@@ -24,7 +24,7 @@ namespace RenderingTransplantProbe
         public int HurtSerial;
         public float HurtDX,HurtDY;
         public EquippedAppearance[] Equipment;
-        public string BodyShape,ApparelFallback;
+        public string BodyShape,ApparelFallback,ArtFallback;
         public string Source,Kind,Resolved,GroundKind,AssetFamily;
         public bool Visible,RequiresOriginal,Grass,DoorOpen;
         public int WaterDepth,WaterVolume;
@@ -135,6 +135,7 @@ namespace RenderingTransplantProbe
             if(!prepared || !ReferenceEquals(buffer,producer)){accepted=null;return;}
             if(!Monitor.IsEntered(TextConsole.BufferCS))throw new InvalidOperationException("Joppa publish outside lock");
             NativeApparel.MutateLate();
+            CtesiphusArt.MutateLate();
             if(PawnPresentation.Enabled && PawnPresentation.InjectLateMutation)
             {
                 var position=PawnPresentation.Human.CurrentCell;
@@ -163,6 +164,7 @@ namespace RenderingTransplantProbe
                     AssetFamily=observed==null?null:observed.AssetFamily,DoorOpen=observed!=null && observed.DoorOpen,
                     Equipment=observed==null || equipmentChanged?null:observed.Equipment,
                     BodyShape=observed==null?null:observed.BodyShape,
+                    ArtFallback=observed==null?null:observed.ArtFallback,
                     ApparelFallback=equipmentChanged?"Equipped appearance changed after observation":observed==null?null:observed.ApparelFallback,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};

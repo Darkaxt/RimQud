@@ -296,7 +296,7 @@ namespace RenderingTransplantProbe
             if(frame.View=="Looker")
             {
                 lookReady=true;
-                ProbeRunner.Record(Phase=="apparel-look"?"apparel-target-view.json":"gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
+                ProbeRunner.Record(Phase=="apparel-look"?"apparel-target-view.json":Phase=="raycat-look"?"raycat-target-view.json":"gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
                     overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
             }
             if(!awaiting || frame.Phase!=Phase)return;
@@ -386,16 +386,17 @@ namespace RenderingTransplantProbe
             XRLCore.Core.Game.Player.Body.Energy.BaseValue=1000;XRLCore.Core.PlayerTurn();
             if(commands.Count!=0)throw new InvalidOperationException("Native command sequence did not finish");
         }
-        public static void TargetApparel(XRL.World.GameObject npc)
+        public static void TargetApparel(XRL.World.GameObject npc){TargetActor(npc,"apparel");}
+        public static void TargetActor(XRL.World.GameObject npc,string fixture)
         {
             int restoreX=targetX,restoreY=targetY,oldLookX=LookX,oldLookY=LookY;
             targetX=npc.CurrentCell.X;targetY=npc.CurrentCell.Y;
-            escaped=lookReady=false;LookX=LookY=-1;Phase="apparel-look";Command("look",true);
+            escaped=lookReady=false;LookX=LookY=-1;Phase=fixture+"-look";Command("look",true);
             if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
-                throw new InvalidOperationException("Native look did not target the equipped NPC");
-            ProbeRunner.Record("apparel-target.json",new{x=LookX,y=LookY,instance=npc.BaseID,nativeLook=true});
+                throw new InvalidOperationException("Native look did not target the fixture NPC");
+            ProbeRunner.Record(fixture+"-target.json",new{x=LookX,y=LookY,instance=npc.BaseID,nativeLook=true});
             targetX=restoreX;targetY=restoreY;LookX=oldLookX;LookY=oldLookY;
-            RenderPhase("apparel-look-returned");
+            RenderPhase(fixture+"-look-returned");
         }
         public static void DisposePresentation()
         {
@@ -526,6 +527,7 @@ namespace RenderingTransplantProbe
                 if(!menuSeen)throw new InvalidOperationException("Native inventory was not observed");
                 RenderPhase("menu-returned");
                 NativeApparel.RunFixture();
+                CtesiphusArt.RunFixture();
                 Replacement=false;RenderPhase("disabled");Replacement=true;RenderPhase("reenabled");
                 game.SetIntGameState("RimQudProbeMarker",17391);
                 var save=game.SaveGame("RimQudProbe");

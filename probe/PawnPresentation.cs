@@ -106,6 +106,7 @@ namespace RenderingTransplantProbe
             else if(cell.Objects.Any(o=>o.Blueprint=="DirtFloor" && o.Render!=null && o.Render.Visible) || KnownPaint(cell.PaintTile))result.GroundKind="ground";
             if(result.WaterDepth>0)result.GroundKind="water";
             NativeApparel.Capture(obj,result);
+            CtesiphusArt.Capture(obj,result);
         }
         static bool KnownPaint(string tile)
         {

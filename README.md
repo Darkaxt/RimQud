@@ -22,14 +22,29 @@ passed; faithful art and broader anatomy support remain separate work.
 The next [faithful-art specification](docs/faithful-joppa-spec.md) is now active.
 The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md)
 identifies Joppa's four species families and the named humans' defining mutations.
-New body/age variants and faithful art are not yet claimed as integrated.
+Reusable body/age variants and the remaining village artwork are still pending.
 
-[Ctesiphus directional art preview](art/ctesiphus/preview.html) is saved for
-pipeline discussion: three generated neutral-albedo views referenced to the actual
-RimWorld cat, with Qud identity/palette from installed definitions. Artwork is
-finished for review; native integration is unverified and paused by user request.
-The preview shows 32/64-pixel silhouettes and illustrative native-magenta tint.
-[Brief](art/ctesiphus/brief.json) and [exact generation prompts](art/ctesiphus/generation-prompts.json).
+The first faithful tile, **Ctesiphus**, now runs in native Qud. Its frozen input
+chain is **creature → race → native race description + actual RimWorld asset
+reference + original Qud model**. Generated pixels are unchanged; native material
+tint supplies Qud magenta. Direction, physical proportions, feet contact,
+visibility, hurt, targeting and save/load passed hidden native checks.
+An extra-foot change after observation and changed detail color fall back to the
+native sprite. The neutral base has no independent detail mask. This remains a
+Qud-side adapter; it does not execute RimWorld's complete pawn render tree.
+
+[Directional art and magnified native captures](art/ctesiphus/preview.html#native) /
+[verification and frozen input packet](evidence/faithful-cat-result.json) /
+[brief](art/ctesiphus/brief.json) /
+[exact generation prompts](art/ctesiphus/generation-prompts.json).
+
+The matched native frames below show original rendering and the current adapter.
+Ctesiphus is the small purple cat near the lower-left actor fixture; other
+replacement graphics remain temporary or retain native Qud art.
+
+![Native Qud rendering for the cat comparison](docs/images/joppa-raycat-original.png)
+
+![Generated Ctesiphus in native Qud, south facing](docs/images/joppa-raycat-south.png)
 
 ## Actually worn equipment — stage 4
 

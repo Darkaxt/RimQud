@@ -37,15 +37,16 @@
     "Beautiful enlarged artwork that is unreadable at game scale"
   ],
   "generation_tool": "Built-in image_gen",
-  "state": "Directional artwork finished for pipeline discussion; paused by user request before native integration or another NPC.",
+  "state": "Integrated in native Qud; tested facing/contact/tint/visibility/hurt/look/save-load and count-change/detail fallback passed",
   "style_reference": "Locally extracted actual RimWorld Cat directional sprites; shape, elevated view, clean outline and restrained shading. Not a panther body.",
   "generation_prompts": "generation-prompts.json",
-  "material_contract": "Neutral grayscale albedo for existing native-foreground material tint; browser tint is illustrative. Native independent detail-color handling is unverified.",
+  "material_contract": "Neutral albedo receives native primary tint; changed detail color retains the original sprite. No independent detail mask is authored.",
   "review_notes": [
     "Generated pixels and transparency retained. Canvases and contacts differ between views.",
-    "Native pivots, per-facing physical scale and independent detail color remain to verify.",
     "West may mirror east for this subject; asymmetrical future anatomy needs explicit review.",
     "Earlier ornate magenta drafts rejected as a RimWorld style match and retained privately for pipeline discussion.",
-    "North view corrected after user review: tail root visibly at lower rump, with upper tail separated from head by a transparent gap. Anatomy must be checked before accepting a directional frame."
-  ]
+    "North view corrected after user review: tail root visibly at lower rump, with upper tail separated from head by a transparent gap. Anatomy must be checked before accepting a directional frame.",
+    "Native pivots and uniform physical scale verified; independent detail mask is absent and explicitly falls back for changed detail color."
+  ],
+  "input_contract": "Creature -> race -> native race description + actual RimWorld reference + original Qud model; package_ctesiphus.py freezes the installed inputs."
 }

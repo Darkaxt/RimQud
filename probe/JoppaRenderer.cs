@@ -117,7 +117,7 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-") ||
+                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("faithful-cat-") || filename.StartsWith("chair-") ||
                     filename.StartsWith("prop-") || filename.StartsWith("worn-") || filename.StartsWith("held-");
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
@@ -155,7 +155,7 @@ namespace RenderingTransplantProbe
         }
         static bool CanMap(JoppaCell c)
         {
-            return c.Visible && !c.RequiresOriginal && c.Kind!="original" &&
+            return c.Visible && !c.RequiresOriginal && c.Kind!="original" && CtesiphusArt.Failure(c)==null &&
                 (!JoppaCoverage.Enabled || !c.Display.VFlip) &&
                 (!PawnPresentation.IsLayered(c.Kind) || (!string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip));
         }
@@ -296,6 +296,12 @@ namespace RenderingTransplantProbe
                     layer.name="RimQudEquipped:"+item.Instance+":"+item.Slot;
                 }
             }
+            else if(CtesiphusArt.Enabled && c.Kind=="animal" && c.AssetFamily=="ray-cat")
+            {
+                var view=CtesiphusArt.View(c.Facing);
+                SpriteLayer(go.transform,Material("Custom/Cutout",(string)view["file"],c.Display.Foreground),
+                    (float)view["width"],(float)view["height"],(float)view["center_x"],(float)view["center_z"],0);
+            }
             else if(JoppaCoverage.Enabled && c.Kind=="prop" && c.AssetFamily!="chair")
             {
                 var asset=JoppaCoverage.Asset(c.AssetFamily);float width=(float)asset["width"],height=(float)asset["height"];
@@ -434,6 +440,7 @@ namespace RenderingTransplantProbe
                     var screen=live && PawnPresentation.IsLayered(c.Kind)?GameManager.Instance.getScreenTileCenter(c.X,c.Y):Vector3.zero;
                     rows.Add(new JObject{{"x",c.X},{"y",c.Y},{"source",c.Source},{"kind",c.Kind},
                         {"instance",c.Instance},{"facing",c.Facing},{"groundKind",c.GroundKind},
+                        {"art",ArtState(c,mapped)},{"artFallback",CtesiphusArt.Failure(c)},
                         {"assetFamily",c.AssetFamily},{"doorOpen",c.DoorOpen},{"tile",c.Display.Tile},
                         {"bodyShape",c.BodyShape},{"apparelFallback",c.ApparelFallback},{"equipment",EquipmentRows(c.Equipment)},
                         {"detailColor",new JArray(c.Display.Detail.r,c.Display.Detail.g,c.Display.Detail.b,c.Display.Detail.a)},
@@ -475,6 +482,19 @@ namespace RenderingTransplantProbe
             foreach(var texture in textures.Values)UnityEngine.Object.DestroyImmediate(texture);
             target.Release();UnityEngine.Object.DestroyImmediate(target);
             UnityEngine.Object.DestroyImmediate(camera.gameObject);bundle.Unload(true);
+        }
+        JObject ArtState(JoppaCell c,bool mapped)
+        {
+            if(!mapped || !CtesiphusArt.Enabled || c.AssetFamily!="ray-cat")return null;
+            Transform actor;if(!actors.TryGetValue(c.Instance,out actor))return null;
+            var view=CtesiphusArt.View(c.Facing);var mf=actor.GetComponentInChildren<MeshFilter>();
+            var vertices=mf.sharedMesh.vertices;var points=view["landmarks"];var size=view["size"];
+            float u=(float)points["contact_x"]/(float)size[0],v=1-(float)points["contact_y"]/(float)size[1];
+            var contact=mf.transform.TransformPoint(vertices[0]+u*(vertices[3]-vertices[0])+v*(vertices[1]-vertices[0]));
+            var material=mf.GetComponent<MeshRenderer>().sharedMaterial;
+            return new JObject{{"file",view["file"]},{"contactX",contact.x/CellWidth},{"contactY",25-contact.z},
+                {"width",(vertices[3]-vertices[0]).magnitude/CellWidth},{"height",(vertices[1]-vertices[0]).magnitude},
+                {"shader",material.shader.name},{"textureWidth",material.mainTexture.width},{"textureHeight",material.mainTexture.height}};
         }
         static JArray EquipmentRows(EquippedAppearance[] equipment)
         {

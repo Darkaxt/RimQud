@@ -188,3 +188,31 @@ root. It is the explicit mapping/decision source; unknown content stays native.
 The published stage-3 evidence reconciles both runs and the observed generated
 addition. It records the canonical LF contract identity separately from the raw
 runtime JSON payload digest because Git normalizes text line endings.
+
+
+## Faithful ray-cat sample
+
+After the donor, scenery, pawn and worn-graphic packages, freeze the installed
+semantic/visual inputs and copy the unmodified generated cat views:
+
+```powershell
+& $Python probe/package_apparel.py --donor-data $Donor --output (Join-Path $Root 'donor')
+if ($LASTEXITCODE -ne 0) { throw 'Worn texture packaging failed' }
+& $Python probe/package_ctesiphus.py --qud-data (Join-Path $Qud 'CoQ_Data') --donor-data $Donor --root $Root
+if ($LASTEXITCODE -ne 0) { throw 'Creature reference packaging failed' }
+./probe/run_probe.ps1 -Root $Root -Game $Qud -Mode pawns -IntegrationStage 4 -ArtSet ray-cat
+& $Python probe/verify_gameplay.py --root $Root --mode pawns --stage 4 --art-set ray-cat --output (Join-Path $Root 'faithful-cat-verified.json')
+if ($LASTEXITCODE -ne 0) { throw 'Faithful cat verification failed' }
+```
+
+`faithful-cat.json` records Ctesiphus -> Ray Cat -> native race description,
+actual donor texture identities/hashes and the original Qud atlas reference.
+The source alpha and pixels are unchanged. Per-view anatomical contact/body
+landmarks set uniform physical scale; width compensates for Qud's rectangular
+cells. The generated image bounding box is not stretched into a cell.
+
+The sample uses native primary color. It has no independent detail mask; a
+changed detail color retains the native sprite. Unsupported body/equipment and
+post-observation changes also retain native graphics. The ray-cat scenario
+checks four real movement directions, visibility, tint, fallback, look targeting,
+hurt and save/load through the existing command-driven native session.

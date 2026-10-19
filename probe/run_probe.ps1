@@ -2,12 +2,16 @@ param(
     [string]$Root = 'E:\Temp\qud-transplant-probe-20261019',
     [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
     [ValidateRange(1,4)][int]$IntegrationStage = 1,
+    [ValidateSet('donor','ray-cat')][string]$ArtSet = 'donor',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
 if(($IntegrationStage -eq 2 -or $IntegrationStage -eq 4) -and $Mode -ne 'pawns' -or
    $IntegrationStage -eq 3 -and $Mode -notin @('pawns','joppa')) {
     throw 'Stages 2/4 require pawns mode; stage 3 requires pawns or joppa mode.'
+}
+if($ArtSet -eq 'ray-cat' -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or -not (Test-Path -LiteralPath (Join-Path $Root 'faithful-cat.json')))) {
+    throw 'Ray-cat art requires its packaged contract and pawns stage 4.'
 }
 $existing = Get-CimInstance Win32_Process -Filter "Name = 'CoQ.exe'"
 if ($existing) { throw 'A Qud process already exists; preserve it and do not launch a competing probe.' }
@@ -35,6 +39,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'GameplayProbe.cs') -Destination
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'PawnPresentation.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaCoverage.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeApparel.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CtesiphusArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{
@@ -47,6 +52,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $m
 $env:QUDEXPERIMENT_ROOT=$rootFull
 $env:QUDEXPERIMENT_MODE=$Mode
 $env:QUDEXPERIMENT_STAGE="$IntegrationStage"
+$env:QUDEXPERIMENT_ART=$ArtSet
 $env:TEMP=Join-Path $Root 'tmp'
 $env:TMP=$env:TEMP
 New-Item -ItemType Directory -Path $env:TEMP -Force | Out-Null
@@ -64,7 +70,7 @@ if($Mode -eq 'review'){$launchArgs=$launchArgs | Where-Object {$_ -ne '-batchmod
 $windowStyle=if($Mode -eq 'review'){'Normal'}else{'Hidden'}
 # review is an explicitly selected interactive launch; do not run it during a hidden-only session.
 $process=Start-Process -FilePath (Join-Path $Game 'CoQ.exe') -WorkingDirectory $Game -ArgumentList $launchArgs -WindowStyle $windowStyle -PassThru
-@{pid=$process.Id;start=$process.StartTime.ToUniversalTime().ToString('o');mode=$Mode;integrationStage=$IntegrationStage;arguments=$launchArgs} |
+@{pid=$process.Id;start=$process.StartTime.ToUniversalTime().ToString('o');mode=$Mode;integrationStage=$IntegrationStage;artSet=$ArtSet;arguments=$launchArgs} |
     ConvertTo-Json | Set-Content -LiteralPath (Join-Path $Root "launch-$Mode.json") -Encoding utf8NoBOM
 Write-Output "Probe process $($process.Id) launched; waiting for its actual exit."
 $process.WaitForExit()

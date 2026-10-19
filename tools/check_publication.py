@@ -62,12 +62,14 @@ def main():
     scenes |= {'joppa-hurt-'+actor+'-'+sample+'.png' for actor in ['human', 'animal'] for sample in ['start', 'mid', 'end']}
     scenes |= {prefix+'-'+side+'.png' for prefix in ['joppa-coverage', 'joppa-coverage-gameplay'] for side in ['original', 'replacement']}
     scenes |= {'joppa-apparel-'+side+'.png' for side in ['original','replacement','swapped','hurt']}
-    assert len(embedded) == 33 and len(engine) == 11
+    scenes |= {'joppa-raycat-original.png','joppa-raycat-south.png'}
+    native_gallery = {'joppa-raycat-east.png','joppa-raycat-north.png'}
+    assert len(embedded) == 35 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 37
-    assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
+    assert len(archived) == 4 and len(listed) == 41
+    assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes - native_gallery
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
     review = json.loads((ROOT / 'evidence/foreground-review.json').read_text())
@@ -107,7 +109,16 @@ def main():
         revision = apparel.get('source_revision')
         source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT/'probe'/name).read_bytes()
         assert hashlib.sha256(source).hexdigest() == digest, name
-    print(f'Publication checks passed: {len(files)} public files; 22 Joppa views, 11 material readbacks 4 archived concepts and 3 generated directional assets; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+    cat = json.loads((ROOT/'evidence/faithful-cat-result.json').read_text(encoding='utf-8'))
+    assert cat['pawn_scene']['faithful_ray_cat']['actual_mesh_contact_verified']
+    assert cat['pawn_scene']['faithful_ray_cat']['native_save_load']
+    for name, digest in cat['source_sha256'].items():
+        revision = cat.get('source_revision')
+        source = subprocess.check_output(['git','show',revision+':probe/'+name],cwd=ROOT) if revision else (ROOT/'probe'/name).read_bytes()
+        assert hashlib.sha256(source).hexdigest() == digest, name
+    preview = (ROOT/'art/ctesiphus/preview.html').read_text(encoding='utf-8')
+    assert all(name in preview for name in native_gallery)
+    print(f'Publication checks passed: {len(files)} public files; 26 Joppa views, 11 material readbacks 4 archived concepts and 3 generated directional assets; links, hashes, reviewed source identities, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

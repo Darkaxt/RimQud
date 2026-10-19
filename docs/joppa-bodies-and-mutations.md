@@ -7,9 +7,9 @@ and definition hashes. The existing generated-game evidence adds the player;
 the player's body is not a new village race. Static definitions cannot replace
 the runtime body tree after mutation, dismemberment, builders or regeneration.
 
-## Inhabitants and necessary visual families
+## Native identity references, not baked body-art instructions
 
-| Inhabitant | Installed species / anatomy | Defining visual requirements | Gender evidence |
+| Inhabitant | Installed species / anatomy | Native identity description; representation remains separate | Gender evidence |
 | --- | --- | --- | --- |
 | Argyve | human / Humanoid | Powdered mushroom-shaped beard, tinker's pockets and scrap | male tag |
 | Mehmet | human / Humanoid | Bent farmer posture, turquoise eyes, work-worn hands | male tag |
@@ -40,11 +40,12 @@ native fixed/random gender independently of which art template is displayed.
 
 ## What the installed donor actually supplies
 
-`BodyTypes.xml` defines Male, Female, Thin, Hulk and Fat adult shape families.
-`LifeStages.xml` separately defines human baby, child, teenager and adult stages,
-including child body/head factors. Child is not a sixth body-type suffix in that
-file. Age needs an explicit render contract; shrinking an adult garment alone
-does not establish correct child proportions or fit.
+Core `BodyTypes.xml` defines Male, Female, Thin, Hulk and Fat adult shapes.
+Installed Biotech additionally defines Baby and Child body types, inheriting
+`Naked_Child`; child apparel therefore has an actual body-type suffix.
+`Pawn_StoryTracker.PostExposeData` selects the Child body type for children when
+Biotech is active. Life-stage geometry also changes body/head proportions. The
+initial Core-only study missed these DLC types; QA corrected that omission.
 
 `RimWorld.ApparelGraphicRecordGetter.TryGetGraphicApparel` chooses a worn path
 with a body-type suffix for ordinary garments, with exceptions for overhead,
@@ -78,11 +79,14 @@ Stage 4 verified an actual added arm falling back natively, not mutation renderi
 
 ## Bounded approach for this village
 
-Start with authored body templates for these known inhabitants and their actual
-generated anatomy. Keep torso/head, appendages and removable equipment separate.
-Use per-facing contact points and explicit front/behind order. Separate garment
-torso panels from sleeves only for a real required multi-arm outfit; the first
-case is Irudad or Nima, not a generic rig for hypothetical species.
+Use reusable species/body graphics, separate heads where required by the
+humanlike tree, and actual equipped garment/equipment graphics. Standard humanlike
+rendering has no separate arm/leg nodes; independent sleeves are not an existing
+donor requirement. Necessary extra anatomy may belong in an authored body graphic
+or an explicitly supported addon. Installed Humanoid Alien Races provides body
+addons, but has not been integrated here and does not synthesize extra sleeves.
+Occupation and descriptive hunches must not be painted into the body template.
+Hair, eyes, beards and other personal overlays are later scope by user instruction.
 
 Select supported topology from native part type, parent path, laterality,
 attachment/missing state and default/equipped item identity. Deduplicate the same
@@ -98,10 +102,17 @@ assembly would be a separate implementation decision with a real case and its ow
 acceptance evidence. This study requires no new simulation, skinning framework,
 runtime race provider or MCP server.
 
-## Art contract and next acceptance
+## Corrected composition and art contract
 
-Work one subject per generation using its original sprite plus a short description
-brief. Preserve silhouette, foreground/detail roles and strong contrast; avoid
+Resolve creature -> race -> race description, and supply actual RimWorld asset
+references plus the original Qud model before generation. One subject per call.
+Use ordinary whole-animal graphics for the first cat; humanlike generation targets
+the required body/head/garment layer rather than a complete dressed named NPC.
+Core Humanlike tree separates Body, Head, Hair, Beard and apparel roots; Animal
+primarily uses a whole body plus supported overlays. Body/head defs select those
+graphics, with sex influencing upstream choices rather than a universal gender
+texture switch. Current RimQud code executes its own quads and adapted facing/hurt;
+RimWorld PawnRenderTree, posture, aiming and animation execution are not ported. Preserve silhouette, foreground/detail roles and strong contrast; avoid
 brown color grading across the village. Use transparent directional sprites with
 consistent canvas, feet/contact baseline and scale. Terrain/walls additionally
 need repeatable surfaces and required neighbor/state variants. Keep source art,

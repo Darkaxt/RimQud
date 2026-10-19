@@ -14,10 +14,12 @@ def main():
     ap.add_argument('--root', type=Path, required=True)
     ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--mode', choices=['gameplay', 'pawns'], default='gameplay')
+    ap.add_argument('--art-set', choices=['donor', 'ray-cat'], default='donor')
     ap.add_argument('--stage', type=int, choices=[1, 2, 3, 4], default=1)
     args = ap.parse_args()
     root = args.root
     launch = json.loads((root / ('launch-' + args.mode + '.json')).read_text(encoding='utf-8-sig'))
+    assert args.art_set != 'ray-cat' or (args.stage == 4 and args.mode == 'pawns' and launch['artSet'] == 'ray-cat')
     started = dt.datetime.fromisoformat(launch['start'].replace('Z', '+00:00')).timestamp()
 
     def read(name):
@@ -62,6 +64,11 @@ def main():
                 'apparel-west', 'apparel-east', 'apparel-north', 'apparel-south', 'apparel-look-returned',
                 'hurt-equipped-ended', 'apparel-unsupported-item', 'apparel-supported-restored',
                 'apparel-unsupported-anatomy']
+    if args.art_set == 'ray-cat':
+        expected[expected.index('disabled'):expected.index('disabled')] = [
+            'raycat-south','raycat-west','raycat-east','raycat-north','raycat-hidden','raycat-visible',
+            'raycat-tint','raycat-tint-restored','raycat-detail-fallback','raycat-detail-restored',
+            'raycat-late-anatomy','raycat-anatomy-restored','raycat-look-returned']
     assert [f['phase'] for f in frames] == expected
     assert result['frames'] == len(frames)
     summaries, images = [], {}
@@ -272,6 +279,71 @@ def main():
                 late_equipment_change_fallback=True,native_npc_movement_facing=True,layered_hurt=True,
                 native_save_load=True,native_targeting=True,resident_equipment_unchanged=True,
                 unsupported_item_native_fallback=True,unsupported_anatomy_native_fallback=True)
+    if args.art_set == 'ray-cat':
+        ray = read('raycat-fixture.json'); identity = ray['instance']; packet = ray['artContract']
+        assert packet == json.loads((root/'faithful-cat.json').read_text(encoding='utf-8'))
+        assert packet['lineage'] == ['Ctesiphus','Ray Cat','BaseCat']
+        assert 'small kitty' in packet['race_description'] and 'glassy fibers' in packet['race_description']
+        original = packet['original_model']
+        assert original['tile'] == 'creatures/sw_kitty.bmp' and original['info_id'] == 8371 and original['atlas_id'] == 224
+        assert hashlib.sha256((root/'donor'/original['private_file']).read_bytes()).hexdigest() == original['mask_sha256']
+        assert ray['nativeMoves'] and ray['extraFeet'] == 5 and ray['restoredFeet'] == 4
+        assert ray['foregroundRestored'] and ray['detailRestored']
+        manifest = json.loads((Path(__file__).resolve().parents[1]/'art/manifest.json').read_text(encoding='utf-8'))
+        donor_metadata = json.loads((root/'donor/pawn-textures.json').read_text(encoding='utf-8'))
+        for direction, view in packet['views'].items():
+            asset = next(a for a in manifest['images'] if a['direction'] == direction)
+            assert asset['sha256'] == view['sha256'] == hashlib.sha256((root/'donor'/view['file']).read_bytes()).hexdigest()
+            donor = next(d for d in donor_metadata if d['file'] == 'cat-'+direction+'.png')
+            assert view['donor_reference']['asset_name'] == donor['name']
+            assert view['donor_reference']['source_id'] == donor['source_id']
+            assert hashlib.sha256((root/'donor'/donor['file']).read_bytes()).hexdigest() == view['donor_reference']['png_sha256']
+        for f in frames:
+            for c in f['cells']:
+                if c['source'] == 'Ctesiphus' and c['mapped']:
+                    view = packet['views'][{0:'north',1:'east',2:'south',3:'east'}[c['facing']]]
+                    actual = c['art']; assert actual and actual['file'] == view['file']
+                    assert actual['shader'] == 'Custom/Cutout'
+                    assert [actual['textureWidth'],actual['textureHeight']] == view['size']
+                    assert abs(actual['contactX']-c['feetX']) < .0001 and abs(actual['contactY']-c['feetY']) < .0001
+                    assert abs((actual['width']*(2/3))/actual['height']-view['size'][0]/view['size'][1]) < .0001
+                    assert abs(actual['width']-view['width']) < .0001 and abs(actual['height']-view['height']) < .0001
+        positions = {}
+        for direction, facing in [('south',2),('west',3),('east',1),('north',0)]:
+            c = cell('raycat-'+direction,identity)
+            assert c['mapped'] and c['facing'] == facing and c['nativeInputEnabled']
+            positions[direction] = (c['x'],c['y'])
+        x,y = positions['south']
+        assert positions['west'] == (x-1,y) and positions['east'] == (x,y) and positions['north'] == (x,y-1)
+        assert not any(c['instance'] == identity for c in by_phase['raycat-hidden']['cells'])
+        assert cell('raycat-visible',identity)['mapped']
+        tint, restored = [cell('raycat-'+n,identity) for n in ['tint','tint-restored']]
+        assert tint['foregroundColor'][0] > 2*tint['foregroundColor'][1]
+        assert tint['foregroundColor'] != restored['foregroundColor']
+        camera = by_phase['raycat-tint']['camera']
+        cx,cy = round(tint['screenX']),camera['height']-round(tint['screenY'])
+        region = (cx-22,cy-48,cx+22,cy+24)
+        red_counts = [red(Image.open(root/by_phase['raycat-'+n]['replacement']).convert('RGB').crop(region)) for n in ['tint','tint-restored']]
+        assert red_counts[0] > red_counts[1]+5, red_counts
+        detail = cell('raycat-detail-fallback',identity)
+        assert not detail['mapped'] and 'detail color' in detail['artFallback']
+        assert cell('raycat-detail-restored',identity)['mapped']
+        late = cell('raycat-late-anatomy',identity)
+        assert late['requiresOriginal'] and not late['mapped']
+        assert cell('raycat-anatomy-restored',identity)['mapped']
+        targeted,target_view = read('raycat-target.json'),read('raycat-target-view.json')
+        assert targeted['instance'] == identity and targeted['nativeLook']
+        assert (targeted['x'],targeted['y']) == positions['north']
+        assert target_view['view'] == 'Looker' and not target_view['overlayVisible'] and target_view['nativeHiddenCells'] == 0
+        loaded = cell('loaded',identity)
+        assert loaded['mapped'] and loaded['assetFamily'] == 'ray-cat' and 'Foot=4' in loaded['bodyShape']
+        assert loaded['foregroundColor'] == restored['foregroundColor'] and loaded['detailColor'] == restored['detailColor']
+        pawn_summary['faithful_ray_cat'] = dict(packet=packet,native_four_direction_moves=True,
+            actual_mesh_contact_verified=True,unmodified_generated_pixels=True,tint_red_pixels=red_counts,
+            visibility=True,changed_detail_native_fallback=True,late_body_change_native_fallback=True,
+            native_targeting=True,native_save_load=True,native_hurt=pawn_summary['native_reactions']['animal'],
+            limits=['Neutral base uses native primary tint; no independent detail mask',
+                    'One ray-cat body contract; other anatomy retains native graphics'])
     preservation = read('preservation.json')
     assert preservation['preferences_restored'] and not preservation['changed_save_or_settings_files']
     # Old failed attempts remain diagnostic evidence; they must not belong to this run.

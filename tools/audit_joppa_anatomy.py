@@ -84,14 +84,20 @@ def main():
     rw = args.rimworld_data.parent / 'Data/Core/Defs/Misc'
     body_file = rw / 'BodyTypeDefs/BodyTypes.xml'
     life_file = rw / 'LifeStageDefs/LifeStages.xml'
+    juvenile_file = args.rimworld_data.parent / 'Data/Biotech/Defs/Misc/BodyTypeDefs/BodyTypes.xml'
+    display_file = base / 'Display.txt'
+    # This installed display file also ends with a NUL outside the JSON document.
+    display_text = display_file.read_text(encoding='utf-8-sig').rstrip('\x00 \t\r\n')
+    display = json.loads(re.sub(r',\s*([}\]])', r'\1', display_text))
     evidence = dict(scope='Installed static definitions for 67 selected baseline types. Not a runtime body-tree census; mutation execution, dismemberment and random builders can change instances.',
                     qud_assembly_sha256=digest(args.qud_data / 'Managed/Assembly-CSharp.dll'),
                     rimworld_assembly_sha256=digest(args.rimworld_data / 'Managed/Assembly-CSharp.dll'),
-                    definition_sha256={str(p.relative_to(base)).replace('\\', '/'): digest(p) for p in sorted(used | {base/'Bodies.xml'})},
-                    donor_definition_sha256={str(p.relative_to(rw)).replace('\\', '/'): digest(p) for p in [body_file, life_file]},
+                    definition_sha256={str(p.relative_to(base)).replace('\\', '/'): digest(p) for p in sorted(used | {base/'Bodies.xml', display_file})},
+                    donor_definition_sha256={str(p.relative_to(args.rimworld_data.parent/'Data')).replace('\\', '/'): digest(p) for p in [body_file, life_file, juvenile_file]},
                     art_targets=rows, actor_blueprints=[a['blueprint'] for a in actors],
                     base_anatomies=anatomy,
-                    donor_body_types=[b.findtext('defName') for b in xml(body_file)],
+                    donor_body_types=[b.findtext('defName') for p in [body_file, juvenile_file] for b in xml(p) if b.findtext('defName')],
+                    native_palette=display['colors'],
                     donor_human_life_stages=[dict(name=l.findtext('defName'), body_size=l.findtext('bodySizeFactor'), head_size=l.findtext('headSizeFactor'), developmental_stage=l.findtext('developmentalStage')) for l in xml(life_file) if 'Humanlike' in (l.findtext('defName') or '')],
                     checks={'selected_contract_reconciled': True, 'removed_random_builder_respected': True, 'age_fields_found_in_selected_actors': any(a['age_evidence'] for a in actors)})
     assert evidence['qud_assembly_sha256'] == 'cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7'

@@ -43,7 +43,7 @@ namespace RenderingTransplantProbe
             failure=null;var body=obj.Body;
             if(body==null){shape="no body";failure="Unsupported anatomy";return new EquippedAppearance[0];}
             var parts=body.GetParts();
-            shape=body.Anatomy+":"+string.Join(",",new[]{"Body","Head","Arm","Hand","Back","Feet"}.Select(t=>t+"="+body.GetPartCount(t)));
+            shape=body.Anatomy+":"+string.Join(",",new[]{"Body","Head","Arm","Hand","Back","Feet","Foot","Tail","Face"}.Select(t=>t+"="+body.GetPartCount(t)));
             var items=new List<EquippedAppearance>();
             foreach(var part in parts)
             {

@@ -4,6 +4,8 @@ Start with [reproduction instructions](../docs/reproducing.md).
 
 | File | Responsibility |
 | --- | --- |
+| `package_ctesiphus.py` | Frozen creature/race/description/reference/original-model inputs and unchanged art packaging |
+| `CtesiphusArt.cs` | Explicit ray-cat body contract and native state-change fixture |
 | `package_donor.py` | Hash-pinned local extraction/container packaging; re-read output verification |
 | `RenderingProbe.cs` | Qud bootstrap, offscreen material rendering, PNG readbacks and completion |
 | `SceneCapture.cs` | Narrow real-render hooks, fixture and frame correspondence |

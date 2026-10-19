@@ -4,18 +4,19 @@
   "rimworld_assembly_sha256": "5cf1b5be399d5b1c9c56ca72c9d35b4ecf307feacf5859d04ac5a1aa5926356a",
   "definition_sha256": {
     "Bodies.xml": "5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292",
+    "Display.txt": "e4eaffbe696a513a7e36a8db241e3215ef5bbfafa344759a7af20c8365555349",
     "ObjectBlueprints/Creatures.xml": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
     "ObjectBlueprints/Furniture.xml": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
     "ObjectBlueprints/Items.xml": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
     "ObjectBlueprints/PhysicalPhenomena.xml": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
     "ObjectBlueprints/RootObjects.xml": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
     "ObjectBlueprints/Walls.xml": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e",
-    "ObjectBlueprints/ZoneTerrain.xml": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
-    "Display.txt": "e4eaffbe696a513a7e36a8db241e3215ef5bbfafa344759a7af20c8365555349"
+    "ObjectBlueprints/ZoneTerrain.xml": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2"
   },
   "donor_definition_sha256": {
-    "BodyTypeDefs/BodyTypes.xml": "b90cfb10ccfcb91357cdb27ce18d0ec4cead2f6fd9efcb63e0b872a49a230af0",
-    "LifeStageDefs/LifeStages.xml": "9e64ca6431d6685b342f3bec90166a911948aeb364a232ff8eb2fe69ed321fbc"
+    "Core/Defs/Misc/BodyTypeDefs/BodyTypes.xml": "b90cfb10ccfcb91357cdb27ce18d0ec4cead2f6fd9efcb63e0b872a49a230af0",
+    "Core/Defs/Misc/LifeStageDefs/LifeStages.xml": "9e64ca6431d6685b342f3bec90166a911948aeb364a232ff8eb2fe69ed321fbc",
+    "Biotech/Defs/Misc/BodyTypeDefs/BodyTypes.xml": "6e43de689329db81ca5261eda032c3f6735687d7e32b1aa40c8437baf1a46420"
   },
   "art_targets": [
     {
@@ -1284,8 +1285,30 @@
     "Female",
     "Thin",
     "Hulk",
-    "Fat"
+    "Fat",
+    "Baby",
+    "Child"
   ],
+  "native_palette": {
+    "r": "a64a2e",
+    "R": "d74200",
+    "g": "009403",
+    "G": "00c420",
+    "b": "0048bd",
+    "B": "0096ff",
+    "c": "40a4b9",
+    "C": "77bfcf",
+    "m": "b154cf",
+    "M": "da5bd6",
+    "w": "98875f",
+    "W": "cfc041",
+    "k": "0f3b3a",
+    "K": "155352",
+    "y": "b1c9c3",
+    "Y": "FFFFFF",
+    "o": "f15f22",
+    "O": "e99f10"
+  },
   "donor_human_life_stages": [
     {
       "name": "HumanlikeBaby",
@@ -1315,10 +1338,7 @@
   "checks": {
     "selected_contract_reconciled": true,
     "removed_random_builder_respected": true,
-    "age_fields_found_in_selected_actors": false,
-    "actual_species_and_named_mutations_checked": true,
-    "donor_worn_path_selection_checked": true,
-    "chimera_attachment_topology_checked": true
+    "age_fields_found_in_selected_actors": false
   },
   "private_source_audit": {
     "XRL.World.Parts.Mutation.MultipleArms": "661cebec46686eeafd765d528e6875a2ecad02c0108edbc86ed624c0c8e3f282",
@@ -1338,15 +1358,21 @@
     "Verse.PawnRenderNodeWorker_Body": "f07d79bd309dc30c4ec33f8eb79d21b6b2a5c1dabbf8a970d20c188e6e5f61bd",
     "Verse.PawnRenderNode_Body": "c62bbbd74d7090ffd35ea263e319b6aa99da3631dd223a6aa2a7d2bccecbdfb3"
   },
-  "palette_correction": {
-    "Ctesiphus_foreground": {
-      "code": "m",
-      "rgb": "b154cf"
-    },
-    "Ctesiphus_detail": {
-      "code": "y",
-      "rgb": "b1c9c3"
-    },
-    "reason": "Installed palette values are authoritative; ANSI color names incorrectly suggested gold details."
+  "composition_qa": {
+    "render_tree_sha256": "7d0abbecc5e92b37124ff729f31a9387f047d436f26b97f6a31fd4daa550cfde",
+    "humanlike_nodes": [
+      "PawnRenderNode_Body",
+      "PawnRenderNode_Tattoo_Body",
+      "PawnRenderNode_Swaddle",
+      "PawnRenderNode_Stump",
+      "PawnRenderNode_Head",
+      "PawnRenderNode_Tattoo_Head",
+      "PawnRenderNode_Beard",
+      "PawnRenderNode_Hair"
+    ],
+    "standard_separate_arm_leg_nodes": false,
+    "installed_biotech_body_types_checked": true,
+    "personal_overlays": "Later scope by user instruction",
+    "current_adapter": "Custom quads plus adapted facing/hurt; full donor pawn render tree and motion are not executed"
   }
 }
