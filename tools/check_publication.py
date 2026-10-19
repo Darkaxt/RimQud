@@ -39,10 +39,18 @@ def main():
         listed.add(path.resolve())
     assert listed == {p.resolve() for p in files if p.suffix == '.png'}
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-    assert readme.count('![', 0) == len(listed) == 7
+    embedded = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme)
+    engine = {entry['file'] for entry in manifest['images']
+              if entry['kind'].startswith('Actual Qud-engine readback')}
+    assert len(embedded) == len(engine) == 11
+    assert {Path(path).name for path in embedded} == engine
+    archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
+    archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
+    assert len(archived) == 4 and len(listed) == 15
+    assert {Path(path).name for path in archived} == {p.name for p in listed} - engine
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
-    print(f'Publication checks passed: {len(files)} files, {len(listed)} README images; links, hashes, JSON and Python syntax valid.')
+    print(f'Publication checks passed: {len(files)} files, 11 engine images in README, 4 archived concept images; links, hashes, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

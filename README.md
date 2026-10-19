@@ -4,62 +4,64 @@ Research toward a **high-contrast, Qud-faithful visual overhaul** using selected
 RimWorld rendering techniques and locally sourced rendering resources. Qud keeps
 its own simulation and controls.
 
-**Current result:** six unchanged RimWorld shaders rendered inside Qud's engine,
-and a controlled scene-capture experiment paired three submitted frames with
-Unity consumption. This repository contains diagnostic source and evidence;
-there is no playable overhaul release yet.
+**Current result: two prerequisite experiments passed separately.** One loaded
+six unchanged RimWorld shaders into Qud's Unity runtime and rendered small test
+planes. The other captured selected Qud appearances and paired submitted display
+buffers with Unity consumption. **The captured Qud scene has not been drawn with
+the donor shaders. There is no shader-rendered Joppa screenshot or playable
+overhaul yet.**
 
-## The visual studies
+## Actual shader experiment: the complete visual output
 
-These are the retained images from the initial HTML study. The slider compares
-Qud's original presentation on the left with an illustrative replacement on the
-right. These screenshots are **browser simulations**, not in-game transplants.
-The generated sprites are early style studies: walls, roads and several NPCs
-still need work, and the two directions are less distinct than intended.
+These are all eleven original, unaltered **128 × 128 GPU readbacks** from the
+executed shader probe. An offscreen camera inside Qud rendered a simple plane
+using a locally extracted RimWorld shader and test texture. These images were
+not AI-generated. They show material compatibility and input effects; they are
+not screenshots of a replacement scene in Qud's gameplay view.
 
-### RimWorld-inspired study
+| Shader / input change | Baseline | Changed input | Pixels changed |
+| --- | --- | --- | ---: |
+| Terrain hard: material tint | ![Terrain hard baseline, actual engine readback](docs/images/terrain-hard-base.png) | ![Terrain hard with green tint, actual engine readback](docs/images/terrain-hard-tint.png) | 7,744 |
+| Terrain fade: vertex alpha | ![Terrain fade baseline, actual engine readback](docs/images/terrain-fade-base.png) | ![Terrain fade edge, actual engine readback](docs/images/terrain-fade-edge.png) | 7,740 |
+| Terrain fade rough: vertex alpha with alpha-add texture | ![Terrain fade rough baseline, actual engine readback](docs/images/terrain-rough-base.png) | ![Terrain fade rough edge, actual engine readback](docs/images/terrain-engine-test.png) | 7,534 |
+| Plant cutout: sway input | ![Plant cutout baseline, actual engine readback](docs/images/plant-engine-test.png) | ![Plant cutout with changed sway, actual engine readback](docs/images/plant-wind-engine-test.png) | 3,463 |
+| Plant transparent: sway input | ![Plant transparent baseline, actual engine readback](docs/images/plant-transparent-base.png) | ![Plant transparent with changed sway, actual engine readback](docs/images/plant-transparent-wind.png) | 3,746 |
 
-![Early Joppa browser comparison with Qud on the left and the RimWorld-inspired concept on the right](docs/images/rimworld-comparison.png)
+The sixth shader, `Custom/Cutout`, was tested with one wall-atlas sample:
 
-Original generated sprite sheet used by this study:
+![Cutout material on a single test plane, actual engine readback](docs/images/cutout-engine-test.png)
 
-![AI-generated RimWorld-inspired Qud concept sprite sheet](docs/images/rimworld-concepts.png)
+The wall sample establishes that the cutout material draws. It does not establish
+connected wall geometry, correct wall-neighbor selection or a finished wall style.
+Likewise, the plant pairs compare two sway values; they do not demonstrate a
+complete animated vegetation system.
 
-### Stoneshard-inspired study
+All six shaders reported supported with one pass and produced pixels without
+magenta error pixels in Qud's Unity 6000.0.77f1 built-in pipeline on Direct3D11.
+The retained [render measurements](evidence/shader-renders.json) and
+[result summary](evidence/integration-result.json) record these tests.
 
-![Early Joppa browser comparison with Qud on the left and the Stoneshard-inspired concept on the right](docs/images/stoneshard-comparison.png)
+## Separate scene-capture experiment
 
-Original generated sprite sheet used by this study:
+A second launch used real Qud ground, wall, vegetation, actor and liquid objects
+in a controlled temporary zone. It tested hidden-object exclusion, actor movement
+and a late buffer mutation. Three frame generations matched between the producer
+and Unity consumer under the existing buffer lock.
 
-![AI-generated Stoneshard-inspired Qud concept sprite sheet](docs/images/stoneshard-concepts.png)
+That fixture ran during MainMenu startup with Qud's original presentation.
+Its output was diagnostic data, not a donor-shader image of the fixture. It does
+not yet prove gameplay view/input integration or a generic layered scene.
 
-The intended art direction has since become clearer: preserve Qud's colors,
-silhouettes and identity, converting individual assets deliberately. These generic
-concept sheets are visual exploration, not an approved final tileset. Connected
-terrain, readable wall faces and natural roads matter before broader coverage.
+The next integration test is to connect these two pieces and draw a small known
+Qud scene with the donor materials during gameplay. Full-scene rendering,
+terrain/wall connectivity and mod compatibility remain to be demonstrated.
 
-## What actually ran in Qud
+## Earlier HTML concepts
 
-The following 128 × 128 images are actual GPU readbacks from the isolated Qud
-engine probe, using locally extracted RimWorld shaders and test textures.
-They establish material loading and rendering, not full-scene quality.
-
-| Rough terrain alpha transition | Plant, baseline | Same plant, changed wind input |
-| --- | --- | --- |
-| ![Actual Qud-engine terrain shader test](docs/images/terrain-engine-test.png) | ![Actual Qud-engine plant shader test](docs/images/plant-engine-test.png) | ![Actual Qud-engine plant wind shader test](docs/images/plant-wind-engine-test.png) |
-
-- Six donor shaders loaded, reported supported and produced pixels in Qud's
-  Unity 6000.0.77f1 built-in pipeline using Direct3D11.
-- Terrain tint/fading and plant wind inputs changed the output; eleven readbacks
-  contained no magenta error pixels.
-- A real Qud object fixture exercised ground, wall, vegetation, actor and liquid
-  appearances, hidden-object exclusion, actor movement and a late buffer mutation.
-- Three frame generations matched between producer and Unity consumer under the
-  existing buffer lock. The fixture ran during MainMenu startup, not gameplay.
-
-This supports a selective rendering transplant. It does **not** establish that
-the entire RimWorld renderer can be dropped into Qud: their high-level rendering
-classes depend on different maps, definitions, lifecycle and visibility rules.
+The previous AI-generated art sheets and before/after browser mockups are
+preserved in [the archived HTML visual study](docs/html-visual-study.md).
+They illustrate possible art directions and are unrelated to the shader test's
+rendered output shown above.
 
 ## Findings and source
 

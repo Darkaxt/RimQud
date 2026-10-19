@@ -1,5 +1,11 @@
 # Integration progress — 2026-10-19
 
+The shader and scene-capture probes were separate launches. The offscreen shader
+test rendered simple planes, not the captured Qud objects. The capture probe kept
+Qud's original presentation. No combined replacement scene or shader-rendered
+Joppa image has been produced. The README now shows only actual engine readbacks;
+the unrelated earlier HTML mockups are archived separately.
+
 ## Verified experiments
 
 | Experiment | Observed result | Boundary |

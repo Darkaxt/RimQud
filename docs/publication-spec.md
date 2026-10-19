@@ -11,8 +11,10 @@ not part of this publication's acceptance criteria.
   history. Preserve the existing local visual-study project and its history.
 - R2: Document all four audits, actual engine results, reproducible probe source,
   remaining integration limits and a bounded next experiment.
-- R3: Embed the retained generated images and comparison screenshots directly in
-  README, clearly distinguishing concepts from actual engine readbacks.
+- R3: Lead the README with actual engine readbacks and the precise scope of the
+  executed shader and capture experiments. Per the user's clarification, move the
+  earlier HTML concepts to a separate archive page linked from README. Preserve
+  those images, but do not present them as results of the shader experiment.
 - R4: Publish no extracted game atlases, textures, compiled shaders, game binaries,
   private profiles, credentials or machine-specific diagnostic dumps. Explicitly
   document image provenance and third-party ownership.
@@ -55,3 +57,19 @@ The publication checker serves the current public-tree acceptance criteria.
 
 Remaining acceptance work: none. Blockers: none. Tracked deferrals: none.
 Future renderer work is outside this requested deliverable.
+
+## Evidence presentation correction — 2026-10-19
+
+User clarification: the prominent HTML PoC images do not reflect the shader test
+that actually ran. This revises R3's presentation requirement above.
+
+**ACTIVE — Correct and synchronize the experiment presentation (R2-R5).**
+
+Acceptance: README leads with all eleven unaltered engine readbacks, describes
+offscreen material tests separately from scene capture, states that no combined
+Joppa replacement scene was rendered, and links the archived HTML studies. Check
+image provenance, links and public README/image delivery; commit and synchronize.
+No runtime change or new engine experiment is part of this correction.
+
+Remaining: update presentation, verify and synchronize. Blockers: none external.
+Tracked deferrals: none.
