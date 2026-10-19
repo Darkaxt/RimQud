@@ -5,13 +5,15 @@ import json
 from pathlib import Path
 import re
 import struct
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    files = [p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.relative_to(ROOT).parts]
-    allowed = {'.md', '.json', '.png', '.py', '.cs', '.ps1'}
+    paths = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=ROOT).decode().split('\0')
+    files = [ROOT / path for path in paths if path]
+    allowed = {'.md', '.json', '.png', '.py', '.cs', '.ps1', '.html'}
     for p in files:
         rel = p.relative_to(ROOT).as_posix()
         assert p.suffix in allowed or rel in {'.gitignore', '.gitattributes', 'LICENSE'}, rel
@@ -42,15 +44,16 @@ def main():
     embedded = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme)
     engine = {entry['file'] for entry in manifest['images']
               if entry['kind'].startswith('Actual Qud-engine readback')}
-    assert len(embedded) == len(engine) == 11
-    assert {Path(path).name for path in embedded} == engine
+    scenes = {'joppa-original.png', 'joppa-replacement.png'}
+    assert len(embedded) == 13 and len(engine) == 11
+    assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 15
-    assert {Path(path).name for path in archived} == {p.name for p in listed} - engine
+    assert len(archived) == 4 and len(listed) == 17
+    assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
-    print(f'Publication checks passed: {len(files)} files, 11 engine images in README, 4 archived concept images; links, hashes, JSON and Python syntax valid.')
+    print(f'Publication checks passed: {len(files)} public files, 2 Joppa scenes and 11 material readbacks in README; 4 archived concepts; links, hashes, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

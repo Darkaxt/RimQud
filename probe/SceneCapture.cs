@@ -23,6 +23,8 @@ namespace RenderingTransplantProbe
         static void Postfix()
         {
             if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "capture") SceneCapture.Run();
+            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "joppa") JoppaSimulation.Run();
+            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "gameplay") GameplayProbe.Run();
         }
     }
 
@@ -64,19 +66,23 @@ namespace RenderingTransplantProbe
     {
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            int anchors=0;
+            int copies=0,anchors=0;
             foreach (var instruction in instructions)
             {
                 yield return instruction;
                 var method=instruction.operand as MethodInfo;
                 if (method!=null && method.DeclaringType==typeof(ScreenBuffer) && method.Name=="Copy")
+                    copies++;
+                var field=instruction.operand as FieldInfo;
+                if (instruction.opcode==OpCodes.Stfld && field!=null &&
+                    field.DeclaringType==typeof(ScreenBuffer) && field.Name=="ViewTag")
                 {
                     yield return new CodeInstruction(OpCodes.Ldarg_1);
                     yield return new CodeInstruction(OpCodes.Call,AccessTools.Method(typeof(SceneCapture),"Publish"));
                     anchors++;
                 }
             }
-            if (anchors!=1) throw new InvalidOperationException("DrawBuffer copy anchor changed");
+            if (copies!=1 || anchors!=1) throw new InvalidOperationException("DrawBuffer copy/view anchor changed");
             SceneCapture.PublishHookInstalled=true;
         }
     }
@@ -120,15 +126,18 @@ namespace RenderingTransplantProbe
         }
         public static void Enter(Cell cell)
         {
+            JoppaSimulation.Enter(cell);
             if(!rendering || cell.ParentZone!=zone) return;
             current=cell; selected=null;
         }
         public static void Selected(GO obj)
         {
+            JoppaSimulation.Selected(obj);
             if(rendering && current!=null && current.ParentZone==zone) selected=obj;
         }
         public static void Leave(Cell cell,RenderEvent e)
         {
+            JoppaSimulation.Leave(cell,e);
             if(!rendering || cell!=current || cell.X<8 || cell.X>14 || cell.Y<8 || cell.Y>9) return;
             var c=new ConsoleChar(); c.Set(e);
             cells.Add(JObject.FromObject(new {x=cell.X,y=cell.Y,visible=e.Visible,
@@ -139,6 +148,7 @@ namespace RenderingTransplantProbe
         }
         public static void Publish(ScreenBuffer buffer)
         {
+            JoppaSimulation.Publish(buffer);
             if(!prepared || !ReferenceEquals(buffer,producer)) { accepted=null; return; }
             if(!Monitor.IsEntered(TextConsole.BufferCS)) throw new InvalidOperationException("Publish outside BufferCS");
             var rows=new JArray();
@@ -158,6 +168,7 @@ namespace RenderingTransplantProbe
         }
         public static void Consumed(ScreenBuffer buffer)
         {
+            JoppaSimulation.Consumed(buffer);
             if(accepted==null || !ReferenceEquals(buffer,TextConsole.CurrentBuffer)) return;
             if(!Monitor.IsEntered(TextConsole.BufferCS)) throw new InvalidOperationException("Consume outside BufferCS");
             accepted["consumerThread"]=Thread.CurrentThread.ManagedThreadId;

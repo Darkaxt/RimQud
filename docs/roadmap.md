@@ -1,8 +1,8 @@
 # Next experiments and eventual release
 
-The repository publication is the current deliverable. The following work is a
-proposal for future implementation, not a claim of completed work or a scheduled
-release.
+The [native Joppa experiment](joppa-experiment.md) is now authorized and active.
+Its full-map offscreen stage passed; actual gameplay verification remains active.
+The later art/compatibility work below remains a proposal, not a scheduled release.
 
 ## Next bounded experiment: one playable patch of terrain
 

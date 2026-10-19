@@ -23,6 +23,8 @@ namespace RenderingTransplantProbe
             if (string.IsNullOrEmpty(root)) return;
             if (!Path.GetFullPath(XRLCore.SavePath).StartsWith(Path.GetFullPath(root), StringComparison.OrdinalIgnoreCase))
                 throw new InvalidOperationException("Probe refuses a non-isolated save path");
+            AudioListener.pause = true;
+            AudioListener.volume = 0f;
             __instance.gameObject.AddComponent<ProbeRunner>();
         }
     }
@@ -47,8 +49,15 @@ namespace RenderingTransplantProbe
                     graphics = SystemInfo.graphicsDeviceType.ToString(), gpu = SystemInfo.graphicsDeviceName,
                     renderPipeline = GraphicsSettings.currentRenderPipeline == null ? "BuiltIn" : GraphicsSettings.currentRenderPipeline.name,
                     thread = Thread.CurrentThread.ManagedThreadId, savePath = XRLCore.SavePath,
-                    mode = Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") });
-                if (mode == "capture") return; // Core boot completion triggers capture.
+                    mode = Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE"),
+                    audioPaused = AudioListener.pause, listenerVolume = AudioListener.volume,
+                    masterVolume = SoundManager.MasterVolume, ambientVolume = XRL.UI.Options.AmbientVolume,
+                    musicEnabled = XRL.UI.Options.Music, soundEnabled = XRL.UI.Options.Sound,
+                    ambientEnabled = XRL.UI.Options.Ambient });
+                if (!AudioListener.pause || AudioListener.volume != 0f || SoundManager.MasterVolume != 0f ||
+                    XRL.UI.Options.Music || XRL.UI.Options.Sound || XRL.UI.Options.Ambient)
+                    throw new InvalidOperationException("Isolated probe audio suppression was not applied");
+                if (mode == "capture" || mode == "joppa" || mode == "gameplay") return; // Core boot completion triggers simulation.
                 ShaderExperiment();
             }
             catch (Exception ex)
@@ -59,7 +68,8 @@ namespace RenderingTransplantProbe
             }
             finally
             {
-                if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") != "capture")
+                string mode = Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE");
+                if (mode != "capture" && mode != "joppa" && mode != "gameplay")
                 {
                     Record("finished.json", new { exitCode = exit });
                     Application.Quit(exit);
@@ -70,11 +80,25 @@ namespace RenderingTransplantProbe
         bool captureQuit;
         void Update()
         {
+            GameplayProbe.ObserveView();
             if (!captureQuit && SceneCapture.Done)
             {
                 captureQuit = true;
                 Record("capture-finished.json", new { exitCode = SceneCapture.ExitCode });
                 Application.Quit(SceneCapture.ExitCode);
+            }
+            if (!captureQuit && JoppaSimulation.Done)
+            {
+                captureQuit = true;
+                JoppaSimulation.DisposeRenderer();
+                Record("joppa-finished.json", new { exitCode = JoppaSimulation.ExitCode });
+                Application.Quit(JoppaSimulation.ExitCode);
+            }
+            if (!captureQuit && GameplayProbe.Done)
+            {
+                captureQuit=true;
+                Record("gameplay-finished.json",new{exitCode=GameplayProbe.ExitCode});
+                Application.Quit(GameplayProbe.ExitCode);
             }
         }
 

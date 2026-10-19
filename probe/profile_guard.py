@@ -63,7 +63,7 @@ def main():
     # Qud's Logger uses the native Unity profile even with explicit save paths.
     # Classify observed runtime diagnostics separately; never ignore saves/options.
     diagnostics = [p for p in changed_files if re.fullmatch(
-        r"(?:game_log\.\d+\.txt|build_log\.txt(?:\.prev)?|Unity\\ShaderVariantAnalytics\\ShaderRuntimeInfoEvent\.json|"
+        r"(?:game_log(?:\.\d+)?\.txt|build_log\.txt(?:\.prev)?|Unity\\ShaderVariantAnalytics\\ShaderRuntimeInfoEvent\.json|"
         r"Unity\\3bf6c570-214f-4f5a-bfcc-196732543d03\\Analytics\\.*)", p)]
     protected_changes = [p for p in changed_files if p not in diagnostics]
     report = {"normal_profile_file_count": len(current), "changed_normal_profile_files": changed_files,

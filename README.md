@@ -4,14 +4,45 @@ Research toward a **high-contrast, Qud-faithful visual overhaul** using selected
 RimWorld rendering techniques and locally sourced rendering resources. Qud keeps
 its own simulation and controls.
 
-**Current result: two prerequisite experiments passed separately.** One loaded
-six unchanged RimWorld shaders into Qud's Unity runtime and rendered small test
-planes. The other captured selected Qud appearances and paired submitted display
-buffers with Unity consumption. **The captured Qud scene has not been drawn with
-the donor shaders. There is no shader-rendered Joppa screenshot or playable
-overhaul yet.**
+**Current result: the captured full Joppa map has now been drawn with donor
+materials inside Qud's Unity runtime.** This connects scene capture to rendering
+in a controlled, hidden offscreen simulation. It is not yet a playable overhaul.
 
-## Actual shader experiment: the complete visual output
+## Full native-map Joppa experiment
+
+These are actual 1920 × 900 GPU captures from the same accepted Qud frame.
+The first uses Qud's resolved sprites. The second maps 1,810 cells to donor
+materials and retains original sprites for 190 unmapped cells, including NPCs
+and furniture. Ground, paths, grass, crops, reeds, trees, water, doors and 161
+brinestalk wall cells use donor materials; walls use linked atlas selection.
+The current capture includes 274 grass clumps at native ground-paint locations
+and 51 connected shallow-water cells.
+
+![Actual native-map Joppa original presentation](docs/images/joppa-original.png)
+
+![Actual native-map Joppa with donor materials and original fallback](docs/images/joppa-replacement.png)
+
+[Local draggable comparison](comparison.html) — download/serve this repository
+to use it; GitHub displays HTML source. [Experiment and acceptance](docs/joppa-experiment.md)
+and [verified result summary](evidence/joppa-result.json).
+
+Qud's map builder created the 996 authored placements from `Joppa.rpm` over an
+explicit dirt-floor fill. This is not normal seeded-world generation; shrine
+initialization logged missing world-history data. The renderer preserves native
+fallback sprites, including their visible dark tile backgrounds.
+
+Eleven accepted/consumed frames tested liquid depth changes, actor relocation, visibility changes, late
+mutation, replacement disabling, view gating, another zone and return. Offscreen
+captures include scene creation and PNG readback; their timings are not gameplay
+frame times. Normal gameplay targeting, menus and save/load remain unverified.
+
+The path interior and its transition use the same donor fade-rough material,
+precedence and texture sampling. The initial hard-interior/rough-edge mismatch
+caused the visible bright rim and was corrected. Open water uses Qud's wading
+and swimming thresholds with distinct donor ramp textures; this is a connected
+liquid adapter, not the complete RimWorld animated water pipeline.
+
+## Earlier isolated shader experiment
 
 These are all eleven original, unaltered **128 × 128 GPU readbacks** from the
 executed shader probe. An offscreen camera inside Qud rendered a simple plane
@@ -52,9 +83,9 @@ That fixture ran during MainMenu startup with Qud's original presentation.
 Its output was diagnostic data, not a donor-shader image of the fixture. It does
 not yet prove gameplay view/input integration or a generic layered scene.
 
-The next integration test is to connect these two pieces and draw a small known
-Qud scene with the donor materials during gameplay. Full-scene rendering,
-terrain/wall connectivity and mod compatibility remain to be demonstrated.
+The later full-map experiment above connects these two pieces in a controlled
+simulation. Gameplay-view integration and broader mod compatibility remain to be
+demonstrated. These earlier fixture results are retained for provenance.
 
 ## Earlier HTML concepts
 

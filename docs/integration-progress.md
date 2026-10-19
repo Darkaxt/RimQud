@@ -1,10 +1,14 @@
 # Integration progress — 2026-10-19
 
-The shader and scene-capture probes were separate launches. The offscreen shader
+Update: [the native Joppa experiment](joppa-experiment.md) has since connected
+accepted full-map appearances to donor materials and produced actual scene
+readbacks. Its controlled simulation passed; gameplay verification is ACTIVE.
+
+The initial shader and scene-capture probes below were separate launches. The offscreen shader
 test rendered simple planes, not the captured Qud objects. The capture probe kept
 Qud's original presentation. No combined replacement scene or shader-rendered
-Joppa image has been produced. The README now shows only actual engine readbacks;
-the unrelated earlier HTML mockups are archived separately.
+Joppa image was produced by those initial probes. The README now includes the
+later native-map output, and the earlier HTML mockups are archived separately.
 
 ## Verified experiments
 
@@ -21,7 +25,9 @@ The public [result summary](../evidence/integration-result.json) records measure
 pixel differences. [Package metadata](../evidence/package.json) binds the inspected
 shader resources to their hashes. Source in `probe/` is identical to the locally
 verified experiment source at commit `4f7086a` of the original private study
-checkout. That checkout's full history and extracted assets were not imported.
+checkout at initial publication. Subsequent Joppa adaptations are documented in
+the active experiment. That checkout's full history and extracted assets were
+not imported.
 
 ## Inspected builds
 

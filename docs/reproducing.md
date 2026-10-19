@@ -62,6 +62,24 @@ install the probe in your normal mod directory.
 
 ## Interpretation and recovery
 
+For the full authored-map experiment, after donor packaging run:
+
+```powershell
+& $Python probe/package_joppa.py --donor-data $Donor --output (Join-Path $Root 'donor')
+if ($LASTEXITCODE -ne 0) { throw 'Joppa texture packaging failed' }
+& ./probe/run_probe.ps1 -Root $Root -Game $Qud -Mode joppa
+& $Python probe/verify_joppa.py --root $Root
+if ($LASTEXITCODE -ne 0) { throw 'Joppa evidence verification failed' }
+```
+
+This mode reads the native Joppa map, creates real Qud objects over an explicit
+dirt-floor fill, and renders nine controlled scenarios through the accepted buffer.
+It is not normal world generation or a normal character game. It logs missing
+world-history dependencies during shrine initialization. See the
+[active experiment](joppa-experiment.md) for exact acceptance and limitations.
+Serve the repository on loopback and open `comparison.html` to compare the two
+retained baseline GPU images; the browser does not generate the scene.
+
 `verify_probe.py` checks actual readbacks, material changes, selected blueprint
 identities, invisible/unseen exclusion, actor movement, late mutation detection,
 three accepted/consumed frame hashes and preservation. Inspect errors and retained

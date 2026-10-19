@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RimQud — native Joppa experiment</title>
+<style>
+  :root{color-scheme:dark;font-family:Georgia,serif;background:#111d1b;color:#e4e4c9}
+  *{box-sizing:border-box}body{margin:0;padding:32px clamp(16px,4vw,64px)}
+  main{max-width:1920px;margin:auto}header{border-top:1px solid #536450;padding-top:20px}
+  .eyebrow,button,label,output,.note,.links{font-family:Consolas,monospace}
+  .eyebrow{color:#a3c1ad;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+  h1{font-size:clamp(32px,4vw,60px);font-weight:normal;margin:16px 0 10px}
+  p{line-height:1.55;max-width:100ch}.lead{color:#c1d0ba;margin-bottom:24px}
+  .stage{position:relative;aspect-ratio:1920/900;border:1px solid #536450;overflow:hidden;touch-action:pan-y;cursor:ew-resize;background:#000}
+  .stage img{display:block;width:100%;height:100%;image-rendering:auto;user-select:none;pointer-events:none}
+  .after{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+  .divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#ede0a6;pointer-events:none}
+  .divider:after{content:'↔';position:absolute;top:48%;left:-17px;background:#ede0a6;color:#152a25;border-radius:3px;padding:8px 5px}
+  .tag{position:absolute;top:12px;padding:7px 10px;background:#10221eef;font:12px Consolas,monospace;pointer-events:none}
+  .tag.before{left:12px}.tag.donor{right:12px}
+  .controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid #536450}
+  button{background:#243a30;color:#ebedce;border:1px solid #6e8062;padding:10px 16px;border-radius:3px;cursor:pointer;min-height:44px}
+  button:hover{background:#364e3b}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #e8d889;outline-offset:3px}
+  label{display:flex;align-items:center;gap:12px;flex:1;min-width:220px;font-size:12px}
+  input{flex:1;min-width:80px;accent-color:#c4c87d}output{min-width:4ch}
+  .note{font-size:12px;color:#c2cdbb}.links{font-size:13px;display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+  a{color:#c8dfa6}footer{margin-top:24px;color:#afc0ac;font-size:14px}
+  @media(max-width:600px){body{padding-top:20px}.tag{font-size:9px;top:6px;padding:4px 5px}.tag.before{left:6px}.tag.donor{right:6px}.divider:after{padding:3px;left:-12px}.controls{gap:8px}button{padding:9px 12px}label{flex-basis:100%}}
+</style>
+<main>
+  <header>
+    <div class="eyebrow">RimQud / actual engine captures / 19 October 2026</div>
+    <h1>Joppa, with donor materials.</h1>
+    <p class="lead">One native Qud map, two presentations. Drag the divider or use the controls below. These images came from Qud's Unity runtime; this page only compares the saved captures.</p>
+  </header>
+  <div class="stage" id="stage" aria-label="Original and donor-material Joppa comparison">
+    <img src="docs/images/joppa-original.png" alt="Qud's resolved original sprites across the complete authored Joppa map" draggable="false">
+    <div class="after" id="after"><img src="docs/images/joppa-replacement.png" alt="The same accepted Qud frame rendered with donor materials and original fallback sprites" draggable="false"></div>
+    <div class="divider" id="divider"></div>
+    <span class="tag before">Original Qud sprites</span><span class="tag donor">Donor materials + Qud fallback</span>
+  </div>
+  <div class="controls">
+    <button type="button" data-cut="100">Original</button>
+    <button type="button" data-cut="50">Compare</button>
+    <button type="button" data-cut="0">Donor materials</button>
+    <label for="cut">Original coverage <input id="cut" type="range" min="0" max="100" value="50"><output id="coverage" for="cut">50%</output></label>
+  </div>
+  <p class="note">80 × 25 cells · 996 authored placements · 1,810 mapped cells · 190 original fallback cells</p>
+  <p>Ground, paths, grass, crops, reeds, trees, doors, water and the main brinestalk walls use donor materials. The capture has 274 grass clumps at Qud's native paint locations and 51 connected shallow-water cells. NPCs, furniture and unmapped structures keep Qud's sprites; native foregrounds over mapped water expose the liquid underneath.</p>
+  <p>Path interiors and their eight-neighbor transitions share the same donor material, texture sampling and terrain precedence. Shallow/deep appearance follows Qud's actual volume thresholds; all baseline ponds are wading depth. The liquid adapter uses donor ramp textures, not RimWorld's complete animated water pipeline.</p>
+  <p>This controlled simulation loads <code>Joppa.rpm</code> through Qud's map builder over an explicit dirt-floor fill. It is not a fully generated world or a normal character session. Gameplay controls, targeting and save/load remain unverified.</p>
+  <div class="links"><a href="docs/images/joppa-original.png">Full-resolution original</a><a href="docs/images/joppa-replacement.png">Full-resolution donor view</a><a href="docs/joppa-experiment.md">Experiment and acceptance</a><a href="README.md">Project README</a></div>
+  <footer>Qud and RimWorld content belongs to its respective creators. <a href="THIRD_PARTY.md">Provenance and notices</a>.</footer>
+</main>
+<script>
+  const stage=document.querySelector('#stage'), cut=document.querySelector('#cut');
+  function update(value){cut.value=value;document.querySelector('#after').style.clipPath=`inset(0 0 0 ${cut.value}%)`;document.querySelector('#divider').style.left=cut.value+'%';document.querySelector('#coverage').value=cut.value+'%';}
+  cut.addEventListener('input',()=>update(cut.value));
+  document.querySelectorAll('[data-cut]').forEach(button=>button.addEventListener('click',()=>update(button.dataset.cut)));
+  function drag(event){const bounds=stage.getBoundingClientRect();update(Math.max(0,Math.min(100,(event.clientX-bounds.left)/bounds.width*100)));}
+  stage.addEventListener('pointerdown',event=>{if(event.button!==0)return;stage.setPointerCapture(event.pointerId);drag(event);});
+  stage.addEventListener('pointermove',event=>{if(stage.hasPointerCapture(event.pointerId))drag(event);});
+</script>
+</html>
