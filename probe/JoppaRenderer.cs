@@ -108,6 +108,7 @@ namespace RenderingTransplantProbe
         }
         Material Material(string shader,string filename,Color color)
         {
+            filename=VillageArt.Surface(filename);
             string key=shader+"|"+filename+"|"+color;
             Material mat;if(materials.TryGetValue(key,out mat))return mat;
             Texture2D texture;
@@ -117,7 +118,7 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                bool sprite=filename.StartsWith("dromad-") || filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("faithful-cat-") || filename.StartsWith("chair-") ||
+                bool sprite=filename.StartsWith("village-") && !filename.StartsWith("village-surface-") || filename.StartsWith("dromad-") || filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("faithful-cat-") || filename.StartsWith("chair-") ||
                     filename.StartsWith("prop-") || filename.StartsWith("worn-") || filename.StartsWith("held-");
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
@@ -188,6 +189,7 @@ namespace RenderingTransplantProbe
             // than claiming transplantation of RimWorld's WaterDepth pipeline.
             string file=depth>=3?"water-deep.png":"water-shallow.png";
             Color tint=depth>=3?new Color(.38f,.95f,1.3f,1):new Color(.65f,1.5f,1.5f,1);
+            if(VillageArt.Enabled)tint=Color.white;
             return Material(feather?"Custom/Terrain fade rough":"Custom/Cutout",file,tint);
         }
         void WaterSurface(JoppaFrame f,JoppaCell c)
@@ -269,7 +271,17 @@ namespace RenderingTransplantProbe
             var go=new UnityEngine.GameObject("RimQudForeground:"+c.Instance);scene.Add(go);go.layer=30;
             go.transform.position=Point(c.X+.5f,c.Y+.86f,ForegroundDepth(c,.2f));
             bool flip=(c.Facing==3)^c.Display.HFlip;go.transform.localScale=new Vector3(flip?-1:1,1,1);
-            if(DromadArt.Enabled && c.AssetFamily=="dromad")
+            if(VillageArt.Enabled && c.AssetFamily!=null && c.AssetFamily.StartsWith("village:"))
+            {
+                foreach(JObject part in VillageArt.Layers(c))
+                {
+                    var renderer=SpriteLayer(go.transform,Material("Custom/Cutout",(string)part["file"],VillageArt.Tint(c,part)),
+                        (float)part["width"],(float)part["height"],(float)part["center_x"],(float)part["center_z"],(float)part["layer"]);
+                    string equipmentKey=(string)part["equipment_key"];
+                    renderer.name=equipmentKey==null?"RimQudVillage:"+(string)part["component"]:"RimQudEquipped:"+c.Equipment.Single(e=>e.Family==equipmentKey).Instance+":"+equipmentKey;
+                }
+            }
+            else if(DromadArt.Enabled && c.AssetFamily=="dromad")
             {
                 foreach(JObject part in DromadArt.View(c.Facing))
                 {
@@ -332,7 +344,7 @@ namespace RenderingTransplantProbe
                 Color tint=(animal?Color.white:new Color(.62f,.45f,.28f,1))*c.Display.Foreground;
                 SpriteLayer(go.transform,Material("Custom/Cutout",file,tint),size,size,0,(bottom/64f-.5f)*size,0);
             }
-            if(PawnPresentation.Stage>=2 && c.Kind!="prop")
+            if(PawnPresentation.Stage>=2 && (c.Kind!="prop" || VillageArt.Enabled))
             {
                 actors[c.Instance]=go.transform;anchors[c.Instance]=go.transform.position;
                 Impact old=null;
@@ -422,12 +434,21 @@ namespace RenderingTransplantProbe
                             int mask=JoppaCoverage.Enabled?LinkMask(frame,c,"wall"):(Is(frame,c.X,c.Y-1,"wall")?1:0)|(Is(frame,c.X+1,c.Y,"wall")?2:0)|
                                 (Is(frame,c.X,c.Y+1,"wall")?4:0)|(Is(frame,c.X-1,c.Y,"wall")?8:0);
                             string file=JoppaCoverage.Enabled?(c.Source=="RustedMetalWall"?"wall-metal.png":"wall-planks.png"):"wall.png";
+                            if(VillageArt.Enabled)file=VillageArt.Wall(c.Source)??file;
                             Color tint=JoppaCoverage.Enabled?c.Display.Foreground:new Color(.75f,.68f,.48f,1);
                             masks[mask]++;Quad(Material("Custom/Cutout",file,tint),c.X,c.Y,altitude:ForegroundDepth(c,.1f),atlas:mask);
+                            if(VillageArt.Enabled && VillageArt.Wall(c.Source,true)!=null)
+                                Quad(Material("Custom/Cutout",VillageArt.Wall(c.Source,true),c.Display.Detail),c.X,c.Y,altitude:ForegroundDepth(c,.1002f),atlas:mask);
                         }
                         if(c.Kind=="fence")Quad(Material("Custom/Cutout","fence.png",c.Display.Foreground),c.X,c.Y,
                             altitude:ForegroundDepth(c,.11f),atlas:LinkMask(frame,c,"fence"));
                         if(c.Kind=="bridge")Quad(Material("Custom/Cutout","bridge.png",c.Display.Foreground),c.X,c.Y,altitude:.04f);
+                        if(VillageArt.Enabled && c.Kind=="fence")Quad(Material("Custom/Cutout","fence-detail.png",c.Display.Detail),c.X,c.Y,altitude:ForegroundDepth(c,.1102f),atlas:LinkMask(frame,c,"fence"));
+                        if(VillageArt.Enabled && c.Kind=="bridge")
+                        {
+                            var detail=VillageArt.Scenery(c.Source)["views"]["south"].FirstOrDefault(p=>(string)p["color_role"]=="detail");
+                            if(detail!=null)Quad(Material("Custom/Cutout",(string)detail["file"],c.Display.Detail),c.X,c.Y,altitude:.0402f);
+                        }
                         if(c.Kind=="door")
                         {
                             float dx=0,dy=0;
@@ -439,6 +460,11 @@ namespace RenderingTransplantProbe
                             }
                             Quad(Material("Custom/Cutout","door.png",JoppaCoverage.Enabled?c.Display.Foreground:Color.white),c.X+dx,c.Y+dy,
                                 altitude:ForegroundDepth(c,.11f)-(c.DoorOpen?.003f:0));
+                            if(VillageArt.Enabled)
+                            {
+                                var detail=VillageArt.Scenery(c.Source)["views"]["south"].FirstOrDefault(p=>(string)p["color_role"]=="detail");
+                                if(detail!=null)Quad(Material("Custom/Cutout",(string)detail["file"],c.Display.Detail),c.X+dx,c.Y+dy,altitude:ForegroundDepth(c,.1102f)-(c.DoorOpen?.003f:0));
+                            }
                         }
                         if(PawnPresentation.IsLayered(c.Kind))Foreground(c);
                         if(c.Kind=="crop" || c.Kind=="reed" || c.Kind=="tree")
@@ -464,6 +490,7 @@ namespace RenderingTransplantProbe
                         {"feetX",c.X+.5f},{"feetY",c.Y+.86f},
                         {"foregroundDepth",ForegroundDepth(c,.2f)},
                         {"foregroundColor",new JArray(c.Display.Foreground.r,c.Display.Foreground.g,c.Display.Foreground.b,c.Display.Foreground.a)},
+                        {"nativeChar",(int)c.Display.Char},{"backgroundColor",new JArray(c.Display.Background.r,c.Display.Background.g,c.Display.Background.b,c.Display.Background.a)},
                         {"inputX",binding==null?-1:binding.x},{"inputY",binding==null?-1:binding.y},
                         {"nativeInputEnabled",binding!=null && binding.enabled && binding.GetComponents<Collider>().Any(collider=>collider.enabled)},
                         {"screenX",screen.x},{"screenY",screen.y},
@@ -500,6 +527,22 @@ namespace RenderingTransplantProbe
         }
         JObject ArtState(JoppaCell c,bool mapped)
         {
+            if(mapped && VillageArt.Enabled && c.AssetFamily!=null && c.AssetFamily.StartsWith("village:"))
+            {
+                Transform villageActor;if(!actors.TryGetValue(c.Instance,out villageActor))return null;var rows=new JArray();
+                var parts=VillageArt.Layers(c).Cast<JObject>().ToArray();
+                foreach(var layer in villageActor.GetComponentsInChildren<MeshRenderer>())
+                {
+                    var part=parts.Single(p=>(string)p["file"]==layer.sharedMaterial.mainTexture.name);
+                    var villageVertices=layer.GetComponent<MeshFilter>().sharedMesh.vertices;
+                    float villageU=(float)part["contact"][0]/(float)part["size"][0],villageV=1-(float)part["contact"][1]/(float)part["size"][1];
+                    var villageContact=layer.transform.TransformPoint(villageVertices[0]+villageU*(villageVertices[3]-villageVertices[0])+villageV*(villageVertices[1]-villageVertices[0]));var color=layer.sharedMaterial.GetColor("_Color");
+                    rows.Add(new JObject{{"name",layer.name},{"file",layer.sharedMaterial.mainTexture.name},{"role",part["color_role"]},{"equipmentKey",part["equipment_key"]},
+                        {"contactX",villageContact.x/CellWidth},{"contactY",25-villageContact.z},{"width",(villageVertices[3]-villageVertices[0]).magnitude},{"height",(villageVertices[1]-villageVertices[0]).magnitude},
+                        {"color",new JArray(color.r,color.g,color.b,color.a)},{"shader",layer.sharedMaterial.shader.name}});
+                }
+                return new JObject{{"family",c.AssetFamily},{"layers",rows}};
+            }
             if(mapped && DromadArt.Enabled && c.AssetFamily=="dromad")
             {
                 Transform dromadActor;if(!actors.TryGetValue(c.Instance,out dromadActor))return null;
@@ -536,6 +579,7 @@ namespace RenderingTransplantProbe
             var rows=new JArray();if(equipment==null)return rows;
             foreach(var item in equipment)rows.Add(new JObject{{"instance",item.Instance},{"blueprint",item.Blueprint},
                 {"slot",item.Slot},{"family",item.Family},{"layer",item.Layer},{"colorCode",item.ColorCode},
+                {"laterality",item.Laterality},{"detail",new JArray(item.Detail.r,item.Detail.g,item.Detail.b,item.Detail.a)},
                 {"color",new JArray(item.Color.r,item.Color.g,item.Color.b,item.Color.a)}});
             return rows;
         }

@@ -15,9 +15,9 @@ namespace RenderingTransplantProbe
 {
     public sealed class EquippedAppearance
     {
-        public int Instance,Layer;
+        public int Instance,Layer,Laterality;
         public string Blueprint,Slot,Family,ColorCode;
-        public Color Color;
+        public Color Color,Detail;
     }
     public static class NativeApparel
     {

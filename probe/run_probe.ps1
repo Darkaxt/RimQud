@@ -3,7 +3,7 @@ param(
     [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
     [ValidateRange(1,4)][int]$IntegrationStage = 1,
     [switch]$CatalogueOnly,
-    [ValidateSet('donor','ray-cat','dromad','dromad-refined')][string]$ArtSet = 'donor',
+    [ValidateSet('donor','ray-cat','dromad','dromad-refined','village')][string]$ArtSet = 'donor',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
@@ -19,6 +19,9 @@ if($ArtSet -in @('dromad','dromad-refined') -and ($Mode -ne 'pawns' -or $Integra
     throw 'Dromad sample requires its packaged contract and pawns stage 4.'
 }
 if ($existing) { throw 'A Qud process already exists; preserve it and do not launch a competing probe.' }
+if($ArtSet -eq 'village' -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or -not (Test-Path -LiteralPath (Join-Path $Root 'village.json')))) {
+    throw 'Village art requires its packaged source contract and pawns stage 4.'
+}
 $assembly=Join-Path $Game 'CoQ_Data\Managed\Assembly-CSharp.dll'
 if ((Get-FileHash -LiteralPath $assembly).Hash -ne 'CFD20CF1D6126BB64C9362311B9611FE0450589E21D51DB00536AF32D63150A7') {
     throw 'Qud build differs from the audited input; inspect the hooks before running.'
@@ -45,6 +48,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaCoverage.cs') -Destination
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeApparel.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CtesiphusArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'DromadArt.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'VillageArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{
@@ -52,6 +56,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $m
     OptionHarmonyDebug='No'; OptionMasterVolume='0'; OptionMusicVolume='0'; OptionSoundVolume='0'
     OptionAmbientVolume='0'; OptionMusic='No'; OptionSound='No'; OptionAmbient='No'
     OptionDisplayFullscreen='No'
+    OptionDisplayScanlines='No'; OptionDisplayVignette='No'
     OptionDisableFloorTextureObjects='No'
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $local 'PlayerOptions.json') -Encoding utf8NoBOM
 $env:QUDEXPERIMENT_ROOT=$rootFull

@@ -69,6 +69,23 @@ requirements have been authored or verified, and does not close Stage 3.
 
 ## Requirements
 
+2026-10-20 unattended continuation: the user requested finishing the conversion
+of the starting village's NPCs/creatures and bringing environment textures/tiles
+as close as possible to Qud's original look, palette and design. Reuse the same
+source-first workflow for scenery: object identity -> native description, tile,
+palette and connectivity/state metadata -> rendering reference -> editable
+construction -> optional refinement -> registered layers/neighbor variants ->
+native batch review. Continue within ACTIVE Stage 3, hidden command-driven tests
+only, with source/art/evidence synchronization. The dromad's held staff needs a
+larger visual proportion. Preserve the accepted ray cat.
+
+For the known village cast, fixed authored variants may represent their captured
+named anatomy (Irudad's hands-face/tail, Nima's arms/spiral stinger, Yrame's four
+feet and equipped horns). This serves existing A4 rather than implementing a
+general mutation resolver. Unknown changed topology retains native art. Personal
+cosmetic customization remains outside this first conversion; no profession pose
+is baked into a shared human body. Age/sex templates do not change demographics.
+
 - A1: Inventory actual Joppa art targets and inhabitants from the installed,
   hash-pinned Qud definitions and retained generated-game evidence. Separate
   mechanical body slots, visible anatomy, gender and age. Do not infer species
@@ -178,3 +195,40 @@ requires authoring and integrating those subjects; full-village completion canno
 be claimed until that work passes. No tracked deferrals. The extraction rule is
 recorded in the repository conversion skill. Scope review found no need for a
 new rig, general renderer or mutation-clothing framework for this sample.
+
+Stage 3 village reconciliation (2026-10-20, supersedes the earlier sample-only
+status): A3 is verified for all 67 selected visible types: ten actor blueprints
+covering 16 residents and 57 environment types. All have source-bound conversion
+art/connected surfaces; no new non-art exclusions hide missing sprites. The
+player remains outside this selected NPC cast and retains native graphics.
+
+A4 is satisfied by shared male/female human bodies, selected adult dromad body,
+retained ray cat, catfish, and fixed Irudad/Nima/Yrame anatomy. Adult dromad genders
+share the same source-supported shape. Fully clothed human/dromad child templates
+are authored separately; there is no established native age selector in these
+residents, so they remain unbound and no demographics are changed. Cat/fish
+juvenile or sex morphology is not established and is not invented. The user-
+postponed generic mutation resolver and personal overlays remain outside scope.
+
+A5 passed the [complete native batch](../evidence/village-result.json): all
+residents and selected scenery, four facings, actual clothing removal/restoration,
+item palette, registered contact/scale, visibility and late-equipment/topology
+fallback, native look, real hurt without advancing simulation, and save/load.
+Shallow/deep textures were exercised through native liquid volume/depth. Full-map
+visibility and facing placement are controlled diagnostics, not normal vision
+or a new locomotion/limb-animation implementation.
+
+A6 profile preservation and cleanup are verified. Native frames, contract and
+tested source are archived privately; the public gallery provides native
+before/after alongside enlarged authoring assemblies. Served desktop/narrow
+layouts, controls and asset loads passed. The temporary profile, trace/compile
+output and superseded unused face graphics were removed through reviewed helper
+tickets; original inputs and runtime remain. No desktop takeover or mod release.
+
+Stage 3 remains ACTIVE solely for final publication reconciliation and verified
+remote synchronization of source/art/evidence. This is an internal advancement
+blocker, resolved by the authorized commit/push/read-back. No tracked deferrals.
+The closure design review found no need for a general rig or rendering framework;
+source geometry, fixed named variants and explicit equipment mappings serve this
+bounded village. Artistic polish remains reviewable interpretation, not a new
+unbounded acceptance criterion.

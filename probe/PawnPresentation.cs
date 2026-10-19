@@ -67,6 +67,7 @@ namespace RenderingTransplantProbe
         public static string Kind(GO obj)
         {
             if((!Enabled && !JoppaCoverage.Enabled) || obj==null)return null;
+            if(VillageArt.Enabled){var villageKind=VillageArt.Kind(obj);if(villageKind!=null)return villageKind;}
             if(DromadArt.Enabled && obj.Blueprint=="Tam")return "human";
             if(JoppaCoverage.Enabled)
             {
@@ -109,6 +110,7 @@ namespace RenderingTransplantProbe
             NativeApparel.Capture(obj,result);
             CtesiphusArt.Capture(obj,result);
             DromadArt.Capture(obj,result);
+            VillageArt.Capture(obj,result);
         }
         static bool KnownPaint(string tile)
         {

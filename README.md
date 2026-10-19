@@ -22,7 +22,37 @@ passed; faithful art and broader anatomy support remain separate work.
 The next [faithful-art specification](docs/faithful-joppa-spec.md) is now active.
 The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md)
 identifies Joppa's four species families and the named humans' defining mutations.
-Reusable body/age variants and the remaining village artwork are still pending.
+The captured village now has a bounded source-bound conversion; generic anatomy
+and third-party item conversion remain outside this sample.
+
+**Current art pass: 16 residents across 10 NPC/creature blueprints, plus all 57
+selected environment types.** Shared human bodies, fixed Irudad/Nima/Yrame
+anatomy, the retained ray cat, glowfish and Tam use actual equipped item layers.
+Tam's staff is enlarged. Scenery follows original Qud shapes and palette roles,
+with basic grass, connected surfaces and distinct water-depth textures.
+
+[Village gallery and native before/after slider](art/village/preview.html) ·
+[Native verification](evidence/village-result.json) ·
+[Coverage and reproduction](docs/village-conversion.md).
+
+These unchanged native game-camera frames use original resident positions and
+controlled full-map visibility. The player keeps native graphics.
+
+![Original native Joppa, full map revealed for the diagnostic](docs/images/village-original.png)
+
+![Converted native Joppa with Qud-bound art and actual equipment](docs/images/village-replacement.png)
+
+The hidden batch verified all residents, four-way facing, contact/scale,
+equipment colors, actual clothing removal/restoration, visibility/fallback,
+look, hurt without simulation advance and save/load. Normal saves/settings were
+preserved. Fully clothed child templates are authoring variants only: native
+actors expose no established age selector, so ages are not guessed.
+
+This is a first art pass for feedback. Scenery remains a restrained conversion
+of Qud's glyph silhouettes. Personal cosmetics, arbitrary mutations and full
+donor pawn-tree integration remain outside this result.
+
+The Tam material below records the earlier individual workflow checkpoint.
 
 The selected **adult dromad base for Tam** now has a constructed front, proposed
 side/back views and a reviewed composite refinement. It is unclothed so later
@@ -51,7 +81,8 @@ four directions, layer toggles and Qud palette roles.
 The unchanged native frames below show this refined assembly and its matching
 original. [Focused native evidence](evidence/dromad-refined-result.json) covers
 facing/contact, actual equip/unequip, tint, hurt, look and save/load. The full
-village stage remains ACTIVE; this is one adult body and two supported items.
+village batch above is separate evidence; this earlier checkpoint covers one
+adult body and two supported items.
 The [earlier vector-only diagnostic](art/dromad/rebuilt/preview.html) remains
 separately labeled and pinned to its tested source.
 

@@ -506,6 +506,7 @@ namespace RenderingTransplantProbe
                 var core=XRLCore.Core;var body=game.Player.Body;var start=body.CurrentCell;
                 GameManager.focused=true;GameManager.Instance.SetGameViewStack("Stage");
                 body.CurrentZone.SetActive();core.UpdateGlobalChoices();Presenting=true;
+                if(VillageArt.Enabled){VillageArt.RunBatch();return;}
                 PawnPresentation.Setup(game);
                 if(DromadArt.Enabled){targetX=start.X;targetY=start.Y;DromadArt.RunSample();return;}
                 string direction=null;

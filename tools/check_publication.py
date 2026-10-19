@@ -73,11 +73,13 @@ def main():
                       'tam-original.png','tam-south.png','tam-east.png','tam-north.png','tam-robe-removed.png'}
     native_gallery |= {'tam-refined-'+name+'.png' for name in ['original','south','east','north','robe-removed']}
     scenes |= {'tam-refined-original.png','tam-refined-south.png'}
-    assert len(embedded) == 38 and len(engine) == 11
+    scenes |= {'village-original.png','village-replacement.png'}
+    native_gallery |= {'village-east.png','village-north.png','village-garments-removed.png','village-deep-water.png'}
+    assert len(embedded) == 40 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes | {'front-derived-refined.png'}
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 51
+    assert len(archived) == 4 and len(listed) == 57
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes - native_gallery
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
@@ -138,7 +140,9 @@ def main():
     assert all(refined[k] for k in ['native_equip_unequip','native_four_way_facing','native_save_load','saves_settings_preserved'])
     assert hashlib.sha256((ROOT/refined['model_file']).read_bytes()).hexdigest()==refined['model_sha256']
     for name,digest in refined['source_sha256'].items():
-        assert hashlib.sha256((ROOT/'probe'/name).read_bytes()).hexdigest()==digest,name
+        revision=refined.get('source_revision')
+        source=subprocess.check_output(['git','show',revision+':probe/'+name],cwd=ROOT) if revision else (ROOT/'probe'/name).read_bytes()
+        assert hashlib.sha256(source).hexdigest()==digest,name
     for entry in manifest['images']:
         if entry.get('source_evidence')=='evidence/dromad-refined-result.json':
             assert entry['sha256']==refined['native_image_sha256'][entry['source_file']]
@@ -147,6 +151,14 @@ def main():
     assert selected['source_masks_registered_to_refinement'] is False
     assert selected['refined_masks_registered'] and selected['native_integration']
     assert hashlib.sha256((ROOT/'art/dromad/nude'/selected['selected_output']).read_bytes()).hexdigest() == selected['selected_output_sha256']
+    village=json.loads((ROOT/'evidence/village-result.json').read_text(encoding='utf-8'))
+    assert village['resident_count']==16 and len(village['actor_blueprints'])==10 and village['selected_scenery_types']==57
+    assert all(village[k] for k in ['native_equipment_removal_restore','native_save_load','native_shallow_deep_water','saves_settings_preserved'])
+    assert hashlib.sha256((ROOT/village['model_file']).read_bytes()).hexdigest()==village['model_sha256']
+    for name,digest in village['source_sha256'].items():
+        assert hashlib.sha256((ROOT/'probe'/name).read_bytes()).hexdigest()==digest,name
+    for entry in manifest['images']:
+        if entry.get('source_evidence')=='evidence/village-result.json':assert entry['sha256']==village['native_image_sha256'][entry['source_file']]
     print(f'Publication checks passed: {len(files)} public files; {len(listed)} contextual images and {len(art_paths)} artwork/mask assets; links, hashes, evidence source identities, JSON, SVG and Python syntax valid.')
 
 

@@ -154,3 +154,27 @@ exact prompts and selected turnaround, registered body/head/tint layers, actual
 separate equipment layers, and applicable native evidence. Retain unresolved
 requirements in the existing project ledger. Stop at the user's requested scope:
 documenting this method does not itself authorize generating the next creature.
+## Source-bound scenery adaptation
+
+For furniture, plants and terrain, use object blueprint -> native description,
+original tile and palette -> coverage/detail geometry -> optional material
+refinement -> registered object or connected surface. A donor object is a visual
+reference, not an excuse to replace an unfamiliar Qud machine with a generic bench.
+
+Decode the installed shader's mask contract before tracing. In the audited Qud
+build, Kobold dual-color output is
+`A*((1-R)*foreground + R*detail) + (1-A)*background`: alpha is coverage, opaque
+black is primary and opaque white is detail. Do not infer this from a raw mask
+thumbnail or assume alpha is a detail channel. Keep source masks local; publish
+source identity, hashes, editable conversion geometry and contextual native views.
+
+Use world-continuous ground/water textures and neighbor-mask walls where the
+source requires connectivity. Keep liquid depth, open doors and visibility under
+native state ownership. Review seamless material scale in the complete village,
+not only enlarged isolated tiles. Native glyphs and dynamically painted tile
+variants need explicit provenance; they are not automatically non-art exclusions.
+
+For fixed named anatomy, verify appendage count across every view. Two generated
+Yrame proposals still had three feet after correction prompts; explicit four-foot
+geometry replaced that region. Retain rejected proposals and state why they failed.
+This is a fixed authored variant, not a general mutation or clothing resolver.
