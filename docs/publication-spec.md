@@ -63,7 +63,7 @@ Future renderer work is outside this requested deliverable.
 User clarification: the prominent HTML PoC images do not reflect the shader test
 that actually ran. This revises R3's presentation requirement above.
 
-**ACTIVE — Correct and synchronize the experiment presentation (R2-R5).**
+**COMPLETE — Correct and synchronize the experiment presentation (R2-R5).**
 
 Acceptance: README leads with all eleven unaltered engine readbacks, describes
 offscreen material tests separately from scene capture, states that no combined
@@ -71,5 +71,13 @@ Joppa replacement scene was rendered, and links the archived HTML studies. Check
 image provenance, links and public README/image delivery; commit and synchronize.
 No runtime change or new engine experiment is part of this correction.
 
-Remaining: update presentation, verify and synchronize. Blockers: none external.
-Tracked deferrals: none.
+Verified: all eleven README readbacks match the original private experiment files
+and recorded byte sizes (including identical baseline images). Local publication
+checks passed for all links, image hashes, JSON/Python syntax and the separation
+of eleven engine images from four archived concepts. Public rendered README has
+eleven image elements, with all downloads byte-verified. The archive page matches
+its local source. Presentation commit 88a5b7a was read back from origin/main.
+
+No diagnostic source or runtime behavior changed. Remaining acceptance work:
+none. Blockers: none. Tracked deferrals: none. Closure record is synchronized
+and checked against public main as part of final delivery.
