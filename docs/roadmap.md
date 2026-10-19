@@ -5,7 +5,7 @@ gameplay and bounded foreground acceptance evidence. Mouse walking, NPC targetin
 zoom, physical I opening inventory, HUD, native menus and save/quit passed.
 The later art/compatibility work below remains a proposal, not a scheduled release.
 
-## Next proposed gate: measured gameplay stability
+## Next proposed outcome: complete Joppa rendering coverage before bulk art
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short
@@ -16,9 +16,12 @@ The native on-screen menu worked. Menus intentionally show Qud's original
 presentation, and donor rendering returns when gameplay resumes.
 
 The controlled zone/visibility/disable checks remain valid. No broad FPS or
-long-session stability claim follows from the short native run. A bounded measured
-walk, repeated menu/save-load transitions and memory/frame-cost observations are
-the next proposed experiment before broader compatibility or a released mod.
+long-session stability claim follows from the short native run. A separate
+performance gate is unnecessary; investigate measured symptoms during normal
+verification. The next useful work is the missing actor/prop and layered-scene
+integration, using a few faithful assets before generating the complete set.
+See the [integration completeness review](integration-readiness.md) and
+[actual blueprint coverage](../evidence/joppa-coverage.json).
 
 ## Art after the playable slice
 

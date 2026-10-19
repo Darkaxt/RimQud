@@ -11,6 +11,12 @@ checks. Foreground review also verified mouse walking, NPC targeting, zoom,
 physical I opening inventory, the full HUD and mouse-driven save/quit. This is
 an experimental integration, not a released overhaul.
 
+**Coverage remains narrow:** the controlled baseline replaces 10 of 67 selected
+blueprint types; 57 types, including NPCs and furniture, retain native sprites.
+Repeated ground/path cells account for much of the apparent coverage. The next
+step is [completing Joppa's rendering path before bulk art](docs/integration-readiness.md),
+using a few individually referenced, faithful assets to prove that path.
+
 ## Foreground review
 
 Unaltered captures of the actual 1280 × 800 game window, including its native HUD:
