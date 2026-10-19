@@ -5,6 +5,10 @@ param(
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
+if(($IntegrationStage -eq 2 -or $IntegrationStage -eq 4) -and $Mode -ne 'pawns' -or
+   $IntegrationStage -eq 3 -and $Mode -notin @('pawns','joppa')) {
+    throw 'Stages 2/4 require pawns mode; stage 3 requires pawns or joppa mode.'
+}
 $existing = Get-CimInstance Win32_Process -Filter "Name = 'CoQ.exe'"
 if ($existing) { throw 'A Qud process already exists; preserve it and do not launch a competing probe.' }
 $assembly=Join-Path $Game 'CoQ_Data\Managed\Assembly-CSharp.dll'
@@ -30,6 +34,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaRenderer.cs') -Destination
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'GameplayProbe.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'PawnPresentation.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaCoverage.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeApparel.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{

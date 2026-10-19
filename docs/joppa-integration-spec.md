@@ -64,7 +64,7 @@ a complete integrated workflow; source/package/unit checks are diagnostics only.
 | 1. Layered NPC/prop scene | COMPLETE | P1, P2, P6-P8 | Generated Joppa shows one layered human, one animal and a prop with correct ground, direction, transparency, mapped overlap and native input binding; actual camera pairs plus visibility/late-change/fallback checks pass. |
 | 2. Native reactions and lifecycle | COMPLETE | P2, P3, P6-P8 | Real Qud movement/damage drives facing and a finite visible hurt reaction; targeting, menus, save/load and return work with the new scene; no simulation authority transferred. |
 | 3. Joppa coverage | COMPLETE | P1, P2, P4, P6-P8 | Every selected baseline blueprint and observed generated addition has a reviewed explicit rendering decision; known eligible content receives its mapped replacement, required state variants pass, and unsupported content retains verified fallback. |
-| 4. Visible equipped items | NOT STARTED | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
+| 4. Visible equipped items | ACTIVE | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
 
 Stage 1 reconciliation: [fresh engine evidence](../evidence/pawns-stage1-result.json)
 passed the full layered scene and native workflow. Twenty-one paired 1280 x 800
@@ -168,10 +168,33 @@ Stage 3 remaining acceptance/blockers: none. Refactoring assessment: the explici
 75-entry contract is shared by runtime and verification; the small coverage reader
 and prop fixture serve this stage. Alpha-bound pivots use the extracted metadata.
 No general content resolver or render framework was introduced. Stage 4 remains
-required and will become ACTIVE after verified stage-3 publication.
+required and is now ACTIVE after verified stage-3 publication `dd6cfa2`.
+Stage 4 reconciliation: [native evidence](../evidence/pawns-stage4-result.json)
+and [supported items](equipped-items.md) verify actual Body/Back/Head/Hand slots,
+carried-only exclusion, four equipped layers over body/head, hat removal, torso
+swap, item-only tint and final accepted-buffer late-change fallback. Four native
+movement directions, NPC look, actual HP-loss reactions across all six layers,
+native menus, disable/restore, save/load and three scheduler turns passed.
+Unsupported boots and an actual extra arm restore native presentation. Existing
+residents' equipment was unchanged. The generated diagnostic activates the
+apparel path after the inherited baseline checks, then checks every eligible
+visible actor; Stage 3 base mapping counts precede this equipment fit gate.
 
-Tracked deferrals: none. Stage 4 is a named requirement, not permission to weaken
-earlier acceptance. Overall completion requires all stages and final reconciliation.
+Forty-two paired phases and nine asynchronous reaction readbacks passed the
+fresh verifier. The original launcher and verifier exited zero. Normal saves/
+settings were unchanged and twelve Unity preferences restored; native diagnostic/
+cache changes were thirteen created, one removed, one modified. No desktop input
+was used. The source hashes bind eight runtime files to this evidence. An initial
+fixture stacking failure was diagnosed and fixed through native NoStack unequip
+commands confined to its own fixture. No resident stacking or AI was changed.
+
+All runtime acceptance for Stage 4 passes. P6 cleanup disposition and P8 final
+publication/reconciliation remain advancement blockers while this stage is ACTIVE.
+They resolve through reviewed exact-output cleanup, public evidence checks and
+verified remote synchronization. The served six-scene comparison passed actual
+1440 x 1000 and 390 x 844 headless browser checks and visual inspection.
+
+Tracked deferrals: none. No overall completion is claimed until closure.
 
 ## Design boundary
 

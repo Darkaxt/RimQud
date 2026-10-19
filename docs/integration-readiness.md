@@ -115,7 +115,7 @@ feasibility sample into a complete overhaul.
 The previous feasibility stages remain complete. The user has now authorized
 execution. The [authoritative implementation specification](joppa-integration-spec.md)
 owns current stage status and acceptance; the ordered scope below remains the
-design rationale. Stages 1-3 are COMPLETE and stage 4 is NOT STARTED.
+design rationale. Stages 1-3 are COMPLETE and stage 4 is ACTIVE.
 
 1. **COMPLETE — Layered NPC/prop scene.** Use actual locally extracted RimWorld
    human and animal graphics to demonstrate bodies, direction, transparency,
@@ -132,7 +132,7 @@ design rationale. Stages 1-3 are COMPLETE and stage 4 is NOT STARTED.
    Custom Qud artwork remains an individual reference-based conversion process.
    Track mapped, visually reviewed and integrated coverage separately; unknown
    content stays native.
-4. **NOT STARTED — Visible equipped items.** Map a bounded initial selection of
+4. **ACTIVE — Visible equipped items.** Map a bounded initial selection of
    Qud clothing/armor to existing RimWorld worn-apparel graphics. Read the items
    actually equipped and their body slots, not items merely carried in inventory.
    Compose body, head, clothing/armor and held-item layers in the correct visual

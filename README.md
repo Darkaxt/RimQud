@@ -16,7 +16,54 @@ blueprint types; 57 types, including NPCs and furniture, retain native sprites.
 Repeated ground/path cells account for much of that apparent coverage.
 The [staged implementation](docs/joppa-integration-spec.md) has now passed its
 layered human/animal/prop scene, native hurt reactions and an explicit Joppa
-coverage review. Visibly equipped Qud apparel remains the fourth stage.
+coverage review and actual equipped-item integration. All four bounded stages
+passed; faithful art and broader anatomy support remain separate work.
+
+## Actually worn equipment — stage 4
+
+
+
+A native farmer fixture now wears items from its actual Qud body slots. The
+
+before frame shows items carried but unequipped; the after frame shows the
+
+same donor body wearing a tunic, cloak, hat and sword. Both are native engine
+
+frames, not original-versus-overhaul art concepts. The actor is beside the chair
+
+near the lower-left edge of the visible region. The [interactive comparison](comparison.html)
+
+opens an 8x browser crop; full images remain unchanged.
+
+
+
+![Donor body with native items carried but unequipped](docs/images/joppa-apparel-original.png)
+
+
+
+![Same native actor actually wearing equipped items](docs/images/joppa-apparel-replacement.png)
+
+
+
+![Native torso swap to temporary robe counterpart](docs/images/joppa-apparel-swapped.png)
+
+
+
+![All six layers reacting to actual native HP loss](docs/images/joppa-apparel-hurt.png)
+
+
+
+[Supported items and limits](docs/equipped-items.md) and [native evidence](evidence/pawns-stage4-result.json)
+
+cover equip/remove/swap, four directions, item tint, late-change fallback, real
+
+hurt feedback and save/load. Unsupported gear or anatomy restores the native
+
+actor. The current donor Male body is one art template, not comprehensive race,
+
+sex, age or mutation support. Existing residents' equipment was unchanged.
+
+
 
 ## Joppa coverage — stage 3
 

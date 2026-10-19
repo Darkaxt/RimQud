@@ -194,7 +194,7 @@ namespace RenderingTransplantProbe
                 }
             });
         }
-        static void DamageFixture(XRL.World.GameObject victim,string name)
+        public static void DamageFixture(XRL.World.GameObject victim,string name)
         {
             reactionId=victim.BaseID;reactionName=name;reactionMid=false;reactionEnded=false;reactionFinished.Reset();
             int before=victim.Stat("Hitpoints"),amount=1;long ticks=XRLCore.Core.Game.TimeTicks;
@@ -296,7 +296,7 @@ namespace RenderingTransplantProbe
             if(frame.View=="Looker")
             {
                 lookReady=true;
-                ProbeRunner.Record("gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
+                ProbeRunner.Record(Phase=="apparel-look"?"apparel-target-view.json":"gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
                     overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
             }
             if(!awaiting || frame.Phase!=Phase)return;
@@ -359,7 +359,7 @@ namespace RenderingTransplantProbe
             finally{awaiting=false;presented.Set();}};
             if(PawnPresentation.Enabled)pendingCapture=capture;else capture();
         }
-        static void RenderPhase(string name)
+        public static void RenderPhase(string name)
         {
             Phase=name;presented.Reset();awaiting=true;XRLCore.Core.RenderBase();presented.Wait();
             if(ExitCode!=0)throw new InvalidOperationException("Gameplay presentation failed");
@@ -385,6 +385,17 @@ namespace RenderingTransplantProbe
             commands.Enqueue(name);if(wait)commands.Enqueue("CmdWait");
             XRLCore.Core.Game.Player.Body.Energy.BaseValue=1000;XRLCore.Core.PlayerTurn();
             if(commands.Count!=0)throw new InvalidOperationException("Native command sequence did not finish");
+        }
+        public static void TargetApparel(XRL.World.GameObject npc)
+        {
+            int restoreX=targetX,restoreY=targetY,oldLookX=LookX,oldLookY=LookY;
+            targetX=npc.CurrentCell.X;targetY=npc.CurrentCell.Y;
+            escaped=lookReady=false;LookX=LookY=-1;Phase="apparel-look";Command("look",true);
+            if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
+                throw new InvalidOperationException("Native look did not target the equipped NPC");
+            ProbeRunner.Record("apparel-target.json",new{x=LookX,y=LookY,instance=npc.BaseID,nativeLook=true});
+            targetX=restoreX;targetY=restoreY;LookX=oldLookX;LookY=oldLookY;
+            RenderPhase("apparel-look-returned");
         }
         public static void DisposePresentation()
         {
@@ -514,6 +525,7 @@ namespace RenderingTransplantProbe
                 Phase="inventory";Command("CmdInventory",true);
                 if(!menuSeen)throw new InvalidOperationException("Native inventory was not observed");
                 RenderPhase("menu-returned");
+                NativeApparel.RunFixture();
                 Replacement=false;RenderPhase("disabled");Replacement=true;RenderPhase("reenabled");
                 game.SetIntGameState("RimQudProbeMarker",17391);
                 var save=game.SaveGame("RimQudProbe");
@@ -526,6 +538,7 @@ namespace RenderingTransplantProbe
                 if(loaded==null || loaded.GetIntGameState("RimQudProbeMarker")!=17391 ||
                     loaded.Player.Body.CurrentCell.X!=targetX || loaded.Player.Body.CurrentCell.Y!=targetY)
                     throw new InvalidOperationException("Native save/load state did not match");
+                NativeApparel.AfterLoad(loaded);
                 RenderPhase("loaded");
                 long startTicks=loaded.TimeTicks;int completedTurns=0,lastInput=inputSerial;
                 string deathReason=loaded.DeathReason;

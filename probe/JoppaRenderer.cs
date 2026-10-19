@@ -43,7 +43,13 @@ namespace RenderingTransplantProbe
             float ticks=impact.AppliedTicks;var offset=actor.position-anchors[id];
             var block=new MaterialPropertyBlock();var layer=actor.GetComponentInChildren<MeshRenderer>();layer.GetPropertyBlock(block);
             Color color=block.GetColor("_Color");
-            return new JObject{{"instance",id},{"serial",impact.Serial},{"visualTicks",ticks},
+            var layers=new JArray();
+            foreach(var renderer in actor.GetComponentsInChildren<MeshRenderer>())
+            {
+                var properties=new MaterialPropertyBlock();renderer.GetPropertyBlock(properties);var applied=properties.GetColor("_Color");
+                layers.Add(new JObject{{"name",renderer.name},{"color",new JArray(applied.r,applied.g,applied.b,applied.a)}});
+            }
+            return new JObject{{"instance",id},{"serial",impact.Serial},{"visualTicks",ticks},{"layers",layers},
                 {"offsetX",offset.x/CellWidth},{"offsetY",-offset.z},
                 {"color",new JArray(color.r,color.g,color.b,color.a)},{"finished",impact.Finished},
                 {"world",world}};
@@ -111,7 +117,8 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-") || filename.StartsWith("prop-");
+                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-") ||
+                    filename.StartsWith("prop-") || filename.StartsWith("worn-") || filename.StartsWith("held-");
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
             }
@@ -242,7 +249,7 @@ namespace RenderingTransplantProbe
             // Mapped foreground sorts by its ground contact row, not image height.
             return PawnPresentation.Enabled || JoppaCoverage.Enabled?.2f+c.Y*.002f:original;
         }
-        void SpriteLayer(Transform parent,Material material,float width,float height,float x,float z,float layer)
+        MeshRenderer SpriteLayer(Transform parent,Material material,float width,float height,float x,float z,float layer)
         {
             float w=width*CellWidth;var mesh=new Mesh();scene.Add(mesh);
             mesh.vertices=new[]{new Vector3(x*CellWidth-w/2,layer,z-height/2),new Vector3(x*CellWidth-w/2,layer,z+height/2),
@@ -253,6 +260,7 @@ namespace RenderingTransplantProbe
             go.transform.SetParent(parent,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;
             var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterial=material;
             renderer.shadowCastingMode=ShadowCastingMode.Off;renderer.receiveShadows=false;
+            return renderer;
         }
         void Foreground(JoppaCell c)
         {
@@ -269,6 +277,24 @@ namespace RenderingTransplantProbe
                 SpriteLayer(go.transform,Material("Custom/Cutout","human-body-"+direction+".png",skin),1.5f*scale,bodyHeight,0,center,0);
                 SpriteLayer(go.transform,Material("Custom/Cutout","human-head-"+direction+".png",skin),1.5f*scale,1.5f*scale,
                     c.Facing==1 || c.Facing==3?.04f*scale:0,center+.34f*scale,.001f);
+                if(c.Equipment!=null)foreach(var item in c.Equipment)
+                {
+                    MeshRenderer layer;
+                    if(item.Family=="sword")
+                    {
+                        layer=SpriteLayer(go.transform,Material("Custom/Cutout","held-sword.png",item.Color),.85f,.85f,0,0,c.Facing==0?-.0002f:.0016f);
+                        layer.transform.localPosition=new Vector3(.34f*CellWidth,0,.30f);
+                        layer.transform.localRotation=Quaternion.Euler(0,c.Facing==0?-45:c.Facing==2?45:0,0);
+                    }
+                    else
+                    {
+                        bool head=item.Slot=="Head";
+                        layer=SpriteLayer(go.transform,Material("Custom/Cutout","worn-"+item.Family+"-"+direction+".png",item.Color),
+                            1.5f*scale,head?1.5f*scale:bodyHeight,
+                            head && (c.Facing==1 || c.Facing==3)?.04f*scale:0,center+(head?.34f*scale:0),item.Layer*.00002f);
+                    }
+                    layer.name="RimQudEquipped:"+item.Instance+":"+item.Slot;
+                }
             }
             else if(JoppaCoverage.Enabled && c.Kind=="prop" && c.AssetFamily!="chair")
             {
@@ -409,9 +435,10 @@ namespace RenderingTransplantProbe
                     rows.Add(new JObject{{"x",c.X},{"y",c.Y},{"source",c.Source},{"kind",c.Kind},
                         {"instance",c.Instance},{"facing",c.Facing},{"groundKind",c.GroundKind},
                         {"assetFamily",c.AssetFamily},{"doorOpen",c.DoorOpen},{"tile",c.Display.Tile},
+                        {"bodyShape",c.BodyShape},{"apparelFallback",c.ApparelFallback},{"equipment",EquipmentRows(c.Equipment)},
                         {"detailColor",new JArray(c.Display.Detail.r,c.Display.Detail.g,c.Display.Detail.b,c.Display.Detail.a)},
                         {"hFlip",c.Display.HFlip},{"vFlip",c.Display.VFlip},
-                        {"foregroundLayers",mapped?(c.Kind=="human"?2:PawnPresentation.IsLayered(c.Kind)?1:0):0},
+                        {"foregroundLayers",mapped?(c.Kind=="human"?2+(c.Equipment==null?0:c.Equipment.Length):PawnPresentation.IsLayered(c.Kind)?1:0):0},
                         {"feetX",c.X+.5f},{"feetY",c.Y+.86f},
                         {"foregroundDepth",ForegroundDepth(c,.2f)},
                         {"foregroundColor",new JArray(c.Display.Foreground.r,c.Display.Foreground.g,c.Display.Foreground.b,c.Display.Foreground.a)},
@@ -448,6 +475,14 @@ namespace RenderingTransplantProbe
             foreach(var texture in textures.Values)UnityEngine.Object.DestroyImmediate(texture);
             target.Release();UnityEngine.Object.DestroyImmediate(target);
             UnityEngine.Object.DestroyImmediate(camera.gameObject);bundle.Unload(true);
+        }
+        static JArray EquipmentRows(EquippedAppearance[] equipment)
+        {
+            var rows=new JArray();if(equipment==null)return rows;
+            foreach(var item in equipment)rows.Add(new JObject{{"instance",item.Instance},{"blueprint",item.Blueprint},
+                {"slot",item.Slot},{"family",item.Family},{"layer",item.Layer},{"colorCode",item.ColorCode},
+                {"color",new JArray(item.Color.r,item.Color.g,item.Color.b,item.Color.a)}});
+            return rows;
         }
     }
 }

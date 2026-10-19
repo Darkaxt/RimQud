@@ -55,6 +55,13 @@ def main():
         if args.stage >= 2:
             expected[expected.index('moved')+1:expected.index('moved')+1] = [
                 'native-move-back', 'native-move-forward', 'hurt-human-ended', 'hurt-animal-ended']
+        if args.stage >= 4:
+            expected[expected.index('disabled'):expected.index('disabled')] = [
+                'apparel-inventory-only', 'apparel-equipped', 'apparel-hat-removed', 'apparel-swapped',
+                'apparel-tint', 'apparel-tint-restored', 'apparel-late-change', 'apparel-late-restored',
+                'apparel-west', 'apparel-east', 'apparel-north', 'apparel-south', 'apparel-look-returned',
+                'hurt-equipped-ended', 'apparel-unsupported-item', 'apparel-supported-restored',
+                'apparel-unsupported-anatomy']
     assert [f['phase'] for f in frames] == expected
     assert result['frames'] == len(frames)
     summaries, images = [], {}
@@ -163,7 +170,7 @@ def main():
                 assert at['facing'] == (facing if f is native_forward else (facing+2) % 4)
             samples = read('hurt-samples.json')
             hurt_summary = {}
-            for name in ['human', 'animal']:
+            for name in (['human', 'animal', 'equipped'] if args.stage >= 4 else ['human', 'animal']):
                 damage = read('hurt-'+name+'-result.json')
                 assert damage['actualQudDamage'] and damage['hpBefore']-damage['hpAfter'] == 1
                 assert damage['startTicks'] == damage['endTicks'] and not damage['simulationAdvanced']
@@ -187,6 +194,13 @@ def main():
                     images[p.name] = hashlib.sha256(p.read_bytes()).hexdigest()
                     red_counts.append(red(Image.open(p).convert('RGB').crop(region)))
                 assert red_counts[0] > red_counts[-1]+5, (name, red_counts)
+                if name == 'equipped':
+                    assert len(start['layers']) == len(end['layers']) == 6
+                    assert all(layer['color'][0] > .9 and max(layer['color'][1:3]) < .1 for layer in start['layers'])
+                    equipped = first_cell['equipment']
+                    for item in equipped:
+                        layer = next(layer for layer in end['layers'] if layer['name'] == f"RimQudEquipped:{item['instance']}:{item['slot']}")
+                        assert all(abs(a-b)<.00001 for a,b in zip(layer['color'], item['color']))
                 hurt_summary[name] = dict(actual_hp_loss=1, no_game_tick_advance=True,
                     red_pixels=red_counts, visual_ticks=[s['visualTicks'] for s in sequence],
                     finite_flash=True, finite_impact_offset=True)
@@ -194,6 +208,70 @@ def main():
             pawn_summary['native_reactions'] = hurt_summary
             pawn_summary['native_movement_facing'] = True
             pawn_summary['world_rebuilt_after_load'] = True
+        if args.stage >= 4:
+            fixture = read('apparel-fixture.json'); identity = fixture['instance']
+            inventory, full, removed, swapped = [cell(name, identity) for name in [
+                'apparel-inventory-only', 'apparel-equipped', 'apparel-hat-removed', 'apparel-swapped']]
+            assert inventory['mapped'] and inventory['equipment'] == [] and inventory['foregroundLayers'] == 2
+            assert full['mapped'] and full['foregroundLayers'] == 6 and full['apparelFallback'] is None
+            expected_items = {'Woven Tunic':'Body','Leather Cloak':'Back','Wide-brimmed Hat':'Head','Long Sword':'Hand'}
+            assert {e['blueprint']:e['slot'] for e in full['equipment']} == expected_items
+            assert [e['layer'] for e in full['equipment']] == [20,32,70,80]
+            assert all(e['instance'] == fixture['items'][e['blueprint']] for e in full['equipment'])
+            assert removed['mapped'] and removed['foregroundLayers'] == 5
+            assert not any(e['slot'] == 'Head' for e in removed['equipment'])
+            assert swapped['mapped'] and swapped['foregroundLayers'] == 6
+            assert any(e['blueprint'] == 'Cloth Robe' and e['family'] == 'robe' for e in swapped['equipment'])
+            assert not any(e['blueprint'] == 'Woven Tunic' for e in swapped['equipment'])
+            tint, restored = [cell(name, identity) for name in ['apparel-tint','apparel-tint-restored']]
+            assert tint['foregroundColor'] == restored['foregroundColor']
+            for item in tint['equipment']:
+                original = next(e for e in restored['equipment'] if e['instance'] == item['instance'])
+                if item['blueprint'] == 'Cloth Robe':
+                    assert item['color'][0] > 2*item['color'][1] and item['color'] != original['color']
+                else:
+                    assert item['color'] == original['color']
+            cam = by_phase['apparel-tint']['camera']
+            cx,cy = round(tint['screenX']),cam['height']-round(tint['screenY'])
+            region = (cx-22,cy-48,cx+22,cy+24)
+            red_tint = red(Image.open(root/by_phase['apparel-tint']['replacement']).convert('RGB').crop(region))
+            red_restored = red(Image.open(root/by_phase['apparel-tint-restored']['replacement']).convert('RGB').crop(region))
+            assert red_tint > red_restored+5, (red_tint,red_restored)
+            late = cell('apparel-late-change',identity)
+            assert late['requiresOriginal'] and not late['mapped'] and late['equipment'] == []
+            assert 'changed after observation' in late['apparelFallback']
+            assert cell('apparel-late-restored',identity)['mapped']
+            for name,facing in [('west',3),('east',1),('north',0),('south',2)]:
+                c = cell('apparel-'+name,identity)
+                assert c['mapped'] and c['foregroundLayers'] == 6 and c['facing'] == facing and c['nativeInputEnabled']
+                assert (c['inputX'],c['inputY']) == (c['x'],c['y'])
+            south = cell('apparel-south',identity)
+            assert (south['x'],south['y']) == (full['x'],full['y'])
+            assert cell('apparel-west',identity)['x'] == full['x']-1
+            assert cell('apparel-north',identity)['y'] == full['y']-1
+            unsupported = cell('apparel-unsupported-item',identity)
+            assert unsupported['kind'] == 'original' and not unsupported['mapped'] and unsupported['foregroundLayers'] == 0
+            assert 'Leather Boots' in unsupported['apparelFallback']
+            assert cell('apparel-supported-restored',identity)['mapped']
+            before_save, loaded = read('apparel-before-save.json'), read('apparel-load.json')
+            assert before_save['residentEquipmentUnchanged'] and before_save['carriedTunicUnworn']
+            assert before_save['anatomyArms'] == 3
+            anatomy = cell('apparel-unsupported-anatomy',before_save['unsupportedAnatomyInstance'])
+            assert not anatomy['mapped'] and 'Unsupported anatomy' in anatomy['apparelFallback'] and 'Arm=3' in anatomy['bodyShape']
+            assert loaded['nativeSaveLoad'] and loaded['outfit'] == before_save['outfit'] and loaded['instance'] == identity
+            after_load = cell('loaded',identity)
+            assert after_load['mapped'] and after_load['foregroundLayers'] == 6 and len(after_load['equipment']) == 4
+            assert after_load['equipment'] == swapped['equipment']
+            targeted = read('apparel-target.json'); target_view = read('apparel-target-view.json')
+            assert targeted['instance'] == identity and targeted['nativeLook']
+            assert (targeted['x'],targeted['y']) == (south['x'],south['y'])
+            assert target_view['view'] == 'Looker' and not target_view['overlayVisible'] and target_view['nativeHiddenCells'] == 0
+            assert all(not c['equipment'] and c['bodyShape'] is None for f in frames for c in f['cells'] if not c['visible'])
+            pawn_summary['equipped_items'] = dict(actual_native_slots=expected_items, inventory_is_not_equipment=True,
+                native_equip_remove_swap=True, item_tint_pixels=[red_tint,red_restored],
+                late_equipment_change_fallback=True,native_npc_movement_facing=True,layered_hurt=True,
+                native_save_load=True,native_targeting=True,resident_equipment_unchanged=True,
+                unsupported_item_native_fallback=True,unsupported_anatomy_native_fallback=True)
     preservation = read('preservation.json')
     assert preservation['preferences_restored'] and not preservation['changed_save_or_settings_files']
     # Old failed attempts remain diagnostic evidence; they must not belong to this run.

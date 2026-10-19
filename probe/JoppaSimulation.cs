@@ -23,6 +23,8 @@ namespace RenderingTransplantProbe
         public int X,Y,Instance,Facing;
         public int HurtSerial;
         public float HurtDX,HurtDY;
+        public EquippedAppearance[] Equipment;
+        public string BodyShape,ApparelFallback;
         public string Source,Kind,Resolved,GroundKind,AssetFamily;
         public bool Visible,RequiresOriginal,Grass,DoorOpen;
         public int WaterDepth,WaterVolume;
@@ -56,6 +58,7 @@ namespace RenderingTransplantProbe
         {
             if(!GameplayProbe.Presenting || area!=XRLCore.Core.Game.ZoneManager.ActiveZone)return;
             Gameplay=true;zone=area;producer=buffer;phase=GameplayProbe.Phase;expectedView="Stage";
+            NativeApparel.BeginFrame();
             Array.Clear(observations,0,observations.Length);rendering=true;
         }
         public static void EndGameplay(Zone area,ScreenBuffer buffer)
@@ -131,6 +134,7 @@ namespace RenderingTransplantProbe
         {
             if(!prepared || !ReferenceEquals(buffer,producer)){accepted=null;return;}
             if(!Monitor.IsEntered(TextConsole.BufferCS))throw new InvalidOperationException("Joppa publish outside lock");
+            NativeApparel.MutateLate();
             if(PawnPresentation.Enabled && PawnPresentation.InjectLateMutation)
             {
                 var position=PawnPresentation.Human.CurrentCell;
@@ -143,6 +147,7 @@ namespace RenderingTransplantProbe
                 int i=x+80*y;var observed=observations[i];
                 var display=new ConsoleChar();display.Copy(TextConsole.CurrentBuffer.Buffer[x,y]);
                 bool changed=observed==null || observed.Resolved!=Appearance(display);
+                bool equipmentChanged=NativeApparel.Changed(i);
                 // A known wall-paint adapter may change the tile variant only.
                 bool wallPaint=observed!=null && observed.Kind=="wall" && display.Tile!=null &&
                     display.Tile.StartsWith("Walls/wall_brinestalk",StringComparison.OrdinalIgnoreCase) &&
@@ -151,11 +156,14 @@ namespace RenderingTransplantProbe
                     display.Tile!=null && display.Tile.StartsWith("Liquids/Water/",StringComparison.OrdinalIgnoreCase);
                 cells[i]=new JoppaCell{X=x,Y=y,Source=observed==null?null:observed.Source,
                     Visible=observed!=null && observed.Visible,Kind=observed==null?"original":observed.Kind,
-                    RequiresOriginal=changed && !wallPaint && !waterPaint,Display=display,
+                    RequiresOriginal=changed && !wallPaint && !waterPaint || equipmentChanged,Display=display,
                     Instance=observed==null?0:observed.Instance,Facing=observed==null?2:observed.Facing,
                     HurtSerial=observed==null?0:observed.HurtSerial,HurtDX=observed==null?0:observed.HurtDX,HurtDY=observed==null?0:observed.HurtDY,
                     GroundKind=observed==null?null:observed.GroundKind,
                     AssetFamily=observed==null?null:observed.AssetFamily,DoorOpen=observed!=null && observed.DoorOpen,
+                    Equipment=observed==null || equipmentChanged?null:observed.Equipment,
+                    BodyShape=observed==null?null:observed.BodyShape,
+                    ApparelFallback=equipmentChanged?"Equipped appearance changed after observation":observed==null?null:observed.ApparelFallback,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
             }

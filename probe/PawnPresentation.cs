@@ -105,6 +105,7 @@ namespace RenderingTransplantProbe
             if(cell.Objects.Any(o=>o.Blueprint=="DirtPath" && o.Render!=null && o.Render.Visible))result.GroundKind="path";
             else if(cell.Objects.Any(o=>o.Blueprint=="DirtFloor" && o.Render!=null && o.Render.Visible) || KnownPaint(cell.PaintTile))result.GroundKind="ground";
             if(result.WaterDepth>0)result.GroundKind="water";
+            NativeApparel.Capture(obj,result);
         }
         static bool KnownPaint(string tile)
         {
