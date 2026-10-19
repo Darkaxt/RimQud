@@ -1,0 +1,50 @@
+{
+  "blueprint": "Ctesiphus",
+  "lineage": [
+    "Ctesiphus",
+    "Ray Cat",
+    "BaseCat"
+  ],
+  "identity": "Small friendly phosphorescent ray cat, not a humanoid.",
+  "semantic_sources": [
+    "ObjectBlueprints/Creatures.xml: Ctesiphus, Ray Cat, BaseCat",
+    "Bodies.xml: Quadruped",
+    "Display.txt: colors"
+  ],
+  "native_palette": {
+    "foreground": {
+      "code": "m",
+      "hex": "#B154CF"
+    },
+    "detail": {
+      "code": "y",
+      "hex": "#B1C9C3"
+    }
+  },
+  "source_description_summary": "The ray cat's glassy coat fibers bend starlight into strange loops. Ctesiphus lives among Joppa's brinestalk huts and dirt paths.",
+  "required": [
+    "Feline ears, coherent four-legged anatomy, visible tail",
+    "Compact elevated map-game view",
+    "Readable at 32 and 64 pixels",
+    "Purple phosphorescent coat; pale gray details",
+    "Original tile is a secondary shape reference; installed identity and descriptions are primary"
+  ],
+  "reject": [
+    "Humanoid or hooded-wanderer anatomy",
+    "Invented wings, extra heads or paws",
+    "Gold eyes inferred from ANSI color names",
+    "Direction view showing a face on the rear of the head",
+    "Beautiful enlarged artwork that is unreadable at game scale"
+  ],
+  "generation_tool": "Built-in image_gen",
+  "state": "Directional artwork finished for pipeline discussion; paused by user request before native integration or another NPC.",
+  "style_reference": "Locally extracted actual RimWorld Cat directional sprites; shape, elevated view, clean outline and restrained shading. Not a panther body.",
+  "generation_prompts": "generation-prompts.json",
+  "material_contract": "Neutral grayscale albedo for existing native-foreground material tint; browser tint is illustrative. Native independent detail-color handling is unverified.",
+  "review_notes": [
+    "Generated pixels and transparency retained. Canvases and contacts differ between views.",
+    "Native pivots, per-facing physical scale and independent detail color remain to verify.",
+    "West may mirror east for this subject; asymmetrical future anatomy needs explicit review.",
+    "Earlier ornate magenta drafts rejected as a RimWorld style match and retained privately for pipeline discussion."
+  ]
+}

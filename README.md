@@ -24,6 +24,13 @@ The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md
 identifies Joppa's four species families and the named humans' defining mutations.
 New body/age variants and faithful art are not yet claimed as integrated.
 
+[Ctesiphus directional art preview](art/ctesiphus/preview.html) is saved for
+pipeline discussion: three generated neutral-albedo views referenced to the actual
+RimWorld cat, with Qud identity/palette from installed definitions. Artwork is
+finished for review; native integration is unverified and paused by user request.
+The preview shows 32/64-pixel silhouettes and illustrative native-magenta tint.
+[Brief](art/ctesiphus/brief.json) and [exact generation prompts](art/ctesiphus/generation-prompts.json).
+
 ## Actually worn equipment — stage 4
 
 

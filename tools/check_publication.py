@@ -40,7 +40,17 @@ def main():
             width, height = struct.unpack('>II', data[16:24])
             assert width > 0 and height > 0
         listed.add(path.resolve())
-    assert listed == {p.resolve() for p in files if p.suffix in {'.png', '.jpg'}}
+    art = json.loads((ROOT / 'art/manifest.json').read_text(encoding='utf-8'))
+    art_paths = set()
+    for entry in art['images']:
+        path = ROOT / entry['file']
+        assert path.is_relative_to(ROOT / 'art') and path.suffix == '.png'
+        data = path.read_bytes()
+        assert hashlib.sha256(data).hexdigest() == entry['sha256']
+        assert list(struct.unpack('>II', data[16:24])) == entry['size']
+        art_paths.add(path.resolve())
+    assert {entry['direction'] for entry in art['images']} == {'south', 'east', 'north'}
+    assert listed | art_paths == {p.resolve() for p in files if p.suffix in {'.png', '.jpg'}}
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
     embedded = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme)
     engine = {entry['file'] for entry in manifest['images']
@@ -97,7 +107,7 @@ def main():
         revision = apparel.get('source_revision')
         source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT/'probe'/name).read_bytes()
         assert hashlib.sha256(source).hexdigest() == digest, name
-    print(f'Publication checks passed: {len(files)} public files; 22 Joppa views, 11 material readbacks and 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+    print(f'Publication checks passed: {len(files)} public files; 22 Joppa views, 11 material readbacks 4 archived concepts and 3 generated directional assets; links, hashes, reviewed source identities, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

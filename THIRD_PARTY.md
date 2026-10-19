@@ -28,3 +28,9 @@ for the earlier local study. Comparison screenshots combine these sheets with
 Qud's original presentation. The small engine-test images are contextual rendered
 evidence, not a replacement asset pack. Exact file provenance and SHA-256 hashes
 are recorded in [the image manifest](docs/images/provenance.json).
+
+The generated Ctesiphus artwork is a character reinterpretation using Qud identity
+and locally inspected RimWorld Cat style references. Its manifest labels it as
+generated artwork, not an extracted game sprite or native readback. Raw reference
+textures remain local. Character/game rights remain with their respective owners;
+the glue-code MIT license does not grant rights to those underlying properties.

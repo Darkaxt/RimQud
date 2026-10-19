@@ -19,7 +19,7 @@ the runtime body tree after mutation, dismemberment, builders or regeneration.
 | Nima Ruda | human / Humanoid plus mutations | Extra arms, great jeweled spiral tail/stinger, apothecary identity | female tag |
 | Warden Yrame | human / Humanoid plus mutations | Hind/forelegs, great horn tines, rime-veined hands | female tag |
 | Tam | dromad / Humanoid | Long camel-like neck, decorated dulla, ringed ears, hump | male tag |
-| Ctesiphus | cat / Quadruped | Phosphorescent purple ray cat; native gold detail role | male tag |
+| Ctesiphus | cat / Quadruped | Phosphorescent purple ray cat; native pale-gray detail role | male tag |
 | Glowfish | catfish / Fish | Small luminous fish visible through water | neuterperson tag |
 
 These establish four species families: human, dromad, cat and catfish. Mutated
@@ -111,3 +111,7 @@ First prove one faithful subject through the existing native scene before
 generating the remaining inventory. Review the result at normal game scale, with
 native tint/visibility and relevant states, then reuse the established contract.
 Do not equate a beautiful atlas or model sheet with a finished in-game tileset.
+
+Palette correction: the installed Display.txt defines `m` as `#B154CF` and `y`
+as `#B1C9C3`. These are actual palette values, not ANSI color-name assumptions.
+The first blue-violet/gold-eye draft was corrected before native integration.
