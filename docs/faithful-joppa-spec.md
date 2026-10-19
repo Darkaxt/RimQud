@@ -131,7 +131,7 @@ its acceptance requires native integration.
 | --- | --- | --- | --- |
 | 1. Native body and clothing study | COMPLETE | A1, A2, A6 | Source-bound inventory covers observed inhabitants and selected art targets; gender/age uncertainty and runtime anatomy changes are explicit; mutation/clothing findings and concrete art/body contracts are recorded and checked against installed sources. |
 | 2. First faithful tile in native Joppa | COMPLETE | A3, A5, A6 | One referenced subject is generated, visually reviewed at intended scale, packaged, used in the actual native scene and verified with relevant direction/tint/lifecycle behavior. This establishes the art contract without broadening the renderer. |
-| 3. Complete village tiles and bodies | ACTIVE | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
+| 3. Complete village tiles and bodies | COMPLETE | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
 
 Stage 1 QA reconciliation: the source-bound inventory now includes installed
 Biotech Baby/Child body types, alongside Core adult types and life-stage geometry.
@@ -225,9 +225,11 @@ layouts, controls and asset loads passed. The temporary profile, trace/compile
 output and superseded unused face graphics were removed through reviewed helper
 tickets; original inputs and runtime remain. No desktop takeover or mod release.
 
-Stage 3 remains ACTIVE solely for final publication reconciliation and verified
-remote synchronization of source/art/evidence. This is an internal advancement
-blocker, resolved by the authorized commit/push/read-back. No tracked deferrals.
+Stage 3 is COMPLETE. Source/art/evidence commit `adc6821` is synchronized to public
+main; remote branch identity and exact README, contract, native evidence, gallery
+and native image bytes were read back and verified. All A3-A6 criteria assigned
+to this bounded village pass are satisfied. Remaining blockers: none. Tracked
+deferrals: none. This closes the former publication advancement blocker.
 The closure design review found no need for a general rig or rendering framework;
 source geometry, fixed named variants and explicit equipment mappings serve this
 bounded village. Artistic polish remains reviewable interpretation, not a new
