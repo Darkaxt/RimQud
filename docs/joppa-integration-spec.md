@@ -64,7 +64,7 @@ a complete integrated workflow; source/package/unit checks are diagnostics only.
 | 1. Layered NPC/prop scene | COMPLETE | P1, P2, P6-P8 | Generated Joppa shows one layered human, one animal and a prop with correct ground, direction, transparency, mapped overlap and native input binding; actual camera pairs plus visibility/late-change/fallback checks pass. |
 | 2. Native reactions and lifecycle | COMPLETE | P2, P3, P6-P8 | Real Qud movement/damage drives facing and a finite visible hurt reaction; targeting, menus, save/load and return work with the new scene; no simulation authority transferred. |
 | 3. Joppa coverage | COMPLETE | P1, P2, P4, P6-P8 | Every selected baseline blueprint and observed generated addition has a reviewed explicit rendering decision; known eligible content receives its mapped replacement, required state variants pass, and unsupported content retains verified fallback. |
-| 4. Visible equipped items | ACTIVE | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
+| 4. Visible equipped items | COMPLETE | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
 
 Stage 1 reconciliation: [fresh engine evidence](../evidence/pawns-stage1-result.json)
 passed the full layered scene and native workflow. Twenty-one paired 1280 x 800
@@ -188,13 +188,24 @@ was used. The source hashes bind eight runtime files to this evidence. An initia
 fixture stacking failure was diagnosed and fixed through native NoStack unequip
 commands confined to its own fixture. No resident stacking or AI was changed.
 
-All runtime acceptance for Stage 4 passes. P6 cleanup disposition and P8 final
-publication/reconciliation remain advancement blockers while this stage is ACTIVE.
-They resolve through reviewed exact-output cleanup, public evidence checks and
-verified remote synchronization. The served six-scene comparison passed actual
-1440 x 1000 and 390 x 844 headless browser checks and visual inspection.
+Stage 4 remaining acceptance/blockers/deferrals: none. P6 exact-output cleanup
+transaction `996d13571e94868e0aaaa12adab10471` applied all 41 reviewed files
+(4,525,736 logical bytes). Protected empty directories remain. Needed runtime,
+private audit inputs, donor resources and contextual evidence are retained for
+the user's newly authorized art/anatomy scope. No native game process remained.
+P8 source, full native captures and comparison were committed as `6ecfe7d`,
+synchronized and independently checked against anonymous public bytes. The served
+six-scene comparison passed actual 1440 x 1000 and 390 x 844 headless browser
+checks and visual inspection. Refactoring assessment: native equipped-slot
+observation and owned visual layers extend the existing accepted-frame renderer;
+no extra simulation, RPC framework or general anatomy resolver was introduced.
 
-Tracked deferrals: none. No overall completion is claimed until closure.
+Final reconciliation: P1-P8 are satisfied within the explicitly bounded four-stage
+scope. All four stages are COMPLETE; no required blocker or deferral remains.
+The new faithful-art/body-variant/mutation request is separate authorized scope,
+recorded in its own specification rather than retroactively expanding this result.
+This does not establish arbitrary outfits, mutations, race variants, full water
+animation, broad mod compatibility or a released overhaul.
 
 ## Design boundary
 

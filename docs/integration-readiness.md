@@ -132,7 +132,7 @@ design rationale. Stages 1-3 are COMPLETE and stage 4 is ACTIVE.
    Custom Qud artwork remains an individual reference-based conversion process.
    Track mapped, visually reviewed and integrated coverage separately; unknown
    content stays native.
-4. **ACTIVE — Visible equipped items.** Map a bounded initial selection of
+4. **COMPLETE — Visible equipped items.** Map a bounded initial selection of
    Qud clothing/armor to existing RimWorld worn-apparel graphics. Read the items
    actually equipped and their body slots, not items merely carried in inventory.
    Compose body, head, clothing/armor and held-item layers in the correct visual
@@ -169,3 +169,8 @@ source evidence, not executed NPC rendering; see
 
 Decompiled donor source remains private and is removed after this inspection.
 No pawn animation or equipped-apparel integration was implemented by this audit.
+
+Stage 4 now has [actual native evidence](../evidence/pawns-stage4-result.json) and
+[explicit supported items and limits](equipped-items.md). The donor audit above
+is historical source evidence; stages 2 and 4 subsequently executed those bounded
+reaction and equipped-layer workflows. All four integration stages are complete.

@@ -9,7 +9,7 @@ The later art/compatibility work below remains a proposal, not a scheduled relea
 
 Execution is authorized. The [implementation specification](joppa-integration-spec.md)
 governs the four stages. The layered NPC/prop scene, native reactions/lifecycle
-and Joppa coverage are COMPLETE. Visibly equipped items are ACTIVE as stage 4.
+and Joppa coverage are COMPLETE. Visibly equipped items are COMPLETE as stage 4. See the [supported item workflow](equipped-items.md).
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short
@@ -23,8 +23,7 @@ The controlled zone/visibility/disable checks remain valid. No broad FPS or
 long-session stability claim follows from the short native run. A separate
 performance gate is unnecessary; investigate measured symptoms during normal
 verification. The actor/prop scene now uses the user-selected donor humans and
-animals, and hurt feedback follows actual Qud HP loss. Next is explicit Joppa
-coverage, using appropriate existing resources before generating faithful art.
+animals, and hurt feedback follows actual Qud HP loss. The next authorized work is faithful Joppa art, body variants and a mutation/clothing study.
 See the [integration completeness review](integration-readiness.md) and
 [actual blueprint coverage](../evidence/joppa-coverage.json).
 
