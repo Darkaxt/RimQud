@@ -63,7 +63,8 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                texture.wrapMode=TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
+                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-");
+                texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
             }
             mat=new Material(shaders[shader]);mat.mainTexture=texture;mat.SetColor("_Color",color);
@@ -97,10 +98,16 @@ namespace RenderingTransplantProbe
             for(int i=0;i<4;i++)g.Colors.Add(new Color32(255,255,255,(byte)(plant && (i==0 || i==3)?0:255)));
             foreach(int index in new[]{0,1,2,0,2,3})g.Triangles.Add(start+index);
         }
-        static bool CanMap(JoppaCell c){return c.Visible && !c.RequiresOriginal && c.Kind!="original";}
+        static bool CanMap(JoppaCell c)
+        {
+            return c.Visible && !c.RequiresOriginal && c.Kind!="original" &&
+                (!PawnPresentation.IsLayered(c.Kind) || (!string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip));
+        }
+        static string Ground(JoppaCell c){return PawnPresentation.IsLayered(c.Kind)?c.GroundKind:c.Kind;}
         static bool Is(JoppaFrame f,int x,int y,string kind)
         {
-            return x>=0 && x<80 && y>=0 && y<25 && CanMap(f.Cells[x+80*y]) && f.Cells[x+80*y].Kind==kind;
+            if(x<0 || x>=80 || y<0 || y>=25)return false;
+            var c=f.Cells[x+80*y];return CanMap(c) && (kind=="path"?Ground(c):c.Kind)==kind;
         }
         static bool Wet(JoppaFrame f,int x,int y)
         {
@@ -170,6 +177,49 @@ namespace RenderingTransplantProbe
             flush.Invoke(sprite,null);
             return go;
         }
+        static float ForegroundDepth(JoppaCell c,float original)
+        {
+            // Mapped foreground sorts by its ground contact row, not image height.
+            return PawnPresentation.Enabled?.2f+c.Y*.002f:original;
+        }
+        void SpriteLayer(Transform parent,Material material,float width,float height,float x,float z,float layer)
+        {
+            float w=width*CellWidth;var mesh=new Mesh();scene.Add(mesh);
+            mesh.vertices=new[]{new Vector3(x*CellWidth-w/2,layer,z-height/2),new Vector3(x*CellWidth-w/2,layer,z+height/2),
+                new Vector3(x*CellWidth+w/2,layer,z+height/2),new Vector3(x*CellWidth+w/2,layer,z-height/2)};
+            mesh.uv=new[]{new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),new Vector2(1,0)};
+            mesh.triangles=new[]{0,1,2,0,2,3};mesh.RecalculateBounds();
+            var go=new UnityEngine.GameObject("RimQudSpriteLayer");scene.Add(go);go.layer=30;
+            go.transform.SetParent(parent,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;
+            var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterial=material;
+            renderer.shadowCastingMode=ShadowCastingMode.Off;renderer.receiveShadows=false;
+        }
+        void Foreground(JoppaCell c)
+        {
+            string direction=c.Facing==0?"north":c.Facing==2?"south":"east";
+            var go=new UnityEngine.GameObject("RimQudForeground:"+c.Instance);scene.Add(go);go.layer=30;
+            go.transform.position=Point(c.X+.5f,c.Y+.86f,ForegroundDepth(c,.2f));
+            bool flip=(c.Facing==3)^c.Display.HFlip;go.transform.localScale=new Vector3(flip?-1:1,1,1);
+            if(c.Kind=="human")
+            {
+                // Donor Male body: 1 x .9 graphic scale; head offset (.04,.34).
+                const float scale=1.2f,bodyHeight=1.35f*scale;
+                float center=(108f/128f-.5f)*bodyHeight;
+                Color skin=new Color(.82f,.69f,.55f,1)*c.Display.Foreground;
+                SpriteLayer(go.transform,Material("Custom/Cutout","human-body-"+direction+".png",skin),1.5f*scale,bodyHeight,0,center,0);
+                SpriteLayer(go.transform,Material("Custom/Cutout","human-head-"+direction+".png",skin),1.5f*scale,1.5f*scale,
+                    c.Facing==1 || c.Facing==3?.04f*scale:0,center+.34f*scale,.001f);
+            }
+            else
+            {
+                bool animal=c.Kind=="animal";float size=animal?.9f:1.15f;
+                string file=(animal?"cat-":"chair-")+direction+".png";
+                // Explicit alpha-bound feet anchors from the extracted donor images.
+                float bottom=animal?(c.Facing==0?60:c.Facing==2?61:52):(c.Facing==0?61:c.Facing==2?62:60);
+                Color tint=(animal?Color.white:new Color(.62f,.45f,.28f,1))*c.Display.Foreground;
+                SpriteLayer(go.transform,Material("Custom/Cutout",file,tint),size,size,0,(bottom/64f-.5f)*size,0);
+            }
+        }
         void FlushGeometry()
         {
             foreach(var entry in groups)
@@ -228,14 +278,15 @@ namespace RenderingTransplantProbe
                     {
                         if(!counts.ContainsKey(c.Kind))counts[c.Kind]=0;counts[c.Kind]++;
                         if(!live)originals[c.X+80*c.Y].SetActive(false);
-                        bool marsh=c.Kind=="ground" || c.Kind=="tree" || c.Kind=="reed";
+                        string ground=Ground(c);
+                        bool marsh=ground=="ground" || ground=="tree" || ground=="reed" || ground=="water";
                         Quad(Material("Custom/Terrain fade rough",marsh?"marsh.png":"soil.png",
                             Color.white),c.X,c.Y);
                         var pathTint=Color.white;
-                        if(c.Kind=="path")Quad(Material("Custom/Terrain fade rough","sand.png",pathTint),c.X,c.Y,altitude:.005f);
-                        if(c.Kind=="ground")PathTransition(frame,c,Material("Custom/Terrain fade rough","sand.png",pathTint));
-                        if(c.Kind=="ground")PathTransition(frame,c,WaterMaterial(2,true),true);
-                        if(c.Kind=="ground" && c.Grass)
+                        if(ground=="path")Quad(Material("Custom/Terrain fade rough","sand.png",pathTint),c.X,c.Y,altitude:.005f);
+                        if(ground=="ground")PathTransition(frame,c,Material("Custom/Terrain fade rough","sand.png",pathTint));
+                        if(ground=="ground")PathTransition(frame,c,WaterMaterial(2,true),true);
+                        if(ground=="ground" && c.Grass)
                         {
                             float dx=((c.X*13+c.Y*7)%11-5)*.02f,dy=((c.X*3+c.Y*17)%11-5)*.02f;
                             Quad(Material("Custom/Plant cutout","grass.png",Color.white),c.X+.1f+dx,c.Y+.1f+dy,.8f,.8f,.12f,plant:true);grass++;
@@ -244,18 +295,30 @@ namespace RenderingTransplantProbe
                         {
                             int mask=(Is(frame,c.X,c.Y-1,"wall")?1:0)|(Is(frame,c.X+1,c.Y,"wall")?2:0)|
                                 (Is(frame,c.X,c.Y+1,"wall")?4:0)|(Is(frame,c.X-1,c.Y,"wall")?8:0);
-                            masks[mask]++;Quad(Material("Custom/Cutout","wall.png",new Color(.75f,.68f,.48f,1)),c.X,c.Y,altitude:.1f,atlas:mask);
+                            masks[mask]++;Quad(Material("Custom/Cutout","wall.png",new Color(.75f,.68f,.48f,1)),c.X,c.Y,altitude:ForegroundDepth(c,.1f),atlas:mask);
                         }
-                        if(c.Kind=="door")Quad(Material("Custom/Cutout","door.png",Color.white),c.X,c.Y,altitude:.11f);
+                        if(c.Kind=="door")Quad(Material("Custom/Cutout","door.png",Color.white),c.X,c.Y,altitude:ForegroundDepth(c,.11f));
+                        if(PawnPresentation.IsLayered(c.Kind))Foreground(c);
                         if(c.Kind=="crop" || c.Kind=="reed" || c.Kind=="tree")
                         {
                             string texture=c.Kind=="crop"?"crop.png":c.Kind=="reed"?"reed.png":"plant.png";
                             float size=c.Kind=="tree"?2f:1f;
                             Quad(Material("Custom/Plant cutout",texture,Color.white),c.X-(size-1)/2,c.Y-(size-1),size,size,
-                                .15f+(25-c.Y)*.002f,plant:true);
+                                ForegroundDepth(c,.15f+(25-c.Y)*.002f),plant:true);
                         }
                     }
+                    var binding=live && PawnPresentation.IsLayered(c.Kind)?
+                        GameManager.Instance.ConsoleCharacter[c.X,c.Y].GetComponent<TileBehavior>():null;
+                    var screen=live && PawnPresentation.IsLayered(c.Kind)?GameManager.Instance.getScreenTileCenter(c.X,c.Y):Vector3.zero;
                     rows.Add(new JObject{{"x",c.X},{"y",c.Y},{"source",c.Source},{"kind",c.Kind},
+                        {"instance",c.Instance},{"facing",c.Facing},{"groundKind",c.GroundKind},
+                        {"foregroundLayers",mapped?(c.Kind=="human"?2:PawnPresentation.IsLayered(c.Kind)?1:0):0},
+                        {"feetX",c.X+.5f},{"feetY",c.Y+.86f},
+                        {"foregroundDepth",ForegroundDepth(c,.2f)},
+                        {"foregroundColor",new JArray(c.Display.Foreground.r,c.Display.Foreground.g,c.Display.Foreground.b,c.Display.Foreground.a)},
+                        {"inputX",binding==null?-1:binding.x},{"inputY",binding==null?-1:binding.y},
+                        {"nativeInputEnabled",binding!=null && binding.enabled && binding.GetComponents<Collider>().Any(collider=>collider.enabled)},
+                        {"screenX",screen.x},{"screenY",screen.y},
                         {"visible",c.Visible},{"requiresOriginal",c.RequiresOriginal},{"mapped",mapped},
                         {"nativeGrassPaint",c.Grass},{"grassDrawn",mapped && c.Kind=="ground" && c.Grass},
                         {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer}});

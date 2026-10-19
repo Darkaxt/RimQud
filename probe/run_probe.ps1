@@ -1,6 +1,6 @@
 param(
     [string]$Root = 'E:\Temp\qud-transplant-probe-20261019',
-    [ValidateSet('shader','capture','joppa','gameplay','review')][string]$Mode = 'shader',
+    [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
@@ -27,6 +27,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'SceneCapture.cs') -Destination 
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaSimulation.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaRenderer.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'GameplayProbe.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'PawnPresentation.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{
     OptionEnableMods='Yes'; OptionAllowCSMods='Yes'; OptionOutputModAssembly='No';
@@ -45,8 +46,8 @@ if (-not (Test-Path -LiteralPath $baseline)) {
     & python (Join-Path $PSScriptRoot 'profile_guard.py') before --root $Root
     if ($LASTEXITCODE -ne 0) { throw 'Profile baseline failed' }
 }
-$screenWidth=if($Mode -eq 'review'){'1280'}else{'640'}
-$screenHeight=if($Mode -eq 'review'){'800'}else{'480'}
+$screenWidth=if($Mode -in @('review','pawns')){'1280'}else{'640'}
+$screenHeight=if($Mode -in @('review','pawns')){'800'}else{'480'}
 $launchArgs=@('-batchmode','-force-d3d11','-screen-width',$screenWidth,'-screen-height',$screenHeight,'-screen-fullscreen','0',
     '-savepath',$profile,'-sharedpath',$local,'-syncedpath',$synced,
     '-logFile',(Join-Path $Root "unity-$Mode.log"),'STEAM:NO','NOMETRICS','probe')

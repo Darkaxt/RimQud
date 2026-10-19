@@ -57,7 +57,7 @@ namespace RenderingTransplantProbe
                 if (!AudioListener.pause || AudioListener.volume != 0f || SoundManager.MasterVolume != 0f ||
                     XRL.UI.Options.Music || XRL.UI.Options.Sound || XRL.UI.Options.Ambient)
                     throw new InvalidOperationException("Isolated probe audio suppression was not applied");
-                if (mode == "capture" || mode == "joppa" || mode == "gameplay" || mode == "review") return; // Core boot completion triggers simulation.
+                if (mode == "capture" || mode == "joppa" || mode == "gameplay" || mode == "review" || PawnPresentation.Enabled) return; // Core boot completion triggers simulation.
                 ShaderExperiment();
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace RenderingTransplantProbe
             finally
             {
                 string mode = Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE");
-                if (mode != "capture" && mode != "joppa" && mode != "gameplay" && mode != "review")
+                if (mode != "capture" && mode != "joppa" && mode != "gameplay" && mode != "review" && !PawnPresentation.Enabled)
                 {
                     Record("finished.json", new { exitCode = exit });
                     Application.Quit(exit);
@@ -78,6 +78,7 @@ namespace RenderingTransplantProbe
         }
 
         bool captureQuit;
+        void LateUpdate(){GameplayProbe.CaptureAfterLayout();}
         void Update()
         {
             GameplayProbe.ObserveView();

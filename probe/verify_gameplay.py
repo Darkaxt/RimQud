@@ -12,9 +12,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--root', type=Path, required=True)
     ap.add_argument('--output', type=Path, required=True)
+    ap.add_argument('--mode', choices=['gameplay', 'pawns'], default='gameplay')
     args = ap.parse_args()
     root = args.root
-    launch = json.loads((root / 'launch-gameplay.json').read_text(encoding='utf-8-sig'))
+    launch = json.loads((root / ('launch-' + args.mode + '.json')).read_text(encoding='utf-8-sig'))
     started = dt.datetime.fromisoformat(launch['start'].replace('Z', '+00:00')).timestamp()
 
     def read(name):
@@ -24,7 +25,7 @@ def main():
 
     assert read('gameplay-finished.json')['exitCode'] == 0
     runtime = read('runtime.json')
-    assert runtime['mode'] == 'gameplay' and runtime['audioPaused']
+    assert runtime['mode'] == args.mode and runtime['audioPaused']
     assert runtime['listenerVolume'] == runtime['masterVolume'] == runtime['ambientVolume'] == 0
     assert not any(runtime[k] for k in ['musicEnabled', 'soundEnabled', 'ambientEnabled'])
     boot = read('gameplay-boot.json')
@@ -39,10 +40,16 @@ def main():
     assert target['view'] == 'Looker' and menu['view'] == 'StatusScreensScreen' and menu['screen'] == 2
     for view in [target, menu]:
         assert not view['overlayVisible'] and view['nativeHiddenCells'] == 0
-    assert (target['x'], target['y']) == (result['targetX'], result['targetY'])
+    look_target = read('pawn-target.json') if args.mode == 'pawns' else dict(x=result['targetX'], y=result['targetY'])
+    assert (target['x'], target['y']) == (look_target['x'], look_target['y'])
     frames = read('gameplay-frames.json')
     expected = ['baseline', 'moved', 'look-returned', 'menu-returned', 'disabled',
                 'reenabled', 'loaded', 'continuous-returned']
+    if args.mode == 'pawns':
+        expected[1:1] = ['pawn-west', 'pawn-east', 'animal-east', 'animal-north', 'pawn-hidden', 'pawn-visible',
+                         'pawn-late-change', 'pawn-restored', 'pawn-tint',
+                         'pawn-tint-restored', 'prop-front', 'prop-behind']
+        expected.insert(expected.index('menu-returned'), 'pawn-look-returned')
     assert [f['phase'] for f in frames] == expected
     assert result['frames'] == len(frames)
     summaries, images = [], {}
@@ -68,7 +75,7 @@ def main():
             assert path.stat().st_mtime >= started, path
             images[path.name] = hashlib.sha256(path.read_bytes()).hexdigest()
         before, after = [Image.open(p).convert('RGB') for p in paths]
-        assert before.size == after.size == (640, 480)
+        assert before.size == after.size == ((1280, 800) if args.mode == 'pawns' else (640, 480))
         difference = ImageChops.difference(before, after)
         changed = sum(any(pixel) for pixel in difference.get_flattened_data())
         if f['phase'] == 'disabled':
@@ -83,10 +90,67 @@ def main():
     initial, moved = by_phase['baseline']['player'], by_phase['moved']['player']
     assert abs(initial['x']-moved['x']) + abs(initial['y']-moved['y']) == 1
     assert moved == by_phase['loaded']['player'] == dict(x=result['targetX'], y=result['targetY'])
+    pawn_summary = None
+    if args.mode == 'pawns':
+        fixture = read('pawn-fixture.json')
+        ids = [fixture[k] for k in ['human', 'animal', 'prop']]
+        assert len(set(ids)) == 3 and all(i > 0 for i in ids)
+
+        def cell(phase, identity):
+            hits = [c for c in by_phase[phase]['cells'] if c['instance'] == identity]
+            assert len(hits) == 1, (phase, identity, len(hits))
+            return hits[0]
+
+        for name, kind, layers in [('human', 'human', 2), ('animal', 'animal', 1), ('prop', 'prop', 1)]:
+            c = cell('baseline', fixture[name])
+            assert c['mapped'] and c['kind'] == kind and c['foregroundLayers'] == layers
+            assert c['groundKind'] in ['ground', 'path', 'water']
+            assert (c['inputX'], c['inputY']) == (c['x'], c['y'])
+            assert c['nativeInputEnabled']
+            assert c['feetX'] == c['x'] + .5 and abs(c['feetY'] - c['y'] - .86) < .001
+        human_id = fixture['human']
+        assert cell('pawn-west', human_id)['facing'] == 3
+        assert cell('pawn-east', human_id)['facing'] == 1
+        assert cell('animal-east', fixture['animal'])['facing'] == 1
+        assert cell('animal-north', fixture['animal'])['facing'] == 0
+        assert not any(c['instance'] == human_id for c in by_phase['pawn-hidden']['cells'])
+        assert cell('pawn-visible', human_id)['mapped']
+        changed = cell('pawn-late-change', human_id)
+        assert changed['requiresOriginal'] and not changed['mapped'] and changed['foregroundLayers'] == 0
+        assert cell('pawn-restored', human_id)['mapped']
+        for f in frames:
+            for c in f['cells']:
+                if not c['visible']:
+                    assert c['instance'] == 0 and c['groundKind'] is None
+        tint = cell('pawn-tint', human_id)
+        restored = cell('pawn-tint-restored', human_id)
+        assert tint['foregroundColor'][0] > 2 * tint['foregroundColor'][1]
+        assert tint['foregroundColor'] != restored['foregroundColor']
+        cam = by_phase['pawn-tint']['camera']
+        assert cam == by_phase['pawn-tint-restored']['camera'] and cam['nativeLayoutReady']
+        cx, cy = round(tint['screenX']), cam['height'] - round(tint['screenY'])
+        assert 0 <= cx < cam['width'] and 0 <= cy < cam['height'], (cx, cy)
+        crop = (cx - 18, cy - 48, cx + 18, cy + 24)
+        a = Image.open(root / by_phase['pawn-tint']['replacement']).convert('RGB').crop(crop)
+        b = Image.open(root / by_phase['pawn-tint-restored']['replacement']).convert('RGB').crop(crop)
+        tint_pixels = sum(any(pixel) for pixel in ImageChops.difference(a, b).get_flattened_data())
+        assert tint_pixels > 5, tint_pixels
+        red = lambda image: sum(r > 20 and r > 1.4 * g and r > 1.2 * b for r, g, b in image.get_flattened_data())
+        red_tint, red_restored = red(a), red(b)
+        assert red_tint > red_restored + 8, (red_tint, red_restored)
+        assert cell('prop-front', fixture['prop'])['foregroundDepth'] > cell('prop-front', human_id)['foregroundDepth']
+        assert cell('prop-behind', fixture['prop'])['foregroundDepth'] < cell('prop-behind', human_id)['foregroundDepth']
+        assert look_target['nativeLook'] and look_target['instance'] == human_id
+        pawn_summary = dict(layered_human=True, directional_animal=True, prop=True,
+                            known_ground_beneath=True, native_binding=True, directional_change=True,
+                            hidden_identity_excluded=True, late_change_fallback=True,
+                            tint_changed_pixels=tint_pixels, red_tinted_pixels=red_tint,
+                            restored_red_pixels=red_restored, mapped_overlap_order=True,
+                            native_npc_targeting=True)
     preservation = read('preservation.json')
     assert preservation['preferences_restored'] and not preservation['changed_save_or_settings_files']
     # Old failed attempts remain diagnostic evidence; they must not belong to this run.
-    for name in ['gameplay-failure.json', 'joppa-render-failure.json']:
+    for name in ['gameplay-failure.json', 'joppa-render-failure.json', 'gameplay-capture-failure.json']:
         file = root / name
         assert not file.exists() or file.stat().st_mtime < started, f'Current failure: {name}'
     output = dict(scope='Real generated Joppa; native map-camera presentation and internal game inputs',
@@ -100,6 +164,11 @@ def main():
                                'Known asset mappings only; native sprites remain for unmapped content',
                                'Physical mouse/keyboard and final foreground review remain pending'],
                   runtime_diagnostics=preservation['diagnostic_changes'])
+    if pawn_summary:
+        output['pawn_scene'] = pawn_summary
+        output['scope'] += '; layered human/animal/prop fixture with native fallback and known ground'
+    output['source_sha256'] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                               for p in (root / 'profile/Local/Mods/RenderingTransplantProbe').iterdir() if p.suffix == '.cs'}
     args.output.write_text(json.dumps(output, indent=2), encoding='utf-8')
     print('Verified real Joppa presentation, movement, look, inventory, save/load and three continuous native turns.')
 

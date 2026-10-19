@@ -47,20 +47,29 @@ def main():
               if entry['kind'].startswith('Actual Qud-engine readback')}
     scenes = {'joppa-original.png', 'joppa-replacement.png',
               'joppa-gameplay-original.png', 'joppa-gameplay-replacement.png',
+              'joppa-pawns-original.png', 'joppa-pawns-replacement.png',
               'joppa-foreground-hud.jpg', 'joppa-foreground-menu.jpg'}
-    assert len(embedded) == 17 and len(engine) == 11
+    assert len(embedded) == 19 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 21
+    assert len(archived) == 4 and len(listed) == 23
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
     review = json.loads((ROOT / 'evidence/foreground-review.json').read_text())
     assert review['mouse_walking'] and review['native_menu_by_mouse'] and review['native_save_and_quit']
     for name, digest in review['source_sha256'].items():
-        assert hashlib.sha256((ROOT / 'probe' / name).read_bytes()).hexdigest() == digest, name
-    print(f'Publication checks passed: {len(files)} public files, 6 Joppa views and 11 material readbacks in README; 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+        revision = review.get('source_revision')
+        source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
+        assert hashlib.sha256(source).hexdigest() == digest, name
+    pawn = json.loads((ROOT / 'evidence/pawns-stage1-result.json').read_text())
+    assert pawn['stage'] == 1 and all(pawn['pawn_scene'][k] for k in ['layered_human', 'directional_animal', 'native_npc_targeting'])
+    for name, digest in pawn['source_sha256'].items():
+        revision = pawn.get('source_revision')
+        source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
+        assert hashlib.sha256(source).hexdigest() == digest, name
+    print(f'Publication checks passed: {len(files)} public files, 8 Joppa views and 11 material readbacks in README; 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

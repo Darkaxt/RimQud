@@ -112,12 +112,12 @@ feasibility sample into a complete overhaul.
 
 ## Four-step integration sequence, revised by the user
 
-The previous feasibility stages remain complete. The four steps below are
-**NOT STARTED**; this records the requested scope, not executed implementation.
-A concrete implementation specification must retain these requirements and keep
-only one stage ACTIVE.
+The previous feasibility stages remain complete. The user has now authorized
+execution. The [authoritative implementation specification](joppa-integration-spec.md)
+owns current stage status and acceptance; the ordered scope below remains the
+design rationale. Stage 1 is COMPLETE; stages 2-4 are NOT STARTED.
 
-1. **NOT STARTED — Layered NPC/prop scene.** Use actual locally extracted RimWorld
+1. **COMPLETE — Layered NPC/prop scene.** Use actual locally extracted RimWorld
    human and animal graphics to demonstrate bodies, direction, transparency,
    scale/pivots, true ground underneath and overlap with Joppa scenery. Preserve
    native visibility and input coordinates. Custom faithful NPC generation is

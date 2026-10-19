@@ -20,8 +20,8 @@ namespace RenderingTransplantProbe
 {
     public sealed class JoppaCell
     {
-        public int X,Y;
-        public string Source,Kind,Resolved;
+        public int X,Y,Instance,Facing;
+        public string Source,Kind,Resolved,GroundKind;
         public bool Visible,RequiresOriginal,Grass;
         public int WaterDepth,WaterVolume;
         public ConsoleChar Display;
@@ -117,15 +117,23 @@ namespace RenderingTransplantProbe
                     depth=v.IsSwimmingDepth()?3:v.IsWadingDepth()?2:1;
                 }
             }
-            observations[cell.X+80*cell.Y]=new JoppaCell{X=cell.X,Y=cell.Y,Visible=e.Visible,
+            var observation=new JoppaCell{X=cell.X,Y=cell.Y,Visible=e.Visible,
                 Source=e.Visible && selected!=null?selected.Blueprint:null,
                 Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,
                 Grass=e.Visible && cell.PaintTile!=null && cell.PaintTile.IndexOf("grass",StringComparison.OrdinalIgnoreCase)>=0};
+            PawnPresentation.Capture(cell,selected,observation);
+            observations[cell.X+80*cell.Y]=observation;
         }
         public static void Publish(ScreenBuffer buffer)
         {
             if(!prepared || !ReferenceEquals(buffer,producer)){accepted=null;return;}
             if(!Monitor.IsEntered(TextConsole.BufferCS))throw new InvalidOperationException("Joppa publish outside lock");
+            if(PawnPresentation.Enabled && PawnPresentation.InjectLateMutation)
+            {
+                var position=PawnPresentation.Human.CurrentCell;
+                var changedCell=TextConsole.CurrentBuffer.Buffer[position.X,position.Y];
+                changedCell.Tile=null;changedCell.Char='!';
+            }
             var cells=new JoppaCell[2000];
             for(int y=0;y<25;y++)for(int x=0;x<80;x++)
             {
@@ -141,6 +149,8 @@ namespace RenderingTransplantProbe
                 cells[i]=new JoppaCell{X=x,Y=y,Source=observed==null?null:observed.Source,
                     Visible=observed!=null && observed.Visible,Kind=observed==null?"original":observed.Kind,
                     RequiresOriginal=changed && !wallPaint && !waterPaint,Display=display,
+                    Instance=observed==null?0:observed.Instance,Facing=observed==null?2:observed.Facing,
+                    GroundKind=observed==null?null:observed.GroundKind,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
             }

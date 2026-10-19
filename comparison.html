@@ -14,6 +14,7 @@
   .stage{position:relative;aspect-ratio:1920/900;border:1px solid #536450;overflow:hidden;touch-action:pan-y;cursor:ew-resize;background:#000}
   .stage img{display:block;width:100%;height:100%;image-rendering:auto;user-select:none;pointer-events:none}
   .stage.gameplay{aspect-ratio:4/3;max-width:960px;margin-inline:auto}
+  .stage.pawns{aspect-ratio:8/5;max-width:1280px;margin-inline:auto}
   .scenes{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
   button[aria-pressed="true"]{background:#526342;border-color:#c4c87d}
   .after{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
@@ -36,10 +37,10 @@
     <h1>Joppa, with donor materials.</h1>
     <p class="lead">One native Qud map, two presentations. Drag the divider or use the controls below. These images came from Qud's Unity runtime; this page only compares the saved captures.</p>
   </header>
-  <nav class="scenes" aria-label="Capture scene"><button type="button" data-scene="gameplay" aria-pressed="true">Actual gameplay camera</button><button type="button" data-scene="village" aria-pressed="false">Full-village simulation</button></nav>
-  <div class="stage gameplay" id="stage" aria-label="Original and donor-material Joppa comparison">
-    <img id="originalImage" src="docs/images/joppa-gameplay-original.png" alt="Original Qud map-camera view after native save/load in generated Joppa" draggable="false">
-    <div class="after" id="after"><img id="replacementImage" src="docs/images/joppa-gameplay-replacement.png" alt="Same actual map-camera frame with donor presentation and native fallback" draggable="false"></div>
+  <nav class="scenes" aria-label="Capture scene"><button type="button" data-scene="pawns" aria-pressed="true">Layered humans, cat and prop</button><button type="button" data-scene="gameplay" aria-pressed="false">Earlier gameplay camera</button><button type="button" data-scene="village" aria-pressed="false">Full-village simulation</button></nav>
+  <div class="stage pawns" id="stage" aria-label="Original and donor-material Joppa comparison">
+    <img id="originalImage" src="docs/images/joppa-pawns-original.png" alt="Original generated Joppa with isolated farmer, cat and chair fixture" draggable="false">
+    <div class="after" id="after"><img id="replacementImage" src="docs/images/joppa-pawns-replacement.png" alt="Same accepted frame with layered donor humans, directional cat, chair and native fallback" draggable="false"></div>
     <div class="divider" id="divider"></div>
     <span class="tag before">Original Qud sprites</span><span class="tag donor">Donor materials + Qud fallback</span>
   </div>
@@ -49,12 +50,12 @@
     <button type="button" data-cut="0">Donor materials</button>
     <label for="cut">Original coverage <input id="cut" type="range" min="0" max="100" value="50"><output id="coverage" for="cut">50%</output></label>
   </div>
-  <p class="note" id="sceneNote" aria-live="polite">Actual Qud map camera · generated Joppa · native field of view · after save/load · separate HUD canvases omitted</p>
-  <p>Gameplay integration passed native movement, coordinate-bearing look input, modern inventory open/close, save/load and three turns through the normal game loop. The donor layer clears for targeting and menus. Physical mouse/keyboard, long-session stability and FPS remain unverified.</p>
-  <p>Ground, paths, grass, crops, reeds, trees, doors, water and the main brinestalk walls use donor materials. The full-village simulation contains 274 grass clumps at Qud's native paint locations and 51 connected shallow-water cells. NPCs, furniture and unmapped structures keep Qud's sprites; native foregrounds over mapped water expose the liquid underneath.</p>
+  <p class="note" id="sceneNote" aria-live="polite">Stage 1 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · separate HUD canvases omitted</p>
+  <p>Stage 1 adds layered donor humans, a directional cat and a chair with native ground underneath. It passed facing, tint, hiding, late-change fallback, mapped overlap and native targeting/save-load checks. Hurt reactions and equipped apparel remain later stages. Earlier foreground review passed basic controls; keyboard movement, long-session stability and FPS remain unverified.</p>
+  <p>Ground, paths, grass, crops, reeds, trees, doors, water and the main brinestalk walls use donor materials. The earlier full-village simulation contains 274 grass clumps at Qud's native paint locations and 51 connected shallow-water cells. In that earlier simulation NPCs, furniture and unmapped structures keep Qud's sprites; native foregrounds over mapped water expose the liquid underneath.</p>
   <p>Path interiors and their eight-neighbor transitions share the same donor material, texture sampling and terrain precedence. Shallow/deep appearance follows Qud's actual volume thresholds; all baseline ponds are wading depth. The liquid adapter uses donor ramp textures, not RimWorld's complete animated water pipeline.</p>
   <p>The separate full-village simulation loads <code>Joppa.rpm</code> over an explicit dirt-floor fill: 80 × 25 cells, 996 authored placements, 1,810 mapped cells and 190 native fallback cells. The gameplay captures above use a real generated world and map native painted ground directly; Qud's camera effects are preserved.</p>
-  <div class="links"><a id="originalLink" href="docs/images/joppa-gameplay-original.png">Full-resolution original</a><a id="replacementLink" href="docs/images/joppa-gameplay-replacement.png">Full-resolution donor view</a><a href="docs/joppa-experiment.md">Experiment and acceptance</a><a href="README.md">Project README</a></div>
+  <div class="links"><a id="originalLink" href="docs/images/joppa-pawns-original.png">Full-resolution original</a><a id="replacementLink" href="docs/images/joppa-pawns-replacement.png">Full-resolution donor view</a><a href="docs/joppa-integration-spec.md">Implementation and acceptance</a><a href="README.md">Project README</a></div>
   <footer>Qud and RimWorld content belongs to its respective creators. <a href="THIRD_PARTY.md">Provenance and notices</a>.</footer>
 </main>
 <script>
@@ -63,16 +64,17 @@
   cut.addEventListener('input',()=>update(cut.value));
   document.querySelectorAll('[data-cut]').forEach(button=>button.addEventListener('click',()=>update(button.dataset.cut)));
   document.querySelectorAll('[data-scene]').forEach(button=>button.addEventListener('click',()=>{
-    const gameplay=button.dataset.scene==='gameplay', prefix=gameplay?'joppa-gameplay':'joppa';
+    const gameplay=button.dataset.scene==='gameplay', pawns=button.dataset.scene==='pawns', prefix=pawns?'joppa-pawns':gameplay?'joppa-gameplay':'joppa';
     stage.classList.toggle('gameplay',gameplay);
+    stage.classList.toggle('pawns',pawns);
     for(const side of ['original','replacement']){
       const path=`docs/images/${prefix}-${side}.png`;
       document.querySelector(`#${side}Image`).src=path;
       document.querySelector(`#${side}Link`).href=path;
     }
-    document.querySelector('#originalImage').alt=gameplay?'Original Qud map-camera view after native save/load in generated Joppa':"Qud's original resolved sprites across the full authored village simulation";
-    document.querySelector('#replacementImage').alt=gameplay?'Same actual map-camera frame with donor presentation and native fallback':'Same full-village simulation with donor materials and native fallback';
-    document.querySelector('#sceneNote').textContent=gameplay?'Actual Qud map camera · generated Joppa · native field of view · after save/load · separate HUD canvases omitted':'Full-village simulation · explicit dirt-floor fill · 1,810 mapped cells · 190 native fallback cells';
+    document.querySelector('#originalImage').alt=pawns?'Original generated Joppa with isolated farmer, cat and chair fixture':gameplay?'Original Qud map-camera view after native save/load in generated Joppa':"Qud's original resolved sprites across the full authored village simulation";
+    document.querySelector('#replacementImage').alt=pawns?'Same accepted frame with layered donor humans, directional cat, chair and native fallback':gameplay?'Same actual map-camera frame with donor presentation and native fallback':'Same full-village simulation with donor materials and native fallback';
+    document.querySelector('#sceneNote').textContent=pawns?'Stage 1 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · separate HUD canvases omitted':gameplay?'Actual Qud map camera · generated Joppa · native field of view · after save/load · separate HUD canvases omitted':'Full-village simulation · explicit dirt-floor fill · 1,810 mapped cells · 190 native fallback cells';
     document.querySelectorAll('[data-scene]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
   }));
   function drag(event){const bounds=stage.getBoundingClientRect();update(Math.max(0,Math.min(100,(event.clientX-bounds.left)/bounds.width*100)));}

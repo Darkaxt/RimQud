@@ -5,7 +5,10 @@ gameplay and bounded foreground acceptance evidence. Mouse walking, NPC targetin
 zoom, physical I opening inventory, HUD, native menus and save/quit passed.
 The later art/compatibility work below remains a proposal, not a scheduled release.
 
-## Next proposed outcome: complete Joppa rendering coverage before bulk art
+## Active implementation: complete Joppa rendering coverage before bulk art
+
+Execution is authorized. The [implementation specification](joppa-integration-spec.md)
+governs the four stages; stage 1, the layered NPC/prop scene, is COMPLETE.
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short

@@ -11,13 +11,30 @@ checks. Foreground review also verified mouse walking, NPC targeting, zoom,
 physical I opening inventory, the full HUD and mouse-driven save/quit. This is
 an experimental integration, not a released overhaul.
 
-**Coverage remains narrow:** the controlled baseline replaces 10 of 67 selected
+**Earlier coverage was narrow:** the controlled baseline replaced 10 of 67 selected
 blueprint types; 57 types, including NPCs and furniture, retain native sprites.
-Repeated ground/path cells account for much of the apparent coverage. The next
-step is [completing Joppa's rendering path before bulk art](docs/integration-readiness.md),
-using existing RimWorld humans/animals as temporary NPC graphics. Hurt reactions
-and a fourth step for visibly equipped Qud apparel are included in that scope;
-they have not yet been implemented.
+Repeated ground/path cells account for much of that apparent coverage.
+The [staged implementation](docs/joppa-integration-spec.md) has now passed its
+first layered human/animal/prop scene. Hurt reactions, wider coverage and visibly
+equipped Qud apparel remain subsequent stages.
+
+## Layered NPC/prop integration — stage 1
+
+Actual 1280 × 800 native map-camera captures from generated Joppa. The isolated
+fixture relocates an existing farmer, Ctesiphus and chair near the player. Humans
+use separate donor body/head layers; the cat uses directional donor graphics.
+Known native ground stays beneath them, and mapped foregrounds sort by contact
+row. Qud's colors, camera effects and original fallback remain. Separate HUD
+canvases are omitted from these readbacks.
+
+![Generated Joppa pawn fixture with original sprites](docs/images/joppa-pawns-original.png)
+
+![Same accepted pawn fixture with donor humans, cat and chair](docs/images/joppa-pawns-replacement.png)
+
+[Stage 1 verification](evidence/pawns-stage1-result.json) covers direction, tint,
+visibility, late changes, overlap and native targeting/save-load behavior.
+These are temporary NPC graphics, not a faithful completed tileset. No hurt or
+apparel animation is claimed by this stage.
 
 ## Foreground review
 

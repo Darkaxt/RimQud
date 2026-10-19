@@ -30,7 +30,7 @@ namespace RenderingTransplantProbe
         {
             if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "capture") SceneCapture.Run();
             if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "joppa") JoppaSimulation.Run();
-            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "gameplay") GameplayProbe.Run();
+            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "gameplay" || PawnPresentation.Enabled) GameplayProbe.Run();
         }
     }
 

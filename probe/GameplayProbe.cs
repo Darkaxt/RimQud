@@ -97,7 +97,7 @@ namespace RenderingTransplantProbe
         public static volatile bool Done;
         public static int ExitCode;
         static int started;
-        public static bool Automated { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="gameplay"; } }
+        public static bool Automated { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="gameplay" || PawnPresentation.Enabled; } }
         public static bool ActiveMode { get { return Automated || Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="review"; } }
         static string lastView;
         static string reviewState;
@@ -118,6 +118,18 @@ namespace RenderingTransplantProbe
         static readonly Renderer[] hidden=new Renderer[2000];
         static readonly bool[] previous=new bool[2000];
         static readonly System.Reflection.MethodInfo flush=AccessTools.Method(typeof(exStandaloneSprite),"LateUpdate");
+        static readonly System.Reflection.FieldInfo layoutRefresh=AccessTools.Field(typeof(LetterboxCamera),"_Refresh");
+        static Action pendingCapture;
+
+        public static void CaptureAfterLayout()
+        {
+            if(pendingCapture==null)return;
+            var layout=GameManager.MapCamera.GetComponent<LetterboxCamera>();
+            // Native layout owns a view-transition delay and refresh state. Wait
+            // for its actual completion, not an invented sleep or elapsed deadline.
+            if(layout.UpdateDelay>0 || (bool)layoutRefresh.GetValue(layout))return;
+            var capture=pendingCapture;pendingCapture=null;capture();
+        }
 
         public static void RestoreCell(int x,int y)
         {
@@ -196,8 +208,21 @@ namespace RenderingTransplantProbe
                     overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
             }
             if(!awaiting || frame.Phase!=Phase)return;
-            try
+            Action capture=()=>{try
             {
+                if(PawnPresentation.Enabled)
+                {
+                    foreach(JObject cell in (JArray)result["cells"])
+                    {
+                        if(!PawnPresentation.IsLayered((string)cell["kind"]))continue;
+                        var point=GameManager.Instance.getScreenTileCenter((int)cell["x"],(int)cell["y"]);
+                        cell["screenX"]=point.x;cell["screenY"]=point.y;
+                    }
+                    var camera=GameManager.MapCamera;
+                    result["camera"]=new JObject{{"width",Screen.width},{"height",Screen.height},
+                        {"orthographicSize",camera.orthographicSize},{"positionX",camera.transform.position.x},
+                        {"positionY",camera.transform.position.y},{"nativeLayoutReady",true}};
+                }
                 Hide();string original=Capture(Phase+"-original");
                 if(show)Cover(renderer.Covered);
                 string replacement=Capture(Phase+"-replacement");
@@ -230,7 +255,12 @@ namespace RenderingTransplantProbe
                     screenX=screen.x,screenY=screen.y,screenZ=screen.z});
                 frames.Add(result);ProbeRunner.Record("gameplay-frames.json",frames);
             }
-            finally{awaiting=false;presented.Set();}
+            catch(Exception ex)
+            {
+                ExitCode=1;ProbeRunner.Record("gameplay-capture-failure.json",new{exception=ex.ToString()});
+            }
+            finally{awaiting=false;presented.Set();}};
+            if(PawnPresentation.Enabled)pendingCapture=capture;else capture();
         }
         static void RenderPhase(string name)
         {
@@ -323,6 +353,7 @@ namespace RenderingTransplantProbe
                 var core=XRLCore.Core;var body=game.Player.Body;var start=body.CurrentCell;
                 GameManager.focused=true;GameManager.Instance.SetGameViewStack("Stage");
                 body.CurrentZone.SetActive();core.UpdateGlobalChoices();Presenting=true;
+                PawnPresentation.Setup(game);
                 string direction=null;
                 foreach(string d in new[]{"E","W","S","N"})
                 {
@@ -331,13 +362,43 @@ namespace RenderingTransplantProbe
                     {direction=d;targetX=candidate.X;targetY=candidate.Y;break;}
                 }
                 if(direction==null)throw new InvalidOperationException("No unobstructed native movement fixture");
-                RenderPhase("baseline");Command("CmdMove"+direction);RenderPhase("moved");
+                RenderPhase("baseline");
+                if(PawnPresentation.Enabled)
+                {
+                    var human=PawnPresentation.Human;var original=human.CurrentCell;
+                    PawnPresentation.Place(human,original.ParentZone.GetCell(original.X-1,original.Y));RenderPhase("pawn-west");
+                    PawnPresentation.Place(human,original);RenderPhase("pawn-east");
+                    var animal=PawnPresentation.Animal;var animalStart=animal.CurrentCell;
+                    PawnPresentation.Place(animal,animalStart.ParentZone.GetCell(animalStart.X+1,animalStart.Y));RenderPhase("animal-east");
+                    PawnPresentation.Place(animal,animal.CurrentCell.ParentZone.GetCell(animal.CurrentCell.X,animal.CurrentCell.Y-1));RenderPhase("animal-north");
+                    human.Render.Visible=false;RenderPhase("pawn-hidden");human.Render.Visible=true;RenderPhase("pawn-visible");
+                    PawnPresentation.InjectLateMutation=true;RenderPhase("pawn-late-change");
+                    PawnPresentation.InjectLateMutation=false;RenderPhase("pawn-restored");
+                    string color=human.Render.ColorString,tileColor=human.Render.TileColor;
+                    human.Render.ColorString="&R";human.Render.TileColor="&R";RenderPhase("pawn-tint");
+                    human.Render.ColorString=color;human.Render.TileColor=tileColor;RenderPhase("pawn-tint-restored");
+                    var prop=PawnPresentation.Prop;var propStart=prop.CurrentCell;
+                    PawnPresentation.Place(prop,original.ParentZone.GetCell(original.X,original.Y+1));RenderPhase("prop-front");
+                    PawnPresentation.Place(prop,propStart);RenderPhase("prop-behind");
+                }
+                Command("CmdMove"+direction);RenderPhase("moved");
                 if(body.CurrentCell.X!=targetX || body.CurrentCell.Y!=targetY)
                     throw new InvalidOperationException("Native movement did not reach the displayed adjacent cell");
                 Phase="look";Command("look",true);
                 if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
                     throw new InvalidOperationException("Native target look flow did not complete");
                 RenderPhase("look-returned");
+                if(PawnPresentation.Enabled)
+                {
+                    int restoreX=targetX,restoreY=targetY;
+                    targetX=PawnPresentation.Human.CurrentCell.X;targetY=PawnPresentation.Human.CurrentCell.Y;
+                    escaped=lookReady=false;LookX=LookY=-1;Phase="pawn-look";Command("look",true);
+                    if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
+                        throw new InvalidOperationException("Native NPC look did not target the displayed human");
+                    ProbeRunner.Record("pawn-target.json",new{x=LookX,y=LookY,instance=PawnPresentation.Human.BaseID,
+                        nativeLook=true,operatingSystemInput=false});
+                    targetX=restoreX;targetY=restoreY;RenderPhase("pawn-look-returned");
+                }
                 Phase="inventory";Command("CmdInventory",true);
                 if(!menuSeen)throw new InvalidOperationException("Native inventory was not observed");
                 RenderPhase("menu-returned");
