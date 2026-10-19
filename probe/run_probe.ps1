@@ -3,7 +3,7 @@ param(
     [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
     [ValidateRange(1,4)][int]$IntegrationStage = 1,
     [switch]$CatalogueOnly,
-    [ValidateSet('donor','ray-cat','dromad')][string]$ArtSet = 'donor',
+    [ValidateSet('donor','ray-cat','dromad','dromad-refined')][string]$ArtSet = 'donor',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
@@ -15,7 +15,7 @@ if($ArtSet -eq 'ray-cat' -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or
     throw 'Ray-cat art requires its packaged contract and pawns stage 4.'
 }
 $existing = Get-CimInstance Win32_Process -Filter "Name = 'CoQ.exe'"
-if($ArtSet -eq 'dromad' -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or -not (Test-Path -LiteralPath (Join-Path $Root 'dromad.json')))) {
+if($ArtSet -in @('dromad','dromad-refined') -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or -not (Test-Path -LiteralPath (Join-Path $Root "$ArtSet.json")))) {
     throw 'Dromad sample requires its packaged contract and pawns stage 4.'
 }
 if ($existing) { throw 'A Qud process already exists; preserve it and do not launch a competing probe.' }

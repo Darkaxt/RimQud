@@ -55,8 +55,9 @@ Current authoring checkpoint: the user selected the front-derived, refined
 unclothed turnaround on 2026-10-20 ("I love the result"). The selected image,
 exact input/prompts and limits are retained under art/dromad/nude. Native source
 identity is resolved; interpretation of unseen surfaces remains explicit.
-Refined view registration, body/head segmentation and garment extraction are
-internal advancement blockers, not verified by the earlier clothed Tam run.
+Refined view registration, body/head segmentation and garment extraction were
+subsequently verified through the separate selected-base native run below.
+The earlier vector-only run remains historical evidence for its own model.
 Stage 3 remains ACTIVE. No tracked deferrals; other village requirements remain.
 
 2026-10-20 priority clarification: the reusable procedure retains available Qud
@@ -150,3 +151,30 @@ unchanged renderer behavior evidence. Generate one subject at a time, review
 native visuals in batches by body family, and rerun behavior checks only when
 relevant integration code changes. A3-A6 still require the complete village
 coverage and native integration; there is no per-NPC full-regression gate.
+
+Stage 3 selected Tam reconciliation (2026-10-20): the approved unclothed sheet is
+registered at one physical pixel scale, with per-facing feet contacts and explicit
+body/head/neck/dulla masks. The actual Cloth Robe was refined in context, returned
+as a separate garment and registered without stretching its views. Recorded
+alpha cutouts remove closed cuff strokes which crossed the unchanged hands.
+Shillelagh uses the actual Right Hand (laterality 2); unsupported handedness or
+equipment retains native graphics. Arms, hands and feet remain pixels in the
+body texture, not articulated limb models. The renderer uses flat directional
+layers; this sample does not claim drop-in donor PawnRenderTree compatibility.
+
+[The selected-base native evidence](../evidence/dromad-refined-result.json)
+verifies four-way facing, measured layer contact/scale, actual equip/unequip,
+independent native palette roles, visibility, late equipment/topology fallback,
+native look, hurt without simulation advance and save/load. Source RGB retention,
+complete body/head mask coverage and alpha-only garment extraction were checked.
+The hidden run exited successfully and restored Unity preferences; normal saves
+and settings were unchanged. Full native frames and the public layer inspector
+are separate evidence from the enlarged authoring preview.
+
+This satisfies the bounded Tam sample's A3/A4/A5 acceptance. Stage 3 stays ACTIVE:
+other selected village targets, required body-family age/sex variants and their
+integrated batch acceptance remain internal advancement blockers. Their resolution
+requires authoring and integrating those subjects; full-village completion cannot
+be claimed until that work passes. No tracked deferrals. The extraction rule is
+recorded in the repository conversion skill. Scope review found no need for a
+new rig, general renderer or mutation-clothing framework for this sample.

@@ -15,7 +15,8 @@ namespace RenderingTransplantProbe
 {
     public static class DromadArt
     {
-        public static bool Enabled { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_ART")=="dromad"; } }
+        public static bool Refined { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_ART")=="dromad-refined"; } }
+        public static bool Enabled { get { return Refined || Environment.GetEnvironmentVariable("QUDEXPERIMENT_ART")=="dromad"; } }
         static JObject contract;
         public static JObject Contract
         {
@@ -23,7 +24,7 @@ namespace RenderingTransplantProbe
             {
                 if(contract==null)
                 {
-                    contract=JObject.Parse(File.ReadAllText(Path.Combine(ProbeRunner.Root,"dromad.json")));
+                    contract=JObject.Parse(File.ReadAllText(Path.Combine(ProbeRunner.Root,Refined?"dromad-refined.json":"dromad.json")));
                     if((string)contract["creature"]!="Tam" || (string)contract["race"]!="Dromad" || contract["original_model"]==null)
                         throw new InvalidDataException("Missing source-bound Tam race contract");
                 }
@@ -45,7 +46,7 @@ namespace RenderingTransplantProbe
             {
                 var item=p.Equipped;if(item==null || items.Any(e=>e.Instance==item.BaseID))continue;
                 string family=item.Blueprint=="Cloth Robe" && p.Type=="Body"?"robe":
-                    item.Blueprint=="Shillelagh" && p.Type=="Hand"?"shillelagh":null;
+                    item.Blueprint=="Shillelagh" && p.Type=="Hand" && (!Refined || p.Laterality==(int)Contract["held_part_laterality"])?"shillelagh":null;
                 var r=item.Render;string color=r==null?"&y":string.IsNullOrEmpty(r.TileColor)?r.ColorString:r.TileColor;
                 var tint=ColorUtility.colorFromChar(ColorUtility.ParseForegroundColor(color));
                 items.Add(new EquippedAppearance{Instance=item.BaseID,Blueprint=item.Blueprint,Slot=p.Type,Family=family,

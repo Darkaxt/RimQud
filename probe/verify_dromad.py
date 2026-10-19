@@ -13,12 +13,14 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--root',type=Path,required=True)
     ap.add_argument('--output',type=Path,required=True)
+    ap.add_argument('--art-set',choices=['dromad','dromad-refined'],default='dromad')
     args=ap.parse_args();root=args.root
     repo=Path(__file__).resolve().parents[1]
     sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
     launch=json.loads((root/'launch-pawns.json').read_text(encoding='utf-8-sig'))
     started=dt.datetime.fromisoformat(launch['start'].replace('Z','+00:00')).timestamp()
-    assert launch['artSet']=='dromad' and launch['integrationStage']==4 and '-batchmode' in launch['arguments']
+    refined=args.art_set=='dromad-refined'
+    assert launch['artSet']==args.art_set and launch['integrationStage']==4 and '-batchmode' in launch['arguments']
     def read(name):
         p=root/name;assert p.stat().st_mtime>=started,('Stale evidence',name)
         return json.loads(p.read_text(encoding='utf-8-sig'))
@@ -28,9 +30,28 @@ def main():
     runtime=read('runtime.json');assert runtime['audioPaused'] and runtime['listenerVolume']==runtime['masterVolume']==0
     assert not any(runtime[k] for k in ['musicEnabled','soundEnabled','ambientEnabled'])
     preservation=read('preservation.json');assert preservation['preferences_restored'] and not preservation['changed_save_or_settings_files']
-    contract=json.loads((repo/'art/dromad/rebuilt/model.json').read_text())
+    model=repo/('art/dromad/layered/model.json' if refined else 'art/dromad/rebuilt/model.json')
+    contract=json.loads(model.read_text())
     assert result['contract']==contract
-    assert contract['authoring']=='Explicit SVG paths; resvg-py==0.5.0; no ImageGen'
+    if not refined:assert contract['authoring']=='Explicit SVG paths; resvg-py==0.5.0; no ImageGen'
+    else:
+        assert contract['held_part_laterality']==2
+        assert sha(repo/'art/dromad/nude/front-derived-refined.png')==contract['selected_base_sha256']
+        assert sha(repo/contract['robe_registration']['source'])==contract['robe_source_sha256']
+        base=Image.open(repo/contract['registration']['source']).convert('RGBA')
+        garment=Image.open(repo/contract['robe_registration']['source']).convert('RGBA')
+        for direction,points in contract['registration']['views'].items():
+            w,h=contract['registration']['canvas'];x=points['source_x']
+            source=base.crop((x,0,x+w,h));alpha=source.getchannel('A').point(lambda a:0 if a<8 else a)
+            parts=[Image.open(repo/f'art/dromad/layered/{name}-{direction}.png').convert('RGBA') for name in ['body','head']]
+            assert all(ImageChops.difference(p.convert('RGB'),source.convert('RGB')).getbbox() is None for p in parts)
+            assert ImageChops.difference(ImageChops.lighter(*(p.getchannel('A') for p in parts)),alpha).getbbox() is None
+            rp=contract['robe_registration']['views'][direction];rw,rh=contract['robe_registration']['canvas']
+            raw=garment.crop((rp['source_x'],0,rp['source_x']+rw,rh))
+            isolated=Image.open(repo/f'art/dromad/layered/robe-{direction}.png').convert('RGBA')
+            assert ImageChops.difference(raw.convert('RGB'),isolated.convert('RGB')).getbbox() is None
+            assert ImageChops.subtract(isolated.getchannel('A'),raw.getchannel('A')).getbbox() is None
+            assert ImageChops.subtract(raw.getchannel('A'),isolated.getchannel('A')).getbbox() is not None
     frames=read('gameplay-frames.json');by_phase={f['phase']:f for f in frames}
     assert len(frames)==16 and len(by_phase)==16
     def tam(phase):
@@ -53,11 +74,21 @@ def main():
             assert not c['mapped'] and c['requiresOriginal'] and c['apparelFallback']=='Equipped appearance changed after observation';continue
         assert c['mapped'] and c['assetFamily']=='dromad' and c['nativeInputEnabled']
         assert (c['inputX'],c['inputY'])==(c['x'],c['y'])
-        layers=c['art']['layers'];expected=5 if frame['phase'] in ['dromad-robe-removed','dromad-held-removed'] else 6
+        direction='north' if c['facing']==0 else 'south' if c['facing']==2 else 'east'
+        rows=contract['views'][direction]
+        available={e['family'] for e in c['equipment']}
+        expected_rows=[p for p in rows if p['color_role']!='equipment' or p['component'] in available]
+        layers=c['art']['layers'];expected=len(expected_rows)
         assert len(layers)==c['foregroundLayers']==expected
+        assert {l['file'] for l in layers}=={p['file'] for p in expected_rows}
         for layer in layers:
             assert abs(layer['contactX']-c['feetX'])<1e-4 and abs(layer['contactY']-c['feetY'])<1e-4
-            assert abs(layer['width']/layer['height']-256/320)<1e-5
+            row=next(p for p in rows if p['file']==layer['file'])
+            if refined:
+                assert abs(layer['width']-row['width']*2/3)<1e-5
+                assert abs(layer['height']-row['height'])<1e-5
+                assert abs(layer['width']/layer['height']-row['size'][0]/row['size'][1])<1e-5
+            else:assert abs(layer['width']/layer['height']-256/320)<1e-5
             assert layer['shader']=='Custom/Cutout'
             tint=c['detailColor'] if '-detail' in layer['name'] else c['foregroundColor'] if layer['name'].startswith('RimQudDromad:') else next(i['color'] for i in c['equipment'] if str(i['instance']) in layer['name'])
             assert all(abs(a-b)<1e-6 for a,b in zip(layer['color'],tint))
@@ -75,7 +106,7 @@ def main():
     damage=read('hurt-dromad-result.json');assert damage['hpBefore']-damage['hpAfter']==1 and damage['startTicks']==damage['endTicks']
     reactions=read('hurt-samples.json');assert [r['sample'] for r in reactions]==['start','mid','end']
     assert 0<=reactions[0]['visualTicks']<8 and 8<=reactions[1]['visualTicks']<16 and reactions[2]['finished']
-    assert all(len(r['layers'])==6 and r['gameTicks']==damage['startTicks'] for r in reactions)
+    assert all(len(r['layers'])==len(tam('dromad-restored')['art']['layers']) and r['gameTicks']==damage['startTicks'] for r in reactions)
     for layer,base in zip(reactions[-1]['layers'],tam('dromad-restored')['art']['layers']):
         assert all(abs(a-b)<1e-6 for a,b in zip(layer['color'],base['color']))
     for reaction in reactions:
@@ -93,10 +124,13 @@ def main():
         late_equipment_fallback=True,unsupported_topology_fallback=True,native_visibility=True,
         native_look=True,native_hurt_without_simulation_advance=True,native_save_load=True,
         saves_settings_preserved=True,operating_system_input=False,
-        source_sha256=sources,model_sha256=sha(repo/'art/dromad/rebuilt/model.json'),
+        source_sha256=sources,model_sha256=sha(model),model_file=model.relative_to(repo).as_posix(),
         native_image_sha256=native_images,launch_start=launch['start'],
-        limitations=['Adult sample only; full village stage remains ACTIVE','Hand-authored directional vectors; not a 3D rig or full donor PawnRenderTree','Only Cloth Robe and Shillelagh supported for this body','Unseen surfaces are authored interpretation; personal cosmetic overlays postponed'])
-    args.output.write_text(json.dumps(evidence,indent=2)+'\n',encoding='utf-8')
+        limitations=['Adult sample only; full village stage remains ACTIVE',
+            'Registered ImageGen-refined 2D layers; not a 3D rig or full donor PawnRenderTree' if refined else 'Hand-authored directional vectors; not a 3D rig or full donor PawnRenderTree',
+            'Only Cloth Robe and right-hand Shillelagh supported for this body' if refined else 'Only Cloth Robe and Shillelagh supported for this body',
+            'Unseen surfaces are authored interpretation; personal cosmetic overlays and mutation visuals postponed'])
+    args.output.write_bytes((json.dumps(evidence,indent=2)+'\n').encode())
     print('Verified native Tam: registered four-way layers, actual equip/unequip, separate Qud palette, visibility/fallback, native look/hurt/save-load; profiles preserved.')
 
 

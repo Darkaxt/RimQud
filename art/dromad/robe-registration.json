@@ -1,0 +1,12 @@
+{
+  "source": "art/dromad/layered/robe-refined-sheet.png",
+  "canvas": [540, 971],
+  "uniform_scale_in_body_pixels": 0.9,
+  "views": {
+    "south": {"source_x": 0, "source_anchor": [242,416], "body_anchor": [234,399], "cuff_cutouts": "M100 657 Q137 662 168 689 L175 735 L90 735 Z M453 689 Q483 660 514 657 L530 735 L450 735 Z"},
+    "east": {"source_x": 540, "source_anchor": [170,405], "body_anchor": [143,406], "cuff_cutouts": "M270 700 Q278 683 308 684 Q338 683 348 706 L349 731 Q341 756 309 756 Q278 756 267 735 Z"},
+    "north": {"source_x": 1080, "source_anchor": [157,414], "body_anchor": [136,390], "cuff_cutouts": "M24 658 Q57 658 96 690 L100 735 L15 735 Z M384 690 Q414 661 454 657 L470 735 L380 735 Z"}
+  },
+  "landmarks": "Upper neck opening / hump attachment, checked against the selected body; all garment views share one uniform physical pixel scale. No independent bounding-box fitting or nonuniform resizing.",
+  "coverage": "The neck/head layer occludes the collar. Explicit alpha-only cuff cutouts remove closed oval strokes that would cross the real hands. RGB pixels remain unchanged; source output is preserved. Inspect openings on the original body, not only in isolation."
+}

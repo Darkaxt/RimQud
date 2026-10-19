@@ -41,10 +41,23 @@ Mutation metadata is retained; mutation-specific rendering is postponed.
 
 ![Selected unclothed adult dromad turnaround; art authoring output, not a native game capture](art/dromad/nude/front-derived-refined.png)
 
-Body/head segmentation and view registration of this refined base are still
-pending. An earlier [constructed clothed Tam diagnostic](art/dromad/rebuilt/preview.html)
-passed native equip/unequip, facing, tint, hurt, look and save/load checks;
-that evidence does not establish integration of the newer selected base.
+The selected base is now registered and split into body, head/neck and dulla
+tint layers. Its actual **Cloth Robe** was refined separately in context and
+fitted with explicit coverage masks, leaving the original hands visible.
+The Shillelagh is a separate right-hand item. The
+[layer inspector and native comparison](art/dromad/layered/preview.html) shows
+four directions, layer toggles and Qud palette roles.
+
+The unchanged native frames below show this refined assembly and its matching
+original. [Focused native evidence](evidence/dromad-refined-result.json) covers
+facing/contact, actual equip/unequip, tint, hurt, look and save/load. The full
+village stage remains ACTIVE; this is one adult body and two supported items.
+The [earlier vector-only diagnostic](art/dromad/rebuilt/preview.html) remains
+separately labeled and pinned to its tested source.
+
+![Original Tam in native Qud, paired with the refined model](docs/images/tam-refined-original.png)
+
+![Selected refined dromad with separate native-equipped robe and Shillelagh](docs/images/tam-refined-south.png)
 
 The first faithful tile, **Ctesiphus**, now runs in native Qud. Its frozen input
 chain is **creature → race → native race description + actual RimWorld asset

@@ -121,6 +121,15 @@ and laterality. Start with one real equipped item, not a profession costume.
    changed anatomy or incorrect perspective. A side garment must turn with the
    torso and accommodate actual humps, necks and additional limbs.
 
+Inspect **ownership at every cut edge**, especially cuffs, necklines and limb
+openings. A generated isolated garment can retain a hand/body outline or a
+closed cuff oval that crosses the real hand when overlaid. Do not treat those
+strokes as fabric merely because they are inside the extracted asset. Remove
+foreign outlines with explicit, recorded alpha/coverage masks; preserve the
+garment's intended outer edge and the unchanged underlying anatomy. Check both
+the isolated shape and its recomposition at enlarged and intended game scale,
+including side/back views. Keep the unmodified generation and mask provenance.
+
 Apparel art must fit the supported body family. Do not claim donor clothing is
 automatically deformed for every Qud mutation. Inventory items remain invisible
 until equipped. Laterality controls held-item anchors rather than a universal

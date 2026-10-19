@@ -507,7 +507,10 @@ namespace RenderingTransplantProbe
                 foreach(var layer in dromadActor.GetComponentsInChildren<MeshRenderer>())
                 {
                     var mesh=layer.GetComponent<MeshFilter>().sharedMesh;var dromadVertices=mesh.vertices;
-                    var dromadContact=layer.transform.TransformPoint(dromadVertices[0]+.5f*(dromadVertices[3]-dromadVertices[0])+(1-296f/320)*(dromadVertices[1]-dromadVertices[0]));
+                    var part=DromadArt.View(c.Facing).Cast<JObject>().Single(p=>(string)p["file"]==layer.sharedMaterial.mainTexture.name);
+                    float contactU=DromadArt.Refined?(float)part["contact"][0]/(float)part["size"][0]:.5f;
+                    float contactV=DromadArt.Refined?1-(float)part["contact"][1]/(float)part["size"][1]:1-296f/320;
+                    var dromadContact=layer.transform.TransformPoint(dromadVertices[0]+contactU*(dromadVertices[3]-dromadVertices[0])+contactV*(dromadVertices[1]-dromadVertices[0]));
                     var color=layer.sharedMaterial.GetColor("_Color");
                     layers.Add(new JObject{{"name",layer.name},{"file",layer.sharedMaterial.mainTexture.name},
                         {"contactX",dromadContact.x/CellWidth},{"contactY",25-dromadContact.z},{"width",(dromadVertices[3]-dromadVertices[0]).magnitude},

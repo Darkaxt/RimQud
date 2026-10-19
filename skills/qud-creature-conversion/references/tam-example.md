@@ -35,13 +35,33 @@ list. Preserve these distinctions rather than inventing another physical limb.
    ImageGen output is retained unchanged. Browser labels identify the views;
    generated text and a misleading RGB preview of transparent background pixels
    are not relied on.
+5. The separately generated Cloth Robe retained closed oval sleeve strokes.
+   Overlaid on the selected body, those strokes crossed the actual hands; the
+   side hand was also obscured. This was an extraction/coverage defect, not a
+   reason to regenerate the creature. Explicit alpha cutouts open the lower
+   cuffs while keeping the original body and garment source. The mask paths and
+   uniform registration are recorded in
+   [robe registration](../../../art/dromad/robe-registration.json); inspect the
+   [assembled layers](../../../art/dromad/layered/preview.html), not just the
+   isolated robe, before accepting the clothing.
 
-## Still required before this selected base is integrated
+## Registered selected base
 
-Register the selected views and split the refined body from head/neck. The
-constructed source masks do not automatically apply to the new output. Then fit
-and isolate one actual equipped garment at a time. The observed snapshot wears
-Cloth Robe and holds Shillelagh; this is not a universal dromad costume.
+The selected views use one physical pixel scale and per-view feet contacts.
+Explicit masks separate body from head/neck; they were re-established on the
+refined image rather than inherited from the constructed source. Body owns arms,
+feet and hump; head owns the long neck and dulla. The observed snapshot wears
+Cloth Robe and holds Shillelagh; this is not a universal dromad costume. A native
+right-hand anchor is recorded for that actual held item.
+
+The isolated robe uses a different image frame, so uniform scale and explicit
+collar/hump registration map it onto the body. Source pixels are not stretched
+to independent bounding boxes. Only alpha changes at the recorded cuff cutouts;
+the selected body and original robe generation remain unchanged.
+
+The [refined native evidence](../../../evidence/dromad-refined-result.json) applies
+to this assembly; the [layer inspector](../../../art/dromad/layered/preview.html)
+separates enlarged art review from actual unchanged native frames.
 
 An [earlier clothed vector diagnostic](../../../evidence/dromad-result.json)
 passed native facing, contact, equip/unequip, separate tint, visibility/fallback,
