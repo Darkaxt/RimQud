@@ -8,8 +8,8 @@ The later art/compatibility work below remains a proposal, not a scheduled relea
 ## Active implementation: complete Joppa rendering coverage before bulk art
 
 Execution is authorized. The [implementation specification](joppa-integration-spec.md)
-governs the four stages; the layered NPC/prop scene and native reactions/lifecycle
-are COMPLETE. Joppa coverage is next, followed by visibly equipped items.
+governs the four stages. The layered NPC/prop scene, native reactions/lifecycle
+and Joppa coverage are COMPLETE. Visibly equipped items remain the required fourth stage.
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short

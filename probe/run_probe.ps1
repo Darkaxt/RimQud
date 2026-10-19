@@ -29,6 +29,8 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaSimulation.cs') -Destinati
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaRenderer.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'GameplayProbe.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'PawnPresentation.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'JoppaCoverage.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{
     OptionEnableMods='Yes'; OptionAllowCSMods='Yes'; OptionOutputModAssembly='No';

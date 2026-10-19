@@ -6,8 +6,9 @@ does not grant rights to any third-party game material.
 
 - **Caves of Qud / Freehold Games:** original glyph/tile appearances visible in
   comparison screenshots and the installed runtime used for the probe.
-- **RimWorld / Ludeon Studios:** shader names, resource metadata and the terrain/
-  plant game content visible in the small engine-test readbacks. No raw donor
+- **RimWorld / Ludeon Studios:** shader names, resource metadata and terrain,
+  plants, body/head, cat and furniture content visible in contextual engine
+  readbacks. No raw donor
   textures, compiled shader records, bundles, assemblies or decompiled game source
   are distributed in this repository.
 - **Stoneshard / Ink Stains Games:** an art-direction reference for one original

@@ -40,7 +40,7 @@ namespace RenderingTransplantProbe
         }
         public static void Accepted(JoppaCell[] cells)
         {
-            if(!Enabled)return;EnsureWorld();visible.Clear();
+            if(!Enabled && !JoppaCoverage.Enabled)return;EnsureWorld();visible.Clear();
             foreach(var c in cells)if(c.Visible && !c.RequiresOriginal && c.Instance>0 &&
                 (c.Kind=="human" || c.Kind=="animal") && !string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip)visible.Add(c.Instance);
         }
@@ -66,7 +66,13 @@ namespace RenderingTransplantProbe
         public static bool IsLayered(string kind){return kind=="human" || kind=="animal" || kind=="prop";}
         public static string Kind(GO obj)
         {
-            if(!Enabled || obj==null)return null;
+            if((!Enabled && !JoppaCoverage.Enabled) || obj==null)return null;
+            if(JoppaCoverage.Enabled)
+            {
+                if(obj==XRLCore.Core.Game.Player.Body && obj.Body!=null && obj.Body.Anatomy=="Humanoid" &&
+                    !obj.HasEffect("Asleep") && !obj.HasEffect("Prone"))return "human";
+                return JoppaCoverage.Kind(obj);
+            }
             if(obj.Blueprint=="WatervineFarmerJoppa" || obj==XRLCore.Core.Game.Player.Body)return "human";
             if(obj.Blueprint=="Ctesiphus")return "animal";
             if(obj.Blueprint=="Chair")return "prop";
@@ -74,11 +80,18 @@ namespace RenderingTransplantProbe
         }
         public static void Capture(Cell cell,GO obj,JoppaCell result)
         {
-            if(!Enabled || !result.Visible || !cell.ParentZone.GetVisibility(cell.X,cell.Y))return;
+            if((!Enabled && !JoppaCoverage.Enabled) || !result.Visible || !cell.ParentZone.GetVisibility(cell.X,cell.Y))return;
+            if(obj==null)return;
             EnsureWorld();
             string kind=Kind(obj);
             if(kind==null)return;
             result.Kind=kind;
+            if(JoppaCoverage.Enabled)
+            {
+                var rule=JoppaCoverage.Rule(obj.Blueprint);
+                result.AssetFamily=rule==null?null:(string)rule["asset_family"];
+                var door=obj.GetPart<XRL.World.Parts.Door>();result.DoorOpen=door!=null && door.Open;
+            }
             // Native BaseID is the game's own serialized instance identity.
             int id=obj.BaseID;Pose pose;
             if(!poses.TryGetValue(id,out pose)){pose=new Pose{X=cell.X,Y=cell.Y};poses[id]=pose;}

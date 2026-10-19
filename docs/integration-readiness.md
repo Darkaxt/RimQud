@@ -115,7 +115,7 @@ feasibility sample into a complete overhaul.
 The previous feasibility stages remain complete. The user has now authorized
 execution. The [authoritative implementation specification](joppa-integration-spec.md)
 owns current stage status and acceptance; the ordered scope below remains the
-design rationale. Stages 1-2 are COMPLETE and stages 3-4 are NOT STARTED.
+design rationale. Stages 1-3 are COMPLETE and stage 4 is NOT STARTED.
 
 1. **COMPLETE — Layered NPC/prop scene.** Use actual locally extracted RimWorld
    human and animal graphics to demonstrate bodies, direction, transparency,
@@ -127,7 +127,7 @@ design rationale. Stages 1-2 are COMPLETE and stages 3-4 are NOT STARTED.
    facing and supported posture changes follow Qud state. Verify targeting,
    visibility, movement and save/load together. Keep Qud health, AI, jobs and
    turn progression authoritative. A matching texture alone is not animation.
-3. **NOT STARTED — Joppa coverage.** Expand verified mappings to observed Joppa
+3. **COMPLETE — Joppa coverage.** Expand verified mappings to observed Joppa
    NPCs/items and required states. NPCs may keep the approved donor placeholders.
    Custom Qud artwork remains an individual reference-based conversion process.
    Track mapped, visually reviewed and integrated coverage separately; unknown

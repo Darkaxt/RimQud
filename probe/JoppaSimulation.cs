@@ -23,8 +23,8 @@ namespace RenderingTransplantProbe
         public int X,Y,Instance,Facing;
         public int HurtSerial;
         public float HurtDX,HurtDY;
-        public string Source,Kind,Resolved,GroundKind;
-        public bool Visible,RequiresOriginal,Grass;
+        public string Source,Kind,Resolved,GroundKind,AssetFamily;
+        public bool Visible,RequiresOriginal,Grass,DoorOpen;
         public int WaterDepth,WaterVolume;
         public ConsoleChar Display;
     }
@@ -87,6 +87,7 @@ namespace RenderingTransplantProbe
         static string Kind(GO obj)
         {
             if(obj==null)return "original";
+            if(JoppaCoverage.Enabled)return JoppaCoverage.Kind(obj);
             string n=obj.Blueprint;
             if(obj.LiquidVolume!=null && obj.LiquidVolume.IsOpenVolume() && obj.LiquidVolume.Volume>0 &&
                 obj.LiquidVolume.Proportion("water")>0)return "water";
@@ -154,6 +155,7 @@ namespace RenderingTransplantProbe
                     Instance=observed==null?0:observed.Instance,Facing=observed==null?2:observed.Facing,
                     HurtSerial=observed==null?0:observed.HurtSerial,HurtDX=observed==null?0:observed.HurtDX,HurtDY=observed==null?0:observed.HurtDY,
                     GroundKind=observed==null?null:observed.GroundKind,
+                    AssetFamily=observed==null?null:observed.AssetFamily,DoorOpen=observed!=null && observed.DoorOpen,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
             }
@@ -223,6 +225,22 @@ namespace RenderingTransplantProbe
                     map="Joppa.rpm",fill="DirtFloor",normalWorldGeneration=false});
                 expectedView=oldView;producer=ScreenBuffer.create(80,25);
                 Frame("baseline");
+                if(JoppaCoverage.Enabled)
+                {
+                    var fixtures=JoppaCoverage.PlaceVariants(zone);Frame("coverage-props-placed");
+                    foreach(var obj in fixtures.Keys)PawnPresentation.Place(obj,zone.GetCell(obj.CurrentCell.X,obj.CurrentCell.Y+1));
+                    Frame("coverage-props-south");
+                    foreach(var obj in fixtures.Keys)PawnPresentation.Place(obj,zone.GetCell(obj.CurrentCell.X+1,obj.CurrentCell.Y));
+                    Frame("coverage-props-east");
+                    foreach(var obj in fixtures.Keys)PawnPresentation.Place(obj,zone.GetCell(obj.CurrentCell.X,obj.CurrentCell.Y-1));
+                    Frame("coverage-props-north");
+                    var first=fixtures.Keys.First();first.Render.VFlip=true;Frame("coverage-unsupported-flip");first.Render.VFlip=false;
+                    foreach(var pair in fixtures)PawnPresentation.Place(pair.Key,pair.Value);
+                    Frame("coverage-props-restored");
+                    var door=Enumerable.Range(0,2000).SelectMany(i=>zone.GetCell(i%80,i/80).Objects)
+                        .First(o=>o.Blueprint=="Door").GetPart<XRL.World.Parts.Door>();
+                    door.PerformOpen();Frame("coverage-door-open");door.PerformClose();Frame("coverage-door-closed");
+                }
                 var sample=Enumerable.Range(0,2000).SelectMany(i=>zone.GetCell(i%80,i/80).Objects)
                     .First(o=>o.Blueprint=="Pond").LiquidVolume;
                 int initialVolume=sample.Volume;

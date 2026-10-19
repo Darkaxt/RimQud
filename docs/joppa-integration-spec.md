@@ -63,7 +63,7 @@ a complete integrated workflow; source/package/unit checks are diagnostics only.
 | --- | --- | --- | --- |
 | 1. Layered NPC/prop scene | COMPLETE | P1, P2, P6-P8 | Generated Joppa shows one layered human, one animal and a prop with correct ground, direction, transparency, mapped overlap and native input binding; actual camera pairs plus visibility/late-change/fallback checks pass. |
 | 2. Native reactions and lifecycle | COMPLETE | P2, P3, P6-P8 | Real Qud movement/damage drives facing and a finite visible hurt reaction; targeting, menus, save/load and return work with the new scene; no simulation authority transferred. |
-| 3. Joppa coverage | NOT STARTED | P1, P2, P4, P6-P8 | Every selected baseline blueprint and observed generated addition has a reviewed explicit rendering decision; known eligible content receives its mapped replacement, required state variants pass, and unsupported content retains verified fallback. |
+| 3. Joppa coverage | COMPLETE | P1, P2, P4, P6-P8 | Every selected baseline blueprint and observed generated addition has a reviewed explicit rendering decision; known eligible content receives its mapped replacement, required state variants pass, and unsupported content retains verified fallback. |
 | 4. Visible equipped items | NOT STARTED | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
 
 Stage 1 reconciliation: [fresh engine evidence](../evidence/pawns-stage1-result.json)
@@ -133,8 +133,42 @@ Refactoring assessment: the existing camera/material path is retained; no donor
 tick manager, RPC framework or independent simulation was added. The per-instance
 effect state and asynchronous diagnostic capture serve this required workflow.
 
-Stages 3-4 remain required and incomplete. Stage 3 will become ACTIVE after the
-verified stage-2 source and evidence are committed and synchronized.
+Stage 3 reconciliation: [per-blueprint review](joppa-coverage.md) and
+[integrated native evidence](../evidence/joppa-stage3-result.json) pass the assigned
+acceptance. All 67 selected baseline types are reconciled: 26 use temporary
+replacements and 41 preserve native graphics. Eight unselected definitions remain
+native. The generated run observed 31 types with one addition, the humanoid player,
+handled by the explicit upright Humanoid-player rule. Known eligible visible
+content is mapped; every native decision is checked against actual selected cells.
+
+Nineteen authored-map captures exercise seven new prop families in south/east/north
+directions, unsupported vertical-flip fallback, door open/close, linked wood/metal
+walls and fences, bridge and native shallow/deep thresholds. Twenty-five paired
+generated-game captures plus reaction readbacks repeat the actual gameplay/state
+workflow with the expanded mappings. Both runs exited zero and preserved normal
+saves/settings and Unity preferences. Separate HUD canvases and physical controls
+were not newly tested; their unchanged integration retains earlier bounded evidence.
+
+The authored run changed 13 created/one removed diagnostic-cache files; the
+generated run changed 13 created/one removed/two modified diagnostic-cache files.
+Each restored twelve Unity preferences. The served comparison at loopback port
+8766 passed five-scene/image switching, range/buttons, keyboard, dragging and
+overflow checks at 1440 x 1000 and 390 x 844. Actual mobile/desktop captures were
+inspected; no foreground browser or native desktop input was required.
+
+Asset review rejected misleading basket and clay-oven counterparts; native graphics
+preserve those forms. An occupied fixed fixture location caused a diagnosed failed
+run; diagnostic placement now uses clear native cells. A duplicate blue-tinted fence
+texture was replaced with the visually reviewed grayscale source identity. No donor
+AI or mod runtime was loaded. Custom faithful art and arbitrary-mod support are
+not claimed. Asleep/prone rejection is an explicit policy, not an exercised posture
+test in this run; the tested posture scope remains upright/injured-upright.
+
+Stage 3 remaining acceptance/blockers: none. Refactoring assessment: the explicit
+75-entry contract is shared by runtime and verification; the small coverage reader
+and prop fixture serve this stage. Alpha-bound pivots use the extracted metadata.
+No general content resolver or render framework was introduced. Stage 4 remains
+required and will become ACTIVE after verified stage-3 publication.
 
 Tracked deferrals: none. Stage 4 is a named requirement, not permission to weaken
 earlier acceptance. Overall completion requires all stages and final reconciliation.

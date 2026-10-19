@@ -37,10 +37,10 @@
     <h1>Joppa, with donor materials.</h1>
     <p class="lead">One native Qud map, two presentations. Drag the divider or use the controls below. These images came from Qud's Unity runtime; this page only compares the saved captures.</p>
   </header>
-  <nav class="scenes" aria-label="Capture scene"><button type="button" data-scene="pawns" aria-pressed="true">Layered humans, cat and prop</button><button type="button" data-scene="gameplay" aria-pressed="false">Earlier gameplay camera</button><button type="button" data-scene="village" aria-pressed="false">Full-village simulation</button></nav>
+  <nav class="scenes" aria-label="Capture scene"><button type="button" data-scene="coverage" aria-pressed="true">Stage 3 gameplay</button><button type="button" data-scene="coverageFull" aria-pressed="false">Stage 3 full sample</button><button type="button" data-scene="pawns" aria-pressed="false">Stage 1 actor scene</button><button type="button" data-scene="gameplay" aria-pressed="false">Earlier gameplay camera</button><button type="button" data-scene="village" aria-pressed="false">Earlier village simulation</button></nav>
   <div class="stage pawns" id="stage" aria-label="Original and donor-material Joppa comparison">
-    <img id="originalImage" src="docs/images/joppa-pawns-original.png" alt="Original generated Joppa with isolated farmer, cat and chair fixture" draggable="false">
-    <div class="after" id="after"><img id="replacementImage" src="docs/images/joppa-pawns-replacement.png" alt="Same accepted frame with layered donor humans, directional cat, chair and native fallback" draggable="false"></div>
+    <img id="originalImage" src="docs/images/joppa-coverage-gameplay-original.png" alt="Stage 3 original generated Joppa camera with isolated object fixture" draggable="false">
+    <div class="after" id="after"><img id="replacementImage" src="docs/images/joppa-coverage-gameplay-replacement.png" alt="Same Stage 3 native frame with reviewed temporary mappings and native fallback" draggable="false"></div>
     <div class="divider" id="divider"></div>
     <span class="tag before">Original Qud sprites</span><span class="tag donor">Donor materials + Qud fallback</span>
   </div>
@@ -50,12 +50,12 @@
     <button type="button" data-cut="0">Donor materials</button>
     <label for="cut">Original coverage <input id="cut" type="range" min="0" max="100" value="50"><output id="coverage" for="cut">50%</output></label>
   </div>
-  <p class="note" id="sceneNote" aria-live="polite">Stage 1 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · separate HUD canvases omitted</p>
-  <p>Stage 1 adds layered donor humans, a directional cat and a chair with native ground underneath. It passed facing, tint, hiding, late-change fallback, mapped overlap and native targeting/save-load checks. Hurt reactions and equipped apparel remain later stages. Earlier foreground review passed basic controls; keyboard movement, long-session stability and FPS remain unverified.</p>
+  <p class="note" id="sceneNote" aria-live="polite">Stage 3 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · expanded mappings · separate HUD canvases omitted</p>
+  <p>Stages 1–3 establish layered donor actors, actual Qud damage reactions and reviewed coverage. Of the 67 selected baseline types, 26 receive temporary replacements and 41 retain native graphics. Prop directions, door open/close, visibility, tint, fallback, targeting and save/load passed native checks. Equipped apparel remains stage 4. Earlier foreground review passed basic controls; keyboard movement, long-session stability and FPS remain unverified.</p>
   <p>Ground, paths, grass, crops, reeds, trees, doors, water and the main brinestalk walls use donor materials. The earlier full-village simulation contains 274 grass clumps at Qud's native paint locations and 51 connected shallow-water cells. In that earlier simulation NPCs, furniture and unmapped structures keep Qud's sprites; native foregrounds over mapped water expose the liquid underneath.</p>
   <p>Path interiors and their eight-neighbor transitions share the same donor material, texture sampling and terrain precedence. Shallow/deep appearance follows Qud's actual volume thresholds; all baseline ponds are wading depth. The liquid adapter uses donor ramp textures, not RimWorld's complete animated water pipeline.</p>
-  <p>The separate full-village simulation loads <code>Joppa.rpm</code> over an explicit dirt-floor fill: 80 × 25 cells, 996 authored placements, 1,810 mapped cells and 190 native fallback cells. The gameplay captures above use a real generated world and map native painted ground directly; Qud's camera effects are preserved.</p>
-  <div class="links"><a id="originalLink" href="docs/images/joppa-pawns-original.png">Full-resolution original</a><a id="replacementLink" href="docs/images/joppa-pawns-replacement.png">Full-resolution donor view</a><a href="docs/joppa-integration-spec.md">Implementation and acceptance</a><a href="README.md">Project README</a></div>
+  <p>The full samples load <code>Joppa.rpm</code> over an explicit dirt-floor fill: 80 × 25 cells and 996 authored placements. The stage-3 sample has 1,899 mapped cells and 101 native fallback cells. Gameplay captures use a real generated world and native painted ground; Qud's field of view and camera effects are preserved. These are temporary mappings, not a completed faithful tileset.</p>
+  <div class="links"><a id="originalLink" href="docs/images/joppa-coverage-gameplay-original.png">Full-resolution original</a><a id="replacementLink" href="docs/images/joppa-coverage-gameplay-replacement.png">Full-resolution donor view</a><a href="docs/joppa-integration-spec.md">Implementation and acceptance</a><a href="README.md">Project README</a></div>
   <footer>Qud and RimWorld content belongs to its respective creators. <a href="THIRD_PARTY.md">Provenance and notices</a>.</footer>
 </main>
 <script>
@@ -63,18 +63,24 @@
   function update(value){cut.value=value;document.querySelector('#after').style.clipPath=`inset(0 0 0 ${cut.value}%)`;document.querySelector('#divider').style.left=cut.value+'%';document.querySelector('#coverage').value=cut.value+'%';}
   cut.addEventListener('input',()=>update(cut.value));
   document.querySelectorAll('[data-cut]').forEach(button=>button.addEventListener('click',()=>update(button.dataset.cut)));
+  const scenes={
+    coverage:{prefix:'joppa-coverage-gameplay',layout:'pawns',before:'Stage 3 original generated Joppa camera with isolated object fixture',after:'Same Stage 3 native frame with reviewed temporary mappings and native fallback',note:'Stage 3 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · expanded mappings · separate HUD canvases omitted'},
+    coverageFull:{prefix:'joppa-coverage',layout:'',before:'Stage 3 original authored village sample over controlled dirt-floor fill',after:'Same Stage 3 full sample with 26 temporary replacement types and 41 native types',note:'Stage 3 · authored-map GPU sample · controlled dirt-floor fill · 26 replacement types / 41 native types · 1,899 mapped cells / 101 native cells'},
+    pawns:{prefix:'joppa-pawns',layout:'pawns',before:'Original generated Joppa with isolated farmer, cat and chair fixture',after:'Same accepted frame with layered donor humans, directional cat, chair and native fallback',note:'Stage 1 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · separate HUD canvases omitted'},
+    gameplay:{prefix:'joppa-gameplay',layout:'gameplay',before:'Original Qud map-camera view after native save/load in generated Joppa',after:'Same actual map-camera frame with donor presentation and native fallback',note:'Earlier actual map camera · generated Joppa · native field of view · after save/load · separate HUD omitted'},
+    village:{prefix:'joppa',layout:'',before:"Qud's original resolved sprites across the earlier authored village simulation",after:'Same earlier full-village simulation with donor materials and native fallback',note:'Earlier full-village simulation · explicit dirt-floor fill · 1,810 mapped cells · 190 native fallback cells'}
+  };
   document.querySelectorAll('[data-scene]').forEach(button=>button.addEventListener('click',()=>{
-    const gameplay=button.dataset.scene==='gameplay', pawns=button.dataset.scene==='pawns', prefix=pawns?'joppa-pawns':gameplay?'joppa-gameplay':'joppa';
-    stage.classList.toggle('gameplay',gameplay);
-    stage.classList.toggle('pawns',pawns);
+    const scene=scenes[button.dataset.scene];
+    stage.className='stage '+scene.layout;
     for(const side of ['original','replacement']){
-      const path=`docs/images/${prefix}-${side}.png`;
+      const path=`docs/images/${scene.prefix}-${side}.png`;
       document.querySelector(`#${side}Image`).src=path;
       document.querySelector(`#${side}Link`).href=path;
     }
-    document.querySelector('#originalImage').alt=pawns?'Original generated Joppa with isolated farmer, cat and chair fixture':gameplay?'Original Qud map-camera view after native save/load in generated Joppa':"Qud's original resolved sprites across the full authored village simulation";
-    document.querySelector('#replacementImage').alt=pawns?'Same accepted frame with layered donor humans, directional cat, chair and native fallback':gameplay?'Same actual map-camera frame with donor presentation and native fallback':'Same full-village simulation with donor materials and native fallback';
-    document.querySelector('#sceneNote').textContent=pawns?'Stage 1 · actual 1280 × 800 map camera · generated Joppa with isolated object relocation · separate HUD canvases omitted':gameplay?'Actual Qud map camera · generated Joppa · native field of view · after save/load · separate HUD canvases omitted':'Full-village simulation · explicit dirt-floor fill · 1,810 mapped cells · 190 native fallback cells';
+    document.querySelector('#originalImage').alt=scene.before;
+    document.querySelector('#replacementImage').alt=scene.after;
+    document.querySelector('#sceneNote').textContent=scene.note;
     document.querySelectorAll('[data-scene]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
   }));
   function drag(event){const bounds=stage.getBoundingClientRect();update(Math.max(0,Math.min(100,(event.clientX-bounds.left)/bounds.width*100)));}

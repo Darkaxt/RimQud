@@ -15,8 +15,36 @@ an experimental integration, not a released overhaul.
 blueprint types; 57 types, including NPCs and furniture, retain native sprites.
 Repeated ground/path cells account for much of that apparent coverage.
 The [staged implementation](docs/joppa-integration-spec.md) has now passed its
-layered human/animal/prop scene and native hurt reactions. Wider coverage and
-visibly equipped Qud apparel remain subsequent stages.
+layered human/animal/prop scene, native hurt reactions and an explicit Joppa
+coverage review. Visibly equipped Qud apparel remains the fourth stage.
+
+## Joppa coverage — stage 3
+
+All 67 selected baseline types now have reviewed decisions: **26 use temporary
+replacements; 41 retain native graphics.** The expanded set includes appropriate
+human placeholders, common furniture, wood/metal walls, fences and a bridge.
+Distinctive anatomy, machinery and unmatched props retain their Qud designs.
+[The complete review](docs/joppa-coverage.md) records each decision and its reason.
+
+These actual 1920 × 900 authored-map GPU captures use the controlled dirt-floor
+fill. They show the complete sample, including native fallback; they are not
+generated-game field-of-view captures or a finished faithful tileset.
+
+![Stage 3 complete authored Joppa sample with original graphics](docs/images/joppa-coverage-original.png)
+
+![Stage 3 complete sample with reviewed temporary replacements and native fallback](docs/images/joppa-coverage-replacement.png)
+
+The same mappings also passed the native generated-game workflow. These actual
+1280 × 800 map-camera captures preserve native visibility and camera effects;
+the diagnostic relocates the existing farmer, cat and chair. Separate HUD omitted.
+
+![Stage 3 generated-game camera with original graphics](docs/images/joppa-coverage-gameplay-original.png)
+
+![Stage 3 generated-game camera with expanded mappings](docs/images/joppa-coverage-gameplay-replacement.png)
+
+[Stage 3 evidence](evidence/joppa-stage3-result.json) covers prop directions,
+door open/close, linked scenery, unsupported flip/native fallback, water depth,
+movement/facing, actual hurt reactions, targeting, menus and save/load.
 
 ## Layered NPC/prop integration — stage 1
 

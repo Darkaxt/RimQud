@@ -50,11 +50,12 @@ def main():
               'joppa-pawns-original.png', 'joppa-pawns-replacement.png',
               'joppa-foreground-hud.jpg', 'joppa-foreground-menu.jpg'}
     scenes |= {'joppa-hurt-'+actor+'-'+sample+'.png' for actor in ['human', 'animal'] for sample in ['start', 'mid', 'end']}
-    assert len(embedded) == 25 and len(engine) == 11
+    scenes |= {prefix+'-'+side+'.png' for prefix in ['joppa-coverage', 'joppa-coverage-gameplay'] for side in ['original', 'replacement']}
+    assert len(embedded) == 29 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 29
+    assert len(archived) == 4 and len(listed) == 33
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
@@ -79,7 +80,16 @@ def main():
         revision = reaction.get('source_revision')
         source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
         assert hashlib.sha256(source).hexdigest() == digest, name
-    print(f'Publication checks passed: {len(files)} public files; 14 Joppa views, 11 material readbacks and 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+    coverage = json.loads((ROOT / 'evidence/joppa-stage3-result.json').read_text())
+    assert coverage['stage'] == 3 and coverage['authored']['coverage']['temporary_replacement_types'] == 26
+    assert coverage['authored']['coverage']['native_fallback_types'] == 41
+    revision = coverage.get('source_revision')
+    for name, digest in coverage['source_sha256'].items():
+        source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
+        assert hashlib.sha256(source).hexdigest() == digest, name
+    contract = subprocess.check_output(['git', 'show', revision + ':probe/joppa-coverage.json'], cwd=ROOT) if revision else (ROOT/'probe/joppa-coverage.json').read_bytes()
+    assert hashlib.sha256(contract.replace(b'\r\n', b'\n')).hexdigest() == coverage['mapping_contract_sha256']
+    print(f'Publication checks passed: {len(files)} public files; 18 Joppa views, 11 material readbacks and 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

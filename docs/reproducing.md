@@ -165,3 +165,26 @@ It does not supply the player as attacker: that correctly caused native hostilit
 in a retained failed diagnostic. Unknown native summaries stop with failure
 evidence. Keep each run's baseline until the original process has exited and its
 preservation result has passed; archive the completed baseline before a new run.
+
+## Reviewed coverage
+
+Extract only the reviewed common-prop and linked-scenery set after the earlier
+packages, then run both authored and generated contexts in sequence:
+
+```powershell
+& $Python probe/package_coverage.py --donor-data $Donor --output (Join-Path $Root 'donor')
+if ($LASTEXITCODE -ne 0) { throw 'Coverage packaging failed' }
+./probe/run_probe.ps1 -Root $Root -Game $Qud -Mode joppa -IntegrationStage 3
+& $Python probe/verify_joppa.py --root $Root --stage 3 --output (Join-Path $Root 'coverage-authored-verified.json')
+if ($LASTEXITCODE -ne 0) { throw 'Authored coverage failed' }
+# Retain this run's outputs and baseline before starting the next run.
+./probe/run_probe.ps1 -Root $Root -Game $Qud -Mode pawns -IntegrationStage 3
+& $Python probe/verify_gameplay.py --root $Root --mode pawns --stage 3 --output (Join-Path $Root 'coverage-gameplay-verified.json')
+if ($LASTEXITCODE -ne 0) { throw 'Generated coverage failed' }
+```
+
+The launcher copies the public `probe/joppa-coverage.json` contract into the local
+root. It is the explicit mapping/decision source; unknown content stays native.
+The published stage-3 evidence reconciles both runs and the observed generated
+addition. It records the canonical LF contract identity separately from the raw
+runtime JSON payload digest because Git normalizes text line endings.

@@ -111,7 +111,7 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-");
+                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("chair-") || filename.StartsWith("prop-");
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
             }
@@ -149,9 +149,10 @@ namespace RenderingTransplantProbe
         static bool CanMap(JoppaCell c)
         {
             return c.Visible && !c.RequiresOriginal && c.Kind!="original" &&
+                (!JoppaCoverage.Enabled || !c.Display.VFlip) &&
                 (!PawnPresentation.IsLayered(c.Kind) || (!string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip));
         }
-        static string Ground(JoppaCell c){return PawnPresentation.IsLayered(c.Kind)?c.GroundKind:c.Kind;}
+        static string Ground(JoppaCell c){return (PawnPresentation.IsLayered(c.Kind) || JoppaCoverage.Enabled && !string.IsNullOrEmpty(c.GroundKind))?c.GroundKind:c.Kind;}
         static bool Is(JoppaFrame f,int x,int y,string kind)
         {
             if(x<0 || x>=80 || y<0 || y>=25)return false;
@@ -161,6 +162,17 @@ namespace RenderingTransplantProbe
         {
             if(x<0 || x>=80 || y<0 || y>=25)return false;
             var c=f.Cells[x+80*y];return c.Visible && !c.RequiresOriginal && c.WaterDepth>0;
+        }
+        static bool Linked(JoppaFrame f,int x,int y,string kind)
+        {
+            if(x<0 || x>=80 || y<0 || y>=25)return false;
+            var c=f.Cells[x+80*y];return c.Visible && !c.RequiresOriginal &&
+                (c.Kind==kind || kind=="wall" && c.Source=="BrinestalkWallWithGearbox");
+        }
+        static int LinkMask(JoppaFrame f,JoppaCell c,string kind)
+        {
+            return (Linked(f,c.X,c.Y-1,kind)?1:0)|(Linked(f,c.X+1,c.Y,kind)?2:0)|
+                (Linked(f,c.X,c.Y+1,kind)?4:0)|(Linked(f,c.X-1,c.Y,kind)?8:0);
         }
         Material WaterMaterial(int depth,bool feather=false)
         {
@@ -228,7 +240,7 @@ namespace RenderingTransplantProbe
         static float ForegroundDepth(JoppaCell c,float original)
         {
             // Mapped foreground sorts by its ground contact row, not image height.
-            return PawnPresentation.Enabled?.2f+c.Y*.002f:original;
+            return PawnPresentation.Enabled || JoppaCoverage.Enabled?.2f+c.Y*.002f:original;
         }
         void SpriteLayer(Transform parent,Material material,float width,float height,float x,float z,float layer)
         {
@@ -257,6 +269,13 @@ namespace RenderingTransplantProbe
                 SpriteLayer(go.transform,Material("Custom/Cutout","human-body-"+direction+".png",skin),1.5f*scale,bodyHeight,0,center,0);
                 SpriteLayer(go.transform,Material("Custom/Cutout","human-head-"+direction+".png",skin),1.5f*scale,1.5f*scale,
                     c.Facing==1 || c.Facing==3?.04f*scale:0,center+.34f*scale,.001f);
+            }
+            else if(JoppaCoverage.Enabled && c.Kind=="prop" && c.AssetFamily!="chair")
+            {
+                var asset=JoppaCoverage.Asset(c.AssetFamily);float width=(float)asset["width"],height=(float)asset["height"];
+                string file="prop-"+c.AssetFamily+"-"+direction+".png";
+                SpriteLayer(go.transform,Material("Custom/Cutout",file,c.Display.Foreground),width,height,
+                    0,JoppaCoverage.Foot(file)*height,0);
             }
             else
             {
@@ -354,11 +373,27 @@ namespace RenderingTransplantProbe
                         }
                         if(c.Kind=="wall")
                         {
-                            int mask=(Is(frame,c.X,c.Y-1,"wall")?1:0)|(Is(frame,c.X+1,c.Y,"wall")?2:0)|
+                            int mask=JoppaCoverage.Enabled?LinkMask(frame,c,"wall"):(Is(frame,c.X,c.Y-1,"wall")?1:0)|(Is(frame,c.X+1,c.Y,"wall")?2:0)|
                                 (Is(frame,c.X,c.Y+1,"wall")?4:0)|(Is(frame,c.X-1,c.Y,"wall")?8:0);
-                            masks[mask]++;Quad(Material("Custom/Cutout","wall.png",new Color(.75f,.68f,.48f,1)),c.X,c.Y,altitude:ForegroundDepth(c,.1f),atlas:mask);
+                            string file=JoppaCoverage.Enabled?(c.Source=="RustedMetalWall"?"wall-metal.png":"wall-planks.png"):"wall.png";
+                            Color tint=JoppaCoverage.Enabled?c.Display.Foreground:new Color(.75f,.68f,.48f,1);
+                            masks[mask]++;Quad(Material("Custom/Cutout",file,tint),c.X,c.Y,altitude:ForegroundDepth(c,.1f),atlas:mask);
                         }
-                        if(c.Kind=="door")Quad(Material("Custom/Cutout","door.png",Color.white),c.X,c.Y,altitude:ForegroundDepth(c,.11f));
+                        if(c.Kind=="fence")Quad(Material("Custom/Cutout","fence.png",c.Display.Foreground),c.X,c.Y,
+                            altitude:ForegroundDepth(c,.11f),atlas:LinkMask(frame,c,"fence"));
+                        if(c.Kind=="bridge")Quad(Material("Custom/Cutout","bridge.png",c.Display.Foreground),c.X,c.Y,altitude:.04f);
+                        if(c.Kind=="door")
+                        {
+                            float dx=0,dy=0;
+                            if(c.DoorOpen)
+                            {
+                                if(Linked(frame,c.X-1,c.Y,"wall"))dx=-.65f;
+                                else if(Linked(frame,c.X+1,c.Y,"wall"))dx=.65f;
+                                else dy=Linked(frame,c.X,c.Y-1,"wall")?-.65f:.65f;
+                            }
+                            Quad(Material("Custom/Cutout","door.png",JoppaCoverage.Enabled?c.Display.Foreground:Color.white),c.X+dx,c.Y+dy,
+                                altitude:ForegroundDepth(c,.11f)-(c.DoorOpen?.003f:0));
+                        }
                         if(PawnPresentation.IsLayered(c.Kind))Foreground(c);
                         if(c.Kind=="crop" || c.Kind=="reed" || c.Kind=="tree")
                         {
@@ -373,6 +408,9 @@ namespace RenderingTransplantProbe
                     var screen=live && PawnPresentation.IsLayered(c.Kind)?GameManager.Instance.getScreenTileCenter(c.X,c.Y):Vector3.zero;
                     rows.Add(new JObject{{"x",c.X},{"y",c.Y},{"source",c.Source},{"kind",c.Kind},
                         {"instance",c.Instance},{"facing",c.Facing},{"groundKind",c.GroundKind},
+                        {"assetFamily",c.AssetFamily},{"doorOpen",c.DoorOpen},{"tile",c.Display.Tile},
+                        {"detailColor",new JArray(c.Display.Detail.r,c.Display.Detail.g,c.Display.Detail.b,c.Display.Detail.a)},
+                        {"hFlip",c.Display.HFlip},{"vFlip",c.Display.VFlip},
                         {"foregroundLayers",mapped?(c.Kind=="human"?2:PawnPresentation.IsLayered(c.Kind)?1:0):0},
                         {"feetX",c.X+.5f},{"feetY",c.Y+.86f},
                         {"foregroundDepth",ForegroundDepth(c,.2f)},
