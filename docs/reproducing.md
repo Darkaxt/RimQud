@@ -121,8 +121,8 @@ The Python verifier needs Pillow. Runtime C# compilation is handled by Qud; no
 separate compiler is needed to launch it. Actual map-camera captures include
 native camera effects and field of view but omit separate HUD canvases.
 
-The following is a **visible interactive launch**, prepared for foreground review.
-Do not run it while operating under the current hidden-only authorization:
+The following is a **visible interactive launch**. Obtain foreground authorization
+when operating under a hidden-only restriction:
 
 ```powershell
 ./probe/run_probe.ps1 -Root E:/Temp/qud-transplant-probe-joppa-20261019 -Mode review
@@ -130,7 +130,10 @@ Do not run it while operating under the current hidden-only authorization:
 
 The review mode reuses the native game loop and rendering connection, disables
 automatic input and menu closing, and leaves normal game controls available.
-It stays silent. Save and quit normally to end the session and let the launcher
-complete its preservation checks. This foreground path has been prepared and
-compiled, but has not yet been executed. Locally retained `donor/` inputs are
-needed for this step and are not public assets.
+It stays silent, starts windowed at 1280 × 800, and waits at the native main menu.
+Select New Game; the diagnostic supplies a native pregen and Joppa starting point.
+Save and quit normally to end the session and let the launcher complete its
+preservation checks. This path was executed successfully; see
+[foreground evidence](../evidence/foreground-review.json). Local `donor/` inputs
+are required and are not public assets. Remote-control tools may intercept Escape
+and synthetic keyboard shortcuts; the on-screen menu supports mouse save/quit.

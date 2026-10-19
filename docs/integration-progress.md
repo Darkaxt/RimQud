@@ -4,8 +4,9 @@ Update: [the native Joppa experiment](joppa-experiment.md) has since connected
 accepted full-map appearances to donor materials and produced actual scene
 readbacks. It now presents donor materials through Qud's actual map camera in a
 fully generated Joppa session. Native movement, look, modern inventory, save/load
-and three continuous RunGame turns passed automatic verification. Foreground
-mouse/keyboard and final display review remain at the user's desktop boundary.
+and three continuous RunGame turns passed automatic verification. Subsequent
+foreground review passed mouse walking, targeting, zoom, physical I opening
+inventory, HUD, native menus and save/quit; exact limits are recorded below.
 
 The initial shader and scene-capture probes below were separate launches. The offscreen shader
 test rendered simple planes, not the captured Qud objects. The capture probe kept
@@ -45,8 +46,12 @@ not imported.
 
 There is no released playable overhaul, production scene cache, faithful
 replacement tileset, complete donor water pipeline or arbitrary-mod support.
-Camera integration and bounded native-input checks now exist; physical pointer
-routing and final foreground presentation remain unverified.
+Camera integration and bounded native-input checks now exist. Foreground review
+verified mouse walking, correct NPC targeting, wheel zoom, full HUD, physical I
+opening inventory and mouse save/quit. Keyboard movement, the Escape menu shortcut,
+long-session stability and FPS remain unverified. Native menu fallback is
+intentional and donor presentation returns in gameplay. See
+[foreground evidence](../evidence/foreground-review.json).
 The captured payload records blueprint identity rather than stable per-instance
 actor IDs. Unknown effects, confusion permutations and independently resolved
 layers remain unresolved integration questions.

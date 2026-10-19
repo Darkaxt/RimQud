@@ -3,8 +3,10 @@
 Authority: the user approved Joppa as the complete sample, using existing
 RimWorld textures first, and authorized execution on 2026-10-19. Pause before any
 required foreground desktop control. Hidden batch graphics and offscreen
-simulation are authorized. No operating-system input injection or desktop
-automation. Native game event/API automation stays within the isolated process.
+simulation were authorized initially. The user subsequently authorized the
+silent isolated foreground review and physical-input/HUD checks with "go ahead".
+Desktop interaction is limited to that review; automated game diagnostics stay
+within the isolated process.
 
 ## Required outcome
 
@@ -51,7 +53,7 @@ automation. Native game event/API automation stays within the isolated process.
    User reprioritized these visible defects before gameplay verification. Inspect
    native ground/liquid semantics, implement the complete scene correction and
    verify actual full-map readbacks, visibility, connectivity and depth transitions.
-3. **BLOCKED — Gameplay lifecycle and targeting verification (J4, J5).**
+3. **COMPLETE — Gameplay lifecycle and targeting verification (J4, J5).**
    Depends on stage 1. Prove actual gameplay-view alignment, targeting, menus and
    save/load using supported internal automation where possible. Pause before any
    necessary foreground action. Desktop permission is not inferred from elapsed
@@ -153,7 +155,7 @@ packages/cache, scoped decompilation diagnostics, extracted donor materials,
 compiled diagnostics, isolated profile, logs and intermediate captures. Requested
 source, reviewed image evidence and comparison deliverables are retained.
 
-## Stage 3 reconciliation — native integration verified; foreground gate parked
+## Stage 3 history — native integration verified; foreground gate initially parked
 
 Implemented and verified through the real map camera: generated Joppa with native
 history/player, accepted/consumed frame hashes, mapped native painted ground,
@@ -171,7 +173,7 @@ native SaveGame's synchronous-success contract and validate by loading actual
 saved state. Native opaque ground-layer pixels match the controlled renderer;
 Qud's map-camera effects remain applied. No compensating color/style patch added.
 
-Current external blocker: J4 physical pointer/keyboard routing, full HUD visibility
+At the earlier pause, the external blocker was J4 physical pointer/keyboard routing, full HUD visibility
 and final foreground readability have not been observed. Their actual path
 requires opening and operating a game window, outside the standing hidden-only
 authorization. Resolve by user authorization for one silent isolated `review`
@@ -179,7 +181,7 @@ session, then verify normal walking, mouse look/targeting, zoom, inventory/HUD a
 save/quit. The prepared review mode is compiled but unexecuted; it uses the same
 presentation and native loop without automatic commands or menu closing. Overall
 playable-sample completion and a working-mod claim depend on this gate. Stage 3
-is parked BLOCKED; no later implementation stage is ACTIVE. Tracked deferrals:
+was parked BLOCKED; no later implementation stage was ACTIVE. Tracked deferrals:
 none. No production FPS or long-session stability claim is made.
 
 Fresh automated run: exit zero, no remaining CoQ process, master/ambient/listener
@@ -200,3 +202,56 @@ evidence and `donor/` review inputs remain intentionally. Complete gameplay
 evidence is also retained in ignored `local/gameplay-20261019/` and verified there.
 The completed run's profile baseline moved with that evidence; the next launch
 will capture a fresh baseline rather than restore stale preferences.
+
+Foreground gate resumed: the user explicitly authorized the proposed silent
+isolated window and physical-input/HUD check with "go ahead". The authorization
+blocker was resolved; stage 3 resumed ACTIVE for the remaining checks below.
+
+## Foreground result and final reconciliation
+
+The actual 1280 × 800 window showed the full HUD, donor terrain and native actors.
+Mouse walking moved the player from (37,22) through (39,22) to (43,17). Right-click
+selected Warden Yrame; mouse-wheel zoom retained map alignment. The user confirmed
+physical I opened inventory, and its native StatusScreensScreen was captured.
+Closing inventory restored donor presentation. The on-screen menu also opened
+correctly; native Save and Quit wrote a 551,538-byte save, displayed "Game saved!"
+and exited zero after mouse acknowledgement. The save's gzip integrity was checked.
+
+Native rendering beneath menus is intentional conservative fallback: unrelated
+views restore owned sprite visibility and hide the donor layer; returning to Stage
+rebuilds it from an accepted buffer. This is not donor-layer loss during gameplay.
+The first review exposed a nullable message in the diagnostic popup hook; fixing
+that exact contract removed its exception. Review now enters through the native
+main menu and NewGame/RunGame lifecycle, without the loader's direct-game shortcut.
+
+Keyboard coverage is deliberately bounded. Physical I worked; synthetic keys were
+visible to Unity's legacy Input but did not trigger the tested native shortcuts.
+The user clarified that walking was by pointer. Keyboard movement is unverified.
+Physical Escape stopped the desktop-control tool, so its game-menu shortcut is
+also unverified. The mouse menu path passed. No input rerouting workaround was
+added. These results establish basic input coexistence, not every key binding,
+production frame rate or long-session stability.
+
+Fresh preservation checks found no changed normal saves/settings, restored ten
+Unity preferences, and recorded 66 created, two removed and one modified normal
+diagnostic/cache files across the two foreground attempts. Installed game content
+remains unchanged. The original launcher completed and no CoQ process remained.
+Reviewed transaction `5a53801542629bddc56811075b6b213f` removed all 28 expendable
+profile/scratch entries (983,931 logical bytes), with no errors or exclusions.
+The completed profile baseline moved into the private review archive so the next
+launch captures fresh preferences. Requested captures and private evidence remain;
+donor inputs remain local
+for reproducibility and are excluded from publication.
+
+J1-J3 remain verified by the full-village and accepted-frame evidence. J6-J7 remain
+verified by the marsh/depth/terrain scenarios. J4 is satisfied by native automated
+save/load and targeting plus this bounded foreground workflow. J5 preservation,
+observed exit and reviewed cleanup passed; source/docs and contextual evidence
+are included in the verified closure commit. No blockers or tracked deferrals.
+All three stages are COMPLETE, with no ACTIVE stage. No speculative consolidation or
+new rendering abstraction is needed for the specified experiment.
+
+See [foreground evidence](../evidence/foreground-review.json) and the README's
+unaltered HUD/menu captures. This closes the specified feasibility sample; it does
+not constitute a released overhaul. Remote synchronization is verified separately
+at delivery.

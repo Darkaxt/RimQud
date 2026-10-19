@@ -18,6 +18,20 @@ using XRL.UI;
 
 namespace RenderingTransplantProbe
 {
+    [HarmonyPatch(typeof(XRLCore),"NewGame")]
+    public static class ReviewGameStarted
+    {
+        static void Postfix(XRLGame __result){GameplayProbe.StartReview(__result);}
+    }
+    [HarmonyPatch(typeof(XRLCore),"RunGame")]
+    public static class ReviewGameEnded
+    {
+        static void Postfix()
+        {
+            if(GameplayProbe.ActiveMode && !GameplayProbe.Automated && GameplayProbe.Presenting)
+                GameplayProbe.Done=true;
+        }
+    }
     [HarmonyPatch(typeof(Keyboard),"kbhit")]
     public static class DiagnosticInput
     {
@@ -43,10 +57,10 @@ namespace RenderingTransplantProbe
         static void Postfix(Qud.UI.PopupMessage __instance, string message, List<Qud.UI.QudMenuItem> buttons)
         {
             if(!GameplayProbe.ActiveMode)return;
-            ProbeRunner.Record("gameplay-popup.json",new{message,commands=buttons.Select(b=>b.command).ToArray()});
-            bool joppaIntro=message.Contains("you arrive at the oasis-hamlet of &GJoppa&y") &&
+            ProbeRunner.Record("gameplay-popup.json",new{message,commands=buttons==null?new string[0]:buttons.Select(b=>b.command).ToArray()});
+            bool joppaIntro=message!=null && message.Contains("you arrive at the oasis-hamlet of &GJoppa&y") &&
                 message.EndsWith("rises above the fray and pierces the cloud-ribboned sky.");
-            if((message=="You embark for the caves of Qud." || joppaIntro) && buttons.Count==1 && buttons[0].command=="Accept")
+            if((message=="You embark for the caves of Qud." || joppaIntro) && buttons!=null && buttons.Count==1 && buttons[0].command=="Accept")
             {
                 __instance.OnActivateCommand(buttons[0]);return;
             }
@@ -86,6 +100,7 @@ namespace RenderingTransplantProbe
         public static bool Automated { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="gameplay"; } }
         public static bool ActiveMode { get { return Automated || Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="review"; } }
         static string lastView;
+        static string reviewState;
         public static volatile bool Presenting,Replacement=true;
         public static volatile string Phase="boot";
         public static int LookX=-1,LookY=-1;
@@ -256,6 +271,19 @@ namespace RenderingTransplantProbe
         {
             if(!ActiveMode)return;
             string view=GameManager.Instance.CurrentGameView;
+            if(!Automated && Presenting)
+            {
+                var body=XRLCore.Core.Game.Player.Body;var cell=body.CurrentCell;
+                string token=view+"|"+cell.X+"|"+cell.Y+"|"+Application.isFocused+"|"+Screen.width+"|"+Screen.height;
+                if(token!=reviewState || Input.anyKeyDown || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+                {
+                    reviewState=token;
+                    ProbeRunner.Record("review-state.json",new{view,x=cell.X,y=cell.Y,
+                        applicationFocused=Application.isFocused,gameFocused=GameManager.focused,threadFocused=XRLCore.bThreadFocus,
+                        screenWidth=Screen.width,screenHeight=Screen.height,fullscreen=Screen.fullScreen,
+                        keyDown=Input.anyKeyDown,inputText=Input.inputString,overlayVisible=overlay!=null && overlay.activeSelf});
+                }
+            }
             if(view!="Stage")Hide();
             if(Automated && Phase=="inventory" && view=="StatusScreensScreen" && !menuSeen)
             {
@@ -274,6 +302,13 @@ namespace RenderingTransplantProbe
                     listenerVolume=AudioListener.volume,masterVolume=SoundManager.MasterVolume});
             }
         }
+        public static void StartReview(XRLGame game)
+        {
+            if(!ActiveMode || Automated || game==null || Interlocked.Exchange(ref started,1)!=0)return;
+            Presenting=true;Phase="review";
+            ProbeRunner.Record("review-ready.json",new{zone=game.Player.Body.CurrentZone.ZoneID,
+                silent=true,entry="Native main menu NewGame and RunGame",operatingSystemInput=false});
+        }
         public static void Run()
         {
             if(Interlocked.Exchange(ref started,1)!=0)return;
@@ -286,12 +321,6 @@ namespace RenderingTransplantProbe
                     historyInitialized=game.sultanHistory!=null,player=game.Player.Body.Blueprint,
                     view=GameManager.Instance.CurrentGameView});
                 var core=XRLCore.Core;var body=game.Player.Body;var start=body.CurrentCell;
-                if(!Automated)
-                {
-                    GameManager.Instance.SetGameViewStack("Stage");body.CurrentZone.SetActive();Presenting=true;Phase="review";
-                    ProbeRunner.Record("review-ready.json",new{zone=body.CurrentZone.ZoneID,silent=true,operatingSystemInput=false});
-                    core.RunGame();return;
-                }
                 GameManager.focused=true;GameManager.Instance.SetGameViewStack("Stage");
                 body.CurrentZone.SetActive();core.UpdateGlobalChoices();Presenting=true;
                 string direction=null;

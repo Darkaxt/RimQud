@@ -93,6 +93,7 @@ in a controlled fixture. It did not establish a generic layered scene contract.
 
 Selective reuse has positive runtime evidence for shader loading and bounded
 scene capture. The later [native Joppa experiment](joppa-experiment.md) adds
-full-map offscreen drawing, linked walls and terrain transitions. Gameplay
-lifecycle, Qud-faithful replacement assets and third-party compatibility remain
-unverified or unimplemented; see the [roadmap](roadmap.md).
+full-map offscreen drawing, linked walls, terrain transitions and a bounded native
+gameplay/foreground workflow. Production stability, Qud-faithful replacement
+assets and third-party compatibility remain unverified or unimplemented;
+see the [roadmap](roadmap.md).

@@ -7,8 +7,27 @@ its own simulation and controls.
 **Current result: donor rendering is connected to Qud's actual gameplay map
 camera in a fully generated Joppa game.** Native movement, look targeting, modern
 inventory, save/load and three continuous native turns passed isolated automated
-checks. Physical input and foreground review remain pending; this is an
-experimental integration, not a released overhaul.
+checks. Foreground review also verified mouse walking, NPC targeting, zoom,
+physical I opening inventory, the full HUD and mouse-driven save/quit. This is
+an experimental integration, not a released overhaul.
+
+## Foreground review
+
+Unaltered captures of the actual 1280 × 800 game window, including its native HUD:
+
+![Actual Joppa foreground gameplay and HUD](docs/images/joppa-foreground-hud.jpg)
+
+Opening a native menu deliberately restores Qud's original presentation; the
+donor layer returns when gameplay resumes. This conservative fallback also
+applies to inventory and NPC context menus.
+
+![Native game menu with original-render fallback](docs/images/joppa-foreground-menu.jpg)
+
+[Foreground evidence](evidence/foreground-review.json) distinguishes direct
+observations from user-confirmed physical input. Keyboard movement and the
+Escape menu shortcut remain unverified: Escape stopped the remote-control tool.
+Synthetic shortcuts did not activate native commands, although physical I did.
+Long-session stability and FPS have not been established.
 
 ## Actual gameplay-view integration
 
@@ -26,7 +45,7 @@ The donor layer clears for look/inventory views, disabling and unmatched buffers
 Native renderer suppression is applied before the map camera draws, after Qud's
 own sprite updates. Save/load rebuilds from the newly accepted native frame.
 [Verified gameplay evidence](evidence/gameplay-result.json) records the bounded
-automated checks; physical controls, long-session stability and FPS are unverified.
+automated checks; the separate foreground evidence above covers basic controls.
 
 ## Full native-map Joppa experiment
 

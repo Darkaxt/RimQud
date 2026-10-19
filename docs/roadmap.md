@@ -1,22 +1,24 @@
 # Next experiments and eventual release
 
-The [native Joppa experiment](joppa-experiment.md) is now authorized and active.
-Its full-map and automated gameplay integration passed. Foreground physical-input
-review remains pending before calling the slice playable.
+The [native Joppa experiment](joppa-experiment.md) now has full-map, automated
+gameplay and bounded foreground acceptance evidence. Mouse walking, NPC targeting,
+zoom, physical I opening inventory, HUD, native menus and save/quit passed.
 The later art/compatibility work below remains a proposal, not a scheduled release.
 
-## Current gate: foreground review of the integrated Joppa slice
+## Next proposed gate: measured gameplay stability
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short
-continuous game loop are verified. A prepared `review` launch uses normal controls
-and silent audio. It has not been launched because foreground use requires the
-user's go-ahead. Check physical pointer routing, sustained walking, camera zoom,
-HUD/menu visibility and the resulting visual readability before expanding art.
+continuous game loop are verified. The authorized silent foreground review also
+passed its bounded workflow. Keyboard movement and the Escape menu shortcut
+remain unverified; physical Escape was intercepted by the remote-control tool.
+The native on-screen menu worked. Menus intentionally show Qud's original
+presentation, and donor rendering returns when gameplay resumes.
 
 The controlled zone/visibility/disable checks remain valid. No broad FPS or
-long-session stability claim follows from the short native run. Those measurements
-should follow successful foreground review, before broader compatibility work.
+long-session stability claim follows from the short native run. A bounded measured
+walk, repeated menu/save-load transitions and memory/frame-cost observations are
+the next proposed experiment before broader compatibility or a released mod.
 
 ## Art after the playable slice
 

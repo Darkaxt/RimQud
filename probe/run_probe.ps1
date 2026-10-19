@@ -32,6 +32,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $m
     OptionEnableMods='Yes'; OptionAllowCSMods='Yes'; OptionOutputModAssembly='No';
     OptionHarmonyDebug='No'; OptionMasterVolume='0'; OptionMusicVolume='0'; OptionSoundVolume='0'
     OptionAmbientVolume='0'; OptionMusic='No'; OptionSound='No'; OptionAmbient='No'
+    OptionDisplayFullscreen='No'
     OptionDisableFloorTextureObjects='No'
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $local 'PlayerOptions.json') -Encoding utf8NoBOM
 $env:QUDEXPERIMENT_ROOT=$rootFull
@@ -44,7 +45,9 @@ if (-not (Test-Path -LiteralPath $baseline)) {
     & python (Join-Path $PSScriptRoot 'profile_guard.py') before --root $Root
     if ($LASTEXITCODE -ne 0) { throw 'Profile baseline failed' }
 }
-$launchArgs=@('-batchmode','-force-d3d11','-screen-width','640','-screen-height','480','-screen-fullscreen','0',
+$screenWidth=if($Mode -eq 'review'){'1280'}else{'640'}
+$screenHeight=if($Mode -eq 'review'){'800'}else{'480'}
+$launchArgs=@('-batchmode','-force-d3d11','-screen-width',$screenWidth,'-screen-height',$screenHeight,'-screen-fullscreen','0',
     '-savepath',$profile,'-sharedpath',$local,'-syncedpath',$synced,
     '-logFile',(Join-Path $Root "unity-$Mode.log"),'STEAM:NO','NOMETRICS','probe')
 if($Mode -eq 'review'){$launchArgs=$launchArgs | Where-Object {$_ -ne '-batchmode'}}

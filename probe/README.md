@@ -28,4 +28,5 @@ profile, set master/ambient volumes to zero, and pause Unity's audio listener.
 The runtime asserts and records that state. No normal audio preferences are
 changed. `gameplay` exercises the native session automatically. `review` launches
 a visible interactive session with the same presentation and silent audio; run it
-only when foreground use is authorized. Physical-input review is still pending.
+only when foreground use is authorized. The bounded foreground review passed;
+see [its evidence and keyboard-testing limits](../evidence/foreground-review.json).
