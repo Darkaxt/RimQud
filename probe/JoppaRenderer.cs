@@ -117,10 +117,11 @@ namespace RenderingTransplantProbe
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
                 // Match the inspected donor textures: repeat, trilinear and mips.
-                bool sprite=filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("faithful-cat-") || filename.StartsWith("chair-") ||
+                bool sprite=filename.StartsWith("dromad-") || filename.StartsWith("human-") || filename.StartsWith("cat-") || filename.StartsWith("faithful-cat-") || filename.StartsWith("chair-") ||
                     filename.StartsWith("prop-") || filename.StartsWith("worn-") || filename.StartsWith("held-");
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
+                texture.name=filename;
             }
             mat=new Material(shaders[shader]);mat.mainTexture=texture;mat.SetColor("_Color",color);
             // Donor terrain drawing uses precedence-ordered materials. Explicit
@@ -268,7 +269,20 @@ namespace RenderingTransplantProbe
             var go=new UnityEngine.GameObject("RimQudForeground:"+c.Instance);scene.Add(go);go.layer=30;
             go.transform.position=Point(c.X+.5f,c.Y+.86f,ForegroundDepth(c,.2f));
             bool flip=(c.Facing==3)^c.Display.HFlip;go.transform.localScale=new Vector3(flip?-1:1,1,1);
-            if(c.Kind=="human")
+            if(DromadArt.Enabled && c.AssetFamily=="dromad")
+            {
+                foreach(JObject part in DromadArt.View(c.Facing))
+                {
+                    string component=(string)part["component"],role=(string)part["color_role"];
+                    var item=c.Equipment==null?null:c.Equipment.FirstOrDefault(e=>e.Family==component);
+                    if(role=="equipment" && item==null)continue;
+                    Color color=role=="detail"?c.Display.Detail:role=="equipment"?item.Color:c.Display.Foreground;
+                    var renderer=SpriteLayer(go.transform,Material("Custom/Cutout",(string)part["file"],color),
+                        (float)part["width"],(float)part["height"],(float)part["center_x"],(float)part["center_z"],(float)part["layer"]);
+                    renderer.name=role=="equipment"?"RimQudEquipped:"+item.Instance+":"+item.Slot:"RimQudDromad:"+component;
+                }
+            }
+            else if(c.Kind=="human")
             {
                 // Donor Male body: 1 x .9 graphic scale; head offset (.04,.34).
                 const float scale=1.2f,bodyHeight=1.35f*scale;
@@ -440,12 +454,13 @@ namespace RenderingTransplantProbe
                     var screen=live && PawnPresentation.IsLayered(c.Kind)?GameManager.Instance.getScreenTileCenter(c.X,c.Y):Vector3.zero;
                     rows.Add(new JObject{{"x",c.X},{"y",c.Y},{"source",c.Source},{"kind",c.Kind},
                         {"instance",c.Instance},{"facing",c.Facing},{"groundKind",c.GroundKind},
-                        {"art",ArtState(c,mapped)},{"artFallback",CtesiphusArt.Failure(c)},
+                        {"art",ArtState(c,mapped)},{"artFallback",c.ArtFallback??CtesiphusArt.Failure(c)},
                         {"assetFamily",c.AssetFamily},{"doorOpen",c.DoorOpen},{"tile",c.Display.Tile},
                         {"bodyShape",c.BodyShape},{"apparelFallback",c.ApparelFallback},{"equipment",EquipmentRows(c.Equipment)},
                         {"detailColor",new JArray(c.Display.Detail.r,c.Display.Detail.g,c.Display.Detail.b,c.Display.Detail.a)},
                         {"hFlip",c.Display.HFlip},{"vFlip",c.Display.VFlip},
-                        {"foregroundLayers",mapped?(c.Kind=="human"?2+(c.Equipment==null?0:c.Equipment.Length):PawnPresentation.IsLayered(c.Kind)?1:0):0},
+                        {"foregroundLayers",mapped && actors.ContainsKey(c.Instance)?actors[c.Instance].GetComponentsInChildren<MeshRenderer>().Length:
+                            mapped?(c.Kind=="human"?2+(c.Equipment==null?0:c.Equipment.Length):PawnPresentation.IsLayered(c.Kind)?1:0):0},
                         {"feetX",c.X+.5f},{"feetY",c.Y+.86f},
                         {"foregroundDepth",ForegroundDepth(c,.2f)},
                         {"foregroundColor",new JArray(c.Display.Foreground.r,c.Display.Foreground.g,c.Display.Foreground.b,c.Display.Foreground.a)},
@@ -485,6 +500,23 @@ namespace RenderingTransplantProbe
         }
         JObject ArtState(JoppaCell c,bool mapped)
         {
+            if(mapped && DromadArt.Enabled && c.AssetFamily=="dromad")
+            {
+                Transform dromadActor;if(!actors.TryGetValue(c.Instance,out dromadActor))return null;
+                var layers=new JArray();
+                foreach(var layer in dromadActor.GetComponentsInChildren<MeshRenderer>())
+                {
+                    var mesh=layer.GetComponent<MeshFilter>().sharedMesh;var dromadVertices=mesh.vertices;
+                    var dromadContact=layer.transform.TransformPoint(dromadVertices[0]+.5f*(dromadVertices[3]-dromadVertices[0])+(1-296f/320)*(dromadVertices[1]-dromadVertices[0]));
+                    var color=layer.sharedMaterial.GetColor("_Color");
+                    layers.Add(new JObject{{"name",layer.name},{"file",layer.sharedMaterial.mainTexture.name},
+                        {"contactX",dromadContact.x/CellWidth},{"contactY",25-dromadContact.z},{"width",(dromadVertices[3]-dromadVertices[0]).magnitude},
+                        {"height",(dromadVertices[1]-dromadVertices[0]).magnitude},{"altitude",dromadVertices[0].y},
+                        {"color",new JArray(color.r,color.g,color.b,color.a)},
+                        {"shader",layer.sharedMaterial.shader.name}});
+                }
+                return new JObject{{"family","dromad"},{"layers",layers}};
+            }
             if(!mapped || !CtesiphusArt.Enabled || c.AssetFamily!="ray-cat")return null;
             Transform actor;if(!actors.TryGetValue(c.Instance,out actor))return null;
             var view=CtesiphusArt.View(c.Facing);var mf=actor.GetComponentInChildren<MeshFilter>();

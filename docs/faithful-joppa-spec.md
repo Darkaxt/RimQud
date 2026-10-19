@@ -15,6 +15,57 @@ without desktop takeover; pause only for a necessary desktop-only acceptance.
 The four stages in [the integration specification](joppa-integration-spec.md) are
 separately complete. This specification governs the newly requested outcome.
 
+2026-10-20 authorized direction correction: explicit editable geometry is the
+production source for creatures and apparel. ImageGen is optional for textures
+or object concepts, not the creature construction engine. Leave the accepted
+ray cat unchanged. The current Stage 3 sample is Tam: reconstruct one adult
+dromad from native race description and original sprite, using donor references
+for presentation. Deliver separate body (including limbs/hump), head/long-neck,
+fitted equipped Cloth Robe and held Shillelagh graphics in south/east/north views;
+west mirrors east. This does not create standard arm/leg render nodes. Record
+authored interpretation where the tiny original does not settle anatomy.
+Acceptance for this sample is the real layered Tam inside native Joppa, correct
+direction/contact and actual equip/unequip, supported palette, native look and
+save/load, with one focused hidden integration run. No per-asset full regression.
+This sample does not close Stage 3 or remove its remaining village requirements.
+
+Latest user correction (2026-10-20): the current authoring phase produces the
+unclothed adult dromad first. Do not use the user's clothed refinement image as
+input. A constructed unclothed model may undergo ImageGen refinement, keeping
+the source anatomy, views and registration as constraints. Subsequent clothing
+is one item at a time: overlay on the refined unclothed reference, refine, and
+retrieve a separate garment. Preserve explicit body/garment coverage masks and
+check extraction; a flattened generated composite does not automatically supply
+independent layers. Existing clothed Tam native evidence is a retained earlier
+diagnostic, not acceptance of this revised authoring process. Stop clothing
+authoring while the unclothed model is being established. All remains within
+the single ACTIVE Stage 3; its full village criteria remain unchanged.
+
+The user's subsequent authoring sequence supersedes constructing all three views
+independently: establish the front design, supply that front to ImageGen for side
+and back proposals, inspect and patch anatomical/perspective errors, then refine
+the composed three-orientation sheet. Labels belong under the views. Race facts
+remain binding: elongated camel muzzle, long neck/dulla and upper-back hump.
+Do not turn the hump into a tail or medallion, or bare feet into shoes. Inspect
+the source shapes before regeneration; no repeated native tests for these art
+drafts. The final selected sheet must be registered and split into separate
+body/head components before it can qualify as integrated race art.
+
+Current authoring checkpoint: the user selected the front-derived, refined
+unclothed turnaround on 2026-10-20 ("I love the result"). The selected image,
+exact input/prompts and limits are retained under art/dromad/nude. Native source
+identity is resolved; interpretation of unseen surfaces remains explicit.
+Refined view registration, body/head segmentation and garment extraction are
+internal advancement blockers, not verified by the earlier clothed Tam run.
+Stage 3 remains ACTIVE. No tracked deferrals; other village requirements remain.
+
+2026-10-20 priority clarification: the reusable procedure retains available Qud
+body/mutation metadata, while mutation-specific visual representation and garment
+adaptation are user-postponed. Ordinary race bodies, consistent views, layer
+separation and actual equipment are the current priority. Unsupported mutated
+shapes retain native graphics. This does not claim the broader named-anatomy
+requirements have been authored or verified, and does not close Stage 3.
+
 ## Requirements
 
 - A1: Inventory actual Joppa art targets and inhabitants from the installed,
@@ -62,7 +113,7 @@ its acceptance requires native integration.
 | --- | --- | --- | --- |
 | 1. Native body and clothing study | COMPLETE | A1, A2, A6 | Source-bound inventory covers observed inhabitants and selected art targets; gender/age uncertainty and runtime anatomy changes are explicit; mutation/clothing findings and concrete art/body contracts are recorded and checked against installed sources. |
 | 2. First faithful tile in native Joppa | COMPLETE | A3, A5, A6 | One referenced subject is generated, visually reviewed at intended scale, packaged, used in the actual native scene and verified with relevant direction/tint/lifecycle behavior. This establishes the art contract without broadening the renderer. |
-| 3. Complete village tiles and bodies | NOT STARTED | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
+| 3. Complete village tiles and bodies | ACTIVE | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
 
 Stage 1 QA reconciliation: the source-bound inventory now includes installed
 Biotech Baby/Child body types, alongside Core adult types and life-stage geometry.
@@ -88,7 +139,12 @@ source and private reproduction evidence remain preserved. Stage-closure design
 review found no required refactor for this bounded tile. A3/A5/A6 acceptance for
 this stage is satisfied; blockers/deferrals: none.
 
-Stage 3 remains NOT STARTED until stage 2's documentation is synchronized.
+Stage 2 source, documentation and native evidence are synchronized at df768dd.
+Stage 3 is ACTIVE: the user selected a deterministic adult dromad/Tam sample next;
+the remaining human variants, other species and mutation arrangements remain required.
+Remaining criteria are full selected art coverage, authored required body variants,
+native batch visual/integration acceptance and final reconciliation. These are
+internal advancement blockers while this stage is implemented. No tracked deferrals.
 Per the user's efficiency correction, subsequent art-only replacements reuse
 unchanged renderer behavior evidence. Generate one subject at a time, review
 native visuals in batches by body family, and rerun behavior checks only when

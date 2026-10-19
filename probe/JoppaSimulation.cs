@@ -59,6 +59,7 @@ namespace RenderingTransplantProbe
             if(!GameplayProbe.Presenting || area!=XRLCore.Core.Game.ZoneManager.ActiveZone)return;
             Gameplay=true;zone=area;producer=buffer;phase=GameplayProbe.Phase;expectedView="Stage";
             NativeApparel.BeginFrame();
+            DromadArt.BeginFrame();
             Array.Clear(observations,0,observations.Length);rendering=true;
         }
         public static void EndGameplay(Zone area,ScreenBuffer buffer)
@@ -136,6 +137,7 @@ namespace RenderingTransplantProbe
             if(!Monitor.IsEntered(TextConsole.BufferCS))throw new InvalidOperationException("Joppa publish outside lock");
             NativeApparel.MutateLate();
             CtesiphusArt.MutateLate();
+            DromadArt.MutateLate();
             if(PawnPresentation.Enabled && PawnPresentation.InjectLateMutation)
             {
                 var position=PawnPresentation.Human.CurrentCell;
@@ -148,7 +150,7 @@ namespace RenderingTransplantProbe
                 int i=x+80*y;var observed=observations[i];
                 var display=new ConsoleChar();display.Copy(TextConsole.CurrentBuffer.Buffer[x,y]);
                 bool changed=observed==null || observed.Resolved!=Appearance(display);
-                bool equipmentChanged=NativeApparel.Changed(i);
+                bool equipmentChanged=NativeApparel.Changed(i) || DromadArt.Changed(i);
                 // A known wall-paint adapter may change the tile variant only.
                 bool wallPaint=observed!=null && observed.Kind=="wall" && display.Tile!=null &&
                     display.Tile.StartsWith("Walls/wall_brinestalk",StringComparison.OrdinalIgnoreCase) &&

@@ -296,7 +296,7 @@ namespace RenderingTransplantProbe
             if(frame.View=="Looker")
             {
                 lookReady=true;
-                ProbeRunner.Record(Phase=="apparel-look"?"apparel-target-view.json":Phase=="raycat-look"?"raycat-target-view.json":"gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
+                ProbeRunner.Record(Phase=="apparel-look"?"apparel-target-view.json":Phase=="raycat-look"?"raycat-target-view.json":Phase=="dromad-look"?"dromad-target-view.json":"gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
                     overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
             }
             if(!awaiting || frame.Phase!=Phase)return;
@@ -455,6 +455,41 @@ namespace RenderingTransplantProbe
             ProbeRunner.Record("review-ready.json",new{zone=game.Player.Body.CurrentZone.ZoneID,
                 silent=true,entry="Native main menu NewGame and RunGame",operatingSystemInput=false});
         }
+        // One native-data collection pass, before any presentation fixture moves residents.
+        static void CaptureCatalogue(XRL.World.Zone zone)
+        {
+            var rows=new JArray();var seen=new HashSet<int>();
+            for(int y=0;y<zone.Height;y++)for(int x=0;x<zone.Width;x++)foreach(var obj in zone.GetCell(x,y).Objects)
+            {
+                if(obj.Body==null || obj.Brain==null || !seen.Add(obj.BaseID))continue;
+                var parts=new JArray();
+                foreach(var part in obj.Body.GetParts())
+                {
+                    var equipped=part.Equipped;var natural=part._DefaultBehavior;
+                    parts.Add(new JObject{{"id",part.ID},{"parent",part.ParentPart==null?-1:part.ParentPart.ID},
+                        {"type",part.Type},{"variant",part.VariantType},{"laterality",part.Laterality},
+                        {"manager",part.Manager},{"defaultBlueprint",part.DefaultBehaviorBlueprint},
+                        {"equipped",CatalogueItem(equipped)},{"defaultItem",CatalogueItem(natural)}});
+                }
+                var description=obj.GetPart<XRL.World.Parts.Description>();var render=obj.Render;
+                rows.Add(new JObject{{"instance",obj.BaseID},{"blueprint",obj.Blueprint},{"species",obj.GetSpecies()},
+                    {"gender",obj.GetGender().Name},{"description",description==null?null:description.Short},
+                    {"anatomy",obj.Body.Anatomy},{"parts",parts},
+                    {"tile",render==null?null:render.Tile},{"foreground",render==null?null:render.ColorString},
+                    {"tileColor",render==null?null:render.TileColor},{"detailColor",render==null?null:render.DetailColor}});
+            }
+            ProbeRunner.Record("joppa-creature-catalogue.json",new{zone=zone.ZoneID,actors=rows,
+                scope="Generated starting-area body/equipped/default-item data before presentation fixtures; not a rendering test",
+                operatingSystemInput=false,rendererRegressionsRun=false});
+        }
+        static JObject CatalogueItem(XRL.World.GameObject item)
+        {
+            if(item==null)return null;var render=item.Render;var description=item.GetPart<XRL.World.Parts.Description>();
+            return new JObject{{"instance",item.BaseID},{"blueprint",item.Blueprint},
+                {"description",description==null?null:description.Short},{"tile",render==null?null:render.Tile},
+                {"foreground",render==null?null:render.ColorString},{"tileColor",render==null?null:render.TileColor},
+                {"detailColor",render==null?null:render.DetailColor}};
+        }
         public static void Run()
         {
             if(Interlocked.Exchange(ref started,1)!=0)return;
@@ -466,10 +501,13 @@ namespace RenderingTransplantProbe
                 ProbeRunner.Record("gameplay-boot.json",new{running=game.Running,zone=game.Player.Body.CurrentZone.ZoneID,
                     historyInitialized=game.sultanHistory!=null,player=game.Player.Body.Blueprint,
                     view=GameManager.Instance.CurrentGameView});
+                if(Environment.GetEnvironmentVariable("QUDEXPERIMENT_CATALOGUE")=="1")
+                {CaptureCatalogue(game.Player.Body.CurrentZone);return;}
                 var core=XRLCore.Core;var body=game.Player.Body;var start=body.CurrentCell;
                 GameManager.focused=true;GameManager.Instance.SetGameViewStack("Stage");
                 body.CurrentZone.SetActive();core.UpdateGlobalChoices();Presenting=true;
                 PawnPresentation.Setup(game);
+                if(DromadArt.Enabled){targetX=start.X;targetY=start.Y;DromadArt.RunSample();return;}
                 string direction=null;
                 foreach(string d in new[]{"E","W","S","N"})
                 {

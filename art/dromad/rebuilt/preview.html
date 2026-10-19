@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tam · constructed dromad study</title>
+<style>
+:root{color-scheme:dark;background:#142823;color:#e4e7d6;font:17px/1.55 Georgia,serif}*{box-sizing:border-box}body{max-width:1120px;margin:auto;padding:32px 24px}h1{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0}h2{font-size:1.3rem}p{max-width:76ch;color:#bbcdc3}.eyebrow{font:12px/1.5 monospace;letter-spacing:.15em;color:#cfc041}a{color:#cfc041}fieldset{border:1px solid #4e6254;display:flex;gap:20px;flex-wrap:wrap;padding:14px 18px}legend{padding:0 8px}label{cursor:pointer}input{accent-color:#cfc041}.views{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.view{margin:0;background:#20352d;border:1px solid #41594c;padding:12px;text-align:center}.view svg{width:100%;max-width:220px;display:block;margin:auto}.view figcaption{font:13px monospace;color:#cfc041}.small{display:block;margin:auto;width:52px;height:65px}.note{font-size:14px}#native{margin-top:36px}#native img{display:block;width:100%;height:auto}.comparison{position:relative;overflow:hidden}.comparison .after{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}#wipe{width:100%}.nativeviews{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.nativeviews img{border:1px solid #4e6254}.hidden-layer{display:none}summary{cursor:pointer;color:#cfc041}@media(max-width:650px){body{padding:20px 14px}.views{grid-template-columns:repeat(2,1fr)}.nativeviews{grid-template-columns:1fr}fieldset{gap:12px}}
+</style>
+<style>.view svg.small{width:52px;height:65px}.nativeviews svg{display:block;width:100%;overflow:hidden}a:focus-visible,summary:focus-visible{outline:2px solid #cfc041;outline-offset:3px}.nativeviews figure{margin:12px 0}</style>
+<div class="eyebrow">RIMQUD / DETERMINISTIC CONSTRUCTION</div>
+<h1>Tam, layer by layer</h1>
+<p>One adult dromad race model, built from editable vector paths. Qud supplies identity, the long neck, muzzle, dulla, hump and palette. RimWorld references guide the rendering conventions. These assembled asset previews are separate from the native captures below.</p>
+<fieldset><legend>Visible layers</legend>
+<label><input type="checkbox" data-layer="body" checked> Body</label>
+<label><input type="checkbox" data-layer="head" checked> Head + neck</label>
+<label><input type="checkbox" data-layer="robe" checked> Equipped robe</label>
+<label><input type="checkbox" data-layer="shillelagh" checked> Held shillelagh</label>
+</fieldset>
+<div class="views" id="views"></div>
+<p class="note">Large views show construction; small views show readability at 52 × 65 pixels. West mirrors east. Limbs remain in the body graphic. Skin/detail and item colors use separate layers. Side clothing has one visible sleeve and drapes over the hump; the back has no front opening.</p>
+<details><summary>Sources and interpretation</summary><p>The original icon supports a compact upright silhouette. Its unseen surfaces are authored interpretation. Native equipment slots corroborate hand-bearing anatomy but do not establish appearance by themselves. The robe is fitted to this body; this does not claim arbitrary garments fit arbitrary races. Personal jewelry, ink and other appearance overlays remain postponed. Earlier ImageGen head concepts are superseded.</p><p><a href="model.json">Body, equipment and reference contract</a> · <a href="../../../docs/faithful-joppa-spec.md">Authoritative specification</a></p></details>
+<section id="native"><h2>Actual Qud captures</h2>
+<p id="native-status">Verified in actual Qud: directional layers, native equip/unequip, palette, visibility, hurt, look and save/load. Full frames are unchanged; magnified windows only adjust the browser view.</p>
+<div class="comparison"><img src="../../../docs/images/tam-original.png" alt="Original Tam inside native Qud"><img class="after" src="../../../docs/images/tam-south.png" alt="Constructed Tam and equipped robe inside native Qud"></div>
+<label for="wipe">Original / reconstructed comparison</label><input id="wipe" type="range" min="0" max="100" value="50">
+<div class="nativeviews"><figure><svg role="img" aria-label="Magnified native Tam" viewBox="421.543243 501.11113 70 70"><image href="../../../docs/images/tam-east.png" width="1280" height="800"/></svg><a href="../../../docs/images/tam-east.png">Full frame</a><figcaption>East</figcaption></figure><figure><svg role="img" aria-label="Magnified native Tam" viewBox="404.7531 475.925934 70 70"><image href="../../../docs/images/tam-north.png" width="1280" height="800"/></svg><a href="../../../docs/images/tam-north.png">Full frame</a><figcaption>North</figcaption></figure><figure><svg role="img" aria-label="Magnified native Tam" viewBox="404.7531 501.11113 70 70"><image href="../../../docs/images/tam-robe-removed.png" width="1280" height="800"/></svg><a href="../../../docs/images/tam-robe-removed.png">Full frame</a><figcaption>Native robe removal</figcaption></figure></div>
+</section>
+<script>
+const ns='http://www.w3.org/2000/svg';
+const tones={foreground:[152/255,135/255,95/255],detail:[207/255,192/255,65/255],equipment:[177/255,201/255,195/255]};
+function el(name,attrs={}){const e=document.createElementNS(ns,name);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);return e;}
+async function start(){const response=await fetch('model.json');if(!response.ok)throw Error('Model unavailable');const data=await response.json();
+for(const direction of ['south','east','north','west']){const f=document.createElement('figure');f.className='view';const caption=document.createElement('figcaption');caption.textContent=direction;f.append(caption);
+const svg=el('svg',{viewBox:'0 0 256 320',role:'img','aria-label':direction+' assembled dromad'});const defs=el('defs');svg.append(defs);
+for(const[role,rgb]of Object.entries(tones)){const filter=el('filter',{id:direction+'-'+role,'color-interpolation-filters':'sRGB'});filter.append(el('feColorMatrix',{type:'matrix',values:`${rgb[0]} 0 0 0 0 0 ${rgb[1]} 0 0 0 0 0 ${rgb[2]} 0 0 0 0 0 1 0`}));defs.append(filter);}
+for(const l of [...data.views[direction==='west'?'east':direction]].sort((a,b)=>a.layer-b.layer)){const image=el('image',{href:l.component+'-'+(direction==='west'?'east':direction)+'.png',width:256,height:320,filter:`url(#${direction}-${l.color_role})`,'data-component':l.component.split('-')[0]});if(direction==='west')image.setAttribute('transform','translate(256 0) scale(-1 1)');svg.append(image);}f.append(svg);const small=svg.cloneNode(true);small.classList.add('small');for(const node of small.querySelectorAll('[id]'))node.id+='-small';for(const image of small.querySelectorAll('image'))image.setAttribute('filter',image.getAttribute('filter').replace(')', '-small)'));f.append(small);document.querySelector('#views').append(f);}
+for(const box of document.querySelectorAll('[data-layer]'))box.addEventListener('change',()=>{for(const layer of document.querySelectorAll(`[data-component="${box.dataset.layer}"]`))layer.classList.toggle('hidden-layer',!box.checked);});document.documentElement.dataset.ready='true';}
+document.querySelector('#wipe').addEventListener('input',e=>document.querySelector('.after').style.clipPath=`inset(0 ${100-e.target.value}% 0 0)`);
+start().catch(e=>{document.querySelector('#views').textContent=e.message;});
+</script></html>

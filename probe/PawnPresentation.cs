@@ -67,6 +67,7 @@ namespace RenderingTransplantProbe
         public static string Kind(GO obj)
         {
             if((!Enabled && !JoppaCoverage.Enabled) || obj==null)return null;
+            if(DromadArt.Enabled && obj.Blueprint=="Tam")return "human";
             if(JoppaCoverage.Enabled)
             {
                 if(obj==XRLCore.Core.Game.Player.Body && obj.Body!=null && obj.Body.Anatomy=="Humanoid" &&
@@ -107,6 +108,7 @@ namespace RenderingTransplantProbe
             if(result.WaterDepth>0)result.GroundKind="water";
             NativeApparel.Capture(obj,result);
             CtesiphusArt.Capture(obj,result);
+            DromadArt.Capture(obj,result);
         }
         static bool KnownPaint(string tile)
         {

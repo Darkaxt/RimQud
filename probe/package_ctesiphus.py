@@ -78,6 +78,8 @@ def main():
     inputs = json.loads((REPO/'art/manifest.json').read_text(encoding='utf-8'))['images']
     views = {}
     for row in inputs:
+        if not row['file'].startswith('art/ctesiphus/'):
+            continue
         direction = row['direction']
         source = REPO/row['file']
         assert sha(source) == row['sha256']

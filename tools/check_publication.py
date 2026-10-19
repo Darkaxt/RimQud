@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     paths = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=ROOT).decode().split('\0')
     files = [ROOT / path for path in paths if path]
-    allowed = {'.md', '.json', '.png', '.jpg', '.py', '.cs', '.ps1', '.html'}
+    allowed = {'.md', '.json', '.png', '.jpg', '.py', '.cs', '.ps1', '.html', '.svg', '.txt'}
     for p in files:
         rel = p.relative_to(ROOT).as_posix()
         assert p.suffix in allowed or rel in {'.gitignore', '.gitattributes', 'LICENSE'}, rel
@@ -21,6 +21,9 @@ def main():
             json.loads(p.read_text(encoding='utf-8'))
         if p.suffix == '.py':
             ast.parse(p.read_text(encoding='utf-8'), filename=rel)
+        if p.suffix == '.svg':
+            import xml.etree.ElementTree as ET
+            assert ET.fromstring(p.read_text(encoding='utf-8')).tag.endswith('svg'), rel
         if p.suffix not in {'.png', '.jpg'}:
             data = p.read_text(encoding='utf-8')
             assert not re.search(r'C:[/\\]Users[/\\]|(?:ghp_|github_pat_|sk-proj-)[A-Za-z0-9_]{15,}', data, re.I), rel
@@ -48,8 +51,11 @@ def main():
         data = path.read_bytes()
         assert hashlib.sha256(data).hexdigest() == entry['sha256']
         assert list(struct.unpack('>II', data[16:24])) == entry['size']
+        if entry.get('source_svg'):
+            assert hashlib.sha256((ROOT/entry['source_svg']).read_bytes()).hexdigest() == entry['source_sha256']
         art_paths.add(path.resolve())
-    assert {entry['direction'] for entry in art['images']} == {'south', 'east', 'north'}
+    directions = {entry['direction'] for entry in art['images']}
+    assert {'south', 'east', 'north'} <= directions <= {'south', 'east', 'north', 'three-view'}
     assert listed | art_paths == {p.resolve() for p in files if p.suffix in {'.png', '.jpg'}}
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
     embedded = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme)
@@ -63,12 +69,13 @@ def main():
     scenes |= {prefix+'-'+side+'.png' for prefix in ['joppa-coverage', 'joppa-coverage-gameplay'] for side in ['original', 'replacement']}
     scenes |= {'joppa-apparel-'+side+'.png' for side in ['original','replacement','swapped','hurt']}
     scenes |= {'joppa-raycat-original.png','joppa-raycat-south.png'}
-    native_gallery = {'joppa-raycat-east.png','joppa-raycat-north.png'}
-    assert len(embedded) == 35 and len(engine) == 11
-    assert {Path(path).name for path in embedded} == engine | scenes
+    native_gallery = {'joppa-raycat-east.png','joppa-raycat-north.png',
+                      'tam-original.png','tam-south.png','tam-east.png','tam-north.png','tam-robe-removed.png'}
+    assert len(embedded) == 36 and len(engine) == 11
+    assert {Path(path).name for path in embedded} == engine | scenes | {'front-derived-refined.png'}
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 41
+    assert len(archived) == 4 and len(listed) == 46
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes - native_gallery
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
@@ -117,8 +124,17 @@ def main():
         source = subprocess.check_output(['git','show',revision+':probe/'+name],cwd=ROOT) if revision else (ROOT/'probe'/name).read_bytes()
         assert hashlib.sha256(source).hexdigest() == digest, name
     preview = (ROOT/'art/ctesiphus/preview.html').read_text(encoding='utf-8')
-    assert all(name in preview for name in native_gallery)
-    print(f'Publication checks passed: {len(files)} public files; 26 Joppa views, 11 material readbacks 4 archived concepts and 3 generated directional assets; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+    assert all(name in preview for name in ['joppa-raycat-east.png','joppa-raycat-north.png'])
+    dromad = json.loads((ROOT/'evidence/dromad-result.json').read_text(encoding='utf-8'))
+    assert dromad['native_equip_unequip'] and dromad['native_save_load'] and dromad['saves_settings_preserved']
+    assert hashlib.sha256((ROOT/'art/dromad/rebuilt/model.json').read_bytes()).hexdigest() == dromad['model_sha256']
+    for name,digest in dromad['source_sha256'].items():
+        assert hashlib.sha256((ROOT/'probe'/name).read_bytes()).hexdigest() == digest, name
+    selected = json.loads((ROOT/'art/dromad/nude/refinement.json').read_text(encoding='utf-8'))
+    assert selected['selected_by_user'] and selected['user_clothed_image_used'] is False
+    assert selected['source_masks_registered_to_refinement'] is False and selected['native_integration'] is False
+    assert hashlib.sha256((ROOT/'art/dromad/nude'/selected['selected_output']).read_bytes()).hexdigest() == selected['selected_output_sha256']
+    print(f'Publication checks passed: {len(files)} public files; {len(listed)} contextual images and {len(art_paths)} artwork/mask assets; links, hashes, evidence source identities, JSON, SVG and Python syntax valid.')
 
 
 if __name__ == '__main__':

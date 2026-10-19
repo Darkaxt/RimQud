@@ -69,6 +69,7 @@ namespace RenderingTransplantProbe
         {return shape+"|"+failure+"|"+string.Join(";",items.Select(e=>e.Instance+"/"+e.Blueprint+"/"+e.Slot+"/"+e.ColorCode));}
         public static void Capture(GO obj,JoppaCell cell)
         {
+            if(DromadArt.Enabled && obj.Blueprint=="Tam")return;
             if(!Enabled || !PawnPresentation.IsLayered(cell.Kind) || cell.Kind=="prop")return;
             string shape,failure;var items=Read(obj,out shape,out failure);
             cell.Equipment=items;cell.BodyShape=shape;cell.ApparelFallback=failure;

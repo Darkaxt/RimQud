@@ -1,0 +1,50 @@
+{
+  "tool": "Built-in image_gen",
+  "sequence": [
+    {
+      "step": "Construct unclothed front",
+      "input": "base-south.png",
+      "sha256": "00cc2a0e3a4053852274098606ced52e4e70e15d6ea1bfb0e8f01a7c522d917d",
+      "semantics": "Tam -> Dromad -> native description and humanoid body metadata"
+    },
+    {
+      "step": "Propose side/back alongside front",
+      "input": "base-south.png",
+      "prompt": "front-to-views-prompt.txt",
+      "output": "front-derived-draft.png",
+      "sha256": "9d6bc922286909026c330a7e618cf941d17ed4ec3ad0e005dee01d1a1ad53785",
+      "review": "Side muzzle and feet turn coherently; round upper-back hump needed correction"
+    },
+    {
+      "step": "Targeted composed refinement",
+      "input": "front-derived-draft.png",
+      "prompt": "front-derived-refinement-prompt.txt",
+      "output": "front-derived-refined.png",
+      "sha256": "263e849bb3a54e23cb7ffe2c9592b31a9a2dae75c248aa7a53fd7219955316c2",
+      "review": "Upper-back hump integrated with shoulders; generated pixel data retained unchanged"
+    }
+  ],
+  "selected_output": "front-derived-refined.png",
+  "selected_output_sha256": "263e849bb3a54e23cb7ffe2c9592b31a9a2dae75c248aa7a53fd7219955316c2",
+  "selected_by_user": true,
+  "user_clothed_image_used": false,
+  "pixels_modified": false,
+  "source_masks_registered_to_refinement": false,
+  "native_integration": false,
+  "review": {
+    "labels": "Browser labels below each view; generated text not relied upon",
+    "shape": "Adult stylized interpretation of the original icon plus native description; not canonical anatomy proof",
+    "layers": "Refined body/head extraction and view registration remain pending",
+    "mutation_representation": "Available metadata retained; visual adaptation postponed by user"
+  },
+  "superseded": [
+    {
+      "file": "refined-v1.png",
+      "reason": "Inherited frontal leg stance in side view"
+    },
+    {
+      "file": "refined-v2.png",
+      "reason": "Corrected constructed three-view refinement; user subsequently selected front-guided process"
+    }
+  ]
+}

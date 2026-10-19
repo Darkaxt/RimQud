@@ -24,6 +24,28 @@ The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md
 identifies Joppa's four species families and the named humans' defining mutations.
 Reusable body/age variants and the remaining village artwork are still pending.
 
+The selected **adult dromad base for Tam** now has a constructed front, proposed
+side/back views and a reviewed composite refinement. It is unclothed so later
+garments can be fitted and extracted one item at a time. The long neck, muzzle,
+dulla and upper-back hump reflect Qud's description; unseen surfaces are an
+authored interpretation. The user's clothed refinement image was not used.
+
+[Labeled unclothed model review](art/dromad/nude/preview.html) /
+[input, prompts and selection record](art/dromad/nude/refinement.json).
+
+The reusable [Qud creature-conversion procedure](skills/qud-creature-conversion/SKILL.md)
+documents identity/race resolution, body metadata, front-guided turnarounds,
+correction/refinement, layer registration and one-item-at-a-time clothing. It is
+maintained as a skill source in this repository; no global skill was installed.
+Mutation metadata is retained; mutation-specific rendering is postponed.
+
+![Selected unclothed adult dromad turnaround; art authoring output, not a native game capture](art/dromad/nude/front-derived-refined.png)
+
+Body/head segmentation and view registration of this refined base are still
+pending. An earlier [constructed clothed Tam diagnostic](art/dromad/rebuilt/preview.html)
+passed native equip/unequip, facing, tint, hurt, look and save/load checks;
+that evidence does not establish integration of the newer selected base.
+
 The first faithful tile, **Ctesiphus**, now runs in native Qud. Its frozen input
 chain is **creature → race → native race description + actual RimWorld asset
 reference + original Qud model**. Generated pixels are unchanged; native material
