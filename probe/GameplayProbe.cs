@@ -11,22 +11,48 @@ using XRL;
 using XRL.Core;
 using XRL.CharacterBuilds;
 using XRL.CharacterBuilds.Qud;
+using ConsoleLib.Console;
+using Newtonsoft.Json.Linq;
+using XRL.World;
+using XRL.UI;
 
 namespace RenderingTransplantProbe
 {
+    [HarmonyPatch(typeof(Keyboard),"kbhit")]
+    public static class DiagnosticInput
+    {
+        static void Prefix(){GameplayProbe.InjectInput();}
+    }
+    [HarmonyPatch(typeof(ConsoleChar),"BeforeRender")]
+    public static class RestoreNativeCell
+    {
+        static void Prefix(int x,int y){GameplayProbe.RestoreCell(x,y);}
+    }
+    [HarmonyPatch(typeof(Look),"ShowLooker")]
+    public static class DiagnosticLook
+    {
+        static void Prefix(int StartX,int StartY)
+        {
+            if(!GameplayProbe.Presenting)return;
+            GameplayProbe.LookX=StartX;GameplayProbe.LookY=StartY;
+        }
+    }
     [HarmonyPatch(typeof(Qud.UI.PopupMessage),"ShowPopup")]
     public static class DiagnosticPopup
     {
         static void Postfix(Qud.UI.PopupMessage __instance, string message, List<Qud.UI.QudMenuItem> buttons)
         {
-            if(Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")!="gameplay")return;
+            if(!GameplayProbe.ActiveMode)return;
             ProbeRunner.Record("gameplay-popup.json",new{message,commands=buttons.Select(b=>b.command).ToArray()});
-            if(message=="You embark for the caves of Qud." && buttons.Count==1 && buttons[0].command=="Accept")
+            bool joppaIntro=message.Contains("you arrive at the oasis-hamlet of &GJoppa&y") &&
+                message.EndsWith("rises above the fray and pierces the cloud-ribboned sky.");
+            if((message=="You embark for the caves of Qud." || joppaIntro) && buttons.Count==1 && buttons[0].command=="Accept")
             {
                 __instance.OnActivateCommand(buttons[0]);return;
             }
-            // Unknown prompts require inspection rather than a guessed response.
-            GameplayProbe.ExitCode=2;GameplayProbe.Done=true;
+            // In automated diagnostics, unknown prompts stop for inspection.
+            // Interactive review leaves them with Qud's normal controls.
+            if(GameplayProbe.Automated){GameplayProbe.ExitCode=2;GameplayProbe.Done=true;}
         }
     }
     [HarmonyPatch(typeof(EmbarkBuilder),"Begin")]
@@ -34,7 +60,7 @@ namespace RenderingTransplantProbe
     {
         static bool Prefix(ref Task<EmbarkInfo> __result)
         {
-            if(Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")!="gameplay")return true;
+            if(!GameplayProbe.ActiveMode)return true;
             EmbarkBuilderConfiguration.Init();
             string code=EmbarkBuilderConfiguration.activeModules.OfType<QudPregenModule>().First().pregens.Values.First().Code;
             var builder=EmbarkBuilder.FromCode(code,true);builder.SkippingUIUpdates=true;
@@ -57,15 +83,196 @@ namespace RenderingTransplantProbe
         public static volatile bool Done;
         public static int ExitCode;
         static int started;
+        public static bool Automated { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="gameplay"; } }
+        public static bool ActiveMode { get { return Automated || Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="review"; } }
         static string lastView;
+        public static volatile bool Presenting,Replacement=true;
+        public static volatile string Phase="boot";
+        public static int LookX=-1,LookY=-1;
+        static int targetX,targetY;
+        static int inputSerial;
+        static bool escaped;
+        static volatile bool lookReady,menuSeen,awaiting;
+        static readonly ManualResetEventSlim presented=new ManualResetEventSlim();
+        static readonly Queue<string> commands=new Queue<string>();
+        static readonly JArray frames=new JArray();
+        static UnityEngine.GameObject overlay;
+        static Mesh overlayMesh;
+        static Material overlayMaterial;
+        static bool cameraHook;
+        static readonly Renderer[] hidden=new Renderer[2000];
+        static readonly bool[] previous=new bool[2000];
+        static readonly System.Reflection.MethodInfo flush=AccessTools.Method(typeof(exStandaloneSprite),"LateUpdate");
+
+        public static void RestoreCell(int x,int y)
+        {
+            int i=x+80*y;
+            if(hidden[i]!=null){hidden[i].enabled=previous[i];hidden[i]=null;}
+        }
+        static void Hide()
+        {
+            if(overlay!=null)overlay.SetActive(false);
+            for(int y=0;y<25;y++)for(int x=0;x<80;x++)RestoreCell(x,y);
+        }
+        public static void HideUnmatched(){Hide();}
+        static void Cover(bool[] covered)
+        {
+            for(int y=0;y<25;y++)for(int x=0;x<80;x++)if(covered[x+80*y])
+            {
+                int i=x+80*y;var r=GameManager.Instance.ConsoleCharacter[x,y].GetComponent<Renderer>();
+                hidden[i]=r;previous[i]=r.enabled;r.enabled=false;
+            }
+            overlay.SetActive(true);
+        }
+        static void BeforeCamera(Camera camera)
+        {
+            if(camera!=GameManager.MapCamera)return;
+            if(!Presenting || GameManager.Instance.CurrentGameView!="Stage"){Hide();return;}
+            if(overlay!=null && overlay.activeSelf)
+                foreach(var renderer in hidden)if(renderer!=null)renderer.enabled=false;
+        }
+        static void CreateOverlay(RenderTexture texture)
+        {
+            if(overlay!=null)return;
+            var shader=Shader.Find("UI/Default");
+            if(shader==null || !shader.isSupported)throw new InvalidOperationException("Native transparent presentation shader unavailable");
+            overlayMaterial=new Material(shader);overlayMaterial.mainTexture=texture;
+            overlayMesh=new Mesh();overlayMesh.vertices=new[]{new Vector3(-640,-300,0),new Vector3(-640,300,0),
+                new Vector3(640,300,0),new Vector3(640,-300,0)};
+            overlayMesh.uv=new[]{new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),new Vector2(1,0)};
+            overlayMesh.triangles=new[]{0,1,2,0,2,3};overlayMesh.RecalculateBounds();
+            overlay=new UnityEngine.GameObject("RimQudGameplayPresentation");overlay.transform.position=new Vector3(0,0,90);
+            overlay.AddComponent<MeshFilter>().sharedMesh=overlayMesh;
+            overlay.AddComponent<MeshRenderer>().sharedMaterial=overlayMaterial;
+            Camera.onPreCull+=BeforeCamera;cameraHook=true;
+            // No collider or event handler: Qud keeps its existing tile input targets.
+        }
+        static string Capture(string name)
+        {
+            var cam=GameManager.MapCamera;var old=cam.targetTexture;
+            var target=new RenderTexture(Screen.width,Screen.height,24,RenderTextureFormat.ARGB32);
+            var oldActive=RenderTexture.active;Texture2D image=null;
+            try
+            {
+                foreach(var sprite in GameManager.Instance.ConsoleCharacter)flush.Invoke(sprite,null);
+                cam.targetTexture=target;cam.Render();RenderTexture.active=target;
+                image=new Texture2D(target.width,target.height,TextureFormat.RGBA32,false);
+                image.ReadPixels(new Rect(0,0,target.width,target.height),0,0);image.Apply();
+                string filename="gameplay-"+name+".png";
+                File.WriteAllBytes(Path.Combine(ProbeRunner.Root,filename),image.EncodeToPNG());return filename;
+            }
+            finally
+            {
+                cam.targetTexture=old;RenderTexture.active=oldActive;
+                if(image!=null)UnityEngine.Object.DestroyImmediate(image);
+                target.Release();UnityEngine.Object.DestroyImmediate(target);
+            }
+        }
+        public static void Present(JoppaFrame frame,JoppaRenderer renderer,JObject result)
+        {
+            Hide();
+            bool show=(bool)result["eligible"] && GameManager.Instance.CurrentGameView=="Stage";
+            CreateOverlay(renderer.Texture);
+            if(show)Cover(renderer.Covered);
+            if(frame.View=="Looker")
+            {
+                lookReady=true;
+                ProbeRunner.Record("gameplay-target.json",new{view=frame.View,x=LookX,y=LookY,
+                    overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
+            }
+            if(!awaiting || frame.Phase!=Phase)return;
+            try
+            {
+                Hide();string original=Capture(Phase+"-original");
+                if(show)Cover(renderer.Covered);
+                string replacement=Capture(Phase+"-replacement");
+                result["original"]=original;result["replacement"]=replacement;
+                result["nativeCamera"]=GameManager.MapCamera.name;
+                result["overlayVisible"]=overlay.activeSelf;
+                result["nativeHiddenCells"]=hidden.Count(r=>r!=null);
+                result["nativeRenderersSuppressed"]=hidden.Where(r=>r!=null).All(r=>!r.enabled);
+                result["audioPaused"]=AudioListener.pause;
+                result["listenerVolume"]=AudioListener.volume;
+                result["masterVolume"]=SoundManager.MasterVolume;
+                if(Phase=="baseline")
+                {
+                    var old=RenderTexture.active;RenderTexture.active=renderer.Texture;
+                    var layer=new Texture2D(renderer.Texture.width,renderer.Texture.height,TextureFormat.RGBA32,false,true);
+                    try
+                    {
+                        layer.ReadPixels(new Rect(0,0,layer.width,layer.height),0,0);layer.Apply();
+                        File.WriteAllBytes(Path.Combine(ProbeRunner.Root,"gameplay-layer.png"),layer.EncodeToPNG());
+                    }
+                    finally{RenderTexture.active=old;UnityEngine.Object.DestroyImmediate(layer);}
+                }
+                var body=XRLCore.Core.Game.Player.Body;
+                result["player"]=JObject.FromObject(new{x=body.CurrentCell.X,y=body.CurrentCell.Y});
+                var tile=GameManager.Instance.ConsoleCharacter[targetX,targetY];
+                var behavior=tile.GetComponent<TileBehavior>();
+                var screen=GameManager.Instance.getScreenTileCenter(targetX,targetY);
+                result["targetBinding"]=JObject.FromObject(new{x=behavior.x,y=behavior.y,
+                    enabled=behavior.enabled,colliders=tile.GetComponents<Collider>().Length,
+                    screenX=screen.x,screenY=screen.y,screenZ=screen.z});
+                frames.Add(result);ProbeRunner.Record("gameplay-frames.json",frames);
+            }
+            finally{awaiting=false;presented.Set();}
+        }
+        static void RenderPhase(string name)
+        {
+            Phase=name;presented.Reset();awaiting=true;XRLCore.Core.RenderBase();presented.Wait();
+            if(ExitCode!=0)throw new InvalidOperationException("Gameplay presentation failed");
+        }
+        public static void PresentationFailed()
+        {
+            ExitCode=1;
+            if(awaiting)presented.Set();else Done=true;
+        }
+        public static void InjectInput()
+        {
+            if(!Automated || !Presenting || !XRLCore.IsCoreThread)return;
+            if(GameManager.Instance.CurrentGameView=="Looker" && lookReady && !escaped)
+            {escaped=true;Keyboard.PushKey(UnityEngine.KeyCode.Escape);return;}
+            if(GameManager.Instance.CurrentGameView!="Stage" || commands.Count==0)return;
+            string command=commands.Dequeue();
+            inputSerial++;
+            if(command=="look")Keyboard.PushMouseEvent("AdventureMouseLook",targetX,targetY);
+            else Keyboard.PushMouseEvent("Command:"+command);
+        }
+        static void Command(string name,bool wait=false)
+        {
+            commands.Enqueue(name);if(wait)commands.Enqueue("CmdWait");
+            XRLCore.Core.Game.Player.Body.Energy.BaseValue=1000;XRLCore.Core.PlayerTurn();
+            if(commands.Count!=0)throw new InvalidOperationException("Native command sequence did not finish");
+        }
+        public static void DisposePresentation()
+        {
+            Presenting=false;Hide();
+            if(cameraHook){Camera.onPreCull-=BeforeCamera;cameraHook=false;}
+            if(overlay!=null)UnityEngine.Object.DestroyImmediate(overlay);
+            if(overlayMesh!=null)UnityEngine.Object.DestroyImmediate(overlayMesh);
+            if(overlayMaterial!=null)UnityEngine.Object.DestroyImmediate(overlayMaterial);
+        }
         public static void ObserveView()
         {
-            if(Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")!="gameplay")return;
+            if(!ActiveMode)return;
             string view=GameManager.Instance.CurrentGameView;
-            if(view==lastView)return;
-            lastView=view;
-            ProbeRunner.Record("gameplay-view.json",new{view,audioPaused=AudioListener.pause,
-                listenerVolume=AudioListener.volume,masterVolume=SoundManager.MasterVolume});
+            if(view!="Stage")Hide();
+            if(Automated && Phase=="inventory" && view=="StatusScreensScreen" && !menuSeen)
+            {
+                var screen=Qud.UI.StatusScreensScreen.instance;
+                if(screen!=null && screen.gameObject.activeInHierarchy && screen.navigationContext.IsActive())
+                {
+                    ProbeRunner.Record("gameplay-menu.json",new{view,screen=screen.CurrentScreen,
+                        overlayVisible=overlay!=null && overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
+                    menuSeen=true;screen.OnCloseButton();
+                }
+            }
+            if(view!=lastView)
+            {
+                lastView=view;
+                ProbeRunner.Record("gameplay-view.json",new{view,audioPaused=AudioListener.pause,
+                    listenerVolume=AudioListener.volume,masterVolume=SoundManager.MasterVolume});
+            }
         }
         public static void Run()
         {
@@ -78,6 +285,67 @@ namespace RenderingTransplantProbe
                 ProbeRunner.Record("gameplay-boot.json",new{running=game.Running,zone=game.Player.Body.CurrentZone.ZoneID,
                     historyInitialized=game.sultanHistory!=null,player=game.Player.Body.Blueprint,
                     view=GameManager.Instance.CurrentGameView});
+                var core=XRLCore.Core;var body=game.Player.Body;var start=body.CurrentCell;
+                if(!Automated)
+                {
+                    GameManager.Instance.SetGameViewStack("Stage");body.CurrentZone.SetActive();Presenting=true;Phase="review";
+                    ProbeRunner.Record("review-ready.json",new{zone=body.CurrentZone.ZoneID,silent=true,operatingSystemInput=false});
+                    core.RunGame();return;
+                }
+                GameManager.focused=true;GameManager.Instance.SetGameViewStack("Stage");
+                body.CurrentZone.SetActive();core.UpdateGlobalChoices();Presenting=true;
+                string direction=null;
+                foreach(string d in new[]{"E","W","S","N"})
+                {
+                    var candidate=start.GetCellFromDirection(d);
+                    if(candidate!=null && !candidate.IsSolidFor(body) && !candidate.Objects.Any(o=>o!=body && o.HasPart("Combat")))
+                    {direction=d;targetX=candidate.X;targetY=candidate.Y;break;}
+                }
+                if(direction==null)throw new InvalidOperationException("No unobstructed native movement fixture");
+                RenderPhase("baseline");Command("CmdMove"+direction);RenderPhase("moved");
+                if(body.CurrentCell.X!=targetX || body.CurrentCell.Y!=targetY)
+                    throw new InvalidOperationException("Native movement did not reach the displayed adjacent cell");
+                Phase="look";Command("look",true);
+                if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
+                    throw new InvalidOperationException("Native target look flow did not complete");
+                RenderPhase("look-returned");
+                Phase="inventory";Command("CmdInventory",true);
+                if(!menuSeen)throw new InvalidOperationException("Native inventory was not observed");
+                RenderPhase("menu-returned");
+                Replacement=false;RenderPhase("disabled");Replacement=true;RenderPhase("reenabled");
+                game.SetIntGameState("RimQudProbeMarker",17391);
+                var save=game.SaveGame("RimQudProbe");
+                // This build returns null after synchronous success, or a Task
+                // for asynchronous/failing storage. Validate the saved state by loading it.
+                if(save!=null)save.GetAwaiter().GetResult();
+                if(!File.Exists(game.GetCacheDirectory("RimQudProbe.sav.gz")))
+                    throw new InvalidOperationException("Native save did not produce its file");
+                var loaded=XRLGame.LoadCurrentGame("RimQudProbe");
+                if(loaded==null || loaded.GetIntGameState("RimQudProbeMarker")!=17391 ||
+                    loaded.Player.Body.CurrentCell.X!=targetX || loaded.Player.Body.CurrentCell.Y!=targetY)
+                    throw new InvalidOperationException("Native save/load state did not match");
+                RenderPhase("loaded");
+                long startTicks=loaded.TimeTicks;int completedTurns=0,lastInput=inputSerial;
+                string deathReason=loaded.DeathReason;
+                Action<XRLCore> endTurn=c=>
+                {
+                    if(inputSerial==lastInput || c.Game.Player.Body.Energy.Value>=1000)return;
+                    lastInput=inputSerial;completedTurns++;
+                    if(completedTurns==3)c.Game.Running=false;
+                };
+                Phase="continuous";loaded.DeathReason="<nodeath>";
+                for(int i=0;i<3;i++)commands.Enqueue("CmdWait");
+                XRLCore.RegisterOnEndPlayerTurnCallback(endTurn);
+                try{core.RunGame();}
+                finally{XRLCore.RemoveOnEndPlayerTurnCallback(endTurn);loaded.DeathReason=deathReason;loaded.Running=true;}
+                if(completedTurns!=3 || commands.Count!=0 || loaded.TimeTicks<=startTicks)
+                    throw new InvalidOperationException("Continuous native game loop did not advance three commanded turns");
+                RenderPhase("continuous-returned");
+                ProbeRunner.Record("gameplay-result.json",new{nativeMovement=true,nativeLook=true,nativeInventory=true,
+                    nativeSaveLoad=true,lookX=LookX,lookY=LookY,targetX,targetY,frames=frames.Count,
+                    continuousNativeTurns=completedTurns,startTicks,endTicks=loaded.TimeTicks,
+                    operatingSystemInput=false,focusOverride="Internal game flag only; no OS focus change",
+                    turnScope="Native PlayerTurn command handlers plus three turns in RunGame with the native action scheduler"});
             }
             catch(Exception ex){ExitCode=1;ProbeRunner.Record("gameplay-failure.json",new{exception=ex.ToString()});}
             finally{Done=true;}

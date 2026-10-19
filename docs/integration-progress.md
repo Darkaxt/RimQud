@@ -2,7 +2,10 @@
 
 Update: [the native Joppa experiment](joppa-experiment.md) has since connected
 accepted full-map appearances to donor materials and produced actual scene
-readbacks. Its controlled simulation passed; gameplay verification is ACTIVE.
+readbacks. It now presents donor materials through Qud's actual map camera in a
+fully generated Joppa session. Native movement, look, modern inventory, save/load
+and three continuous RunGame turns passed automatic verification. Foreground
+mouse/keyboard and final display review remain at the user's desktop boundary.
 
 The initial shader and scene-capture probes below were separate launches. The offscreen shader
 test rendered simple planes, not the captured Qud objects. The capture probe kept
@@ -40,9 +43,10 @@ not imported.
 
 ## What is not implemented
 
-There is no replacement renderer submitting a complete Qud scene, playable
-overhaul, production material cache, faithful replacement tileset, complete wall
-or terrain connectivity, camera/input integration, or arbitrary-mod support.
+There is no released playable overhaul, production scene cache, faithful
+replacement tileset, complete donor water pipeline or arbitrary-mod support.
+Camera integration and bounded native-input checks now exist; physical pointer
+routing and final foreground presentation remain unverified.
 The captured payload records blueprint identity rather than stable per-instance
 actor IDs. Unknown effects, confusion permutations and independently resolved
 layers remain unresolved integration questions.
@@ -65,7 +69,7 @@ exception. The later capture probe completed after initialization and exited
 cleanly. Both processes exited with code zero. Shader results do not imply clean
 startup/shutdown parity for a production mod.
 
-Expendable packages, extracted resources, generated bundle, isolated profile and
+In those initial probes, expendable packages, extracted resources, generated bundle, isolated profile and
 compile outputs were removed using a reviewed transactional cleanup. Retained
 source, metadata and explicitly requested documentation images remain. No probe
 process or persistent normal-profile mod was left active.

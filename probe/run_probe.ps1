@@ -1,6 +1,6 @@
 param(
     [string]$Root = 'E:\Temp\qud-transplant-probe-20261019',
-    [ValidateSet('shader','capture','joppa','gameplay')][string]$Mode = 'shader',
+    [ValidateSet('shader','capture','joppa','gameplay','review')][string]$Mode = 'shader',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
@@ -38,6 +38,7 @@ $env:QUDEXPERIMENT_ROOT=$rootFull
 $env:QUDEXPERIMENT_MODE=$Mode
 $env:TEMP=Join-Path $Root 'tmp'
 $env:TMP=$env:TEMP
+New-Item -ItemType Directory -Path $env:TEMP -Force | Out-Null
 $baseline=Join-Path $Root 'profile-before.json'
 if (-not (Test-Path -LiteralPath $baseline)) {
     & python (Join-Path $PSScriptRoot 'profile_guard.py') before --root $Root
@@ -46,7 +47,10 @@ if (-not (Test-Path -LiteralPath $baseline)) {
 $launchArgs=@('-batchmode','-force-d3d11','-screen-width','640','-screen-height','480','-screen-fullscreen','0',
     '-savepath',$profile,'-sharedpath',$local,'-syncedpath',$synced,
     '-logFile',(Join-Path $Root "unity-$Mode.log"),'STEAM:NO','NOMETRICS','probe')
-$process=Start-Process -FilePath (Join-Path $Game 'CoQ.exe') -WorkingDirectory $Game -ArgumentList $launchArgs -WindowStyle Hidden -PassThru
+if($Mode -eq 'review'){$launchArgs=$launchArgs | Where-Object {$_ -ne '-batchmode'}}
+$windowStyle=if($Mode -eq 'review'){'Normal'}else{'Hidden'}
+# review is an explicitly selected interactive launch; do not run it during a hidden-only session.
+$process=Start-Process -FilePath (Join-Path $Game 'CoQ.exe') -WorkingDirectory $Game -ArgumentList $launchArgs -WindowStyle $windowStyle -PassThru
 @{pid=$process.Id;start=$process.StartTime.ToUniversalTime().ToString('o');mode=$Mode;arguments=$launchArgs} |
     ConvertTo-Json | Set-Content -LiteralPath (Join-Path $Root "launch-$Mode.json") -Encoding utf8NoBOM
 Write-Output "Probe process $($process.Id) launched; waiting for its actual exit."

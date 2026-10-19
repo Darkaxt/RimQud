@@ -51,11 +51,21 @@ automation. Native game event/API automation stays within the isolated process.
    User reprioritized these visible defects before gameplay verification. Inspect
    native ground/liquid semantics, implement the complete scene correction and
    verify actual full-map readbacks, visibility, connectivity and depth transitions.
-3. **ACTIVE — Gameplay lifecycle and targeting verification (J4, J5).**
+3. **BLOCKED — Gameplay lifecycle and targeting verification (J4, J5).**
    Depends on stage 1. Prove actual gameplay-view alignment, targeting, menus and
    save/load using supported internal automation where possible. Pause before any
    necessary foreground action. Desktop permission is not inferred from elapsed
    time or a successful batch run.
+
+Stage 3 implementation contract: reuse the verified material/geometry path in a
+transparent render target on Qud's actual map camera. Preserve native tile input
+objects and original renderers for fallback; restore owned visibility changes on
+new buffers, unrelated views, disabling and disposal. Capture actual map-camera
+before/after frames. Exercise adjacent movement through native PlayerTurn command
+handling, coordinate-bearing native look input, modern inventory open/close and
+native save/load, then verify fresh presentation after each. The isolated command
+test supplies an energy budget; it is distinct from a continuous RunGame session
+or physical mouse/keyboard validation. No FPS claim without measured evidence.
 
 Acceptance is per complete stage outcome, not per mesh or shader. The existing
 publication experiments remain historical evidence; they do not satisfy J2/J4.
@@ -118,8 +128,8 @@ attempt lacked UI-owned gamemode/character-type choices; these are now explicitl
 selected in the isolated diagnostic. The native single-button embark message is
 acknowledged through its own callback, without OS input; unknown prompts are
 recorded and stop the diagnostic. This is bootstrap evidence only: no live donor
-presentation, targeting, menus or save/load acceptance has passed. Stage 3 stays
-ACTIVE; these requirements remain required, not silently dropped.
+presentation, targeting, menus or save/load acceptance had passed at that point.
+This initial bootstrap evidence is superseded by the native gameplay checks below.
 Tracked deferrals: none. Overall experiment is not complete.
 
 Stage 3 diagnostic interruption: the native-game bootstrap reached Joppa world
@@ -142,3 +152,51 @@ Scratch owner: `E:/Temp/qud-transplant-probe-joppa-20261019`; cleanup transactio
 packages/cache, scoped decompilation diagnostics, extracted donor materials,
 compiled diagnostics, isolated profile, logs and intermediate captures. Requested
 source, reviewed image evidence and comparison deliverables are retained.
+
+## Stage 3 reconciliation — native integration verified; foreground gate parked
+
+Implemented and verified through the real map camera: generated Joppa with native
+history/player, accepted/consumed frame hashes, mapped native painted ground,
+adjacent movement through native commands, coordinate-bearing look input, modern
+inventory open/close, replacement disable/re-enable, native save/load and three
+continuous turns through RunGame/its native scheduler. Eight phase pairs contain
+16 actual 640 × 480 map-camera readbacks. The separate HUD canvases are not in
+these images. Desktop/mobile comparison, scene switching, divider drag, keyboard
+and buttons passed against the served URL.
+
+Integration fixes were scoped to proven boundaries: use the loaded native UI
+presentation shader; suppress replaced native renderers at camera pre-cull after
+Qud's LateUpdate can re-enable them; restore on unmatched buffers/views; use
+native SaveGame's synchronous-success contract and validate by loading actual
+saved state. Native opaque ground-layer pixels match the controlled renderer;
+Qud's map-camera effects remain applied. No compensating color/style patch added.
+
+Current external blocker: J4 physical pointer/keyboard routing, full HUD visibility
+and final foreground readability have not been observed. Their actual path
+requires opening and operating a game window, outside the standing hidden-only
+authorization. Resolve by user authorization for one silent isolated `review`
+session, then verify normal walking, mouse look/targeting, zoom, inventory/HUD and
+save/quit. The prepared review mode is compiled but unexecuted; it uses the same
+presentation and native loop without automatic commands or menu closing. Overall
+playable-sample completion and a working-mod claim depend on this gate. Stage 3
+is parked BLOCKED; no later implementation stage is ACTIVE. Tracked deferrals:
+none. No production FPS or long-session stability claim is made.
+
+Fresh automated run: exit zero, no remaining CoQ process, master/ambient/listener
+volumes zero and listener paused; no changed normal saves/settings, nine restored
+Unity preferences. Aggregate native diagnostic/cache effects: 219 created,
+3 removed, 1 modified. Native shutdown can log a loading-thread abort/platform
+shutdown exception; the successful probe/preservation results do not establish
+production shutdown parity. See `evidence/gameplay-result.json`.
+
+Stage 3 parking cleanup: discarded the original broad-root inventory because the
+root contains requested captures and donor inputs needed for foreground review.
+Reviewed all 2,191 entries of exact expendable tooling/profile targets in
+transaction `5dcf37b27b3458459d1e4a857cf69f2c`, then applied its signed ticket:
+102,214,642 logical bytes removed, no exclusions/errors/residual candidates.
+Packages/cache, scoped decompilation, closed browser profile, isolated test
+profile and compile intermediates are gone. Requested captures, private run
+evidence and `donor/` review inputs remain intentionally. Complete gameplay
+evidence is also retained in ignored `local/gameplay-20261019/` and verified there.
+The completed run's profile baseline moved with that evidence; the next launch
+will capture a fresh baseline rather than restore stale preferences.

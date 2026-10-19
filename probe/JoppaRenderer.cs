@@ -23,6 +23,8 @@ namespace RenderingTransplantProbe
         readonly Dictionary<string,Material> materials=new Dictionary<string,Material>();
         readonly Camera camera;
         readonly RenderTexture target;
+        public RenderTexture Texture { get { return target; } }
+        public bool[] Covered { get; private set; }
         readonly MethodInfo flush=AccessTools.Method(typeof(exStandaloneSprite),"LateUpdate");
         readonly List<UnityEngine.Object> scene=new List<UnityEngine.Object>();
         readonly Dictionary<Material,Geometry> groups=new Dictionary<Material,Geometry>();
@@ -192,21 +194,24 @@ namespace RenderingTransplantProbe
             }
             finally{RenderTexture.active=previous;UnityEngine.Object.DestroyImmediate(image);}
         }
-        public JObject Draw(JoppaFrame frame)
+        public JObject Draw(JoppaFrame frame,bool live=false)
         {
             var clock=System.Diagnostics.Stopwatch.StartNew();
             var originals=new UnityEngine.GameObject[2000];var counts=new Dictionary<string,int>();
             var masks=new int[16];var rows=new JArray();int grass=0,water=0,shallow=0,deep=0;
             bool eligible=frame.Enabled && frame.View==frame.ExpectedView && frame.Zone=="JoppaWorld.11.22.1.1.10";
+            Covered=new bool[2000];
             try
             {
+                camera.backgroundColor=live?Color.clear:new Color(.04f,.08f,.12f,1);
                 Shader.SetGlobalFloat("_FallIntensity",0);Shader.SetGlobalVector("_FallGlobalControls",Vector4.zero);
-                foreach(var cell in frame.Cells)originals[cell.X+80*cell.Y]=Original(cell);
-                string original=Capture(frame.Phase+"-original");
+                if(!live)foreach(var cell in frame.Cells)originals[cell.X+80*cell.Y]=Original(cell);
+                string original=live?null:Capture(frame.Phase+"-original");
                 foreach(var c in frame.Cells)
                 {
                     bool mapped=eligible && CanMap(c);
                     bool waterLayer=eligible && Wet(frame,c.X,c.Y);
+                    Covered[c.X+80*c.Y]=mapped || waterLayer;
                     if(waterLayer)
                     {
                         WaterSurface(frame,c);water++;if(c.WaterDepth>=3)deep++;else shallow++;
@@ -214,6 +219,7 @@ namespace RenderingTransplantProbe
                         {
                             // Scoped liquid-underlay adapter: keep the native
                             // foreground/detail silhouette while exposing water.
+                            if(live)originals[c.X+80*c.Y]=Original(c);
                             var sprite=originals[c.X+80*c.Y].GetComponent<ex3DSprite2>();
                             sprite.backcolor=Color.clear;flush.Invoke(sprite,null);
                         }
@@ -221,7 +227,7 @@ namespace RenderingTransplantProbe
                     if(mapped)
                     {
                         if(!counts.ContainsKey(c.Kind))counts[c.Kind]=0;counts[c.Kind]++;
-                        originals[c.X+80*c.Y].SetActive(false);
+                        if(!live)originals[c.X+80*c.Y].SetActive(false);
                         bool marsh=c.Kind=="ground" || c.Kind=="tree" || c.Kind=="reed";
                         Quad(Material("Custom/Terrain fade rough",marsh?"marsh.png":"soil.png",
                             Color.white),c.X,c.Y);
@@ -254,7 +260,8 @@ namespace RenderingTransplantProbe
                         {"nativeGrassPaint",c.Grass},{"grassDrawn",mapped && c.Kind=="ground" && c.Grass},
                         {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer}});
                 }
-                FlushGeometry();string replacement=Capture(frame.Phase+"-replacement");clock.Stop();
+                FlushGeometry();string replacement=null;
+                if(live)camera.Render();else replacement=Capture(frame.Phase+"-replacement");clock.Stop();
                 return JObject.FromObject(new{phase=frame.Phase,generation=frame.Generation,original,replacement,
                     enabled=frame.Enabled,eligible,zone=frame.Zone,mappedByKind=counts,wallMasks=masks,
                     grassClumps=grass,waterLayerCells=water,shallowWaterCells=shallow,deepWaterCells=deep,

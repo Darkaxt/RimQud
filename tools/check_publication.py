@@ -44,16 +44,17 @@ def main():
     embedded = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme)
     engine = {entry['file'] for entry in manifest['images']
               if entry['kind'].startswith('Actual Qud-engine readback')}
-    scenes = {'joppa-original.png', 'joppa-replacement.png'}
-    assert len(embedded) == 13 and len(engine) == 11
+    scenes = {'joppa-original.png', 'joppa-replacement.png',
+              'joppa-gameplay-original.png', 'joppa-gameplay-replacement.png'}
+    assert len(embedded) == 15 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 17
+    assert len(archived) == 4 and len(listed) == 19
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
-    print(f'Publication checks passed: {len(files)} public files, 2 Joppa scenes and 11 material readbacks in README; 4 archived concepts; links, hashes, JSON and Python syntax valid.')
+    print(f'Publication checks passed: {len(files)} public files, 4 Joppa views and 11 material readbacks in README; 4 archived concepts; links, hashes, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

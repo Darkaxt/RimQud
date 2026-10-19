@@ -1,21 +1,22 @@
 # Next experiments and eventual release
 
 The [native Joppa experiment](joppa-experiment.md) is now authorized and active.
-Its full-map offscreen stage passed; actual gameplay verification remains active.
+Its full-map and automated gameplay integration passed. Foreground physical-input
+review remains pending before calling the slice playable.
 The later art/compatibility work below remains a proposal, not a scheduled release.
 
-## Next bounded experiment: one playable patch of terrain
+## Current gate: foreground review of the integrated Joppa slice
 
-Use the proven loading route and resolved Qud buffer association to draw one known
-terrain/wall/plant cluster during actual gameplay. Keep the original presentation
-for unmapped or invalidated cells. Reuse inspected mesh/transition/link algorithms
-with explicit scene inputs; avoid bringing in RimWorld map classes or simulation.
+The native map-camera connection now draws the visible Joppa materials and keeps
+unmapped content native. Native movement, look, inventory, save/load and a short
+continuous game loop are verified. A prepared `review` launch uses normal controls
+and silent audio. It has not been launched because foreground use requires the
+user's go-ahead. Check physical pointer routing, sustained walking, camera zoom,
+HUD/menu visibility and the resulting visual readability before expanding art.
 
-Acceptance should cover entering/leaving the zone, walking, visibility changes,
-mouse targeting, menus, save/load, and disabling the mod. Verify actual visual
-output and frame timing before expanding coverage. This would answer the principal
-remaining question: whether the known material and capture pieces can participate
-in a stable playable scene without obscuring Qud's information.
+The controlled zone/visibility/disable checks remain valid. No broad FPS or
+long-session stability claim follows from the short native run. Those measurements
+should follow successful foreground review, before broader compatibility work.
 
 ## Art after the playable slice
 

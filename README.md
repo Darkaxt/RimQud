@@ -4,9 +4,29 @@ Research toward a **high-contrast, Qud-faithful visual overhaul** using selected
 RimWorld rendering techniques and locally sourced rendering resources. Qud keeps
 its own simulation and controls.
 
-**Current result: the captured full Joppa map has now been drawn with donor
-materials inside Qud's Unity runtime.** This connects scene capture to rendering
-in a controlled, hidden offscreen simulation. It is not yet a playable overhaul.
+**Current result: donor rendering is connected to Qud's actual gameplay map
+camera in a fully generated Joppa game.** Native movement, look targeting, modern
+inventory, save/load and three continuous native turns passed isolated automated
+checks. Physical input and foreground review remain pending; this is an
+experimental integration, not a released overhaul.
+
+## Actual gameplay-view integration
+
+These unaltered 640 × 480 readbacks use Qud's own map camera after a native save/load
+round trip, including native field of view and camera effects. They omit separate
+HUD canvases. The donor layer shares the native tile coordinates; existing input
+objects and unmapped native sprites remain in place. Qud's painted bare ground
+is mapped directly without adding floor objects to the generated world.
+
+![Actual Joppa gameplay map camera, original](docs/images/joppa-gameplay-original.png)
+
+![Same actual gameplay frame with donor presentation](docs/images/joppa-gameplay-replacement.png)
+
+The donor layer clears for look/inventory views, disabling and unmatched buffers.
+Native renderer suppression is applied before the map camera draws, after Qud's
+own sprite updates. Save/load rebuilds from the newly accepted native frame.
+[Verified gameplay evidence](evidence/gameplay-result.json) records the bounded
+automated checks; physical controls, long-session stability and FPS are unverified.
 
 ## Full native-map Joppa experiment
 
@@ -34,7 +54,7 @@ fallback sprites, including their visible dark tile backgrounds.
 Eleven accepted/consumed frames tested liquid depth changes, actor relocation, visibility changes, late
 mutation, replacement disabling, view gating, another zone and return. Offscreen
 captures include scene creation and PNG readback; their timings are not gameplay
-frame times. Normal gameplay targeting, menus and save/load remain unverified.
+frame times. The later gameplay checks above use a separately generated world.
 
 The path interior and its transition use the same donor fade-rough material,
 precedence and texture sampling. The initial hard-interior/rough-edge mismatch
@@ -84,8 +104,8 @@ Its output was diagnostic data, not a donor-shader image of the fixture. It does
 not yet prove gameplay view/input integration or a generic layered scene.
 
 The later full-map experiment above connects these two pieces in a controlled
-simulation. Gameplay-view integration and broader mod compatibility remain to be
-demonstrated. These earlier fixture results are retained for provenance.
+simulation. The later native-game experiment connects it to the map camera;
+broader mod compatibility remains unverified. These fixtures remain for provenance.
 
 ## Earlier HTML concepts
 

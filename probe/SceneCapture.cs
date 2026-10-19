@@ -17,6 +17,12 @@ using GO = XRL.World.GameObject;
 
 namespace RenderingTransplantProbe
 {
+    [HarmonyPatch(typeof(Zone),"Render",new Type[]{typeof(ScreenBuffer)})]
+    public static class GameplayZoneHook
+    {
+        static void Prefix(Zone __instance,ScreenBuffer Buf){JoppaSimulation.BeginGameplay(__instance,Buf);}
+        static void Postfix(Zone __instance,ScreenBuffer Buf){JoppaSimulation.EndGameplay(__instance,Buf);}
+    }
     [HarmonyPatch(typeof(XRLCore), "LoadEverything")]
     public static class CaptureReady
     {
@@ -24,7 +30,8 @@ namespace RenderingTransplantProbe
         {
             if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "capture") SceneCapture.Run();
             if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "joppa") JoppaSimulation.Run();
-            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "gameplay") GameplayProbe.Run();
+            if (Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "gameplay" ||
+                Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE") == "review") GameplayProbe.Run();
         }
     }
 

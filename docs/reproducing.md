@@ -73,7 +73,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Joppa evidence verification failed' }
 ```
 
 This mode reads the native Joppa map, creates real Qud objects over an explicit
-dirt-floor fill, and renders nine controlled scenarios through the accepted buffer.
+dirt-floor fill, and renders eleven controlled scenarios through the accepted buffer.
 It is not normal world generation or a normal character game. It logs missing
 world-history dependencies during shrine initialization. See the
 [active experiment](joppa-experiment.md) for exact acceptance and limitations.
@@ -106,3 +106,31 @@ workflow. In the original agent environment this was the installed
 inspection, ticket issuance and apply. Its installation is environment-specific;
 it is not bundled or required to render the probe. Never sweep game/profile
 directories as experiment cleanup.
+
+## Native gameplay integration
+
+After local donor packaging, use the same isolated root with `-Mode gameplay`.
+This creates a real seeded Joppa game and runs native commands, modern inventory,
+save/load and three turns through the native scheduler. Verify its fresh outputs:
+
+```powershell
+python probe/verify_gameplay.py --root E:/Temp/qud-transplant-probe-joppa-20261019 --output evidence/gameplay-result.json
+```
+
+The Python verifier needs Pillow. Runtime C# compilation is handled by Qud; no
+separate compiler is needed to launch it. Actual map-camera captures include
+native camera effects and field of view but omit separate HUD canvases.
+
+The following is a **visible interactive launch**, prepared for foreground review.
+Do not run it while operating under the current hidden-only authorization:
+
+```powershell
+./probe/run_probe.ps1 -Root E:/Temp/qud-transplant-probe-joppa-20261019 -Mode review
+```
+
+The review mode reuses the native game loop and rendering connection, disables
+automatic input and menu closing, and leaves normal game controls available.
+It stays silent. Save and quit normally to end the session and let the launcher
+complete its preservation checks. This foreground path has been prepared and
+compiled, but has not yet been executed. Locally retained `donor/` inputs are
+needed for this step and are not public assets.

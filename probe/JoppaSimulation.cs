@@ -49,6 +49,18 @@ namespace RenderingTransplantProbe
         static readonly ManualResetEventSlim consumed=new ManualResetEventSlim();
         static readonly JArray results=new JArray();
         static JoppaRenderer renderer;
+        public static bool Gameplay { get; private set; }
+        public static void BeginGameplay(Zone area,ScreenBuffer buffer)
+        {
+            if(!GameplayProbe.Presenting || area!=XRLCore.Core.Game.ZoneManager.ActiveZone)return;
+            Gameplay=true;zone=area;producer=buffer;phase=GameplayProbe.Phase;expectedView="Stage";
+            Array.Clear(observations,0,observations.Length);rendering=true;
+        }
+        public static void EndGameplay(Zone area,ScreenBuffer buffer)
+        {
+            if(!Gameplay || area!=zone || !ReferenceEquals(buffer,producer))return;
+            rendering=false;current=null;prepared=true;
+        }
 
         public static string Appearance(ConsoleChar c)
         {
@@ -89,6 +101,10 @@ namespace RenderingTransplantProbe
         {
             if(!rendering || cell!=current)return;
             var display=new ConsoleChar();display.Set(e);
+            bool paintedGround=selected==null && (cell.PaintTile=="Tiles/tile-dirt1.png" ||
+                cell.PaintTile=="assets_content_textures_tiles_tile-grass1.png" ||
+                cell.PaintTile=="Terrain/sw_grass1.bmp" || cell.PaintTile=="Terrain/sw_grass2.bmp" ||
+                cell.PaintTile=="Terrain/sw_grass3.bmp");
             int depth=0,volume=0;
             if(e.Visible && zone.GetVisibility(cell.X,cell.Y))
             {
@@ -103,7 +119,7 @@ namespace RenderingTransplantProbe
             }
             observations[cell.X+80*cell.Y]=new JoppaCell{X=cell.X,Y=cell.Y,Visible=e.Visible,
                 Source=e.Visible && selected!=null?selected.Blueprint:null,
-                Kind=e.Visible?Kind(selected):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,
+                Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,
                 Grass=e.Visible && cell.PaintTile!=null && cell.PaintTile.IndexOf("grass",StringComparison.OrdinalIgnoreCase)>=0};
         }
         public static void Publish(ScreenBuffer buffer)
@@ -128,13 +144,14 @@ namespace RenderingTransplantProbe
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
             }
-            accepted=new JoppaFrame{Generation=++generation,Phase=phase,Enabled=enabled,Cells=cells,
+            accepted=new JoppaFrame{Generation=++generation,Phase=phase,Enabled=enabled && (!Gameplay || GameplayProbe.Replacement),Cells=cells,
                 Hash=Hash(TextConsole.CurrentBuffer),View=TextConsole.CurrentBuffer.ViewTag,
                 ExpectedView=expectedView,Zone=zone.ZoneID,ProducerThread=Thread.CurrentThread.ManagedThreadId};
             prepared=false;
         }
         public static void Consumed(ScreenBuffer buffer)
         {
+            if(Gameplay && accepted==null){GameplayProbe.HideUnmatched();return;}
             if(accepted==null || !ReferenceEquals(buffer,TextConsole.CurrentBuffer))return;
             var frame=accepted;accepted=null;
             try
@@ -142,14 +159,18 @@ namespace RenderingTransplantProbe
                 if(!Monitor.IsEntered(TextConsole.BufferCS) || frame.Hash!=Hash(buffer) || frame.View!=buffer.ViewTag)
                     throw new InvalidOperationException("Joppa accepted frame mismatch");
                 if(renderer==null)renderer=new JoppaRenderer();
-                JObject result=renderer.Draw(frame);
+                JObject result=renderer.Draw(frame,Gameplay);
                 result["producerThread"]=frame.ProducerThread;
                 result["consumerThread"]=Thread.CurrentThread.ManagedThreadId;
                 result["submittedHash"]=frame.Hash;result["consumedHash"]=Hash(buffer);
                 result["insideBufferLock"]=true;result["view"]=frame.View;
-                results.Add(result);
+                if(Gameplay)GameplayProbe.Present(frame,renderer,result);else results.Add(result);
             }
-            catch(Exception ex){ExitCode=1;ProbeRunner.Record("joppa-render-failure.json",new{exception=ex.ToString()});}
+            catch(Exception ex)
+            {
+                ExitCode=1;ProbeRunner.Record("joppa-render-failure.json",new{exception=ex.ToString()});
+                if(Gameplay)GameplayProbe.PresentationFailed();
+            }
             finally{consumed.Set();}
         }
         static void Frame(string name,bool mutate=false)
