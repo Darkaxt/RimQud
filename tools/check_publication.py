@@ -49,11 +49,12 @@ def main():
               'joppa-gameplay-original.png', 'joppa-gameplay-replacement.png',
               'joppa-pawns-original.png', 'joppa-pawns-replacement.png',
               'joppa-foreground-hud.jpg', 'joppa-foreground-menu.jpg'}
-    assert len(embedded) == 19 and len(engine) == 11
+    scenes |= {'joppa-hurt-'+actor+'-'+sample+'.png' for actor in ['human', 'animal'] for sample in ['start', 'mid', 'end']}
+    assert len(embedded) == 25 and len(engine) == 11
     assert {Path(path).name for path in embedded} == engine | scenes
     archive = (ROOT / 'docs/html-visual-study.md').read_text(encoding='utf-8')
     archived = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', archive)
-    assert len(archived) == 4 and len(listed) == 23
+    assert len(archived) == 4 and len(listed) == 29
     assert {Path(path).name for path in archived} == {p.name for p in listed} - engine - scenes
     result = json.loads((ROOT / 'evidence/integration-result.json').read_text(encoding='utf-8'))
     assert result['donor_shaders_loaded_and_rendered'] == 6 and result['paired_scene_frames'] == 3
@@ -69,7 +70,16 @@ def main():
         revision = pawn.get('source_revision')
         source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
         assert hashlib.sha256(source).hexdigest() == digest, name
-    print(f'Publication checks passed: {len(files)} public files, 8 Joppa views and 11 material readbacks in README; 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
+    reaction = json.loads((ROOT / 'evidence/pawns-stage2-result.json').read_text())
+    assert reaction['stage'] == 2 and reaction['pawn_scene']['native_movement_facing']
+    for actor in ['human', 'animal']:
+        state = reaction['pawn_scene']['native_reactions'][actor]
+        assert state['actual_hp_loss'] == 1 and state['no_game_tick_advance'] and state['finite_flash']
+    for name, digest in reaction['source_sha256'].items():
+        revision = reaction.get('source_revision')
+        source = subprocess.check_output(['git', 'show', revision + ':probe/' + name], cwd=ROOT) if revision else (ROOT / 'probe' / name).read_bytes()
+        assert hashlib.sha256(source).hexdigest() == digest, name
+    print(f'Publication checks passed: {len(files)} public files; 14 Joppa views, 11 material readbacks and 4 archived concepts; links, hashes, reviewed source identities, JSON and Python syntax valid.')
 
 
 if __name__ == '__main__':

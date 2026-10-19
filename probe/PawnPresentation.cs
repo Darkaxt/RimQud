@@ -5,18 +5,64 @@ using System.Linq;
 using XRL;
 using XRL.Core;
 using XRL.World;
+using HarmonyLib;
 using GO=XRL.World.GameObject;
 
 namespace RenderingTransplantProbe
 {
+    [HarmonyPatch]
+    public static class NativePawnDamage
+    {
+        static System.Reflection.MethodBase TargetMethod(){return AccessTools.GetDeclaredMethods(typeof(GO)).Single(m=>
+            m.Name=="TakeDamage" && m.GetParameters()[0].ParameterType==typeof(int).MakeByRefType());}
+        static void Prefix(GO __instance,ref int __state){__state=__instance.Stat("Hitpoints");}
+        static void Postfix(GO __instance,GO Attacker,GO Source,string Attributes,int __state)
+        {PawnPresentation.Damaged(__instance,Attacker??Source,Attributes,__state-__instance.Stat("Hitpoints"));}
+    }
     public static class PawnPresentation
     {
         public static bool Enabled { get { return Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")=="pawns"; } }
+        public static int Stage { get { int stage;return int.TryParse(Environment.GetEnvironmentVariable("QUDEXPERIMENT_STAGE"),out stage)?stage:1; } }
         sealed class Pose { public int X,Y,Facing=2; }
+        sealed class Hurt { public int Serial;public float DX,DY; }
         static readonly Dictionary<int,Pose> poses=new Dictionary<int,Pose>();
+        static readonly Dictionary<int,Hurt> hurt=new Dictionary<int,Hurt>();
+        static readonly HashSet<int> visible=new HashSet<int>();
+        static int serial;
+        public static int World { get; private set; }
         static XRLGame owner;
         public static GO Human,Animal,Prop;
         public static bool InjectLateMutation;
+        static void EnsureWorld()
+        {
+            if(owner==XRLCore.Core.Game)return;
+            owner=XRLCore.Core.Game;poses.Clear();hurt.Clear();visible.Clear();World++;
+        }
+        public static void Accepted(JoppaCell[] cells)
+        {
+            if(!Enabled)return;EnsureWorld();visible.Clear();
+            foreach(var c in cells)if(c.Visible && !c.RequiresOriginal && c.Instance>0 &&
+                (c.Kind=="human" || c.Kind=="animal") && !string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip)visible.Add(c.Instance);
+        }
+        public static void Damaged(GO obj,GO attacker,string attributes,int loss)
+        {
+            if(!Enabled || Stage<2 || loss<=0)return;EnsureWorld();
+            var cell=obj.CurrentCell;
+            if(cell==null || !visible.Contains(obj.BaseID) || obj.Render==null || !obj.Render.Visible ||
+                !cell.ParentZone.GetVisibility(cell.X,cell.Y))return;
+            var state=new Hurt{Serial=++serial};
+            // Only explicitly physical Qud attributes supply a forceful impact.
+            bool forceful=(attributes??"").Split(' ').Any(a=>new[]{"Blunt","Crushing","Cutting","Piercing"}.Contains(a));
+            var from=attacker==null?null:attacker.CurrentCell;
+            if(forceful && from!=null && from.ParentZone==cell.ParentZone)
+            {
+                float dx=cell.X-from.X,dy=cell.Y-from.Y,length=(float)Math.Sqrt(dx*dx+dy*dy);
+                if(length>0){state.DX=.17f*dx/length;state.DY=.17f*dy/length;}
+            }
+            hurt[obj.BaseID]=state;
+            ProbeRunner.Record("pawn-damage.json",new{instance=obj.BaseID,serial=state.Serial,hpLoss=loss,
+                attributes,forceful,offsetX=state.DX,offsetY=state.DY,gameTicks=owner.TimeTicks,world=World});
+        }
         public static bool IsLayered(string kind){return kind=="human" || kind=="animal" || kind=="prop";}
         public static string Kind(GO obj)
         {
@@ -29,7 +75,7 @@ namespace RenderingTransplantProbe
         public static void Capture(Cell cell,GO obj,JoppaCell result)
         {
             if(!Enabled || !result.Visible || !cell.ParentZone.GetVisibility(cell.X,cell.Y))return;
-            if(owner!=XRLCore.Core.Game){owner=XRLCore.Core.Game;poses.Clear();}
+            EnsureWorld();
             string kind=Kind(obj);
             if(kind==null)return;
             result.Kind=kind;
@@ -40,6 +86,8 @@ namespace RenderingTransplantProbe
             if(dx!=0 || dy!=0)pose.Facing=Math.Abs(dx)>=Math.Abs(dy)?(dx>0?1:3):(dy>0?2:0);
             pose.X=cell.X;pose.Y=cell.Y;
             result.Instance=id;result.Facing=pose.Facing;
+            Hurt impact;if(hurt.TryGetValue(id,out impact))
+            {result.HurtSerial=impact.Serial;result.HurtDX=impact.DX;result.HurtDY=impact.DY;}
             // Read only explicit, visible floor families; do not render objects twice.
             if(cell.Objects.Any(o=>o.Blueprint=="DirtPath" && o.Render!=null && o.Render.Visible))result.GroundKind="path";
             else if(cell.Objects.Any(o=>o.Blueprint=="DirtFloor" && o.Render!=null && o.Render.Visible) || KnownPaint(cell.PaintTile))result.GroundKind="ground";

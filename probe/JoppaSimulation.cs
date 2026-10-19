@@ -21,6 +21,8 @@ namespace RenderingTransplantProbe
     public sealed class JoppaCell
     {
         public int X,Y,Instance,Facing;
+        public int HurtSerial;
+        public float HurtDX,HurtDY;
         public string Source,Kind,Resolved,GroundKind;
         public bool Visible,RequiresOriginal,Grass;
         public int WaterDepth,WaterVolume;
@@ -28,7 +30,7 @@ namespace RenderingTransplantProbe
     }
     public sealed class JoppaFrame
     {
-        public int Generation,ProducerThread;
+        public int Generation,ProducerThread,World;
         public string Phase,Hash,View,ExpectedView,Zone;
         public bool Enabled;
         public JoppaCell[] Cells;
@@ -150,11 +152,13 @@ namespace RenderingTransplantProbe
                     Visible=observed!=null && observed.Visible,Kind=observed==null?"original":observed.Kind,
                     RequiresOriginal=changed && !wallPaint && !waterPaint,Display=display,
                     Instance=observed==null?0:observed.Instance,Facing=observed==null?2:observed.Facing,
+                    HurtSerial=observed==null?0:observed.HurtSerial,HurtDX=observed==null?0:observed.HurtDX,HurtDY=observed==null?0:observed.HurtDY,
                     GroundKind=observed==null?null:observed.GroundKind,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
             }
-            accepted=new JoppaFrame{Generation=++generation,Phase=phase,Enabled=enabled && (!Gameplay || GameplayProbe.Replacement),Cells=cells,
+            PawnPresentation.Accepted(cells);
+            accepted=new JoppaFrame{Generation=++generation,World=PawnPresentation.World,Phase=phase,Enabled=enabled && (!Gameplay || GameplayProbe.Replacement),Cells=cells,
                 Hash=Hash(TextConsole.CurrentBuffer),View=TextConsole.CurrentBuffer.ViewTag,
                 ExpectedView=expectedView,Zone=zone.ZoneID,ProducerThread=Thread.CurrentThread.ManagedThreadId};
             prepared=false;
@@ -183,6 +187,7 @@ namespace RenderingTransplantProbe
             }
             finally{consumed.Set();}
         }
+        public static void TickVisuals(){if(renderer!=null)renderer.TickVisuals();}
         static void Frame(string name,bool mutate=false)
         {
             phase=name;Array.Clear(observations,0,observations.Length);consumed.Reset();rendering=true;

@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
+using UnityEngine.Rendering;
 using XRL;
 using XRL.Core;
 using XRL.CharacterBuilds;
@@ -120,6 +121,97 @@ namespace RenderingTransplantProbe
         static readonly System.Reflection.MethodInfo flush=AccessTools.Method(typeof(exStandaloneSprite),"LateUpdate");
         static readonly System.Reflection.FieldInfo layoutRefresh=AccessTools.Field(typeof(LetterboxCamera),"_Refresh");
         static Action pendingCapture;
+        static readonly ManualResetEventSlim reactionFinished=new ManualResetEventSlim();
+        static volatile bool reactionArmed;
+        static int reactionId;
+        static string reactionName;
+        static bool reactionMid;
+        static readonly JArray reactions=new JArray();
+        sealed class ReactionReadback { public JObject State;public byte[] Pixels;public int Width,Height; }
+        static readonly List<ReactionReadback> reactionReadbacks=new List<ReactionReadback>();
+        static int pendingReadbacks;
+        static bool reactionEnded;
+        public static void ObserveReaction(JoppaRenderer renderer)
+        {
+            if(!reactionArmed)return;
+            try
+            {
+                var state=renderer.VisualState(reactionId);
+                if(state==null)throw new InvalidOperationException("Damaged native actor has no mapped visual state");
+                float ticks=(float)state["visualTicks"];
+                if(!reactionMid && ticks>=8 && ticks<16){SampleReaction(renderer,"mid");reactionMid=true;}
+                if((bool)state["finished"])
+                {reactionEnded=true;reactionArmed=false;SampleReaction(renderer,"end");}
+            }
+            catch(Exception ex)
+            {
+                ExitCode=1;reactionArmed=false;ProbeRunner.Record("reaction-failure.json",new{exception=ex.ToString()});reactionFinished.Set();
+            }
+        }
+        static void SampleReaction(JoppaRenderer renderer,string sample)
+        {
+            var state=renderer.VisualState(reactionId);
+            if(state==null)throw new InvalidOperationException("Actual HP loss was not bridged to a selected actor");
+            state["sample"]=sample;state["fixture"]=reactionName;state["gameTicks"]=XRLCore.Core.Game.TimeTicks;
+            string file="gameplay-hurt-"+reactionName+"-"+sample+".png";state["image"]=file;
+            var cam=GameManager.MapCamera;var old=cam.targetTexture;
+            var target=new RenderTexture(Screen.width,Screen.height,24,RenderTextureFormat.ARGB32);
+            var readback=new ReactionReadback{State=state,Width=Screen.width,Height=Screen.height};
+            reactionReadbacks.Add(readback);pendingReadbacks++;
+            try{cam.targetTexture=target;cam.Render();}finally{cam.targetTexture=old;}
+            AsyncGPUReadback.Request(target,0,TextureFormat.RGBA32,request=>
+            {
+                try
+                {
+                    if(request.hasError)throw new InvalidOperationException("Reaction GPU readback failed");
+                    readback.Pixels=request.GetData<byte>().ToArray();
+                }
+                catch(Exception ex){ExitCode=1;ProbeRunner.Record("reaction-failure.json",new{exception=ex.ToString()});}
+                finally
+                {
+                    target.Release();UnityEngine.Object.DestroyImmediate(target);pendingReadbacks--;
+                    if(pendingReadbacks==0 && reactionEnded)
+                    {
+                        try
+                        {
+                            foreach(var item in reactionReadbacks)
+                            {
+                                if(item.Pixels==null)throw new InvalidOperationException("Missing reaction pixels");
+                                var image=new Texture2D(item.Width,item.Height,TextureFormat.RGBA32,false);
+                                try
+                                {
+                                    image.LoadRawTextureData(item.Pixels);image.Apply();
+                                    File.WriteAllBytes(Path.Combine(ProbeRunner.Root,(string)item.State["image"]),image.EncodeToPNG());
+                                }
+                                finally{UnityEngine.Object.DestroyImmediate(image);}
+                                reactions.Add(item.State);
+                            }
+                            reactionReadbacks.Clear();ProbeRunner.Record("hurt-samples.json",reactions);
+                        }
+                        catch(Exception ex){ExitCode=1;ProbeRunner.Record("reaction-failure.json",new{exception=ex.ToString()});}
+                        finally{reactionFinished.Set();}
+                    }
+                }
+            });
+        }
+        static void DamageFixture(XRL.World.GameObject victim,string name)
+        {
+            reactionId=victim.BaseID;reactionName=name;reactionMid=false;reactionEnded=false;reactionFinished.Reset();
+            int before=victim.Stat("Hitpoints"),amount=1;long ticks=XRLCore.Core.Game.TimeTicks;
+            // A native environmental event has an origin but no player attacker.
+            // The earlier player-attributed fixture correctly angered native NPCs.
+            victim.TakeDamage(ref amount,Attributes:"Blunt",Source:PawnPresentation.Prop,
+                Message:"",Environmental:true,NoSetTarget:true,UsePopups:false);
+            if(victim.Stat("Hitpoints")!=before-1)throw new InvalidOperationException("Fixture did not lose one native HP");
+            RenderPhase("hurt-"+name+"-start");reactionFinished.Wait();
+            if(ExitCode!=0 || !reactionMid || XRLCore.Core.Game.TimeTicks!=ticks)
+                throw new InvalidOperationException("Native hurt reaction did not finish during input wait with a midpoint sample");
+            RenderPhase("hurt-"+name+"-ended");
+            ProbeRunner.Record("hurt-"+name+"-result.json",new{instance=victim.BaseID,hpBefore=before,
+                hpAfter=victim.Stat("Hitpoints"),startTicks=ticks,endTicks=XRLCore.Core.Game.TimeTicks,
+                actualQudDamage=true,simulationAdvanced=false,environmentalSource=PawnPresentation.Prop.BaseID,
+                postureMapping="Unchanged upright graphic; HP loss does not select a downed or dead graphic"});
+        }
 
         public static void CaptureAfterLayout()
         {
@@ -208,6 +300,11 @@ namespace RenderingTransplantProbe
                     overlayVisible=overlay.activeSelf,nativeHiddenCells=hidden.Count(r=>r!=null)});
             }
             if(!awaiting || frame.Phase!=Phase)return;
+            if(PawnPresentation.Stage>=2 && Phase=="hurt-"+reactionName+"-start")
+            {
+                SampleReaction(renderer,"start");reactionArmed=true;
+                awaiting=false;presented.Set();return;
+            }
             Action capture=()=>{try
             {
                 if(PawnPresentation.Enabled)
@@ -315,6 +412,13 @@ namespace RenderingTransplantProbe
                 }
             }
             if(view!="Stage")Hide();
+            if(Automated && view=="GameSummaryScreen" && !Done)
+            {
+                var game=XRLCore.Core.Game;
+                ProbeRunner.Record("gameplay-failure.json",new{reason="Unexpected native game summary",phase=Phase,
+                    deathReason=game.DeathReason,remainingCommands=commands.Count,playerHP=game.Player.Body.Stat("Hitpoints")});
+                ExitCode=1;Done=true;
+            }
             if(Automated && Phase=="inventory" && view=="StatusScreensScreen" && !menuSeen)
             {
                 var screen=Qud.UI.StatusScreensScreen.instance;
@@ -384,6 +488,14 @@ namespace RenderingTransplantProbe
                 Command("CmdMove"+direction);RenderPhase("moved");
                 if(body.CurrentCell.X!=targetX || body.CurrentCell.Y!=targetY)
                     throw new InvalidOperationException("Native movement did not reach the displayed adjacent cell");
+                if(PawnPresentation.Enabled && PawnPresentation.Stage>=2)
+                {
+                    string opposite=direction=="E"?"W":direction=="W"?"E":direction=="N"?"S":"N";
+                    Command("CmdMove"+opposite);RenderPhase("native-move-back");
+                    Command("CmdMove"+direction);RenderPhase("native-move-forward");
+                    DamageFixture(PawnPresentation.Human,"human");
+                    DamageFixture(PawnPresentation.Animal,"animal");
+                }
                 Phase="look";Command("look",true);
                 if(LookX!=targetX || LookY!=targetY || !lookReady || !escaped)
                     throw new InvalidOperationException("Native target look flow did not complete");

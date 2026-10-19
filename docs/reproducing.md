@@ -11,7 +11,8 @@ versions before changing those guards.
   [integration progress](integration-progress.md).
 - The matching installed Vehicle Framework Workshop item `3014915404`, specifically
   `1.6/AssetBundles/shaders_win`, for its UnityFS container/type tree.
-- Python 3.13, a private virtual environment, UnityPy 1.25.4 and Pillow.
+- Python 3.12 or 3.13, a private virtual environment, UnityPy 1.25.4 and Pillow
+  (the layered/reaction run used Python 3.12.14 and Pillow 13.0.0).
 - PowerShell 7. Qud compiles the actual C# source mod at startup; a Unity Editor
   installation is not required.
 
@@ -23,7 +24,7 @@ The launcher intentionally requires a task-owned root beginning with
 ## Prepare and run
 
 From the repository root, set the paths to your actual installations. `python`
-in the first command below must resolve to Python 3.13; use its explicit executable
+in the first command below must resolve to a compatible Python; use its explicit executable
 path if your default Python differs.
 
 ```powershell
@@ -137,3 +138,30 @@ preservation checks. This path was executed successfully; see
 [foreground evidence](../evidence/foreground-review.json). Local `donor/` inputs
 are required and are not public assets. Remote-control tools may intercept Escape
 and synthetic keyboard shortcuts; the on-screen menu supports mouse save/quit.
+
+## Layered actors and native reactions
+
+After the donor and Joppa packages above, extract the selected human, cat and
+chair graphics locally. No raw donor graphics are included in this repository.
+
+```powershell
+& $Python probe/package_pawns.py --donor-data $Donor --output (Join-Path $Root 'donor')
+if ($LASTEXITCODE -ne 0) { throw 'Pawn texture packaging failed' }
+./probe/run_probe.ps1 -Root $Root -Game $Qud -Mode pawns -IntegrationStage 2
+& $Python probe/verify_gameplay.py --root $Root --mode pawns --stage 2 --output (Join-Path $Root 'verified.json')
+if ($LASTEXITCODE -ne 0) { throw 'Native reaction verification failed' }
+```
+
+Stage 1 (the default) reproduces the layered scene without the reaction fixture;
+use `-IntegrationStage 1` and `--stage 1` together. Stage 2 adds native movement
+facing and real environmental damage to the two isolated actors, asynchronous
+GPU start/mid/end readbacks and native lifecycle verification. The visual flash
+uses 16/60 seconds; no game turns are added to run it. Downed/dead motion is not
+inferred from missing HP. Only explicit physical attributes produce an impact
+offset, and an actual attacker/source position supplies its direction.
+
+The fixture relocates existing objects and changes HP only in the isolated game.
+It does not supply the player as attacker: that correctly caused native hostility
+in a retained failed diagnostic. Unknown native summaries stop with failure
+evidence. Keep each run's baseline until the original process has exited and its
+preservation result has passed; archive the completed baseline before a new run.

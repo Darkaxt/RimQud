@@ -15,8 +15,8 @@ an experimental integration, not a released overhaul.
 blueprint types; 57 types, including NPCs and furniture, retain native sprites.
 Repeated ground/path cells account for much of that apparent coverage.
 The [staged implementation](docs/joppa-integration-spec.md) has now passed its
-first layered human/animal/prop scene. Hurt reactions, wider coverage and visibly
-equipped Qud apparel remain subsequent stages.
+layered human/animal/prop scene and native hurt reactions. Wider coverage and
+visibly equipped Qud apparel remain subsequent stages.
 
 ## Layered NPC/prop integration — stage 1
 
@@ -35,6 +35,32 @@ canvases are omitted from these readbacks.
 visibility, late changes, overlap and native targeting/save-load behavior.
 These are temporary NPC graphics, not a faithful completed tileset. No hurt or
 apparel animation is claimed by this stage.
+
+## Native hurt reactions — stage 2
+
+Actual Qud damage now drives a short red flash and decaying impact offset on the
+temporary humans and animals. Each diagnostic actor loses one native HP through
+environmental damage; the reaction completes while Qud waits for input, with no
+game tick advancement. These are unaltered native camera captures, not concept art.
+The human is beside the chair near the lower-left edge of the visible area.
+
+![Human at the start of actual native damage reaction](docs/images/joppa-hurt-human-start.png)
+
+![Human midway through the reaction](docs/images/joppa-hurt-human-mid.png)
+
+![Human after its color and position settle](docs/images/joppa-hurt-human-end.png)
+
+Ctesiphus uses the same event/lifetime path with his native purple tint:
+
+![Ctesiphus at the start of actual native damage reaction](docs/images/joppa-hurt-animal-start.png)
+
+![Ctesiphus midway through the reaction](docs/images/joppa-hurt-animal-mid.png)
+
+![Ctesiphus after the reaction finishes](docs/images/joppa-hurt-animal-end.png)
+
+[Stage 2 verification](evidence/pawns-stage2-result.json) also checks native
+movement/facing, targeting, inventory, menu return, disabling, save/load and three
+native turns. Donor downed/dead behavior and visible equipment are not claimed.
 
 ## Foreground review
 

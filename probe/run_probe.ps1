@@ -1,6 +1,7 @@
 param(
     [string]$Root = 'E:\Temp\qud-transplant-probe-20261019',
     [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
+    [ValidateRange(1,4)][int]$IntegrationStage = 1,
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
@@ -38,6 +39,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $m
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $local 'PlayerOptions.json') -Encoding utf8NoBOM
 $env:QUDEXPERIMENT_ROOT=$rootFull
 $env:QUDEXPERIMENT_MODE=$Mode
+$env:QUDEXPERIMENT_STAGE="$IntegrationStage"
 $env:TEMP=Join-Path $Root 'tmp'
 $env:TMP=$env:TEMP
 New-Item -ItemType Directory -Path $env:TEMP -Force | Out-Null
@@ -55,7 +57,7 @@ if($Mode -eq 'review'){$launchArgs=$launchArgs | Where-Object {$_ -ne '-batchmod
 $windowStyle=if($Mode -eq 'review'){'Normal'}else{'Hidden'}
 # review is an explicitly selected interactive launch; do not run it during a hidden-only session.
 $process=Start-Process -FilePath (Join-Path $Game 'CoQ.exe') -WorkingDirectory $Game -ArgumentList $launchArgs -WindowStyle $windowStyle -PassThru
-@{pid=$process.Id;start=$process.StartTime.ToUniversalTime().ToString('o');mode=$Mode;arguments=$launchArgs} |
+@{pid=$process.Id;start=$process.StartTime.ToUniversalTime().ToString('o');mode=$Mode;integrationStage=$IntegrationStage;arguments=$launchArgs} |
     ConvertTo-Json | Set-Content -LiteralPath (Join-Path $Root "launch-$Mode.json") -Encoding utf8NoBOM
 Write-Output "Probe process $($process.Id) launched; waiting for its actual exit."
 $process.WaitForExit()

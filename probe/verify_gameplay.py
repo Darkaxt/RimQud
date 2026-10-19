@@ -3,6 +3,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import math
 from pathlib import Path
 
 from PIL import Image, ImageChops
@@ -13,6 +14,7 @@ def main():
     ap.add_argument('--root', type=Path, required=True)
     ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--mode', choices=['gameplay', 'pawns'], default='gameplay')
+    ap.add_argument('--stage', type=int, choices=[1, 2, 3, 4], default=1)
     args = ap.parse_args()
     root = args.root
     launch = json.loads((root / ('launch-' + args.mode + '.json')).read_text(encoding='utf-8-sig'))
@@ -50,6 +52,9 @@ def main():
                          'pawn-late-change', 'pawn-restored', 'pawn-tint',
                          'pawn-tint-restored', 'prop-front', 'prop-behind']
         expected.insert(expected.index('menu-returned'), 'pawn-look-returned')
+        if args.stage >= 2:
+            expected[expected.index('moved')+1:expected.index('moved')+1] = [
+                'native-move-back', 'native-move-forward', 'hurt-human-ended', 'hurt-animal-ended']
     assert [f['phase'] for f in frames] == expected
     assert result['frames'] == len(frames)
     summaries, images = [], {}
@@ -147,10 +152,52 @@ def main():
                             tint_changed_pixels=tint_pixels, red_tinted_pixels=red_tint,
                             restored_red_pixels=red_restored, mapped_overlap_order=True,
                             native_npc_targeting=True)
+        if args.stage >= 2:
+            native_back, native_forward = [by_phase[name] for name in ['native-move-back', 'native-move-forward']]
+            assert native_back['player'] == initial and native_forward['player'] == moved
+            for f in [native_back, native_forward]:
+                at = next(c for c in f['cells'] if (c['x'], c['y']) == (f['player']['x'], f['player']['y']))
+                assert at['mapped'] and at['kind'] == 'human'
+                dx, dy = moved['x']-initial['x'], moved['y']-initial['y']
+                facing = (1 if dx > 0 else 3) if dx else (2 if dy > 0 else 0)
+                assert at['facing'] == (facing if f is native_forward else (facing+2) % 4)
+            samples = read('hurt-samples.json')
+            hurt_summary = {}
+            for name in ['human', 'animal']:
+                damage = read('hurt-'+name+'-result.json')
+                assert damage['actualQudDamage'] and damage['hpBefore']-damage['hpAfter'] == 1
+                assert damage['startTicks'] == damage['endTicks'] and not damage['simulationAdvanced']
+                sequence = [s for s in samples if s['fixture'] == name]
+                assert [s['sample'] for s in sequence] == ['start', 'mid', 'end'], sequence
+                start, mid, end = sequence
+                assert 0 <= start['visualTicks'] < mid['visualTicks'] < 16 <= end['visualTicks']
+                assert not start['finished'] and not mid['finished'] and end['finished']
+                assert end['offsetX'] == end['offsetY'] == 0
+                assert .14 < math.hypot(start['offsetX'], start['offsetY']) <= .171
+                assert math.hypot(mid['offsetX'], mid['offsetY']) < math.hypot(start['offsetX'], start['offsetY'])
+                assert all(s['gameTicks'] == damage['startTicks'] for s in sequence)
+                assert all(s['instance'] == damage['instance'] for s in sequence)
+                first_cell = cell('hurt-'+name+'-ended', damage['instance'])
+                cam = by_phase['hurt-'+name+'-ended']['camera']
+                cx, cy = round(first_cell['screenX']), cam['height']-round(first_cell['screenY'])
+                region = (cx-18, cy-48, cx+18, cy+24)
+                red_counts = []
+                for s in sequence:
+                    p = root / s['image']; assert p.stat().st_mtime >= started
+                    images[p.name] = hashlib.sha256(p.read_bytes()).hexdigest()
+                    red_counts.append(red(Image.open(p).convert('RGB').crop(region)))
+                assert red_counts[0] > red_counts[-1]+5, (name, red_counts)
+                hurt_summary[name] = dict(actual_hp_loss=1, no_game_tick_advance=True,
+                    red_pixels=red_counts, visual_ticks=[s['visualTicks'] for s in sequence],
+                    finite_flash=True, finite_impact_offset=True)
+            assert by_phase['loaded']['world'] > by_phase['hurt-animal-ended']['world']
+            pawn_summary['native_reactions'] = hurt_summary
+            pawn_summary['native_movement_facing'] = True
+            pawn_summary['world_rebuilt_after_load'] = True
     preservation = read('preservation.json')
     assert preservation['preferences_restored'] and not preservation['changed_save_or_settings_files']
     # Old failed attempts remain diagnostic evidence; they must not belong to this run.
-    for name in ['gameplay-failure.json', 'joppa-render-failure.json', 'gameplay-capture-failure.json']:
+    for name in ['gameplay-failure.json', 'joppa-render-failure.json', 'gameplay-capture-failure.json', 'reaction-failure.json']:
         file = root / name
         assert not file.exists() or file.stat().st_mtime < started, f'Current failure: {name}'
     output = dict(scope='Real generated Joppa; native map-camera presentation and internal game inputs',
@@ -165,6 +212,7 @@ def main():
                                'Physical mouse/keyboard and final foreground review remain pending'],
                   runtime_diagnostics=preservation['diagnostic_changes'])
     if pawn_summary:
+        output['stage'] = args.stage
         output['pawn_scene'] = pawn_summary
         output['scope'] += '; layered human/animal/prop fixture with native fallback and known ground'
     output['source_sha256'] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()

@@ -28,6 +28,54 @@ namespace RenderingTransplantProbe
         readonly MethodInfo flush=AccessTools.Method(typeof(exStandaloneSprite),"LateUpdate");
         readonly List<UnityEngine.Object> scene=new List<UnityEngine.Object>();
         readonly Dictionary<Material,Geometry> groups=new Dictionary<Material,Geometry>();
+        sealed class Impact { public int Serial;public double Started;public Vector2 Offset;public bool Finished;public float AppliedTicks; }
+        readonly Dictionary<int,Impact> impacts=new Dictionary<int,Impact>();
+        readonly Dictionary<int,Transform> actors=new Dictionary<int,Transform>();
+        readonly Dictionary<int,Vector3> anchors=new Dictionary<int,Vector3>();
+        int world=-1;
+        bool retained;
+        static double Now { get { return (double)System.Diagnostics.Stopwatch.GetTimestamp()/System.Diagnostics.Stopwatch.Frequency; } }
+        static float Ticks(Impact impact){return (float)((Now-impact.Started)*60);}
+        public JObject VisualState(int id)
+        {
+            Impact impact;Transform actor;
+            if(!impacts.TryGetValue(id,out impact) || !actors.TryGetValue(id,out actor))return null;
+            float ticks=impact.AppliedTicks;var offset=actor.position-anchors[id];
+            var block=new MaterialPropertyBlock();var layer=actor.GetComponentInChildren<MeshRenderer>();layer.GetPropertyBlock(block);
+            Color color=block.GetColor("_Color");
+            return new JObject{{"instance",id},{"serial",impact.Serial},{"visualTicks",ticks},
+                {"offsetX",offset.x/CellWidth},{"offsetY",-offset.z},
+                {"color",new JArray(color.r,color.g,color.b,color.a)},{"finished",impact.Finished},
+                {"world",world}};
+        }
+        bool ApplyImpact(int id,Transform actor)
+        {
+            Impact impact;if(!impacts.TryGetValue(id,out impact))return false;
+            float ticks=Ticks(impact),amount=Mathf.Clamp01(1-ticks/16);
+            impact.AppliedTicks=ticks;
+            Vector2 offset=impact.Offset;
+            offset=offset.normalized*Mathf.Max(0,offset.magnitude-.018f*ticks);
+            actor.position=anchors[id]+new Vector3(offset.x*CellWidth,0,-offset.y);
+            foreach(var layer in actor.GetComponentsInChildren<MeshRenderer>())
+            {
+                var block=new MaterialPropertyBlock();
+                block.SetColor("_Color",Color.Lerp(layer.sharedMaterial.GetColor("_Color"),Color.red,amount));
+                layer.SetPropertyBlock(block);
+            }
+            bool changed=!impact.Finished;impact.Finished=amount==0;return changed;
+        }
+        public void TickVisuals()
+        {
+            if(!retained)return;
+            bool changed=false;foreach(var pair in actors)changed=ApplyImpact(pair.Key,pair.Value) || changed;
+            if(changed)camera.Render();
+            GameplayProbe.ObserveReaction(this);
+        }
+        void ClearScene()
+        {
+            for(int i=scene.Count-1;i>=0;i--)if(scene[i]!=null)UnityEngine.Object.DestroyImmediate(scene[i]);
+            scene.Clear();groups.Clear();actors.Clear();anchors.Clear();retained=false;
+        }
         sealed class Geometry
         {
             public readonly List<Vector3> Vertices=new List<Vector3>();
@@ -219,6 +267,17 @@ namespace RenderingTransplantProbe
                 Color tint=(animal?Color.white:new Color(.62f,.45f,.28f,1))*c.Display.Foreground;
                 SpriteLayer(go.transform,Material("Custom/Cutout",file,tint),size,size,0,(bottom/64f-.5f)*size,0);
             }
+            if(PawnPresentation.Stage>=2 && c.Kind!="prop")
+            {
+                actors[c.Instance]=go.transform;anchors[c.Instance]=go.transform.position;
+                Impact old=null;
+                if(c.HurtSerial>0 && (!impacts.TryGetValue(c.Instance,out old) || old.Serial!=c.HurtSerial))
+                {
+                    Vector2 residual=old==null?Vector2.zero:old.Offset.normalized*Mathf.Max(0,old.Offset.magnitude-.018f*Ticks(old));
+                    impacts[c.Instance]=new Impact{Serial=c.HurtSerial,
+                        Offset=Vector2.ClampMagnitude(residual+new Vector2(c.HurtDX,c.HurtDY),.35f)};
+                }
+            }
         }
         void FlushGeometry()
         {
@@ -246,6 +305,8 @@ namespace RenderingTransplantProbe
         }
         public JObject Draw(JoppaFrame frame,bool live=false)
         {
+            ClearScene();
+            if(world!=frame.World){world=frame.World;impacts.Clear();}
             var clock=System.Diagnostics.Stopwatch.StartNew();
             var originals=new UnityEngine.GameObject[2000];var counts=new Dictionary<string,int>();
             var masks=new int[16];var rows=new JArray();int grass=0,water=0,shallow=0,deep=0;
@@ -324,8 +385,14 @@ namespace RenderingTransplantProbe
                         {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer}});
                 }
                 FlushGeometry();string replacement=null;
+                foreach(var actor in actors)
+                {
+                    Impact impact;if(impacts.TryGetValue(actor.Key,out impact) && impact.Started==0)impact.Started=Now;
+                    ApplyImpact(actor.Key,actor.Value);
+                }
                 if(live)camera.Render();else replacement=Capture(frame.Phase+"-replacement");clock.Stop();
-                return JObject.FromObject(new{phase=frame.Phase,generation=frame.Generation,original,replacement,
+                retained=live && PawnPresentation.Enabled && PawnPresentation.Stage>=2;
+                return JObject.FromObject(new{phase=frame.Phase,generation=frame.Generation,world=frame.World,original,replacement,
                     enabled=frame.Enabled,eligible,zone=frame.Zone,mappedByKind=counts,wallMasks=masks,
                     grassClumps=grass,waterLayerCells=water,shallowWaterCells=shallow,deepWaterCells=deep,
                     originalFallbackCells=2000-counts.Values.Sum(),offscreenMilliseconds=clock.Elapsed.TotalMilliseconds,
@@ -333,12 +400,12 @@ namespace RenderingTransplantProbe
             }
             finally
             {
-                for(int i=scene.Count-1;i>=0;i--)if(scene[i]!=null)UnityEngine.Object.DestroyImmediate(scene[i]);
-                scene.Clear();groups.Clear();
+                if(!retained)ClearScene();
             }
         }
         public void Dispose()
         {
+            ClearScene();impacts.Clear();
             foreach(var mat in materials.Values)UnityEngine.Object.DestroyImmediate(mat);
             foreach(var texture in textures.Values)UnityEngine.Object.DestroyImmediate(texture);
             target.Release();UnityEngine.Object.DestroyImmediate(target);

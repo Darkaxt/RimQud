@@ -78,7 +78,7 @@ namespace RenderingTransplantProbe
         }
 
         bool captureQuit;
-        void LateUpdate(){GameplayProbe.CaptureAfterLayout();}
+        void LateUpdate(){JoppaSimulation.TickVisuals();GameplayProbe.CaptureAfterLayout();}
         void Update()
         {
             GameplayProbe.ObserveView();

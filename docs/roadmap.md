@@ -8,7 +8,8 @@ The later art/compatibility work below remains a proposal, not a scheduled relea
 ## Active implementation: complete Joppa rendering coverage before bulk art
 
 Execution is authorized. The [implementation specification](joppa-integration-spec.md)
-governs the four stages; stage 1, the layered NPC/prop scene, is COMPLETE.
+governs the four stages; the layered NPC/prop scene and native reactions/lifecycle
+are COMPLETE. Joppa coverage is next, followed by visibly equipped items.
 
 The native map-camera connection now draws the visible Joppa materials and keeps
 unmapped content native. Native movement, look, inventory, save/load and a short
@@ -21,9 +22,9 @@ presentation, and donor rendering returns when gameplay resumes.
 The controlled zone/visibility/disable checks remain valid. No broad FPS or
 long-session stability claim follows from the short native run. A separate
 performance gate is unnecessary; investigate measured symptoms during normal
-verification. The next useful work is the missing actor/prop and layered-scene
-integration, using the user-selected RimWorld human/animal placeholders before
-generating a complete faithful set. Hurt feedback must follow Qud damage events.
+verification. The actor/prop scene now uses the user-selected donor humans and
+animals, and hurt feedback follows actual Qud HP loss. Next is explicit Joppa
+coverage, using appropriate existing resources before generating faithful art.
 See the [integration completeness review](integration-readiness.md) and
 [actual blueprint coverage](../evidence/joppa-coverage.json).
 

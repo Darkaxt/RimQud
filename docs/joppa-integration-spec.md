@@ -62,7 +62,7 @@ a complete integrated workflow; source/package/unit checks are diagnostics only.
 | Stage | Status | Requirements | Acceptance outcome |
 | --- | --- | --- | --- |
 | 1. Layered NPC/prop scene | COMPLETE | P1, P2, P6-P8 | Generated Joppa shows one layered human, one animal and a prop with correct ground, direction, transparency, mapped overlap and native input binding; actual camera pairs plus visibility/late-change/fallback checks pass. |
-| 2. Native reactions and lifecycle | NOT STARTED | P2, P3, P6-P8 | Real Qud movement/damage drives facing and a finite visible hurt reaction; targeting, menus, save/load and return work with the new scene; no simulation authority transferred. |
+| 2. Native reactions and lifecycle | COMPLETE | P2, P3, P6-P8 | Real Qud movement/damage drives facing and a finite visible hurt reaction; targeting, menus, save/load and return work with the new scene; no simulation authority transferred. |
 | 3. Joppa coverage | NOT STARTED | P1, P2, P4, P6-P8 | Every selected baseline blueprint and observed generated addition has a reviewed explicit rendering decision; known eligible content receives its mapped replacement, required state variants pass, and unsupported content retains verified fallback. |
 | 4. Visible equipped items | NOT STARTED | P2, P3, P5-P8 | A native NPC fixture actually equips/removes/swaps supported torso/outer/head/held items; correct layers/facing/tint react to those changes and survive movement, damage and save/load. |
 
@@ -98,7 +98,43 @@ remains in use. The added known-layer/pose adapter and body/head composition ser
 this scene and the required apparel stage; no separate RPC framework or renderer
 was introduced. No acceptance-blocking consolidation was found.
 
-Stage 1 remaining acceptance: none. Stages 2-4 remain required and incomplete.
+Stage 1 remaining acceptance: none.
+
+Stage 2 reconciliation: [fresh native evidence](../evidence/pawns-stage2-result.json)
+passes all assigned acceptance. Native commands move the player back/forward and
+change facing. A native environmental Blunt event removes one real HP from each
+fixture actor. Both actors flash, decay and settle while game ticks stay fixed.
+Actual map-camera GPU readbacks sample the start, midpoint and end. Targeting,
+inventory/menu return, disabling, save/load and three native scheduler turns pass
+with the reaction path installed. The accepted world epoch changes after load;
+transient presentation state is rebuilt. Upright and injured-upright graphics are
+supported; HP loss alone never selects donor downed/dead motion. Unsupported
+vertical flips retain native presentation. Other posture behaviors are not claimed.
+
+The adapter observes HP loss in the native ref-int TakeDamage overload; it does
+not change damage, AI, equipment or simulation clocks. Donor behavior supplies a
+16-tick red flash and physical impact offset (.17, .018 decay/tick, .35 cap), with
+60 visual ticks per second and per-renderer property blocks. The existing owned
+scene remains alive between accepted frames; only active effects redraw it.
+
+Two diagnostic failures were resolved. Synchronous screenshot readbacks stalled
+Unity and missed the short reaction; asynchronous GPU readback now observes it
+without extending its duration. Player-attributed fixture damage caused native
+hostility: the retained isolated score confirms death to a farmer after three
+turns. That failed run was stopped at its recorded summary screen, its original
+launcher was observed to exit, and preservation passed. The fixture now uses
+environmental damage with a real source position. It does not suppress hostility
+or change damage semantics. Unexpected native summaries produce failure evidence.
+
+The successful launcher exited zero with no CoQ process remaining; twelve Unity
+preferences were restored and normal saves/settings were unchanged (14 created,
+one removed diagnostic/cache files). Stage 2 remaining acceptance/blockers: none.
+Refactoring assessment: the existing camera/material path is retained; no donor
+tick manager, RPC framework or independent simulation was added. The per-instance
+effect state and asynchronous diagnostic capture serve this required workflow.
+
+Stages 3-4 remain required and incomplete. Stage 3 will become ACTIVE after the
+verified stage-2 source and evidence are committed and synchronized.
 
 Tracked deferrals: none. Stage 4 is a named requirement, not permission to weaken
 earlier acceptance. Overall completion requires all stages and final reconciliation.

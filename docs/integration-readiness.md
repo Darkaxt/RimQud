@@ -115,14 +115,14 @@ feasibility sample into a complete overhaul.
 The previous feasibility stages remain complete. The user has now authorized
 execution. The [authoritative implementation specification](joppa-integration-spec.md)
 owns current stage status and acceptance; the ordered scope below remains the
-design rationale. Stage 1 is COMPLETE; stages 2-4 are NOT STARTED.
+design rationale. Stages 1-2 are COMPLETE and stages 3-4 are NOT STARTED.
 
 1. **COMPLETE — Layered NPC/prop scene.** Use actual locally extracted RimWorld
    human and animal graphics to demonstrate bodies, direction, transparency,
    scale/pivots, true ground underneath and overlap with Joppa scenery. Preserve
    native visibility and input coordinates. Custom faithful NPC generation is
    not a prerequisite.
-2. **NOT STARTED — Native state and reaction integration.** Bind hurt feedback
+2. **COMPLETE — Native state and reaction integration.** Bind hurt feedback
    to actual Qud damage; adapt applicable donor flash/offset behavior. Movement,
    facing and supported posture changes follow Qud state. Verify targeting,
    visibility, movement and save/load together. Keep Qud health, AI, jobs and
