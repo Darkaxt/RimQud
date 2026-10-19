@@ -19,6 +19,11 @@ layered human/animal/prop scene, native hurt reactions and an explicit Joppa
 coverage review and actual equipped-item integration. All four bounded stages
 passed; faithful art and broader anatomy support remain separate work.
 
+The next [faithful-art specification](docs/faithful-joppa-spec.md) is now active.
+The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md)
+identifies Joppa's four species families and the named humans' defining mutations.
+New body/age variants and faithful art are not yet claimed as integrated.
+
 ## Actually worn equipment — stage 4
 
 
