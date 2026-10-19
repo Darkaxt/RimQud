@@ -1,0 +1,22 @@
+{
+  "scope": "Read-only donor source audit for temporary human/animal NPC rendering, hurt reactions and equipped apparel",
+  "date": "2026-10-19",
+  "donor_assembly_sha256": "5cf1b5be399d5b1c9c56ca72c9d35b4ecf307feacf5859d04ac5a1aa5926356a",
+  "inspected_types": [
+    "Verse.DamageFlasher",
+    "Verse.PawnDownedWiggler",
+    "Verse.Pawn_DrawTracker",
+    "Verse.PawnRenderNodeWorker_Apparel_Body",
+    "Verse.PawnRenderNodeWorker_Head",
+    "RimWorld.ApparelGraphicRecordGetter"
+  ],
+  "findings": {
+    "hurt": "Damage notifications drive flash and jitter; textures alone do not animate.",
+    "flash_lifetime_donor_ticks": 16,
+    "clothing": "Worn-apparel graphics use body type, facing, layer order and draw color; inventory icons are distinct.",
+    "native_authority": "Qud damage, equipped-item/body-slot state and turn progression must remain authoritative."
+  },
+  "implemented": false,
+  "runtime_verified": false,
+  "raw_donor_assets_published": false
+}

@@ -15,7 +15,9 @@ an experimental integration, not a released overhaul.
 blueprint types; 57 types, including NPCs and furniture, retain native sprites.
 Repeated ground/path cells account for much of the apparent coverage. The next
 step is [completing Joppa's rendering path before bulk art](docs/integration-readiness.md),
-using a few individually referenced, faithful assets to prove that path.
+using existing RimWorld humans/animals as temporary NPC graphics. Hurt reactions
+and a fourth step for visibly equipped Qud apparel are included in that scope;
+they have not yet been implemented.
 
 ## Foreground review
 

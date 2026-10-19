@@ -19,9 +19,15 @@ The controlled zone/visibility/disable checks remain valid. No broad FPS or
 long-session stability claim follows from the short native run. A separate
 performance gate is unnecessary; investigate measured symptoms during normal
 verification. The next useful work is the missing actor/prop and layered-scene
-integration, using a few faithful assets before generating the complete set.
+integration, using the user-selected RimWorld human/animal placeholders before
+generating a complete faithful set. Hurt feedback must follow Qud damage events.
 See the [integration completeness review](integration-readiness.md) and
 [actual blueprint coverage](../evidence/joppa-coverage.json).
+
+The user added a fourth step: NPCs visibly wear their actual equipped Qud items,
+initially mapped to appropriate donor worn-apparel graphics. Inventory ownership
+alone must not add clothing. The revised four-step scope and acceptance boundaries
+are recorded in the integration review.
 
 ## Art after the playable slice
 
