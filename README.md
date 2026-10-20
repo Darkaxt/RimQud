@@ -15,8 +15,10 @@ inputs, including Tam and Ctesiphus; no completion credit is carried forward.
 The [HTML conversion report](docs/conversion-report.html) records the new
 generation workflow step by step. Five human body templates are generation-ready:
 adult male/female, older male/female, and a shared featureless child base for both
-template labels. The child Woven Tunic's corrected v2 covers the shoulders and
-keeps intact cloth separate from its precise foreground-arm overlap. Native acceptance and the
+template labels. The human child Woven Tunic's v2 shoulder correction is retained,
+but its generation-ready credit is withdrawn: an opaque sleeve interior still
+crosses the exposed profile arm. Correcting foreground cloth ownership is the
+active entry. Native acceptance and the
 remaining clothing fits are pending.
 Adult and child dromad bases are also generation-ready, with centered directional
 body/head layers and separate neutral dulla coverage. Juvenile proportions and
@@ -79,7 +81,7 @@ Watervine is generation-ready across all three native layouts and both harvest
 tints, with separate neutral vine/wafer layers. Its actual refinement calls,
 source-positioned wafer marks, alpha cleanup and native firefly-particle boundary
 are recorded. All five vegetation entries are now generation-ready.
-The Alchemist Table is also generation-ready: scorched wood, left phial rack and
+The Alchemist Table's recorded front proposal has scorched wood, left phial rack and
 tall alembic follow its original shape. Neutral glass ownership includes pale
 reflections without turning wooden rack edges cyan. Native inventory/empty-full
 tag behavior stays explicit in its source packet and report.
@@ -124,7 +126,14 @@ Cardinal-camera correction: Chair now has a straight south construction and refi
 
 [Corrected Canvas Folding Chair](art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-comparison.png)
 
-There are now 38 generation-ready entries; Bed is the single active camera correction. Native acceptance still waits for every conversion to finish generation.
+There are now 32 generation-ready entries. Human child tunic foreground-arm
+ownership is the single active correction; Bed remains unfinished.
+All 16 furniture entries now require front/south, side/east and back/north
+artwork, even if Qud currently binds one tile. West mirrors only if the design
+permits it. The five previously ready single-view furniture entries were reopened;
+their recorded front/state work remains preserved. Extra views are unbound
+authoring assets: choosing orientation from walls or tables is still undecided.
+Native acceptance waits for every conversion to finish generation.
 
 The report now has cascading category/subcategory/type filters, including
 Human → Male Child → Equipment and the shared Female Child entry. Its small

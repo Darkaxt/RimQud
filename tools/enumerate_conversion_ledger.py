@@ -121,6 +121,7 @@ def enumerate_entries():
     for obj in source['scenery']:
         name=obj['blueprint'];category=next(g for g,names in groups.items() if name in names)
         variants=['fixed map view; source palette/coverage and native supported states']
+        if category=='Furniture':variants+=['authored front/south','authored complete side/east','authored back/north','west mirror only if geometry/markings permit; otherwise separate west','extra views unbound; wall/table orientation selection undecided']
         if name in model['scenery']['walls'] or name=='BrinestalkFence':
             variants=[dict(mask=i,neighbors=[d for bit,d in [(1,'N'),(2,'E'),(4,'S'),(8,'W')] if i&bit]) for i in range(16)]
         if name=='Door':variants=['closed','open; native panel position and occlusion']
@@ -136,6 +137,7 @@ def enumerate_entries():
         add('SCN-'+slug(name),category,name,targets=[name],variants=variants,artifacts=art,issues=issue,
             metadata=dict(description=obj.get('description'),render=obj.get('render'),original_reference=refs.get(name)),
             steps=['resolve_object_description_original_tile_palette_state','select_render_reference_or_document_no_equivalent','construct_faithful_shape',
+                *(['create_front_side_back_furniture_views'] if category=='Furniture' else []),
                 'create_required_state_neighbor_variants','refine_materials_and_form','extract_register_color_coverage','visual_review_identity_and_connections_at_game_scale','native_state_review'])
     surfaces=model['scenery']['surfaces']
     for file,subject in [('marsh.png','marsh/grass ground'),('soil.png','bare soil/interior ground'),('sand.png','path surface'),('water-shallow.png','shallow/wading water'),('water-deep.png','deep/swimming water')]:
@@ -166,6 +168,10 @@ def validate(data,expected):
             assert e[key]==fresh[key],(e['id'],'Inventory/workflow drift',key)
         assert set(e['related_entries'])<=set(ids),(e['id'],'Missing linked entry')
         assert e['status'] in ['UNFINISHED','IN PROGRESS','COMPLETE']
+        if e['category']=='Furniture' and e.get('generation_ready'):
+            latest={log['step']:log for log in e['process_log']}
+            assert latest.get('create_front_side_back_furniture_views',{}).get('result')=='PASS',(e['id'],'Furniture front/side/back evidence missing')
+            assert {'south','east','north'}<=set(e.get('furniture_views',{}).get('completed_views',[])),(e['id'],'Furniture view set incomplete')
         for artifact in e['historical_artifacts']:assert digest(ROOT/artifact['path'])==artifact['sha256'],('Historical input changed',artifact)
         if e['status']=='COMPLETE':
             if e['category'] in ['Equipment inventory','NPC assemblies','Creatures']:

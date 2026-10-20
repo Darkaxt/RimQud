@@ -59,6 +59,9 @@ def entry_paths(entry,index):
 def render_entry_body(e,url_prefix):
     logs=e['process_log'];latest={l['step']:l for l in logs};passed={s for s,l in latest.items() if l.get('result')=='PASS'}
     parts=['<div class="entry-body">']
+    if e.get('furniture_views'):
+        views=e['furniture_views'];done=views.get('completed_views',[])
+        parts.append('<p class="issues"><strong>Required furniture views: front / south, side / east, back / north.</strong> '+h('Complete set pending.' if not done else 'Recorded views: '+', '.join(done)+'.')+' Extra views are unbound authoring assets; wall/table-facing selection is undecided. West mirrors only where the design permits it.</p>')
     parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
     if e.get('current_registration'):
         current=e['current_registration']

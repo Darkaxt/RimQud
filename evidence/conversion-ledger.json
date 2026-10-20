@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-BED",
+  "active_entry": "FIT-HUMAN-CHILD-TEMPLATE-TUNIC",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -5220,7 +5220,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -5229,6 +5234,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -5581,6 +5587,16 @@
           ],
           "review": "Front-aligned but tabletop has receding/converging depth. Compare the whole fixture against a documented cardinal target camera; diagonal alembic tubes are intrinsic features, not camera yaw. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -5604,6 +5620,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -5615,7 +5642,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -5624,6 +5656,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -6076,6 +6109,16 @@
           ],
           "review": "Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -6099,6 +6142,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -6110,15 +6164,21 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "select_render_reference_or_document_no_equivalent",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -6450,6 +6510,16 @@
           ],
           "review": "Bed long axis and bed plane shear diagonally relative to the map-facing frame. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -6473,6 +6543,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -6484,7 +6565,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -6493,6 +6579,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -6824,6 +6911,16 @@
           ],
           "review": "Entire bedding footprint lies diagonally in the map plane instead of a cardinal orientation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -6847,6 +6944,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -6858,7 +6966,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -6867,6 +6980,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -7198,6 +7312,16 @@
           ],
           "review": "Front-aligned drawers below a visibly receding trapezoidal tabletop. Camera depth must match the target rather than be accepted solely from source shape. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -7221,6 +7345,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -7232,7 +7367,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -7241,6 +7381,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -7853,9 +7994,19 @@
           ],
           "review": "Source sling/jointed-wood identity remains readable, all supports meet the seat, and cardinal frame no longer has a diamond footprint. One deployed fixed source state; native sitting/takeability/visibility/animated fallback acceptance remains pending all-generated gate.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -7875,6 +8026,17 @@
           "path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/model.json",
           "sha256": "ad9e0cf5b12a9fddcd66ffc28d1d297d0053d3186c1aadefe12caa2887e88654"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -7886,7 +8048,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -7895,6 +8062,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -8470,9 +8638,19 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -8503,6 +8681,17 @@
             "sha256": "6cc2f896e841b91691537fae3c3e1a378111e557c3c26dbbf706f066368f2547"
           }
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -8514,7 +8703,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -8523,6 +8717,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -8854,6 +9049,16 @@
           ],
           "review": "Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -8877,6 +9082,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -8888,7 +9104,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -8897,6 +9118,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -9228,6 +9450,16 @@
           ],
           "review": "Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -9251,6 +9483,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -9262,7 +9505,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -9271,6 +9519,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -9905,6 +10154,16 @@
           ],
           "review": "All four layouts use a rotated diamond footprint and isometric-like cushion presentation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -9928,6 +10187,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -9939,7 +10209,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -9948,6 +10223,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -10370,9 +10646,19 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -10384,7 +10670,18 @@
           "sha256": "45c9522735d4b7dcb41bb83eb5b2dafda863be0f97714bb7b9097035ffad257a"
         }
       },
-      "registration_summary": "Selected hammock covers both actual native forms: portable loop/fringe and support-owned diagonal hanging sling. Production rope/detail layers are neutral with genuinely open mesh; previews use explicit TileColor y and detail Y rather than glyph-only ColorString Y. Exact native states, description, actual installed legacy net reference, editable forms, two actual refinements and alpha/role extraction are recorded below. Trees, stands and state selection stay outside artwork; native supports/endpoints/sleep/visibility acceptance remains pending."
+      "registration_summary": "Selected hammock covers both actual native forms: portable loop/fringe and support-owned diagonal hanging sling. Production rope/detail layers are neutral with genuinely open mesh; previews use explicit TileColor y and detail Y rather than glyph-only ColorString Y. Exact native states, description, actual installed legacy net reference, editable forms, two actual refinements and alpha/role extraction are recorded below. Trees, stands and state selection stay outside artwork; native supports/endpoints/sleep/visibility acceptance remains pending.",
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      }
     },
     {
       "id": "SCN-JOPPA-BOOKSHELF",
@@ -10395,7 +10692,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -10404,6 +10706,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -10973,6 +11276,16 @@
           ],
           "review": "Three straight-facing shelf layouts have visible tapered top boards; their depth still needs explicit donor-camera comparison. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "generation_ready": false,
@@ -10996,6 +11309,17 @@
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
         }
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -11007,7 +11331,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -11016,6 +11345,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -11342,9 +11672,19 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -11356,7 +11696,18 @@
           "sha256": "99a2a6f71a8c9f0833ba96213c447fd5a930cfe087cda3c7b892b081a6508ec4"
         }
       },
-      "registration_summary": "Static wood/fiberglass mannequin retains source head, angular torso/hip forms, side cues and pale stand. Production layers are neutral; complete shell highlights inherit actual native randomized detail while armature/stand stay primary y. Default R and c/m/g samples illustrate the same masks, not captured random choices. Exact armature joints are uncertain authored interpretation. This furniture has one source-cell frame, not an actor rig, independent limb nodes or new apparel behavior. Native color selection, physics, visibility and rare animated/custom fallback remain pending."
+      "registration_summary": "Static wood/fiberglass mannequin retains source head, angular torso/hip forms, side cues and pale stand. Production layers are neutral; complete shell highlights inherit actual native randomized detail while armature/stand stay primary y. Default R and c/m/g samples illustrate the same masks, not captured random choices. Exact armature joints are uncertain authored interpretation. This furniture has one source-cell frame, not an actor rig, independent limb nodes or new apparel behavior. Native color selection, physics, visibility and rare animated/custom fallback remain pending.",
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      }
     },
     {
       "id": "SCN-METAL-WORKBENCH",
@@ -11367,7 +11718,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -11376,6 +11732,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -11941,6 +12298,16 @@
           ],
           "review": "Four explicit samples now independently represent native C,w,y,W. Old occupied-native-c-w-preview.png is historical and actually W-tinted because case-insensitive paths collided. Neutral production art, native color codes and selected C/W comparison plate were unchanged; no new generation, game run or renderer change.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
         }
       ],
       "camera_review": {
@@ -11962,7 +12329,7 @@
           }
         }
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -11978,6 +12345,17 @@
       "native_color_samples": {
         "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json",
         "sha256": "57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5"
+      },
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
       }
     },
     {
@@ -11989,7 +12367,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -11998,6 +12381,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -12064,7 +12448,30 @@
           "sha256": "b174f94935df9dd61d53d8b66be8c1b3fa624c842797036729f9945ebb54a4a3"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
+        }
+      ],
+      "generation_ready": false,
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      }
     },
     {
       "id": "SCN-TABLE",
@@ -12075,7 +12482,12 @@
       ],
       "related_entries": [],
       "required_variants": [
-        "fixed map view; source palette/coverage and native supported states"
+        "fixed map view; source palette/coverage and native supported states",
+        "authored front/south",
+        "authored complete side/east",
+        "authored back/north",
+        "west mirror only if geometry/markings permit; otherwise separate west",
+        "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
@@ -12084,6 +12496,7 @@
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
+        "create_front_side_back_furniture_views",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
         "extract_register_color_coverage",
@@ -12144,7 +12557,30 @@
           "sha256": "935a7a1770d4f2701fb553b551fbee3385242199d0551393c603fc823f3277d6"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "phase": "User added mandatory furniture turnaround authoring",
+          "action": "Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.",
+          "inputs": [],
+          "outputs": [],
+          "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
+          "result": "RECORDED"
+        }
+      ],
+      "generation_ready": false,
+      "furniture_views": {
+        "required_views": [
+          "south",
+          "east",
+          "north"
+        ],
+        "completed_views": [],
+        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
+        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      }
     },
     {
       "id": "SCN-BROKEN-INDUSTRIAL-FAN",
@@ -24586,8 +25022,8 @@
       ],
       "required_variants": [],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "extract_register_palette_masks",
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -25444,9 +25880,28 @@
           ],
           "review": "Full shoulders, coherent collar, natural sleeve-to-forearm boundary and continuous hem in all views. No copied body/hand outlines in cloth; actual hand remains visible. Authoring ready only, native acceptance remains behind all-generated gate.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T09:48:02.870535+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Foreground sleeve-cap ownership defect reported",
+          "action": "Withdrew human child tunic generation-ready credit after the user identified the opaque sleeve interior still crossing the exposed arm.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v2/model.json",
+              "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png",
+              "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"
+            }
+          ],
+          "outputs": [],
+          "review": "User identified opaque inner-cuff/rear sleeve fill crossing the exposed profile arm. The foreground garment must be transparent over the actual exposed limb through the true cuff edge, not just below a coarse cut. Preserve v2 sources and body; make the correction in a sibling version. Native validation remains deferred.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "current_registration": {
         "model": {
           "path": "art/conversion/fit-human-child-woven-tunic/v2/model.json",
@@ -25459,8 +25914,8 @@
       },
       "native_acceptance": "Pending final all-conversions validation gate",
       "art_review": {
-        "status": "RESOLVED IN AUTHORING",
-        "reason": "Corrected full shoulder coverage, collar seam and profile cuff registration; intact garment retained separately from precise painted-arm overlap."
+        "status": "REQUIRES REWORK",
+        "reason": "User identified opaque inner-cuff/rear sleeve fill crossing the exposed profile arm. The foreground garment must be transparent over the actual exposed limb through the true cuff edge, not just below a coarse cut."
       },
       "registration_summary": "Corrected v2: unchanged centered body; continuous covered shoulders and collar. Whole cloth and effective foreground-arm coverage are separately recorded. Native acceptance pending."
     },
@@ -32790,5 +33245,17 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T09:39:37.661877+00:00"
+  "updated_at": "2026-10-20T09:48:02.870535+00:00",
+  "furniture_view_policy": {
+    "required": [
+      "south/front",
+      "east/complete side",
+      "north/back"
+    ],
+    "applies_to_category": "Furniture",
+    "entries": 16,
+    "west": "mirror only when design permits; otherwise separate view",
+    "native_integration": "unbound assets; wall/table facing selection undecided",
+    "source": "Explicit user request 2026-10-20"
+  }
 }

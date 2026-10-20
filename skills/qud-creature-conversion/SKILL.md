@@ -82,8 +82,10 @@ Intrinsic diagonal parts, leaning books, bent limbs and hanging ropes remain
 physical features; they do not authorize rotating the whole object.
 
 Record the chosen facing and reference camera in the source packet and exact
-generation prompt. For fixed scenery, one documented cardinal map view is enough
-unless native states require others; this does not invent four-way rotation.
+generation prompt. Furniture always requires front/south, side/east and back/north
+art, even when Qud currently binds one fixed tile. Other fixed scenery may use
+one documented cardinal map view unless its source/state requires more. Authored
+furniture views do not establish native four-way rotation or automatic placement.
 Reject a mismatched camera during authoring, before registration or clothing
 extraction. Record it as unresolved on the entry and withhold generation-ready
 credit until corrected/reviewed. Preserve rejected art and previous process logs.
@@ -120,6 +122,25 @@ Check that the entire body turns: feet and limb overlap, muzzle projection,
 front/back feature visibility and hump/tail attachment must agree. A front torso
 with a sideways head is not a side model. Side/back are proposals for unseen
 surfaces, not new canonical race facts.
+
+For furniture, use the selected front construction plus the Qud description,
+original sprite, material/part metadata and actual directional RimWorld reference
+to generate a complete side and back. Preserve the same object, structural parts,
+material regions, physical scale and consistent map-camera elevation; no oblique
+turntable view or independently fitted bounds. Use a shared placement pivot and
+a common canvas large enough for every facing, with transparent margins. Record
+any mapping from that authoring frame to the current native cell explicitly.
+West may mirror east only when geometry, markings and attachments permit it;
+otherwise record the unresolved asymmetry and author a separate west view.
+
+Review and patch the side/back construction, then refine the coherent composed
+views without changing the selected front design. Show each view and its
+neutral/tint masks in the report. Label unseen construction as authored where
+source evidence is absent. Preserve required cosmetic/occupied/folded states
+separately; do not invent native states. All three views are required for furniture
+generation-readiness, not just the currently bound facing. Record the extra views
+as unbound authoring assets. Whether wall/table context should select a facing
+is a later integration decision, not permission to implement placement logic now.
 
 ## 4. Correct anatomy, then refine the composed views
 
@@ -193,6 +214,25 @@ arm/neck occlusion from the actual registered silhouette and local cuff/collar
 boundaries; broad guessed polygons or circular hand punches can remove cloth
 outside the body. Show both the garment and its precise recomposition so a
 necessary overlap mask is not mistaken for missing fabric.
+
+**Foreground clothing has no background or rear sleeve cap.** Export only the
+cloth visible in that facing. Do not include a backdrop, mannequin-colored fill,
+opaque inner-cuff oval, hidden lining or rear sleeve surface in front of exposed
+arms, hands, neck or other body parts. A fully transparent image background is
+not enough: an opaque sleeve interior inside the garment can still cover a limb,
+just like a foreign hand-outline stroke. Keep ordinary shading on actual visible
+fabric; it does not authorize filling a body opening.
+
+At each sleeve opening, identify the visible front rim, the exposed body, and
+any rear fabric separately. Make the foreground garment transparent over the
+entire exposed limb up to the actual front cuff edge, including rear-cap pixels
+and antialiased fringes above a crude horizontal cut. Rear fabric must remain
+behind the body using an already supported layer, or be excluded from the
+foreground export; do not add a rendering framework to rescue an extraction.
+Intact generated garment sheets are reference/provenance, not automatically
+production layers. Inspect the final transparent export over the unchanged
+body: no interior fill, closed oval or contour may cross the exposed limb.
+Record the correction and withhold generation-ready credit while it remains.
 
 Apparel art must fit the supported body family. Do not claim donor clothing is
 automatically deformed for every Qud mutation. Inventory items remain invisible

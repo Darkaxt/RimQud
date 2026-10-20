@@ -356,3 +356,49 @@ is retained in the process log. There are now 38 generation-ready entries;
 Bed is the sole active entry. Three angled furniture families/six layouts and
 six frontal-depth families/nine layouts remain unresolved. Native acceptance
 and the Stage 3 art blockers remain unchanged.
+
+Foreground apparel ownership correction (2026-10-20): the user identified an
+opaque rear sleeve/inner-cuff cap still painted across the human child arm.
+Foreground garment exports must contain only camera-visible fabric and its
+actual front cuff edge. Background fills, mannequin pixels, hidden lining/rear
+caps and foreign body contours must not cover exposed limbs. Full-image alpha
+transparency does not establish correct internal opening ownership. Preserve
+visible fabric shading and complete shoulder coverage; remove rear-cap coverage
+through the true exposed-limb boundary rather than a coarse horizontal cut.
+Keep intact proposals as provenance. Rear fabric may use an existing supported
+behind-body layer or be excluded from the foreground export; no new renderer
+work is required by this clarification. The affected fitting loses authoring
+readiness until corrected and recomposed. This remains generation work, with
+native validation behind the all-generated gate.
+
+Furniture orientation authoring extension (2026-10-20, explicit user request):
+all 16 Furniture entries require front/south, complete side/east and back/north
+views, even if Qud currently supports only one source tile. West may mirror only
+when the item's geometry/markings allow it; otherwise author it separately.
+Use source description, original art, part/material metadata and actual installed
+directional RimWorld references. Preserve a common physical scale, placement
+pivot and sufficient shared canvas, plus explicit current-native-cell mapping.
+Generate side/back from the selected front, correct errors, refine the composed
+views, and record separate neutral/color coverage for required views and actual
+states. Hidden construction remains labelled interpretation. A single-view
+furniture conversion no longer satisfies generation-readiness; preserve its
+performed work and log the missing views as internal advancement blockers.
+
+These extra views are unbound authoring assets. Native binding/footprint and
+state ownership are unchanged for now. Selecting an orientation from a wall or
+neighboring table is reserved for a later integration decision; this request
+does not authorize implementing or testing that placement behavior during
+generation. Other scenery keeps its existing source/state-based view rules.
+
+Current reconciliation after these two user corrections: all 16 furniture entries
+have the new three-view requirement recorded, and none has a complete documented
+set yet. Five previously generation-ready single-view entries lose that credit;
+their sources, calls and selected front/state artwork remain preserved. The
+reported human child sleeve-cap defect also withdraws that fitting's readiness.
+There are 32 generation-ready entries. Human child tunic extraction is the sole
+active entry; Bed remains unfinished and resumes after that correction.
+The missing furniture views are internal A3/A5 advancement blockers, resolved by
+recording and reviewing the required view sets and masks. The sleeve-cap defect
+is an internal A4/A5 blocker, resolved by a foreground-only garment over the
+unchanged body. They block corresponding full-set authoring acceptance and later
+native acceptance. Stage 3 stays ACTIVE, with no new tracked deferrals.

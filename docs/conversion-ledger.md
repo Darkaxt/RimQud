@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BED**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **FIT-HUMAN-CHILD-TEMPLATE-TUNIC**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -135,7 +135,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-BED | Bed | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BED | Bed | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BEDROLL | Bedroll | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -240,7 +240,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | FIT-DROMAD-CHILD-TEMPLATE-TUNIC | dromad child / tunic | UNFINISHED | BODY-DROMAD-CHILD | Unmapped template garment: no actual Qud item identity or native equipped-slot binding established. |
-| FIT-HUMAN-CHILD-TEMPLATE-TUNIC | human child / tunic | UNFINISHED | BODY-HUMAN-CHILD | Unmapped template garment: no actual Qud item identity or native equipped-slot binding established. |
+| FIT-HUMAN-CHILD-TEMPLATE-TUNIC | human child / tunic | IN PROGRESS | BODY-HUMAN-CHILD | Unmapped template garment: no actual Qud item identity or native equipped-slot binding established. |
 
 ### Terrain/structures (10)
 
@@ -1073,13 +1073,13 @@ Current step: not started. Process-log events: 0.
 
 ### SCN-ALCHEMIST-TABLE: Alchemist Table
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/alchemist-table-body.png](../art/village/scenery/alchemist-table-body.png), [art/village/scenery/alchemist-table-detail.png](../art/village/scenery/alchemist-table-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T06:30:33.351102+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Alchemist Table/Table definitions, original tile mask/hash, scorched-table description and deleted inherited empty/full appearance tags.
   Review: Viewed original source decoded with native w wood and C glass. Wide table/visible supports, left rack and tall alembic define its source identity. Inventory/cover/organic furniture metadata remains native; described fixture art is distinct from actual carried inventory.
@@ -1135,15 +1135,21 @@ Current step: not started. Process-log events: 9.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-ARGYVE-MULTICABINET: Argyve Multicabinet
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/argyve-multicabinet-body.png](../art/village/scenery/argyve-multicabinet-body.png), [art/village/scenery/argyve-multicabinet-detail.png](../art/village/scenery/argyve-multicabinet-detail.png).
 
-Current step: not started. Process-log events: 10.
+Current step: not started. Process-log events: 11.
 
 - 2026-10-20T06:49:11.343210+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Argyve/Multicabinet definitions and decoded both actual RandomTile source masks, rather than relying only on the older static thumbnail.
   Review: Both exact16x24source masks/hash/atlas rectangles are retained in the index. The child changes inventory population, not appearance. Native c/W palette, galvanized-metal description, solidity and occlusion are recorded. Tiny partial marks do not prove electronics or dynamic open drawers.
@@ -1205,15 +1211,21 @@ Current step: not started. Process-log events: 10.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-BED: Bed
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/bed-body.png](../art/village/scenery/bed-body.png), [art/village/scenery/bed-detail.png](../art/village/scenery/bed-detail.png).
 
-Current step: select_render_reference_or_document_no_equivalent. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T06:54:35.154016+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Bed/BaseBed/MountedFurniture/Furniture inheritance, original16x24mask and native w/Y wood/fabric palette; inspected native Bed part for appearance ownership.
   Review: Actual source/hash, description, open upper-right headboard and lower-left sleeping surface are recorded. Bed part declares no Render/Tile override; source has one tile, native sleep state and rare Animated builder. Hidden structure and curves/seams remain authored interpretation.
@@ -1269,15 +1281,21 @@ Current step: select_render_reference_or_document_no_equivalent. Process-log eve
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-BEDROLL: Bedroll
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/bedroll-body.png](../art/village/scenery/bedroll-body.png), [art/village/scenery/bedroll-detail.png](../art/village/scenery/bedroll-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T07:01:52.510253+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Bedroll/Furniture definitions, original16x24mask/hash, goat-wool/canvas-ties description and native w/y roles.
   Review: Source has a rounded diagonal lower body, pale upper folded end and primary fastening marks. Hollow glyph is not a transparent physical bed. This is takeable4-weight non-solid furniture with native Bed interaction, not BaseBed/mounted furniture.
@@ -1333,15 +1351,21 @@ Current step: not started. Process-log events: 9.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-BOOK-TABLE: Book Table
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/book-table-body.png](../art/village/scenery/book-table-body.png), [art/village/scenery/book-table-detail.png](../art/village/scenery/book-table-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T07:06:17.740223+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Book Table/Furniture definitions, exact original tile/hash, puzzle-box description and native w/W drawer/top roles.
   Review: The source has a broad shallow top, two horizontal drawer fronts, low rail and short feet. No visible books/papers are established. Direct Furniture inheritance means the ordinary Table empty/full state tags do not apply; real inventory remains native.
@@ -1397,15 +1421,21 @@ Current step: not started. Process-log events: 9.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-CANVAS-FOLDING-CHAIR: Canvas Folding Chair
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 19.
+Current step: not started. Process-log events: 20.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -1521,15 +1551,21 @@ Current step: generation ready; final acceptance pending. Process-log events: 19
   Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-comparison.png", "sha256": "db0479dead226ba92829ec45ed97f0311e73d3777115701d5d17e45d14c11911"}]
   Method/prompt/corrections: {"phase": "Cardinal folding-chair authoring ready"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-CHAIR: Chair
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 16.
+Current step: not started. Process-log events: 17.
 
 - 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
   Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.
@@ -1627,15 +1663,21 @@ Current step: generation ready; final acceptance pending. Process-log events: 16
   Outputs: []
   Method/prompt/corrections: {"phase": "Native seating and physical acceptance remain deferred"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-CHEST1: Chest1
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/chest1-body.png](../art/village/scenery/chest1-body.png), [art/village/scenery/chest1-detail.png](../art/village/scenery/chest1-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T07:26:22.614516+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chest1/Chest/Furniture inheritance, original16x24mask/hash, scratched-wood description and native w/W roles; inspected Container part for appearance overrides.
   Review: Chest1 changes inventory builder/tier/aggregation, not appearance. Two bright side bands use W; center latch remains primary w. No alternate lid/empty/full/random tile is declared and inspected Container code has no Render/Tile appearance override. Native inventory, sounds, organic/source physics and unspecified defaults remain native.
@@ -1691,15 +1733,21 @@ Current step: not started. Process-log events: 9.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-DRESSER: Dresser
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/dresser-body.png](../art/village/scenery/dresser-body.png), [art/village/scenery/dresser-detail.png](../art/village/scenery/dresser-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T07:30:42.522367+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Dresser/Furniture definitions, exact original tile/hash and precise-wood/internal-brass-rail description; decoded native primary/detail w/w.
   Review: Source supports three stacked fronts, top recessed pull, opposed lower curved motifs, shallow cap and tiny feet. Both color roles are w: no gold hardware is implied. Explicit80-weight non-solid non-takeable organic container/inventory and rare Animated state stay native.
@@ -1755,15 +1803,21 @@ Current step: not started. Process-log events: 9.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-FLOOR-CUSHION: Floor Cushion
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/floor-cushion-body.png](../art/village/scenery/floor-cushion-body.png), [art/village/scenery/floor-cushion-detail.png](../art/village/scenery/floor-cushion-detail.png).
 
-Current step: not started. Process-log events: 12.
+Current step: not started. Process-log events: 13.
 
 - 2026-10-20T07:41:40.915255+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Floor Cushion/BaseChair/Furniture definitions, chaff/glowcrow-feather description and native w/y roles; extracted all four actual RandomTile masks rather than only the older default thumbnail.
   Review: Viewed exact source patterns. Default thumbnail and variant1 have identical alpha and identical source R wherever covered; invisible RGB differs, so raw RGBA identity is not claimed. Native shader appearance is equivalent. Glowcrow stuffing does not imply glow or loose feathers. Low weight does not override inherited takeability/cover.
@@ -1837,15 +1891,21 @@ Current step: not started. Process-log events: 12.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-HAMMOCK: Hammock
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/hammock-body.png](../art/village/scenery/hammock-body.png), [art/village/scenery/hammock-detail.png](../art/village/scenery/hammock-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T07:54:45.894131+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Hammock/Furniture definitions, exact default/hanging masks and lattice/frayed-center description; inspected native Hangable and Render color/state methods.
   Review: Default sw_shawl portable/ground tile differs from actual sw_hammock hanging tile. Hangable support/lifecycle selects HangingTile at render time. Explicit TileColor y supplies primary tile color; glyph ColorString Y remains metadata and detail stays Y. Organic2-weight takeable non-solid Bed/Hangable and Hitpoints5remain native.
@@ -1901,15 +1961,21 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native supports, state transitions, sleep and visibility acceptance deferred"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-JOPPA-BOOKSHELF: Joppa Bookshelf
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/joppa-bookshelf-body.png](../art/village/scenery/joppa-bookshelf-body.png), [art/village/scenery/joppa-bookshelf-detail.png](../art/village/scenery/joppa-bookshelf-detail.png).
 
-Current step: not started. Process-log events: 11.
+Current step: not started. Process-log events: 12.
 
 - 2026-10-20T08:06:21.369110+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Joppa Bookshelf/Bookshelf/BaseBookshelf/MountedFurniture/Furniture definitions, exact three RandomTile masks and dusty-paper description; inspected native Inventory state methods.
   Review: Inherited RandomTile retains three layouts despite child default tile1. Native Inventory reads FullDetailColor W/EmptyDetailColor k while wood stays w; this chain declares no alternate empty/full tile. Source spine groups are cosmetic marks, not actual inventory identities. Mounted organic50-weight state and HangingSupport remain native.
@@ -1977,15 +2043,21 @@ Current step: not started. Process-log events: 11.
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-MANNEQUIN: Mannequin
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/mannequin-body.png](../art/village/scenery/mannequin-body.png), [art/village/scenery/mannequin-detail.png](../art/village/scenery/mannequin-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T08:21:56.104589+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed Mannequin/MountedFurniture/Furniture definitions, original mask and native RandomColors behavior.
   Review: Static mounted furniture uses primary y and RandomColors DetailColor=all; R is the blueprint default only. Source head, torso/hip forms, pale stem/base and ambiguous side marks are distinct. BodyType and rare Animated metadata do not establish actor render joints or a mannequin-specific apparel path.
@@ -2035,15 +2107,21 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native random detail, physics, visibility and rare animated fallback deferred"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-METAL-WORKBENCH: Metal Workbench
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 13.
+Current step: not started. Process-log events: 14.
 
 - 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
   Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
@@ -2123,25 +2201,43 @@ Current step: generation ready; final acceptance pending. Process-log events: 13
   Outputs: [{"path": "art/conversion/scn-metal-workbench/v2/export-native-color-samples.py", "sha256": "c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png", "sha256": "ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png", "sha256": "0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png", "sha256": "05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png", "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json", "sha256": "57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5"}]
   Method/prompt/corrections: {"phase": "Case-safe native color sample correction"}
 
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
 ### SCN-ORNATE-TABLE: Ornate Table
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/ornate-table-body.png](../art/village/scenery/ornate-table-body.png), [art/village/scenery/ornate-table-detail.png](../art/village/scenery/ornate-table-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: not started. Process-log events: 1.
+
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
 ### SCN-TABLE: Table
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
-Required views/states: fixed map view; source palette/coverage and native supported states.
+Required views/states: fixed map view; source palette/coverage and native supported states; authored front/south; authored complete side/east; authored back/north; west mirror only if geometry/markings permit; otherwise separate west; extra views unbound; wall/table orientation selection undecided.
 
 Historical artifacts: [art/village/scenery/table-body.png](../art/village/scenery/table-body.png).
 
-Current step: not started. Process-log events: 0.
+Current step: not started. Process-log events: 1.
+
+- 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
+  Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
 ### SCN-BROKEN-INDUSTRIAL-FAN: Broken Industrial Fan
 
@@ -3609,7 +3705,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 26.
+Current step: extract_register_palette_masks. Process-log events: 27.
 
 - 2026-10-20T01:51:31.357715+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic, preserved its original tile/palette and exact coarse-flax/hemp-rope description, and bound the authored fitting to the unchanged child body.
   Review: Exact original reference hash matched. This resolves the previously generic template garment identity; no child was observed wearing it and no native child selector is assumed. Construction, refinement, extraction and fitting are still unfinished.
@@ -3766,6 +3862,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 26
   Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/model.json", "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png", "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "a59f213db188ecea25f56ed8c5e22a80d3fd6afb66d2146d82fb276ba7c5023a"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/effective-coverage-comparison.png", "sha256": "8909f66fd3c5c7ff79c66382924f87aef5a4a8d33362ff21bb3a049c9c14663f"}]
   Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/game-scale-review.png", "sha256": "4a802e10664d5c3c4d9fea33ab1c2033e4195999ab8b72c56e24b5aa4d8b21b6"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-south.png", "sha256": "712d9a52f66b04ac0c3e55c1b289c9b8fa4d3c99a78c535ef50b2d8bc9489998"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-east.png", "sha256": "0899a34f69b2ce7f74721f63f0c4a4644caf92593a6cedadb6999e443700beed"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-north.png", "sha256": "fe11938a3f32b18042db345b685a37ac357b170a2bbc0943abf8c0018ac8538f"}]
   Method/prompt/corrections: {"phase": "Corrected child tunic authoring review"}
+
+- 2026-10-20T09:48:02.870535+00:00 / visual_review_all_views_at_game_scale / REQUIRES REWORK: Withdrew human child tunic generation-ready credit after the user identified the opaque sleeve interior still crossing the exposed arm.
+  Review: User identified opaque inner-cuff/rear sleeve fill crossing the exposed profile arm. The foreground garment must be transparent over the actual exposed limb through the true cuff edge, not just below a coarse cut. Preserve v2 sources and body; make the correction in a sibling version. Native validation remains deferred.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/model.json", "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png", "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Foreground sleeve-cap ownership defect reported"}
 
 ### SCN-BRINEBRIDGE: BrineBridge
 
