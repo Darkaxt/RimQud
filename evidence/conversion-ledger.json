@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "NPC-ARGYVE",
+  "active_entry": "NPC-ELDERBOB",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -38222,8 +38222,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_individual_race_and_runtime_metadata",
+      "status": "UNFINISHED",
+      "current_step": "native_visibility_equipment_hurt_look_save_review",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -38232,9 +38232,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "male",
@@ -38463,7 +38461,176 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Resolve captured Argyve519 to the shared unmutated human male family and exact five equipped instances/parts.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/source-packet.json",
+              "sha256": "4af41b35582df4db529566376870187dc12f4031e37a31fc1df39cbf12306dc1"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/source-to-assembly.png",
+              "sha256": "c00b8f70ea491581fba9535185280f4f7732c2586641a72e4ac337baaf019384"
+            }
+          ],
+          "review": "Native description/ancestry, original mask hash, source snapshot and attached parts retained. Personal beard/eyebrow metadata kept under postponed A4 cosmetics; no inferred age, mutation or profession pose.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify current shared body and each of the five current item registrations and retain their complete earlier conversion history.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/source-packet.json",
+              "sha256": "4af41b35582df4db529566376870187dc12f4031e37a31fc1df39cbf12306dc1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/dependency-lineage.json",
+              "sha256": "2928c9abebecb623c5f0c7682b87427048b1c9811da7346cc3041d0ff4a92258"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/dependency-evidence.html",
+              "sha256": "c0735da79a440b45bf5a3b6e704899dc7a565e0f9e1866694d1285da1e08a893"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/historical-instruction-versions.json",
+              "sha256": "cab4085ef21f4aa60d4760d3a59bd65613db5808d8e18ee64809b033fa3cd4be"
+            }
+          ],
+          "review": "Six generation-ready dependencies match exact current model/component hashes and physical mapping. Two old instruction inputs resolve byte-for-byte to Git dde9ca9; original events are unchanged. Linked original/reference/manual/refinement/patch/extraction/fitting records are reused, not invented NPC-specific generation calls.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Compose body, vest, monocle, sandals and both captured hand items without baking equipment into the body.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/source-packet.json",
+              "sha256": "4af41b35582df4db529566376870187dc12f4031e37a31fc1df39cbf12306dc1"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/dependency-lineage.json",
+              "sha256": "2928c9abebecb623c5f0c7682b87427048b1c9811da7346cc3041d0ff4a92258"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/assemble-argyve.py",
+              "sha256": "9f9caa291b702c7423c1528dba60537565e23e28363a9da757acc19d0c755eff"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/model.json",
+              "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/base-comparison.png",
+              "sha256": "e1b13928bc021a8f7ebffd442b2634fcb4df41eff03dc43730eb6ff90cc912a3"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/worn-comparison.png",
+              "sha256": "630dafd66664c5027578bab5f7cee505fc9ea353038f06c48301e78d20f5635a"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/assembly-stages.png",
+              "sha256": "90111e2cf870abdceb39e25663c8ee0a8dd0c56f40beae72dbfdee01bd0c29f9"
+            }
+          ],
+          "review": "Original body/item pixels unchanged. Per-item late ownership is applied only to its own cloth/tool coverage; source far-hand depths retained. Stationary display only, no accepted native weapon state.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Inspect all four facings, slot/laterality, explicit monocle west and fixed body/equipment registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/model.json",
+              "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/full-neutral-comparison.png",
+              "sha256": "de93a75a7dff44030ec1e43ce43c16f13f2bf8366ac92852d1db852d7d624a76"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/registration-comparison.png",
+              "sha256": "952faf82cc98cddd29d8f361473729630b58ab938e01bee7fbb913a382e6dcc9"
+            }
+          ],
+          "review": "Shared frame/contact and source components verified. Full bodies remain cardinal; original visible arms/hands stay over the appropriate item without erasing unrelated equipment. No anatomical or fit correction required in this assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Inspect independent captured palettes and game-size assembly; correct only the overlapping report layout.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/model.json",
+              "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/full-native-comparison.png",
+              "sha256": "47a63eeb04694553673fe7e68c313a2d858081a65feadd1cd767f971da8b2a8f"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/render-authoring-evidence.py",
+              "sha256": "6b9296878122510f0f8c7fb5d71439b2cd4e57a44996984214e087a98efa89f4"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/game-scale-comparison.png",
+              "sha256": "dc22ca005cf515b0fcf79aa410d435c274a52336fd8e13041a47238947f756a9"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/game-scale-review.png",
+              "sha256": "54c2bbb9bc9cbd4a48c499bc3a43701ccd0f61ec34466eca16b3a19920020a38"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/hidden-comparison.png",
+              "sha256": "654cafa89e43b917cf53b9d3e64c809cab4f42c7dba3ed8a8404de1a0a418fb4"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/record-review.py",
+              "sha256": "304d7062f58e99e9e056167d5ec7f6e50db2655e73ceab2431813851e9149daa"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/authoring-review.json",
+              "sha256": "1c2ebc4f238197447feffde04c8096fc9094e15d97c97d23915a63035fd11cf3"
+            },
+            {
+              "path": "art/conversion/npc-argyve/v1/artifact-manifest.json",
+              "sha256": "1c230c9a1644cfb363a071acfbe170907c860968131eaae867ec01a5477794e7"
+            }
+          ],
+          "review": "Inspected original source, shared body, five actual fitted items, staged outfit, all four neutral/native directions and intended-size views. Actor519 is captured human/male with ordinary attached Humanoid tree; no age or eyebrow mutation invented. Original body/head, canvas512x1024, contact256,950 and all item physical mappings/pixels retained. Vest, monocle, sandals, knife Hand/2 and wrench Hand/1 remain independent; explicit monocle west is used. Far-hand source depths and per-item late body ownership avoid a whole-body overlay erasing other gear. Actual body c and independent item palettes are used, including wrench TileColor y overriding foreground c. Hair/beard/eyes/personal overlays remain postponed under A4. Held-item previews are stationary displays; ready/resting grip/angle/depth review is assigned to integrated Stage3 after generation. No native activation, game launch, harness acceptance or new ImageGen call. Crowded initial scale evidence retained and replaced by separated rows; art unchanged.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:28:10.544022+00:00",
+          "step": "native_visibility_equipment_hurt_look_save_review",
+          "action": "Retain native visibility/equipment/hurt/look/save and source-supported held-state review behind the complete generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-argyve/v1/model.json",
+              "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"
+            }
+          ],
+          "outputs": [],
+          "review": "Authoring hidden previews are empty; they do not prove native visibility. Native equip/unequip, near/far ordering, grip/ready/resting state, hurt, look and persistence remain pending integrated Stage3 after all156 entries are generated.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
       "apparel_dependencies": {
         "workflow": "regional-curved-v1",
         "entries": [
@@ -38471,7 +38638,27 @@
           "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0",
           "FIT-HUMAN-MALE-SANDALS-FEET-0"
         ],
-        "status": "Pending new garment fittings; no historical outfit approval implied"
+        "status": "Current generation-ready vest, monocle and sandals verified; native outfit acceptance pending full-set gate."
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/npc-argyve/v1/model.json",
+          "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"
+        },
+        "plate": {
+          "path": "art/conversion/npc-argyve/v1/registration-comparison.png",
+          "sha256": "952faf82cc98cddd29d8f361473729630b58ab938e01bee7fbb913a382e6dcc9"
+        }
+      },
+      "registration_summary": "Captured Argyve519 assembled from the unchanged shared human-male body and five independent fitted items. Guides show the shared pivot/contact. Neutral, captured palettes, staged assembly and full dependency histories follow below. Cosmetics and native held-state acceptance remain explicitly pending under the specification.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected original source, shared body, five actual fitted items, staged outfit, all four neutral/native directions and intended-size views. Actor519 is captured human/male with ordinary attached Humanoid tree; no age or eyebrow mutation invented. Original body/head, canvas512x1024, contact256,950 and all item physical mappings/pixels retained. Vest, monocle, sandals, knife Hand/2 and wrench Hand/1 remain independent; explicit monocle west is used. Far-hand source depths and per-item late body ownership avoid a whole-body overlay erasing other gear. Actual body c and independent item palettes are used, including wrench TileColor y overriding foreground c. Hair/beard/eyes/personal overlays remain postponed under A4. Held-item previews are stationary displays; ready/resting grip/angle/depth review is assigned to integrated Stage3 after generation. No native activation, game launch, harness acceptance or new ImageGen call. Crowded initial scale evidence retained and replaced by separated rows; art unchanged.",
+        "record": {
+          "path": "art/conversion/npc-argyve/v1/authoring-review.json",
+          "sha256": "1c2ebc4f238197447feffde04c8096fc9094e15d97c97d23915a63035fd11cf3"
+        }
       }
     },
     {
@@ -38498,8 +38685,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_individual_race_and_runtime_metadata",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -58735,7 +58922,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T23:13:16.315878+00:00",
+  "updated_at": "2026-10-20T23:28:10.544022+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

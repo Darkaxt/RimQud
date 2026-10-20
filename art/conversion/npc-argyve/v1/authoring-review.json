@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-20T23:28:10.544022+00:00",
+  "status": "PASS",
+  "scope": "Complete NPC assembly generation authoring only",
+  "reason": "Inspected original source, shared body, five actual fitted items, staged outfit, all four neutral/native directions and intended-size views. Actor519 is captured human/male with ordinary attached Humanoid tree; no age or eyebrow mutation invented. Original body/head, canvas512x1024, contact256,950 and all item physical mappings/pixels retained. Vest, monocle, sandals, knife Hand/2 and wrench Hand/1 remain independent; explicit monocle west is used. Far-hand source depths and per-item late body ownership avoid a whole-body overlay erasing other gear. Actual body c and independent item palettes are used, including wrench TileColor y overriding foreground c. Hair/beard/eyes/personal overlays remain postponed under A4. Held-item previews are stationary displays; ready/resting grip/angle/depth review is assigned to integrated Stage3 after generation. No native activation, game launch, harness acceptance or new ImageGen call. Crowded initial scale evidence retained and replaced by separated rows; art unchanged.",
+  "checked_dependency_files": 280,
+  "checks": {
+    "actual_five_equipped_part_bindings": true,
+    "all_four_cardinal_views": true,
+    "unchanged_body_and_item_source_hashes": true,
+    "shared_physical_frame_and_contact": true,
+    "neutral_equal_RGB": true,
+    "explicit_monocle_west": true,
+    "independent_captured_palettes": true,
+    "wrench_tile_color_override": true,
+    "per_item_late_ownership_not_global_body_redraw": true,
+    "hidden_preview_empty": true,
+    "new_imagegen_calls": 0,
+    "native_activation": false
+  },
+  "report_correction": {
+    "rejected": {
+      "path": "art/conversion/npc-argyve/v1/game-scale-comparison.png",
+      "sha256": "dc22ca005cf515b0fcf79aa410d435c274a52336fd8e13041a47238947f756a9"
+    },
+    "selected": {
+      "path": "art/conversion/npc-argyve/v1/game-scale-review.png",
+      "sha256": "54c2bbb9bc9cbd4a48c499bc3a43701ccd0f61ec34466eca16b3a19920020a38"
+    },
+    "reason": "Original report rows overlap; separated row layout without changing the art."
+  },
+  "native_acceptance": "Pending integrated Stage3 after all156generation entries: actual visibility/equip-unequip/near-far hand/resting-ready/hurt/look/save-load. This packet is authoring only."
+}

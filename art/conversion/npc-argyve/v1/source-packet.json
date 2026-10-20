@@ -1,0 +1,422 @@
+{
+  "entry": "NPC-ARGYVE",
+  "captured_actor": {
+    "instance": 519,
+    "blueprint": "Argyve",
+    "species": "human",
+    "gender": "male",
+    "description": "His mushroom cloud of beard hair is powdered with all the abrasions of the trash sea: white lime, red iron, gold filament, opalescent shavings of the plastiglomerate. Chrome joints and pieces of scrap crystal are hooked to pockets lining his torso, and one of his bushy eyebrows is perpetually cocked, though whether that's a symptom of an insatiable curiosity or forehead mutation is unknown.",
+    "anatomy": "Humanoid",
+    "tile": "Creatures/npc-argyve.bmp",
+    "foreground": "&c",
+    "tileColor": "",
+    "detailColor": "w"
+  },
+  "identity_chain": [
+    "Argyve",
+    "HumanTinker_Village0",
+    "HumanTinker",
+    "NPC",
+    "BaseHumanoid",
+    "Humanoid",
+    "Creature"
+  ],
+  "race_description": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "source_snapshot": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "catalogue": {
+    "path": "evidence/joppa-creature-catalogue.json",
+    "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79"
+  },
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+    "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+    "object": "<object Name=\"Argyve\" Inherits=\"HumanTinker_Village0\">\n    <part Name=\"Render\" DisplayName=\"Argyve\" Tile=\"Creatures/npc-argyve.bmp\" RenderString=\"h\" />\n    <part Name=\"Description\" Short=\"=pronouns.Possessive= mushroom cloud of beard hair is powdered with all the abrasions of the trash sea: white lime, red iron, gold filament, opalescent shavings of the plastiglomerate. Chrome joints and pieces of scrap crystal are hooked to pockets lining =pronouns.possessive= torso, and one of =pronouns.possessive= bushy eyebrows is perpetually cocked, though whether that's a symptom of an insatiable curiosity or forehead mutation is unknown.\" />\n    <part Name=\"ConversationScript\" ConversationID=\"Argyve\" />\n    <part Name=\"Brain\" Wanders=\"false\" Factions=\"Joppa-100,Barathrumites-100\" />\n    <part Name=\"Interesting\" />\n    <stat Name=\"Level\" Value=\"22\" />\n    <stat Name=\"Hitpoints\" Value=\"150\" />\n    <stat Name=\"Strength\" Boost=\"-2\" />\n    <stat Name=\"Willpower\" Boost=\"-2\" />\n    <stat Name=\"Intelligence\" Boost=\"2\" />\n    <inventoryobject Blueprint=\"Scratched Data Disk\" Number=\"1\" />\n    <inventoryobject Blueprint=\"Goggles\" />\n    <inventoryobject Blueprint=\"Sandals\" />\n    <inventoryobject Blueprint=\"Pocketed Vest\" />\n    <property Name=\"WontSell\" Value=\"Scratched Data Disk\" />\n    <skill Name=\"Tinkering\" />\n    <skill Name=\"Tinkering_Repair\" />\n    <skill Name=\"Tinkering_Disassemble\" />\n    <skill Name=\"Tinkering_ReverseEngineer\" />\n    <skill Name=\"Tinkering_Tinker1\" />\n    <tag Name=\"NoSignpost\" />\n    <tag Name=\"AllowIdleBehavior\" Value=\"*delete\" />\n    <tag Name=\"QuestGiver\" Value=\"Fetch Argyve a Knickknack;Fetch Argyve Another Knickknack;Weirdwire Conduit... Eureka!;A Canticle for Barathrum\" />\n    <!-- todo:these may needs to be set as prerequisites of each other so you aren't directed to a quest you can't start yet -->\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"Gender\" Value=\"male\" />\n    <xtagGrammar Proper=\"true\" />\n  </object>"
+  },
+  "original": {
+    "tile": "Creatures/npc-argyve.bmp",
+    "description": "His mushroom cloud of beard hair is powdered with all the abrasions of the trash sea: white lime, red iron, gold filament, opalescent shavings of the plastiglomerate. Chrome joints and pieces of scrap crystal are hooked to pockets lining his torso, and one of his bushy eyebrows is perpetually cocked, though whether that's a symptom of an insatiable curiosity or forehead mutation is unknown.",
+    "kind": "creature",
+    "blueprint": "Argyve",
+    "reference_file": "village-originals/argyve-reference.png",
+    "native_mask_sha256": "238602e19cc96f3c9ac59db73e516223c2882bfeaffa0a1895151a4a39df7716",
+    "reference_sha256": "55c09b305bf57c63eea8a539cbeaf1d29a5cd44564f49cd24dba59a551d274b0",
+    "info_id": 7703,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      702,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\argyve-mask.png",
+      "sha256": "238602e19cc96f3c9ac59db73e516223c2882bfeaffa0a1895151a4a39df7716"
+    }
+  },
+  "runtime_parts": [
+    {
+      "id": 315,
+      "parent": -1,
+      "type": "Body",
+      "variant": "Body",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 518,
+        "blueprint": "Pocketed Vest",
+        "description": "A scratchy kirtle was taken to a pocket seamstress and accoutered for cave delving and trinket fishing.\n\n{{C|+5% carry capacity}}\n\n{{K|Weight: 2 lbs.}}",
+        "tile": "Items/sw_vest.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "K"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 316,
+      "parent": 315,
+      "type": "Head",
+      "variant": "Head",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 317,
+      "parent": 316,
+      "type": "Face",
+      "variant": "Face",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 587,
+        "blueprint": "Telescopic Monocle",
+        "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+        "tile": "Items/sw_monocle.bmp",
+        "foreground": "&C",
+        "tileColor": "",
+        "detailColor": "Y"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 318,
+      "parent": 315,
+      "type": "Back",
+      "variant": "Back",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 319,
+      "parent": 315,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 2,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 320,
+      "parent": 319,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 2,
+      "manager": null,
+      "defaultBlueprint": "DefaultFist",
+      "equipped": {
+        "instance": 588,
+        "blueprint": "Steel Utility Knife",
+        "description": "A use-dull and finger-smudged knife folds in on itself.\n\n{{rules|Strength Bonus Cap: 3\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Orohim}}:\n\nDeep in the wilds of the Historians' District of Biwan, Orohim discovered the Shrine at Birsilil. There he befriended oozes and fought for everlasting glory.}}\n\n{{rules|+50 reputation with the Burgundy Sorrow of Daarramrod Brood}}\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/sw_shortblade_12.bmp",
+        "foreground": "&Y",
+        "tileColor": "",
+        "detailColor": "y"
+      },
+      "defaultItem": {
+        "instance": 589,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 321,
+      "parent": 315,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 1,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 322,
+      "parent": 321,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 1,
+      "manager": null,
+      "defaultBlueprint": "DefaultFist",
+      "equipped": {
+        "instance": 590,
+        "blueprint": "Wrench",
+        "description": "An armlength of time-tortured metal is punched through with screwing iron for extra torque.\n\n{{rules|+1 To-Hit}}\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n{{rules|Counterweighted: Adds +1 to hit.}}\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/wrench.bmp",
+        "foreground": "&c",
+        "tileColor": "&y",
+        "detailColor": "c"
+      },
+      "defaultItem": {
+        "instance": 591,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 323,
+      "parent": 315,
+      "type": "Missile Weapon",
+      "variant": "Missile Weapon",
+      "laterality": 2,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 324,
+      "parent": 315,
+      "type": "Missile Weapon",
+      "variant": "Missile Weapon",
+      "laterality": 1,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 325,
+      "parent": 315,
+      "type": "Hands",
+      "variant": "Hands",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 326,
+      "parent": 315,
+      "type": "Feet",
+      "variant": "Feet",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 521,
+        "blueprint": "Sandals",
+        "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "items/sw_sandals.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "w"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 327,
+      "parent": 315,
+      "type": "Thrown Weapon",
+      "variant": "Thrown Weapon",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 328,
+      "parent": 315,
+      "type": "Floating Nearby",
+      "variant": "Floating Nearby",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    }
+  ],
+  "mutation_boundary": "Retained attached tree is ordinary Humanoid; no extra limb attachment captured. Active mutation list was not fully exported; eyebrow prose is uncertain, not proof of physical mutation. Do not invent extra limbs.",
+  "age": "No explicit age/life-stage established; captured adult male body family is authoring selection, no demographic change.",
+  "cosmetic_boundary": "Per authoritative A4/user scope, hair/eyes/beards/personal overlays postponed beyond initial conversion. Argyve beard/eyebrow/scrap description retained, not baked into shared body or fabricated as equipment.",
+  "dependencies": [
+    {
+      "entry": "BODY-HUMAN-MALE",
+      "model": {
+        "path": "art/conversion/body-human-male/v2/model.json",
+        "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-pocketed-vest/v2/model.json",
+        "sha256": "032bf729e0f1dc8a8d001ea3dbd4836d7bec73ea0689cdca8f3583dc28db5743"
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-telescopic-monocle/v2/model.json",
+        "sha256": "4d69cf76b2fd6ab431899a4178621e8bc2cbe5899164ed080199bb3f16567702"
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2",
+      "model": {
+        "path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json",
+        "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-WRENCH-HAND-1",
+      "model": {
+        "path": "art/conversion/fit-human-male-wrench/v1/model.json",
+        "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-sandals/v3/model.json",
+        "sha256": "d6b64225968ecc379fc6c1310a6f3339c5b9ad7dfa3899f291f8685ad708c3f7"
+      }
+    }
+  ],
+  "equipped": [
+    {
+      "part_id": 315,
+      "parent": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "item": {
+        "instance": 518,
+        "blueprint": "Pocketed Vest",
+        "description": "A scratchy kirtle was taken to a pocket seamstress and accoutered for cave delving and trinket fishing.\n\n{{C|+5% carry capacity}}\n\n{{K|Weight: 2 lbs.}}",
+        "tile": "Items/sw_vest.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "K"
+      },
+      "fit_entry": "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0"
+    },
+    {
+      "part_id": 317,
+      "parent": 316,
+      "slot": "Face",
+      "laterality": 0,
+      "item": {
+        "instance": 587,
+        "blueprint": "Telescopic Monocle",
+        "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+        "tile": "Items/sw_monocle.bmp",
+        "foreground": "&C",
+        "tileColor": "",
+        "detailColor": "Y"
+      },
+      "fit_entry": "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0"
+    },
+    {
+      "part_id": 320,
+      "parent": 319,
+      "slot": "Hand",
+      "laterality": 2,
+      "item": {
+        "instance": 588,
+        "blueprint": "Steel Utility Knife",
+        "description": "A use-dull and finger-smudged knife folds in on itself.\n\n{{rules|Strength Bonus Cap: 3\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Orohim}}:\n\nDeep in the wilds of the Historians' District of Biwan, Orohim discovered the Shrine at Birsilil. There he befriended oozes and fought for everlasting glory.}}\n\n{{rules|+50 reputation with the Burgundy Sorrow of Daarramrod Brood}}\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/sw_shortblade_12.bmp",
+        "foreground": "&Y",
+        "tileColor": "",
+        "detailColor": "y"
+      },
+      "fit_entry": "FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2"
+    },
+    {
+      "part_id": 322,
+      "parent": 321,
+      "slot": "Hand",
+      "laterality": 1,
+      "item": {
+        "instance": 590,
+        "blueprint": "Wrench",
+        "description": "An armlength of time-tortured metal is punched through with screwing iron for extra torque.\n\n{{rules|+1 To-Hit}}\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n{{rules|Counterweighted: Adds +1 to hit.}}\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/wrench.bmp",
+        "foreground": "&c",
+        "tileColor": "&y",
+        "detailColor": "c"
+      },
+      "fit_entry": "FIT-HUMAN-MALE-WRENCH-HAND-1"
+    },
+    {
+      "part_id": 326,
+      "parent": 315,
+      "slot": "Feet",
+      "laterality": 0,
+      "item": {
+        "instance": 521,
+        "blueprint": "Sandals",
+        "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "items/sw_sandals.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "w"
+      },
+      "fit_entry": "FIT-HUMAN-MALE-SANDALS-FEET-0"
+    }
+  ],
+  "assembly_contract": {
+    "canvas": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "geometry": "Original body/head and full item pixels retained; only composition and late ownership applied. No rescale or position change.",
+    "ownership": "Body first, source-declared far-hand gear behind body, worn vest/footwear/monocle in disjoint regions, near-hand gear above outfit. Each item applies only its own body-overlay alpha at composition; no full-body redraw above other equipment.",
+    "color": "Captured body c; actual item TileColor overrides foreground; independent per-item primary/detail. One coverage for primary/detail within item, no copied whole-outfit body tint.",
+    "weapon_pose": "Existing stationary authoring display fits only; no ready/drafted/resting acceptance claimed. Authoritative spec assigns item-specific grip/angle/depth/native pose review to integrated Stage3 after all-generation gate; no new Qud drafting mechanic.",
+    "native_visibility": "Hidden previews show no actor layers; native visibility/hurt/look/save and held-state behavior remain untested behind full-generation gate."
+  },
+  "native_activation": false,
+  "native_acceptance": "Pending integrated Stage3 after all156generation entries: actual visibility/equip-unequip/near-far hand/resting-ready/hurt/look/save-load. This packet is authoring only."
+}
