@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-20T03:19:02.917298+00:00",
+  "installed_display_sha256": "e4eaffbe696a513a7e36a8db241e3215ef5bbfafa344759a7af20c8365555349",
+  "captured_palette": {
+    "path": "evidence/joppa-anatomy-study.json",
+    "sha256": "83a67a07c7e495c2b64b827853013f599fc132ec0a014420e53b982672fcede8"
+  },
+  "colors": {
+    "w": "98875f",
+    "W": "cfc041",
+    "g": "009403",
+    "G": "00c420",
+    "k": "0f3b3a",
+    "K": "155352"
+  },
+  "decision": "Production source is neutral stone RGB plus coverage. Preview uses exact native w, g and G anchors with authored value shading. Grass preview is context only, not completion of a grass entry.",
+  "static_map": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\Joppa.rpm",
+    "sha256": "581053cd370dfee27bb855ccb5870de7a782898b05a0377d6b79ac28bf956951",
+    "kind": "Installed static Joppa layout; not a capture of the current generated/runtime zone"
+  },
+  "geometry": "Twenty staggered rows of twenty irregular stones on a 512-square periodic field; about six stones per logical 64-square cell. Arrangement is authored under the requested cobblestone interpretation, not native per-pixel canonical geometry.",
+  "neighbor_contract": "Center is a path cell. Bits clockwise N=1, NE=2, E=4, SE=8, S=16, SW=32, W=64, NW=128. 256 local states, native occupancy unchanged.",
+  "coverage_method": "Blur the 3x3 occupancy field at .16 cell radius then smoothstep .54 to .82. Crop the center cell; no per-cell material rescaling. At absent outer neighbors the edge fades inside its cell. Diagonal occupancy controls corner coverage.",
+  "uv_contract": "One shared world-anchored repeating material, period eight logical cells in each axis. Connected masks modulate coverage only. Do not restart stone UV at every cell.",
+  "native_variants": "All four inherited ground-dot selectors retain their identities and map to the same continuous material. Native random dot placement does not require inventing a new animation or rerolling the surface.",
+  "state": "Construction suggestion only; material refinement/extraction and visual selection pending. Native review deferred."
+}

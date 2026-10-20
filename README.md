@@ -26,8 +26,14 @@ its report preserves the rejected cuff extraction and corrected coverage masks.
 Tam's adult Cloth Robe and enlarged Shillelagh fittings are also generation-ready.
 Their body, garment and held-item layers remain separate. The report records the
 Shillelagh's exact installed description and actual installed Tribal mod reference.
-There are now 11 generation-ready entries; the next active entry is DirtPath,
-with cobblestone-like paving over grass as the requested visual interpretation.
+The DirtPath and shared path-material records now select one source-bound
+cobblestone-like surface with native brown tint, independent grass coverage and
+eight-neighbor states. The report includes manual, refined, patched and selected
+material views plus a static Joppa layout; these are not native game captures.
+Basic Grass 1 is generation-ready as sparse neutral paint with its source cell
+frame retained. Its first faint registration and direct width/value correction
+are both recorded. There are now 14 generation-ready entries; Basic Grass 2 is
+active next. Other grass/ground, walls, furniture and remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

@@ -38,7 +38,8 @@ def render(data):
         parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
         if e.get('current_registration'):
             current=e['current_registration']
-            parts.append('<h3>Current registered artwork</h3><p>Use this registered version for layer alignment. The gold guide marks the shared horizontal pivot; the ground guide marks the common contact baseline. Body, head, masks and fitted clothing share that frame. A muzzle, hump or forward-pointing foot can extend beyond the pivot without moving it.</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current layer registration</a></p>')
+            registration_note=e.get('registration_summary','Use this registered version for layer alignment. The gold guide marks the shared horizontal pivot; the ground guide marks the common contact baseline. Body, head, masks and fitted clothing share that frame. A muzzle, hump or forward-pointing foot can extend beyond the pivot without moving it.')
+            parts.append('<h3>Current registered artwork</h3><p>'+h(registration_note)+'</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current asset registration</a></p>')
         parts.append('<ol class="workflow">'+''.join(f'<li class="{"pass" if s in passed else "pending"}">{h(s.replace("_"," "))} — {"recorded PASS" if s in passed else "pending"}</li>' for s in e['required_steps'])+'</ol>')
         if e.get('current_registration'):
             parts.append('<h3>Process history, including superseded sheets</h3>')

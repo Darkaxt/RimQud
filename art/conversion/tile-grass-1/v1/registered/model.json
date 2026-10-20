@@ -1,0 +1,39 @@
+{
+  "kind": "native_cell_paint",
+  "native_tile": "Terrain/sw_grass1.bmp",
+  "identity": "Basic Grass 1",
+  "canvas": [
+    512,
+    768
+  ],
+  "native_cell": [
+    16,
+    24
+  ],
+  "nominal_native_anchor": [
+    8,
+    16
+  ],
+  "nominal_canvas_anchor": [
+    256,
+    512
+  ],
+  "refined_main_blade_root": [
+    273,
+    512
+  ],
+  "neutral": {
+    "path": "art/conversion/tile-grass-1/v1/registered/grass1-neutral.png",
+    "sha256": "3c412716771840d69cc08ba553e90554c5caa7b13492c06e30e364dfdca8a899"
+  },
+  "coverage": {
+    "path": "art/conversion/tile-grass-1/v1/registered/grass1-coverage.png",
+    "sha256": "b957d65d694f57f594d7f34d34202d4184427e376d3dc95c311fd5a6b9ffddca"
+  },
+  "color_role": "Native cell primary foreground; no source detail region",
+  "palette_policy": "Do not bake preview green into production RGB. Source references do not establish a universal paint color; preserve native cell tint/visibility, including non-green usages.",
+  "frame_policy": "Keep the entire 16 x 24 source cell frame; nominal pivot is fixed. Both shoots share one .55 scale and one translation. Their alpha bounds are not independently centered/fitted.",
+  "view_policy": "One fixed map-paint view. No biological growth, facing rotation, wind or extra blades invented. Grass variants 2 and 3 remain separate entries.",
+  "layer": "Native paint layer relative to ground; real draw-order/visibility binding pending final integration",
+  "state": "Generation-ready authoring only; native acceptance pending every-conversion-generated gate"
+}

@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-DIRTPATH**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **TILE-GRASS-2**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -227,7 +227,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | TILE-GRASS-1 | Basic Grass 1 | UNFINISHED | - | Grass 1 traced candidate only; Grass 2/3 have original references but no converted output. Validate variation and vegetation merging. |
-| TILE-GRASS-2 | Basic Grass 2 | UNFINISHED | - | Grass 1 traced candidate only; Grass 2/3 have original references but no converted output. Validate variation and vegetation merging. |
+| TILE-GRASS-2 | Basic Grass 2 | IN PROGRESS | - | Grass 1 traced candidate only; Grass 2/3 have original references but no converted output. Validate variation and vegetation merging. |
 | TILE-GRASS-3 | Basic Grass 3 | UNFINISHED | - | Grass 1 traced candidate only; Grass 2/3 have original references but no converted output. Validate variation and vegetation merging. |
 | TILE-SOIL | bare soil/interior ground | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
 | TILE-WATER-DEEP | deep/swimming water | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
@@ -252,7 +252,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-BRINESTALKWALLWITHGEARBOX | BrinestalkWallWithGearbox | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVASWALL | CanvasWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTFLOOR | DirtFloor | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-DIRTPATH | DirtPath | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
+| SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
 | SCN-DOOR | Door | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POND | Pond | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-RUSTEDMETALWALL | RustedMetalWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -2007,7 +2007,67 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/scenery/basic-grass.png](../art/village/scenery/basic-grass.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
+
+- 2026-10-20T03:33:34.990854+00:00 / source_identity_description_metadata / PASS: Read the actual native grass1 mask and reference packet, recording its ten primary-color coverage pixels and original 16 x 24 frame.
+  Review: This is a floor-paint glyph, not a new crop/NPC species. Native black RGB is foreground coverage in the audited shader, not background. No source detail region. Universal paint color was not exported; preserve native primary tint rather than bake green into the asset. Cyan PrimalGrass is a separate source usage of this tile.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/prepare-and-construct.py", "sha256": "33a1bf651d968d3d44b6ffbcac919fe51ae16bd15b663697c677a81d6d82db16"}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}]
+  Method/prompt/corrections: {"phase": "First grass paint identity and coverage"}
+
+- 2026-10-20T03:33:34.991260+00:00 / original_and_render_reference_decision / PASS: Selected actual extracted RimWorld GrassA for blade taper/shading while retaining the much sparser native two-shoot interpretation.
+  Review: Viewed original, editable suggestion and donor reference. The dense donor tuft is not copied. A fixed top-down paint frame needs no creature turnarounds, body anatomy or clothing. Variants 2 and 3 remain separate entries.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/source-construction-comparison.png", "sha256": "c801c7e2bed7acf3d8ce94fe79bf97ef1ce4117383c51e17154fa0c2bb7ccb8b"}]
+  Method/prompt/corrections: {"phase": "Actual GrassA blade convention only"}
+
+- 2026-10-20T03:33:34.991422+00:00 / construct_shape / RECORDED: Constructed one longer right-curving shoot and one shorter leftward shoot as neutral editable paths in the original rectangular cell frame.
+  Review: Viewed shape: sparse two-shoot silhouette follows the original covered pixels. Blade width/shading is authored interpretation; no extra leaves, flowers, soil or crop has been added. Nominal source anchor (8,16) scales to (256,512), not an independently centered alpha crop.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/prepare-and-construct.py", "sha256": "33a1bf651d968d3d44b6ffbcac919fe51ae16bd15b663697c677a81d6d82db16"}, {"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/constructed-grass.svg", "sha256": "c74c64bb2b8967935b7c9a827e9454e631cbc6217363577248a9854cf2da0d04"}, {"path": "art/conversion/tile-grass-1/v1/constructed-grass.png", "sha256": "3909ad86a1e59f10e1a46cee20e30f13a6bc66b1c5955a5423f169ef417fae05"}, {"path": "art/conversion/tile-grass-1/v1/source-construction-comparison.png", "sha256": "c801c7e2bed7acf3d8ce94fe79bf97ef1ce4117383c51e17154fa0c2bb7ccb8b"}]
+  Method/prompt/corrections: {"phase": "Editable sparse shoots from native coverage"}
+
+- 2026-10-20T03:38:11.888639+00:00 / correct_errors_and_refine / REJECTED: Refined the manual sparse paint, selected both connected shoots, cleared invisible RGB and registered them together in the source rectangular cell frame.
+  Review: Two shoots, original relative tips and frame anchor retained. Tool-preview halo was RGB in alpha-zero pixels and was cleared. Native-size review shows the shaded blades are too faint/thin compared with the original ten-pixel paint. Reject this registration for readability; widen each blade around its fixed row centerline and lift neutral values, without adding shoots or moving the anchor.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/constructed-grass.png", "sha256": "3909ad86a1e59f10e1a46cee20e30f13a6bc66b1c5955a5423f169ef417fae05"}, {"path": "art/conversion/tile-grass-1/v1/source-construction-comparison.png", "sha256": "c801c7e2bed7acf3d8ce94fe79bf97ef1ce4117383c51e17154fa0c2bb7ccb8b"}, {"path": "art/conversion/tile-grass-1/v1/refine-grass-prompt.txt", "sha256": "a8743588258cac8af9cd517516a09f011294d4dd2038293ab242b658e5b43825"}, {"path": "art/conversion/tile-grass-1/v1/register-grass.py", "sha256": "2499cb13fb3a2c3762ffbc50cc5fde972ad5aed138250edd3a7d0ac925832184"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/refined-proposal.png", "sha256": "8d13cfe875f9965a14f0710df324ee25e7dc6060049243469470ea32be09a3b2"}, {"path": "art/conversion/tile-grass-1/v1/registered/model.json", "sha256": "221e43475df9bfda0a9c5322d04c25efb0359092c1b9e253779911f460e1649b"}, {"path": "art/conversion/tile-grass-1/v1/registered/registration-comparison.png", "sha256": "e2d94db11db8dca95ded2404826c22925803896dfe985acaa3430da2feb45bf1"}, {"path": "art/conversion/tile-grass-1/v1/registered/paint-distribution-comparison.png", "sha256": "fd271e46f2f2ff711a7f90f5c2199e2197a3570be5b8efaf06b470be699da03d"}]
+  Method/prompt/corrections: {"phase": "Two-shoot refinement and first registration reviewed", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-703f72d7-22be-4507-b3a5-67a73533f5fd.png"}
+
+- 2026-10-20T03:39:21.017625+00:00 / construct_shape / PASS: Retained the manual two-shoot interpretation of the native ten-pixel grass1 coverage, then reviewed it against the width-corrected selected paint.
+  Review: Original longer rightward and shorter leftward shoots remain distinct; no dense donor tuft, roots, flower or extra blade added. Exact biological blade width is not a source fact; the explicit width correction is an authoring readability choice.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}, {"path": "art/conversion/tile-grass-1/v1/constructed-grass.svg", "sha256": "c74c64bb2b8967935b7c9a827e9454e631cbc6217363577248a9854cf2da0d04"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/constructed-grass.png", "sha256": "3909ad86a1e59f10e1a46cee20e30f13a6bc66b1c5955a5423f169ef417fae05"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png", "sha256": "2e995d5f91a0f782c88b85563677785728f74dc95c8448a259accf22915fccbf"}]
+  Method/prompt/corrections: {"phase": "Sparse native shoot identity selected"}
+
+- 2026-10-20T03:39:21.018036+00:00 / create_required_views_states / PASS: Retained one map-paint orientation and the original rectangular cell frame; authored neutral, native g and native C previews plus repeated-cell context.
+  Review: Viewed single paint frame at native 16x24, 24x36 and 32x48 proportions and simple repeated-cell context. No creature turnaround or invented growth/wind state applies. Grass2/3 are separate pending entries, not hidden inside this one.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}, {"path": "art/conversion/tile-grass-1/v1/register-grass-v2.py", "sha256": "8d061444fc54b204388ee1deb204f37d3607159e050a381f540aee3b36f92dad"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png", "sha256": "2e995d5f91a0f782c88b85563677785728f74dc95c8448a259accf22915fccbf"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/paint-distribution-comparison.png", "sha256": "ca97518bb9bd959c9097e0d81bdca4f1791ee654807be3b4710b2147873161f2"}]
+  Method/prompt/corrections: {"phase": "Fixed paint view and native-color roles"}
+
+- 2026-10-20T03:39:21.018279+00:00 / correct_errors_and_refine / PASS: Patched the rejected thin registration directly: widened each shoot x1.5 around its fixed row centerline and lifted neutral values, preserving both original tips/root y, common translation and nominal paint anchor.
+  Review: Viewed corrected registration: more readable native-size shoots without turning sparse paint into a bush. No additional generator invocation is claimed. Invisible source RGB was cleared; neutral source remains tint-independent. First attempt is retained as rejected history.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/refined-proposal.png", "sha256": "8d13cfe875f9965a14f0710df324ee25e7dc6060049243469470ea32be09a3b2"}, {"path": "art/conversion/tile-grass-1/v1/register-grass-v2.py", "sha256": "8d061444fc54b204388ee1deb204f37d3607159e050a381f540aee3b36f92dad"}, {"path": "art/conversion/tile-grass-1/v1/registered/registration-comparison.png", "sha256": "e2d94db11db8dca95ded2404826c22925803896dfe985acaa3430da2feb45bf1"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/cleaned-proposal.png", "sha256": "b3187c83fdd4797a28d36fe647c976832f696ab1408d8f614d604054bd40fa59"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-decisions.json", "sha256": "7940311db8276cc06bf8943340fc09cd3a10dcce776717f9bda6bbc8553e2875"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png", "sha256": "2e995d5f91a0f782c88b85563677785728f74dc95c8448a259accf22915fccbf"}]
+  Method/prompt/corrections: {"phase": "Native-scale blade width and value correction"}
+
+- 2026-10-20T03:39:21.032221+00:00 / extract_register_palette_masks / PASS: Selected both complete source components together, cleaned alpha/RGB and registered the fixed-view paint in a 512x768 frame corresponding to the original 16x24 cell.
+  Review: Neutral RGB and rectangular source frame inspected. Source has primary coverage only; no invented detail mask or baked green. Nominal pivot remains (256,512), and both source blades share scale .55 and translation before the recorded width patch. Real native draw-order/visibility/tint binding remains pending.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/register-grass-v2.py", "sha256": "8d061444fc54b204388ee1deb204f37d3607159e050a381f540aee3b36f92dad"}, {"path": "art/conversion/tile-grass-1/v1/refined-proposal.png", "sha256": "8d13cfe875f9965a14f0710df324ee25e7dc6060049243469470ea32be09a3b2"}, {"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/model.json", "sha256": "66bd36911cfd95074b52d0ace26a00e90fde1ddb98335c6787f17fcf0baa1b9c"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-decisions.json", "sha256": "7940311db8276cc06bf8943340fc09cd3a10dcce776717f9bda6bbc8553e2875"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/grass1-neutral.png", "sha256": "f54652087d51f6d03df1b911c3d76175f65e79e8fab919b12dcbb423d97a8673"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/grass1-coverage.png", "sha256": "e895339766a7cd2ba06c88b320f7c4a44be77b3d7d05d29f4f957ed699de723c"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/source-selection-long-right.png", "sha256": "72c91f8605546352939cfc3acae01d505f3a7073ccbbef8a46a6d12fba6561be"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/source-selection-short-left.png", "sha256": "82f210fa0993c2ac23413828042c55cf6b82ce2a684d391ea27fbde345805420"}]
+  Method/prompt/corrections: {"phase": "Neutral primary paint and coverage registered"}
+
+- 2026-10-20T03:39:21.033169+00:00 / visual_review_all_views_at_game_scale / PASS: Viewed the selected sparse paint enlarged, under native green/cyan preview tints, at three small display-cell sizes and in repeated authoring context.
+  Review: Sparse two-shoot silhouette remains recognizable and has improved native-size contrast. Production contains no fixed color; green/cyan are preview choices, not a claim that runtime always uses either. Distribution image is an authoring arrangement, not a captured zone. Ground material and other grass variants remain unfinished.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/model.json", "sha256": "66bd36911cfd95074b52d0ace26a00e90fde1ddb98335c6787f17fcf0baa1b9c"}, {"path": "art/conversion/tile-grass-1/v1/source-packet.json", "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"}]
+  Outputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png", "sha256": "2e995d5f91a0f782c88b85563677785728f74dc95c8448a259accf22915fccbf"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/paint-distribution-comparison.png", "sha256": "ca97518bb9bd959c9097e0d81bdca4f1791ee654807be3b4710b2147873161f2"}]
+  Method/prompt/corrections: {"phase": "Basic Grass 1 generation ready"}
+
+- 2026-10-20T03:39:21.033402+00:00 / native_review_applicable_states / DEFERRED UNTIL ALL GENERATED: Kept actual cell tint, visibility and paint-layer registration review behind the every-conversion-generated gate.
+  Review: No native game/harness launch. Overall entry remains UNFINISHED.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native paint acceptance deferred"}
 
 ### TILE-GRASS-2: Basic Grass 2
 
@@ -2017,7 +2077,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: source_identity_description_metadata. Process-log events: 0.
 
 ### TILE-GRASS-3: Basic Grass 3
 
@@ -2067,7 +2127,55 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-sand.png](../art/village/scenery/surface-sand.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T03:30:22.059278+00:00 / source_identity_description_metadata / PASS: Resolved the historical sand-named surface row to DirtPath, adopted its native description/variants/palette evidence and recorded the exact historical draft that is superseded in the selected authoring binding.
+  Review: This is a shared-material catalogue row, not a second environment species or a global sand replacement. Exact native brown, inherited dot selectors and source-metadata limits remain intact. Production application waits for final integration.
+  Inputs: [{"path": "art/conversion/tile-path-surface/v1/register-shared-material.py", "sha256": "941c8121e25ea7a670f92bf4741469d59928b5019500dde90d3a311a2cb1e12b"}, {"path": "art/conversion/scn-dirtpath/v1/source-packet.json", "sha256": "b8ba6827d8a39dc9aed310aa153ee8f6c35ed792c9f7127a59d73254f042604b"}, {"path": "art/conversion/scn-dirtpath/v1/palette-and-surface-decisions.json", "sha256": "fc56c0c03f0ed6ba15e413e398abafe1ec1bf2b7c20ca7a2bb41da3dafdfbd35"}, {"path": "art/village/scenery/surface-sand.png", "sha256": "104adec1151a0adee05ccf7c5e75541abe4584874315a974e8aa1a932228a6b6"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/source-packet.json", "sha256": "8cf007af7833f5c436c2ace17c15b695750170d32401a8e8c3f13248c050d308"}]
+  Method/prompt/corrections: {"phase": "Legacy path slot bound to the real source", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.059782+00:00 / original_and_render_reference_decision / PASS: Adopted the already-performed source/reference decision for the same stone-over-grass surface; recorded linked workflow hashes instead of generating a divergent duplicate.
+  Review: Reviewed original/source plate and binding context. Selected reference is actual Vanilla Furniture Expanded - Architect Cobblestone, used for stone/material convention only. Historical sand hue/fill is rejected; source Qud w remains authoritative.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/source-packet.json", "sha256": "b8ba6827d8a39dc9aed310aa153ee8f6c35ed792c9f7127a59d73254f042604b"}, {"path": "art/conversion/scn-dirtpath/v1/source-comparison.png", "sha256": "242b0deaa86e8394714100eca8a84b082767085b3db68938c96c7c38dcc0fb30"}, {"path": "art/conversion/tile-path-surface/v1/source-packet.json", "sha256": "8cf007af7833f5c436c2ace17c15b695750170d32401a8e8c3f13248c050d308"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/source-packet.json", "sha256": "8cf007af7833f5c436c2ace17c15b695750170d32401a8e8c3f13248c050d308"}]
+  Method/prompt/corrections: {"phase": "Original glyph and installed Architect reference reused explicitly", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.060372+00:00 / construct_shape / PASS: Adopted the source-bound periodic stone SVG and manual connected composition for this material-binding row.
+  Review: This row refers to the same already-constructed material, not freshly generated artwork. Reviewed the manual shape against selected material in the binding plate: small stones and transparent interstices carry forward; no sand base remains in the selected binding.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-stones.svg", "sha256": "0cbabed76ee58ee12c083d71ebf286bfe13ce60e8a41838a4fc18655440f01ae"}, {"path": "art/conversion/scn-dirtpath/v1/stone-geometry.json", "sha256": "f06f37933587c4cc039195d6dd1dadea50f2e04696fa567c5f33c15b7b95c666"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-connections-comparison.png", "sha256": "d46275421e81ce8da5d065e4ce82d888d7f719d7be6383306307ff9e4644d00a"}, {"path": "art/conversion/tile-path-surface/v1/source-packet.json", "sha256": "8cf007af7833f5c436c2ace17c15b695750170d32401a8e8c3f13248c050d308"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-stones.svg", "sha256": "0cbabed76ee58ee12c083d71ebf286bfe13ce60e8a41838a4fc18655440f01ae"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-connections-comparison.png", "sha256": "d46275421e81ce8da5d065e4ce82d888d7f719d7be6383306307ff9e4644d00a"}]
+  Method/prompt/corrections: {"phase": "Same editable manual stone construction adopted", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.061356+00:00 / create_required_views_states / PASS: Bound the one world-anchored material and existing 256 eight-neighbor masks; retained all native tile-selector aliases.
+  Review: Read producer state manifest and viewed named cases. Top-down surface requires coverage states, not creature viewpoints, clothing or liquid depth. Native selector identity is preserved while the stone texture runs continuously across path cells.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/registered/model.json", "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json", "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png", "sha256": "6618bf9efbf3aecd58e331f6cf8acbdb11b7046350ce64ed480f3ff1d2d6ba84"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/model.json", "sha256": "ac4015dd29a1a24232f8a26238e72cf7e3070f503607a0cd677d67f0be6fcfaa"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png", "sha256": "6618bf9efbf3aecd58e331f6cf8acbdb11b7046350ce64ed480f3ff1d2d6ba84"}]
+  Method/prompt/corrections: {"phase": "Shared seamless and connected states adopted", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.061920+00:00 / correct_errors_and_refine / PASS: Adopted the performed material workflow: first refinement, neutral-alpha/periodic patch, composed refinement and final registration. Reviewed its selected result against the old sand draft.
+  Review: No additional ImageGen invocation is claimed. The actual prompts, proposals, corrections and hashes remain under SCN-DIRTPATH and are linked in this row. Current selection uses reduced outline weight, clear joints and deterministic repeat completion; old sand draft is preserved as history.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/refine-material-prompt.txt", "sha256": "e1ac247d90024a7ee6dd3a897c2b3daee5b4e233ed8263f9fb29a377977abf4e"}, {"path": "art/conversion/scn-dirtpath/v1/refined-material-proposal.png", "sha256": "5a2d6d1cbbe48d38e97218997c3732ec96c0ba210a871e1d1764e530cb8682d9"}, {"path": "art/conversion/scn-dirtpath/v1/patch-material.py", "sha256": "baf93c1840534edb84501be2a45e7506bc7c22cac1d1c8f5b8793abd4ef537d6"}, {"path": "art/conversion/scn-dirtpath/v1/patched-neutral-material.png", "sha256": "d9b7783bd7474516e40afd5d059165fe19705b59458573e1e49baa7f705da063"}, {"path": "art/conversion/scn-dirtpath/v1/refine-patched-material-prompt.txt", "sha256": "db213b87e7225b34e7a4e4510bd64b779ae13e3570f1ce9995ed53846fc49569"}, {"path": "art/conversion/scn-dirtpath/v1/refined-patched-material.png", "sha256": "6225c7df9ceabf2dfcd67f4d2a66d1887f1ed4bf8fea13c27b21bb26251407cf"}, {"path": "art/conversion/scn-dirtpath/v1/register-surface.py", "sha256": "15a05dd85a28a2737974eb67baf927b5a6b264f402b1f2c5f5147ea925f750ad"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/material-binding-comparison.png", "sha256": "f95b238e8c5091221123be06d3bb841cd92cb001bbde3e8848f24d065936b165"}]
+  Method/prompt/corrections: {"phase": "Original/refinement/patch/refined-patch chain linked", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.069960+00:00 / extract_register_palette_masks / PASS: Recorded the selected neutral albedo, alpha, world period, native brown tint and eight-neighbor resources in a source-bound material binding.
+  Review: Read binding: producer hashes and mask resources match; one sixteen-cell material period and 64 texels/logical cell. Grayscale albedo is separate from native brown and underlying green. The legacy sand.png label is scoped only to this path presentation; no installed/donor natural-sand asset is changed.
+  Inputs: [{"path": "art/conversion/tile-path-surface/v1/register-shared-material.py", "sha256": "941c8121e25ea7a670f92bf4741469d59928b5019500dde90d3a311a2cb1e12b"}, {"path": "art/conversion/scn-dirtpath/v1/registered/model.json", "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neutral-material.png", "sha256": "c49ec499336b401b10dadeb29cce31f31cf788fe2e2dd66ee91552bea84f7ec5"}, {"path": "art/conversion/scn-dirtpath/v1/registered/stone-coverage.png", "sha256": "78bfd83110e30ada8df67e49832bc94f06793cff56a94f9cd9bbb17177428059"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/model.json", "sha256": "ac4015dd29a1a24232f8a26238e72cf7e3070f503607a0cd677d67f0be6fcfaa"}]
+  Method/prompt/corrections: {"phase": "Shared material-only binding registered", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.071933+00:00 / visual_review_all_views_at_game_scale / PASS: Viewed the old draft/selected surface comparison plus 16 x 24 and 24 x 36 cell previews and their enlarged inspections.
+  Review: Small brown stone material remains readable at Qud cell proportions, with transparent gaps retaining the independent green layer. It is the same source-bound conversion used by DirtPath, not another separately generated texture. Context green is not a completed grass conversion. No native acceptance.
+  Inputs: [{"path": "art/conversion/tile-path-surface/v1/model.json", "sha256": "ac4015dd29a1a24232f8a26238e72cf7e3070f503607a0cd677d67f0be6fcfaa"}, {"path": "art/conversion/scn-dirtpath/v1/registered/joppa-comparison.png", "sha256": "87ef759aee663483fbf4653dabdd94afc576b8b67550f14514449965699b157b"}, {"path": "art/conversion/scn-dirtpath/v1/registered/connections-comparison.png", "sha256": "f6379c24d0c17c496dd7e2fc16a6d40ebce755f621d5e22a30d274bbc9283e22"}]
+  Outputs: [{"path": "art/conversion/tile-path-surface/v1/material-binding-comparison.png", "sha256": "f95b238e8c5091221123be06d3bb841cd92cb001bbde3e8848f24d065936b165"}]
+  Method/prompt/corrections: {"phase": "Path material binding generation ready", "reuse_of_entry": "SCN-DIRTPATH"}
+
+- 2026-10-20T03:30:22.073075+00:00 / native_review_applicable_states / DEFERRED UNTIL ALL GENERATED: Kept actual legacy-slot replacement, native tint/visibility and neighbor-state integration for the final every-conversion-generated gate.
+  Review: No game or native harness launch. Overall row remains UNFINISHED.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native material binding review deferred", "reuse_of_entry": "SCN-DIRTPATH"}
 
 ### TILE-WATER-SHALLOW: shallow/wading water
 
@@ -2341,7 +2449,7 @@ Required views/states: continuous interior; 8-neighbor edge/corner blending.
 
 Historical artifacts: none recorded.
 
-Current step: construct_faithful_shape. Process-log events: 2.
+Current step: generation ready; final acceptance pending. Process-log events: 12.
 
 - 2026-10-20T03:10:38.167968+00:00 / resolve_object_description_original_tile_palette_state / PASS: Bound DirtPath to the captured source/16x24 original glyph, exact Floor/DirtFloor/DirtPath declarations and installed color names.
   Review: No native Description.Short. Original palette &w/detail w is named brown in Colors.xml. Four ground-dot tile variants are inherited through RandomTileOnMove; native state ownership is preserved. Stone-over-grass is the user-requested visual interpretation, not a claim that the native definition says cobblestone.
@@ -2354,6 +2462,66 @@ Current step: construct_faithful_shape. Process-log events: 2.
   Inputs: [{"path": "art/conversion/scn-dirtpath/v1/source-packet.json", "sha256": "b8ba6827d8a39dc9aed310aa153ee8f6c35ed792c9f7127a59d73254f042604b"}]
   Outputs: [{"path": "art/conversion/scn-dirtpath/v1/source-comparison.png", "sha256": "242b0deaa86e8394714100eca8a84b082767085b3db68938c96c7c38dcc0fb30"}]
   Method/prompt/corrections: {"phase": "Installed Architect cobblestone reference selected"}
+
+- 2026-10-20T03:19:35.718277+00:00 / construct_faithful_shape / RECORDED: Constructed a periodic SVG of irregular staggered stones with transparent interstices; recorded exact installed/native captured w/g/G palette anchors and static-map source hash.
+  Review: Viewed neutral and Qud-colored manual shapes. Source native sparse dots do not prove cobblestones; the stone interpretation is user-directed. Current geometry has deliberately simple faceted blocks and needs restrained worn-stone material refinement. Grass underneath is explicitly temporary authoring context, not completion of any grass entry.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/construct-surface.py", "sha256": "8059c3ec4098f974900cdb451b1b941adba0f0cf0c6b788e7e5ba13d38bd904d"}, {"path": "art/conversion/scn-dirtpath/v1/source-packet.json", "sha256": "b8ba6827d8a39dc9aed310aa153ee8f6c35ed792c9f7127a59d73254f042604b"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-stones.svg", "sha256": "0cbabed76ee58ee12c083d71ebf286bfe13ce60e8a41838a4fc18655440f01ae"}, {"path": "art/conversion/scn-dirtpath/v1/stone-geometry.json", "sha256": "f06f37933587c4cc039195d6dd1dadea50f2e04696fa567c5f33c15b7b95c666"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neutral.png", "sha256": "bd9e7f16c22eda02884813c7993917da4bb3c6fdd8b09d92f087489b6701d641"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-stone-coverage.png", "sha256": "79a922eff9a9ec0b388263f3cd7b05c59f2bf6c0c4d78e386725ecccb07b6b0e"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-qud-stones.png", "sha256": "e501332e4172c524467b52bd6adc109f27e43cf62033b037c0caae7a62781534"}, {"path": "art/conversion/scn-dirtpath/v1/palette-and-surface-decisions.json", "sha256": "fc56c0c03f0ed6ba15e413e398abafe1ec1bf2b7c20ca7a2bb41da3dafdfbd35"}]
+  Method/prompt/corrections: {"phase": "Editable periodic cobblestone suggestion and exact palette"}
+
+- 2026-10-20T03:19:35.719414+00:00 / create_required_state_neighbor_variants / RECORDED: Constructed all 256 local path-occupancy coverage masks, a single repeating material field and connected end/bend/junction/diagonal previews.
+  Review: Viewed connected arrangement and full static Joppa layout at 16 x 24 cell proportions. No independent cell material UV reset; only coverage changes with neighbors. Dark wall blocks are context, not converted walls. Static-map path count differs from captured generated-zone count; this is an authoring layout, not a live game capture. Surface still needs material refinement.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/construct-surface.py", "sha256": "8059c3ec4098f974900cdb451b1b941adba0f0cf0c6b788e7e5ba13d38bd904d"}, {"path": "art/conversion/scn-dirtpath/v1/palette-and-surface-decisions.json", "sha256": "fc56c0c03f0ed6ba15e413e398abafe1ec1bf2b7c20ca7a2bb41da3dafdfbd35"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json", "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-atlas.png", "sha256": "ae176539b81e93ed866e11df19b88847c888f2058bd6dbbfb733bf1920c8a9f1"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-connections-comparison.png", "sha256": "d46275421e81ce8da5d065e4ce82d888d7f719d7be6383306307ff9e4644d00a"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-repeat-comparison.png", "sha256": "1eb0d3e9660fba6f4fdde3f9a501cc5eba443a2d78910309465a3832b9da3e1a"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-joppa-comparison.png", "sha256": "5a0cc80a6c86dad892afcbe8b2755f0a1c39a32d9076ea5e4816e172ef8fb6cc"}, {"path": "art/conversion/scn-dirtpath/v1/layout-decisions.json", "sha256": "b5a6c28eb0de8f2d22da7a2fd2f698991cbb45c3f01cc208e958dd20bab9545e"}]
+  Method/prompt/corrections: {"phase": "Complete eight-neighbor coverage construction"}
+
+- 2026-10-20T03:22:48.133273+00:00 / refine_materials_and_form / RECORDED: Refined the neutral manual stone field with the original Qud and installed Architect source plate as reference.
+  Review: Viewed generated surface: worn bevels/pitting and original small staggered stone scale retained. Alpha includes low-opacity colored residue, and raw edges are not accepted as seamless. Neutral cleanup and periodic patch required. Outline rhythm is still uniform at full material scale.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-neutral.png", "sha256": "bd9e7f16c22eda02884813c7993917da4bb3c6fdd8b09d92f087489b6701d641"}, {"path": "art/conversion/scn-dirtpath/v1/source-comparison.png", "sha256": "242b0deaa86e8394714100eca8a84b082767085b3db68938c96c7c38dcc0fb30"}, {"path": "art/conversion/scn-dirtpath/v1/refine-material-prompt.txt", "sha256": "e1ac247d90024a7ee6dd3a897c2b3daee5b4e233ed8263f9fb29a377977abf4e"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/refined-material-proposal.png", "sha256": "5a2d6d1cbbe48d38e97218997c3732ec96c0ba210a871e1d1764e530cb8682d9"}]
+  Method/prompt/corrections: {"phase": "Worn-stone material proposal", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-1c750a0b-3d53-47b3-95f9-95e7880226fc.png"}
+
+- 2026-10-20T03:22:48.136618+00:00 / refine_materials_and_form / RECORDED: Cleared low-alpha residue, restored opaque stone interiors and equal RGB, then completed a repeatable material with horizontal/vertical reflection at unchanged stone texel density.
+  Review: Viewed neutral field, connected layout and static Joppa preview. Gaps reveal independent green context; material runs continuously across cells. Repeat period is now 16 logical cells after reflection, not the initial 8-cell construction period; stone scale is unchanged. Reflection can create symmetry, so composed refinement and final intended-scale selection remain pending. No game/native test performed.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/refined-material-proposal.png", "sha256": "5a2d6d1cbbe48d38e97218997c3732ec96c0ba210a871e1d1764e530cb8682d9"}, {"path": "art/conversion/scn-dirtpath/v1/patch-material.py", "sha256": "baf93c1840534edb84501be2a45e7506bc7c22cac1d1c8f5b8793abd4ef537d6"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json", "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"}, {"path": "art/conversion/scn-dirtpath/v1/palette-and-surface-decisions.json", "sha256": "fc56c0c03f0ed6ba15e413e398abafe1ec1bf2b7c20ca7a2bb41da3dafdfbd35"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/patched-neutral-quadrant.png", "sha256": "885de4d63727d5dd90245b13c596942f054321ebdd924eee7abdd727ea136e10"}, {"path": "art/conversion/scn-dirtpath/v1/patched-neutral-material.png", "sha256": "d9b7783bd7474516e40afd5d059165fe19705b59458573e1e49baa7f705da063"}, {"path": "art/conversion/scn-dirtpath/v1/patched-stone-coverage.png", "sha256": "ebf9a056ce479a0e9b51152e9589a5b27d8410c244058e4a1bd7fd7a15fac5ea"}, {"path": "art/conversion/scn-dirtpath/v1/patched-qud-material.png", "sha256": "d83380a02be7feaf37e5e2c3a5faee6f5f115b4cd4c654a8ead2bcad96369410"}, {"path": "art/conversion/scn-dirtpath/v1/patch-decisions.json", "sha256": "e83eefaded9e270da99857fe73e530e1d23c9c0b2aff478df517882f80273736"}, {"path": "art/conversion/scn-dirtpath/v1/patched-repeat-comparison.png", "sha256": "cc6f9f4e5e97697ff1449cbb5a077295623565212ee6ee6df6c08a67836ea6bc"}, {"path": "art/conversion/scn-dirtpath/v1/patched-connections-comparison.png", "sha256": "e7622f5baabad4755180982459b3ba6e1c5b6d93d1786ab9fd0420f8f57945ca"}, {"path": "art/conversion/scn-dirtpath/v1/patched-joppa-comparison.png", "sha256": "ae6aac49b0ca593cca05a6eaa584cbaff7c6809b039a8aefcf60d82787114d6f"}]
+  Method/prompt/corrections: {"phase": "Neutral alpha cleanup and periodic patch"}
+
+- 2026-10-20T03:27:19.316640+00:00 / construct_faithful_shape / PASS: Reviewed the editable source-bound stone construction against the selected material. Stone arrangement is an authored response to the user cobblestone-over-grass requirement.
+  Review: Native dots and brown palette remain documented without falsely describing the native blueprint as cobblestone. The neutral material/transparent interstices retain the manual small-stone scale; no sand fill is substituted.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/source-packet.json", "sha256": "b8ba6827d8a39dc9aed310aa153ee8f6c35ed792c9f7127a59d73254f042604b"}, {"path": "art/conversion/scn-dirtpath/v1/construct-surface.py", "sha256": "8059c3ec4098f974900cdb451b1b941adba0f0cf0c6b788e7e5ba13d38bd904d"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-stones.svg", "sha256": "0cbabed76ee58ee12c083d71ebf286bfe13ce60e8a41838a4fc18655440f01ae"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neutral.png", "sha256": "bd9e7f16c22eda02884813c7993917da4bb3c6fdd8b09d92f087489b6701d641"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-connections-comparison.png", "sha256": "d46275421e81ce8da5d065e4ce82d888d7f719d7be6383306307ff9e4644d00a"}]
+  Method/prompt/corrections: {"phase": "Manual stone interpretation retained"}
+
+- 2026-10-20T03:27:19.317326+00:00 / create_required_state_neighbor_variants / PASS: Selected all 256 constructed occupancy coverage masks for the shared material; reviewed the full coverage atlas and named isolated/end/straight/bend/junction/cross/diagonal/concave/full cases.
+  Review: Only coverage changes by neighbor state; world material UV remains continuous. Native path occupancy/visibility/passability ownership is unchanged by authoring. All four native dot selectors are retained as aliases to the same continuous material, rather than inventing a random surface animation. Top-down terrain has no front/side/back views or clothing fit.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json", "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"}, {"path": "art/conversion/scn-dirtpath/v1/register-surface.py", "sha256": "15a05dd85a28a2737974eb67baf927b5a6b264f402b1f2c5f5147ea925f750ad"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-atlas.png", "sha256": "ae176539b81e93ed866e11df19b88847c888f2058bd6dbbfb733bf1920c8a9f1"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png", "sha256": "6618bf9efbf3aecd58e331f6cf8acbdb11b7046350ce64ed480f3ff1d2d6ba84"}, {"path": "art/conversion/scn-dirtpath/v1/registered/connections-comparison.png", "sha256": "f6379c24d0c17c496dd7e2fc16a6d40ebce755f621d5e22a30d274bbc9283e22"}]
+  Method/prompt/corrections: {"phase": "All eight-neighbor asset states selected"}
+
+- 2026-10-20T03:27:19.318004+00:00 / refine_materials_and_form / PASS: Applied restrained refinement to the neutral patched quadrant using its connected grass-context composition as a scale reference, then mechanically registered the selected material.
+  Review: Viewed selected output: reduced uniform dark outlines, worn irregular stone surfaces, restrained pitting; no sand/grass/opaque grout baked into the production source. Source colors/low-alpha residue were neutralized during extraction. The deterministic reflection patch retains seamless borders and is explicit authoring evidence, not a claim that ImageGen produced exact tileability.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/refine-patched-material-prompt.txt", "sha256": "db213b87e7225b34e7a4e4510bd64b779ae13e3570f1ce9995ed53846fc49569"}, {"path": "art/conversion/scn-dirtpath/v1/patched-neutral-quadrant.png", "sha256": "885de4d63727d5dd90245b13c596942f054321ebdd924eee7abdd727ea136e10"}, {"path": "art/conversion/scn-dirtpath/v1/patched-connections-comparison.png", "sha256": "e7622f5baabad4755180982459b3ba6e1c5b6d93d1786ab9fd0420f8f57945ca"}, {"path": "art/conversion/scn-dirtpath/v1/register-surface.py", "sha256": "15a05dd85a28a2737974eb67baf927b5a6b264f402b1f2c5f5147ea925f750ad"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/refined-patched-material.png", "sha256": "6225c7df9ceabf2dfcd67f4d2a66d1887f1ed4bf8fea13c27b21bb26251407cf"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neutral-material.png", "sha256": "c49ec499336b401b10dadeb29cce31f31cf788fe2e2dd66ee91552bea84f7ec5"}, {"path": "art/conversion/scn-dirtpath/v1/registered/repeat-comparison.png", "sha256": "1e94048fd4e5f8a59a7a07ebd191ef4e5b17a0b8dca73586159a6771773c1ba3"}]
+  Method/prompt/corrections: {"phase": "Refined patched stone field selected", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-2f8bd520-4eb9-4dbc-ad0a-fbe1d59246bc.png"}
+
+- 2026-10-20T03:27:19.360742+00:00 / extract_register_color_coverage / PASS: Registered the selected 1024-square neutral material, stone alpha and all 256 exact neighbor masks with a sixteen-cell world repeat; applied native w only in the colored authoring preview.
+  Review: Inspected neutral RGB and exact reflected border equality as asset-authoring diagnostics. Selected coverage file hashes match the registration manifest. This is a grayscale terrain/albedo contract, not a Kobold red-channel glyph mask. Native foreground/detail both use w, so no invented second pigment is needed. Grass is separate. Runtime binding remains pending.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/register-surface.py", "sha256": "15a05dd85a28a2737974eb67baf927b5a6b264f402b1f2c5f5147ea925f750ad"}, {"path": "art/conversion/scn-dirtpath/v1/refined-patched-material.png", "sha256": "6225c7df9ceabf2dfcd67f4d2a66d1887f1ed4bf8fea13c27b21bb26251407cf"}, {"path": "art/conversion/scn-dirtpath/v1/palette-and-surface-decisions.json", "sha256": "fc56c0c03f0ed6ba15e413e398abafe1ec1bf2b7c20ca7a2bb41da3dafdfbd35"}, {"path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json", "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/registered/model.json", "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"}, {"path": "art/conversion/scn-dirtpath/v1/registered/registration-decisions.json", "sha256": "85e2e2a5da9f7af0bccef8881f5450d04abeaf6e25743b7b2e1c952f0ccc1c6c"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neutral-quadrant.png", "sha256": "87d6a711f0370f26d65130d0592e6483b02939367c5d4976c922f86ad10c1131"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neutral-material.png", "sha256": "c49ec499336b401b10dadeb29cce31f31cf788fe2e2dd66ee91552bea84f7ec5"}, {"path": "art/conversion/scn-dirtpath/v1/registered/stone-coverage.png", "sha256": "78bfd83110e30ada8df67e49832bc94f06793cff56a94f9cd9bbb17177428059"}, {"path": "art/conversion/scn-dirtpath/v1/registered/qud-material-preview.png", "sha256": "0f09e0c79c3354a1ce62200c7f764bf93d7b0d944dbe92ea196c11b5a1bde1b4"}]
+  Method/prompt/corrections: {"phase": "Neutral albedo and separate connected coverage registration"}
+
+- 2026-10-20T03:27:19.366707+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed repeated material, connected paths, named neighbor examples and installed static Joppa path layout at 16 x 24 display-cell proportions.
+  Review: Brown small-stone surface reads over green context with no sand fill or per-cell material reset; gaps and outer coverage let grass show. Repetition symmetry is a documented limit of the reflected material. Static-map source differs from the generated runtime zone; this is not a native capture. Context grass/walls receive no conversion credit.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/registered/model.json", "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"}, {"path": "art/conversion/scn-dirtpath/v1/layout-decisions.json", "sha256": "b5a6c28eb0de8f2d22da7a2fd2f698991cbb45c3f01cc208e958dd20bab9545e"}]
+  Outputs: [{"path": "art/conversion/scn-dirtpath/v1/registered/repeat-comparison.png", "sha256": "1e94048fd4e5f8a59a7a07ebd191ef4e5b17a0b8dca73586159a6771773c1ba3"}, {"path": "art/conversion/scn-dirtpath/v1/registered/connections-comparison.png", "sha256": "f6379c24d0c17c496dd7e2fc16a6d40ebce755f621d5e22a30d274bbc9283e22"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png", "sha256": "6618bf9efbf3aecd58e331f6cf8acbdb11b7046350ce64ed480f3ff1d2d6ba84"}, {"path": "art/conversion/scn-dirtpath/v1/registered/joppa-comparison.png", "sha256": "87ef759aee663483fbf4653dabdd94afc576b8b67550f14514449965699b157b"}]
+  Method/prompt/corrections: {"phase": "Connected path generation ready"}
+
+- 2026-10-20T03:27:19.368618+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Kept native visibility, tile-selector binding and actual terrain/neighbor integration pending until every required conversion is generated.
+  Review: No game/harness launch or native acceptance. Overall entry stays UNFINISHED.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native state acceptance deferred"}
 
 ### SCN-DOOR: Door
 

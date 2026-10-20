@@ -1,0 +1,160 @@
+{
+  "entry": "TILE-GRASS-1",
+  "recorded_at": "2026-10-20T03:32:48.159814+00:00",
+  "identity": "Terrain/sw_grass1.bmp, native paint glyph; no independent creature/furniture blueprint or anatomy",
+  "description": "No standalone Description.Short for a cell paint. Reference extraction labels it Basic Grass 1; do not invent a crop, reed, flower or tall grass species.",
+  "original": {
+    "tile": "Terrain/sw_grass1.bmp",
+    "description": "Native visible cell grass paint; not a crop or a new game object",
+    "kind": "paint",
+    "blueprint": "Basic Grass 1",
+    "reference_file": "village-originals/basic-grass-1-reference.png",
+    "native_mask_sha256": "9f2ee0e82564b77531c07c6db428df97d66cf9abbc0d9d9080c62640e7865b48",
+    "reference_sha256": "6d8df0559e27144a0b18d32674aa6f39049ac5bcf8c8492e5b90991a0c55f444",
+    "info_id": 11191,
+    "atlas_id": 203,
+    "rect": [
+      738,
+      208,
+      16,
+      24
+    ]
+  },
+  "visible_native_coverage": [
+    {
+      "x": 11,
+      "y": 9,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    }
+  ],
+  "mask_contract": "All ten opaque native pixels are black: primary foreground coverage in the audited Kobold mask contract. There is no source detail-color region.",
+  "donor_reference": {
+    "file": "grass.png",
+    "source_id": 1797,
+    "name": "GrassA",
+    "width": 64,
+    "height": 64,
+    "png_sha256": "0853cc134407e5d34b2d39d7fb8cf11145049340fbc843277ccacb4928a88758",
+    "role": "Actual RimWorld GrassA supplies blade taper and plant/shading convention only. Its dense many-blade tuft is not the shape to copy."
+  },
+  "authored_interpretation": "Two sparse shoots inferred from ten native coverage pixels: one short leftward blade and one longer upward/right blade. Preserve the sparse relative tips/root placement; fine blade width/shading is authored.",
+  "palette": "Neutral equal-RGB production source with native primary tint at binding time. Green g/G previews use exact captured palette values; the reference packet did not export a universal runtime paint color. The same tile can appear in cyan PrimalGrass elsewhere.",
+  "source_usage_limit": "Tile identity alone does not identify a universal plant color or biological species. Preserve per-cell native visibility and color; do not hardcode a green crop object.",
+  "frame": {
+    "canvas": [
+      512,
+      768
+    ],
+    "native_cell": [
+      16,
+      24
+    ],
+    "source_scale": 32,
+    "nominal_anchor": [
+      256,
+      512
+    ],
+    "native_anchor": [
+      8,
+      16
+    ],
+    "policy": "Sparse floor paint stays in its original rectangular cell frame. Do not independently crop/center alpha or give it a humanoid foot pivot."
+  },
+  "states": "One fixed map view. Native grass variants 2 and 3 are separate ledger entries; no invented rotation, growth, flowering or wind animation here.",
+  "native_acceptance": "Deferred until every required conversion is generated"
+}
