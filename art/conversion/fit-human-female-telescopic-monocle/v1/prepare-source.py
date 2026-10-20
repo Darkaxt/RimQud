@@ -1,0 +1,25 @@
+"""Resolve exact monocle metadata and actual mod reference before construction."""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+DONOR=Path('E:/Temp/qud-transplant-probe-pawns-20261019/donor')
+MOD=Path('D:/Steam/steamapps/workshop/content/294100/1814988282')
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def external(p):return dict(path=p.as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),publication='Private installed source; not copied to repository')
+assert not (HERE/'source-packet.json').exists()
+lp=ROOT/'evidence/conversion-ledger.json';ledger=json.loads(lp.read_text());entry=next(e for e in ledger['entries'] if e['id']=='FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0');assert ledger['active_entry']==entry['id']
+item=next(e for e in ledger['entries'] if e['id']=='ITEM-TELESCOPIC-MONOCLE')['metadata']['original_reference']
+original=DONOR/item['reference_file'];assert hashlib.sha256(original.read_bytes()).hexdigest()==item['reference_sha256']
+bindings=[dict(actor=e['id'],captured_gender=e['metadata'].get('captured_gender'),part=p) for e in ledger['entries'] for p in e.get('metadata',{}).get('native_parts',[]) if (p.get('equipped') or {}).get('blueprint')=='Telescopic Monocle']
+packet=dict(entry=entry['id'],workflow='regional-curved-v1',item=item,observed_bindings=bindings,body=ref(ROOT/'art/conversion/body-human-female/v2/model.json'),reference=external(original),
+ donor=dict(mod='Vanilla Armour Expanded',workshop_id='1814988282',about=external(MOD/'About/About.xml'),assets=[external(MOD/f'Textures/Things/Headgear/NightVisionGoggles/NightVisionGoggles_{f}.png') for f in ['south','east','north']],role='Optical barrel shading, restrained outline, face attachment and directional back strap convention only. Two donor lenses and military body are not Qud identity; do not copy them.'),
+ source_interpretation='The original glyph clearly contains one circular rim and a trailing dotted curve. Treat a single ocular and hanging chain as authored reconstruction of that silhouette. The item name supports telescoping optical depth; the description establishes dust only, not a long telescope, binoculars or helmet.',
+ identity_boundary='Captured actual wearer is male Argyve, Face part 317, parent 316, item 587, manager null/laterality 0. This enumerated female fitting is a reusable body variant, not evidence of another female NPC or invented equipment.',
+ palette=dict(primary='C',detail='Y',assignment='Primary metal rim/barrel; separate white chain, lens/glint detail, kept neutral before tint.'),
+ planned_construction=dict(camera='Straight south/front, complete east/right profile, straight north/back; derive explicit west visibility from the same physical one-eye mount.',frame=[512,1024],contact=[256,950],body_unchanged=True,mount='Wearer right eye is an authored convention; Face/0 has no exported eye handedness. Keep side fixed across the turnaround.',west='Do not mirror the completed east assembly onto the opposite eye. Retain full item and use original-head visibility for the far-side/behind-head portions; explicitly author that visibility and record native binding as pending.',source_completion='Retain complete optical item before original-head occlusion; no face-shaped permanent alpha cutouts.'),
+ unresolved=['Exact ocular handedness is not specified by captured metadata.','Original glyph does not settle hidden mounting geometry.','Directional/outfit support requires final full-set native acceptance, not an authoring-time game run.'],new_imagegen_call=False,native_acceptance='Pending all-conversions generation gate')
+(HERE/'source-packet.json').write_bytes((json.dumps(packet,indent=2)+'\n').encode())
+for step,action in [('source_identity_description_slot_laterality','Read actual Telescopic Monocle description, original circular/trailing-curve glyph, native C/Y palette and captured Argyve ordinary Face/0 binding. Female fit is a reusable variant, not an invented observed wearer.'),('select_correct_body_and_references','Selected unchanged female v2 body and inspected actual Vanilla Armour Expanded directional NightVisionGoggles assets as an optical material/attachment reference only. Preserve single Qud lens and source palette; do not adopt donor binocular anatomy.')]:
+ entry['process_log'].append(dict(timestamp=datetime.now(timezone.utc).isoformat(),step=step,action=action,inputs=[ref(HERE/'prepare-source.py'),packet['body']],outputs=[ref(HERE/'source-packet.json')],review='Source identity, current private image hash, donor SEN assets and attachment metadata inspected. Construction/refinement and explicit one-eye west visibility remain unfinished. No ImageGen call or native validation performed.',result='PASS'))
+entry['current_step']='construct_and_overlay_one_item';ledger['updated_at']=datetime.now(timezone.utc).isoformat();lp.write_bytes((json.dumps(ledger,indent=2)+'\n').encode());print('Monocle source packet recorded; construction remains the sole active authoring work.')

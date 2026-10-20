@@ -564,3 +564,30 @@ body. All three authoring logs and the item aggregate are generation-ready;
 native gear/outfit acceptance and named mutation assemblies remain unfinished.
 Stage 3 stays ACTIVE. Continue on the sole active female Telescopic Monocle
 entry; no native validation or mod release is authorized by this art checkpoint.
+
+Telescopic Monocle authoring reconciliation: both enumerated Face/0 fits and the
+item aggregate now retain one circular ocular, compact optical profile and a
+trailing chain, with separate native `C` primary / `Y` detail. Actual Vanilla
+Armour Expanded directional optical assets supply material/attachment reference;
+they do not replace Qud's single ocular with binoculars. The single contextual
+output shifted the mannequin and invented a knob; the final item excludes both,
+using only recorded metal shading on the complete constructed source. Original
+body/head pixels and transparent glass/chain geometry remain separate.
+
+Explicit rear/far-side head visibility keeps the same authored eye across all
+four facings. Male v1 reuses the canonical item with constrained original-head
+landmarks and target-original head masks. Existing native side mapping currently
+selects east for both sides, so explicit-west binding is an identified remaining
+four-facing integration requirement: retain these west art/masks for final
+integration and full-set native acceptance. It is not a reason to launch native
+tests or change renderer code during generation. Named actor/outfit acceptance
+remains unfinished. Stage 3 stays ACTIVE; continue on Irudad's Black Robes.
+
+The monocle authoring asset check rejected v1's chain/glint detail because its
+source outline `#202523` was not neutral. Female v2 corrects that editable ink to
+`#232323` before rasterization; male v2 refits the corrected source through its
+unchanged controls before premultiplied sampling. Current detail channels are
+equal and alpha is unchanged. Full optical geometry, body/head ownership and
+contact remain unchanged. Both v1 candidates and the rejection stay in the
+report. Current selection is v2 for both fits and their item aggregate; the
+original one contextual generation remains their actual material provenance.

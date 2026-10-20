@@ -1,0 +1,69 @@
+{
+  "item": "Telescopic Monocle",
+  "workflow": "regional-curved-v1",
+  "source": {
+    "instance": 587,
+    "blueprint": "Telescopic Monocle",
+    "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+    "tile": "Items/sw_monocle.bmp",
+    "foreground": "&C",
+    "tileColor": "",
+    "detailColor": "Y",
+    "kind": "equipment",
+    "reference_file": "village-originals/telescopic-monocle-reference.png",
+    "native_mask_sha256": "9982d866569fbb030b897448cf48dafdef00e3e3122fc159a82dd017b3ace23d",
+    "reference_sha256": "e0a447485e960819d37e042b203bf8c46894d0873e5623636d27d41f21df300e",
+    "info_id": 9851,
+    "atlas_id": 185,
+    "rect": [
+      576,
+      78,
+      16,
+      24
+    ]
+  },
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-telescopic-monocle/v2/model.json",
+          "sha256": "35d1d79d18c2dbb2f76cb617eb0fdbb5f0aef70a4b5172dcdca31509cf525b4c"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-telescopic-monocle/v2/headwear-comparison.png",
+          "sha256": "4e9dd6ac1d9e0566e4d60583c0ae9c60ca32941d7c60f2c1f14c12593c803f6d"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Corrected v1 nonneutral chain/glint ink #202523 to grayscale #232323 in the editable detail source before rasterization. Every detail channel is now equal; original detail alpha is exactly unchanged. Full item, original body/head masks, geometry and facing/contact remain v1 byte-identical. Inspected recomposition of actual current full item + detail + original-head overlay and native C/Y palette. Earlier source/refinement/view/ownership records still apply; explicit-west native binding remains pending."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-telescopic-monocle/v2/model.json",
+          "sha256": "4d69cf76b2fd6ab431899a4178621e8bc2cbe5899164ed080199bb3f16567702"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-telescopic-monocle/v2/headwear-comparison.png",
+          "sha256": "e26b117401a7f2d1c066f92c3c6868b86c1c8c3172a583472df9e22cecf27401"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Refitted the corrected neutral female chain/glint source through the existing male uniform controls in one premultiplied sample. Every detail RGB channel is equal and alpha is exactly unchanged from v1. Full item, actual male head ownership, original body, facing/scale/contact remain unchanged. Inspected actual current item + detail + original-head composition and C/Y palette. Source/refinement provenance remains v1 with this explicit correction; no new ImageGen. Native explicit-west/outfit acceptance pending."
+      }
+    }
+  ],
+  "scope": "All two enumerated Face/0 authoring fits reuse the same complete ocular/barrel/chain; male fit has target-original head-relative controls and visibility. No actor or native acceptance completion claimed.",
+  "expected_views": [
+    "south",
+    "east",
+    "north",
+    "west explicit"
+  ],
+  "native_acceptance": "Pending full-set gate, explicit-west direction binding and combined outfit precedence"
+}

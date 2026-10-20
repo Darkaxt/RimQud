@@ -1,0 +1,48 @@
+{
+  "body": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "construction_script": {
+    "path": "art/conversion/fit-human-female-telescopic-monocle/v1/construct-monocle.py",
+    "sha256": "15407b3d0c216c1302d8254d4168c5e893eb3d72d3ec42f377813d9c48f8ea14"
+  },
+  "camera": "SEN cardinal + explicit far-side west",
+  "authoring_mount": "Wearer right eye; source Face/0 does not prescribe an eye",
+  "frame": [
+    512,
+    1024
+  ],
+  "contact": [
+    256,
+    950
+  ],
+  "lens_centers": {
+    "south": [
+      222,
+      98
+    ],
+    "east": [
+      378,
+      100
+    ],
+    "north": [
+      286,
+      98
+    ],
+    "west": [
+      134,
+      100
+    ]
+  },
+  "depth": {
+    "south": "above original head",
+    "east": "near-side above original head",
+    "north": "whole monocle behind original head/neck",
+    "west": "same physical eye now far-side; original near-side head/neck overlays full item"
+  },
+  "backdrop": "Transparent source; no body-colored garment fill",
+  "source_completion": "Complete optical geometry retained behind all original-head masks",
+  "runtime_limitation": "Current probe/VillageArt.cs Direction maps both side facings to east. Authored west assets require explicit direction binding in final integration; no generation-time renderer edit/test.",
+  "native_acceptance": "Pending full-set generation gate"
+}

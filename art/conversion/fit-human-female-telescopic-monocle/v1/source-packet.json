@@ -1,0 +1,115 @@
+{
+  "entry": "FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0",
+  "workflow": "regional-curved-v1",
+  "item": {
+    "instance": 587,
+    "blueprint": "Telescopic Monocle",
+    "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+    "tile": "Items/sw_monocle.bmp",
+    "foreground": "&C",
+    "tileColor": "",
+    "detailColor": "Y",
+    "kind": "equipment",
+    "reference_file": "village-originals/telescopic-monocle-reference.png",
+    "native_mask_sha256": "9982d866569fbb030b897448cf48dafdef00e3e3122fc159a82dd017b3ace23d",
+    "reference_sha256": "e0a447485e960819d37e042b203bf8c46894d0873e5623636d27d41f21df300e",
+    "info_id": 9851,
+    "atlas_id": 185,
+    "rect": [
+      576,
+      78,
+      16,
+      24
+    ]
+  },
+  "observed_bindings": [
+    {
+      "actor": "NPC-ARGYVE",
+      "captured_gender": "male",
+      "part": {
+        "id": 317,
+        "parent": 316,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 587,
+          "blueprint": "Telescopic Monocle",
+          "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+          "tile": "Items/sw_monocle.bmp",
+          "foreground": "&C",
+          "tileColor": "",
+          "detailColor": "Y"
+        },
+        "defaultItem": null
+      }
+    }
+  ],
+  "body": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "reference": {
+    "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/telescopic-monocle-reference.png",
+    "sha256": "e0a447485e960819d37e042b203bf8c46894d0873e5623636d27d41f21df300e",
+    "publication": "Private installed source; not copied to repository"
+  },
+  "donor": {
+    "mod": "Vanilla Armour Expanded",
+    "workshop_id": "1814988282",
+    "about": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/1814988282/About/About.xml",
+      "sha256": "44588a4159c3e09af8f9bc53174a0ae963b89b1a78e5c4613af10e84a231a185",
+      "publication": "Private installed source; not copied to repository"
+    },
+    "assets": [
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1814988282/Textures/Things/Headgear/NightVisionGoggles/NightVisionGoggles_south.png",
+        "sha256": "bfa97b755da2acb7c1cfd67de2f46b20ed2b50773e48f4cb6146224b073efdee",
+        "publication": "Private installed source; not copied to repository"
+      },
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1814988282/Textures/Things/Headgear/NightVisionGoggles/NightVisionGoggles_east.png",
+        "sha256": "b870bff50a0484b19cdb3d506e0c58684a883e6704beffe7e6961fdd6fb6aecd",
+        "publication": "Private installed source; not copied to repository"
+      },
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1814988282/Textures/Things/Headgear/NightVisionGoggles/NightVisionGoggles_north.png",
+        "sha256": "ff02b3fd7df0c275ed88df01ba682748ea69c255fe0f22db1474729b40f04bcc",
+        "publication": "Private installed source; not copied to repository"
+      }
+    ],
+    "role": "Optical barrel shading, restrained outline, face attachment and directional back strap convention only. Two donor lenses and military body are not Qud identity; do not copy them."
+  },
+  "source_interpretation": "The original glyph clearly contains one circular rim and a trailing dotted curve. Treat a single ocular and hanging chain as authored reconstruction of that silhouette. The item name supports telescoping optical depth; the description establishes dust only, not a long telescope, binoculars or helmet.",
+  "identity_boundary": "Captured actual wearer is male Argyve, Face part 317, parent 316, item 587, manager null/laterality 0. This enumerated female fitting is a reusable body variant, not evidence of another female NPC or invented equipment.",
+  "palette": {
+    "primary": "C",
+    "detail": "Y",
+    "assignment": "Primary metal rim/barrel; separate white chain, lens/glint detail, kept neutral before tint."
+  },
+  "planned_construction": {
+    "camera": "Straight south/front, complete east/right profile, straight north/back; derive explicit west visibility from the same physical one-eye mount.",
+    "frame": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "body_unchanged": true,
+    "mount": "Wearer right eye is an authored convention; Face/0 has no exported eye handedness. Keep side fixed across the turnaround.",
+    "west": "Do not mirror the completed east assembly onto the opposite eye. Retain full item and use original-head visibility for the far-side/behind-head portions; explicitly author that visibility and record native binding as pending.",
+    "source_completion": "Retain complete optical item before original-head occlusion; no face-shaped permanent alpha cutouts."
+  },
+  "unresolved": [
+    "Exact ocular handedness is not specified by captured metadata.",
+    "Original glyph does not settle hidden mounting geometry.",
+    "Directional/outfit support requires final full-set native acceptance, not an authoring-time game run."
+  ],
+  "new_imagegen_call": false,
+  "native_acceptance": "Pending all-conversions generation gate"
+}
