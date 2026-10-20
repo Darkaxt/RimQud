@@ -591,3 +591,16 @@ equal and alpha is unchanged. Full optical geometry, body/head ownership and
 contact remain unchanged. Both v1 candidates and the rejection stay in the
 report. Current selection is v2 for both fits and their item aggregate; the
 original one contextual generation remains their actual material provenance.
+
+Black Robes authoring reconciliation: the actual Irudad Body/0 fit and item
+aggregate are generation-ready on the unchanged unmutated older-human base.
+The garment has its own dyed-wool description, source glyph and native `K/K`
+roles, with actual installed ETRT directional robe references for drape/camera.
+The v1 bare-shoulder construction was rejected; v2 corrects shoulder coverage
+before its one contextual wool refinement. Complete cloth is retained before
+late original wrist/hand visibility, with a shared recorded material whitepoint
+and no invented bright trim. v3 narrows only the side wrist paint to remove
+adjacent original body-outline contamination; full wool/body/contact remain
+unchanged. Both rejected drafts and the actual corrections remain in the report.
+This baseline fit does not complete Irudad's mutation-body, extra limbs/tail or
+native outfit assembly. Stage 3 stays ACTIVE; continue on his Spectacles.
