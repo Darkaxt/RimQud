@@ -81,7 +81,7 @@ def enumerate_entries():
             variants=['male/female templates; shared geometry if no supported distinction','south/east/north','west mirror','separate removable clothing'],artifacts=layers(body),
             issues=['Constructed template only. No native age selector established; do not assign an age to residents by guesswork.'],
             steps=['resolve_age_evidence_and_render_reference','construct_featureless_front','generate_other_views','correct_and_refine_composite',
-                'register_body_head_and_actual_clothing','visual_review_all_views','record_native_selection_policy_without_changing_demographics'])
+                'register_body_head_and_palette','visual_review_all_views','record_native_selection_policy_without_changing_demographics'])
         for component in sorted({l['component'] for v in body['views'].values() for l in v}-{'body','head'}):
             add('FIT-'+slug(race+'-child-template-'+component),'Template garments',race+' child / '+component,links=[key],
                 artifacts=[l['public_file'] for v in body['views'].values() for l in v if l['component']==component],

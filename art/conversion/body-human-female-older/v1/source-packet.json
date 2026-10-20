@@ -1,0 +1,95 @@
+{
+  "entry": "BODY-HUMAN-FEMALE-OLDER",
+  "recorded_at": "2026-10-20T01:26:17.499017+00:00",
+  "identity": "Older adult female human authoring template; no NPC age reassignment",
+  "race": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "body_plan": {
+    "heads": 1,
+    "arms": 2,
+    "hands": 2,
+    "legs": 2,
+    "feet": 2,
+    "source": "Observed Humanoid body tree, paired Feet group; no race-wide Description.Short"
+  },
+  "original_age_reference": {
+    "tile": "Creatures/npc-irudad.bmp",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "kind": "creature",
+    "blueprint": "ElderBob",
+    "reference_file": "village-originals/elderbob-reference.png",
+    "native_mask_sha256": "239481d2824d7a5542de66bd5e08c8637fc8a047f6ec80471c06727ac5b2fc61",
+    "reference_sha256": "aad051460416512d0cd78b801b4458ff8c148d2400b72569c790c6555f2bacfc",
+    "info_id": 7704,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      676,
+      16,
+      24
+    ]
+  },
+  "source_age_description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+  "source_limits": "Irudad explicitly supplies old-face/hunched-back prose. His extra arms, hands-face and stinger are individual mutation features for the separate mutation framework, never generic human aging.",
+  "shared_human_reference": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "donor_references": [
+    {
+      "file": "human-body-female-south.png",
+      "source_id": 1653,
+      "name": "Naked_Female_south",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        40,
+        38,
+        88,
+        113
+      ],
+      "png_sha256": "e550440b2c8a76610c03fe8866ecb40b050bf9ecdc228bb99a09e922b1c29d0b"
+    },
+    {
+      "file": "human-head-female-south.png",
+      "source_id": 3108,
+      "name": "Female_Average_Normal_south",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        41,
+        39,
+        87,
+        89
+      ],
+      "png_sha256": "5f22ca52fd59d985239c218b1f8cc4f5753d6b9d0e7e38cf1efcbaa0ab306c03"
+    }
+  ],
+  "donor_limit": "No separate old-age torso is established from these donor references; reuse the same adult presentation convention, with authored age variation.",
+  "construction": {
+    "source_svg": "art/conversion/body-human-female/v1/constructed-front.svg",
+    "source_sha256": "01c73dd1765553f6b1f56c6c7709a75e9685ae80a112f87bc2c980d78e987ccb",
+    "retained": "Same head/limb counts, bare feet, camera and family proportions",
+    "changes": "Slightly lowered/softened shoulders and torso; side should have a restrained age-related stoop, not a profession pose or extreme caricature"
+  },
+  "uncertainty": "Age variant requested by user. No native numerical-age/life-stage selection is established; no canonical older-female resident is inferred.",
+  "palette": "Neutral grayscale and separate clothing; no baked gray hair or personal cosmetics",
+  "baseline_metadata_packet": {
+    "path": "art/conversion/body-human-female/v1/source-packet.json",
+    "sha256": "0949e4f13981fe60ebc6eb57acc6766066efe506dbcee1b432e274d2a9a1476e"
+  },
+  "registration_target": {
+    "canvas": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "method": "Translate complete views and all extracted layers together; no independent bbox scale."
+  }
+}

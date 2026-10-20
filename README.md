@@ -13,8 +13,11 @@ active entry and an evidence-backed process log. Existing assets are historical
 inputs, including Tam and Ctesiphus; no completion credit is carried forward.
 
 The [HTML conversion report](docs/conversion-report.html) records the new
-generation workflow step by step. Shared human male, female and older-male bases
-are generation-ready; their native acceptance and clothing fits remain pending.
+generation workflow step by step. Five human body templates are generation-ready:
+adult male/female, older male/female, and a shared featureless child base for both
+template labels. The child Woven Tunic is also generation-ready as a separate,
+source-bound garment with recorded coverage cuts. Native acceptance and the
+remaining clothing fits are pending.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

@@ -281,3 +281,10 @@ a stable authoring anchor. Preserve old evidence; identify the current registere
 version and show center/ground guides separately from production layers. Clothing
 inherits the registered family frame. This is art generation/registration work;
 native movement acceptance still waits for the all-conversions generation gate.
+
+Child body entries follow the user's featureless-mannequin/separate-clothing
+instruction: author and register body/head/palette first. Their existing linked
+template-garment entries own actual garment identity, in-context refinement,
+extraction and fitting; none of that work is removed or accepted by the body entry.
+The earlier combined child-body registration step is named accordingly in the
+enumerator. Age selection remains authored and must not alter resident demographics.
