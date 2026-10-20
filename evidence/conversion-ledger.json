@@ -11673,6 +11673,54 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer change was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:49:27.010556+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Case-safe native color sample correction",
+          "action": "Corrected the preview filename collision between native w and W on Windows by exporting explicit lower-w and upper-w names; preserved the old ambiguous file and logged its actual W contents.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png",
+              "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png",
+              "sha256": "f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png",
+              "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/export-native-color-samples.py",
+              "sha256": "c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png",
+              "sha256": "ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png",
+              "sha256": "0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png",
+              "sha256": "05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png",
+              "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json",
+              "sha256": "57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5"
+            }
+          ],
+          "review": "Four explicit samples now independently represent native C,w,y,W. Old occupied-native-c-w-preview.png is historical and actually W-tinted because case-insensitive paths collided. Neutral production art, native color codes and selected C/W comparison plate were unchanged; no new generation, game run or renderer change.",
+          "result": "PASS"
         }
       ],
       "camera_review": {
@@ -11706,7 +11754,11 @@
           "sha256": "ac6c3e5ca1176fd8840327118ee3f274a0873aa653da2076e38a86de4345b6db"
         }
       },
-      "registration_summary": "Corrected straight south camera uses parallel tabletop boundaries and vertical perforated supports. Both actual inventory appearances reuse the same neutral bench; the occupied state adds only two separately extracted source stock marks, with a real open handle. Steel follows native c, occupied stock follows actual native C/w/y/W; samples do not choose native state. Earlier tapered proposal remains rejected history. Native stock/color transitions, physics, visibility and rare animated fallback remain pending."
+      "registration_summary": "Corrected straight south camera uses parallel tabletop boundaries and vertical perforated supports. Both actual inventory appearances reuse the same neutral bench; the occupied state adds only two separately extracted source stock marks, with a real open handle. Steel follows native c, occupied stock follows actual native C/w/y/W; samples do not choose native state. Earlier tapered proposal remains rejected history. Native stock/color transitions, physics, visibility and rare animated fallback remain pending.",
+      "native_color_samples": {
+        "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json",
+        "sha256": "57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5"
+      }
     },
     {
       "id": "SCN-ORNATE-TABLE",

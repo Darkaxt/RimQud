@@ -13707,6 +13707,86 @@
   &quot;review&quot;: &quot;No game/harness launch or production renderer change was performed. Overall entry remains UNFINISHED.&quot;,
   &quot;result&quot;: &quot;DEFERRED UNTIL ALL GENERATED&quot;
 }</pre></details></section>
+<section class="event"><small>13 / 2026-10-20T08:49:27.010556+00:00 / PASS</small><h3>Case-safe native color sample correction</h3><p>Corrected the preview filename collision between native w and W on Windows by exporting explicit lower-w and upper-w names; preserved the old ambiguous file and logged its actual W contents.</p><p><strong>Review:</strong> Four explicit samples now independently represent native C,w,y,W. Old occupied-native-c-w-preview.png is historical and actually W-tinted because case-insensitive paths collided. Neutral production art, native color codes and selected C/W comparison plate were unchanged; no new generation, game run or renderer change.</p>
+<div class="gallery"><figure><a href="../art/conversion/scn-metal-workbench/v2/export-native-color-samples.py">export-native-color-samples.py</a><details class="hash"><summary>Exact evidence hash</summary><code>c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902</code></details></figure><figure><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png"><img loading="lazy" src="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png" alt="occupied-primary-c-detail-lower-w"></a><figcaption><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png">occupied-primary-c-detail-lower-w.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71</code></details></figure><figure><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png"><img loading="lazy" src="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png" alt="occupied-primary-c-detail-lower-y"></a><figcaption><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png">occupied-primary-c-detail-lower-y.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61</code></details></figure><figure><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png"><img loading="lazy" src="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png" alt="occupied-primary-c-detail-upper-c"></a><figcaption><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png">occupied-primary-c-detail-upper-c.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b</code></details></figure><figure><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png"><img loading="lazy" src="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png" alt="occupied-primary-c-detail-upper-w"></a><figcaption><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png">occupied-primary-c-detail-upper-w.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2</code></details></figure><figure><a href="../art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json">samples.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/export-native-color-samples.py&quot;,
+      &quot;sha256&quot;: &quot;c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902&quot;
+    }
+  ],
+  &quot;samples&quot;: [
+    {
+      &quot;detail_code&quot;: &quot;C&quot;,
+      &quot;detail_rgb&quot;: &quot;77bfcf&quot;,
+      &quot;asset&quot;: {
+        &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png&quot;,
+        &quot;sha256&quot;: &quot;05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b&quot;
+      }
+    },
+    {
+      &quot;detail_code&quot;: &quot;w&quot;,
+      &quot;detail_rgb&quot;: &quot;98875f&quot;,
+      &quot;asset&quot;: {
+        &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png&quot;,
+        &quot;sha256&quot;: &quot;ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71&quot;
+      }
+    },
+    {
+      &quot;detail_code&quot;: &quot;y&quot;,
+      &quot;detail_rgb&quot;: &quot;b1c9c3&quot;,
+      &quot;asset&quot;: {
+        &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png&quot;,
+        &quot;sha256&quot;: &quot;0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61&quot;
+      }
+    },
+    {
+      &quot;detail_code&quot;: &quot;W&quot;,
+      &quot;detail_rgb&quot;: &quot;cfc041&quot;,
+      &quot;asset&quot;: {
+        &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png&quot;,
+        &quot;sha256&quot;: &quot;b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2&quot;
+      }
+    }
+  ],
+  &quot;correction&quot;: &quot;The original registration exporter used literal palette letters in filenames. Windows treats w and W filenames as the same path, so upper W overwrote the lower w preview. The preserved old occupied-native-c-w-preview.png therefore actually contains W tint. Production neutral layers, native palette contract and main selected plate are unaffected; these four explicit case-named files are authoritative color samples.&quot;,
+  &quot;preserved_ambiguous_file&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png&quot;,
+    &quot;sha256&quot;: &quot;b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2&quot;,
+    &quot;actual_detail&quot;: &quot;W&quot;,
+    &quot;status&quot;: &quot;Historical naming collision; use explicit upper/lower sample paths&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T08:49:27.010556+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_identity_and_connections_at_game_scale&quot;,
+  &quot;phase&quot;: &quot;Case-safe native color sample correction&quot;,
+  &quot;action&quot;: &quot;Corrected the preview filename collision between native w and W on Windows by exporting explicit lower-w and upper-w names; preserved the old ambiguous file and logged its actual W contents.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png&quot;,
+      &quot;sha256&quot;: &quot;b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Four explicit samples now independently represent native C,w,y,W. Old occupied-native-c-w-preview.png is historical and actually W-tinted because case-insensitive paths collided. Neutral production art, native color codes and selected C/W comparison plate were unchanged; no new generation, game run or renderer change.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
 </div></div></details>
 <details class="entry" id="SCN-ORNATE-TABLE" data-search="scn-ornate-table ornate table furniture" data-worked="0"><summary><span>Ornate Table <small> / Furniture</small></span><span class="status">UNFINISHED</span></summary><div class="entry-body">
 <p class="eyebrow">SCN-ORNATE-TABLE / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished.</p>

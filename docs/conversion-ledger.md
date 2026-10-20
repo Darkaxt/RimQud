@@ -1995,7 +1995,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 12.
+Current step: generation ready; final acceptance pending. Process-log events: 13.
 
 - 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
   Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
@@ -2068,6 +2068,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 12
   Inputs: [{"path": "art/conversion/scn-metal-workbench/v2/registered/model.json", "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"}]
   Outputs: []
   Method/prompt/corrections: {"phase": "Native stock, color and visibility acceptance deferred"}
+
+- 2026-10-20T08:49:27.010556+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Corrected the preview filename collision between native w and W on Windows by exporting explicit lower-w and upper-w names; preserved the old ambiguous file and logged its actual W contents.
+  Review: Four explicit samples now independently represent native C,w,y,W. Old occupied-native-c-w-preview.png is historical and actually W-tinted because case-insensitive paths collided. Neutral production art, native color codes and selected C/W comparison plate were unchanged; no new generation, game run or renderer change.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png", "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"}, {"path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png", "sha256": "f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2"}, {"path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png", "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v2/export-native-color-samples.py", "sha256": "c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png", "sha256": "ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png", "sha256": "0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png", "sha256": "05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png", "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"}, {"path": "art/conversion/scn-metal-workbench/v2/native-color-samples/samples.json", "sha256": "57129eb4c8bc286bcd3b9d57e0058f06bb08b16823df12247f61901242d00ed5"}]
+  Method/prompt/corrections: {"phase": "Case-safe native color sample correction"}
 
 ### SCN-ORNATE-TABLE: Ornate Table
 

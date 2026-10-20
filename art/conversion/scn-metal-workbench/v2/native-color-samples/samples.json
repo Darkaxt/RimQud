@@ -1,0 +1,57 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png",
+      "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"
+    },
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png",
+      "sha256": "f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2"
+    },
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/export-native-color-samples.py",
+      "sha256": "c586c02916556f96b86432ee1934ab0c3d321f4cc6776bd2b648d2539cdff902"
+    }
+  ],
+  "samples": [
+    {
+      "detail_code": "C",
+      "detail_rgb": "77bfcf",
+      "asset": {
+        "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-c.png",
+        "sha256": "05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b"
+      }
+    },
+    {
+      "detail_code": "w",
+      "detail_rgb": "98875f",
+      "asset": {
+        "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-w.png",
+        "sha256": "ad5dfa2b24179ec0cb2007a4e586715ac79032c185f3a29f97d2bc620c57bb71"
+      }
+    },
+    {
+      "detail_code": "y",
+      "detail_rgb": "b1c9c3",
+      "asset": {
+        "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-lower-y.png",
+        "sha256": "0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61"
+      }
+    },
+    {
+      "detail_code": "W",
+      "detail_rgb": "cfc041",
+      "asset": {
+        "path": "art/conversion/scn-metal-workbench/v2/native-color-samples/occupied-primary-c-detail-upper-w.png",
+        "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"
+      }
+    }
+  ],
+  "correction": "The original registration exporter used literal palette letters in filenames. Windows treats w and W filenames as the same path, so upper W overwrote the lower w preview. The preserved old occupied-native-c-w-preview.png therefore actually contains W tint. Production neutral layers, native palette contract and main selected plate are unaffected; these four explicit case-named files are authoritative color samples.",
+  "preserved_ambiguous_file": {
+    "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png",
+    "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2",
+    "actual_detail": "W",
+    "status": "Historical naming collision; use explicit upper/lower sample paths"
+  }
+}
