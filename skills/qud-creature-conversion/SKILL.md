@@ -21,6 +21,10 @@ status. All entries were explicitly reset unfinished on 2026-10-20, including
 previously selected models. Work one entry at a time and append its actual
 inputs/hashes, prompts, corrections, extraction and review evidence as performed.
 Historical assets or a passing native batch never complete another entry.
+**Generation first:** do not perform native or formal integration validation
+until all pending textures, objects, creatures/NPCs and their required equipment
+have completed the generation workflow. This applies to scenery as well as bodies.
+Follow the gate in section 7; one completed asset is not permission to test it.
 Resolve the repository root from this file, two directories above this folder.
 Read [the metadata contract](references/metadata-packet.md) when preparing an
 input packet and [the Tam example](references/tam-example.md) for the worked case
@@ -140,23 +144,40 @@ automatically deformed for every Qud mutation. Inventory items remain invisible
 until equipped. Laterality controls held-item anchors rather than a universal
 hand location.
 
-## 7. Verify the assembled result at its real boundary
+## 7. Validate only after every pending conversion is generated
 
-Review intended game scale and the assembled body-family batch. Once the complete
-sample is wired, check relevant native facing, contact, visibility, item
-equip/unequip, palette, hurt, look and save/load through the existing authorized
-hidden diagnostic. Preserve profiles and user processes.
+Finish generation across the entire requested ledger before beginning native
+or formal integration validation. All pending textures/terrain tiles, furniture,
+plants, machinery, other objects, creatures/NPC bodies and separate clothing or
+equipment must have their required construction, refinement, views/states,
+corrections and extraction recorded in the HTML evidence report. A justified
+non-art exclusion needs its source-based explanation. A single generated body,
+family or small sample does not satisfy this gate.
 
-Reuse applicable renderer evidence. Art-only changes do not require rerunning
-the entire movement/menu/save suite for each asset. Run affected behavior checks
-when bindings or renderer logic change. Artwork selection, segmentation and
-native verification are separate claims; record exactly which was demonstrated.
+During generation, inspect the artwork to correct anatomy, perspective, palette,
+cut edges and layer ownership; recompose layers and show intended-size previews.
+These are authoring steps. Do not turn them into per-asset game launches,
+native acceptance batches, simulation/save/load tests, performance tests or
+test-harness debugging. Record discovered integration concerns and keep generating.
+
+Record an entry as generation-ready when its authoring steps are finished, then
+move to the next generation entry. Keep pending native acceptance explicit;
+generation-ready does not mean validated, integrated or overall COMPLETE. Pending
+native checks must not force a validation detour before the next generation entry.
+
+Only once every pending conversion is generation-ready, assemble the full set
+and run the applicable native facing, contact, visibility, equip/unequip, palette,
+hurt, look and save/load checks through the authorized hidden diagnostic.
+Reuse applicable renderer evidence and validate the integrated set rather than
+rerunning the gameplay suite for every asset. Preserve profiles and user processes.
+Keep generation evidence and final native evidence separately identified.
 
 ## Output
 
 Deliver the source-bound metadata packet, selected references, editable front,
 exact prompts and selected turnaround, registered body/head/tint layers, actual
-separate equipment layers, and applicable native evidence. Retain unresolved
+separate equipment layers, and the contemporaneous HTML process report. Native
+evidence belongs to the final validation phase after section 7's gate. Retain unresolved
 requirements in the existing project ledger. Stop at the user's requested scope:
 documenting this method does not itself authorize generating the next creature.
 ## Source-bound scenery adaptation

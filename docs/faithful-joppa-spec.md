@@ -77,6 +77,28 @@ requirements have been authored or verified, and does not close Stage 3.
 
 ## Requirements
 
+2026-10-20 ledger execution objective: complete all enumerated entries one at a
+time. The HTML conversion report must show contemporaneous evidence for original
+shape, metadata, actual Core/DLC/mod rendering reference, constructed suggestion,
+refined front, secondary views, consequential patches, composed refinement,
+layer/mask extraction, and actual separate clothing integration where applicable.
+Furniture, plants, machinery and props follow the same source-first procedure;
+omit extra views only with a shape/state-specific reason. Environmental materials
+must preserve Qud's original palette and design: the path should read as
+stone/cobblestone-like paving integrated over grass, not the previous sandy road.
+Keep rejected outputs and uncertainty visible. Start with the shared human male
+base; do not start another ledger entry until its complete workflow is accepted.
+
+Subsequent user correction: generation takes priority across the entire pending
+ledger. Complete an entry's authoring workflow before moving to the next generation
+entry; native validation must wait until all pending textures, objects,
+creatures/NPCs and required clothing/equipment are generation-ready. Visual
+inspection and correction remain authoring work. Do not launch per-entry native
+tests or debug their harness during generation. Generation readiness and native
+acceptance remain distinct; A5 stays required for final Stage 3 closure after the
+complete generated set is assembled. This sequencing supersedes the earlier
+per-sample native checkpoints for the current conversion pass.
+
 2026-10-20 unattended continuation: the user requested finishing the conversion
 of the starting village's NPCs/creatures and bringing environment textures/tiles
 as close as possible to Qud's original look, palette and design. Reuse the same
@@ -215,7 +237,8 @@ reference choice, prompts/tool settings, output hashes, corrections/rejections,
 mask extraction, all-view visual review and applicable native evidence as those
 steps occur. A passing batch cannot automatically complete other entries.
 Stages 1/2 above are historical study/demonstration milestones, not completion
-credit for the reset art entries. No new art generation is part of this ledger task.
+credit for the reset art entries. The subsequent ledger execution objective above
+authorizes conversion and its HTML evidence report, one entry at a time.
 
 A3/A4/A5 advancement blockers (internal):
 
