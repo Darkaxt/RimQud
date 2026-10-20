@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BEDROLL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-BOOK-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -136,8 +136,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - |  |
 | SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - |  |
 | SCN-BED | Bed | UNFINISHED | - |  |
-| SCN-BEDROLL | Bedroll | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-BOOK-TABLE | Book Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BEDROLL | Bedroll | UNFINISHED | - |  |
+| SCN-BOOK-TABLE | Book Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHAIR | Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHEST1 | Chest1 | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -4313,7 +4313,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bedroll-body.png](../art/village/scenery/bedroll-body.png), [art/village/scenery/bedroll-detail.png](../art/village/scenery/bedroll-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 10.
+Current step: native_state_review. Process-log events: 19.
 
 - 2026-10-20T07:01:52.510253+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Bedroll/Furniture definitions, original16x24mask/hash, goat-wool/canvas-ties description and native w/y roles.
   Review: Source has a rounded diagonal lower body, pale upper folded end and primary fastening marks. Hollow glyph is not a transparent physical bed. This is takeable4-weight non-solid furniture with native Bed interaction, not BaseBed/mounted furniture.
@@ -4375,6 +4375,60 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T19:09:51.143068+00:00 / resolve_object_description_original_tile_palette_state / PASS: Retain verified goat-wool/ties source identity, original glyph w/y and fixed source state. Supersede diagonal whole-object camera while preserving design.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/source-packet.json", "sha256": "6f14b7f057865e25a5111595ea9d45c78286de96ae5a63ede6ba40623c6019fb"}, {"path": "art/conversion/scn-bedroll/v2/source-reference-camera-comparison.png", "sha256": "d526bdf7877cb692595c2eadd80a9833adcd54922988077193d5b302c7779e7f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE S/E/N bedroll textures and Core definition/render metadata; use flat cardinal map convention without copied pillow, patches or behavior.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/source-packet.json", "sha256": "6f14b7f057865e25a5111595ea9d45c78286de96ae5a63ede6ba40623c6019fb"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/source-reference-camera-comparison.png", "sha256": "d526bdf7877cb692595c2eadd80a9833adcd54922988077193d5b302c7779e7f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / construct_faithful_shape / PASS: Rigidly reorient original editable shape, selected source material, full coverage and folded-end ownership together at common scale, with explicit common pivot and margin.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/source-packet.json", "sha256": "6f14b7f057865e25a5111595ea9d45c78286de96ae5a63ede6ba40623c6019fb"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/construct-cardinal-views.py", "sha256": "4ea5ec270b4c2561d0f32e655eebe505fe613d34b871fbe28f15f43de5789d7e"}, {"path": "art/conversion/scn-bedroll/v2/rigid-view-transforms.json", "sha256": "a725a774cd0b97daaada17bf36a7bec747654c29d6aa3b83207cab3ee700b3bc"}, {"path": "art/conversion/scn-bedroll/v2/manual-selected-cardinal-comparison.png", "sha256": "5135f691a3338521c8b260400e9c2403bf04b7166f38d9a21f2e201c87c966c7"}, {"path": "art/conversion/scn-bedroll/v2/manual-structural-review.json", "sha256": "0cf91df96c451fc6efcf167ebeeecc874613e72d8e62122ca3638db20fdef1dc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / create_front_side_back_furniture_views / PASS: Compose selected south with cardinal east/north; author west by explicit same-object rotation to preserve asymmetric tie tails. No thin side elevation or independent bounds fitting.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/rigid-view-transforms.json", "sha256": "a725a774cd0b97daaada17bf36a7bec747654c29d6aa3b83207cab3ee700b3bc"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/front-guided-turnaround.png", "sha256": "bf0f6e69706c50d851272611407c5adb47d32bf6bd6e60d6ed482220e064a96c"}, {"path": "art/conversion/scn-bedroll/v2/selected-west-context.png", "sha256": "a5fd23a3bb1bf0e8ba7c4b502cb7327a662ba5adcb30728321418263cf16e6b9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen composed-view refinement, guided by retained selected front and actual directional reference; inspect first new refinement before extraction.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/front-guided-turnaround.png", "sha256": "bf0f6e69706c50d851272611407c5adb47d32bf6bd6e60d6ed482220e064a96c"}, {"path": "art/conversion/scn-bedroll/v2/turnaround-prompt.txt", "sha256": "c8c28cdbf71522347e2591ff59905078bdb69f79da00b9a71eaff8298b36f5c7"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/refined-turnaround-raw.png", "sha256": "7839d4d44553e31cbf155e29a26216029c458813632b830835610211f1a311cd"}, {"path": "art/conversion/scn-bedroll/v2/first-structural-review.json", "sha256": "f4df13499995acafe267b75dc08b6698d5e713f1c878c9b01d66ad23f08eb859"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-bedroll/v2/turnaround-prompt.txt", "sha256": "c8c28cdbf71522347e2591ff59905078bdb69f79da00b9a71eaff8298b36f5c7"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-368ce1b2-c6e0-4dfa-acbd-ec682e689b30.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-bedroll\\v2\\front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_east.png"]}}
+
+- 2026-10-20T19:09:51.143068+00:00 / extract_register_color_coverage / PASS: Patch generative drift by selecting material into exact reoriented alpha/ownership, retaining old dark ink. Explicit west rotates selected south material; same-source body/edge fallback counts disclosed. No AI isolation or new geometry.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/refined-turnaround-raw.png", "sha256": "7839d4d44553e31cbf155e29a26216029c458813632b830835610211f1a311cd"}, {"path": "art/conversion/scn-bedroll/v2/first-structural-review.json", "sha256": "f4df13499995acafe267b75dc08b6698d5e713f1c878c9b01d66ad23f08eb859"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/register-bedroll.py", "sha256": "7d43a588eaa631617edf1fc6b11a116f2b4a4dfd2db528f3a1058740be3ff7c4"}, {"path": "art/conversion/scn-bedroll/v2/registered/model.json", "sha256": "7470de0aeaeba253027633c76c2bd7931587bf73c616e777814ab2012c09bac1"}, {"path": "art/conversion/scn-bedroll/v2/registered/registration-decisions.json", "sha256": "ba43f6f95a14a284d784d1c49c1d398fd6cc9d4ac1be567c9bf821d1e8652c0a"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-neutral.png", "sha256": "2e627e94cd4872a61f07139ec5cf6fd0be52a0c5accfce4746366b39d146dc9c"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-detail.png", "sha256": "a8fda7f99b9a7a7551c7943837e45608e68504559b0380f92b004598e22640e4"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-coverage.png", "sha256": "65325fa33e5a882e390463d506a02dfd09dfe293df8e30471ee32e0d646ca6c4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed source tile, not a new packed/unpacked or occupied-bed state. Extra views remain authored and unbound.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/source-packet.json", "sha256": "6f14b7f057865e25a5111595ea9d45c78286de96ae5a63ede6ba40623c6019fb"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/registered/model.json", "sha256": "7470de0aeaeba253027633c76c2bd7931587bf73c616e777814ab2012c09bac1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Review full four-view bedroll authoring at enlarged and24/36/48extended-frame sizes, checking source identity, fold/ties, neutral roles, rigid scale/pivot and native palette.
+  Review: Reviewed source description/blueprint, actual original mask and palette, VTE directional textures with Core Bedroll Graphic_Multi/drawSize/footprint, manual rigid reorientation of the source design, selected-front-guided composed refinement, structural review before extraction, same-material selection into fixed alpha, independent folded-end tint and intended-size views. Flat bedding retains its source soft irregularity while long axis follows cardinal facing. No shear, local mesh or finished-view narrowing. Explicit west preserves asymmetric ties. Common expanded frame/mapping is recorded. Fixed native tile, sleeping/takeable/non-solid behavior and actual extra-view/physical placement acceptance stay unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/registered/model.json", "sha256": "7470de0aeaeba253027633c76c2bd7931587bf73c616e777814ab2012c09bac1"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v2/registered/all-views-native.png", "sha256": "d46cec3618492f6e617d15b177f8cafcf0273b82963f1eed2d2b2e54710e06d7"}, {"path": "art/conversion/scn-bedroll/v2/registered/authoring-review.json", "sha256": "dbfa56a1dfa54f9d0d4bc49ece30da032e421f4e924c612ffa3e9eb97060cde7"}, {"path": "art/conversion/scn-bedroll/v2/artifact-manifest.json", "sha256": "142e3a7ed7352c18e96dee432680637f1ff30da739bc66f415f8f4fb3e78a62d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:09:51.143068+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep takeability, non-solidity, sleep behavior, exact physical mapping and extra-view activation behind full-set generation gate.
+  Review: No game/harness or runtime code change. Entry remains UNFINISHED pending native acceptance.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/registered/model.json", "sha256": "7470de0aeaeba253027633c76c2bd7931587bf73c616e777814ab2012c09bac1"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-BOOK-TABLE: Book Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4383,7 +4437,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/book-table-body.png](../art/village/scenery/book-table-body.png), [art/village/scenery/book-table-detail.png](../art/village/scenery/book-table-detail.png).
 
-Current step: not started. Process-log events: 10.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 10.
 
 - 2026-10-20T07:06:17.740223+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Book Table/Furniture definitions, exact original tile/hash, puzzle-box description and native w/W drawer/top roles.
   Review: The source has a broad shallow top, two horizontal drawer fronts, low rail and short feet. No visible books/papers are established. Direct Furniture inheritance means the ordinary Table empty/full state tags do not apply; real inventory remains native.

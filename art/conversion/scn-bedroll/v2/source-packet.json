@@ -1,0 +1,177 @@
+{
+  "entry": "SCN-BEDROLL",
+  "identity": "Bedroll -> Furniture",
+  "description": "A goat wool bed fastened with canvas ties.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Bedroll": "<object Name=\"Bedroll\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"bedroll\" ColorString=\"&amp;w\" RenderString=\"169\" Occluding=\"false\" RenderIfDark=\"true\" Tile=\"Items/sw_bedroll.bmp\" DetailColor=\"y\" />\n    <part Name=\"Physics\" Weight=\"4\" Takeable=\"true\" Solid=\"false\" />\n    <part Name=\"Description\" Short=\"A goat wool bed fastened with canvas ties.\" />\n    <part Name=\"Bed\" />\n\t\t<stag Name=\"Sleep\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\bedroll-mask.png",
+    "sha256": "47bdcea3a7f3c0c121ae3e8a9f2ac78feb0732dd29bc6d2b9e852d4539653393",
+    "tile": "Items/sw_bedroll.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9297,
+    "atlas_id": 185,
+    "rect": [
+      864,
+      234,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Source goat-wool body, rounded lower end, pale folded/rolled upper end and canvas fastening retained. Replace diagonal map-plane orientation with cardinal axes by one rigid transform per complete view, not a new mattress design.",
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Main wool bed/canvas fastening receive w; the source pale upper folded end receives y. Cyan during authoring only marks the latter region; final production layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_south.png",
+    "sha256": "378532349cd9fbd57ea13d4d7debf16a03482409262a2049868fcdea04922716",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Bedroll_south supplies wool/fabric padding, restrained seams and clean contour shading. Its pillow, straight footprint, large repaired patches and four donor facings are not copied."
+  },
+  "construction": "Original editable source geometry rigidly reoriented for manual comparison. Previously selected front refinement and explicit alpha/ownership are reoriented by the identical source-unit mapping. Preserve irregular fold/ties and material; final composed refinement is material-only.",
+  "native_state": "One fixed tile, takeable4-weight non-solid furniture with native Bed interaction. It does not inherit BaseBed/mounted solidity or the donor sleeping-bag behavior. No source occupied/packed tile switch is declared.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "authoring_extent": [
+      24,
+      24
+    ],
+    "manual_canvas": [
+      768,
+      768
+    ],
+    "recipient_canvas": [
+      384,
+      256
+    ],
+    "source_cell_offset": [
+      4,
+      0
+    ],
+    "native_original_anchor": [
+      8,
+      16
+    ],
+    "authored_source_anchor": [
+      12,
+      16
+    ],
+    "object_rotation_center": [
+      12,
+      13
+    ],
+    "rule": "Common24x24authoring extent and original16x24cell mapping, with4units side margin for rotated length. All parts/masks share rigid pose transform. Recipient384x256keeps native source-unit sampling; physical-frame activation pending."
+  },
+  "native_acceptance": "Pending full-set generation gate; fixed source tile, takeable/non-solid sleep state and expanded-frame/extra-view placement remain unfinished.",
+  "recorded_at": "2026-10-20T19:06:12.256769+00:00",
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_south.png",
+        "sha256": "378532349cd9fbd57ea13d4d7debf16a03482409262a2049868fcdea04922716",
+        "frame": [
+          128,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          256
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_east.png",
+        "sha256": "a1dafbea1a41367aa99e69d8831c83eb9973495dbd13f644f90601ce5bf57e6d",
+        "frame": [
+          256,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          128
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_north.png",
+        "sha256": "7bb78db0841845e8a8d8af9736f6f6940fc7223577ff0a5efcdd25786f349be4",
+        "frame": [
+          128,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          256
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_Multi",
+    "shader": "CutoutComplex",
+    "draw_size": [
+      1,
+      2
+    ],
+    "footprint": [
+      1,
+      2
+    ],
+    "role": "Actual VTE Bedroll directional paths and Core definition show flat map bedding, broad side footprint and restrained padded material. Texture margins and differing frame orientations are recorded. No pillow, repaired patches, donor physical footprint or caravan mechanics copied."
+  },
+  "camera": {
+    "contract": "Flat map-plane bedding with shallow drawn fold relief; straight cardinal long axis. Rotate whole selected design and all masks rigidly. No engineering end elevation, yaw, shear or independent part/bounds centering.",
+    "selected_front": {
+      "path": "art/conversion/scn-bedroll/v1/registered/neutral-master.png",
+      "sha256": "e4b11da8602c847767d56fa723c6b530a263657be43b0c000fabfa90c3249407"
+    },
+    "source_fold_centroid": [
+      707.1730830360611,
+      516.4154805213153
+    ],
+    "source_body_centroid": [
+      404.456318196432,
+      846.3263094699132
+    ],
+    "source_rotation_pivot": [
+      555.8147006162466,
+      681.3708949956142
+    ],
+    "target_rotation_pivot": [
+      384.0,
+      416.0
+    ],
+    "south_rotation_degrees": -42.53860486508593,
+    "physical_scale": "Old1024x1536master=64pixels per source unit; new768x768extent=32pixels per unit. Exactly0.5source raster scale; rigid orientation only.",
+    "west": "Explicit +90degree orientation of same asymmetric tie design; not mirrored east."
+  }
+}
