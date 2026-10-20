@@ -1,0 +1,83 @@
+{
+  "entry": "SCN-METAL-WORKBENCH",
+  "kind": "inventory_state_layered_furniture",
+  "blueprint": "Metal Workbench",
+  "source": {
+    "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+    "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+  },
+  "shared_base": {
+    "path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png",
+    "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"
+  },
+  "states": {
+    "empty": {
+      "native_tile": "Items/sw_table_metal.bmp",
+      "primary": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png",
+        "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/empty-detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/empty-coverage.png",
+        "sha256": "a22133fffc97309c96d73a90e7c1b8f06e7c34dc27b17679b730dc39488614e8"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/empty-detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      }
+    },
+    "occupied": {
+      "native_tile": "Items/sw_table_metal_full.bmp",
+      "primary": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-primary-neutral.png",
+        "sha256": "4acff6eed64310f9938b578f4518322adf2c37bf6ef2c9a937270d0da007b6e6"
+      },
+      "detail": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png",
+        "sha256": "f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-coverage.png",
+        "sha256": "58a7d53f6453a869fe05da18c39bd80913e091e0da39974986cbd766a579e785"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-coverage.png",
+        "sha256": "4fa70c1f77c664da432ca86362668b94549f0270b431a185d7b3d5c67f6798e8"
+      }
+    }
+  },
+  "camera": {
+    "facing": "south/front",
+    "projection": "Parallel horizontal/vertical tabletop edges, vertical front supports, no yaw or converging depth. Same camera across states."
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536source frame maps once to256square. Occupied overlay stays in actual generated frame; unchanged selected empty base is reused. No bbox fitting or independent centering."
+  },
+  "palette": {
+    "primary": "Native c across all steel, including edge highlights",
+    "empty_detail": "C with no occupied detail coverage",
+    "occupied_detail": "Actual native chosen C/w/y/W on stock only; sample previews do not choose or reroll state"
+  },
+  "state_owner": "Native Inventory determines EmptyTile/FullTile and independent FullDetailColor. Source marker is stock indication, not identified inventory or new crafting gameplay.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-METAL-WORKBENCH",
+  "active_entry": "SCN-CANVAS-FOLDING-CHAIR",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -7235,8 +7235,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "construct_faithful_shape",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -8006,28 +8006,282 @@
           ],
           "review": "Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.150125+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Reuse actual named donor south camera",
+          "action": "Reused and inspected the recorded VFE SquareChair/Chair_south reference as the direction convention for the correction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v1/source-packet.json",
+              "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/source-packet.json",
+              "sha256": "748cbc070d02e57735b9efa982b02233e950d4f877c4499943594a795cb4e251"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/camera-construction-comparison.png",
+              "sha256": "d0bd5973496f22189cb73be917c6e3c9097326e3350fa182b17ec6c8f5e7797c"
+            }
+          ],
+          "review": "Actual donor south is straight-facing. Original source oblique footprint is not copied; Qud nailed-plank identity, tall slatted back, hard seat and w/y palette remain authoritative. Donor upholstery/layout/mechanics are not copied.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.151270+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable cardinal Chair construction",
+          "action": "Reconstructed the back, rails, two inner slats, hard plank seat and source-like supports in straight south view.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/source-packet.json",
+              "sha256": "748cbc070d02e57735b9efa982b02233e950d4f877c4499943594a795cb4e251"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/construct-cardinal.py",
+              "sha256": "0e1a03fe560c5962ac1b9c8306b31ed0e38cfdb06cdcd4b9ab55537dd641e175"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-front.svg",
+              "sha256": "fe15b286a459ca7686959a3d6fb5d63768878e91364767af17ede462d3c3a8dd"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-front.png",
+              "sha256": "d3f60d7823f526689f3bbe78ccb09ca4cc64d352b3aa2cbc932efcf191fb4869"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-frame.svg",
+              "sha256": "96985cf7b6d83fc916879a5fb803a40bfbe3bbdbf9b29b7b734412e6be141fec"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-frame.png",
+              "sha256": "d8e65f7f612d61b8d7ccda0839566f777925736ce09d9401f21fe11636d7d12b"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-seat.svg",
+              "sha256": "f4156bd27acea0344bab9d5c45512c75d34bdffd1c03c57b1495c95f7fb93528"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-seat.png",
+              "sha256": "7609c4c01a22f8f2a7b18b71977cef66508c2bcfa49a54a60a347a56b81f1362"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/camera-construction-comparison.png",
+              "sha256": "d0bd5973496f22189cb73be917c6e3c9097326e3350fa182b17ec6c8f5e7797c"
+            }
+          ],
+          "review": "Viewed rejected/new/donor comparison. Seat boundaries are parallel horizontal/vertical, back rails horizontal, posts/supports vertical. Rear support overlap is authored and not a claim of two-legged native anatomy. No canvas, upholstery, armrests or new support splay.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.153181+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "One native fixed tile under corrected presentation",
+          "action": "Retained one actual Chair tile and native sitting behavior; no facing selector or occupied graphics are fabricated.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/source-packet.json",
+              "sha256": "748cbc070d02e57735b9efa982b02233e950d4f877c4499943594a795cb4e251"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-front.png",
+              "sha256": "d3f60d7823f526689f3bbe78ccb09ca4cc64d352b3aa2cbc932efcf191fb4869"
+            }
+          ],
+          "review": "Source declares no native cardinal rotation or alternative occupied tile. New camera is an art convention, not new game state. Existing physics/cover/rare animated fallback remain native.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.158225+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Actual corrected cardinal Chair refinement",
+          "action": "Performed one built-in ImageGen refinement from the corrected construction and actual named donor Chair_south.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/source-packet.json",
+              "sha256": "748cbc070d02e57735b9efa982b02233e950d4f877c4499943594a795cb4e251"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/constructed-front.png",
+              "sha256": "d3f60d7823f526689f3bbe78ccb09ca4cc64d352b3aa2cbc932efcf191fb4869"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/refine-front-prompt.txt",
+              "sha256": "d3cae9f51e3bd7472de5cf697f4aaa7e88664fff9416bd94215f53374cfb0c00"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/refined-front.png",
+              "sha256": "018bcbfab7ebf050c009ea0eeaf8de963dba425fca99decdc9697593827bb543"
+            }
+          ],
+          "review": "Viewed actual saved generation. Straight-facing back/supports and rectangular seat stay cardinal. Grain/nails support hard wooden construction; cyan is only seat ownership. No oblique camera or upholstered/canvas seat is accepted.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-chair/v2/refine-front-prompt.txt",
+            "sha256": "d3cae9f51e3bd7472de5cf697f4aaa7e88664fff9416bd94215f53374cfb0c00"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-7c572814-8da3-4b1c-a958-2151cd725e5b.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-chair/v2/constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/Things/Seating/SquareChair/Chair_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.161813+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral frame and complete hard-seat ownership",
+          "action": "Neutralized source pigments, excluded detached alpha glow, retained open back/under-seat spaces and separated seat including bevel/seam highlights.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/refined-front.png",
+              "sha256": "018bcbfab7ebf050c009ea0eeaf8de963dba425fca99decdc9697593827bb543"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/register-chair.py",
+              "sha256": "908294fb0fb17ea96701f220579dab4116e44e9f6398831d970cd16d7273dc64"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/coverage.png",
+              "sha256": "0fe70379c6299578c45b8f63cb49aa5dfc4e8833f357ab4f8d0c028c7b783b9f"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/detail-coverage.png",
+              "sha256": "2dfa7f37a304dbcd91bac1a14915c639e332ae84a2ea870fe0d7d227a1670a2d"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/detail-neutral.png",
+              "sha256": "c17bf16825f41977ab92c6877990d590579846af84f973bd742f345f6b9625df"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/model.json",
+              "sha256": "fa748e0d3851f655a659d150bf5ad2602d7102f826b5f554eaecdb1157d242fc"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/native-w-y-preview.png",
+              "sha256": "3d2468d63cb645eef5e6688f5720d2d132912c1b0c256d82fefe87f4c67f7ea2"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/neutral-master.png",
+              "sha256": "368335af038e86cfd4df80a5b5816cef6d1a450647d1506ae83f6bf3b6e17170"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/opaque-structure-mask.png",
+              "sha256": "292a7b7afc13a6861dcd803c79fb38baa597b3567ba213e68b778b6e4a0d3d3b"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/primary-neutral.png",
+              "sha256": "480e7cb806e7b5a6178680b0c33e10a92de08b1cbeb2f2f7955d6f13c1cb113e"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/registration-comparison.png",
+              "sha256": "6cc2f896e841b91691537fae3c3e1a378111e557c3c26dbbf706f066368f2547"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/registration-decisions.json",
+              "sha256": "6c2722639ca7c20ac88faf68676484cca3ebd6cdffd1e070f149bcbe7120816e"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/seat-color-seed.png",
+              "sha256": "2e22fa9f5002a5ee1a76b65d5103b7e217d438edb6b7ffa94b15171e2d309b53"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/seat-neutral-master.png",
+              "sha256": "62681f2708b481131d01738b4995e80d75b417843bdb9be7e13d0b6c9c8916aa"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/seat-ownership-mask.png",
+              "sha256": "550cfc449ca02019af13b569a1fa9df14b6bb815ed6eb58e542c2f0797d40bc3"
+            },
+            {
+              "path": "art/conversion/scn-chair/v2/registered/selected-edge-mask.png",
+              "sha256": "25c11af87982c18ddce94582c10ba1d205c12ec9b6acf4f5d25dd499860d4324"
+            }
+          ],
+          "review": "Inspected isolated seat and whole neutral/native recomposition. Frame/nails/supports remain primary w; complete hard seat follows y. Both selected layers are equal RGB and share one full-cell mapping. No independent seat/back centering or three-quarter geometry remains.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.167935+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Corrected cardinal frame and hard material at intended size",
+          "action": "Inspected the selected enlarged and16x24/24x36/32x48neutral, isolated seat and native w/y views.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/registered/model.json",
+              "sha256": "fa748e0d3851f655a659d150bf5ad2602d7102f826b5f554eaecdb1157d242fc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/registered/registration-comparison.png",
+              "sha256": "6cc2f896e841b91691537fae3c3e1a378111e557c3c26dbbf706f066368f2547"
+            }
+          ],
+          "review": "Camera issue is resolved in authoring: parallel seat edges, horizontal back rails and vertical posts/supports. Tall open slatted-back source identity remains. This is not native sitting, visibility, physics or animated fallback acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:46:28.168300+00:00",
+          "step": "native_state_review",
+          "phase": "Native seating and physical acceptance remain deferred",
+          "action": "Kept native sitting/cover/physics/non-occlusion and rare animated/custom fallback behind the all-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v2/registered/model.json",
+              "sha256": "fa748e0d3851f655a659d150bf5ad2602d7102f826b5f554eaecdb1157d242fc"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-chair/v1/registered/model.json",
-          "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"
+          "path": "art/conversion/scn-chair/v2/registered/model.json",
+          "sha256": "fa748e0d3851f655a659d150bf5ad2602d7102f826b5f554eaecdb1157d242fc"
         },
         "plate": {
-          "path": "art/conversion/scn-chair/v1/registered/registration-comparison.png",
-          "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"
+          "path": "art/conversion/scn-chair/v2/registered/registration-comparison.png",
+          "sha256": "6cc2f896e841b91691537fae3c3e1a378111e557c3c26dbbf706f066368f2547"
         }
       },
-      "registration_summary": "Selected marsh-dweller plank chair retains the tall source slatted back, hard angled wooden seat and straight supports. Production frame/seat layers are neutral; preview applies native w/y. Pale seat tint does not imply fabric. Source metadata, actual installed VFE contour reference, editable construction, refinement and hard-seat extraction are recorded below. Native seating/cover/visibility and rare animated fallback acceptance remain pending.",
+      "registration_summary": "Corrected straight SOUTH Chair retains Qud tall slatted back, nailed right-angle planks and hard seat. Back/seat/supports share one cardinal frame; parallel boundaries replace the rejected oblique source camera. Neutral frame and complete hard-seat layers support native w/y. Pale seat color is a tint, not fabric. Original camera draft and rejection stay in history. Native sitting/cover/physics/visibility and rare animated fallback acceptance remain pending.",
       "camera_review": {
-        "status": "REQUIRES REWORK",
+        "status": "RESOLVED IN AUTHORING",
         "classification": "OBLIQUE_OR_DIAGONAL",
-        "reason": "Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south.",
+        "reason": "Corrected south view inspected against actual named donor: straight back/supports and rectangular seat, without oblique yaw. Source design/palette and fixed native state remain.",
         "audit": {
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        },
+        "resolution": {
+          "model": {
+            "path": "art/conversion/scn-chair/v2/registered/model.json",
+            "sha256": "fa748e0d3851f655a659d150bf5ad2602d7102f826b5f554eaecdb1157d242fc"
+          },
+          "plate": {
+            "path": "art/conversion/scn-chair/v2/registered/registration-comparison.png",
+            "sha256": "6cc2f896e841b91691537fae3c3e1a378111e557c3c26dbbf706f066368f2547"
+          }
         }
       }
     },
@@ -10896,8 +11150,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "construct_faithful_shape",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -11118,17 +11372,341 @@
               "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Production/TableMachining_south.png"
             ]
           }
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.139176+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Corrected cardinal bench and stock construction",
+          "action": "Reconstructed source furniture in a straight south camera with a rectangular parallel-edged tabletop and front-facing stock component.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+              "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+              "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/construct-cardinal.py",
+              "sha256": "a895d0a7f0828af2e5ea22d81391f3606e8ea52a1f61fefde13fb97f77804de7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-empty.svg",
+              "sha256": "f59eea2ad18992f301883cee67ca02d5bdbf5502c6cc76a4fa13caa95a54b26e"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-empty.png",
+              "sha256": "c10c729202fa8b26cc706102f0fa2a03b1158c6d4fa5ad64ea40ef8b97b7cfc1"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-occupied.svg",
+              "sha256": "693c4ff1a84918d9d36839b8bcfda4a364a7925dec7fd2c1a24e6cd4450e8c16"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-occupied.png",
+              "sha256": "575345a90de6d376a6cc3066e47586482c985a9573e06215b7110974c192dee7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-stock.svg",
+              "sha256": "e9dd7de1300bd9cb3a37291c44add11ee96dda1e08669b1a374cb861b9455cd2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-stock.png",
+              "sha256": "a7d18342033dd45c7d1649177e7cadf15fae1d40be1b5bab2832722736775a43"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/camera-construction-comparison.png",
+              "sha256": "053ddba7fff344db37945b4f14058e6d5ca02b90019cb5cf02a2a224375e0c1d"
+            }
+          ],
+          "review": "Inspected corrected-versus-rejected comparison. Source chrome-steel identity, broad perforated supports, apron, stock marker and native colors remain; old tapered camera is not reused. No native four-way rotation or mechanic is added.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.140215+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Two native inventory states in one corrected camera",
+          "action": "Retained actual empty/occupied tile identities and source-shaped marker over a common full-cell frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+              "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-empty.png",
+              "sha256": "c10c729202fa8b26cc706102f0fa2a03b1158c6d4fa5ad64ea40ef8b97b7cfc1"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-occupied.png",
+              "sha256": "575345a90de6d376a6cc3066e47586482c985a9573e06215b7110974c192dee7"
+            }
+          ],
+          "review": "Native Inventory chooses actual stock tile and independent occupied color C/w/y/W. No alternate physical camera or rescale is attached to stock state.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.141943+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Actual cardinal empty refinement",
+          "action": "Performed one built-in ImageGen call for this source state using the corrected construction and recorded references.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+              "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-empty.png",
+              "sha256": "c10c729202fa8b26cc706102f0fa2a03b1158c6d4fa5ad64ea40ef8b97b7cfc1"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refine-empty-prompt.txt",
+              "sha256": "13fd7fe4952dd0918d38d89c93ebf4555730a6ef9aaed353f0b7dd8bd81e96f4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refined-empty.png",
+              "sha256": "c414834bfa6398b80d03bfcbc93113678fddbc5aee90996384d1a0c951aa7351"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Tabletop edges remain parallel/horizontal/vertical and supports straight, without a three-quarter camera. Empty steel has no stock; occupied adds only the rectangular slotted marker and small mark. Raw halo/colors are handled in extraction, not accepted as opaque geometry.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-metal-workbench/v2/refine-empty-prompt.txt",
+            "sha256": "13fd7fe4952dd0918d38d89c93ebf4555730a6ef9aaed353f0b7dd8bd81e96f4"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-9ed388c5-4e13-4271-8b94-46b962e08e8d.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-metal-workbench/v2/constructed-empty.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Production/TableMachining_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.144113+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Actual cardinal occupied refinement",
+          "action": "Performed one built-in ImageGen call for this source state using the corrected construction and recorded references.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+              "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/constructed-occupied.png",
+              "sha256": "575345a90de6d376a6cc3066e47586482c985a9573e06215b7110974c192dee7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refine-occupied-prompt.txt",
+              "sha256": "1ea984fccc52757cb551bf3fdfb7595068043313b2e05dd88d14a2bad6473975"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refined-empty.png",
+              "sha256": "c414834bfa6398b80d03bfcbc93113678fddbc5aee90996384d1a0c951aa7351"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refined-occupied.png",
+              "sha256": "9d420864226a9fa79695664e208f601477d1769b0f90f49d1cf74b0d7f271d09"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Tabletop edges remain parallel/horizontal/vertical and supports straight, without a three-quarter camera. Empty steel has no stock; occupied adds only the rectangular slotted marker and small mark. Raw halo/colors are handled in extraction, not accepted as opaque geometry.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-metal-workbench/v2/refine-occupied-prompt.txt",
+            "sha256": "1ea984fccc52757cb551bf3fdfb7595068043313b2e05dd88d14a2bad6473975"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-44175771-e3aa-4030-84c5-b327d141154f.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-metal-workbench/v2/constructed-occupied.png",
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-metal-workbench/v2/refined-empty.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.146236+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "One unchanged neutral bench and separately extracted stock",
+          "action": "Neutralized empty steel; extracted two actual gold stock components by local row-span ownership clipped to actual alpha, then recomposed over the unchanged selected base.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refined-empty.png",
+              "sha256": "c414834bfa6398b80d03bfcbc93113678fddbc5aee90996384d1a0c951aa7351"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/refined-occupied.png",
+              "sha256": "9d420864226a9fa79695664e208f601477d1769b0f90f49d1cf74b0d7f271d09"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/register-states.py",
+              "sha256": "8a9488ed88568c8418ab80d52d0da3cc522ed38903ef5f44a3c3e86123e844c1"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/base-neutral-master.png",
+              "sha256": "7d380b4843bd8279b89f12bf9d90471f5a623549bff68fcdcedf0e26f70f8367"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/base-opaque-structure-mask.png",
+              "sha256": "dee08a1d8bebc9966f079e32d05e9b91350c09894058c62f8b787e066181a92d"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/base-primary-neutral.png",
+              "sha256": "96b1eba350dbef35acec19bd06dad0fefcae9901e2c7833163f8c69e07d82b1d"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/base-selected-edge-mask.png",
+              "sha256": "709eefb85f920dc4aa8f979682b5d4da326d1f20cfce7e3d2ce5ee8182cfd683"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/empty-coverage.png",
+              "sha256": "a22133fffc97309c96d73a90e7c1b8f06e7c34dc27b17679b730dc39488614e8"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/empty-detail-coverage.png",
+              "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/empty-detail-neutral.png",
+              "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/empty-native-c-preview.png",
+              "sha256": "b233b0ba59a02f11fa31a48cffccd9727f0ed987b6ab154bc76fa5fae788cfc9"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/model.json",
+              "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-coverage.png",
+              "sha256": "58a7d53f6453a869fe05da18c39bd80913e091e0da39974986cbd766a579e785"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-coverage.png",
+              "sha256": "4fa70c1f77c664da432ca86362668b94549f0270b431a185d7b3d5c67f6798e8"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-detail-neutral.png",
+              "sha256": "f405a8cbcc66bd4353996442fc7db3ecf4e15eb806aa29c23f0f7713d97c11e2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-C-preview.png",
+              "sha256": "05da475a06c3d05b5a19ea2d03cd0b8ce1ee3775490c468171febbc1f66a130b"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-w-preview.png",
+              "sha256": "b8170b093582b75430724601735941a44b8d9bd42f0114cc3af8f25061989db2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-native-c-y-preview.png",
+              "sha256": "0ea4c5d686313e2f4dc2c0c519ddb7ff2b32ec2344608d4a15d742e8e2cb8e61"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/occupied-primary-neutral.png",
+              "sha256": "4acff6eed64310f9938b578f4518322adf2c37bf6ef2c9a937270d0da007b6e6"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png",
+              "sha256": "ac6c3e5ca1176fd8840327118ee3f274a0873aa653da2076e38a86de4345b6db"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/registration-decisions.json",
+              "sha256": "331b3e5bbbc09ba247c0ecf3990ca4b6749b43a90b31f3b344613c7477eb2bab"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/stock-neutral-master.png",
+              "sha256": "fabb2fca04a6acc68ad9e98348a5d8072335341d41d30aa2f5e32df35a674490"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/stock-surface-ownership-mask.png",
+              "sha256": "c4bb7c0fa7dce7c23d5bc0f43d8b65b48cd69163f9142573599460f8cb900c16"
+            }
+          ],
+          "review": "Inspected complete and isolated stock plate. Support apertures and marker handle remain alpha openings. No whole-bench repaint between states, foreign gray tabletop strip in stock, baked gold or detail tint on empty metal highlights. Full frame is mapped once without individual centering.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.149058+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal frame, state continuity and Qud palette review",
+          "action": "Inspected enlarged and16x24/24x36/32x48neutral, isolated stock, empty c and occupied c+C/c+W views.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/model.json",
+              "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png",
+              "sha256": "ac6c3e5ca1176fd8840327118ee3f274a0873aa653da2076e38a86de4345b6db"
+            }
+          ],
+          "review": "Both states use the same bench pixels and camera. Only source stock is added; native C/w/y/W belongs to stock while c owns steel. Camera correction is resolved in authoring. This does not claim native inventory, physics or visibility acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:42:36.149252+00:00",
+          "step": "native_state_review",
+          "phase": "Native stock, color and visibility acceptance deferred",
+          "action": "Kept source inventory transitions, actual detail selection, physics, visibility and rare animated/custom fallback behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v2/registered/model.json",
+              "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer change was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
       "camera_review": {
-        "status": "REQUIRES REVIEW",
+        "status": "RESOLVED IN AUTHORING",
         "classification": "FRONTAL_DEPTH_REVIEW",
-        "reason": "One uncredited empty-state draft has strong tabletop taper/depth. Resolve its camera before producing occupied refinement. No occupied-state call has been performed.",
+        "reason": "Corrected parallel-edged south camera inspected in both states; shared bench and separate stock keep the frame unchanged.",
         "audit": {
           "path": "evidence/camera-facing-audit.json",
           "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        },
+        "resolution": {
+          "model": {
+            "path": "art/conversion/scn-metal-workbench/v2/registered/model.json",
+            "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"
+          },
+          "plate": {
+            "path": "art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png",
+            "sha256": "ac6c3e5ca1176fd8840327118ee3f274a0873aa653da2076e38a86de4345b6db"
+          }
         }
-      }
+      },
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-metal-workbench/v2/registered/model.json",
+          "sha256": "496cf74ae90781cddb46563eacaee07dd9c48e43b24f60316d51d87f41febbfa"
+        },
+        "plate": {
+          "path": "art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png",
+          "sha256": "ac6c3e5ca1176fd8840327118ee3f274a0873aa653da2076e38a86de4345b6db"
+        }
+      },
+      "registration_summary": "Corrected straight south camera uses parallel tabletop boundaries and vertical perforated supports. Both actual inventory appearances reuse the same neutral bench; the occupied state adds only two separately extracted source stock marks, with a real open handle. Steel follows native c, occupied stock follows actual native C/w/y/W; samples do not choose native state. Earlier tapered proposal remains rejected history. Native stock/color transitions, physics, visibility and rare animated fallback remain pending."
     },
     {
       "id": "SCN-ORNATE-TABLE",
@@ -31196,7 +31774,7 @@
   "validation_gate": "Native/formal integration validation only after every pending conversion is generation-ready; visual correction remains generation work.",
   "baseline_policy": "Reusable unmutated race body first. Derive ordinary age/sex variants; separate clothing and mutation framework. Intrinsic species anatomy stays in the race base.",
   "camera_policy": {
-    "summary": "5 furniture families /8layouts require cardinal reorientation;6more families /9layouts need frontal-depth review. These11entries are withheld from generation-ready credit. Seven selected body families have no clear oblique facing identified. Counts exclude historical drafts; the current Metal Workbench draft is separately flagged.",
+    "summary": "The initial audit identified 5 angled furniture families and 6 frontal-depth review families. Chair is now corrected, leaving 4 angled families / 7 layouts and 6 depth-review families / 9 layouts unresolved. Metal Workbench also completed its separate draft-camera correction. Seven selected body families have no clear oblique facing identified. Historical audit counts remain preserved; current per-entry camera statuses govern readiness.",
     "audit": {
       "path": "evidence/camera-facing-audit.json",
       "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"

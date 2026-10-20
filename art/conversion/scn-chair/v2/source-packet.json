@@ -1,0 +1,81 @@
+{
+  "entry": "SCN-CHAIR",
+  "identity": "Chair -> BaseChair -> Furniture",
+  "description": "Planks of wood are nailed together at right angles in the style of the marsh dwellers.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Chair": "<object Name=\"Chair\" Inherits=\"BaseChair\">\n    <part Name=\"Render\" DisplayName=\"chair\" ColorString=\"&amp;w\" DetailColor=\"y\" Tile=\"Items/sw_chair.bmp\" />\n    <part Name=\"Description\" Short=\"Planks of wood are nailed together at right angles in the style of the marsh dwellers.\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stag Name=\"Basic\" />\n    <tag Name=\"HangingSupport\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "BaseChair": "<object Name=\"BaseChair\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[chair]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"190\" Tile=\"Items/sw_chair.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"20\" Takeable=\"false\" />   \n    <part Name=\"Chair\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Short-Legged,Straight-Backed,Sturdy,Three-Legged\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Backs,Lumbar,the Tired\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Chair\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"chair\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"60\" />\n    <stag Name=\"Seating\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sit on\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeingSatOn\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\chair-mask.png",
+    "sha256": "98bc3882c4b2387cfb3f0bd3c431fc344cd61b424eb6a20197a66e61929bd1f2",
+    "tile": "Items/sw_chair.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9399,
+    "atlas_id": 185,
+    "rect": [
+      342,
+      208,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Tall upper-left rectangular slatted back, right-angle plank joints and hard seat angled down-right. Three source-visible support extents remain: long front-left, front-right and shorter rear-left; rear-right structure is occluded by the seat. Source back/seat proportions, gaps and footprint are authoritative.",
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Back/rails/supports receive primary w; the hard wooden seat surface receives detail y. This is a color role, not evidence that the seat is cloth. Cyan seat is only an extraction aid; final layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Furniture Expanded",
+    "workshop_id": "1718190143",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_south.png",
+    "sha256": "16fb84c463a13b4c7a2dc4ef9485df79d35f9049aff7c6712d081db4b3c494c2",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\About\\About.xml",
+    "about_sha256": "2a52a3f81c98268f54889762e98fa90e891db621e359802da0d1ea934f68afda",
+    "role": "Actual installed legacy Things/Seating/SquareChair sprite supplies clean straight-frame contours and restrained bevel shading. It is retained installed reference art, not claimed as the active current VFE definition. Its smooth/padded seat, unslatted rectangular back, donor footprint/facings and gameplay are not copied."
+  },
+  "rejected_reference_note": "VTE DiningChair_south and the previously extracted Core chair were viewed but their round backs/soft seats do not match the source plank structure; neither is selected for this refinement.",
+  "construction": "Source nailed plank chair reconstructed with tall open back, two inner vertical back slats, upper/lower rails, hard horizontal plank seat and two source-like long visible supports. Rear supports overlap/are occluded in this straight-facing authoring, not a claim that native furniture physically has only two legs. Exact hidden joinery remains interpretation. No canvas, upholstery, armrests or curved back.",
+  "native_state": "One fixed native chair tile. BaseChair supplies native Chair interaction,20-weight non-takeable organic furniture, MissileCover10, non-occlusion and rare Animated builder. No source facing selector or occupied tile is declared; rare animated/custom shapes require original fallback.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source-cell mapping for back, hard seat, supports and masks. No independent seat/back/foot bbox centering."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate",
+  "supersedes": {
+    "path": "art/conversion/scn-chair/v1/source-packet.json",
+    "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"
+  },
+  "camera": {
+    "facing": "south/front",
+    "reference": "Actual installed VFE Things/Seating/SquareChair/Chair_south, not its east image or the original Qud diagonal projection.",
+    "projection": "Straight symmetrical back, horizontal rails/seat and vertical supports; only shallow layer shading. No yaw, isometric seat, diagonal footprint or converging side rails."
+  },
+  "source_camera_boundary": "Original Qud art has an oblique hard seat and offset support extents. Preserve its parts/materials/palette in a new cardinal presentation; do not trace its camera or claim source-pixel position is native facing data."
+}

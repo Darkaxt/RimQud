@@ -1,0 +1,42 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/refined-empty.png",
+      "sha256": "c414834bfa6398b80d03bfcbc93113678fddbc5aee90996384d1a0c951aa7351"
+    },
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/refined-occupied.png",
+      "sha256": "9d420864226a9fa79695664e208f601477d1769b0f90f49d1cf74b0d7f271d09"
+    },
+    {
+      "path": "art/conversion/scn-metal-workbench/v2/register-states.py",
+      "sha256": "8a9488ed88568c8418ab80d52d0da3cc522ed38903ef5f44a3c3e86123e844c1"
+    }
+  ],
+  "camera": "Inspected actual saved empty and occupied proposals: rectangular tabletop boundaries and vertical supports remain cardinal. Intrinsic support foot notches and square apertures are not a new perspective.",
+  "alpha": "A>=224structure plus two-pixel allowance retains actual A>=16only near structure, normalizes>=240and clears invisible RGB. Actual support holes and occupied handle center are alpha openings, not colored background RGB.",
+  "stock_extraction": {
+    "method": "Two actual opaque-gold connected components (one slotted upright mark, one small circular mark); per-component row-span ownership includes internal achromatic shading and dark outlines with two-pixel allowance. Clip to actual cleaned alpha, so the slot remains open. No global gold halo or unchanged table surface is extracted.",
+    "core_bounds": [
+      [
+        559,
+        212,
+        742,
+        578
+      ],
+      [
+        454,
+        516,
+        496,
+        559
+      ]
+    ],
+    "core_sizes": [
+      61727,
+      1402
+    ]
+  },
+  "same_base": "Empty master and occupied base are exactly the same selected base file. Only extracted neutral stock is added. Raw occupied bench repaint is ignored.",
+  "palette": "Neutral equal RGB for base and stock; original blue-gray/gold pigments removed. Empty detail layer is transparent because original empty mask has no covered detail pixels.",
+  "native": "This is art generation/registration only. Native inventory transitions, color selection, visibility, physics and rare animated fallback remain pending."
+}

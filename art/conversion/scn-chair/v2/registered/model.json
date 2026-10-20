@@ -1,0 +1,59 @@
+{
+  "entry": "SCN-CHAIR",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Chair",
+  "native_tiles": [
+    "Items/sw_chair.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-chair/v2/source-packet.json",
+    "sha256": "748cbc070d02e57735b9efa982b02233e950d4f877c4499943594a795cb4e251"
+  },
+  "primary": {
+    "path": "art/conversion/scn-chair/v2/registered/primary-neutral.png",
+    "sha256": "480e7cb806e7b5a6178680b0c33e10a92de08b1cbeb2f2f7955d6f13c1cb113e"
+  },
+  "detail": {
+    "path": "art/conversion/scn-chair/v2/registered/detail-neutral.png",
+    "sha256": "c17bf16825f41977ab92c6877990d590579846af84f973bd742f345f6b9625df"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-chair/v2/registered/coverage.png",
+    "sha256": "0fe70379c6299578c45b8f63cb49aa5dfc4e8833f357ab4f8d0c028c7b783b9f"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-chair/v2/registered/detail-coverage.png",
+    "sha256": "2dfa7f37a304dbcd91bac1a14915c639e332ae84a2ea870fe0d7d227a1670a2d"
+  },
+  "camera": {
+    "facing": "south/front",
+    "projection": "Straight back/posts and supports; rectangular hard seat with horizontal/vertical parallel edges. No diagonal footprint, yaw or three-quarter view."
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One entire1024x1536frame maps once to256square for frame, seat, supports and masks. Reconstructed cardinal camera, no separate bbox fitting."
+  },
+  "palette": {
+    "primary": "Native frame/back/support w",
+    "detail": "Native hard plank seat y; tint does not imply cloth",
+    "neutral": "Equal RGB in both production layers; no baked cyan or wood pigment"
+  },
+  "state_owner": "One fixed native furniture tile. Camera correction does not invent facing selection or an occupied graphic.",
+  "native_behavior": "Preserve native sitting,20-weight non-takeable organic furniture, cover/non-occlusion and rare animated/custom native fallback.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

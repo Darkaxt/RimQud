@@ -116,9 +116,11 @@ editable shapes and extraction evidence are in the report. [Hammock states](art/
 · [Bookshelf layouts and stock tints](art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png).
 Mannequin now preserves its wood/fiberglass source forms with neutral shell/stand layers and native randomized detail tint; the uncertain armature interpretation is explicit. [Mannequin palette and ownership](art/conversion/scn-mannequin/v1/registered/registration-comparison.png)
 
-Cardinal-camera correction: five furniture families (eight layouts) need reorientation; six more families (nine layouts) need review of frontal depth. Their generation-ready credit is withdrawn while existing art remains preserved. The seven registered body families use cardinal poses. See the [source-bound camera audit](evidence/camera-facing-audit.json).
+Cardinal-camera correction: Chair now has a straight south construction and refinement, with its tall slatted back and hard seat retained. Metal Workbench also has corrected parallel-edged empty/occupied artwork using one unchanged bench and separate stock. Four angled furniture families (seven layouts) and six frontal-depth families (nine layouts) still need correction/review. Previous art and the [initial source-bound camera audit](evidence/camera-facing-audit.json) remain preserved. The seven registered body families use cardinal poses.
 
-There are now 35 generation-ready entries; Metal Workbench remains active for its camera correction before occupied-state refinement.
+[Corrected Chair](art/conversion/scn-chair/v2/registered/registration-comparison.png) · [Corrected Metal Workbench states](art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png)
+
+There are now 37 generation-ready entries; Canvas Folding Chair is the single active camera correction. Native acceptance still waits for every conversion to finish generation.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

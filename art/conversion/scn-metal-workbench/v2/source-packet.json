@@ -1,0 +1,108 @@
+{
+  "entry": "SCN-METAL-WORKBENCH",
+  "identity": "Metal Workbench -> Metal Table -> Table -> Furniture",
+  "description": "Steel was anointed with liquid chrome, cooled, and beaten into a flat and workable surface.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Metal Workbench": "<object Name=\"Metal Workbench\" Inherits=\"Metal Table\">\n    <part Name=\"Render\" DisplayName=\"metal workbench\" ColorString=\"&amp;c\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Items/sw_table_metal.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n  </object>",
+      "Metal Table": "<object Name=\"Metal Table\" Inherits=\"Table\">\n    <part Name=\"Render\" DisplayName=\"metal table\" ColorString=\"&amp;c\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Items/sw_table_metal.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"100\" Organic=\"false\" />\n    <tag Name=\"EmptyTile\" Value=\"Items/sw_table_metal.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table_metal_full.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,w,y,W\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <part Name=\"Description\" Short=\"Steel was anointed with liquid chrome, cooled, and beaten into a flat and workable surface.\" />\n    <part Name=\"Metal\" />\n  </object>",
+      "Table": "<object Name=\"Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"table\" ColorString=\"&amp;w\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Assets_Content_Textures_Tiles_sw_table.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <tag Name=\"EmptyTile\" Value=\"Assets_Content_Textures_Tiles_sw_table.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table1.bmp,Items/sw_table2.bmp,Items/sw_table3.bmp,Items/sw_table4.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,c,y,W\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_table\" />\n    <part Name=\"Inventory\" />\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"Table\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,the Relaxed\" />\n    <xtagTextFragments Skin=\"glaze\" PoeticFeatures=\"flat surfaces,artfulness,gentle stillness\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <tag Name=\"AutoexploreChest\" />\n    <stag Name=\"Storage\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_states": {
+    "game_assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "states": [
+      {
+        "state": "empty",
+        "tile": "Assets_Content_Textures_Items_sw_table_metal.bmp",
+        "info_id": 10121,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          390,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-metal-workbench-20261020\\empty-mask.png",
+          "sha256": "9d4fef29b069cd1d3a29c22b892eb92e48d2e68cab960c97d6d01aaa624d7aab"
+        }
+      },
+      {
+        "state": "occupied",
+        "tile": "Assets_Content_Textures_Items_sw_table_metal_full.bmp",
+        "info_id": 10122,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          364,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-metal-workbench-20261020\\occupied-mask.png",
+          "sha256": "9f3b816fee423643662b1ca48b3f1cc687be66fe4e2ba1b430dd33cd14eaa6d9"
+        }
+      }
+    ],
+    "selector": "Inventory.CheckEmptyState/CheckNonEmptyState use inherited Metal Table EmptyTile/FullTile and independent detail-color choice."
+  },
+  "source_shape": "Wide flat trapezoidal top over two broad perforated plate supports; occupied tile adds one tall rectangular handled/slotted mark on the right and one small mark on the left. Exact stock-item identity is not established.",
+  "palette": {
+    "primary": "c",
+    "empty_detail": "C",
+    "occupied_detail_choices": [
+      "C",
+      "w",
+      "y",
+      "W"
+    ],
+    "rule": "Actual empty mask contains no covered detail pixels. Whole chrome-steel structure follows primary c, including its highlights. Occupied decorative marker follows native chosen detail. No bright-metal edge is arbitrarily assigned detail."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "package_id": "VanillaExpanded.VTEXE",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_south.png",
+    "sha256": "8f13ea5fbf2409881b155f94c6a1dc30c79cbde6dafc027d0809d42d59071435",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual Vanilla Textures Expanded TableMachining_south supplies readable cold metal contours, shallow plane shading and restrained edge wear only. No machinery, tools, countertop plan, facing system or crafting mechanics are copied."
+  },
+  "construction": "Source parts reconstructed in the locked south camera: rectangular top with parallel edges, straight apron and broad slotted supports joined underneath. Upright slotted stock component stays straight front, with no angled side panel. Exact fine joinery and stock identity remain authored/unknown.",
+  "states": "Inherited Metal Table EmptyTile sw_table_metal.bmp; FullTile sw_table_metal_full.bmp. Inventory.CheckEmptyState/CheckNonEmptyState independently choose comma-expanded tile/detail values. Empty C; occupied C/w/y/W. Do not correlate a new item identity to native color or reroll native state.",
+  "inventory_boundary": "Table Container/Inventory population, non-takeable100-weight inorganic metal furniture, cover and sounds stay native. Stock marker represents the native occupied tile, not actual held inventory, a research bench or imported production functionality. Rare animated/custom cases retain native fallback.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same entire source-cell frame for empty base and occupied component; no independent bbox centering or per-state scaling."
+  },
+  "native_acceptance": "Pending all-conversions-generated gate",
+  "supersedes": {
+    "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+    "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+  },
+  "camera": {
+    "facing": "south/front",
+    "projection": "Fixed shallow orthographic-style cardinal presentation; parallel tabletop boundaries and vertical supports. No yaw, diagonal footprint, converging edges or per-state camera changes.",
+    "reference": "The actual named VTE TableMachining_south graphic provides a cardinal rectangular work-surface convention. Qud trapezoid source contour is reprojected, not copied as a camera.",
+    "identity_boundary": "Retain chrome-steel material, shallow apron, broad perforated supports and source-shaped occupied markers. Camera reconstruction does not change native states or add four-way rotation."
+  }
+}
