@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2",
+  "active_entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -6466,7 +6466,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -6477,9 +6477,7 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "human-female",
         "equipment_key": "wrench@Hand@1",
@@ -6500,7 +6498,254 @@
           "sha256": "9ca108a9cdf5006912647b4d7d432ff509d95037032c98442e73fbf7d607e3d9"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:15:19.173251+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve native armlength metal wrench, actual male Argyve ordinary offhand322/1 and Counterweighted text. Female is compatibility only; native primary y overrides foreground c.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/weapon-metadata.json",
+              "sha256": "7b8129a4798ca3297f761d0b100bffff4189fc9adeb89ae2bffc65fcefc1208a"
+            }
+          ],
+          "review": "Inspected manual SEN context for connected full tool, hooked opening, correct palm-side position and no new body anatomy. Existing source metadata distinguishes actual male offhand from this female compatibility template. First contextual refinement not yet called.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:15:19.174310+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select fixed female baseline, original Qud shape, actual VFE decorative adjustable-wrench reference and explicitly legacy VWE icon; record limits and exact mod metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-references.png",
+              "sha256": "e5d52c551086ac2366ced11dc0574ed3062e946a8852fb4c3f4666cc136e8a14"
+            }
+          ],
+          "review": "Inspected manual SEN context for connected full tool, hooked opening, correct palm-side position and no new body anatomy. Existing source metadata distinguishes actual male offhand from this female compatibility template. First contextual refinement not yet called.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:15:19.174733+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Construct a continuous hooked jaw/neck/shaft with thread detail and lower grip, scaled from armlength description. Compose strict SEN on unchanged original body, preserving offhand depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/prepare-source.py",
+              "sha256": "a0be3ca63aa8e6a6bfb444b7ac1b4ca6f2d613ab2995b31089b92b8f91042fbf"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/canonical-pattern.svg",
+              "sha256": "0951fddc76d58a2c2394fa385e591d2766c530f0c7b3d89a3097612a1013d5d9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/constructed-red-item-context.png",
+              "sha256": "91934b24192a69a3d8bd2a8f520b3cb33da555ab1da950bcad791c0139d1cc3b"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/constructed-neutral-context.png",
+              "sha256": "777ba84a19578fc61743b37b4b0d81ad466601926ee1641bccea6e4d3378fb8f"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/imagegen-prompt.txt",
+              "sha256": "c426d6173ea40d9abe3762098de86063044ce431b54f836d849966270c05eccf"
+            }
+          ],
+          "review": "Inspected manual SEN context for connected full tool, hooked opening, correct palm-side position and no new body anatomy. Existing source metadata distinguishes actual male offhand from this female compatibility template. First contextual refinement not yet called.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:17:42.062702+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One built-in contextual refinement using the manual hooked wrench, Qud original and exact VFE prop style reference; inspect structural construction before material extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/imagegen-prompt.txt",
+              "sha256": "c426d6173ea40d9abe3762098de86063044ce431b54f836d849966270c05eccf"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/constructed-red-item-context.png",
+              "sha256": "91934b24192a69a3d8bd2a8f520b3cb33da555ab1da950bcad791c0139d1cc3b"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "review": "Inspected full SEN sheet: open hooked jaw, neck and long shaft remain connected; lower grip, complete handle end and threaded neck retain their construction. Head/shaft scale remains armlength rather than decorative-prop size. Body/hand count and cardinal facing are unchanged as source proposals. Glowing/dark backdrop, incidental fill in the jaw cavity and small body/edge differences are not tool alpha, new metal surfaces or registered anatomy. Preserve original body and exact constructed opening/outline.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:19:15.747570+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Extract neutral contextual metal only into fixed complete hooked wrench; explicitly complete hidden grip and preserve open jaw, head/shaft tint regions and original hand mask.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/register-wrench.py",
+              "sha256": "e09210ab1560925a49985e96a9c31a605ce967eda792fd2557b8c483a630edaa"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/registration-decisions.json",
+              "sha256": "3672d5c6e2bf7baf9dd5b6d20761631649dd70a88713d356fcbbdbe044b596b7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/full-item-comparison.png",
+              "sha256": "2f40ba7e98670a9e2b6726ef65299e8b65f5ce447d82a1c696d47adf9696629e"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/depth-off-comparison.png",
+              "sha256": "d25ed9797fe568c0ff990c58724ceda43098ceeb6df2fac9b70635ae7269742f"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Contextual metal selected after first structural review; hidden grip completed before placement. Female compatibility only; actual male offhand and native near/far/ready/resting state remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:19:15.747570+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recompose actual full tool with original body/hand depth; inspect every cardinal display and mirrored profile without drawing a new far arm.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/model.json",
+              "sha256": "cb56f88e1e4e59411154cbd1b5d9ea9976823556d43bc2e555920ecdb4a80e27"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/assembly-comparison.png",
+              "sha256": "00a432157d92f294a2cf112c26328df51babf893d9611973f1deb95e04b9d288"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/grip-comparison.png",
+              "sha256": "32d8bcd78271bebeb3e73a3ced653df8783e76733842bac1ec9f1a2afce470b7"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Contextual metal selected after first structural review; hidden grip completed before placement. Female compatibility only; actual male offhand and native near/far/ready/resting state remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:19:15.747570+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect source-guided armlength size against the small utility knife on one fixed body, independent native colors and intended-size view.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/independent-palette-comparison.png",
+              "sha256": "f5a2e93473bd0308d75295e3b995d0b52fbec3d0fbc5d1123e0aaefa8d7bdca0"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/game-scale-review.png",
+              "sha256": "8c970c08a112ab4ab08a911f7231c784073b165d8189d25bb624b2226f8128f8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/weapon-size-comparison.png",
+              "sha256": "3dea3d282c604953753874b83e9ce0d3bd21931920a0dfb44564b19c13509ccf"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/scale-comparison-inputs.json",
+              "sha256": "15627994e893074f7bdbc9d75a892344b04d2ed4622cdfa10e3721a99bfd8ff8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/authoring-review.json",
+              "sha256": "4a4570bed071075ad83a3d4f198ec1b262e28c58e8cdd5ad7655343f42193fe9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/artifact-manifest.json",
+              "sha256": "261d087315f813baf3202aa7332425b83d221fe51666196c1806b44035bf552e"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Contextual metal selected after first structural review; hidden grip completed before placement. Female compatibility only; actual male offhand and native near/far/ready/resting state remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Contextual metal selected after first structural review; hidden grip completed before placement. Female compatibility only; actual male offhand and native near/far/ready/resting state remain pending."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-wrench/v1/model.json",
+          "sha256": "cb56f88e1e4e59411154cbd1b5d9ea9976823556d43bc2e555920ecdb4a80e27"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-wrench/v1/assembly-comparison.png",
+          "sha256": "00a432157d92f294a2cf112c26328df51babf893d9611973f1deb95e04b9d288"
+        }
+      },
+      "registration_summary": "Female compatibility Wrench: Qud hooked metal jaw and armlength shaft, lower Hand/1 grip, full item and original body depth, primary y/shaft c. Actual male binding and native offhand/pose state retained separately.",
+      "native_acceptance": "Pending full-set generation and native female compatibility, offhand and pose state."
     },
     {
       "id": "FIT-HUMAN-MALE-CLOTH-ROBE-BODY-0",
@@ -8480,8 +8725,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -8492,9 +8737,7 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "human-male",
         "equipment_key": "steel-utility-knife@Hand@2",
@@ -8527,12 +8770,287 @@
           "sha256": "8eadfb001a52944b0abcd526775ee20243a63bd26b15be998e7fb46ca5d4a9a7"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve actual Argyve519 item588 on ordinary Hand320/2, complete source description and original tile/palette. Recheck inherited one-hand metadata; retain unknown actor-specific slot demand.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/source-packet.json",
+              "sha256": "aba3a5f8d4fdf3fa8fcca783acce7194db750d5b4edb698fddb3cc92083e02a6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/weapon-metadata.json",
+              "sha256": "537a6de3fed634d36e5b3744f329ab6a5eeace720b0d2c6ca5f60f80758825cc"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select the registered male baseline and actual VWE CombatKnife outline reference; retain folding Qud identity rather than military guard/fixed blade.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/source-comparison.png",
+              "sha256": "172b05c1df1f4941a75bcf671dd7b74e912ae4faa20aaad172caf0be5715168b"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Fit identical manual canonical knife at unchanged physical size with male palm/scale/depth controls on fixed unclothed body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/fit-shared-knife.py",
+              "sha256": "9fdb9d76f239809748ce17b39a03f3372e35978ab37c149dca7e26f208e26f64"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/canonical-pattern.svg",
+              "sha256": "ad5ed89c891332e580412de091af2d6fdd95aff2bc0535be6f075e5a89bbe362"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/constructed-comparison.png",
+              "sha256": "be887bfbfbfdcc494b2ba517f83c5acf33ac032f3d28f10e284e82e9800521c1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/fit-controls.json",
+              "sha256": "537a231db2e9e1ad990a4a26eb96e4d37be235209d57def93d1b5300f2b06597"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse the selected exact knife contextual refinement/material and original prompt from compatibility fitting. No new call or new male drawing is claimed.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/imagegen-prompt.txt",
+              "sha256": "f4ff5cfac269eccfd2f4d204aa3f350f34a98441042356bebda193388781e218"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/refined-red-context.png",
+              "sha256": "b26da878f25d364ce40274b05bd620ce4dd00e56e6db1279917efea029d3eb33"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/registration-decisions.json",
+              "sha256": "8489b85e8d63b60924310c59637f829cdf64b9bbbcdf86ef44db9d0faf3dba78"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retain full blade/pivot/handle and independent Y/y material regions, then place them with the original palm mask. No generative isolation or destructive hand cutout.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json",
+              "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/registration-decisions.json",
+              "sha256": "95f0d51ee8aed286fa870a1ffded7ac0c97f5bbd1e271c128ff34782e61d0db9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/full-item-comparison.png",
+              "sha256": "138d7cd850dfae3ffd40cb6891ea29379ccb40a9d3e89833f58915b95f3f5460"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/depth-off-comparison.png",
+              "sha256": "5067c2531a3955c64fb543ac041d46659ca0df768cb689f98edadc336939cffb"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspect all facing grips and fixed-body depth; correct only the fully hidden initial north display angle and preserve the initial evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/rear-display-correction.json",
+              "sha256": "e26f5b02caeda7f63542efd8ce6ed059e799d9ffd71bb80f9153a8d06dd49f5f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/initial-rear-hidden/grip-comparison.png",
+              "sha256": "bb673b775a65f47c9dffe8ccdd42b175d78686bdf95445c7ffd7d133dacb3342"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/grip-comparison.png",
+              "sha256": "6e5acdfd21ce5f8d5ba9bdcfe4647daac3a36f1b0cf9939d89db09ef757160fb"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/assembly-comparison.png",
+              "sha256": "6b7df322fc44d5999a86a1380543f56bc2e02d49b5a90f7bf12cfd21721c4336"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:08:54.923128+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Review intended-size and source-specific palette; verify canonical identity, common physical mapping, original pixels and complete registered recomposition.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+              "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+              "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/independent-palette-comparison.png",
+              "sha256": "1a70a23227a8565aee84471f4cdcefbccadd2ea226c6ace6d1666d9b13c98b05"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/game-scale-review.png",
+              "sha256": "3f10c062ea42e24993d91514a05c36e37672283ac77b05f14697a98781e5ca31"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/cross-body-scale-comparison.png",
+              "sha256": "beb287921e5cc87dcc7fe057dd59b342363e93abe942d070169d0347b7356b48"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/authoring-review.json",
+              "sha256": "d816edac1981005300d05f9cfb1ecf02f68d11e711660f47e7861a6f92a31707"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/artifact-manifest.json",
+              "sha256": "8d120effc506567ec0bdebe7a52695fda907d87391777e7be3ca5edabf845617"
+            }
+          ],
+          "review": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.",
+          "result": "PASS"
+        }
+      ],
       "held_pose_review": {
         "status": "PENDING FINAL ASSEMBLY",
         "requirement": "Ready one-handed knife projects forward/horizontally in side view90deg to body; separate resting/ready controls and actual slot-demand/compatibility state. Current plates stationary display only.",
         "owner": "Stage 3 final assembly after full-set generation gate"
-      }
+      },
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json",
+          "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-steel-utility-knife/v1/assembly-comparison.png",
+          "sha256": "6b7df322fc44d5999a86a1380543f56bc2e02d49b5a90f7bf12cfd21721c4336"
+        }
+      },
+      "registration_summary": "Small folding knife reused at identical physical size on actual male Argyve Hand/2 baseline; lower grip, independent c/Y/y, readable rear display. Native equipment/ready-resting and named actor assembly pending.",
+      "native_acceptance": "Pending all-conversions gate and native equipment/pose acceptance"
     },
     {
       "id": "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0",
@@ -9895,7 +10413,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -9906,9 +10424,7 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "human-male",
         "equipment_key": "wrench@Hand@1",
@@ -9929,7 +10445,258 @@
           "sha256": "c42365f43bd78500125e1d376b36037bc2d84b754ec6feb19dc4f84703cb8acd"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:21:36.213329+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Reconcile captured actual ordinary male offhand, full item description, native primary y overriding c, shaft detail c and one-hand declaration/event uncertainty.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/intact-canonical.png",
+              "sha256": "0a7683d96f24bbd12fe2924dc21f91ea1ce71514bbcb93fb955bbfec5d28a8c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/source-packet.json",
+              "sha256": "555cc71c8c39fae42756b3db510e2cb4bcea908f448fb95c080acd4f487a27fa"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/weapon-metadata.json",
+              "sha256": "c310bb50deaf3f12feacccc9cf3dc76cc35f24e5e808990ef8a692bda8467613"
+            }
+          ],
+          "review": "Actual male Argyve519 item590 occupies ordinary offhand322/1. Same full canonical Qud armlength Wrench as compatibility fit, compensated to male world mapping; no new ImageGen call, inferred female NPC or body/limb generation. Native offhand/ready-resting and named outfit pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.213895+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select fixed male baseline and reuse source-bound Qud/VFE-prop/legacy-icon references with their limited roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/intact-canonical.png",
+              "sha256": "0a7683d96f24bbd12fe2924dc21f91ea1ce71514bbcb93fb955bbfec5d28a8c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-references.png",
+              "sha256": "e5d52c551086ac2366ced11dc0574ed3062e946a8852fb4c3f4666cc136e8a14"
+            }
+          ],
+          "review": "Actual male Argyve519 item590 occupies ordinary offhand322/1. Same full canonical Qud armlength Wrench as compatibility fit, compensated to male world mapping; no new ImageGen call, inferred female NPC or body/limb generation. Native offhand/ready-resting and named outfit pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.214181+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Place identical full manual wrench with male offhand grip and physical scale compensation; retain original body, lower grip and independent full source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/intact-canonical.png",
+              "sha256": "0a7683d96f24bbd12fe2924dc21f91ea1ce71514bbcb93fb955bbfec5d28a8c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/prepare-shared-fit.py",
+              "sha256": "f007fd74e003c1809a87fa732197caad76e11cac9b6579107255b8ce7eb51012"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/constructed-neutral-context.png",
+              "sha256": "0ed3803d709779f31eac5171f9c7d95d87b46c2d691ab16a6f4e9469f6be24bb"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/fit-controls.json",
+              "sha256": "a0bab8a1d5e3450d9a287d3990701a90c8b3d493ae266514464b571741f6f086"
+            }
+          ],
+          "review": "Actual male Argyve519 item590 occupies ordinary offhand322/1. Same full canonical Qud armlength Wrench as compatibility fit, compensated to male world mapping; no new ImageGen call, inferred female NPC or body/limb generation. Native offhand/ready-resting and named outfit pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.214897+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse exact selected contextual refinement and first structural inspection; no new generation is performed for recipient fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/source-packet.json",
+              "sha256": "71386eec5c76f791d3c8d0cdf27095d0e930a424fe471085bc2d332a8c6af6f6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/intact-canonical.png",
+              "sha256": "0a7683d96f24bbd12fe2924dc21f91ea1ce71514bbcb93fb955bbfec5d28a8c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/imagegen-prompt.txt",
+              "sha256": "c426d6173ea40d9abe3762098de86063044ce431b54f836d849966270c05eccf"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "review": "Actual male Argyve519 item590 occupies ordinary offhand322/1. Same full canonical Qud armlength Wrench as compatibility fit, compensated to male world mapping; no new ImageGen call, inferred female NPC or body/limb generation. Native offhand/ready-resting and named outfit pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.682137+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Reuse the selected complete hooked wrench and separate head/shaft tints; place on the fixed male base without a new extraction, resynthesis or destructive hand cutout.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/source-packet.json",
+              "sha256": "555cc71c8c39fae42756b3db510e2cb4bcea908f448fb95c080acd4f487a27fa"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/register-shared-wrench.py",
+              "sha256": "0c208176b4472a89d1b9a5e262de1f5e1c7ff9c1479b414d9a0cfb1ba0c5584a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/registration-decisions.json",
+              "sha256": "3c5b6e4855a503bf939444b2ddaee71c2791a8306967c47672af590c463cacb0"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/full-item-comparison.png",
+              "sha256": "936d4f19fc506439f6b4c8256a809675fd96be07370113508ec085c24f2245fa"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/depth-off-comparison.png",
+              "sha256": "c56ecf7872da8e2e2c2fd8df79899d7668a0715d0e99ea9f44e2aca1635a3f41"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Exact selected contextual metal and completed full source reused after source structural inspection; no new ImageGen call. Male physical scale compensation preserves item size. Actual Argyve offhand captured; native near/far/ready/resting and named outfit remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.682137+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recompose actual full tool with original body/hand depth; inspect every cardinal display and mirrored profile without drawing a new far arm.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/source-packet.json",
+              "sha256": "555cc71c8c39fae42756b3db510e2cb4bcea908f448fb95c080acd4f487a27fa"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/model.json",
+              "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/assembly-comparison.png",
+              "sha256": "deb8c2b6acc5dba6c7807f68db9061661fb3fd26df8b02502c111ab583b1702f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/grip-comparison.png",
+              "sha256": "1b4c6a1f6ffb02a2f1571e52644dd06bf6842df8a23b6c46cff742978e44f2d4"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Exact selected contextual metal and completed full source reused after source structural inspection; no new ImageGen call. Male physical scale compensation preserves item size. Actual Argyve offhand captured; native near/far/ready/resting and named outfit remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:21:36.682137+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect source-guided armlength size against the small utility knife on one fixed body, independent native colors and intended-size view.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/source-packet.json",
+              "sha256": "555cc71c8c39fae42756b3db510e2cb4bcea908f448fb95c080acd4f487a27fa"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/refined-red-context.png",
+              "sha256": "857332bbd12a733dfe146e1cf9efbbc36262a40730616710fabee3ab200bc2a7"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/first-refinement-structural-review.json",
+              "sha256": "4578605aa65de1d5f78f2aa1904e8228cdf2c1b95ef8cd400c3a587ad11e6f30"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/independent-palette-comparison.png",
+              "sha256": "de8233cb69e4665e290be1a425b0bf8bf3c2fbcc8e74db193e00aa08e1019924"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/game-scale-review.png",
+              "sha256": "df49de74b3fbab04ae49982ceb1738552f4399bdfd2ac364217c3f722d566f21"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/weapon-size-comparison.png",
+              "sha256": "11406334cd766b7e34bec12b3c05d0df521f1a2ed26f277e8bc6d754b3d66591"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/scale-comparison-inputs.json",
+              "sha256": "d8b53277d6d52adc5d542328c3336ab4bf09761e77d0073436f01f3794359560"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/authoring-review.json",
+              "sha256": "50e3e7249ae4e5b508d3f47bd95719e7550c90431e3d79e8300b4cc641801395"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/artifact-manifest.json",
+              "sha256": "221d89f00c2ece393ea0e1569f601caba1dbc993e79b93574a67dbffdd8c8b20"
+            }
+          ],
+          "review": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Exact selected contextual metal and completed full source reused after source structural inspection; no new ImageGen call. Male physical scale compensation preserves item size. Actual Argyve offhand captured; native near/far/ready/resting and named outfit remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected SEN/mirrored west, complete open jaw/neck/shaft, lower palm grip, neutral and native y-head/c-shaft palette and intended-size appearance. Armlength cue informs authored scale, larger than utility knife; decorative prop drawSize is not treated as weapon length. Original source alpha/ink and body pixels preserved. Exact selected contextual metal and completed full source reused after source structural inspection; no new ImageGen call. Male physical scale compensation preserves item size. Actual Argyve offhand captured; native near/far/ready/resting and named outfit remain pending."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-wrench/v1/model.json",
+          "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-wrench/v1/assembly-comparison.png",
+          "sha256": "deb8c2b6acc5dba6c7807f68db9061661fb3fd26df8b02502c111ab583b1702f"
+        }
+      },
+      "registration_summary": "Actual male offhand Wrench: Qud hooked metal jaw and armlength shaft, lower Hand/1 grip, full item and original body depth, primary y/shaft c. Actual Argyve Hand322/1 binding; native offhand/pose and named outfit pending.",
+      "native_acceptance": "Pending full-set generation and actual native offhand, pose state and named Argyve assembly."
     },
     {
       "id": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
@@ -12003,8 +12770,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -18121,7 +18888,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -18157,7 +18924,95 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:09:56.182350+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolve actual dull folding utility knife, native Y/y, inherited base handedness and painted-instance text without inventing a paint surface.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json",
+              "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/model.json",
+              "sha256": "d8f9fcf355a878b91daecedb7ab8d968889393889c12c88bbe80a9103522467c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/weapon-metadata.json",
+              "sha256": "537a6de3fed634d36e5b3744f329ab6a5eeace720b0d2c6ca5f60f80758825cc"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/weapon-metadata.json",
+              "sha256": "ec24066d289156737b1d7db766d2f30f1088a494a917e4f5ad9e46d38f26f4db"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-steel-utility-knife/v1/fittings.json",
+              "sha256": "c8197102afa604b6a07af9f7d571f4c0571b2b2022d9b97f0e038555f9d37368"
+            },
+            {
+              "path": "art/conversion/item-steel-utility-knife/v1/body-fittings-comparison.png",
+              "sha256": "05ac61e9eb2f69960e673b8ab5fbb6d6d0c5a4a2e97101f14f0d3a4d22c42fbe"
+            }
+          ],
+          "review": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/2 plus explicitly separate female compatibility. Full canonical blade/handle material identical, common physical mapping verified, source palette and painted-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:09:56.183303+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconcile both individually generation-ready fitting logs, full sources, palm ownership, directional displays, actual/compatibility scopes and equal physical item size.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json",
+              "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/model.json",
+              "sha256": "d8f9fcf355a878b91daecedb7ab8d968889393889c12c88bbe80a9103522467c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-steel-utility-knife/v1/weapon-metadata.json",
+              "sha256": "537a6de3fed634d36e5b3744f329ab6a5eeace720b0d2c6ca5f60f80758825cc"
+            },
+            {
+              "path": "art/conversion/fit-human-female-steel-utility-knife/v1/weapon-metadata.json",
+              "sha256": "ec24066d289156737b1d7db766d2f30f1088a494a917e4f5ad9e46d38f26f4db"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-steel-utility-knife/v1/fittings.json",
+              "sha256": "c8197102afa604b6a07af9f7d571f4c0571b2b2022d9b97f0e038555f9d37368"
+            },
+            {
+              "path": "art/conversion/item-steel-utility-knife/v1/body-fittings-comparison.png",
+              "sha256": "05ac61e9eb2f69960e673b8ab5fbb6d6d0c5a4a2e97101f14f0d3a4d22c42fbe"
+            }
+          ],
+          "review": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/2 plus explicitly separate female compatibility. Full canonical blade/handle material identical, common physical mapping verified, source palette and painted-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/2 plus explicitly separate female compatibility. Full canonical blade/handle material identical, common physical mapping verified, source palette and painted-description uncertainty retained. No new generation, native test or named outfit acceptance claimed."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-steel-utility-knife/v1/fittings.json",
+          "sha256": "c8197102afa604b6a07af9f7d571f4c0571b2b2022d9b97f0e038555f9d37368"
+        },
+        "plate": {
+          "path": "art/conversion/item-steel-utility-knife/v1/body-fittings-comparison.png",
+          "sha256": "05ac61e9eb2f69960e673b8ab5fbb6d6d0c5a4a2e97101f14f0d3a4d22c42fbe"
+        }
+      },
+      "registration_summary": "Authoring index for the same small folding knife: captured Argyve male and female compatibility. Fixed bodies, complete canonical material and common physical scale. Native states/painted-instance/named outfit remain pending.",
+      "native_acceptance": "Pending complete requested generation set and integrated native acceptance."
     },
     {
       "id": "ITEM-TELESCOPIC-MONOCLE",
@@ -19006,7 +19861,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -19042,7 +19897,95 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:22:31.237753+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolve actual armlength hooked Wrench, native head y/shaft c, inherited base handedness and counterweighted text without inventing an added weight.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/model.json",
+              "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/model.json",
+              "sha256": "cb56f88e1e4e59411154cbd1b5d9ea9976823556d43bc2e555920ecdb4a80e27"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/weapon-metadata.json",
+              "sha256": "c310bb50deaf3f12feacccc9cf3dc76cc35f24e5e808990ef8a692bda8467613"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/weapon-metadata.json",
+              "sha256": "7b8129a4798ca3297f761d0b100bffff4189fc9adeb89ae2bffc65fcefc1208a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-wrench/v1/fittings.json",
+              "sha256": "3c8b1205a9b7ae47a829961ab332323e74f28d7647559306ef7734d9368d9442"
+            },
+            {
+              "path": "art/conversion/item-wrench/v1/body-fittings-comparison.png",
+              "sha256": "d3256454d99b299f220090b9662d8bb846497da02f4fc4c5b0615fe9d04503de"
+            }
+          ],
+          "review": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/1 plus explicitly separate female compatibility. Full canonical jaw/shaft material identical, common physical mapping verified, source palette and counterweight-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:22:31.238988+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconcile both individually generation-ready fitting logs, full sources, palm ownership, directional displays, actual/compatibility scopes and equal physical item size.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/model.json",
+              "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/model.json",
+              "sha256": "cb56f88e1e4e59411154cbd1b5d9ea9976823556d43bc2e555920ecdb4a80e27"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wrench/v1/weapon-metadata.json",
+              "sha256": "c310bb50deaf3f12feacccc9cf3dc76cc35f24e5e808990ef8a692bda8467613"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wrench/v1/weapon-metadata.json",
+              "sha256": "7b8129a4798ca3297f761d0b100bffff4189fc9adeb89ae2bffc65fcefc1208a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-wrench/v1/fittings.json",
+              "sha256": "3c8b1205a9b7ae47a829961ab332323e74f28d7647559306ef7734d9368d9442"
+            },
+            {
+              "path": "art/conversion/item-wrench/v1/body-fittings-comparison.png",
+              "sha256": "d3256454d99b299f220090b9662d8bb846497da02f4fc4c5b0615fe9d04503de"
+            }
+          ],
+          "review": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/1 plus explicitly separate female compatibility. Full canonical jaw/shaft material identical, common physical mapping verified, source palette and counterweight-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/1 plus explicitly separate female compatibility. Full canonical jaw/shaft material identical, common physical mapping verified, source palette and counterweight-description uncertainty retained. No new generation, native test or named outfit acceptance claimed."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-wrench/v1/fittings.json",
+          "sha256": "3c8b1205a9b7ae47a829961ab332323e74f28d7647559306ef7734d9368d9442"
+        },
+        "plate": {
+          "path": "art/conversion/item-wrench/v1/body-fittings-comparison.png",
+          "sha256": "d3256454d99b299f220090b9662d8bb846497da02f4fc4c5b0615fe9d04503de"
+        }
+      },
+      "registration_summary": "Authoring index for the same armlength hooked Wrench: captured Argyve male offhand and female compatibility. Fixed bodies, complete canonical material and common physical scale. Native offhand/pose/named outfit remain pending.",
+      "native_acceptance": "Pending complete requested generation set and integrated native acceptance."
     },
     {
       "id": "SCN-ALCHEMIST-TABLE",
@@ -47807,7 +48750,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T16:59:33.892864+00:00",
+  "updated_at": "2026-10-20T17:22:31.240437+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

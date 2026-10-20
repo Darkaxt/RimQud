@@ -1,0 +1,193 @@
+{
+  "entry": "FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2",
+  "recorded_at": "2026-10-20T17:07:47.256554+00:00",
+  "creature": "Argyve, captured male519; ordinary male race fitting",
+  "race": "Human, ordinary male baseline",
+  "fitting_scope": "Actual captured male ordinary Hand320/2 item588; named cosmetics/outfit and native state not accepted by this fit.",
+  "original": {
+    "instance": 588,
+    "blueprint": "Steel Utility Knife",
+    "description": "A use-dull and finger-smudged knife folds in on itself.\n\n{{rules|Strength Bonus Cap: 3\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Orohim}}:\n\nDeep in the wilds of the Historians' District of Biwan, Orohim discovered the Shrine at Birsilil. There he befriended oozes and fought for everlasting glory.}}\n\n{{rules|+50 reputation with the Burgundy Sorrow of Daarramrod Brood}}\n\n{{K|Weight: 1 lbs.}}",
+    "tile": "Items/sw_shortblade_12.bmp",
+    "foreground": "&Y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/steel-utility-knife-reference.png",
+    "native_mask_sha256": "468e2db1781a9a73bade56a1366694925d8db9981aa8f519226cce57ec5b2ae1",
+    "reference_sha256": "a6152b0d2364565461da1fd058c9d5933d07f529ba9b747727ac953fa3c51551",
+    "info_id": 10010,
+    "atlas_id": 185,
+    "rect": [
+      54,
+      806,
+      16,
+      24
+    ]
+  },
+  "observed_bindings": [
+    {
+      "creature": "Argyve",
+      "resident": {
+        "instance": 519,
+        "blueprint": "Argyve",
+        "species": "human",
+        "gender": "male",
+        "description": "His mushroom cloud of beard hair is powdered with all the abrasions of the trash sea: white lime, red iron, gold filament, opalescent shavings of the plastiglomerate. Chrome joints and pieces of scrap crystal are hooked to pockets lining his torso, and one of his bushy eyebrows is perpetually cocked, though whether that's a symptom of an insatiable curiosity or forehead mutation is unknown.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/npc-argyve.bmp",
+        "foreground": "&c",
+        "tileColor": "",
+        "detailColor": "w"
+      },
+      "part": {
+        "id": 320,
+        "parent": 319,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 588,
+          "blueprint": "Steel Utility Knife",
+          "description": "A use-dull and finger-smudged knife folds in on itself.\n\n{{rules|Strength Bonus Cap: 3\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Orohim}}:\n\nDeep in the wilds of the Historians' District of Biwan, Orohim discovered the Shrine at Birsilil. There he befriended oozes and fought for everlasting glory.}}\n\n{{rules|+50 reputation with the Burgundy Sorrow of Daarramrod Brood}}\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "Items/sw_shortblade_12.bmp",
+          "foreground": "&Y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 589,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    }
+  ],
+  "installed_definition": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+    "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+    "object_xml": "<object Name=\"Steel Utility Knife\" Inherits=\"BaseDagger\">\n    <part Name=\"Render\" DisplayName=\"{{Y|steel}} utility knife\" Tile=\"Items/sw_shortblade_12.bmp\" ColorString=\"&amp;Y\" />\n    <part Name=\"MeleeWeapon\" MaxStrengthBonus=\"3\" BaseDamage=\"1d4\" />\n    <part Name=\"Commerce\" Value=\"20\" />\n    <part Name=\"Description\" Short=\"A use-dull and finger-smudged knife folds in on itself.\" />\n    <part Name=\"Metal\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n  </object>"
+  },
+  "source_resolution": "Core description specifies a use-dull finger-smudged folding knife. Actual Argyve item588 also has a painted sultan-history description/reputation property. Capture provides ordinary tile/palette and text; no separate painting graphic exported. Preserve individual property rather than inventing a miniature scene in every generic knife.",
+  "body": {
+    "path": "art/conversion/body-human-male/v2/model.json",
+    "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+  },
+  "donor_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\Textures\\NewThings\\CombatKnife.png",
+    "sha256": "1fb71ab6a73cd335f35bc49382103d5975461360bf31ff3facb32b8c28aba657",
+    "mod": "Vanilla Weapons Expanded",
+    "workshop_id": "1814383360",
+    "about_sha256": "eab53ea349ceebb740c331ea50663489dcec14112f576c8b5918ac9ddc3c4629",
+    "role": "Actual current VWE_MeleeWeapon_CombatKnife texPath via LoadFolders1.6/1.7. Small blade/handle outline and restrained flat shading only. Fixed military knife is not a folding utility knife; omit its guard and reconstruct Qud folding pivot/handle."
+  },
+  "design": "Small open folding utility knife: use-dull steel blade, simple recessed handle, pivot and thumb nick. No military guard, serration, ornate dagger or imaginary painted scene. Open depiction follows source glyph/description; no fold-toggle mechanic inferred.",
+  "authored_scale": "Approximately170 source pixels /16 pixels at48x96, comparable to Pestle and substantially shorter than Vinereaper/Vibro Blade displays. Authored readable size; native numeric dimensions unavailable, weight1 is not length.",
+  "frame": {
+    "canvas": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "item_space_grip": [
+      256,
+      590
+    ],
+    "item_scale": 0.9828877005347593,
+    "controls": {
+      "south": {
+        "grip": [
+          138,
+          555
+        ],
+        "angle": 0,
+        "mirror": false,
+        "inverse_affine": [
+          1.0174102285092492,
+          -0.0,
+          115.59738846572361,
+          0.0,
+          1.0174102285092492,
+          25.33732317736667
+        ]
+      },
+      "east": {
+        "grip": [
+          290,
+          555
+        ],
+        "angle": -20,
+        "mirror": false,
+        "inverse_affine": [
+          0.9560528840422464,
+          0.3479747921757348,
+          -214.38134602978428,
+          -0.3479747921757348,
+          0.9560528840422464,
+          160.3033390875163
+        ]
+      },
+      "north": {
+        "grip": [
+          372,
+          555
+        ],
+        "angle": -40,
+        "mirror": true,
+        "inverse_affine": [
+          0.77938145192192,
+          0.653978688854096,
+          -397.8880724289776,
+          -0.653978688854096,
+          0.77938145192192,
+          400.7233664370581
+        ]
+      }
+    },
+    "mirror_anchor": "x256 becomes255 under Pillow flip"
+  },
+  "palette": {
+    "foreground": "Y",
+    "detail": "y",
+    "detail_assignment": "Native bright steel blade Y and contrasting handle y. Separate neutral equal-RGB regions; no fixed skin/paint colors."
+  },
+  "assembly_boundary": "Actual male Argyve Hand/2 item. Shared ordinary baseline fitting does not complete his beard, pockets, cosmetics or full named outfit.",
+  "native_acceptance": "Pending all-conversions gate and native equipment/pose acceptance",
+  "weapon_metadata": {
+    "path": "art/conversion/fit-human-male-steel-utility-knife/v1/weapon-metadata.json",
+    "sha256": "537a6de3fed634d36e5b3744f329ab6a5eeace720b0d2c6ca5f60f80758825cc"
+  },
+  "shared_source": {
+    "path": "art/conversion/fit-human-female-steel-utility-knife/v1/source-packet.json",
+    "sha256": "4f2bbc53b3ca832591decc51796fc2532673d57c3f85ac90f905f19042ede534"
+  },
+  "shared_refinement": {
+    "context": {
+      "path": "art/conversion/fit-human-female-steel-utility-knife/v1/refined-red-context.png",
+      "sha256": "b26da878f25d364ce40274b05bd620ce4dd00e56e6db1279917efea029d3eb33"
+    },
+    "prompt": {
+      "path": "art/conversion/fit-human-female-steel-utility-knife/v1/imagegen-prompt.txt",
+      "sha256": "f4ff5cfac269eccfd2f4d204aa3f350f34a98441042356bebda193388781e218"
+    },
+    "registration": {
+      "path": "art/conversion/fit-human-female-steel-utility-knife/v1/registration-decisions.json",
+      "sha256": "8489b85e8d63b60924310c59637f829cdf64b9bbbcdf86ef44db9d0faf3dba78"
+    },
+    "selected_item": {
+      "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+      "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+    },
+    "new_imagegen_call": false,
+    "reason": "Same complete physical item and material already selected; recipient change requires grip/scale/depth fitting, not another drawing."
+  }
+}

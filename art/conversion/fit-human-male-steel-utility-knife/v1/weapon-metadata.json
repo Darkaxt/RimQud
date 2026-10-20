@@ -1,0 +1,236 @@
+{
+  "item": "Steel Utility Knife",
+  "recipient_scope": "Captured male Argyve519, ordinary Hand320/laterality2; shared male race template fitting.",
+  "inheritance": [
+    {
+      "blueprint": "Steel Utility Knife",
+      "parent": "BaseDagger",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "BaseDagger",
+      "parent": "MeleeWeapon",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "1"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "MeleeWeapon",
+      "parent": "Item",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "5",
+          "Category": "Melee Weapons"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Item",
+      "parent": "InorganicObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Conductivity": "20"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "InorganicObject",
+      "parent": "PhysicalObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Organic": "false"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Category": "Miscellaneous",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "1"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "physics": [
+        {
+          "Name": "Physics",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "0"
+        }
+      ],
+      "uses_slots": []
+    }
+  ],
+  "effective_physics": {
+    "IsReal": "true",
+    "Solid": "false",
+    "Weight": "1",
+    "Category": "Melee Weapons",
+    "Organic": "false",
+    "Conductivity": "20"
+  },
+  "handedness": {
+    "declared_uses_two_slots": false,
+    "uses_slots": null,
+    "base_grip_class": "one-handed",
+    "evidence": "Full inherited UsesTwoSlots/UsesSlots declarations and audited Physics defaults support the one-handed base class. Captured Argyve item588 occupies ordinary Hand320/2; actor-specific demand remains unexported.",
+    "physics_default": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.Parts.Physics.decompiled.cs",
+      "sha256": "40cefa92ac9a9ba50eae456f7f95da79b2ab3fd291905d6aeaa7f1e02cdbed0a",
+      "flags": 2,
+      "uses_two_slots_bit": 8
+    },
+    "runtime_requirement_semantics": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.GameObject.decompiled.cs",
+      "sha256": "1d73ce04d4e0a3bf1b859ce1f91aacea4e413b62cf57808c4c1a7720a25a0480",
+      "method": "GetSlotsRequiredFor delegates to actor-sensitive event"
+    },
+    "runtime_get_slots_required_for": null,
+    "unknown": "No actor-specific slot-demand event exported; preserve null rather than infer an event result from a single occupied part.",
+    "observed_occupancy": [
+      {
+        "actor": "Argyve",
+        "resident": 519,
+        "item": 588,
+        "occupied_parts": [
+          {
+            "id": 320,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      }
+    ]
+  },
+  "size": {
+    "native_dimensions": null,
+    "native_size_class": null,
+    "descriptive_length": null,
+    "weight": "1",
+    "weapon_class": "ShortBlades",
+    "native_description": "Use-dull finger-smudged knife folds in on itself; no numeric length.",
+    "authored_canonical_bounds": [
+      240,
+      453,
+      274,
+      622
+    ],
+    "blade_bounds": [
+      244,
+      453,
+      274,
+      547
+    ],
+    "handle_bounds": [
+      240,
+      541,
+      273,
+      622
+    ],
+    "primary_grip": [
+      256,
+      590
+    ],
+    "supporting_grip": null,
+    "reason": "Reuse the identical small folding knife. Male raster compensation preserves its canonical physical size rather than scaling the item up with the recipient. Grip590 remains32px from the canonical lower bound622; weight1 is not length.",
+    "canonical_source": {
+      "path": "art/conversion/fit-human-male-steel-utility-knife/v1/constructed-canonical.png",
+      "sha256": "379e0545f2b8cffe5dd1f2fddc790d611e3b010bfba336d6cc764cb61caab7d8"
+    },
+    "pixel_world_scale": 0.0013166485310119695,
+    "raster_scale": 0.9828877005347593,
+    "world_mapping": {
+      "width": 1.0111860718171928,
+      "height": 1.3482480957562568
+    },
+    "units": "Registered authoring/world mapping, not meters or native measured dimensions.",
+    "selected_refined_source": {
+      "path": "art/conversion/fit-human-female-steel-utility-knife/v1/intact-canonical.png",
+      "sha256": "e83f8af5632dfddf6018dfaee47d494774cc460e78852a7007411fcab0b1ce58"
+    },
+    "canonical_geometry_identical": true,
+    "source_pixel_world_scale": 0.0012941176470588234
+  },
+  "donor_size_reference": {
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\1.6\\Defs\\ThingDefs_Misc\\Weapons\\MeleeIndustrial.xml",
+      "sha256": "2af403cf6a17b53f92e634851e8b0c355f3524d784b6beeb7bf13fe0e3d85e78",
+      "defName": "VWE_MeleeWeapon_CombatKnife",
+      "description": "OA refined and deadly tool, the military combat knife has taken many forms, but the concept has always remained the same: A handle for a sure grip and a sharp edge for cutting and thrusting, optimized for battlefield use.",
+      "texPath": "NewThings/CombatKnife",
+      "equipped_angle_offset": "-65"
+    },
+    "load_folders": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\LoadFolders.xml",
+      "sha256": "8eb2050ac65cd118fcb657a5e44472c14cd86370690ae2011b72a5c701ebe7e9",
+      "mapping": "1.6 and1.7 select1.6"
+    },
+    "base_defs": {
+      "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Misc\\Weapons\\BaseWeapons.xml",
+      "sha256": "db07467327633fceaa2de5225e7f90db386ff874545c05faa313683ecab0c107",
+      "inheritance": [
+        {
+          "name": "BaseMeleeWeapon_Sharp_Quality",
+          "parent": "BaseMeleeWeapon_Sharp",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon_Sharp",
+          "parent": "BaseMeleeWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon",
+          "parent": "BaseWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseWeapon",
+          "parent": null,
+          "explicit_draw_size": null
+        }
+      ]
+    },
+    "explicit_xml_drawSize": null,
+    "runtime_graphic_drawSize": null,
+    "qualification": "No explicit XML drawSize or live graphic value available; donor small knife is visual reference, not a numeric length."
+  },
+  "individual_variant": "Observed Argyve painted-story text retained in original description. No additional paint texture/mask exported, so no invented narrative scene is baked into generic knife.",
+  "pose": "Stationary display only; forward/horizontal ready side pose and native state remain unfinished."
+}
