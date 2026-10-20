@@ -1,0 +1,108 @@
+{
+  "entry": "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0",
+  "workflow": "regional-curved-v1",
+  "recorded_at": "2026-10-20T12:56:30.847516+00:00",
+  "item": {
+    "instance": 518,
+    "blueprint": "Pocketed Vest",
+    "description": "A scratchy kirtle was taken to a pocket seamstress and accoutered for cave delving and trinket fishing.\n\n{{C|+5% carry capacity}}\n\n{{K|Weight: 2 lbs.}}",
+    "tile": "Items/sw_vest.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "K",
+    "kind": "equipment",
+    "reference_file": "village-originals/pocketed-vest-reference.png",
+    "native_mask_sha256": "9276f8f0779ef0bca61ecb985b50518b3a503b635fbb45a378714661946fbdf0",
+    "reference_sha256": "2188bb77861157ec54c7c7ff9b6dced5f68832034204eed4153ba2a754489833",
+    "info_id": 10203,
+    "atlas_id": 185,
+    "rect": [
+      414,
+      0,
+      16,
+      24
+    ]
+  },
+  "observed_bindings": [
+    {
+      "actor": "Argyve",
+      "gender": "male",
+      "instance": 519,
+      "part": {
+        "id": 315,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 518,
+          "blueprint": "Pocketed Vest",
+          "description": "A scratchy kirtle was taken to a pocket seamstress and accoutered for cave delving and trinket fishing.\n\n{{C|+5% carry capacity}}\n\n{{K|Weight: 2 lbs.}}",
+          "tile": "Items/sw_vest.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "K"
+        },
+        "defaultItem": null
+      }
+    }
+  ],
+  "body": {
+    "path": "art/conversion/body-human-male/v2/model.json",
+    "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+  },
+  "body_metadata": {
+    "path": "art/conversion/body-human-male/v1/source-packet.json",
+    "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6"
+  },
+  "donor": {
+    "package": "Retextured Apparel",
+    "about_sha256": "8a8d4fe265822373a69db8c3763107a8e9313fa6a65c108abf260d3f17e3ee4c",
+    "assets": [
+      {
+        "private_path": "D:/Steam/steamapps/workshop/content/294100/2042613316/Textures/Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest_Male_south.png",
+        "sha256": "53e70c8b9f9ec821772234f61aaaa13d11530f1bd1f06fce3a213e3c55260524",
+        "facing": "south",
+        "role": "Installed Retextured Apparel cardinal vest silhouette/spacing only; not armor, fabric or literal color."
+      },
+      {
+        "private_path": "D:/Steam/steamapps/workshop/content/294100/2042613316/Textures/Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest_Male_east.png",
+        "sha256": "a04b3bb779fdce04d4d9cacbe4de1a78c14de9c763afa2bd7920df4e6def1ce3",
+        "facing": "east",
+        "role": "Installed Retextured Apparel cardinal vest silhouette/spacing only; not armor, fabric or literal color."
+      },
+      {
+        "private_path": "D:/Steam/steamapps/workshop/content/294100/2042613316/Textures/Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest_Male_north.png",
+        "sha256": "7505035f1ba04011dad92eb05d135df6d8aac165de548c7b1ba3516228604a01",
+        "facing": "north",
+        "role": "Installed Retextured Apparel cardinal vest silhouette/spacing only; not armor, fabric or literal color."
+      }
+    ]
+  },
+  "design": "Scratchy cloth sleeveless kirtle/vest fitted with four mirrored practical front pockets and narrow front-edge profile pockets. Plain back. No armor, lapels, zips or straps imported from donor. Pocket number/placement and seam details are authored from the description and small sprite.",
+  "palette": {
+    "foreground": "y",
+    "detail": "K",
+    "detail_assignment": "Pocket panels, authored placement. Neutral cloth and neutral panel layer retained; equipment-detail tint is independent of body."
+  },
+  "coverage": "True sleeveless openings are garment construction, not destructive limb-shaped cutoffs. Full profile cloth remains under the original near arm. Front/back reuse validated lower-arm paint with item-specific upper arms; profile follows its actual original arm contour and round hand instead of extending the former sleeve mask into the torso.",
+  "frame": {
+    "canvas": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "facings": [
+      "south",
+      "east",
+      "north"
+    ],
+    "west": "Mirror east: paired front pockets and symmetric construction, no handed detail"
+  },
+  "native_acceptance": "Pending all-conversions generation gate; outfit precedence not yet native-tested"
+}

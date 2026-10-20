@@ -532,3 +532,13 @@ and forearms. The item inventory record aggregates all three completed authoring
 logs, without claiming native acceptance. Child dromad/human Woven Tunic
 reprocessing is also recorded separately. Continue through the remaining actual
 clothing entries; the full village and final native criteria remain unfinished.
+
+Further clothing authoring checkpoint: Pocketed Vest now has human-female v1
+and human-male v2 registrations with its own sleeveless arm ownership and
+independent native primary `y` / pocket detail `K`. Male v1 elbow-mask spurs
+are retained as a rejected source; v2 changes ownership only. Its shared item
+record aggregates both actual body-specific process logs. Human-female Sandals
+v1 retain full soles/straps, native `y` / `w` tint and original-foot visibility
+at the unchanged contact. Their enlarged contextual output is a material source,
+not a replacement for registered foot anatomy. Continue with the remaining
+Sandals fittings; this does not close the item aggregate or any native criterion.
