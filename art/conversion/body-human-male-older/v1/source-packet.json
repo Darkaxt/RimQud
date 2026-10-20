@@ -1,0 +1,80 @@
+{
+  "entry": "BODY-HUMAN-MALE-OLDER",
+  "recorded_at": "2026-10-20T01:13:10.880041+00:00",
+  "identity": "Older adult male human authoring template; no NPC age reassignment",
+  "race": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "body_plan": {
+    "heads": 1,
+    "arms": 2,
+    "hands": 2,
+    "legs": 2,
+    "feet": 2,
+    "source": "Observed Humanoid body tree; plural Feet is a group, not a count of one. No race-wide native Description.Short is supplied."
+  },
+  "original_age_reference": {
+    "tile": "Creatures/npc-irudad.bmp",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "kind": "creature",
+    "blueprint": "ElderBob",
+    "reference_file": "village-originals/elderbob-reference.png",
+    "native_mask_sha256": "239481d2824d7a5542de66bd5e08c8637fc8a047f6ec80471c06727ac5b2fc61",
+    "reference_sha256": "aad051460416512d0cd78b801b4458ff8c148d2400b72569c790c6555f2bacfc",
+    "info_id": 7704,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      676,
+      16,
+      24
+    ]
+  },
+  "source_age_description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+  "source_limits": "Irudad explicitly supplies an old face and hunched back. His hands-face, extra arms and stinger are individual mutation features, not baseline human aging; they remain required in BODY-IRUDAD, not here.",
+  "shared_human_reference": {
+    "model": "art/conversion/body-human-male/v1/model.json",
+    "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e"
+  },
+  "donor_references": [
+    {
+      "file": "human-body-south.png",
+      "source_id": 2302,
+      "name": "Naked_Male_south",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        38,
+        43,
+        90,
+        108
+      ],
+      "png_sha256": "57b37b2c54bd2f5cade7aecd26047ea8f130d59b81aebc4e076f98ad2e436449"
+    },
+    {
+      "file": "human-head-south.png",
+      "source_id": 2403,
+      "name": "Male_Average_Normal_south",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        41,
+        39,
+        87,
+        89
+      ],
+      "png_sha256": "8ea346c40f1391e9309c2dcd8da35d35cfbf4d4aa6c2dbd03b16f4b644c192d0"
+    }
+  ],
+  "donor_limit": "No separate old-age torso is established from these donor references; reuse the same adult presentation convention, with authored age variation.",
+  "construction": {
+    "source_svg": "art/conversion/body-human-male/v1/constructed-front.svg",
+    "source_sha256": "618d5e12a3c6fdfec84456655ea1a3217d60cdb4168ce7722b6c56ce47c0c84c",
+    "retained": "Same head/limb counts, bare feet, camera and family proportions",
+    "changes": "Slightly lowered/softened shoulders and torso; side should have a restrained age-related stoop, not a profession pose or extreme caricature"
+  },
+  "uncertainty": "Age variant requested by user. No native numerical-age/life-stage selection is established; no canonical older-female resident is inferred.",
+  "palette": "Neutral grayscale and separate clothing; no baked gray hair or personal cosmetics"
+}

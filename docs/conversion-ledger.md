@@ -4,7 +4,7 @@ Reset date: 2026-10-20. **Every entry is UNFINISHED at the reset.**
 
 This ledger supersedes earlier art-completion claims. Native tests establish integration behavior only. Existing sprites, traced contours, generated sheets and previous selections are historical inputs; none receive completion credit.
 
-154 entries: 16 resident assemblies (10 blueprints), 10 body/age templates, 20 actual equipment inventory/aggregate records, 33 body/equipment fittings, 2 unmapped child-template garments, 57 scenery types, 8 surface/grass targets and 8 exclusion reviews.
+156 entries: 16 resident assemblies (10 blueprints), 12 body/age templates, 20 actual equipment inventory/aggregate records, 33 body/equipment fittings, 2 child-template garments, 57 scenery types, 8 surface/grass targets and 8 exclusion reviews.
 
 The 75 baseline blueprint types are all accounted for: 67 selected visible types plus eight exclusions to recheck. Connectivity masks are enumerated under their owning wall/fence entry, not hidden behind an atlas count. Counts overlap between subjects and fittings; they are not a completion percentage.
 
@@ -16,10 +16,10 @@ Active entry: **none**. Overall art work: **unfinished**. Implementation Stage 3
 
 1. Select exactly one entry and record it as IN PROGRESS with its current step. Resolve its source identity, description, native metadata and actual reference decision first.
 2. Append the conversion process as it happens: timestamp, step, action, exact input hashes, prompt text/file and tool/settings when used, output hashes, corrections/rejections, and review result. Do not manufacture retrospective PASS events from file existence.
-3. For adults: front construction -> front-guided side/back -> anatomical fixes -> composed refinement -> registered body/head/color masks. Child references remain fully clothed. For each equipped piece: fit on the unchanged selected body -> in-context refinement -> isolated extraction -> recomposition/occlusion review in every view.
+3. Body authoring: front construction -> front-guided side/back -> anatomical fixes -> composed refinement -> registered body/head/color masks. Child models are featureless mannequins; removable clothing stays separate at every age. For each equipped piece: fit on the unchanged selected body -> in-context refinement -> isolated extraction -> recomposition/occlusion review in every view.
 4. Furniture/vegetation/machinery/tiles follow identity + description + original shape/palette + reference decision -> deliberate reconstruction -> relevant views/states -> refinement -> masks/registration -> visual and native review. A trace/upscale is an input, not the completed conversion.
 5. Review neutral/Qud palettes, actual game scale, anatomical count, whole-body orientation, clothing perspective, cuffs, attachment and depth order. Record failures and remedies on that entry. A native batch result never completes unreviewed art entries.
-6. Mark COMPLETE only after every required step has a passing logged result and matching evidence. Then move to the next entry. A necessary pause leaves this entry UNFINISHED with the exact blocker/resolution; it does not quietly disappear.
+6. Record generation-ready after every authoring step is finished, then close its active generation work and move to the next entry. Native validation waits until all pending conversions are generation-ready. Overall COMPLETE still requires every applicable final acceptance step and evidence; pending native acceptance remains explicit.
 
 The JSON is the editable record; this Markdown is generated from it. `python tools/enumerate_conversion_ledger.py --render` preserves statuses/logs and updates this view. `--check` checks inventory coverage, links, one active entry and completion evidence. The script never generates art or promotes entries automatically.
 
@@ -194,20 +194,22 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-TORCHPOST | Torchpost | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
-### Race/body templates (10)
+### Race/body templates (12)
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | BODY-DROMAD | dromad | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
-| BODY-DROMAD-CHILD | dromad child (fully clothed template) | UNFINISHED | - | Constructed template only. No native age selector established; do not assign an age to residents by guesswork. |
+| BODY-DROMAD-CHILD | dromad child (featureless body with separate clothing) | UNFINISHED | - | Constructed template only. No native age selector established; do not assign an age to residents by guesswork. |
 | BODY-GLOWFISH | glowfish | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Known defect: magenta/cyan are baked into fixed-color pixels; palette-off is not neutral. Establish neutral base and separate Qud color masks. Existing east-guided turnaround is not evidence of the complete agreed front-first process. |
-| BODY-HUMAN-CHILD | human child (fully clothed template) | UNFINISHED | - | Constructed template only. No native age selector established; do not assign an age to residents by guesswork. |
+| BODY-HUMAN-CHILD | human child (featureless body with separate clothing) | UNFINISHED | - | Constructed template only. No native age selector established; do not assign an age to residents by guesswork. |
 | BODY-HUMAN-FEMALE | human-female | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
 | BODY-HUMAN-MALE | human-male | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
-| BODY-IRUDAD | irudad | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Native second arm pair/hands-face is supported, but the upright mannequin omits the described hunched back and elderly proportions. Reconstruct the elder silhouette from sprite plus full description. Native description explicitly specifies a short barb-crowned tail and the blueprint includes Stinger. The displayed smooth curled tail does not clearly preserve the barbed tip; review against description in all views. The initial constructed torso shared human geometry, but independently generated/registered turnarounds drifted in torso, leg and head proportions. Derive from the selected shared human base and record each source-supported age/anatomy change. |
-| BODY-NIMA | nima | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
+| BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. Native second arm pair/hands-face is supported, but the upright mannequin omits the described hunched back and elderly proportions. Reconstruct the elder silhouette from sprite plus full description. Native description explicitly specifies a short barb-crowned tail and the blueprint includes Stinger. The displayed smooth curled tail does not clearly preserve the barbed tip; review against description in all views. The initial constructed torso shared human geometry, but independently generated/registered turnarounds drifted in torso, leg and head proportions. Derive from the selected shared human base and record each source-supported age/anatomy change. |
+| BODY-NIMA | nima | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. |
 | BODY-RAY-CAT | ray-cat | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
-| BODY-YRAME | yrame | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. ImageGen three-foot proposals were rejected; four-foot geometry was patched afterward without a completed composed refinement. |
+| BODY-YRAME | yrame | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. ImageGen three-foot proposals were rejected; four-foot geometry was patched afterward without a completed composed refinement. |
+| BODY-HUMAN-FEMALE-OLDER | human female older template | UNFINISHED | BODY-HUMAN-FEMALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
+| BODY-HUMAN-MALE-OLDER | human male older template | UNFINISHED | BODY-HUMAN-MALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
 
 ### Signs/shrine (6)
 
@@ -230,7 +232,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | TILE-SOIL | bare soil/interior ground | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
 | TILE-WATER-DEEP | deep/swimming water | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
 | TILE-MARSH | marsh/grass ground | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
-| TILE-SAND | path surface | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
+| TILE-SAND | path surface | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. Historical filename only: replace the sandy-road interpretation with Qud-colored stone/cobblestone-like paving over grass. |
 | TILE-WATER-SHALLOW | shallow/wading water | UNFINISHED | - | Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow. |
 
 ### Template garments (2)
@@ -250,7 +252,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-BRINESTALKWALLWITHGEARBOX | BrinestalkWallWithGearbox | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVASWALL | CanvasWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTFLOOR | DirtFloor | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
 | SCN-DOOR | Door | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POND | Pond | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-RUSTEDMETALWALL | RustedMetalWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -1409,11 +1411,11 @@ Historical artifacts: [art/dromad/layered/body-east.png](../art/dromad/layered/b
 
 Current step: not started. Process-log events: 0.
 
-### BODY-DROMAD-CHILD: dromad child (fully clothed template)
+### BODY-DROMAD-CHILD: dromad child (featureless body with separate clothing)
 
-Required steps: resolve_age_evidence_and_render_reference -> construct_fully_clothed_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_actual_clothing -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
+Required steps: resolve_age_evidence_and_render_reference -> construct_featureless_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_actual_clothing -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
 
-Required views/states: fully clothed south/east/north; west mirror.
+Required views/states: male/female templates; shared geometry if no supported distinction; south/east/north; west mirror; separate removable clothing.
 
 Historical artifacts: [art/village/age-templates/dromad/body-east.png](../art/village/age-templates/dromad/body-east.png), [art/village/age-templates/dromad/body-north.png](../art/village/age-templates/dromad/body-north.png), [art/village/age-templates/dromad/body-south.png](../art/village/age-templates/dromad/body-south.png), [art/village/age-templates/dromad/head-east.png](../art/village/age-templates/dromad/head-east.png), [art/village/age-templates/dromad/head-north.png](../art/village/age-templates/dromad/head-north.png), [art/village/age-templates/dromad/head-south.png](../art/village/age-templates/dromad/head-south.png), [art/village/age-templates/dromad/tunic-east.png](../art/village/age-templates/dromad/tunic-east.png), [art/village/age-templates/dromad/tunic-north.png](../art/village/age-templates/dromad/tunic-north.png), [art/village/age-templates/dromad/tunic-south.png](../art/village/age-templates/dromad/tunic-south.png).
 
@@ -1429,11 +1431,11 @@ Historical artifacts: [art/village/bodies/glowfish/body-east.png](../art/village
 
 Current step: not started. Process-log events: 0.
 
-### BODY-HUMAN-CHILD: human child (fully clothed template)
+### BODY-HUMAN-CHILD: human child (featureless body with separate clothing)
 
-Required steps: resolve_age_evidence_and_render_reference -> construct_fully_clothed_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_actual_clothing -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
+Required steps: resolve_age_evidence_and_render_reference -> construct_featureless_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_actual_clothing -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
 
-Required views/states: fully clothed south/east/north; west mirror.
+Required views/states: male/female templates; shared geometry if no supported distinction; south/east/north; west mirror; separate removable clothing.
 
 Historical artifacts: [art/village/age-templates/human/body-east.png](../art/village/age-templates/human/body-east.png), [art/village/age-templates/human/body-north.png](../art/village/age-templates/human/body-north.png), [art/village/age-templates/human/body-south.png](../art/village/age-templates/human/body-south.png), [art/village/age-templates/human/head-east.png](../art/village/age-templates/human/head-east.png), [art/village/age-templates/human/head-north.png](../art/village/age-templates/human/head-north.png), [art/village/age-templates/human/head-south.png](../art/village/age-templates/human/head-south.png), [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
@@ -1447,7 +1449,61 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/human-female/body-east.png](../art/village/bodies/human-female/body-east.png), [art/village/bodies/human-female/body-north.png](../art/village/bodies/human-female/body-north.png), [art/village/bodies/human-female/body-south.png](../art/village/bodies/human-female/body-south.png), [art/village/bodies/human-female/brief.json](../art/village/bodies/human-female/brief.json), [art/village/bodies/human-female/front.png](../art/village/bodies/human-female/front.png), [art/village/bodies/human-female/front.svg](../art/village/bodies/human-female/front.svg), [art/village/bodies/human-female/head-east.png](../art/village/bodies/human-female/head-east.png), [art/village/bodies/human-female/head-north.png](../art/village/bodies/human-female/head-north.png), [art/village/bodies/human-female/head-south.png](../art/village/bodies/human-female/head-south.png), [art/village/bodies/human-female/model.json](../art/village/bodies/human-female/model.json), [art/village/bodies/human-female/turnaround-prompt.txt](../art/village/bodies/human-female/turnaround-prompt.txt), [art/village/bodies/human-female/turnaround.png](../art/village/bodies/human-female/turnaround.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
+
+- 2026-10-20T01:05:15.310631+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolved female humans from the captured JoppaFarmerConvert and watervine farmer instances, retaining source descriptions, ancestry, body trees and actual equipment.
+  Review: Inspected the packet and reference plate. The body plan is Humanoid with paired feet, two hands and one head; no race-wide nude description exists. Captured gender does not establish mandatory morphology or a life stage.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22", "role": ""}, {"path": "evidence/joppa-creature-catalogue.json", "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79", "role": ""}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/source-packet.json", "sha256": "0949e4f13981fe60ebc6eb57acc6766066efe506dbcee1b432e274d2a9a1476e", "role": ""}, {"path": "art/conversion/body-human-female/v1/source-comparison.png", "sha256": "24f7a962826da30dfcf88a8fffcadfc3127c2db3c02058fe65b8eed0217e8377", "role": ""}]
+  Method/prompt/corrections: {"phase": "Original shapes and captured female human anatomy"}
+
+- 2026-10-20T01:05:15.310896+00:00 / select_actual_core_dlc_or_mod_reference / PASS: Selected exact installed Core Naked_Female_south and Female_Average_Normal_south, retaining the completed male base as the common design family.
+  Review: Viewed the actual donor torso and head. Their role is body-type presentation and clean game shading; Qud identity and separate gear remain authoritative.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/source-packet.json", "sha256": "0949e4f13981fe60ebc6eb57acc6766066efe506dbcee1b432e274d2a9a1476e", "role": ""}, {"path": "art/conversion/body-human-male/v1/model.json", "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/source-comparison.png", "sha256": "24f7a962826da30dfcf88a8fffcadfc3127c2db3c02058fe65b8eed0217e8377", "role": ""}]
+  Method/prompt/corrections: {"phase": "Female donor convention and shared human reference"}
+
+- 2026-10-20T01:05:15.311216+00:00 / construct_front / PASS: Retained shared human head, arms, hands and explicit bare feet, with a modest authored torso/hip variation based on the donor convention.
+  Review: Viewed rendered front: one head, two arms/hands, two legs and two feet; relaxed neutral mannequin. The body variation is an authoring convention, not claimed as native anatomical fact.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/source-packet.json", "sha256": "0949e4f13981fe60ebc6eb57acc6766066efe506dbcee1b432e274d2a9a1476e", "role": ""}, {"path": "tools/construct_female_base.py", "sha256": "8c4b08513cbdfa7715b55f585b54d136de7e403135211708dcf2d7ab6c655fc0", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/constructed-front.svg", "sha256": "01c73dd1765553f6b1f56c6c7709a75e9685ae80a112f87bc2c980d78e987ccb", "role": ""}, {"path": "art/conversion/body-human-female/v1/constructed-front.png", "sha256": "b3aad5f65861f16406e12255a9b10ab5766509eb285a7bc7f66e3e4106c73a16", "role": ""}]
+  Method/prompt/corrections: {"phase": "Manual front derived from the shared human geometry", "tool": "Python + resvg_py 0.5.0", "settings": "512x1024 transparent editable SVG"}
+
+- 2026-10-20T01:08:28.559814+00:00 / construct_front / RECORDED: Refined the manually constructed shared-family female front. Retained the returned image as an intermediate proposal; its false ankle-cuff lines need correction.
+  Review: One head/two arms/hands/two legs and feet retained. Front body belongs to the shared human family. Ankle seams resemble shoe cuffs; request removal with the selected male bare feet as reference in the next proposal.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/constructed-front.png", "sha256": "b3aad5f65861f16406e12255a9b10ab5766509eb285a7bc7f66e3e4106c73a16"}, {"path": "art/conversion/body-human-female/v1/source-comparison.png", "sha256": "24f7a962826da30dfcf88a8fffcadfc3127c2db3c02058fe65b8eed0217e8377"}, {"path": "art/conversion/body-human-female/v1/refine-front-prompt.txt", "sha256": "96fc8e9bd14d775cd87fa88f82f1bc82edf44a4c6e4087e7f16cefb5e1398335"}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/refined-front.png", "sha256": "570f48928a16d3384180d56116ac141857caad39796c705e5eeebf0f46820d17"}]
+  Method/prompt/corrections: {"phase": "Refined front proposal and foot correction identified", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-9aa37c6c-880b-4b1d-8370-985dac5a807e.png"}
+
+- 2026-10-20T01:10:00.052485+00:00 / imagegen_side_back_from_front_and_race_facts / PASS: Generated female front/side/back from its refined front and the selected male turnaround; explicitly corrected the ankle cuffs and retained modest ordinary contour differences.
+  Review: Viewed all three: feet now read as bare feet, side torso/limbs turn together, rear view has heels. No new appendages or cosmetics. Subtle torso/hip curves remain within the shared human design.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/refined-front.png", "sha256": "570f48928a16d3384180d56116ac141857caad39796c705e5eeebf0f46820d17"}, {"path": "art/conversion/body-human-male/v1/registered-assembly.png", "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a"}, {"path": "art/conversion/body-human-female/v1/secondary-views-prompt.txt", "sha256": "0099a62b1f1d2de86294ccea5f59514076777e0014febbe2f341aef075ecdf2d"}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/secondary-views.png", "sha256": "eff784118096bc294f2eba9274a8a1ae43e0328956a68be7e15df5338c0482e3"}]
+  Method/prompt/corrections: {"phase": "Secondary views with the shared male family reference", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-483147ec-540c-40cb-bf57-9418f100a760.png"}
+
+- 2026-10-20T01:10:00.054166+00:00 / correct_anatomy_then_imagegen_refine_composed_views / RECORDED: Removed generated labels, cleared invisible background RGB/low-alpha fringe, converted to equal-channel grayscale and translated feet onto one baseline.
+  Review: Viewed the patched sheet. Side foot/arm overlap is coherent; head and body turn, and no ankle cuff remains. No anatomical-count correction needed. Next is the required composed refinement.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/secondary-views.png", "sha256": "eff784118096bc294f2eba9274a8a1ae43e0328956a68be7e15df5338c0482e3"}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/patched-views.png", "sha256": "c57b0dbf0143011fe47046f46bf6a4792542791063c6d2db518a6f706636a696"}, {"path": "art/conversion/body-human-female/v1/patch-decisions.json", "sha256": "652463eaedbf66f24d01596f1038a4860902b22907664aa2787be0d6f91cafc1"}]
+  Method/prompt/corrections: {"phase": "Patched view registration and neutral source", "tool": "Python Pillow", "settings": {"alpha_clear_below": 16, "alpha_restore_from": 240, "foot_baseline": 950}}
+
+- 2026-10-20T01:12:14.088652+00:00 / correct_anatomy_then_imagegen_refine_composed_views / PASS: Refined the composed patched sheet once, retaining the same human family and modest curves.
+  Review: Viewed output: coherent front/side/back, no cuff seams, extra appendages, clothes or cosmetics. Side limb occlusion and foot direction are retained; rear view uses heels.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/patched-views.png", "sha256": "c57b0dbf0143011fe47046f46bf6a4792542791063c6d2db518a6f706636a696", "role": ""}, {"path": "art/conversion/body-human-female/v1/refine-patched-prompt.txt", "sha256": "a4d168928b69250f6cedf55f8034044819896e38512221ecb3aea83a86995f43", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/refined-patched-views.png", "sha256": "4e3727c571a2bc475ec0651cfeabee226dd6ad9b48798920a506625641f403b2", "role": ""}]
+  Method/prompt/corrections: {"phase": "Refined patched female views", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 1}, "generation_file": "exec-6b44fa51-9e8c-45ff-98c7-7cc675355b02.png"}
+
+- 2026-10-20T01:12:14.091040+00:00 / register_required_layers_and_color_masks / PASS: Registered the selected views, cleared invisible RGB, neutralized source shading and split body/head using explicit neck masks with two-pixel body underlap.
+  Review: Inspected the recomposed registered image: no neck gaps or cropped hands/feet. Body contains painted limbs; head is separate. No garment or foreign hand outline is baked into an equipment layer. Native use waits for the complete generated set.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/refined-patched-views.png", "sha256": "4e3727c571a2bc475ec0651cfeabee226dd6ad9b48798920a506625641f403b2", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/model.json", "sha256": "64dc8143e6d213f6573671a98d5c3dca81208534ecb16b2f31374b0077a1dfc5", "role": ""}, {"path": "art/conversion/body-human-female/v1/registered-assembly.png", "sha256": "35c294224ef070f93701c3212bf7bca823c96c4d06430c0f165a3282d2cb817f", "role": ""}, {"path": "art/conversion/body-human-female/v1/body-south.png", "sha256": "fd424b78b7fb2e45529000f0cc46f53f6eeb55cf5bef87d492ee47db26123f7f", "role": "body / south"}, {"path": "art/conversion/body-human-female/v1/head-south.png", "sha256": "a25fd8f5cf18d52c1ca6a62119dd187da14f8e80b56a6a1e63c02d65602d614b", "role": "head / south"}, {"path": "art/conversion/body-human-female/v1/body-mask-south.png", "sha256": "8dc764e0fb398c7704dcd6235ec00091bcd00bd2d01c3c653b7aa296b334df5d", "role": "body-mask / south"}, {"path": "art/conversion/body-human-female/v1/head-mask-south.png", "sha256": "2c5543c572e49d68cf5bcdaa63aaf42608dd475a1bf89eaa0c8d0ece6a72775f", "role": "head-mask / south"}, {"path": "art/conversion/body-human-female/v1/body-east.png", "sha256": "e1cc2a73198e89fdad1d69751c6852f3fa1e607966c2e621807e22bd9807a56d", "role": "body / east"}, {"path": "art/conversion/body-human-female/v1/head-east.png", "sha256": "c561948d9d19baf6bfa3ece091fb6880f300693f4ae16eaf2561c52f4a3a21d0", "role": "head / east"}, {"path": "art/conversion/body-human-female/v1/body-mask-east.png", "sha256": "68f914b723a56991070b7d4d64caed35942316b0365ffbbca85ebac7ee925b9c", "role": "body-mask / east"}, {"path": "art/conversion/body-human-female/v1/head-mask-east.png", "sha256": "1cd4862169d2b89586983fb122d62c2a9a77e2f00fb521639d56c0f4685e1652", "role": "head-mask / east"}, {"path": "art/conversion/body-human-female/v1/body-north.png", "sha256": "e4c78a288b316853441baf9602b147559e0079b67b27ef391604ac0762b6be0e", "role": "body / north"}, {"path": "art/conversion/body-human-female/v1/head-north.png", "sha256": "b03fbfc93d172d41ff6986f977bc6abb06af0f537b15d3d28130108b665931d3", "role": "head / north"}, {"path": "art/conversion/body-human-female/v1/body-mask-north.png", "sha256": "1f16c2a9d09fafe0e5bff980fb554ff42b170d3b7bde24b0b1aac5fb2055c886", "role": "body-mask / north"}, {"path": "art/conversion/body-human-female/v1/head-mask-north.png", "sha256": "3fa7e08fbe406f06379710b2875636f10a68182ce2ac48f403bf63024345a259", "role": "head-mask / north"}]
+  Method/prompt/corrections: {"phase": "Separate female body/head layers and masks", "tool": "Python Pillow", "settings": {"canvas": [512, 1024], "native_body_height": 1.21, "head_mask_top_y": 210, "neck_mask_bottom_y": 242, "body_underlap_pixels": 2}}
+
+- 2026-10-20T01:12:14.091388+00:00 / visual_review_anatomy_orientation_palette_all_views / PASS: Reviewed the registered assembly and intended-size authoring previews. Finished this entry's generation work without native testing.
+  Review: Same family as the male human, with modest contour variation. Blank head, two arms/hands, two legs and distinct bare feet. Side turns coherently; rear feet are heels; west mirrors east. Clothing remains separate and its fitting entries are pending.
+  Inputs: [{"path": "art/conversion/body-human-female/v1/model.json", "sha256": "64dc8143e6d213f6573671a98d5c3dca81208534ecb16b2f31374b0077a1dfc5", "role": ""}, {"path": "art/conversion/body-human-female/v1/registered-assembly.png", "sha256": "35c294224ef070f93701c3212bf7bca823c96c4d06430c0f165a3282d2cb817f", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-female/v1/game-scale-review.png", "sha256": "d2de21d2e81012f7823f238a30b798c08e969761b88fa65c49a380d4acbfdf20", "role": ""}]
+  Method/prompt/corrections: {"phase": "Female base generation-ready"}
 
 ### BODY-HUMAN-MALE: human-male
 
@@ -1457,7 +1513,79 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/human-male/body-east.png](../art/village/bodies/human-male/body-east.png), [art/village/bodies/human-male/body-north.png](../art/village/bodies/human-male/body-north.png), [art/village/bodies/human-male/body-south.png](../art/village/bodies/human-male/body-south.png), [art/village/bodies/human-male/brief.json](../art/village/bodies/human-male/brief.json), [art/village/bodies/human-male/front.png](../art/village/bodies/human-male/front.png), [art/village/bodies/human-male/front.svg](../art/village/bodies/human-male/front.svg), [art/village/bodies/human-male/head-east.png](../art/village/bodies/human-male/head-east.png), [art/village/bodies/human-male/head-north.png](../art/village/bodies/human-male/head-north.png), [art/village/bodies/human-male/head-south.png](../art/village/bodies/human-male/head-south.png), [art/village/bodies/human-male/model.json](../art/village/bodies/human-male/model.json), [art/village/bodies/human-male/turnaround-prompt.txt](../art/village/bodies/human-male/turnaround-prompt.txt), [art/village/bodies/human-male/turnaround.png](../art/village/bodies/human-male/turnaround.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 12.
+
+- 2026-10-20T00:49:23.267686+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolved Argyve, Mehmet and captured male watervine farmers to reusable human anatomy. Preserved individual descriptions, attached native body trees, actual gear, source hashes and uncertainty.
+  Review: Inspected the exact metadata and contextual source plate. Two arms, two hands and paired feet; no native race-wide appearance prose. The original clothed sprite is not a nude anatomy diagram.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22", "role": "Observed native definitions and parts"}, {"path": "evidence/joppa-creature-catalogue.json", "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79", "role": "Source-bound species catalogue"}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149", "role": "Original sprite identities"}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/source-packet.json", "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6", "role": "Exact source packet and authored anatomy contract"}, {"path": "art/conversion/body-human-male/v1/source-comparison.png", "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b", "role": "Annotated Qud original shapes alongside donor conventions"}]
+  Method/prompt/corrections: {"phase": "Original shape and body metadata"}
+
+- 2026-10-20T00:49:23.267847+00:00 / select_actual_core_dlc_or_mod_reference / PASS: Selected installed Core Naked_Male_south and Male_Average_Normal_south for presentation only. Verified the extracted PNG hashes against the recorded catalogue; DLC/mod references remain eligible for subjects that need them.
+  Review: Viewed donor torso/head reference. Ordinary donor humanlike body has no independent rendered arms/legs; this Qud body keeps them painted into the body graphic. No donor race substitution.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/source-packet.json", "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6", "role": "Exact donor IDs/hashes and role"}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/source-comparison.png", "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b", "role": "Contextual source/reference comparison"}]
+  Method/prompt/corrections: {"phase": "RimWorld reference decision"}
+
+- 2026-10-20T00:49:23.268142+00:00 / construct_front / PASS: Constructed original editable adult front with two visible arms/hands, paired legs and explicit rounded bare feet. Preserved the non-detailed neutral mannequin convention; personal cosmetics and occupation gear remain separate.
+  Review: Viewed the rendered PNG: one head, two arms/hands, two legs and two distinct feet. Foot overlap/ankle contours still require the refinement review. This passes construction only, not final body or native acceptance.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/source-packet.json", "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6", "role": "Anatomy and design contract"}, {"path": "tools/construct_human_base.py", "sha256": "c0edbb92f78c930c49a4328137a7606706b2ff1bfd49c3669b743de15f0cf1dc", "role": "Exact geometry and plate construction method"}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/constructed-front.svg", "sha256": "618d5e12a3c6fdfec84456655ea1a3217d60cdb4168ce7722b6c56ce47c0c84c", "role": "Editable source geometry"}, {"path": "art/conversion/body-human-male/v1/constructed-front.png", "sha256": "f4ccc3be23caca549954021f28af47086157e46fb225f868a5f6c6ccf0e3fd15", "role": "Rendered manual front suggestion"}]
+  Method/prompt/corrections: {"phase": "Manual front suggestion", "tool": "Python + resvg_py 0.5.0", "settings": "512x1024 transparent SVG render; deterministic authored geometry"}
+
+- 2026-10-20T00:50:32.619990+00:00 / construct_front / PASS: Refined only the constructed front with built-in ImageGen, using the manual front and the inspected source/reference plate.
+  Review: Viewed full output: one blank head, two arms/hands, two legs and distinct short bare feet with toes. Foot stubs corrected. Neutral low-chroma gray; exact alpha inspected. No clothes or personal cosmetics. Front selected as the next view-generation anchor, not final native art.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/constructed-front.png", "sha256": "f4ccc3be23caca549954021f28af47086157e46fb225f868a5f6c6ccf0e3fd15"}, {"path": "art/conversion/body-human-male/v1/source-comparison.png", "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b"}, {"path": "art/conversion/body-human-male/v1/refine-front-prompt.txt", "sha256": "508479e64f8cd2a5600b6ee7f4c15aa55558ea6aef0dd02a7e4ef5b01ee5b87c"}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/refined-front.png", "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd"}]
+  Method/prompt/corrections: {"phase": "Refined front suggestion", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-9e08c9ab-9d61-47ee-a74a-eb3571e45f4e.png"}
+
+- 2026-10-20T00:52:22.047183+00:00 / imagegen_side_back_from_front_and_race_facts / PASS: Generated the same adult body in front, right-facing side and back using only the reviewed refined front plus explicit anatomy facts.
+  Review: Viewed the raw sheet. Side body/legs/foot rotate coherently and far limbs are occluded. Back has no face features or front toes. Proposal changes the front slightly and low-chroma fill/alpha still require controlled cleanup.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/refined-front.png", "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd", "role": ""}, {"path": "art/conversion/body-human-male/v1/secondary-views-prompt.txt", "sha256": "abd015f6e250f394157c669fee5aa6f1d3acf71be795c419c885e92c0bdace86", "role": ""}, {"path": "art/conversion/body-human-male/v1/source-packet.json", "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/secondary-views.png", "sha256": "f75108d6aad2e2be1a2b7a5b3beb6ffb22e317774716307fd13600de6b36308f", "role": "Raw proposed turnaround, including generated labels"}]
+  Method/prompt/corrections: {"phase": "Secondary views proposed from the front", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 1}, "generation_file": "exec-bf36edf1-fb52-468f-96b5-34557aca3c02.png"}
+
+- 2026-10-20T00:52:22.049107+00:00 / correct_anatomy_then_imagegen_refine_composed_views / RECORDED: Restored selected front, cleared labels, normalized neutral grayscale and alpha, and aligned foot contact. No anatomy-count patch was necessary; the side silhouette supports occluded far limbs.
+  Review: Inspected patched sheet: feet visible in every applicable direction, genuine side profile, no background or labels in sprite panels. Back head/torso breadth consistency is explicitly requested in the composed refinement.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/refined-front.png", "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd", "role": ""}, {"path": "art/conversion/body-human-male/v1/secondary-views.png", "sha256": "f75108d6aad2e2be1a2b7a5b3beb6ffb22e317774716307fd13600de6b36308f", "role": ""}, {"path": "tools/patch_human_turnaround.py", "sha256": "84208fe5367aad46134dc12b41a88bc44656aebf11e2c8de2100783a21317dcb", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/patched-views.png", "sha256": "4ec47fba8771fb45c8f22bd00a2ace36c9ba97001132dee1a24464c72d57bfc6", "role": "Patched front / side / back"}, {"path": "art/conversion/body-human-male/v1/patch-decisions.json", "sha256": "e56bd97b0ab68c42a1f6aae9aeb09636d3438d284e0c1f2f201e27b2998d2c00", "role": "Exact patch regions and registration decisions"}]
+  Method/prompt/corrections: {"phase": "Patched views before composed refinement", "tool": "Python Pillow", "settings": {"alpha_clear_below": 16, "alpha_restore_from": 240, "neutral": "equal RGB luminance", "foot_baseline": 930}}
+
+- 2026-10-20T00:55:48.198028+00:00 / correct_anatomy_then_imagegen_refine_composed_views / PASS: Refined the composed patched sheet once, preserving count, directions and bare feet; selected its coherent three-view result.
+  Review: Viewed the complete returned sheet: one head/two arms/hands/two legs/feet; side is a full-body profile and back shows heels rather than front toes. Front/back head and torso remain the same body family. Raw transparent pixels carry irrelevant background RGB; registration explicitly clears it.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/patched-views.png", "sha256": "4ec47fba8771fb45c8f22bd00a2ace36c9ba97001132dee1a24464c72d57bfc6", "role": ""}, {"path": "art/conversion/body-human-male/v1/refine-patched-prompt.txt", "sha256": "cf04ed7b85464b4dc080bae2d7807b1852cef602b4946db67079e724453e558f", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/refined-patched-views.png", "sha256": "5678c33fb1561c1c1f88a89c07fc5605aa9433e97023bd3c0bf321ea4b14cc25", "role": "Raw composed refinement"}]
+  Method/prompt/corrections: {"phase": "Refined patched views", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 1}, "generation_file": "exec-20ed3e12-9f2f-43b4-bb61-88d4fdfd1523.png"}
+
+- 2026-10-20T00:55:48.200669+00:00 / register_required_layers_and_color_masks / PASS: Registered selected views to physical contact, converted source to true grayscale, split body/head with explicit masks and a two-pixel body underlap. Prepared an isolated native contract.
+  Review: Viewed registered assembly and normal-size authoring sheet. Recomposition preserves the body and neck; no separate limb nodes added. Source pixels have equal RGB channels, with body/head under native foreground tint. Historical clothing remains unaccepted and is not regenerated by this body entry.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/refined-patched-views.png", "sha256": "5678c33fb1561c1c1f88a89c07fc5605aa9433e97023bd3c0bf321ea4b14cc25", "role": ""}, {"path": "tools/register_human_base.py", "sha256": "c246de68cf5c364d589062ce6e8e670bafbc491ab9b9b41e0f36753d78657676", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/model.json", "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e", "role": "Exact layer registration and palette contract"}, {"path": "art/conversion/body-human-male/v1/registered-assembly.png", "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a", "role": "Recomposed registered front / side / back"}, {"path": "art/conversion/body-human-male/v1/body-mask-south.png", "sha256": "0c15a4c60887019c8b12466a1dce728928ede488409997784c9842f92b323934", "role": "body ownership mask / south"}, {"path": "art/conversion/body-human-male/v1/head-mask-south.png", "sha256": "91ab4a405e9611f8a388429ac1ee81ea6654fe511b051d805021a50877112d68", "role": "head ownership mask / south"}, {"path": "art/conversion/body-human-male/v1/body-mask-east.png", "sha256": "d48a0b98139f37e38d67ccc9ebca99f4b01f598ae2dac8aff23679e7fd4ac742", "role": "body ownership mask / east"}, {"path": "art/conversion/body-human-male/v1/head-mask-east.png", "sha256": "442f20d565ab7c3c89e4c726229b2c302caa0274356314ffd609308746b13ef2", "role": "head ownership mask / east"}, {"path": "art/conversion/body-human-male/v1/body-mask-north.png", "sha256": "946f68c27c39d659f7c7e7e49c6a83ef923cf79a739af15202544307a3ce7750", "role": "body ownership mask / north"}, {"path": "art/conversion/body-human-male/v1/head-mask-north.png", "sha256": "4422afeba5826c44683aeeb7630fd2fd310b79f0fe6bf26589919014caaf7b85", "role": "head ownership mask / north"}]
+  Method/prompt/corrections: {"phase": "Registered body, head and explicit masks", "tool": "Python Pillow", "settings": {"body_height_world": 1.21, "head_body_underlap_pixels": 2, "body_contains_limbs": true}}
+
+- 2026-10-20T00:55:48.201291+00:00 / visual_review_anatomy_orientation_palette_all_views / RECORDED: Reviewed the same registered model at 48x96 and 2x nearest display; native captures are still pending.
+  Review: Feet remain visible and side foot points right. No shoulder/neck holes or extra hands. The entry remains IN PROGRESS until the real native body evidence and current bindings are reviewed.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/model.json", "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e", "role": ""}, {"path": "art/conversion/body-human-male/v1/registered-assembly.png", "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/game-scale-review.png", "sha256": "dfcd88d79635ba81e432ed2340917c121264ea1d4526655b66d5953f38d822d8", "role": "Authoring-scale review, not native footage"}]
+  Method/prompt/corrections: {"phase": "Authoring-scale review before native acceptance"}
+
+- 2026-10-20T01:00:03.908420+00:00 / native_body_review / FAIL: Ran isolated hidden native Qud with the registered human body. Four-facing captures rendered, but the existing diagnostic rejected a completed hurt reaction for missing its narrow midpoint window; save/load was not reached.
+  Review: Failure inspected. Actual hurt start/end exist; no claim of a passing batch or save/load. Diagnostic is corrected without changing animation timing, then a new isolated run will verify completion.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/native-contract.json", "sha256": "cd588e2e566d2a816a733c67d187670742fc14dfddc6f6d1dbdabb320ce68d4b"}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/native-attempt-01.json", "sha256": "db4fd1f1529749bb9c634601352b1ec02ad15b520a74add9b809a9d640331f3d"}]
+  Method/prompt/corrections: {"phase": "Native attempt 01: retained diagnostic failure"}
+
+- 2026-10-20T01:02:52.068448+00:00 / native_body_review / DEFERRED UNTIL ALL GENERATED: User requires generation of all pending textures, objects and creatures before native validation. The already-running second probe exited; no new probe will be started. Reverted the diagnostic code change and retained the existing generated artwork.
+  Review: No validation acceptance or completion credit assigned. Resume generation and its visual corrections. Native checks remain pending until the all-conversions gate.
+  Inputs: []
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Validation deferred by user instruction"}
+
+- 2026-10-20T01:05:15.309900+00:00 / visual_review_anatomy_orientation_palette_all_views / PASS: Concluded visual authoring review of the registered neutral model, including explicit feet and whole-body side orientation. Native acceptance is intentionally pending until all conversions are generated.
+  Review: Body/head layers recompose without a neck gap. Two arms/hands and paired feet are retained; east is a genuine profile, north has rear heels, west uses the documented east mirror. Equal RGB channels preserve neutral source tint. Clothing fitting belongs to the separate fitting entries.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/model.json", "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e", "role": ""}, {"path": "art/conversion/body-human-male/v1/registered-assembly.png", "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male/v1/game-scale-review.png", "sha256": "dfcd88d79635ba81e432ed2340917c121264ea1d4526655b66d5953f38d822d8", "role": ""}]
+  Method/prompt/corrections: {"phase": "Authoring complete: shared human male base"}
 
 ### BODY-IRUDAD: irudad
 
@@ -1809,6 +1937,92 @@ Historical artifacts: [art/village/scenery/watervine-body.png](../art/village/sc
 
 Current step: not started. Process-log events: 0.
 
+### BODY-HUMAN-FEMALE-OLDER: human female older template
+
+Required steps: resolve_age_evidence_and_render_reference -> construct_front_from_shared_human_base -> refine_front -> generate_other_views -> patch_and_refine_composed_views -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
+
+Required views/states: south/front; east/whole-body side; north/back; west mirror; separate body/head and clothing.
+
+Historical artifacts: none recorded.
+
+Current step: not started. Process-log events: 0.
+
+### BODY-HUMAN-MALE-OLDER: human male older template
+
+Required steps: resolve_age_evidence_and_render_reference -> construct_front_from_shared_human_base -> refine_front -> generate_other_views -> patch_and_refine_composed_views -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
+
+Required views/states: south/front; east/whole-body side; north/back; west mirror; separate body/head and clothing.
+
+Historical artifacts: none recorded.
+
+Current step: generation ready; final acceptance pending. Process-log events: 11.
+
+- 2026-10-20T01:13:36.283910+00:00 / resolve_age_evidence_and_render_reference / PASS: Recorded the requested older human variant, original Qud age reference, actual adult donor references, and the source hierarchy.
+  Review: Inspected the plate and packet. Irudad supplies explicit old-face/hunched-back prose, but extra arms/tail are individual mutations, not generic aging. No distinct aged donor torso or native age selector is established; age variation is authored.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "art/conversion/body-human-male/v1/model.json", "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/source-packet.json", "sha256": "61ff9a57a6aedd1e37d94fd406471b17c57563406c3bb10e1da161e0ce78d49c"}, {"path": "art/conversion/body-human-male-older/v1/source-comparison.png", "sha256": "ca0dfc9f63529505d8b023644c4b4d96c37295d62c31a3f260daaa5f5554f903"}]
+  Method/prompt/corrections: {"phase": "Human age reference and metadata"}
+
+- 2026-10-20T01:13:36.284216+00:00 / construct_front_from_shared_human_base / PASS: Adjusted the shared human editable torso to softened shoulders and midsection, retaining head, limbs, bare feet and presentation.
+  Review: Viewed the manually constructed front. Same human family and anatomy; no clothes, personal hair/eyes, mutation appendages or profession pose. This is an age-related authoring suggestion, not a new native demographic.
+  Inputs: [{"path": "art/conversion/body-human-male/v1/constructed-front.svg", "sha256": "618d5e12a3c6fdfec84456655ea1a3217d60cdb4168ce7722b6c56ce47c0c84c"}, {"path": "tools/construct_older_human.py", "sha256": "4fc047dad3df73b87888cb21f577119fd32c6b8c9f9585f16a5dc17a3fea9c28"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/constructed-front.svg", "sha256": "791064bc6d2b431546cb76f5bb6ca7559fa8cdf177db02168115ec7a7aae3726"}, {"path": "art/conversion/body-human-male-older/v1/constructed-front.png", "sha256": "cd8d98e4ddc6630c2690102caa390e05c3143b354289fe8931c985717ab9ea61"}]
+  Method/prompt/corrections: {"phase": "Manual older male front"}
+
+- 2026-10-20T01:15:01.250159+00:00 / refine_front / REJECTED: Generated a first refined older front from the construction and shared male reference. Rejected it because the returned shoulder/pectoral shading reads more athletic and did not establish the intended age variation.
+  Review: Anatomy/feet were retained, but the age brief was missed. Do not select this as an older human. Make one focused correction to the shoulder/torso planes and age-specific head/neck planes while preserving the family.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/constructed-front.png", "sha256": "cd8d98e4ddc6630c2690102caa390e05c3143b354289fe8931c985717ab9ea61"}, {"path": "art/conversion/body-human-male/v1/registered-assembly.png", "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a"}, {"path": "art/conversion/body-human-male-older/v1/refine-front-prompt.txt", "sha256": "0975fe314a99cd0a757354578e978d37cb1a524948c7b5601e0e25cd7d3a5d83"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/refined-front-rejected-athletic.png", "sha256": "28ccdc1f87d2f7b397e5d7aa6eb03b47ee3665000282ed00aed03516ccd0b27f"}]
+  Method/prompt/corrections: {"phase": "Rejected older front: athletic shading replaced age cues", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-6b8f614b-4793-4af2-a2c9-2819b04cafc2.png"}
+
+- 2026-10-20T01:16:05.936592+00:00 / refine_front / PASS: Applied one focused correction to the rejected athletic proposal, keeping the manually constructed human family and adding restrained age-related neck/cheek planes and a softer torso.
+  Review: Viewed output: softer sloped shoulders, relaxed abdomen and subtle neck/cheek creases. One blank head, two arms/hands and two bare feet remain; no hair, eyes, clothing or mutation appendages. Selected as the older front anchor.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/refined-front-rejected-athletic.png", "sha256": "28ccdc1f87d2f7b397e5d7aa6eb03b47ee3665000282ed00aed03516ccd0b27f"}, {"path": "art/conversion/body-human-male-older/v1/constructed-front.png", "sha256": "cd8d98e4ddc6630c2690102caa390e05c3143b354289fe8931c985717ab9ea61"}, {"path": "art/conversion/body-human-male-older/v1/correct-front-prompt.txt", "sha256": "273b5517b12a8d5c0e0d227fffe84e8433bb5cdbb0c409f8a08cbb64b0ba9352"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/refined-front.png", "sha256": "a93caed2d577514bb9ddfed2995e21eb24628a23f88cdf55a678f814883750ec"}]
+  Method/prompt/corrections: {"phase": "Corrected older front selected", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-05187bf1-22dc-465e-adfa-ff406142a03e.png"}
+
+- 2026-10-20T01:17:47.418140+00:00 / generate_other_views / PASS: Generated secondary views from the corrected older front and explicit shared-family/age anatomy.
+  Review: Viewed three directions: the side has restrained rounded upper back and forward head, with whole-body rotation and occluded far limbs. Rear head and heels read as back view. No mutation appendages or clothing.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/refined-front.png", "sha256": "a93caed2d577514bb9ddfed2995e21eb24628a23f88cdf55a678f814883750ec"}, {"path": "art/conversion/body-human-male-older/v1/secondary-views-prompt.txt", "sha256": "2768f17a31ce5a3e73b7d5701a23eda287fa978bc8207295e2056ad5edf9b6ae"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/secondary-views.png", "sha256": "2e6b4836f357633b88632addb595456e79d5d9bf4286be1bb1ca14142be9a7a2"}]
+  Method/prompt/corrections: {"phase": "Older male side/back proposals", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 1}, "generation_file": "exec-df595590-120e-40dd-9f65-33acce761693.png"}
+
+- 2026-10-20T01:17:47.419567+00:00 / patch_and_refine_composed_views / RECORDED: Cleaned generated labels/alpha, restored neutral source and aligned contacts before composed refinement.
+  Review: Contact/neutrality patches only; no count or attachment error required rebuilding. Preserve the age cues during the composed refinement.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/secondary-views.png", "sha256": "2e6b4836f357633b88632addb595456e79d5d9bf4286be1bb1ca14142be9a7a2"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/patched-views.png", "sha256": "7b063168fc5524907ce0618c3da466734fb11b95b8e04fc2952c2171b3409b4c"}, {"path": "art/conversion/body-human-male-older/v1/patch-decisions.json", "sha256": "8106a89eb5139c5bfa243a80cda6dabd78d310700fd53b8eb91542c0699dc454"}]
+  Method/prompt/corrections: {"phase": "Patched older views"}
+
+- 2026-10-20T01:20:19.682356+00:00 / patch_and_refine_composed_views / RECORDED: Caught that the proposal did not use equal columns: the front right hand crossed x512, and the back left hand began before x1024. Preserved v1 and replaced its segmentation with inspected full-figure regions.
+  Review: Viewed the corrected composed sheet: each panel now owns its complete figure, including both front/back hands. Scale unchanged; baseline aligned. V1 is retained as rejected segmentation evidence and must not be registered.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/secondary-views.png", "sha256": "2e6b4836f357633b88632addb595456e79d5d9bf4286be1bb1ca14142be9a7a2"}, {"path": "art/conversion/body-human-male-older/v1/patched-views.png", "sha256": "7b063168fc5524907ce0618c3da466734fb11b95b8e04fc2952c2171b3409b4c"}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/patched-views-v2.png", "sha256": "bb834dcdf1ff70551feb6e619a524bf2214487fea633e6bbff64976fd412da41"}, {"path": "art/conversion/body-human-male-older/v1/patch-decisions-v2.json", "sha256": "a0612b3283dd2c776aa58a3ff256f920bb26e0fbde87dac7ab8509db46b0e038"}]
+  Method/prompt/corrections: {"phase": "Corrected unequal view boundaries before refinement"}
+
+- 2026-10-20T01:22:51.195852+00:00 / patch_and_refine_composed_views / PASS: Refined the correctly separated v2 composed sheet, keeping the unmutated human family, mild older stance and complete hands/feet.
+  Review: Viewed all directions. Retains relaxed torso, older neck/knee planes, slight forward head and rounded upper back in side view. Same one head/two arms/hands/two legs/feet; no added mutations, clothing or personal cosmetics.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/patched-views-v2.png", "sha256": "bb834dcdf1ff70551feb6e619a524bf2214487fea633e6bbff64976fd412da41", "role": ""}, {"path": "art/conversion/body-human-male-older/v1/refine-patched-prompt.txt", "sha256": "c939a8abf0a02536b60be586bfe40847c7fc9462cf02cd00e51f4bbe74d42a93", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/refined-patched-views.png", "sha256": "0a42be20267db6c7ed48eafd2e919dcd2f8877088858039a716b84309474e279", "role": ""}]
+  Method/prompt/corrections: {"phase": "Refined corrected older-male views", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 1}, "generation_file": "exec-c7229443-7fe3-402e-a763-ef2a4c06fb22.png"}
+
+- 2026-10-20T01:22:51.199193+00:00 / register_body_head_and_palette / PASS: Registered the selected complete-figure views at the shared physical human height, with grayscale source, separate head/neck masks and two-pixel body underlap.
+  Review: Viewed the recomposition: no missing hands/feet or neck gaps. Intrinsic age planes remain in the body/head art. No mutation appendages are baked into this reusable race variant.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/refined-patched-views.png", "sha256": "0a42be20267db6c7ed48eafd2e919dcd2f8877088858039a716b84309474e279", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/model.json", "sha256": "1dc629200b2a9ae71466230a4e130d2709fecc8441f162a45dc5729007bcbded", "role": ""}, {"path": "art/conversion/body-human-male-older/v1/registered-assembly.png", "sha256": "d4ae5a06f783eadb19586886209978a84b3aa0ac7f42baca6f88fd193e964618", "role": ""}, {"path": "art/conversion/body-human-male-older/v1/body-south.png", "sha256": "d40f6caeaffa194d223c96fe7a652e228464c7f133e62c6e997caf1c819f51e6", "role": "body / south"}, {"path": "art/conversion/body-human-male-older/v1/head-south.png", "sha256": "c625aa2cf9a2f968d4f0d4d9c5b78a7d399180b4347df30b28758c229b53edda", "role": "head / south"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-south.png", "sha256": "9121d6f63dfac84ff2b45667220b2e9fb5e52f2abf127a509f0a9dc8cb929d2e", "role": "body-mask / south"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-south.png", "sha256": "7d401843cb09cd8fb3e0b0e2674800e999d0b40c8a389d4683e36a8294e9dc49", "role": "head-mask / south"}, {"path": "art/conversion/body-human-male-older/v1/body-east.png", "sha256": "8dc37ee37a1ff2f9eb0efb42124e1da27f0c1efee004ca32cf831e55ff8cd438", "role": "body / east"}, {"path": "art/conversion/body-human-male-older/v1/head-east.png", "sha256": "177c7e9ebe7693125d918c4dacb9cb7893e0e395be5968fee9c2f9b3fcba3ba9", "role": "head / east"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-east.png", "sha256": "d185b9f68316bf22f51c7b29d75ba7625d46c373034fa74a27999e9f5e22cf30", "role": "body-mask / east"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-east.png", "sha256": "84b3dd4bf3bd026e7dc034e6766b4f1f3764c730871e60d281dce237850eea98", "role": "head-mask / east"}, {"path": "art/conversion/body-human-male-older/v1/body-north.png", "sha256": "8dc54232a51a0dd928147fb1d3123011fde595289f67bae32bc6a18afd387d17", "role": "body / north"}, {"path": "art/conversion/body-human-male-older/v1/head-north.png", "sha256": "a1086c735aa423f41b3a892e4cc045f657ab045d258eabc485f2b4e8fb1927e1", "role": "head / north"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-north.png", "sha256": "32ebe6a168b6f62e45ae7716b1195f650d59c591b51ae470b28b3e6a65aa756b", "role": "body-mask / north"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-north.png", "sha256": "abcab997a3c75c19e963532dd595a4b6131cb86e84b5bede865d6943feae5372", "role": "head-mask / north"}]
+  Method/prompt/corrections: {"phase": "Registered older body/head and explicit masks", "tool": "Python Pillow", "settings": {"canvas": [512, 1024], "physical_height": 1.21, "head_mask_top_y": 210, "neck_bottom_y": 248, "body_underlap_pixels": 2}}
+
+- 2026-10-20T01:22:51.199710+00:00 / visual_review_all_views / PASS: Reviewed the registered views and intended-size authoring preview, including complete hands after correcting the unequal-column proposal.
+  Review: Front/back feet and hands remain visible; side is a whole-body profile with occluded far limbs. Grayscale source supports Qud foreground tint and separate clothing colors. Generation-ready only; native acceptance remains pending.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/model.json", "sha256": "1dc629200b2a9ae71466230a4e130d2709fecc8441f162a45dc5729007bcbded", "role": ""}, {"path": "art/conversion/body-human-male-older/v1/registered-assembly.png", "sha256": "d4ae5a06f783eadb19586886209978a84b3aa0ac7f42baca6f88fd193e964618", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/game-scale-review.png", "sha256": "db5dd88863880015c08d04422302f675d84aaadb04e96a7d7cd2e23dbaa25209", "role": ""}]
+  Method/prompt/corrections: {"phase": "Older male authoring ready"}
+
+- 2026-10-20T01:22:51.199884+00:00 / record_native_selection_policy_without_changing_demographics / PASS: Recorded this as an authored older-human variant without assigning a numerical age or changing villagers. It may supply Irudad's unmutated baseline later; his mutation metadata stays separate.
+  Review: No native age selector is assumed. Mutation appendages and actual equipped items remain separate from the reusable older human base.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v1/source-packet.json", "sha256": "61ff9a57a6aedd1e37d94fd406471b17c57563406c3bb10e1da161e0ce78d49c", "role": ""}]
+  Outputs: [{"path": "art/conversion/body-human-male-older/v1/model.json", "sha256": "1dc629200b2a9ae71466230a4e130d2709fecc8441f162a45dc5729007bcbded", "role": ""}]
+  Method/prompt/corrections: {"phase": "Age template selection policy"}
+
 ## Sources and exclusions
 
 [Structured ledger](../evidence/conversion-ledger.json) contains per-entry native metadata, exact hashes, source targets and the log.
@@ -1817,4 +2031,4 @@ Sources: [art/village/sources.json](../art/village/sources.json), [art/village/m
 
 Race description/body trees, equipped part/laterality and palette references are retained. Captured instance IDs/genders describe one source snapshot, not permanent demographics. Unknown age or mutation state is not guessed. Player anatomy and future random/mod inventory are outside the enumerated resident snapshot; they are not silently counted as converted. Any newly discovered visible target must be added explicitly.
 
-All completion blockers remain internal, actionable unfinished art work: missing full construction/refinement, masks/fit and visual acceptance. No required art is deferred to an unnamed future stage. This request establishes the ledger; it does not resume asset generation.
+All completion blockers remain internal, actionable unfinished art work: missing full construction/refinement, masks/fit and visual acceptance. No required art is deferred to an unnamed future stage. The active objective authorizes completing the entries one at a time with the [HTML evidence report](conversion-report.html), including Qud-colored stone-like paths integrated over grass.

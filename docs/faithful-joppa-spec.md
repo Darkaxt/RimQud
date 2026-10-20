@@ -99,6 +99,23 @@ acceptance remain distinct; A5 stays required for final Stage 3 closure after th
 complete generated set is assembled. This sequencing supersedes the earlier
 per-sample native checkpoints for the current conversion pass.
 
+Human variant request: retain the selected human turnaround as the common visual
+family for adult male/female, child male/female and older male/female templates.
+Children are featureless mannequins, not detailed anatomy studies. Keep removable
+clothing separate for every age; the earlier blanket fully-clothed authoring
+constraint is withdrawn by the user's clarification. Child male/female variants
+may share body geometry when references do not support meaningful differences.
+These are authoring variants, not permission to infer or change villagers' ages.
+
+Latest creature workflow rule: first create the reusable unmutated race body;
+derive ordinary age/sex variants from it. Individual mutation-granted limbs,
+heads, tails and similar changes belong to a separate mutation framework and
+must not be baked into a named NPC's baseline body. Preserve their exact native
+metadata. Intrinsic species anatomy remains in the race base. This supersedes
+the earlier fixed Irudad/Nima/Yrame body-authoring approach. Mutation appearance
+and its clothing fit remain explicit unfinished requirements; this generation
+pass does not implement that framework or claim those NPC assemblies complete.
+
 2026-10-20 unattended continuation: the user requested finishing the conversion
 of the starting village's NPCs/creatures and bringing environment textures/tiles
 as close as possible to Qud's original look, palette and design. Reuse the same
@@ -140,7 +157,8 @@ is baked into a shared human body. Age/sex templates do not change demographics.
   Necessary species/mutation anatomy must remain represented using a supported
   body graphic or addon arrangement, without assuming separate limb nodes. New age/sex
   templates are authored variants, not evidence that the village contains those
-  ages or permission to change NPC demographics. Children are fully clothed.
+  ages or permission to change NPC demographics. Child bodies are featureless
+  mannequins with separate removable clothing, following the clarification above.
   Preserve all visible appendages; unknown runtime shapes retain native graphics.
 - A5: Integrate the new art through the existing native rendering path. Respect
   direction, contact pivots, layer order, native visibility, palette/tint and

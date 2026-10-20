@@ -12,6 +12,13 @@ body, equipped item/fitting, scenery and tile/state target. It requires one
 active entry and an evidence-backed process log. Existing assets are historical
 inputs, including Tam and Ctesiphus; no completion credit is carried forward.
 
+The [HTML conversion report](docs/conversion-report.html) records the new
+generation workflow step by step. Shared human male, female and older-male bases
+are generation-ready; their native acceptance and clothing fits remain pending.
+Generate every pending entry before running native validation. Reusable race
+bodies are unmutated; individual mutation appearance belongs to the separate
+framework, with the native metadata retained.
+
 **Current result: donor rendering is connected to Qud's actual gameplay map
 camera in a fully generated Joppa game.** Native movement, look targeting, modern
 inventory, save/load and three continuous native turns passed isolated automated

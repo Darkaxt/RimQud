@@ -1,0 +1,72 @@
+{
+  "anatomy_review": "No added/missing limb correction required: side occlusion supports two arms/legs; short feet face right. Back has no face or front toes.",
+  "corrections": [
+    "Replace generated front with the exact selected refined-front silhouette, uniformly rescaled.",
+    "Crop footer labels away from all sprite panels; report supplies reliable view labels.",
+    "Convert low-chroma generated fill to equal-channel grayscale, retaining shading.",
+    "Clear alpha below 16; restore near-opaque alpha >=240; keep intermediate antialiasing. Clear RGB wherever alpha is zero.",
+    "Align each inspected view to y=930; do not stretch panel widths to match."
+  ],
+  "registration": [
+    {
+      "direction": "south",
+      "source": "refined-front.png",
+      "source_body_rect": [
+        218,
+        216,
+        669,
+        1649
+      ],
+      "uniform_scale": 0.6280530355896721,
+      "placement": [
+        114,
+        30
+      ],
+      "feet_baseline": 930,
+      "canvas": [
+        512,
+        1024
+      ]
+    },
+    {
+      "direction": "east",
+      "source": "secondary-views.png",
+      "source_body_rect": [
+        168,
+        29,
+        343,
+        933
+      ],
+      "uniform_scale": 1,
+      "placement": [
+        168,
+        26
+      ],
+      "feet_baseline": 930,
+      "canvas": [
+        512,
+        1024
+      ]
+    },
+    {
+      "direction": "north",
+      "source": "secondary-views.png",
+      "source_body_rect": [
+        51,
+        29,
+        366,
+        933
+      ],
+      "uniform_scale": 1,
+      "placement": [
+        98,
+        26
+      ],
+      "feet_baseline": 930,
+      "canvas": [
+        512,
+        1024
+      ]
+    }
+  ]
+}

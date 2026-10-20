@@ -1,0 +1,69 @@
+{
+  "outcome": "FAIL: diagnostic midpoint window missed; body entry remains unfinished",
+  "failure": {
+    "exception": "System.InvalidOperationException: Native hurt reaction did not finish during input wait with a midpoint sample\r\n  at RenderingTransplantProbe.GameplayProbe.DamageFixture (XRL.World.GameObject victim, System.String name) [0x000ca] in <587f89b379384fe695a05996feca009d>:0 \r\n  at RenderingTransplantProbe.VillageArt.RunRevealedBatch () [0x00679] in <587f89b379384fe695a05996feca009d>:0 \r\n  at RenderingTransplantProbe.VillageArt.RunBatch () [0x00016] in <587f89b379384fe695a05996feca009d>:0 \r\n  at RenderingTransplantProbe.GameplayProbe.Run () [0x00131] in <587f89b379384fe695a05996feca009d>:0 "
+  },
+  "native_exit": {
+    "exitCode": 1
+  },
+  "hurt_observations": [
+    {
+      "instance": 506,
+      "serial": 1,
+      "visualTicks": 0.002112,
+      "offsetX": -0.169961929,
+      "offsetY": 0.0,
+      "color": [
+        0.999868,
+        7.662587e-05,
+        1.553227e-06,
+        1.0
+      ],
+      "finished": false,
+      "world": 1,
+      "sample": "start",
+      "fixture": "village",
+      "gameTicks": 20725,
+      "image": "gameplay-hurt-village-start.png"
+    },
+    {
+      "instance": 506,
+      "serial": 1,
+      "visualTicks": 16.5886688,
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "color": [
+        0.0,
+        0.5803922,
+        0.0117647061,
+        1.0
+      ],
+      "finished": true,
+      "world": 1,
+      "sample": "end",
+      "fixture": "village",
+      "gameTicks": 20725,
+      "image": "gameplay-hurt-village-end.png"
+    }
+  ],
+  "recorded_phases": [
+    "village-native-layout",
+    "village-deep-water",
+    "village-fixtures-south",
+    "village-east",
+    "village-west",
+    "village-north",
+    "village-south",
+    "village-garments-removed",
+    "village-equipped",
+    "village-late-item",
+    "village-unsupported-body",
+    "village-hidden",
+    "village-restored",
+    "village-look-returned"
+  ],
+  "profiles_preserved": true,
+  "preferences_restored": true,
+  "root_cause": "Actual start and finished end exist. ObserveReaction samples mid only at visualTicks>=8 and <16; consecutive observed states jumped from 0.002112 to 16.5886688. The diagnostic rejects this finite reaction solely because reactionMid is false.",
+  "correction": "Keep animation clock unchanged. Verify recorded non-finished start, actual finished end and unchanged native game ticks; report midpoint availability explicitly. Preserve failure and rerun after this diagnostic correction."
+}

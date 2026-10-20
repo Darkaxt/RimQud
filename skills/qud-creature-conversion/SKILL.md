@@ -5,15 +5,21 @@ description: Convert a Caves of Qud creature into a source-bound layered sprite 
 
 # Qud creature conversion
 
-Create reusable race/body art, then fit actual equipped items separately. Resolve
+**First define the creature without mutations.** Create the reusable unmutated
+race body before any named NPC's mutation-specific appearance. Derive ordinary
+age/sex/body variants from that base, then fit actual equipped items separately.
+Extra mutation-granted arms, feet, heads, tails and other appendages belong to
+the separate mutation framework, not a one-off baked body for each NPC.
+Resolve
 identity and anatomy before interpreting the tiny sprite. Follow the project's
 authoritative specification; this procedure does not authorize installations,
 game launches, desktop takeover, publication or a change of project stage.
 
-Current priority is ordinary race/body conversion. Retain available mutation
-metadata, but mutation-specific visuals and clothing adaptations are postponed
-by the user. Do not build a mutation renderer or block ordinary body authoring
-on filling every mutation field. Preserve native art for unsupported shapes.
+Current priority is ordinary race/body conversion. Retain mutation metadata and
+its relationship to the baseline, but do not implement the mutation framework
+during generation or block baseline art on that later work. Intrinsic species
+anatomy is not removed as a mutation: a cat's normal tail and a dromad's long
+neck/hump remain in their race base. Preserve native art for unsupported shapes.
 
 This is a repository-maintained skill source, not a globally installed skill.
 The [conversion ledger](../../docs/conversion-ledger.md) governs current entry
@@ -42,6 +48,11 @@ Build this input chain:
   Wiki data supplements them; record its revision/game version and conflicts.
 - Keep mechanical body tree, description-based visible features, and authored
   interpretation distinct. A slot name or sprite blob is not proof of anatomy.
+- Resolve the unmutated race/body plan separately from the captured individual's
+  mutation-altered tree. Do not make Irudad's extra arms/tail, Nima's extra arms
+  or Yrame's extra feet the baseline for ordinary humans. Existing named-mutant
+  drafts are historical inputs, not reusable race templates. Carry their exact
+  mutation and attachment metadata forward to the separate framework.
 - Record attached part IDs/parents, type/variant, laterality, mutation manager,
   natural/default equipment and actually equipped items where available.
   Separate inventory from worn/held gear. Missing exports are unknown, not zero.
@@ -60,8 +71,10 @@ enlarge ambiguous pixels or invent a species from their appearance.
 Create a neutral adult race/body template without clothing, held items or
 occupation-specific posture. Keep distinguishing anatomy, palette roles and
 compatible presentation. Personal cosmetics follow the project's current scope.
-Children require the separate fully clothed authoring policy; this adult nude
-reference step does not authorize unclothed child templates.
+Child templates use plain, featureless mannequins without detailed anatomy.
+Keep their body/head separate from removable clothing just as for adult templates;
+do not bake garments into the body. Male/female child labels do not require
+inventing body-shape differences unsupported by the selected references.
 
 Treat the estimated shape as an interpretation until checked. Preserve the front
 as the design anchor once selected. Avoid generating a new body per named farmer
@@ -200,7 +213,8 @@ native state ownership. Review seamless material scale in the complete village,
 not only enlarged isolated tiles. Native glyphs and dynamically painted tile
 variants need explicit provenance; they are not automatically non-art exclusions.
 
-For fixed named anatomy, verify appendage count across every view. Two generated
-Yrame proposals still had three feet after correction prompts; explicit four-foot
-geometry replaced that region. Retain rejected proposals and state why they failed.
-This is a fixed authored variant, not a general mutation or clothing resolver.
+Do not repeat the earlier fixed-mutant-body approach. The historical Yrame
+three-foot proposals and four-foot patch illustrate why baseline species art
+and mutation assembly must remain separate. Retain rejected proposals as history;
+generate the unmutated human race base and leave added feet to the mutation
+framework, with their source metadata preserved.
