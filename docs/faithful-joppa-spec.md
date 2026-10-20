@@ -1,5 +1,13 @@
 # Faithful Joppa art and body specification
 
+Current status correction (2026-10-20): **Stage 3 is ACTIVE and every asset is
+unfinished**, including previously selected Tam/Ctesiphus. The user explicitly
+reset completion after identifying incomplete scenery and Yrame clothing/horns.
+The [conversion ledger](conversion-ledger.md) enumerates all subjects and required
+variants, with one active entry and a complete contemporaneous process log.
+Earlier completion/reconciliation statements below are historical and withdrawn
+as art acceptance. Native checks retain only their measured integration meaning.
+
 Authority: already_authorized. The user requested a new tileset close to Qud's
 original art, proper models for the village's races including male/female/child
 variants, and a study of mutations/variable appendages against RimWorld clothing.
@@ -131,7 +139,7 @@ its acceptance requires native integration.
 | --- | --- | --- | --- |
 | 1. Native body and clothing study | COMPLETE | A1, A2, A6 | Source-bound inventory covers observed inhabitants and selected art targets; gender/age uncertainty and runtime anatomy changes are explicit; mutation/clothing findings and concrete art/body contracts are recorded and checked against installed sources. |
 | 2. First faithful tile in native Joppa | COMPLETE | A3, A5, A6 | One referenced subject is generated, visually reviewed at intended scale, packaged, used in the actual native scene and verified with relevant direction/tint/lifecycle behavior. This establishes the art contract without broadening the renderer. |
-| 3. Complete village tiles and bodies | COMPLETE | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
+| 3. Complete village tiles and bodies | ACTIVE | A3-A6 | Every selected visible target has completed faithful art or an explicitly justified non-art exclusion; required body-family age/sex variants and named anatomy are authored; the integrated native village and supported equipment/lifecycle states pass, and all source/assets/evidence are reconciled and synchronized. |
 
 Stage 1 QA reconciliation: the source-bound inventory now includes installed
 Biotech Baby/Child body types, alongside Core adult types and life-stage geometry.
@@ -196,41 +204,31 @@ be claimed until that work passes. No tracked deferrals. The extraction rule is
 recorded in the repository conversion skill. Scope review found no need for a
 new rig, general renderer or mutation-clothing framework for this sample.
 
-Stage 3 village reconciliation (2026-10-20, supersedes the earlier sample-only
-status): A3 is verified for all 67 selected visible types: ten actor blueprints
-covering 16 residents and 57 environment types. All have source-bound conversion
-art/connected surfaces; no new non-art exclusions hide missing sprites. The
-player remains outside this selected NPC cast and retains native graphics.
+Stage 3 current reconciliation (2026-10-20): the former full-village art
+completion claim is withdrawn. The native batch measured rendering integration
+for the historical candidates; it did not establish the agreed per-subject
+construction, refinement, extraction, perspective, neutral palette or visual fit.
 
-A4 is satisfied by shared male/female human bodies, selected adult dromad body,
-retained ray cat, catfish, and fixed Irudad/Nima/Yrame anatomy. Adult dromad genders
-share the same source-supported shape. Fully clothed human/dromad child templates
-are authored separately; there is no established native age selector in these
-residents, so they remain unbound and no demographics are changed. Cat/fish
-juvenile or sex morphology is not established and is not invented. The user-
-postponed generic mutation resolver and personal overlays remain outside scope.
+All 154 ledger entries start UNFINISHED, including Tam and Ctesiphus. Exactly one
+entry may be IN PROGRESS. Every conversion must log its actual source inputs,
+reference choice, prompts/tool settings, output hashes, corrections/rejections,
+mask extraction, all-view visual review and applicable native evidence as those
+steps occur. A passing batch cannot automatically complete other entries.
+Stages 1/2 above are historical study/demonstration milestones, not completion
+credit for the reset art entries. No new art generation is part of this ledger task.
 
-A5 passed the [complete native batch](../evidence/village-result.json): all
-residents and selected scenery, four facings, actual clothing removal/restoration,
-item palette, registered contact/scale, visibility and late-equipment/topology
-fallback, native look, real hurt without advancing simulation, and save/load.
-Shallow/deep textures were exercised through native liquid volume/depth. Full-map
-visibility and facing placement are controlled diagnostics, not normal vision
-or a new locomotion/limb-animation implementation.
+A3/A4/A5 advancement blockers (internal):
 
-A6 profile preservation and cleanup are verified. Native frames, contract and
-tested source are archived privately; the public gallery provides native
-before/after alongside enlarged authoring assemblies. Served desktop/narrow
-layouts, controls and asset loads passed. The temporary profile, trace/compile
-output and superseded unused face graphics were removed through reviewed helper
-tickets; original inputs and runtime remain. No desktop takeover or mod release.
+| Blocker | Unmet requirement and reason | Resolution | Dependent acceptance |
+| --- | --- | --- | --- |
+| ART-01 | A3/A5: furniture, vegetation, machinery, surfaces and tiles are mostly traces/drafts; source-to-design/refinement and visual acceptance are missing. | Complete the logged workflow for every corresponding entry, including relevant states and connections. | Full tileset/environment acceptance. |
+| ART-02 | A4/A5: no body receives reset completion credit; Yrame has patched anatomy without the completed composed refinement; Glowfish has baked colors instead of a neutral/masked base. | Complete and review each body/age entry through the agreed procedure. | NPC assemblies and their clothing fits. |
+| ART-03 | A3/A4/A5: generic equipment shapes skipped per-body in-context refinement/extraction; Yrame chain mail/horns and Tam staff have known fit/proportion issues. | Complete each fitting individually, then its equipment aggregate and NPC assembly. | Dressed NPC/creature conversion. |
+| ART-04 | A3/A6: earlier green checks measured native bindings, not art completion. | Keep historical evidence labelled; require each ledger step's contemporaneous log and verified outputs before completion. | Truthful final reconciliation. |
 
-Stage 3 is COMPLETE. Source/art/evidence commit `adc6821` is synchronized to public
-main; remote branch identity and exact README, contract, native evidence, gallery
-and native image bytes were read back and verified. All A3-A6 criteria assigned
-to this bounded village pass are satisfied. Remaining blockers: none. Tracked
-deferrals: none. This closes the former publication advancement blocker.
-The closure design review found no need for a general rig or rendering framework;
-source geometry, fixed named variants and explicit equipment mappings serve this
-bounded village. Artistic polish remains reviewable interpretation, not a new
-unbounded acceptance criterion.
+Stage 3 remains ACTIVE. These are implementable advancement blockers, not a parked
+BLOCKED stage. No required work is moved to an unnamed future stage. The ledger
+records exact remaining work; arbitrary mutation systems and personal cosmetics
+retain their explicitly agreed separate scope. User profiles, historical native
+evidence and prior assets remain preserved. Documentation/publication of the
+ledger does not satisfy the unfinished conversion objective.

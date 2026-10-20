@@ -159,6 +159,10 @@ def main():
         assert hashlib.sha256((ROOT/'probe'/name).read_bytes()).hexdigest()==digest,name
     for entry in manifest['images']:
         if entry.get('source_evidence')=='evidence/village-result.json':assert entry['sha256']==village['native_image_sha256'][entry['source_file']]
+    from enumerate_conversion_ledger import enumerate_entries,validate,markdown
+    ledger=json.loads((ROOT/'evidence/conversion-ledger.json').read_text(encoding='utf-8'))
+    validate(ledger,enumerate_entries())
+    assert (ROOT/'docs/conversion-ledger.md').read_text(encoding='utf-8')==markdown(ledger)
     print(f'Publication checks passed: {len(files)} public files; {len(listed)} contextual images and {len(art_paths)} artwork/mask assets; links, hashes, evidence source identities, JSON, SVG and Python syntax valid.')
 
 

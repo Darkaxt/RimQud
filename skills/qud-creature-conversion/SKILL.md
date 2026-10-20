@@ -16,6 +16,11 @@ by the user. Do not build a mutation renderer or block ordinary body authoring
 on filling every mutation field. Preserve native art for unsupported shapes.
 
 This is a repository-maintained skill source, not a globally installed skill.
+The [conversion ledger](../../docs/conversion-ledger.md) governs current entry
+status. All entries were explicitly reset unfinished on 2026-10-20, including
+previously selected models. Work one entry at a time and append its actual
+inputs/hashes, prompts, corrections, extraction and review evidence as performed.
+Historical assets or a passing native batch never complete another entry.
 Resolve the repository root from this file, two directories above this folder.
 Read [the metadata contract](references/metadata-packet.md) when preparing an
 input packet and [the Tam example](references/tam-example.md) for the worked case

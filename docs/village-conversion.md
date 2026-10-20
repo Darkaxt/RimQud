@@ -1,5 +1,10 @@
 # Source-bound Joppa conversion
 
+**Status correction, 2026-10-20:** this document describes historical integration
+drafts, not completed art. The user reset every subject to unfinished. See the
+[conversion ledger](conversion-ledger.md) for the authoritative per-entry process
+and outstanding work. Native rendering evidence does not accept the artwork.
+
 This pass covers the captured starting village: **16 residents, 10 actor
 blueprints and 57 selected environment types**. The player keeps native graphics.
 It is a bounded Qud-side adapter using selected donor shaders and flat directional

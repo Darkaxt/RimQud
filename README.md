@@ -4,6 +4,14 @@ Research toward a **high-contrast, Qud-faithful visual overhaul** using selected
 RimWorld rendering techniques and locally sourced rendering resources. Qud keeps
 its own simulation and controls.
 
+**Art completion reset, 2026-10-20: every entry is unfinished.** Earlier claims
+of a completed village conversion were incorrect: loading layers and passing
+native tests did not prove the agreed art workflow, fit or visual quality.
+The [conversion ledger](docs/conversion-ledger.md) now enumerates every resident,
+body, equipped item/fitting, scenery and tile/state target. It requires one
+active entry and an evidence-backed process log. Existing assets are historical
+inputs, including Tam and Ctesiphus; no completion credit is carried forward.
+
 **Current result: donor rendering is connected to Qud's actual gameplay map
 camera in a fully generated Joppa game.** Native movement, look targeting, modern
 inventory, save/load and three continuous native turns passed isolated automated
@@ -19,15 +27,15 @@ layered human/animal/prop scene, native hurt reactions and an explicit Joppa
 coverage review and actual equipped-item integration. All four bounded stages
 passed; faithful art and broader anatomy support remain separate work.
 
-The bounded [faithful-art specification](docs/faithful-joppa-spec.md) has passed
-its captured-village conversion scope.
+The [faithful-art specification](docs/faithful-joppa-spec.md) remains ACTIVE;
+its art criteria have not passed.
 The [installed-source anatomy/clothing study](docs/joppa-bodies-and-mutations.md)
 identifies Joppa's four species families and the named humans' defining mutations.
 The captured village now has a bounded source-bound conversion; generic anatomy
 and third-party item conversion remain outside this sample.
 
-**Current art pass: 16 residents across 10 NPC/creature blueprints, plus all 57
-selected environment types.** Shared human bodies, fixed Irudad/Nima/Yrame
+**Historical integration draft: 16 residents across 10 NPC/creature blueprints,
+plus 57 selected environment types.** Shared human bodies, fixed Irudad/Nima/Yrame
 anatomy, the retained ray cat, glowfish and Tam use actual equipped item layers.
 Tam's staff is enlarged. Scenery follows original Qud shapes and palette roles,
 with basic grass, connected surfaces and distinct water-depth textures.
@@ -49,8 +57,9 @@ look, hurt without simulation advance and save/load. Normal saves/settings were
 preserved. Fully clothed child templates are authoring variants only: native
 actors expose no established age selector, so ages are not guessed.
 
-This is a first art pass for feedback. Scenery remains a restrained conversion
-of Qud's glyph silhouettes. Personal cosmetics, arbitrary mutations and full
+This is unfinished artwork, not completion of the conversion procedure. Most
+scenery remains traced/enlarged glyph contours. Yrame's garment/horn fit and
+Glowfish's baked colors are known defects in the ledger. Personal cosmetics, arbitrary mutations and full
 donor pawn-tree integration remain outside this result.
 
 The Tam material below records the earlier individual workflow checkpoint.
