@@ -1,0 +1,153 @@
+{
+  "entry": "SCN-BOOK-TABLE",
+  "identity": "Book Table -> Furniture",
+  "description": "Dwellers in the earth-clefts fashion tables in the style of puzzle boxes. Their drawers house the stenographic imagination.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Book Table": "<object Name=\"Book Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"book table\" ColorString=\"&amp;w\" DetailColor=\"W\" RenderString=\"227\" Tile=\"Items/sw_table_low_drawers.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"80\" Takeable=\"false\" Solid=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Dwellers in the earth-clefts fashion tables in the style of puzzle boxes. Their drawers house the stenographic imagination.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" />\n    <part Name=\"Inventory\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,Readers,the Relaxed\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <stag Name=\"Storage\" />\n\t\t<stag Name=\"Contemporary\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\book-table-mask.png",
+    "sha256": "c27d3941fa5f74f559530f9672acabc4dc376fae690aea40e4db469059915764",
+    "tile": "Items/sw_table_low_drawers.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 10120,
+    "atlas_id": 185,
+    "rect": [
+      36,
+      416,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Broad shallow trapezoidal top at y7..11, two side-by-side low rectangular drawer fronts at y13..15, low rail at y17 and short outer feet at y19. Source has no visible books, papers, stacks or separate lamp.",
+  "palette": {
+    "primary": "w",
+    "detail": "W",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "cfc041",
+    "rule": "Drawer fronts, housing, low rail and supports use primary w. The broad tabletop including its shallow front edge uses detail W. Gold top is an extraction aid; final layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_south.png",
+    "sha256": "3813423f9d3bbb2611dd566268845765aa2aa133aea7844871d5a0eda9dfdf0d",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed EndTable_south supplies wood-front shading, restrained drawer seams and crisp furniture contours. Its vertically stacked drawers, round knobs, footprint and donor gameplay are not copied."
+  },
+  "construction": "One editable spatial wood body, broad independent tabletop, two equal side-by-side inset fronts with recessed pulls, low rail and short supports. S has two drawers; E complete plain end; N plain back. W mirrors E because geometry and markings are symmetric.",
+  "native_state": "Book Table inherits Furniture directly, not Table: no inherited EmptyTile/FullTile or alternate detail-color tags apply. One fixed source tile; native container/on inventory, non-solid80-weight non-takeable organic furniture and rare Animated builder remain native.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell transform for entire table and top ownership. Preserve source cell margins; do not fit/center drawers or tabletop separately."
+  },
+  "native_acceptance": "Pending full-set generation gate; fixed source container/on inventory, non-solid organic furniture, rare Animated fallback and extra-view placement remain unfinished.",
+  "recorded_at": "2026-10-20T19:13:22.792392+00:00",
+  "source_camera_superseded": {
+    "path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png",
+    "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_south.png",
+        "sha256": "3813423f9d3bbb2611dd566268845765aa2aa133aea7844871d5a0eda9dfdf0d",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_east.png",
+        "sha256": "7ef362f5fcab8041f858048a3463cc89fb7ecabbf26f695e431e777ffe48fea4",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_north.png",
+        "sha256": "5cbc625eab07cfd6243b2687ef48df1b3a6843fb48962e3d78538924929f2bdd",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "building_base": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_Multi",
+    "xml_ancestry": [
+      "EndTable",
+      "TableBase",
+      "FurnitureWithQualityBase",
+      "FurnitureBase",
+      "BuildingBase"
+    ],
+    "draw_size": null,
+    "footprint": null,
+    "missing": "No explicit drawSize/size in inspected XML ancestry; runtime defaults not exported. Texture dimensions are not physical dimensions.",
+    "role": "Actual directional VTE EndTable surfaces establish parallel top edges and shallow map-camera visibility with front drawer seams, blank side/back panels. No stacked donor drawers, knobs, gameplay or footprint copied."
+  },
+  "camera": {
+    "projection": "screen u8+cardinal_horizontal, v18-height-0.475*cardinal_depth. Parallel axes, same object scale/pivot throughout; no perspective convergence.",
+    "width": 13.6,
+    "depth": 8,
+    "height": 8.4,
+    "depth_status": "Authored estimate for Qud hidden depth; broad source width and low drawer housing retained. Actual donor camera informs planes, not recovered dimensions.",
+    "source_correction": "Replace strongly converging trapezoid with rectangular tabletop in a fixed shallow cardinal map projection. Retain two side-by-side front drawers, low rail and short feet.",
+    "unseen": "Plain side/back wood with understated puzzle-box joinery seams; no extra drawers, books, papers, switches or visible inventory."
+  }
+}
