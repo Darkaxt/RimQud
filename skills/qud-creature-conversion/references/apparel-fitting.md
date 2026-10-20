@@ -22,9 +22,16 @@ not a universal native sprite size. West mirrors east only when permitted.
 1. Construct one actual garment and overlay it on the registered body. A red
    recoloring of the body may preserve its shading and outlines as a segmentation
    key; keep the untouched body as the authoritative anatomical source.
-2. Provide that reference, garment construction and item description for one
+2. Provide that reference, garment construction and item description for an initial
    contextual refinement. Preserve the exact prompt, input/output and hashes.
    Treat generated body preservation as a proposal, never as registered truth.
+   Before extraction, apply section 4's structural inspection to every facing.
+   Check actual coverage and connected construction, including straps reaching
+   over the full foot height/instep and joining their intended anchors. If the
+   refined source is structurally unusable, reject it and reattempt contextual
+   generation with explicit corrections; retain both attempts and the decision.
+   Do not confuse this with a second call to isolate the item. Persistent failure
+   returns to editable construction; extraction/fitting cannot conceal the defect.
 3. Derive cloth from that same output programmatically. Do not make a second
    ImageGen call to isolate it: a new drawing changes cuffs, proportions and lines.
    Exclude mannequin RGB, backdrop and body contours from actual visible fabric.

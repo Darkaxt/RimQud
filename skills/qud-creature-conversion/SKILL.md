@@ -167,6 +167,25 @@ refinement while keeping anatomy, scale and pose. Do not try to correct a wrong
 body by repeatedly asking for a prettier image. If the same invariant keeps
 failing, return to the constructed geometry instead of extending a prompt loop.
 
+**Inspect structural quality immediately after the first refinement, before
+extraction or fitting.** Apply this to bodies, equipment, furniture and scenery.
+Compare every required facing with the fixed construction and source metadata:
+check part continuity, attachment, thickness, coverage, openings and consistent
+orientation. Inspect both the full refined output and its intended-size view;
+small display size does not excuse broken construction. For example, sandal
+straps must wrap over the foot's actual height/instep and connect to their intended
+anchors, rather than ending halfway up the foot as disconnected strips.
+
+If quality is too low to preserve the intended structure through ordinary
+registration and fitting, reject the output and reattempt contextual generation
+with the specific defects and corrected construction made explicit. Do not
+extract an unusable source or hide its defects with masks, deformation or reduced
+preview size. Preserve the rejected output, exact prompt, defect notes and retry
+inputs/results on the active entry. Inspect the retry at the same point; repeated
+failure of the same structural constraint requires returning to editable geometry,
+not an open-ended prompt loop. Withhold generation-ready credit until corrected.
+This is generation-time art inspection, not native or formal integration validation.
+
 Keep input/output hashes, exact prompts, selected output and superseded reasons.
 Inspect alpha in the actual saved image or browser: RGB values in fully
 transparent pixels can make a tool preview misleading. A selected refined sheet
@@ -212,7 +231,8 @@ the single-item evidence or establish native outfit acceptance.
 
 For garments, follow [the approved apparel-fitting recipe](references/apparel-fitting.md)
 before constructing or extracting a replacement. Its production sequence is:
-fixed race/body → one contextual refinement → continuous cloth source →
+fixed race/body → initial contextual refinement → structural inspection and
+targeted regeneration if unusable → continuous cloth source →
 registered regional fitting where needed → curved body visibility →
 independent body/equipment tint → authoring review in every required facing.
 
