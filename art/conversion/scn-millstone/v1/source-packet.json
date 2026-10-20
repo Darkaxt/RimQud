@@ -1,0 +1,196 @@
+{
+  "entry": "SCN-MILLSTONE",
+  "identity": "Millstone -> MountedFurniture -> Furniture",
+  "description": "Circles of limestone, porous and oyster-gray with the shells of old things, are arranged in vertical slabs and turned against each other to grind fibrous grains into flours.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Millstone": "<object Name=\"Millstone\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"millstone\" ColorString=\"&amp;y\" DetailColor=\"w\" RenderString=\"15\" Tile=\"Items/sw_millstone_1.bmp\" />\n    <part Name=\"Physics\" Weight=\"300\" />\n    <part Name=\"Description\" Short=\"Circles of limestone, porous and oyster-gray with the shells of old things, are arranged in vertical slabs and turned against each other to grind fibrous grains into flours.\" />\n    <part Name=\"MechanicalPowerTransmission\" ChargeRate=\"100\" IsConsumer=\"true\" />\n    <part Name=\"Mill\" ChargeUse=\"1\" Transformations=\"Vinewafer,Lagroot Tuber,Mirror Shard,Psychal Gland,Voider Gland,Clump of Grave Moss,Compacted Bone Matter\" TagTransformations=\"BreatherGland\" />\n    <part Name=\"AnimatedMaterialGeneric\" AnimationLength=\"300\" TileAnimationFrames=\"0=default,100=Items/sw_millstone_2.bmp,200=Items/sw_millstone_3.bmp\" RequiresOperationalActivePart=\"Mill\" ActivePartStatusIgnoreSubject=\"true\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" Complexity=\"2\" Difficulty=\"1\" />\n    <part Name=\"TinkerItem\" Bits=\"BB\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <part Name=\"Interesting\" IfPartOperational=\"MechanicalPowerTransmission\" Radius=\"1\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" />\n    <part Name=\"Inventory\" />\n    <stat Name=\"AV\" Value=\"10\" />\n    <stat Name=\"Hitpoints\" Value=\"500\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Miller,Grinder,Provider\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Chefs,Cooks,Grains,the Hungry\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"RailedMechanism\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"AnimatedSkills\" Value=\"CookingAndGathering\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"infrastructure\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"DontWarnOnExamine\" />\n    <tag Name=\"CantBreakOnExamine\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Food\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"DeepPower\" />\n    <stag Name=\"MechanicalPower\" />\n    <stag Name=\"MechanicalPowerConsumer\" />\n    <stag Name=\"DeepMechanicalPowerConsumer\" />\n\t\t<stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_frames": {
+    "resources": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tile": "Items/sw_millstone_1.bmp",
+        "info_id": 9845,
+        "atlas_id": 185,
+        "rect": [
+          684,
+          78,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-millstone-20261021\\frame-1-mask.png",
+          "sha256": "1f41c696356d4a6b283cf66a1f3d48c9bba82143d9b173ce63559754da8435d1"
+        }
+      },
+      {
+        "frame": 2,
+        "tile": "Items/sw_millstone_2.bmp",
+        "info_id": 9846,
+        "atlas_id": 185,
+        "rect": [
+          666,
+          78,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-millstone-20261021\\frame-2-mask.png",
+          "sha256": "bd2ceaaace2414009022456733baf3afdd2fbeed5297020574b6130b87feeb64"
+        }
+      },
+      {
+        "frame": 3,
+        "tile": "Items/sw_millstone_3.bmp",
+        "info_id": 9847,
+        "atlas_id": 185,
+        "rect": [
+          648,
+          78,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-millstone-20261021\\frame-3-mask.png",
+          "sha256": "cb46a68693977aa0feed986a1680421c97bc3c620f0e5328e3684486eedc6b24"
+        }
+      }
+    ]
+  },
+  "source_shape": "Broad upper round/slab outline with constant pale diamond-ring hub and phase-changing primary rim/face marks; fixed exposed lower crescent/slab below. All three native masks inspected. Exact spatial mounting/hidden slab depth is not established by glyph.",
+  "palette": {
+    "primary": "y on limestone slabs and recessed pore/groove shading",
+    "detail": "w only small central hub ring",
+    "rule": "Neutral limestone and separate central hub role; oyster-gray texture description does not replace actual source y/w palette."
+  },
+  "native_state": {
+    "default_frame": 1,
+    "animation_length": 300,
+    "tile_frames": {
+      "0": "Items/sw_millstone_1.bmp",
+      "100": "Items/sw_millstone_2.bmp",
+      "200": "Items/sw_millstone_3.bmp"
+    },
+    "requires_operational_active_part": "Mill",
+    "active_part_status_ignore_subject": true,
+    "native_timing": "Retain AnimatedMaterialGeneric behavior including its own timing multiplier; no new clock or assumed milliseconds.",
+    "rare_animated": "Original builder ChanceOneIn15000/RailedMechanism/CookingAndGathering retained as native fallback; no actor conversion invented."
+  },
+  "native_code_study": {
+    "Mill": {
+      "path": "E:\\Temp\\rimqud-native-millstone-20261021\\XRL.World.Parts.Mill.decompiled.cs",
+      "sha256": "b77ce8f49dc296521514817979f98884a5b6587e4738ef6b15cb6e5a9406b216"
+    },
+    "AnimatedMaterialGeneric": {
+      "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Parts.AnimatedMaterialGeneric.decompiled.cs",
+      "sha256": "a785f77a4ae6e591d256b84bdcf55a953e54e8cd5c40c70dca702a4fff8036df"
+    },
+    "findings": [
+      "Mill processes items/transforms on EndTurn when ready and consumes charge; native recipe/container behavior is not reimplemented.",
+      "AnimatedMaterialGeneric.Render checks RequiresOperationalActivePart status, passing actual ActivePartStatusIgnoreSubject field through StatusOf. Thus source true ignores subject presence for art phase eligibility, not all operational constraints.",
+      "No generated dust, hopper fill, grain props, extra idle/off sprite or new timing is inferred from description."
+    ],
+    "scope": "Static installed metadata/class study; no native replacement validation."
+  },
+  "native_behavior": "MechanicalPowerTransmission consumer100, MillChargeUse1, actual named/tag transformations and container/inventory remain native. AV10/HP500/weight300, examiner2/difficulty1, non-buildable/non-disassemblable BBtinker, native rare animation and operational behavior preserved.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_StoneGrinder\\VFEPD_StoneGrinder_north.png",
+      "sha256": "b4ff633f4b0a30bb4b692805a246699cdde658adda69e7e61d7cbdbd0ad90d36"
+    },
+    "frame": [
+      256,
+      256
+    ],
+    "alpha_bounds": [
+      20,
+      19,
+      236,
+      235
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_WorkshopProps.xml",
+      "sha256": "e8c7f97902d00525907c3278be96481429ad141f02876bb4ae4d596aaa476a52"
+    },
+    "child": "<ThingDef ParentName=\"VFEPD_NonColourableFurnitureBase\">\n\t\t<defName>VFEPD_StoneGrinder</defName>\n\t\t<label>stone grinder</label>\n\t\t<description>A small stone grinder. Intended to be placed over an empty workbench. Just for decorative purposes.</description>\n\t\t<graphicData>\n\t\t\t<texPath>Things/Building/WorkshopProps/VFEPD_StoneGrinder/VFEPD_StoneGrinder</texPath>\n\t\t\t<graphicClass>Graphic_Multi</graphicClass>\n\t\t\t<drawSize>1.25</drawSize>\n\t\t</graphicData>\n\t\t<altitudeLayer>BuildingOnTop</altitudeLayer>\n\t\t<passability>Standable</passability>\n\t\t<pathCost>0</pathCost>\n\t\t<building>\n\t\t\t<isEdifice>false</isEdifice>\n\t\t\t<isInert>true</isInert>\n\t\t</building>\n\t\t<castEdgeShadows>false</castEdgeShadows>\n\t\t<fillPercent>0</fillPercent>\n\t\t<statBases>\n\t\t\t<MaxHitPoints>20</MaxHitPoints>\n\t\t\t<WorkToBuild>0</WorkToBuild>\n\t\t\t<Mass>0.1</Mass>\n\t\t\t<Flammability>0.1</Flammability>\n\t\t</statBases>\n\t\t<size>(1,1)</size>\n\t\t<uiIconScale>1</uiIconScale>\n\t\t<clearBuildingArea>false</clearBuildingArea>\n\t\t<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>\n\t</ThingDef>\n\t",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Bases.xml",
+      "sha256": "35acdf75e815308ea0aa8016e4eddd237c4cf74399e31de2f953b36ac30855d8"
+    },
+    "parent": "<ThingDef Name=\"VFEPD_NonColourableFurnitureBase\" ParentName=\"BuildingBase\" Abstract=\"True\">\n\t\t<thingClass>VFEProps.Building_SubstractsSilver</thingClass>\n\t\t<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>\n\t</ThingDef>\n\t",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": "1.25",
+    "footprint": "(1,1)",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+      "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\LoadFolders.xml",
+      "sha256": "7d7c598e4f61e7382a63c0ec62e531011635169f95a3d968610338b98a5d14e6"
+    },
+    "role": "Actual VFE Props and Decor stone grinder north: restrained upright stone-edge shading and coarse mineral texture only. It is a decorative workbench prop; no donor steel motor/base/foot pedal/bench mounting,1x1footprint or decorative mechanics copied.",
+    "equivalence": "Partial upright stone material reference. Qud broad exposed round slabs/hub and native poses authoritative."
+  },
+  "construction": {
+    "camera": "One fixed source map face with parallel slab presentation and shallow stone edge thickness; no yaw/turntable or imported donor edge-on view.",
+    "source_supported": "Upper changing round stone/rim, invariant detail hub at8,8.5 and fixed lower exposed rounded slab across all3source masks.",
+    "authored": "Filled limestone stone faces behind sparse source rim/marks, soft perimeter, shallow rim thickness, carved radial seams and subtle shell/porosity. Exact depth/slab mounting unknown. Upper radial texture angles are authored0,+40,-40 degrees to distinguish source phase tendencies, not recovered angular measurements or native timing.",
+    "upper_center": [
+      8,
+      9.1
+    ],
+    "upper_radii": [
+      6.6,
+      4.9
+    ],
+    "lower_center": [
+      8,
+      14.65
+    ],
+    "lower_radii": [
+      6.7,
+      4.95
+    ],
+    "hub_center": [
+      8,
+      8.5
+    ],
+    "phase_angles": {
+      "1": 0,
+      "2": 40,
+      "3": -40
+    },
+    "rule": "One default material refinement; rigidly map only upper stone material/ink through authored phase angles, fixed lower slab and hub remain identical. No independently generated body or bounds fit per phase."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same full cell/centers/scale/pivot and y/w roles in all3phases."
+  },
+  "native_acceptance": "Pending full-set generation: native operational/charge/subject-ignore phase selection/timing, recipe/container/physics/visibility/rare Animated and save/load. No native activation."
+}

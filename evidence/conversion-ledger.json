@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-MILLSTONE",
+  "active_entry": "SCN-POWERLESS-ELECTROTHING",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -36299,8 +36299,8 @@
         "operational/motion states: native metadata study still required; do not invent animations"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -36311,9 +36311,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -36369,7 +36367,315 @@
           "sha256": "a75503c6348e0e8b46181519aafdceba16a762899ba25c3fc30aba81fa1c3f97"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Extract and inspect all3declared millstone masks; resolve native description, ancestry, palette, Mill mechanics and animation gate.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/extract-native-frames.py",
+              "sha256": "98a0150aef855170ec3fe12f0e8fdfc386995812832f03b5c5da15914f8a3bd5"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/native-frames.json",
+              "sha256": "77304e5aff8d500e5fbb0e6500400a43dbbfda1143ec52d647ab60e3ae7c8a9b"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/source-packet.json",
+              "sha256": "95b96a8c3ca8d7d0a2aa26a6be124613d64c125c66b090a330cbe9dbd1e76fba"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/source-reference-construction.png",
+              "sha256": "65f23d424c3ae1d6697e6827e0a13206d341159d722ebd271151f47262c59d79"
+            }
+          ],
+          "review": "Bounded extraction to private E:storage; original default hash matches catalogue. Source length300,0/100/200tiles,requires operational Mill and ignores subject status. Static Mill/AnimatedMaterialGeneric class evidence; no game/harness launch.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE upright stone grinder north and matching1.6definition/parent/render mapping.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/source-packet.json",
+              "sha256": "95b96a8c3ca8d7d0a2aa26a6be124613d64c125c66b090a330cbe9dbd1e76fba"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/source-reference-construction.png",
+              "sha256": "65f23d424c3ae1d6697e6827e0a13206d341159d722ebd271151f47262c59d79"
+            }
+          ],
+          "review": "Graphic_Multi,drawSize1.25,size1x1; partial mineral/stone-edge style only. Decorative bench mounting, motor/pedestal/foot pedal and footprint not imported; source slab layout authoritative.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Construct editable default limestone slabs/hub and three phase guides with shared lower geometry and registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/source-packet.json",
+              "sha256": "95b96a8c3ca8d7d0a2aa26a6be124613d64c125c66b090a330cbe9dbd1e76fba"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/construct-millstone.py",
+              "sha256": "04863359cdc0451e7457d578151741be5a74fa0208adcf8bf43b923a3de9f044"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/lower.svg",
+              "sha256": "7d4594e7a3fbc05b116d982107e3de813d5e2bc79d79b89f59f595d3a4f0c433"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/upper.svg",
+              "sha256": "09c5ef6783079a7b0f90c619fde8879a8130b1d6209b1b8546459082b7b2fef2"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/hub.svg",
+              "sha256": "d11ea45737408ea9958e1514787ba1f116eefb5725034d68ebcca76126956656"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-1-constructed.png",
+              "sha256": "76c4b26a524f65a2dcad92d107b1d4ea7098cdc9a5578ae48e2a00394d923f56"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-1-ownership.png",
+              "sha256": "d38ac6cc532c1b969983bcdad253dedbb14d901d44595c0183a58eeb8f21b9f7"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/constructed-native-phases.png",
+              "sha256": "91f6d1c9a3345ebf54c6b23cf9c638bfb5f1f856d2ae56a0c7a9a3060d550c69"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/manual-structural-review.json",
+              "sha256": "9a76cac87db647c62ff98f5279ce42c5c63b529e281e45ca090c54a3382dc5e9"
+            }
+          ],
+          "review": "All actual source masks/reference/manual phases inspected. Filled slab faces/hidden depth and0,+40,-40seam-angle interpretation explicit. No structural patch required; default construction retained for first refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Prepare native three-frame appearances with fixed lower exposed slab and hub, changing upper stone marks.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/native-frames.json",
+              "sha256": "77304e5aff8d500e5fbb0e6500400a43dbbfda1143ec52d647ab60e3ae7c8a9b"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/source-packet.json",
+              "sha256": "95b96a8c3ca8d7d0a2aa26a6be124613d64c125c66b090a330cbe9dbd1e76fba"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-1-constructed.svg",
+              "sha256": "cfe35dde01bd458e194a98be8a5f3c00dc164a2515bc2eea25956c3a9e52f43a"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-2-constructed.svg",
+              "sha256": "45984cdce06dc32bdb2fc6e27dc3f91834757aacb8aca82166351cd9d13d30a5"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-3-constructed.svg",
+              "sha256": "5b2ae5ef86b5732bfa5cb6ee0dae6ed7dd649c9575402932dd50fb0f6b2f5d30"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/constructed-native-phases.png",
+              "sha256": "91f6d1c9a3345ebf54c6b23cf9c638bfb5f1f856d2ae56a0c7a9a3060d550c69"
+            }
+          ],
+          "review": "One fixed map face;3native source frames, not extra camera directions. Authored texture angles do not change source timing or imply recovered mechanical angular measures. No idle/off/stock/dust variant invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Perform one actual default-phase contextual limestone refinement and inspect before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-1-constructed.png",
+              "sha256": "76c4b26a524f65a2dcad92d107b1d4ea7098cdc9a5578ae48e2a00394d923f56"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/refine-prompt.txt",
+              "sha256": "281575b4f2b2d75386fb09cf4cdd028f93ab266554cd65f346248fcd38787a75"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/refined-raw.png",
+              "sha256": "b9b4dd2de57c00c4160c7b953ee70823bf7d7a4c34be507ef8eaeef9d46801b8"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/first-structural-review.json",
+              "sha256": "7aa5da107bdde4f5dd127f05d05c8a166474dce0967eb988b205884986b8da83"
+            }
+          ],
+          "review": "Inspected full actual first refinement. Broad upper and lower exposed limestone slabs, small ring hub, radial seams and restrained fossil/porous limestone appearance usable. Generated exterior halo, thick generated outlines and altered edge/bevel placement rejected. Select material into fixed editable slab coverage/ink/roles. Sample upper stone independently as gray material, continuing through gold hub area before phase transforms so no duplicate hub rotates with texture. Lower exposed slab and detail hub remain identical. No new stand/motor/grain/dust props or native clock.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-millstone/v1/refine-prompt.txt",
+            "sha256": "281575b4f2b2d75386fb09cf4cdd028f93ab266554cd65f346248fcd38787a75"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-91c47d96-87c1-41ae-8673-219159d49c6d.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-millstone\\v1\\frame-1-constructed.png",
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-millstone\\v1\\source-reference-construction.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_StoneGrinder\\VFEPD_StoneGrinder_north.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Select default/gray upper materials, remove hub from turning texture, and derive all3shared-frame native appearances.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/first-structural-review.json",
+              "sha256": "7aa5da107bdde4f5dd127f05d05c8a166474dce0967eb988b205884986b8da83"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/upper.png",
+              "sha256": "0d6dd552194d4963fe339144735e3792c42f63364ccf5efda3477f2a10180670"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/frame-1-ownership.png",
+              "sha256": "d38ac6cc532c1b969983bcdad253dedbb14d901d44595c0183a58eeb8f21b9f7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/register-millstone.py",
+              "sha256": "6c3906b84a96db7ecd5559ba7f0afc3115d4d4d2b99585f3b714a57d9a2cd11d"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/default-material-master.png",
+              "sha256": "bfc154e86ec7656f1aada7baac9cd696525b503708871da9a037317b3c7fe216"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/upper-material-master.png",
+              "sha256": "116323e8b50be2cecf630ccde264cbede2530fee347a92df8b329fde8fc32840"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/model.json",
+              "sha256": "4d0d660808ad573558d07a6e54bcf7b3eaebf869953867f612422883d2f4db63"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/registration-decisions.json",
+              "sha256": "a15e10a881d7e6f7ab7ad968edb0035974e45bc4cdd560dbc0b5074bb3ec9193"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/frame-1-neutral-master.png",
+              "sha256": "9ae4e3ff3ea4b9e1c03c736bcd41dee7d32b9c224c928d7cf621991e992a6080"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/frame-2-neutral-master.png",
+              "sha256": "daed8a4a2768dc450cdb3f0d42cbea0796f2ccdcb7b37be2d86d0c2c4bfc17c1"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/frame-3-neutral-master.png",
+              "sha256": "01ce47f1490d3a4cb3d18eedf2f87138235e9da009aa6348021985daeaeca779"
+            }
+          ],
+          "review": "Only upper RGB/ink changes with inverse ellipse-plane mapping. Fixed lower slab/hub and alpha/role/pivot retained; gold excluded from upper gray sampling to avoid turning duplicate hub. Same-material continuation and manual ink; no second isolation or independent generated phase.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect source3frames/manual phases/refined/default and final3neutral/native y/w appearances at intended sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/model.json",
+              "sha256": "4d0d660808ad573558d07a6e54bcf7b3eaebf869953867f612422883d2f4db63"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/record-review.py",
+              "sha256": "f1b8a6450a1df019f863c79cdd041bdd130e7c619446d90545c8cc24524883ed"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/registration-comparison.png",
+              "sha256": "651879e0142fcbd148c2577c514513816064b60d9d3543c90cc7a0cc65ec8198"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/authoring-review.json",
+              "sha256": "565be5968c0fbfbeb78619f2f6baf52ab8ac539fa0f6b0abafa8c3ddcd878df3"
+            },
+            {
+              "path": "art/conversion/scn-millstone/v1/artifact-manifest.json",
+              "sha256": "653cf33e0a0ade5867f5f9318ba621505981c13805463ce627ddd28025a1777c"
+            }
+          ],
+          "review": "Reviewed all3actual installed sw_millstone masks extracted privately from pinned resources: upper rim/face pattern changes while lower exposed slab and small detail hub remain invariant. Exact source Millstone ancestry/description/native y/w roles retained. Broad slab layout follows source map arrangement; filled limestone faces, shallow edge thickness, porous shell-bearing mineral texture, radial seams and exact hidden mounting are explicit authored interpretation, not source physical measurements. Actual VFE Props and Decor stone grinder north and matching1.6definition/parent/LoadFolders inspected, Graphic_Multi/drawSize1.25/size1x1; partial upright stone-edge/mineral style only, no donor motor/steel pedestal/bench mounting/foot pedal or gameplay copied. One actual default-phase contextual refinement inspected before extraction; usable limestone texture, generated halo and shifted thick outlines excluded by exact editable alpha/ink/role. Separate gray upper sampling excludes/continues through gold hub so no duplicate ring rotates in texture. Default selected material supplies fixed lower/hub; controlled upper RGB mapping at authored0,+40,-40degrees produces3appearances in common frame; angles are not claimed native angular data. Exposed lower slab/hub pixels and all coverage/detail masks remain identical across frames; actual upper textures differ. Full phase/neutral/native y/w plates and16x24/24x36/32x48views inspected. Source AnimatedMaterialGeneric length300 with0/100/200tiles, operational Mill gate and ActivePartStatusIgnoreSubjecttrue remain native; existing class study confirms status handling. Native Mill item transformations/container/inventory/charge and mechanical power, physics/visibility/rare Animated/save-load remain pending integrated acceptance, not replaced or tested during generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T22:42:27.805109+00:00",
+          "step": "native_state_review",
+          "action": "Keep operational/charge/subject-ignore animation, recipes/container/physics/rare Animated/visibility/save-load acceptance behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-millstone/v1/registered/model.json",
+              "sha256": "4d0d660808ad573558d07a6e54bcf7b3eaebf869953867f612422883d2f4db63"
+            }
+          ],
+          "outputs": [],
+          "review": "No native/game/harness validation or activation; entry remains UNFINISHED pending integrated acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed all3actual installed sw_millstone masks extracted privately from pinned resources: upper rim/face pattern changes while lower exposed slab and small detail hub remain invariant. Exact source Millstone ancestry/description/native y/w roles retained. Broad slab layout follows source map arrangement; filled limestone faces, shallow edge thickness, porous shell-bearing mineral texture, radial seams and exact hidden mounting are explicit authored interpretation, not source physical measurements. Actual VFE Props and Decor stone grinder north and matching1.6definition/parent/LoadFolders inspected, Graphic_Multi/drawSize1.25/size1x1; partial upright stone-edge/mineral style only, no donor motor/steel pedestal/bench mounting/foot pedal or gameplay copied. One actual default-phase contextual refinement inspected before extraction; usable limestone texture, generated halo and shifted thick outlines excluded by exact editable alpha/ink/role. Separate gray upper sampling excludes/continues through gold hub so no duplicate ring rotates in texture. Default selected material supplies fixed lower/hub; controlled upper RGB mapping at authored0,+40,-40degrees produces3appearances in common frame; angles are not claimed native angular data. Exposed lower slab/hub pixels and all coverage/detail masks remain identical across frames; actual upper textures differ. Full phase/neutral/native y/w plates and16x24/24x36/32x48views inspected. Source AnimatedMaterialGeneric length300 with0/100/200tiles, operational Mill gate and ActivePartStatusIgnoreSubjecttrue remain native; existing class study confirms status handling. Native Mill item transformations/container/inventory/charge and mechanical power, physics/visibility/rare Animated/save-load remain pending integrated acceptance, not replaced or tested during generation."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-millstone/v1/registered/model.json",
+          "sha256": "4d0d660808ad573558d07a6e54bcf7b3eaebf869953867f612422883d2f4db63"
+        },
+        "plate": {
+          "path": "art/conversion/scn-millstone/v1/registered/registration-comparison.png",
+          "sha256": "651879e0142fcbd148c2577c514513816064b60d9d3543c90cc7a0cc65ec8198"
+        }
+      },
+      "registration_summary": "All3native millstone source masks/palette and operational animation metadata studied. Actual VFE stone-edge reference, editable slab/hub/phase suggestions, one contextual limestone refinement and controlled shared-material3phase extraction recorded. Fixed lower slab/hub/coverage; upper texture angles authored and disclosed, native clock/recipes/container unchanged. Native acceptance pending.",
+      "native_acceptance": "Pending full-set generation: native operational/charge/subject-ignore phase selection/timing, recipe/container/physics/visibility/rare Animated and save/load. No native activation.",
+      "camera_review": {
+        "status": "PASS",
+        "classification": "SOURCE_FIXED_CARDINAL_MAP_FACE",
+        "reason": "Same broad source slab arrangement/full cell/pivot across3native phases; shallow edge/material interpretation authored, no yaw or independent phase bounds fitting.",
+        "evidence": {
+          "path": "art/conversion/scn-millstone/v1/registered/registration-comparison.png",
+          "sha256": "651879e0142fcbd148c2577c514513816064b60d9d3543c90cc7a0cc65ec8198"
+        }
+      },
+      "motion_review": {
+        "default_frame": 1,
+        "animation_length": 300,
+        "tile_frames": {
+          "0": "Items/sw_millstone_1.bmp",
+          "100": "Items/sw_millstone_2.bmp",
+          "200": "Items/sw_millstone_3.bmp"
+        },
+        "requires_operational_active_part": "Mill",
+        "active_part_status_ignore_subject": true,
+        "native_timing": "Retain AnimatedMaterialGeneric behavior including its own timing multiplier; no new clock or assumed milliseconds.",
+        "rare_animated": "Original builder ChanceOneIn15000/RailedMechanism/CookingAndGathering retained as native fallback; no actor conversion invented."
+      }
     },
     {
       "id": "SCN-POWERLESS-ELECTROTHING",
@@ -36384,8 +36690,8 @@
         "operational/motion states: native metadata study still required; do not invent animations"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -57249,7 +57555,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T22:35:20.121546+00:00",
+  "updated_at": "2026-10-20T22:42:27.805109+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

@@ -1,0 +1,141 @@
+{
+  "entry": "SCN-MILLSTONE",
+  "kind": "source_dualcolor_native_three_phase_machine",
+  "blueprint": "Millstone",
+  "source": {
+    "path": "art/conversion/scn-millstone/v1/source-packet.json",
+    "sha256": "95b96a8c3ca8d7d0a2aa26a6be124613d64c125c66b090a330cbe9dbd1e76fba"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same full cell/centers/scale/pivot and y/w roles in all3phases."
+  },
+  "camera": "One fixed source map face with parallel slab presentation and shallow stone edge thickness; no yaw/turntable or imported donor edge-on view.",
+  "palette": {
+    "primary": "y on limestone slabs and recessed pore/groove shading",
+    "detail": "w only small central hub ring",
+    "rule": "Neutral limestone and separate central hub role; oyster-gray texture description does not replace actual source y/w palette."
+  },
+  "native_state_owner": {
+    "default_frame": 1,
+    "animation_length": 300,
+    "tile_frames": {
+      "0": "Items/sw_millstone_1.bmp",
+      "100": "Items/sw_millstone_2.bmp",
+      "200": "Items/sw_millstone_3.bmp"
+    },
+    "requires_operational_active_part": "Mill",
+    "active_part_status_ignore_subject": true,
+    "native_timing": "Retain AnimatedMaterialGeneric behavior including its own timing multiplier; no new clock or assumed milliseconds.",
+    "rare_animated": "Original builder ChanceOneIn15000/RailedMechanism/CookingAndGathering retained as native fallback; no actor conversion invented."
+  },
+  "native_behavior": "MechanicalPowerTransmission consumer100, MillChargeUse1, actual named/tag transformations and container/inventory remain native. AV10/HP500/weight300, examiner2/difficulty1, non-buildable/non-disassemblable BBtinker, native rare animation and operational behavior preserved.",
+  "native_acceptance": "Pending full-set generation: native operational/charge/subject-ignore phase selection/timing, recipe/container/physics/visibility/rare Animated and save/load. No native activation.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map face,3source-declared phases. Native operational gate/subject-ignore/timing/recipes/container remain native; no new direction/rotation clock.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "frames": [
+    {
+      "frame": 1,
+      "native_tile": "Items/sw_millstone_1.bmp",
+      "authored_material_angle_degrees": 0,
+      "primary": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-primary-neutral.png",
+        "sha256": "b6f26c146e4da1ea7bab39db06be335bc5f40bdd253835c595e9455bea29b8cb"
+      },
+      "detail": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-detail-neutral.png",
+        "sha256": "bf332ee04fe88a3c221aeb725ada46ac91330902794e9c829395c59ba773e471"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-coverage.png",
+        "sha256": "baefadb58a8c71d29a5045bdc7004a0425f2928fbe30a747dcd7dbcceeeebbec"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-detail-weight.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-detail-coverage.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-1-authored-dualcolor-mask.png",
+        "sha256": "921333016537b4299209a3cefdfa601c8cd602ced83d54b6dba9073b1f585faf"
+      }
+    },
+    {
+      "frame": 2,
+      "native_tile": "Items/sw_millstone_2.bmp",
+      "authored_material_angle_degrees": 40,
+      "primary": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-primary-neutral.png",
+        "sha256": "a185e336af50c3adc1f56e9477c6d0ba0b6c90d2d0371957f3928df39fe6c6fa"
+      },
+      "detail": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-detail-neutral.png",
+        "sha256": "adc7ebd83af7de9c0a9dc784a1bebefcaa7757bd7465fc4414a2356086796ee0"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-coverage.png",
+        "sha256": "baefadb58a8c71d29a5045bdc7004a0425f2928fbe30a747dcd7dbcceeeebbec"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-detail-weight.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-detail-coverage.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-2-authored-dualcolor-mask.png",
+        "sha256": "921333016537b4299209a3cefdfa601c8cd602ced83d54b6dba9073b1f585faf"
+      }
+    },
+    {
+      "frame": 3,
+      "native_tile": "Items/sw_millstone_3.bmp",
+      "authored_material_angle_degrees": -40,
+      "primary": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-primary-neutral.png",
+        "sha256": "1cc163283c44b7747c16721a6c6de6007719a1f63281d5c3a353d4ea9a591eef"
+      },
+      "detail": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-detail-neutral.png",
+        "sha256": "e3c396262c201e83d8a04dad61fd3e0ff29992c6771bd6225ebc92b7a12c9bbe"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-coverage.png",
+        "sha256": "baefadb58a8c71d29a5045bdc7004a0425f2928fbe30a747dcd7dbcceeeebbec"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-detail-weight.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-detail-coverage.png",
+        "sha256": "ab0b97ca7cc565b714be8205f68b04cf0486d316c52edecff2b07892774d42ba"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-millstone/v1/registered/frame-3-authored-dualcolor-mask.png",
+        "sha256": "921333016537b4299209a3cefdfa601c8cd602ced83d54b6dba9073b1f585faf"
+      }
+    }
+  ]
+}
