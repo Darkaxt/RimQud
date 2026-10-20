@@ -248,6 +248,15 @@ mask cannot create anatomy outside the selected body. Keep one mask per garment,
 body family and facing; do not independently center, resize or infer it from
 generated garment placement. Preserve shoulder coverage.
 
+For ordinary sleeves, draw the body's exposed-arm boundary as a smooth cuff
+cross-section matching the fitted sleeve opening. Use editable continuous curves
+with appropriate tangents, not a diagonal polygon followed by a horizontal spur.
+Keep the forearm/hand together and retain the original body contour. Antialias
+the geometric mask edge; do not blur garment/body art to hide a mismatch. Compare
+the old and curved masks on identical cloth so fit changes remain attributable.
+The garment's visible front cuff edge must retain its intended outline; record
+any rim/overlap issue instead of accepting a smooth mask alone.
+
 The authoring compositor draws the base body, the intact garment, then the
 body pixels selected by the mask, with the documented head/detail order. The
 garment uses its equipment tint; the masked body uses the body's own tint/detail,

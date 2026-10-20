@@ -1,0 +1,90 @@
+{
+  "facing": "south",
+  "steps": [
+    {
+      "step": "01 Fixed body",
+      "path": "art/conversion/body-dromad/v2/selected-south.png",
+      "sha256": "7fdef9dca577a4a00d6b9aa13d2d3b2ac8c385f415c8a12703dc9c474a7e261f",
+      "note": "Body, canvas and contact remain fixed.",
+      "sheet_column": null
+    },
+    {
+      "step": "02 Red body reference",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-sheet.png",
+      "sha256": "3cb7a516750de4ced37bc24f46ecc5e6c8986740979092abc38143a45340c034",
+      "note": "Recolor only; supply the robe reference too.",
+      "sheet_column": 0
+    },
+    {
+      "step": "03 Robe reference",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/whole-robe-sheet.png",
+      "sha256": "0ab742f74d75ca4e96d919d2e873514591ea9ebf50991c9dc303c7b335163c55",
+      "note": "The actual clothing input to the generation.",
+      "sheet_column": 0
+    },
+    {
+      "step": "04 ImageGen composite",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+      "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e",
+      "note": "One drawing. Body preservation was imperfect.",
+      "sheet_column": 0
+    },
+    {
+      "step": "05 Classify + continue",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/continuous-source-south.png",
+      "sha256": "981dd9f5162c8e4ca89a35c5b6166c9589772b3728f5c17ed60e48c4e84ad7be",
+      "note": "Neutral fabric; fill closed hidden regions. Not exact extraction.",
+      "sheet_column": null
+    },
+    {
+      "step": "06 Whole-image stretch",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/stretched-full-texture-south.png",
+      "sha256": "d6e570094e7e31c631ae6e0412829fbb6d6b6871d9b121ab719bd121a0f1489f",
+      "note": "One X/Y scale and translation. Historical alpha contour reused.",
+      "sheet_column": null
+    },
+    {
+      "step": "07 Local cuff refit",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/fitted-full-texture-south.png",
+      "sha256": "8e486e5d036e9c38a185186d1f87e72362ad986f18973b0ff4d8e30ed845b080",
+      "note": "Bounded RGB warp; additional hidden cloth fill. Still experimental.",
+      "sheet_column": null
+    },
+    {
+      "step": "08 Body visibility mask",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/body-over-cloth-mask-south.png",
+      "sha256": "71d27415e724a033b667a014e9aaf73514010ac15419f59aeb2385a5a7d77096",
+      "note": "Separate fixed-body mask. White restores original body.",
+      "sheet_column": null
+    },
+    {
+      "step": "09 Original body overlay",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/body-overlay-south.png",
+      "sha256": "a625928f41af8bdaa2c99099fab27a52032767f7172733544f4f5bd2bcede30d",
+      "note": "Original exposed body, not generated mannequin pixels.",
+      "sheet_column": null
+    },
+    {
+      "step": "10 Mask disabled",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/mask-off-south.png",
+      "sha256": "8e5a0468af383c57d1b8c02a2f144bc92af37fe6ed3b8dd9616e6f28393a8726",
+      "note": "Shows fabric retained behind the hand.",
+      "sheet_column": null
+    },
+    {
+      "step": "11 Final composition",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/assembly-south.png",
+      "sha256": "fff59bdf3393af45c3efc790b1ab7e833fb33b56a1068aebf342638e53a7d8e1",
+      "note": "Body + fitted cloth + selected original body.",
+      "sheet_column": null
+    },
+    {
+      "step": "12 Proposed three bands",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/fitted-full-texture-south.png",
+      "sha256": "8e486e5d036e9c38a185186d1f87e72362ad986f18973b0ff4d8e30ed845b080",
+      "note": "PROPOSAL ONLY: upper adjust; middle transition; lower freeze.",
+      "sheet_column": null
+    }
+  ],
+  "status": "Existing pipeline only; new regional fitting compared separately"
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "Front/back authoring comparison only; accepted profile unchanged",
+  "source": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+    "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+  },
+  "visual_status": "REQUIRES REWORK",
+  "reason": "Both transforms execute, but inherited visibility/cuff ownership and cloth overlap remain unresolved. A cleaner silhouette is not accepted garment fitting.",
+  "views": {
+    "south": {
+      "three-band": {
+        "inherited_required_mask_pixels_below_cloth_alpha_128": 558,
+        "arm_roi_unclaimed_body_pixels": 420
+      },
+      "nine-grid": {
+        "inherited_required_mask_pixels_below_cloth_alpha_128": 550,
+        "arm_roi_unclaimed_body_pixels": 412
+      }
+    },
+    "north": {
+      "three-band": {
+        "inherited_required_mask_pixels_below_cloth_alpha_128": 462,
+        "arm_roi_unclaimed_body_pixels": 358
+      },
+      "nine-grid": {
+        "inherited_required_mask_pixels_below_cloth_alpha_128": 462,
+        "arm_roi_unclaimed_body_pixels": 358
+      }
+    }
+  },
+  "native_validation": "Not performed; generation-first gate unchanged"
+}

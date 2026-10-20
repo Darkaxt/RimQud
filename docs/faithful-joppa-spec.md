@@ -478,3 +478,30 @@ Front/back material completion remains unresolved; all versions stay unfinished
 on the same active robe entry. Original-body restoration is measured separately
 from cloth completeness. No native testing, readiness credit, or general-purpose
 fitting framework is authorized by this bounded experiment.
+
+2026-10-20 authorized regional-fitting comparison: first provide equivalent
+existing-pipeline walkthroughs for south/front and north/back. Then execute the
+three-band proposal on those two views, preserving the accepted east/profile
+composition byte-for-byte. Keep the selected lower robe alignment fixed; fit
+the upper collar/shoulder/sleeve region and join through the middle region with
+shared boundaries. If sleeve placement still needs separate control, compare
+a 3-by-3 grid using the same source cloth and body masks. This is a bounded
+authoring task within Stage 3 (A4/A5), not a new renderer or native test stage.
+
+For this comparison, record source construction, all control coordinates,
+visibility masks, full cloth and final assemblies for both methods. Complete
+missing body-occluded source material before fitting, without inheriting an
+arm-shaped cutoff alpha. A diagnostic same-source whole-image baseline is
+required so changes are attributable to the regional transform. Verify shared
+boundaries, unchanged lower-region pixels/body inputs and the retained profile;
+inspect actual images before describing any improvement. Neither a numerical
+fit nor this comparison alone grants readiness to the unfinished robe entry.
+
+The user's subsequent review favors the nine-grid result and identifies angular
+body-mask boundaries as the next defect. Hold that cloth fixed and replace the
+front/back cuff selection with smooth natural sleeve-opening curves. This is a
+body visibility mask, not a new cloth cut. Preserve original body pixels, the
+accepted profile and all prior comparisons. Show the painted unclothed model,
+separate curved mask and same-cloth old/new assemblies; antialias curve edges
+without blurring garment or body artwork. This remains the same bounded A4/A5
+authoring experiment and does not close the robe or Stage 3.
