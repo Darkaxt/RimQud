@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-STARAPPLE-TREE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-WATERVINE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -263,9 +263,9 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | SCN-BRINESTALK | Brinestalk | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DOGTHORN-TREE | Dogthorn Tree | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-STARAPPLE-TREE | Starapple Tree | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-STARAPPLE-TREE | Starapple Tree | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-STARAPPLE-TREE-RIPE | Starapple Tree Ripe | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-WATERVINE | Watervine | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-WATERVINE | Watervine | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ## Per-entry workflow and artifact index
 
@@ -3439,7 +3439,61 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/starapple-tree-ripe-body.png](../art/village/scenery/starapple-tree-ripe-body.png), [art/village/scenery/starapple-tree-ripe-detail.png](../art/village/scenery/starapple-tree-ripe-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
+
+- 2026-10-20T06:03:47.806366+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Starapple Tree and Ripe sibling definitions, source tile mask, six native detail clusters and installed Harvestable state-color behavior.
+  Review: Viewed original source decoded with native g/R and g/K palettes. Both states share one tile. Six visual glyph groups are authored as fruit marks; actual harvest yield remains one. Ashen description informs neutral bark texture, while actual native g tint remains authoritative.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}, {"path": "art/conversion/scn-starapple-tree/v1/source-construction-comparison.png", "sha256": "68f3a6926ab5297e94f0d38541d4aca4a21097d85003f2931b5afcd2097af64b"}]
+  Method/prompt/corrections: {"phase": "Actual starapple identity, source shape and native harvest tint states"}
+
+- 2026-10-20T06:03:47.806841+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected VCE_TreeAppleA from the installed Vanilla Plants Expanded package for pome readability, leaf clustering and crisp game-art shading.
+  Review: Viewed actual apple sprite and mod/definition metadata/hash. Its round dense crown, straight trunk, fruit count and mechanics are not copied; Qud sparse crooked crown and native palette remain the constraints.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-construction-comparison.png", "sha256": "68f3a6926ab5297e94f0d38541d4aca4a21097d85003f2931b5afcd2097af64b"}]
+  Method/prompt/corrections: {"phase": "Actual installed Vanilla Plants Expanded apple reference"}
+
+- 2026-10-20T06:03:47.807029+00:00 / construct_faithful_shape / PASS: Constructed an asymmetric open crown, arching crooked branches/root flare and six fruit marks at source-inspired positions, with two larger and four smaller pomes.
+  Review: Viewed full manual shape and comparison. Gray wood/foliage and red fruit are extraction roles only; no third fixed bark tint or extra harvest yield is invented.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/prepare-and-construct.py", "sha256": "98a5b703828b6cb6ea65abd7c9a473aa8818e8bd663e7a995b3b09da53c5fee7"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-front.svg", "sha256": "73bc25cb2bb68f6a75c117c53ef382b57902b2ed1ea500e403df0ed291ef0c9e"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-front.png", "sha256": "b6ccfc1327011b5ac7f5a1cf770e77836d916c82618199075bff662d357bd0bd"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-tree.svg", "sha256": "9e8ce183fd07505b3fdda46098adc0e50de12124a3a1b460da62da0b2190e9ab"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-tree.png", "sha256": "10be32ac565deed0345a51f0578c4f8bb359a71e62bcab6ba804b24ef4a1996a"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-fruit.svg", "sha256": "01fa96f6c438aa294bab757a19987f149dfe1c7e3e2e21655af41dede1726db7"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-fruit.png", "sha256": "da2e26b27241ce4a47b0c7bf0cbb5f1fe90b0a993fbcc4de6ff0576223423506"}, {"path": "art/conversion/scn-starapple-tree/v1/source-construction-comparison.png", "sha256": "68f3a6926ab5297e94f0d38541d4aca4a21097d85003f2931b5afcd2097af64b"}]
+  Method/prompt/corrections: {"phase": "Editable sparse crown, ashen branches and source-positioned fruit"}
+
+- 2026-10-20T06:03:47.807748+00:00 / create_required_state_neighbor_variants / PASS: Prepared native ripe R versus unripe K fruit tint previews from one fixed primary/fruit layer set; source Harvestable provides state changes.
+  Review: Viewed both states in one frame. Fruit, branches, root baseline, alpha and anchors do not change. Fixed vegetation has no required creature turnarounds, clothing or rotated crown; source declares no alternate ripe/unripe tile.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/registration-comparison.png", "sha256": "c893c9291cfb79eec92c855f8870d2105afde1c3796d00f8ed01f9a0d0c39978"}]
+  Method/prompt/corrections: {"phase": "Ripe and unripe states share the exact same artwork"}
+
+- 2026-10-20T06:03:47.808020+00:00 / refine_materials_and_form / PASS: Used built-in ImageGen once on the editable front with the actual installed apple rendering reference.
+  Review: Viewed generated output: sparse asymmetric crown, arching exposed ashen-textured wood and exactly six red fruit. No copied dense orchard crown, basket, extra fruit or literal star ornaments. Raw output is retained including its soft exterior halo.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/refine-front-prompt.txt", "sha256": "eab9af94c59446af4f70a23023c18d84872ab079df2abda1b0481197b6278e47"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-front.png", "sha256": "b6ccfc1327011b5ac7f5a1cf770e77836d916c82618199075bff662d357bd0bd"}, {"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/refine-front-prompt.txt", "sha256": "eab9af94c59446af4f70a23023c18d84872ab079df2abda1b0481197b6278e47"}, {"path": "art/conversion/scn-starapple-tree/v1/refined-proposal.png", "sha256": "08cebd0ecc0b09225c9bfcca1ef97ea56f39aa1156d4aeb3cbed2d5b1ee1a8bc"}]
+  Method/prompt/corrections: {"phase": "One controlled starapple shape and material refinement", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-starapple-tree\\v1\\constructed-front.png", "D:/Steam/steamapps/workshop/content/294100/2134308522/Textures/Things/Plant/Trees/VCE_TreeApple/VCE_TreeAppleA.png"]}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-9705b044-7c65-4fe7-bea6-cf172ce7d37b.png"}
+
+- 2026-10-20T06:03:47.809638+00:00 / extract_register_color_coverage / RECORDED: First low-alpha color-component inspection counted detached faint red halo fragments as additional fruit; it stopped before saving a selected model.
+  Review: Opaque-core comparison at alpha224and240resolves the six actual fruit components. Selection needs structural alpha plus narrow antialias edges, rather than accepting all faint generated glow as artwork.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/refined-proposal.png", "sha256": "08cebd0ecc0b09225c9bfcca1ef97ea56f39aa1156d4aeb3cbed2d5b1ee1a8bc"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/register-tree-rejected-red-islands.py", "sha256": "2bd5e4dffa766b1e0777714a0dc4d5f1b57015ce46cb97692b3bc36f28352f90"}]
+  Method/prompt/corrections: {"phase": "Rejected extraction diagnostic: translucent red halo islands"}
+
+- 2026-10-20T06:03:47.810991+00:00 / extract_register_color_coverage / PASS: Selected opaque tree structure plus a two-pixel edge allowance, removed detached glow, neutralized red fruit and saved independent neutral fruit ownership in the common full-cell mapping.
+  Review: Inspected selected plate and actual saved alpha. Six opaque fruit components remain; no detached color halos or baked red in neutral layers. Both neutral roles use equal RGB and exactly the same registration across native tint states.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/refined-proposal.png", "sha256": "08cebd0ecc0b09225c9bfcca1ef97ea56f39aa1156d4aeb3cbed2d5b1ee1a8bc"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/register-tree.py", "sha256": "4a0d0d60e110520cdda540b2ca903b6905c2944bb539e528242d46d84629c223"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/registration-decisions.json", "sha256": "1096329dca3f8af73dee7f055183850d02d3ca3957f70d4e0382410a23e85b7b"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/opaque-structure-mask.png", "sha256": "1ff7f6dcede81cdd70efce3097f4958dec9fdd374bbe25449f9c7319095ed529"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/selected-structure-edge-mask.png", "sha256": "678cd731abbb5d27d523c0e28bf959f0ee5f216902a0b32d5031588ec4fc610f"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/neutral-master.png", "sha256": "baf91cb6d38fd3500f80fd9628d28731d66ecbf83a375e7001ca5195effa899a"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/fruit-neutral-master.png", "sha256": "0a97217518cefa6a057c98ee4ad9f07c713819e39fa43be45494531be2e71446"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/fruit-ownership-mask.png", "sha256": "a429af6c2423c88b25251115581df6776a1b55567c3ea5fa1829d1698a8d6317"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/source-coverage-mask.png", "sha256": "a70f3c830e8d190151bddf8caab31923bb28a0c4cf5d9aae9a0b5eee07e33094"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/primary-neutral.png", "sha256": "828bb02032ed6a1187e0adce5703355e99d11a55f6a0833faa65515b925cfefd"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/detail-neutral.png", "sha256": "81e606b7a921f9baf9b7c30fe6c3830322d73fb138a0204c0ce50d19addaccbf"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/coverage.png", "sha256": "20378521e2ae5955a990bac656dce770834508108fc08a52053ed3ef6a6be333"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/detail-coverage.png", "sha256": "2c50b483dddb6fbe76b59fd2b110838fc0cf55fc26ff4b2a0d1f89dc4d6f0357"}]
+  Method/prompt/corrections: {"phase": "Neutral tree/fruit extraction with structural alpha cleanup"}
+
+- 2026-10-20T06:03:47.813701+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Recomposed primary g with ripe R and unripe K fruit details, showing neutral/isolated fruit/native states and intended-size samples.
+  Review: Viewed actual saved plate. Neutral fruit mask owns all six marks; red/dark-teal fruit remain attached at unchanged locations. Native green primary is retained despite the ashen prose. This is authoring review, not harvest or native scene validation.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/registration-comparison.png", "sha256": "c893c9291cfb79eec92c855f8870d2105afde1c3796d00f8ed01f9a0d0c39978"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/ripe-native-preview.png", "sha256": "52bb664dbc7e79493fb15886f334f5324bc48c77534f2c38f621f26ee53391c1"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/unripe-native-preview.png", "sha256": "41f225649ccfac2c2dfb10c6f1bb2574a454cf579e249650e416d31d59f8bfaf"}]
+  Method/prompt/corrections: {"phase": "Sparse-tree identity, fruit ownership and native palette review"}
+
+- 2026-10-20T06:03:47.814118+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Kept actual Harvestable ripeness/yield/regeneration, state tint binding and visibility/occlusion acceptance behind the all-conversions-generated gate.
+  Review: No native game/harness run or production renderer changes; overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native starapple acceptance deferred"}
 
 ### SCN-STARAPPLE-TREE-RIPE: Starapple Tree Ripe
 
@@ -3449,7 +3503,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/starapple-tree-ripe-body.png](../art/village/scenery/starapple-tree-ripe-body.png), [art/village/scenery/starapple-tree-ripe-detail.png](../art/village/scenery/starapple-tree-ripe-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T06:05:45.161842+00:00 / resolve_object_description_original_tile_palette_state / PASS: Compared installed normal/ripe Render, Description, Tree ancestry, native original mask hashes and Harvestable appearance fields.
+  Review: Render and Description attributes match exactly; both inherit Tree. All harvest fields match except starting ripe chance1:5versus1:1. Both still become unripe through native harvest state; no permanently-red frozen binding is appropriate.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}, {"path": "art/conversion/scn-starapple-tree-ripe/v1/source-packet.json", "sha256": "59991fad802c933f02cab8fbfb946ab10fe0c15672a1e5248f01288b853943b1"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/bind-ripe.py", "sha256": "9c7de56d5db8c9c9dc717fd5fb8fccbc7f40e01693fc4e6fce03643b6aaa1e5b"}, {"path": "art/conversion/scn-starapple-tree-ripe/v1/source-packet.json", "sha256": "59991fad802c933f02cab8fbfb946ab10fe0c15672a1e5248f01288b853943b1"}]
+  Method/prompt/corrections: {"phase": "Ripe sibling source appearance equality", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.162099+00:00 / select_render_reference_or_document_no_equivalent / PASS: Adopted the actual source-bound Vanilla Plants Expanded apple reference selected and inspected by the producer conversion.
+  Review: Same source shape/material/palette means the same specific donor rendering reference applies. Producer packet records actual mod, asset path/hash and constrained reference role. No new reference selection or fabricated inspection call is claimed.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-construction-comparison.png", "sha256": "68f3a6926ab5297e94f0d38541d4aca4a21097d85003f2931b5afcd2097af64b"}]
+  Method/prompt/corrections: {"phase": "Reuse actual installed VPE apple rendering reference", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.162684+00:00 / construct_faithful_shape / PASS: Adopted the performed sparse-crown, ashen-texture, exposed branch/root and six-fruit manual construction.
+  Review: Inspected producer selected design and own binding comparison. Shared original mask and description support the same authored shape; no duplicate tree geometry or altered fruit/yield count is introduced.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/constructed-front.svg", "sha256": "73bc25cb2bb68f6a75c117c53ef382b57902b2ed1ea500e403df0ed291ef0c9e"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-front.png", "sha256": "b6ccfc1327011b5ac7f5a1cf770e77836d916c82618199075bff662d357bd0bd"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-tree.svg", "sha256": "9e8ce183fd07505b3fdda46098adc0e50de12124a3a1b460da62da0b2190e9ab"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-tree.png", "sha256": "10be32ac565deed0345a51f0578c4f8bb359a71e62bcab6ba804b24ef4a1996a"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-fruit.svg", "sha256": "01fa96f6c438aa294bab757a19987f149dfe1c7e3e2e21655af41dede1726db7"}, {"path": "art/conversion/scn-starapple-tree/v1/constructed-fruit.png", "sha256": "da2e26b27241ce4a47b0c7bf0cbb5f1fe90b0a993fbcc4de6ff0576223423506"}]
+  Method/prompt/corrections: {"phase": "Reuse completed editable source-shaped starapple construction", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.163013+00:00 / create_required_state_neighbor_variants / PASS: Bound the producer fixed primary/fruit layers and ripe/unripe tint contract to Starapple Tree Ripe.
+  Review: Viewed source-bound normal-ripe, sibling-ripe and unripe appearance comparison. Same albedo/fruit mask/alpha/anchor is reused. Only initial state probability differs. No creature facings or clothing apply.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}, {"path": "art/conversion/scn-starapple-tree-ripe/v1/source-packet.json", "sha256": "59991fad802c933f02cab8fbfb946ab10fe0c15672a1e5248f01288b853943b1"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/model.json", "sha256": "45614425769333f08e2bf2b53db66c329875f7fbef86e4b85b109167cc71810e"}, {"path": "art/conversion/scn-starapple-tree-ripe/v1/binding-comparison.png", "sha256": "a1deded7d3787ecafa095d1519f91e4df9dbcc70c570f32e5dce246984670102"}]
+  Method/prompt/corrections: {"phase": "Bind both native harvest tint states to the same geometry", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.164731+00:00 / refine_materials_and_form / PASS: Adopted the producer actual built-in ImageGen output and its exact prompt, with its documented structural-alpha correction.
+  Review: Producer ledger records the real generation call, input hashes and output path. This sibling event is reuse, not a second generation call. The performed refinement preserves the sparse Qud crown and six fruit marks.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/source-packet.json", "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"}, {"path": "art/conversion/scn-starapple-tree/v1/refine-front-prompt.txt", "sha256": "eab9af94c59446af4f70a23023c18d84872ab079df2abda1b0481197b6278e47"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree/v1/refine-front-prompt.txt", "sha256": "eab9af94c59446af4f70a23023c18d84872ab079df2abda1b0481197b6278e47"}, {"path": "art/conversion/scn-starapple-tree/v1/refined-proposal.png", "sha256": "08cebd0ecc0b09225c9bfcca1ef97ea56f39aa1156d4aeb3cbed2d5b1ee1a8bc"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/registration-decisions.json", "sha256": "1096329dca3f8af73dee7f055183850d02d3ca3957f70d4e0382410a23e85b7b"}]
+  Method/prompt/corrections: {"phase": "Reuse actual performed shape/material refinement", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.165306+00:00 / extract_register_color_coverage / PASS: Selected the identical source-bound neutral primary, fruit role and alpha masks, with a sibling model recording the producer/source binding.
+  Review: Same neutral files/hashes are used directly, rather than copied or retinted permanently. Native unripe K versus ripe R remains state-owned. No baked generation red or per-state recentering is introduced.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/registration-decisions.json", "sha256": "1096329dca3f8af73dee7f055183850d02d3ca3957f70d4e0382410a23e85b7b"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/model.json", "sha256": "45614425769333f08e2bf2b53db66c329875f7fbef86e4b85b109167cc71810e"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/primary-neutral.png", "sha256": "828bb02032ed6a1187e0adce5703355e99d11a55f6a0833faa65515b925cfefd"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/detail-neutral.png", "sha256": "81e606b7a921f9baf9b7c30fe6c3830322d73fb138a0204c0ce50d19addaccbf"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/coverage.png", "sha256": "20378521e2ae5955a990bac656dce770834508108fc08a52053ed3ef6a6be333"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/detail-coverage.png", "sha256": "2c50b483dddb6fbe76b59fd2b110838fc0cf55fc26ff4b2a0d1f89dc4d6f0357"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/fruit-ownership-mask.png", "sha256": "a429af6c2423c88b25251115581df6776a1b55567c3ea5fa1829d1698a8d6317"}]
+  Method/prompt/corrections: {"phase": "Reuse actual neutral fruit extraction and registration", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.165735+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed the shared artwork in the sibling binding comparison and producer native/neutral intended-size plate.
+  Review: Ripe sibling has exactly the performed producer appearance and can still show native unripe fruit. The source-difference log explains starting state. This is authoring/source binding review, not an in-game harvest capture.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/model.json", "sha256": "45614425769333f08e2bf2b53db66c329875f7fbef86e4b85b109167cc71810e"}]
+  Outputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/binding-comparison.png", "sha256": "a1deded7d3787ecafa095d1519f91e4df9dbcc70c570f32e5dce246984670102"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/registration-comparison.png", "sha256": "c893c9291cfb79eec92c855f8870d2105afde1c3796d00f8ed01f9a0d0c39978"}]
+  Method/prompt/corrections: {"phase": "Ripe-sibling identity and native palette authoring review", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
+
+- 2026-10-20T06:05:45.165819+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Kept actual starting-state, harvest/regeneration, dynamic tint and visibility/occlusion acceptance behind the every-conversion-generated gate.
+  Review: No game/harness launch or production renderer changes. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/model.json", "sha256": "45614425769333f08e2bf2b53db66c329875f7fbef86e4b85b109167cc71810e"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native ripe-sibling acceptance deferred", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
 
 ### SCN-WATERVINE: Watervine
 
@@ -3459,7 +3561,25 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/watervine-body.png](../art/village/scenery/watervine-body.png), [art/village/scenery/watervine-detail.png](../art/village/scenery/watervine-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: refine_materials_and_form. Process-log events: 3.
+
+- 2026-10-20T06:10:44.859605+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed Watervine/Plant definitions, actual three RandomTile masks, native Harvestable colors/yield and Fireflies particle-event implementation.
+  Review: Viewed all three source glyphs decoded with native w/g. Vine stays w; swollen wafers use ripe g/unripe K. Fireflies adds a separate native night particle, not a required baked glow on this plant image. Actual yield remains one Vinewafer; native behavior stays source-owned.
+  Inputs: [{"path": "art/conversion/scn-watervine/v1/source-packet.json", "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"}]
+  Outputs: [{"path": "art/conversion/scn-watervine/v1/source-packet.json", "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"}, {"path": "art/conversion/scn-watervine/v1/extract-native-states.py", "sha256": "8ba90ad434a54c3cef736dac4b7fc2a1544c5214d94296b9ebe9e649f060f8c8"}, {"path": "art/conversion/scn-watervine/v1/native-state-index.json", "sha256": "f4a49d8da5bbfec4c45469d921e65529accc3ed7181af6fafd00f2dd5bfa14d8"}, {"path": "art/conversion/scn-watervine/v1/native-states-comparison.png", "sha256": "5e043a2f1efa16c265710fee87d78a49048e7adc890f415cbc64f369d9eb5e2d"}]
+  Method/prompt/corrections: {"phase": "Watervine source description, three glyph layouts and harvest/particle metadata"}
+
+- 2026-10-20T06:10:44.860195+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected extracted Core HaygrassA source id1040 for crisp narrow plant strokes and restrained shading only.
+  Review: Viewed actual private reed.png and verified existing manifest/hash. No close donor equivalent for moisture-swollen wafer knots is asserted. Cereal seed heads, straight grass blades and donor crop mechanics are not adopted.
+  Inputs: [{"path": "art/conversion/scn-watervine/v1/source-packet.json", "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"}]
+  Outputs: [{"path": "art/conversion/scn-watervine/v1/source-construction-comparison.png", "sha256": "9d9cff0ed2df98bc8fe6bb16e5824fa9120047820e232f1a3683eba34d6aac60"}]
+  Method/prompt/corrections: {"phase": "Actual Core narrow-plant rendering reference"}
+
+- 2026-10-20T06:10:44.860445+00:00 / construct_faithful_shape / PASS: Constructed each source layout with crooked furrowed vine paths and swollen wafer marks at native detail-group centers, connected by short tendrils.
+  Review: Viewed all three manual layouts. This is editable pre-refinement geometry, not selected production art. Detail-group counts26/27/23are authored glyph marks, not harvest yield. Green currently marks intended ownership for later neutralization. Refinement, any corrections, registered tint states and final authoring review remain unfinished.
+  Inputs: [{"path": "art/conversion/scn-watervine/v1/source-packet.json", "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"}, {"path": "art/conversion/scn-watervine/v1/native-state-index.json", "sha256": "f4a49d8da5bbfec4c45469d921e65529accc3ed7181af6fafd00f2dd5bfa14d8"}]
+  Outputs: [{"path": "art/conversion/scn-watervine/v1/prepare-and-construct.py", "sha256": "472f260e3b3d530324610db577616f0ed5bd81d9370bb3535388b9aa0dca1c12"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-1.svg", "sha256": "75af20f5c75f57b286ccc8220a8cfa53d0029e9836a05a4379ac26c670f99d7a"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-1.png", "sha256": "0bda2234ddc913673a533b0265d57cebf058688ecbe1433fa8dab9391b7e2afa"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-2.svg", "sha256": "b1e8533317e84af741d5cd7e57ec704edc3c15a60b531afc4e4f5e3842349575"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-2.png", "sha256": "3a36efe9c61b1bc5d79350942d7173649958786d54c57e5e1f6f8d339a5a1da0"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-3.svg", "sha256": "e1111747c5d2ded2a26e5daca134ec2ad56d5acc09c6e096a9530e459ccb35fb"}, {"path": "art/conversion/scn-watervine/v1/constructed-variant-3.png", "sha256": "970469ef287150ab79f52f1674e083a028f33c54b1d09f1728b622d59bfbdd1c"}, {"path": "art/conversion/scn-watervine/v1/source-construction-comparison.png", "sha256": "9d9cff0ed2df98bc8fe6bb16e5824fa9120047820e232f1a3683eba34d6aac60"}]
+  Method/prompt/corrections: {"phase": "Three editable source-positioned vine and wafer designs"}
 
 ### BODY-HUMAN-FEMALE-OLDER: human female older template
 

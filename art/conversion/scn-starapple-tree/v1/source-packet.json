@@ -1,0 +1,179 @@
+{
+  "entry": "SCN-STARAPPLE-TREE",
+  "recorded_at": "2026-10-20T05:59:11.834565+00:00",
+  "identity": "Starapple Tree -> Tree -> Plant -> PhysicalObject",
+  "description": "Starapples hang from ashen branches, motes of luscious, red light in a bleached tableau.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected": "<object Name=\"Starapple Tree\" Inherits=\"Tree\">\n    <part Name=\"Render\" DisplayName=\"starapple tree\" RenderString=\"157\" ColorString=\"&amp;R\" TileColor=\"&amp;g\" Tile=\"Terrain/sw_starappletree.bmp\" DetailColor=\"R\" Occluding=\"true\" />\n    <part Name=\"Harvestable\" OnSuccess=\"Starapple\" OnSuccessAmount=\"1\" StartRipeChance=\"1:5\" RipeColor=\"&amp;R\" RipeTileColor=\"&amp;g\" RipeDetailColor=\"R\" UnripeColor=\"&amp;g\" UnripeTileColor=\"&amp;g\" UnripeDetailColor=\"K\" />\n    <part Name=\"Description\" Short=\"Starapples hang from ashen branches, motes of luscious, red light in a bleached tableau.\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"DynamicObjectsTable:FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:DesertCanyon_FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:Hills_FarmablePlants\" />\n\t\t<tag Name=\"DynamicObjectsTable:Mountains_FarmablePlants\" />\t\t\t\t\n    <tag Name=\"DynamicObjectsTable:Jungle_FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:DeepJungle_FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:DesertCanyon_Plants\" />\n    <tag Name=\"DynamicObjectsTable:Hills_Plants\" />\n\t\t<tag Name=\"DynamicObjectsTable:Mountains_Plants\" />\n    <tag Name=\"DynamicObjectsTable:Jungle_Plants\" />\n    <tag Name=\"DynamicObjectsTable:DeepJungle_Plants\" />\n    <tag Name=\"PlacementIsSkippable\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_tree\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_tree\" />\n  </object>\n  ",
+    "ripe_sibling": "<object Name=\"Starapple Tree Ripe\" Inherits=\"Tree\">\n    <part Name=\"Render\" DisplayName=\"starapple tree\" RenderString=\"157\" ColorString=\"&amp;R\" TileColor=\"&amp;g\" Tile=\"Terrain/sw_starappletree.bmp\" DetailColor=\"R\" Occluding=\"true\" />\n    <part Name=\"Harvestable\" OnSuccess=\"Starapple\" OnSuccessAmount=\"1\" StartRipeChance=\"1:1\" RipeColor=\"&amp;R\" RipeTileColor=\"&amp;g\" RipeDetailColor=\"R\" UnripeColor=\"&amp;g\" UnripeTileColor=\"&amp;g\" UnripeDetailColor=\"K\" />\n    <part Name=\"Description\" Short=\"Starapples hang from ashen branches, motes of luscious, red light in a bleached tableau.\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_tree\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_tree\" />\n  </object>\n  "
+  },
+  "original_reference": {
+    "tile": "Terrain/sw_starappletree.bmp",
+    "description": "Starapples hang from ashen branches, motes of luscious, red light in a bleached tableau.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "starapple tree",
+      "RenderString": "157",
+      "RenderLayer": "3",
+      "RenderIfDark": "true",
+      "Tile": "Terrain/sw_starappletree.bmp",
+      "ColorString": "&R",
+      "Occluding": "true",
+      "TileColor": "&g",
+      "DetailColor": "R"
+    },
+    "kind": "scenery",
+    "blueprint": "Starapple Tree",
+    "reference_file": "village-originals/starapple-tree-reference.png",
+    "native_mask_sha256": "67b3b8d2acfda532e4a6c1e7aa3649d7db287b8d3f8ef6f62a735e2b788c9425",
+    "reference_sha256": "e7f972a60ffc1e5f9d84455e2ff1e4d3f73664bd9073e6301942f7cb53214cc7",
+    "info_id": 11447,
+    "atlas_id": 203,
+    "rect": [
+      882,
+      130,
+      16,
+      24
+    ]
+  },
+  "private_original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\starapple-tree-mask.png",
+    "sha256": "67b3b8d2acfda532e4a6c1e7aa3649d7db287b8d3f8ef6f62a735e2b788c9425"
+  },
+  "fruit_glyph_groups": [
+    [
+      [
+        10,
+        6
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        11,
+        6
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        12,
+        6
+      ]
+    ],
+    [
+      [
+        1,
+        12
+      ]
+    ],
+    [
+      [
+        13,
+        14
+      ]
+    ],
+    [
+      [
+        3,
+        13
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    [
+      [
+        4,
+        6
+      ]
+    ],
+    [
+      [
+        9,
+        11
+      ]
+    ]
+  ],
+  "interpretation": "Six visible source detail clusters are authored as fruit: two larger cross-like marks and four small marks. This is visual glyph interpretation, not a six-fruit yield claim; native Harvestable.OnSuccessAmount is1.",
+  "harvest": {
+    "Name": "Harvestable",
+    "OnSuccess": "Starapple",
+    "OnSuccessAmount": "1",
+    "StartRipeChance": "1:5",
+    "RipeColor": "&R",
+    "RipeTileColor": "&g",
+    "RipeDetailColor": "R",
+    "UnripeColor": "&g",
+    "UnripeTileColor": "&g",
+    "UnripeDetailColor": "K"
+  },
+  "installed_state_evidence": {
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "class_name": "XRL.World.Parts.Harvestable",
+    "scoped_decompilation_sha256": "1212f45426d57cc487bca11df7ef6c9245a00e342907a547031ed8c1ab4dd8ac",
+    "facts": [
+      "Native ripe/unripe updates assign TileColor and DetailColor. These blueprints declare no RipeTiles or UnripeTiles.",
+      "Both states keep primary TileColor g. Ripe detail R and unripe detail K change fruit appearance without replacing this source tile.",
+      "Starapple Tree starts with1:5ripe chance; Starapple Tree Ripe starts1:1, but has the same Render/Description and subsequent Harvestable appearance roles."
+    ]
+  },
+  "palette": {
+    "primary": "g",
+    "ripe_detail": "R",
+    "unripe_detail": "K",
+    "native_primary_rgb": "009403",
+    "native_ripe_rgb": "d74200",
+    "native_unripe_rgb": "155352",
+    "description_palette_boundary": "Description says ashen branches, but native tile primary is g. Express pale/ashen bark through neutral texture values; retain native g tint rather than inventing a third fixed-white bark color."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Plants Expanded",
+    "package_id": "VanillaExpanded.VPlantsE",
+    "workshop_id": "2134308522",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2134308522\\Textures\\Things\\Plant\\Trees\\VCE_TreeApple\\VCE_TreeAppleA.png",
+    "sha256": "9454c353963d6444277434269b51ef9082d41514815d813f3e3684453730dade",
+    "definition_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2134308522\\1.6\\Defs\\ThingDefs_Plants\\Plants_Cultivated_Trees.xml",
+    "definition_sha256": "09e04ac894adb667f7dfbfe9870a9c50de663cf491a54e0a4ebc082766ed4965",
+    "role": "Actual Vanilla Plants Expanded apple tree supplies readable red pome fruit, leaf clustering and outline/shading conventions. Do not copy its round dense crown, straight trunk, cultivar mechanics, donor colors or fruit count."
+  },
+  "construction": "Editable crooked ashen-textured tree with source-inspired asymmetric sparse crown, exposed branches/root flare and six source-positioned fruit glyphs. Red marks aid fruit ownership extraction; final layers are neutral grayscale.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_anchor": [
+      8,
+      16
+    ],
+    "rule": "One fixed frame for primary and fruit role in both harvest states. No per-state crop/recenter; state changes tint only."
+  },
+  "states": "One fixed map view with ripe/unripe tint states. No creature turnarounds, clothing, random crown, seasonal models or new harvest mechanics are required.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

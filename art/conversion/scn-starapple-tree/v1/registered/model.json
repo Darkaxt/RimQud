@@ -1,0 +1,66 @@
+{
+  "entry": "SCN-STARAPPLE-TREE",
+  "kind": "harvest_tinted_fixed_plant",
+  "blueprint": "Starapple Tree",
+  "native_tiles": [
+    "Terrain/sw_starappletree.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-starapple-tree/v1/source-packet.json",
+    "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"
+  },
+  "primary": {
+    "path": "art/conversion/scn-starapple-tree/v1/registered/primary-neutral.png",
+    "sha256": "828bb02032ed6a1187e0adce5703355e99d11a55f6a0833faa65515b925cfefd"
+  },
+  "detail": {
+    "path": "art/conversion/scn-starapple-tree/v1/registered/detail-neutral.png",
+    "sha256": "81e606b7a921f9baf9b7c30fe6c3830322d73fb138a0204c0ce50d19addaccbf"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-starapple-tree/v1/registered/coverage.png",
+    "sha256": "20378521e2ae5955a990bac656dce770834508108fc08a52053ed3ef6a6be333"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-starapple-tree/v1/registered/detail-coverage.png",
+    "sha256": "2c50b483dddb6fbe76b59fd2b110838fc0cf55fc26ff4b2a0d1f89dc4d6f0357"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full-cell transform for both harvest states. States share exactly the same primary, fruit layer and alpha; no geometry or anchor changes."
+  },
+  "palette": {
+    "primary": "actual native TileColor g",
+    "detail": "actual native DetailColor: R when ripe, K when unripe",
+    "neutral_preview": "Equal RGB only; red extraction aid removed from both saved layers."
+  },
+  "states": {
+    "ripe": {
+      "primary": "g",
+      "detail": "R"
+    },
+    "unripe": {
+      "primary": "g",
+      "detail": "K"
+    }
+  },
+  "appearance": "Sparse asymmetric fruit tree with ashen neutral bark texture and six source-inspired fruit marks. Native primary g tint is retained even on described ashen wood; no unsupported third fixed bark color.",
+  "state_owner": "Native Harvestable owns ripeness, yield1, regeneration and tint. RipeTiles/UnripeTiles absent for this source. No fruit disappears or moves as an invented harvest effect.",
+  "native_behavior": "Source visibility/occlusion, plant/hanging support and native harvest interaction remain unchanged; native binding/tint acceptance pending.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

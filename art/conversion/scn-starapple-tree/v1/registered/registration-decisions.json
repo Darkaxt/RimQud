@@ -1,0 +1,74 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-starapple-tree/v1/refined-proposal.png",
+      "sha256": "08cebd0ecc0b09225c9bfcca1ef97ea56f39aa1156d4aeb3cbed2d5b1ee1a8bc"
+    },
+    {
+      "path": "art/conversion/scn-starapple-tree/v1/register-tree.py",
+      "sha256": "4a0d0d60e110520cdda540b2ca903b6905c2944bb539e528242d46d84629c223"
+    }
+  ],
+  "alpha": "Select alpha>=224structure plus a two-pixel edge allowance; retain actual alpha>=16only within that structural mask. This removes soft generated glow while preserving antialiased edges. Interiors>=240normalized and invisible RGB cleared; branch gaps stay transparent.",
+  "fruit_ownership": "Red-dominant pixels R-G>=12,R-B>=12,R>=30 identify fruit. Six connected opaque components (alpha>=224) establish fruit count; faint red antialias islands do not create extra fruit. Both primary and fruit roles are neutralized.",
+  "rejected_extraction": "The first alpha>=16red-component diagnostic counted detached translucent red halos as extra fruit. That script is retained as register-tree-rejected-red-islands.py. Actual opaque-core comparison resolves exactly six fruit; selected output also excludes detached halos.",
+  "refined_fruit_components": [
+    {
+      "pixels": 4992,
+      "bounds": [
+        694,
+        391,
+        777,
+        469
+      ]
+    },
+    {
+      "pixels": 1270,
+      "bounds": [
+        269,
+        397,
+        310,
+        436
+      ]
+    },
+    {
+      "pixels": 1167,
+      "bounds": [
+        591,
+        721,
+        630,
+        759
+      ]
+    },
+    {
+      "pixels": 1215,
+      "bounds": [
+        77,
+        782,
+        117,
+        822
+      ]
+    },
+    {
+      "pixels": 5568,
+      "bounds": [
+        248,
+        830,
+        335,
+        912
+      ]
+    },
+    {
+      "pixels": 1203,
+      "bounds": [
+        860,
+        913,
+        900,
+        951
+      ]
+    }
+  ],
+  "source_limit": "Six glyph groups are authored fruit marks, not native harvest count. Native yield remains1. Branch texture is authored from description, and actual native primary tint remains g.",
+  "registration": "Whole1024x1536image maps once to256square, shared by both harvest tints. Neither state is independently centered or rescaled.",
+  "omitted_views": "Fixed-view plant does not require creature turnarounds, clothing or secondary facing. Ripeness is a source-defined color change with shared geometry."
+}

@@ -68,7 +68,14 @@ actual native RandomTile variants, with independently constructed/refined crowns
 pointed bark splinters and exposed roots. Its neutral foliage/wood layers preserve
 native green/brown color roles. The report records the actual installed Vanilla
 Textures Expanded references, source metadata, editable inputs and extraction.
-There are now 30 generation-ready entries; Starapple Tree is active next.
+Starapple now has a source-shaped sparse crown, exposed ashen-textured branches
+and a separate neutral fruit mask. Native harvest states keep identical geometry
+while fruit tint changes from ripe red to unripe dark teal. The Ripe sibling uses
+the same performed conversion with exact source comparison: only its starting
+ripe chance differs. The actual native primary green remains authoritative.
+There are now 32 generation-ready entries. Watervine is active: all three native
+layouts, source/harvest/firefly metadata, actual Core reference and editable
+vine/wafer constructions are recorded; refinement and registration remain pending.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

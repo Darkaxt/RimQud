@@ -1,0 +1,30 @@
+{
+  "entry": "SCN-STARAPPLE-TREE-RIPE",
+  "recorded_at": "2026-10-20T06:04:44.414612+00:00",
+  "identity": "Starapple Tree Ripe -> Tree -> Plant -> PhysicalObject",
+  "reuse_of_entry": "SCN-STARAPPLE-TREE",
+  "source_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected": "<object Name=\"Starapple Tree Ripe\" Inherits=\"Tree\">\n    <part Name=\"Render\" DisplayName=\"starapple tree\" RenderString=\"157\" ColorString=\"&amp;R\" TileColor=\"&amp;g\" Tile=\"Terrain/sw_starappletree.bmp\" DetailColor=\"R\" Occluding=\"true\" />\n    <part Name=\"Harvestable\" OnSuccess=\"Starapple\" OnSuccessAmount=\"1\" StartRipeChance=\"1:1\" RipeColor=\"&amp;R\" RipeTileColor=\"&amp;g\" RipeDetailColor=\"R\" UnripeColor=\"&amp;g\" UnripeTileColor=\"&amp;g\" UnripeDetailColor=\"K\" />\n    <part Name=\"Description\" Short=\"Starapples hang from ashen branches, motes of luscious, red light in a bleached tableau.\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_tree\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_tree\" />\n  </object>\n  "
+  },
+  "source_comparison": {
+    "render": "Exact attribute equality",
+    "description": "Exact attribute equality",
+    "parent": "Both inherit Tree",
+    "harvest": "Same harvest appearance and yield fields; only StartRipeChance differs1:5versus1:1",
+    "mask_sha256": "67b3b8d2acfda532e4a6c1e7aa3649d7db287b8d3f8ef6f62a735e2b788c9425"
+  },
+  "producer_packet": {
+    "path": "art/conversion/scn-starapple-tree/v1/source-packet.json",
+    "sha256": "4e29b1bb2ba06789287c5fd5e08d06e695509fa163b43b30cbd8e2123a83b1c6"
+  },
+  "producer_model": {
+    "path": "art/conversion/scn-starapple-tree/v1/registered/model.json",
+    "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"
+  },
+  "producer_workflow": "Adopt the actually performed source/installed-reference/editable-construction/ImageGen-refinement/halo-correction/neutral-fruit-mask workflow. No new ImageGen call is claimed and no duplicate tree design is created.",
+  "appearance": "Same fixed tree and fruit mask; native g primary with R ripe detail and K unripe detail.1:1initial ripeness does not mean permanently ripe or an independent frozen-red texture.",
+  "native_behavior": "Keep actual native Harvestable state/yield/regeneration, visibility and physics. Do not use a permanently ripe art binding or new schedule to override it.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}
