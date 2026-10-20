@@ -523,3 +523,12 @@ restart speculative fitting variants for it. Continue on the sole active robe
 entry, then proceed through required clothing entries individually. This resumes
 the original full-ledger generation objective; Stage 3 remains the only ACTIVE
 stage and final native validation remains behind the all-generated gate.
+
+Production authoring checkpoint: current Cloth Robe registrations now cover
+human-female v1, human-male v2 and adult dromad v6. Each retains continuous cloth,
+the fixed original body and independent curved visibility. The male v1 broad
+hand mask is a retained rejected attempt; v2 narrows ownership to actual hands
+and forearms. The item inventory record aggregates all three completed authoring
+logs, without claiming native acceptance. Child dromad/human Woven Tunic
+reprocessing is also recorded separately. Continue through the remaining actual
+clothing entries; the full village and final native criteria remain unfinished.
