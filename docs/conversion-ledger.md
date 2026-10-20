@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BROKEN-INDUSTRIAL-FAN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-ELECTRIC-GENERATOR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -154,8 +154,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-BROKEN-INDUSTRIAL-FAN | Broken Industrial Fan | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-ELECTRIC-GENERATOR | Electric Generator | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BROKEN-INDUSTRIAL-FAN | Broken Industrial Fan | UNFINISHED | - |  |
+| SCN-ELECTRIC-GENERATOR | Electric Generator | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-JOPPAOVEN | JoppaOven | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-LATHE | Lathe | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -6117,7 +6117,67 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/broken-industrial-fan-body.png](../art/village/scenery/broken-industrial-fan-body.png), [art/village/scenery/broken-industrial-fan-detail.png](../art/village/scenery/broken-industrial-fan-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 10.
+
+- 2026-10-20T21:59:55.714258+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Broken->South->Industrial Fan ancestry, native4phase masks/default3, y rotor/c rim roles and operational/Broken/power state ownership.
+  Review: Read-only installed source atlas and bounded Fan/IActivePart/AnimatedMaterialGeneric/Broken metadata study. No game/harness run. Actual frame3hash equals existing source reference. Do not infer missing blades or force broken equipment to spin.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/extract-native-frames.py", "sha256": "b44ba4937832d1496565c151833e62584426d6838c93f7acbe2953efcf651c99"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/native-frames.json", "sha256": "693876317455a3858485fad9437e8be7239c3997a989a0598527f1ba2d539245"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/native-frames-comparison.png", "sha256": "9d887819887cd118fb76223c9c2a31160e2d4783c7c0e75eb293996b07598e43"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/source-packet.json", "sha256": "e4571c328b81e44f143883f9beeb75db2074f31a0d423ee295a06af6c19ae432"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE AirConditioner override and Core AncientAirConditioner/AncientSmallWalkableBuildingBase mapping.
+  Review: Graphic_Single, drawSize1x1, footprint1x1, rotatablefalse. Partial rim/worn-metal shading reference only; no close whole-object donor for stacked source silhouette. Square shell/grille/rust color/footprint/cooling gameplay not copied.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/source-packet.json", "sha256": "e4571c328b81e44f143883f9beeb75db2074f31a0d423ee295a06af6c19ae432"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/source-reference-construction.png", "sha256": "47ffd1167241346556cdf50795e62966b00561f7f7893903e2bf73fa805337cd"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / construct_faithful_shape / PASS: Construct source stacked rear arcs and broad opposed airfoil lobes in one fixed map-face cell, preserving two visible sections without creating2objects.
+  Review: Smooth lobe profile, axial join, shallow rim edge/nicks are authored refinements. Source phase3top-horizontal/lower-vertical and original palette ownership remain the design anchor.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/source-packet.json", "sha256": "e4571c328b81e44f143883f9beeb75db2074f31a0d423ee295a06af6c19ae432"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/construct-fan.py", "sha256": "40e0803124c593b432f2841ac1f6bfcbc26df3f77a17070b1e4998c7ae4daab4"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/housing.svg", "sha256": "3e2023cdeab6805135a51137e5de3652467bd664f571fd4d972d2eefcfd19def"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/housing.png", "sha256": "3a9e9760973af196f461c3c13294873dc6f5fa4335e1ff6a2a81d53cf615b3ca"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-upper-rotor.svg", "sha256": "6af5b915320fb75879b6eb6fa5c762be429c4eaf11c2ee9198a8eb8aa46a8f3e"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-lower-rotor.svg", "sha256": "36c674c5116118ea8ae3994c14e2a39de00fda59d289a84bd8bf98241a043899"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-constructed.svg", "sha256": "399856cc9bdb1c910bae9533d1791dabe9a2e181f70fc2add7ad2e548c81da4e"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-constructed.png", "sha256": "293cb6137583bc94ec84f14cd1723907cf2c8f5bc8967db57853cfb1b0cbfafb"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/manual-structural-review.json", "sha256": "3b84500c723dbcf02a43dcd0b34309112d3d598db95913126306d17b2febb5ea"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / create_required_state_neighbor_variants / PASS: Derive exact vector phase constructions from fixed centers and source angles90/45/0/-45with lower section offset-90.
+  Review: Native length20and phase0/5/10/15are retained metadata, no invented frame rate or new runtime tick. One fixed source face/map view; Fan.DirectionS controls wind, not furniture orientation.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/source-packet.json", "sha256": "e4571c328b81e44f143883f9beeb75db2074f31a0d423ee295a06af6c19ae432"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/frame-1-constructed.png", "sha256": "bf0e4299ba873cf9470ccd44936445b64f3af763f8a3c651890a930ba815f071"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-2-constructed.png", "sha256": "2e112910894ae0d2eb13089ed1171f2fce309f729a3ee07bf7f90296d8558d6f"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-constructed.png", "sha256": "293cb6137583bc94ec84f14cd1723907cf2c8f5bc8967db57853cfb1b0cbfafb"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-4-constructed.png", "sha256": "8cbecc0d671ea2e621c9c1c064c9681fe8e54b89bc79743b61d9b64ed017a3ef"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-1-ownership.png", "sha256": "062639507c0c83327a993d0616c922025a5db3b1e219a89a16a6b407b71bbb92"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-2-ownership.png", "sha256": "101f3d8d0f466876529284d06edd4f812bf03e667ea38b0f42f41ea246c8eebb"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-ownership.png", "sha256": "a94331bec9439cc46a02cd66f931752ec077d1fc401a100ce7baca3199ec1e13"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/frame-4-ownership.png", "sha256": "cf9f64927926a901ab753a2334d7dca75185872b5d53a6c5d09164cd7227824c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / refine_materials_and_form / PASS: Perform one actual built-in default-frame contextual refinement, inspect before any component extraction.
+  Review: Inspected actual default refinement before extraction: two stacked partial rim sections, each with broad opposed airfoil lobes, correct upper-horizontal/lower-vertical pose and common source frame. No square vent/grille/pedestal or missing blade. Generated background/glow and colored edge wear are not production geometry or fixed paint. Select neutral material into full editable housing/rotor masks, keep occluded housing complete and reject halo/position changes.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/frame-3-constructed.png", "sha256": "293cb6137583bc94ec84f14cd1723907cf2c8f5bc8967db57853cfb1b0cbfafb"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/refine-default-prompt.txt", "sha256": "a404368eab4b4272380397dffdc7e13a042977374919049965e1818466dcba6e"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/refined-default-raw.png", "sha256": "981c04fb9fbe76c2fde3d5e39d3e21baafe0516b31973986b8b0eb563986bc2d"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/first-structural-review.json", "sha256": "633298614e3bbce317cabbc8506941b5850a8e0d267c7ca0226232011089ec56"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-broken-industrial-fan/v1/refine-default-prompt.txt", "sha256": "a404368eab4b4272380397dffdc7e13a042977374919049965e1818466dcba6e"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-c27337f1-e8ea-4c0e-9eff-df0b42b00220.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-broken-industrial-fan\\v1\\frame-3-constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-broken-industrial-fan\\v1\\native-frames-comparison.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Ruins\\AirConditioner.png"]}}
+
+- 2026-10-20T21:59:55.714258+00:00 / extract_register_color_coverage / PASS: Select complete housing and both default rotor materials into exact component geometry/ink, excluding generated glow/background/paint/placement.
+  Review: Occluded housing stays complete for later rotor poses; no rotor-shaped destructive cuts or second ImageGen isolation. Existing two-role material helper top=housing/wood=rotor, no wood material introduced.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/first-structural-review.json", "sha256": "633298614e3bbce317cabbc8506941b5850a8e0d267c7ca0226232011089ec56"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/register-fan.py", "sha256": "619e1863bb3e5f8b750bc598c3c7576d396bf82a0231f51a8d99dd7f102c9c81"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/default-material-selection.json", "sha256": "4814125a106640a94747054055d8248e6115e4cd0b3255c497f9e9d929da3fa9"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/default-housing-neutral-master.png", "sha256": "6b216528877534ec4e80e652577f7672fdcc97a8bc03f2600a35218d178fbc4c"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/default-upper-neutral-master.png", "sha256": "c3c6334f83525d051840012e31aef3ad01efd2239596d0ac1492afe8e35e40c7"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/default-lower-neutral-master.png", "sha256": "fc7838715c4fa4d4d373c956378cede7e97ca0d7255d10999e28df4201297131"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/housing-neutral.png", "sha256": "d8e9d8910576295ff1d9b7ec2267e1ba482787ea27abbb9e249b148dba888e94"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / create_required_state_neighbor_variants / PASS: Rigidly transform only selected default rotor materials to native source poses, restoring exact target vector alpha/ink; reuse unchanged selected housing.
+  Review: Same ellipse map, centers, frame and scale. Other3phases use deterministic material transforms, not new AI proposals. Preserve native Broken/operational gate, default3and timing; status UI fallback stays native.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/default-upper-neutral-master.png", "sha256": "c3c6334f83525d051840012e31aef3ad01efd2239596d0ac1492afe8e35e40c7"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/default-lower-neutral-master.png", "sha256": "fc7838715c4fa4d4d373c956378cede7e97ca0d7255d10999e28df4201297131"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/housing-neutral.png", "sha256": "d8e9d8910576295ff1d9b7ec2267e1ba482787ea27abbb9e249b148dba888e94"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/model.json", "sha256": "0d5f73a6ca63b4db6ec1cd94bc3b62abbbe0367da797e4e4ba2f8edc81ad7ff9"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/registration-decisions.json", "sha256": "6acb20fcc84ce702d475dae6ac7bf8bef7c4b712e2573634e06a5ce45de237c4"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-rotors-primary.png", "sha256": "376e69593642c462703aa7ab85362919fbb087ef6a7efb886b9da91b80497d52"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-neutral.png", "sha256": "3d4faf4f07bc3832ed35d66411d5020e9b0fd99281c9240eea77b28ea75fa286"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / extract_register_color_coverage / PASS: Compose primary rotors over detail housing with one coverage and independent luminance-weighted detail role; export neutral and source y/c palette.
+  Review: No gold or rust baked into production. Shared housing bytes stay identical, only actual rotor orientation changes. Single-alpha tint reproduces component overlap within1.1RGBunits.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/model.json", "sha256": "0d5f73a6ca63b4db6ec1cd94bc3b62abbbe0367da797e4e4ba2f8edc81ad7ff9"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-native-y-c.png", "sha256": "8eec20121365898830b0ee60c37130953819939ba82d40ff13ca3bd8f6555809"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-housing-detail.png", "sha256": "93bd11b9bb19697af91732029c846ae8a6ceb6cf5067fb60ed38971c255a9ab6"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-coverage.png", "sha256": "2c84625a937a8a0091944f4566b5672f38afb0a278caec2d4cb89d8d7d2f86a1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect native/constructed/selected4phase sets, fixed housing, rotor components, proper source roles and16x24/24x36/32x48previews.
+  Review: Reviewed exact Broken Industrial Fan ancestry/description/default tile and4installed native phase masks with atlas IDs/hashes. Source is two stacked partial rim/rotor sections in one tile, not a generic single vent or2game objects. TileColor y owns rotor masses, c housing arcs. Actual VTE/Core AncientAirConditioner texture/Graphic_Single/drawSize1x1/size1x1/rotatablefalse inspected as partial worn-metal/rim style reference only; no square shell/grille/rust color or donor mechanics copied. Native code metadata confirms AnimatedMaterialGeneric operational gate and IActivePart breakage check; broken static/default and operational phase/power/repair remain native. Authored smooth airfoil curves and shallow partial rims preserve source silhouette; angles90/45/0/-45and lower offset-90follow source poses. One actual default contextual refinement inspected before extraction, generated glow/background/hue/placement rejected. Full housing and default rotor material sampled separately into exact editable masks; other3poses derive from rigid default material transforms with exact vector coverage. Housing bytes/pivots/frame unchanged across4poses. Neutral/detail/primary components, single-coverage native y/c and intended-size previews reviewed. No forced spin/FPS/new side camera/native activation. Inherited power-cut UI/status art deliberately retains native fallback; final broken/operational/power/repair/wind/visibility/save-load acceptance remains pending full-set generation.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/model.json", "sha256": "0d5f73a6ca63b4db6ec1cd94bc3b62abbbe0367da797e4e4ba2f8edc81ad7ff9"}]
+  Outputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/record-review.py", "sha256": "6432da9950500e72fb5f57ce8b12681e5e0f608e2441c7f3821666b23b67b263"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-native-y-c.png", "sha256": "8eec20121365898830b0ee60c37130953819939ba82d40ff13ca3bd8f6555809"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/authoring-review.json", "sha256": "9b5f2b43a7eec1d8076a7cc629f04e34c50004bb554baeb8ef3aa6a50618636c"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/artifact-manifest.json", "sha256": "3560fbbf64d2c8f71a9fa0fa4fd5fd2ff4dc7b9cf582c034b652d22bce3d6668"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:59:55.714258+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep Broken/static/default, operational/power/repair phase gate, native wind/Sdirection, physics/visibility and inherited status overlay/save-load acceptance behind full-set generation.
+  Review: No native/game/harness launch, animation clock change or native activation. Entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/model.json", "sha256": "0d5f73a6ca63b4db6ec1cd94bc3b62abbbe0367da797e4e4ba2f8edc81ad7ff9"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-ELECTRIC-GENERATOR: Electric Generator
 
@@ -6127,7 +6187,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/electric-generator-body.png](../art/village/scenery/electric-generator-body.png), [art/village/scenery/electric-generator-detail.png](../art/village/scenery/electric-generator-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-JOPPAOVEN: JoppaOven
 

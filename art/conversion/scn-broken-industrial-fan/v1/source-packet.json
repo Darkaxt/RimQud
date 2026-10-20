@@ -1,0 +1,252 @@
+{
+  "entry": "SCN-BROKEN-INDUSTRIAL-FAN",
+  "identity": "Broken Industrial Fan -> Industrial Fan South -> Industrial Fan -> SolidHighTechInstallation -> HighTechInstallation -> MountedFurniture",
+  "description": "Cyclopean blades shaped to the airfoil are housed inside a metallic ring nicked with the scars of time. In the distant past, someone directed the course of air at grand scales.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Broken Industrial Fan": "<object Name=\"Broken Industrial Fan\" Inherits=\"Industrial Fan South\">\n\t\t<tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n\t\t<part Name=\"SpawnWithEffect\" Effect=\"Broken\" />\n\t</object>",
+      "Industrial Fan South": "<object Name=\"Industrial Fan South\" Inherits=\"Industrial Fan\">\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <part Name=\"TinkerItem\" SubstituteBlueprint=\"Industrial Fan\" />\n    <part Name=\"Fan\" Direction=\"S\" />\n  </object>",
+      "Industrial Fan": "<object Name=\"Industrial Fan\" Inherits=\"SolidHighTechInstallation\">\n    <part Name=\"Render\" DisplayName=\"industrial fan\" ColorString=\"&amp;c\" TileColor=\"&amp;y\" DetailColor=\"c\" RenderString=\"21\" Tile=\"Tiles2/sw_fan_3.bmp\" />\n    <part Name=\"Description\" Short=\"Cyclopean blades shaped to the airfoil are housed inside a metallic ring nicked with the scars of time. In the distant past, someone directed the course of air at grand scales.\" />\n    <part Name=\"Physics\" Weight=\"2000\" />\n    <part Name=\"Fan\" ChargeUse=\"30\" BlowStrength=\"100\" BlowRange=\"9\" />\n    <part Name=\"AnimatedMaterialGeneric\" AnimationLength=\"20\" LowFrameOffset=\"1\" HighFrameOffset=\"1\" TileAnimationFrames=\"0=Tiles2/sw_fan_1.bmp,5=Tiles2/sw_fan_2.bmp,10=Tiles2/sw_fan_3.bmp,15=Tiles2/sw_fan_4.bmp\" RequiresOperationalActivePart=\"Fan\" />\n    <part Name=\"ElectricalPowerTransmission\" ChargeRate=\"10000\" IsConsumer=\"true\" />\n    <part Name=\"PowerSwitch\" SecurityClearance=\"2\" />\n    <part Name=\"Examiner\" Complexity=\"2\" Difficulty=\"1\" />\n    <part Name=\"TinkerItem\" Bits=\"0BBRR245\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <stat Name=\"AV\" Value=\"10\" />\n    <stat Name=\"Hitpoints\" Value=\"1500\" />\n    <tag Name=\"BodyType\" Value=\"RailedMechanism\" />\n    <tag Name=\"Mods\" Value=\"CommonMods,ElectronicsMods\" />\n    <tag Name=\"Tier\" Value=\"5\" />\n    <stag Name=\"Industrial\" />\n    <tag Name=\"HangingSupport\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"DeepPower\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"ElectricalPower\" />\n    <stag Name=\"ElectricalPowerConsumer\" />\n    <stag Name=\"SurfaceElectricalPowerConsumer\" />\n    <stag Name=\"DeepElectricalPowerConsumer\" />\n    <tag Name=\"AggregateWith\" Value=\"Industrial Fan\" />\n    <tag Name=\"DynamicSemanticTable:ElectricalPowerConsumer:Weight\" Value=\"50\" />\n    <tag Name=\"DynamicSemanticTable:DeepElectricalPowerConsumer:Weight\" Value=\"50\" />\n  </object>",
+      "SolidHighTechInstallation": "<object Name=\"SolidHighTechInstallation\" Inherits=\"HighTechInstallation\">\n    <part Name=\"Render\" RenderLayer=\"7\" Occluding=\"true\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"15000\" Solid=\"true\" />\n    <removepart Name=\"MissileCover\" />\n    <stat Name=\"Hitpoints\" Value=\"800\" />\n    <stat Name=\"AV\" Value=\"10\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n   \n  </object>",
+      "HighTechInstallation": "<object Name=\"HighTechInstallation\" Inherits=\"MountedFurniture\">\n    <stat Name=\"HeatResistance\" Value=\"75\" />\n    <stat Name=\"ColdResistance\" Value=\"75\" />\n    <stat Name=\"ElectricResistance\" Value=\"25\" />\n    <stat Name=\"AcidResistance\" Value=\"75\" />\n    <part Name=\"Physics\" />\n    <part Name=\"AnimatedMaterialGenericAlternate\" AnimationLength=\"300\" TileAnimationFrames=\"80=Items/sw_power_cut_small.png,180=default\" RequiresAnyUnpoweredActivePart=\"true\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" />\n    <xtagTextFragments Skin=\"machinery\" PoeticFeatures=\"towering stature,machinic pose,rhythmic piping\" />\n    <part Name=\"Metal\" />\n    <stat Name=\"Hitpoints\" Value=\"200\" />\n    <stat Name=\"AV\" Value=\"4\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_electronic\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_electronic\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_frames": {
+    "assembly": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\Managed\\Assembly-CSharp.dll",
+      "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+    },
+    "resource": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "native_phase": 0,
+        "default": false,
+        "tile": "Assets_Content_Textures_Tiles2_sw_fan_1.bmp",
+        "info_id": 14271,
+        "atlas_id": 213,
+        "rect": [
+          0,
+          702,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-fan-20261021\\frame-1-mask.png",
+          "sha256": "1b53dbad59a8cb9866793f722bbda7cef3a616e92c01a66d0e2042f335194d35"
+        }
+      },
+      {
+        "frame": 2,
+        "native_phase": 5,
+        "default": false,
+        "tile": "Assets_Content_Textures_Tiles2_sw_fan_2.bmp",
+        "info_id": 14272,
+        "atlas_id": 213,
+        "rect": [
+          0,
+          676,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-fan-20261021\\frame-2-mask.png",
+          "sha256": "db98fbca1f253e2e9b13735464244adc781e586d3c5fd3a7e59cafbe5281a474"
+        }
+      },
+      {
+        "frame": 3,
+        "native_phase": 10,
+        "default": true,
+        "tile": "Assets_Content_Textures_Tiles2_sw_fan_3.bmp",
+        "info_id": 14273,
+        "atlas_id": 213,
+        "rect": [
+          0,
+          650,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-fan-20261021\\frame-3-mask.png",
+          "sha256": "e0926dc6af0a75eca4a116b7876bddb5274165690e260cb604596342973426b9"
+        }
+      },
+      {
+        "frame": 4,
+        "native_phase": 15,
+        "default": false,
+        "tile": "Assets_Content_Textures_Tiles2_sw_fan_4.bmp",
+        "info_id": 14274,
+        "atlas_id": 213,
+        "rect": [
+          0,
+          624,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-fan-20261021\\frame-4-mask.png",
+          "sha256": "401d8d7f17dec9cf80b2a08233475532ae9d0ee0cf5a12f3851bf1563c468ec6"
+        }
+      }
+    ],
+    "default_frame": 3,
+    "native_phase_length": 20,
+    "requires_operational_active_part": "Fan",
+    "scope": "Source metadata/art extraction only, not a native replacement test. Raw source kept private."
+  },
+  "source_shape": "Two vertically stacked partial rear-rim/rotor sections in one native16x24tile. Each has two broad opposed lobes; upper/lower poses are90degrees offset. Preserve this stacked silhouette rather than replace it with a generic single circular vent. Visible sections do not establish2independent game objects or mechanical parts.",
+  "palette": {
+    "primary": "y from TileColor on rotor/axial blade masses, despite glyph ColorString c",
+    "detail": "c on exposed rear housing arcs",
+    "rule": "No fixed baked metal/gold paint. Temporary gold key means housing ownership only. Both original palette roles retained."
+  },
+  "native_state": {
+    "default_frame": 3,
+    "animation_length": 20,
+    "tile_frames": {
+      "0": "Tiles2/sw_fan_1.bmp",
+      "5": "Tiles2/sw_fan_2.bmp",
+      "10": "Tiles2/sw_fan_3.bmp",
+      "15": "Tiles2/sw_fan_4.bmp"
+    },
+    "requires_operational_active_part": "Fan",
+    "broken": "SpawnWithEffect Broken, native IActivePart breakage sensitivity/status and AnimatedMaterialGeneric operational check leave native static/default rendering while not operational. Do not force this broken object to spin.",
+    "physics_direction": "S from Fan.Direction controls native air behavior. Source uses one fixed face/map tile set; this is not a four-way furniture camera or donor placement system.",
+    "power_warning": "Inherited AnimatedMaterialGenericAlternate power-cut status tile remains native diagnostic/status fallback, not a new scenery appearance or authored animation."
+  },
+  "native_code_study": {
+    "classes": {
+      "Fan": {
+        "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Parts.Fan.decompiled.cs",
+        "sha256": "d45720b89caf12e0ecb55d949dc8e88c30a8f6ae6a6480a4ebd664229bcda6b1"
+      },
+      "IActivePart": {
+        "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Parts.IActivePart.decompiled.cs",
+        "sha256": "344a8078d144ef874cd2c4d6e8f468c397d59a12efa9e2847b4f8ebee01cce72"
+      },
+      "AnimatedMaterialGeneric": {
+        "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Parts.AnimatedMaterialGeneric.decompiled.cs",
+        "sha256": "a785f77a4ae6e591d256b84bdcf55a953e54e8cd5c40c70dca702a4fff8036df"
+      },
+      "Broken": {
+        "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Effects.Broken.decompiled.cs",
+        "sha256": "0c56954e503d3a6e5fc5ed78e399695867e3750eaebec9ab3e760c7aecf3bca9"
+      }
+    },
+    "findings": [
+      "AnimatedMaterialGeneric.Render checks StatusOf(Fan)==Operational before changing tile; StatusOf passes actual ignore flags, including default false IgnoreBreakage.",
+      "IActivePart IsBreakageSensitive defaults true and GetActivePartStatus returns Broken when IsBroken and not ignored.",
+      "Broken handles RepairedEvent by removing the effect; source status/state/repair remains native, no new repair workflow or effects rendered."
+    ],
+    "scope": "Read-only installed code metadata, not a native replacement test. Raw decompiled code retained privately."
+  },
+  "native_behavior": "Native solid, non-takeable2000weight metal installation, RenderLayer7/occludingtrue, Fan charge30/strength100/range9/S, electrical consumer10000, security2switch, AV10/HP1500, examine/tinker state remain native. No donor cooler/generator or new timing/physics.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Ruins\\AirConditioner.png",
+      "sha256": "58034a3645863487cbe1ef0c35d84cd7f86edb104a6d915d79c0ae05378acf18"
+    },
+    "frame": [
+      128,
+      128
+    ],
+    "alpha_bounds": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Ancient_Outdoors.xml",
+      "sha256": "124cce3a1b4bfa64ffd5706bbd1c95190a5d6979a56e4385e5563b46554462f3"
+    },
+    "child": "<ThingDef ParentName=\"AncientSmallWalkableBuildingBase\">\n    <defName>AncientAirConditioner</defName>\n    <label>ancient air conditioner</label>\n    <description>An ancient air conditioning machine. Its internals were smashed long ago and what wasn't looted has rusted away in the time since.</description>\n    <graphicData>\n      <texPath>Things/Building/Ruins/AirConditioner</texPath>\n      <shadowData>\n        <volume>(0.99, 0.35, 0.99)</volume>\n      </shadowData>\n    </graphicData>\n    <statBases>\n      <MaxHitPoints>200</MaxHitPoints>\n      <WorkToBuild>40</WorkToBuild>\n    </statBases>\n  </ThingDef>\n\n  ",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Ancient_Indoors.xml",
+      "sha256": "c6eb08feb9e5d9d6bb7932b1efa8fbceee84d372af5ac24b06fdf371721f4495"
+    },
+    "parent": "<ThingDef Name=\"AncientSmallWalkableBuildingBase\" ParentName=\"AncientBuildingBase\" Abstract=\"True\">\n    <graphicData>\n      <graphicClass>Graphic_Single</graphicClass>\n      <drawSize>(1,1)</drawSize>\n    </graphicData>\n    <size>(1,1)</size>\n    <fillPercent>0.5</fillPercent>\n    <passability>PassThroughOnly</passability>\n    <pathCost>50</pathCost>\n    <rotatable>false</rotatable>\n    <statBases>\n      <MaxHitPoints>150</MaxHitPoints>\n      <WorkToBuild>500</WorkToBuild>\n    </statBases>\n  </ThingDef>\n\n  ",
+    "building_base": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "graphic_class": "Graphic_Single",
+    "drawSize": [
+      1,
+      1
+    ],
+    "footprint": [
+      1,
+      1
+    ],
+    "rotatable": false,
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "role": "Actual VTE override of Core AncientAirConditioner: old machine metal/rim edge wear and shallow circular component shading only. No square shell, guard grille, rust color,1x1footprint or cooler mechanics copied.",
+    "equivalence": "Partial visual reference; no close whole-object reference for source stacked open-rim silhouette found in installed named fan assets."
+  },
+  "construction": {
+    "camera": "One fixed cardinal face/map plane following source; no yaw, body turn or3/4perspective.",
+    "source_supported": "Stacked arcs, two opposed rotor lobes per visible section and90degree top/bottom pose offset read from all4actual native masks. Same housing in all phases.",
+    "authored": "Smooth airfoil lobe curves, shallow rear-rim thickness, restrained nicks and small axial join shading refine ambiguous pixels; no blade broken off or missing rim inferred solely from Broken name.",
+    "rotor_centers": [
+      [
+        8,
+        6.3
+      ],
+      [
+        8,
+        18.3
+      ]
+    ],
+    "ellipse_y_scale": 0.65,
+    "upper_angles": {
+      "1": 90,
+      "2": 45,
+      "3": 0,
+      "4": -45
+    },
+    "lower_angles": {
+      "1": 0,
+      "2": -45,
+      "3": -90,
+      "4": -135
+    },
+    "rule": "Fit one default-frame material pass, then rigidly transform only rotor material through native angular poses inside fixed vector coverage. Housing stays byte-identical; no independent generated casing per phase."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same canvas/origin/physical scale and fixed centers for both visible sections/all4phases. No per-phase bounds fitting."
+  },
+  "native_acceptance": "Pending full-set generation: native Broken/operational/power/repair state and phase selection, direction/wind/physics/visibility, source status fallback and save/load. No native activation performed."
+}
