@@ -773,3 +773,18 @@ directional hand/aim relationships and the separate resting/ready state mapping;
 no new weapon generation or body rotation is required to correct that pose.
 This clarification does not start native tests or a combat-state framework during
 the generation pass. The Iron Vinereaper fitting remains the sole active entry.
+
+Female Iron Vinereaper authoring checkpoint: the source-bound crescent/shaft
+fits the fixed ordinary female base, with all four captured ordinary Hand/2
+bindings retained individually. Actual Vanilla Weapons Expanded Axe supplies
+flat rendering convention; Primitive Tools FlintSickle was inspected/rejected
+for chipped teeth/bent wood. One contextual refinement supplies neutral forged
+surface, while its altered mannequin, scale and opaque glow are rejected. Full
+source alpha/ink remain constructed, hidden shaft is completed before original
+hand/body depth, and head/shaft native y/y roles remain separate. The convert516
+C palette example does not replace other actors' captured palettes/cosmetics.
+SEN/mirrored west intended-size authoring views are recorded. These are explicitly
+stationary display fits, not final horizontal ready/drafted presentation. Named
+outfits, native equipped-state and resting/ready pose acceptance stay unfinished
+behind the full-generation gate. Continue the male Iron Vinereaper fitting next;
+Stage 3 remains the sole ACTIVE stage.

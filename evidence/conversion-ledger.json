@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2",
+  "active_entry": "FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -3295,8 +3295,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -3308,7 +3308,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Stationary authoring displays are not ready/drafted pose evidence. Horizontal forward ready pose, resting/ready native state and named appearances/outfits remain unfinished. Shaft material is not explicitly described; neutral surface does not establish wood."
       ],
       "metadata": {
         "body_family": "human-female",
@@ -3342,7 +3342,262 @@
           "sha256": "2fe12149d451f5b8b4c36e5ad98c6bb54819fb8d44613d3ecb0ef8adf588316a"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T16:05:17.402081+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved female human farmers/convert -> wrought-iron crescent vinereaper -> original sw_axe_10 glyph and y/y roles. Captured Hand236/250/278/306 and equipped556/562/570/583 links are ordinary Hand/2, no mutation managers; installed description agrees.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "1d0f3cb5d10a6bfe0a2671aab7449d7154ed17cea885879647de0d91590280af"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.402469+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary female v2 and actual Vanilla Weapons Expanded Axe for flat crescent/shaft readability. Actual Primitive Tools FlintSickle inspected/rejected: chipped flint teeth and bent wood conflict with Qud wrought iron. No occupation posture or costume inferred.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "1d0f3cb5d10a6bfe0a2671aab7449d7154ed17cea885879647de0d91590280af"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.403868+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed editable crescent head with smooth open inner curve and simple shaft, lower grip580 and original-hand depth. One item alone over fixed bare base; north reflects opposite unmarked surface. SEN are stationary authoring placements, not final ready poses.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/prepare-source.py",
+              "sha256": "06c1c3b8473fc77769875f0b8d6ad126faba57b82fb6ab4985d17f3be5eef45a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/canonical-pattern.svg",
+              "sha256": "a2d8c7e50fe1523338a3321dbd5cb3d7fda9376904439f82a3bfa560c380ec86"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-canonical.png",
+              "sha256": "854a87ba8141051a50c891dcbdbe7c4ac6b4da7379fa531748eae97266798484"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/canonical-head-region.png",
+              "sha256": "aabb5c17859660a4e5e7e55c7208b8b0e5b3e60a8534a72a45229bb993ab0374"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/canonical-shaft-region.png",
+              "sha256": "57480248a7ffe9d497ec4822c80cc1612ac710bbd2c883fb0db205d690c4d9b8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-neutral-context.png",
+              "sha256": "46200eb8fcd2586c1e30456c5bab27ff4b25d952e25b7e8f6237ffdc7af259e2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "42f38ade8dd546dcd8dcc87d94bd508dec8ab91e80f242e84f5a58baa09d52a6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "4dec6fdcd8ba4bd12ac44c0eec0bc660ff6b63d9d3a8b69d27c61f3ab2e140e4"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.406060+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual contextual forged-iron material refinement. Raw generation changed mannequin and scale and added opaque glow: excluded from registered geometry/body. Only neutral surface is selected; no consequential anatomy patch needed because originals are preserved, and no patched-refinement call invented.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "42f38ade8dd546dcd8dcc87d94bd508dec8ab91e80f242e84f5a58baa09d52a6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/imagegen-prompt.txt",
+              "sha256": "16d8b6b819f38bdd7ec498b2eec1c1fd88fddd7cd355832799aa05a5d7960764"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "5ca472b9ffab1e718f8c12a9e8e5d5149dd31dbc4d761a437a70265ab7eff0e1"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit target: first image, exact1536x1024 three-column close-up sheet. It shows one Iron Vinereaper on a fixed red human mannequin: SOUTH/front, EAST/right profile, NORTH/back. Preserve exact crescent geometry, open inner curve, head-to-shaft attachment, straight shaft, lower hand grip, scale and per-view placement. Preserve every red body/hand pixel and its existing occlusion. Transparent background, no labels.\n\nQud description: \"Wrought iron was moulded to a crescent for scything the rough hides of watervine.\" Second image is the actual original Qud glyph, whose crescent and long handle define the object. Third image is actual RimWorld Vanilla Weapons Expanded Axe, used for flat crescent/shaft readability and restrained outlines only. Keep the Qud-shaped crescent, not the donor axe's spikes or proportions. The shaft material is not specified: keep a simple neutral handle without invented wood grain, rope or bands.\n\nRefine only the existing tool surface in place: modest forged-iron shading, very subtle hammer/age texture and restrained cutting edge. Neutral equal-RGB gray throughout, clean dark original contour. Preserve the existing two small mounting details without adding more machinery. No serrations, chipped flint teeth, gems, decorative runes, emissive glow, blur or sparks. Do not redraw the mannequin, rotate the object, change the grip, isolate the item or add clothes. This is a stationary authoring display, NOT a ready/drafted pose. No cast shadows, halo, backdrop, vignette or colored reflections. Keep actual transparency. One contextual material refinement only.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-human-female-iron-vinereaper/v1/constructed-red-item-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/iron-vinereaper-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814383360/Textures/Things/WeaponMelee/Axe.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.408276+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Mapped selected neutral surface using recorded1.53 scale/anchors, completed hidden shaft before late body depth, retained exact constructed full alpha/ink and separate shaft detail excluding overlying crescent. No second generation/isolation or destructive body cutouts.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/register-vinereaper.py",
+              "sha256": "093fd0883960c7bfe49c1200b87c2e21592ade57c1be2c4fe677539ef431f350"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "5ca472b9ffab1e718f8c12a9e8e5d5149dd31dbc4d761a437a70265ab7eff0e1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/registration-decisions.json",
+              "sha256": "42d5a434ebbb5642ad30fdba0afc73bdc28fa721c207844fa54541a5aa23f8f5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/intact-canonical.png",
+              "sha256": "21beb5408bfe0dd61cbc816b8787d80fbfd931420d63c3ae33dc137e1cd7f16d"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/shaft-canonical.png",
+              "sha256": "bd3e63e6986cdcb79e57f57a0d81d78c3b8350e7cc7086e61f68e134738e9894"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/canonical-continuation.png",
+              "sha256": "bb28f0d0472ac23d04e01c310c03960292e99524a3a9ecb2233a640251edddcf"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/full-item-comparison.png",
+              "sha256": "375a18f698ae3abe7ec802a8f52da0fddba8f35fc4b4060910a24112e2edb7e4"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.409106+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed full tool through per-facing affine/mirror controls with original foreground palm and rear body depth. Item-space grip sits38px above shaft end; body unchanged. All required SEN/west views inspected as display fits, without claiming horizontal ready/resting state integration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+              "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "4dec6fdcd8ba4bd12ac44c0eec0bc660ff6b63d9d3a8b69d27c61f3ab2e140e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/assembly-comparison.png",
+              "sha256": "2d5ecfb78a7f01f2cf8763eecb516a2560eb1cda64a1da9c2ca975cd0326ac08"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/grip-comparison.png",
+              "sha256": "9fec11b5fad7cbd2e88b0e0e0bb78f2690391a85c3481fa8cd158fbea6cf7f99"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/depth-off-comparison.png",
+              "sha256": "3e9e8e50240583db55d70b6e0d69947d7aca8ad46007e190b5e4992c8c013c96"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:05:17.409770+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended-size silhouette and equal-RGB production material, native head/shaft y/y and independent convert516 body C example. Other captured female foreground values remain in source packet for actual actor binding; no named g cosmetic detail is invented. Native tests remain behind all-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+              "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/independent-palette-comparison.png",
+              "sha256": "9052e6e4c8510f0a84d4815757f98e7da24bc2d15c63982a9d6e136df36da670"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/game-scale-review.png",
+              "sha256": "229c9e8166130eebc9a0ae3f21cfd152f5e470fd50e095d1a6aba7422b5acc93"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/authoring-review.json",
+              "sha256": "05dc36d03ead47240e4c75cea4cba7dbf047ed9a7165da11717246b373729cb1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/artifact-manifest.json",
+              "sha256": "2f396c0b38c98422bcb7052f675f25f49b44059516e3de4bea8845fe39515307"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+          "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-iron-vinereaper/v1/assembly-comparison.png",
+          "sha256": "2d5ecfb78a7f01f2cf8763eecb516a2560eb1cda64a1da9c2ca975cd0326ac08"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work."
+      },
+      "registration_summary": "Female Iron Vinereaper source-bound crescent/shaft, four actual ordinary Hand/2 bindings, one contextual refinement and original lower-grip/body depth. Full neutral tool and native y/y roles retained. Stationary display only; named outfit and horizontal ready/resting/native acceptance unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual equipped/resting-ready state",
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Ready one-handed tool projects forward horizontally in side view, roughly90deg to upright body; separate resting/ready controls and native state mapping. Current plates are stationary display only.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "FIT-HUMAN-FEMALE-POCKETED-VEST-BODY-0",
@@ -5922,8 +6177,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -5969,7 +6224,12 @@
           "sha256": "28c0ee1f9d5d128e40788bc991b1ef36202238ed0d42c1fffffeb24f883a5ff4"
         }
       ],
-      "process_log": []
+      "process_log": [],
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Ready one-handed tool projects forward horizontally in side view, roughly90deg to upright body; separate resting/ready controls and native state mapping. Current plates are stationary display only.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0",
@@ -44859,7 +45119,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T15:54:24.249403+00:00",
+  "updated_at": "2026-10-20T16:05:17.410099+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
