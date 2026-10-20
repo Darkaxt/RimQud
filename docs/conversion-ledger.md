@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BRINESTALKWALLWITHGEARBOX**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-BRINEBRIDGE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -246,10 +246,10 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-BRINEBRIDGE | BrineBridge | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BRINEBRIDGE | BrineBridge | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BRINESTALKFENCE | BrinestalkFence | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BRINESTALKWALL | BrinestalkWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-BRINESTALKWALLWITHGEARBOX | BrinestalkWallWithGearbox | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BRINESTALKWALLWITHGEARBOX | BrinestalkWallWithGearbox | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVASWALL | CanvasWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTFLOOR | DirtFloor | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
@@ -2719,7 +2719,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/brinebridge-detail.png](../art/village/scenery/brinebridge-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-BRINESTALKFENCE: BrinestalkFence
 
@@ -2729,7 +2729,67 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/fence-detail.png](../art/village/scenery/fence-detail.png), [art/village/scenery/fence.png](../art/village/scenery/fence.png), [art/village/scenery/rustedmetalwall-detail.png](../art/village/scenery/rustedmetalwall-detail.png), [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
+
+- 2026-10-20T04:55:13.345360+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the installed BrinestalkFence definition and ZoneManager fence naming, then extracted all16native painted masks read-only into private E-drive storage.
+  Review: Viewed all actual painted states. The earlier static tile-0-13 reference is a placeholder, not this fence shape. Native isolated state has three squared salt-tipped stalks; cardinal states include narrow edge-on N/S presentation. Raw atlases/masks remain private.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/extract-native-states.py", "sha256": "fbb38251b186c68de44d8ac2fb5c7243762274399adef01a999112d57684154a"}, {"path": "art/conversion/scn-brinestalkfence/v1/native-state-index.json", "sha256": "1d69d8f1a410d34526efb503a2d23ac4004f938b6a9a2903815ff0ebb89df79d"}, {"path": "art/conversion/scn-brinestalkfence/v1/native-states-comparison.png", "sha256": "f8eb9a13c221e6b0856c09a9e8e64ad9a796d90d66d2d2fd7b69c716e40e8f20"}, {"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}]
+  Method/prompt/corrections: {"phase": "Actual painted fence states replace inherited placeholder as shape evidence"}
+
+- 2026-10-20T04:55:13.346206+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected VFE Architect picket icon/atlas and its Graphic_Single/Asymmetric definition, recording exact private paths and hashes.
+  Review: Viewed actual icon/atlas and source comparison. Reference contributes game shading/edge-on presentation only. Its pointed continuous boards, hue, donor atlas ordering and fence mechanics are not copied.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/source-construction-comparison.png", "sha256": "922a9f0c88f9e91347e6fa2ff3d5d0607b13eb8c1ea98fce55fa3cf551d97f1e"}]
+  Method/prompt/corrections: {"phase": "Actual installed Architect picket-fence presentation reference"}
+
+- 2026-10-20T04:55:13.346352+00:00 / construct_faithful_shape / RECORDED: Constructed three narrow irregular stripped stalks at native isolated positions, with pale ends, salt-tracing waves and short fibrous side spurs.
+  Review: Viewed source comparison and transparent construction. No continuous opaque panel/rails or mud wall cap is added. Source-coordinate states, not ImageGen placement, will own the connected atlas.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}, {"path": "art/conversion/scn-brinestalkfence/v1/native-state-index.json", "sha256": "1d69d8f1a410d34526efb503a2d23ac4004f938b6a9a2903815ff0ebb89df79d"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/prepare-and-construct.py", "sha256": "344543bf8413b72eb8022264c4751bf1d1c46d1ad6e3728ede8f1c14d28a4168"}, {"path": "art/conversion/scn-brinestalkfence/v1/constructed-front.svg", "sha256": "26c229f72342ff1d438abc2819d175a53247f03f2ea6d2a8d0aff16e1f298377"}, {"path": "art/conversion/scn-brinestalkfence/v1/constructed-front.png", "sha256": "5b97cf62dc02f6434bef145f1e5e9ee9ae83d400a91c997cc2ecc87fef337397"}]
+  Method/prompt/corrections: {"phase": "Editable squared brinestalk pickets in original cell frame"}
+
+- 2026-10-20T04:59:28.715535+00:00 / refine_materials_and_form / REJECTED: Refined the three front pickets, extracted the complete middle picket, cleared invisible RGB and built all16source-coordinate states.
+  Review: Viewed16states and connected layout. Front pickets retain correct squared tips, grain and open gaps. Bilinear native cap-mask enlargement makes N/S pale cap boundaries too soft and removes the shaft edge weight compared with frontal pickets. Retain this registration as rejected history; correct only cap resampling/edge ownership, keeping source geometry and refinement unchanged.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/refine-fence-prompt.txt", "sha256": "fbd6c1c9e26159391e4a5c7016814a40571044d3f433edf97210d323e0257b8d"}, {"path": "art/conversion/scn-brinestalkfence/v1/constructed-front.png", "sha256": "5b97cf62dc02f6434bef145f1e5e9ee9ae83d400a91c997cc2ecc87fef337397"}, {"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/refine-fence-prompt.txt", "sha256": "fbd6c1c9e26159391e4a5c7016814a40571044d3f433edf97210d323e0257b8d"}, {"path": "art/conversion/scn-brinestalkfence/v1/refined-proposal.png", "sha256": "2c2e6c2a2dd35b4991df686c1236d3e74edaa5fcfab8b701e4a5310309895c2f"}, {"path": "art/conversion/scn-brinestalkfence/v1/register-fence.py", "sha256": "66ee8daf6e6651275f3fc4d8c9a40a371044b78619701cbd45a8d93be5e097b0"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered/model.json", "sha256": "00e22864dc2f604093fa5843334cf8cd4bcd51abd19e597c54472b806b170163"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered/states-comparison.png", "sha256": "65aebda5d2cf8e09de37e28ea6854481b7a0e20604c1a784f3146379cfd8b202"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered/connections-comparison.png", "sha256": "6cf704cdc0ad75631dbe9a65e54f0e92a23d4a6601763e098fbe28dc826539c5"}]
+  Method/prompt/corrections: {"phase": "First refined fence registration: edge-on cap softness", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-brinestalkfence\\v1\\constructed-front.png", "D:/Steam/steamapps/workshop/content/294100/2608762624/Textures/Fences/PicketFence/PicketFence_MenuIcon.png"]}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-7ef6b4ba-a91d-4853-aeb2-c0fa9fcf5add.png"}
+
+- 2026-10-20T05:00:30.387620+00:00 / construct_faithful_shape / PASS: Retained the source-positioned three-upright construction as the front design; reused one complete refined middle picket as a shared species/material element.
+  Review: No pointed donor boards, opaque panel, wall cap or connecting rails introduced. Actual16state native positions/counts and edge-on presentation remain explicit construction rules.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}, {"path": "art/conversion/scn-brinestalkfence/v1/constructed-front.svg", "sha256": "26c229f72342ff1d438abc2819d175a53247f03f2ea6d2a8d0aff16e1f298377"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/constructed-front.png", "sha256": "5b97cf62dc02f6434bef145f1e5e9ee9ae83d400a91c997cc2ecc87fef337397"}]
+  Method/prompt/corrections: {"phase": "Selected squared stalk/salt-wave construction"}
+
+- 2026-10-20T05:00:30.387942+00:00 / create_required_state_neighbor_variants / PASS: Constructed all16recipient layouts from the extracted source suffixes, front post positions and native N/S edge-on strip/cap locations.
+  Review: Viewed all corrected states and connected rows, corners, T and an open gate gap. Shared frame preserves native layout; clipped edge pickets and central N/S presentation are deliberate. No additional gate artwork or new physical behavior is claimed.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/native-state-index.json", "sha256": "1d69d8f1a410d34526efb503a2d23ac4004f938b6a9a2903815ff0ebb89df79d"}, {"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/states-comparison.png", "sha256": "3d9b1cd5d1346a8794fddeac028b8dbbbad603aed7285d9a55a96a723d87d7d5"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/connections-comparison.png", "sha256": "bf8eb6653f4688f8109fd1389cfc40c142c6d7de291cee67c5f2a173c27f4096"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/native-scale-comparison.png", "sha256": "fd0ebed3473bbdd77cbaeec5fc3fe099cc3341a62b34ec930a6b4ef43b9f3b52"}]
+  Method/prompt/corrections: {"phase": "Sixteen actual native-derived fence layouts"}
+
+- 2026-10-20T05:00:30.388467+00:00 / refine_materials_and_form / PASS: Patched the rejected registration with near-texel native cap resampling and explicit primary-owned shaft edges.
+  Review: Viewed corrected all-state and connected plates. Pale cap boundaries now match the crisp front picket presentation. The original refinement, source coordinates, positions and alpha gaps remain unchanged; no second ImageGen invocation.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered/model.json", "sha256": "00e22864dc2f604093fa5843334cf8cd4bcd51abd19e597c54472b806b170163"}, {"path": "art/conversion/scn-brinestalkfence/v1/refined-proposal.png", "sha256": "2c2e6c2a2dd35b4991df686c1236d3e74edaa5fcfab8b701e4a5310309895c2f"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/register-fence-v2.py", "sha256": "173a8640e85f189ecc6892b65724e0ea588147a71df658168ddc1e16e2c032fc"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/registration-decisions.json", "sha256": "5dcd28aff34fe91b104707061e630b7e74140146f0bd2683bfcd04e445b97f48"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/connections-comparison.png", "sha256": "bf8eb6653f4688f8109fd1389cfc40c142c6d7de291cee67c5f2a173c27f4096"}]
+  Method/prompt/corrections: {"phase": "Corrected edge-on cap boundaries without changing refined pickets"}
+
+- 2026-10-20T05:00:30.389661+00:00 / extract_register_color_coverage / PASS: Registered separate native-w body and native-y tips/salt traces, source-coordinate frame and recipient4x4bottom-origin atlas order.
+  Review: Inspected equal RGB, all16sizes, detail within body coverage and actual open gap alpha. Selected middle picket uses real connected alpha; the generator exterior glow is RGB-only transparency and was cleared. Native atlas/sampling/state binding remains pending.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/source-packet.json", "sha256": "63c4239833cd3391300ea51d3754e54ed23d492d08e9c406b2d1b059a51e16e1"}, {"path": "art/conversion/scn-brinestalkfence/v1/refined-proposal.png", "sha256": "2c2e6c2a2dd35b4991df686c1236d3e74edaa5fcfab8b701e4a5310309895c2f"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/model.json", "sha256": "379aac48cf0fe62efe2a439a0ee583a05ff47c02cf54c721495932f30f73e63a"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/primary-atlas.png", "sha256": "52f2340131d2aa24a0e5d3e42478f430abb99cecbd7fc8a737c900a102f7ef14"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/detail-atlas.png", "sha256": "d89b1bd9a5215d53825b9e21ffb4a1769e428bb102c57dbd8d2cf8f1d7f72afb"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/source-selection-middle.png", "sha256": "9ebc45957519d604c050a2537e360c0976b74559ff3d47fb1ed84cd1e8ca9337"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/cleaned-proposal.png", "sha256": "277e06e0c8394dbca96b5a551cc61aa50123d07576d0fadbc5b7cfc3fc6fbe0e"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/picket-master-neutral.png", "sha256": "36e72b6f3e3801020973aef47c260b8664d8f4f2d24bdab1a449a16509e09148"}]
+  Method/prompt/corrections: {"phase": "Neutral primary/detail fence layers and open coverage"}
+
+- 2026-10-20T05:00:30.390770+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed squared pale tops, salt waves, open gaps and all16fixed-frame connection states enlarged and at16x24cell proportions.
+  Review: Source form differs from a mud wall or painted donor picket panel. N/S preserves native narrow edge-on appearance, while E/W shows front pickets. This is authored art, not a native connection, collision, projectile or visibility test.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/model.json", "sha256": "379aac48cf0fe62efe2a439a0ee583a05ff47c02cf54c721495932f30f73e63a"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/states-comparison.png", "sha256": "3d9b1cd5d1346a8794fddeac028b8dbbbad603aed7285d9a55a96a723d87d7d5"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/connections-comparison.png", "sha256": "bf8eb6653f4688f8109fd1389cfc40c142c6d7de291cee67c5f2a173c27f4096"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/native-scale-comparison.png", "sha256": "fd0ebed3473bbdd77cbaeec5fc3fe099cc3341a62b34ec930a6b4ef43b9f3b52"}]
+  Method/prompt/corrections: {"phase": "Fence identity and source-colored connections authoring review"}
+
+- 2026-10-20T05:00:30.391168+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained actual connection selection, native tint/visibility/non-occlusion, foreground and supported-state acceptance behind the all-conversions-generated gate.
+  Review: No game/harness launch or production renderer changes. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/model.json", "sha256": "379aac48cf0fe62efe2a439a0ee583a05ff47c02cf54c721495932f30f73e63a"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native fence acceptance deferred"}
 
 ### SCN-BRINESTALKWALL: BrinestalkWall
 
@@ -2809,7 +2869,55 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/brinestalkwallwithgearbox-body.png](../art/village/scenery/brinestalkwallwithgearbox-body.png), [art/village/scenery/brinestalkwallwithgearbox-detail.png](../art/village/scenery/brinestalkwallwithgearbox-detail.png), [art/village/scenery/wall-brinestalk-detail.png](../art/village/scenery/wall-brinestalk-detail.png), [art/village/scenery/wall-brinestalk.png](../art/village/scenery/wall-brinestalk.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T04:45:45.853711+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed wall inheritance and scoped ModGearbox, MechanicalPowerTransmission and IPowerTransmission implementation; compared exact exported ordinary reference/mask hashes.
+  Review: The added part supplies power transmission and name/description information, not a distinct default visible gear sprite. TileEffects defaults false; changed runtime appearances remain unknown/native. Do not infer exposed machinery from the blueprint name.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"}, {"path": "art/conversion/scn-brinestalkwall/v1/source-packet.json", "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/source-packet.json", "sha256": "6169f93ecd918a5d8b3b7efb69b90b2309a44e665be829e562f208bb741ef20b"}]
+  Method/prompt/corrections: {"phase": "Gearbox component and shared ordinary native appearance", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.854389+00:00 / select_render_reference_or_document_no_equivalent / PASS: Adopted the source-bound installed VFE Architect log-wall presentation reference from the base conversion.
+  Review: Same native wall material/palette means the same reference role applies; no new gearbox artwork or donor machine is justified. Exact asset/mod/version/hash remains in the producer packet.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/source-packet.json", "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"}, {"path": "art/conversion/scn-brinestalkwall-gearbox/v1/source-packet.json", "sha256": "6169f93ecd918a5d8b3b7efb69b90b2309a44e665be829e562f208bb741ef20b"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall/v1/source-construction-comparison.png", "sha256": "433d25edec877a569cbbc85c8f96f2c44438ac6e0e9a94be1d5f9ffaa4de0c95"}]
+  Method/prompt/corrections: {"phase": "Adopted actual Architect wall reference", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.854650+00:00 / construct_faithful_shape / PASS: Reused the explicit four-trunk/mud face and corrected connected wall geometry from the performed base conversion.
+  Review: Viewed shared original/selected comparison. Ordinary source appearances really match; no duplicate construction or ImageGen is claimed.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/constructed-face.svg", "sha256": "971d551d04acb09bc931d963760c388fdbb21001071705a6bf3789b905cb97f6"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json", "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall/v1/constructed-qud-preview.png", "sha256": "a7bdc91fee6800117846647a4d8713884e0f440af51889e2d57fab3a04f1d09d"}, {"path": "art/conversion/scn-brinestalkwall-gearbox/v1/shared-appearance-comparison.png", "sha256": "8c08f37ab6351f33352a954df294ca5be58f80aec9508ec03dbb1cbb4f6cc536"}]
+  Method/prompt/corrections: {"phase": "Adopted performed stalk-and-mud construction", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.854981+00:00 / create_required_state_neighbor_variants / PASS: Bound all16performed recipient connection states and their unchanged frame, scale, primary/detail coverage and atlas order.
+  Review: Reused complete selected state set, not a single flat glyph. Ordinary gearbox wall connects to compatible brinestalk walls; native power routing/changed-state overlays are not new art states invented here.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json", "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/states-comparison.png", "sha256": "9c86ecb0707fc2b38110e3c895e0c2f1876b4616a1e2acd96450a60c82b8855a"}]
+  Method/prompt/corrections: {"phase": "All sixteen fixed-frame wall states inherited", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.855175+00:00 / refine_materials_and_form / PASS: Adopted the recorded face refinement, rejected oversized cap and corrected quiet mud cap.
+  Review: Retained real producer inputs/prompts/outputs and corrections rather than regenerating identical material. A gear decal would add unsupported visible anatomy to this object.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png", "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/registration-decisions.json", "sha256": "e14d75ed4af7d5f19d8685635ac20fee1a5c89e36bad1a1789862a62625adff6"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png", "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png", "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"}]
+  Method/prompt/corrections: {"phase": "Actual base refinement and correction provenance", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.858400+00:00 / extract_register_color_coverage / PASS: Saved explicit blueprint-to-base-model binding without copying/changing texture bytes or adding a visual overlay.
+  Review: Selected model references the same16states, primary/detail atlases and registration. Actual changed/native/unsupported appearances must retain native fallback at final integration.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json", "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"}, {"path": "art/conversion/scn-brinestalkwall-gearbox/v1/source-packet.json", "sha256": "6169f93ecd918a5d8b3b7efb69b90b2309a44e665be829e562f208bb741ef20b"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/bind-gearbox-wall.py", "sha256": "18308f3e2c6ff4a196a77690cbcf62cef5fb2d440156bcddf23e647b3d0638a8"}, {"path": "art/conversion/scn-brinestalkwall-gearbox/v1/model.json", "sha256": "a8b5b6338555dffb0237e321a2dc5f4fd58de0b2b9c18765bcc9968b0faa460a"}]
+  Method/prompt/corrections: {"phase": "Shared asset binding, separate native mechanics", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.858669+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed both original wall glyphs beside the same selected connected material and reread the source-based no-extra-overlay decision.
+  Review: Matches the installed/exported ordinary source, preserving brinestalk/mud identity. Base16state and intended-size authoring views are retained unchanged. This does not verify power or renderer state behavior.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/model.json", "sha256": "a8b5b6338555dffb0237e321a2dc5f4fd58de0b2b9c18765bcc9968b0faa460a"}]
+  Outputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/shared-appearance-comparison.png", "sha256": "8c08f37ab6351f33352a954df294ca5be58f80aec9508ec03dbb1cbb4f6cc536"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/native-scale-comparison.png", "sha256": "2a2bf62d4840bbb542f0767cd033569e5ea0a03b399ace97db228b992f2c2c02"}]
+  Method/prompt/corrections: {"phase": "Shared ordinary wall identity authoring review", "reuse_of_entry": "SCN-BRINESTALKWALL"}
+
+- 2026-10-20T04:45:45.858930+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Kept native power/changed-state fallback, visibility, tint and atlas acceptance behind the all-conversions-generated gate.
+  Review: No game/harness launch or production renderer edits. Overall subject remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/model.json", "sha256": "a8b5b6338555dffb0237e321a2dc5f4fd58de0b2b9c18765bcc9968b0faa460a"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native gearbox-wall acceptance deferred", "reuse_of_entry": "SCN-BRINESTALKWALL"}
 
 ### SCN-CANVASWALL: CanvasWall
 
@@ -2829,7 +2937,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T04:47:22.835630+00:00 / resolve_object_description_original_tile_palette_state / PASS: Bound DirtFloor to its already performed source-bound soil conversion, rechecking installed definition hash.
+  Review: Render name packed dirt floor, no native short description, source primary/detail both w. Original mask has eight sparse deposits. Native aliases retained with exported-layout limits explicit.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "art/conversion/tile-soil/v1/source-packet.json", "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"}]
+  Outputs: [{"path": "art/conversion/scn-dirtfloor/v1/source-packet.json", "sha256": "2d072b91f8f1042132b579dfab678872946768a151421d9c3a4c53c7c5e9fab5"}]
+  Method/prompt/corrections: {"phase": "Actual packed-floor blueprint and palette binding", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.836076+00:00 / select_render_reference_or_document_no_equivalent / PASS: Adopted the exact private extracted RimWorld Soil grain reference and its restricted presentation role.
+  Review: Donor solid brown fill is not copied; native background/foreground and sparse source style remain binding. No new reference or generation is claimed.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/source-packet.json", "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"}]
+  Outputs: [{"path": "art/conversion/tile-soil/v1/source-construction-comparison.png", "sha256": "7a813e675079090cdaea75fb9a512fdbd839b20cec733033adfac65bb515f352"}]
+  Method/prompt/corrections: {"phase": "Adopted actual Soil reference decision", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.836413+00:00 / construct_faithful_shape / PASS: Reused the source-derived sparse grit/scuff SVG and native-colored manual suggestion.
+  Review: DirtFloor is the actual source object used by TILE-SOIL, not a second independent texture target. Reuse avoids diverging packed-ground designs.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/constructed-coverage.svg", "sha256": "e28ec459ca654ecb9ba16a4c0c7c8487b34c013c9fc5edf3cd700a25b1f2f635"}]
+  Outputs: [{"path": "art/conversion/tile-soil/v1/constructed-qud-preview.png", "sha256": "214872605078abfc39928dcff2665c4b1dd61077b48ed17aceda2a85bce545dc"}]
+  Method/prompt/corrections: {"phase": "Adopted performed sparse-earth editable construction", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.836595+00:00 / create_required_state_neighbor_variants / PASS: Adopted one world-continuous material, declared native selector aliases and shared bare-soil boundary geometry.
+  Review: Only dots1 exact native mask was exported; no false claim that dots2/3/4 point patterns were independently observed. No extra creature views, liquid depth or equipment applies. Source ownership is distinct from DirtPath and other foregrounds.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/registered/model.json", "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"}, {"path": "art/conversion/scn-dirtfloor/v1/source-packet.json", "sha256": "2d072b91f8f1042132b579dfab678872946768a151421d9c3a4c53c7c5e9fab5"}]
+  Outputs: [{"path": "art/conversion/tile-soil/v1/registered/repeat-comparison.png", "sha256": "f51a9d993e5d6a93ee66abe5e161857504c7f0cf77a52b32bb3087a99145628a"}, {"path": "art/conversion/tile-soil/v1/registered/boundary-examples-comparison.png", "sha256": "4af6c50a47255b326b1cf7e666462df448289d52ce40388f6f980d49e3a73fd9"}]
+  Method/prompt/corrections: {"phase": "Continuous material, aliases and source-eligible boundaries", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.837449+00:00 / refine_materials_and_form / PASS: Adopted the performed ImageGen coverage refinement, controlled numeric extraction, exact-border patch and corrected one-logical-cell previews.
+  Review: Producer logs retain actual prompt/inputs/output. No duplicate generation, unrecorded texture or full brown carpet introduced.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/registered/registration-decisions.json", "sha256": "0d874faae5e2ff75ede0c3eb6c37995c69f07a48cf1a7a2ec2945f034eebff3f"}]
+  Outputs: [{"path": "art/conversion/tile-soil/v1/refined-proposal.png", "sha256": "79acb287a8b1c3104ce8d28b75dccd0b4d994afe841757ef99833d51ae0e74e4"}, {"path": "art/conversion/tile-soil/v1/registered/registration-comparison.png", "sha256": "3083186ddaa566c59ed476d5c4ec2c4197374e732c59ab7a65b7045ce72a7ce5"}]
+  Method/prompt/corrections: {"phase": "Adopted actual soil refinement and registration corrections", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.839422+00:00 / extract_register_color_coverage / PASS: Saved the blueprint recipe with separate background/pigment roles and native alias/ownership limits.
+  Review: Neutral source pixels and source-aware tint semantics are unchanged. This authoring binding is not runtime material installation or proof of eligibility/UV behavior.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/registered/model.json", "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"}, {"path": "art/conversion/scn-dirtfloor/v1/source-packet.json", "sha256": "2d072b91f8f1042132b579dfab678872946768a151421d9c3a4c53c7c5e9fab5"}]
+  Outputs: [{"path": "art/conversion/scn-dirtfloor/v1/bind-floor.py", "sha256": "dba3ba705c2b59e552164cfbc65c48238b892010fb3d0a3d382efdf00c9dbdb7"}, {"path": "art/conversion/scn-dirtfloor/v1/model.json", "sha256": "f214f1894ad8efaef6b14e66f220316200227ccdd9aae4fcafbc84d65347ffb0"}]
+  Method/prompt/corrections: {"phase": "Explicit native-object material binding", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.839671+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed original sparse native tile, selected full material and one logical cell side by side.
+  Review: Native-brown deposits remain sparse over dark teal and separate from cobble paths, grass, water and furniture. Actual visibility and cosmetic/native state behavior remain pending.
+  Inputs: [{"path": "art/conversion/scn-dirtfloor/v1/model.json", "sha256": "f214f1894ad8efaef6b14e66f220316200227ccdd9aae4fcafbc84d65347ffb0"}]
+  Outputs: [{"path": "art/conversion/scn-dirtfloor/v1/binding-comparison.png", "sha256": "570342b4e4a328a97cdb0a51002b9ee79a6f5c2354e9a8a1e92fdac4ed09608c"}, {"path": "art/conversion/tile-soil/v1/registered/static-joppa-authoring-comparison.png", "sha256": "70993165527275a71218fd1b39ba434ab5f455ac79b7f3f91aa204f4794d0041"}]
+  Method/prompt/corrections: {"phase": "Packed-floor object authoring review", "reuse_of_entry": "TILE-SOIL"}
+
+- 2026-10-20T04:47:22.840354+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained source ownership/tint/world-UV and native cosmetic-state acceptance behind the all-conversions-generated gate.
+  Review: No game/harness launch or production renderer changes. Entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-dirtfloor/v1/model.json", "sha256": "f214f1894ad8efaef6b14e66f220316200227ccdd9aae4fcafbc84d65347ffb0"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native packed-floor acceptance deferred", "reuse_of_entry": "TILE-SOIL"}
 
 ### SCN-DIRTPATH: DirtPath
 

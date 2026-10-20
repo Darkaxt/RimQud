@@ -1,0 +1,132 @@
+{
+  "entry": "SCN-DIRTFLOOR",
+  "recorded_at": "2026-10-20T04:46:51.404047+00:00",
+  "identity": "DirtFloor -> Floor -> CosmeticObject",
+  "object": {
+    "blueprint": "DirtFloor",
+    "source": "ZoneTerrain.xml",
+    "parent": "Floor",
+    "selected": 1111,
+    "render": {
+      "Name": "Render",
+      "DisplayName": "packed dirt floor",
+      "RenderString": "250",
+      "RenderLayer": "0",
+      "RenderIfDark": "true",
+      "Tile": "terrain/sw_ground_dots1.png",
+      "ColorString": "&w",
+      "DetailColor": "w"
+    },
+    "body": null,
+    "description": null
+  },
+  "description": "No native Description.Short; Render.DisplayName is packed dirt floor.",
+  "producer": {
+    "entry": "TILE-SOIL",
+    "source": {
+      "path": "art/conversion/tile-soil/v1/source-packet.json",
+      "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+    },
+    "model": {
+      "path": "art/conversion/tile-soil/v1/registered/model.json",
+      "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+    }
+  },
+  "original": {
+    "tile": "terrain/sw_ground_dots1.png",
+    "description": "",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "packed dirt floor",
+      "RenderString": "250",
+      "RenderLayer": "0",
+      "RenderIfDark": "true",
+      "Tile": "terrain/sw_ground_dots1.png",
+      "ColorString": "&w",
+      "DetailColor": "w"
+    },
+    "kind": "scenery",
+    "blueprint": "DirtFloor",
+    "reference_file": "village-originals/dirtfloor-reference.png",
+    "native_mask_sha256": "b2019af79f44f1b930c42b380cb8f25503fcc66a79fe71b0ed4e97f9b4d21c61",
+    "reference_sha256": "7ead118d5300382b0e50e8397bc67bce21b83e1f959bff7b0ec5d22e8770e192",
+    "info_id": 11208,
+    "atlas_id": 203,
+    "rect": [
+      432,
+      208,
+      16,
+      24
+    ]
+  },
+  "original_coverage": [
+    {
+      "x": 10,
+      "y": 3,
+      "role": "primary"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "role": "detail"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "role": "primary"
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "role": "primary"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "role": "primary"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "role": "detail"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "role": "primary"
+    },
+    {
+      "x": 4,
+      "y": 23,
+      "role": "primary"
+    }
+  ],
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected_definitions": {
+      "Floor": "<object Name=\"Floor\" Inherits=\"CosmeticObject\">\n    <part Name=\"Render\" DisplayName=\"[Ground]\" RenderString=\".\" RenderLayer=\"0\" RenderIfDark=\"true\" Tile=\"terrain/sw_ground_dots1.png\" />\n    <part Name=\"Physics\" Solid=\"false\" Takeable=\"false\" Weight=\"-1\" Category=\"Terrain\" FreezeTemperature=\"-9999\" BrittleTemperature=\"-9999\" FlameTemperature=\"99999\" VaporTemperature=\"9999\" />\n    <tag Name=\"NoPassByMessage\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"IgnoreOccupationChecks\" />\n    <tag Name=\"HideInNearbyItemsList\" />\n  </object>\n  ",
+      "DirtFloor": "<object Name=\"DirtFloor\" Inherits=\"Floor\">\n    <part Name=\"Render\" DisplayName=\"packed dirt floor\" RenderString=\"250\" ColorString=\"&amp;w\" DetailColor=\"w\" RenderLayer=\"0\" />\n    <part Name=\"RandomTileOnMove\" Tiles=\"Terrain/sw_ground_dots1.png,Terrain/sw_ground_dots2.png,Terrain/sw_ground_dots3.png,Terrain/sw_ground_dots4.png\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>\n  ",
+      "DirtPath": "<object Name=\"DirtPath\" Inherits=\"DirtFloor\">\n    <part Name=\"Render\" DisplayName=\"dirt path\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>\n  "
+    }
+  },
+  "source_roles": {
+    "primary": "w",
+    "detail": "w",
+    "brown_hex": "98875f",
+    "field_background": "k",
+    "background_hex": "0f3b3a",
+    "explanation": "The mask has six primary and two detail points; both use native brown w. All other pixels retain native field background. The reference image includes its extraction preview background; it is not the actual shader background."
+  },
+  "native_selectors": [
+    "Terrain/sw_ground_dots1.png",
+    "Terrain/sw_ground_dots2.png",
+    "Terrain/sw_ground_dots3.png",
+    "Terrain/sw_ground_dots4.png"
+  ],
+  "selector_limit": "Only dots1 was exported as an exact original mask. The four selectors are declared native aliases, not four independently observed or reconstructed masks. The authored continuous packed-earth material can serve those aliases without claiming their unexported point layouts.",
+  "reuse": "This is the exact native object used to author TILE-SOIL. Adopt its actual source/ref/manual/refinement/coverage work; do not generate another packed-ground texture for a second ledger role.",
+  "state": "One overhead continuous packed-earth material, with source-owned native brown and background roles, source tile aliases and actual visible floor eligibility. No creature views, depth or equipment applies.",
+  "separation": "DirtPath inherits DirtFloor but uses its independently authored cobble interpretation. This binding must not select every subtype or overwrite actual water, furniture, vegetation or other floor/foreground winners.",
+  "native_acceptance": "Actual native visibility/ownership, source tint/UV and RandomTileOnMove appearance binding pending every-conversion-generated gate"
+}

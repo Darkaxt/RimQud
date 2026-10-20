@@ -1,0 +1,68 @@
+{
+  "entry": "SCN-BRINESTALKFENCE",
+  "recorded_at": "2026-10-20T04:54:31.293155+00:00",
+  "identity": "BrinestalkFence -> Wall",
+  "description": "Salt-tracing waves cross the grain on the brinestalk pickets stuck into the ground.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Walls.xml",
+    "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e",
+    "selected": "<object Name=\"BrinestalkFence\" Inherits=\"Wall\">\n    <part Name=\"Render\" DisplayName=\"brinestalk fence\" RenderString=\"216\" ColorString=\"&amp;w\" DetailColor=\"y\" Occluding=\"false\" />\n    <part Name=\"Physics\" Weight=\"100\" Takeable=\"false\" Solid=\"true\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Salt-tracing waves cross the grain on the brinestalk pickets stuck into the ground.\" />\n    <stat Name=\"AV\" Value=\"1\" />\n    <stat Name=\"Hitpoints\" Value=\"15\" />\n    <tag Name=\"BodyType\" Value=\"WoodWall\" />\n    <tag Name=\"PaintedFence\" Value=\"fence\" />\n\t\t<tag Name=\"PaintWith\" Value=\"brinestalkfence\" />\n\t\t<tag Name=\"ImmutableWhenUnexplored\" Value=\"1\" />\n    <tag Name=\"Category_Settlement\" />\n    <tag Name=\"Flyover\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <intproperty Name=\"AllowMissiles\" Value=\"1\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"UsesGate\" Value=\"Brinestalk Gate\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitWood\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_genPlant\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_genPlant\" />\n    <tag Name=\"Fence\" />\n  </object>\n\n  \n  "
+  },
+  "source_states": {
+    "path": "art/conversion/scn-brinestalkfence/v1/native-state-index.json",
+    "sha256": "1d69d8f1a410d34526efb503a2d23ac4004f938b6a9a2903815ff0ebb89df79d"
+  },
+  "source_context": {
+    "path": "art/conversion/scn-brinestalkfence/v1/native-states-comparison.png",
+    "sha256": "f8eb9a13c221e6b0856c09a9e8e64ad9a796d90d66d2d2fd7b69c716e40e8f20"
+  },
+  "original_reference_correction": "Earlier village reference index exported inherited tile-0-13 placeholder. Read-only resources extraction now supplies all16actual painted fence masks. Original index is retained, not overwritten or credited as the shape.",
+  "anatomy": "Fixed map-view plant-stalk pickets with pale squared tops and short fibrous side projections. Isolated native state has3uprights at x3,7,11 over y7..16 in16x24frame. East/west states extend the row; north/south present a narrow edge-on strip with alternating pale caps.",
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "background": "retain actual source-owned native background through open alpha gaps"
+  },
+  "donor_reference": {
+    "mod": "Vanilla Furniture Expanded - Architect",
+    "package_id": "VanillaExpanded.VFEArchitect",
+    "workshop_id": "2608762624",
+    "icon": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\Textures\\Fences\\PicketFence\\PicketFence_MenuIcon.png",
+      "sha256": "b85382de60e8c4e316f319d71b0e1949a778b517cdc77a89365e58594732933d"
+    },
+    "atlas": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\Textures\\Fences\\PicketFence\\PicketFence_Atlas.png",
+      "sha256": "c498abaa5eb63c83b92acd0fa6642d1eeae31834d32442cfca41423e3cdff391"
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Structure.xml",
+      "sha256": "a6543e988186b83202ecba28cf0fbd4c00a31d323e99910f391c7e2c28f7b6f6",
+      "graphic_class": "Graphic_Single",
+      "link_type": "Asymmetric"
+    },
+    "role": "Actual Architect picket-fence presentation supplies low-relief edge weight and asymmetric edge-on/front connection convention. Qud counts, squared stalk tops, salt grain, palette and connection suffixes remain authoritative; triangular sawn boards and donor hue/order are not adopted."
+  },
+  "construction": "Editable stripped stalks with slightly irregular squared/split tops and salt-tracing waves. The manual native-frame16state construction owns topology; refinement supplies restrained fibrous surface/outline, not independently invented connection shapes.",
+  "native_behavior": "Solid organic, non-occluding, allows missiles and flyover; uses its own gate. Do not make open alpha gaps opaque, change collision/projectile rules, copy donor fence logic or add a mud wall cap.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient_state": [
+      256,
+      256
+    ],
+    "native_anchor": [
+      8,
+      16
+    ],
+    "rule": "Preserve source cell layout and side/cap placement. Every recipient state uses the same native-coordinate mapping, not independently fitted alpha bounds."
+  },
+  "native_acceptance": "Deferred until every conversion is generation-ready"
+}

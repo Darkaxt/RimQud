@@ -1,0 +1,25 @@
+{
+  "kind": "ground_blueprint_art_binding",
+  "blueprint": "DirtFloor",
+  "material_model": {
+    "path": "art/conversion/tile-soil/v1/registered/model.json",
+    "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+  },
+  "source": {
+    "path": "art/conversion/scn-dirtfloor/v1/source-packet.json",
+    "sha256": "2d072b91f8f1042132b579dfab678872946768a151421d9c3a4c53c7c5e9fab5"
+  },
+  "native_tile_aliases": [
+    "Terrain/sw_ground_dots1.png",
+    "Terrain/sw_ground_dots2.png",
+    "Terrain/sw_ground_dots3.png",
+    "Terrain/sw_ground_dots4.png"
+  ],
+  "layers": [
+    "Actual source-owned native background",
+    "Sparse neutral packed-earth pigment with native w foreground/detail tint",
+    "Independent visible native foreground/paint or separately converted art"
+  ],
+  "eligibility": "Only the supported actual visible native packed-floor state; DirtPath and other subtype/material ownership stay separate.",
+  "state": "Generation-ready art binding; native ownership/tint/world-UV and cosmetic-state acceptance pending"
+}

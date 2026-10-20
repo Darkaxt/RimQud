@@ -44,8 +44,14 @@ upright trunk faces, a restrained mud cap and separate native primary/detail
 layers. Its installed Architect mod reference, first rejected cap design and
 corrected connected assembly are recorded. Native atlas/visibility/occlusion
 acceptance remains pending.
-There are now 22 generation-ready entries; Brinestalk Wall With Gearbox is active
-next. Other walls, furniture and the remaining entries are unfinished.
+The gearbox-wall binding adopts the same selected wall art: installed defaults
+add native power transmission, with no distinct ordinary gearbox sprite. DirtFloor
+likewise binds the performed packed-earth conversion rather than regenerating it.
+Brinestalk Fence is generation-ready with all 16 actual painted source states,
+squared salt-tipped pickets and separate native color layers. Its earlier inherited
+placeholder is documented, and its refinement/edge-on cap correction is recorded.
+There are now 25 generation-ready entries; BrineBridge is active next.
+Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

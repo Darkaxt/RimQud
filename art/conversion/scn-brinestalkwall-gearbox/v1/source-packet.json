@@ -1,0 +1,81 @@
+{
+  "entry": "SCN-BRINESTALKWALLWITHGEARBOX",
+  "recorded_at": "2026-10-20T04:45:04.413717+00:00",
+  "identity": "BrinestalkWallWithGearbox -> BrinestalkWall -> BaseWallWood -> Wall",
+  "description": "Here are several stripped trunks of sallow brinestalk bonded with mud.",
+  "original": {
+    "tile": "Walls/wall_brinestalk-00000000.png",
+    "description": "Here are several stripped trunks of sallow brinestalk bonded with mud.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "brinestalk wall",
+      "RenderString": "215",
+      "RenderLayer": "7",
+      "RenderIfDark": "true",
+      "Tile": "Walls/wall_brinestalk-00000000.png",
+      "ColorString": "&w^y",
+      "Occluding": "true",
+      "TileColor": "&w",
+      "DetailColor": "y"
+    },
+    "kind": "scenery",
+    "blueprint": "BrinestalkWallWithGearbox",
+    "reference_file": "village-originals/brinestalkwallwithgearbox-reference.png",
+    "native_mask_sha256": "8bf1d154d5f3c9aea4d1fd4727cec23baa983beab472f8153666fb3bc9c3ca04",
+    "reference_sha256": "4c5bcd74a4a66314fce61ed09acba622975d59c6557667005024be52bd5d5917",
+    "info_id": 27569,
+    "atlas_id": 239,
+    "rect": [
+      1026,
+      1664,
+      16,
+      24
+    ]
+  },
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Walls.xml",
+    "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e",
+    "parent": "BrinestalkWall",
+    "added_part": "ModGearbox",
+    "own_render_override": false
+  },
+  "assembly": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\Managed\\Assembly-CSharp.dll",
+    "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "scoped_types": {
+      "ModGearbox": {
+        "type": "XRL.World.Parts.ModGearbox",
+        "scoped_decompilation_sha256": "f1f5a6d006d94805d6622c43bdbc13e2cd1351e598b26fe57283516d5f0d2bf0"
+      },
+      "MechanicalPowerTransmission": {
+        "type": "XRL.World.Parts.MechanicalPowerTransmission",
+        "scoped_decompilation_sha256": "5edc7008c5827249c48c9cae1e87a12f1e2688b5905fce9b423396bddf8c900d"
+      },
+      "IPowerTransmission": {
+        "type": "XRL.World.Parts.IPowerTransmission",
+        "scoped_decompilation_sha256": "4557b3d4ede7413d8c4ed9bac5b01da0e7445484b9c7cf74734614d7482d0a98"
+      }
+    },
+    "inspection": "Scoped ilspycmd inspection only; raw decompiled classes remain private and are not included in this repository."
+  },
+  "mechanical_facts": {
+    "modification": "Adds MechanicalPowerTransmission or updates its charge rate; adds gearbox name/description information.",
+    "default_appearance": "MechanicalPowerTransmission does not enable tile effects. IPowerTransmission TileEffects is an uninitialized bool defaulting false; its Render calls SyncTile only when enabled. Installed ordinary gearbox-wall references have exactly the same sprite/mask/palette as BrinestalkWall.",
+    "boundary": "These installed defaults and exported ordinary appearance do not prove all future mod/runtime states. Preserve native changed-tile, powered/broken/spark/overlay behavior rather than inventing a new exposed-gear sprite."
+  },
+  "shared_conversion": {
+    "entry": "SCN-BRINESTALKWALL",
+    "model": {
+      "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json",
+      "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"
+    },
+    "source": {
+      "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+      "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+    },
+    "provenance": "Adopt the actual original/reference/manual face/refinement/rejected-cap/corrected16state conversion. No duplicate generation and no new machinery decal."
+  },
+  "required_states": "All16recipient cardinal connections inherit the same fixed frame, primary/detail roles and material. Machinery/power behavior remains a separate native component, not additional painted parts.",
+  "authoring_decision": "Use shared converted wall art for the unchanged ordinary native appearance. The word gearbox alone is not a visual-design reference.",
+  "native_acceptance": "Deferred until all pending conversions are generation-ready; ordinary appearance and changed-state fallback remain final integration checks."
+}

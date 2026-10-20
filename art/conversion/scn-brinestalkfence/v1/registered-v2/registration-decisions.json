@@ -1,0 +1,38 @@
+{
+  "source": {
+    "path": "art/conversion/scn-brinestalkfence/v1/refined-proposal.png",
+    "sha256": "2c2e6c2a2dd35b4991df686c1236d3e74edaa5fcfab8b701e4a5310309895c2f"
+  },
+  "source_size": [
+    1024,
+    1536
+  ],
+  "selected_component": "Complete middle connected picket",
+  "selection_bounds": [
+    397,
+    442,
+    579,
+    1093
+  ],
+  "cleanup": "Select actual alpha, grayscale RGB, discard alpha<16 and make alpha>=240 opaque. RGB-only exterior glow is cleared rather than baked into a fence.",
+  "registration": {
+    "native_frame": [
+      16,
+      24
+    ],
+    "recipient_frame": [
+      256,
+      256
+    ],
+    "native_front_picket_rectangle": [
+      6.4,
+      7,
+      9,
+      17
+    ],
+    "rule": "Use the same native-derived position/extent for every cloned upright; no per-state independent fit. The generator sheet offsets are not world pivots."
+  },
+  "source_topology": "Front pickets keep native counts/locations, including clipped neighbor-edge pickets. N/S connections use a separate narrow edge-on strip and actual native pale cap positions. No wall cap, connecting board or opaque gap fill.",
+  "source_color_ownership": "Native w body and independent y pale tips/salt traces. N/S native cap boundaries keep only .65texel smoothing and leave the two-texel shaft edge to primary shading. No fixed color in production sources.",
+  "interpretation": "Refined stump contour/grain and short side spurs are authored. Explicit source-state layouts, not generated connection variants, own the atlas."
+}
