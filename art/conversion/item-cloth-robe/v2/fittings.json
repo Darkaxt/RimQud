@@ -1,0 +1,80 @@
+{
+  "item": "Cloth Robe",
+  "workflow": "regional-curved-v1",
+  "source": {
+    "instance": 604,
+    "blueprint": "Cloth Robe",
+    "description": "Particulate from the eons-sheared shale sticks in the fibers of goat wool. They make red freckles on the garment.\n\n{{K|Weight: 5 lbs.}}",
+    "tile": "Items/sw_robes1.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/cloth-robe-reference.png",
+    "native_mask_sha256": "005ad8aa6355519ab294aef261d420e291c024901309e1534d011efa61b20c37",
+    "reference_sha256": "fce1d492efe15fd64a88cdeeb0c3c459d291583ae7e01706d0f85aa9ec4dbd7c",
+    "info_id": 9972,
+    "atlas_id": 185,
+    "rect": [
+      612,
+      52,
+      16,
+      24
+    ]
+  },
+  "scope": "Current dromad v7 profile correction plus unchanged human fits. One robe on each fixed unclothed base; no native item acceptance.",
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-MALE-CLOTH-ROBE-BODY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-cloth-robe/v2/model.json",
+          "sha256": "e12cf0975d57259b488ca7d0c206584306ea00877dc9d418e35eae75c4bbbeaa"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-cloth-robe/v2/assembly-comparison.png",
+          "sha256": "8dd3e8e3bc903009544b3934074643c0623ca8f09f7dc9553c085ae8d9a9eb10"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected full neutral cardinal facings and mirrored west, independent palette and intended-size plates. Same intact contextual robe and fixed original body retained. Corrected broad lower masks which included torso-outline slivers beside the hands: explicit original-hand circular ownership joins curved cuffs/forearms in v2. No extra isolation generation, cloth cutouts or body changes. Native acceptance pending full-set gate."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-cloth-robe/v1/model.json",
+          "sha256": "76a0c9692c070e8a76b06ac6649bfd777f243954f3d32745571a56ad07244b80"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-cloth-robe/v1/assembly-comparison.png",
+          "sha256": "bdf711e25542cae517a2f663ad4e2644d5a9175143c33ed0ad56aaec517ae2c6"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected full neutral cardinal views, intact garment, independent original-arm overlay, separate Qud body/equipment palette and 48x96 intended-size plate. Body/frame unchanged; natural cuff curves and continuous hip coverage retained. Contextual material transferred to editable geometry; same-source continuation fills mannequin/contour/backdrop exclusions before final visibility. No second isolation generation or baked limb cutouts. Native outfit/mutation precedence remains pending."
+      }
+    },
+    {
+      "entry": "FIT-DROMAD-CLOTH-ROBE-BODY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-dromad-cloth-robe/v7/model.json",
+          "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"
+        },
+        "plate": {
+          "path": "art/conversion/fit-dromad-cloth-robe/v7/assembly-comparison.png",
+          "sha256": "2f4f76459e1439ed168fe18e02ea148923251e401059ba7979ca1408fe657474"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing."
+      }
+    }
+  ],
+  "native_acceptance": "Pending final all-conversions gate, including native equipment state and outfit precedence"
+}

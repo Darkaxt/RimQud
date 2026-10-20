@@ -201,6 +201,14 @@ occlusion and per-facing layer order. Unsupported anatomy retains native art.
 
 Read the actual item's blueprint, description, original sprite/palette, equipped
 part and laterality. Start with one real item, not a profession costume.
+The primary fitting/report composition shows only this item on the fixed
+unclothed model, with the body's own head/detail and this item's visibility
+layers. Do not include an unrelated robe, hat, weapon or other equipment as
+context: an older outfit layer can hide the actual fit or suggest a new defect.
+Generate these single-item previews from the current registered body and item
+parameters. Any additional outfit comparison must be separate, explicitly
+labeled and list the exact versions of every included item; it does not replace
+the single-item evidence or establish native outfit acceptance.
 
 For garments, follow [the approved apparel-fitting recipe](references/apparel-fitting.md)
 before constructing or extracting a replacement. Its production sequence is:
@@ -244,6 +252,14 @@ the new version. Native checks stay behind section 7's full-set generation gate.
 
 Held tools/weapons retain their separate identity, directional art, attachment,
 slot and laterality workflow. They do not gain sleeve masks or garment deformation.
+For a hand-held shaft such as the dromad's Shillelagh, anchor the grip inside the
+palm, toward its body-facing side in south/front and north/back views; do not
+place the shaft against or beyond the hand's outer edge. Derive each facing's
+attachment from the actual equipped hand and laterality, rather than the item's
+image bounds. Draw the original gripping hand above the shaft at the contact;
+retain the complete item separately. Preserve accepted profile placement, item
+scale and the fixed body/robe registration when correcting a front/back grip.
+Show the grip and depth in all required facings in the entry's authoring report.
 Mutation overlays likewise remain separate from reusable unmutated body templates.
 
 ## 7. Validate only after every pending conversion is generated

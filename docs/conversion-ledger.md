@@ -54,7 +54,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | FIT-DROMAD-CLOTH-ROBE-BODY-0 | dromad / Cloth Robe / Body / laterality 0 | UNFINISHED | ITEM-CLOTH-ROBE, BODY-DROMAD | Earlier isolated/refined robe and cuff masks exist; re-audit every view under the reset. No completion credit carried forward. |
-| FIT-DROMAD-SHILLELAGH-HAND-2 | dromad / Shillelagh / Hand / laterality 2 | UNFINISHED | ITEM-SHILLELAGH, BODY-DROMAD | User reported staff too small. Later shaft enlargement has not been accepted as resolution; review proportions and grip in every view. |
+| FIT-DROMAD-SHILLELAGH-HAND-2 | dromad / Shillelagh / Hand / laterality 2 | UNFINISHED | ITEM-SHILLELAGH, BODY-DROMAD | Actual native held-state and full outfit acceptance remain pending the full-set generation gate. Authored staff length is preserved; no new user size acceptance claimed. |
 | FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0 | human-female / Cloth Robe / Body / laterality 0 | UNFINISHED | ITEM-CLOTH-ROBE, BODY-HUMAN-FEMALE | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2 | human-female / Iron Vinereaper / Hand / laterality 2 | UNFINISHED | ITEM-IRON-VINEREAPER, BODY-HUMAN-FEMALE | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-HUMAN-FEMALE-POCKETED-VEST-BODY-0 | human-female / Pocketed Vest / Body / laterality 0 | UNFINISHED | ITEM-POCKETED-VEST, BODY-HUMAN-FEMALE | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
@@ -359,7 +359,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/dromad/layered/robe-east.png](../art/dromad/layered/robe-east.png), [art/dromad/layered/robe-north.png](../art/dromad/layered/robe-north.png), [art/dromad/layered/robe-south.png](../art/dromad/layered/robe-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 44.
+Current step: native_equipment_state_review. Process-log events: 47.
 
 - 2026-10-20T02:56:10.663930+00:00 / source_identity_description_slot_laterality / PASS: Bound the actual goat-wool robe to Body part 357, laterality 0, instance 604 from the captured Tam body tree.
   Review: Read item description and equipped binding; source tile Items/sw_robes1.bmp with foreground &y/detail y. Shale freckles are recorded. Held Shillelagh is a separate entry; no new outfit invented.
@@ -625,6 +625,24 @@ Current step: native_equipment_state_review. Process-log events: 44.
   Outputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v6/assembly-comparison.png", "sha256": "3ce241e9c271b8448aa0f59d693fc4a890a6e39117d6149096fe9ac24970f27a"}, {"path": "art/conversion/fit-dromad-cloth-robe/v6/authoring-review.json", "sha256": "9084a61e69c1ea48bdcbdc68f169ece77fc7eb4e8f4ad267cc73cde3ae8b28f1"}]
   Method/prompt/corrections: {"phase": "Reconcile approved current registration with historical pending step"}
 
+- 2026-10-20T14:55:27.271694+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Corrected profile cuff and original-arm ownership through a shared source-opening curve; discarded the lower-mouth diagnostic because it exposed an excessive dark cavity. Current full source remains intact; no body redraw.
+  Review: Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.
+  Inputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v6/model.json", "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py", "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v7/profile-cuff-comparison.png", "sha256": "444d730afa335ed5d5a05eeca05c2caefef9ab5e094afa3a74d8c17fa7001dfb"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/assembly-comparison.png", "sha256": "2f4f76459e1439ed168fe18e02ea148923251e401059ba7979ca1408fe657474"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/registration-decisions.json", "sha256": "62e7e67c70b28e91eff16ce21b4fd8101d7a47ebb10932dd987ed6f5a9c4599a"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:55:27.272347+00:00 / review_game_scale_and_palette / PASS: Reviewed one robe over its unclothed base, independent actual Qud palette and intended-size preview. Preserved selected front/back and body/contact.
+  Review: Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.
+  Inputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v6/model.json", "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py", "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v7/qud-palette-east.png", "sha256": "1bfbc8c0a9d505636f09a14da4d84723bb1d78ed074d7ca46a07d29a1df92dad"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/game-scale-review.png", "sha256": "c3eb4513d4bc73e842c008d69cd0c25e11eff12fc27e19146c4ae816ee2bd131"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/authoring-review.json", "sha256": "94159da076e8699cb5927b718a3bd5831815849ae6f41495c6b6b5cdf555ffb1"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/artifact-manifest.json", "sha256": "38ea3b907c1f79270998411b9c7178444a1d41521d1d5840e95b6810ac55009d"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:55:27.272889+00:00 / reprocess_under_regional_curved_v1 / PASS: Recorded full source, explicit cuff ink, shared curve, original-body visibility and exact retained facings. Native and combined outfit acceptance remain pending.
+  Review: Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.
+  Inputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v6/model.json", "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py", "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v7/model.json", "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
 ### FIT-DROMAD-SHILLELAGH-HAND-2: dromad / Shillelagh / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -633,7 +651,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/dromad-shillelagh-east.png](../art/village/equipment/dromad-shillelagh-east.png), [art/village/equipment/dromad-shillelagh-north.png](../art/village/equipment/dromad-shillelagh-north.png), [art/village/equipment/dromad-shillelagh-south.png](../art/village/equipment/dromad-shillelagh-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: native_equipment_state_review. Process-log events: 16.
 
 - 2026-10-20T03:04:13.289886+00:00 / source_identity_description_slot_laterality / PASS: Read Tam Hand part 362/laterality 2 equipped instance 524 and the exact installed Shillelagh object definition, which inherits BaseCudgel.
   Review: Installed description specifies hewn wood shaped into a stick with an oaken knot. Captured generic puzzling-device description and differing weight remain preserved rather than silently rewritten. Identification state was not exported. No mutation, clothing or other item is invented.
@@ -694,6 +712,42 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Inputs: []
   Outputs: []
   Method/prompt/corrections: {"phase": "Native held-state acceptance deferred"}
+
+- 2026-10-20T14:45:54.013987+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / REQUIRES REWORK: Reopened this held-item fit for the user-priority inner-palm correction. Nima apron generation remains unfinished and resumes after this entry.
+  Review: v1 front/back grip lies toward the external hand edge. Authoring correction only; no native tests or new generative isolation.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json", "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"}, {"path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembly-comparison.png", "sha256": "d7f5081c2c37bab37b768d1f3e11f4027d3f1e2041d535c30b59aee6eec5f0c6"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-20T14:46:55.440176+00:00 / construct_and_overlay_one_item / PASS: Corrected front/back grip by integer translation of the identical full staff. Preserve scale/rotation and accepted profile. Original actual hand supplies foreground, separately from intact item.
+  Review: Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json", "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"}, {"path": "art/conversion/fit-dromad-shillelagh/v1/placement-suggestion.json", "sha256": "f2bb029976a1c54181a84cc7c46e692432f600febc86bcf32c52486bcbd8d63f"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/refit-grip.py", "sha256": "54d05c18651042c05cf03f5fe260c78d55c99c60a93e58edc34d5b201a3c67e6"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v2/registration-decisions.json", "sha256": "bc32b0e8f87d32e600e53ef451608a1d81c867ef603a9e116629ccfe06a2f40f"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/intact-item-comparison.png", "sha256": "aa0330780418ac654f037a19fa48742cc86a2c7c262503d19b17b7da79b06cb2"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/before-after-comparison.png", "sha256": "9130f0caa20747a758136fcd12dd5746e481669e96a04923c78e350fecb25e31"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:46:55.442150+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Reviewed inner-palm grip and original-hand ownership in every required facing on the current fixed body/robe. Full front staff remains uncut; rear staff remains behind original body. Profile item and attachment unchanged.
+  Review: Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v2/model.json", "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"}, {"path": "art/conversion/body-dromad/v2/model.json", "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"}, {"path": "art/conversion/fit-dromad-cloth-robe/v6/model.json", "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v2/assembly-comparison.png", "sha256": "37eba6f29c7f485924b4b3a2a66f684e8d32f71385ab0159b087b80ec4952c4d"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/hand-overlay-south.png", "sha256": "bbdaf16de500cb686b93f32c99d18591fcb545cea0f0f71c314a98dbf1b56388"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/hand-overlay-north.png", "sha256": "46236664b5c021b1c4e2eb9a49a6ee5cc170a6dd5b08488f58b8e18238657e0e"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:46:55.443350+00:00 / review_game_scale_and_palette / PASS: Inspected intended-size held silhouette and independent y/y equipment tint; original body/robe/contact unchanged. Skill now records inner-palm attachment and original gripping-hand foreground.
+  Review: Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v2/model.json", "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"}, {"path": "skills/qud-creature-conversion/SKILL.md", "sha256": "10f273adafdd19c554bc4cf32f1beaa22bda03c8f929330fff19002d83b74add"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v2/palette-comparison.png", "sha256": "b086fd57c577bc753f2d9b29034e7d132ba3af4693d3af137b14422e1e460b4a"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/game-scale-review.png", "sha256": "3cc6e453ceb12b7d92540d9fe771784b150942ece3c37cec6fa205c498b4423c"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/authoring-review.json", "sha256": "8e81a9e21e5d5f3204a2298ffa4511a192e42276d02e43c5a5fbdff63f92e6fb"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/artifact-manifest.json", "sha256": "c5c6bec32e2bf2b64279d4d316906ff1dda55699a10f0debccde5c92fcbb4de6"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:56:27.412425+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Recomposed unchanged registered staff on current fixed unclothed base, with no unrelated robe. This is the primary fitting evidence; old outfit sheets stay historical.
+  Review: Inspected single-item primary preview: fixed unclothed dromad body v2 plus corrected inward-grip Shillelagh only, in all required facings. Staff item geometry/scale/attachment and original gripping-hand foreground unchanged from v2; no robe or other equipment included. Independent y/y staff tint and intended-size plates retained. Earlier outfit compositions remain historical evidence; no native/outfit acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/compose-single-item.py", "sha256": "37bdf4c82729188292b46c42affe59e2b967ed4e01656114ccaa641908086126"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/model.json", "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"}, {"path": "skills/qud-creature-conversion/SKILL.md", "sha256": "0168b8e281b81f758c01cd3c2256a0193d6305aad65cd9eae699b3c1d317c414"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/composition-inputs.json", "sha256": "e515d1c708ecd17cf0cea0c58cf546e9dcf06326aaf631e3443b1b52be6f38ed"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/assembly-comparison.png", "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
+
+- 2026-10-20T14:56:27.413160+00:00 / review_game_scale_and_palette / PASS: Reviewed single-item neutral and independent equipment tint plus intended-size views; no other equipment or new generation.
+  Review: Inspected single-item primary preview: fixed unclothed dromad body v2 plus corrected inward-grip Shillelagh only, in all required facings. Staff item geometry/scale/attachment and original gripping-hand foreground unchanged from v2; no robe or other equipment included. Independent y/y staff tint and intended-size plates retained. Earlier outfit compositions remain historical evidence; no native/outfit acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/compose-single-item.py", "sha256": "37bdf4c82729188292b46c42affe59e2b967ed4e01656114ccaa641908086126"}, {"path": "art/conversion/fit-dromad-shillelagh/v2/model.json", "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"}, {"path": "skills/qud-creature-conversion/SKILL.md", "sha256": "0168b8e281b81f758c01cd3c2256a0193d6305aad65cd9eae699b3c1d317c414"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/palette-comparison.png", "sha256": "75a2da04b550dbe9d7867c1fd16ac19fe8db0acdebe2e8d78a3420fd8159dd09"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/game-scale-review.png", "sha256": "752af8613985ab16201e79f4627f40566d2b925fe2e3d30dd2ce777c28ff405d"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/authoring-review.json", "sha256": "65b2b9bc81e8a9edf45f6d3af20576f80473a38b5f715059c6a4f9875e9d6ad9"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/artifact-manifest.json", "sha256": "f93eba18c9cfb2a076f46969d6e4c878e0f9ee0f86b041a7bbae114dd4bf33c7"}]
+  Method/prompt/corrections: {"new_imagegen_call": false}
 
 ### FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0: human-female / Cloth Robe / Body / laterality 0
 
@@ -2231,7 +2285,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2255,6 +2309,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Review: All enumerated Cloth Robe fittings have current recipe authoring evidence; generation aggregation only, not native item acceptance.
   Inputs: [{"path": "art/conversion/fit-human-male-cloth-robe/v2/model.json", "sha256": "e12cf0975d57259b488ca7d0c206584306ea00877dc9d418e35eae75c4bbbeaa"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/model.json", "sha256": "76a0c9692c070e8a76b06ac6649bfd777f243954f3d32745571a56ad07244b80"}, {"path": "art/conversion/fit-dromad-cloth-robe/v6/model.json", "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"}]
   Outputs: [{"path": "art/conversion/item-cloth-robe/v1/fittings.json", "sha256": "a77c383f7d0f323d431c20fda644283a97ddcd45daaa86c12f85b7ccd6292746"}, {"path": "art/conversion/item-cloth-robe/v1/body-fittings-comparison.png", "sha256": "41827e6123387cd5611c112fe32bfddb0765301b0bd0ac11490ca556cf798fa4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T14:56:27.267022+00:00 / verify_every_body_fitting_log / PASS: Refresh aggregate after dromad profile cuff correction; preserve prior aggregate history.
+  Review: Reconciled current three body-specific robe fits against their exact registered models/plates and authoring logs. Dromad v7 supersedes v6 only for profile cuff ownership; male/female human fits unchanged. Aggregate and all fits remain native-pending.
+  Inputs: [{"path": "art/conversion/fit-human-male-cloth-robe/v2/model.json", "sha256": "e12cf0975d57259b488ca7d0c206584306ea00877dc9d418e35eae75c4bbbeaa"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/model.json", "sha256": "76a0c9692c070e8a76b06ac6649bfd777f243954f3d32745571a56ad07244b80"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/model.json", "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"}]
+  Outputs: [{"path": "art/conversion/item-cloth-robe/v2/fittings.json", "sha256": "8d1ba6d20a69ac8137cb8300c21a1b334e966c45e6708d30e4f42435dc8dbb83"}, {"path": "art/conversion/item-cloth-robe/v2/body-fittings-comparison.png", "sha256": "b992bf0abab22ccdd554ca67e4f47e467bf25c738dd60e6f4da285947d55f4fe"}]
   Method/prompt/corrections: {}
 
 ### ITEM-FLOATING-GLOWSPHERE: Floating Glowsphere

@@ -626,3 +626,31 @@ The user-rejected v1 and exact prompts/outputs remain in history. Current fit
 and item aggregate are generation-ready authoring selections, not user/native
 acceptance or completed Irudad mutation/outfit work. Stage 3 stays ACTIVE;
 continue on Nima's Leather Apron.
+
+User-directed held-item correction: in front/south and back/north views, the
+dromad's Shillelagh shaft must pass inside the body-facing portion of the gripping
+palm, rather than outside its external edge. Keep the original hand above the
+grip and retain the complete item separately. Preserve staff scale, accepted
+profile attachment and fixed body/robe registration. Record this rule in the
+conversion skill, including its installed copy. The v2 authoring correction
+translates south +35 pixels and north -34 pixels without resizing or rotating
+the staff; east item/attachment is unchanged and west remains its mirror.
+Preview context uses the already selected body v2 and robe v6. Retain v1 history;
+native held-state acceptance stays behind the all-generation gate. Stage 3 stays
+ACTIVE; resume Nima's unfinished Leather Apron after this priority correction.
+
+Single-item preview correction: primary fitting evidence shows only the item
+under review over its fixed unclothed body, retaining that body's own detail
+layers. Separate outfit comparisons must list their item versions and cannot
+replace isolated fit evidence. Shillelagh v3 uses the corrected v2 grips and
+unchanged scale/profile over the bare dromad v2; historical robe compositions
+remain in the process history. This rule is synchronized to the installed skill.
+
+The current robe v6 already covers the front hump; the user's screenshot came
+from the obsolete robe v1 context in the old staff plate. Profile cuff v7 now
+derives its explicit neutral rim ink and original-arm visibility from one sampled
+opening curve. Semantic forearm/hand spans exclude adjacent torso ownership.
+Full cloth alpha, original body and front/back robe art are preserved; the new
+rim is recorded as a manual geometry repair, not a pure stretch. Update the
+Cloth Robe aggregate to the current fit. Native acceptance remains pending and
+Stage 3 remains ACTIVE; continue the unfinished Nima apron generation.
