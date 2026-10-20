@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-ARGYVE-MULTICABINET",
+  "active_entry": "SCN-BED",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -22343,8 +22343,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -22356,9 +22356,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -22812,28 +22810,268 @@
           "outputs": [],
           "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
           "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect installed directional textures with actual current1.6 definition and LoadFolders; measure alpha bounds in shared draw frame. Resolve earlier shallow-cap camera review without regenerating accepted fronts.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/source-packet.json",
+              "sha256": "86f276e17f290684e4757074775cb9250b948778968eaa75bb65e095d8e836cd"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/reference-camera-comparison.png",
+              "sha256": "6c96cc842482bdb200b16b7e15d67c523749d60aaf62cdb2b1b48b8a3615384a"
+            }
+          ],
+          "review": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Preserve two selected front designs, author missing full-width side/rear surfaces with explicit inferred depth and topbox/bracket relationships. Keep original two cosmetic states.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/source-packet.json",
+              "sha256": "86f276e17f290684e4757074775cb9250b948778968eaa75bb65e095d8e836cd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/construct-turnarounds.py",
+              "sha256": "b38962575648551f5754ea803628222faf73bee8aef949e72d32bbec19cb27b8"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/constructed-all-layouts.png",
+              "sha256": "9e578aef194a2eb3d623fb3e9dd5e5b358e3a9552b222c46a7bc0a9bbef774e5"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/manual-structural-review.json",
+              "sha256": "eb37556aa383fdbe4a54b95d0c1f25a9102b94d7c9b9ddcb7b5af25a9ca408e9"
+            }
+          ],
+          "review": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "action": "Construct complete S/E/N/W sets per layout from selected fronts in common frame, including opposite front-edge lips and topbox rear location.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/source-packet.json",
+              "sha256": "86f276e17f290684e4757074775cb9250b948778968eaa75bb65e095d8e836cd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-front-guided-turnaround.png",
+              "sha256": "58a2bfccc70469d5df50055e6f18ca40b5ce90f1a7cfd47ffda375c2bb5bf004"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-front-guided-turnaround.png",
+              "sha256": "9b415bf79bd0514a3240e2d97f58e59dc799c3477ac5b3ab7f1658ea58f090ac"
+            }
+          ],
+          "review": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Actual built-in ImageGen contextual turnaround refinement for cosmetic layout1; existing selected front supplied as anchor.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-front-guided-turnaround.png",
+              "sha256": "58a2bfccc70469d5df50055e6f18ca40b5ce90f1a7cfd47ffda375c2bb5bf004"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-turnaround-prompt.txt",
+              "sha256": "3c39a07bb9a101bbeeaf68bc186999fe486350a5b38c972fce0485aa29a471e8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-refined-turnaround-raw.png",
+              "sha256": "ffdb25cf80d171af6e4eeef930388982edae21e5297674f49d85eec7edb42fad"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-structural-review.json",
+              "sha256": "2930f3f160b9bd86dbd95ff899c0bb333f431b6fdbe46567346e9d5f6a3be715"
+            }
+          ],
+          "review": "Front drawer/recess identity, plain side/rear panels, substantial end width, cap and feet retained. Slight generated seam positions are not used as geometry. Keep original selected v1 front and exact constructed new-view alpha/ink; use output as galvanized material only. No extra compartments or unsupported hardware.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-turnaround-prompt.txt",
+            "sha256": "3c39a07bb9a101bbeeaf68bc186999fe486350a5b38c972fce0485aa29a471e8"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-82a850e6-1287-4aa8-b1d2-95f1c14d14c0.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-argyve-multicabinet\\v2\\variant-1-front-guided-turnaround.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Misc/FilingCabinet/FilingCabinet_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Actual built-in ImageGen contextual turnaround refinement for cosmetic layout2; existing selected front supplied as anchor.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-front-guided-turnaround.png",
+              "sha256": "9b415bf79bd0514a3240e2d97f58e59dc799c3477ac5b3ab7f1658ea58f090ac"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-turnaround-prompt.txt",
+              "sha256": "3a9262836b062edc661c9739cfce9db1252fd1e03bdf65349d016444ad1d5047"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-refined-turnaround-raw.png",
+              "sha256": "24aaa1f12385169fa12c6e41aa153ede12b65698278e0e29c0872f7b81d43952"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-structural-review.json",
+              "sha256": "f4878f9bf1bc9fa0111ad1b00aad538a2d635c2b6a579e5a0e5b428cff6106c9"
+            }
+          ],
+          "review": "Cabinet planes, substantial ends, two front brackets overlapping as one end bracket, plain rear topbox and panel seams agree with fixed construction. Opaque diffuse background/halo is rejected, not accepted as structure. Retain original v1 front; select same-material interior luminance only inside exact manual new-view geometry, with independent source-color roles. No extra compartments, handles or electronics.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-turnaround-prompt.txt",
+            "sha256": "3a9262836b062edc661c9739cfce9db1252fd1e03bdf65349d016444ad1d5047"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-991bf794-e4c8-41e5-ae58-353d0522a5ce.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-argyve-multicabinet\\v2\\variant-2-front-guided-turnaround.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Misc/FilingCabinet/FilingCabinet_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Transfer same-material luminance into fixed new-view geometry, exclude generated background/halo, retain manual seams and exact original fronts. Preserve initial material transfer; correct gold normalization to match front extraction without another AI redraw.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/source-packet.json",
+              "sha256": "86f276e17f290684e4757074775cb9250b948778968eaa75bb65e095d8e836cd"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-1-refined-turnaround-raw.png",
+              "sha256": "ffdb25cf80d171af6e4eeef930388982edae21e5297674f49d85eec7edb42fad"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/variant-2-refined-turnaround-raw.png",
+              "sha256": "24aaa1f12385169fa12c6e41aa153ede12b65698278e0e29c0872f7b81d43952"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/register-turnarounds.py",
+              "sha256": "6bfad9e12226b7e7d0b31b4d16b10b2a942f850ce83926cbf9b676e106d27e62"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered/all-layouts-native.png",
+              "sha256": "256b92e87809159cb92abaa745647a7d56e00dd63d7831cf38161ecbc850f37c"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/model.json",
+              "sha256": "f5a3f776afb260b867f066c8adced322ada4e89d02842b53a49a8e1fc13c6624"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/registration-decisions.json",
+              "sha256": "052166bb1116ea9dd5840f65e65a4888cde8820bb543446b52df27d3315351ff"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-neutral.png",
+              "sha256": "46899a61b595e6383173171b86312ecd4a34be28cfaac493ab6f442e7a53f511"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-detail.png",
+              "sha256": "699fc35bf7f1ec2942596ec3e47d3524cab8b5f4d9a6e930df12ecd0f5d649bc"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-coverage.png",
+              "sha256": "9c328b4a2d49a0a161258be196d09f1b6e9774ea867c28e2bce6ef7f75200537"
+            }
+          ],
+          "review": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect complete eight-view art outcome at enlarged and16x24/24x36/32x48sizes; reconcile front continuity, source states, volume, neutral layers, color roles, shared pivot and complete coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/model.json",
+              "sha256": "f5a3f776afb260b867f066c8adced322ada4e89d02842b53a49a8e1fc13c6624"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-native.png",
+              "sha256": "8416a94433a75189cd5ef6ef259c9c6e2812dd708f291ea6be5d8178f8e994f1"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/authoring-review.json",
+              "sha256": "de74686ddd35043b2a0f155bc39c0b585e0062c9ec8da2876d8b315e216a4e5d"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/artifact-manifest.json",
+              "sha256": "94d9d556e036e268b37ceb0ff9be2f2ded5a03cf47f586b5635a193ca559c012"
+            }
+          ],
+          "review": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:50:03.261067+00:00",
+          "step": "native_state_review",
+          "action": "Keep source random cosmetic selection, container inventory/smart-use, occlusion/solidity and actual placement/extra-view bindings behind full-set generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/model.json",
+              "sha256": "f5a3f776afb260b867f066c8adced322ada4e89d02842b53a49a8e1fc13c6624"
+            }
+          ],
+          "outputs": [],
+          "review": "No native activation or game/harness launch. Additional directions are authoring assets only; the entry remains UNFINISHED pending native acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
-      "native_acceptance": "Pending final all-conversions validation gate",
+      "generation_ready": true,
+      "native_acceptance": "Pending full-set generation gate; no runtime activation, native orientation/footprint or container acceptance.",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
-          "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+          "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/model.json",
+          "sha256": "f5a3f776afb260b867f066c8adced322ada4e89d02842b53a49a8e1fc13c6624"
         },
         "plate": {
-          "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
-          "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+          "path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-native.png",
+          "sha256": "8416a94433a75189cd5ef6ef259c9c6e2812dd708f291ea6be5d8178f8e994f1"
         }
       },
-      "registration_summary": "Both native Argyve Multicabinet cosmetic layouts retain unequal galvanized drawers, dark recessed storage and source-selected detail fronts. Production primary/detail layers are neutral; previews apply actual native c/W colors. Original masks, installed VFE reference, editable shapes, two actual refinements and surface-ownership extraction are recorded below. The child changes inventory population only. Native inventory, visibility and state acceptance remain pending.",
+      "registration_summary": "Both actual multicabinet layouts now have source-bound S/E/N plus explicit W. Existing irregular front pixels retained; substantial authored side depth informed by actual directional render metadata. Front-guided refinement, structural reviews, material correction, neutral color roles and all-view evidence logged. Extra directions unbound; native container/placement/state acceptance pending.",
       "camera_review": {
-        "status": "REQUIRES REVIEW",
-        "classification": "FRONTAL_DEPTH_REVIEW",
-        "reason": "Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed.",
-        "audit": {
-          "path": "evidence/camera-facing-audit.json",
-          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        "status": "PASS",
+        "classification": "CARDINAL_SOURCE_BOUND",
+        "reason": "Straight fronts and shallow bevel retained after actual donor comparison. Full end depth explicitly authored; parallel structural axes and common frame.",
+        "evidence": {
+          "path": "art/conversion/scn-argyve-multicabinet/v2/reference-camera-comparison.png",
+          "sha256": "6c96cc842482bdb200b16b7e15d67c523749d60aaf62cdb2b1b48b8a3615384a"
         }
       },
       "furniture_views": {
@@ -22842,10 +23080,19 @@
           "east",
           "north"
         ],
-        "completed_views": [],
-        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
-        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "completed_views": [
+          "south",
+          "east",
+          "north",
+          "west"
+        ],
+        "west_policy": "Explicit authored west with opposite front-edge lip; source topbox/rear relationships retained.",
+        "native_binding": "Two native cosmetic layouts retained; south proposed fixed tile, additional directions unbound. No runtime rotation activation.",
         "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed source description and both original cosmetic layouts, actual installed VFE S/E/N reference with Graphic_Multi/drawSize/footprint/margins, accepted-front camera, authored substantial end depth, front-guided constructed/refined E/N/W, structural reviews before extraction, same-material transfer and its detail-luminance correction, exact coverage and independent neutral c/W ownership. Selected front pixels are unchanged. Rear/end surfaces and depth remain authored interpretations, with no new drawer/open states. Eight views share a cell/pivot; native container, placement, orientation and palette acceptance remain pending full-set generation."
       }
     },
     {
@@ -22865,8 +23112,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -50667,7 +50914,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T18:33:40.689936+00:00",
+  "updated_at": "2026-10-20T18:50:03.261067+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

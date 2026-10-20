@@ -1,0 +1,147 @@
+{
+  "entry": "SCN-ARGYVE-MULTICABINET",
+  "recorded_at": "2026-10-20T18:43:41.432779+00:00",
+  "identity": "Argyve Multicabinet -> Multicabinet -> MountedFurniture",
+  "description": "Slide drawers of galvanized metal are arranged in a cabinet as rectangles of assorted dimensions. Storage is fractal.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "selected": "<object Name=\"Argyve Multicabinet\" Inherits=\"Multicabinet\">\n    <tag Name=\"InventoryPopulationTable\" Value=\"Argyve Cabinet\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n  </object>",
+    "parent": "<object Name=\"Multicabinet\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"sliding drawer cabinet\" ColorString=\"&amp;c\" DetailColor=\"W\" RenderString=\"61\" Tile=\"Items/sw_multi_cabinet_1.bmp\" Occluding=\"true\" />\n    <part Name=\"Description\" Short=\"Slide drawers of galvanized metal are arranged in a cabinet as rectangles of assorted dimensions. Storage is fractal.\" />\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_multi_cabinet_1.bmp,Items/sw_multi_cabinet_2.bmp\" />\n    <part Name=\"Physics\" Weight=\"200\" Solid=\"true\" />\n    <stat Name=\"AV\" Value=\"10\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"Metal\" />\n    <part Name=\"Container\" />\n    <part Name=\"Inventory\" />\n    <tag Name=\"InventoryPopulationTable\" Value=\"Scrap Cabinet\" />\n    <tag Name=\"AutoexploreChest\" />\n    <tag Name=\"ForceSmartUse\" />\n    <stag Name=\"Storage\" />\n    <stag Name=\"Crafts\" />\n    <tag Name=\"Tier\" Value=\"3\" />\n  </object>"
+  },
+  "original_states": {
+    "path": "art/conversion/scn-argyve-multicabinet/v1/native-state-index.json",
+    "sha256": "8b98c98f3a8fc01cc6daf906279d52f8d487b774fbab5ff57944ad288f24617f"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-argyve-multicabinet/v1/native-states-comparison.png",
+    "sha256": "baad8e1fe02ff67ed0bf94b321dbf609d3f1091af1d3c0f9952febbd2d6845c1"
+  },
+  "source_shapes": [
+    "Variant1 has three small upper fronts, two middle fronts plus a partial/recessed right compartment, unequal-width lower fronts and one broad bottom drawer. Gold-role marks are upper-center, middle-left and broad bottom front.",
+    "Variant2 has a small gold-role storage box with two short metal projections above the cabinet, two rows of narrow mixed-height fronts, a large lower-left door and a lower-right recess/shelf with small nested storage blocks. These ambiguous tiny marks are not evidence for a radio, robot or electronics."
+  ],
+  "palette": {
+    "primary": "c",
+    "detail": "W",
+    "native_primary_rgb": "40a4b9",
+    "native_detail_rgb": "cfc041",
+    "rule": "Neutral metal case/fronts receive native c. Source-selected fronts/trim receive W. Gold during refinement identifies detail ownership; production layers must be neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Furniture Expanded",
+    "package_id": "VanillaExpanded.VFECore",
+    "workshop_id": "1718190143",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_south.png",
+    "sha256": "c90066fad10832e81dfaf5baf4c636f53059aebb67cb086e433d0c60016a7e2a",
+    "definition_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_Misc.xml",
+    "definition_sha256": "c2629befbf4d16f144a2443be7c3569001de76652277695d09507caca512cc4d",
+    "role": "Actual installed Vanilla Furniture Expanded filing cabinet supplies restrained galvanized-metal bevels, recessed pulls and clean game-art edge weight. Its two equal drawers, facing model, research bonus and donor palette are not copied."
+  },
+  "construction": "Editable cabinet bodies preserve each source layout, assorted rectangular front sizes, recesses, top storage block and short base supports. Closed metal faces are filled authored surfaces: a tiny outline glyph does not establish physically transparent drawer panels. Partial source marks are represented as recessed storage without inventing a dynamic open state.",
+  "states": "Two actual RandomTile cosmetic layouts; each receives S/E/N/W authoring. No new open/closed state. South remains proposed fixed native tile; all extra directions unbound.",
+  "inventory_boundary": "Argyve child changes InventoryPopulationTable to Argyve Cabinet but does not change render/shape. Actual inventory remains native and is not drawn as invented visible loot.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell coordinate mapping for each complete layout and all tint masks. No independent drawer or top-box bbox centering."
+  },
+  "native_behavior": "Preserve solid200-weight metal container, occluding=true, native inventory/smart-use and source random selection. No donor research/storage mechanics are transplanted.",
+  "native_acceptance": "Pending full-set generation gate; no runtime activation, native orientation/footprint or container acceptance.",
+  "previous_fronts": {
+    "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+    "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_south.png",
+        "sha256": "c90066fad10832e81dfaf5baf4c636f53059aebb67cb086e433d0c60016a7e2a",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          66,
+          22,
+          190,
+          190
+        ],
+        "visible_width": 124
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_east.png",
+        "sha256": "16f153d611aba507d1da1ff0d1c31bb7842c9db6d72d9622afa83915d9f370ee",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          63,
+          20,
+          146,
+          193
+        ],
+        "visible_width": 83
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_north.png",
+        "sha256": "77a06308e4657d4c08e41f7606d201a88a61c443ae1d59220a6cc6e6428e935f",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          66,
+          27,
+          190,
+          195
+        ],
+        "visible_width": 124
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_Misc.xml",
+      "sha256": "c2629befbf4d16f144a2443be7c3569001de76652277695d09507caca512cc4d"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\LoadFolders.xml",
+      "sha256": "148c4e0d349c9c8c709feb00e2ca92b486a28e5e1d54f9a35c541078e227ea9a"
+    },
+    "graphic_class": "Graphic_Multi",
+    "draw_size": [
+      2,
+      2
+    ],
+    "footprint": [
+      1,
+      1
+    ],
+    "mapping": "Same square2x2 draw frame for S/E/N; source pixels have transparent margins. Actual alpha widths124/83/124; E/S=0.669. This informs a plausible cabinet end, not a measured Qud footprint or copied damage rectangle."
+  },
+  "camera": {
+    "contract": "Straight cardinal front, complete end, back and explicit west; vertical axes parallel. Shallow top bevel inherited from accepted fronts. No yaw or convergence of structural walls.",
+    "front_review": "Existing fronts have straight vertical sides and only a shallow cap bevel; comparison with actual reference supports retaining them. No redraw is required to remove a three-quarter camera.",
+    "width": 14,
+    "depth": 8.8,
+    "end_front_ratio": 0.6285714285714287,
+    "depth_status": "Authored hidden depth informed by actual directional reference; upright Qud glyph does not establish it.",
+    "unseen": "Plain galvanized side and rear panels with restrained folded-edge seams and short feet. These are authored surfaces, not source-established extra drawers, vents, machinery or storage states.",
+    "variant2": "Same top storage box and two metal brackets; front handle does not appear on the rear/end. Rear x reflects the front x about shared pivot. Brackets overlap in end views. No radio/electronic interpretation."
+  },
+  "refinement": "Reuse the two actual v1 front refinements. Front-guided missing-view refinement per layout, followed by fixed-geometry material transfer; no second isolation generation."
+}
