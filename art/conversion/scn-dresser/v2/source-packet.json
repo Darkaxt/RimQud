@@ -1,0 +1,149 @@
+{
+  "entry": "SCN-DRESSER",
+  "identity": "Dresser -> Furniture",
+  "description": "Wood was precisely cut into drawers and set on brass rails to house clothes.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Dresser": "<object Name=\"Dresser\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"dresser\" ColorString=\"&amp;w\" DetailColor=\"w\" RenderString=\"227\" Tile=\"Items/sw_dresser.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"80\" Takeable=\"false\" Solid=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Wood was precisely cut into drawers and set on brass rails to house clothes.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" />    \n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Clothing,Dandies,the Fashionable\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <stag Name=\"Storage\" />\n\t\t<stag Name=\"Contemporary\" />\n\t\t<part Name=\"Inventory\" Builder=\"InventoryChestJunk1\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something in\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\dresser-mask.png",
+    "sha256": "dcbb96fb536e69747a582927b5c2f7a3255e68b98c0a08a7c7918fbc64b5add3",
+    "tile": "Items/sw_dresser.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9557,
+    "atlas_id": 185,
+    "rect": [
+      810,
+      156,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Tall narrow case with broad shallow trapezoid cap, one upper rectangular-pull drawer and two lower fronts with opposed curved mark patterns, low support rail and two tiny outer feet. Three stacked-front interpretation follows the original glyph, not donor four-drawer layout.",
+  "palette": {
+    "primary": "w",
+    "detail": "w",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "98875f",
+    "rule": "Case/fronts/pull marks are primary. Top cap and tiny feet are source detail. Both roles currently tint identically w; do not invent gold brass rails. Cyan cap/feet are only an extraction aid; final layers must be neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Dresser_south.png",
+    "sha256": "165859c9a61e57d371ee7b1244163af69cb4ea5c7060b09d00b02845806bb3f3",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Dresser_south supplies restrained inset-front wood shading, precise seam edges and low-relief contours. Its four2x2drawers, round knobs, broad footprint, facings and mechanics are not copied."
+  },
+  "construction": "Three stacked precise wooden fronts: top rectangular recessed pull and opposed lower curved source motifs retained. New parallel cap keeps separate source detail ownership along with tiny feet. Body and hidden-depth assumptions remain explicit; internal brass rails do not become visible gold.",
+  "native_state": "One fixed source tile,80-weight non-takeable non-solid organic container/inventory furniture with junk inventory builder, non-occlusion and rare Animated builder. No source random, open/closed or empty/full sprite is declared. Native inventory and rare/custom behavior remain native.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source-cell mapping for case/fronts, cap and feet ownership. No independently centered fronts or tiny feet."
+  },
+  "native_acceptance": "Pending full-set generation gate; native non-solid80-weight/non-takeable organic container/inventory, rare Animated fallback and extra-view placement remain unfinished.",
+  "recorded_at": "2026-10-20T19:56:53.638628+00:00",
+  "retained_front_material": {
+    "path": "art/conversion/scn-dresser/v1/registered/model.json",
+    "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Dresser_south.png",
+        "sha256": "165859c9a61e57d371ee7b1244163af69cb4ea5c7060b09d00b02845806bb3f3",
+        "frame": [
+          256,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          128
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Dresser_east.png",
+        "sha256": "3de1bc02c9b799360db628b1d50006d8d549c086d1124199e42d607ceba58b4c",
+        "frame": [
+          128,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          256
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Dresser_north.png",
+        "sha256": "223c6c4a8d39708014e5ee5d3b2ec806703eaeebe534c1c92828748826218eba",
+        "frame": [
+          256,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          128
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_Multi",
+    "draw_size": [
+      2,
+      1
+    ],
+    "footprint": [
+      2,
+      1
+    ],
+    "mapping": "Actual donor S/N wide frame and E portrait frame rotate render footprint; transparent bounds are not Qud physical dimensions.",
+    "role": "Parallel rectangular top planes, inset wood surfaces and shallow map-camera visibility only. Retain Qud tall three-front form, not donor low four2x2drawers/knobs or footprint/mechanics."
+  },
+  "camera": {
+    "contract": "Straight stacked fronts with parallel rectangular cap; complete end has substantial authored depth. No converging cap edges or yaw. Same16x24source cell/pivot8,16.",
+    "authored_width": 11.9,
+    "authored_depth": 7.5,
+    "top_visibility_factor": 0.28,
+    "depth_status": "Authored hidden depth guided by original broad cap and actual directional reference, not native Qud measurements.",
+    "front_correction": "Preserve existing body/front/pull/foot material and replace only the receding trapezoid cap geometry with a parallel plane. Reuse existing cap material by row-wise surface-coordinate remapping; no separate AI front redraw.",
+    "unseen": "Plain closed end/back wood with precise seam joinery. No front pulls or hidden brass rails are drawn onto unseen closed faces.",
+    "west": "Mirror east; symmetric unmarked end and feet."
+  }
+}

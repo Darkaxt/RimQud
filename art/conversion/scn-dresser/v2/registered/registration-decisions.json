@@ -1,0 +1,73 @@
+{
+  "views": {
+    "south": {
+      "material": {
+        "retained_body_and_patched_cap": {
+          "path": "art/conversion/scn-dresser/v2/cap-material-correction.json",
+          "sha256": "2b625cca8fc872d14793fd65386deb9381b1df369be51ea8a1b01cd903e68946"
+        }
+      },
+      "coverage": "Patched parallel-cap S with retained lower body/feet, exact authored E/N geometry and symmetric mirrored W. Generated cap/frame drift and fringe excluded.",
+      "color": "Independent cap/feet role and main case/fronts both receive native w. No visible gold/brass or baked cyan. Neutral luminance with one coverage alpha and separate role weight."
+    },
+    "east": {
+      "material": {
+        "case": {
+          "selected": 113761,
+          "continued": 10699,
+          "unsampled_constructed_pixels": 0
+        },
+        "cap_and_feet": {
+          "selected": 18536,
+          "continued": 11998,
+          "unsampled_constructed_pixels": 0
+        }
+      },
+      "coverage": "Patched parallel-cap S with retained lower body/feet, exact authored E/N geometry and symmetric mirrored W. Generated cap/frame drift and fringe excluded.",
+      "color": "Independent cap/feet role and main case/fronts both receive native w. No visible gold/brass or baked cyan. Neutral luminance with one coverage alpha and separate role weight."
+    },
+    "north": {
+      "material": {
+        "case": {
+          "selected": 179928,
+          "continued": 17028,
+          "unsampled_constructed_pixels": 0
+        },
+        "cap_and_feet": {
+          "selected": 28354,
+          "continued": 4677,
+          "unsampled_constructed_pixels": 509
+        }
+      },
+      "coverage": "Patched parallel-cap S with retained lower body/feet, exact authored E/N geometry and symmetric mirrored W. Generated cap/frame drift and fringe excluded.",
+      "color": "Independent cap/feet role and main case/fronts both receive native w. No visible gold/brass or baked cyan. Neutral luminance with one coverage alpha and separate role weight."
+    },
+    "west": {
+      "material": {
+        "rule": "Mirror east; symmetric unmarked end/cap/feet, no side-specific fittings."
+      },
+      "coverage": "Patched parallel-cap S with retained lower body/feet, exact authored E/N geometry and symmetric mirrored W. Generated cap/frame drift and fringe excluded.",
+      "color": "Independent cap/feet role and main case/fronts both receive native w. No visible gold/brass or baked cyan. Neutral luminance with one coverage alpha and separate role weight."
+    }
+  },
+  "shared_material_sampler": {
+    "path": "art/conversion/scn-chest1/v2/select-dark-wood-material.py",
+    "sha256": "5eacea49e52ffd095cc78388b6ad1c739db5f2286756716ed2c941383d8aa77c"
+  },
+  "channel_mapping": "Temporary raw R/B swap maps cyan role to existing gold-role sampler; max(R,G) becomes original max(B,G), neutral wood mean/spread unchanged. Production output is grayscale.",
+  "new_imagegen_calls": 1,
+  "second_isolation_call": false,
+  "cap_geometry_correction": {
+    "path": "art/conversion/scn-dresser/v2/cap-geometry-correction.json",
+    "sha256": "b57a9254f5586cae45879438cc6f629e0fefb58bb3aed7715367799e562631be"
+  },
+  "cap_edge_correction": {
+    "path": "art/conversion/scn-dresser/v2/cap-edge-correction.json",
+    "sha256": "5784588583d99941e79617772ec3a62a64eb0f2d26759e416aec9d2916b1d068"
+  },
+  "cap_material_correction": {
+    "path": "art/conversion/scn-dresser/v2/cap-material-correction.json",
+    "sha256": "2b625cca8fc872d14793fd65386deb9381b1df369be51ea8a1b01cd903e68946"
+  },
+  "native_acceptance": "Pending full-set generation gate; native non-solid80-weight/non-takeable organic container/inventory, rare Animated fallback and extra-view placement remain unfinished."
+}

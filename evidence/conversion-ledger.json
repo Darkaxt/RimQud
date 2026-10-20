@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-DRESSER",
+  "active_entry": "SCN-FLOOR-CUSHION",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -27648,8 +27648,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -27661,9 +27661,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -27996,28 +27994,321 @@
           "outputs": [],
           "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
           "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain precise source three-front motifs and direct Furniture/container ancestry. Both palette roles are w; described internal brass rails do not introduce visible gold hardware.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/source-packet.json",
+              "sha256": "3f66b50ffce54a5ae72d58d6e705bf6013426184ce28b1b917fa51ece5b010b3"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/source-reference-camera-comparison.png",
+              "sha256": "3abc0c7a9879df2990109585c66657e825b5d887a50e5ec94b532986f324858e"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VTE directional Dresser textures with Core Graphic_Multi/drawSize/footprint2x1; use parallel map planes and material, not donor low four-drawer layout or mechanics.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/source-packet.json",
+              "sha256": "3f66b50ffce54a5ae72d58d6e705bf6013426184ce28b1b917fa51ece5b010b3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/source-reference-camera-comparison.png",
+              "sha256": "3abc0c7a9879df2990109585c66657e825b5d887a50e5ec94b532986f324858e"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Retain selected front/body material; replace receding cap with parallel geometry by existing cap surface-coordinate mapping, and construct broad plain end/back with source cap/feet roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/source-packet.json",
+              "sha256": "3f66b50ffce54a5ae72d58d6e705bf6013426184ce28b1b917fa51ece5b010b3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/construct-turnaround.py",
+              "sha256": "07fc20b846a396f1f8691002a4379bb04c2cb3f31ce4562dc5493ae2074168a1"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/retained-front-before-cap.png",
+              "sha256": "e20598f4bf66d3117f674f8c5670120d67e02b5ebb3dc9a1f77c0cd5dc16c8c7"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/parallel-front-cap.svg",
+              "sha256": "5eadb1d999a69916add1f522fc6c15a1d17c26455799d442970202ec28b09e76"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/cap-geometry-correction.json",
+              "sha256": "b57a9254f5586cae45879438cc6f629e0fefb58bb3aed7715367799e562631be"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/before-edge-fix-constructed-turnaround.png",
+              "sha256": "42195b04ecd1be7290c1a1361b859fda41bc98b5f052f5997e12e3c132cee4af"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/manual-structural-review.json",
+              "sha256": "cf9f52488e62a644fc104c70d9bd9f5dfe918e2c10681ff8ea36be06c36b8faa"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Patch residual old cap outline outside the new plane, then exclude old sloped-edge highlights from cap material selection before refinement. Preserve both earlier views and exact unchanged lower body.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/before-edge-fix-selected-front-neutral.png",
+              "sha256": "386b268c8d7422b0688f5fd61f42640557fd8ee3fd642893d230c788f0dd1418"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/parallel-front-cap.png",
+              "sha256": "0c03e586e71e10c40611850de803cec21f9123965b0892d0eceb61b8454d1338"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/patch-cap-edge.py",
+              "sha256": "579d1d0046e644a81b824d473b0a6a1016cf1c230c96c4a1e54397866fbf4e14"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/cap-edge-correction.json",
+              "sha256": "5784588583d99941e79617772ec3a62a64eb0f2d26759e416aec9d2916b1d068"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/selected-front-neutral.png",
+              "sha256": "ed8cd1590e4750377428fab847f697d498be9f4f6328611e7a269f9fdb7ec878"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/clean-cap-material.py",
+              "sha256": "141c674162d093dda778ff25e43a905ea88d444f3a71b545bc29bf51ed32d90a"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/cap-material-correction.json",
+              "sha256": "2b625cca8fc872d14793fd65386deb9381b1df369be51ea8a1b01cd903e68946"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/selected-front-neutral-clean.png",
+              "sha256": "d69e887e507add939470c76730ffe1334fba3451599af827661bf87a2fd03b4f"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/selected-front-context-clean.png",
+              "sha256": "e8db0f0c279ec3035080d87d6e6cbd47b37c508486d8f15cabdec9003f28cd60"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "action": "Compose clean patched selected front with complete E/N at common frame/pivot; no front pulls copied to plain end/back. Mirror E for symmetric west.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/selected-front-context-clean.png",
+              "sha256": "e8db0f0c279ec3035080d87d6e6cbd47b37c508486d8f15cabdec9003f28cd60"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/constructed-east.png",
+              "sha256": "b3ff22a7b9732483602dbc67d7fbd5d7f05288b27f53a238181534db99d1a0f7"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/constructed-north.png",
+              "sha256": "01247a808cc79f38cd7205f57197d900735e67b8bc120e90737df105f408aee1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/front-guided-turnaround-clean.png",
+              "sha256": "9de08b0710479bd819b0a632f0e0638966b1a28499aa111695d7ec1c437fc2b7"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen patched-front-guided composed refinement, structurally inspected before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/front-guided-turnaround-clean.png",
+              "sha256": "9de08b0710479bd819b0a632f0e0638966b1a28499aa111695d7ec1c437fc2b7"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/turnaround-prompt.txt",
+              "sha256": "f4d2973db7df0bf0e95ca3e138c4388dfd0164c4f5e03da6fe09f011dabd9fb0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/refined-turnaround-raw.png",
+              "sha256": "ad5821acc0ca0d5aca7e96e7a31f113478c43a6162651b18cdea344a7279a332"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/first-structural-review.json",
+              "sha256": "003dd35ee24baac49ac6b6abb4c666a84173e939add0ae4ebe73cc07eff97481"
+            }
+          ],
+          "review": "Three stacked source pulls, plain side/back and parallel cap retained; no fourth drawer, gold rails, mirror or visible clothing contents. Generated cap height/position and outline widths drift, so retain patched selected S and exact authored E/N coverage/ink. Sample wood material only, with cap/feet ownership separate despite both native roles being w. Exterior/cavity fringe excluded.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-dresser/v2/turnaround-prompt.txt",
+            "sha256": "f4d2973db7df0bf0e95ca3e138c4388dfd0164c4f5e03da6fe09f011dabd9fb0"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-9baef29c-fb35-4ad7-850d-92bd9d23f233.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-dresser\\v2\\front-guided-turnaround-clean.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Dresser_east.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Reject generated cap/outline/frame drift and fringe by sampling wood material into fixed E/N alpha/ink. Retain clean patched S; preserve distinct neutral case versus cap/feet ownership despite both rendering w.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/refined-turnaround-raw.png",
+              "sha256": "ad5821acc0ca0d5aca7e96e7a31f113478c43a6162651b18cdea344a7279a332"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/first-structural-review.json",
+              "sha256": "003dd35ee24baac49ac6b6abb4c666a84173e939add0ae4ebe73cc07eff97481"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/register-dresser.py",
+              "sha256": "e0d82b129dd37de61dd6ae02a07186c4078c2e132c543270af000acbe124c736"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/model.json",
+              "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/registration-decisions.json",
+              "sha256": "86e58dea9b7753885b65e07ba64258b66e6c4bdd41c06d08bfc309b01e242e62"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/all-views-neutral.png",
+              "sha256": "1df1c9e157862f6948d456edf6d1e3d7601bfe9330bf2083bff604779d32a3da"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/all-views-detail.png",
+              "sha256": "2180f86c991204340bbd141a9c9e3e7172a62363cb66d8490712355cf62ca86a"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/all-views-coverage.png",
+              "sha256": "332a9fda6d056fa839adede62037240765af567fb3a7e65fcb95932660cf1b67"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed source tile with container/inventory and rare Animated behavior; no open/empty/full or donor variants invented.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/source-packet.json",
+              "sha256": "3f66b50ffce54a5ae72d58d6e705bf6013426184ce28b1b917fa51ece5b010b3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/model.json",
+              "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect S/E/N/W at enlarged and16x24/24x36/32x48sizes: source three fronts, parallel cap, precise wood, complete end depth, distinct masks, no gold, exact common coverage/pivot.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/model.json",
+              "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/all-views-native.png",
+              "sha256": "3d7b8b4028798026661c604137f20f359c7fa71e1473ddbfab0f61052008c548"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/authoring-review.json",
+              "sha256": "14e1b939d76e7a2d917b53231e3657796176e0edbc7f542edf2fdd3dd2f686a8"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v2/artifact-manifest.json",
+              "sha256": "7d4c860eb46e3ea0f9955a5ad10d3519ce87bcd48f0ab3d8545bb1e9b2f33750"
+            }
+          ],
+          "review": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:02:46.335605+00:00",
+          "step": "native_state_review",
+          "action": "Keep actual inventory/container, non-takeable/non-solid80-weight organic furniture, rare Animated fallback and extra-view placement behind full-set generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v2/registered/model.json",
+              "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"
+            }
+          ],
+          "outputs": [],
+          "review": "No native activation, game/harness launch, donor comfort bonus or hidden brass rail mechanic added. Entry remains UNFINISHED pending native acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
-      "native_acceptance": "Pending final all-conversions validation gate",
+      "generation_ready": true,
+      "native_acceptance": "Pending full-set generation gate; native non-solid80-weight/non-takeable organic container/inventory, rare Animated fallback and extra-view placement remain unfinished.",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-dresser/v1/registered/model.json",
-          "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+          "path": "art/conversion/scn-dresser/v2/registered/model.json",
+          "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"
         },
         "plate": {
-          "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
-          "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+          "path": "art/conversion/scn-dresser/v2/registered/all-views-native.png",
+          "sha256": "3d7b8b4028798026661c604137f20f359c7fa71e1473ddbfab0f61052008c548"
         }
       },
-      "registration_summary": "Selected dresser retains three stacked source fronts, top recessed pull, opposed lower motifs, shallow cap and tiny feet. Production case/front and cap/feet roles are neutral, and native preview uses matching w/w brown colors. Internal brass rails do not create gold hardware. Source metadata, actual installed VTE reference, editable construction, refinement and ownership extraction are recorded below. Native inventory/physics/visibility and rare animated fallback acceptance remain pending.",
+      "registration_summary": "Three source dresser fronts retained with corrected parallel cap, complete plain end/back and mirrored W. Actual directional/render reference, cap geometry/material edge patches, one composed refinement, structural review and fixed-coverage registration logged. Separate neutral cap/feet and case masks both receive native w; no visible gold. Native container/fallback/physics and extra-view placement pending.",
       "camera_review": {
-        "status": "REQUIRES REVIEW",
-        "classification": "FRONTAL_DEPTH_REVIEW",
-        "reason": "Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view.",
-        "audit": {
-          "path": "evidence/camera-facing-audit.json",
-          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        "status": "PASS",
+        "classification": "CARDINAL_SOURCE_BOUND",
+        "reason": "Old receding cap rectified to parallel planes; complete end has authored7.5depth. Original lower front material retained, same source cell/pivot and no oblique yaw.",
+        "evidence": {
+          "path": "art/conversion/scn-dresser/v2/source-reference-camera-comparison.png",
+          "sha256": "3abc0c7a9879df2990109585c66657e825b5d887a50e5ec94b532986f324858e"
         }
       },
       "furniture_views": {
@@ -28026,10 +28317,19 @@
           "east",
           "north"
         ],
-        "completed_views": [],
-        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
-        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "completed_views": [
+          "south",
+          "east",
+          "north",
+          "west"
+        ],
+        "west_policy": "Mirror east; symmetric unmarked end/cap/feet, no side fittings.",
+        "native_binding": "One fixed native tile retained; extra directions unbound. No dynamic drawer state or placement selector added.",
         "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed native description/original w/w glyph and Dresser ancestry/fixed state, actual VTE S/E/N reference with Core Graphic_Multi/drawSize/footprint mapping, retained three-front/body material, parallel cap surface rectification plus old fringe/edge-highlight corrections, complete authored end/back, one patched-front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection, independent cap/feet ownership and intended-size palette views. No visible brass/gold, clothing inventory, mirror or donor four-drawer layout. Hidden depth7.5/joinery are authored. Shared source cell/pivot and symmetric west. Native container/inventory, non-solid/non-takeable80-weight organic furniture, rare Animated fallback and extra-view placement remain unfinished behind full-set generation."
       }
     },
     {
@@ -28049,8 +28349,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -52510,7 +52810,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T19:52:45.342687+00:00",
+  "updated_at": "2026-10-20T20:02:46.335605+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
