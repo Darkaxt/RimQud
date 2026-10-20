@@ -1,0 +1,361 @@
+{
+  "recorded_at": "2026-10-20T08:33:12.911191+00:00",
+  "scope": "All13currently registered furniture families (20layouts/states) and7registered body families (21authored views; west mirrors east). Historical reset/unselected NPC and creature drafts, four equipment fittings, terrain and vegetation are outside this bounded count. A count of all raw ImageGen files would count superseded attempts as models.",
+  "criterion": "Separate whole-object oblique/diagonal orientation from frontal depth requiring target-camera comparison. Cardinal bodies have front/back/complete profiles. Small bevel shading, organic curvature and genuinely diagonal parts are not automatically a camera failure.",
+  "counts": {
+    "registered_furniture_families": 13,
+    "clear_oblique_or_diagonal_families": 5,
+    "clear_oblique_or_diagonal_layouts": 8,
+    "frontal_depth_review_families": 6,
+    "frontal_depth_review_layouts": 9,
+    "other_furniture_families": 2,
+    "other_furniture_states": 3,
+    "registered_body_families": 7,
+    "authored_body_views": 21,
+    "clear_oblique_body_families": 0
+  },
+  "findings": [
+    {
+      "entry": "SCN-ALCHEMIST-TABLE",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Front-aligned but tabletop has receding/converging depth. Compare the whole fixture against a documented cardinal target camera; diagonal alembic tubes are intrinsic features, not camera yaw.",
+      "model": {
+        "path": "art/conversion/scn-alchemist-table/v1/registered/model.json",
+        "sha256": "ac5e34e1491ed8ee68d6813b97978ac07075694924a73a2b67d8df03d7565b47"
+      },
+      "plate": {
+        "path": "art/conversion/scn-alchemist-table/v1/registered/registration-comparison.png",
+        "sha256": "d4f5c7f7646ff13b606a0e73ccad3ced2045e43202975088c98ef30ba4d428d3"
+      }
+    },
+    {
+      "entry": "SCN-ARGYVE-MULTICABINET",
+      "category": "Furniture",
+      "layouts_or_authored_views": 2,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed.",
+      "model": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+        "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+      },
+      "plate": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
+        "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+      }
+    },
+    {
+      "entry": "SCN-BED",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "OBLIQUE_OR_DIAGONAL",
+      "status": "REQUIRES REWORK",
+      "reason": "Bed long axis and bed plane shear diagonally relative to the map-facing frame.",
+      "model": {
+        "path": "art/conversion/scn-bed/v1/registered/model.json",
+        "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+      },
+      "plate": {
+        "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+        "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+      }
+    },
+    {
+      "entry": "SCN-BEDROLL",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "OBLIQUE_OR_DIAGONAL",
+      "status": "REQUIRES REWORK",
+      "reason": "Entire bedding footprint lies diagonally in the map plane instead of a cardinal orientation.",
+      "model": {
+        "path": "art/conversion/scn-bedroll/v1/registered/model.json",
+        "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"
+      },
+      "plate": {
+        "path": "art/conversion/scn-bedroll/v1/registered/registration-comparison.png",
+        "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"
+      }
+    },
+    {
+      "entry": "SCN-BOOK-TABLE",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Front-aligned drawers below a visibly receding trapezoidal tabletop. Camera depth must match the target rather than be accepted solely from source shape.",
+      "model": {
+        "path": "art/conversion/scn-book-table/v1/registered/model.json",
+        "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"
+      },
+      "plate": {
+        "path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png",
+        "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"
+      }
+    },
+    {
+      "entry": "SCN-CANVAS-FOLDING-CHAIR",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "OBLIQUE_OR_DIAGONAL",
+      "status": "REQUIRES REWORK",
+      "reason": "Diamond seat and front/side crossed supports use an oblique three-quarter presentation.",
+      "model": {
+        "path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json",
+        "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"
+      },
+      "plate": {
+        "path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png",
+        "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"
+      }
+    },
+    {
+      "entry": "SCN-CHAIR",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "OBLIQUE_OR_DIAGONAL",
+      "status": "REQUIRES REWORK",
+      "reason": "Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south.",
+      "model": {
+        "path": "art/conversion/scn-chair/v1/registered/model.json",
+        "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"
+      },
+      "plate": {
+        "path": "art/conversion/scn-chair/v1/registered/registration-comparison.png",
+        "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"
+      }
+    },
+    {
+      "entry": "SCN-CHEST1",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention.",
+      "model": {
+        "path": "art/conversion/scn-chest1/v1/registered/model.json",
+        "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+      },
+      "plate": {
+        "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
+        "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+      }
+    },
+    {
+      "entry": "SCN-DRESSER",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view.",
+      "model": {
+        "path": "art/conversion/scn-dresser/v1/registered/model.json",
+        "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+      },
+      "plate": {
+        "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
+        "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+      }
+    },
+    {
+      "entry": "SCN-FLOOR-CUSHION",
+      "category": "Furniture",
+      "layouts_or_authored_views": 4,
+      "classification": "OBLIQUE_OR_DIAGONAL",
+      "status": "REQUIRES REWORK",
+      "reason": "All four layouts use a rotated diamond footprint and isometric-like cushion presentation.",
+      "model": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+        "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+      },
+      "plate": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
+        "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+      }
+    },
+    {
+      "entry": "SCN-HAMMOCK",
+      "category": "Furniture",
+      "layouts_or_authored_views": 2,
+      "classification": "NO_OBLIQUE_CAMERA_IDENTIFIED",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "No rotated rigid footprint or three-quarter actor pose identified in the inspected plate. Hanging curvature/armature bends are intrinsic geometry; this finding does not claim native integration or final art acceptance.",
+      "model": {
+        "path": "art/conversion/scn-hammock/v1/registered/model.json",
+        "sha256": "2b0cf4a36fdde27706c1c8b94866949dae1548d628599a18f5d3afe753dffd2c"
+      },
+      "plate": {
+        "path": "art/conversion/scn-hammock/v1/registered/registration-comparison.png",
+        "sha256": "45c9522735d4b7dcb41bb83eb5b2dafda863be0f97714bb7b9097035ffad257a"
+      }
+    },
+    {
+      "entry": "SCN-JOPPA-BOOKSHELF",
+      "category": "Furniture",
+      "layouts_or_authored_views": 3,
+      "classification": "FRONTAL_DEPTH_REVIEW",
+      "status": "REQUIRES REVIEW",
+      "reason": "Three straight-facing shelf layouts have visible tapered top boards; their depth still needs explicit donor-camera comparison.",
+      "model": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/model.json",
+        "sha256": "e6963f84256493a0e7a85e6c6cfbe7d22424fce18764539976ca817c6e31e1f3"
+      },
+      "plate": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png",
+        "sha256": "846b9bc19edcfa0d167d2b4756d562764f91099c1da36e003b78a8136737105f"
+      }
+    },
+    {
+      "entry": "SCN-MANNEQUIN",
+      "category": "Furniture",
+      "layouts_or_authored_views": 1,
+      "classification": "NO_OBLIQUE_CAMERA_IDENTIFIED",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "No rotated rigid footprint or three-quarter actor pose identified in the inspected plate. Hanging curvature/armature bends are intrinsic geometry; this finding does not claim native integration or final art acceptance.",
+      "model": {
+        "path": "art/conversion/scn-mannequin/v1/registered/model.json",
+        "sha256": "d74690ab98674f86a87c44ae2a580aba26a5a4543ed0b9fe0a84ea271d5a648a"
+      },
+      "plate": {
+        "path": "art/conversion/scn-mannequin/v1/registered/registration-comparison.png",
+        "sha256": "99a2a6f71a8c9f0833ba96213c447fd5a930cfe087cda3c7b892b081a6508ec4"
+      }
+    },
+    {
+      "entry": "BODY-DROMAD",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-dromad/v1/model.json",
+        "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+      },
+      "plate": {
+        "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+        "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+      }
+    },
+    {
+      "entry": "BODY-DROMAD-CHILD",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-dromad-child/v1/model.json",
+        "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+      },
+      "plate": {
+        "path": "art/conversion/body-dromad-child/v1/registration-comparison.png",
+        "sha256": "f81a14963e11cc6c97a79f0ebe8750e792fb002b9e96414e77875b8dc5db8639"
+      }
+    },
+    {
+      "entry": "BODY-HUMAN-CHILD",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-human-child/v1/model.json",
+        "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"
+      },
+      "plate": {
+        "path": "art/conversion/body-human-child/v1/registration-comparison.png",
+        "sha256": "946ed8fbd17eeede747c863e0438b7399b91036632e91c0dbc4a2e1c73293b71"
+      }
+    },
+    {
+      "entry": "BODY-HUMAN-FEMALE",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-human-female/v2/model.json",
+        "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+      },
+      "plate": {
+        "path": "art/conversion/body-human-female/v2/registration-comparison.png",
+        "sha256": "b91dddc5eac7c2bc72dc6008ffcc91aa7df706aa3b608981d4800e0dfc972a9a"
+      }
+    },
+    {
+      "entry": "BODY-HUMAN-MALE",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-human-male/v2/model.json",
+        "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+      },
+      "plate": {
+        "path": "art/conversion/body-human-male/v2/registration-comparison.png",
+        "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"
+      }
+    },
+    {
+      "entry": "BODY-HUMAN-FEMALE-OLDER",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-human-female-older/v1/model.json",
+        "sha256": "c638d348c491a9081d26626d1d8fd818d7630a37d43cdf10c9d0cdf7b5dff20a"
+      },
+      "plate": {
+        "path": "art/conversion/body-human-female-older/v1/registration-comparison.png",
+        "sha256": "ae56c2d39bbf36476532f3dda161d94e0a2a2ee65ec060f39b7cea852f6859de"
+      }
+    },
+    {
+      "entry": "BODY-HUMAN-MALE-OLDER",
+      "category": "Race/body templates",
+      "layouts_or_authored_views": 3,
+      "classification": "CARDINAL_BODY_VIEWS",
+      "status": "NO OBLIQUE FACING IDENTIFIED",
+      "reason": "Viewed selected registered south/east/north plus mirrored-west plate: straight front/back and complete side profiles. Shading, anatomical overlap and staggered feet alone do not establish three-quarter yaw.",
+      "model": {
+        "path": "art/conversion/body-human-male-older/v2/model.json",
+        "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"
+      },
+      "plate": {
+        "path": "art/conversion/body-human-male-older/v2/registration-comparison.png",
+        "sha256": "31a39a0be4ca5b1ea6d36cf65be29a8b05c5a7fc2e4019c7072903a9ccb0e262"
+      }
+    }
+  ],
+  "donor_observation": {
+    "south": {
+      "path": "art/conversion/scn-chair/v1/source-packet.json",
+      "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"
+    },
+    "private_assets_inspected": [
+      "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/Things/Seating/SquareChair/Chair_south.png",
+      "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/Things/Seating/SquareChair/Chair_east.png",
+      "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/Bed/Bedroll_south.png"
+    ],
+    "review": "Named donor chair south/east views keep a cardinal presentation with limited plane visibility; donor bedroll is aligned along the map axis. This does not assert that every RimWorld/mod asset has mathematically zero projection depth."
+  },
+  "current_draft": {
+    "entry": "SCN-METAL-WORKBENCH",
+    "classification": "FRONTAL_DEPTH_REVIEW",
+    "proposal": {
+      "path": "art/conversion/scn-metal-workbench/v1/refined-empty.png",
+      "sha256": "ff486314d30548a640a96a061b46e41992ddc5d7e03b8f0c5277cdb0f6736f6b"
+    },
+    "reason": "One uncredited empty-state draft has strong tabletop taper/depth. Resolve its camera before producing occupied refinement. No occupied-state call has been performed."
+  },
+  "next_action": "Finish the currently active Metal Workbench under the updated camera rule, then correct/review affected entries one at a time. Preserve rejected files, original process logs, native states, palette ownership and the all-generated-before-native-validation gate."
+}

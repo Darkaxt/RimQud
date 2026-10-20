@@ -282,6 +282,20 @@ version and show center/ground guides separately from production layers. Clothin
 inherits the registered family frame. This is art generation/registration work;
 native movement acceptance still waits for the all-conversions generation gate.
 
+Cardinal camera correction (2026-10-20): the user identified the oblique Chair
+proposal and requested restricting perspective in the conversion skill. Preserve
+Qud identity, anatomy, construction, materials and palette while reconstructing
+them in a consistent cardinal view matching actual RimWorld reference art. South
+is straight front, north straight back, east/west complete profiles. Furniture
+uses a cardinal footprint and only the donor's documented shallow top visibility;
+do not trace a source sprite's diagonal camera or invent strong foreshortening.
+Physical diagonal parts and small shaded bevels are not camera rotation. Fixed
+scenery does not acquire new four-way native rotation from this clarification.
+The source-bound camera audit records affected selected art separately from raw
+historical sheets. Withhold generation-ready credit for camera corrections or
+unresolved projection review; retain prior outputs/logs unchanged. This is Stage 3
+authoring work, with the same single-entry and generation-first constraints.
+
 Child body entries follow the user's featureless-mannequin/separate-clothing
 instruction: author and register body/head/palette first. Their existing linked
 template-garment entries own actual garment identity, in-context refinement,

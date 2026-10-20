@@ -1079,7 +1079,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/alchemist-table-body.png](../art/village/scenery/alchemist-table-body.png), [art/village/scenery/alchemist-table-detail.png](../art/village/scenery/alchemist-table-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T06:30:33.351102+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Alchemist Table/Table definitions, original tile mask/hash, scorched-table description and deleted inherited empty/full appearance tags.
   Review: Viewed original source decoded with native w wood and C glass. Wide table/visible supports, left rack and tall alembic define its source identity. Inventory/cover/organic furniture metadata remains native; described fixture art is distinct from actual carried inventory.
@@ -1129,6 +1129,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native alchemist furniture acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Front-aligned but tabletop has receding/converging depth. Compare the whole fixture against a documented cardinal target camera; diagonal alembic tubes are intrinsic features, not camera yaw. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v1/registered/model.json", "sha256": "ac5e34e1491ed8ee68d6813b97978ac07075694924a73a2b67d8df03d7565b47"}, {"path": "art/conversion/scn-alchemist-table/v1/registered/registration-comparison.png", "sha256": "d4f5c7f7646ff13b606a0e73ccad3ced2045e43202975088c98ef30ba4d428d3"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-ARGYVE-MULTICABINET: Argyve Multicabinet
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1137,7 +1143,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/argyve-multicabinet-body.png](../art/village/scenery/argyve-multicabinet-body.png), [art/village/scenery/argyve-multicabinet-detail.png](../art/village/scenery/argyve-multicabinet-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T06:49:11.343210+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Argyve/Multicabinet definitions and decoded both actual RandomTile source masks, rather than relying only on the older static thumbnail.
   Review: Both exact16x24source masks/hash/atlas rectangles are retained in the index. The child changes inventory population, not appearance. Native c/W palette, galvanized-metal description, solidity and occlusion are recorded. Tiny partial marks do not prove electronics or dynamic open drawers.
@@ -1193,6 +1199,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native inventory, appearance selection and visibility acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json", "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"}, {"path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png", "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-BED: Bed
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1201,7 +1213,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bed-body.png](../art/village/scenery/bed-body.png), [art/village/scenery/bed-detail.png](../art/village/scenery/bed-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T06:54:35.154016+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Bed/BaseBed/MountedFurniture/Furniture inheritance, original16x24mask and native w/Y wood/fabric palette; inspected native Bed part for appearance ownership.
   Review: Actual source/hash, description, open upper-right headboard and lower-left sleeping surface are recorded. Bed part declares no Render/Tile override; source has one tile, native sleep state and rare Animated builder. Hidden structure and curves/seams remain authored interpretation.
@@ -1251,6 +1263,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native bed interaction and visibility acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REWORK: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Bed long axis and bed plane shear diagonally relative to the map-facing frame. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-bed/v1/registered/model.json", "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"}, {"path": "art/conversion/scn-bed/v1/registered/registration-comparison.png", "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-BEDROLL: Bedroll
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1259,7 +1277,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bedroll-body.png](../art/village/scenery/bedroll-body.png), [art/village/scenery/bedroll-detail.png](../art/village/scenery/bedroll-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T07:01:52.510253+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Bedroll/Furniture definitions, original16x24mask/hash, goat-wool/canvas-ties description and native w/y roles.
   Review: Source has a rounded diagonal lower body, pale upper folded end and primary fastening marks. Hollow glyph is not a transparent physical bed. This is takeable4-weight non-solid furniture with native Bed interaction, not BaseBed/mounted furniture.
@@ -1309,6 +1327,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native bedroll sleeping, takeability and visibility acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REWORK: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Entire bedding footprint lies diagonally in the map plane instead of a cardinal orientation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/registered/model.json", "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"}, {"path": "art/conversion/scn-bedroll/v1/registered/registration-comparison.png", "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-BOOK-TABLE: Book Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1317,7 +1341,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/book-table-body.png](../art/village/scenery/book-table-body.png), [art/village/scenery/book-table-detail.png](../art/village/scenery/book-table-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T07:06:17.740223+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Book Table/Furniture definitions, exact original tile/hash, puzzle-box description and native w/W drawer/top roles.
   Review: The source has a broad shallow top, two horizontal drawer fronts, low rail and short feet. No visible books/papers are established. Direct Furniture inheritance means the ordinary Table empty/full state tags do not apply; real inventory remains native.
@@ -1367,6 +1391,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native book-table inventory, visibility and rare-animation acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Front-aligned drawers below a visibly receding trapezoidal tabletop. Camera depth must match the target rather than be accepted solely from source shape. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/registered/model.json", "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"}, {"path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png", "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-CANVAS-FOLDING-CHAIR: Canvas Folding Chair
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1375,7 +1405,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: not started. Process-log events: 11.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -1437,6 +1467,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native portable seating, visibility and rare-animation acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REWORK: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Diamond seat and front/side crossed supports use an oblique three-quarter presentation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json", "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png", "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-CHAIR: Chair
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1445,7 +1481,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
   Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.
@@ -1495,6 +1531,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native seating, cover and rare-animation acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REWORK: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/registered/model.json", "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"}, {"path": "art/conversion/scn-chair/v1/registered/registration-comparison.png", "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-CHEST1: Chest1
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1503,7 +1545,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chest1-body.png](../art/village/scenery/chest1-body.png), [art/village/scenery/chest1-detail.png](../art/village/scenery/chest1-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T07:26:22.614516+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chest1/Chest/Furniture inheritance, original16x24mask/hash, scratched-wood description and native w/W roles; inspected Container part for appearance overrides.
   Review: Chest1 changes inventory builder/tier/aggregation, not appearance. Two bright side bands use W; center latch remains primary w. No alternate lid/empty/full/random tile is declared and inspected Container code has no Render/Tile appearance override. Native inventory, sounds, organic/source physics and unspecified defaults remain native.
@@ -1553,6 +1595,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native container, inventory, physics and visibility acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-chest1/v1/registered/model.json", "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"}, {"path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png", "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-DRESSER: Dresser
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1561,7 +1609,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/dresser-body.png](../art/village/scenery/dresser-body.png), [art/village/scenery/dresser-detail.png](../art/village/scenery/dresser-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T07:30:42.522367+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Dresser/Furniture definitions, exact original tile/hash and precise-wood/internal-brass-rail description; decoded native primary/detail w/w.
   Review: Source supports three stacked fronts, top recessed pull, opposed lower curved motifs, shallow cap and tiny feet. Both color roles are w: no gold hardware is implied. Explicit80-weight non-solid non-takeable organic container/inventory and rare Animated state stay native.
@@ -1611,6 +1659,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native inventory, furniture physics and rare-animation acceptance deferred"}
 
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-dresser/v1/registered/model.json", "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"}, {"path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png", "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
 ### SCN-FLOOR-CUSHION: Floor Cushion
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -1619,7 +1673,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/floor-cushion-body.png](../art/village/scenery/floor-cushion-body.png), [art/village/scenery/floor-cushion-detail.png](../art/village/scenery/floor-cushion-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 11.
+Current step: not started. Process-log events: 12.
 
 - 2026-10-20T07:41:40.915255+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Floor Cushion/BaseChair/Furniture definitions, chaff/glowcrow-feather description and native w/y roles; extracted all four actual RandomTile masks rather than only the older default thumbnail.
   Review: Viewed exact source patterns. Default thumbnail and variant1 have identical alpha and identical source R wherever covered; invisible RGB differs, so raw RGBA identity is not claimed. Native shader appearance is equivalent. Glowcrow stuffing does not imply glow or loose feathers. Low weight does not override inherited takeability/cover.
@@ -1686,6 +1740,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 11
   Inputs: [{"path": "art/conversion/scn-floor-cushion/v1/registered/model.json", "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"}]
   Outputs: []
   Method/prompt/corrections: {"phase": "Native pattern selection, seating, cover and rare-animation acceptance deferred"}
+
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REWORK: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: All four layouts use a rotated diamond footprint and isometric-like cushion presentation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-floor-cushion/v1/registered/model.json", "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"}, {"path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png", "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
 ### SCN-HAMMOCK: Hammock
 
@@ -1759,7 +1819,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/joppa-bookshelf-body.png](../art/village/scenery/joppa-bookshelf-body.png), [art/village/scenery/joppa-bookshelf-detail.png](../art/village/scenery/joppa-bookshelf-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: not started. Process-log events: 11.
 
 - 2026-10-20T08:06:21.369110+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Joppa Bookshelf/Bookshelf/BaseBookshelf/MountedFurniture/Furniture definitions, exact three RandomTile masks and dusty-paper description; inspected native Inventory state methods.
   Review: Inherited RandomTile retains three layouts despite child default tile1. Native Inventory reads FullDetailColor W/EmptyDetailColor k while wood stays w; this chain declares no alternate empty/full tile. Source spine groups are cosmetic marks, not actual inventory identities. Mounted organic50-weight state and HangingSupport remain native.
@@ -1820,6 +1880,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Inputs: [{"path": "art/conversion/scn-joppa-bookshelf/v1/registered/model.json", "sha256": "e6963f84256493a0e7a85e6c6cfbe7d22424fce18764539976ca817c6e31e1f3"}]
   Outputs: []
   Method/prompt/corrections: {"phase": "Native random selection, stock tint, inventory and support acceptance deferred"}
+
+- 2026-10-20T08:33:12.911191+00:00 / visual_review_identity_and_connections_at_game_scale / REQUIRES REVIEW: Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.
+  Review: Three straight-facing shelf layouts have visible tapered top boards; their depth still needs explicit donor-camera comparison. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.
+  Inputs: [{"path": "art/conversion/scn-joppa-bookshelf/v1/registered/model.json", "sha256": "e6963f84256493a0e7a85e6c6cfbe7d22424fce18764539976ca817c6e31e1f3"}, {"path": "art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png", "sha256": "846b9bc19edcfa0d167d2b4756d562764f91099c1da36e003b78a8136737105f"}]
+  Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
+  Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
 
 ### SCN-MANNEQUIN: Mannequin
 
@@ -1887,7 +1953,37 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: construct_faithful_shape. Process-log events: 5.
+
+- 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
+  Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v1/extract-native-states.py", "sha256": "a45242e27995e8b06f05abb1bdcd1a81f2689b17998c6cfdb756fd66b906fabe"}, {"path": "art/conversion/scn-metal-workbench/v1/native-state-index.json", "sha256": "75e5a9381f535acd7d33bc624fc1cd0596c63b38cd2b0ea046c3deaadf49e816"}, {"path": "art/conversion/scn-metal-workbench/v1/native-states-comparison.png", "sha256": "24048491f60f5591b4d6bbfa95a6d1f260599e52bf63a20553b9a6fb26cbf1d2"}, {"path": "art/conversion/scn-metal-workbench/v1/source-packet.json", "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"}]
+  Method/prompt/corrections: {"phase": "Actual empty and occupied source states"}
+
+- 2026-10-20T08:33:12.911191+00:00 / select_render_reference_or_document_no_equivalent / PASS: Viewed actual TableMachining_south for restrained metal contour and shallow plane shading.
+  Review: Donor supplies material/readability, not tools, machines, crafting mechanics or inventory identities. It does not authorize the constructed strong tabletop depth.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v1/source-packet.json", "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v1/source-construction-comparison.png", "sha256": "1c69db4dfddd5aa188473dc161a0d6bfd26af017075efd1bb74f6bb1b4a1ec3b"}]
+  Method/prompt/corrections: {"phase": "Actual installed VTE metal reference"}
+
+- 2026-10-20T08:33:12.911191+00:00 / construct_faithful_shape / REQUIRES REWORK: Constructed one common-frame empty bench and occupied source marker, then identified excessive depth under the user camera clarification.
+  Review: Retain two perforated supports, source stock marker and steel identity; reconstruct the tabletop camera before treating these candidates as selected.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v1/source-packet.json", "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v1/prepare-and-construct.py", "sha256": "9b80c3ee1707f056baabb16c207849cba89b9e641f6a9db6b5fc5d4f686219f7"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-empty.svg", "sha256": "8c725986d12a5569d90c2aed697501ac036054863802f88a9ca43242f9528774"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-empty.png", "sha256": "0a7e202a1de43dccdda6095f39cb42b91fb58bb7c406f25d676c4551a8b671f2"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-occupied.svg", "sha256": "2491e2e8f8921a325bbe40d13bf67f689ff2be06d73082e552fbbc9c82f4435a"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-occupied.png", "sha256": "d20b2ae199d3f2f2a83fb30cfbaa62e19aa7eed27276ffa079a326d0428b0339"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-stock.svg", "sha256": "bec2ac219018f3003db8e40d70f8d6e9553c98447a40d84800766dd4614317fd"}, {"path": "art/conversion/scn-metal-workbench/v1/constructed-stock.png", "sha256": "f20ea20febc5276da853a2924c0e38a5be3f027ba388dc9e1ebdaf1885813254"}, {"path": "art/conversion/scn-metal-workbench/v1/source-construction-comparison.png", "sha256": "1c69db4dfddd5aa188473dc161a0d6bfd26af017075efd1bb74f6bb1b4a1ec3b"}]
+  Method/prompt/corrections: {"phase": "Editable bench and stock construction needs camera correction"}
+
+- 2026-10-20T08:33:12.911191+00:00 / create_required_state_neighbor_variants / PASS: Recorded both inherited tile identities and native independent occupied detail colors in the source index.
+  Review: Two states are real native behavior, not arbitrary donor variants. No four-way furniture rotation is invented; occupied art generation remains pending.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v1/native-state-index.json", "sha256": "75e5a9381f535acd7d33bc624fc1cd0596c63b38cd2b0ea046c3deaadf49e816"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v1/native-states-comparison.png", "sha256": "24048491f60f5591b4d6bbfa95a6d1f260599e52bf63a20553b9a6fb26cbf1d2"}]
+  Method/prompt/corrections: {"phase": "Actual native inventory appearances"}
+
+- 2026-10-20T08:33:12.911191+00:00 / refine_materials_and_form / REQUIRES REWORK: Performed one actual built-in ImageGen call for the empty bench. The occupied prompt is an unexecuted draft.
+  Review: Viewed actual empty output. Material and source supports remain, but the frontal tabletop has strong taper/depth and exterior halo; do not register or credit it as generation-ready under the new camera rule. No occupied image call has been performed.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v1/constructed-empty.png", "sha256": "0a7e202a1de43dccdda6095f39cb42b91fb58bb7c406f25d676c4551a8b671f2"}, {"path": "art/conversion/scn-metal-workbench/v1/refine-empty-prompt.txt", "sha256": "eb8df6eb2b125ebd4b7903852e98c902339ba36039d9734d82199b392f5379c2"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v1/refined-empty.png", "sha256": "ff486314d30548a640a96a061b46e41992ddc5d7e03b8f0c5277cdb0f6736f6b"}, {"path": "art/conversion/scn-metal-workbench/v1/refine-occupied-prompt.txt", "sha256": "89480500c00cab00c35d20e2f2b4686cff11e55475f8cc7cee98b8c73f234735"}]
+  Method/prompt/corrections: {"phase": "Uncredited empty bench refinement; camera correction required", "tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-metal-workbench/v1/refine-empty-prompt.txt", "sha256": "eb8df6eb2b125ebd4b7903852e98c902339ba36039d9734d82199b392f5379c2"}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-34e37427-0674-4a67-abb7-dab084694097.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-metal-workbench/v1/constructed-empty.png", "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Production/TableMachining_south.png"]}}
 
 ### SCN-ORNATE-TABLE: Ornate Table
 

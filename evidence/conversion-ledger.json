@@ -5557,9 +5557,33 @@
           "outputs": [],
           "review": "No game/harness launch, production renderer edit or donor mechanics import. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-alchemist-table/v1/registered/model.json",
+              "sha256": "ac5e34e1491ed8ee68d6813b97978ac07075694924a73a2b67d8df03d7565b47"
+            },
+            {
+              "path": "art/conversion/scn-alchemist-table/v1/registered/registration-comparison.png",
+              "sha256": "d4f5c7f7646ff13b606a0e73ccad3ced2045e43202975088c98ef30ba4d428d3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Front-aligned but tabletop has receding/converging depth. Compare the whole fixture against a documented cardinal target camera; diagonal alembic tubes are intrinsic features, not camera yaw. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -5571,7 +5595,16 @@
           "sha256": "d4f5c7f7646ff13b606a0e73ccad3ced2045e43202975088c98ef30ba4d428d3"
         }
       },
-      "registration_summary": "Selected source-shaped alchemist table retains scorched wood, a left phial rack and tall alembic. Refined wood/glass layers are neutral, with explicit glass-highlight ownership and native w/C tint. Original geometry, installed VTE lab reference, editable construction, refinement and extraction are recorded below. Inherited empty/full tile variants are deleted in source; native inventory/visibility acceptance remains pending."
+      "registration_summary": "Selected source-shaped alchemist table retains scorched wood, a left phial rack and tall alembic. Refined wood/glass layers are neutral, with explicit glass-highlight ownership and native w/C tint. Original geometry, installed VTE lab reference, editable construction, refinement and extraction are recorded below. Inherited empty/full tile variants are deleted in source; native inventory/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Front-aligned but tabletop has receding/converging depth. Compare the whole fixture against a documented cardinal target camera; diagonal alembic tubes are intrinsic features, not camera yaw.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-ARGYVE-MULTICABINET",
@@ -6019,9 +6052,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+              "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
+              "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -6033,7 +6090,16 @@
           "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
         }
       },
-      "registration_summary": "Both native Argyve Multicabinet cosmetic layouts retain unequal galvanized drawers, dark recessed storage and source-selected detail fronts. Production primary/detail layers are neutral; previews apply actual native c/W colors. Original masks, installed VFE reference, editable shapes, two actual refinements and surface-ownership extraction are recorded below. The child changes inventory population only. Native inventory, visibility and state acceptance remain pending."
+      "registration_summary": "Both native Argyve Multicabinet cosmetic layouts retain unequal galvanized drawers, dark recessed storage and source-selected detail fronts. Production primary/detail layers are neutral; previews apply actual native c/W colors. Original masks, installed VFE reference, editable shapes, two actual refinements and surface-ownership extraction are recorded below. The child changes inventory population only. Native inventory, visibility and state acceptance remain pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Both cabinet fronts are cardinal; top caps introduce shallow taper/depth. Compare that depth to the chosen donor camera before deciding whether redraw is needed.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-BED",
@@ -6360,9 +6426,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/registered/model.json",
+              "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+              "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Bed long axis and bed plane shear diagonally relative to the map-facing frame. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -6374,7 +6464,16 @@
           "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
         }
       },
-      "registration_summary": "Selected hillfolk bed retains the source oblique wooden frame, open headboard, low foot rail and chaff-stuffed fabric. Production wood/fabric layers are neutral; preview applies native w/Y tint. Actual source, installed VTE reference, editable geometry, refinement and fabric-ownership extraction are recorded below. One fixed source tile is retained; native sleeping/visibility and rare animated-furniture acceptance remain pending."
+      "registration_summary": "Selected hillfolk bed retains the source oblique wooden frame, open headboard, low foot rail and chaff-stuffed fabric. Production wood/fabric layers are neutral; preview applies native w/Y tint. Actual source, installed VTE reference, editable geometry, refinement and fabric-ownership extraction are recorded below. One fixed source tile is retained; native sleeping/visibility and rare animated-furniture acceptance remain pending.",
+      "camera_review": {
+        "status": "REQUIRES REWORK",
+        "classification": "OBLIQUE_OR_DIAGONAL",
+        "reason": "Bed long axis and bed plane shear diagonally relative to the map-facing frame.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-BEDROLL",
@@ -6701,9 +6800,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bedroll/v1/registered/model.json",
+              "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"
+            },
+            {
+              "path": "art/conversion/scn-bedroll/v1/registered/registration-comparison.png",
+              "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Entire bedding footprint lies diagonally in the map plane instead of a cardinal orientation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -6715,7 +6838,16 @@
           "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"
         }
       },
-      "registration_summary": "Selected goat-wool bedroll retains the original diagonal soft body, pale upper fold and canvas fastening. Production layers are neutral; native w/y tint is shown separately. Actual source, installed VTE reference, editable geometry, refinement and folded-end ownership extraction are recorded below. It remains takeable non-solid native furniture; final sleeping/visibility acceptance is pending."
+      "registration_summary": "Selected goat-wool bedroll retains the original diagonal soft body, pale upper fold and canvas fastening. Production layers are neutral; native w/y tint is shown separately. Actual source, installed VTE reference, editable geometry, refinement and folded-end ownership extraction are recorded below. It remains takeable non-solid native furniture; final sleeping/visibility acceptance is pending.",
+      "camera_review": {
+        "status": "REQUIRES REWORK",
+        "classification": "OBLIQUE_OR_DIAGONAL",
+        "reason": "Entire bedding footprint lies diagonally in the map plane instead of a cardinal orientation.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-BOOK-TABLE",
@@ -7042,9 +7174,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-book-table/v1/registered/model.json",
+              "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"
+            },
+            {
+              "path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png",
+              "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Front-aligned drawers below a visibly receding trapezoidal tabletop. Camera depth must match the target rather than be accepted solely from source shape. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -7056,7 +7212,16 @@
           "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"
         }
       },
-      "registration_summary": "Selected low book table retains the broad source top, two side-by-side drawer fronts, low rail and short feet. Production wood/top layers are neutral; previews apply actual native w/W colors. Original metadata, actual installed VTE reference, editable construction, refinement and top extraction are recorded below. No books/papers or generic Table empty/full state are invented; native inventory/visibility acceptance remains pending."
+      "registration_summary": "Selected low book table retains the broad source top, two side-by-side drawer fronts, low rail and short feet. Production wood/top layers are neutral; previews apply actual native w/W colors. Original metadata, actual installed VTE reference, editable construction, refinement and top extraction are recorded below. No books/papers or generic Table empty/full state are invented; native inventory/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Front-aligned drawers below a visibly receding trapezoidal tabletop. Camera depth must match the target rather than be accepted solely from source shape.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-CANVAS-FOLDING-CHAIR",
@@ -7443,9 +7608,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json",
+              "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"
+            },
+            {
+              "path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png",
+              "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Diamond seat and front/side crossed supports use an oblique three-quarter presentation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -7457,7 +7646,16 @@
           "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"
         }
       },
-      "registration_summary": "Selected canvas folding chair retains the source low oblique sling, wooden rail edges and jointed supports. Two preserved construction corrections establish connected support tops before actual refinement. Production wood/canvas layers are neutral; preview applies native w/y. Source facts, limited actual VTE cloth reference, drafts, corrections, refinement and ownership extraction are recorded below. No source-absent backrest or packed view is invented; native portable seating/visibility acceptance remains pending."
+      "registration_summary": "Selected canvas folding chair retains the source low oblique sling, wooden rail edges and jointed supports. Two preserved construction corrections establish connected support tops before actual refinement. Production wood/canvas layers are neutral; preview applies native w/y. Source facts, limited actual VTE cloth reference, drafts, corrections, refinement and ownership extraction are recorded below. No source-absent backrest or packed view is invented; native portable seating/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REWORK",
+        "classification": "OBLIQUE_OR_DIAGONAL",
+        "reason": "Diamond seat and front/side crossed supports use an oblique three-quarter presentation.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-CHAIR",
@@ -7784,9 +7982,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chair/v1/registered/model.json",
+              "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"
+            },
+            {
+              "path": "art/conversion/scn-chair/v1/registered/registration-comparison.png",
+              "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -7798,7 +8020,16 @@
           "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"
         }
       },
-      "registration_summary": "Selected marsh-dweller plank chair retains the tall source slatted back, hard angled wooden seat and straight supports. Production frame/seat layers are neutral; preview applies native w/y. Pale seat tint does not imply fabric. Source metadata, actual installed VFE contour reference, editable construction, refinement and hard-seat extraction are recorded below. Native seating/cover/visibility and rare animated fallback acceptance remain pending."
+      "registration_summary": "Selected marsh-dweller plank chair retains the tall source slatted back, hard angled wooden seat and straight supports. Production frame/seat layers are neutral; preview applies native w/y. Pale seat tint does not imply fabric. Source metadata, actual installed VFE contour reference, editable construction, refinement and hard-seat extraction are recorded below. Native seating/cover/visibility and rare animated fallback acceptance remain pending.",
+      "camera_review": {
+        "status": "REQUIRES REWORK",
+        "classification": "OBLIQUE_OR_DIAGONAL",
+        "reason": "Attached raw proposal matches the current Chair generation. Back/seat/supports form a diagonal oblique camera, unlike the selected donor cardinal Chair_south.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-CHEST1",
@@ -8125,9 +8356,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/model.json",
+              "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
+              "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -8139,7 +8394,16 @@
           "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
         }
       },
-      "registration_summary": "Selected Chest1 retains the source shouldered closed lid, two bright side bands, primary-colored center latch and abstract scratches. Production wood/latch and band layers are neutral; preview applies native w/W. Exact source, actual installed JDS wood reference, editable construction, refinement and band extraction are recorded below. No alternate open-lid/empty/full artwork is invented; native container/inventory/physics/visibility acceptance remains pending."
+      "registration_summary": "Selected Chest1 retains the source shouldered closed lid, two bright side bands, primary-colored center latch and abstract scratches. Production wood/latch and band layers are neutral; preview applies native w/W. Exact source, actual installed JDS wood reference, editable construction, refinement and band extraction are recorded below. No alternate open-lid/empty/full artwork is invented; native container/inventory/physics/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-DRESSER",
@@ -8466,9 +8730,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/model.json",
+              "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
+              "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -8480,7 +8768,16 @@
           "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
         }
       },
-      "registration_summary": "Selected dresser retains three stacked source fronts, top recessed pull, opposed lower motifs, shallow cap and tiny feet. Production case/front and cap/feet roles are neutral, and native preview uses matching w/w brown colors. Internal brass rails do not create gold hardware. Source metadata, actual installed VTE reference, editable construction, refinement and ownership extraction are recorded below. Native inventory/physics/visibility and rare animated fallback acceptance remain pending."
+      "registration_summary": "Selected dresser retains three stacked source fronts, top recessed pull, opposed lower motifs, shallow cap and tiny feet. Production case/front and cap/feet roles are neutral, and native preview uses matching w/w brown colors. Internal brass rails do not create gold hardware. Source metadata, actual installed VTE reference, editable construction, refinement and ownership extraction are recorded below. Native inventory/physics/visibility and rare animated fallback acceptance remain pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Front-aligned stacked drawers with a receding cap. Check allowable shallow depth rather than classifying every bevel as a diagonal view.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-FLOOR-CUSHION",
@@ -9110,9 +9407,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+              "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
+              "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "All four layouts use a rotated diamond footprint and isometric-like cushion presentation. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -9124,7 +9445,16 @@
           "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
         }
       },
-      "registration_summary": "All four native floor-cushion cosmetic patterns retain their original tuft/crease differences and pale lower/front binding. Default thumbnail is shader-visibly equivalent to variant1, with exact coverage/source role evidence. Production fabric/binding layers are neutral; previews apply native w/y. Exact sources, actual installed VFE reference, four editable constructions, four real refinement calls and mask extraction are recorded below. No faces, holes, loose feathers or glow are invented; native pattern selection/seating/cover/visibility acceptance remains pending."
+      "registration_summary": "All four native floor-cushion cosmetic patterns retain their original tuft/crease differences and pale lower/front binding. Default thumbnail is shader-visibly equivalent to variant1, with exact coverage/source role evidence. Production fabric/binding layers are neutral; previews apply native w/y. Exact sources, actual installed VFE reference, four editable constructions, four real refinement calls and mask extraction are recorded below. No faces, holes, loose feathers or glow are invented; native pattern selection/seating/cover/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REWORK",
+        "classification": "OBLIQUE_OR_DIAGONAL",
+        "reason": "All four layouts use a rotated diamond footprint and isometric-like cushion presentation.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-HAMMOCK",
@@ -10145,9 +10475,33 @@
           "outputs": [],
           "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Cardinal camera authoring correction",
+          "action": "Inspected current registered artwork against the user camera correction and selected donor references; withdrew generation-ready credit pending correction/review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppa-bookshelf/v1/registered/model.json",
+              "sha256": "e6963f84256493a0e7a85e6c6cfbe7d22424fce18764539976ca817c6e31e1f3"
+            },
+            {
+              "path": "art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png",
+              "sha256": "846b9bc19edcfa0d167d2b4756d562764f91099c1da36e003b78a8136737105f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/camera-facing-audit.json",
+              "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+            }
+          ],
+          "review": "Three straight-facing shelf layouts have visible tapered top boards; their depth still needs explicit donor-camera comparison. Previous PASS events remain historical evidence for their stated authoring scope, not satisfaction of the new camera requirement.",
+          "result": "REQUIRES REVIEW"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -10159,7 +10513,16 @@
           "sha256": "846b9bc19edcfa0d167d2b4756d562764f91099c1da36e003b78a8136737105f"
         }
       },
-      "registration_summary": "All three inherited Joppa bookshelf layouts retain native sparse upright/flat/leaning spine groups. Production frame/spine layers are neutral, with whole-spine ownership including gray bands; stocked W and empty k tint share the same geometry while wood stays w. Exact source states, description, actual installed JPT reference, editable layouts, three actual refinements and ownership extraction are recorded below. Open backing/bottom board are authored physical interpretation, not identified inventory. Native random selection/stock tint/inventory/support/visibility acceptance remains pending."
+      "registration_summary": "All three inherited Joppa bookshelf layouts retain native sparse upright/flat/leaning spine groups. Production frame/spine layers are neutral, with whole-spine ownership including gray bands; stocked W and empty k tint share the same geometry while wood stays w. Exact source states, description, actual installed JPT reference, editable layouts, three actual refinements and ownership extraction are recorded below. Open backing/bottom board are authored physical interpretation, not identified inventory. Native random selection/stock tint/inventory/support/visibility acceptance remains pending.",
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "Three straight-facing shelf layouts have visible tapered top boards; their depth still needs explicit donor-camera comparison.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-MANNEQUIN",
@@ -10534,7 +10897,7 @@
       ],
       "disposition": "Convert and review",
       "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "current_step": "construct_faithful_shape",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -10599,7 +10962,173 @@
           "sha256": "0636a81edc8a3c428f43f33260ed2c7762d5f0564d01ef970da76f198c7d2d9c"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Actual empty and occupied source states",
+          "action": "Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/extract-native-states.py",
+              "sha256": "a45242e27995e8b06f05abb1bdcd1a81f2689b17998c6cfdb756fd66b906fabe"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/native-state-index.json",
+              "sha256": "75e5a9381f535acd7d33bc624fc1cd0596c63b38cd2b0ea046c3deaadf49e816"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/native-states-comparison.png",
+              "sha256": "24048491f60f5591b4d6bbfa95a6d1f260599e52bf63a20553b9a6fb26cbf1d2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+              "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+            }
+          ],
+          "review": "Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VTE metal reference",
+          "action": "Viewed actual TableMachining_south for restrained metal contour and shallow plane shading.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+              "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-construction-comparison.png",
+              "sha256": "1c69db4dfddd5aa188473dc161a0d6bfd26af017075efd1bb74f6bb1b4a1ec3b"
+            }
+          ],
+          "review": "Donor supplies material/readability, not tools, machines, crafting mechanics or inventory identities. It does not authorize the constructed strong tabletop depth.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable bench and stock construction needs camera correction",
+          "action": "Constructed one common-frame empty bench and occupied source marker, then identified excessive depth under the user camera clarification.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+              "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/prepare-and-construct.py",
+              "sha256": "9b80c3ee1707f056baabb16c207849cba89b9e641f6a9db6b5fc5d4f686219f7"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-empty.svg",
+              "sha256": "8c725986d12a5569d90c2aed697501ac036054863802f88a9ca43242f9528774"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-empty.png",
+              "sha256": "0a7e202a1de43dccdda6095f39cb42b91fb58bb7c406f25d676c4551a8b671f2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-occupied.svg",
+              "sha256": "2491e2e8f8921a325bbe40d13bf67f689ff2be06d73082e552fbbc9c82f4435a"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-occupied.png",
+              "sha256": "d20b2ae199d3f2f2a83fb30cfbaa62e19aa7eed27276ffa079a326d0428b0339"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-stock.svg",
+              "sha256": "bec2ac219018f3003db8e40d70f8d6e9553c98447a40d84800766dd4614317fd"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-stock.png",
+              "sha256": "f20ea20febc5276da853a2924c0e38a5be3f027ba388dc9e1ebdaf1885813254"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/source-construction-comparison.png",
+              "sha256": "1c69db4dfddd5aa188473dc161a0d6bfd26af017075efd1bb74f6bb1b4a1ec3b"
+            }
+          ],
+          "review": "Retain two perforated supports, source stock marker and steel identity; reconstruct the tabletop camera before treating these candidates as selected.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Actual native inventory appearances",
+          "action": "Recorded both inherited tile identities and native independent occupied detail colors in the source index.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/native-state-index.json",
+              "sha256": "75e5a9381f535acd7d33bc624fc1cd0596c63b38cd2b0ea046c3deaadf49e816"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/native-states-comparison.png",
+              "sha256": "24048491f60f5591b4d6bbfa95a6d1f260599e52bf63a20553b9a6fb26cbf1d2"
+            }
+          ],
+          "review": "Two states are real native behavior, not arbitrary donor variants. No four-way furniture rotation is invented; occupied art generation remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:33:12.911191+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Uncredited empty bench refinement; camera correction required",
+          "action": "Performed one actual built-in ImageGen call for the empty bench. The occupied prompt is an unexecuted draft.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/constructed-empty.png",
+              "sha256": "0a7e202a1de43dccdda6095f39cb42b91fb58bb7c406f25d676c4551a8b671f2"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/refine-empty-prompt.txt",
+              "sha256": "eb8df6eb2b125ebd4b7903852e98c902339ba36039d9734d82199b392f5379c2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/refined-empty.png",
+              "sha256": "ff486314d30548a640a96a061b46e41992ddc5d7e03b8f0c5277cdb0f6736f6b"
+            },
+            {
+              "path": "art/conversion/scn-metal-workbench/v1/refine-occupied-prompt.txt",
+              "sha256": "89480500c00cab00c35d20e2f2b4686cff11e55475f8cc7cee98b8c73f234735"
+            }
+          ],
+          "review": "Viewed actual empty output. Material and source supports remain, but the frontal tabletop has strong taper/depth and exterior halo; do not register or credit it as generation-ready under the new camera rule. No occupied image call has been performed.",
+          "result": "REQUIRES REWORK",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-metal-workbench/v1/refine-empty-prompt.txt",
+            "sha256": "eb8df6eb2b125ebd4b7903852e98c902339ba36039d9734d82199b392f5379c2"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-34e37427-0674-4a67-abb7-dab084694097.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-metal-workbench/v1/constructed-empty.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Production/TableMachining_south.png"
+            ]
+          }
+        }
+      ],
+      "camera_review": {
+        "status": "REQUIRES REVIEW",
+        "classification": "FRONTAL_DEPTH_REVIEW",
+        "reason": "One uncredited empty-state draft has strong tabletop taper/depth. Resolve its camera before producing occupied refinement. No occupied-state call has been performed.",
+        "audit": {
+          "path": "evidence/camera-facing-audit.json",
+          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        }
+      }
     },
     {
       "id": "SCN-ORNATE-TABLE",
@@ -30665,5 +31194,13 @@
     }
   ],
   "validation_gate": "Native/formal integration validation only after every pending conversion is generation-ready; visual correction remains generation work.",
-  "baseline_policy": "Reusable unmutated race body first. Derive ordinary age/sex variants; separate clothing and mutation framework. Intrinsic species anatomy stays in the race base."
+  "baseline_policy": "Reusable unmutated race body first. Derive ordinary age/sex variants; separate clothing and mutation framework. Intrinsic species anatomy stays in the race base.",
+  "camera_policy": {
+    "summary": "5 furniture families /8layouts require cardinal reorientation;6more families /9layouts need frontal-depth review. These11entries are withheld from generation-ready credit. Seven selected body families have no clear oblique facing identified. Counts exclude historical drafts; the current Metal Workbench draft is separately flagged.",
+    "audit": {
+      "path": "evidence/camera-facing-audit.json",
+      "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+    },
+    "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
+  }
 }

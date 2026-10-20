@@ -64,6 +64,30 @@ Build this input chain:
 
 ## 2. Establish one unclothed front design
 
+**Lock the camera before construction or refinement.** Use the actual selected
+RimWorld reference's cardinal facing: south is straight front, north straight
+back, east a complete right profile, and west the supported mirrored or authored
+left profile. No three-quarter body, diagonal stance substituted for a facing,
+isometric camera, or independently turned head over a frontal torso. Shading and
+normal overlapping anatomy do not change the facing.
+
+Apply this camera contract to furniture and props too. Align their footprint and
+principal structural axes north/south or east/west. Use only the fixed, shallow
+top visibility/depth established by the actual donor reference; do not invent
+strong foreshortening, converging tabletop edges or a display-model camera. A
+small shaded bevel is not itself a three-quarter view. A source Qud sprite may
+be oblique: preserve its identity, materials, parts, patterns and palette, then
+reconstruct those in the target cardinal view rather than tracing its camera.
+Intrinsic diagonal parts, leaning books, bent limbs and hanging ropes remain
+physical features; they do not authorize rotating the whole object.
+
+Record the chosen facing and reference camera in the source packet and exact
+generation prompt. For fixed scenery, one documented cardinal map view is enough
+unless native states require others; this does not invent four-way rotation.
+Reject a mismatched camera during authoring, before registration or clothing
+extraction. Record it as unresolved on the entry and withhold generation-ready
+credit until corrected/reviewed. Preserve rejected art and previous process logs.
+
 Reconstruct the original silhouette using explicit editable geometry where
 practical. Combine race description and anatomy with the sprite; do not merely
 enlarge ambiguous pixels or invent a species from their appearance.
@@ -84,7 +108,9 @@ when they share a race and body plan.
 
 Supply ImageGen with the selected front and an explicit **race description and
 anatomy summary**. Use the installed image-generation workflow. Request the same
-creature at the same physical scale in front, right-facing side and back views.
+creature at the same physical scale in strict front, complete right profile and
+straight back views, with the locked camera above. Labels alone do not establish
+those orientations; the actual contours and anatomical overlap must agree.
 
 Label views **FRONT / SOUTH**, **RIGHT SIDE / EAST**, **BACK / NORTH**, below the
 shapes. Prefer labels supplied by the review layout; generated text is not a
@@ -207,6 +233,9 @@ For furniture, plants and terrain, use object blueprint -> native description,
 original tile and palette -> coverage/detail geometry -> optional material
 refinement -> registered object or connected surface. A donor object is a visual
 reference, not an excuse to replace an unfamiliar Qud machine with a generic bench.
+Apply section 2's camera contract before tracing scenery: source-camera fidelity
+must not override the target cardinal presentation. Keep terrain in the map
+plane, with continuous world scale; do not render a tilted material sample slab.
 
 Decode the installed shader's mask contract before tracing. In the audited Qud
 build, Kobold dual-color output is

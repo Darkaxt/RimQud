@@ -30,20 +30,27 @@ def render(data):
     parts.append('<div class="counts">'+f'<span><strong>{ready}</strong> generation-ready</span>'+''.join(f'<span><strong>{n}</strong> {h(s.lower())}</span>' for s,n in counts.items())+'</div>')
     parts.append(f'<p>Active entry: <strong>{h(data["active_entry"] or "none")}</strong>. Stage 3 remains ACTIVE. Overall conversion is unfinished.</p>')
     parts.append('<p class="intro"><strong>Generation first.</strong> Native and formal integration validation waits until every pending conversion is generation-ready. Generation-ready is an authoring milestone; overall ledger status stays unfinished until applicable final acceptance. Image inspection, patches and recomposition remain generation work.</p>')
+    if data.get('camera_policy'):
+        parts.append('<p class="intro"><strong>Cardinal camera correction.</strong> '+h(data['camera_policy']['summary'])+' <a href="../evidence/camera-facing-audit.json">Camera audit and affected entries</a>.</p>')
     parts.append('<p class="intro">Environment contract: preserve the original Qud palette and forms. Paths should read as stone/cobblestone-like paving integrated over grass, rather than the historical sandy-road interpretation. Extra views may be omitted only when the object and its states do not require them, with the reason logged.</p>')
     parts.append('<div class="filters"><label>Find a subject <input id="search" type="search" placeholder="Name, category or ledger entry"></label><label><input id="worked" type="checkbox" style="width:auto" checked> Entries with process evidence only</label><span id="shown" role="status"></span></div>')
     for e in sorted(rows,key=lambda x:(x['id']!=data['active_entry'],x['category'],x['name'])):
-        logs=e['process_log'];passed={l['step'] for l in logs if l.get('result')=='PASS'}
+        logs=e['process_log'];latest={l['step']:l for l in logs};passed={s for s,l in latest.items() if l.get('result')=='PASS'}
         parts.append(f'<details class="entry" id="{h(e["id"])}" data-search="{h((e["id"]+" "+e["name"]+" "+e["category"]).lower())}" data-worked="{int(bool(logs))}"'+(' open' if logs else '')+f'><summary><span>{h(e["name"])} <small> / {h(e["category"])}</small></span><span class="status">{h(e["status"])}</span></summary><div class="entry-body">')
         parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
         if e.get('current_registration'):
             current=e['current_registration']
             registration_note=e.get('registration_summary','Use this registered version for layer alignment. The gold guide marks the shared horizontal pivot; the ground guide marks the common contact baseline. Body, head, masks and fitted clothing share that frame. A muzzle, hump or forward-pointing foot can extend beyond the pivot without moving it.')
-            parts.append('<h3>Current registered artwork</h3><p>'+h(registration_note)+'</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current asset registration</a></p>')
+            camera=e.get('camera_review',{})
+            if camera.get('status') in ['REQUIRES REWORK','REQUIRES REVIEW']:
+                parts.append('<p class="issues"><strong>Camera: '+h(camera['status'])+'.</strong> '+h(camera['reason'])+'</p>')
+                title='Registered candidate — camera correction/review pending'
+            else:title='Current registered artwork'
+            parts.append('<h3>'+title+'</h3><p>'+h(registration_note)+'</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current asset registration</a></p>')
         parts.append('<ol class="workflow">'+''.join(f'<li class="{"pass" if s in passed else "pending"}">{h(s.replace("_"," "))} — {"recorded PASS" if s in passed else "pending"}</li>' for s in e['required_steps'])+'</ol>')
         if e.get('current_registration'):
             parts.append('<h3>Process history, including superseded sheets</h3>')
-            parts.append('<p class="pending">These records include raw ImageGen sheets with uneven placement and superseded registrations. Their placement is not the current runtime alignment. Refer to Current registered artwork above for the selected frame. Native movement acceptance remains pending.</p>')
+            parts.append('<p class="pending">These records include raw ImageGen sheets with uneven placement and superseded registrations. Refer to the registered artwork or flagged candidate above for its current frame and authoring status. Native movement acceptance remains pending.</p>')
         elif logs:
             parts.append('<p class="pending">No current registered output is selected for this entry. The images below are authoring evidence; their position on a sheet does not establish a stable runtime pivot.</p>')
         parts.append('<div class="timeline">')
