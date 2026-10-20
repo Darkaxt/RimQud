@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": null,
+  "active_entry": "BODY-HUMAN-FEMALE-OLDER",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -11526,10 +11526,160 @@
           ],
           "review": "Same family as the male human, with modest contour variation. Blank head, two arms/hands, two legs and distinct bare feet. Side turns coherently; rear feet are heels; west mirrors east. Clothing remains separate and its fitting entries are pending.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T01:31:42.340273+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Shared centered canvas registration v2",
+          "action": "Translated all body/head/mask layers together to contact (256, 950), preserving v1, dimensions and exact visible source pixels. Replaced facing-dependent horizontal offsets with the shared canvas pivot.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-female/v1/model.json",
+              "sha256": "64dc8143e6d213f6573671a98d5c3dca81208534ecb16b2f31374b0077a1dfc5"
+            },
+            {
+              "path": "tools/center_human_registration.py",
+              "sha256": "16beef95e1ebeee0d7329f250b568c49a1264704c7bebdbefc72ae184ab64cff"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-south.png",
+              "sha256": "fd424b78b7fb2e45529000f0cc46f53f6eeb55cf5bef87d492ee47db26123f7f"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-mask-south.png",
+              "sha256": "8dc764e0fb398c7704dcd6235ec00091bcd00bd2d01c3c653b7aa296b334df5d"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-south.png",
+              "sha256": "a25fd8f5cf18d52c1ca6a62119dd187da14f8e80b56a6a1e63c02d65602d614b"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-mask-south.png",
+              "sha256": "2c5543c572e49d68cf5bcdaa63aaf42608dd475a1bf89eaa0c8d0ece6a72775f"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-east.png",
+              "sha256": "e1cc2a73198e89fdad1d69751c6852f3fa1e607966c2e621807e22bd9807a56d"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-mask-east.png",
+              "sha256": "68f914b723a56991070b7d4d64caed35942316b0365ffbbca85ebac7ee925b9c"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-east.png",
+              "sha256": "c561948d9d19baf6bfa3ece091fb6880f300693f4ae16eaf2561c52f4a3a21d0"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-mask-east.png",
+              "sha256": "1cd4862169d2b89586983fb122d62c2a9a77e2f00fb521639d56c0f4685e1652"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-north.png",
+              "sha256": "e4c78a288b316853441baf9602b147559e0079b67b27ef391604ac0762b6be0e"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/body-mask-north.png",
+              "sha256": "1f16c2a9d09fafe0e5bff980fb554ff42b170d3b7bde24b0b1aac5fb2055c886"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-north.png",
+              "sha256": "b03fbfc93d172d41ff6986f977bc6abb06af0f537b15d3d28130108b665931d3"
+            },
+            {
+              "path": "art/conversion/body-human-female/v1/head-mask-north.png",
+              "sha256": "3fa7e08fbe406f06379710b2875636f10a68182ce2ac48f403bf63024345a259"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-female/v2/body-south.png",
+              "sha256": "a16d522e0f330d76bd3136914eba9c7173ad5598d24f660072a463c3ce7de902"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/body-mask-south.png",
+              "sha256": "15fc68744fbe010dcbd9fa07470ae4f83382fed45f1be9682d2abf76fae34a6a"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-south.png",
+              "sha256": "faa3bc3220fe2db08794e0e6b77b7c2795757468306249a13121e8530a5585b8"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-mask-south.png",
+              "sha256": "85cea5822341c4c591a8c2a511315408b29db4d8447fb041244f3467aba30c45"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/selected-south.png",
+              "sha256": "4be9af44baa01447c0dfaa23abe8c93cd98218aafd681885987c793d62b039e6"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/body-east.png",
+              "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/body-mask-east.png",
+              "sha256": "3599d2f6d099570b72aeb381a7bfe03aaa9ef0b055cd3c2b04bbace68341d22e"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-east.png",
+              "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-mask-east.png",
+              "sha256": "f17c12f4a0b3e8b1c9863313d7464633a671bcb1e7b3643774f421ec0ee226d9"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/selected-east.png",
+              "sha256": "a71914893266ae414176d760e0e1560b399834469f840f3d2cc2e2c5bd7e5762"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/body-north.png",
+              "sha256": "f56d658f1e9cb36f9b1f44766ab8e5d95157a83009a848730e8927fd832d3d30"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/body-mask-north.png",
+              "sha256": "475ef61e238fd6fa6492d20f33538194175cdd9990b48e97d50b3b83c8026846"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-north.png",
+              "sha256": "894d6930977186ca62f3bcf681242ee3f8131fbcff7136cb8f927dc459eec637"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/head-mask-north.png",
+              "sha256": "7a58309fefcef7f53abf9b6744b2077ee59b029fda7b482df54d9795e0b1c3a9"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/selected-north.png",
+              "sha256": "62c7e1757d8301a8528f3c298a60e9dcc8ce2a7664871e287236a8db69104979"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/model.json",
+              "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/registration-decisions.json",
+              "sha256": "b5ef422bf378d890349ac22a708d389a93a68659728d2b5bca511db7ad5fba1d"
+            },
+            {
+              "path": "art/conversion/body-human-female/v2/registration-comparison.png",
+              "sha256": "b91dddc5eac7c2bc72dc6008ffcc91aa7df706aa3b608981d4800e0dfc972a9a"
+            }
+          ],
+          "review": "Viewed all four facings with center/ground guides. Front/back align on the canvas center; side and mirrored side keep the same contact while retaining profile asymmetry. No cut limbs or displaced neck joins. Native movement acceptance remains pending.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
-      "native_acceptance": "Pending final all-conversions validation gate"
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-human-female/v2/model.json",
+          "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+        },
+        "plate": {
+          "path": "art/conversion/body-human-female/v2/registration-comparison.png",
+          "sha256": "b91dddc5eac7c2bc72dc6008ffcc91aa7df706aa3b608981d4800e0dfc972a9a"
+        }
+      }
     },
     {
       "id": "BODY-HUMAN-MALE",
@@ -12011,10 +12161,160 @@
           ],
           "review": "Body/head layers recompose without a neck gap. Two arms/hands and paired feet are retained; east is a genuine profile, north has rear heels, west uses the documented east mirror. Equal RGB channels preserve neutral source tint. Clothing fitting belongs to the separate fitting entries.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T01:31:29.305480+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Shared centered canvas registration v2",
+          "action": "Translated body, head and segmentation masks together to contact (256, 950) on unchanged 512 x 1024 canvases. Preserved v1 and replaced compensating horizontal render offsets with a common canvas pivot. No resizing or native testing.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/model.json",
+              "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e"
+            },
+            {
+              "path": "tools/center_human_registration.py",
+              "sha256": "16beef95e1ebeee0d7329f250b568c49a1264704c7bebdbefc72ae184ab64cff"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-south.png",
+              "sha256": "10f4f1aed4788afe28e3a9af63b4efa3d52c2286022075a9fd2d30bea298f061"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-south.png",
+              "sha256": "0c15a4c60887019c8b12466a1dce728928ede488409997784c9842f92b323934"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-south.png",
+              "sha256": "eebe09d48114fce7ce76d08afa684200f9912573e4268437b9efa5e10bfc777a"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-south.png",
+              "sha256": "91ab4a405e9611f8a388429ac1ee81ea6654fe511b051d805021a50877112d68"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-east.png",
+              "sha256": "31c4f1e51880a225275c38389f6ac31d8512317c8787ede7c33e184692659dd5"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-east.png",
+              "sha256": "d48a0b98139f37e38d67ccc9ebca99f4b01f598ae2dac8aff23679e7fd4ac742"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-east.png",
+              "sha256": "8ff86ae187d5cf612b48fb4938469f09f037ec066da4def773c529dabf31e29b"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-east.png",
+              "sha256": "442f20d565ab7c3c89e4c726229b2c302caa0274356314ffd609308746b13ef2"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-north.png",
+              "sha256": "ca8d56852784783c4900311d66bda6da2d0afe9f2167e8285f4012f48e524b69"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-north.png",
+              "sha256": "946f68c27c39d659f7c7e7e49c6a83ef923cf79a739af15202544307a3ce7750"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-north.png",
+              "sha256": "5fade74e67ccef9c2d93b267716e21f4185f6c628239eda44c708127d129a0e6"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-north.png",
+              "sha256": "4422afeba5826c44683aeeb7630fd2fd310b79f0fe6bf26589919014caaf7b85"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v2/body-south.png",
+              "sha256": "37833fb63565d9af0e01fa1f5f2986de097761bc0b534a6ed2aebc042cd96b57"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-south.png",
+              "sha256": "95f3d42db6b738ad0a8f16a33211ae545ae230ea8f6e72abb49c5da478b61fbe"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-south.png",
+              "sha256": "9ed0324137804609c9c0e8b430af17d3d2c90f645669f4f9844e2a67903a7b05"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-south.png",
+              "sha256": "0b71145761180ce50a5fe2d07f6264a34091ffa8642620f7c88965d3b12a1cd7"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-south.png",
+              "sha256": "16f2266b29a1fcccb5a44bcf5b8cfea4953fa1ce7e595724cfca9873ee971bd1"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-east.png",
+              "sha256": "10c7b8fbc8118fd46e208c093d4d975eefcbb36c1e74b7840f6de67f0e26f860"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-east.png",
+              "sha256": "3608d456aad367c705c6177bbee7b04887f9da8747eb6bab9f088c4ac9fc90c7"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-east.png",
+              "sha256": "a27cc8e70ed2e46845ea844b748af133a34eb8ebb660fbc1816815cd74d18fa0"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-east.png",
+              "sha256": "eacc182e21ac26760405cc02a623beaf4b199c12cee72592422df6cbceabfba6"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-east.png",
+              "sha256": "24705a71b541a8b416a12ca12a0b7587e4b31082c94a5dbdefd44f0f272a2f56"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-north.png",
+              "sha256": "328499003f02e2d3e4d4792c2e53ac8522896afa3050da5f18a3d6c505de32ee"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-north.png",
+              "sha256": "178c8866f8bba7baaea91180f6faf229784bfeba720c810eaa019b725603d5d0"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-north.png",
+              "sha256": "6025b82030de0122cc32787913ce6fce720d88c8131963a477dfee8d335bb7ee"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-north.png",
+              "sha256": "cd78bb7e39a7f7626a5ac7da9df8d0e067ec560e4ea0b69a8b605e29c62d780c"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-north.png",
+              "sha256": "4fe07f85bc1f472241a2c22d089b8c4bdf70dc168ca916c077c463140a36cd8c"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/registration-decisions.json",
+              "sha256": "a34709e348b21b170c753fdb35a87d50bd2cf76d4362305cc5d11eef6bd8d87a"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/registration-comparison.png",
+              "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"
+            }
+          ],
+          "review": "Viewed front, side, back and mirrored west with guides: shared horizontal center and ground contact, complete hands/feet and unchanged head/body joins. Exact source pixels inside art bounds survive translation; full-canvas mask padding clips only outside visible art. Side profile retains natural asymmetry.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
-      "native_acceptance": "Pending final all-conversions validation gate"
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-human-male/v2/model.json",
+          "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+        },
+        "plate": {
+          "path": "art/conversion/body-human-male/v2/registration-comparison.png",
+          "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"
+        }
+      }
     },
     {
       "id": "BODY-IRUDAD",
@@ -15160,8 +15460,8 @@
         "separate body/head and clothing"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "construct_front_from_shared_human_base",
       "required_steps": [
         "resolve_age_evidence_and_render_reference",
         "construct_front_from_shared_human_base",
@@ -15177,7 +15477,9 @@
       ],
       "metadata": {},
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "generation_ready": false,
+      "generation_note": "Manual source/front preserved; continue using the normalized family registration for final extraction."
     },
     {
       "id": "BODY-HUMAN-MALE-OLDER",
@@ -15598,10 +15900,160 @@
           ],
           "review": "No native age selector is assumed. Mutation appendages and actual equipped items remain separate from the reusable older human base.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T01:32:06.245907+00:00",
+          "step": "register_body_head_and_palette",
+          "phase": "Shared centered canvas registration v2",
+          "action": "Translated body/head/masks together to contact (256, 950), keeping the original size, age shape and head/body segmentation. Preserved the previous registration and its evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male-older/v1/model.json",
+              "sha256": "1dc629200b2a9ae71466230a4e130d2709fecc8441f162a45dc5729007bcbded"
+            },
+            {
+              "path": "tools/center_human_registration.py",
+              "sha256": "16beef95e1ebeee0d7329f250b568c49a1264704c7bebdbefc72ae184ab64cff"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-south.png",
+              "sha256": "d40f6caeaffa194d223c96fe7a652e228464c7f133e62c6e997caf1c819f51e6"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-mask-south.png",
+              "sha256": "9121d6f63dfac84ff2b45667220b2e9fb5e52f2abf127a509f0a9dc8cb929d2e"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-south.png",
+              "sha256": "c625aa2cf9a2f968d4f0d4d9c5b78a7d399180b4347df30b28758c229b53edda"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-mask-south.png",
+              "sha256": "7d401843cb09cd8fb3e0b0e2674800e999d0b40c8a389d4683e36a8294e9dc49"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-east.png",
+              "sha256": "8dc37ee37a1ff2f9eb0efb42124e1da27f0c1efee004ca32cf831e55ff8cd438"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-mask-east.png",
+              "sha256": "d185b9f68316bf22f51c7b29d75ba7625d46c373034fa74a27999e9f5e22cf30"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-east.png",
+              "sha256": "177c7e9ebe7693125d918c4dacb9cb7893e0e395be5968fee9c2f9b3fcba3ba9"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-mask-east.png",
+              "sha256": "84b3dd4bf3bd026e7dc034e6766b4f1f3764c730871e60d281dce237850eea98"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-north.png",
+              "sha256": "8dc54232a51a0dd928147fb1d3123011fde595289f67bae32bc6a18afd387d17"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/body-mask-north.png",
+              "sha256": "32ebe6a168b6f62e45ae7716b1195f650d59c591b51ae470b28b3e6a65aa756b"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-north.png",
+              "sha256": "a1086c735aa423f41b3a892e4cc045f657ab045d258eabc485f2b4e8fb1927e1"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v1/head-mask-north.png",
+              "sha256": "abcab997a3c75c19e963532dd595a4b6131cb86e84b5bede865d6943feae5372"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-south.png",
+              "sha256": "b25c2a6a9b69d6f79f02b4f16b1080c72dac476218ddeb2d274ad52e18080f4b"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-mask-south.png",
+              "sha256": "63a25ef4f65b169d23fb5bcf5a03ab8fecb942c2a437599dc101924411fd1d71"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-south.png",
+              "sha256": "a51dae7026a931ec698ce81105853096618a64cf60d513251dae89ac33ccc869"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-mask-south.png",
+              "sha256": "7c313cf6dffc1c74f4def1d126b433ef38e23275089ecaf68208c0ef93feb73b"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/selected-south.png",
+              "sha256": "4003d3a7e8ebe80de3146b346f271674ff9989805dc19deeee570f6a5b55b506"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-east.png",
+              "sha256": "b02e62e26817d3b0ed9fbf0e4b58ea7ed19839d5617b688ebcc1967e761f4ee1"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-mask-east.png",
+              "sha256": "cf968b40f96aeb4499c998ed67f4ef9a7a239703cd34bdad782f6d7dc2d33883"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-east.png",
+              "sha256": "fc213613028b8be93f39a5857cd0755830ca0c332483b2ab74ed936cd15905ae"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-mask-east.png",
+              "sha256": "3dbc3e537cb869d06253e55f8ee9092ae60e36bd1248fd5750ff7c28cfda6ba9"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/selected-east.png",
+              "sha256": "d0a10e7cc510a0bb8949f7699304e10b74033c38862e145521c29559ed740fa6"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-north.png",
+              "sha256": "3e13cf2dc56c96f3c9dc5e513edfc5494c788ff86a3dba7522f9e50e4756b800"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/body-mask-north.png",
+              "sha256": "e416ab62c176bc0de75b67f5135d9016b9b33eac6ca638794aae596c299ecd72"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-north.png",
+              "sha256": "771f0b0d627c71b28aaa95f23e404f406a0dce0db0a48c273ec7d4be6454442a"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/head-mask-north.png",
+              "sha256": "b552c1ce29633802fca437003493f949f4cb5e2bb3592c0e3e749be2acd9366a"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/selected-north.png",
+              "sha256": "18f21eec1e2ba53057f222ddbd07fe370389664ebd648299d82552a2120a5db1"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/model.json",
+              "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/registration-decisions.json",
+              "sha256": "4470036b2b635e32b0eea7d35eccbd30628396a5792909928ab3d1bae45c1cbc"
+            },
+            {
+              "path": "art/conversion/body-human-male-older/v2/registration-comparison.png",
+              "sha256": "31a39a0be4ca5b1ea6d36cf65be29a8b05c5a7fc2e4019c7072903a9ccb0e262"
+            }
+          ],
+          "review": "Viewed front, east, back and mirrored west with center/ground guides: identical anchor, no clipping, complete hands/feet and unchanged neck join. Side lean remains part of the authored older shape. Exact source pixels preserved. No native tests run.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
-      "native_acceptance": "Pending final all-conversions validation gate"
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-human-male-older/v2/model.json",
+          "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"
+        },
+        "plate": {
+          "path": "art/conversion/body-human-male-older/v2/registration-comparison.png",
+          "sha256": "31a39a0be4ca5b1ea6d36cf65be29a8b05c5a7fc2e4019c7072903a9ccb0e262"
+        }
+      }
     }
   ],
   "validation_gate": "Native/formal integration validation only after every pending conversion is generation-ready; visual correction remains generation work.",

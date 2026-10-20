@@ -273,3 +273,11 @@ records exact remaining work; arbitrary mutation systems and personal cosmetics
 retain their explicitly agreed separate scope. User profiles, historical native
 evidence and prior assets remain preserved. Documentation/publication of the
 ledger does not satisfy the unfinished conversion objective.
+
+Human registration correction (2026-10-20): normalize the authored human facing
+canvases to 512 × 1024 with common contact (256, 950), translating body/head/masks
+together without resizing. Per-facing silhouette placement from ImageGen is not
+a stable authoring anchor. Preserve old evidence; identify the current registered
+version and show center/ground guides separately from production layers. Clothing
+inherits the registered family frame. This is art generation/registration work;
+native movement acceptance still waits for the all-conversions generation gate.

@@ -115,6 +115,14 @@ is artwork, not proof of registered layers or native integration.
 ## 5. Register and split the selected base
 
 Use shared feet-contact, scale and head/neck attachment landmarks across views.
+Normalize every facing to the same horizontal canvas pivot and ground baseline
+before calling the layers generation-ready. Current human canvases are 512 × 1024,
+with contact at (256, 950). Translate body, head and masks together; keep render
+offsets consistent with that normalized contact. Do not use ImageGen placement,
+equal sheet columns or independently centered alpha bounds as registration.
+An asymmetric side profile can extend forward while its foot/body anchor remains
+fixed. Show center/ground guides in a separate report plate, never in production
+textures. Clothing must inherit that body's canvas, scale and anchor.
 Retain transparent margins; do not independently fit bounding boxes, since ears,
 muzzles or humps would change apparent body scale. Respect Qud's rectangular
 cells when converting image coordinates to physical render dimensions.

@@ -36,7 +36,12 @@ def render(data):
         logs=e['process_log'];passed={l['step'] for l in logs if l.get('result')=='PASS'}
         parts.append(f'<details class="entry" id="{h(e["id"])}" data-search="{h((e["id"]+" "+e["name"]+" "+e["category"]).lower())}" data-worked="{int(bool(logs))}"'+(' open' if logs else '')+f'><summary><span>{h(e["name"])} <small> / {h(e["category"])}</small></span><span class="status">{h(e["status"])}</span></summary><div class="entry-body">')
         parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
+        if e.get('current_registration'):
+            current=e['current_registration']
+            parts.append('<h3>Current registered artwork</h3><p>All facings share the marked canvas center and ground anchor. Side silhouettes may extend forward. Earlier sheets below are retained as process history.</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current layer registration</a></p>')
         parts.append('<ol class="workflow">'+''.join(f'<li class="{"pass" if s in passed else "pending"}">{h(s.replace("_"," "))} — {"recorded PASS" if s in passed else "pending"}</li>' for s in e['required_steps'])+'</ol>')
+        if e.get('current_registration'):
+            parts.append('<h3>Process history, including superseded sheets</h3>')
         parts.append('<div class="timeline">')
         for i,event in enumerate(logs,1):
             parts.append(f'<section class="event"><small>{i:02} / {h(event["timestamp"])} / {h(event.get("result","PENDING"))}</small><h3>{h(event.get("phase",event["step"].replace("_"," ")))}</h3><p>{h(event["action"])}</p><p><strong>Review:</strong> {h(event.get("review","Not yet reviewed"))}</p>')
