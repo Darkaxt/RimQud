@@ -146,6 +146,27 @@ any mapping from that authoring frame to the current native cell explicitly.
 West may mirror east only when geometry, markings and attachments permit it;
 otherwise record the unresolved asymmetry and author a separate west view.
 
+**Establish furniture depth before rendering the turnaround.** Inspect the actual
+directional reference textures together with their `GraphicClass`, `drawSize`,
+footprint/`size` and per-facing mapping when available. Texture bounds alone are
+not physical dimensions: account for transparent margins and the render mapping.
+Compare front/end proportions in one shared physical frame. Prefer source Qud
+dimensions when established; otherwise record depth as an authored estimate
+informed by the selected reference, not a measurement recovered from the upright
+Qud glyph. Do not choose an arbitrary thin slab merely to obtain an end view.
+
+Cardinal furniture views follow the reference's map-camera convention; they are
+not automatically edge-on engineering elevations. Preserve plausible volume and
+readability of glassware, coils, racks and other attachments in profile rather
+than collapsing them into lines. A narrower end is valid when supported by the
+object and reference; equal widths or a fixed minimum ratio are not universal
+rules. Inspect the full manual view set before refinement and again at intended
+size after refinement. If a profile is unjustifiably compressed, correct the
+shared inferred depth or component geometry and reproject the views, retaining
+accepted front design and common scale. Do not stretch a finished side image or
+independently fit its bounds. Log reference measurements, assumptions and the
+before/after correction; this remains authoring, not a native-validation detour.
+
 Review and patch the side/back construction, then refine the coherent composed
 views without changing the selected front design. Show each view and its
 neutral/tint masks in the report. Label unseen construction as authored where
