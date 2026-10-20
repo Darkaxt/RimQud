@@ -1,0 +1,292 @@
+{
+  "item": "Iron Vinereaper",
+  "inheritance": [
+    {
+      "blueprint": "Iron Vinereaper",
+      "parent": "BaseAxe",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "BaseAxe",
+      "parent": "MeleeWeapon",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "5"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "MeleeWeapon",
+      "parent": "Item",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "5",
+          "Category": "Melee Weapons"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Item",
+      "parent": "InorganicObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Conductivity": "20"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "InorganicObject",
+      "parent": "PhysicalObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Organic": "false"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Category": "Miscellaneous",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "1"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "physics": [
+        {
+          "Name": "Physics",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "0"
+        }
+      ],
+      "uses_slots": []
+    }
+  ],
+  "effective_physics": {
+    "IsReal": "true",
+    "Solid": "false",
+    "Weight": "5",
+    "Category": "Melee Weapons",
+    "Organic": "false",
+    "Conductivity": "20"
+  },
+  "handedness": {
+    "declared_uses_two_slots": false,
+    "uses_slots": null,
+    "base_grip_class": "one-handed",
+    "evidence": "Full inherited declaration has no UsesTwoSlots/UsesSlots override; audited Physics default Flags2 excludes bit8. Observed snapshot occupancy is one Hand for each item.",
+    "physics_default": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.Parts.Physics.decompiled.cs",
+      "sha256": "40cefa92ac9a9ba50eae456f7f95da79b2ab3fd291905d6aeaa7f1e02cdbed0a",
+      "flags": 2,
+      "uses_two_slots_bit": 8
+    },
+    "runtime_requirement_semantics": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.GameObject.decompiled.cs",
+      "sha256": "1d73ce04d4e0a3bf1b859ce1f91aacea4e413b62cf57808c4c1a7720a25a0480",
+      "method": "GetSlotsRequiredFor delegates to actor-sensitive GetSlotsRequiredEvent"
+    },
+    "runtime_get_slots_required_for": null,
+    "unknown": "No actor-specific requirement event result exported; static class and occupied snapshot are not a new runtime query.",
+    "observed_occupancy": [
+      {
+        "actor": "Mehmet",
+        "resident": 522,
+        "item": 594,
+        "occupied_parts": [
+          {
+            "id": 334,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 508,
+        "item": 550,
+        "occupied_parts": [
+          {
+            "id": 222,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 523,
+        "item": 600,
+        "occupied_parts": [
+          {
+            "id": 348,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 526,
+        "item": 609,
+        "occupied_parts": [
+          {
+            "id": 376,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 527,
+        "item": 615,
+        "occupied_parts": [
+          {
+            "id": 390,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      }
+    ]
+  },
+  "size": {
+    "native_dimensions": null,
+    "native_size_class": null,
+    "descriptive_length": null,
+    "weight": "5",
+    "weapon_class": "Axe",
+    "native_description": "Wrought iron moulded to a crescent for scything watervine; no numeric length.",
+    "authored_canonical_bounds": [
+      157,
+      244,
+      292,
+      621
+    ],
+    "head_bounds": [
+      157,
+      244,
+      292,
+      422
+    ],
+    "shaft_bounds": [
+      244,
+      321,
+      268,
+      621
+    ],
+    "shaft_grip": [
+      256,
+      580
+    ],
+    "supporting_grip": null,
+    "reason": "One-handed harvesting crescent with readable head and long simple shaft; retain the already selected female tool geometry/physical size, not equal body-relative enlargement. Weight5 is not length.",
+    "canonical_source": {
+      "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-canonical.png",
+      "sha256": "854a87ba8141051a50c891dcbdbe7c4ac6b4da7379fa531748eae97266798484"
+    },
+    "canonical_geometry_identical": true,
+    "female_pixel_world_scale": 0.0012941176470588234,
+    "male_pixel_world_scale": 0.0013166485310119695,
+    "male_raster_scale": 0.9828877005347593,
+    "world_mapping": {
+      "female": {
+        "width": 0.9938823529411764,
+        "height": 1.3251764705882352
+      },
+      "male": {
+        "width": 1.0111860718171928,
+        "height": 1.3482480957562568
+      }
+    },
+    "units": "Registered authoring/world mapping, not meters or native measured weapon dimensions."
+  },
+  "donor_size_reference": {
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\1.6\\Defs\\ThingDefs_Misc\\Weapons\\MeleeNeolithic.xml",
+      "sha256": "7146a2852dba1ab4fc33a8dd7eac655fe2e9328c80450d19e5db87e8ff52d273",
+      "defName": "VWE_MeleeWeapon_Axe",
+      "description": "A small, single-handed axe designed for quick, repeated strikes. Its light weight and short handle allow for fast swinging speed. Using a hatchet increases the plant harvest yield slightly.",
+      "texPath": "NewThings/Hatchet",
+      "equipped_angle_offset": "-65"
+    },
+    "load_folders": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\LoadFolders.xml",
+      "sha256": "8eb2050ac65cd118fcb657a5e44472c14cd86370690ae2011b72a5c701ebe7e9",
+      "mapping": "1.6 and1.7 both select1.6"
+    },
+    "base_defs": {
+      "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Misc\\Weapons\\BaseWeapons.xml",
+      "sha256": "db07467327633fceaa2de5225e7f90db386ff874545c05faa313683ecab0c107",
+      "inheritance": [
+        {
+          "name": "BaseMeleeWeapon_Sharp_Quality",
+          "parent": "BaseMeleeWeapon_Sharp",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon_Sharp",
+          "parent": "BaseMeleeWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon",
+          "parent": "BaseWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseWeapon",
+          "parent": null,
+          "explicit_draw_size": null
+        }
+      ]
+    },
+    "explicit_xml_drawSize": null,
+    "runtime_graphic_drawSize": null,
+    "qualification": "No explicit drawSize in inspected ancestry and no live graphic export. Current single-handed hatchet description informs class/proportions, not an invented numerical draw size."
+  },
+  "pose": "Stationary authoring display only. Ready one-handed side presentation is forward/horizontal90deg to upright body; native resting/ready state remains unfinished."
+}

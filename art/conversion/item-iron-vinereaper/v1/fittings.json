@@ -1,0 +1,647 @@
+{
+  "item": "Iron Vinereaper",
+  "source": {
+    "instance": 615,
+    "blueprint": "Iron Vinereaper",
+    "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+    "tile": "Items/sw_axe_10.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/iron-vinereaper-reference.png",
+    "native_mask_sha256": "b79608b992b202235b24815f27136897614ac95e681d40d470fe0a78c7faf022",
+    "reference_sha256": "e6e41243d6a23168240c6549eddb5537fe90bb7d2642e6133f7798abec98bfe4",
+    "info_id": 9270,
+    "atlas_id": 185,
+    "rect": [
+      252,
+      728,
+      16,
+      24
+    ]
+  },
+  "source_packets": [
+    {
+      "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+      "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+    },
+    {
+      "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+      "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+    }
+  ],
+  "weapon_metadata": {
+    "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+    "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+  },
+  "handedness": {
+    "declared_uses_two_slots": false,
+    "uses_slots": null,
+    "base_grip_class": "one-handed",
+    "evidence": "Full inherited declaration has no UsesTwoSlots/UsesSlots override; audited Physics default Flags2 excludes bit8. Observed snapshot occupancy is one Hand for each item.",
+    "physics_default": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.Parts.Physics.decompiled.cs",
+      "sha256": "40cefa92ac9a9ba50eae456f7f95da79b2ab3fd291905d6aeaa7f1e02cdbed0a",
+      "flags": 2,
+      "uses_two_slots_bit": 8
+    },
+    "runtime_requirement_semantics": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\scratch\\inspect\\XRL.World.GameObject.decompiled.cs",
+      "sha256": "1d73ce04d4e0a3bf1b859ce1f91aacea4e413b62cf57808c4c1a7720a25a0480",
+      "method": "GetSlotsRequiredFor delegates to actor-sensitive GetSlotsRequiredEvent"
+    },
+    "runtime_get_slots_required_for": null,
+    "unknown": "No actor-specific requirement event result exported; static class and occupied snapshot are not a new runtime query.",
+    "observed_occupancy": [
+      {
+        "actor": "Mehmet",
+        "resident": 522,
+        "item": 594,
+        "occupied_parts": [
+          {
+            "id": 334,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 508,
+        "item": 550,
+        "occupied_parts": [
+          {
+            "id": 222,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 523,
+        "item": 600,
+        "occupied_parts": [
+          {
+            "id": 348,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 526,
+        "item": 609,
+        "occupied_parts": [
+          {
+            "id": 376,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      },
+      {
+        "actor": "WatervineFarmerJoppa",
+        "resident": 527,
+        "item": 615,
+        "occupied_parts": [
+          {
+            "id": 390,
+            "type": "Hand",
+            "laterality": 2,
+            "manager": null
+          }
+        ],
+        "captured_get_slots_required_for": null
+      }
+    ]
+  },
+  "size": {
+    "native_dimensions": null,
+    "native_size_class": null,
+    "descriptive_length": null,
+    "weight": "5",
+    "weapon_class": "Axe",
+    "native_description": "Wrought iron moulded to a crescent for scything watervine; no numeric length.",
+    "authored_canonical_bounds": [
+      157,
+      244,
+      292,
+      621
+    ],
+    "head_bounds": [
+      157,
+      244,
+      292,
+      422
+    ],
+    "shaft_bounds": [
+      244,
+      321,
+      268,
+      621
+    ],
+    "shaft_grip": [
+      256,
+      580
+    ],
+    "supporting_grip": null,
+    "reason": "One-handed harvesting crescent with readable head and long simple shaft; retain the already selected female tool geometry/physical size, not equal body-relative enlargement. Weight5 is not length.",
+    "canonical_source": {
+      "path": "art/conversion/fit-human-female-iron-vinereaper/v1/constructed-canonical.png",
+      "sha256": "854a87ba8141051a50c891dcbdbe7c4ac6b4da7379fa531748eae97266798484"
+    },
+    "canonical_geometry_identical": true,
+    "female_pixel_world_scale": 0.0012941176470588234,
+    "male_pixel_world_scale": 0.0013166485310119695,
+    "male_raster_scale": 0.9828877005347593,
+    "world_mapping": {
+      "female": {
+        "width": 0.9938823529411764,
+        "height": 1.3251764705882352
+      },
+      "male": {
+        "width": 1.0111860718171928,
+        "height": 1.3482480957562568
+      }
+    },
+    "units": "Registered authoring/world mapping, not meters or native measured weapon dimensions."
+  },
+  "donor_size_reference": {
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\1.6\\Defs\\ThingDefs_Misc\\Weapons\\MeleeNeolithic.xml",
+      "sha256": "7146a2852dba1ab4fc33a8dd7eac655fe2e9328c80450d19e5db87e8ff52d273",
+      "defName": "VWE_MeleeWeapon_Axe",
+      "description": "A small, single-handed axe designed for quick, repeated strikes. Its light weight and short handle allow for fast swinging speed. Using a hatchet increases the plant harvest yield slightly.",
+      "texPath": "NewThings/Hatchet",
+      "equipped_angle_offset": "-65"
+    },
+    "load_folders": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814383360\\LoadFolders.xml",
+      "sha256": "8eb2050ac65cd118fcb657a5e44472c14cd86370690ae2011b72a5c701ebe7e9",
+      "mapping": "1.6 and1.7 both select1.6"
+    },
+    "base_defs": {
+      "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Misc\\Weapons\\BaseWeapons.xml",
+      "sha256": "db07467327633fceaa2de5225e7f90db386ff874545c05faa313683ecab0c107",
+      "inheritance": [
+        {
+          "name": "BaseMeleeWeapon_Sharp_Quality",
+          "parent": "BaseMeleeWeapon_Sharp",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon_Sharp",
+          "parent": "BaseMeleeWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseMeleeWeapon",
+          "parent": "BaseWeapon",
+          "explicit_draw_size": null
+        },
+        {
+          "name": "BaseWeapon",
+          "parent": null,
+          "explicit_draw_size": null
+        }
+      ]
+    },
+    "explicit_xml_drawSize": null,
+    "runtime_graphic_drawSize": null,
+    "qualification": "No explicit drawSize in inspected ancestry and no live graphic export. Current single-handed hatchet description informs class/proportions, not an invented numerical draw size."
+  },
+  "observed_bindings": [
+    {
+      "creature": "JoppaFarmerConvert",
+      "resident": {
+        "instance": 516,
+        "blueprint": "JoppaFarmerConvert",
+        "species": "human",
+        "gender": "female",
+        "description": "Her kufiya has been cut and resewn to a cowl, and she has tailored a vinewafer sack to approximate the slate habit of the chromaic people. A sheaf of watervine bundled in copper wire is slung on her hip, and she rubs a salt-nailed thumb over a talisman of cracked circuitboard.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/farmer_convert.bmp",
+        "foreground": "&C",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 306,
+        "parent": 305,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 583,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 584,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 509,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "female",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in her gnarled, brown hand is a curved vinereaper of iron with which she culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer4.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 236,
+        "parent": 235,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 556,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 557,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 510,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "female",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in her gnarled, brown hand is a curved vinereaper of iron with which she culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer1.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 250,
+        "parent": 249,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 562,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 563,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 514,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "female",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in her gnarled, brown hand is a curved vinereaper of iron with which she culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer2.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 278,
+        "parent": 277,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 570,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 571,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "Mehmet",
+      "resident": {
+        "instance": 522,
+        "blueprint": "Mehmet",
+        "species": "human",
+        "gender": "male",
+        "description": "He is a wind-carved man with the posture of a vinereaper; his spine is bent to point the bright turquoise of his eyes at the tilling angle, his hips are pushed odd-forward with the slumping ease of a stance much more relaxed than his. If it weren't for the salt on his brow and the scarred knuckles, he would seem a marble Saad perched under a crumbling tomb.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nDisliked by {{C|the Seekers of the Sightless Way}} for leading a raiding party on one of their camps.\n\nDisliked by {{C|mysterious strangers}} for torching one of their villages.\n",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/npc-mehmet.bmp",
+        "foreground": "&W",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 334,
+        "parent": 333,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 594,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 595,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 508,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "male",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in his gnarled, brown hand is a curved vinereaper of iron with which he culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer1.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 222,
+        "parent": 221,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 550,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 551,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 523,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "male",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in his gnarled, brown hand is a curved vinereaper of iron with which he culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer3.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 348,
+        "parent": 347,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 600,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 601,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 526,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "male",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in his gnarled, brown hand is a curved vinereaper of iron with which he culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer1.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 376,
+        "parent": 375,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 609,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 610,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    },
+    {
+      "creature": "WatervineFarmerJoppa",
+      "resident": {
+        "instance": 527,
+        "blueprint": "WatervineFarmerJoppa",
+        "species": "human",
+        "gender": "male",
+        "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in his gnarled, brown hand is a curved vinereaper of iron with which he culls moisture-swollen wafers from the viridian plant called watervine.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/sw_farmer1.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "part": {
+        "id": 390,
+        "parent": 389,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 615,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 616,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      }
+    }
+  ],
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+          "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png",
+          "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+          "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-iron-vinereaper/v1/assembly-comparison.png",
+          "sha256": "2d5ecfb78a7f01f2cf8763eecb516a2560eb1cda64a1da9c2ca975cd0326ac08"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work."
+      }
+    }
+  ],
+  "scope": "Both enumerated ordinary body fittings and complete reusable item authoring; one handed base classification and same canonical physical scale. No actual runtime event query or ready/resting acceptance.",
+  "pose_review": {
+    "status": "PENDING FINAL ASSEMBLY",
+    "requirement": "Ready one-handed tool projects forward/horizontally in side view, roughly90deg to upright body; separate resting/ready state and actual runtime slot demand. Current plates stationary display only.",
+    "owner": "Stage 3 final assembly after full-set generation gate"
+  },
+  "native_acceptance": "Pending full-set generation gate and native actual equipped/slot-demand/ready-resting state"
+}

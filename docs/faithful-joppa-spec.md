@@ -805,3 +805,24 @@ on each active weapon entry; separate scale from angle/resting-ready state.
 Existing authored scale estimates remain estimates, not native measured sizes
 or proof of two-handed presentation. The male Iron Vinereaper is still the sole
 active conversion entry; this clarification adds no native-test detour.
+
+Male Iron Vinereaper and shared-item checkpoint: both enumerated ordinary Hand/2
+fits are generation-ready, retaining nine captured item/part bindings. Full
+blueprint ancestry has no UsesTwoSlots/UsesSlots override, and audited Physics
+default excludes the two-slot flag; this supports a one-handed base class.
+Actor-specific GetSlotsRequiredFor results were not exported and remain unknown.
+The tool's canonical geometry is identical across bodies; male raster scale
+0.9828877005347593 compensates the registered body/world mapping, with both width
+and height relationships checked and a common-scale comparison recorded. Head,
+shaft, overall bounds and grip580 are authored metadata, not native measurements
+derived from weight. Current VWE Hatchet definition/LoadFolders/texPath is traced;
+the female fit's installed legacy Axe reference remains disclosed. Donor XML has
+no explicit drawSize in its inspected ancestry, and no live value is invented.
+
+One actual male contextual refinement supplies neutral iron; generated glow/body
+are excluded, full source/ink and original body stay fixed, and hidden grip is
+completed before depth. The reused female material reference clears RGB only
+under alpha0, retaining alpha and every visible pixel. Item aggregation adds no
+generation call. Stationary display fits do not satisfy horizontal ready/resting
+state, runtime slot-demand, named outfit or native equipped-state acceptance.
+Stage 3 remains the sole ACTIVE stage; continue the female Steel Utility Knife.

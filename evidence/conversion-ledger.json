@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2",
+  "active_entry": "FIT-HUMAN-FEMALE-STEEL-UTILITY-KNIFE-HAND-2",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -4347,8 +4347,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -6177,8 +6177,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -6190,7 +6190,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Actor-specific GetSlotsRequiredFor result and donor runtime drawSize not exported. Physical weapon dimensions remain authored estimates. Horizontal ready/resting/native state and named appearances/outfits remain unfinished."
       ],
       "metadata": {
         "body_family": "human-male",
@@ -6224,12 +6224,279 @@
           "sha256": "28c0ee1f9d5d128e40788bc991b1ef36202238ed0d42c1fffffeb24f883a5ff4"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T16:20:18.348974+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved male humans/Mehmet -> actual wrought-iron crescent item -> full Iron Vinereaper/BaseAxe/MeleeWeapon/Item/InorganicObject/PhysicalObject/Object ancestry. Retained five individual ordinary Hand/2 bindings and exact source tile/y-y roles. Static one-hand declaration, snapshot occupancy and unknown actor event result are distinct.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "4f7e2b8bf50147c176ca2dce1164fdd50177db0c0a70be2df120e633dad1fac5"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.349349+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected registered male v2 and identical female canonical tool construction. Traced current VWE_MeleeWeapon_Axe texPath to NewThings/Hatchet through LoadFolders1.6/1.7; female legacy Axe.png remains valid installed visual history but is not the current def texture. Current hatchet description informs one-handed class; explicit XML/live drawSize remains unknown.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "4f7e2b8bf50147c176ca2dce1164fdd50177db0c0a70be2df120e633dad1fac5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png",
+              "sha256": "702d631c642aeaf14bc2116679133b0c89efc34e4aea1f14ea7dd07061f3b3cf"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.350237+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused exact editable Qud crescent/shaft geometry; new male hand landmarks and0.9828877005347593 raster scale retain same item physical size as female world mapping. Primary grip580; no two-hand support pose invented. North accounts for mirrored source pivot255. One item over bare original base, stationary display only.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/prepare-source.py",
+              "sha256": "c5447a05e15cb84bce18d8fc126e06d5e25082dd1c2882d610d087ae29bba1ad"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-pattern.svg",
+              "sha256": "a2d8c7e50fe1523338a3321dbd5cb3d7fda9376904439f82a3bfa560c380ec86"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-canonical.png",
+              "sha256": "854a87ba8141051a50c891dcbdbe7c4ac6b4da7379fa531748eae97266798484"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-neutral-context.png",
+              "sha256": "b059547ab22381560ece05ce2e9654e9ace07ad5d3819ec64e66f84fb8accf08"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "153699de92f4f107632ae5342e305bc8929271af52c95cac45686f0f340ad9a5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "df56697e7a3b43519d2ef2ead7d5fa72a354b6d0c88a89f84dbb85b1308d3563"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.351871+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual male contextual forged-material refinement, with Qud source, current actual Hatchet and cleaned prior full tool reference. Generated body/halo are excluded. Cleaned reference zeroes hidden RGB only where alpha0; no visible source/body change or generative isolation. No consequential geometry patch or second refinement call was needed/invented.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "153699de92f4f107632ae5342e305bc8929271af52c95cac45686f0f340ad9a5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png",
+              "sha256": "702d631c642aeaf14bc2116679133b0c89efc34e4aea1f14ea7dd07061f3b3cf"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/imagegen-prompt.txt",
+              "sha256": "ff37a979b85902f18d2057e8bf94dc301843df1005074c5a0544d9adc0f588b6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "6871deeea4f941ae5e7ee9af209c7a50b4d8e22650ebc87268a4c40a5ee467bb"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit the FIRST image, exact1536x1024 three-column close-up sheet. It shows the SAME Iron Vinereaper on a fixed red adult male mannequin: SOUTH/front, EAST/right profile, NORTH/back. Preserve exact crescent geometry, open inner curve, head-to-shaft attachment, straight shaft, lower hand grip, scale, layout and per-view placement. Every red body/hand pixel and its existing occlusion stays unchanged. Transparent background, no labels.\n\nQud description: \"Wrought iron was moulded to a crescent for scything the rough hides of watervine.\" SECOND image is actual Qud glyph, identity/proportions reference. THIRD is actual current RimWorld Vanilla Weapons Expanded Hatchet, single-handed flat-rendering reference only; do not replace the Qud crescent. FOURTH is the already refined COMPLETE canonical vinereaper used for the female fitting: match its forged gray material and the SAME object design, rather than inventing a different male weapon. The male input already corrects for body pixel/world-scale differences; do not enlarge the weapon to fill its column or match the taller body.\n\nRefine the existing iron surface in place with restrained forging texture and subtle cutting-edge shading. Equal-RGB neutral gray, original clean dark contour and two small mounting marks. No wood grain, rope, wraps, teeth, gems, runes, machinery, glow, motion blur or sparks. The shaft material is unspecified: retain the existing simple neutral treatment. Do not redraw the mannequin, change grip or silhouette, isolate the tool, add clothes or reveal hidden material. This is a stationary authoring display, not a drafted/ready pose. No shadows, halo, backdrop, vignette or colored reflections. Preserve transparency. One contextual refinement only.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/iron-vinereaper-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814383360/Textures/NewThings/Hatchet.png",
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.353350+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Registered neutral material through recorded male crop/world-scale mapping; completed hidden shaft on full tool before final body ownership. Exact constructed full alpha and own ink retained, shaft detail separate from head, transparent RGB cleared on canonical outputs. No destructive hand hole or second ImageGen isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/register-vinereaper.py",
+              "sha256": "6fbd105c322e06a9d29fb07ad8bed2bcaa2561778ba5cdae2c4229fb7f46878f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "6871deeea4f941ae5e7ee9af209c7a50b4d8e22650ebc87268a4c40a5ee467bb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/registration-decisions.json",
+              "sha256": "7824dffc5918ef31c203221072aae039a52d71c9a8645fc36bda042ccadb5c88"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/intact-canonical.png",
+              "sha256": "67ab522fe413ae75116896e8f9d7671fdb0b9d63fdda471d9a96110d88a4b44c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/shaft-canonical.png",
+              "sha256": "469047298baf78f24b5e83752d5462bf884fcda5459d4fbff560516bbb3d0e71"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-continuation.png",
+              "sha256": "6d94045aa3c6e8828ade8bf41e979431b2640fa39194242941ad8e297c50e01a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/full-item-comparison.png",
+              "sha256": "758c844d64f7267a60be7e3a8a6b9d7d1c4f4804460bbb4301d4c2659b3533c0"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.353958+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed full item with original male foreground hand and rear body depth, same registered body/contact. Explicit source grip580 and per-facing hand controls; reflected north/source-pivot and mirrored west reviewed. Display angles do not establish final horizontal ready/resting state.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "df56697e7a3b43519d2ef2ead7d5fa72a354b6d0c88a89f84dbb85b1308d3563"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png",
+              "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/grip-comparison.png",
+              "sha256": "f3b8664e943bd3c2ba2819e4fcb0c8da5b3ff2ba20523011d7b615f2a260d4a6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/depth-off-comparison.png",
+              "sha256": "64ccdae8ec62cf830293e7ed5a11cc6279f307ad67abd57215e430673bbbb609"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.354617+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended size and cross-body common-world-scale plate, equal-channel production RGB, native y/y equipment and independent Mehmet522 W example. Exact width/height mappings confirm same item physical scale; no measured native weapon length or donor drawSize invented. Native tests remain behind all-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/cross-body-scale-comparison.png",
+              "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/independent-palette-comparison.png",
+              "sha256": "a883c05c5d49e7179c626e79485d56a6791a598a290f57e6b68ba7ab56966a85"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/game-scale-review.png",
+              "sha256": "de6f2e1cb3c38e35c161bddaf048e22bed9516954d8300c5cacc7d429f93ad18"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/authoring-review.json",
+              "sha256": "a05e15b95d77c816c9b505cb4fe533e76cfbedc340f3173485c42007fe986e1f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/artifact-manifest.json",
+              "sha256": "58fca9b453fb5dc29c3e78a3b5806c6b1986fb829cc6216887193777fad0669f"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        }
+      ],
       "held_pose_review": {
         "status": "PENDING FINAL ASSEMBLY",
-        "requirement": "Ready one-handed tool projects forward horizontally in side view, roughly90deg to upright body; separate resting/ready controls and native state mapping. Current plates are stationary display only.",
+        "requirement": "Ready one-handed tool projects forward/horizontally in side view, roughly90deg to upright body; separate resting/ready state and actual runtime slot demand. Current plates stationary display only.",
         "owner": "Stage 3 final assembly after full-set generation gate"
-      }
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+          "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png",
+          "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished."
+      },
+      "registration_summary": "Male Iron Vinereaper: five actual Hand/2 bindings, inherited one-handed base class with unknown actor-event result, explicit size/grip metadata and same canonical physical tool size as female. One actual contextual refinement, original hand/body and y/y roles. Stationary display only; native held/ready/resting state unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual runtime/equipped/resting-ready state"
     },
     {
       "id": "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0",
@@ -14264,14 +14531,14 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Runtime actor-specific slot demand and donor runtime drawSize not exported; weapon dimensions remain authored. Horizontal ready/resting pose and named outfit/native acceptance remain unfinished."
       ],
       "metadata": {
         "original_reference": {
@@ -14300,7 +14567,110 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T16:21:17.272537+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolved wrought-iron crescent/watervine identity and y/y roles, full ancestry one-handed base declaration, nine captured ordinary hand bindings and explicit unknown runtime actor slot demand. Dimensions/grips are authored estimates; same canonical physical size across bodies.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+              "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-iron-vinereaper/v1/fittings.json",
+              "sha256": "ffe32306fd1d0e06112455a61ce7ecce19d089e0cc69367c8d55c598e30c5301"
+            },
+            {
+              "path": "art/conversion/item-iron-vinereaper/v1/body-fittings-comparison.png",
+              "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"
+            }
+          ],
+          "review": "Both ordinary female and male Hand/2 fittings have actual source/reference/construction/contextual-refinement/full-source/depth/intended-size evidence. Nine captured item/hand bindings retained. Common installed ancestry and Physics default support a one-handed base class; runtime actor-event results remain unknown rather than inferred. Explicit head/shaft/overall/grip metadata and male raster/world mapping preserve the same canonical tool physical size across both bases; dimensions are authored, weight5 is not length. Female used an installed legacy Axe texture; male traced the current Hatchet texPath/LoadFolders, and both reference roles stay explicit. No donor runtime drawSize invented. Current plates are stationary authoring fits; horizontal ready/resting state, actual runtime slot demand and named outfits/native acceptance remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T16:21:17.273312+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled both current per-body fitting histories, exact model/plate hashes, same canonical geometry, compensated male world mapping, current versus legacy donor reference roles, original hand/body depth and intended-size palette views. No new ImageGen for aggregate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/source-packet.json",
+              "sha256": "bb2e03376d13b357a83e3fe4c25252f6191d9eb3c693b321c20350c33e4dcbdd"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+              "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-iron-vinereaper/v1/fittings.json",
+              "sha256": "ffe32306fd1d0e06112455a61ce7ecce19d089e0cc69367c8d55c598e30c5301"
+            },
+            {
+              "path": "art/conversion/item-iron-vinereaper/v1/body-fittings-comparison.png",
+              "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"
+            }
+          ],
+          "review": "Both ordinary female and male Hand/2 fittings have actual source/reference/construction/contextual-refinement/full-source/depth/intended-size evidence. Nine captured item/hand bindings retained. Common installed ancestry and Physics default support a one-handed base class; runtime actor-event results remain unknown rather than inferred. Explicit head/shaft/overall/grip metadata and male raster/world mapping preserve the same canonical tool physical size across both bases; dimensions are authored, weight5 is not length. Female used an installed legacy Axe texture; male traced the current Hatchet texPath/LoadFolders, and both reference roles stay explicit. No donor runtime drawSize invented. Current plates are stationary authoring fits; horizontal ready/resting state, actual runtime slot demand and named outfits/native acceptance remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Ready one-handed tool projects forward/horizontally in side view, roughly90deg to upright body; separate resting/ready state and actual runtime slot demand. Current plates stationary display only.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-iron-vinereaper/v1/fittings.json",
+          "sha256": "ffe32306fd1d0e06112455a61ce7ecce19d089e0cc69367c8d55c598e30c5301"
+        },
+        "plate": {
+          "path": "art/conversion/item-iron-vinereaper/v1/body-fittings-comparison.png",
+          "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Both ordinary female and male Hand/2 fittings have actual source/reference/construction/contextual-refinement/full-source/depth/intended-size evidence. Nine captured item/hand bindings retained. Common installed ancestry and Physics default support a one-handed base class; runtime actor-event results remain unknown rather than inferred. Explicit head/shaft/overall/grip metadata and male raster/world mapping preserve the same canonical tool physical size across both bases; dimensions are authored, weight5 is not length. Female used an installed legacy Axe texture; male traced the current Hatchet texPath/LoadFolders, and both reference roles stay explicit. No donor runtime drawSize invented. Current plates are stationary authoring fits; horizontal ready/resting state, actual runtime slot demand and named outfits/native acceptance remain unfinished."
+      },
+      "registration_summary": "Iron Vinereaper identity and both ordinary Hand/2 authoring fits generation-ready. Nine observed bindings; one-handed base declaration/unknown runtime event, explicit size/grip metadata and common physical scale. Stationary display only; actual native held/ready/resting state remains unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual runtime/equipped/resting-ready state"
     },
     {
       "id": "ITEM-LEATHER-APRON",
@@ -45119,7 +45489,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T16:05:17.410099+00:00",
+  "updated_at": "2026-10-20T16:21:17.274200+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
