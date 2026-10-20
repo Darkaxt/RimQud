@@ -1,0 +1,22 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-door/v1/refined-proposal.png",
+      "sha256": "2d824dfccf557c09b1d4c46238dff8f9a6d8f8e38d46e11102f9c620772b4243"
+    },
+    {
+      "path": "art/conversion/scn-door/v1/constructed-open.png",
+      "sha256": "eaac2ca88fe6ab0143b38705cbf8706980fa3ccbf63a5494d3681c188228e3dd"
+    },
+    {
+      "path": "art/conversion/scn-door/v1/register-door.py",
+      "sha256": "52ca0c7f71d8ed36e708ef1b7c6a3637adf634908d13a234d19f27eef9e39755"
+    }
+  ],
+  "extraction": "Connected alpha components selected from actual refined output at threshold16. Invisible pixels cleared, nearly opaque interiors normalized and RGB made equal. One full-canvas downsample for both layers.",
+  "frame_ownership": "Refined outer arch is detail-owned (source R255). It is exactly byte-identical between states.",
+  "leaf_ownership": "Refined inner slate slab and its small hinges are foreground-owned (source R0). No frame or transparent gap is baked into it.",
+  "open_edge": "Authored from the actual native left strip geometry; same selected slate material sampled away from front handle/handprint. No additional ImageGen call or unseen rear view is claimed.",
+  "derived_state": "Open uses common arch plus edge-on leaf x3..4,y6..22. Foreground behind opening remains visible; native controls actual state and occlusion.",
+  "source_limits": "Appearance extraction is authoring; no evidence yet of native replacement dispatch/state ordering."
+}

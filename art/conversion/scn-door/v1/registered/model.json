@@ -1,0 +1,104 @@
+{
+  "entry": "SCN-DOOR",
+  "kind": "stateful_object",
+  "native_frame": [
+    16,
+    24
+  ],
+  "manual_frame": [
+    512,
+    768
+  ],
+  "recipient_frame": [
+    256,
+    256
+  ],
+  "anchor": [
+    8,
+    16
+  ],
+  "state_owner": "Native Door.SyncRender selects exact ClosedTile/OpenTile. No donor motion, state timer, solid/occlusion or input code is added.",
+  "mapping_rule": "One full-canvas mapping for both states and all layers; never fit each alpha bounding box. Closed/basic and original blueprint thumbnail resolve to closed. Unknown/custom tiles retain native fallback.",
+  "original_states": {
+    "path": "art/conversion/scn-door/v1/native-state-index.json",
+    "sha256": "cb7cea81b5c4000d97ebb4f8999e2e7d2e8f2e31699c99144c4e50630d838502"
+  },
+  "source_packet": {
+    "path": "art/conversion/scn-door/v1/source-packet.json",
+    "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+  },
+  "palette": {
+    "primary": "actual native foreground y",
+    "detail": "actual native detail y",
+    "current_rgb": "b1c9c3",
+    "rule": "Separate neutral leaf/frame roles; no baked tan, teal or rust orange."
+  },
+  "states": {
+    "closed": {
+      "native_tiles": [
+        "Assets_Content_Textures_Tiles_sw_doorclosed.bmp",
+        "Assets_Content_Textures_Tiles_sw_door_basic.bmp"
+      ],
+      "layers": [
+        {
+          "component": "leaf",
+          "color_role": "foreground",
+          "texture": {
+            "path": "art/conversion/scn-door/v1/registered/closed-leaf-neutral.png",
+            "sha256": "8e64f95f4db2438044feb1759bd87b5bb371a23125d94275d88ff0100f5d45d6"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/v1/registered/closed-leaf-coverage.png",
+            "sha256": "e43c4fbc677a7c15cd28055ea04a95a919f98a7c2769567ca13b65e2a49270a5"
+          }
+        },
+        {
+          "component": "frame",
+          "color_role": "detail",
+          "texture": {
+            "path": "art/conversion/scn-door/v1/registered/closed-frame-neutral.png",
+            "sha256": "2817e66dfbb36fdb6f0528015a2d79a0913144f576bc92b81b814a1024f818f9"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/v1/registered/closed-frame-coverage.png",
+            "sha256": "f474079b932cfaa3c727c264e602658861e7ed4a4e39e166d78d4e22dcaf6370"
+          }
+        }
+      ],
+      "solid_occluding": "native closed"
+    },
+    "open": {
+      "native_tiles": [
+        "Assets_Content_Textures_Tiles_sw_door_basic_open.bmp"
+      ],
+      "layers": [
+        {
+          "component": "leaf",
+          "color_role": "foreground",
+          "texture": {
+            "path": "art/conversion/scn-door/v1/registered/open-leaf-neutral.png",
+            "sha256": "435c5ce84c97b9b3a601f429ea4766e057ea7cffdd7f90a91fe415e9561a64e9"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/v1/registered/open-leaf-coverage.png",
+            "sha256": "152a5e47f460daaf331bd636d69e11b286b0911a96360d0e70663b8db6230c73"
+          }
+        },
+        {
+          "component": "frame",
+          "color_role": "detail",
+          "texture": {
+            "path": "art/conversion/scn-door/v1/registered/open-frame-neutral.png",
+            "sha256": "2817e66dfbb36fdb6f0528015a2d79a0913144f576bc92b81b814a1024f818f9"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/v1/registered/open-frame-coverage.png",
+            "sha256": "f474079b932cfaa3c727c264e602658861e7ed4a4e39e166d78d4e22dcaf6370"
+          }
+        }
+      ],
+      "solid_occluding": "native open"
+    }
+  },
+  "native_acceptance": "Pending all-conversions-generated gate"
+}

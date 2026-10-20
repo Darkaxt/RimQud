@@ -1,0 +1,86 @@
+{
+  "entry": "SCN-RUSTEDMETALWALL",
+  "recorded_at": "2026-10-20T05:31:23.896182+00:00",
+  "identity": "RustedMetalWall -> MetalWall -> BaseWallMetal -> Wall",
+  "description": "Sheet metal is locked in diamond pattern and welded to enclose. The surface is scorched and scratched in sections.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Walls.xml",
+    "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e",
+    "selected_ancestry": [
+      "<object Name=\"RustedMetalWall\" Inherits=\"MetalWall\">\n\t\t<part Name=\"Render\" DisplayName=\"rusted metal wall\" RenderString=\"177\" ColorString=\"&amp;r^C\" TileColor=\"&amp;r\" DetailColor=\"C\" Occluding=\"true\" />\t\t\n\t\t<part Name=\"Description\" Short=\"Sheet metal is locked in diamond pattern and welded to enclose. The surface is scorched and scratched in sections.\" />\t\t\n\t</object>\n\t",
+      "<object Name=\"MetalWall\" Inherits=\"BaseWallMetal\">\n    <part Name=\"Render\" DisplayName=\"metal wall\" RenderString=\"177\" ColorString=\"&amp;c^C\" TileColor=\"&amp;c\" DetailColor=\"C\" Occluding=\"true\" />\n    <stat Name=\"AV\" Value=\"30\" />\n    <stat Name=\"Hitpoints\" Value=\"400\" />\n    <part Name=\"Description\" Short=\"Sheet metal is locked in diamond pattern and welded to enclose. The surface is scorched and scratched in sections.\" />\n    <tag Name=\"PaintWith\" Value=\"MetalWalls\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"VaporObject\" Value=\"LavaPuddle\" />\n    <tag Name=\"ImmutableWhenUnexplored\" Value=\"1\" />\n    <tag Name=\"Mods\" Value=\"TechWallMods\" />\n    <tag Name=\"Tier\" Value=\"3\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitMetal\" />\n  </object>\n  ",
+      "<object Name=\"BaseWallMetal\" Inherits=\"Wall\">\n    <part Name=\"Render\" ColorString=\"&amp;y^R\" TileColor=\"&amp;y\" DetailColor=\"R\" />\n    <part Name=\"Metal\" />\n    <tag Name=\"BodyType\" Value=\"MetalWall\" />\n    <tag Name=\"PaintedWall\" Value=\"wall_metal\" />\n    <tag Name=\"Mods\" Value=\"TechWallMods\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitMetal\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_metal\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_metal\" />\n  </object>\n  ",
+      "<object Name=\"Wall\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Wall]\" Tile=\"assets_content_textures_tiles_tile-0-13.png\" RenderLayer=\"7\" RenderString=\"219\" ColorString=\"&amp;y^k\" Occluding=\"true\" />\n    <part Name=\"Physics\" Weight=\"10000\" Takeable=\"false\" Solid=\"true\" SpecificHeat=\"1.55\" Conductivity=\"20\" />\n    <part Name=\"Description\" Short=\"[wall]\" />\n    <stat Name=\"AV\" Value=\"5\" />\n    <stat Name=\"Hitpoints\" Value=\"100\" />\n    <tag Name=\"Wall\" />\n    <tag Name=\"Diggable\" />\n    <tag Name=\"NoEffects\" />\n    <stat Name=\"ColdResistance\" Value=\"50\" />\n    <stat Name=\"ElectricResistance\" Value=\"50\" />\n    <tag Name=\"PaintedWall\" Value=\"wall_brick\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Cracked,Crackless,Once-Cracked,Painted,Still-Standing,Studded,Sturdy,Twice-Cracked,Unpainted,Unstudded\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Builders,Cowards,Defenders,Roofs,the Assailed,the Stalwart\" />\n    <xtagTextFragments Skin=\"texture\" PoeticFeatures=\"towering nature,gentle stillness,comforting enclosure\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"200000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"wall\" />\n    <tag Name=\"BodyType\" Value=\"Wall\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"2000\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitStone\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_stone\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_stone\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_rocks\" />\n\t\t<tag Name=\"Breakable\" Value=\"*delete\" />\n  </object>\n  "
+    ]
+  },
+  "original_states": {
+    "path": "art/conversion/scn-rustedmetalwall/v1/native-state-index.json",
+    "sha256": "cb2bcb025ba706ad43bf48995d6f00810746497cd35392ee5aca5692f5006e31"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-rustedmetalwall/v1/native-states-comparison.png",
+    "sha256": "c629726aee6b2b05c4f343bff83ba12310b142f13d6a6e1eaad9d6b8545ef0a7"
+  },
+  "source_correction": "The inherited tile-0-13 static reference is a placeholder. Native PaintedWall=wall_metal uses256installed eight-neighbor masks, all now extracted privately. Cardinal examples are shown for the16ledger layouts.",
+  "installed_paint_evidence": {
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "class_name": "XRL.World.ZoneManager",
+    "scoped_decompilation_sha256": "fdbe96f833aea01568a52bc8e348dfecf9ff7ed1b040a270181eedf31971726c",
+    "facts": [
+      "PaintedWall appends N,NE,E,SE,S,SW,W,NW binary flags after a dash. Default Tiles prefix and .bmp extension apply.",
+      "PaintWith=MetalWalls governs native joins. Material is not linked to unrelated fences/wood automatically."
+    ]
+  },
+  "palette": {
+    "primary": "r",
+    "detail": "C",
+    "native_primary_rgb": "a64a2e",
+    "native_detail_rgb": "77bfcf",
+    "rule": "Opaque source R0 is rust-metal foreground; R255 is pale-cyan edging. Transparent cells remain background, not a black fill."
+  },
+  "donor_reference": {
+    "package": "RimWorld Core",
+    "record": {
+      "file": "wall-metal.png",
+      "width": 320,
+      "height": 320,
+      "alpha_bounds": [
+        0,
+        0,
+        320,
+        320
+      ],
+      "png_sha256": "dbe4ba4e962f948d5ac35befdda5fbece098c9186757e7241ece35471a1642da",
+      "source_id": 392,
+      "name": "Wall_Atlas_Smooth",
+      "source_package": "RimWorld core"
+    },
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\wall-metal.png",
+    "sha256": "dbe4ba4e962f948d5ac35befdda5fbece098c9186757e7241ece35471a1642da",
+    "role": "Actual Wall_Atlas_Smooth supplies restrained bevel, metal shading and connected-atlas presentation only. Qud diamond pattern, lower industrial bracing, native geometry and r/C colors remain authoritative; no donor atlas order is copied."
+  },
+  "construction": "Reconstruct all native coverage and color-role regions as explicit source-coordinate geometry, soften only subpixel edges and add shallow metal bevel/material within coverage. Preserve8neighbor source shapes instead of replacing them with generic masonry or a narrower four-direction extrusion.",
+  "material": "Editable neutral sheet-metal sample with restrained diagonal welded/diamond pattern, scratches and scorch marks. One material refinement supplies surface detail; native masks retain shape and color ownership.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "anchor": [
+      8,
+      16
+    ],
+    "rule": "Identical full-cell mapping for all256states. No state-specific alpha crop/recenter. No per-cell border caps or outline added on connected edges."
+  },
+  "views": "All256native painted states plus a16cardinal recipient atlas. No creature turnarounds, clothing or arbitrary rotations apply.",
+  "native_behavior": "Solid metal/occluding state, damage/graffiti, visibility and paintability remain native. Appearance alpha does not authorize new see-through navigation/line-of-sight behavior.",
+  "native_acceptance": "Deferred until every conversion is generated"
+}

@@ -1,0 +1,71 @@
+{
+  "entry": "SCN-DOOR",
+  "recorded_at": "2026-10-20T05:24:41.954805+00:00",
+  "identity": "Door -> MountedFurniture",
+  "description": "The slate is touched with years of handprints and a ring of rust flakes off the top of the hinges. The door continues, though, its stubborn assertion of 'in' and 'out'.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "selected": "<object Name=\"Door\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" Tile=\"Assets_Content_Textures_Tiles_sw_doorclosed.bmp\" ColorString=\"&amp;y\" DetailColor=\"y\" RenderLayer=\"7\" DisplayName=\"door\" RenderString=\"+\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"50\" Organic=\"true\" />\n    <part Name=\"Door\" />\n    <tag Name=\"Door\" />\n    <tag Name=\"NoEffects\" />\n    <part Name=\"Description\" Short=\"The slate is touched with years of handprints and a ring of rust flakes off the top of the hinges. The door continues, though, its stubborn assertion of 'in' and 'out'.\" />\n    <tag Name=\"OpenSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_open\" />\n    <tag Name=\"CloseSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_close\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Ajar,Closed,Locked,Once-Knocked,Open,Thrice-Knocked,Twice-Knocked,Unknockable,Unknocked,Unlocked\" />\n    <xtagTextFragments Skin=\"panel\" PoeticFeatures=\"charming moulding,oiled hinges,inviting knob\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Door\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Category\" Value=\"door\" />\n    <tag Name=\"Class\" Value=\"door\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"QuestableVerb\" Value=\"open,close\" />\n    <tag Name=\"QuestableEvent\" Value=\"Opened,Closed\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <intproperty Name=\"Anchoring\" Value=\"8000\" />\n  </object>"
+  },
+  "installed_state_evidence": {
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "class_name": "XRL.World.Parts.Door",
+    "scoped_decompilation_sha256": "54af541cdf41ae5370adf29b14682124e8a1dff7f96aa90c0eca5dcf79e1fbde",
+    "facts": [
+      "SyncRender defaults true. ObjectCreatedEvent selects ClosedTile or OpenTile, superseding the static blueprint thumbnail.",
+      "ClosedTile=Tiles/sw_door_basic.bmp; OpenTile=Tiles/sw_door_basic_open.bmp.",
+      "Open sets Render.Occluding=false and Physics.Solid=false. Closed restores solid/occluding state; native code and caches own this behavior."
+    ]
+  },
+  "source_states": {
+    "path": "art/conversion/scn-door/v1/native-state-index.json",
+    "sha256": "cb7cea81b5c4000d97ebb4f8999e2e7d2e8f2e31699c99144c4e50630d838502"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-door/v1/native-states-comparison.png",
+    "sha256": "6b1e5b54dc793b6d2e1bf301104f44480196b404a2dc5b2634c2acd59a6007b4"
+  },
+  "palette": {
+    "primary": "y",
+    "detail": "y",
+    "native_rgb": "b1c9c3",
+    "ownership": "Native runtime arch uses R255/detail, leaf R0/foreground; equal current colors do not erase these roles."
+  },
+  "donor_reference": {
+    "package": "RimWorld Core",
+    "record": {
+      "file": "door.png",
+      "source_id": 2541,
+      "name": "DoorSimple_Mover",
+      "width": 64,
+      "height": 64,
+      "png_sha256": "87063416ef6c7aff59c0a69901505057bc3e3da04bd29e730aff059fed23e6be"
+    },
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\door.png",
+    "sha256": "87063416ef6c7aff59c0a69901505057bc3e3da04bd29e730aff059fed23e6be",
+    "role": "Actual DoorSimple_Mover supplies restrained planar shading and handle readability only. It is a rectangular moving panel, not an equivalent arched slate design. No donor sliding motion, wood appearance or mechanics is copied."
+  },
+  "authored_interpretation": "Arched frame and chipped slate slab preserve native stepped/rounded outline, left hinges and right recessed handle. Restrained slate lamination, faint hand wear and pitted hinges derive from the description. Rust stays a neutral value role so native y palette remains authoritative.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "anchor": [
+      8,
+      16
+    ],
+    "rule": "Same native-coordinate frame in both states. Frame is byte-identical; open leaf becomes the source left edge-on strip, not a newly centered or sliding door."
+  },
+  "views": "Only native closed/open map views are required. No unsupported north/east art is inferred from a generic door graphic.",
+  "native_acceptance": "Deferred until every conversion is generation-ready"
+}

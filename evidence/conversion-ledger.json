@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-DOOR",
+  "active_entry": "SCN-BRINESTALK",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -22087,8 +22087,8 @@
         "open; native panel position and occlusion"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -22157,7 +22157,333 @@
           "sha256": "c80da7b6174930c41f92a413569359dcc94f717aa558817267a10d39d9c68894"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T05:27:56.201183+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Actual source identity, slate description and runtime states",
+          "action": "Read the exact Door blueprint and installed Door class defaults/ObjectCreated/open/close behavior. Extracted the static thumbnail and both actual runtime tiles privately.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/extract-native-states.py",
+              "sha256": "eeb8aa7eb4a3f052f1fe9394cdcfa8c4f0e9dfa1d4cbe290cdc30db02c01efde"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/native-state-index.json",
+              "sha256": "cb7cea81b5c4000d97ebb4f8999e2e7d2e8f2e31699c99144c4e50630d838502"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/native-states-comparison.png",
+              "sha256": "6b1e5b54dc793b6d2e1bf301104f44480196b404a2dc5b2634c2acd59a6007b4"
+            }
+          ],
+          "review": "Viewed all three decoded source glyphs. Static sw_doorclosed is not the normal synchronized runtime tile. Closed is basic; open is basic_open. Runtime arch uses detail and slab uses foreground; both are y. Native source, selectors and state ownership are explicit.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.201811+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual RimWorld rendering reference with a limited role",
+          "action": "Selected extracted Core DoorSimple_Mover source id2541 as a planar shading/handle-readability reference; documented that it is not an arched slate equivalent.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-construction-comparison.png",
+              "sha256": "956f07ee32ad5cbdaea126dd24809fd4e9300f289317ef03ebce64d84c7db689"
+            }
+          ],
+          "review": "Viewed actual private Core door.png and its recorded manifest/hash. Did not adopt wooden material, rectangular outline, sliding animation or donor mechanics.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.202000+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable slate leaf, surround and open-edge construction",
+          "action": "Constructed the native arched surround and slate slab, left hinge wear and right L-shaped recessed handle as explicit editable geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/native-state-index.json",
+              "sha256": "cb7cea81b5c4000d97ebb4f8999e2e7d2e8f2e31699c99144c4e50630d838502"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/prepare-and-construct.py",
+              "sha256": "d928c2f9447913d046f1e48a35cbcc2817301a643b69742f1f6c9b58cc790695"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-closed.svg",
+              "sha256": "9c743ee30c89fd3d5d34126044262d7903879c3a108010a4a5cbac30f9a3013a"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-closed.png",
+              "sha256": "f5aa1fe28b1462b0ea32da97a247dd7a74de906fe7bd72a03dbbbe6ec2cf60d6"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-open.svg",
+              "sha256": "0da182393c249881e0f47f08d308cb2bde5f4370199e64d3cf904593afe5da2e"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-open.png",
+              "sha256": "eaac2ca88fe6ab0143b38705cbf8706980fa3ccbf63a5494d3681c188228e3dd"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-leaf.svg",
+              "sha256": "220143db7c1e2069a05cd203cea449793e3db85d6acff00455aa00078904573f"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-leaf.png",
+              "sha256": "8403f276b90340ea98965a66e73927dea71b18189fa3ad4b8237f6e1b6bb41e1"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-frame.svg",
+              "sha256": "a873ab5302aa7254f89d7d5121d5a0190886af8bfb28080637ee414616ad66c9"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-frame.png",
+              "sha256": "b6b5e08d802af23cc2be3d4c4647f120bb822f893003871e0c208e31711a75b2"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/source-construction-comparison.png",
+              "sha256": "956f07ee32ad5cbdaea126dd24809fd4e9300f289317ef03ebce64d84c7db689"
+            }
+          ],
+          "review": "Viewed manual comparison and full closed image. Shape, relative placement, native cell proportions and slate identity follow source; hand wear is restrained. Later unrelated invalid XML character references were avoided by parsing the exact valid Door object block.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.202882+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Open and closed views from one unchanged frame",
+          "action": "Derived the open edge at the actual source left strip from the selected slate material and manual source-coordinate coverage. Kept the arch byte-identical between states.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/constructed-open.png",
+              "sha256": "eaac2ca88fe6ab0143b38705cbf8706980fa3ccbf63a5494d3681c188228e3dd"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/refined-proposal.png",
+              "sha256": "2d824dfccf557c09b1d4c46238dff8f9a6d8f8e38d46e11102f9c620772b4243"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/registered/states-comparison.png",
+              "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"
+            }
+          ],
+          "review": "Viewed selected states at enlarged and16x24/24x36/32x48sizes. The surround and anchor stay fixed. The open strip has no squeezed front handle. No creature turnarounds or clothing apply to this fixed source door; actual native selector/occlusion remains native.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.204638+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "One controlled closed-door material refinement",
+          "action": "Used built-in ImageGen once with the manual closed door and actual Core panel; retained its slate, hinge wear and handle while supplying finer material/edge rendering.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/refine-closed-prompt.txt",
+              "sha256": "d95ecf22c6f0203c5e8ef9efbc0673e5046b4bec244acc7fda3b0a2b74b5f79b"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-closed.png",
+              "sha256": "f5aa1fe28b1462b0ea32da97a247dd7a74de906fe7bd72a03dbbbe6ec2cf60d6"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/refine-closed-prompt.txt",
+              "sha256": "d95ecf22c6f0203c5e8ef9efbc0673e5046b4bec244acc7fda3b0a2b74b5f79b"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/refined-proposal.png",
+              "sha256": "2d824dfccf557c09b1d4c46238dff8f9a6d8f8e38d46e11102f9c620772b4243"
+            }
+          ],
+          "review": "Viewed generated output and inspected actual alpha. Apparent exterior glow in the tool preview is primarily invisible RGB, not opaque surroundings. The arch and leaf remain separate connected alpha components. Final extraction clears invisible RGB and enforces neutral equal RGB.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-door\\v1\\constructed-closed.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/door.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-20dd7e5d-cd2e-4931-be9b-0f98bde31cab.png"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.206222+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Actual refined component extraction and state registration",
+          "action": "Selected the arch and slab by connected alpha, removed unowned pixels, normalized interiors and grayscale, then saved neutral foreground/detail components and coverage per state in one frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/refined-proposal.png",
+              "sha256": "2d824dfccf557c09b1d4c46238dff8f9a6d8f8e38d46e11102f9c620772b4243"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/constructed-open.png",
+              "sha256": "eaac2ca88fe6ab0143b38705cbf8706980fa3ccbf63a5494d3681c188228e3dd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/register-door.py",
+              "sha256": "52ca0c7f71d8ed36e708ef1b7c6a3637adf634908d13a234d19f27eef9e39755"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/model.json",
+              "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/registration-decisions.json",
+              "sha256": "d43aa4df7e953ff8f30eb1e05d8b0582aa9ad2ee65fee632c4bf9bf781a7c53e"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/source-selection-frame.png",
+              "sha256": "fe9bd5b661d3d4071fafe3509584fdb2d676713aa34d879152713a66e61a9d80"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/source-selection-leaf.png",
+              "sha256": "5713c56a47654a42dd11b5781425bb3101c8c56e6262f17a4a1664607ee5f61a"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/cleaned-frame.png",
+              "sha256": "8f1dec3afb8a28b1fc424d83d6cb2a5b0ee1d24b91ffcee1ae52b3320032695d"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/cleaned-leaf.png",
+              "sha256": "373a34f5e26b9ea30a7c8f23eb875e96d3f86d5d17f1805ab805a6625fac53bc"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-edge-neutral-master.png",
+              "sha256": "d42a547eb0be9a6c50faf37ed47f6eb4128a7e948cbccfb855e00dc2bc1db903"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-leaf-neutral.png",
+              "sha256": "8e64f95f4db2438044feb1759bd87b5bb371a23125d94275d88ff0100f5d45d6"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-leaf-coverage.png",
+              "sha256": "e43c4fbc677a7c15cd28055ea04a95a919f98a7c2769567ca13b65e2a49270a5"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-frame-neutral.png",
+              "sha256": "2817e66dfbb36fdb6f0528015a2d79a0913144f576bc92b81b814a1024f818f9"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-frame-coverage.png",
+              "sha256": "f474079b932cfaa3c727c264e602658861e7ed4a4e39e166d78d4e22dcaf6370"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-leaf-neutral.png",
+              "sha256": "435c5ce84c97b9b3a601f429ea4766e057ea7cffdd7f90a91fe415e9561a64e9"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-leaf-coverage.png",
+              "sha256": "152a5e47f460daaf331bd636d69e11b286b0911a96360d0e70663b8db6230c73"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-frame-neutral.png",
+              "sha256": "2817e66dfbb36fdb6f0528015a2d79a0913144f576bc92b81b814a1024f818f9"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-frame-coverage.png",
+              "sha256": "f474079b932cfaa3c727c264e602658861e7ed4a4e39e166d78d4e22dcaf6370"
+            }
+          ],
+          "review": "Actual saved state arch bytes match exactly, full-canvas mapping/anchor is shared and open leaf remains in the native left strip. Leaf/arch preserve independent native color roles; no baked rust hue, background fill or isolated per-state bounding-box fit.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.209361+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Slate identity, palette, cut edges and intended-size review",
+          "action": "Inspected the assembled neutral and actual native-y states and their intended-cell previews.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/registered/model.json",
+              "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/v1/registered/states-comparison.png",
+              "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-neutral-composition.png",
+              "sha256": "3b424056075a87934ffee74e26ed4f586394056480158f8354a1e51a6d16670b"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-neutral-composition.png",
+              "sha256": "c6b592209a5d391387edcf28e5249e22bdda94f9283cd1f3e6392640bf53152d"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/closed-native-preview.png",
+              "sha256": "5728be0fe330a97ef11d701cd543cf027f588295b5699cddb1b2fc66f532002c"
+            },
+            {
+              "path": "art/conversion/scn-door/v1/registered/open-native-preview.png",
+              "sha256": "384abcfa16e663d75a853b9e5e20286fe6b090de3af31fa176a65ca4f5f0cbb3"
+            }
+          ],
+          "review": "Closed is a weathered arched slate panel, open exposes the background around its left edge-on leaf. Shared surround does not move; gaps remain transparent. This is authoring review, not a game-state or native movement test.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:27:56.210429+00:00",
+          "step": "native_state_review",
+          "phase": "Native Door acceptance deferred",
+          "action": "Recorded exact selector, native visibility/solid/occlusion and replacement dispatch as pending the final all-conversions-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/registered/model.json",
+              "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, renderer/harness modification or native acceptance. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-door/v1/registered/model.json",
+          "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"
+        },
+        "plate": {
+          "path": "art/conversion/scn-door/v1/registered/states-comparison.png",
+          "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"
+        }
+      },
+      "registration_summary": "Selected source-faithful slate Door states: one byte-identical arched surround, a closed worn slab and a source-positioned left edge when open. Runtime Door tiles supersede the old blueprint thumbnail. Neutral leaf/arch preserve foreground/detail ownership and native y colors; state/solid/occlusion acceptance remains pending."
     },
     {
       "id": "SCN-POND",
@@ -22700,7 +23026,345 @@
           "sha256": "d483c1281e969faa474153da869e983c9e5971a818e6abb0e01f7d2e4cb5ec03"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T05:36:57.878677+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Actual painted source shapes and native metal palette",
+          "action": "Read RustedMetalWall ancestry, description and native eight-neighbor paint selection. Extracted all256installed wall_metal source masks privately, retaining16cardinal source examples.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet.json",
+              "sha256": "33edda890c4606333d3b2d5c32a4ff09d37cd002d607d02b66e4b81091b928a3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet.json",
+              "sha256": "33edda890c4606333d3b2d5c32a4ff09d37cd002d607d02b66e4b81091b928a3"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/extract-native-states.py",
+              "sha256": "17747e32201026eda42cab12503dc3b66d8d8d96ed559a74adcceb5739358e06"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/native-state-index.json",
+              "sha256": "cb2bcb025ba706ad43bf48995d6f00810746497cd35392ee5aca5692f5006e31"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/native-states-comparison.png",
+              "sha256": "c629726aee6b2b05c4f343bff83ba12310b142f13d6a6e1eaad9d6b8545ef0a7"
+            }
+          ],
+          "review": "Viewed actual r/C source shapes. Earlier tile-0-13 was an inherited placeholder. Source has checker/diamond metal, pale-cyan edging and lower industrial bracing. Native N,NE,E,SE,S,SW,W,NW ordering differs from recipient four-bit order.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.879345+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual Core smooth-wall reference with constrained use",
+          "action": "Selected extracted Core Wall_Atlas_Smooth source id392 as a shallow metal bevel/material and connected-atlas reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet.json",
+              "sha256": "33edda890c4606333d3b2d5c32a4ff09d37cd002d607d02b66e4b81091b928a3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-construction-comparison.png",
+              "sha256": "152b7622aab6f40237a5abc1f7699605e8992ed28a2c14a24a4ed9bcfaf31e65"
+            }
+          ],
+          "review": "Viewed the actual private320x320Core atlas and recorded manifest/hash. No donor atlas ordering, neutral gray palette or generic solid wall silhouette replaces Qud source geometry/colors.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.879518+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Literal source reconstruction retained as rejected design",
+          "action": "Created an explicit editable source-coordinate trace and a separate neutral welded-metal material proposal.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/native-state-index.json",
+              "sha256": "cb2bcb025ba706ad43bf48995d6f00810746497cd35392ee5aca5692f5006e31"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet.json",
+              "sha256": "33edda890c4606333d3b2d5c32a4ff09d37cd002d607d02b66e4b81091b928a3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/prepare-and-construct.py",
+              "sha256": "a18e9216fe00c519f0b2c7e04e0d15c0f4271528cbf2d68d44c52167ff54606d"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated.svg",
+              "sha256": "f55666b38a2839b620399b1c00b28823043b6ba8c27166c8019db67fd2bd84ab"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated.png",
+              "sha256": "177d2a96a9ee980eae1c4fce919a2b78258918c3842d355384875adc776e0db5"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-material.svg",
+              "sha256": "505e86021fbfbcdc47e1319e1dc8ef40d64eeaea03508e9574165caf052ddc34"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-material.png",
+              "sha256": "800e007fd92f113e292b4e46c11b35a47095d2918cb996240ee4c61910787f8f"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-construction-comparison.png",
+              "sha256": "152b7622aab6f40237a5abc1f7699605e8992ed28a2c14a24a4ed9bcfaf31e65"
+            }
+          ],
+          "review": "Viewed original and manual comparison. Literal checker enlargement yields disconnected square marks and is retained as a rejected shape interpretation; this record is not the selected final geometry.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.880105+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Source-positioned welded diamond correction",
+          "action": "Rebuilt checker nodes as diamond joints and connected diagonal welded strips while preserving source frame/base contours and color ownership. Included terminal joints with only one diagonal neighbor.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/native-state-index.json",
+              "sha256": "cb2bcb025ba706ad43bf48995d6f00810746497cd35392ee5aca5692f5006e31"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated.png",
+              "sha256": "177d2a96a9ee980eae1c4fce919a2b78258918c3842d355384875adc776e0db5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/construct-geometry.py",
+              "sha256": "246e803de458b15cbc64b3ddd21c09f1aa92dca0284f7f13268d1a77bc1cc883"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet-v2.json",
+              "sha256": "fd606874d16b66230b5d493f6b6230a0a7a0713446035a3770cec8e779a7a07a"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated-v2-primary.svg",
+              "sha256": "4912879d79f5f6d0f9becc55dae0b0c25455036182a5cf109aad5be189686b48"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated-v2-primary.png",
+              "sha256": "9acc03a723ae943fcb4930fd6c84300ca940006d46a8c55c0bda2904e772828d"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated-v2-detail.svg",
+              "sha256": "2b892462e722b82971e09b1695b56efef6bd89138d15cadba48511f6f9210752"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated-v2-detail.png",
+              "sha256": "39475173bed5ddf1b619b4b5ac59355d8dcb5383cb4d6b75bfc93fde9084d6e7"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-isolated-v2.png",
+              "sha256": "65e48783c260ad90b5f7a0a1f65daa2e848298a5ce0a63c5c74b24c7157e9b51"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/construction-correction-comparison.png",
+              "sha256": "15dada7c847fcc2e9969df4c5d4bc6d1cbfb1a258ab8026b62bdd17609cf89d0"
+            }
+          ],
+          "review": "Viewed correction plate and selected all-state/connection plates. Fine mesh construction is an explicit authored interpretation of tiny source checker marks; it is not presented as exact native alpha. Native physical occlusion remains independent.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.880811+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "All256native layouts and sixteen cardinal recipient layouts",
+          "action": "Applied the same source-coordinate geometry procedure and fixed material phase to every native painted suffix, then packed the16cardinal states in recipient bottom-origin order.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet-v2.json",
+              "sha256": "fd606874d16b66230b5d493f6b6230a0a7a0713446035a3770cec8e779a7a07a"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/native-state-index.json",
+              "sha256": "cb2bcb025ba706ad43bf48995d6f00810746497cd35392ee5aca5692f5006e31"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/construct-geometry.py",
+              "sha256": "246e803de458b15cbc64b3ddd21c09f1aa92dca0284f7f13268d1a77bc1cc883"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/states-comparison.png",
+              "sha256": "0bf2e332f7783606fb06ad11cc142f7b8486b5fd4b8013fc03489b1c29d27086"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/all-native-states-comparison.png",
+              "sha256": "9666840651b5b3c9f0f79d5291ddd5f3fe3bb42aa7f9f4756a04d9c4fd3d2e0c"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/primary-cardinal-atlas.png",
+              "sha256": "c0856f11740d856abc4804d611084889615e58013e7ef2de915f9b7759d92615"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/detail-cardinal-atlas.png",
+              "sha256": "6d7fac03b22bc1c7e828344f58b31ed870046ab07f85317a97562169f5101296"
+            }
+          ],
+          "review": "Viewed all256contact-sheet states and16cardinal examples. Frame/base shapes and color roles follow their actual state; no independent alpha-bounds centering or added cell-edge caps. No creature turnarounds or clothing apply.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.881915+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "One controlled neutral metal material refinement",
+          "action": "Used built-in ImageGen once on the editable square welded-metal swatch with actual Core smooth-wall shading reference; geometry and source tint ownership remain deterministic.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/refine-material-prompt.txt",
+              "sha256": "6ac5ffc0ca185b959d26412ba0ce4d7c0e369f005ea7f7c8ac6b8b3e6db23eac"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/constructed-material.png",
+              "sha256": "800e007fd92f113e292b4e46c11b35a47095d2918cb996240ee4c61910787f8f"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet.json",
+              "sha256": "33edda890c4606333d3b2d5c32a4ff09d37cd002d607d02b66e4b81091b928a3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/refine-material-prompt.txt",
+              "sha256": "6ac5ffc0ca185b959d26412ba0ce4d7c0e369f005ea7f7c8ac6b8b3e6db23eac"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/refined-proposal.png",
+              "sha256": "7e48f021458bba67aca290f3bd3fa2f3b86682377231a1c1dfa6d3c1706427df"
+            }
+          ],
+          "review": "Viewed the generated opaque grayscale metal surface with diamond seams, scratches, scorches and pitting. It supplies material only, not wall topology or unobserved physical behavior. Opposite material edges receive a recorded seam patch before registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-rustedmetalwall\\v1\\constructed-material.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/wall-metal.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-c8d2778e-b32c-40e6-bff2-c0fee245282e.png"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.884083+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral source-role layers and coverage in one fixed frame",
+          "action": "Matched opposite material borders, restrained luminance, applied constructed coverage and shallow edge bevel, and saved primary/detail/coverage for all256states with an exact selected model index.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/refined-proposal.png",
+              "sha256": "7e48f021458bba67aca290f3bd3fa2f3b86682377231a1c1dfa6d3c1706427df"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/source-packet-v2.json",
+              "sha256": "fd606874d16b66230b5d493f6b6230a0a7a0713446035a3770cec8e779a7a07a"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/construct-geometry.py",
+              "sha256": "246e803de458b15cbc64b3ddd21c09f1aa92dca0284f7f13268d1a77bc1cc883"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/register-wall.py",
+              "sha256": "234a1a723705284e0386f50311361c61e4970c222750965dca40a83798a81c3b"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/registration-decisions.json",
+              "sha256": "652f20349708c83a913894c52d5521294d611fb927022dbaddda7b5ecb83ab34"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/patched-seamless-material.png",
+              "sha256": "cb6a6ce46fffd50e75c4ee3f3d83c7d94f7edede14869ad20229f957cbfc0287"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/model.json",
+              "sha256": "1ec35fafa2589913b03d871343824508e51fb0f396945b0ab155a53a25faa14b"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/primary-cardinal-atlas.png",
+              "sha256": "c0856f11740d856abc4804d611084889615e58013e7ef2de915f9b7759d92615"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/detail-cardinal-atlas.png",
+              "sha256": "6d7fac03b22bc1c7e828344f58b31ed870046ab07f85317a97562169f5101296"
+            }
+          ],
+          "review": "All state assets are referenced with exact hashes in selected model.json. Primary is rust-metal r; detail is pale-cyan C. Both are neutral grayscale RGBA. Shared16x24source frame maps to256x256recipient textures; native source coordinates control relative placement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.886938+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Native palette, intended-size and connected-shape authoring review",
+          "action": "Composed source-native r/C states in a connected enclosure, corners, T junction and opening, and inspected enlarged and16x24cell previews.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/model.json",
+              "sha256": "1ec35fafa2589913b03d871343824508e51fb0f396945b0ab155a53a25faa14b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/connections-comparison.png",
+              "sha256": "3309924b09204d885994273e94eefeed2e7225235b57b5e925db087e76a38174"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/native-scale-comparison.png",
+              "sha256": "649804e8018872d50f763e5dfdd3a8972c9bb04f2d694e247a110ecc9780f0a7"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/states-comparison.png",
+              "sha256": "0bf2e332f7783606fb06ad11cc142f7b8486b5fd4b8013fc03489b1c29d27086"
+            },
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/all-native-states-comparison.png",
+              "sha256": "9666840651b5b3c9f0f79d5291ddd5f3fe3bb42aa7f9f4756a04d9c4fd3d2e0c"
+            }
+          ],
+          "review": "Viewed the actual saved plates. Diamond metal and lower bracing join according to source eight-neighbor state; cyan edging follows source contours. No generic mud cap or sand/masonry texture is substituted. Fine mesh remains authored and native visibility/solid/occlusion acceptance is pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:36:57.887643+00:00",
+          "step": "native_state_review",
+          "phase": "Native wall acceptance deferred",
+          "action": "Kept native256state dispatch, recipient atlas UV/sampling, paint/visibility/solid/occlusion and damage/graffiti exceptions behind the all-conversions-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-rustedmetalwall/v1/registered/model.json",
+              "sha256": "1ec35fafa2589913b03d871343824508e51fb0f396945b0ab155a53a25faa14b"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, production renderer edits or native/harness tests occurred. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-rustedmetalwall/v1/registered/model.json",
+          "sha256": "1ec35fafa2589913b03d871343824508e51fb0f396945b0ab155a53a25faa14b"
+        },
+        "plate": {
+          "path": "art/conversion/scn-rustedmetalwall/v1/registered/connections-comparison.png",
+          "sha256": "3309924b09204d885994273e94eefeed2e7225235b57b5e925db087e76a38174"
+        }
+      },
+      "registration_summary": "Selected rusted metal with source r/C colors, source-shaped industrial frame/bracing and authored welded diamond mesh at the native checker nodes. All256native eight-neighbor variants and the16cardinal recipient layouts share one coordinate frame. Rejected square trace, material refinement and mesh correction remain below. Native dispatch/visibility/occlusion acceptance is pending."
     },
     {
       "id": "SCN-BRINESTALK",
@@ -22714,8 +23378,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

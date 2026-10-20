@@ -1,0 +1,22 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-rustedmetalwall/v1/refined-proposal.png",
+      "sha256": "7e48f021458bba67aca290f3bd3fa2f3b86682377231a1c1dfa6d3c1706427df"
+    },
+    {
+      "path": "art/conversion/scn-rustedmetalwall/v1/construct-geometry.py",
+      "sha256": "246e803de458b15cbc64b3ddd21c09f1aa92dca0284f7f13268d1a77bc1cc883"
+    },
+    {
+      "path": "art/conversion/scn-rustedmetalwall/v1/register-wall.py",
+      "sha256": "234a1a723705284e0386f50311361c61e4970c222750965dca40a83798a81c3b"
+    }
+  ],
+  "source_shapes": "All256installed painted keys extracted privately. Public geometry reconstructs source frame/base and mesh nodes, then adds explicit welded mesh struts; no generic donor wall silhouette replaces them.",
+  "correction": "Rejected literal checker enlargement retained. Mesh terminal nodes with one diagonal neighbor are included; no orphan square is accepted as a separate object.",
+  "material_patch": "One grayscale512square material, twelve-texel opposite-edge bands matched, then common512x768sampling. Grain is restrained to preserve palette readability; geometry never comes from material alpha.",
+  "layers": "Source cyan frame/edge cells remain separately detail-owned. Red rust-metal primary underlies complete constructed coverage. Edge bevel derives from constructed union, not cell boundary, so no extra seam/cap is introduced per tile.",
+  "source_limit": "Fine mesh is an authored interpretation of tiny checker marks. Native alpha cannot establish seeing through an occluding wall; mechanics stay native.",
+  "views": "All256native shapes and16cardinal atlas layouts. No creature turnarounds or clothing are applicable."
+}

@@ -55,7 +55,14 @@ a continuous dried-stalk deck and shared coverage. The report records the reject
 spaced-mat sketch, correction, refinement and liquid-underlay composition. Its
 nonbinary native source mask uses a constant 65/255 foreground/detail mix;
 neutral art preserves that runtime tint contract rather than baking literal green.
-There are now 26 generation-ready entries; Door is active next.
+Door is generation-ready with fixed-frame open/closed slate artwork. Its actual
+runtime state tiles replace the old blueprint-thumbnail assumption; the surround
+is byte-identical between states and the leaf/frame keep separate color roles.
+Rusted Metal Wall now preserves native rust-red/pale-cyan colors, source-shaped
+industrial bracing and authored welded diamond mesh. All 256 native eight-neighbor
+variants and the 16 cardinal layouts are recorded, including the rejected literal
+checker trace, material refinement and geometry correction.
+There are now 28 generation-ready entries; living Brinestalk is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
