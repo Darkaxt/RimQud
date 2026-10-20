@@ -1,0 +1,56 @@
+{
+  "entry": "SCN-MANNEQUIN",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Mannequin",
+  "native_tiles": [
+    "Items/sw_mannequin.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+    "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+  },
+  "primary": {
+    "path": "art/conversion/scn-mannequin/v1/registered/primary-neutral.png",
+    "sha256": "96a7982fa3fc365d14af0a7970a58a5f78a6c1f3ae13ce9241ee9e4d7cc3d517"
+  },
+  "detail": {
+    "path": "art/conversion/scn-mannequin/v1/registered/detail-neutral.png",
+    "sha256": "08863e3d594e0a8be7c02926ede366db4203c3eb2c7e5c49ce12d49746a8a19a"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-mannequin/v1/registered/coverage.png",
+    "sha256": "2edf1c23acd05e379690cd2433c5ce06d4b00625f7fbd727d424149b2298fc7a"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-mannequin/v1/registered/detail-coverage.png",
+    "sha256": "469c5b427a03fc008fdf6549d7efc2bccaba0ef2d48c5b184517916e8a44afea"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One entire1024x1536frame maps once to256square for form, stand, right armature and both masks. No independently centered actor parts or contact normalization."
+  },
+  "palette": {
+    "primary": "actual native armature/stem/base y",
+    "detail": "actual chosen native Render.DetailColor from RandomColors=all; R is blueprint default only",
+    "neutral_preview": "Warm raw wood tint and cyan shell markers are removed. Whole shell highlights inherit detail ownership; production RGB is equal."
+  },
+  "state_owner": "Native RandomColors resolves actual detail tint. All shown color samples reuse exactly the same production geometry/masks; previews do not claim a captured random choice or alter its distribution.",
+  "equipment_boundary": "Static mounted furniture graphic; no new actor body, apparel render path or independent arm/leg node. BodyType/rare Animated behavior retains native original fallback.",
+  "native_behavior": "Preserve30-weight non-solid mounted furniture, non-takeability, AV2,Hitpoints80and rare animated/custom fallback. No donor training behavior.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

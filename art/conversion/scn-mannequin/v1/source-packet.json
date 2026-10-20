@@ -1,0 +1,80 @@
+{
+  "entry": "SCN-MANNEQUIN",
+  "identity": "Mannequin -> MountedFurniture -> Furniture",
+  "description": "The biped form emerges out of a cocoon of wood and fiberglass.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Mannequin": "<object Name=\"Mannequin\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"mannequin\" ColorString=\"&amp;y\" DetailColor=\"R\" RenderString=\"h\" Tile=\"Items/sw_mannequin.bmp\" />\n    <part Name=\"Description\" Short=\"The biped form emerges out of a cocoon of wood and fiberglass.\" />\n    <part Name=\"RandomColors\" DetailColor=\"all\" />\n    <part Name=\"Physics\" Weight=\"30\" Solid=\"false\" />\n    <stat Name=\"AV\" Value=\"2\" />\n    <stat Name=\"Hitpoints\" Value=\"80\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Well-Formed,Beautiful,Fair,Still,Uncanny,Lifelike\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Sculptors,Haberdashers,Clothiers,Armorers\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"WoodenHumanoid\" />\n    <tag Name=\"AnimatedSkills\" Value=\"Persuasion_SnakeOiler,Customs_Tactful,Discipline_Meditate\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n\t\t<tag Name=\"Class\" Value=\"human\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Crafts\" />\n    <stag Name=\"Centerpiece\" />\n\t\t<stag Name=\"Beauty\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\mannequin-mask.png",
+    "sha256": "17e5061ae5916c72d8cd693d6e548445b7080b888419ecb57d1dd1628bf46d07",
+    "tile": "Items/sw_mannequin.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9823,
+    "atlas_id": 185,
+    "rect": [
+      108,
+      182,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Colored featureless head at upper-left/center, separated upper torso and hip-form marks over a pale central stem with split base supports. Pale angled marks on the right and colored marks left of the torso are ambiguous arm/armature cues, not proof of extra limbs or a game actor skeleton.",
+  "palette": {
+    "primary": "y",
+    "default_detail": "R",
+    "native_primary_rgb": "b1c9c3",
+    "default_detail_rgb": "d74200",
+    "random_detail": "RandomColors DetailColor=all",
+    "rule": "Head/torso/hip shell and colored left bent-form marks receive actual native randomized detail. Stem/base/right armature remain primary y. Cyan in authoring only identifies shell ownership; final production layers are neutral. Default R preview is a blueprint illustration, not a claimed captured random result."
+  },
+  "donor_reference": {
+    "mod": "Combat Training (Continued)",
+    "package_id": "Mlie.CombatTraining",
+    "workshop_id": "2778569619",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_south.png",
+    "sha256": "2c4c05554c9d092eac703504c40736568cd188da25f6a05c97049fb7a113c742",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\About\\About.xml",
+    "about_sha256": "bb753a337938a6ec17c279d6dc0dd948a0551e739eb533586e2d2fb797803ed4",
+    "role": "Actual installed CombatTrainingDummy_south supplies restrained featureless dummy/form contours, shallow surface shading and stand readability only. Its X eyes, target circles, soft sack shape, donor training behavior and source colors are not copied."
+  },
+  "reference_limits": "VFE Vikings training dummy was viewed but not selected: helmet, shield and sword would change source identity. No exact wood/fiberglass tailoring mannequin equivalent was found in inspected named assets.",
+  "construction": "Editable static upper-body form has a featureless oval head, simple torso/hip shell, one colored bent left arm and one pale jointed right armature following the sparse source marks. A pale central stem and splayed supports follow the lower primary marks; no walking legs or actor pose system is added. Exact arm connections, joints, neck connectors, material seams and unseen surfaces are authored interpretation, not native anatomical metadata.",
+  "native_state": {
+    "owner": "XRL.World.Parts.RandomColors",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "319ff7640f7d672335fb8c33a6583f9b0010c7ff8fbe961eca87dc4561208866",
+    "rule": "RandomColors DetailColor=all resolves with Crayons.GetRandomColorAll and writes native Render.DetailColor. Keep actual chosen color native. One ordinary fixed tile is declared; rare Animated builder/BodyType WoodenHumanoid is a separate native behavior and requires original fallback."
+  },
+  "equipment_boundary": "Ordinary mannequin definition declares no Mannequin-specific clothing/apparel render path. BodyType is animated-furniture metadata, not a reusable human actor body, independent arm/leg render nodes or proof of wearable equipment. This entry converts the static furniture graphic only.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source-cell transform for shell, armature, stem/base and masks. No independently centered head/armature or actor contact normalization."
+  },
+  "native_behavior": "Preserve mounted30-weight non-solid furniture, AV2,Hitpoints80, source non-takeability and rare animated/custom fallback. No donor training mechanics or new clothing framework.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

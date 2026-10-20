@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-MANNEQUIN",
+  "active_entry": "SCN-METAL-WORKBENCH",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -10173,8 +10173,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -10243,7 +10243,283 @@
           "sha256": "2164dbaa6c0b8fe3a73b70ef63bcf9ff3181d3c30a85440bce25988f17bbc3ef"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T08:21:56.104589+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Mannequin source, wood/fiberglass description and native randomized detail",
+          "action": "Read installed Mannequin/MountedFurniture/Furniture definitions, original mask and native RandomColors behavior.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+              "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+            }
+          ],
+          "review": "Static mounted furniture uses primary y and RandomColors DetailColor=all; R is the blueprint default only. Source head, torso/hip forms, pale stem/base and ambiguous side marks are distinct. BodyType and rare Animated metadata do not establish actor render joints or a mannequin-specific apparel path.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.104799+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed Combat Training dummy reference",
+          "action": "Selected Mlie.CombatTraining CombatTrainingDummy_south for restrained blank-form contours, shallow shading and stand readability.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+              "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-construction-comparison.png",
+              "sha256": "2018943d482a890af79ecb3aec567bab7ddddc1142d90ea52e22837cba3e1dc8"
+            }
+          ],
+          "review": "Viewed actual installed donor; its exact path/hash and About metadata are recorded. Do not copy X eyes, red target, sack silhouette, colors or training mechanics. VFE Vikings armed dummy was viewed but not selected. No exact source-equivalent tailoring mannequin was established.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.105146+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable static source forms, armature and stand",
+          "action": "Constructed featureless oval head, separated angular torso/hip shells, colored bent left form, pale jointed right armature and splayed stand.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+              "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/prepare-and-construct.py",
+              "sha256": "92bc3212c2ca24b03cff1b40a2e2640079f3299096ee53eed54e3c70ec6f6b16"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/constructed-front.svg",
+              "sha256": "50465c8f7a733369036a4a6a7abdc0922cadacf978744effc43c6fc724d1320c"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/constructed-front.png",
+              "sha256": "77a971409967384945bf488651880ce0c2bd1b202ae65103f81a87d32885fef1"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-construction-comparison.png",
+              "sha256": "2018943d482a890af79ecb3aec567bab7ddddc1142d90ea52e22837cba3e1dc8"
+            }
+          ],
+          "review": "Inspected source/construction comparison. Preserve the unusual sparse forms rather than inventing an ordinary human torso. Exact right joints and connectors are explicitly authored interpretation of uncertain marks; no face, walking legs, weapons or extra actor limbs.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.105525+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "One fixed native tile with native-selected detail tint",
+          "action": "Retained one ordinary fixed furniture view; all illustrative palette samples reuse identical geometry and ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+              "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/constructed-front.png",
+              "sha256": "77a971409967384945bf488651880ce0c2bd1b202ae65103f81a87d32885fef1"
+            }
+          ],
+          "outputs": [],
+          "review": "No source turnarounds or open/closed state is defined for the ordinary tile. RandomColors remains native, not new cosmetic tile variants. Rare animated/custom cases retain native fallback and final acceptance; no new clothing or animation system is generated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.106891+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled wood/fiberglass form refinement",
+          "action": "Performed one built-in ImageGen refinement using the editable source-bound form and actual installed dummy reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+              "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/constructed-front.png",
+              "sha256": "77a971409967384945bf488651880ce0c2bd1b202ae65103f81a87d32885fef1"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/refine-front-prompt.txt",
+              "sha256": "57e446aaf57d1daca7808aa5c5f1d6bb185137eda8fd5f790b45ad0a569e1fa2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/refined-proposal.png",
+              "sha256": "383d0b49cd2a7adfdc5d29ca005b908a1c43e9352c0ec6c89e1fc3087e3e7a74"
+            }
+          ],
+          "review": "Viewed the actual saved generation. Source head/torso/hip forms, bent side cues, armature and stand remain identifiable. Raw wood is warm and shells cyan; both pigments are removed during neutral extraction. No donor eyes/target/garment or actor rig is accepted.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-mannequin/v1/refine-front-prompt.txt",
+            "sha256": "57e446aaf57d1daca7808aa5c5f1d6bb185137eda8fd5f790b45ad0a569e1fa2"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-d773d7ad-7059-4c71-8a9d-c76d4ad5048f.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-mannequin/v1/constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/2778569619/Textures/CombatTrainingDummy_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.108172+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral primary and whole-shell detail ownership",
+          "action": "Removed detached soft alpha halo, neutralized wood/cyan pigments, inherited shell highlights into detail ownership and mapped the entire frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/refined-proposal.png",
+              "sha256": "383d0b49cd2a7adfdc5d29ca005b908a1c43e9352c0ec6c89e1fc3087e3e7a74"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/register-mannequin.py",
+              "sha256": "f0d79d36a5f909a60476d0f82414860c7eb4244165e9ed5c18fc8ef2eefbbf0a"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/coverage.png",
+              "sha256": "2edf1c23acd05e379690cd2433c5ce06d4b00625f7fbd727d424149b2298fc7a"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/default-y-R-preview.png",
+              "sha256": "67f3f99edc2f2cb5709add1c27175961779fdececa9d5649fab913a4f94cd1bb"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/detail-coverage.png",
+              "sha256": "469c5b427a03fc008fdf6549d7efc2bccaba0ef2d48c5b184517916e8a44afea"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/detail-neutral.png",
+              "sha256": "08863e3d594e0a8be7c02926ede366db4203c3eb2c7e5c49ce12d49746a8a19a"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/illustrative-y-c-preview.png",
+              "sha256": "315fa2e73864b50f10451b726ec49cfe5b11de6a1633dbc7ff738ba7966e44c6"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/illustrative-y-g-preview.png",
+              "sha256": "84d4262da4fd33eb0bb6ab29c5d920829d721cc450219e5f4c7ed135c8c872a2"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/illustrative-y-m-preview.png",
+              "sha256": "afd5e72c3206e30370700c526dc26d06e92375c34edb1ae53ccbaa92f2e6af41"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/inherited-shell-highlight-mask.png",
+              "sha256": "0807909bd58a9f929118935c505dde213e4d14ca6a4f9460b3cd408c6d1a6517"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/model.json",
+              "sha256": "d74690ab98674f86a87c44ae2a580aba26a5a4543ed0b9fe0a84ea271d5a648a"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/neutral-master.png",
+              "sha256": "d757e707bcbfafb11a78bd9d5f4c3b67131ebedbb1997830eb396d49c28581d4"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/opaque-structure-mask.png",
+              "sha256": "e3e128c2be1cd0796db4611fd742b7200c47794548e005926a30baa55d34316e"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/palette-samples.png",
+              "sha256": "4eeb9494b01673bb064d20b5afe3211ace5766ac6970e5eeb98f57b270740b87"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/primary-neutral.png",
+              "sha256": "96a7982fa3fc365d14af0a7970a58a5f78a6c1f3ae13ce9241ee9e4d7cc3d517"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/registration-comparison.png",
+              "sha256": "99a2a6f71a8c9f0833ba96213c447fd5a930cfe087cda3c7b892b081a6508ec4"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/registration-decisions.json",
+              "sha256": "2cc6029874d09d27e438cd64fe7de05ab2b5d96d4cf1bd49d3f0207050736897"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/selected-edge-mask.png",
+              "sha256": "883b3b209118c8ec4134ea8e0090f9a26fc5fa34ac2d3e101e285cb6f7ec70ab"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/shell-color-seed.png",
+              "sha256": "2be54f84a049648967f95b368189485440ccc7d705098f88f7cc78a005e34bed"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/shell-neutral-master.png",
+              "sha256": "b4dc8216f765812bcd6d80c61af82ecc08d991dd9999b0bb82369624cc478b44"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/shell-ownership-mask.png",
+              "sha256": "f79776506bd6bdf9de882a5d0d0602078e1c3de64c13e3bbd804772df2acb0cd"
+            }
+          ],
+          "review": "Inspected isolated shell ownership and recomposition. Cyan-seeded near-white highlights belong to the shell; pale wood/stand remain primary. Concave cutouts stay open rather than filling a convex hull. Selected256-square layers have equal RGB. Furniture retains its full source-cell mapping, not independent actor contact/bbox centering.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.110458+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Source form, neutral ownership and native palette samples at intended size",
+          "action": "Inspected the neutral complete form, isolated shell, default y/R and illustrative c/m/g detail palettes enlarged and at16x24,24x36,32x48.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/model.json",
+              "sha256": "d74690ab98674f86a87c44ae2a580aba26a5a4543ed0b9fe0a84ea271d5a648a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/registration-comparison.png",
+              "sha256": "99a2a6f71a8c9f0833ba96213c447fd5a930cfe087cda3c7b892b081a6508ec4"
+            },
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/palette-samples.png",
+              "sha256": "4eeb9494b01673bb064d20b5afe3211ace5766ac6970e5eeb98f57b270740b87"
+            }
+          ],
+          "review": "Actual saved plates retain blank oval head, angular torso/hip shell, side cues and open splayed base. Palette samples share exactly the same textures/geometry. Actual live random choice/distribution is not claimed; anatomical interpretation stays explicit. This is art authoring, not game movement, equip or rare-animation acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T08:21:56.110708+00:00",
+          "step": "native_state_review",
+          "phase": "Native random detail, physics, visibility and rare animated fallback deferred",
+          "action": "Retained native selection, physical behavior and rare animated/custom fallback checks behind the all-conversions-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-mannequin/v1/registered/model.json",
+              "sha256": "d74690ab98674f86a87c44ae2a580aba26a5a4543ed0b9fe0a84ea271d5a648a"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-mannequin/v1/registered/model.json",
+          "sha256": "d74690ab98674f86a87c44ae2a580aba26a5a4543ed0b9fe0a84ea271d5a648a"
+        },
+        "plate": {
+          "path": "art/conversion/scn-mannequin/v1/registered/registration-comparison.png",
+          "sha256": "99a2a6f71a8c9f0833ba96213c447fd5a930cfe087cda3c7b892b081a6508ec4"
+        }
+      },
+      "registration_summary": "Static wood/fiberglass mannequin retains source head, angular torso/hip forms, side cues and pale stand. Production layers are neutral; complete shell highlights inherit actual native randomized detail while armature/stand stay primary y. Default R and c/m/g samples illustrate the same masks, not captured random choices. Exact armature joints are uncertain authored interpretation. This furniture has one source-cell frame, not an actor rig, independent limb nodes or new apparel behavior. Native color selection, physics, visibility and rare animated/custom fallback remain pending."
     },
     {
       "id": "SCN-METAL-WORKBENCH",
@@ -10257,8 +10533,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

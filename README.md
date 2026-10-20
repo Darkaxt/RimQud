@@ -114,7 +114,9 @@ retain gray seams/highlights without coloring wooden shelf strokes.
 Their five actual refinements, native source states, installed mod references,
 editable shapes and extraction evidence are in the report. [Hammock states](art/conversion/scn-hammock/v1/registered/registration-comparison.png)
 · [Bookshelf layouts and stock tints](art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png).
-There are now 45 generation-ready entries; Mannequin is active next.
+Mannequin now preserves its wood/fiberglass source forms with neutral shell/stand layers and native randomized detail tint; the uncertain armature interpretation is explicit. [Mannequin palette and ownership](art/conversion/scn-mannequin/v1/registered/registration-comparison.png)
+
+There are now 46 generation-ready entries; Metal Workbench is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
