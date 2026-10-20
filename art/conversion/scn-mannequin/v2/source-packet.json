@@ -1,0 +1,168 @@
+{
+  "entry": "SCN-MANNEQUIN",
+  "identity": "Mannequin -> MountedFurniture -> Furniture",
+  "description": "The biped form emerges out of a cocoon of wood and fiberglass.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Mannequin": "<object Name=\"Mannequin\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"mannequin\" ColorString=\"&amp;y\" DetailColor=\"R\" RenderString=\"h\" Tile=\"Items/sw_mannequin.bmp\" />\n    <part Name=\"Description\" Short=\"The biped form emerges out of a cocoon of wood and fiberglass.\" />\n    <part Name=\"RandomColors\" DetailColor=\"all\" />\n    <part Name=\"Physics\" Weight=\"30\" Solid=\"false\" />\n    <stat Name=\"AV\" Value=\"2\" />\n    <stat Name=\"Hitpoints\" Value=\"80\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Well-Formed,Beautiful,Fair,Still,Uncanny,Lifelike\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Sculptors,Haberdashers,Clothiers,Armorers\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"WoodenHumanoid\" />\n    <tag Name=\"AnimatedSkills\" Value=\"Persuasion_SnakeOiler,Customs_Tactful,Discipline_Meditate\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n\t\t<tag Name=\"Class\" Value=\"human\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Crafts\" />\n    <stag Name=\"Centerpiece\" />\n\t\t<stag Name=\"Beauty\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\mannequin-mask.png",
+    "sha256": "17e5061ae5916c72d8cd693d6e548445b7080b888419ecb57d1dd1628bf46d07",
+    "tile": "Items/sw_mannequin.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9823,
+    "atlas_id": 185,
+    "rect": [
+      108,
+      182,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Colored featureless head at upper-left/center, separated upper torso and hip-form marks over a pale central stem with split base supports. Pale angled marks on the right and colored marks left of the torso are ambiguous arm/armature cues, not proof of extra limbs or a game actor skeleton.",
+  "palette": {
+    "primary": "y",
+    "default_detail": "R",
+    "native_primary_rgb": "b1c9c3",
+    "default_detail_rgb": "d74200",
+    "random_detail": "RandomColors DetailColor=all",
+    "rule": "Head/torso/hip shell and colored left bent-form marks receive actual native randomized detail. Stem/base/right armature remain primary y. Cyan in authoring only identifies shell ownership; final production layers are neutral. Default R preview is a blueprint illustration, not a claimed captured random result."
+  },
+  "donor_reference": {
+    "mod": "Combat Training (Continued)",
+    "package_id": "Mlie.CombatTraining",
+    "workshop_id": "2778569619",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_south.png",
+    "sha256": "2c4c05554c9d092eac703504c40736568cd188da25f6a05c97049fb7a113c742",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\About\\About.xml",
+    "about_sha256": "bb753a337938a6ec17c279d6dc0dd948a0551e739eb533586e2d2fb797803ed4",
+    "role": "Actual installed CombatTrainingDummy_south supplies restrained featureless dummy/form contours, shallow surface shading and stand readability only. Its X eyes, target circles, soft sack shape, donor training behavior and source colors are not copied."
+  },
+  "reference_limits": "VFE Vikings training dummy was viewed but not selected: helmet, shield and sword would change source identity. No exact wood/fiberglass tailoring mannequin equivalent was found in inspected named assets.",
+  "construction": "Retain actual selected front material and shell ownership in expanded frame; author reverse of featureless forms about source stand. Separate complete profiles preserve intrinsic colored left bent form versus pale right armature, head/torso/hip fragments, central stem and splayed supports. Profile depth/overlap/unseen surfaces remain interpretation. No face, hands/fingers, walking legs, target, modern human mannequin or new clothing system.",
+  "native_state": {
+    "owner": "XRL.World.Parts.RandomColors",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "319ff7640f7d672335fb8c33a6583f9b0010c7ff8fbe961eca87dc4561208866",
+    "rule": "RandomColors DetailColor=all resolves with Crayons.GetRandomColorAll and writes native Render.DetailColor. Keep actual chosen color native. One ordinary fixed tile is declared; rare Animated builder/BodyType WoodenHumanoid is a separate native behavior and requires original fallback."
+  },
+  "equipment_boundary": "Ordinary mannequin definition declares no Mannequin-specific clothing/apparel render path. BodyType is animated-furniture metadata, not a reusable human actor body, independent arm/leg render nodes or proof of wearable equipment. This entry converts the static furniture graphic only.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "expanded_source_frame": [
+      24,
+      24
+    ],
+    "original_cell_offset": [
+      4,
+      0
+    ],
+    "manual_canvas": [
+      768,
+      768
+    ],
+    "recipient_canvas": [
+      384,
+      256
+    ],
+    "authored_source_anchor": [
+      12,
+      16
+    ],
+    "original_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Shared expanded frame adds4source units each side of the original cell; original physical pixels/scale retained. Reflect N about standx11.3 to preserve rotation pivot and fit the source long armature. No per-view/part alpha-bounds normalization; all masks share mapping."
+  },
+  "native_behavior": "Preserve mounted30-weight non-solid furniture, AV2,Hitpoints80, source non-takeability and rare animated/custom fallback. No donor training mechanics or new clothing framework.",
+  "native_acceptance": "Pending full-set generation gate; native random detail selection, mounted non-solid30-weight furniture/AV2/HP80, visibility and rare Animated fallback plus extra-view placement remain unfinished.",
+  "previous_packet": {
+    "path": "art/conversion/scn-mannequin/v1/source-packet.json",
+    "sha256": "2ecdd773894c18e3b997188607e9ec4020d31b40d39de577e0860bc861c4998b"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_south.png",
+        "sha256": "2c4c05554c9d092eac703504c40736568cd188da25f6a05c97049fb7a113c742",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          32,
+          1,
+          96,
+          125
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_east.png",
+        "sha256": "229005f6b84ca15df4a6e37ea1dcfdb1ffe5fafda040418f3ca052555bf800f8",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          34,
+          0,
+          95,
+          127
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_north.png",
+        "sha256": "c99313deecdeb977d271ec6fff16c0cf493d12205260e89661ab59437aa07d97",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          32,
+          1,
+          96,
+          125
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Misc.xml",
+      "sha256": "9190716f04a84f4f9ad517a773420b2393d6126698b8c12da9306ee457cc209f"
+    },
+    "object": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>CombatDummy</defName>\n    <label>combat dummy</label>\n    <description>Used to train melee and shooting skills</description>\n    <thingClass>KriilMod_CD.Building_CombatDummy</thingClass>\n    <hasTooltip>true</hasTooltip>\n    <graphicData>\n      <texPath>CombatTrainingDummy</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <shadowData>\n        <volume>(0.3, 0.2, 0.3)</volume>\n        <offset>(0,0,-0.1)</offset>\n      </shadowData>\n      <damageData>\n        <rect>(0.2,0.2,0.6,0.6)</rect>\n      </damageData>\n      <drawSize>1.2</drawSize>\n    </graphicData>\n    <defaultPlacingRot>South</defaultPlacingRot>\n    <castEdgeShadows>false</castEdgeShadows>\n    <altitudeLayer>Building</altitudeLayer>\n    <minifiedDef>MinifiedThing</minifiedDef>\n    <thingCategories>\n      <li>BuildingsMisc</li>\n    </thingCategories>\n    <statBases>\n      <MaxHitPoints>1000</MaxHitPoints>\n      <WorkToBuild>4000</WorkToBuild>\n      <Flammability>0.5</Flammability>\n      <Mass>25</Mass>\n    </statBases>\n    <scatterableOnMapGen>false</scatterableOnMapGen>\n    <fillPercent>0.70</fillPercent>\n    <costStuffCount>70</costStuffCount>\n    <stuffCategories>\n      <li>Metallic</li>\n      <li>Woody</li>\n      <li>Stony</li>\n    </stuffCategories>\n    <comps>\n      <li Class=\"CompProperties_Forbiddable\" />\n    </comps>\n    <designationCategory>Misc</designationCategory>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>\n    <passability>PassThroughOnly</passability>\n    <pathCost>70</pathCost>\n    <canOverlapZones>false</canOverlapZones>\n  </ThingDef>\n",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "parent_object": "<ThingDef Name=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshOnly</drawerType>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n  </ThingDef>\n  \n  ",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": 1.2,
+    "footprint": "No explicit size in inspected CombatDummy/BuildingBase XML; runtime default unknown.",
+    "mapping": "Exact1.6CombatDummy texPath matches root CombatTrainingDummy S/E/N textures. No LoadFolders.xml installed; activation/profile not asserted.",
+    "role": "Actual featureless form silhouette, complete profile head volume and shallow shading only. Donor X eyes/target/sack silhouette/training are not copied; source stand/armature geometry is not supplied by this sack reference."
+  },
+  "camera": {
+    "classification": "CARDINAL_SOURCE_BOUND",
+    "contract": "Selected straight front retained; N is the same featureless manufactured forms reversed about the central stand, not the image midpoint. Complete east and west profiles are authored separately for asymmetric limb/role overlap. No humanoid actor pose or face.",
+    "authored_shell_depth": 2.2,
+    "authored_head_profile_width": 2.1,
+    "authored_profile_base_depth": 3.6,
+    "dimension_provenance": "Unseen form thickness, profile armature depth/occlusion and stand strut directions are authored estimates informed by native biped-form glyph/description and actual donor profile volume; not native dimensions or a donor frame ratio.",
+    "stand_center_source_x": 7.3,
+    "stand_center_expanded_x": 11.3,
+    "west": "Separate profile: pale right armature is far, colored left form is near. A mirror of the entire east would swap source role/laterality incorrectly."
+  }
+}

@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-MANNEQUIN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-METAL-WORKBENCH**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -145,8 +145,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-FLOOR-CUSHION | Floor Cushion | UNFINISHED | - |  |
 | SCN-HAMMOCK | Hammock | UNFINISHED | - |  |
 | SCN-JOPPA-BOOKSHELF | Joppa Bookshelf | UNFINISHED | - |  |
-| SCN-MANNEQUIN | Mannequin | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-METAL-WORKBENCH | Metal Workbench | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-MANNEQUIN | Mannequin | UNFINISHED | - |  |
+| SCN-METAL-WORKBENCH | Metal Workbench | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-ORNATE-TABLE | Ornate Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-TABLE | Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
@@ -5633,7 +5633,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/mannequin-body.png](../art/village/scenery/mannequin-body.png), [art/village/scenery/mannequin-detail.png](../art/village/scenery/mannequin-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 9.
+Current step: native_state_review. Process-log events: 18.
 
 - 2026-10-20T08:21:56.104589+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed Mannequin/MountedFurniture/Furniture definitions, original mask and native RandomColors behavior.
   Review: Static mounted furniture uses primary y and RandomColors DetailColor=all; R is the blueprint default only. Source head, torso/hip forms, pale stem/base and ambiguous side marks are distinct. BodyType and rare Animated metadata do not establish actor render joints or a mannequin-specific apparel path.
@@ -5689,6 +5689,60 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T21:00:51.112132+00:00 / resolve_object_description_original_tile_palette_state / PASS: Retain source featureless partial forms, pale stem/armature/base and native randomized shell detail; preserve static furniture versus rare Animated/apparel boundary.
+  Review: One fixed ordinary tile. Random detail is native, not a fixed red repaint or new human body. No ordinary apparel path declared.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/source-packet.json", "sha256": "03e017332733d629febf99367287becfbff9685a6e9bbf7bcf00fc1268dca8b1"}, {"path": "art/conversion/scn-mannequin/v2/source-reference-construction.png", "sha256": "7dd47a27489f256483f8fd41f67892be2c4f68636a53d0b25b2a6616774f9701"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual CombatTrainingDummy S/E/N and matching1.6Graphic_Multi/drawSize1.2definition, with Core parent and missing explicit footprint documented.
+  Review: Reference supplies form/profile volume and shallow shading only. Source stand differs; donor sack/eyes/target/training not copied.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/source-packet.json", "sha256": "03e017332733d629febf99367287becfbff9685a6e9bbf7bcf00fc1268dca8b1"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/source-reference-construction.png", "sha256": "7dd47a27489f256483f8fd41f67892be2c4f68636a53d0b25b2a6616774f9701"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / construct_faithful_shape / PASS: Retain selected source front; reverse featureless forms about actual stand and author separate E/W profiles with same source arm roles, full depth and near/far overlap.
+  Review: Profile shell/base depth and armature overlap are authored, not native anatomy. E/W do not reuse a whole mirrored profile.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/source-packet.json", "sha256": "03e017332733d629febf99367287becfbff9685a6e9bbf7bcf00fc1268dca8b1"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/construct-turnaround.py", "sha256": "e1a13cfdafb17d082b445a13ff5f9ecc847e936f648d08ea44d1c9626a2880b0"}, {"path": "art/conversion/scn-mannequin/v2/original-selected-front.png", "sha256": "8d42323c2d452c9c1db2210843af33837a046402a21982230af4461d41dcf848"}, {"path": "art/conversion/scn-mannequin/v2/selected-south-neutral.png", "sha256": "9ba2f2b48846fed3f0088305802ee6f2e7ca067107e3c87715e3c968b064f61b"}, {"path": "art/conversion/scn-mannequin/v2/selected-north-neutral.png", "sha256": "1ffeac589200b62968d785d234a4e686fcab5759a0b16ddf0641893f287d478f"}, {"path": "art/conversion/scn-mannequin/v2/constructed-east.svg", "sha256": "90db7943a9ef826166c259f7a17aca6f3e9236a0560e35159c07989fd55af914"}, {"path": "art/conversion/scn-mannequin/v2/constructed-west.svg", "sha256": "65cf3116876302525f230036e495b426f742db64593eeee34c53f77aae275389"}, {"path": "art/conversion/scn-mannequin/v2/manual-structural-review.json", "sha256": "363ac0f0f8fdc63ceaade8ab347ed12aa568ce97ab34a5a2fb9d3b14aa2e4e02"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / create_front_side_back_furniture_views / PASS: Expand shared frame to24x24 with original16x24cell at offset4,0; preserve source scale and all masks, preventing long reverse armature clipping without independent bounds fits.
+  Review: All S/E/N/W share768square authoring and384x256recipient mapping, native anchor12,16/standx11.3. Additional directions remain unbound.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/selected-south-neutral.png", "sha256": "9ba2f2b48846fed3f0088305802ee6f2e7ca067107e3c87715e3c968b064f61b"}, {"path": "art/conversion/scn-mannequin/v2/selected-north-neutral.png", "sha256": "1ffeac589200b62968d785d234a4e686fcab5759a0b16ddf0641893f287d478f"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/frame-expansion.json", "sha256": "e60f52659794b876d7005f47e59004658a00625fad73710b04fb688ef22c81f6"}, {"path": "art/conversion/scn-mannequin/v2/front-guided-turnaround.png", "sha256": "d1e684ffeec04b3bc9e08af08f61b4b2e1fd2e98249f7e0f06d596518a4a4332"}, {"path": "art/conversion/scn-mannequin/v2/frame-and-role-comparison.png", "sha256": "38697e5d1a9027d2b222e55f37bae394f5510a51e3ded1a2e0c7b29b489631eb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen four-view composed refinement, structurally inspected before profile material extraction.
+  Review: All four static manufactured forms retain source featureless head, separate torso/hip shells, pale right armature, colored left bend and stand. E/W preserve different near/far arm/role overlap; no face, target, complete human torso, hands/walking legs or clothes. Generated frame/panel placement, strut stance, line widths and exterior cyan fringe drift; retain selected S and reflected N material, exact constructed E/W alpha/ink/role and authored physical mapping. Use E/W material only, no second isolation. Profile/base depths remain authored, ordinary static furniture only; RandomColors and rare Animated fallback/native acceptance remain pending.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/front-guided-turnaround.png", "sha256": "d1e684ffeec04b3bc9e08af08f61b4b2e1fd2e98249f7e0f06d596518a4a4332"}, {"path": "art/conversion/scn-mannequin/v2/turnaround-prompt.txt", "sha256": "65f4a67e3aab44b681683f21078c6e6dbb3e3cc34b03d5811c442d52f4b3f507"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/refined-turnaround-raw.png", "sha256": "18b8ded43eac2b042e31145a7d133d18b4e8e03b8461fc2bc2798bd22ddd9df5"}, {"path": "art/conversion/scn-mannequin/v2/first-structural-review.json", "sha256": "131b72ccca9268d921f22e03956e48a4a875351418663532cb8b1e0fc1bd3785"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-mannequin/v2/turnaround-prompt.txt", "sha256": "65f4a67e3aab44b681683f21078c6e6dbb3e3cc34b03d5811c442d52f4b3f507"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-546a40c3-7dae-4aec-a331-3256d10a6cf4.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-mannequin\\v2\\front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2778569619\\Textures\\CombatTrainingDummy_east.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-mannequin\\v1\\source-construction-comparison.png"]}}
+
+- 2026-10-20T21:00:51.112132+00:00 / extract_register_color_coverage / PASS: Retain padded S and reflected N; select E/W fiber/shell shading into exact constructed geometry/ink/role, rejecting generated strut/placement/fringe changes. Single-alpha color composition replaces old detail overdraw.
+  Review: Primary y armature/stem/base and independent randomized shell role remain neutral. Existing two-role helper fabric label is mapped explicitly to fiberglass shell, no clothing material.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/first-structural-review.json", "sha256": "131b72ccca9268d921f22e03956e48a4a875351418663532cb8b1e0fc1bd3785"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/register-mannequin.py", "sha256": "e425199377d88d6ef6f8a2a321daff1470be29af6937d6621105d8e9fc7a23ea"}, {"path": "art/conversion/scn-mannequin/v2/registered/model.json", "sha256": "2b5021fbc16eb2236c2936aeeb9757910fc44027ec85eb5d3d1050e12709dcf4"}, {"path": "art/conversion/scn-mannequin/v2/registered/registration-decisions.json", "sha256": "fdae6ce9e41f1b833c8fbd4f9f5730eb40517cfe6b2ccf1e61c0e41207a696ee"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-neutral.png", "sha256": "bba2ba4bcd80daa560e588a34ae2bf7f57d19b30574a89c921c7bfe78d638303"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-detail.png", "sha256": "f130e635c3e5950824686ceeb5fe09f7a2a60b76d60cd97d0400383976eac264"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-coverage.png", "sha256": "613610d71d7eded934c96dd09c4c025b2bf2ae51cd69519d5447bfb0e8f665c5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / create_required_state_neighbor_variants / PASS: Keep one native fixed shape and show default R plus illustrative c/m/g on identical production geometry/masks; native RandomColors owns actual choice/distribution.
+  Review: Samples illustrate mask ownership, not captured random states. No wardrobe/body-age/actor variants or Animated implementation created.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/source-packet.json", "sha256": "03e017332733d629febf99367287becfbff9685a6e9bbf7bcf00fc1268dca8b1"}, {"path": "art/conversion/scn-mannequin/v2/registered/model.json", "sha256": "2b5021fbc16eb2236c2936aeeb9757910fc44027ec85eb5d3d1050e12709dcf4"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/registered/all-views-default-R.png", "sha256": "f2ee600fa2a731e38a06c378ec387ec7f9d3a056802d7c1365a1ee82f83e2936"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-sample-c.png", "sha256": "85a85fec27405aeb9c060756046d2ce509ae06809e41f992f17de13cdb1a21f8"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-sample-m.png", "sha256": "16106d3e68e43bd5e4c72ec725efc30574c889ace652c9d43aefeadc847296b9"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-sample-g.png", "sha256": "d34e8c319197ff5119103f02bba1bedf320d90c2cf2d6511b404b9bb6f0b2fbe"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect full S/E/N/W and24x24/36x36/48x48expanded-frame previews: source identity, actual role/laterality, stand-centered reverse, uncropped frame, neutral masks and consistent palette ownership.
+  Review: Reviewed exact native mannequin glyph/description/ancestry, RandomColors detail=all and static-versus-Animated/apparel boundary; actual Combat Training S/E/N and1.6Graphic_Multi/drawSize1.2mapping inspected. Selected unusual featureless head/torso/hip forms, colored left bend and pale right armature/stem/base retained. Expanded common24x24frame preserves source size/native-cell offset and rotates reverse about actual stand rather than clipping/recentering. E/W have separate full profile depth/occlusion, with authored unseen geometry. One actual four-view composed refinement inspected before material extraction; selected S/reversed N retained and generated E/W material sampled inside exact manual coverage/ink/roles. Neutral shell/armature layers and one-alpha y/defaultR plus illustrative c/m/g previews recorded at intended sizes. No face/target/human anatomy/garments/new rig. Native mounted/random/physics/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/registered/model.json", "sha256": "2b5021fbc16eb2236c2936aeeb9757910fc44027ec85eb5d3d1050e12709dcf4"}]
+  Outputs: [{"path": "art/conversion/scn-mannequin/v2/registered/all-views-default-R.png", "sha256": "f2ee600fa2a731e38a06c378ec387ec7f9d3a056802d7c1365a1ee82f83e2936"}, {"path": "art/conversion/scn-mannequin/v2/registered/authoring-review.json", "sha256": "12d1837d1cfb74b2b587c7c9d3b785f06318685cb0ffd1393fec05329e39af88"}, {"path": "art/conversion/scn-mannequin/v2/artifact-manifest.json", "sha256": "0f6205a4564738cf722534d3b8021bccf23ccc89997ec2335a32e3f4b5d822cc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:00:51.112132+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native mounted non-solid30-weight furniture, random detail, AV2/HP80, visibility/cover and rare Animated fallback plus extra-view placement behind full-set generation.
+  Review: No game/harness launch or native activation. Entry remains UNFINISHED pending native acceptance.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/registered/model.json", "sha256": "2b5021fbc16eb2236c2936aeeb9757910fc44027ec85eb5d3d1050e12709dcf4"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-METAL-WORKBENCH: Metal Workbench
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5697,7 +5751,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: not started. Process-log events: 14.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 14.
 
 - 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
   Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
