@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-CHAIR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-CHEST1**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -139,8 +139,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-BEDROLL | Bedroll | UNFINISHED | - |  |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - |  |
 | SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - |  |
-| SCN-CHAIR | Chair | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-CHEST1 | Chest1 | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CHAIR | Chair | UNFINISHED | - |  |
+| SCN-CHEST1 | Chest1 | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DRESSER | Dresser | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-FLOOR-CUSHION | Floor Cushion | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-HAMMOCK | Hammock | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -4751,7 +4751,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 17.
+Current step: native_state_review. Process-log events: 26.
 
 - 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
   Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.
@@ -4855,6 +4855,60 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T19:40:13.806728+00:00 / resolve_object_description_original_tile_palette_state / PASS: Retain source marsh-dweller nailed-plank identity, original w/y glyph, BaseChair ancestry and one fixed native tile; hard seat tint is not upholstery.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-chair/v3/source-packet.json", "sha256": "f68deeff0d35ae95cf0ee3dbf5e24c405a393fadacab232822fdc5067739a9c8"}, {"path": "art/conversion/scn-chair/v3/source-reference-camera-comparison.png", "sha256": "8598acd28d83a40258f12801c958c7aa7aac70c7cda5a0bcc2dc8369ed74792d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / select_render_reference_or_document_no_equivalent / PASS: Carry actual inspected legacy VFE S/E/N camera reference with source evidence and current SchoolChair mapping limitation. No donor hard-seat/plank geometry or physical dimension assumed.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/source-packet.json", "sha256": "f68deeff0d35ae95cf0ee3dbf5e24c405a393fadacab232822fdc5067739a9c8"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/source-reference-camera-comparison.png", "sha256": "8598acd28d83a40258f12801c958c7aa7aac70c7cda5a0bcc2dc8369ed74792d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / construct_faithful_shape / PASS: Retain selected corrected S; author complete right hard-seat profile and rear plank frame, with rear back posts above seat and shared source cell/pivot.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/source-packet.json", "sha256": "f68deeff0d35ae95cf0ee3dbf5e24c405a393fadacab232822fdc5067739a9c8"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/construct-turnaround.py", "sha256": "3f3a7269fe1d37baa487fb1f588211f9051b5e10cad2dbf0fed9ebd35202b0a3"}, {"path": "art/conversion/scn-chair/v3/constructed-turnaround.png", "sha256": "5e272384b412dc0660cbee5db510a93cfb954710939ee73c92a0f2538f4a0969"}, {"path": "art/conversion/scn-chair/v3/manual-structural-review.json", "sha256": "5db16e6587c46fdd3eae116f7fb55c5688c012166110eb3c686c2ec94b2968d0"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / create_front_side_back_furniture_views / PASS: Compose selected front with complete E/N, preserving source back slats/rails, hard plank seat and supports without padding or backrest pasted onto profile.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/selected-front-neutral.png", "sha256": "36bfbaa962673cdc5726c8b7234d8a16e514f68017375167a050d4a8535f3feb"}, {"path": "art/conversion/scn-chair/v3/constructed-east.png", "sha256": "8f07f109edbd81bdf01a0a87b8d8c7b49b723d59ab20c848bb9c8d1e8f916279"}, {"path": "art/conversion/scn-chair/v3/constructed-north.png", "sha256": "a014c04abe7987c468c5d9d64be524e2af249a994eb5e07ea81fde89e78d081e"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/front-guided-turnaround.png", "sha256": "1f30fe24a4f022bf2247817904b349862eeb5ee05b7adddb3b72110fa54bc5e9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen selected-front-guided composed refinement, structurally inspected before extraction.
+  Review: Source two-slat nailed back, hard rectangular plank seat, attached supports and cardinal profile retained. Rear posts visibly pass above seat. No upholstery, canvas, armrests or new occupant/state. Changed line thickness and exterior/cavity fringe are rejected; selected front and exact manual side/rear alpha/ink remain fixed. Use wood material only, with independent seat tint.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/front-guided-turnaround.png", "sha256": "1f30fe24a4f022bf2247817904b349862eeb5ee05b7adddb3b72110fa54bc5e9"}, {"path": "art/conversion/scn-chair/v3/turnaround-prompt.txt", "sha256": "8d77a7a26332d4e4e11a6da3bb279dea4eb940936bc54522435e0d9511f38386"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/refined-turnaround-raw.png", "sha256": "62d9b5b1a5531ce66c0a898a4a21843ac3c488045b31ea7030bdb91d87b4fad5"}, {"path": "art/conversion/scn-chair/v3/first-structural-review.json", "sha256": "15ae7e6ea9b5b66c1b161a40628fecff0c3acd583e1cb5f14413434967a45e9b"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-chair/v3/turnaround-prompt.txt", "sha256": "8d77a7a26332d4e4e11a6da3bb279dea4eb940936bc54522435e0d9511f38386"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-a4da9368-f3c9-4c21-a2b7-dd2fa68d010e.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-chair\\v3\\front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_east.png"]}}
+
+- 2026-10-20T19:40:13.806728+00:00 / extract_register_color_coverage / PASS: Patch generated edge/thickness drift by selecting wood luminance into exact E/N alpha/ink, retain S pixels, derive symmetric W and independent neutral hard-seat ownership. Cavity fringe excluded.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/refined-turnaround-raw.png", "sha256": "62d9b5b1a5531ce66c0a898a4a21843ac3c488045b31ea7030bdb91d87b4fad5"}, {"path": "art/conversion/scn-chair/v3/first-structural-review.json", "sha256": "15ae7e6ea9b5b66c1b161a40628fecff0c3acd583e1cb5f14413434967a45e9b"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/register-chair.py", "sha256": "28c56b8948cd5dc4aa101d6189580c4fa7f08eb2b95157687cd7dc85ee6f417c"}, {"path": "art/conversion/scn-chair/v3/registered/model.json", "sha256": "5a45bc16f5f92af8e1b50781df44176ee8c61b178e23bbbc2955f606390a84c8"}, {"path": "art/conversion/scn-chair/v3/registered/registration-decisions.json", "sha256": "de24fc95c0cebe7b9841ca83930295b0394dc3aeb181336b232a4b171235cb2e"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-neutral.png", "sha256": "f6d91c324d6def9b0f115148c4b547b5ec10dfd77225fe61763af3b714182b5f"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-detail.png", "sha256": "737d83725355343227df39f3a4e73bf80894c517f952af31e50f472e152c7f88"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-coverage.png", "sha256": "9f171f5b46f365e1ab4b5f8f1424b621fbc1b751ddf43f78d99a5620b42b9b4c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed native chair tile; no occupied/empty/folded variant or new sitting mechanic declared.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/source-packet.json", "sha256": "f68deeff0d35ae95cf0ee3dbf5e24c405a393fadacab232822fdc5067739a9c8"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/registered/model.json", "sha256": "5a45bc16f5f92af8e1b50781df44176ee8c61b178e23bbbc2955f606390a84c8"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect all four views at enlarged and16x24/24x36/32x48sizes: source plank identity, two back slats, profile depth, rear-post ownership, neutral color roles and exact common coverage/pivot.
+  Review: Reviewed source nailed-plank description/original glyph, baseline Chair ancestry/state and source w/y roles, actual legacy VFE directional reference with current-binding limitation, retained corrected front, manual complete hard-seat side/rear overlap, one front-guided composed refinement and structural review before extraction, exact manual coverage/ink material selection and intended-size palette views. Hard seat remains wood, not upholstery. Two inner back slats and upper/lower rails remain; rear posts correctly render above seat. Hidden depth8.3 and joinery are authored, not native/donor measurements. Symmetric side permits mirrored west. Native sitting, non-takeable20-weight organic furniture/MissileCover10/non-occlusion/rare Animated fallback and extra-view placement remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/registered/model.json", "sha256": "5a45bc16f5f92af8e1b50781df44176ee8c61b178e23bbbc2955f606390a84c8"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v3/registered/all-views-native.png", "sha256": "9e7c0945d8e3309c22331e047ecca084e5fc160a2d778e2c1c5ce52626753bdd"}, {"path": "art/conversion/scn-chair/v3/registered/authoring-review.json", "sha256": "c941ea76bdf83d44e03df453e15e58ec3bab83835411aad24e10a3666706a797"}, {"path": "art/conversion/scn-chair/v3/artifact-manifest.json", "sha256": "ec2c19a087d23ff68e66d2d0c1485e5321cdb830824b7e36c8c996b6578b9b15"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:40:13.806728+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep actual sitting, non-takeability, cover/visibility, inherited rare Animated fallback and extra-view placement behind full-set generation.
+  Review: No native activation, game/harness launch, donor facilities or other mechanics copied. Entry remains UNFINISHED pending native acceptance.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/registered/model.json", "sha256": "5a45bc16f5f92af8e1b50781df44176ee8c61b178e23bbbc2955f606390a84c8"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-CHEST1: Chest1
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4863,7 +4917,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chest1-body.png](../art/village/scenery/chest1-body.png), [art/village/scenery/chest1-detail.png](../art/village/scenery/chest1-detail.png).
 
-Current step: not started. Process-log events: 10.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 10.
 
 - 2026-10-20T07:26:22.614516+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chest1/Chest/Furniture inheritance, original16x24mask/hash, scratched-wood description and native w/W roles; inspected Container part for appearance overrides.
   Review: Chest1 changes inventory builder/tier/aggregation, not appearance. Two bright side bands use W; center latch remains primary w. No alternate lid/empty/full/random tile is declared and inspected Container code has no Render/Tile appearance override. Native inventory, sounds, organic/source physics and unspecified defaults remain native.
