@@ -154,6 +154,13 @@ Compare front/end proportions in one shared physical frame. Prefer source Qud
 dimensions when established; otherwise record depth as an authored estimate
 informed by the selected reference, not a measurement recovered from the upright
 Qud glyph. Do not choose an arbitrary thin slab merely to obtain an end view.
+Carry the chosen width, depth, camera elevation and relevant component thickness
+into both the editable construction and the exact refinement prompt. Derive all
+facings from those shared dimensions; do not independently compress the bench,
+glassware or apparatus to fit a narrow side-view panel. Record which dimensions
+are source-supported and which are authored estimates. A reference's rotated
+texture-frame ratio is evidence about its mapping, not a target width ratio for
+the converted object.
 
 Cardinal furniture views follow the reference's map-camera convention; they are
 not automatically edge-on engineering elevations. Preserve plausible volume and
