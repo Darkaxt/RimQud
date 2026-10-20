@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-BRINESTALK",
+  "kind": "fixed_layered_plant",
+  "blueprint": "Brinestalk",
+  "native_tiles": [
+    "assets_content_textures_tiles_tile-brinestalk.png"
+  ],
+  "source": {
+    "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+    "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+  },
+  "primary": {
+    "path": "art/conversion/scn-brinestalk/v1/registered/primary-neutral.png",
+    "sha256": "28308b951a6cdcfc7bbafa4cd9c279ff8d40518a8b9388a30e3c9447b05960a2"
+  },
+  "detail": {
+    "path": "art/conversion/scn-brinestalk/v1/registered/detail-neutral.png",
+    "sha256": "b7ae8c04b60262dc06bc44ac0a50c03ae33c54ee86eb169e1f0a83da2bab75ee"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-brinestalk/v1/registered/coverage.png",
+    "sha256": "7ff76d3fda0ea326634f3496f3ac4689ceea48497c2e284ed18837973cb6e34a"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-brinestalk/v1/registered/detail-coverage.png",
+    "sha256": "07c82df89babea03b6bc1ec54e082a7a184a08691d9d1825e31a2698b0ebc05e"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "Shared full-canvas transform for the whole three-stalk object; all component positions retained. Never center separate stalk bounds or crop each stem independently."
+  },
+  "palette": {
+    "primary": "actual native foreground w",
+    "detail": "actual native detail g",
+    "neutral_preview": "Equal RGB; grayscale only, including all growth regions. Native preview receives separate w/g tint; no green is baked into primary albedo."
+  },
+  "supported_states": "One declared fixed map view. No random builder or native connected variants are present in the inspected object/Plant definitions.",
+  "native_behavior": "Preserve layer3, source visibility, inherited non-solid physics and occluding=true; authored gaps do not alter occlusion. Damage/spring/plant exceptions stay native.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

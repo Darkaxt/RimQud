@@ -1,0 +1,60 @@
+{
+  "entry": "SCN-DOGTHORN-TREE",
+  "recorded_at": "2026-10-20T05:48:54.657626+00:00",
+  "identity": "Dogthorn Tree -> Tree -> Plant -> PhysicalObject",
+  "description": "A tangled nest of roots spill through the earth. The bark is splintered into pointy spines. The leaves are greasy and stinking.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected": "<object Name=\"Dogthorn Tree\" Inherits=\"Tree\">\n    <part Name=\"Render\" DisplayName=\"dogthorn tree\" RenderString=\"157\" ColorString=\"&amp;G\" Tile=\"terrain/sw_fattree1.bmp\" TileColor=\"&amp;G\" DetailColor=\"w\" Occluding=\"true\" />\n    <part Name=\"Description\" Short=\"A tangled nest of roots spill through the earth. The bark is splintered into pointy spines. The leaves are greasy and stinking.\" />\n\t\t<builder Name=\"RandomTile\" Tiles=\"Terrain/sw_fattree1.bmp,Terrain/sw_fattree2.bmp\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"DynamicObjectsTable:FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:DesertCanyon_FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:Hills_FarmablePlants\" />\n\t\t<tag Name=\"DynamicObjectsTable:Mountains_FarmablePlants\" />\n    <tag Name=\"DynamicObjectsTable:DesertCanyon_Plants\" />\n    <tag Name=\"DynamicObjectsTable:Hills_Plants\" />\n\t\t<tag Name=\"DynamicObjectsTable:Mountains_Plants\" />\n    <tag Name=\"PlacementIsSkippable\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_tree\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_tree\" />\n  </object>\n  ",
+    "tree_parent": "<object Name=\"Tree\" Inherits=\"Plant\">\n    <tag Name=\"Tree\" />\n    <tag Name=\"Class\" Value=\"tree\" />\n    <tag Name=\"BodyType\" Value=\"Tree\" />\n    <tag Name=\"PrimaryLimbType\" Value=\"Arm\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_tree\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_tree\" />\n  </object>\n  ",
+    "plant_parent": "<object Name=\"Plant\" Inherits=\"PhysicalObject\">\n    <part Name=\"Render\" DisplayName=\"[Plant]\" RenderLayer=\"3\" RenderString=\"157\" Tile=\"assets_content_textures_tiles_tile-9-4.png\" ColorString=\"&amp;G\" Occluding=\"false\" />\n    <part Name=\"Physics\" Conductivity=\"60\" Solid=\"false\" Weight=\"200\" Category=\"Plants\" Takeable=\"false\" />\n    <part Name=\"MentalShield\" />\n    <part Name=\"PlantProperties\" />\n    <part Name=\"NoBleed\" />\n    <part Name=\"Springy\" Factor=\"0.8\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Plant\" />\n    <tag Name=\"LivePlant\" />\n    <tag Name=\"BodyType\" Value=\"Bush\" />\n    <stag Name=\"Plank\" Value=\"plank\" />\n    <stag Name=\"Fiber\" Value=\"strip\" />\n    <stag Name=\"FiberMaterial\" Value=\"bark\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_tree\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_genPlant\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_genPlant\" />\n  </object>\n  "
+  },
+  "original_states": {
+    "path": "art/conversion/scn-dogthorn-tree/v1/native-state-index.json",
+    "sha256": "babeed388defd83bccef8bfa7f0ed882010c5165ea95ce0acc6caf601725342a"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-dogthorn-tree/v1/native-states-comparison.png",
+    "sha256": "573f757a6c9fe44499cdf5b47da12fca16c5e3b7ccd2b5e3610fc8caf4885776"
+  },
+  "source_shape": "Both16x24native variants have broad irregular greasy-leaf crowns, crooked visible brown branches/trunk and a wide exposed root nest. Variant1leans its crown toward the upper right with a low left lobe; variant2has a higher central lobe and a lower right-spreading crown.",
+  "palette": {
+    "primary": "G",
+    "detail": "w",
+    "native_primary_rgb": "00c420",
+    "native_detail_rgb": "98875f",
+    "rule": "Foliage is source primary; exposed trunk/branches/roots are source detail. Neutral albedo and independent wood tint mask must be extracted after refinement."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "package_id": "VanillaExpanded.VTEXE",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Plant\\TreeOak\\TreeOakA.png",
+    "sha256": "3444f9620ff57137ef3ae69676fd3627a23202f169548e1ecd8b11513ccb7440",
+    "role": "Actual installed oak replacement supplies readable clustered leaf masses, dark game-art contours and restrained tree shading only. It is not a dogthorn species equivalent. Source root nest, thorns, branch visibility, two crown shapes and native G/w colors stay authoritative."
+  },
+  "construction": "Editable thorn-splintered crooked wood and tangled exposed roots under irregular clustered pointed leaves. Neutral gray foliage and brown wood during refinement explicitly identify tint ownership; final selected layers are entirely grayscale.",
+  "states": "Two actual RandomTile builder choices: Terrain/sw_fattree1.bmp and Terrain/sw_fattree2.bmp. They are cosmetic fixed-map-view variants, not different ages/facings/races. Native instance selection remains source-owned.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell transform across both variants; no independent alpha-bound fit or new per-state root center."
+  },
+  "native_behavior": "Preserve source occlusion, plant/hanging support, inherited non-solid physics and native tile/random selection. Dense leaf art does not add collision or new growth behavior.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

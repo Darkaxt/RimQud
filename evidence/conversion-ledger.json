@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-BRINESTALK",
+  "active_entry": "SCN-STARAPPLE-TREE",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -23378,8 +23378,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -23448,7 +23448,289 @@
           "sha256": "4b7a1cef3b20d01c5f7341b2b97605f97f708d17118fc19888da3e326a335d5d"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T05:46:14.636453+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Native brinestalk identity, shape and exact color roles",
+          "action": "Read Brinestalk/Plant definitions, description, actual original mask and inherited physics; decoded source mask into actual native w/g palette for contextual comparison.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-construction-comparison.png",
+              "sha256": "e94466be25073e7c0ea0001576772ef193e5ba76e798a2c4e1f718d3ee0ddfb1"
+            }
+          ],
+          "review": "Original mask/hash matches existing captured source. Three uneven stalks with sparse green knots, not a canopy tree. Historical reference uses standardized pale swatches; packet distinguishes that preview from actual native brown w/green g. Non-solid inheritance and occluding=true remain source-owned.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.636924+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed Vanilla Textures Expanded bamboo reference",
+          "action": "Selected installed TreeBambooA from Vanilla Textures Expanded for three-stalk shading and crisp-outline convention only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-construction-comparison.png",
+              "sha256": "e94466be25073e7c0ea0001576772ef193e5ba76e798a2c4e1f718d3ee0ddfb1"
+            }
+          ],
+          "review": "Viewed actual bamboo image and About metadata/hash. No close species equivalent is asserted. Large canopy and donor plant mechanics are excluded from the authored brinestalk. An inspected Alpha Biomes sugarcane candidate was candy-cane themed and was not selected or passed to ImageGen.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.637129+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable original-shaped three-piling construction",
+          "action": "Built three explicit crooked fibrous pilings, source-positioned growths, irregular heights, furrows and salt-wear strokes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/prepare-and-construct.py",
+              "sha256": "cec3ee394486331fa3a17963641b841c6d9824a2bf89bcb15fae56ac3c370e5e"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-front.svg",
+              "sha256": "d7742586e9e06dd271fa624907094fef06d6e023740685986aca2d18f01e0b34"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-front.png",
+              "sha256": "e86b822a88f61d934a5dba4ccb8160d88ec19f4f0cc3460c792dd5069fc88195"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-body.svg",
+              "sha256": "4e9997d6032d8577b16ce1db03e0899afb003d1fba50c5e2d819f4558cbb96bd"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-body.png",
+              "sha256": "3000ed92c5d9ed870f9f67d373faa60c0279662375ad9a38473468914a3fee43"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-detail.svg",
+              "sha256": "0dca6a6b29b6fd8ed86a1abe37b47a216e81fd29c4995d5b20e318bf54355d02"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-detail.png",
+              "sha256": "1d058759b3f8ac7170d4933f957460bba895858f5c0bc110ac1d7b74e4c653d7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-construction-comparison.png",
+              "sha256": "e94466be25073e7c0ea0001576772ef193e5ba76e798a2c4e1f718d3ee0ddfb1"
+            }
+          ],
+          "review": "Viewed complete manual front and source comparison. Separate stalks share the original source-cell mapping. Green in this input intentionally identifies the native detail role; it is not an accepted baked-color output.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.637872+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Fixed native map view and shared source-cell frame",
+          "action": "Retained one complete three-stalk object in its declared native fixed view; no random tile builder, painted connectivity or secondary facing is declared for this object/Plant parent.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/registration-comparison.png",
+              "sha256": "251981310463b6803e00372597b2f83438b313ed3bce96a73df8dd69a50df2c8"
+            }
+          ],
+          "review": "Viewed the registered full-cell composition and intended-size views. No creature turnarounds or clothing apply. Each stalk stays at its authored source position rather than being independently cropped or centered; current source behavior is not extended with plant-merging or growth states.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.638127+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled fibrous salt-rot refinement",
+          "action": "Used built-in ImageGen once on the editable front with the actual installed bamboo rendering reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/refine-front-prompt.txt",
+              "sha256": "09e2f900e5ba393a1fe9603f0327cb604ebddcfeb893b10350e4224477a7f859"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/constructed-front.png",
+              "sha256": "e86b822a88f61d934a5dba4ccb8160d88ec19f4f0cc3460c792dd5069fc88195"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/source-packet.json",
+              "sha256": "7dccb9cf8ea32852e70d12495cbaf7d2577bb1ab5075f5b8f4552aadf6855d14"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/refine-front-prompt.txt",
+              "sha256": "09e2f900e5ba393a1fe9603f0327cb604ebddcfeb893b10350e4224477a7f859"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/refined-proposal.png",
+              "sha256": "6cb9b7f16f4873d237ada5c9ff1e1078c310dc68acd7d516c1515e10f38709fb"
+            }
+          ],
+          "review": "Viewed generated output and actual alpha. Three separately rooted ragged stalks and all small growths retained, no broad donor canopy. Fibers and salt furrows are restrained authored refinement. Exterior glow in the preview is not selected object alpha.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-brinestalk\\v1\\constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Plant/TreeBamboo/TreeBambooA.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-c5b2682a-bf79-4d20-b745-b9dfc5e27d12.png"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.639521+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Actual refined alpha selection, neutralization and detail ownership",
+          "action": "Selected the three complete connected stalks, cleared unowned RGB, normalized opaque interiors and extracted green-dominant growth ownership into independent grayscale layers/masks.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/refined-proposal.png",
+              "sha256": "6cb9b7f16f4873d237ada5c9ff1e1078c310dc68acd7d516c1515e10f38709fb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/register-plant.py",
+              "sha256": "34f2184846782cce44950fe63ae77d8357c54a0438b24ded06d55b861276c874"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/model.json",
+              "sha256": "83ef0bfa56bfc1003c4383523a8d1ff08400dbe009a8090b36657fd522843bdc"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/registration-decisions.json",
+              "sha256": "72f75206d8746d3d4e6b73b6c4ff1b7619946f1126c02a5b44519049f34f37c5"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/source-selection-left.png",
+              "sha256": "191b670f551466e41ac2274407f11248d518a3b5cbf2c5c195e9921de16fb2bd"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/source-selection-center.png",
+              "sha256": "9f8c54894cb1e64bd891ccf9f7f33e0a1e78f538e68f2a51be8a51c3f599dd5b"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/source-selection-right.png",
+              "sha256": "9b4d55ffde35ef4a6e01ab30f2c8f90f8848794545de3340c00c1061f59133d1"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/source-selection-all.png",
+              "sha256": "0b7e2f4b8e3ab1add403eecff3154e2a23902eae57e0c85578dfa387a48803ee"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/green-ownership-mask.png",
+              "sha256": "6259dd238967db375c110df3fde566106db244d0f509671b5424ee7364d659a7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/neutral-cleaned-master.png",
+              "sha256": "babf347b6be1003da18d1e63b516e2712077638716cad12b30da13d6d1ffc062"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/detail-neutral-master.png",
+              "sha256": "e9a19c42ff367e76263d9d406e294e10491e9bfdb66ed4b8d1c11a4a8925c45e"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/primary-neutral.png",
+              "sha256": "28308b951a6cdcfc7bbafa4cd9c279ff8d40518a8b9388a30e3c9447b05960a2"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/detail-neutral.png",
+              "sha256": "b7ae8c04b60262dc06bc44ac0a50c03ae33c54ee86eb169e1f0a83da2bab75ee"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/coverage.png",
+              "sha256": "7ff76d3fda0ea326634f3496f3ac4689ceea48497c2e284ed18837973cb6e34a"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/detail-coverage.png",
+              "sha256": "07c82df89babea03b6bc1ec54e082a7a184a08691d9d1825e31a2698b0ebc05e"
+            }
+          ],
+          "review": "Inspected saved neutral primary/detail layers: equal RGB in every pixel; selected neutral view has no fixed green. Actual green source pixels select tint ownership, not final albedo hue. All layers use the same full-canvas transform.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.642411+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Native palette and intended-size vegetation review",
+          "action": "Recomposed the separate neutral roles with native w/g tint and inspected full-cell/intended-size and neighboring-object plates.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/model.json",
+              "sha256": "83ef0bfa56bfc1003c4383523a8d1ff08400dbe009a8090b36657fd522843bdc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/registration-comparison.png",
+              "sha256": "251981310463b6803e00372597b2f83438b313ed3bce96a73df8dd69a50df2c8"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/native-w-g-preview.png",
+              "sha256": "f848d01c23836080d965ce6d2c44ae233927156d56fe024998057cffc425b281"
+            },
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/cluster-comparison.png",
+              "sha256": "8904a9456c93ba8e86a5bee8520af672044e0a034c3ea83fa135f5d5821449b0"
+            }
+          ],
+          "review": "Viewed all selected plates. Native brown pilings and small green growths retain the original shape/role identity. Neighbor plate contains separate authored objects; it is not a native scene or a claim of merged vegetation. Body turnarounds, mutations and equipment are inapplicable.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:46:14.642891+00:00",
+          "step": "native_state_review",
+          "phase": "Native brinestalk acceptance deferred",
+          "action": "Kept native frame binding, visibility/occlusion, Springy/Plant behavior and state acceptance behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalk/v1/registered/model.json",
+              "sha256": "83ef0bfa56bfc1003c4383523a8d1ff08400dbe009a8090b36657fd522843bdc"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch or native/harness validation; overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-brinestalk/v1/registered/model.json",
+          "sha256": "83ef0bfa56bfc1003c4383523a8d1ff08400dbe009a8090b36657fd522843bdc"
+        },
+        "plate": {
+          "path": "art/conversion/scn-brinestalk/v1/registered/registration-comparison.png",
+          "sha256": "251981310463b6803e00372597b2f83438b313ed3bce96a73df8dd69a50df2c8"
+        }
+      },
+      "registration_summary": "Selected three fibrous salt-rotted pilings retain native source placement and small green growths. Refined RGB was split into neutral albedo and an independent neutral growth mask, so neutral mode contains no baked green. Actual native w/g tint, construction and refinement are documented; fixed-view native visibility/occlusion acceptance remains pending."
     },
     {
       "id": "SCN-DOGTHORN-TREE",
@@ -23534,7 +23816,366 @@
           "sha256": "ab3efda599d35f38df54a7e89ca1fa2767f039fe757beae3bb93e4d82f7e30ef"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T05:53:44.132548+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Dogthorn source identity, tangled roots and both native tiles",
+          "action": "Read Dogthorn Tree/Tree/Plant definitions, native description and actual RandomTile choices; privately extracted both installed sw_fattree variants and decoded native G/w roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/extract-native-states.py",
+              "sha256": "8cc2900884aae81df3ba9ab6dcc9c6e222d17b0227498d3cd42a77a6c53c214e"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/native-state-index.json",
+              "sha256": "babeed388defd83bccef8bfa7f0ed882010c5165ea95ce0acc6caf601725342a"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/native-states-comparison.png",
+              "sha256": "573f757a6c9fe44499cdf5b47da12fca16c5e3b7ccd2b5e3610fc8caf4885776"
+            }
+          ],
+          "review": "Viewed both original source shapes. Broad irregular foliage is primary G; exposed branches/trunk/root nest are detail w. Native builder has two cosmetic variants, not a single static image. Actual fixed shape and inherited mechanics remain distinct from authored foliage detail.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.133014+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed oak rendering reference",
+          "action": "Selected Vanilla Textures Expanded TreeOakA for clustered leaf readability, outline and restrained shading.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-construction-comparison.png",
+              "sha256": "9a4a4eb66eb32bef5d41d99c0f70f8a1a00d775d861c107f4e6756e080e454ca"
+            }
+          ],
+          "review": "Viewed actual installed image and package metadata/hash. This is a rendering reference, not an equivalent Qud species; source pointy bark splinters, wide roots, irregular crowns and native palette are retained. Alpha Biomes bramble reference was inspected but not selected or supplied to refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.133248+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Two editable source-inspired thorny rooted trees",
+          "action": "Constructed each native variant with distinct irregular crown layout, crooked exposed branches, bark splinters and a broad tangled root base.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/native-state-index.json",
+              "sha256": "babeed388defd83bccef8bfa7f0ed882010c5165ea95ce0acc6caf601725342a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/prepare-and-construct.py",
+              "sha256": "3a8de52c8e06364d7c77dfe603cb3a7b1fc8bcd530da158c64c6f5d119a2d905"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-1.svg",
+              "sha256": "ceda35091f96975ba5a25ca1e9ff7ab539b6aaab99d67a5b04ccc1f0d2adb7b1"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-1.png",
+              "sha256": "7e7872afb96c25a1a82be585dff5062de0de7497f5c3af347a90ff4a7ddd83af"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-2.svg",
+              "sha256": "ed23a41a8b68160a3515171de90f16fa1f898b73661db03252b89bf20d7c4372"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-2.png",
+              "sha256": "872e179a0c22d76e25985fd178dca7ce0cc9d88c8f1f8f333865b893a55a6fb5"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-construction-comparison.png",
+              "sha256": "9a4a4eb66eb32bef5d41d99c0f70f8a1a00d775d861c107f4e6756e080e454ca"
+            }
+          ],
+          "review": "Viewed both full manual trees. Simplified crown masses are editable guides; refinement must turn them into pointed leaf clusters. Brown wood and gray foliage are deliberate extraction roles, not production colors. Both use a shared source-cell frame.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.133887+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Both fixed-view native RandomTile variants",
+          "action": "Retained actual sw_fattree1 and2 choices as independently constructed/refined cosmetic tree states with a common source-frame mapping.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/native-state-index.json",
+              "sha256": "babeed388defd83bccef8bfa7f0ed882010c5165ea95ce0acc6caf601725342a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png",
+              "sha256": "508592841bf77192dcbd8ec5058626b23c823fc76e689fb47d4f34e99ccde934"
+            }
+          ],
+          "review": "Viewed selected variant1and2at enlarged and16x24/24x36/32x48sizes. No secondary creature facings, clothing or age variants apply to this fixed-view tree. Native random selection remains unchanged; no new growth/merging state is fabricated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.134363+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled dogthorn variant1 refinement",
+          "action": "Used built-in ImageGen on manual variant1 with the actual installed oak reference, retaining crown placement, thorn-splintered wood and exposed roots.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refine-variant-1-prompt.txt",
+              "sha256": "a26c1cb69c6f93b7470f5af415f5915d07905129f6a78b7acd665c2164b2db94"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-1.png",
+              "sha256": "7e7872afb96c25a1a82be585dff5062de0de7497f5c3af347a90ff4a7ddd83af"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refine-variant-1-prompt.txt",
+              "sha256": "a26c1cb69c6f93b7470f5af415f5915d07905129f6a78b7acd665c2164b2db94"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-1.png",
+              "sha256": "6c489cb4fd1085f455ba681cac68e17901c77760f5b6a10b680eb8a496051de6"
+            }
+          ],
+          "review": "Viewed actual refined output. Simplified masses became pointed leaf clusters; no fruit, flowers, creature, scene or generic straight oak trunk was introduced. Brown wood is retained only as the extraction aid. Saved alpha rather than preview RGB owns coverage.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-dogthorn-tree\\v1\\constructed-variant-1.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Plant/TreeOak/TreeOakA.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-6adfe3e8-3e9e-4848-82a1-6b3b431797d3.png"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.135760+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled dogthorn variant2 refinement",
+          "action": "Used built-in ImageGen on manual variant2 with the actual installed oak reference, retaining crown placement, thorn-splintered wood and exposed roots.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refine-variant-2-prompt.txt",
+              "sha256": "46610d55e4bdf78543288ea9f9b45882027cdf2e494caa1b5fb9f30ad5003240"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/constructed-variant-2.png",
+              "sha256": "872e179a0c22d76e25985fd178dca7ce0cc9d88c8f1f8f333865b893a55a6fb5"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+              "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refine-variant-2-prompt.txt",
+              "sha256": "46610d55e4bdf78543288ea9f9b45882027cdf2e494caa1b5fb9f30ad5003240"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-2.png",
+              "sha256": "33d940133ac7c1c490dee6b205f246f3e24b827d75d0a3284fbeaca8adeb151e"
+            }
+          ],
+          "review": "Viewed actual refined output. Simplified masses became pointed leaf clusters; no fruit, flowers, creature, scene or generic straight oak trunk was introduced. Brown wood is retained only as the extraction aid. Saved alpha rather than preview RGB owns coverage.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-dogthorn-tree\\v1\\constructed-variant-2.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Plant/TreeOak/TreeOakA.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-8d4cd049-35bf-4371-9f3c-3ce8006e8fc5.png"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.137439+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Actual neutral wood/foliage extraction and shared registration",
+          "action": "Cleaned actual refined alpha and invisible RGB, classified warm wood ownership, neutralized both roles and saved per-variant albedo/wood/detail coverage in one full-cell mapping.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-1.png",
+              "sha256": "6c489cb4fd1085f455ba681cac68e17901c77760f5b6a10b680eb8a496051de6"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-2.png",
+              "sha256": "33d940133ac7c1c490dee6b205f246f3e24b827d75d0a3284fbeaca8adeb151e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/register-tree.py",
+              "sha256": "55fb9d9ccd7f10eae5a09ec0e96b4d5da7e71971c6174a2c506ec7f4dac5f68b"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json",
+              "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-decisions.json",
+              "sha256": "12e6acd79abb05d4122406c5cb00cfce380e8e5094391bcd0a8df17f3c2d841b"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-neutral-master.png",
+              "sha256": "5c9052b7d7ca19870a8d4fa31f86973f3aa76e210b767792ffc6a9601b5d66b2"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-wood-neutral-master.png",
+              "sha256": "4c8610e5c02c5d79c9920b4316e762e9a46a332a3b876462c090026406899b45"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-wood-ownership-mask.png",
+              "sha256": "a8989eccd2bbef919f783e2b21b58a794fdbc321d156f0da473f8e8cf073d262"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-source-coverage-mask.png",
+              "sha256": "a91fab1e241759a7663f961bd884563f8dc298f70d6551a27bd1141622815092"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-primary-neutral.png",
+              "sha256": "cb5d702375dccfb646e202365e5570f5bf8e3cd0950489f27a3d58076a161e2f"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-detail-neutral.png",
+              "sha256": "3736c1c643f430b963153d9ddce56097421544908ad35c1ad6caea93020655d7"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-coverage.png",
+              "sha256": "d483635da1ecc678b00cc79cd4e2af1e99d3b2061c2403676ee50a0353bad1e3"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-detail-coverage.png",
+              "sha256": "c2c63b7bae6337f8d61d1dde6b307a0fe6e80edd8861db8572d0ce677a1343d0"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-neutral-master.png",
+              "sha256": "cf742371afbcb6f398a8c01efed4fa4353aad3ccd732e750713cf5a925051ed4"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-wood-neutral-master.png",
+              "sha256": "c8088da83401b6cb9bed31eb68ba87cbc8f1ce961f7bca6f1bd1b1405261af7c"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-wood-ownership-mask.png",
+              "sha256": "67627e8d646266fae1fd7d28b0ae7dc12b764861384c21c3666ea80626679f9f"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-source-coverage-mask.png",
+              "sha256": "4682ab387b92357c4a343bfeb01ed3a4f4e2dbdc533dbfd71987dad4c7ab1816"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-primary-neutral.png",
+              "sha256": "71064684fcd0a1863c6329b5fb738b5f9f215c592183da16d19e19138b23e45b"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-detail-neutral.png",
+              "sha256": "80dd233258feecc03841ba87ee96b741fa2f30006bd4400209ce695b66ef2aa1"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-coverage.png",
+              "sha256": "2188237ff94121d1d2cfbf67335c78fe6905f4b10014ab0ecabe9a2bb205fa24"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-detail-coverage.png",
+              "sha256": "0d493ce1fa188ad6ebd5028d186641bec2cbd7dab9df2011a4ec90e25633595f"
+            }
+          ],
+          "review": "Inspected neutral and isolated wood recompositions. Exposed roots/branches and pointed bark splinters have wood ownership, without brown foliage or baked green in neutral mode. All saved neutral layers have equal RGB. No independent state-bound crop/recenter is used.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.142905+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Dogthorn identity, native palette and cut-edge review",
+          "action": "Recomposed native G foliage and w exposed wood, and viewed isolated wood masks plus neutral/native tree states at intended cell sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json",
+              "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png",
+              "sha256": "508592841bf77192dcbd8ec5058626b23c823fc76e689fb47d4f34e99ccde934"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/wood-ownership-comparison.png",
+              "sha256": "1c68095baa35fb0fa0373963aaca03f42746002f9c11c7b3d5a2869bba12b1a1"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-native-preview.png",
+              "sha256": "57fd9ec99be2fcbe8c4287bfdd34427cab11c811878cb9ea83383ed708a0d8cf"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-native-preview.png",
+              "sha256": "130b0e5f79617bd6869119f6608f94b906b90a12bff2e65a7a7a8c6ba67a3782"
+            }
+          ],
+          "review": "Viewed actual saved plates: both variants read as leafy, crooked rooted thorn trees; source crown/root layout differences remain visible. Native colors are source roles, not donor olive or generation brown. This is authoring review, not native scene/selection validation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T05:53:44.143649+00:00",
+          "step": "native_state_review",
+          "phase": "Native dogthorn acceptance deferred",
+          "action": "Kept native RandomTile binding, visibility/occlusion, spring/plant/hanging-support behavior and actual in-game presentation behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json",
+              "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, production renderer changes or native/harness validation; overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json",
+          "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"
+        },
+        "plate": {
+          "path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png",
+          "sha256": "508592841bf77192dcbd8ec5058626b23c823fc76e689fb47d4f34e99ccde934"
+        }
+      },
+      "registration_summary": "Both actual dogthorn RandomTile variants have source-inspired irregular leaf crowns, crooked thorn-splintered wood and exposed tangled roots. Each was manually constructed and independently refined with the installed Vanilla Textures Expanded oak rendering reference. Neutral albedo and separate neutral wood ownership preserve native G/w palette roles; native state/visibility acceptance remains pending."
     },
     {
       "id": "SCN-STARAPPLE-TREE",
@@ -23548,8 +24189,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

@@ -1,0 +1,91 @@
+{
+  "entry": "SCN-BRINESTALK",
+  "recorded_at": "2026-10-20T05:42:58.823184+00:00",
+  "identity": "Brinestalk -> Plant -> PhysicalObject",
+  "description": "Girthy pilings of fibrous salt-rot stake out these pools of brine. They belong to no one.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected": "<object Name=\"Brinestalk\" Inherits=\"Plant\">\n    <part Name=\"Render\" DisplayName=\"brinestalk\" RenderString=\"157\" ColorString=\"&amp;w\" Tile=\"assets_content_textures_tiles_tile-brinestalk.png\" DetailColor=\"g\" Occluding=\"true\" />\n    <part Name=\"Description\" Short=\"Girthy pilings of fibrous salt-rot stake out these pools of brine. They belong to no one.\" />\n    <stag Name=\"Plank\" Value=\"bundle\" />\n    <stag Name=\"Fiber\" Value=\"rope\" />\n    <stag Name=\"FiberMaterial\" Value=\"fibre\" />\n    <xtagGrammar massNoun=\"true\" />\n    <tag Name=\"LiquidNative\" Value=\"water\" />\n    <tag Name=\"DynamicObjectsTable:Saltmarsh_Plants\" />\n    <tag Name=\"PlacementIsSkippable\" />\n  </object>\n  ",
+    "parent": "<object Name=\"Plant\" Inherits=\"PhysicalObject\">\n    <part Name=\"Render\" DisplayName=\"[Plant]\" RenderLayer=\"3\" RenderString=\"157\" Tile=\"assets_content_textures_tiles_tile-9-4.png\" ColorString=\"&amp;G\" Occluding=\"false\" />\n    <part Name=\"Physics\" Conductivity=\"60\" Solid=\"false\" Weight=\"200\" Category=\"Plants\" Takeable=\"false\" />\n    <part Name=\"MentalShield\" />\n    <part Name=\"PlantProperties\" />\n    <part Name=\"NoBleed\" />\n    <part Name=\"Springy\" Factor=\"0.8\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Plant\" />\n    <tag Name=\"LivePlant\" />\n    <tag Name=\"BodyType\" Value=\"Bush\" />\n    <stag Name=\"Plank\" Value=\"plank\" />\n    <stag Name=\"Fiber\" Value=\"strip\" />\n    <stag Name=\"FiberMaterial\" Value=\"bark\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_tree\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_genPlant\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_genPlant\" />\n  </object>\n  "
+  },
+  "original_reference": {
+    "tile": "assets_content_textures_tiles_tile-brinestalk.png",
+    "description": "Girthy pilings of fibrous salt-rot stake out these pools of brine. They belong to no one.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "brinestalk",
+      "RenderString": "157",
+      "RenderLayer": "3",
+      "RenderIfDark": "true",
+      "Tile": "assets_content_textures_tiles_tile-brinestalk.png",
+      "ColorString": "&w",
+      "Occluding": "true",
+      "DetailColor": "g"
+    },
+    "kind": "scenery",
+    "blueprint": "Brinestalk",
+    "reference_file": "village-originals/brinestalk-reference.png",
+    "native_mask_sha256": "74959e60bb91bcf9f50127ac1ed8138e26751c81b0cbb840ce583cf4afbdc815",
+    "reference_sha256": "b3c51c48108ccbbea6a43041d6fe357df3e83e5a8d4b29de984cacfb2635d776",
+    "info_id": 14511,
+    "atlas_id": 277,
+    "rect": [
+      1512,
+      650,
+      16,
+      24
+    ]
+  },
+  "private_original": {
+    "mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\brinestalk-mask.png",
+      "sha256": "74959e60bb91bcf9f50127ac1ed8138e26751c81b0cbb840ce583cf4afbdc815"
+    },
+    "context": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\brinestalk-reference.png",
+      "sha256": "b3c51c48108ccbbea6a43041d6fe357df3e83e5a8d4b29de984cacfb2635d776"
+    }
+  },
+  "reference_color_note": "Historical reference PNG uses standardized pale preview swatches, not literal native w/g. This comparison decodes the original mask with the installed native palette; the old export remains unchanged as shape evidence.",
+  "source_shape": "Three distinct crooked fibrous stalks at native x4.5,7.5,11.5. Left extends y2..16, center y6..22, right y3..18. Green caps and side knots occupy small source detail regions. No broad leaf canopy is present.",
+  "palette": {
+    "primary": "w",
+    "detail": "g",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "009403",
+    "rule": "Opaque black mask is stalk/foreground; white is small green growth/detail. Extract neutral albedo and independent detail mask after refinement; never bake green into neutral view."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "package_id": "VanillaExpanded.VTEXE",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Plant\\TreeBamboo\\TreeBambooA.png",
+    "sha256": "f001e3e928dfc9f8e7e9236c0dacd1bf28282d3755725aade810deb9c779fa2c",
+    "role": "Actual installed bamboo replacement supplies three-stalk cylindrical shading, crisp contours and fibrous rendering convention only. Broad canopy, bamboo leaf shape, uniform segmentation and donor colors are not adopted.",
+    "definition": "Texture override at a Core asset path, not a new plant blueprint or required mechanics mod."
+  },
+  "construction": "Explicit editable three-piling geometry with uneven source heights, salt furrows, loose fibers and small green cap/side growths. Green during refinement is a color-role extraction aid; final selected layers are neutral grayscale.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_anchor": [
+      8,
+      16
+    ],
+    "rule": "One source-cell mapping; do not fit or center individual stalks or alpha bounds. The anchor is authored registration, not a newly measured runtime physical root position."
+  },
+  "states": "Installed object/Plant parent declares one fixed tile and no random tile builder, open/close, ripeness or neighbor-painting state. No fabricated facing, clothing, canopy-merging or growth simulation is required for this fixed view.",
+  "native_behavior": "Render layer3, occluding=true, LiquidNative water; inherited Physics Solid=false. Keep spring/plant state, visibility and source mechanics native. Sparse alpha does not redefine occlusion.",
+  "native_acceptance": "Deferred until all pending conversions are generated"
+}

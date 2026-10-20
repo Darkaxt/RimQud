@@ -1,0 +1,54 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-dogthorn-tree/v1/register-tree.py",
+      "sha256": "55fb9d9ccd7f10eae5a09ec0e96b4d5da7e71971c6174a2c506ec7f4dac5f68b"
+    }
+  ],
+  "variants": [
+    {
+      "variant": 1,
+      "input": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-1.png",
+        "sha256": "6c489cb4fd1085f455ba681cac68e17901c77760f5b6a10b680eb8a496051de6"
+      },
+      "source_alpha_bounds": [
+        76,
+        79,
+        948,
+        1490
+      ],
+      "wood_bounds": [
+        116,
+        399,
+        911,
+        1490
+      ],
+      "registration": "Same1024x1536full canvas to256x256recipient transform; no per-variant alpha-bounds fit, root crop or individual recentering."
+    },
+    {
+      "variant": 2,
+      "input": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/refined-variant-2.png",
+        "sha256": "33d940133ac7c1c490dee6b205f246f3e24b827d75d0a3284fbeaca8adeb151e"
+      },
+      "source_alpha_bounds": [
+        77,
+        59,
+        961,
+        1481
+      ],
+      "wood_bounds": [
+        100,
+        547,
+        905,
+        1481
+      ],
+      "registration": "Same1024x1536full canvas to256x256recipient transform; no per-variant alpha-bounds fit, root crop or individual recentering."
+    }
+  ],
+  "alpha": "Keep source alpha>=16, normalize>=240, clear invisible RGB; retain complete crown/roots and true gaps. Exterior preview glow is discarded rather than assigned to bark.",
+  "wood_ownership": "Warm-brown opaque pixels R-G>=8,G-B>=8,R>=25 identify wood. Neutral leaves remain primary; wood mask includes exposed roots, bark splinters and visible branches. Both roles become equal RGB.",
+  "source_limits": "Leaves, bark grain and tiny root surfaces are authored refinement. Exact root topology is not mechanically exported anatomy; do not infer native collision or species variants from it.",
+  "omitted": "No creature turnarounds or clothing apply. Both declared native cosmetic variants are independently constructed/refined and registered."
+}

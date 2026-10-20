@@ -62,7 +62,13 @@ Rusted Metal Wall now preserves native rust-red/pale-cyan colors, source-shaped
 industrial bracing and authored welded diamond mesh. All 256 native eight-neighbor
 variants and the 16 cardinal layouts are recorded, including the rejected literal
 checker trace, material refinement and geometry correction.
-There are now 28 generation-ready entries; living Brinestalk is active next.
+Living Brinestalk now has source-positioned fibrous pilings and a separate neutral
+growth mask; its neutral view contains no baked green. Dogthorn includes both
+actual native RandomTile variants, with independently constructed/refined crowns,
+pointed bark splinters and exposed roots. Its neutral foliage/wood layers preserve
+native green/brown color roles. The report records the actual installed Vanilla
+Textures Expanded references, source metadata, editable inputs and extraction.
+There are now 30 generation-ready entries; Starapple Tree is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

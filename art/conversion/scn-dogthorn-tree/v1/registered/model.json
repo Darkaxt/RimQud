@@ -1,0 +1,78 @@
+{
+  "entry": "SCN-DOGTHORN-TREE",
+  "kind": "fixed_plant_variants",
+  "blueprint": "Dogthorn Tree",
+  "source": {
+    "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+    "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+  },
+  "states": [
+    {
+      "variant": 1,
+      "native_tile": "Assets_Content_Textures_Terrain_sw_fattree1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-primary-neutral.png",
+        "sha256": "cb5d702375dccfb646e202365e5570f5bf8e3cd0950489f27a3d58076a161e2f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-detail-neutral.png",
+        "sha256": "3736c1c643f430b963153d9ddce56097421544908ad35c1ad6caea93020655d7"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-coverage.png",
+        "sha256": "d483635da1ecc678b00cc79cd4e2af1e99d3b2061c2403676ee50a0353bad1e3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-1-detail-coverage.png",
+        "sha256": "c2c63b7bae6337f8d61d1dde6b307a0fe6e80edd8861db8572d0ce677a1343d0"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Assets_Content_Textures_Terrain_sw_fattree2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-primary-neutral.png",
+        "sha256": "71064684fcd0a1863c6329b5fb738b5f9f215c592183da16d19e19138b23e45b"
+      },
+      "detail": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-detail-neutral.png",
+        "sha256": "80dd233258feecc03841ba87ee96b741fa2f30006bd4400209ce695b66ef2aa1"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-coverage.png",
+        "sha256": "2188237ff94121d1d2cfbf67335c78fe6905f4b10014ab0ecabe9a2bb205fa24"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-dogthorn-tree/v1/registered/variant-2-detail-coverage.png",
+        "sha256": "0d493ce1fa188ad6ebd5028d186641bec2cbd7dab9df2011a4ec90e25633595f"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One common full-cell mapping for both fixed native cosmetic variants."
+  },
+  "palette": {
+    "primary": "actual native foliage foreground G",
+    "detail": "actual native exposed wood detail w",
+    "rule": "Both saved albedo layers are grayscale; brown extraction aid is not baked into neutral mode."
+  },
+  "state_owner": "Native RandomTile builder selects sw_fattree1 or2; no new state machine, wind simulation or rotated views.",
+  "native_behavior": "Native visibility, occlusion, physics, hanging support and plant/damage exceptions remain source-owned. Unknown custom shapes retain native fallback.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}
