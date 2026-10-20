@@ -747,3 +747,17 @@ are recorded; no native testing was performed. Actual mutation Hand181/6 remains
 unplaced by this ordinary-hand illustration. Both fitting and item-source ledger
 entries are generation-ready, with actual mutation/outfit and weapon pose/state
 acceptance unfinished. Continue one entry at a time with Yrame's Vibro Blade.
+
+Vibro Blade authoring checkpoint: the ordinary Hand292/2 fitting and item source
+are generation-ready. Installed matte ionic-plastifer/finger-rest identity and
+original c/y glyph govern the full blade/hilt, with actual extracted RimWorld
+Core Longsword as a flat held-item convention reference. Captured generic text
+and weight3 versus installed2 remain explicit; charge state is unknown. One
+contextual refinement supplies matte material, with generated glow/body rejected.
+Full tool alpha/outline/root grooves and original body stay fixed, hidden grip
+is completed before depth, hilt tint remains independent, and item-space grip570
+lies30px above the pommel. SEN/mirrored west authoring, palette and intended-size
+views are recorded. Named Big Yrame/horns/rime/extra feet/outfit and actual native
+equipment/resting-ready state acceptance remain unfinished; no charged animation
+or native testing was added. Stage 3 remains ACTIVE. Continue the ordinary human
+Iron Vinereaper fittings one entry at a time.

@@ -1,0 +1,60 @@
+{
+  "item": "Vibro Blade",
+  "source": {
+    "instance": 576,
+    "blueprint": "Vibro Blade",
+    "description": "Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}",
+    "tile": "Items/sw_longblade_10.bmp",
+    "foreground": "&c",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/vibro-blade-reference.png",
+    "native_mask_sha256": "9f7244f30174b9736953f2ad8006526a6056d7ca505401375d63a4786f69c730",
+    "reference_sha256": "8ef9b171b2efb9edee098d54e9b76c9050460a28b704d66fdc0b210858160813",
+    "info_id": 9807,
+    "atlas_id": 185,
+    "rect": [
+      108,
+      598,
+      16,
+      24
+    ]
+  },
+  "source_packet": {
+    "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+    "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+  },
+  "installed_definition": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+    "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+    "object_xml": "<object Name=\"Vibro Blade\" Inherits=\"BaseLongBlade\">\n    <part Name=\"Render\" DisplayName=\"{{c|vibro blade}}\" Tile=\"Items/sw_longblade_10.bmp\" ColorString=\"&amp;c\" DetailColor=\"y\" />\n    <part Name=\"MeleeWeapon\" MaxStrengthBonus=\"0\" BaseDamage=\"1d10\" Skill=\"LongBlades\" />\n    <part Name=\"Commerce\" Value=\"300\" />\n    <part Name=\"EnergyCellSocket\" SlotType=\"EnergyCell\" />\n    <part Name=\"AIOffensiveEnergyCellReload\" />\n    <part Name=\"AIPassiveEnergyCellReload\" />\n    <part Name=\"Description\" Short=\"A long, matte blade of ionic plastifer sits on a finger-rest hilt. When charged it blurs in high-width motion and jostles its material obstacles out of the way.\" />\n    <part Name=\"RulesDescription\" Text=\"When charged, this weapon's penetration value is equal to the defender's armor value.\" />\n    <part Name=\"Examiner\" Complexity=\"5\" />\n    <part Name=\"TinkerItem\" Bits=\"0015\" CanDisassemble=\"true\" CanBuild=\"true\" />\n    <part Name=\"Metal\" />\n    <part Name=\"VibroWeapon\" ChargeUse=\"100\" WorksWhenThrown=\"false\" />\n    <part Name=\"Physics\" Weight=\"2\" />\n    <tag Name=\"Mods\" Value=\"LongBladeMods,BladeMods,WeaponMods,CommonMods,ElectronicsMods\" />\n    <tag Name=\"Tier\" Value=\"5\" />\n    <tag Name=\"SwingSound\" Value=\"Sounds/Melee/longBlades/sfx_melee_longBlade_vibro_swing\" />\n    <tag Name=\"BlockedSound\" Value=\"Sounds/Melee/multiUseBlock/sfx_melee_vibro_blocked\" />\n\t  <tag Name=\"EquipSound\" Value=\"Sounds/Equip/sfx_equip_weapon_blade_long_artifact\" />\n  </object>"
+  },
+  "source_resolution": "Runtime captured generic unidentified-device text and weight3, while installed definition identifies matte ionic plastifer, finger-rest hilt, energy cell and weight2. Preserve both; reason for observed weight difference unknown. Charge state not exported here.",
+  "fittings": [
+    {
+      "entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+          "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+        },
+        "plate": {
+          "path": "art/conversion/fit-yrame-vibro-blade/v1/assembly-comparison.png",
+          "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished."
+      }
+    }
+  ],
+  "scope": "Complete reusable stationary tool and ordinary Hand292/2 baseline fitting. No charged animation or actual resting-ready state acceptance.",
+  "pose_review": {
+    "status": "PENDING FINAL ASSEMBLY",
+    "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
+    "owner": "Stage 3 final assembly after full-set generation gate"
+  },
+  "native_acceptance": "Pending full-set generation gate and actual named/held/pose state"
+}

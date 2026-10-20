@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
+  "active_entry": "FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -3295,8 +3295,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12178,8 +12178,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12191,7 +12191,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Captured generic unidentified text and weight3 differ from installed item identity/weight2; both retained. Named Big silhouette/mutations/outfit and native held/resting-ready pose acceptance remain unfinished."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -12225,7 +12225,262 @@
           "sha256": "c950d8ec3fea8c614cc9cb1949ebf4524b19d4fcb57083b53b0358746c00e374"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T15:54:24.111181+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Yrame -> ordinary human female baseline -> Vibro Blade576 on actual Hand292 parent291/laterality2, no mutation manager. Retained generic unidentified runtime text/weight3 and exact installed matte ionic-plastifer/finger-rest/weight2 definition, source sprite and c/y roles.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-comparison.png",
+              "sha256": "c3223ec235ad7883534a111dfb8d744e4924d6cb581dc04e06792ab951bd36bc"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.111463+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary female v2 and actual extracted RimWorld Core Longsword228, exact PNG hash/provenance. Actual Vanilla Weapons Expanded CombatKnife inspected but too short. Core outline/convention is a reference; Qud defines material, finger-rest, colors and proportions.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-comparison.png",
+              "sha256": "c3223ec235ad7883534a111dfb8d744e4924d6cb581dc04e06792ab951bd36bc"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.112729+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed complete editable long matte blade, sparse root grooves, finger-rest hilt/grip and exact item-space contact570. One tool alone over fixed bare base, affine SEN poses, original hand above shaft and rear body above tool. No body edits, clothing or invented cell/charged effect.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/prepare-source.py",
+              "sha256": "9115ee9ddb4c510f2a6a5d547d41d77c77ded1e9244499c78ed0412479ae590a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/canonical-pattern.svg",
+              "sha256": "90d7cec18a5739db4cf4b1dd8fc60fddad52132fc9b0bc67bfc0ac442ad9f5fe"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/constructed-canonical.png",
+              "sha256": "f3d7aeae5b370bd336f9093d14e261a99e51af0e3ac24168f61be89bf9e2759d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/canonical-blade-region.png",
+              "sha256": "f1325b0aaa55d53bc30dacb5f14d8128b110f7d4be4f21b9e1ddeaeab0293589"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/canonical-hilt-region.png",
+              "sha256": "45ed27f1da61d6bd96aa88e8877e963b59f4ac2c2aa08154ae489ab5083a439b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/constructed-neutral-context.png",
+              "sha256": "ef00063550c74b5a4f3b6614d004dfd5a97ff2c67b24fd472eb359a6af525590"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/constructed-red-item-context.png",
+              "sha256": "f973bcfc7212afa9c693e1f24db5df14f6e0882d50ed583d1bd2b3228ff8f5c6"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/fit-controls.json",
+              "sha256": "b3d13d779359c56fe584672e296e5f13bbee3b8fa4e1f4e8e4c514c191ef59b9"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.114476+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual contextual matte-surface refinement. Selected neutral blade/hilt surface only; rejected opaque glow, red reflections and generated mannequin. No consequential anatomical/geometry correction was required because registered source/body remain the explicit originals; no invented patched-refinement call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/constructed-red-item-context.png",
+              "sha256": "f973bcfc7212afa9c693e1f24db5df14f6e0882d50ed583d1bd2b3228ff8f5c6"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/imagegen-prompt.txt",
+              "sha256": "f4356f9dd5dc9f7345936d02a35031167a09324fc2b2e53fd5082c1ee5eaaaa6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/refined-red-context.png",
+              "sha256": "a4cdd56042555b289355724f48e20c8042987a17198e37d4be8b5b5ddeef878a"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit the first image: a 1536x1024 three-column close-up sheet of one long Vibro Blade held by red mannequin references. Left SOUTH/front, middle EAST/right profile, right NORTH/back. Preserve exact placement, scale, thin contour, short handle, lower grip point and red body/hand occlusion. No captions or layout changes. Transparent background.\n\nQud description: \"A long, matte blade of ionic plastifer sits on a finger-rest hilt. When charged it blurs in high-width motion and jostles its material obstacles out of the way.\" Only the stationary uncharged material is requested. Second image is the actual original Qud glyph: long tapered blade, sparse root details and contrasting hilt. Third image is actual RimWorld Core Longsword, only a flat held-item rendering reference; do not copy its crossguard or polished steel.\n\nRefine only the existing blade surface and hilt in place. Subtle matte gray broad shading, restrained surface grain, legible finger-rest and grip. Keep the source root grooves simple. All material must be neutral equal-RGB gray. Preserve the designed dark outline and silhouette. No metallic mirror highlights, wood, wraps, gems, serrations, engravings, cables, glowing energy blade, blur or sparks. No cast shadows, glow, vignette, haze or background. Do not reveal areas hidden by the red body/hand, move the red mannequin, isolate the tool or add clothing. The complete underlying tool is retained independently by the authoring code; this is one contextual material refinement.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-yrame-vibro-blade/v1/constructed-red-item-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/vibro-blade-reference.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/held-sword.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.116153+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Registered actual contextual matte surface through recorded2x crop; programmatic harmonic continuation fills hidden grip before depth. Complete source alpha equals own construction; original outline/root grooves restored and contrasting hilt retained separately. No generative isolation or destructive hand holes.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/register-blade.py",
+              "sha256": "f03a4d7a4396353904ef4d9491d10cefb49dfa208e406c3210fc629e86155489"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/refined-red-context.png",
+              "sha256": "a4cdd56042555b289355724f48e20c8042987a17198e37d4be8b5b5ddeef878a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/registration-decisions.json",
+              "sha256": "a3911606c87c1ef6f8cb53b4a7a173e9a96d0f3f915deffaf823f025f865678d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/hilt-canonical.png",
+              "sha256": "6723ceca8cfff2e9f850564568dcb1d79791bf4e71d02a402202ec0655f078f8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/canonical-continuation.png",
+              "sha256": "885d02448af914907078356f2d031dd40e0ab13aabab4de74e4fc709fb2fc596"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/full-item-comparison.png",
+              "sha256": "f2fd3d811036b87bd61c2aa8740a1dac44e3bf493fcc84351895432dab426fb5"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.116831+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed one full tool through original hand/body ownership with lower item-space grip570, body palm landmarks and fixed shared contact. SEN/west mirror reviewed; profile/front hand lies below finger-rest, north retains rear depth. Resting/ready pose variants remain final assembly work.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+              "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/fit-controls.json",
+              "sha256": "b3d13d779359c56fe584672e296e5f13bbee3b8fa4e1f4e8e4c514c191ef59b9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/assembly-comparison.png",
+              "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/grip-comparison.png",
+              "sha256": "87d3c3263389b3d575d5e428e7bca1cfd10e4d1a7185779f60633b2036784248"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/depth-off-comparison.png",
+              "sha256": "80e078861ea44983ca6184e560da50b6bd7f40f48db9e8aff6bf929a1557b88b"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.117346+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected intended-size silhouette and independent native c blade / y hilt / Yrame tileColor w override, with no blue cosmetic mask or glow invented. Equal-RGB production channels and original foreground-hand pixels preserved; native named/equipped/pose acceptance not run.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+              "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/independent-palette-comparison.png",
+              "sha256": "47b5bfdd5be27d4e6f0cb3a3ec80ea551c03adca24ba4d2ff9ef314dda5ed3e0"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/game-scale-review.png",
+              "sha256": "c7a6d131ae54a22aa6b14dfce78a7f6c24ec31ed8253e198729001f2dff2ef69"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/authoring-review.json",
+              "sha256": "993a4b183108764459002272b97c5895c2b903b8d2417179ebb22df0e32d2700"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/artifact-manifest.json",
+              "sha256": "3b85b4046699ec5d43cf9e7f3e247784d8f465184d073268440a78d099351c54"
+            }
+          ],
+          "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+          "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+        },
+        "plate": {
+          "path": "art/conversion/fit-yrame-vibro-blade/v1/assembly-comparison.png",
+          "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished."
+      },
+      "registration_summary": "Matte Vibro Blade, sparse root grooves and finger-rest hilt; one complete neutral tool and separate c/y tint, lower item-space grip on unchanged ordinary female baseline. Actual Hand292/2 retained; named Big body/mutations/outfit and resting-ready/native state unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual native named/equipment/pose state",
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "SCN-CANTEEN",
@@ -15238,14 +15493,14 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Captured generic description/weight differ from installed identity; records retained. Named Yrame body/mutations/outfit and native equipment/pose acceptance remain unfinished."
       ],
       "metadata": {
         "original_reference": {
@@ -15274,7 +15529,86 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T15:54:24.248251+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolved installed matte ionic plastifer, long blade/finger-rest hilt, original c/y roles and energy-cell definition; preserved generic runtime description/weight mismatch and unknown charge state.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+              "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-vibro-blade/v1/fittings.json",
+              "sha256": "c3b8690fd9ce27ee04db7fdfc801c15eb890c0671df2e59fa9ee366fd65311cf"
+            },
+            {
+              "path": "art/conversion/item-vibro-blade/v1/body-fittings-comparison.png",
+              "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+            }
+          ],
+          "review": "Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T15:54:24.248770+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled sole current ordinary Yrame Hand292/2 fitting through source/reference/construction/contextual refinement, complete neutral source/hilt, lower item-space grip and SEN/mirror palette/depth views.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+              "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-vibro-blade/v1/fittings.json",
+              "sha256": "c3b8690fd9ce27ee04db7fdfc801c15eb890c0671df2e59fa9ee366fd65311cf"
+            },
+            {
+              "path": "art/conversion/item-vibro-blade/v1/body-fittings-comparison.png",
+              "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+            }
+          ],
+          "review": "Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-vibro-blade/v1/fittings.json",
+          "sha256": "c3b8690fd9ce27ee04db7fdfc801c15eb890c0671df2e59fa9ee366fd65311cf"
+        },
+        "plate": {
+          "path": "art/conversion/item-vibro-blade/v1/body-fittings-comparison.png",
+          "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished."
+      },
+      "registration_summary": "Vibro Blade item identity and ordinary Hand292/2 authoring fit generation-ready; matte full blade/finger-rest, separate c/y tint and lower grip. Named Yrame and actual held/resting-ready state acceptance remain unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual native named/held/pose state"
     },
     {
       "id": "ITEM-WALKING-STICK",
@@ -44525,7 +44859,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T15:46:46.502606+00:00",
+  "updated_at": "2026-10-20T15:54:24.249403+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
