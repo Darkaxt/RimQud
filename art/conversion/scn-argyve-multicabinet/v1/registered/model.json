@@ -1,0 +1,79 @@
+{
+  "entry": "SCN-ARGYVE-MULTICABINET",
+  "kind": "fixed_layered_furniture_variants",
+  "blueprint": "Argyve Multicabinet",
+  "source": {
+    "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+    "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+  },
+  "variants": [
+    {
+      "variant": 1,
+      "native_tile": "Items/sw_multi_cabinet_1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-primary-neutral.png",
+        "sha256": "d6bb29047c6885014a260230aea3e6161dfb6cc7f87884045da6e43a60526536"
+      },
+      "detail": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-detail-neutral.png",
+        "sha256": "2fe0eafef5fe24858ae022a2f928fa2e81396c10d4af8e08d3655ee946170694"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-coverage.png",
+        "sha256": "bcc0f317d98904251be4942f07c3bb1dcf97bdcb8249f870be38d24f92dac50c"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-detail-coverage.png",
+        "sha256": "4e7deed906c313738fbe004e29b883e02aa04c0caae0af8e93e21863a9d56568"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Items/sw_multi_cabinet_2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-primary-neutral.png",
+        "sha256": "060cfef7ec5b10347b119e76c87c14b2a2057c9a38b518a69e10a49558e35b0d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-detail-neutral.png",
+        "sha256": "b9e5f5ff6fe863fddfd09e0e257221a96098454fd6fc1bb0b3f989d92a2a5b34"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-coverage.png",
+        "sha256": "3f4a0c40fe95162f677c72ba59602ec28b40011171b09e168e3852e466115f9f"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-detail-coverage.png",
+        "sha256": "01daf43563c828a7540a631b6635c61cf666c775cccc1608bd18e254900d2852"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "Each entire1024x1536refined frame maps once to256square. No drawer, top box, foot, detail mask or variant is independently bbox-centered."
+  },
+  "palette": {
+    "primary": "actual native c",
+    "detail": "actual native W",
+    "neutral_preview": "Equal-RGB case/front and detail layers; no baked gold remains in production."
+  },
+  "state_owner": "Native inherited RandomTile selects one of two cosmetic layouts. No invented container-open/closed sprite or donor rotations.",
+  "inventory_boundary": "Actual Argyve inventory population stays native. Tiny fixture storage marks are source-bound interpretation, not displayed contents.",
+  "native_behavior": "Preserve source metal container/inventory/smart-use, solid physics and occluding behavior; no VFE research bonus or donor storage mechanics.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

@@ -1,0 +1,78 @@
+{
+  "entry": "SCN-BED",
+  "identity": "Bed -> BaseBed -> MountedFurniture -> Furniture",
+  "description": "Fabrics were stuffed with watervine chaff and laid across wooden slats in the style of the hillfolk.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Bed": "<object Name=\"Bed\" Inherits=\"BaseBed\">\n    <part Name=\"Render\" DisplayName=\"bed\" ColorString=\"&amp;w\" DetailColor=\"Y\" Tile=\"Items/sw_bed.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Description\" Short=\"Fabrics were stuffed with watervine chaff and laid across wooden slats in the style of the hillfolk.\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stag Name=\"Basic\" />\n  </object>",
+      "BaseBed": "<object Name=\"BaseBed\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"[bed]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"240\" Tile=\"Items/sw_bed.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"200\" />    \n    <part Name=\"Bed\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Restful,Soft,Lumpy,Firm,Luxurious,Comfortable,Short-Sheeted,Unsprung\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"the Weary, the Tired\" />\n    <xtagTextFragments Skin=\"sheets\" PoeticFeatures=\"reclining stature,soft surfaces,inviting flatness\" />\n    <tag Name=\"BodyType\" Value=\"Bed\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"bed\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"120\" />\n    <stag Name=\"Sleep\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sleep in\" />\n    <tag Name=\"QuestableEvent\" Value=\"SleptIn\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\bed-mask.png",
+    "sha256": "7a697abb6c2ab7bd54b8b97d655c45dc332382a58fb3e2fa19ee04c0ae1b1e12",
+    "tile": "Items/sw_bed.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9291,
+    "atlas_id": 185,
+    "rect": [
+      972,
+      234,
+      16,
+      24
+    ]
+  },
+  "source_shape": "The installed sprite is oblique: headboard at upper-right, sleeping surface descends toward lower-left, broad foot rail and short feet. Upper open wooden bars remain visible. This source perspective is retained instead of substituting the donor straight top-down footprint.",
+  "palette": {
+    "primary": "w",
+    "detail": "Y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "ffffff",
+    "rule": "Wood/slats/frame receive primary w; stuffed-fabric sleeping surface receives Y. Pale cyan fabric in the construction/refinement is only an extraction aid; both final layers must be neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_south.png",
+    "sha256": "cade86a3035469604f0a1abf3be038180dd7ac9e88ef3aa1474afeba41113284",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Bed_south supplies restrained fabric folds, padded edge shading, wooden-frame readability and outline weight. Its pillow, blanket subdivision, straight orientation, four facings, bed dimensions and sleeping mechanics are not copied."
+  },
+  "construction": "Editable oblique slatted wood frame, open headboard, broad low foot rail, short supports and one softly stuffed fabric pad. Fabric is chaff-stuffed, not a modern spring mattress. Exact hidden slat spacing and seams are authored interpretation; no pillow or additional blanket absent from source is invented.",
+  "native_state": {
+    "tile": "One fixed Items/sw_bed.bmp; no RandomTile or alternate occupied tile is declared by Bed/BaseBed.",
+    "part": "XRL.World.Parts.Bed",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "19b8a75e3293e0ee8535a515ab9b9017fa8dcaf4eaaf31ef13414fc1f43e354e",
+    "part_declares_Render_or_Tile": false,
+    "rule": "Native sleeping/occupant state stays native; no donor occupancy sprite or independent furniture rotation is invented. Rare Animated builder needs original fallback at final integration."
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell mapping for wood/fabric coverage, including oblique overhangs. Do not independently center mattress or wooden alpha bounds."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

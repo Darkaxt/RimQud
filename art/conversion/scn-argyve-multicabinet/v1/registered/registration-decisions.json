@@ -1,0 +1,138 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-argyve-multicabinet/v1/register-cabinet.py",
+      "sha256": "b3b1e3b8e20e16d7e4c2da110d94add1c5f8324d61c1dea859821acaeac9cb5c"
+    },
+    {
+      "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+      "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+    }
+  ],
+  "variants": [
+    {
+      "variant": 1,
+      "actual_gold_front_regions": [
+        {
+          "pixels": 35533,
+          "rect": [
+            399,
+            261,
+            622,
+            427
+          ]
+        },
+        {
+          "pixels": 35003,
+          "rect": [
+            94,
+            516,
+            312,
+            682
+          ]
+        },
+        {
+          "pixels": 185211,
+          "rect": [
+            94,
+            1032,
+            929,
+            1257
+          ]
+        }
+      ],
+      "input": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-1.png",
+        "sha256": "fd523f37cd45c0a56ba0e2143c398a74d2dc885485138c353c28a9322cbd349e"
+      },
+      "ownership": "Substantial opaque gold islands supply rectangular front bounds. Their interiors include achromatic recessed pulls and white highlights; adjacent case/shelves/brackets stay primary. These are explicit cabinet-surface regions, not creature limb masks."
+    },
+    {
+      "variant": 2,
+      "actual_gold_front_regions": [
+        {
+          "pixels": 33274,
+          "rect": [
+            529,
+            140,
+            749,
+            298
+          ]
+        },
+        {
+          "pixels": 12591,
+          "rect": [
+            91,
+            642,
+            211,
+            752
+          ]
+        },
+        {
+          "pixels": 12827,
+          "rect": [
+            630,
+            642,
+            752,
+            752
+          ]
+        },
+        {
+          "pixels": 12711,
+          "rect": [
+            810,
+            642,
+            931,
+            752
+          ]
+        },
+        {
+          "pixels": 7873,
+          "rect": [
+            268,
+            682,
+            388,
+            752
+          ]
+        },
+        {
+          "pixels": 7945,
+          "rect": [
+            448,
+            682,
+            569,
+            752
+          ]
+        },
+        {
+          "pixels": 4740,
+          "rect": [
+            604,
+            900,
+            650,
+            1010
+          ]
+        },
+        {
+          "pixels": 2274,
+          "rect": [
+            725,
+            956,
+            771,
+            1010
+          ]
+        }
+      ],
+      "input": {
+        "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-2.png",
+        "sha256": "1a9d769bc1d73ed070a3912ef9c6edfd3a17c16ef79d394203c847d74a0ca24f"
+      },
+      "ownership": "Substantial opaque gold islands supply rectangular front bounds. Their interiors include achromatic recessed pulls and white highlights; adjacent case/shelves/brackets stay primary. These are explicit cabinet-surface regions, not creature limb masks."
+    }
+  ],
+  "alpha": "Opaque structure at actual A>=224plus two-pixel edge allowance; retain actual A>=16only within it, normalize>=240and clear invisible RGB. Discard detached exterior glow. Under-plinth opening remains transparent.",
+  "palette": "Gray metal becomes neutral mean-RGB. Gold-owned fronts become neutral max(R,G); their hue is discarded. Native preview applies c to case and W to owned surfaces. Neutral view is actually grayscale.",
+  "registration": "One full-cell frame/anchor per whole cabinet, including top storage block; source cosmetic variants remain distinct. No independent alpha-bounds centering.",
+  "source_interpretations": "Opaque galvanized faces fill native outline glyphs; glyph gaps are not physically transparent doors. Partial original marks become dark recesses and nested storage. Top projections are brackets, not proven electronics.",
+  "omitted": "No four-view creature turnaround, clothing or dynamically opening door state is declared for this source furniture. Native state/visibility/contact acceptance remains pending."
+}

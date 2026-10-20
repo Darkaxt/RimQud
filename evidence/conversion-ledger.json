@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-ARGYVE-MULTICABINET",
+  "active_entry": "SCN-BEDROLL",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -5585,8 +5585,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -5655,7 +5655,385 @@
           "sha256": "da0be281197151132e9abf0f758ba8d52e2d5261bb04a0079016878d9652ee6e"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T06:49:11.343210+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Argyve inherited cabinet identity and both original layouts",
+          "action": "Read exact Argyve/Multicabinet definitions and decoded both actual RandomTile source masks, rather than relying only on the older static thumbnail.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/extract-native-states.py",
+              "sha256": "8c2f1b1787e43cdb1c5c32d7322088e3d17ec76d13d879be8f2f8120317de229"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/native-state-index.json",
+              "sha256": "8b98c98f3a8fc01cc6daf906279d52f8d487b774fbab5ff57944ad288f24617f"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/native-states-comparison.png",
+              "sha256": "baad8e1fe02ff67ed0bf94b321dbf609d3f1091af1d3c0f9952febbd2d6845c1"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            }
+          ],
+          "review": "Both exact16x24source masks/hash/atlas rectangles are retained in the index. The child changes inventory population, not appearance. Native c/W palette, galvanized-metal description, solidity and occlusion are recorded. Tiny partial marks do not prove electronics or dynamic open drawers.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.343600+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VFE galvanized filing-cabinet reference",
+          "action": "Selected Vanilla Furniture Expanded NewThings/Misc/FilingCabinet_south for shallow galvanized-metal bevels, recessed pulls and edge weight only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-construction-comparison.png",
+              "sha256": "019c85237606f45c742dec58b62bef916bf1f6b9b67cbf048592302650e485a5"
+            }
+          ],
+          "review": "Viewed the actual selected installed asset and its metadata. Its two equal drawers, donor facings and research/storage mechanics are not adopted. Old Things/Other cabinet was viewed but not selected.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.343762+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable unequal drawers, recessed storage and nested compartments",
+          "action": "Constructed both source-bound layouts as explicit editable metal fronts, cap/plinth/feet and recessed compartments.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/prepare-and-construct.py",
+              "sha256": "3747e29ae392434ac3f0d02df18d26ea93a40163a0b56b69bf5a3b7f49c697c7"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-1.svg",
+              "sha256": "3cddd00c49ae3638faf87acb182878f94e712a359c13e04c3b63fef7fc227043"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-1.png",
+              "sha256": "e240e02824ae47549b4a60e010c85fb962ab7937af81469f2d3e870c79e74190"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-2.svg",
+              "sha256": "8713e98201c0fd9c4d540121a955a051aa6ff73af074ae4d1463899eee992c0a"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-2.png",
+              "sha256": "b70374342f1806004617bb552d30ab40fd4d86560a3f9870622e701512f94dd9"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-construction-comparison.png",
+              "sha256": "019c85237606f45c742dec58b62bef916bf1f6b9b67cbf048592302650e485a5"
+            }
+          ],
+          "review": "Viewed both manual shapes. Outline glyphs receive opaque metal faces as an explicit authored interpretation. Layout1 retains unequal drawer sizes and broad bottom front; layout2 retains narrow fronts, a large door and nested top/shelf storage. No unsupported radio identity, face or visible inventory was invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.344196+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Both actual cosmetic RandomTile variants in a shared full-cell frame",
+          "action": "Preserved native sw_multi_cabinet_1 and2 as separate fixed map-view layout choices, including their different detail regions.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/native-state-index.json",
+              "sha256": "8b98c98f3a8fc01cc6daf906279d52f8d487b774fbab5ff57944ad288f24617f"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-1.png",
+              "sha256": "e240e02824ae47549b4a60e010c85fb962ab7937af81469f2d3e870c79e74190"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-2.png",
+              "sha256": "b70374342f1806004617bb552d30ab40fd4d86560a3f9870622e701512f94dd9"
+            }
+          ],
+          "review": "Both source alternatives are constructed; no donor four-way facings or dynamic open/closed cabinet animation is fabricated. Every part/mask within a layout shares the full native-cell coordinate frame.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.344479+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled galvanized cabinet refinement / layout1",
+          "action": "Performed one built-in ImageGen call for this exact constructed layout, supplying the selected actual installed VFE metal reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refine-variant-1-prompt.txt",
+              "sha256": "cf8b468f239b3949351cdcbfc86b9a312fbb6e99a9e4499aa2e3ca29175d6cf3"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-1.png",
+              "sha256": "e240e02824ae47549b4a60e010c85fb962ab7937af81469f2d3e870c79e74190"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-1.png",
+              "sha256": "fd523f37cd45c0a56ba0e2143c398a74d2dc885485138c353c28a9322cbd349e"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Drawer/recess counts, unequal proportions and selected gold ownership regions remain source-bound. Soft exterior alpha halo is removed during structural registration; no new anatomy, facings, loot or mechanisms are accepted.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-argyve-multicabinet/v1/refine-variant-1-prompt.txt",
+            "sha256": "cf8b468f239b3949351cdcbfc86b9a312fbb6e99a9e4499aa2e3ca29175d6cf3"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-1f6638c4-4d95-41dc-9a6c-d70a00222f49.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-argyve-multicabinet/v1/constructed-variant-1.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Misc/FilingCabinet/FilingCabinet_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.345848+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled galvanized cabinet refinement / layout2",
+          "action": "Performed one built-in ImageGen call for this exact constructed layout, supplying the selected actual installed VFE metal reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/source-packet.json",
+              "sha256": "3b52c5aa622ca8bf1fb596206a58c8aed1c7bb0e50be7be23442ffd8e97a99c0"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refine-variant-2-prompt.txt",
+              "sha256": "663d0afa30582d36a1075c46ec80537f5aa50e52715c440b69fcf205a9a18750"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/constructed-variant-2.png",
+              "sha256": "b70374342f1806004617bb552d30ab40fd4d86560a3f9870622e701512f94dd9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-2.png",
+              "sha256": "1a9d769bc1d73ed070a3912ef9c6edfd3a17c16ef79d394203c847d74a0ca24f"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Drawer/recess counts, unequal proportions and selected gold ownership regions remain source-bound. Soft exterior alpha halo is removed during structural registration; no new anatomy, facings, loot or mechanisms are accepted.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-argyve-multicabinet/v1/refine-variant-2-prompt.txt",
+            "sha256": "663d0afa30582d36a1075c46ec80537f5aa50e52715c440b69fcf205a9a18750"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-ca71b3df-c800-42dd-a70d-0a8bd40b50b1.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-argyve-multicabinet/v1/constructed-variant-2.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Misc/FilingCabinet/FilingCabinet_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.347926+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral metal and drawer ownership extraction / fixed source-cell registration",
+          "action": "Removed detached exterior halo, neutralized proposal color, assigned three/eight selected front regions including their pale highlights and dark pulls, and registered each entire frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-1.png",
+              "sha256": "fd523f37cd45c0a56ba0e2143c398a74d2dc885485138c353c28a9322cbd349e"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/refined-variant-2.png",
+              "sha256": "1a9d769bc1d73ed070a3912ef9c6edfd3a17c16ef79d394203c847d74a0ca24f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/register-cabinet.py",
+              "sha256": "b3b1e3b8e20e16d7e4c2da110d94add1c5f8324d61c1dea859821acaeac9cb5c"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+              "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
+              "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-decisions.json",
+              "sha256": "46674b318300658f572ce48fd81fd296f614a31a1d167a8886221628a028adec"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-coverage.png",
+              "sha256": "bcc0f317d98904251be4942f07c3bb1dcf97bdcb8249f870be38d24f92dac50c"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-detail-coverage.png",
+              "sha256": "4e7deed906c313738fbe004e29b883e02aa04c0caae0af8e93e21863a9d56568"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-detail-neutral-master.png",
+              "sha256": "efbcdeffdcdd4d6418a525d8b09b17289e4980f5a0df4bcf1faae85918256436"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-detail-neutral.png",
+              "sha256": "2fe0eafef5fe24858ae022a2f928fa2e81396c10d4af8e08d3655ee946170694"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-drawer-ownership-mask.png",
+              "sha256": "d4a371072612dbd9860eb55be0b4145b52c7a342617f0e6616a367b54091b6b2"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-gold-seed.png",
+              "sha256": "aa5491d502615214525caf4c0211c54164f618c6ba04a69276fc3d57edf8fc01"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-native-c-W-preview.png",
+              "sha256": "9537c771ea9892ceb684cfc72971dfc9d81ccefe33da0a8706392c2969c51052"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-neutral-master.png",
+              "sha256": "c29e3686fd632fb0c6cdd383b2c081d0e948561297592d6db6ecc73d1c3a512f"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-opaque-structure-mask.png",
+              "sha256": "d61bb7968993876d6627aa1bbd792fa65feb3441422cd5b07e2caf521adfdcc8"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-primary-neutral.png",
+              "sha256": "d6bb29047c6885014a260230aea3e6161dfb6cc7f87884045da6e43a60526536"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-selected-edge-mask.png",
+              "sha256": "a5a10744656c6e5d97e72f70b1c43f518cc225a9c70f83d05ef9d425d7576361"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-coverage.png",
+              "sha256": "3f4a0c40fe95162f677c72ba59602ec28b40011171b09e168e3852e466115f9f"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-detail-coverage.png",
+              "sha256": "01daf43563c828a7540a631b6635c61cf666c775cccc1608bd18e254900d2852"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-detail-neutral-master.png",
+              "sha256": "2f8e6140cb8964576860d985903871192c3a386d36d2243a3be154c42d3aed20"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-detail-neutral.png",
+              "sha256": "b9e5f5ff6fe863fddfd09e0e257221a96098454fd6fc1bb0b3f989d92a2a5b34"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-drawer-ownership-mask.png",
+              "sha256": "dc0e9d44d1d97fd4dd1835e721324438a84ef220fbc7988aea2351c00fc84022"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-gold-seed.png",
+              "sha256": "f713f5adbf189369fd3cc3a4ea8f41f94b125bdd61b48792efcf3f45e420d46b"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-native-c-W-preview.png",
+              "sha256": "dc5cdcb9c51dd80cd75fe292c119c2ec3c6d6cd38f1d71cdaee2b6816991d96f"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-neutral-master.png",
+              "sha256": "7534e736e58f5dfcfe36065e0dd05f2584bf44bc6fe9417d37e6604c98b8aacc"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-opaque-structure-mask.png",
+              "sha256": "f147602ff0adc264650a81ac896e92e0da3e20155d0f02eb936c8fa1ec30823a"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-primary-neutral.png",
+              "sha256": "060cfef7ec5b10347b119e76c87c14b2a2057c9a38b518a69e10a49558e35b0d"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-selected-edge-mask.png",
+              "sha256": "33de4dd3674cda86917da32373cd853efc451e8458f7034dacbad4979baddc68"
+            }
+          ],
+          "review": "Viewed neutral/full/detail/native plates. Gold islands give explicit rectangular surface ownership so white reflections and achromatic pulls are not misassigned to the case. All production layer RGB channels are equal; source c/W tint is applied only in native-color previews. No part is independently centered or resized.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.353880+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Both cabinet layouts, cut edges and intended-size palette review",
+          "action": "Inspected isolated detail ownership and complete native c/W recomposition at enlarged and16x24/24x36/32x48sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+              "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
+              "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-1-native-c-W-preview.png",
+              "sha256": "9537c771ea9892ceb684cfc72971dfc9d81ccefe33da0a8706392c2969c51052"
+            },
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/variant-2-native-c-W-preview.png",
+              "sha256": "dc5cdcb9c51dd80cd75fe292c119c2ec3c6d6cd38f1d71cdaee2b6816991d96f"
+            }
+          ],
+          "review": "Actual selected saved plate preserves unequal fronts, recesses, upper box and short feet. Detail stays on its intended drawer surfaces, not on neighboring case/shelf brackets. This is artwork authoring review, not native game or movement acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:49:11.354373+00:00",
+          "step": "native_state_review",
+          "phase": "Native inventory, appearance selection and visibility acceptance deferred",
+          "action": "Retained native random layout selection, container/inventory/smart-use, solidity/occlusion and fallback requirements behind the all-conversions generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+              "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-argyve-multicabinet/v1/registered/model.json",
+          "sha256": "d2b4462126c703c28051647ae4702d38e7133d091c123877d91c20e0d2183fd6"
+        },
+        "plate": {
+          "path": "art/conversion/scn-argyve-multicabinet/v1/registered/registration-comparison.png",
+          "sha256": "4d5dff7115cd38cf6c078c0a99c08de107ac0eb18d0fc1631e5e4c1918ea7541"
+        }
+      },
+      "registration_summary": "Both native Argyve Multicabinet cosmetic layouts retain unequal galvanized drawers, dark recessed storage and source-selected detail fronts. Production primary/detail layers are neutral; previews apply actual native c/W colors. Original masks, installed VFE reference, editable shapes, two actual refinements and surface-ownership extraction are recorded below. The child changes inventory population only. Native inventory, visibility and state acceptance remain pending."
     },
     {
       "id": "SCN-BED",
@@ -5739,7 +6117,264 @@
           "sha256": "48a6ec82f6d63ee154c333a13d1bd4cfa33f424d26d8ee31f171f7978dce36fd"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T06:54:35.154016+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Hillfolk bed identity, original oblique tile and chaff-stuffed fabric",
+          "action": "Read exact Bed/BaseBed/MountedFurniture/Furniture inheritance, original16x24mask and native w/Y wood/fabric palette; inspected native Bed part for appearance ownership.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-packet.json",
+              "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/source-construction-comparison.png",
+              "sha256": "693f83e9f09a69b3eec791704cfe846549ea487b126d3dd9c5f3860360284003"
+            }
+          ],
+          "review": "Actual source/hash, description, open upper-right headboard and lower-left sleeping surface are recorded. Bed part declares no Render/Tile override; source has one tile, native sleep state and rare Animated builder. Hidden structure and curves/seams remain authored interpretation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.154379+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VTE bed material reference",
+          "action": "Selected installed Vanilla Textures Expanded Bed_south for fabric shading, wooden-edge readability and restrained outlines only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-packet.json",
+              "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-construction-comparison.png",
+              "sha256": "693f83e9f09a69b3eec791704cfe846549ea487b126d3dd9c5f3860360284003"
+            }
+          ],
+          "review": "Viewed exact installed donor and About metadata/hash. Donor pillow, separate blanket, straight orientation, facings, footprint and sleeping mechanics are not copied.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.154568+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable oblique wooden slats and single stuffed fabric pad",
+          "action": "Constructed the source-shaped open headboard, rails, low foot board, supports and diagonal chaff-stuffed sleeping pad as explicit SVG geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-packet.json",
+              "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/prepare-and-construct.py",
+              "sha256": "bca6a8e1b28c605faf991404a9d316e46217d32a52bb01d2fea756d66408cdfd"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/constructed-front.svg",
+              "sha256": "61d96857be226bb4c6a8d570dea35ba9ba62b5c9b611449b3b013cd4be6375ed"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/constructed-front.png",
+              "sha256": "6cb094db33a46940ea2e566fc508163b884fe61a480aa49dec2fd6109bab10e6"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/source-construction-comparison.png",
+              "sha256": "693f83e9f09a69b3eec791704cfe846549ea487b126d3dd9c5f3860360284003"
+            }
+          ],
+          "review": "Viewed manual source/donor comparison. Headboard shallow curves, hidden slat spacing and seams are authored interpretation constrained by the icon/description. No absent pillow, extra blanket or modern spring mattress is added. Cyan fabric identifies later independent tint ownership.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.154940+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "One fixed native map-view bed and shared full-cell geometry",
+          "action": "Retained the source oblique orientation and one cell frame for wooden structure, fabric and all masks.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-packet.json",
+              "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/constructed-front.png",
+              "sha256": "6cb094db33a46940ea2e566fc508163b884fe61a480aa49dec2fd6109bab10e6"
+            }
+          ],
+          "review": "No source alternate occupied tile, RandomTile or furniture-facing set is declared. No donor rotations/occupant images are invented. Native sleep interaction and animated/custom fallback remain explicit final integration requirements.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.155150+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled wood and chaff-padding refinement",
+          "action": "Performed one built-in ImageGen refinement of the explicit oblique source construction with actual installed VTE Bed_south style reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/source-packet.json",
+              "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/constructed-front.png",
+              "sha256": "6cb094db33a46940ea2e566fc508163b884fe61a480aa49dec2fd6109bab10e6"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/refine-front-prompt.txt",
+              "sha256": "4704024e5bd7487f9ba174671cd15f35688a07ab089515c456926df28f7657d8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/refined-proposal.png",
+              "sha256": "109bb58aaa6da48a80a18dfc7d350f82bb6d9a6e1f4b77cd76685cb7bca4a7cb"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Oblique shape, open headboard, rails, short supports and single softly padded fabric surface remain. Gray wood and pale-cyan fabric are extraction aids; exterior alpha halo is excluded at registration. No additional pillow, blanket or occupant is accepted.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-bed/v1/refine-front-prompt.txt",
+            "sha256": "4704024e5bd7487f9ba174671cd15f35688a07ab089515c456926df28f7657d8"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-d4cd7dea-cde6-43d1-8dc7-98a83ab6ce98.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-bed/v1/constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/Bed/Bed_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.156807+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral wood/fabric coverage and full source-cell registration",
+          "action": "Removed detached exterior halo, extracted actual pale-cyan fabric ownership, neutralized both roles and mapped the complete refined frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/refined-proposal.png",
+              "sha256": "109bb58aaa6da48a80a18dfc7d350f82bb6d9a6e1f4b77cd76685cb7bca4a7cb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/register-bed.py",
+              "sha256": "7cfcc54854378720d84dcd86446ad10b1a473fe30279e014f8c3022a5b97cadd"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/coverage.png",
+              "sha256": "717941a8897cd8c8300f186642704ab29587cac5c439b7479c486f3ab9ca7e5d"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/detail-coverage.png",
+              "sha256": "a622f0a94aff878df2298e74f29c92c6e1f25becbb9d9404456ba058a153e0bd"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/detail-neutral.png",
+              "sha256": "e776daa0050a4d5997c5e8a3f0de6b1ad4c8604c3e23cc6098df197c0323d6ad"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/fabric-neutral-master.png",
+              "sha256": "230e921bcad98298843e2abc61c0e0a7c43ea46c9a775cebc74234329daf4fa9"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/fabric-ownership-mask.png",
+              "sha256": "94d71f48e66aec61cb74424911856a4dc85d9f295c25aa7e10a4ac1d1b2cebdd"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/model.json",
+              "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/native-w-Y-preview.png",
+              "sha256": "bbd550971a71246037dc5fa3992615b7e3d54e0739e7f1b810a3cc005831b5c0"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/neutral-master.png",
+              "sha256": "9213d4889e9be986e28056b3c2be425b6127c293c95a81bcf654538c23b49d45"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/opaque-structure-mask.png",
+              "sha256": "e4cd1b012d2505ccb8897a29daff7b97830ac3c641d8b8d5f019a2661a4a05c1"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/primary-neutral.png",
+              "sha256": "39dd425832f922f97927b6611d8e2246e7bc4c6a4abc4bf8a4d1c08b53dae8d7"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+              "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/registration-decisions.json",
+              "sha256": "743a72ba35427ec9ad3a41110dfef5a860bd4200ee3f09285e0d75bf1fdb2fdb"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/selected-edge-mask.png",
+              "sha256": "3fb3242008d8b615788d17fcb363dfc396ad05cbfd061e6ddcc0827c99984c39"
+            }
+          ],
+          "review": "Viewed isolated fabric and recomposed whole. Wood rails/headboard/feet remain primary; fabric alone receives Y. Both selected production layers have equal RGB. Open headboard and under-frame gaps retain alpha transparency. Neither mattress nor wood is independently bbox-centered.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.159479+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Oblique silhouette, palette ownership and intended-size art review",
+          "action": "Recomposed native w wooden structure and Y white fabric and inspected enlarged plus16x24/24x36/32x48previews.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/registered/model.json",
+              "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+              "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+            },
+            {
+              "path": "art/conversion/scn-bed/v1/registered/native-w-Y-preview.png",
+              "sha256": "bbd550971a71246037dc5fa3992615b7e3d54e0739e7f1b810a3cc005831b5c0"
+            }
+          ],
+          "review": "Viewed actual saved selected plate. Original diagonal shape remains recognizable; fabric cut edges stay within the wooden rails, with no baked cyan or invented occupant. This is authoring review, not native sleep/movement/visibility acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T06:54:35.159754+00:00",
+          "step": "native_state_review",
+          "phase": "Native bed interaction and visibility acceptance deferred",
+          "action": "Kept actual native sleep interaction, occupant visibility, non-occlusion, contact and animated/custom fallback behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v1/registered/model.json",
+              "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-bed/v1/registered/model.json",
+          "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+        },
+        "plate": {
+          "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+          "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+        }
+      },
+      "registration_summary": "Selected hillfolk bed retains the source oblique wooden frame, open headboard, low foot rail and chaff-stuffed fabric. Production wood/fabric layers are neutral; preview applies native w/Y tint. Actual source, installed VTE reference, editable geometry, refinement and fabric-ownership extraction are recorded below. One fixed source tile is retained; native sleeping/visibility and rare animated-furniture acceptance remain pending."
     },
     {
       "id": "SCN-BEDROLL",
@@ -5753,8 +6388,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

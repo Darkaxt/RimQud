@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-BED",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Bed",
+  "native_tiles": [
+    "Items/sw_bed.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-bed/v1/source-packet.json",
+    "sha256": "9b922ac275ff0329f329965e53aace94c13c1a957bee04eb5df9b49b20239b94"
+  },
+  "primary": {
+    "path": "art/conversion/scn-bed/v1/registered/primary-neutral.png",
+    "sha256": "39dd425832f922f97927b6611d8e2246e7bc4c6a4abc4bf8a4d1c08b53dae8d7"
+  },
+  "detail": {
+    "path": "art/conversion/scn-bed/v1/registered/detail-neutral.png",
+    "sha256": "e776daa0050a4d5997c5e8a3f0de6b1ad4c8604c3e23cc6098df197c0323d6ad"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-bed/v1/registered/coverage.png",
+    "sha256": "717941a8897cd8c8300f186642704ab29587cac5c439b7479c486f3ab9ca7e5d"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-bed/v1/registered/detail-coverage.png",
+    "sha256": "a622f0a94aff878df2298e74f29c92c6e1f25becbb9d9404456ba058a153e0bd"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for oblique wood/fabric/headboard/feet. No independent mattress/frame fitting or bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wood w",
+    "detail": "actual native fabric Y",
+    "neutral_preview": "Both selected layers are equal-RGB neutral; pale cyan segmentation aid is removed."
+  },
+  "state_owner": "One source fixed-map-view Bed tile. Native sleeping/occupant handling stays native; no donor facings or alternate occupied artwork is invented.",
+  "native_behavior": "Preserve native Bed interaction, non-occlusion, mounted/organic furniture metadata and rare animated/custom native fallback. No RimWorld bed dimensions or mechanics are transplanted.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

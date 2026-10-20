@@ -81,7 +81,14 @@ The Alchemist Table is also generation-ready: scorched wood, left phial rack and
 tall alembic follow its original shape. Neutral glass ownership includes pale
 reflections without turning wooden rack edges cyan. Native inventory/empty-full
 tag behavior stays explicit in its source packet and report.
-There are now 34 generation-ready entries; Argyve Multicabinet is active next.
+Argyve Multicabinet now retains both native cosmetic layouts: unequal galvanized
+drawer fronts, recessed compartments and the second layout's nested storage.
+Neutral surface ownership preserves the actual native cyan/yellow palette.
+The hillfolk Bed also retains its original oblique frame and chaff-stuffed fabric,
+with separate neutral wood/fabric roles and the native brown/white palette.
+Both entries include source metadata, actual installed mod references, editable
+construction, actual refinement calls and extraction evidence.
+There are now 36 generation-ready entries; Bedroll is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
