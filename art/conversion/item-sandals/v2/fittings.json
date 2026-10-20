@@ -1,0 +1,146 @@
+{
+  "item": "Sandals",
+  "workflow": "regional-curved-v1",
+  "source": {
+    "instance": 618,
+    "blueprint": "Sandals",
+    "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+    "tile": "items/sw_sandals.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "w",
+    "kind": "equipment",
+    "reference_file": "village-originals/sandals-reference.png",
+    "native_mask_sha256": "34ee7254323c09bd09ae36b786ff2406da40ef8caa37ab655d7def7517f96570",
+    "reference_sha256": "ecaf268358b7e7351b6b0eb2b7cf7d075477679b73510bc804f25fdffcb4fa74",
+    "info_id": 9980,
+    "atlas_id": 185,
+    "rect": [
+      468,
+      52,
+      16,
+      24
+    ]
+  },
+  "supersedes": {
+    "path": "art/conversion/item-sandals/v1/fittings.json",
+    "sha256": "2fd2a988bcbc9f643ed660af00f62e0db9d335801e721682d9311dac1668c645"
+  },
+  "scope": "All four enumerated ordinary Feet/0 fittings separately corrected/reviewed after v1 profile-height and v2 rear-ankle-width rejection. Source/refinement reused truthfully; original bodies, full item sources and late ownership remain separate.",
+  "structural_correction": {
+    "profile": "Continuous bands span upper foot contour to sole.",
+    "ankles": "Curved front/rear bands span both ankle edges on actual fixed feet; target body-specific coverage checked.",
+    "context": {
+      "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+      "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+    },
+    "inspection": {
+      "path": "art/conversion/fit-human-female-sandals/v3/first-refinement-structural-review.json",
+      "sha256": "d6bb4dbeda7b4673f230d7b2b6c341587acae3901604734ece8d33c9a7324570"
+    }
+  },
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-MALE-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-sandals/v3/model.json",
+          "sha256": "d6b64225968ecc379fc6c1310a6f3339c5b9ad7dfa3899f291f8685ad708c3f7"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-sandals/v3/footwear-comparison.png",
+          "sha256": "3b061e4bb0ebebd2e00737f873845451e8e726f9e4c0269c28a8f2a8d133cc6b"
+        }
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-human-male-sandals/v3/authoring-review.json",
+        "sha256": "5844fb08cfa602d501601404dad998c8191efec70cad086da6af2293665b9825"
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-human-male-sandals/v3/source-packet.json",
+        "sha256": "c4d92dd29edfd47c0a11ea6a484e3137b17b3a2ab2b1756533f37c6ba300313e"
+      },
+      "actual_review": {
+        "status": "PASS",
+        "reason": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-FEMALE-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+          "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+          "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+        }
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-human-female-sandals/v3/authoring-review.json",
+        "sha256": "a6c953919c20717580dba94f2a2a78e8c3bad13ae7537367c621b7383004fc73"
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+        "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+      },
+      "actual_review": {
+        "status": "PASS",
+        "reason": "Inspected corrected SEN/west footwear, source retry and neutral/native palette. Profile bands run over the instep and forefoot upper contour and down to the sole instead of terminating halfway up the foot. Front/rear ankle bands now span both original ankle edges, with direct body/visibility checks at the actual band rows. Open skin between straps and back heel supports remains intentional. Source/feet/contact unchanged; AI body/background rejected, neutral material used with explicit corrected geometry. No native validation or named mutation assembly credit."
+      }
+    },
+    {
+      "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+          "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+        },
+        "plate": {
+          "path": "art/conversion/fit-irudad-sandals/v3/footwear-comparison.png",
+          "sha256": "31106cf48de35e5eb3a07fddf70a7196898550884d4add524b37566d038cce97"
+        }
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-irudad-sandals/v3/authoring-review.json",
+        "sha256": "0badeda5838539cf02d23c4bbe697434a6024ee6a5078e527834e8a84c962c5c"
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-irudad-sandals/v3/source-packet.json",
+        "sha256": "cb4e1fac9416aad82f7774b49d32d42f5b25610a60ea4a203dfb67ad38d84775"
+      },
+      "actual_review": {
+        "status": "PASS",
+        "reason": "Inspected older-human SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original older-human foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly."
+      }
+    },
+    {
+      "entry": "FIT-NIMA-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-sandals/v3/model.json",
+          "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+          "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+        }
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-nima-sandals/v3/authoring-review.json",
+        "sha256": "3cf84523fb0d1f33dd34e03bbbd312ce52c3646629551fd83585dd5ff02e826e"
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-nima-sandals/v3/source-packet.json",
+        "sha256": "4792048982d7e8ca4df91347689a1659ef693e002a5fb9700593a85059135a06"
+      },
+      "actual_review": {
+        "status": "PASS",
+        "reason": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly."
+      }
+    }
+  ],
+  "palette": "Native sole y / strap detail w. Body C in overview is illustrative and independent.",
+  "limits": "Generation readiness only. Individual mutations, complete outfits and native acceptance remain pending the full-set gate. No new ImageGen or native test performed for aggregation."
+}

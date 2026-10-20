@@ -1,0 +1,74 @@
+{
+  "entry": "FIT-NIMA-SANDALS-FEET-0",
+  "workflow": "regional-curved-v1",
+  "creature": "Nima Ruda",
+  "captured_gender": "female",
+  "actual_foot_binding": {
+    "id": 192,
+    "parent": 176,
+    "type": "Feet",
+    "variant": "Feet",
+    "laterality": 0,
+    "manager": null,
+    "defaultBlueprint": null,
+    "equipped": {
+      "instance": 536,
+      "blueprint": "Sandals",
+      "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+      "tile": "items/sw_sandals.bmp",
+      "foreground": "&y",
+      "tileColor": "",
+      "detailColor": "w"
+    },
+    "defaultItem": null
+  },
+  "original_item": {
+    "instance": 618,
+    "blueprint": "Sandals",
+    "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+    "tile": "items/sw_sandals.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "w",
+    "kind": "equipment",
+    "reference_file": "village-originals/sandals-reference.png",
+    "native_mask_sha256": "34ee7254323c09bd09ae36b786ff2406da40ef8caa37ab655d7def7517f96570",
+    "reference_sha256": "ecaf268358b7e7351b6b0eb2b7cf7d075477679b73510bc804f25fdffcb4fa74",
+    "info_id": 9980,
+    "atlas_id": 185,
+    "rect": [
+      468,
+      52,
+      16,
+      24
+    ]
+  },
+  "original_reference_and_donor": {
+    "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+    "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+  },
+  "body": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "canonical_registration": {
+    "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+    "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+  },
+  "decision": "Nima uses the selected unmutated female base. Her ordinary Feet/0 and actual Sandals share blueprint, sprite and palette with the structurally corrected shared fit. Reuse its full sole/strap art and exact masks; no new drawing, fit, body generation, demographic assignment or ImageGen call.",
+  "mutations": "No mutation-managed Feet group is captured. Other individual mutation/body requirements remain on BODY-NIMA and NPC-NIMA-RUDA; this shoe registration does not complete them.",
+  "context": {
+    "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+    "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+  },
+  "prompt": {
+    "path": "art/conversion/fit-human-female-sandals/v2/imagegen-prompt.txt",
+    "sha256": "613e185e776b022d891a84765d57d63d493e3d42f9d86a887ffdc71aa332e026"
+  },
+  "new_imagegen_call": false,
+  "source_footwear_plate": {
+    "path": "art/conversion/fit-human-female-sandals/v2/footwear-comparison.png",
+    "sha256": "45a131b248fdc23246434a12df7593b3f56f01375d91b25cf2b4eb65f4fdddda"
+  },
+  "native_acceptance": "Pending all-conversions generation gate"
+}
