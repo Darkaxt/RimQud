@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-WOODENMECHANICALTRANSMISSION**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **NPC-ARGYVE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -163,13 +163,13 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - |  |
 | SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - |  |
 | SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - |  |
-| SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | UNFINISHED | - |  |
 
 ### NPC assemblies (14)
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| NPC-ARGYVE | Argyve | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-ARGYVE | Argyve | IN PROGRESS | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -6681,7 +6681,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png), [art/village/scenery/woodenmechanicaltransmission-detail.png](../art/village/scenery/woodenmechanicaltransmission-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-20T23:13:16.315878+00:00 / resolve_object_description_original_tile_palette_state / PASS: Extract all48actual sw_axle painted states and bind native phases/neighbor suffixes; correct static catalogue fallback glyph interpretation.
+  Review: Private raw extraction from pinned resources. Actual painted48family replaces fallback glyph as shape evidence; native glyph untouched. Static IPowerTransmission/MechanicalPowerTransmission study preserves SyncTile/AnyChargeActivity/unpowered_1/merge/repaint/grid ownership.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/extract-native-family.py", "sha256": "26ac8c84f1e5c2d62db44d299fcf671931a7ee25e5c5f2b920231d04d1ddaa2b"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/prepare-native-evidence.py", "sha256": "5bba540b1806b4c7b7c38b63902dc11613fd2915581a352ce5dfd7e5b6d6e566"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/native-state-index.json", "sha256": "99082b767325a28eee4769f29ae8f231e581af403ef07726ef9b1e350497a75f"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/native-family-comparison.png", "sha256": "6648120facd20bf91b662600ad89a2640a81ecf443a091bb11a19fd2783763ed"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/source-packet.json", "sha256": "10fd75354f0a360c41109585efc712195c4a36a6af1f376db4867adbc038165f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE watermill blade component and matching Core main building/parent mapping for wood finish.
+  Review: Partial shaved wood/edge-weight reference, no close whole transmission match selected. Main Graphic_Multi/drawSize5x6/footprint5x6 not component/Qud dimensions; donor roof/metal rails/generator/river/power behavior not copied.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/source-packet.json", "sha256": "10fd75354f0a360c41109585efc712195c4a36a6af1f376db4867adbc038165f"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/source-reference-construction.png", "sha256": "aaa89225b54c18d2261d3d6dc23f3cb7913b94c80f3059c6386018cc1cb6b52a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / construct_faithful_shape / PASS: Construct all16connection layouts x3shaft/housing-slot phases using shared source-bound editable geometry.
+  Review: NS/EW straight runs and14gearbox/branch layouts inspected against all actual masks. Short joins/smooth slot edges authored. Exact per-phase endpoint profiles/full cell/pivot shared; no structural patch required before refinement.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/native-state-index.json", "sha256": "99082b767325a28eee4769f29ae8f231e581af403ef07726ef9b1e350497a75f"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/source-packet.json", "sha256": "10fd75354f0a360c41109585efc712195c4a36a6af1f376db4867adbc038165f"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/construct-transmission.py", "sha256": "622615f4c38e09f43e90c8c17a41a915c697d65232e4356ea0ca7fbfcea17932"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/p1-m15-constructed.svg", "sha256": "2502d54e46f7f9ff1563a0fcec82b9bc9adaf476d12e36b4b8dc5d46f4376fb0"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/p2-m15-constructed.svg", "sha256": "3bb8cd4a715b1e7a2a70cd2eebff6d7fbbca0be74bfeaab4b7c0009c9524ab1a"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/p3-m15-constructed.svg", "sha256": "5f47dcd0d76712b8415df39c4a25c1322eea416dc207b64d2f620a6ed47e0e4d"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/constructed-family.png", "sha256": "c0392040f6c44ffbc37e7ad7d5bfb585d0d65fda3db746a92b3d812db7cb81f3"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/manual-structural-review.json", "sha256": "a6a945183a9050461bdda3c65f02f55c31abb4ac73bdbcc46bf46de39cd7c8b3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / create_required_state_neighbor_variants / PASS: Cover every source connection suffix and powered phase, retaining unpowered phase1 reuse.
+  Review: All48actual tiles, no invented unpowered/frame bank. Native source suffix order/AnyChargeActivity/frame arithmetic/default desyncfalse and MergeConduit/grid behavior unchanged; no new neighbor/rotation system.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/native-state-index.json", "sha256": "99082b767325a28eee4769f29ae8f231e581af403ef07726ef9b1e350497a75f"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/constructed-family.png", "sha256": "c0392040f6c44ffbc37e7ad7d5bfb585d0d65fda3db746a92b3d812db7cb81f3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / refine_materials_and_form / PASS: Perform one actual contextual default cross wood refinement and inspect structure before material extraction.
+  Review: Inspected actual default cross before extraction: wood casing/slot/feet and four-direction shaft profiles retained; soft wood grain usable. Generated halo, dark slot/gap background, shifted upper-case placement and old slot bezel shading rejected. Fixed48source-bound constructions own topology/coverage/ink/roles. Material sampling excludes generated slot corridor before continuous gray wood plane fill, preventing a phantom vertical slot in other phases. No metal gear/motor/belts, new direction or clock.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/p1-m15-constructed.png", "sha256": "96139438974e76fc08e5975ac9d83e6c3bfaca33df2b4aff2016ee313895e482"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/refine-prompt.txt", "sha256": "6ba2aaeb3503be25e19753cdce539094f5655b6ac332f24940dfdf91299de8a7"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/refined-raw.png", "sha256": "e6edf2812e2d83a5f394c1f7b746b79939d0ef4d41f966647d27d51f3280039c"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/first-structural-review.json", "sha256": "b403164c763bd4dd3e8cb68677a8489838e27cf1228766cf664de2c978892594"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/refine-prompt.txt", "sha256": "6ba2aaeb3503be25e19753cdce539094f5655b6ac332f24940dfdf91299de8a7"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-11b99928-5306-4cc2-a18b-6c102bdc74bb.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-woodenmechanicaltransmission\\v1\\p1-m15-constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-woodenmechanicaltransmission\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\WatermillGenerator\\WatermillGeneratorBlades.png"]}}
+
+- 2026-10-20T23:13:16.315878+00:00 / extract_register_color_coverage / PASS: Exclude default generated slot shading from transferable wood; derive48exact source-state layers from one material plane.
+  Review: Union sampling geometry fills candidate slots only for material continuation; production holes/branches remain exact per-state constructions. Single gray wood material for source w/w, separate role masks retained. Short edge samples share endpoint color. No second isolation/per-state ImageGen or native clock changes.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/first-structural-review.json", "sha256": "b403164c763bd4dd3e8cb68677a8489838e27cf1228766cf664de2c978892594"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/material-sampling-decisions.json", "sha256": "8f153b63ba4027b886f7ec00344f96ca9d4e8f36a57c080b765c2bffbaccdffe"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/material-excluding-slot.png", "sha256": "46ec9356990e7334395b13321781cd09d51573459e6545bfadb6f7d674e56a73"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/register-transmission.py", "sha256": "a23972b7395b27dd5d41c0e263b0be75b6077c64411a98e9513becb35182922c"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/shared-wood-material.png", "sha256": "0c6c56d1e0bfc2dfad11f15db6a1ab9d5d9286299931a3ac19ba4a266da9cf46"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/model.json", "sha256": "41161d338b69dbb96747e01b7414b420237169991ab4c23a3954cb6950547cad"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/registration-decisions.json", "sha256": "52fd2d91edce97b5fac967153f49fca0a00bd4aa10828729d9feb24d32952245"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/neutral-family.png", "sha256": "3f46b384f3a27e33badd54e7a7cc8da4c98f7eb9e8c1ba492991925ff8ff0fba"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/native-family.png", "sha256": "77f7ab9f4d1a023db56244b85adaec11d76367953c140f585626a35ea5e9b319"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect actual/manual/refined/registered48families,3phaseconnected contexts and intended-size pieces.
+  Review: Reviewed actual48painted sw_axle source masks:16neighbor suffixes in native n,s,e,worder and3phases; unpowered usesphase1. Catalogue static text/216 is fallback glyph and was not credited as painted source, its opaque font background not interpreted as solid wood. Exact WoodenMechanicalTransmission/BaseMechanicalTransmission ancestry/description, source w/w and native PaintPart/MergeConduit/TileEffects metadata retained. NS/EW layouts are straight phase-profile shafts; other14share source wooden box/pedestal and neighbor branches. Smooth shaft/box/slot edges, short bridged joins and shaved wood grain are explicit authored interpretation; hidden gear geometry unknown. Actual VTE WatermillGeneratorBlades component and matching Core building/parent inspected: partial wood finish only, no whole gearbox match claimed. Main building Graphic_Multi/drawSize5x6/footprint5x6 is not blade/Qud dimensions, no roof/generator/metal rails/river/electricity mechanics copied. Full actual/constructed48family and default cross inspected before one contextual refinement. First output reviewed before extraction: gray wood usable, generated halo/slot background/shifted bezel rejected. Sampling corridor excludes old default slot/edge shading; one continuous gray wood material plane fills unavailable surface without phantom slot ink. Each of48production constructions restores its own exact alpha/ink/shaft phase profile/housing slot and source palette roles; both roles actually w, no invented second material. Shared short edge material samples and exact same-phase NS/EW endpoint RGBA profiles verified across allpieces; no pixel reaches an undeclared neighbor edge. Full neutral/native48plates,3phaseconnected context and24x36swatches inspected. Source AnyChargeActivity/SyncTile native frame arithmetic/unpowered_1, painted suffix mapping/grid/merge/repaint/charge/physics remain native; no new clock/connectivity/crafting/placement or activation. Native integrated acceptance pending all generation.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/model.json", "sha256": "41161d338b69dbb96747e01b7414b420237169991ab4c23a3954cb6950547cad"}]
+  Outputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/record-review.py", "sha256": "e9b11aa969211a92f72944eb95f4b29ec50bd05bfa194af0fd20d342751befd5"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/registration-comparison.png", "sha256": "41a360b1b9f895c1f60719d3408f37fe670e8eebfdf866a9c77eed0a73b945ed"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/authoring-review.json", "sha256": "b3778da1e16b08e9583c8e7bb17c595a15d33ad13f3386be37917ddf771430da"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/artifact-manifest.json", "sha256": "b3f86f41587b8c94fa0b5cc724101654adcf35f55e25e0868a037ab5195047c3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:13:16.315878+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native painted suffix/charge activity/phase clock/unpowered/merge/grid/physics/visibility/save-load acceptance behind full-generation gate.
+  Review: No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/model.json", "sha256": "41161d338b69dbb96747e01b7414b420237169991ab4c23a3954cb6950547cad"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-ARGYVE: Argyve
 
@@ -6691,7 +6739,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
 
 ### NPC-ELDERBOB: Irudad (ElderBob)
 

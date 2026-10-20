@@ -1,0 +1,1109 @@
+{
+  "entry": "SCN-WOODENMECHANICALTRANSMISSION",
+  "identity": "WoodenMechanicalTransmission -> BaseMechanicalTransmission -> MountedFurniture -> Furniture",
+  "description": "Wood was shaved, cut to smooth-volumed shafts, and fit inside gearboxes to convey motion in continuity.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "WoodenMechanicalTransmission": "<object Name=\"WoodenMechanicalTransmission\" Inherits=\"BaseMechanicalTransmission\">\n    <part Name=\"Render\" DisplayName=\"wooden machinery\" RenderString=\"216\" ColorString=\"&amp;w\" DetailColor=\"w\" Occluding=\"false\" />\n    <part Name=\"Physics\" Weight=\"200\" />\n    <part Name=\"Description\" Short=\"Wood was shaved, cut to smooth-volumed shafts, and fit inside gearboxes to convey motion in continuity.\" />\n    <part Name=\"MechanicalPowerTransmission\" ChargeRate=\"100\" IsTechScannable=\"false\" />\n    <part Name=\"Examiner\" Complexity=\"1\" Difficulty=\"1\" />\n    <part Name=\"TinkerItem\" Bits=\"B\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <stat Name=\"AV\" Value=\"2\" />\n    <stat Name=\"Hitpoints\" Value=\"50\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <xtagGrammar massNoun=\"true\" />\n  </object>",
+      "BaseMechanicalTransmission": "<object Name=\"BaseMechanicalTransmission\" Inherits=\"MountedFurniture\">\n    <part Name=\"MechanicalPowerTransmission\" IsConduit=\"true\" TileEffects=\"true\" TileBaseFromTag=\"PaintedFence\" TileAnimateWhenPowered=\"true\" TileAnimatePoweredFrames=\"3\" TileAppendWhenUnpowered=\"_1\" />\n    <part Name=\"MergeConduit\" ModPart=\"ModGearbox\" DestroyIfPart=\"MechanicalPowerTransmission\" />\n    <tag Name=\"PaintedFence\" Value=\"sw_axle\" />\n    <tag Name=\"PaintedFenceExtension\" Value=\".png\" />\n    <tag Name=\"PaintPart\" Value=\"MechanicalPowerTransmission\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_states": {
+    "resources": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "states": [
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_.png",
+        "info_id": 14615,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          936,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_-png-mask.png",
+          "sha256": "f38b16b7beed0d126ce102994ccb55634ad15a7ef381975deda311158da500ca"
+        },
+        "phase": 1,
+        "native_suffix": "",
+        "neighbor_mask": 0,
+        "native_tile": "Tiles/sw_axle_1_.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_e.png",
+        "info_id": 14616,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          910,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_e-png-mask.png",
+          "sha256": "c9ccde8db4c10dd4952639b5d9931f78b86796e485d656d0de8faec953d565b6"
+        },
+        "phase": 1,
+        "native_suffix": "e",
+        "neighbor_mask": 2,
+        "native_tile": "Tiles/sw_axle_1_e.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_ew.png",
+        "info_id": 14617,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          884,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_ew-png-mask.png",
+          "sha256": "a8493c0a321515fc4f9dbaaf82cb0b4903e7843a922be467cb85a10935cd34e6"
+        },
+        "phase": 1,
+        "native_suffix": "ew",
+        "neighbor_mask": 10,
+        "native_tile": "Tiles/sw_axle_1_ew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_n.png",
+        "info_id": 14618,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          858,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_n-png-mask.png",
+          "sha256": "cfe8d9ca86dce12695724729fc20574d2ee7dc23c882313f01306a5f20896ad2"
+        },
+        "phase": 1,
+        "native_suffix": "n",
+        "neighbor_mask": 1,
+        "native_tile": "Tiles/sw_axle_1_n.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_ne.png",
+        "info_id": 14619,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          832,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_ne-png-mask.png",
+          "sha256": "3234fa011eda7b42c6a59770aa8e4ebac372d7d8480efc91a321696fcc5ada28"
+        },
+        "phase": 1,
+        "native_suffix": "ne",
+        "neighbor_mask": 3,
+        "native_tile": "Tiles/sw_axle_1_ne.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_new.png",
+        "info_id": 14620,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          806,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_new-png-mask.png",
+          "sha256": "f4d90e092cac89d819c0d2416da73042b61513b98ff5134c3805ad7965967ef5"
+        },
+        "phase": 1,
+        "native_suffix": "new",
+        "neighbor_mask": 11,
+        "native_tile": "Tiles/sw_axle_1_new.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_ns.png",
+        "info_id": 14621,
+        "atlas_id": 277,
+        "rect": [
+          792,
+          780,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_ns-png-mask.png",
+          "sha256": "3796c34fe7b8917c85b0b4b86a05cb473b57c605bb4479071c8d6026ba0832cf"
+        },
+        "phase": 1,
+        "native_suffix": "ns",
+        "neighbor_mask": 5,
+        "native_tile": "Tiles/sw_axle_1_ns.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_nse.png",
+        "info_id": 14622,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          2002,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_nse-png-mask.png",
+          "sha256": "5d7e593b5392c53ff969769ec4341b0063815c4497c8dabfa7e7cc0039e67865"
+        },
+        "phase": 1,
+        "native_suffix": "nse",
+        "neighbor_mask": 7,
+        "native_tile": "Tiles/sw_axle_1_nse.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_nsew.png",
+        "info_id": 14623,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1976,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_nsew-png-mask.png",
+          "sha256": "6f8e7cf3d1343c85dc030c28ef186a15675ed927e539cff588efc09d584e2451"
+        },
+        "phase": 1,
+        "native_suffix": "nsew",
+        "neighbor_mask": 15,
+        "native_tile": "Tiles/sw_axle_1_nsew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_nsw.png",
+        "info_id": 14624,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1950,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_nsw-png-mask.png",
+          "sha256": "2bbb73871f9140008a330f1708ab8ea5748c783d9ed5697d04975cedd3cc352c"
+        },
+        "phase": 1,
+        "native_suffix": "nsw",
+        "neighbor_mask": 13,
+        "native_tile": "Tiles/sw_axle_1_nsw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_nw.png",
+        "info_id": 14625,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1924,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_nw-png-mask.png",
+          "sha256": "65211640bdfa9a9071b940855380458905c636891367d0611fc34745876b5a41"
+        },
+        "phase": 1,
+        "native_suffix": "nw",
+        "neighbor_mask": 9,
+        "native_tile": "Tiles/sw_axle_1_nw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_s.png",
+        "info_id": 14626,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1898,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_s-png-mask.png",
+          "sha256": "f1e83f6718247e4aebfd3e3996279e14f19d8ca92f57e76a7aeb434eab8016f1"
+        },
+        "phase": 1,
+        "native_suffix": "s",
+        "neighbor_mask": 4,
+        "native_tile": "Tiles/sw_axle_1_s.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_se.png",
+        "info_id": 14627,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1872,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_se-png-mask.png",
+          "sha256": "c59f00beeb07181605a06b7a4fd40e75fa00f04e04bff76abd45328f6852bf0a"
+        },
+        "phase": 1,
+        "native_suffix": "se",
+        "neighbor_mask": 6,
+        "native_tile": "Tiles/sw_axle_1_se.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_sew.png",
+        "info_id": 14628,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1846,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_sew-png-mask.png",
+          "sha256": "dcbf9058b44300691d219a3223f824b49bd1a1236c8824f8d86649ba492d8666"
+        },
+        "phase": 1,
+        "native_suffix": "sew",
+        "neighbor_mask": 14,
+        "native_tile": "Tiles/sw_axle_1_sew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_sw.png",
+        "info_id": 14629,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1820,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_sw-png-mask.png",
+          "sha256": "3554a93905266759b6256c88be76dd44a3e5ebbbd30a184fdc77735b7c083e7c"
+        },
+        "phase": 1,
+        "native_suffix": "sw",
+        "neighbor_mask": 12,
+        "native_tile": "Tiles/sw_axle_1_sw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_1_w.png",
+        "info_id": 14630,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1794,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_1_w-png-mask.png",
+          "sha256": "af6551063c39bdfd1d0c35de2acc76fe2c6836226ccbb9f71a50320b8309e97e"
+        },
+        "phase": 1,
+        "native_suffix": "w",
+        "neighbor_mask": 8,
+        "native_tile": "Tiles/sw_axle_1_w.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_.png",
+        "info_id": 14631,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1768,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_-png-mask.png",
+          "sha256": "84eeea3992fa823a6007dd7386dbb089ffa18557d7069f9fed8c051e13039d78"
+        },
+        "phase": 2,
+        "native_suffix": "",
+        "neighbor_mask": 0,
+        "native_tile": "Tiles/sw_axle_2_.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_e.png",
+        "info_id": 14632,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1742,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_e-png-mask.png",
+          "sha256": "86ad5efc2112a2af2ee321ebfb48c452bdce02d658ccf53fab093c94185d4df0"
+        },
+        "phase": 2,
+        "native_suffix": "e",
+        "neighbor_mask": 2,
+        "native_tile": "Tiles/sw_axle_2_e.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_ew.png",
+        "info_id": 14633,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1716,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_ew-png-mask.png",
+          "sha256": "c86e9db0c046df697fd9a858940f00b42e1438c54f6c2887c2e5421a11988422"
+        },
+        "phase": 2,
+        "native_suffix": "ew",
+        "neighbor_mask": 10,
+        "native_tile": "Tiles/sw_axle_2_ew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_n.png",
+        "info_id": 14634,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1690,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_n-png-mask.png",
+          "sha256": "1ab36e126392e0d8c618baff9ddd007f5495407a36dfc89acb58f27dfd8be6b6"
+        },
+        "phase": 2,
+        "native_suffix": "n",
+        "neighbor_mask": 1,
+        "native_tile": "Tiles/sw_axle_2_n.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_ne.png",
+        "info_id": 14635,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1664,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_ne-png-mask.png",
+          "sha256": "061f10d191619fbb813be2572e8ef50108a35953db0ae0bf43a07016a03b4be2"
+        },
+        "phase": 2,
+        "native_suffix": "ne",
+        "neighbor_mask": 3,
+        "native_tile": "Tiles/sw_axle_2_ne.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_new.png",
+        "info_id": 14636,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1638,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_new-png-mask.png",
+          "sha256": "6745bc3b348168d9171a1b463d299f7d03bc19d76ad7210d8ff26af6b758469a"
+        },
+        "phase": 2,
+        "native_suffix": "new",
+        "neighbor_mask": 11,
+        "native_tile": "Tiles/sw_axle_2_new.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_ns.png",
+        "info_id": 14637,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1612,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_ns-png-mask.png",
+          "sha256": "786d2e57d123b6ecff7f1186a65a1a64045cb0821d6757db2a6e6f4d93f5d3e2"
+        },
+        "phase": 2,
+        "native_suffix": "ns",
+        "neighbor_mask": 5,
+        "native_tile": "Tiles/sw_axle_2_ns.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_nse.png",
+        "info_id": 14638,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1586,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_nse-png-mask.png",
+          "sha256": "613b50627c149e44a8ce775ed3320ae31cbf5528b88e7d041e8406796c91ed34"
+        },
+        "phase": 2,
+        "native_suffix": "nse",
+        "neighbor_mask": 7,
+        "native_tile": "Tiles/sw_axle_2_nse.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_nsew.png",
+        "info_id": 14639,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1560,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_nsew-png-mask.png",
+          "sha256": "5f37b1c128e01030f18166f70f335c2c64805b7a9e7c8f83bf21943e5e563925"
+        },
+        "phase": 2,
+        "native_suffix": "nsew",
+        "neighbor_mask": 15,
+        "native_tile": "Tiles/sw_axle_2_nsew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_nsw.png",
+        "info_id": 14640,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1534,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_nsw-png-mask.png",
+          "sha256": "9ed5aa1248f5fd2e4672b0395eb0e1c3cbf6c241083eac967f6eb8d8d5c95f7b"
+        },
+        "phase": 2,
+        "native_suffix": "nsw",
+        "neighbor_mask": 13,
+        "native_tile": "Tiles/sw_axle_2_nsw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_nw.png",
+        "info_id": 14641,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1508,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_nw-png-mask.png",
+          "sha256": "e6098f61c1a21293fa39d64050ebc2a9021c1546a7522d644f90ba798cb047e4"
+        },
+        "phase": 2,
+        "native_suffix": "nw",
+        "neighbor_mask": 9,
+        "native_tile": "Tiles/sw_axle_2_nw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_s.png",
+        "info_id": 14642,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1482,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_s-png-mask.png",
+          "sha256": "11b27aec37b125f9ddea7c0bb96f78881ac03ef3344facdf9a40fa988a9b8ab5"
+        },
+        "phase": 2,
+        "native_suffix": "s",
+        "neighbor_mask": 4,
+        "native_tile": "Tiles/sw_axle_2_s.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_se.png",
+        "info_id": 14643,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1456,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_se-png-mask.png",
+          "sha256": "f0d483d3837051c843b453fd4f579e2c58fb1d971810e32a2877b9d0a7eb6ab0"
+        },
+        "phase": 2,
+        "native_suffix": "se",
+        "neighbor_mask": 6,
+        "native_tile": "Tiles/sw_axle_2_se.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_sew.png",
+        "info_id": 14644,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1430,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_sew-png-mask.png",
+          "sha256": "b38502623091c68007b578f3c69c6396dd3d4f73078de3507840052ccb54cff4"
+        },
+        "phase": 2,
+        "native_suffix": "sew",
+        "neighbor_mask": 14,
+        "native_tile": "Tiles/sw_axle_2_sew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_sw.png",
+        "info_id": 14645,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1404,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_sw-png-mask.png",
+          "sha256": "b0965b7803b9853ce8f3a8f5838e0744fdf3fdec1c204134ad997a7c87847e74"
+        },
+        "phase": 2,
+        "native_suffix": "sw",
+        "neighbor_mask": 12,
+        "native_tile": "Tiles/sw_axle_2_sw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_2_w.png",
+        "info_id": 14646,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1378,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_2_w-png-mask.png",
+          "sha256": "3fdabdba9afd8decda1cbf268a8b4cd3da8176e9a716e0e8d3ac0121a60c711f"
+        },
+        "phase": 2,
+        "native_suffix": "w",
+        "neighbor_mask": 8,
+        "native_tile": "Tiles/sw_axle_2_w.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_.png",
+        "info_id": 14647,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1352,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_-png-mask.png",
+          "sha256": "a2b920e17fd9931b02577f1cb948e716d8d228018504ac07d5000199d3cfadfb"
+        },
+        "phase": 3,
+        "native_suffix": "",
+        "neighbor_mask": 0,
+        "native_tile": "Tiles/sw_axle_3_.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_e.png",
+        "info_id": 14648,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1326,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_e-png-mask.png",
+          "sha256": "dfed67bda02526f0c4e9b0e6ed6289db9ff708a6077f7481286f87f42d03ecfe"
+        },
+        "phase": 3,
+        "native_suffix": "e",
+        "neighbor_mask": 2,
+        "native_tile": "Tiles/sw_axle_3_e.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_ew.png",
+        "info_id": 14649,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1300,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_ew-png-mask.png",
+          "sha256": "81ce2d7313b5035f04db7cbd3e824984c3cf16cc7224c44449b93bcb271bb0e2"
+        },
+        "phase": 3,
+        "native_suffix": "ew",
+        "neighbor_mask": 10,
+        "native_tile": "Tiles/sw_axle_3_ew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_n.png",
+        "info_id": 14650,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1274,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_n-png-mask.png",
+          "sha256": "ee422b7bf7386b9c66ebcf8c6750aacdc5b2fda61eeaf3a492e4209e6d921753"
+        },
+        "phase": 3,
+        "native_suffix": "n",
+        "neighbor_mask": 1,
+        "native_tile": "Tiles/sw_axle_3_n.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_ne.png",
+        "info_id": 14651,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1248,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_ne-png-mask.png",
+          "sha256": "c8aaa1c00a8e1d1a0040ea1e67118f242254397d2ac36970b67e5143da1993bc"
+        },
+        "phase": 3,
+        "native_suffix": "ne",
+        "neighbor_mask": 3,
+        "native_tile": "Tiles/sw_axle_3_ne.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_new.png",
+        "info_id": 14652,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1222,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_new-png-mask.png",
+          "sha256": "34709824d3bd49c41cf06f76fc90166eb1335eea17ab5c086cb90d918706f9b8"
+        },
+        "phase": 3,
+        "native_suffix": "new",
+        "neighbor_mask": 11,
+        "native_tile": "Tiles/sw_axle_3_new.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_ns.png",
+        "info_id": 14653,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1196,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_ns-png-mask.png",
+          "sha256": "ce284d5b4b16d1d8c1b4791a7ad3cae807a15733407858ca5b7543b1550636d7"
+        },
+        "phase": 3,
+        "native_suffix": "ns",
+        "neighbor_mask": 5,
+        "native_tile": "Tiles/sw_axle_3_ns.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_nse.png",
+        "info_id": 14654,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1170,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_nse-png-mask.png",
+          "sha256": "dfd1a53ebf3d42b16c41d4c53821309fc539ab859e17a9744f8ba8dfc936570d"
+        },
+        "phase": 3,
+        "native_suffix": "nse",
+        "neighbor_mask": 7,
+        "native_tile": "Tiles/sw_axle_3_nse.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_nsew.png",
+        "info_id": 14655,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1144,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_nsew-png-mask.png",
+          "sha256": "37a3c482ded90d2cbabc9c2e47c33694699ccc72185eec1fb811d2d9c7132884"
+        },
+        "phase": 3,
+        "native_suffix": "nsew",
+        "neighbor_mask": 15,
+        "native_tile": "Tiles/sw_axle_3_nsew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_nsw.png",
+        "info_id": 14656,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1118,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_nsw-png-mask.png",
+          "sha256": "f3f7a1e167b46ab921439de9da56dbaff57ad57a37232585cc78b6a5966181d5"
+        },
+        "phase": 3,
+        "native_suffix": "nsw",
+        "neighbor_mask": 13,
+        "native_tile": "Tiles/sw_axle_3_nsw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_nw.png",
+        "info_id": 14657,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1092,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_nw-png-mask.png",
+          "sha256": "d84604f352cf97ec70ba93b8200b760357c753003a290f27ae4195c1873af9a1"
+        },
+        "phase": 3,
+        "native_suffix": "nw",
+        "neighbor_mask": 9,
+        "native_tile": "Tiles/sw_axle_3_nw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_s.png",
+        "info_id": 14658,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1066,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_s-png-mask.png",
+          "sha256": "c5964263caed2f59af48a9e0957db8623afa0969d189bdf4ab52b76c964ab9ef"
+        },
+        "phase": 3,
+        "native_suffix": "s",
+        "neighbor_mask": 4,
+        "native_tile": "Tiles/sw_axle_3_s.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_se.png",
+        "info_id": 14659,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1040,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_se-png-mask.png",
+          "sha256": "a96314245862a1220d03ef6a2b58587a5bfec3627150daf48624fc1b45e23c81"
+        },
+        "phase": 3,
+        "native_suffix": "se",
+        "neighbor_mask": 6,
+        "native_tile": "Tiles/sw_axle_3_se.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_sew.png",
+        "info_id": 14660,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          1014,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_sew-png-mask.png",
+          "sha256": "e9caf5578d3e57f99ea14b02ae938ae173fe0fab72b6f76ec1cd4cd4c6f37a0f"
+        },
+        "phase": 3,
+        "native_suffix": "sew",
+        "neighbor_mask": 14,
+        "native_tile": "Tiles/sw_axle_3_sew.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_sw.png",
+        "info_id": 14661,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          988,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_sw-png-mask.png",
+          "sha256": "f830c89ef23f0e6393fec78bc87be704e10a80c4adb503d79cec491d1b76774e"
+        },
+        "phase": 3,
+        "native_suffix": "sw",
+        "neighbor_mask": 12,
+        "native_tile": "Tiles/sw_axle_3_sw.png"
+      },
+      {
+        "tile_key": "Assets_Content_Textures_Tiles_sw_axle_3_w.png",
+        "info_id": 14662,
+        "atlas_id": 277,
+        "rect": [
+          774,
+          962,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\tiles_sw_axle_3_w-png-mask.png",
+          "sha256": "7e022bff3ae49f30815cdbccba164225095478f8da72f9803ce3f925e483ddaa"
+        },
+        "phase": 3,
+        "native_suffix": "w",
+        "neighbor_mask": 8,
+        "native_tile": "Tiles/sw_axle_3_w.png"
+      }
+    ],
+    "mapping": "Source suffix order n,s,e,w; neighbor bits N1 E2 S4 W8. Three actual phases per each of16suffixes, unpowered uses phase1."
+  },
+  "original_reference_correction": "Catalogue text/216.bmp is a static fallback glyph, not the normally painted machinery. Original glyph export remains historical; do not read its fully opaque black font background as a solid wooden tile. All48actual Tiles/sw_axle_[1..3]_[suffix].png masks now inspected. Native fallback glyph remains unchanged.",
+  "source_shape": "Straight NS/EW runs are narrow smooth shafts with3cross-section appearances. Isolated/end/elbow/T/cross states share a low rectangular gearbox/pedestal with phase-changing slot and source-specific branch shafts.",
+  "palette": {
+    "primary": "w on shafts",
+    "detail": "w on gearbox housing; same source color, independent role retained",
+    "rule": "Neutral single wood material, source w/w palette. Source roles do not imply two different materials or colors."
+  },
+  "native_state": {
+    "connection_states": 16,
+    "phases": 3,
+    "neighbor_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8
+    },
+    "native_suffix_order": "n,s,e,w",
+    "powered": "IPowerTransmission.SyncTile uses AnyChargeActivity and TileAnimateWhenPowered with3frames; preserve native CurrentFrameLong calculation and no desync default.",
+    "unpowered": "TileAppendWhenUnpowered=_1, so unpowered reuses actual phase1; no extra unpowered art.",
+    "paint": "PaintedFence=sw_axle, extension.png; PaintPartMechanicalPowerTransmission, MergeConduitModGearbox and repaint/grid behavior remain native. Native paints neighbor suffix; SyncTile inserts phase before suffix.",
+    "fallback": "Native glyph216 remains engine fallback, not replaced font art."
+  },
+  "native_code_study": {
+    "MechanicalPowerTransmission": {
+      "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\XRL.World.Parts.MechanicalPowerTransmission.decompiled.cs",
+      "sha256": "5edc7008c5827249c48c9cae1e87a12f1e2688b5905fce9b423396bddf8c900d"
+    },
+    "IPowerTransmission": {
+      "path": "E:\\Temp\\rimqud-native-wooden-transmission-20261021\\XRL.World.Parts.IPowerTransmission.decompiled.cs",
+      "sha256": "4557b3d4ede7413d8c4ed9bac5b01da0e7445484b9c7cf74734614d7482d0a98"
+    },
+    "findings": [
+      "MechanicalPowerTransmission inherits IPowerTransmission; defaults mechanical type/charge100/EMPsensitivityfalse.",
+      "RepaintedEvent splits native painted tile on PaintedFence tag, then SyncTile rebuilds prefix+base+phase+neighbor suffix.",
+      "SyncTile powered predicate is AnyChargeActivity, not generic RequiresOperationalActivePart; retain native CurrentFrameLong phase arithmetic, default desyncfalse and unpowered_1.",
+      "Conduit grid/reset/merge/destruction/charge mechanics remain unchanged. No new neighbor algorithm or simulation clock."
+    ],
+    "scope": "Static installed source/code study only."
+  },
+  "native_behavior": "IsConduittrue/charge100/TileEffects, weight200/AV2/HP50, examiner1/difficulty1, mounted physics, TinkerBitsB but no build/disassemble, native MergeConduitModGearbox and electrical-grid-like mechanical transmission ownership preserved.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\WatermillGenerator\\WatermillGeneratorBlades.png",
+      "sha256": "6c1861e8afac67fed95f550ae859e5449676c2163efb64a5037a6173a1ab6931"
+    },
+    "frame": [
+      512,
+      128
+    ],
+    "alpha_bounds": [
+      0,
+      0,
+      512,
+      128
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Power.xml",
+      "sha256": "f9213d01681e0d9082447c75a3d31113ba8e6b52f7595ef951d29ca624d0aaba"
+    },
+    "child": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>WatermillGenerator</defName>\n    <label>watermill generator</label>\n    <description>Produces electricity from a river. Must be placed with its wheel in moving water. If watermills are placed too close together, the turbulence they generate will interfere and reduce power generation.</description>\n    <thingClass>Building</thingClass>\n    <drawerType>MapMeshAndRealTime</drawerType>\n    <graphicData>\n      <texPath>Things/Building/Power/WatermillGenerator/WatermillGeneratorBody</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <drawSize>(5,6)</drawSize>\n      <shadowData>\n        <volume>(2.6,1,2.16)</volume>\n        <offset>(-0.20,0,0)</offset>\n      </shadowData>\n      <damageData>\n        <rectN>(0.1,1.2,4.75,3.25)</rectN>\n        <rectE>(1.25,0.2,3.5,4.7)</rectE>\n        <rectS>(0.2,1.2,4.7,3.25)</rectS>\n        <rectW>(1.25,0.2,3.5,4.7)</rectW>\n      </damageData>\n    </graphicData>\n    <castEdgeShadows>false</castEdgeShadows>\n    <staticSunShadowHeight>0</staticSunShadowHeight>\n    <altitudeLayer>Building</altitudeLayer>\n    <passability>Impassable</passability>\n    <blockWind>true</blockWind>\n    <scatterableOnMapGen>false</scatterableOnMapGen>\n    <fillPercent>1</fillPercent>\n    <blockLight>true</blockLight>\n    <canOverlapZones>false</canOverlapZones>\n    <statBases>\n      <MaxHitPoints>400</MaxHitPoints>\n      <WorkToBuild>4000</WorkToBuild>\n      <Flammability>1.0</Flammability>\n      <Beauty>-20</Beauty>\n    </statBases>\n    <tickerType>Normal</tickerType>\n    <size>(5,6)</size>\n    <costList>\n      <WoodLog>280</WoodLog>\n      <Steel>80</Steel>\n      <ComponentIndustrial>3</ComponentIndustrial>\n    </costList>\n    <bringAlongOnGravship>false</bringAlongOnGravship>\n    <comps>\n      <li Class=\"CompProperties_Power\">\n        <compClass>CompPowerPlantWater</compClass>\n        <basePowerConsumption>-1100</basePowerConsumption>\n        <transmitsPower>true</transmitsPower>\n        <soundAmbientProducingPower>WaterMill_Ambience</soundAmbientProducingPower>\n      </li>\n      <li Class=\"CompProperties_Breakdownable\" />\n      <li Class=\"CompProperties_Stunnable\">\n        <useLargeEMPEffecter>true</useLargeEMPEffecter>\n        <empEffecterDimensions>(2.0,0,1.6)</empEffecterDimensions>\n        <empChancePerTick>0.5</empChancePerTick>\n        <affectedDamageDefs>\n          <li>EMP</li>\n        </affectedDamageDefs>\n      </li>\n    </comps>\n    <rotatable>true</rotatable>\n    <terrainAffordanceNeeded /> \n    <designationCategory>Power</designationCategory>\n    <uiOrder>2100</uiOrder>\n    <placeWorkers>\n      <li>PlaceWorker_WatermillGenerator</li>\n    </placeWorkers>\n    <building>\n      <ai_chillDestination>false</ai_chillDestination>\n      <destroySound>BuildingDestroyed_Wood_Big</destroySound>\n    </building>\n    <constructEffect>ConstructWood</constructEffect>\n    <researchPrerequisites><li>WatermillGenerator</li></researchPrerequisites>\n    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>\n  </ThingDef>\n\n",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "parent": "<ThingDef Name=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshOnly</drawerType>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n  </ThingDef>\n  \n  ",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": "(5,6)",
+    "footprint": "(5,6)",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "role": "Actual VTE watermill blade component supplies restrained shaved-plank grain and shallow edge weight only. No close whole wooden shaft/gearbox match selected. Main building Graphic_Multi/drawSize5x6/size5x6 does not define component/Qud scale; no generator roof/metal rails/river/power placement copied.",
+    "equivalence": "Partial wood finish reference only; Qud actual48painted tile shapes/topology authoritative."
+  },
+  "construction": {
+    "camera": "Fixed cardinal map-plane connected shafts and straight gearbox face; shared source cell coordinates, no perspective yaw or independent fitting.",
+    "source_supported": "NS/EW thin shafts without gearbox; other14states common box/pedestal, exact neighbor directions and three shaft/slot phase tendencies from all48native masks.",
+    "authored": "Smooth cylindrical shaft strip edges, rounded wooden housing/pedestal joins and simple grain; phase1vertical slot, phase2descending slot, phase3ascending slot. Short source gaps near housings bridged as physical continuity. Hidden gear teeth/depth unknown; no visible metal gear set, belts, motor, crank, added directions or machinery logic.",
+    "geometry": {
+      "housing": [
+        3.1,
+        6.1,
+        12.9,
+        12.9
+      ],
+      "feet_y": [
+        12.7,
+        15.9
+      ],
+      "shaft_profiles": {
+        "1": [
+          [
+            6.15,
+            7.85
+          ],
+          [
+            9.15,
+            9.85
+          ]
+        ],
+        "2": [
+          [
+            7.15,
+            8.85
+          ]
+        ],
+        "3": [
+          [
+            6.15,
+            6.85
+          ],
+          [
+            8.15,
+            9.85
+          ]
+        ]
+      },
+      "horizontal_profiles": {
+        "1": [
+          [
+            10.15,
+            11.85
+          ],
+          [
+            13.15,
+            13.85
+          ]
+        ],
+        "2": [
+          [
+            11.15,
+            12.85
+          ]
+        ],
+        "3": [
+          [
+            10.15,
+            10.85
+          ],
+          [
+            12.15,
+            13.85
+          ]
+        ]
+      }
+    },
+    "rule": "One cross-state default refinement supplies shared neutral wood plane. All48geometry/masks explicitly generated from source-bound connection/phase parameters; same phase uses identical edge profiles across allstates. No per-state ImageGen call or runtime connectivity change."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Full source cell/scale/pivot; exact connection edges intentionally touch canvas only in declared neighbor directions."
+  },
+  "native_acceptance": "Pending full-set generation: native painted suffix/charge activity/phase1unpowered/clock/merge/grid/physics/visibility/save-load, no activation."
+}
