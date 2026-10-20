@@ -266,6 +266,14 @@ provisional grip/pose choices explicitly. Resting and ready/drafted presentation
 need separate item angle/depth controls and a source-supported game-state mapping;
 their implementation/review belongs to the later assembly phase, after the
 full-set generation gate, unless the user explicitly changes that priority.
+Apply this ready-pose rule to one-handed held weapons, including knives, swords
+and staves. For the ready/drafted side view, the weapon projects forward horizontally,
+roughly 90 degrees to the upright body's long axis. A vertical tool beside the
+torso is only an authoring display pose, not evidence of a correct ready pose.
+Front/back placements must follow their directional hand/aim relationship;
+record the intended pose and facing rather than treating one upright transform
+as the final weapon presentation in every view. Apply pose changes to the intact
+item and its grip/depth controls; do not regenerate the weapon or rotate the body.
 Mutation overlays likewise remain separate from reusable unmutated body templates.
 
 ## 7. Validate only after every pending conversion is generated

@@ -761,3 +761,15 @@ views are recorded. Named Big Yrame/horns/rime/extra feet/outfit and actual nati
 equipment/resting-ready state acceptance remain unfinished; no charged animation
 or native testing was added. Stage 3 remains ACTIVE. Continue the ordinary human
 Iron Vinereaper fittings one entry at a time.
+
+User weapon-pose clarification: one-handed weapons, including knives, swords
+and staves, project forward in their ready/drafted pose at roughly
+90 degrees to the upright body; the side view therefore needs a horizontal
+weapon instead of the upright display used in the Vibro Blade generation sheet.
+Treat existing upright weapon plates as provisional authoring displays, never
+ready-pose acceptance. Keep complete item pixels and item-space grip independent
+of the per-facing pose/angle/depth controls. Final assembly owns corresponding
+directional hand/aim relationships and the separate resting/ready state mapping;
+no new weapon generation or body rotation is required to correct that pose.
+This clarification does not start native tests or a combat-state framework during
+the generation pass. The Iron Vinereaper fitting remains the sole active entry.
