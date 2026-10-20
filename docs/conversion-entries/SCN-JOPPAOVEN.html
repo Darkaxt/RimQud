@@ -2,8 +2,552 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#SCN-JOPPAOVEN">Back to conversion index</a></nav><h1>JoppaOven</h1><div class="entry-body">
-<p class="eyebrow">SCN-JOPPAOVEN / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished.</p>
-<ol class="workflow"><li class="pending">resolve object description original tile palette state — pending</li><li class="pending">select render reference or document no equivalent — pending</li><li class="pending">construct faithful shape — pending</li><li class="pending">create required state neighbor variants — pending</li><li class="pending">refine materials and form — pending</li><li class="pending">extract register color coverage — pending</li><li class="pending">visual review identity and connections at game scale — pending</li><li class="pending">native state review — pending</li></ol>
+<p class="eyebrow">SCN-JOPPAOVEN / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: </p>
+<h3>Current registered artwork</h3><p>Source-bound Joppa clay oven: offset chimney, flared cap, true arch/fire and raised open plinth. Actual legacy RimWorld kiln reference, source/state metadata, editable manual geometry, one contextual refinement and fixed neutral/fire extraction logged. Native w/R palette preserved without generated glow/gap fill; one fixed source map face. Native cooking/thermal/physics/status acceptance pending.</p><div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6985a356f28ab97d1b42b848f0181878c8e22b4e058369dbfffb8e04925ded72</code></details></figure></div><p><a href="../../art/conversion/scn-joppaoven/v1/registered/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">resolve object description original tile palette state — recorded PASS</li><li class="pass">select render reference or document no equivalent — recorded PASS</li><li class="pass">construct faithful shape — recorded PASS</li><li class="pass">create required state neighbor variants — recorded PASS</li><li class="pass">refine materials and form — recorded PASS</li><li class="pass">extract register color coverage — recorded PASS</li><li class="pass">visual review identity and connections at game scale — recorded PASS</li><li class="pending">native state review — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>resolve object description original tile palette state</h3><p>Resolve Joppa clay oven description, ancestry, original tile and palette, cooking preset/heat and declared native visual states.</p><p><strong>Review:</strong> Version-pinned definitions plus bounded Campfire code metadata study; AppleMatz preset, CampfireHeatSelfOnly and unset ExtinguishBlueprint recorded. No game launch or invented fire/smoke/off state.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCN-JOPPAOVEN&quot;,
+  &quot;identity&quot;: &quot;JoppaOven -&gt; Oven -&gt; MountedFurniture -&gt; Furniture&quot;,
+  &quot;description&quot;: &quot;Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.&quot;,
+  &quot;native_definition&quot;: {
+    &quot;path&quot;: &quot;D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml&quot;,
+    &quot;sha256&quot;: &quot;b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae&quot;,
+    &quot;objects&quot;: {
+      &quot;JoppaOven&quot;: &quot;&lt;object Name=\&quot;JoppaOven\&quot; Inherits=\&quot;Oven\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;clay oven\&quot; ColorString=\&quot;&amp;amp;w\&quot; DetailColor=\&quot;R\&quot; RenderString=\&quot;234\&quot; Tile=\&quot;Items/sw_oven.bmp\&quot; Occluding=\&quot;false\&quot; RenderIfDark=\&quot;true\&quot; /&gt;\n    &lt;part Name=\&quot;Campfire\&quot; PresetMeals=\&quot;AppleMatz\&quot; /&gt;\n    &lt;tag Name=\&quot;PresetMealMessage\&quot; Value=\&quot;Eat fresh apple matz.\&quot; /&gt;\n    &lt;part Name=\&quot;Description\&quot; Short=\&quot;Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.\&quot; /&gt;\n    &lt;tag Name=\&quot;ExcludeFromDynamicEncounters\&quot; /&gt;\n  &lt;/object&gt;&quot;,
+      &quot;Oven&quot;: &quot;&lt;object Name=\&quot;Oven\&quot; Inherits=\&quot;MountedFurniture\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;clay oven\&quot; ColorString=\&quot;&amp;amp;w\&quot; DetailColor=\&quot;R\&quot; RenderString=\&quot;234\&quot; Tile=\&quot;Items/sw_oven.bmp\&quot; Occluding=\&quot;false\&quot; RenderIfDark=\&quot;true\&quot; RenderLayer=\&quot;6\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Weight=\&quot;1000\&quot; Solid=\&quot;true\&quot; Organic=\&quot;false\&quot; FlameTemperature=\&quot;10000\&quot; /&gt;\n    &lt;removepart Name=\&quot;MissileCover\&quot; /&gt;\n    &lt;stat Name=\&quot;Hitpoints\&quot; Value=\&quot;1200\&quot; /&gt;\n    &lt;part Name=\&quot;Description\&quot; Short=\&quot;Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of scrumptious food.\&quot; /&gt;\n    &lt;part Name=\&quot;Campfire\&quot; /&gt;\n    &lt;intproperty Name=\&quot;ThermalInsulation\&quot; Value=\&quot;700\&quot; /&gt;\n    &lt;tag Name=\&quot;CampfireHeatSelfOnly\&quot; /&gt;\n    &lt;tag Name=\&quot;HangingSupport\&quot; /&gt;\n    &lt;tag Name=\&quot;QuestableVerb\&quot; Value=\&quot;cook at\&quot; /&gt;\n    &lt;tag Name=\&quot;QuestableEvent\&quot; Value=\&quot;CookedAt\&quot; /&gt;\n    &lt;tag Name=\&quot;OverlayColor\&quot; Value=\&quot;&amp;amp;w^k\&quot; /&gt;\n    &lt;tag Name=\&quot;NoClear\&quot;&gt;&lt;/tag&gt;\n\t\t&lt;stag Name=\&quot;Heat\&quot; /&gt;\n\t  &lt;stag Name=\&quot;Contemporary\&quot; /&gt;\n  &lt;/object&gt;&quot;,
+      &quot;MountedFurniture&quot;: &quot;&lt;object Name=\&quot;MountedFurniture\&quot; Inherits=\&quot;Furniture\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;[MountedFurniture]\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Takeable=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;MountedFurniture\&quot; /&gt;\n    &lt;stat Name=\&quot;Hitpoints\&quot; Value=\&quot;300\&quot; /&gt;\n    &lt;part Name=\&quot;MissileCover\&quot; Percentage=\&quot;10\&quot; /&gt;\n    &lt;tag Name=\&quot;OverlayColor\&quot; Value=\&quot;&amp;amp;k^k\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n  &lt;/object&gt;&quot;,
+      &quot;Furniture&quot;: &quot;&lt;object Name=\&quot;Furniture\&quot; Inherits=\&quot;InorganicObject\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; RenderLayer=\&quot;6\&quot; Occluding=\&quot;false\&quot; RenderIfDark=\&quot;true\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Conductivity=\&quot;20\&quot; Organic=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;Examiner\&quot; Unknown=\&quot;UnknownStrangeFurniture\&quot; KeepTile=\&quot;true\&quot; /&gt;\n    &lt;tag Name=\&quot;Furniture\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n    &lt;stag Name=\&quot;InsideFurniture\&quot; /&gt;\n    &lt;stag Name=\&quot;InsideWallFurniture\&quot; /&gt;\n    &lt;tag Name=\&quot;NeverStack\&quot; /&gt;\n    &lt;tag Name=\&quot;NoAutoget\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;tag Name=\&quot;Tier\&quot; Value=\&quot;0\&quot; /&gt;\n    &lt;part Name=\&quot;Graffitied\&quot; ChanceOneIn=\&quot;300\&quot; /&gt;\n    &lt;tag Name=\&quot;BlocksDoors\&quot; /&gt;\n    &lt;tag Name=\&quot;DiscardInsteadOfGeneratingStacked\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;stag Name=\&quot;Furniture\&quot; /&gt;\n    &lt;tag Name=\&quot;TakeDamageSound\&quot; Value=\&quot;Sounds/Damage/sfx_damage_manufacturedWood\&quot; /&gt;\n    &lt;tag Name=\&quot;DeathSounds\&quot; Value=\&quot;Sounds/Damage/sfx_destroy_manufacturedWood\&quot; /&gt;\n    &lt;tag Name=\&quot;LairAmbientBed\&quot; Value=\&quot;Sounds/Ambiences/amb_creature_animatedFurniture\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    }
+  },
+  &quot;original&quot;: {
+    &quot;tile&quot;: &quot;Items/sw_oven.bmp&quot;,
+    &quot;description&quot;: &quot;Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.&quot;,
+    &quot;render&quot;: {
+      &quot;Name&quot;: &quot;Render&quot;,
+      &quot;DisplayName&quot;: &quot;clay oven&quot;,
+      &quot;RenderString&quot;: &quot;234&quot;,
+      &quot;RenderLayer&quot;: &quot;6&quot;,
+      &quot;RenderIfDark&quot;: &quot;true&quot;,
+      &quot;Occluding&quot;: &quot;false&quot;,
+      &quot;ColorString&quot;: &quot;&amp;w&quot;,
+      &quot;DetailColor&quot;: &quot;R&quot;,
+      &quot;Tile&quot;: &quot;Items/sw_oven.bmp&quot;
+    },
+    &quot;kind&quot;: &quot;scenery&quot;,
+    &quot;blueprint&quot;: &quot;JoppaOven&quot;,
+    &quot;reference_file&quot;: &quot;village-originals/joppaoven-reference.png&quot;,
+    &quot;native_mask_sha256&quot;: &quot;2867c98951d675ecc81cad44cb665f1a8ad4abc7d062224d851c3d20698db016&quot;,
+    &quot;reference_sha256&quot;: &quot;9068573097e52142eb081cb87a552b33d2afb3950fe92ce55e6de70f4932bae9&quot;,
+    &quot;info_id&quot;: 9876,
+    &quot;atlas_id&quot;: 185,
+    &quot;rect&quot;: [
+      126,
+      78,
+      16,
+      24
+    ],
+    &quot;private_mask&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppaoven-mask.png&quot;,
+      &quot;sha256&quot;: &quot;2867c98951d675ecc81cad44cb665f1a8ad4abc7d062224d851c3d20698db016&quot;
+    },
+    &quot;private_reference&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppaoven-reference.png&quot;,
+      &quot;sha256&quot;: &quot;9068573097e52142eb081cb87a552b33d2afb3950fe92ce55e6de70f4932bae9&quot;
+    }
+  },
+  &quot;source_shape&quot;: &quot;Narrow chimney offset right above broad domed/flared clay cap, arched open mouth with low central detail-colored fire mass, raised rectangular hearth/plinth with open horizontal base gap and inset lower foot.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;w on all clay/chimney/hearth/plinth&quot;,
+    &quot;detail&quot;: &quot;R (d74200 in pinned palette) on actual source fire region only&quot;,
+    &quot;rule&quot;: &quot;Neutral clay and flame material plus independent fire mask; no fixed terracotta/glow/stone colors baked into production.&quot;
+  },
+  &quot;native_state&quot;: &quot;One fixed Items/sw_oven.bmp. Joppa preset AppleMatz/message remain native, not new food props. No child TileAnimationFrames or body Render changes in inspected Campfire; ExtinguishBlueprint defaults null and is unset in Oven/Joppa chain, so do not invent extinguish/unlit replacement or fire-frame loop. Native temperature/fire/status behavior stays native.&quot;,
+  &quot;native_code_study&quot;: {
+    &quot;Campfire&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\rimqud-native-oven-20261021\\XRL.World.Parts.Campfire.decompiled.cs&quot;,
+      &quot;sha256&quot;: &quot;3e6ade37129111a2089871346eaaee6cbf80794daed1eb908d8d0c0a265faf33&quot;
+    },
+    &quot;findings&quot;: [
+      &quot;Campfire derives IActivePart and handles cooking actions, preset meals and heat. No Tile/ColorString/DetailColor or Render override found in this class.&quot;,
+      &quot;ExtinguishBlueprint is unset by default; extinguish action/replacement/frozen triggers are gated on a nonempty value. Oven/Joppa does not set it.&quot;,
+      &quot;CampfireHeatSelfOnly is checked before radiating heat to cells/other objects. Source Oven provides that tag; no new heat/light/particle system implemented.&quot;
+    ],
+    &quot;scope&quot;: &quot;Static installed code/definition study, not live native replacement validation.&quot;
+  },
+  &quot;native_behavior&quot;: &quot;Native preset AppleMatz, cooking interactions/meal message, ThermalInsulation700/CampfireHeatSelfOnly, solid non-takeable1000weight inorganic clay oven, FlameTemperature10000, HP1200, RenderLayer6 non-occluding; inherited MissileCover explicitly removed. Native quest/no-clear/hanging/heat state remains intact.&quot;,
+  &quot;reference&quot;: {
+    &quot;texture&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LegacyAssets\\Textures\\Things\\Building\\AYCharcoal\\AYCharcoalKiln\\AYCharcoalKiln.png&quot;,
+      &quot;sha256&quot;: &quot;fcf7ca87cea014fe6eb919fb6cfaabd1c27a57c4d04494170a0bbd4a0e33aad9&quot;
+    },
+    &quot;frame&quot;: [
+      256,
+      256
+    ],
+    &quot;alpha_bounds&quot;: [
+      13,
+      23,
+      240,
+      247
+    ],
+    &quot;definition&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\1.5\\Defs\\Buildings\\CharcoalKiln\\Defs_AYCharcoalKiln.xml&quot;,
+      &quot;sha256&quot;: &quot;18f44bab4875e69d925bd75d86dab4b6159ee97ab00f5a14d16490a78098c4c2&quot;
+    },
+    &quot;child&quot;: &quot;&lt;ThingDef ParentName=\&quot;AYBuildingBase\&quot;&gt;\n    &lt;defName&gt;AYCharcoalKiln&lt;/defName&gt;\n    &lt;label&gt;Charcoal Kiln&lt;/label&gt;\n    &lt;thingClass&gt;Apothecary.Building_AYCompostBin&lt;/thingClass&gt;\n    &lt;description&gt;A temporary crude structure made from stone and filled with wood that will slowly burn with limited air supply to produce charcoal.&lt;/description&gt;\n    &lt;graphicData&gt;\n      &lt;texPath&gt;Things/Building/AYCharcoal/AYCharcoalKiln/AYCharcoalKiln&lt;/texPath&gt;\n      &lt;graphicClass&gt;Graphic_Single&lt;/graphicClass&gt;\n    &lt;/graphicData&gt;\n    &lt;blockLight&gt;false&lt;/blockLight&gt;\n    &lt;castEdgeShadows&gt;true&lt;/castEdgeShadows&gt;\n    &lt;staticSunShadowHeight&gt;0.20&lt;/staticSunShadowHeight&gt;\n    &lt;altitudeLayer&gt;Building&lt;/altitudeLayer&gt;\n    &lt;terrainAffordanceNeeded&gt;Medium&lt;/terrainAffordanceNeeded&gt;\n    &lt;canOverlapZones&gt;false&lt;/canOverlapZones&gt;\n    &lt;rotatable&gt;false&lt;/rotatable&gt;\n    &lt;statBases&gt;\n      &lt;WorkToBuild&gt;750&lt;/WorkToBuild&gt;\n      &lt;Beauty&gt;-5&lt;/Beauty&gt;\n      &lt;Cleanliness&gt;-3&lt;/Cleanliness&gt;\n    &lt;/statBases&gt;\n    &lt;costStuffCount&gt;75&lt;/costStuffCount&gt;\n    &lt;stuffCategories&gt;\n      &lt;li&gt;Stony&lt;/li&gt;\n    &lt;/stuffCategories&gt;\n    &lt;costList&gt;\n      &lt;WoodLog&gt;150&lt;/WoodLog&gt;\n    &lt;/costList&gt;\n    &lt;useHitPoints&gt;true&lt;/useHitPoints&gt;\n    &lt;size&gt;(1,1)&lt;/size&gt;\n    &lt;designationCategory&gt;Production&lt;/designationCategory&gt;\n    &lt;passability&gt;PassThroughOnly&lt;/passability&gt;\n    &lt;tickerType&gt;Rare&lt;/tickerType&gt;\n    &lt;comps&gt;\n      &lt;li Class=\&quot;Apothecary.CompProperties_AYCompostBin\&quot;&gt;\n        &lt;fermentTicks&gt;600&lt;/fermentTicks&gt;\n        &lt;productOne&gt;AYCharcoal&lt;/productOne&gt;\n        &lt;numProductOne&gt;150&lt;/numProductOne&gt;\n        &lt;productTwo&gt;AYWoodAshes&lt;/productTwo&gt;\n        &lt;numProductTwo&gt;150&lt;/numProductTwo&gt;\n      &lt;/li&gt;\n    &lt;/comps&gt;\n    &lt;pathCost&gt;75&lt;/pathCost&gt;\n    &lt;researchPrerequisites Inherit=\&quot;false\&quot;&gt;\n      &lt;li&gt;AYCharcoal&lt;/li&gt;\n    &lt;/researchPrerequisites&gt;\n  &lt;/ThingDef&gt;\n&quot;,
+    &quot;parent_definition&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\1.5\\Defs\\Buildings\\Defs_AYBuildingBase.xml&quot;,
+      &quot;sha256&quot;: &quot;fde725f287b7f8267a02fd3f12eda530365cc47881296aecd6f270d1da68ae95&quot;
+    },
+    &quot;parent&quot;: &quot;&lt;ThingDef Name=\&quot;AYBuildingBase\&quot; Abstract=\&quot;True\&quot;&gt;\n    &lt;category&gt;Building&lt;/category&gt;\n    &lt;thingClass&gt;Building&lt;/thingClass&gt;\n    &lt;soundImpactDefault&gt;BulletImpact_Metal&lt;/soundImpactDefault&gt;\n    &lt;selectable&gt;true&lt;/selectable&gt;\n    &lt;drawerType&gt;MapMeshAndRealTime&lt;/drawerType&gt;\n    &lt;terrainAffordanceNeeded&gt;Light&lt;/terrainAffordanceNeeded&gt;\n    &lt;repairEffect&gt;Repair&lt;/repairEffect&gt;\n    &lt;leaveResourcesWhenKilled&gt;true&lt;/leaveResourcesWhenKilled&gt;\n    &lt;filthLeaving&gt;Filth_RubbleBuilding&lt;/filthLeaving&gt;\n    &lt;statBases&gt;\n      &lt;SellPriceFactor&gt;0.70&lt;/SellPriceFactor&gt;\n    &lt;/statBases&gt;\n    &lt;researchPrerequisites&gt;\n      &lt;li&gt;AYHerbsSimple&lt;/li&gt;\n    &lt;/researchPrerequisites&gt;\n  &lt;/ThingDef&gt;\n&quot;,
+    &quot;building_base&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml&quot;,
+      &quot;sha256&quot;: &quot;b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142&quot;
+    },
+    &quot;graphic_class&quot;: &quot;Graphic_Single&quot;,
+    &quot;drawSize&quot;: null,
+    &quot;footprint&quot;: [
+      1,
+      1
+    ],
+    &quot;rotatable&quot;: false,
+    &quot;about&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\About\\About.xml&quot;,
+      &quot;sha256&quot;: &quot;d0662f74ef3ed430fc642f9625e699147568ad89640694b1ea1bebb0505048b1&quot;
+    },
+    &quot;load_folders&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LoadFolders.xml&quot;,
+      &quot;sha256&quot;: &quot;e452ae27bb9ef79a765c9d59817f0afc6c9594a248535b9275a1449ca6ec8753&quot;
+    },
+    &quot;version_boundary&quot;: &quot;Installed retained LegacyAssets texture with matching1.5definition; LoadFolders selects LegacyAssets for1.5 and Assets bundle for1.6. No claim this loose PNG is the currently active1.6image.&quot;,
+    &quot;role&quot;: &quot;Actual Apothecary retained charcoal kiln supplies rounded fired-clay/shallow dome shading and simple oven-mouth readability only. No central donor chimney, fieldstone pattern, round base, charcoal products,1x1footprint or donor gameplay copied.&quot;,
+    &quot;equivalence&quot;: &quot;Partial clay/dome material reference. Qud silhouette/chimney position/base and fire role remain authoritative.&quot;
+  },
+  &quot;construction&quot;: {
+    &quot;camera&quot;: &quot;One fixed cardinal map-face, consistent shallow dome volume; no yaw/converging brick slab/3quarter oven.&quot;,
+    &quot;source_supported&quot;: &quot;Offset right chimney, flared dome/cap, arched opening with fire mass, broad raised plinth and base opening/inset support. Source w/R roles.&quot;,
+    &quot;authored&quot;: &quot;Smooth clay dome/arch curvature, modest chimney rim, plaster-like surface wear and shallow hearth bevel replace glyph stairs. Exact depth/wall thickness are authored; no food, logs, cookware, external smoke or new fire state added.&quot;,
+    &quot;dimensions&quot;: {
+      &quot;chimney&quot;: [
+        10.1,
+        1.2,
+        11.7,
+        6.9
+      ],
+      &quot;cap_bounds&quot;: [
+        1.3,
+        6.2,
+        14.7,
+        10.8
+      ],
+      &quot;mouth_bounds&quot;: [
+        4,
+        11,
+        12,
+        17.7
+      ],
+      &quot;hearth_y&quot;: [
+        18,
+        18.8
+      ],
+      &quot;base_y&quot;: [
+        18.8,
+        22.8
+      ]
+    },
+    &quot;openings&quot;: &quot;Arch around flame and low plinth slot remain true transparent geometry, not opaque black/background-colored paint. Fire stays within source mouth region.&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;native_canvas&quot;: [
+      16,
+      24
+    ],
+    &quot;manual_canvas&quot;: [
+      512,
+      768
+    ],
+    &quot;recipient_canvas&quot;: [
+      256,
+      256
+    ],
+    &quot;authored_source_anchor&quot;: [
+      8,
+      16
+    ],
+    &quot;rule&quot;: &quot;One complete source cell and common clay/fire frame/pivot. No part bounds fitting or native rotation changes.&quot;
+  },
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native preset/cooking/thermal/status/physics/visibility/no-clear behavior and save/load. No native activation or new animation.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png" alt="source-reference-construction"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png">source-reference-construction.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>1f738e35a09a394e187a9e260788f0f7f89e15edfda7be099672d66d54b07cf7</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_object_description_original_tile_palette_state&quot;,
+  &quot;action&quot;: &quot;Resolve Joppa clay oven description, ancestry, original tile and palette, cooking preset/heat and declared native visual states.&quot;,
+  &quot;inputs&quot;: [],
+  &quot;review&quot;: &quot;Version-pinned definitions plus bounded Campfire code metadata study; AppleMatz preset, CampfireHeatSelfOnly and unset ExtinguishBlueprint recorded. No game launch or invented fire/smoke/off state.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>select render reference or document no equivalent</h3><p>Inspect actual retained Apothecary1.5charcoal kiln texture and matching child/parent/LoadFolders mapping.</p><p><strong>Review:</strong> Partial clay/dome material reference only. Retained legacy asset provenance explicit; current1.6bundle image not claimed. Donor round base, fieldstones, central chimney, footprint and mechanics excluded.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png" alt="source-reference-construction"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/source-reference-construction.png">source-reference-construction.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>1f738e35a09a394e187a9e260788f0f7f89e15edfda7be099672d66d54b07cf7</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;select_render_reference_or_document_no_equivalent&quot;,
+  &quot;action&quot;: &quot;Inspect actual retained Apothecary1.5charcoal kiln texture and matching child/parent/LoadFolders mapping.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Partial clay/dome material reference only. Retained legacy asset provenance explicit; current1.6bundle image not claimed. Donor round base, fieldstones, central chimney, footprint and mechanics excluded.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>construct faithful shape</h3><p>Construct editable source-bound offset chimney, broad cap, thick arched mouth/fire and raised rectangular plinth with genuine openings.</p><p><strong>Review:</strong> Full source/donor/manual plate inspected before refinement. Smooth clay curvature/rim/wear authored, no measured hidden depth claimed. Separate fire ownership. No structural patch required by manual inspection.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/construct-oven.py">construct-oven.py</a><details class="hash"><summary>Exact evidence hash</summary><code>9cd1e20f72037535c593d8e5432fbf40d9640f9bd8c891ca0b2a291d4cd2e329</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/constructed.svg"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/constructed.svg" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/constructed.svg">constructed.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3fd1b4c7df71927fa8745871a1e58bde1d1ddf0ca70f8328a17da1bdc1dd7642</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/constructed.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/constructed.png" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/constructed.png">constructed.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/ownership.svg"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/ownership.svg" alt="ownership"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/ownership.svg">ownership.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>fef822a97cac40b05dd157815a63eb022217fff84255c1246bbe8fd936c95b14</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/ownership.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/ownership.png" alt="ownership"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/ownership.png">ownership.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>41f362f8c984152ee90d1b6bf3fce6436174b4bdd884af789d192b8704c9ce27</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/manual-structural-review.json">manual-structural-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;One source-bound clay oven, no extra native state&quot;,
+  &quot;review&quot;: &quot;Inspected original/native-source comparison, actual Apothecary retained1.5kiln and full construction. Right-offset chimney, broad flared cap, thick arch, central detail fire and raised rectangular plinth retain source landmarks. Mouth and base slot transparent. Donor fieldstones, centered chimney and round base excluded. Depth unobserved in fixed native map face; no new facing/state required. Construction and material role proposal suitable for first refinement.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>4aa42cf8ac0a6df022c40035bd414df1370dd79049f42dce48ab0b62d79e3d77</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;construct_faithful_shape&quot;,
+  &quot;action&quot;: &quot;Construct editable source-bound offset chimney, broad cap, thick arched mouth/fire and raised rectangular plinth with genuine openings.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Full source/donor/manual plate inspected before refinement. Smooth clay curvature/rim/wear authored, no measured hidden depth claimed. Separate fire ownership. No structural patch required by manual inspection.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>create required state neighbor variants</h3><p>Retain one fixed native source appearance and original cooking/heat/status ownership.</p><p><strong>Review:</strong> This Machinery/appliances entry requires fixed map view and source-supported states. No child animation loop, rendering override or configured extinguish replacement found. No invented facing/state or placement logic.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/constructed.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/constructed.png" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/constructed.png">constructed.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;create_required_state_neighbor_variants&quot;,
+  &quot;action&quot;: &quot;Retain one fixed native source appearance and original cooking/heat/status ownership.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;This Machinery/appliances entry requires fixed map view and source-supported states. No child animation loop, rendering override or configured extinguish replacement found. No invented facing/state or placement logic.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>refine materials and form</h3><p>Perform one actual built-in contextual clay refinement and inspect all structure before extraction.</p><p><strong>Review:</strong> Inspected actual full refinement before extraction. Right-offset chimney, flared clay dome, arch walls, low fire and rectangular open plinth preserve construction identity. Clay wear/shading usable. Generated exterior halo, dark/gray mouth/base-slot fill and gold glow outside fire are rejected. Select gray clay and gold fire luminance through exact editable alpha/ownership and retain fixed construction outlines. Source geometry/registration not inferred from generated bounds. No second isolation, new animation or native activation.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/refined-raw.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/refined-raw.png" alt="refined-raw"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/refined-raw.png">refined-raw.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/first-structural-review.json">first-structural-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:23:11.604453+00:00&quot;,
+  &quot;status&quot;: &quot;PASS FOR MATERIAL ONLY&quot;,
+  &quot;generated_file&quot;: &quot;C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-93d70fe3-a599-462e-a356-60fe5e1fa2b6.png&quot;,
+  &quot;raw_sha256&quot;: &quot;224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e&quot;,
+  &quot;review&quot;: &quot;Inspected actual full refinement before extraction. Right-offset chimney, flared clay dome, arch walls, low fire and rectangular open plinth preserve construction identity. Clay wear/shading usable. Generated exterior halo, dark/gray mouth/base-slot fill and gold glow outside fire are rejected. Select gray clay and gold fire luminance through exact editable alpha/ownership and retain fixed construction outlines. Source geometry/registration not inferred from generated bounds. No second isolation, new animation or native activation.&quot;,
+  &quot;native_validation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>aee6c78d07e96fddc30af51b11d16c0403e616b5b0e3b2aa7fdb0f8be388638e</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;refine_materials_and_form&quot;,
+  &quot;action&quot;: &quot;Perform one actual built-in contextual clay refinement and inspect all structure before extraction.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/constructed.png&quot;,
+      &quot;sha256&quot;: &quot;0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/refine-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;8ca40d064bb326d2215d13aa34f05233fef2183e26b1b78506a718ca9a2e6525&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected actual full refinement before extraction. Right-offset chimney, flared clay dome, arch walls, low fire and rectangular open plinth preserve construction identity. Clay wear/shading usable. Generated exterior halo, dark/gray mouth/base-slot fill and gold glow outside fire are rejected. Select gray clay and gold fire luminance through exact editable alpha/ownership and retain fixed construction outlines. Source geometry/registration not inferred from generated bounds. No second isolation, new animation or native activation.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;prompt_file&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/refine-prompt.txt&quot;,
+    &quot;sha256&quot;: &quot;8ca40d064bb326d2215d13aa34f05233fef2183e26b1b78506a718ca9a2e6525&quot;
+  },
+  &quot;generation_file&quot;: &quot;C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-93d70fe3-a599-462e-a356-60fe5e1fa2b6.png&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_image_paths&quot;: [
+      &quot;C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-joppaoven\\v1\\constructed.png&quot;,
+      &quot;C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-joppaoven\\v1\\source-reference-construction.png&quot;,
+      &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LegacyAssets\\Textures\\Things\\Building\\AYCharcoal\\AYCharcoalKiln\\AYCharcoalKiln.png&quot;
+    ]
+  }
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>extract register color coverage</h3><p>Select neutral clay/fire luminance into fixed geometry and restore exact source openings, ink and independent detail role.</p><p><strong>Review:</strong> One full-frame material sampling; no generated-bounds fitting. Same-material continuation excludes halo, dark displaced seams, background plugs and fire glow. Existing helper role names wood/top mean clay/fire here. No second AI isolation or destructive opening approximation.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/register-oven.py">register-oven.py</a><details class="hash"><summary>Exact evidence hash</summary><code>683b8dbe9f9fc55ae8256351407f889fcb3272753af8ba89a94fc92c2be36f5c</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCN-JOPPAOVEN&quot;,
+  &quot;kind&quot;: &quot;source_dualcolor_static_appliance&quot;,
+  &quot;blueprint&quot;: &quot;JoppaOven&quot;,
+  &quot;native_tile&quot;: &quot;Items/sw_oven.bmp&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;native_canvas&quot;: [
+      16,
+      24
+    ],
+    &quot;manual_canvas&quot;: [
+      512,
+      768
+    ],
+    &quot;recipient_canvas&quot;: [
+      256,
+      256
+    ],
+    &quot;authored_source_anchor&quot;: [
+      8,
+      16
+    ],
+    &quot;rule&quot;: &quot;One complete source cell and common clay/fire frame/pivot. No part bounds fitting or native rotation changes.&quot;
+  },
+  &quot;camera&quot;: &quot;One fixed cardinal map-face, consistent shallow dome volume; no yaw/converging brick slab/3quarter oven.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;w on all clay/chimney/hearth/plinth&quot;,
+    &quot;detail&quot;: &quot;R (d74200 in pinned palette) on actual source fire region only&quot;,
+    &quot;rule&quot;: &quot;Neutral clay and flame material plus independent fire mask; no fixed terracotta/glow/stone colors baked into production.&quot;
+  },
+  &quot;native_state_owner&quot;: &quot;One fixed Items/sw_oven.bmp. Joppa preset AppleMatz/message remain native, not new food props. No child TileAnimationFrames or body Render changes in inspected Campfire; ExtinguishBlueprint defaults null and is unset in Oven/Joppa chain, so do not invent extinguish/unlit replacement or fire-frame loop. Native temperature/fire/status behavior stays native.&quot;,
+  &quot;native_behavior&quot;: &quot;Native preset AppleMatz, cooking interactions/meal message, ThermalInsulation700/CampfireHeatSelfOnly, solid non-takeable1000weight inorganic clay oven, FlameTemperature10000, HP1200, RenderLayer6 non-occluding; inherited MissileCover explicitly removed. Native quest/no-clear/hanging/heat state remains intact.&quot;,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native preset/cooking/thermal/status/physics/visibility/no-clear behavior and save/load. No native activation or new animation.&quot;,
+  &quot;native_activation&quot;: false,
+  &quot;view_policy&quot;: &quot;One fixed source/cardinal map face; no declared body animation or extinguished replacement. Cooking and heat remain native; no additional furniture orientation binding.&quot;,
+  &quot;formula&quot;: &quot;coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background&quot;,
+  &quot;primary&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/primary-neutral.png&quot;,
+    &quot;sha256&quot;: &quot;8bb88ce023443bc919639090c4fbd258fda314f529b1af538201fc61a9c22495&quot;
+  },
+  &quot;detail&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-neutral.png&quot;,
+    &quot;sha256&quot;: &quot;3c1fb2943c385296604615c529e346e7595fc3dcca8d1353b83f5d2d6c2ebc52&quot;
+  },
+  &quot;coverage&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/coverage.png&quot;,
+    &quot;sha256&quot;: &quot;7b872b86dfe97eeb49ec1e3c8c26194128ebaac5498f1bc3fd8bee09fe6f3852&quot;
+  },
+  &quot;detail_weight&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-weight.png&quot;,
+    &quot;sha256&quot;: &quot;e1016c18b94f7e13886e001e4d8ad6cf650c2c4409e620bbf45f8ed2d95c8fff&quot;
+  },
+  &quot;detail_coverage&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-coverage.png&quot;,
+    &quot;sha256&quot;: &quot;a72c63cf51ff28a02a68a07be05dbb98395f6ea2c26ec61c6b1a4c4b08560f27&quot;
+  },
+  &quot;authored_dualcolor_mask&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/authored-dualcolor-mask.png&quot;,
+    &quot;sha256&quot;: &quot;ef6b6f4f618b6607951b17fbc33aabdb383e5988fe1db8d7b7776d7c32dc03bf&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;helper&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-book-table/v2/select-material.py&quot;,
+    &quot;sha256&quot;: &quot;f5d9341401ad0846b3588e99ca29622f0c1277437029597ef2067e643ccbeff2&quot;
+  },
+  &quot;selection&quot;: {
+    &quot;wood&quot;: {
+      &quot;selected&quot;: 101914,
+      &quot;continued&quot;: 35200,
+      &quot;unsampled_constructed_pixels&quot;: 0
+    },
+    &quot;top&quot;: {
+      &quot;selected&quot;: 8153,
+      &quot;continued&quot;: 4812,
+      &quot;unsampled_constructed_pixels&quot;: 0
+    }
+  },
+  &quot;helper_roles&quot;: {
+    &quot;wood&quot;: &quot;gray fired clay/chimney/hearth/plinth; no wood material&quot;,
+    &quot;top&quot;: &quot;fire luminance within source detail shape&quot;
+  },
+  &quot;ownership_coverage_corrected_to_exact_pattern_pixels&quot;: 0,
+  &quot;material_rule&quot;: &quot;One full generated portrait frame resampled to the existing512x768authoring frame for material RGB only. Exact constructed geometry, openings, ink, pivot and fire ownership retained; no bounding-box fitting. Generated halo, mouth/base fill and fire glow excluded. Same-material harmonic continuation fills rejected dark/displaced material pixels only.&quot;,
+  &quot;new_imagegen_calls&quot;: 1,
+  &quot;second_isolation_call&quot;: false,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>45e150c9a321a72f8ae0b807d4d7acb0fb850ba236274d22d65004181e87a861</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/neutral-master.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/neutral-master.png" alt="neutral-master"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/neutral-master.png">neutral-master.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>b5630128fcaf3b3a201a1e1484ba2969c9b051e62a4d3f52677dd74db899dd64</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/primary-neutral.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/primary-neutral.png" alt="primary-neutral"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/primary-neutral.png">primary-neutral.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>8bb88ce023443bc919639090c4fbd258fda314f529b1af538201fc61a9c22495</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/detail-neutral.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/detail-neutral.png" alt="detail-neutral"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/detail-neutral.png">detail-neutral.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3c1fb2943c385296604615c529e346e7595fc3dcca8d1353b83f5d2d6c2ebc52</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/detail-weight.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/detail-weight.png" alt="detail-weight"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/detail-weight.png">detail-weight.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e1016c18b94f7e13886e001e4d8ad6cf650c2c4409e620bbf45f8ed2d95c8fff</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;extract_register_color_coverage&quot;,
+  &quot;action&quot;: &quot;Select neutral clay/fire luminance into fixed geometry and restore exact source openings, ink and independent detail role.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/refined-raw.png&quot;,
+      &quot;sha256&quot;: &quot;224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/first-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;aee6c78d07e96fddc30af51b11d16c0403e616b5b0e3b2aa7fdb0f8be388638e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/ownership.png&quot;,
+      &quot;sha256&quot;: &quot;41f362f8c984152ee90d1b6bf3fce6436174b4bdd884af789d192b8704c9ce27&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;One full-frame material sampling; no generated-bounds fitting. Same-material continuation excludes halo, dark displaced seams, background plugs and fire glow. Existing helper role names wood/top mean clay/fire here. No second AI isolation or destructive opening approximation.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>07 / 2026-10-20T22:24:07.833732+00:00 / PASS</small><h3>visual review identity and connections at game scale</h3><p>Inspect original/manual/refined/registered art, true openings, neutral/primary/fire separation and native w/R at intended sizes.</p><p><strong>Review:</strong> Reviewed exact JoppaOven/Oven ancestry, description and native w clay/R fire tile: right-offset chimney, flared cap, thick arch, central low fire and raised rectangular hearth/plinth with open base slot. Curved clay surfaces, shallow rim/bevel and wear are authored refinements; hidden depth remains unknown. Actual retained Apothecary1.5LegacyAssets kiln and matching definition/LoadFolders inspected: Graphic_Single,1x1,rotatablefalse, drawSize unspecified in inspected child/parent. Partial clay/dome shading reference only; no fieldstones, round base, centered chimney, donor footprint or gameplay copied, no active1.6loose-PNG claim. One actual contextual refinement reviewed before extraction. Generated halo, opaque/dark gap fill and fire glow rejected; usable material selected into exact editable coverage/ink and separate fire role with same-material continuation. Full neutral and native w/R plates and16x24/24x36/32x48views inspected; actual mouth/base gaps remain transparent, shared frame/pivot retained. Bounded installed Campfire code/definitions give AppleMatz cooking/heat, no body rendering override or declared unlit replacement; no new smoke, particles, food/log props or animation. Native preset/cooking/thermal/status/physics/visibility/save-load acceptance remains pending full-set generation.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-joppaoven/v1/record-review.py">record-review.py</a><details class="hash"><summary>Exact evidence hash</summary><code>40511f943027ff8cf2ee1970aa944ec46ad350f68c3f479e521802cf763c2686</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/scn-joppaoven/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6985a356f28ab97d1b42b848f0181878c8e22b4e058369dbfffb8e04925ded72</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/registered/authoring-review.json">authoring-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;Complete generation authoring only&quot;,
+  &quot;reason&quot;: &quot;Reviewed exact JoppaOven/Oven ancestry, description and native w clay/R fire tile: right-offset chimney, flared cap, thick arch, central low fire and raised rectangular hearth/plinth with open base slot. Curved clay surfaces, shallow rim/bevel and wear are authored refinements; hidden depth remains unknown. Actual retained Apothecary1.5LegacyAssets kiln and matching definition/LoadFolders inspected: Graphic_Single,1x1,rotatablefalse, drawSize unspecified in inspected child/parent. Partial clay/dome shading reference only; no fieldstones, round base, centered chimney, donor footprint or gameplay copied, no active1.6loose-PNG claim. One actual contextual refinement reviewed before extraction. Generated halo, opaque/dark gap fill and fire glow rejected; usable material selected into exact editable coverage/ink and separate fire role with same-material continuation. Full neutral and native w/R plates and16x24/24x36/32x48views inspected; actual mouth/base gaps remain transparent, shared frame/pivot retained. Bounded installed Campfire code/definitions give AppleMatz cooking/heat, no body rendering override or declared unlit replacement; no new smoke, particles, food/log props or animation. Native preset/cooking/thermal/status/physics/visibility/save-load acceptance remains pending full-set generation.&quot;,
+  &quot;checks&quot;: {
+    &quot;exact_fixed_geometry_alpha&quot;: true,
+    &quot;arch_and_base_slot_transparent&quot;: true,
+    &quot;neutral_equal_RGB&quot;: true,
+    &quot;independent_fire_detail&quot;: true,
+    &quot;single_coverage_native_palette_matches&quot;: true,
+    &quot;transparent_frame_edges&quot;: true,
+    &quot;shared_frame_pivot_scale&quot;: true,
+    &quot;native_activation&quot;: false
+  },
+  &quot;new_imagegen_calls&quot;: 1,
+  &quot;second_isolation_call&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native preset/cooking/thermal/status/physics/visibility/no-clear behavior and save/load. No native activation or new animation.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>6caba560217680a084481d13b0558efd16a0f70e9f6965828030b8ced43103ca</code></details></figure><figure><a href="../../art/conversion/scn-joppaoven/v1/artifact-manifest.json">artifact-manifest.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;artifacts&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/construct-oven.py&quot;,
+      &quot;sha256&quot;: &quot;9cd1e20f72037535c593d8e5432fbf40d9640f9bd8c891ca0b2a291d4cd2e329&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/constructed.png&quot;,
+      &quot;sha256&quot;: &quot;0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/constructed.svg&quot;,
+      &quot;sha256&quot;: &quot;3fd1b4c7df71927fa8745871a1e58bde1d1ddf0ca70f8328a17da1bdc1dd7642&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/first-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;aee6c78d07e96fddc30af51b11d16c0403e616b5b0e3b2aa7fdb0f8be388638e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/manual-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;4aa42cf8ac0a6df022c40035bd414df1370dd79049f42dce48ab0b62d79e3d77&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/ownership.png&quot;,
+      &quot;sha256&quot;: &quot;41f362f8c984152ee90d1b6bf3fce6436174b4bdd884af789d192b8704c9ce27&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/ownership.svg&quot;,
+      &quot;sha256&quot;: &quot;fef822a97cac40b05dd157815a63eb022217fff84255c1246bbe8fd936c95b14&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/record-review.py&quot;,
+      &quot;sha256&quot;: &quot;40511f943027ff8cf2ee1970aa944ec46ad350f68c3f479e521802cf763c2686&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/refine-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;8ca40d064bb326d2215d13aa34f05233fef2183e26b1b78506a718ca9a2e6525&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/refined-raw.png&quot;,
+      &quot;sha256&quot;: &quot;224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/register-oven.py&quot;,
+      &quot;sha256&quot;: &quot;683b8dbe9f9fc55ae8256351407f889fcb3272753af8ba89a94fc92c2be36f5c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/authored-dualcolor-mask.png&quot;,
+      &quot;sha256&quot;: &quot;ef6b6f4f618b6607951b17fbc33aabdb383e5988fe1db8d7b7776d7c32dc03bf&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;6caba560217680a084481d13b0558efd16a0f70e9f6965828030b8ced43103ca&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/clay-primary-preview.png&quot;,
+      &quot;sha256&quot;: &quot;c53fb0635d4e7a06765c4aeaf2b28352fcfa8b613f7b87196b62b22f26a3fdd7&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/coverage.png&quot;,
+      &quot;sha256&quot;: &quot;7b872b86dfe97eeb49ec1e3c8c26194128ebaac5498f1bc3fd8bee09fe6f3852&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-coverage.png&quot;,
+      &quot;sha256&quot;: &quot;a72c63cf51ff28a02a68a07be05dbb98395f6ea2c26ec61c6b1a4c4b08560f27&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;3c1fb2943c385296604615c529e346e7595fc3dcca8d1353b83f5d2d6c2ebc52&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/detail-weight.png&quot;,
+      &quot;sha256&quot;: &quot;e1016c18b94f7e13886e001e4d8ad6cf650c2c4409e620bbf45f8ed2d95c8fff&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/native-primary-w-detail-upper-r.png&quot;,
+      &quot;sha256&quot;: &quot;640a657b50cee88df42fb89b38b75018c834a2218eea612b8f5d8c39998c00d1&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/neutral-master.png&quot;,
+      &quot;sha256&quot;: &quot;b5630128fcaf3b3a201a1e1484ba2969c9b051e62a4d3f52677dd74db899dd64&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/ownership-master.png&quot;,
+      &quot;sha256&quot;: &quot;a64e37f59371962ed73b45257afa374d6eb21bf6f33976dc1453dd2e81eb6a30&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/primary-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;8bb88ce023443bc919639090c4fbd258fda314f529b1af538201fc61a9c22495&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/registration-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;6985a356f28ab97d1b42b848f0181878c8e22b4e058369dbfffb8e04925ded72&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/registration-decisions.json&quot;,
+      &quot;sha256&quot;: &quot;45e150c9a321a72f8ae0b807d4d7acb0fb850ba236274d22d65004181e87a861&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/source-reference-construction.png&quot;,
+      &quot;sha256&quot;: &quot;1f738e35a09a394e187a9e260788f0f7f89e15edfda7be099672d66d54b07cf7&quot;
+    }
+  ]
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>efc397d0aee2d24f58fe175fb5051fd998edbf12395423e80abb69c0d909b811</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_identity_and_connections_at_game_scale&quot;,
+  &quot;action&quot;: &quot;Inspect original/manual/refined/registered art, true openings, neutral/primary/fire separation and native w/R at intended sizes.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Reviewed exact JoppaOven/Oven ancestry, description and native w clay/R fire tile: right-offset chimney, flared cap, thick arch, central low fire and raised rectangular hearth/plinth with open base slot. Curved clay surfaces, shallow rim/bevel and wear are authored refinements; hidden depth remains unknown. Actual retained Apothecary1.5LegacyAssets kiln and matching definition/LoadFolders inspected: Graphic_Single,1x1,rotatablefalse, drawSize unspecified in inspected child/parent. Partial clay/dome shading reference only; no fieldstones, round base, centered chimney, donor footprint or gameplay copied, no active1.6loose-PNG claim. One actual contextual refinement reviewed before extraction. Generated halo, opaque/dark gap fill and fire glow rejected; usable material selected into exact editable coverage/ink and separate fire role with same-material continuation. Full neutral and native w/R plates and16x24/24x36/32x48views inspected; actual mouth/base gaps remain transparent, shared frame/pivot retained. Bounded installed Campfire code/definitions give AppleMatz cooking/heat, no body rendering override or declared unlit replacement; no new smoke, particles, food/log props or animation. Native preset/cooking/thermal/status/physics/visibility/save-load acceptance remains pending full-set generation.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>08 / 2026-10-20T22:24:07.833732+00:00 / DEFERRED UNTIL ALL GENERATED</small><h3>native state review</h3><p>Retain native cooking/preset/thermal/status/physics/visibility/save-load acceptance behind all-generation gate.</p><p><strong>Review:</strong> No native/game/harness validation or production activation; entry stays UNFINISHED pending integrated native acceptance.</p>
+<div class="gallery"></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:24:07.833732+00:00&quot;,
+  &quot;step&quot;: &quot;native_state_review&quot;,
+  &quot;action&quot;: &quot;Retain native cooking/preset/thermal/status/physics/visibility/save-load acceptance behind all-generation gate.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-joppaoven/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;No native/game/harness validation or production activation; entry stays UNFINISHED pending integrated native acceptance.&quot;,
+  &quot;result&quot;: &quot;DEFERRED UNTIL ALL GENERATED&quot;
+}</pre></details></section>
 </div></div></main></html>

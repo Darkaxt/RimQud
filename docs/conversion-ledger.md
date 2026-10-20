@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-JOPPAOVEN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-LATHE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -156,8 +156,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | SCN-BROKEN-INDUSTRIAL-FAN | Broken Industrial Fan | UNFINISHED | - |  |
 | SCN-ELECTRIC-GENERATOR | Electric Generator | UNFINISHED | - |  |
-| SCN-JOPPAOVEN | JoppaOven | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-LATHE | Lathe | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-JOPPAOVEN | JoppaOven | UNFINISHED | - |  |
+| SCN-LATHE | Lathe | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-MILLSTONE | Millstone | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -6251,7 +6251,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/joppaoven-body.png](../art/village/scenery/joppaoven-body.png), [art/village/scenery/joppaoven-detail.png](../art/village/scenery/joppaoven-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-20T22:24:07.833732+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve Joppa clay oven description, ancestry, original tile and palette, cooking preset/heat and declared native visual states.
+  Review: Version-pinned definitions plus bounded Campfire code metadata study; AppleMatz preset, CampfireHeatSelfOnly and unset ExtinguishBlueprint recorded. No game launch or invented fire/smoke/off state.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/source-packet.json", "sha256": "2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9"}, {"path": "art/conversion/scn-joppaoven/v1/source-reference-construction.png", "sha256": "1f738e35a09a394e187a9e260788f0f7f89e15edfda7be099672d66d54b07cf7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual retained Apothecary1.5charcoal kiln texture and matching child/parent/LoadFolders mapping.
+  Review: Partial clay/dome material reference only. Retained legacy asset provenance explicit; current1.6bundle image not claimed. Donor round base, fieldstones, central chimney, footprint and mechanics excluded.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/source-packet.json", "sha256": "2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/source-reference-construction.png", "sha256": "1f738e35a09a394e187a9e260788f0f7f89e15edfda7be099672d66d54b07cf7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / construct_faithful_shape / PASS: Construct editable source-bound offset chimney, broad cap, thick arched mouth/fire and raised rectangular plinth with genuine openings.
+  Review: Full source/donor/manual plate inspected before refinement. Smooth clay curvature/rim/wear authored, no measured hidden depth claimed. Separate fire ownership. No structural patch required by manual inspection.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/source-packet.json", "sha256": "2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/construct-oven.py", "sha256": "9cd1e20f72037535c593d8e5432fbf40d9640f9bd8c891ca0b2a291d4cd2e329"}, {"path": "art/conversion/scn-joppaoven/v1/constructed.svg", "sha256": "3fd1b4c7df71927fa8745871a1e58bde1d1ddf0ca70f8328a17da1bdc1dd7642"}, {"path": "art/conversion/scn-joppaoven/v1/constructed.png", "sha256": "0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6"}, {"path": "art/conversion/scn-joppaoven/v1/ownership.svg", "sha256": "fef822a97cac40b05dd157815a63eb022217fff84255c1246bbe8fd936c95b14"}, {"path": "art/conversion/scn-joppaoven/v1/ownership.png", "sha256": "41f362f8c984152ee90d1b6bf3fce6436174b4bdd884af789d192b8704c9ce27"}, {"path": "art/conversion/scn-joppaoven/v1/manual-structural-review.json", "sha256": "4aa42cf8ac0a6df022c40035bd414df1370dd79049f42dce48ab0b62d79e3d77"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed native source appearance and original cooking/heat/status ownership.
+  Review: This Machinery/appliances entry requires fixed map view and source-supported states. No child animation loop, rendering override or configured extinguish replacement found. No invented facing/state or placement logic.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/source-packet.json", "sha256": "2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/constructed.png", "sha256": "0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / refine_materials_and_form / PASS: Perform one actual built-in contextual clay refinement and inspect all structure before extraction.
+  Review: Inspected actual full refinement before extraction. Right-offset chimney, flared clay dome, arch walls, low fire and rectangular open plinth preserve construction identity. Clay wear/shading usable. Generated exterior halo, dark/gray mouth/base-slot fill and gold glow outside fire are rejected. Select gray clay and gold fire luminance through exact editable alpha/ownership and retain fixed construction outlines. Source geometry/registration not inferred from generated bounds. No second isolation, new animation or native activation.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/constructed.png", "sha256": "0188429e43e5a596e86c8ed9146f0a203be59877370c6c5c27dd36bc86dedee6"}, {"path": "art/conversion/scn-joppaoven/v1/refine-prompt.txt", "sha256": "8ca40d064bb326d2215d13aa34f05233fef2183e26b1b78506a718ca9a2e6525"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/refined-raw.png", "sha256": "224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e"}, {"path": "art/conversion/scn-joppaoven/v1/first-structural-review.json", "sha256": "aee6c78d07e96fddc30af51b11d16c0403e616b5b0e3b2aa7fdb0f8be388638e"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-joppaoven/v1/refine-prompt.txt", "sha256": "8ca40d064bb326d2215d13aa34f05233fef2183e26b1b78506a718ca9a2e6525"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-93d70fe3-a599-462e-a356-60fe5e1fa2b6.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-joppaoven\\v1\\constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-joppaoven\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LegacyAssets\\Textures\\Things\\Building\\AYCharcoal\\AYCharcoalKiln\\AYCharcoalKiln.png"]}}
+
+- 2026-10-20T22:24:07.833732+00:00 / extract_register_color_coverage / PASS: Select neutral clay/fire luminance into fixed geometry and restore exact source openings, ink and independent detail role.
+  Review: One full-frame material sampling; no generated-bounds fitting. Same-material continuation excludes halo, dark displaced seams, background plugs and fire glow. Existing helper role names wood/top mean clay/fire here. No second AI isolation or destructive opening approximation.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/refined-raw.png", "sha256": "224268e86bd8a68a54151e11615b54be937f7e921f62ecc3ee8ca2336fb7123e"}, {"path": "art/conversion/scn-joppaoven/v1/first-structural-review.json", "sha256": "aee6c78d07e96fddc30af51b11d16c0403e616b5b0e3b2aa7fdb0f8be388638e"}, {"path": "art/conversion/scn-joppaoven/v1/ownership.png", "sha256": "41f362f8c984152ee90d1b6bf3fce6436174b4bdd884af789d192b8704c9ce27"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/register-oven.py", "sha256": "683b8dbe9f9fc55ae8256351407f889fcb3272753af8ba89a94fc92c2be36f5c"}, {"path": "art/conversion/scn-joppaoven/v1/registered/model.json", "sha256": "e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48"}, {"path": "art/conversion/scn-joppaoven/v1/registered/registration-decisions.json", "sha256": "45e150c9a321a72f8ae0b807d4d7acb0fb850ba236274d22d65004181e87a861"}, {"path": "art/conversion/scn-joppaoven/v1/registered/neutral-master.png", "sha256": "b5630128fcaf3b3a201a1e1484ba2969c9b051e62a4d3f52677dd74db899dd64"}, {"path": "art/conversion/scn-joppaoven/v1/registered/primary-neutral.png", "sha256": "8bb88ce023443bc919639090c4fbd258fda314f529b1af538201fc61a9c22495"}, {"path": "art/conversion/scn-joppaoven/v1/registered/detail-neutral.png", "sha256": "3c1fb2943c385296604615c529e346e7595fc3dcca8d1353b83f5d2d6c2ebc52"}, {"path": "art/conversion/scn-joppaoven/v1/registered/detail-weight.png", "sha256": "e1016c18b94f7e13886e001e4d8ad6cf650c2c4409e620bbf45f8ed2d95c8fff"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect original/manual/refined/registered art, true openings, neutral/primary/fire separation and native w/R at intended sizes.
+  Review: Reviewed exact JoppaOven/Oven ancestry, description and native w clay/R fire tile: right-offset chimney, flared cap, thick arch, central low fire and raised rectangular hearth/plinth with open base slot. Curved clay surfaces, shallow rim/bevel and wear are authored refinements; hidden depth remains unknown. Actual retained Apothecary1.5LegacyAssets kiln and matching definition/LoadFolders inspected: Graphic_Single,1x1,rotatablefalse, drawSize unspecified in inspected child/parent. Partial clay/dome shading reference only; no fieldstones, round base, centered chimney, donor footprint or gameplay copied, no active1.6loose-PNG claim. One actual contextual refinement reviewed before extraction. Generated halo, opaque/dark gap fill and fire glow rejected; usable material selected into exact editable coverage/ink and separate fire role with same-material continuation. Full neutral and native w/R plates and16x24/24x36/32x48views inspected; actual mouth/base gaps remain transparent, shared frame/pivot retained. Bounded installed Campfire code/definitions give AppleMatz cooking/heat, no body rendering override or declared unlit replacement; no new smoke, particles, food/log props or animation. Native preset/cooking/thermal/status/physics/visibility/save-load acceptance remains pending full-set generation.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/registered/model.json", "sha256": "e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48"}]
+  Outputs: [{"path": "art/conversion/scn-joppaoven/v1/record-review.py", "sha256": "40511f943027ff8cf2ee1970aa944ec46ad350f68c3f479e521802cf763c2686"}, {"path": "art/conversion/scn-joppaoven/v1/registered/registration-comparison.png", "sha256": "6985a356f28ab97d1b42b848f0181878c8e22b4e058369dbfffb8e04925ded72"}, {"path": "art/conversion/scn-joppaoven/v1/registered/authoring-review.json", "sha256": "6caba560217680a084481d13b0558efd16a0f70e9f6965828030b8ced43103ca"}, {"path": "art/conversion/scn-joppaoven/v1/artifact-manifest.json", "sha256": "efc397d0aee2d24f58fe175fb5051fd998edbf12395423e80abb69c0d909b811"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:24:07.833732+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retain native cooking/preset/thermal/status/physics/visibility/save-load acceptance behind all-generation gate.
+  Review: No native/game/harness validation or production activation; entry stays UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/registered/model.json", "sha256": "e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-LATHE: Lathe
 
@@ -6261,7 +6309,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/lathe-body.png](../art/village/scenery/lathe-body.png), [art/village/scenery/lathe-detail.png](../art/village/scenery/lathe-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-LOUDSPEAKER: Loudspeaker
 

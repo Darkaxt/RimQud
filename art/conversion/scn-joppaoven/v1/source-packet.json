@@ -1,0 +1,173 @@
+{
+  "entry": "SCN-JOPPAOVEN",
+  "identity": "JoppaOven -> Oven -> MountedFurniture -> Furniture",
+  "description": "Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "JoppaOven": "<object Name=\"JoppaOven\" Inherits=\"Oven\">\n    <part Name=\"Render\" DisplayName=\"clay oven\" ColorString=\"&amp;w\" DetailColor=\"R\" RenderString=\"234\" Tile=\"Items/sw_oven.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Campfire\" PresetMeals=\"AppleMatz\" />\n    <tag Name=\"PresetMealMessage\" Value=\"Eat fresh apple matz.\" />\n    <part Name=\"Description\" Short=\"Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" />\n  </object>",
+      "Oven": "<object Name=\"Oven\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"clay oven\" ColorString=\"&amp;w\" DetailColor=\"R\" RenderString=\"234\" Tile=\"Items/sw_oven.bmp\" Occluding=\"false\" RenderIfDark=\"true\" RenderLayer=\"6\" />\n    <part Name=\"Physics\" Weight=\"1000\" Solid=\"true\" Organic=\"false\" FlameTemperature=\"10000\" />\n    <removepart Name=\"MissileCover\" />\n    <stat Name=\"Hitpoints\" Value=\"1200\" />\n    <part Name=\"Description\" Short=\"Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of scrumptious food.\" />\n    <part Name=\"Campfire\" />\n    <intproperty Name=\"ThermalInsulation\" Value=\"700\" />\n    <tag Name=\"CampfireHeatSelfOnly\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"QuestableVerb\" Value=\"cook at\" />\n    <tag Name=\"QuestableEvent\" Value=\"CookedAt\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;w^k\" />\n    <tag Name=\"NoClear\"></tag>\n\t\t<stag Name=\"Heat\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "tile": "Items/sw_oven.bmp",
+    "description": "Warmth radiates from the crackling fire of the thick clay oven, and with it comes the smell of hot starapple jam and toasted matz.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "clay oven",
+      "RenderString": "234",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&w",
+      "DetailColor": "R",
+      "Tile": "Items/sw_oven.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "JoppaOven",
+    "reference_file": "village-originals/joppaoven-reference.png",
+    "native_mask_sha256": "2867c98951d675ecc81cad44cb665f1a8ad4abc7d062224d851c3d20698db016",
+    "reference_sha256": "9068573097e52142eb081cb87a552b33d2afb3950fe92ce55e6de70f4932bae9",
+    "info_id": 9876,
+    "atlas_id": 185,
+    "rect": [
+      126,
+      78,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppaoven-mask.png",
+      "sha256": "2867c98951d675ecc81cad44cb665f1a8ad4abc7d062224d851c3d20698db016"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppaoven-reference.png",
+      "sha256": "9068573097e52142eb081cb87a552b33d2afb3950fe92ce55e6de70f4932bae9"
+    }
+  },
+  "source_shape": "Narrow chimney offset right above broad domed/flared clay cap, arched open mouth with low central detail-colored fire mass, raised rectangular hearth/plinth with open horizontal base gap and inset lower foot.",
+  "palette": {
+    "primary": "w on all clay/chimney/hearth/plinth",
+    "detail": "R (d74200 in pinned palette) on actual source fire region only",
+    "rule": "Neutral clay and flame material plus independent fire mask; no fixed terracotta/glow/stone colors baked into production."
+  },
+  "native_state": "One fixed Items/sw_oven.bmp. Joppa preset AppleMatz/message remain native, not new food props. No child TileAnimationFrames or body Render changes in inspected Campfire; ExtinguishBlueprint defaults null and is unset in Oven/Joppa chain, so do not invent extinguish/unlit replacement or fire-frame loop. Native temperature/fire/status behavior stays native.",
+  "native_code_study": {
+    "Campfire": {
+      "path": "E:\\Temp\\rimqud-native-oven-20261021\\XRL.World.Parts.Campfire.decompiled.cs",
+      "sha256": "3e6ade37129111a2089871346eaaee6cbf80794daed1eb908d8d0c0a265faf33"
+    },
+    "findings": [
+      "Campfire derives IActivePart and handles cooking actions, preset meals and heat. No Tile/ColorString/DetailColor or Render override found in this class.",
+      "ExtinguishBlueprint is unset by default; extinguish action/replacement/frozen triggers are gated on a nonempty value. Oven/Joppa does not set it.",
+      "CampfireHeatSelfOnly is checked before radiating heat to cells/other objects. Source Oven provides that tag; no new heat/light/particle system implemented."
+    ],
+    "scope": "Static installed code/definition study, not live native replacement validation."
+  },
+  "native_behavior": "Native preset AppleMatz, cooking interactions/meal message, ThermalInsulation700/CampfireHeatSelfOnly, solid non-takeable1000weight inorganic clay oven, FlameTemperature10000, HP1200, RenderLayer6 non-occluding; inherited MissileCover explicitly removed. Native quest/no-clear/hanging/heat state remains intact.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LegacyAssets\\Textures\\Things\\Building\\AYCharcoal\\AYCharcoalKiln\\AYCharcoalKiln.png",
+      "sha256": "fcf7ca87cea014fe6eb919fb6cfaabd1c27a57c4d04494170a0bbd4a0e33aad9"
+    },
+    "frame": [
+      256,
+      256
+    ],
+    "alpha_bounds": [
+      13,
+      23,
+      240,
+      247
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\1.5\\Defs\\Buildings\\CharcoalKiln\\Defs_AYCharcoalKiln.xml",
+      "sha256": "18f44bab4875e69d925bd75d86dab4b6159ee97ab00f5a14d16490a78098c4c2"
+    },
+    "child": "<ThingDef ParentName=\"AYBuildingBase\">\n    <defName>AYCharcoalKiln</defName>\n    <label>Charcoal Kiln</label>\n    <thingClass>Apothecary.Building_AYCompostBin</thingClass>\n    <description>A temporary crude structure made from stone and filled with wood that will slowly burn with limited air supply to produce charcoal.</description>\n    <graphicData>\n      <texPath>Things/Building/AYCharcoal/AYCharcoalKiln/AYCharcoalKiln</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n    </graphicData>\n    <blockLight>false</blockLight>\n    <castEdgeShadows>true</castEdgeShadows>\n    <staticSunShadowHeight>0.20</staticSunShadowHeight>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>\n    <canOverlapZones>false</canOverlapZones>\n    <rotatable>false</rotatable>\n    <statBases>\n      <WorkToBuild>750</WorkToBuild>\n      <Beauty>-5</Beauty>\n      <Cleanliness>-3</Cleanliness>\n    </statBases>\n    <costStuffCount>75</costStuffCount>\n    <stuffCategories>\n      <li>Stony</li>\n    </stuffCategories>\n    <costList>\n      <WoodLog>150</WoodLog>\n    </costList>\n    <useHitPoints>true</useHitPoints>\n    <size>(1,1)</size>\n    <designationCategory>Production</designationCategory>\n    <passability>PassThroughOnly</passability>\n    <tickerType>Rare</tickerType>\n    <comps>\n      <li Class=\"Apothecary.CompProperties_AYCompostBin\">\n        <fermentTicks>600</fermentTicks>\n        <productOne>AYCharcoal</productOne>\n        <numProductOne>150</numProductOne>\n        <productTwo>AYWoodAshes</productTwo>\n        <numProductTwo>150</numProductTwo>\n      </li>\n    </comps>\n    <pathCost>75</pathCost>\n    <researchPrerequisites Inherit=\"false\">\n      <li>AYCharcoal</li>\n    </researchPrerequisites>\n  </ThingDef>\n",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\1.5\\Defs\\Buildings\\Defs_AYBuildingBase.xml",
+      "sha256": "fde725f287b7f8267a02fd3f12eda530365cc47881296aecd6f270d1da68ae95"
+    },
+    "parent": "<ThingDef Name=\"AYBuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshAndRealTime</drawerType>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n    <researchPrerequisites>\n      <li>AYHerbsSimple</li>\n    </researchPrerequisites>\n  </ThingDef>\n",
+    "building_base": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "graphic_class": "Graphic_Single",
+    "drawSize": null,
+    "footprint": [
+      1,
+      1
+    ],
+    "rotatable": false,
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\About\\About.xml",
+      "sha256": "d0662f74ef3ed430fc642f9625e699147568ad89640694b1ea1bebb0505048b1"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2195469123\\LoadFolders.xml",
+      "sha256": "e452ae27bb9ef79a765c9d59817f0afc6c9594a248535b9275a1449ca6ec8753"
+    },
+    "version_boundary": "Installed retained LegacyAssets texture with matching1.5definition; LoadFolders selects LegacyAssets for1.5 and Assets bundle for1.6. No claim this loose PNG is the currently active1.6image.",
+    "role": "Actual Apothecary retained charcoal kiln supplies rounded fired-clay/shallow dome shading and simple oven-mouth readability only. No central donor chimney, fieldstone pattern, round base, charcoal products,1x1footprint or donor gameplay copied.",
+    "equivalence": "Partial clay/dome material reference. Qud silhouette/chimney position/base and fire role remain authoritative."
+  },
+  "construction": {
+    "camera": "One fixed cardinal map-face, consistent shallow dome volume; no yaw/converging brick slab/3quarter oven.",
+    "source_supported": "Offset right chimney, flared dome/cap, arched opening with fire mass, broad raised plinth and base opening/inset support. Source w/R roles.",
+    "authored": "Smooth clay dome/arch curvature, modest chimney rim, plaster-like surface wear and shallow hearth bevel replace glyph stairs. Exact depth/wall thickness are authored; no food, logs, cookware, external smoke or new fire state added.",
+    "dimensions": {
+      "chimney": [
+        10.1,
+        1.2,
+        11.7,
+        6.9
+      ],
+      "cap_bounds": [
+        1.3,
+        6.2,
+        14.7,
+        10.8
+      ],
+      "mouth_bounds": [
+        4,
+        11,
+        12,
+        17.7
+      ],
+      "hearth_y": [
+        18,
+        18.8
+      ],
+      "base_y": [
+        18.8,
+        22.8
+      ]
+    },
+    "openings": "Arch around flame and low plinth slot remain true transparent geometry, not opaque black/background-colored paint. Fire stays within source mouth region."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source cell and common clay/fire frame/pivot. No part bounds fitting or native rotation changes."
+  },
+  "native_acceptance": "Pending full-set generation: native preset/cooking/thermal/status/physics/visibility/no-clear behavior and save/load. No native activation or new animation."
+}

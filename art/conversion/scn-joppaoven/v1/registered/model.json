@@ -1,0 +1,65 @@
+{
+  "entry": "SCN-JOPPAOVEN",
+  "kind": "source_dualcolor_static_appliance",
+  "blueprint": "JoppaOven",
+  "native_tile": "Items/sw_oven.bmp",
+  "source": {
+    "path": "art/conversion/scn-joppaoven/v1/source-packet.json",
+    "sha256": "2b129d578d830204e0ac8c736d11e7752833bae5fbadb1b0d1ba138226f650a9"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source cell and common clay/fire frame/pivot. No part bounds fitting or native rotation changes."
+  },
+  "camera": "One fixed cardinal map-face, consistent shallow dome volume; no yaw/converging brick slab/3quarter oven.",
+  "palette": {
+    "primary": "w on all clay/chimney/hearth/plinth",
+    "detail": "R (d74200 in pinned palette) on actual source fire region only",
+    "rule": "Neutral clay and flame material plus independent fire mask; no fixed terracotta/glow/stone colors baked into production."
+  },
+  "native_state_owner": "One fixed Items/sw_oven.bmp. Joppa preset AppleMatz/message remain native, not new food props. No child TileAnimationFrames or body Render changes in inspected Campfire; ExtinguishBlueprint defaults null and is unset in Oven/Joppa chain, so do not invent extinguish/unlit replacement or fire-frame loop. Native temperature/fire/status behavior stays native.",
+  "native_behavior": "Native preset AppleMatz, cooking interactions/meal message, ThermalInsulation700/CampfireHeatSelfOnly, solid non-takeable1000weight inorganic clay oven, FlameTemperature10000, HP1200, RenderLayer6 non-occluding; inherited MissileCover explicitly removed. Native quest/no-clear/hanging/heat state remains intact.",
+  "native_acceptance": "Pending full-set generation: native preset/cooking/thermal/status/physics/visibility/no-clear behavior and save/load. No native activation or new animation.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map face; no declared body animation or extinguished replacement. Cooking and heat remain native; no additional furniture orientation binding.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/primary-neutral.png",
+    "sha256": "8bb88ce023443bc919639090c4fbd258fda314f529b1af538201fc61a9c22495"
+  },
+  "detail": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/detail-neutral.png",
+    "sha256": "3c1fb2943c385296604615c529e346e7595fc3dcca8d1353b83f5d2d6c2ebc52"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/coverage.png",
+    "sha256": "7b872b86dfe97eeb49ec1e3c8c26194128ebaac5498f1bc3fd8bee09fe6f3852"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/detail-weight.png",
+    "sha256": "e1016c18b94f7e13886e001e4d8ad6cf650c2c4409e620bbf45f8ed2d95c8fff"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/detail-coverage.png",
+    "sha256": "a72c63cf51ff28a02a68a07be05dbb98395f6ea2c26ec61c6b1a4c4b08560f27"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-joppaoven/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "ef6b6f4f618b6607951b17fbc33aabdb383e5988fe1db8d7b7776d7c32dc03bf"
+  }
+}
