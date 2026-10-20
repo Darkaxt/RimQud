@@ -2,8 +2,544 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#SCN-LATHE">Back to conversion index</a></nav><h1>Lathe</h1><div class="entry-body">
-<p class="eyebrow">SCN-LATHE / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished.</p>
-<ol class="workflow"><li class="pending">resolve object description original tile palette state — pending</li><li class="pending">select render reference or document no equivalent — pending</li><li class="pending">construct faithful shape — pending</li><li class="pending">create required state neighbor variants — pending</li><li class="pending">refine materials and form — pending</li><li class="pending">extract register color coverage — pending</li><li class="pending">visual review identity and connections at game scale — pending</li><li class="pending">native state review — pending</li></ol>
+<p class="eyebrow">SCN-LATHE / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: </p>
+<h3>Current registered artwork</h3><p>Source y/Y lathe shape and opposed tip ownership retained in fixed cardinal map view. Single pedestal/bed, explicit authored support bridges and true wheel aperture; actual VFE donor metadata/reference, manual, one contextual refinement and controlled neutral extraction recorded. No invented Rotation animation or machinery states. Native charge/physics/status acceptance pending.</p><div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>69c4feacd5f4163d21a3ffa756be80ef0403497ace37cf2565d092e314b8d609</code></details></figure></div><p><a href="../../art/conversion/scn-lathe/v1/registered/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">resolve object description original tile palette state — recorded PASS</li><li class="pass">select render reference or document no equivalent — recorded PASS</li><li class="pass">construct faithful shape — recorded PASS</li><li class="pass">create required state neighbor variants — recorded PASS</li><li class="pass">refine materials and form — recorded PASS</li><li class="pass">extract register color coverage — recorded PASS</li><li class="pass">visual review identity and connections at game scale — recorded PASS</li><li class="pending">native state review — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>resolve object description original tile palette state</h3><p>Resolve source lathe, ancestry, exact original shape/y/Y palette and native power/rotation status metadata.</p><p><strong>Review:</strong> Exact Lathe has hydraulic/electrical consumers1000, ChargeSink10 and Rotation status. Static ChargeSink class study shows charge consumption, no Tile/Render override. No child animation/alternate physical tile declared; inherited status/rare Animated fallback preserved.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCN-LATHE&quot;,
+  &quot;identity&quot;: &quot;Lathe -&gt; MountedFurniture -&gt; Furniture&quot;,
+  &quot;description&quot;: &quot;Handwheel and spindle turn to sand off matter and gift the world with helices and round things. Metal dust accrues on the ground beneath.&quot;,
+  &quot;native_definition&quot;: {
+    &quot;path&quot;: &quot;D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml&quot;,
+    &quot;sha256&quot;: &quot;b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae&quot;,
+    &quot;objects&quot;: {
+      &quot;Lathe&quot;: &quot;&lt;object Name=\&quot;Lathe\&quot; Inherits=\&quot;MountedFurniture\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;lathe\&quot; ColorString=\&quot;&amp;amp;y\&quot; DetailColor=\&quot;Y\&quot; RenderString=\&quot;226\&quot; Tile=\&quot;Items/sw_lathe.bmp\&quot; /&gt;\n    &lt;part Name=\&quot;Description\&quot; Short=\&quot;Handwheel and spindle turn to sand off matter and gift the world with helices and round things. Metal dust accrues on the ground beneath.\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Weight=\&quot;300\&quot; Solid=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;Examiner\&quot; Alternate=\&quot;UnknownBizarreContraption\&quot; Complexity=\&quot;1\&quot; /&gt;\n    &lt;part Name=\&quot;HydraulicPowerTransmission\&quot; ChargeRate=\&quot;1000\&quot; IsConsumer=\&quot;true\&quot; DependsOnLiquid=\&quot;\&quot; /&gt;\n    &lt;part Name=\&quot;ElectricalPowerTransmission\&quot; ChargeRate=\&quot;1000\&quot; IsConsumer=\&quot;true\&quot; /&gt;\n    &lt;part Name=\&quot;ChargeSink\&quot; ChargeUse=\&quot;10\&quot; NameForStatus=\&quot;Rotation\&quot; /&gt;\n    &lt;part Name=\&quot;Metal\&quot; /&gt;\n    &lt;stat Name=\&quot;AV\&quot; Value=\&quot;10\&quot; /&gt;\n    &lt;stat Name=\&quot;Hitpoints\&quot; Value=\&quot;300\&quot; /&gt;\n    &lt;tag Name=\&quot;Tier\&quot; Value=\&quot;3\&quot; /&gt;\n    &lt;stag Name=\&quot;Crafts\&quot; /&gt;\n    &lt;stag Name=\&quot;Power\&quot; /&gt;\n    &lt;stag Name=\&quot;DeepPower\&quot; /&gt;\n    &lt;stag Name=\&quot;SurfacePower\&quot; /&gt;\n    &lt;stag Name=\&quot;ElectricalPower\&quot; /&gt;\n    &lt;stag Name=\&quot;ElectricalPowerConsumer\&quot; /&gt;\n    &lt;stag Name=\&quot;DeepElectricalPowerConsumer\&quot; /&gt;\n    &lt;stag Name=\&quot;HydraulicPower\&quot; /&gt;\n    &lt;stag Name=\&quot;HydraulicPowerConsumer\&quot; /&gt;\n    &lt;stag Name=\&quot;DeepHydraulicPowerConsumer\&quot; /&gt;\n  &lt;/object&gt;&quot;,
+      &quot;MountedFurniture&quot;: &quot;&lt;object Name=\&quot;MountedFurniture\&quot; Inherits=\&quot;Furniture\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;[MountedFurniture]\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Takeable=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;MountedFurniture\&quot; /&gt;\n    &lt;stat Name=\&quot;Hitpoints\&quot; Value=\&quot;300\&quot; /&gt;\n    &lt;part Name=\&quot;MissileCover\&quot; Percentage=\&quot;10\&quot; /&gt;\n    &lt;tag Name=\&quot;OverlayColor\&quot; Value=\&quot;&amp;amp;k^k\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n  &lt;/object&gt;&quot;,
+      &quot;Furniture&quot;: &quot;&lt;object Name=\&quot;Furniture\&quot; Inherits=\&quot;InorganicObject\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; RenderLayer=\&quot;6\&quot; Occluding=\&quot;false\&quot; RenderIfDark=\&quot;true\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Conductivity=\&quot;20\&quot; Organic=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;Examiner\&quot; Unknown=\&quot;UnknownStrangeFurniture\&quot; KeepTile=\&quot;true\&quot; /&gt;\n    &lt;tag Name=\&quot;Furniture\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n    &lt;stag Name=\&quot;InsideFurniture\&quot; /&gt;\n    &lt;stag Name=\&quot;InsideWallFurniture\&quot; /&gt;\n    &lt;tag Name=\&quot;NeverStack\&quot; /&gt;\n    &lt;tag Name=\&quot;NoAutoget\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;tag Name=\&quot;Tier\&quot; Value=\&quot;0\&quot; /&gt;\n    &lt;part Name=\&quot;Graffitied\&quot; ChanceOneIn=\&quot;300\&quot; /&gt;\n    &lt;tag Name=\&quot;BlocksDoors\&quot; /&gt;\n    &lt;tag Name=\&quot;DiscardInsteadOfGeneratingStacked\&quot; Value=\&quot;1\&quot; /&gt;\n    &lt;stag Name=\&quot;Furniture\&quot; /&gt;\n    &lt;tag Name=\&quot;TakeDamageSound\&quot; Value=\&quot;Sounds/Damage/sfx_damage_manufacturedWood\&quot; /&gt;\n    &lt;tag Name=\&quot;DeathSounds\&quot; Value=\&quot;Sounds/Damage/sfx_destroy_manufacturedWood\&quot; /&gt;\n    &lt;tag Name=\&quot;LairAmbientBed\&quot; Value=\&quot;Sounds/Ambiences/amb_creature_animatedFurniture\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    }
+  },
+  &quot;original&quot;: {
+    &quot;tile&quot;: &quot;Items/sw_lathe.bmp&quot;,
+    &quot;description&quot;: &quot;Handwheel and spindle turn to sand off matter and gift the world with helices and round things. Metal dust accrues on the ground beneath.&quot;,
+    &quot;render&quot;: {
+      &quot;Name&quot;: &quot;Render&quot;,
+      &quot;DisplayName&quot;: &quot;lathe&quot;,
+      &quot;RenderString&quot;: &quot;226&quot;,
+      &quot;RenderLayer&quot;: &quot;6&quot;,
+      &quot;RenderIfDark&quot;: &quot;true&quot;,
+      &quot;Occluding&quot;: &quot;false&quot;,
+      &quot;ColorString&quot;: &quot;&amp;y&quot;,
+      &quot;DetailColor&quot;: &quot;Y&quot;,
+      &quot;Tile&quot;: &quot;Items/sw_lathe.bmp&quot;
+    },
+    &quot;kind&quot;: &quot;scenery&quot;,
+    &quot;blueprint&quot;: &quot;Lathe&quot;,
+    &quot;reference_file&quot;: &quot;village-originals/lathe-reference.png&quot;,
+    &quot;native_mask_sha256&quot;: &quot;061bc8b72dd18c812161feec7bef5827c91da40ad6f6fffb327139c37b8fbbf5&quot;,
+    &quot;reference_sha256&quot;: &quot;eecf4dbca7dcc464afc431a867cb623461434e0e038c0370c1645ae993625e78&quot;,
+    &quot;info_id&quot;: 9786,
+    &quot;atlas_id&quot;: 185,
+    &quot;rect&quot;: [
+      216,
+      104,
+      16,
+      24
+    ],
+    &quot;private_mask&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\lathe-mask.png&quot;,
+      &quot;sha256&quot;: &quot;061bc8b72dd18c812161feec7bef5827c91da40ad6f6fffb327139c37b8fbbf5&quot;
+    },
+    &quot;private_reference&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\lathe-reference.png&quot;,
+      &quot;sha256&quot;: &quot;eecf4dbca7dcc464afc431a867cb623461434e0e038c0370c1645ae993625e78&quot;
+    }
+  },
+  &quot;source_shape&quot;: &quot;Left tall headstock with low wheel/opening, right slim tailstock, two opposed detail-colored spindle tips, long horizontal bed with left underside carriage, one narrow left pedestal with lateral short marks and broad low foot.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;y on metal headstock, wheel, bed, supports and foot&quot;,
+    &quot;detail&quot;: &quot;Y only opposed spindle tips at source row5&quot;,
+    &quot;rule&quot;: &quot;Neutral metal plus independent tip ownership; no donor teal/brown or fixed gold color baked into production.&quot;
+  },
+  &quot;native_state&quot;: &quot;One fixed Items/sw_lathe.bmp. No TileAnimationFrames or alternate body tile in exact Lathe/MountedFurniture/Furniture chain. ChargeSink consumes native charge; Rotation is status label, not evidence of render frames. Inherited power status/rare Animated fallback remains native.&quot;,
+  &quot;native_code_study&quot;: {
+    &quot;ChargeSink&quot;: {
+      &quot;path&quot;: &quot;E:\\Temp\\rimqud-native-lathe-20261021\\XRL.World.Parts.ChargeSink.decompiled.cs&quot;,
+      &quot;sha256&quot;: &quot;4c4a4e932d62ae517ce3170d22450e5d0d3eb5594f52481c3c6e43b987c368d6&quot;
+    },
+    &quot;findings&quot;: [
+      &quot;ChargeSink derives IPoweredPart, WorksOnSelf=true, TurnTick calls ConsumeChargeIfOperational. No Tile/Render/ColorString/DetailColor override in inspected ChargeSink class.&quot;,
+      &quot;Hydraulic/electrical transmission and inherited powered/status behavior remain native; no replacement of power or rotation logic.&quot;
+    ],
+    &quot;scope&quot;: &quot;Static metadata study only; native rotation/status acceptance pending.&quot;
+  },
+  &quot;native_behavior&quot;: &quot;HydraulicPowerTransmission and ElectricalPowerTransmission consumers ChargeRate1000; ChargeSink ChargeUse10 NameForStatusRotation; Metal, AV10, HP300, non-solid300weight, non-takeable mounted furniture; native cover/status/examiner complexity1 remain intact.&quot;,
+  &quot;reference&quot;: {
+    &quot;texture&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_FabricationLathe\\VFEPD_FabricationLathe_north.png&quot;,
+      &quot;sha256&quot;: &quot;26dd05553f0a19627fbe849232c87d33707f1b5fcb48f9d390fdb8606b5af4d8&quot;
+    },
+    &quot;frame&quot;: [
+      256,
+      256
+    ],
+    &quot;alpha_bounds&quot;: [
+      3,
+      87,
+      253,
+      169
+    ],
+    &quot;definition&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_WorkshopProps.xml&quot;,
+      &quot;sha256&quot;: &quot;e8c7f97902d00525907c3278be96481429ad141f02876bb4ae4d596aaa476a52&quot;
+    },
+    &quot;child&quot;: &quot;&lt;ThingDef ParentName=\&quot;VFEPD_NonColourableFurnitureBase\&quot;&gt;\n\t\t&lt;defName&gt;VFEPD_FabricationLathe&lt;/defName&gt;\n\t\t&lt;label&gt;fabrication small lathe&lt;/label&gt;\n\t\t&lt;description&gt;A fabrication laser. Intended to be placed over an empty workbench. Just for decorative purposes.&lt;/description&gt;\n\t\t&lt;graphicData&gt;\n\t\t\t&lt;texPath&gt;Things/Building/WorkshopProps/VFEPD_FabricationLathe/VFEPD_FabricationLathe&lt;/texPath&gt;\n\t\t\t&lt;graphicClass&gt;Graphic_Multi&lt;/graphicClass&gt;\n\t\t\t&lt;drawSize&gt;2&lt;/drawSize&gt;\n\t\t&lt;/graphicData&gt;\n\t\t&lt;altitudeLayer&gt;BuildingOnTop&lt;/altitudeLayer&gt;\n\t\t&lt;passability&gt;Standable&lt;/passability&gt;\n\t\t&lt;pathCost&gt;0&lt;/pathCost&gt;\n\t\t&lt;building&gt;\n\t\t\t&lt;isEdifice&gt;false&lt;/isEdifice&gt;\n\t\t\t&lt;isInert&gt;true&lt;/isInert&gt;\n\t\t&lt;/building&gt;\n\t\t&lt;castEdgeShadows&gt;false&lt;/castEdgeShadows&gt;\n\t\t&lt;fillPercent&gt;0&lt;/fillPercent&gt;\n\t\t&lt;statBases&gt;\n\t\t\t&lt;MaxHitPoints&gt;5&lt;/MaxHitPoints&gt;\n\t\t\t&lt;WorkToBuild&gt;0&lt;/WorkToBuild&gt;\n\t\t\t&lt;Mass&gt;0.1&lt;/Mass&gt;\n\t\t\t&lt;Flammability&gt;0.1&lt;/Flammability&gt;\n\t\t&lt;/statBases&gt;\n\t\t&lt;size&gt;(2,1)&lt;/size&gt;\n\t\t&lt;uiIconScale&gt;1&lt;/uiIconScale&gt;\n\t\t&lt;clearBuildingArea&gt;false&lt;/clearBuildingArea&gt;\n\t\t&lt;leaveResourcesWhenKilled&gt;false&lt;/leaveResourcesWhenKilled&gt;\n\t&lt;/ThingDef&gt;\n\t&quot;,
+    &quot;parent_definition&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Bases.xml&quot;,
+      &quot;sha256&quot;: &quot;35acdf75e815308ea0aa8016e4eddd237c4cf74399e31de2f953b36ac30855d8&quot;
+    },
+    &quot;parent&quot;: &quot;&lt;ThingDef Name=\&quot;VFEPD_NonColourableFurnitureBase\&quot; ParentName=\&quot;BuildingBase\&quot; Abstract=\&quot;True\&quot;&gt;\n\t\t&lt;thingClass&gt;VFEProps.Building_SubstractsSilver&lt;/thingClass&gt;\n\t\t&lt;leaveResourcesWhenKilled&gt;false&lt;/leaveResourcesWhenKilled&gt;\n\t&lt;/ThingDef&gt;\n\t&quot;,
+    &quot;graphic_class&quot;: &quot;Graphic_Multi&quot;,
+    &quot;drawSize&quot;: &quot;2&quot;,
+    &quot;footprint&quot;: &quot;(2,1)&quot;,
+    &quot;about&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml&quot;,
+      &quot;sha256&quot;: &quot;fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7&quot;
+    },
+    &quot;load_folders&quot;: {
+      &quot;path&quot;: &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\LoadFolders.xml&quot;,
+      &quot;sha256&quot;: &quot;7d7c598e4f61e7382a63c0ec62e531011635169f95a3d968610338b98a5d14e6&quot;
+    },
+    &quot;role&quot;: &quot;Actual VFE Props and Decor fabrication small lathe north texture: compact metal end housings, opposed tip readability, simple shading only. Decorative source described as fabrication laser; Qud description/shape governs identity. Do not copy its workbench mounting, second full housing, brown material, drawSize2/footprint or decorative mechanics.&quot;,
+    &quot;equivalence&quot;: &quot;Partial spindle/housing style reference, not a replacement machine or physical dimension source.&quot;
+  },
+  &quot;construction&quot;: {
+    &quot;camera&quot;: &quot;One fixed cardinal source map face with horizontal bed and opposed horizontal spindle axis; no converging bed or whole-object yaw.&quot;,
+    &quot;source_supported&quot;: &quot;Left headstock, slim right upright, opposed Y tips at row5, long rail at row10, left underside mass and single pedestal/foot. Source wheel opening retained.&quot;,
+    &quot;authored&quot;: &quot;Rounded headstock/wheel, chamfered bed, short load-bearing connectors under headstock/tailstock and continuous pedestal supporting rail replace isolated glyph fragments. Connections and exact hidden thickness/depth are authored; no second pedestal, held workpiece, dust pile, tools, motor props or motion frames.&quot;,
+    &quot;dimensions&quot;: {
+      &quot;headstock&quot;: [
+        1.1,
+        3.2,
+        4.1,
+        8.6
+      ],
+      &quot;tailstock&quot;: [
+        14,
+        4.2,
+        14.9,
+        8.6
+      ],
+      &quot;axis_y&quot;: 5.5,
+      &quot;bed&quot;: [
+        1.1,
+        10.1,
+        14.9,
+        11.2
+      ],
+      &quot;pedestal&quot;: [
+        3.1,
+        12.6,
+        4.2,
+        20.9
+      ],
+      &quot;foot&quot;: [
+        2,
+        20.5,
+        9.1,
+        21.3
+      ]
+    },
+    &quot;openings&quot;: &quot;Wheel center, space between opposed tips and open under-bed field retain genuine transparent alpha.&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;native_canvas&quot;: [
+      16,
+      24
+    ],
+    &quot;manual_canvas&quot;: [
+      512,
+      768
+    ],
+    &quot;recipient_canvas&quot;: [
+      256,
+      256
+    ],
+    &quot;authored_source_anchor&quot;: [
+      8,
+      16
+    ],
+    &quot;rule&quot;: &quot;One full source cell, fixed geometry and independent tip role; no generated bounds fitting or component recentering.&quot;
+  },
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native charge/rotation status, hydraulic/electrical behavior, non-solid physics, examiner/cover/visibility and save/load; no production activation.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/source-reference-construction.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/source-reference-construction.png" alt="source-reference-construction"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/source-reference-construction.png">source-reference-construction.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>78efe45e74a7649fe9ac2e0b658c7a906b303d82907614f462c689910c766ce3</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_object_description_original_tile_palette_state&quot;,
+  &quot;action&quot;: &quot;Resolve source lathe, ancestry, exact original shape/y/Y palette and native power/rotation status metadata.&quot;,
+  &quot;inputs&quot;: [],
+  &quot;review&quot;: &quot;Exact Lathe has hydraulic/electrical consumers1000, ChargeSink10 and Rotation status. Static ChargeSink class study shows charge consumption, no Tile/Render override. No child animation/alternate physical tile declared; inherited status/rare Animated fallback preserved.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>select render reference or document no equivalent</h3><p>Inspect actual VFE Props and Decor lathe north texture and matching1.6definition/parent/LoadFolders.</p><p><strong>Review:</strong> Graphic_Multi,drawSize2,footprint2x1; partial compact metal/spindle style reference only. Donor decorative laser wording recorded, not used to rename Qud lathe or copy mechanics/mounting/footprint.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/source-reference-construction.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/source-reference-construction.png" alt="source-reference-construction"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/source-reference-construction.png">source-reference-construction.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>78efe45e74a7649fe9ac2e0b658c7a906b303d82907614f462c689910c766ce3</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;select_render_reference_or_document_no_equivalent&quot;,
+  &quot;action&quot;: &quot;Inspect actual VFE Props and Decor lathe north texture and matching1.6definition/parent/LoadFolders.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Graphic_Multi,drawSize2,footprint2x1; partial compact metal/spindle style reference only. Donor decorative laser wording recorded, not used to rename Qud lathe or copy mechanics/mounting/footprint.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>construct faithful shape</h3><p>Construct editable left headstock/wheel, opposed tips, slim tailstock, long bed/carriage and single pedestal with low foot.</p><p><strong>Review:</strong> Full source/reference/manual inspected before refinement. Short bracket connections and continuous pedestal are authored structural interpretation. True wheel aperture uses editable SVG mask. Corrected report donor footprint label before refinement; no body geometry correction needed.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/construct-lathe.py">construct-lathe.py</a><details class="hash"><summary>Exact evidence hash</summary><code>e96b6224f7d69ef4c755e7443183c6bed9c2b431d94a62d76dd7122a8d8b8341</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/constructed.svg"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/constructed.svg" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/constructed.svg">constructed.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>06a6fadafaef6dbb082b025a9600f8a3136de6a9f7e7fb967ee37f838c125ed1</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/constructed.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/constructed.png" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/constructed.png">constructed.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/ownership.svg"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/ownership.svg" alt="ownership"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/ownership.svg">ownership.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>7f068d52f29334688d007db5694b8145982133aca7000eebc90f054ed80259b2</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/ownership.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/ownership.png" alt="ownership"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/ownership.png">ownership.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>457d008047997d0c0a4f3fac013f75b4cb4b805d4245da15119442932399b37b</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/manual-structural-review.json">manual-structural-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;review&quot;: &quot;Inspected full source/reference/manual. Left stepped headstock/wheel aperture, opposed tips, slender right tailstock, long bed/left carriage and single pedestal/foot remain source-bound. Added short brackets/continuous support are explicit authored connections. Corrected plate donor footprint label from1x1 to actual2x1 after child definition read-back; packet already records actual(2,1). No structural patch needed.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>7d175d65e78fa3d9bb512f39b411de6007445caf28cc6a5e861aed287e240139</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;construct_faithful_shape&quot;,
+  &quot;action&quot;: &quot;Construct editable left headstock/wheel, opposed tips, slim tailstock, long bed/carriage and single pedestal with low foot.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Full source/reference/manual inspected before refinement. Short bracket connections and continuous pedestal are authored structural interpretation. True wheel aperture uses editable SVG mask. Corrected report donor footprint label before refinement; no body geometry correction needed.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>create required state neighbor variants</h3><p>Retain one fixed source map face and original native charge/status ownership.</p><p><strong>Review:</strong> Rotation status is not render-animation evidence. Machinery entry fixed-view requirement satisfied; no source child frame loop, off-state or directional binding invented. Native status/rare Animated fallback retained.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/constructed.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/constructed.png" alt="constructed"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/constructed.png">constructed.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;create_required_state_neighbor_variants&quot;,
+  &quot;action&quot;: &quot;Retain one fixed source map face and original native charge/status ownership.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Rotation status is not render-animation evidence. Machinery entry fixed-view requirement satisfied; no source child frame loop, off-state or directional binding invented. Native status/rare Animated fallback retained.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>refine materials and form</h3><p>Perform one actual built-in contextual metal refinement and inspect structure before extraction.</p><p><strong>Review:</strong> Inspected full actual first refinement before extraction. Same left headstock/wheel, opposed tip axis, slim right tailstock, bed, single pedestal/three lugs and low foot retained. Metal shading usable. Generated halo, gold glow, enlarged dark seam widths and dark aperture background rejected. Fixed editable alpha/ink/role will retain true wheel opening and under-bed space. No second isolation, new workpiece, rotation frames or native activation.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/refined-raw.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/refined-raw.png" alt="refined-raw"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/refined-raw.png">refined-raw.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>bc6d2fee02ff13c1666f7dd8d4b1207e5778c9506d60b47f90d4158cd5f02d28</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/first-structural-review.json">first-structural-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:28:31.444207+00:00&quot;,
+  &quot;status&quot;: &quot;PASS FOR MATERIAL ONLY&quot;,
+  &quot;generated_file&quot;: &quot;C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-7025daf5-13ba-4a97-8bb3-f38cc4107975.png&quot;,
+  &quot;review&quot;: &quot;Inspected full actual first refinement before extraction. Same left headstock/wheel, opposed tip axis, slim right tailstock, bed, single pedestal/three lugs and low foot retained. Metal shading usable. Generated halo, gold glow, enlarged dark seam widths and dark aperture background rejected. Fixed editable alpha/ink/role will retain true wheel opening and under-bed space. No second isolation, new workpiece, rotation frames or native activation.&quot;,
+  &quot;native_validation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>74992a1fdcf8d26af1a3b0310c38ffa9aa59f06e07701b10f625d49239dbdeb5</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;refine_materials_and_form&quot;,
+  &quot;action&quot;: &quot;Perform one actual built-in contextual metal refinement and inspect structure before extraction.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/constructed.png&quot;,
+      &quot;sha256&quot;: &quot;91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/refine-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;4315ef4aa817fc72c6b270f40d1fd3e054b4ca60af644817a8bab3fa24cc554c&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected full actual first refinement before extraction. Same left headstock/wheel, opposed tip axis, slim right tailstock, bed, single pedestal/three lugs and low foot retained. Metal shading usable. Generated halo, gold glow, enlarged dark seam widths and dark aperture background rejected. Fixed editable alpha/ink/role will retain true wheel opening and under-bed space. No second isolation, new workpiece, rotation frames or native activation.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;prompt_file&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/refine-prompt.txt&quot;,
+    &quot;sha256&quot;: &quot;4315ef4aa817fc72c6b270f40d1fd3e054b4ca60af644817a8bab3fa24cc554c&quot;
+  },
+  &quot;generation_file&quot;: &quot;C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-7025daf5-13ba-4a97-8bb3-f38cc4107975.png&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_image_paths&quot;: [
+      &quot;C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-lathe\\v1\\constructed.png&quot;,
+      &quot;C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-lathe\\v1\\source-reference-construction.png&quot;,
+      &quot;D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_FabricationLathe\\VFEPD_FabricationLathe_north.png&quot;
+    ]
+  }
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>extract register color coverage</h3><p>Select metal and tip luminance in exact editable alpha/ink/role; preserve genuine wheel/under-bed openings.</p><p><strong>Review:</strong> One full-frame RGB material sampling into existing frame; no generated-bounds fitting. Existing material helper wood/top names mean metal/tips. Same-role continuation excludes glow/background/displaced seams. No second isolation or native motion implementation.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/register-lathe.py">register-lathe.py</a><details class="hash"><summary>Exact evidence hash</summary><code>3894119646f00e3c66068fd987849a2314d09cfc14326ed792465b80d94f1edc</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCN-LATHE&quot;,
+  &quot;kind&quot;: &quot;source_dualcolor_static_appliance&quot;,
+  &quot;blueprint&quot;: &quot;Lathe&quot;,
+  &quot;native_tile&quot;: &quot;Items/sw_lathe.bmp&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;native_canvas&quot;: [
+      16,
+      24
+    ],
+    &quot;manual_canvas&quot;: [
+      512,
+      768
+    ],
+    &quot;recipient_canvas&quot;: [
+      256,
+      256
+    ],
+    &quot;authored_source_anchor&quot;: [
+      8,
+      16
+    ],
+    &quot;rule&quot;: &quot;One full source cell, fixed geometry and independent tip role; no generated bounds fitting or component recentering.&quot;
+  },
+  &quot;camera&quot;: &quot;One fixed cardinal source map face with horizontal bed and opposed horizontal spindle axis; no converging bed or whole-object yaw.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;y on metal headstock, wheel, bed, supports and foot&quot;,
+    &quot;detail&quot;: &quot;Y only opposed spindle tips at source row5&quot;,
+    &quot;rule&quot;: &quot;Neutral metal plus independent tip ownership; no donor teal/brown or fixed gold color baked into production.&quot;
+  },
+  &quot;native_state_owner&quot;: &quot;One fixed Items/sw_lathe.bmp. No TileAnimationFrames or alternate body tile in exact Lathe/MountedFurniture/Furniture chain. ChargeSink consumes native charge; Rotation is status label, not evidence of render frames. Inherited power status/rare Animated fallback remains native.&quot;,
+  &quot;native_behavior&quot;: &quot;HydraulicPowerTransmission and ElectricalPowerTransmission consumers ChargeRate1000; ChargeSink ChargeUse10 NameForStatusRotation; Metal, AV10, HP300, non-solid300weight, non-takeable mounted furniture; native cover/status/examiner complexity1 remain intact.&quot;,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native charge/rotation status, hydraulic/electrical behavior, non-solid physics, examiner/cover/visibility and save/load; no production activation.&quot;,
+  &quot;native_activation&quot;: false,
+  &quot;view_policy&quot;: &quot;One fixed source/cardinal map face. Rotation is native power status; no declared body animation or replacement tile. No extra orientation binding.&quot;,
+  &quot;formula&quot;: &quot;coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background&quot;,
+  &quot;primary&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/primary-neutral.png&quot;,
+    &quot;sha256&quot;: &quot;5ecf593b0f075d4b8228860c19123742c11622dc593a6bda7d49ba3b63993e4c&quot;
+  },
+  &quot;detail&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-neutral.png&quot;,
+    &quot;sha256&quot;: &quot;102cf3b41d50e25755ed8661db4b550615227ea27d63e8c46261eb296f3c8c27&quot;
+  },
+  &quot;coverage&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/coverage.png&quot;,
+    &quot;sha256&quot;: &quot;0a2faa18daa99997714dbe0c8c55734842d253c4a83889811bd2edb5faec6f4a&quot;
+  },
+  &quot;detail_weight&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-weight.png&quot;,
+    &quot;sha256&quot;: &quot;4e9b79211fd245937736a32a7fa81009b0249de8162e9069bc927dd0d992e818&quot;
+  },
+  &quot;detail_coverage&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-coverage.png&quot;,
+    &quot;sha256&quot;: &quot;abf84b90a814924049fb3a386841e591d94ae720c21f3cde9fa1449018e5887c&quot;
+  },
+  &quot;authored_dualcolor_mask&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/authored-dualcolor-mask.png&quot;,
+    &quot;sha256&quot;: &quot;4a7eeac40fc08eb4b4d44f95c501c0804f77bc747f1517b6ad656c80fc45254e&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;helper&quot;: {
+    &quot;path&quot;: &quot;art/conversion/scn-book-table/v2/select-material.py&quot;,
+    &quot;sha256&quot;: &quot;f5d9341401ad0846b3588e99ca29622f0c1277437029597ef2067e643ccbeff2&quot;
+  },
+  &quot;selection&quot;: {
+    &quot;wood&quot;: {
+      &quot;selected&quot;: 36318,
+      &quot;continued&quot;: 26893,
+      &quot;unsampled_constructed_pixels&quot;: 0
+    },
+    &quot;top&quot;: {
+      &quot;selected&quot;: 688,
+      &quot;continued&quot;: 827,
+      &quot;unsampled_constructed_pixels&quot;: 0
+    }
+  },
+  &quot;helper_roles&quot;: {
+    &quot;wood&quot;: &quot;gray metal headstock/wheel/bed/support/pedestal; no wood material&quot;,
+    &quot;top&quot;: &quot;opposed spindle tip luminance within source detail shapes&quot;
+  },
+  &quot;ownership_coverage_corrected_to_exact_pattern_pixels&quot;: 0,
+  &quot;material_rule&quot;: &quot;One full generated portrait frame resampled to the existing512x768authoring frame for material RGB only. Exact constructed geometry, openings, ink, pivot and spindle tip ownership retained; no bounding-box fitting. Generated halo, wheel/background fill and tip glow excluded. Same-material harmonic continuation fills rejected dark/displaced material pixels only.&quot;,
+  &quot;new_imagegen_calls&quot;: 1,
+  &quot;second_isolation_call&quot;: false,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>28822f84c004cdc8dfea6c255871d16ecf04e54d4d1ebaa611fadff6ae4b7512</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/neutral-master.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/neutral-master.png" alt="neutral-master"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/neutral-master.png">neutral-master.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6f67e9ec35c6cc76abb32e64756dcec3120ba216e064a21f0935ca42e26e7e06</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/primary-neutral.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/primary-neutral.png" alt="primary-neutral"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/primary-neutral.png">primary-neutral.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>5ecf593b0f075d4b8228860c19123742c11622dc593a6bda7d49ba3b63993e4c</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/detail-neutral.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/detail-neutral.png" alt="detail-neutral"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/detail-neutral.png">detail-neutral.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>102cf3b41d50e25755ed8661db4b550615227ea27d63e8c46261eb296f3c8c27</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/detail-weight.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/detail-weight.png" alt="detail-weight"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/detail-weight.png">detail-weight.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>4e9b79211fd245937736a32a7fa81009b0249de8162e9069bc927dd0d992e818</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;extract_register_color_coverage&quot;,
+  &quot;action&quot;: &quot;Select metal and tip luminance in exact editable alpha/ink/role; preserve genuine wheel/under-bed openings.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/refined-raw.png&quot;,
+      &quot;sha256&quot;: &quot;bc6d2fee02ff13c1666f7dd8d4b1207e5778c9506d60b47f90d4158cd5f02d28&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/first-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;74992a1fdcf8d26af1a3b0310c38ffa9aa59f06e07701b10f625d49239dbdeb5&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/ownership.png&quot;,
+      &quot;sha256&quot;: &quot;457d008047997d0c0a4f3fac013f75b4cb4b805d4245da15119442932399b37b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;One full-frame RGB material sampling into existing frame; no generated-bounds fitting. Existing material helper wood/top names mean metal/tips. Same-role continuation excludes glow/background/displaced seams. No second isolation or native motion implementation.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>07 / 2026-10-20T22:29:22.682708+00:00 / PASS</small><h3>visual review identity and connections at game scale</h3><p>Inspect source/manual/refined/registered identity and neutral/primary/opposed-tip/source y/Y appearances at intended sizes.</p><p><strong>Review:</strong> Reviewed original Lathe ancestry/description and sparse y/Y native tile: left stepped headstock/handwheel aperture, slim right tailstock, opposed detail tips, horizontal bed/left underside carriage, single pedestal with three side marks and wide low foot. Smooth wheel/chamfers and short headstock/tailstock-to-bed bridges/continuous pedestal are explicit authored support interpretations, not recovered native dimensions. No second pedestal, held stock, tool set or dust pile. Actual VFE Props and Decor fabrication small lathe north texture and matching1.6child/parent/LoadFolders used for compact metal/spindle shading only; Graphic_Multi,drawSize2,size2x1. Child description calls donor a decorative fabrication laser; Qud identity remains authoritative, donor bench mounting/footprint/colors/gameplay not imported. Corrected manual plate donor footprint label from1x1 to2x1 before refinement; packet already held actual source value. One actual contextual refinement inspected before extraction: metal shading usable, exterior halo/gold glow/displaced dark seams and wheel fill rejected. Fixed editable geometry, original ink/openings and two independent tip regions retained; selected material continued within each role, no second isolation. Full neutral, source y/Y and16x24/24x36/32x48views inspected. Native hydraulic/electrical consumers1000 and ChargeSink10 with Rotation status retained as metadata. Inspected ChargeSink consumes charge with no body rendering override; no declared child animation/state tile, no invented motion loop. Native charge/status/physics/visibility/save-load acceptance pending all-generation gate.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scn-lathe/v1/record-review.py">record-review.py</a><details class="hash"><summary>Exact evidence hash</summary><code>c9d14d0259128c9cf1e2770a5b72f7f7e8625e7930a691742e295e712f7eb417</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/scn-lathe/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>69c4feacd5f4163d21a3ffa756be80ef0403497ace37cf2565d092e314b8d609</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/registered/authoring-review.json">authoring-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;Complete generation authoring only&quot;,
+  &quot;reason&quot;: &quot;Reviewed original Lathe ancestry/description and sparse y/Y native tile: left stepped headstock/handwheel aperture, slim right tailstock, opposed detail tips, horizontal bed/left underside carriage, single pedestal with three side marks and wide low foot. Smooth wheel/chamfers and short headstock/tailstock-to-bed bridges/continuous pedestal are explicit authored support interpretations, not recovered native dimensions. No second pedestal, held stock, tool set or dust pile. Actual VFE Props and Decor fabrication small lathe north texture and matching1.6child/parent/LoadFolders used for compact metal/spindle shading only; Graphic_Multi,drawSize2,size2x1. Child description calls donor a decorative fabrication laser; Qud identity remains authoritative, donor bench mounting/footprint/colors/gameplay not imported. Corrected manual plate donor footprint label from1x1 to2x1 before refinement; packet already held actual source value. One actual contextual refinement inspected before extraction: metal shading usable, exterior halo/gold glow/displaced dark seams and wheel fill rejected. Fixed editable geometry, original ink/openings and two independent tip regions retained; selected material continued within each role, no second isolation. Full neutral, source y/Y and16x24/24x36/32x48views inspected. Native hydraulic/electrical consumers1000 and ChargeSink10 with Rotation status retained as metadata. Inspected ChargeSink consumes charge with no body rendering override; no declared child animation/state tile, no invented motion loop. Native charge/status/physics/visibility/save-load acceptance pending all-generation gate.&quot;,
+  &quot;checks&quot;: {
+    &quot;exact_fixed_geometry_alpha&quot;: true,
+    &quot;wheel_and_underbed_openings_transparent&quot;: true,
+    &quot;neutral_equal_RGB&quot;: true,
+    &quot;two_independent_spindle_detail_regions&quot;: true,
+    &quot;single_coverage_native_palette_matches&quot;: true,
+    &quot;transparent_frame_edges&quot;: true,
+    &quot;shared_frame_pivot_scale&quot;: true,
+    &quot;native_activation&quot;: false
+  },
+  &quot;new_imagegen_calls&quot;: 1,
+  &quot;second_isolation_call&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation: native charge/rotation status, hydraulic/electrical behavior, non-solid physics, examiner/cover/visibility and save/load; no production activation.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>b7b9df6f5d39a4c1e95e5456b79d42fdfd6816014809deff1b80c3fc84a70ae5</code></details></figure><figure><a href="../../art/conversion/scn-lathe/v1/artifact-manifest.json">artifact-manifest.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;artifacts&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/construct-lathe.py&quot;,
+      &quot;sha256&quot;: &quot;e96b6224f7d69ef4c755e7443183c6bed9c2b431d94a62d76dd7122a8d8b8341&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/constructed.png&quot;,
+      &quot;sha256&quot;: &quot;91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/constructed.svg&quot;,
+      &quot;sha256&quot;: &quot;06a6fadafaef6dbb082b025a9600f8a3136de6a9f7e7fb967ee37f838c125ed1&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/first-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;74992a1fdcf8d26af1a3b0310c38ffa9aa59f06e07701b10f625d49239dbdeb5&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/manual-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;7d175d65e78fa3d9bb512f39b411de6007445caf28cc6a5e861aed287e240139&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/ownership.png&quot;,
+      &quot;sha256&quot;: &quot;457d008047997d0c0a4f3fac013f75b4cb4b805d4245da15119442932399b37b&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/ownership.svg&quot;,
+      &quot;sha256&quot;: &quot;7f068d52f29334688d007db5694b8145982133aca7000eebc90f054ed80259b2&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/record-review.py&quot;,
+      &quot;sha256&quot;: &quot;c9d14d0259128c9cf1e2770a5b72f7f7e8625e7930a691742e295e712f7eb417&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/refine-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;4315ef4aa817fc72c6b270f40d1fd3e054b4ca60af644817a8bab3fa24cc554c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/refined-raw.png&quot;,
+      &quot;sha256&quot;: &quot;bc6d2fee02ff13c1666f7dd8d4b1207e5778c9506d60b47f90d4158cd5f02d28&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/register-lathe.py&quot;,
+      &quot;sha256&quot;: &quot;3894119646f00e3c66068fd987849a2314d09cfc14326ed792465b80d94f1edc&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/authored-dualcolor-mask.png&quot;,
+      &quot;sha256&quot;: &quot;4a7eeac40fc08eb4b4d44f95c501c0804f77bc747f1517b6ad656c80fc45254e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;b7b9df6f5d39a4c1e95e5456b79d42fdfd6816014809deff1b80c3fc84a70ae5&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/coverage.png&quot;,
+      &quot;sha256&quot;: &quot;0a2faa18daa99997714dbe0c8c55734842d253c4a83889811bd2edb5faec6f4a&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-coverage.png&quot;,
+      &quot;sha256&quot;: &quot;abf84b90a814924049fb3a386841e591d94ae720c21f3cde9fa1449018e5887c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;102cf3b41d50e25755ed8661db4b550615227ea27d63e8c46261eb296f3c8c27&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/detail-weight.png&quot;,
+      &quot;sha256&quot;: &quot;4e9b79211fd245937736a32a7fa81009b0249de8162e9069bc927dd0d992e818&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/metal-primary-preview.png&quot;,
+      &quot;sha256&quot;: &quot;9c0471489f758af0ca2eb7c8611c13a1592b1f7e277e0a3f749e6dbdcad4a7f7&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/native-primary-y-detail-upper-y.png&quot;,
+      &quot;sha256&quot;: &quot;22eb49ba5636adf4479f945fa3757cf4421d5bcf8e0cdbea8852e7a5f5eebff8&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/neutral-master.png&quot;,
+      &quot;sha256&quot;: &quot;6f67e9ec35c6cc76abb32e64756dcec3120ba216e064a21f0935ca42e26e7e06&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/ownership-master.png&quot;,
+      &quot;sha256&quot;: &quot;0b02248f62bb4fe6ea8653672b4c34b6e8a7b9c0d9a9826e1800ba6fde9a66a3&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/primary-neutral.png&quot;,
+      &quot;sha256&quot;: &quot;5ecf593b0f075d4b8228860c19123742c11622dc593a6bda7d49ba3b63993e4c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/registration-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;69c4feacd5f4163d21a3ffa756be80ef0403497ace37cf2565d092e314b8d609&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/registration-decisions.json&quot;,
+      &quot;sha256&quot;: &quot;28822f84c004cdc8dfea6c255871d16ecf04e54d4d1ebaa611fadff6ae4b7512&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/source-reference-construction.png&quot;,
+      &quot;sha256&quot;: &quot;78efe45e74a7649fe9ac2e0b658c7a906b303d82907614f462c689910c766ce3&quot;
+    }
+  ]
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>da5ab5a39845fe1042d528655866bad521469e03e63272e7172c00ae5ed8f1dd</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_identity_and_connections_at_game_scale&quot;,
+  &quot;action&quot;: &quot;Inspect source/manual/refined/registered identity and neutral/primary/opposed-tip/source y/Y appearances at intended sizes.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Reviewed original Lathe ancestry/description and sparse y/Y native tile: left stepped headstock/handwheel aperture, slim right tailstock, opposed detail tips, horizontal bed/left underside carriage, single pedestal with three side marks and wide low foot. Smooth wheel/chamfers and short headstock/tailstock-to-bed bridges/continuous pedestal are explicit authored support interpretations, not recovered native dimensions. No second pedestal, held stock, tool set or dust pile. Actual VFE Props and Decor fabrication small lathe north texture and matching1.6child/parent/LoadFolders used for compact metal/spindle shading only; Graphic_Multi,drawSize2,size2x1. Child description calls donor a decorative fabrication laser; Qud identity remains authoritative, donor bench mounting/footprint/colors/gameplay not imported. Corrected manual plate donor footprint label from1x1 to2x1 before refinement; packet already held actual source value. One actual contextual refinement inspected before extraction: metal shading usable, exterior halo/gold glow/displaced dark seams and wheel fill rejected. Fixed editable geometry, original ink/openings and two independent tip regions retained; selected material continued within each role, no second isolation. Full neutral, source y/Y and16x24/24x36/32x48views inspected. Native hydraulic/electrical consumers1000 and ChargeSink10 with Rotation status retained as metadata. Inspected ChargeSink consumes charge with no body rendering override; no declared child animation/state tile, no invented motion loop. Native charge/status/physics/visibility/save-load acceptance pending all-generation gate.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>08 / 2026-10-20T22:29:22.682708+00:00 / DEFERRED UNTIL ALL GENERATED</small><h3>native state review</h3><p>Keep native power/rotation-status/physics/examiner/visibility/save-load acceptance pending the whole generation set.</p><p><strong>Review:</strong> No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.</p>
+<div class="gallery"></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T22:29:22.682708+00:00&quot;,
+  &quot;step&quot;: &quot;native_state_review&quot;,
+  &quot;action&quot;: &quot;Keep native power/rotation-status/physics/examiner/visibility/save-load acceptance pending the whole generation set.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scn-lathe/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.&quot;,
+  &quot;result&quot;: &quot;DEFERRED UNTIL ALL GENERATED&quot;
+}</pre></details></section>
 </div></div></main></html>

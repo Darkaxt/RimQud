@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-LATHE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-LOUDSPEAKER**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -157,8 +157,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-BROKEN-INDUSTRIAL-FAN | Broken Industrial Fan | UNFINISHED | - |  |
 | SCN-ELECTRIC-GENERATOR | Electric Generator | UNFINISHED | - |  |
 | SCN-JOPPAOVEN | JoppaOven | UNFINISHED | - |  |
-| SCN-LATHE | Lathe | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-LATHE | Lathe | UNFINISHED | - |  |
+| SCN-LOUDSPEAKER | Loudspeaker | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-MILLSTONE | Millstone | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -6309,7 +6309,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/lathe-body.png](../art/village/scenery/lathe-body.png), [art/village/scenery/lathe-detail.png](../art/village/scenery/lathe-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-20T22:29:22.682708+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve source lathe, ancestry, exact original shape/y/Y palette and native power/rotation status metadata.
+  Review: Exact Lathe has hydraulic/electrical consumers1000, ChargeSink10 and Rotation status. Static ChargeSink class study shows charge consumption, no Tile/Render override. No child animation/alternate physical tile declared; inherited status/rare Animated fallback preserved.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/source-packet.json", "sha256": "addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933"}, {"path": "art/conversion/scn-lathe/v1/source-reference-construction.png", "sha256": "78efe45e74a7649fe9ac2e0b658c7a906b303d82907614f462c689910c766ce3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VFE Props and Decor lathe north texture and matching1.6definition/parent/LoadFolders.
+  Review: Graphic_Multi,drawSize2,footprint2x1; partial compact metal/spindle style reference only. Donor decorative laser wording recorded, not used to rename Qud lathe or copy mechanics/mounting/footprint.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/source-packet.json", "sha256": "addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/source-reference-construction.png", "sha256": "78efe45e74a7649fe9ac2e0b658c7a906b303d82907614f462c689910c766ce3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / construct_faithful_shape / PASS: Construct editable left headstock/wheel, opposed tips, slim tailstock, long bed/carriage and single pedestal with low foot.
+  Review: Full source/reference/manual inspected before refinement. Short bracket connections and continuous pedestal are authored structural interpretation. True wheel aperture uses editable SVG mask. Corrected report donor footprint label before refinement; no body geometry correction needed.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/source-packet.json", "sha256": "addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/construct-lathe.py", "sha256": "e96b6224f7d69ef4c755e7443183c6bed9c2b431d94a62d76dd7122a8d8b8341"}, {"path": "art/conversion/scn-lathe/v1/constructed.svg", "sha256": "06a6fadafaef6dbb082b025a9600f8a3136de6a9f7e7fb967ee37f838c125ed1"}, {"path": "art/conversion/scn-lathe/v1/constructed.png", "sha256": "91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276"}, {"path": "art/conversion/scn-lathe/v1/ownership.svg", "sha256": "7f068d52f29334688d007db5694b8145982133aca7000eebc90f054ed80259b2"}, {"path": "art/conversion/scn-lathe/v1/ownership.png", "sha256": "457d008047997d0c0a4f3fac013f75b4cb4b805d4245da15119442932399b37b"}, {"path": "art/conversion/scn-lathe/v1/manual-structural-review.json", "sha256": "7d175d65e78fa3d9bb512f39b411de6007445caf28cc6a5e861aed287e240139"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed source map face and original native charge/status ownership.
+  Review: Rotation status is not render-animation evidence. Machinery entry fixed-view requirement satisfied; no source child frame loop, off-state or directional binding invented. Native status/rare Animated fallback retained.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/source-packet.json", "sha256": "addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/constructed.png", "sha256": "91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / refine_materials_and_form / PASS: Perform one actual built-in contextual metal refinement and inspect structure before extraction.
+  Review: Inspected full actual first refinement before extraction. Same left headstock/wheel, opposed tip axis, slim right tailstock, bed, single pedestal/three lugs and low foot retained. Metal shading usable. Generated halo, gold glow, enlarged dark seam widths and dark aperture background rejected. Fixed editable alpha/ink/role will retain true wheel opening and under-bed space. No second isolation, new workpiece, rotation frames or native activation.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/constructed.png", "sha256": "91f6840a62c97e509033514e9c991b304c345ebf50cae712b7ed937158eb7276"}, {"path": "art/conversion/scn-lathe/v1/refine-prompt.txt", "sha256": "4315ef4aa817fc72c6b270f40d1fd3e054b4ca60af644817a8bab3fa24cc554c"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/refined-raw.png", "sha256": "bc6d2fee02ff13c1666f7dd8d4b1207e5778c9506d60b47f90d4158cd5f02d28"}, {"path": "art/conversion/scn-lathe/v1/first-structural-review.json", "sha256": "74992a1fdcf8d26af1a3b0310c38ffa9aa59f06e07701b10f625d49239dbdeb5"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-lathe/v1/refine-prompt.txt", "sha256": "4315ef4aa817fc72c6b270f40d1fd3e054b4ca60af644817a8bab3fa24cc554c"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-7025daf5-13ba-4a97-8bb3-f38cc4107975.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-lathe\\v1\\constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-lathe\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_FabricationLathe\\VFEPD_FabricationLathe_north.png"]}}
+
+- 2026-10-20T22:29:22.682708+00:00 / extract_register_color_coverage / PASS: Select metal and tip luminance in exact editable alpha/ink/role; preserve genuine wheel/under-bed openings.
+  Review: One full-frame RGB material sampling into existing frame; no generated-bounds fitting. Existing material helper wood/top names mean metal/tips. Same-role continuation excludes glow/background/displaced seams. No second isolation or native motion implementation.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/refined-raw.png", "sha256": "bc6d2fee02ff13c1666f7dd8d4b1207e5778c9506d60b47f90d4158cd5f02d28"}, {"path": "art/conversion/scn-lathe/v1/first-structural-review.json", "sha256": "74992a1fdcf8d26af1a3b0310c38ffa9aa59f06e07701b10f625d49239dbdeb5"}, {"path": "art/conversion/scn-lathe/v1/ownership.png", "sha256": "457d008047997d0c0a4f3fac013f75b4cb4b805d4245da15119442932399b37b"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/register-lathe.py", "sha256": "3894119646f00e3c66068fd987849a2314d09cfc14326ed792465b80d94f1edc"}, {"path": "art/conversion/scn-lathe/v1/registered/model.json", "sha256": "a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8"}, {"path": "art/conversion/scn-lathe/v1/registered/registration-decisions.json", "sha256": "28822f84c004cdc8dfea6c255871d16ecf04e54d4d1ebaa611fadff6ae4b7512"}, {"path": "art/conversion/scn-lathe/v1/registered/neutral-master.png", "sha256": "6f67e9ec35c6cc76abb32e64756dcec3120ba216e064a21f0935ca42e26e7e06"}, {"path": "art/conversion/scn-lathe/v1/registered/primary-neutral.png", "sha256": "5ecf593b0f075d4b8228860c19123742c11622dc593a6bda7d49ba3b63993e4c"}, {"path": "art/conversion/scn-lathe/v1/registered/detail-neutral.png", "sha256": "102cf3b41d50e25755ed8661db4b550615227ea27d63e8c46261eb296f3c8c27"}, {"path": "art/conversion/scn-lathe/v1/registered/detail-weight.png", "sha256": "4e9b79211fd245937736a32a7fa81009b0249de8162e9069bc927dd0d992e818"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source/manual/refined/registered identity and neutral/primary/opposed-tip/source y/Y appearances at intended sizes.
+  Review: Reviewed original Lathe ancestry/description and sparse y/Y native tile: left stepped headstock/handwheel aperture, slim right tailstock, opposed detail tips, horizontal bed/left underside carriage, single pedestal with three side marks and wide low foot. Smooth wheel/chamfers and short headstock/tailstock-to-bed bridges/continuous pedestal are explicit authored support interpretations, not recovered native dimensions. No second pedestal, held stock, tool set or dust pile. Actual VFE Props and Decor fabrication small lathe north texture and matching1.6child/parent/LoadFolders used for compact metal/spindle shading only; Graphic_Multi,drawSize2,size2x1. Child description calls donor a decorative fabrication laser; Qud identity remains authoritative, donor bench mounting/footprint/colors/gameplay not imported. Corrected manual plate donor footprint label from1x1 to2x1 before refinement; packet already held actual source value. One actual contextual refinement inspected before extraction: metal shading usable, exterior halo/gold glow/displaced dark seams and wheel fill rejected. Fixed editable geometry, original ink/openings and two independent tip regions retained; selected material continued within each role, no second isolation. Full neutral, source y/Y and16x24/24x36/32x48views inspected. Native hydraulic/electrical consumers1000 and ChargeSink10 with Rotation status retained as metadata. Inspected ChargeSink consumes charge with no body rendering override; no declared child animation/state tile, no invented motion loop. Native charge/status/physics/visibility/save-load acceptance pending all-generation gate.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/registered/model.json", "sha256": "a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8"}]
+  Outputs: [{"path": "art/conversion/scn-lathe/v1/record-review.py", "sha256": "c9d14d0259128c9cf1e2770a5b72f7f7e8625e7930a691742e295e712f7eb417"}, {"path": "art/conversion/scn-lathe/v1/registered/registration-comparison.png", "sha256": "69c4feacd5f4163d21a3ffa756be80ef0403497ace37cf2565d092e314b8d609"}, {"path": "art/conversion/scn-lathe/v1/registered/authoring-review.json", "sha256": "b7b9df6f5d39a4c1e95e5456b79d42fdfd6816014809deff1b80c3fc84a70ae5"}, {"path": "art/conversion/scn-lathe/v1/artifact-manifest.json", "sha256": "da5ab5a39845fe1042d528655866bad521469e03e63272e7172c00ae5ed8f1dd"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:29:22.682708+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native power/rotation-status/physics/examiner/visibility/save-load acceptance pending the whole generation set.
+  Review: No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/registered/model.json", "sha256": "a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-LOUDSPEAKER: Loudspeaker
 
@@ -6319,7 +6367,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/loudspeaker-body.png](../art/village/scenery/loudspeaker-body.png), [art/village/scenery/loudspeaker-detail.png](../art/village/scenery/loudspeaker-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-MILLSTONE: Millstone
 

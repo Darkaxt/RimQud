@@ -1,0 +1,65 @@
+{
+  "entry": "SCN-LATHE",
+  "kind": "source_dualcolor_static_appliance",
+  "blueprint": "Lathe",
+  "native_tile": "Items/sw_lathe.bmp",
+  "source": {
+    "path": "art/conversion/scn-lathe/v1/source-packet.json",
+    "sha256": "addc66219ba71f69ffe4f211dd3d96c55b0d3ca32c06068f91e7acda266cf933"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source cell, fixed geometry and independent tip role; no generated bounds fitting or component recentering."
+  },
+  "camera": "One fixed cardinal source map face with horizontal bed and opposed horizontal spindle axis; no converging bed or whole-object yaw.",
+  "palette": {
+    "primary": "y on metal headstock, wheel, bed, supports and foot",
+    "detail": "Y only opposed spindle tips at source row5",
+    "rule": "Neutral metal plus independent tip ownership; no donor teal/brown or fixed gold color baked into production."
+  },
+  "native_state_owner": "One fixed Items/sw_lathe.bmp. No TileAnimationFrames or alternate body tile in exact Lathe/MountedFurniture/Furniture chain. ChargeSink consumes native charge; Rotation is status label, not evidence of render frames. Inherited power status/rare Animated fallback remains native.",
+  "native_behavior": "HydraulicPowerTransmission and ElectricalPowerTransmission consumers ChargeRate1000; ChargeSink ChargeUse10 NameForStatusRotation; Metal, AV10, HP300, non-solid300weight, non-takeable mounted furniture; native cover/status/examiner complexity1 remain intact.",
+  "native_acceptance": "Pending full-set generation: native charge/rotation status, hydraulic/electrical behavior, non-solid physics, examiner/cover/visibility and save/load; no production activation.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map face. Rotation is native power status; no declared body animation or replacement tile. No extra orientation binding.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-lathe/v1/registered/primary-neutral.png",
+    "sha256": "5ecf593b0f075d4b8228860c19123742c11622dc593a6bda7d49ba3b63993e4c"
+  },
+  "detail": {
+    "path": "art/conversion/scn-lathe/v1/registered/detail-neutral.png",
+    "sha256": "102cf3b41d50e25755ed8661db4b550615227ea27d63e8c46261eb296f3c8c27"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-lathe/v1/registered/coverage.png",
+    "sha256": "0a2faa18daa99997714dbe0c8c55734842d253c4a83889811bd2edb5faec6f4a"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-lathe/v1/registered/detail-weight.png",
+    "sha256": "4e9b79211fd245937736a32a7fa81009b0249de8162e9069bc927dd0d992e818"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-lathe/v1/registered/detail-coverage.png",
+    "sha256": "abf84b90a814924049fb3a386841e591d94ae720c21f3cde9fa1449018e5887c"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-lathe/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "4a7eeac40fc08eb4b4d44f95c501c0804f77bc747f1517b6ad656c80fc45254e"
+  }
+}
