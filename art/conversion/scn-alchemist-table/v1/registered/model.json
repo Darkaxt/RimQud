@@ -1,0 +1,56 @@
+{
+  "entry": "SCN-ALCHEMIST-TABLE",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Alchemist Table",
+  "native_tiles": [
+    "Items/sw_alchemist_table.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-alchemist-table/v1/source-packet.json",
+    "sha256": "341c8b49ebd363852c0a9048919731876ac3611c155fb31b8da4720eb00e4ca6"
+  },
+  "primary": {
+    "path": "art/conversion/scn-alchemist-table/v1/registered/primary-neutral.png",
+    "sha256": "630924c834fb4b25b239e8daa0335819ea3a670aea9bb5cd1b38242ab4153af2"
+  },
+  "detail": {
+    "path": "art/conversion/scn-alchemist-table/v1/registered/detail-neutral.png",
+    "sha256": "b982b3a4de0ab8531f3d861ad6779817a6d433621cc7232741f2d653f72da655"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-alchemist-table/v1/registered/coverage.png",
+    "sha256": "118cd5ef1f971323d90925d669facbe524b0ac31668c76e06fe76c92b5ffd691"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-alchemist-table/v1/registered/detail-coverage.png",
+    "sha256": "3f846bb9d7c2bd92cf8ef8f047139d07326c0f95eda1e7e62bf7197fcd8092e5"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full-cell transform for tabletop, feet, rack, phials, glass loops and masks; no independently fitted tall glass bounds."
+  },
+  "palette": {
+    "primary": "actual native furniture foreground w",
+    "detail": "actual native glass detail C",
+    "neutral_preview": "Both layers are equal RGB; cyan extraction aid is removed. Glass reflections inherit glass ownership, not wood tint."
+  },
+  "state_owner": "One fixed tile; child deletes inherited empty/full tile/detail tags. Do not replace this fixture with generic empty/full Table art on inventory interaction.",
+  "fixture_boundary": "Phial rack and alembic are described source bitmap fixtures. Actual carried inventory is separate native state, not additional baked objects.",
+  "native_behavior": "Keep actual container/inventory, cover, non-occlusion and physics. No donor crafting/drug/research behavior. Rare animated/custom states retain native fallback.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

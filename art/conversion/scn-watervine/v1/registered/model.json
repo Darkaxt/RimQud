@@ -1,0 +1,110 @@
+{
+  "entry": "SCN-WATERVINE",
+  "kind": "harvest_tinted_plant_variants",
+  "blueprint": "Watervine",
+  "source": {
+    "path": "art/conversion/scn-watervine/v1/source-packet.json",
+    "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"
+  },
+  "states": [
+    {
+      "variant": 1,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-1-primary-neutral.png",
+        "sha256": "92005213242f810deb3aeb55863f81a84bb356dc43833f8139c8f7e45115dd83"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-1-detail-neutral.png",
+        "sha256": "06c197ba73c85474ab2cfe397e797defd85eea9276a90e0948e7f94df8355f46"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-1-coverage.png",
+        "sha256": "72c170dba3f039f72a1115106d63f1f592221b87f72525f6c6d08d1982e32d97"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-1-detail-coverage.png",
+        "sha256": "e1fbb6f0a1b953ccf4bca1dc3f0658884259bde2a6e035cd46e8ae95eb032807"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-2-primary-neutral.png",
+        "sha256": "d8889a7e21c640c5dd6bb7383aab90c5fb72accb17c9bea83806ad5419567c9c"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-2-detail-neutral.png",
+        "sha256": "17d1ceb4b7f2d9a28c70e2a112c7ead23a29be0d51be8a9ca602abdf11c22b15"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-2-coverage.png",
+        "sha256": "70bafdf31581002de288b095ca5c9c10630cc9345da38a6388121a589c977ab3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-2-detail-coverage.png",
+        "sha256": "b8e4115e142f6dd6004bb2a6dbadd6f14fe81fb8d73c2ce21819ed05780cacf2"
+      }
+    },
+    {
+      "variant": 3,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-3-primary-neutral.png",
+        "sha256": "9adb3518ef56f6e2ef97c22fede0d6c5fbe47909ad11a5579bb00ab49eee3515"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-3-detail-neutral.png",
+        "sha256": "02176b292c0f2feaa0e93a35195430b06cd210538d4f2234483975c8287e287d"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-3-coverage.png",
+        "sha256": "fa366f5685997eeb99cb451eb41b314a040425f20144366f24c12af8cdc92893"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/v1/registered/variant-3-detail-coverage.png",
+        "sha256": "5e66070abe460fb8d2a438de398318f862fe2a3b67509b6b39945306c36fe6fc"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "All three source-inspired layouts use the same full-cell coordinate transform. Within each variant, ripe/unripe shares exactly the same layers and anchor."
+  },
+  "palette": {
+    "primary": "actual native TileColor w",
+    "detail": "actual native DetailColor: g when ripe, K when unripe",
+    "neutral_preview": "Equal RGB in both saved layers; green extraction aid removed from neutral albedo."
+  },
+  "harvest_states": {
+    "ripe": {
+      "primary": "w",
+      "detail": "g"
+    },
+    "unripe": {
+      "primary": "w",
+      "detail": "K"
+    }
+  },
+  "state_owner": "Native RandomTile chooses one of three layouts; native Harvestable owns ripeness, yield1 and regeneration. No new vine-merging, growth or state machine.",
+  "native_effects": "Keep Fireflies.BeforeRenderEvent and its native night particle separately; no firefly/glow is baked into plant material.",
+  "appearance": "Crooked furrowed salt-bearing vines with small thick moisture-swollen wafer knots instead of leaf sprays. Donor HaygrassA only informs narrow-stroke rendering.",
+  "native_behavior": "Preserve inherited non-solid plant physics, non-occluding Render, LiquidNative water, harvest interaction and original particles. Native binding/state/visibility acceptance remains pending.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

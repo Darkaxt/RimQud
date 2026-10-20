@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-alchemist-table/v1/refined-proposal.png",
+      "sha256": "566f58d73e3b67efa273924e4ef7735e95c6bc5e956a5fc712dec6d3b4e4b6c0"
+    },
+    {
+      "path": "art/conversion/scn-alchemist-table/v1/register-fixture.py",
+      "sha256": "a971b600e4fa01c45a7e5fb307d0ea203d4527b32f284757a9c55ef77db89cfb"
+    }
+  ],
+  "alpha": "Actual alpha>=224structure plus two-pixel edge allowance; keep actual alpha>=16only there. Clear invisible RGB, normalize>=240and preserve glass/leg gaps. Detached exterior glow is not object coverage.",
+  "glass_ownership": "Cyan-dominant pixels G-R>=6,B-R>=6,min(G,B)>=20 supply the actual color seed. The exclusively-glass upper region above y510is detail-owned. Near-white reflections within six pixels of cyan inherit glass ownership; hue alone would misassign those highlights to wood.",
+  "cut_edge_review": "Wood rack crossbars and supports stay primary-owned. Phials remain behind the rack; separate glass plate allows inspection of vial/wood crossings. Reflection ownership is explicit rather than accepting every near-white pixel as wood.",
+  "registration": "Entire1024x1536image maps once to256square. All components share the native-source cell frame; no tall-apparatus recentering or invented rotations.",
+  "source_limits": "Three phial marks and precise tubing joins are authored interpretation constrained by the icon and description. They are decorative fixture forms, not native inventory objects or functional chemistry simulation.",
+  "omitted": "One source fixed-map-view fixture; no creature turnarounds, separate clothing or inherited deleted empty/full variants apply. Native integration acceptance stays deferred."
+}

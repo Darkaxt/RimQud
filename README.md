@@ -73,9 +73,15 @@ and a separate neutral fruit mask. Native harvest states keep identical geometry
 while fruit tint changes from ripe red to unripe dark teal. The Ripe sibling uses
 the same performed conversion with exact source comparison: only its starting
 ripe chance differs. The actual native primary green remains authoritative.
-There are now 32 generation-ready entries. Watervine is active: all three native
-layouts, source/harvest/firefly metadata, actual Core reference and editable
-vine/wafer constructions are recorded; refinement and registration remain pending.
+Watervine is generation-ready across all three native layouts and both harvest
+tints, with separate neutral vine/wafer layers. Its actual refinement calls,
+source-positioned wafer marks, alpha cleanup and native firefly-particle boundary
+are recorded. All five vegetation entries are now generation-ready.
+The Alchemist Table is also generation-ready: scorched wood, left phial rack and
+tall alembic follow its original shape. Neutral glass ownership includes pale
+reflections without turning wooden rack edges cyan. Native inventory/empty-full
+tag behavior stays explicit in its source packet and report.
+There are now 34 generation-ready entries; Argyve Multicabinet is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
