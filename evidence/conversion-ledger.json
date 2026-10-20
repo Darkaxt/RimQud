@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": null,
+  "active_entry": "FIT-DROMAD-CHILD-TEMPLATE-TUNIC",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -10886,7 +10886,463 @@
           "sha256": "ee5208c68969916b53a1bba6e1a53574c531ee1846a6082405fe136f77c8f2e5"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T02:08:30.483483+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "phase": "Dromad identity, description and observed body tree",
+          "action": "Resolved Tam through Dromad ancestry; carried native race/individual descriptions, complete attached part IDs/parents/laterality, natural/actual equipment, source version/hashes and metadata gaps.",
+          "inputs": [
+            {
+              "path": "evidence/tam-conversion-input.json",
+              "sha256": "2dfd8529d919dc160e4dcf05e546d4e8fd5c84340bfe6cac4a3ceb9c8b5ff4fc"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "review": "Read the source packet and viewed original glyph. Humanoid baseline supports two hands and paired feet, while description supplies long neck, dulla and upper-back hump. Runtime mutation list, age and race-wide dimorphism remain unknown; no four-legged camel substitution.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:08:30.483865+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "phase": "Actual RimWorld dromedary references",
+          "action": "Selected installed Core Dromedary front/side/back assets for muzzle, hump, perspective, outline and shading conventions.",
+          "inputs": [
+            {
+              "path": "evidence/joppa-creature-catalogue.json",
+              "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/source-comparison.png",
+              "sha256": "e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5"
+            }
+          ],
+          "review": "Viewed actual donor front/side and the contextual three-direction plate; all source PNG hashes matched the catalogue. Donor quadruped legs/tail are not copied into the Qud humanoid race.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:08:30.484056+00:00",
+          "step": "construct_front",
+          "phase": "Reconstructed editable dromad front in the shared frame",
+          "action": "Reused the earlier editable body/head geometry as source only, composing it with one transform onto the common centered canvas. No historical art acceptance carried forward.",
+          "inputs": [
+            {
+              "path": "art/dromad/nude/body-south.svg",
+              "sha256": "c017414ec56f0671adcaaca2cb6f4dad42879911b1d42daa44b080a52f5c9873"
+            },
+            {
+              "path": "art/dromad/nude/head-south.svg",
+              "sha256": "ca87c5895fe7eb827c92cae1e0716ee4016bf22868ff9940f09815069d589030"
+            },
+            {
+              "path": "tools/construct_dromad_front.py",
+              "sha256": "c49052e1b1a572f5b11f502c6ffbbbedc0eec883bd6f2d87daf3b7e4edaa56d6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.svg",
+              "sha256": "a2641fded3aed5e5122481e1c58c817fd781b65b8262967e43978fde3b7c12c5"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.png",
+              "sha256": "3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64"
+            }
+          ],
+          "review": "Viewed whole front: camel-like head, long neck/dulla, hump, two arms/hands and paired rounded feet. No robe, staff, jewelry or markings. Neck and foot fine shape remain authored; next is restrained front refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:09:41.098057+00:00",
+          "step": "construct_front",
+          "phase": "Refined dromad front selected",
+          "action": "Refined the constructed front with the native original/description and installed dromedary reference plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.png",
+              "sha256": "3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-comparison.png",
+              "sha256": "e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refine-front-prompt.txt",
+              "sha256": "f0a63ca46c098027385bf907eb13a3d0dc97c83d1c67bbb9d9512573f23e8b8d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            }
+          ],
+          "review": "Viewed the complete front. Preserves compact bipedal camelfolk, long neck/dulla, ears/muzzle, integrated body/hump and two hands/feet. No gear or personal adornment. Source foot guide bars remain and will be removed during composed refinement; exact grayscale and contact registration follow.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-8b350434-bcdf-4617-b23e-360a80c19a9d.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.517602+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "phase": "Front-guided dromad side/back proposals",
+          "action": "Generated secondary views from the selected dromad front and actual donor camel profile, with explicit humanoid race anatomy.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views-prompt.txt",
+              "sha256": "95ec5c17fc7514d1573883a776e51d29fd6325326ff3e11a1536fd2ddc73b31c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            }
+          ],
+          "review": "Viewed projecting camel muzzle, long neck, profile feet/limb overlap and continuous side upper-back hump. Rear proposal has an extra rounded lobe beside the neck; correct it to one integrated hump before selecting. Foot guide bars removed.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2,
+            "private_reference": "dromedary-reference-east.png; exact source/hash in source-packet.json"
+          },
+          "generation_file": "exec-e74fe33f-d6ba-405a-b174-b8ac24e6531b.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.519897+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Rejected panel-boundary segmentation",
+          "action": "Prepared a first frame/palette patch using rectangular view bands, then inspected connected silhouettes.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/prepare-views-rejected-panels.py",
+              "sha256": "431fe0d8d39c9fd042db1895bb41848099b0b4e76a09fd7cd122cf1c73f015f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views-rejected-panels.png",
+              "sha256": "ae9c5b93e39e1faa995f6364c2cacd650693eeb25c15ca997468ae8dc62a7baa"
+            }
+          ],
+          "review": "Source figures overlap in horizontal range: rear silhouette begins at x1047 while the profile extends to x1043. A column band steals or includes pixels from another figure at different heights. Replace it with connected-silhouette ownership.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.521619+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Complete-figure ownership, neutral source and common anchors",
+          "action": "Separated each whole figure by its connected alpha silhouette, cleaned invisible/low-alpha RGB and neutralized grayscale. Used one .84 scale and translated complete figures to centered foot contacts, preserving long profile muzzle.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/prepare-views.py",
+              "sha256": "f4d636cc84a0169e70e8c27a6e5a34fbcf07d674da9941ae83185b6195dd8441"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views.png",
+              "sha256": "bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/patch-decisions.json",
+              "sha256": "5fbb9a61ccf17bbccc2001fe528a2feeb6892de6af723203f604cd111bfa10d4"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-south.png",
+              "sha256": "61fb34d15b2ce233a309f68556333242cdd0bc485878fb6ef68f33bf8f9dc7bf"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-east.png",
+              "sha256": "41ca3059d468ec31386f2b81ee2da0a5396748935a853e180dce6827ed2d9fce"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-north.png",
+              "sha256": "ee3d83cf59e76c719d6c728f1832c7db6466368fa70175a8deb79f3d350dcacb"
+            }
+          ],
+          "review": "Ownership masks retain whole figures rather than splitting columns. Rear extra upper-back lobe is explicitly pending the targeted composed refinement; no final anatomy acceptance yet.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.980364+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Selected composed refinement: one rear hump",
+          "action": "Refined the neutral, ownership-separated sheet with a focused rear upper-back correction while preserving the selected front/profile.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views.png",
+              "sha256": "bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refine-patched-prompt.txt",
+              "sha256": "4df95d58d75335a1f86596b96b1101e576fe83d4bcdfd2b2e6d6aa27ddb66206"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            }
+          ],
+          "review": "Viewed all views: rear extra lobe removed, one continuous central upper-back mound. Profile retains the projecting muzzle, long neck/dulla and properly turned feet; no tail, extra appendages or clothing. Foot guide bars removed.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 1
+          },
+          "generation_file": "exec-6fdeece5-7c94-4575-86f3-a6e2326b04e7.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.981758+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "phase": "Secondary directions selected after correction",
+          "action": "Selected the corrected front/profile/rear proposal, keeping native humanoid counts and camel-specific description anatomy.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            }
+          ],
+          "review": "A genuine whole-body profile and rear view are now present. Unseen surfaces remain authored interpretation; no donor quadruped anatomy or tail was substituted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.983269+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Rejected head ownership at projecting dulla edge",
+          "action": "Inspected first body/head/detail ownership masks before accepting registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/register-layers-rejected-dulla-edge.py",
+              "sha256": "03823231a34f8e954076f5f630bea8e0fe390d09d693587f48c41014c019f4ff"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/ownership-rejected-dulla-edge.png",
+              "sha256": "8776f32228f7845852d05a32681dd36b5b2a7bf964d49fe88d44ca82978bef18"
+            }
+          ],
+          "review": "The straight profile neck boundary assigned the outer edge of the projecting dulla to the body. Reject that ownership split; union the full dulla outline into head/neck before deriving body coverage.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.984176+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Centered dromad layers and separate neutral detail region",
+          "action": "Re-established masks on the actual refined image. Used connected whole-figure selection, one .84 image scale, shared contact (256, 950), head ownership including the complete dulla and two-source-pixel body underlap. Kept distinct source/refined selection masks to preserve logged provenance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/register-layers.py",
+              "sha256": "4a95ce852c5a9fada0685b7a5860e16f987670ee2ac81fa607032aa365b07b5b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-decisions.json",
+              "sha256": "28d1b21eb580dd31dee1807e9cee25567c6490b11ccf0cf02543cba7359aec81"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+              "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/ownership-comparison.png",
+              "sha256": "2ce666657ec8b30247e04c108e9a868fa885e4bd1cc747b14b68d5c2ce4e1e50"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-south.png",
+              "sha256": "0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-south.png",
+              "sha256": "51905c4151f6adbf88714f9f9d5a40f385a71d9fd252133054653d8b6fc996a4"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-south.png",
+              "sha256": "1c6b410c0764bd0892c19d46ff24d2546392343fd0d7993755e682b373a80d5f"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-south.png",
+              "sha256": "9c54b5c720d4ecff3bad080b005eb67e4a035f35fa2dc9f2c0ac40d152703b7c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-south.png",
+              "sha256": "91af9578ee8b25be3e6e69343adba91982478b01413ac1e1bf123f1068c43000"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-south.png",
+              "sha256": "54a21bb060c7c68d7f837a2d8d3b784ba44800901fc87c5f260ed05025700667"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-south.png",
+              "sha256": "1d72d26f5412010d62b4ea096b7ba941c9e794581965df4b2ec297fcfd5b63d8"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-east.png",
+              "sha256": "5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-east.png",
+              "sha256": "aef704589190def62ef6376c528f7fb90c0fe74d837bbb4581d3aa299ecafa0e"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-east.png",
+              "sha256": "26a83da099933f63b451bd098ca3c561cc5587c5d1c25e6f78da9e05ac3ee7c2"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-east.png",
+              "sha256": "7eb8fb731cfea20006a8f3c6089404915d4f1d9b6ecd482fe68bbe6ed9425390"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-east.png",
+              "sha256": "05d9217d15c6f6025b894e60ae596608ac2a2bd11820bb8d77cdced776836c55"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-east.png",
+              "sha256": "9d6a3534cb9c405ef1961285b419a463e5608bae9edae706a1d0587297f28bbe"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-east.png",
+              "sha256": "030bac3c2342992cd2fe26640d0c93aa6c1f3f362be5e2c883f85bc81cd9c117"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-north.png",
+              "sha256": "c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-north.png",
+              "sha256": "d467695c9dad915efef6c428d19142257d9f914f20f797e336e6b01972f346d3"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-north.png",
+              "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-north.png",
+              "sha256": "04bade47e250144bd80f93e7f419c73a44ee30c9c333a7bcd5f7b6760fbbd9fb"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-north.png",
+              "sha256": "6fbd15b478fb0ca9ba95c405def53a669a39d10b1267193c174f6d1df3cac5c6"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-north.png",
+              "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-north.png",
+              "sha256": "3f924de1b2e46850c06cf73047f80e90e252616323ffbb073e83dae7240d48f6"
+            }
+          ],
+          "review": "Viewed neutral recomposition and colored ownership: body owns hump/painted limbs, head owns the complete neck/dulla. No back dulla layer rendered. Dulla detail region is authored, not asserted as a proven original-color location. Every production layer is grayscale; all facings use identical centered anchors. Physical height 1.4 is an explicit authoring choice, not native metadata.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.986653+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "phase": "Dromad base generation-ready",
+          "action": "Reviewed four facings and intended-size authoring previews of the same registered neutral model.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+              "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/game-scale-review.png",
+              "sha256": "5be89c1849baf9a53d392db9befcd392be64727d7368a17785639c973724908b"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-south.png",
+              "sha256": "1d1eaded3fcc976dff381ef05c70317565eaabe0b9a0dd558a3c1b5c64aaf694"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-east.png",
+              "sha256": "4e25b4f69b77b132f0b55aaeaf0cf7669661ec4f02c19c1ccf3dc3f889e56caf"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-north.png",
+              "sha256": "12a7f74eba51adb597e0ab1add7f42dbc347fc78f3896287d73e191f08c0f955"
+            }
+          ],
+          "review": "Readable long-necked bipedal camelfolk, continuous hump, elongated side muzzle and paired bare feet. No clothing/staff/jewelry baked into the base. Shared contact and separate neutral detail retained. Native acceptance and actual clothing/staff fittings remain pending the all-conversions gate.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-dromad/v1/model.json",
+          "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+        },
+        "plate": {
+          "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+          "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+        }
+      },
+      "native_acceptance": "Pending final all-conversions validation gate"
     },
     {
       "id": "BODY-DROMAD-CHILD",
@@ -10954,8 +11410,399 @@
           "sha256": "8d45071677e4564bbaa9d5f3ab39d1ae0104840ebbc0bd07fd5bb35d8077a1ab"
         }
       ],
-      "process_log": [],
-      "clothing_requirement": "Separate removable garment generation/fitting remains required in FIT-DROMAD-CHILD-TEMPLATE-TUNIC; no clothing acceptance from this body entry."
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T02:20:24.309587+00:00",
+          "step": "resolve_age_evidence_and_render_reference",
+          "phase": "Child camelfolk metadata and reference limits",
+          "action": "Carried the complete dromad race description/body tree, original glyph, donor dromedary references and explicit unknowns into the child template. Added actual Biotech child torso as a life-stage presentation reference only.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "evidence/joppa-creature-catalogue.json",
+              "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-packet.json",
+              "sha256": "95ce9f3839ead77ff4392aeeb6f29782dcb54784a2b61bf04cf6a8392f5aa0a2"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-comparison.png",
+              "sha256": "7866f94d2a3bcee566e4aff4336977e3b9663f6b7fa13f636261f5bb1a4cc013"
+            }
+          ],
+          "review": "Read packet and viewed reference plate. No canonical juvenile dromad, age selector or sex-specific geometry is established. Child hump/dulla development is unknown; small family features are an authored choice, not native biological proof. Male/female labels share geometry.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:20:24.310046+00:00",
+          "step": "construct_featureless_front",
+          "phase": "Editable featureless child dromad front",
+          "action": "Constructed a compact torso and relatively larger head from the race source geometry, removing foot guide bars and personal face marks. Kept a continuous long neck, muzzle, dulla and hump.",
+          "inputs": [
+            {
+              "path": "tools/construct_dromad_child_front.py",
+              "sha256": "1dda7cd134124f8792af9c5acf4b8870a348b58609b7720a9ab1b534b6b88896"
+            },
+            {
+              "path": "art/dromad/nude/body-south.svg",
+              "sha256": "c017414ec56f0671adcaaca2cb6f4dad42879911b1d42daa44b080a52f5c9873"
+            },
+            {
+              "path": "art/dromad/nude/head-south.svg",
+              "sha256": "ca87c5895fe7eb827c92cae1e0716ee4016bf22868ff9940f09815069d589030"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/constructed-front.svg",
+              "sha256": "c888d28b56421b878fd1f48846a151e2ad97a1720ffbda1737ce4dcfaf076d3b"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/constructed-front.png",
+              "sha256": "6e652bc3a61508d203e2bcd7f80094bc0c8a7ee54d786e2c6725bc09c075141b"
+            }
+          ],
+          "review": "Viewed full front: ordinary humanoid counts with species silhouette retained. Smooth mannequin without eyes, personal marks, clothing or staff. Native age/demographics unchanged. This is a construction suggestion pending refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:21:35.080701+00:00",
+          "step": "construct_featureless_front",
+          "phase": "Refined featureless child camelfolk front selected",
+          "action": "Refined the child front with the selected adult race model as a family-style reference only.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/constructed-front.png",
+              "sha256": "6e652bc3a61508d203e2bcd7f80094bc0c8a7ee54d786e2c6725bc09c075141b"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-south.png",
+              "sha256": "1d1eaded3fcc976dff381ef05c70317565eaabe0b9a0dd558a3c1b5c64aaf694"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/refine-front-prompt.txt",
+              "sha256": "a49106f37c85bff760fd570c2cc79a18945ed8008bf5db234ec4a39e2c76d21d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-front.png",
+              "sha256": "e7b0d5a3a896e64c2ec3cf5d8c449d4e17797d196a4d0f3764126f220ba9d406"
+            }
+          ],
+          "review": "Viewed complete smooth mannequin: compact two-handed/two-footed body, relatively larger structural head/ears/muzzle, long neck/dulla and hump. No eyes, nostrils, personal marks, gear or detailed anatomy. Juvenile proportions remain authored, not a canonical age claim.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-c002ecf0-c3e9-49a7-a000-cca79b27b95e.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:23:29.119693+00:00",
+          "step": "generate_other_views",
+          "phase": "Front-guided child dromad profile/rear proposals",
+          "action": "Generated secondary directions from the selected child front and adult profile as a species-family reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-front.png",
+              "sha256": "e7b0d5a3a896e64c2ec3cf5d8c449d4e17797d196a4d0f3764126f220ba9d406"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-east.png",
+              "sha256": "4e25b4f69b77b132f0b55aaeaf0cf7669661ec4f02c19c1ccf3dc3f889e56caf"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/secondary-views-prompt.txt",
+              "sha256": "4cf01ff26331d7e3680ee2b19adcc6a1ae36e02f85e82fa6f47eb68fa414b8f7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/secondary-views.png",
+              "sha256": "9c58361c34b8f75b42cfdc6471c0538ef5c5c4daef0f556db91ccd1207caa947"
+            }
+          ],
+          "review": "Viewed all directions: whole-body profile, paired feet/occluded far limbs, camel muzzle and long neck; rear has no front dulla or face features. One rear hump is present, but its spherical shading should blend more naturally into the shoulders in composed refinement.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-939e1d50-0c07-415f-b1ef-7b38a6b9fcb4.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:23:29.122151+00:00",
+          "step": "correct_and_refine_composite",
+          "phase": "Complete silhouette selection and neutral centered frames",
+          "action": "Selected complete connected figures, cleared low-alpha/invisible RGB and neutralized grayscale. Applied one common .78 scale, then whole-figure translation to the shared contact without independent facing fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/secondary-views.png",
+              "sha256": "9c58361c34b8f75b42cfdc6471c0538ef5c5c4daef0f556db91ccd1207caa947"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/prepare-views.py",
+              "sha256": "12d2ee6ecace1987f2166fb35f06d76f3c8e082fa7e6db081b07997b4f6d91c1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/patched-views.png",
+              "sha256": "9ff5201b358399fa855db5c7b9cdca330301a1d56711758afa8643e98d62b8fe"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/patch-decisions.json",
+              "sha256": "db2d49cd05d4fc15ad7813b8638d932cb14a0618160cb37c132edd452c4e83b2"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-selection-south.png",
+              "sha256": "b1b15defa915ccc84e7d0d48f20d2c4084b0efdefa8a86b8abd76eff74e480fb"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-selection-east.png",
+              "sha256": "7b8d9780c1a5c98bbb313fa777a599cb9dcdbacae7a04f3d7d811605b7824363"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-selection-north.png",
+              "sha256": "7770214bbfdf3b0eeca30c341c47e4ac1054adf170a7c2373015721c342ea2ce"
+            }
+          ],
+          "review": "Figure ownership retains whole muzzles, ears, hands and feet. Compact proportions and structural features retained. Rear hump shading blend remains the targeted composed-refinement item; no native acceptance claimed.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:27:45.046844+00:00",
+          "step": "correct_and_refine_composite",
+          "phase": "Selected composed child dromad refinement",
+          "action": "Refined the neutral patched views with a focused organic rear-hump shading blend while retaining the compact family design.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/patched-views.png",
+              "sha256": "9ff5201b358399fa855db5c7b9cdca330301a1d56711758afa8643e98d62b8fe"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/refine-patched-prompt.txt",
+              "sha256": "ffe2b4bd42dc866ddc3afa6bf40b5abc717dcdbf839463aeb4d14a46f23eb780"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-patched-views.png",
+              "sha256": "85311116fb01ce60c0fff28573ad7424eb9a4c0a1213b23b40ea0b58d5c80a09"
+            }
+          ],
+          "review": "Viewed all three: smooth blank mannequin, structural camel muzzle/ears, long neck/dulla, coherent whole-body side and one shoulder-integrated rear hump. No face marks, clothing, tail or extra appendages. Juvenile forms remain authored interpretation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 1
+          },
+          "generation_file": "exec-bacbf565-ae73-487d-bf69-774b7e10ff0e.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:27:45.048054+00:00",
+          "step": "register_body_head_and_palette",
+          "phase": "Centered child dromad layers and ownership",
+          "action": "Re-established masks on the actual 1489 x 1056 refinement. Used complete connected silhouettes, one .84 image scale and shared contact (256, 950). Head owns the full long-neck/dulla outline; body owns hump/painted limbs, with two-source-pixel underlap. Detail remains separate neutral coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-patched-views.png",
+              "sha256": "85311116fb01ce60c0fff28573ad7424eb9a4c0a1213b23b40ea0b58d5c80a09"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/register-layers.py",
+              "sha256": "6fd900a2d1f18a9f36c91f40904b66617c593a185cda4d7eddc8166234f38601"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/registration-decisions.json",
+              "sha256": "99153376dff3158f5a5307b83e82a8999f665fcf812b0aef055502d1df135de3"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/registration-comparison.png",
+              "sha256": "f81a14963e11cc6c97a79f0ebe8750e792fb002b9e96414e77875b8dc5db8639"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/ownership-comparison.png",
+              "sha256": "b24a730e915ee0a1cc8b5b07737334dcbddfa70954a9d338c9520258f377ee9e"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-south.png",
+              "sha256": "ff5622736e308c278eec00ad2df64037b32b578b32d017c0113f456c8841f7f2"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-south.png",
+              "sha256": "af99746d35bc93499b5a5da2f009cc1cde791c999cdca0ef94384c7f2499f0dd"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-south.png",
+              "sha256": "5bbfc050ca208a00e6b9dd74592f333b42700b5c965d30fdf7da596b272e9130"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-mask-south.png",
+              "sha256": "7a11f9d064d90d27bcec8f93eee46bc5b975b9b568ae8e71c4b6226b90e74025"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-mask-south.png",
+              "sha256": "5253485f7b69cf00a24d55c48826f049f6094e855c7a3283a1de1202b626a8e4"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-mask-south.png",
+              "sha256": "ceec238da9716bd84f52da3fd30a71a3812c17b7fb02ef6459cfd633baaab66a"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-selection-south.png",
+              "sha256": "2f4fd53d7cb25786357b0d8a1d575ec0318898764a75de29a714b4185d3d858c"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-east.png",
+              "sha256": "9f4387129f2ce8e06438f31f3f4d67652a2021af8b5c6a9e9c61e7f88e70414c"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-east.png",
+              "sha256": "9315c16da2d8e38e6d582082d7b05f3a40d1827d218e92ec0c8c4201cdde2573"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-east.png",
+              "sha256": "d679fbddab85401c1aee40a4a2e32566c77e588b414f26acaf51772419da462f"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-mask-east.png",
+              "sha256": "6a6f072fc268cf1f4e8b53725ce1480864804176be5e8440edff26cee7da0d85"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-mask-east.png",
+              "sha256": "4eeabba27823a1ed7dbd205cbeac67e73051f7d251fd83b8311ba781b4078f74"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-mask-east.png",
+              "sha256": "773606e70c3e3bb47cbdf8257bca656e2bb8a19f4f706e594d68ede7b35ddada"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-selection-east.png",
+              "sha256": "46feb31a7ea96069f8806fdb5fba9f7a4fbd3c5e8a567074a7ed88aaf5516ba9"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-north.png",
+              "sha256": "b95bf2c80a7560e37c82ab47614039024312a2808f201b526a946c0cac52e2af"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-north.png",
+              "sha256": "f73424a7e50dcbbe364a9715fd55a5bb13f3a79594e546ca2945a1065a9334d1"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-north.png",
+              "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/body-mask-north.png",
+              "sha256": "976ce09bed9e151ebf90d1b05a7caa2a5cc3185c0a7e0b6e940d8db5a9ea1bf1"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-mask-north.png",
+              "sha256": "0ff572ebc00e09baef7ba74100ce3845ddf92c10690fb830c1d23cf6b3888a75"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/head-detail-mask-north.png",
+              "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/refined-selection-north.png",
+              "sha256": "a0bc1d8d1b0509ad4ae206a5be4496b1515a4e96a8a612fa98750e8028bdf0cc"
+            }
+          ],
+          "review": "Viewed neutral assembly and colored ownership: complete muzzles/ears/hands/feet and neck contour, no neck gap. All production RGB is neutral; no rear dulla layer rendered. Source and refined selection masks are separate evidence. Clothing is not accepted by this body step.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:27:45.050266+00:00",
+          "step": "visual_review_all_views",
+          "phase": "Child dromad body authoring ready",
+          "action": "Reviewed front, whole-body profile, rear, mirrored west and intended-size authoring previews.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/registration-comparison.png",
+              "sha256": "f81a14963e11cc6c97a79f0ebe8750e792fb002b9e96414e77875b8dc5db8639"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/game-scale-review.png",
+              "sha256": "2df17adc3e7ce87f3ad836b9dc63c2dcfaa366484774916c769593b3b1289f25"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/selected-south.png",
+              "sha256": "089fe4d83f08ac294e553feedbf38e14e8b6ebfcc46faee2d2d1615541a93cd5"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/selected-east.png",
+              "sha256": "3984f807e31296597f88023161d484aacd506772b9893a3630dd5cc2abc704a9"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/selected-north.png",
+              "sha256": "6e71f8f97d966f6bf451b33c12ecc69c269400337f7d8f95ed10e19788ff1cac"
+            }
+          ],
+          "review": "Same family as adult, compact smooth body and blank face, paired simple feet and proper profile overlap. Identical centered contact and fixed component frame. Male/female labels share geometry; no unsupported body difference invented. Generation-ready only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:27:45.050877+00:00",
+          "step": "record_native_selection_policy_without_changing_demographics",
+          "phase": "Juvenile template selection and separate garment policy",
+          "action": "Recorded authored child-scale variant without assigning an age or new equipment to Tam. Preserved canonical juvenile/dulla-development uncertainty and the full baseline source metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-packet.json",
+              "sha256": "95ce9f3839ead77ff4392aeeb6f29782dcb54784a2b61bf04cf6a8392f5aa0a2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "review": "Physical height .98 is an authoring choice, not native evidence. No child age selector or observed child outfit is assumed. FIT-DROMAD-CHILD-TEMPLATE-TUNIC still owns separate garment work; native acceptance waits for all conversions.",
+          "result": "PASS"
+        }
+      ],
+      "clothing_requirement": "Separate removable garment generation/fitting remains required in FIT-DROMAD-CHILD-TEMPLATE-TUNIC; no clothing acceptance from this body entry.",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-dromad-child/v1/model.json",
+          "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+        },
+        "plate": {
+          "path": "art/conversion/body-dromad-child/v1/registration-comparison.png",
+          "sha256": "f81a14963e11cc6c97a79f0ebe8750e792fb002b9e96414e77875b8dc5db8639"
+        }
+      },
+      "native_acceptance": "Pending final all-conversions validation gate"
     },
     {
       "id": "BODY-GLOWFISH",
@@ -13890,8 +14737,8 @@
       ],
       "required_variants": [],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "construct_shape",
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -13905,7 +14752,13 @@
       "known_issues": [
         "Unmapped template garment: no actual Qud item identity or native equipped-slot binding established."
       ],
-      "metadata": {},
+      "metadata": {
+        "resolved_blueprint": "Woven Tunic",
+        "body_family": "dromad-child",
+        "slot": "Body",
+        "laterality": 0,
+        "native_child_binding": "Not established; authored fitting only"
+      },
       "historical_artifacts": [
         {
           "path": "art/village/age-templates/dromad/tunic-east.png",
@@ -13920,7 +14773,109 @@
           "sha256": "8d45071677e4564bbaa9d5f3ab39d1ae0104840ebbc0bd07fd5bb35d8077a1ab"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T02:30:30.102304+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Real Qud tunic identity and attachment evidence",
+          "action": "Selected Woven Tunic and retained exact original glyph/palette/description plus captured Body attachment IDs and laterality from its existing source packet.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v1/source-packet.json",
+              "sha256": "d2e65664d4c5d53d41ba6018733f10526ea33dc7b191e78f2fa537fda36fcf4a"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-comparison.png",
+              "sha256": "d0908c92414609e45044483a64bb935f4471f03eb28bba8ee245a1ec816b2a67"
+            }
+          ],
+          "review": "Read the item/body source packets. No child-dromad outfit or age selector is inferred; this is a removable authored fitting. Base body/head/dulla and contact remain fixed.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:30:30.102871+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Source item, fixed species base and selected material design",
+          "action": "Prepared a contextual comparison of original Qud Woven Tunic, the fixed child dromad and our selected human-tunic flax/rope design.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v1/source-packet.json",
+              "sha256": "d2e65664d4c5d53d41ba6018733f10526ea33dc7b191e78f2fa537fda36fcf4a"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-comparison.png",
+              "sha256": "d0908c92414609e45044483a64bb935f4471f03eb28bba8ee245a1ec816b2a67"
+            }
+          ],
+          "review": "The material design may be shared, while the long-neck/hump/profile geometry requires its own construction and coverage. Actual donor creature/child references remain linked; no human garment fit is accepted for dromads.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:31:46.335611+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Source item and fixed-body packet reviewed",
+          "action": "Reviewed the resolved Woven Tunic packet and contextual source/base/material plate before garment construction.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-comparison.png",
+              "sha256": "d0908c92414609e45044483a64bb935f4471f03eb28bba8ee245a1ec816b2a67"
+            }
+          ],
+          "review": "Real Qud item, exact coarse-flax/hemp-rope description and Body/laterality 0 attachment evidence retained. Child-dromad fitting remains authored and ungenerated; no new outfit/age assignment inferred.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:31:46.335993+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Material reuse and species-specific fit boundary reviewed",
+          "action": "Selected the existing source-bound flax/rope treatment as a material reference, with the actual child-dromad donor/metadata references linked through its body packet.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/source-packet.json",
+              "sha256": "95ce9f3839ead77ff4392aeeb6f29782dcb54784a2b61bf04cf6a8392f5aa0a2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-comparison.png",
+              "sha256": "d0908c92414609e45044483a64bb935f4471f03eb28bba8ee245a1ec816b2a67"
+            }
+          ],
+          "review": "Viewed original glyph, fixed camelfolk body and selected tunic material. Human garment placement will not be reused as a dromad fit. Long neck, hump and painted near arm require their own garment coverage.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": false
     },
     {
       "id": "FIT-HUMAN-CHILD-TEMPLATE-TUNIC",

@@ -18,6 +18,9 @@ adult male/female, older male/female, and a shared featureless child base for bo
 template labels. The child Woven Tunic is also generation-ready as a separate,
 source-bound garment with recorded coverage cuts. Native acceptance and the
 remaining clothing fits are pending.
+Adult and child dromad bases are also generation-ready, with centered directional
+body/head layers and separate neutral dulla coverage. Juvenile proportions and
+detail-region placement are documented authoring choices, not new native facts.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.
