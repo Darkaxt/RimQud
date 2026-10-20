@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-YRAME-CHAIN-MAIL-BODY-0",
+  "active_entry": "FIT-YRAME-LEATHER-BOOTS-FEET-16",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -11047,8 +11047,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -11061,7 +11061,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Known defect: generic garment does not fit Yrame correctly."
+        "Yrame named size/silhouette, mutation anatomy, blue details, complete outfit and native equipped-state acceptance remain unfinished."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -11119,6 +11119,284 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.019238+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Warden Yrame -> ordinary human female base -> actual ordinary Body287/item574 Chain Mail, steel linked-loop description and original y/Y tile. Captured named appearance and mutation topology remain in source packet, not baked into this base garment.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-packet.json",
+              "sha256": "beacb4584a66c0c3dbb250b0c6cd7de0ae4bbe552b7ea89a803eae784fc66ae1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-comparison.png",
+              "sha256": "311c0e3ef4400ee1e055c67b96162ed19b3182ed79534f494c13c073ad4bb272"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.019608+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary female v2 baseline and actual Vanilla Armour Expanded Chainmail_Female SEN. Donor metal/directional convention only; its sleeveless tall-neck cut is not copied. Original source broad sleeve/hem detail drives authored short-sleeved mail shirt.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-packet.json",
+              "sha256": "beacb4584a66c0c3dbb250b0c6cd7de0ae4bbe552b7ea89a803eae784fc66ae1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-comparison.png",
+              "sha256": "311c0e3ef4400ee1e055c67b96162ed19b3182ed79534f494c13c073ad4bb272"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.020538+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Initial constructed mail inspection found broad head ownership exposing shoulders, then a rectangular neck-alpha split over the collar. Profile clipping started too low, allowing adjacent torso into the arm overlay. Retained both unsuccessful constructions.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/construction-initial/prepare-source.py",
+              "sha256": "73869456919b87f0f4f1f062906779c54b3ad58b09fbc0dbc7b7177a06d961bc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/construction-initial/constructed-neutral-context.png",
+              "sha256": "32bfd44cefab18df760eb5cde08344f07ccff86062ddf79988f9a7ad5cfdd832"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/construction-initial/head-alpha-trial.png",
+              "sha256": "6f7e953dbfd7b511a712d3d1b5df90b3924601e6e1249dcdf3e4fa1e6f17293d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/construction-initial/rejection.json",
+              "sha256": "29b96f43a4cdc5f936e712e238145a9357ba7ad1b739a94f1a053c5b9390ce3f"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.021851+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Corrected head/neck ownership before material refinement: source curved neckline controls coverage, with this shirt above the existing head/detail depth and original forearms above shirt. Tightened profile ink bounds; retained fixed body, full mail and curved cuff construction. No other equipment in preview.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/prepare-source.py",
+              "sha256": "b3357725ae40075a1250a93798e1072de3f6f13f40fc7557ff13d54ee605861d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-packet.json",
+              "sha256": "beacb4584a66c0c3dbb250b0c6cd7de0ae4bbe552b7ea89a803eae784fc66ae1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/pattern-south.svg",
+              "sha256": "28de61aa446ad4613132f36851e1efd45fb4e67a5c13aa07ef76fd80828bffc8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/pattern-east.svg",
+              "sha256": "1e7196fbf6641cefad17aa035c50143f677ad5acecccae8cd8a2331d128e1119"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/pattern-north.svg",
+              "sha256": "1cddf442895b429f3931ad14b8d2deaa7de12d9534de5dbf349550db87886818"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/constructed-neutral-context.png",
+              "sha256": "eb2cd1a0bd03ef7f1b931918d9bc56e5fc79447946747fd66f78cc33f96ad0c5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/constructed-red-torso-context.png",
+              "sha256": "021ceecac694c47ac30503251fd04a5cd2b44faf56e74137418b0f063af611bc"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.025073+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One contextual refinement of corrected SEN mail construction. Selected neutral linked-steel surface; raw glow, red mannequin/reflections and generated geometry excluded. No second isolation/refinement call or generated anatomy registered.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/constructed-red-torso-context.png",
+              "sha256": "021ceecac694c47ac30503251fd04a5cd2b44faf56e74137418b0f063af611bc"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-packet.json",
+              "sha256": "beacb4584a66c0c3dbb250b0c6cd7de0ae4bbe552b7ea89a803eae784fc66ae1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/imagegen-prompt.txt",
+              "sha256": "85a383fb9dcb3734c47426526c6433a3550a5b44e1c8a86852c0f2caeecb4f54"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/refined-red-context.png",
+              "sha256": "17a9360d2be5ed6f39c17250dda879d5b22f14ba183a97d33e4126a63845bfec"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: precise-object-edit / game sprite material refinement.\nImage 1 is the exact edit target: three registered cardinal views of one linked-loop mail shirt on a red featureless adult mannequin. SOUTH/front left; EAST/complete right profile center; NORTH/straight back right. Keep the three-column 1536x1024 sheet, scale, pose, garment outline and positions unchanged. The red body is an ownership key; retain its contours, original hands/forearms, neck and legs exactly. Only the existing gray shirt changes.\nImage 2 is the original tiny Caves of Qud Chain Mail tile, displayed in normalized two-tone colors. Image 3 is an actual Vanilla Armour Expanded mail asset: a neutral metal-surface and restrained sprite-style reference, not permission to copy its sleeveless tall-neck shape.\nNative description: \"A shiny mesh of linked loops that were sourced from the steel heart of the trash sea.\"\nRefine the gray shirt into readable interlinked steel loops, with soft restrained metal highlights and slight weight/drape. Keep the selected plain round neckline, short sleeves, curved cuff openings and thigh-length hem exactly. No hood, high collar, breastplate, shoulder plates, padding, belt, emblems, lining, accessories or extra clothing. Preserve the original arm emergence and hand positions. Keep the neckline curved; no rectangular skin cutouts across the chest or exposed shoulders. No new body shape, anatomy, extra feet, horns, pose or perspective.\nKeep the mail entirely neutral equal-RGB grayscale. Do not bake blue, brown or gold into the metal. Native primary y and bright detail Y will be applied separately at sleeve ends and hem after registration. Preserve the red mannequin as red; no red reflections on the mail. Use clear small game-sprite outlines and controlled shading, not photographic glitter or cloth weave. The constructed fine linked-loop mesh should remain recognizable without becoming noisy giant rings.\nDo not isolate the item, rearrange any panel or add text. Output the same composition with a genuinely transparent background, no glow, floor, environment or shadow backdrop. Leave transparent margins. Preserve all three cardinal views.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-yrame-chain-mail/v1/constructed-red-torso-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/chain-mail-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814988282/Textures/Things/Apparel/Chainmail/Chainmail_Female_south.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.029194+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Programmatically mapped the actual neutral mail surface through recorded torso zoom, preserved dark ring gaps, excluded foreign red/body/background and continued concealed material before body visibility. Restored authored seams; full material alpha remains identical to constructed source. Retained bright-loop regions and original-body overlay separately.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/register-mail.py",
+              "sha256": "7c9a03f3b77ed09517bc1dd643c6ac4ddb88037d17bc8f91fe373e82fae21700"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/refined-red-context.png",
+              "sha256": "17a9360d2be5ed6f39c17250dda879d5b22f14ba183a97d33e4126a63845bfec"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/registration-decisions.json",
+              "sha256": "50d2b91f43904006371c342bcdf137f9c78716b442615437d3a15c757e58bc5b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/intact-garment-comparison.png",
+              "sha256": "c51ed4a8d7fe4532c5d87f221df07a2735032af35cc05616860d2de35000c9bd"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/continuation-comparison.png",
+              "sha256": "cc330ce02b7dee84a8fd484e580907075e98f62c50ea05b835d1d36adc43adb6"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/detail-comparison.png",
+              "sha256": "b30562b0d5ccfcfca3a57ad53b784ffdfe7a6ef5970ddf009daccb26dc81ae7b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/body-overlay-comparison.png",
+              "sha256": "52403c539dc0940e72196645547f4842b5ae833d6578e59aab3ff1dd89e7419e"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.030417+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Composed one mail shirt over fixed unclothed body in SEN and mirrored west. Original forearms/hands emerge at curved cuffs. Mail controls round neckline above head split; masks are separate from full texture and original body tint.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+              "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/registration-decisions.json",
+              "sha256": "50d2b91f43904006371c342bcdf137f9c78716b442615437d3a15c757e58bc5b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/assembly-comparison.png",
+              "sha256": "7491a2c64b1b5e324cc4b59487ba61b0d980971b0e5feca11fc8edb053e4dfb2"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/mask-off-comparison.png",
+              "sha256": "e7a4d930edc5e767ede5ebc756d3e5fc419ae159d814dc98f7d1a9e821b1e41a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/body-mask-comparison.png",
+              "sha256": "408b7d4c4663c23776d886303cd0c05e74e4fcc416b535b04c57ee4afcae64f9"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.031105+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended-size mail silhouette and independent native Yrame tileColor w override / Chain Mail y primary / bright Y cuff-and-hem metal regions. Blue named detail remains unassigned on ordinary base rather than inventing mutation/cosmetic art.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+              "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/independent-palette-comparison.png",
+              "sha256": "1ad30e229a94ca324d269ff3c03f331ce43db51a1773aa9d64d138f704eebaec"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/game-scale-review.png",
+              "sha256": "f7c62e62f80ffd2d86fc6b02d45b80273aa93511f168719b479114636a6ea5d1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/authoring-review.json",
+              "sha256": "3c68b270b158d72c05ffdc10f3e67019bf754f0cadee2bdeaf3f8aff60ab8248"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.031793+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled source-bound original/reference/manual/patched/contextual source, full metal completion, matched curved sleeves, class-specific neck depth and unchanged body/contact. Identity fit needed no added mesh deformation. Native equipment and named mutation/outfit acceptance remain behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/record-review.py",
+              "sha256": "8b83457919446d5fb0e2cf7df1eca25d7a9120c183b59299c3221effc536dc5b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/source-packet.json",
+              "sha256": "beacb4584a66c0c3dbb250b0c6cd7de0ae4bbe552b7ea89a803eae784fc66ae1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/registration-decisions.json",
+              "sha256": "50d2b91f43904006371c342bcdf137f9c78716b442615437d3a15c757e58bc5b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/artifact-manifest.json",
+              "sha256": "8810b7a3bb2167cb05e8abcd30397754fe23529f04db499de6a4c8c37af6d3c2"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/authoring-review.json",
+              "sha256": "3c68b270b158d72c05ffdc10f3e67019bf754f0cadee2bdeaf3f8aff60ab8248"
+            }
+          ],
+          "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
+          "result": "PASS"
         }
       ],
       "apparel_occlusion": {
@@ -11129,19 +11407,31 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+          "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+        },
+        "plate": {
+          "path": "art/conversion/fit-yrame-chain-mail/v1/assembly-comparison.png",
+          "sha256": "7491a2c64b1b5e324cc4b59487ba61b0d980971b0e5feca11fc8edb053e4dfb2"
+        }
+      },
+      "registration_summary": "Source-bound linked-steel shirt on fixed ordinary female human base. Correct round neckline and original forearm depth; full mail, y/Y metal regions and body masks separate. Actual Yrame ordinary Body287/0 binding retained; Big named morphology, horns/extra feet/blue detail and full outfit remain unfinished.",
+      "native_acceptance": "Pending full-set generation gate and named mutation/outfit work"
     },
     {
       "id": "FIT-YRAME-HORNS-HEAD-0",
@@ -11236,8 +11526,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12441,7 +12731,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -12449,7 +12739,7 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Named Yrame morphology/mutation/outfit assembly and native acceptance remain unfinished."
       ],
       "metadata": {
         "original_reference": {
@@ -12502,21 +12792,81 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.233283+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolved original shiny linked-loop steel item and y/Y metal palette.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+              "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-chain-mail/v1/fittings.json",
+              "sha256": "9f7a9d7528ae78b91b99d4dc5fe7d6c0cd8d157d06abb900ff6cf549f9388db3"
+            },
+            {
+              "path": "art/conversion/item-chain-mail/v1/body-fittings-comparison.png",
+              "sha256": "7491a2c64b1b5e324cc4b59487ba61b0d980971b0e5feca11fc8edb053e4dfb2"
+            }
+          ],
+          "review": "Reconciled exact Chain Mail identity, linked-steel description, y/Y roles and its only enumerated fit; original/mod/manual/rejected/patched/contextual/registration evidence and exact model/plate hashes are present. Ordinary-body garment authoring only; this does not accept named Yrame morphology, mutation assembly or native equipment state.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T15:19:23.234070+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled the sole enumerated Body0 chain-mail fit against current authoring evidence and registered assets.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+              "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-chain-mail/v1/fittings.json",
+              "sha256": "9f7a9d7528ae78b91b99d4dc5fe7d6c0cd8d157d06abb900ff6cf549f9388db3"
+            },
+            {
+              "path": "art/conversion/item-chain-mail/v1/body-fittings-comparison.png",
+              "sha256": "7491a2c64b1b5e324cc4b59487ba61b0d980971b0e5feca11fc8edb053e4dfb2"
+            }
+          ],
+          "review": "Reconciled exact Chain Mail identity, linked-steel description, y/Y roles and its only enumerated fit; original/mod/manual/rejected/patched/contextual/registration evidence and exact model/plate hashes are present. Ordinary-body garment authoring only; this does not accept named Yrame morphology, mutation assembly or native equipment state.",
+          "result": "PASS",
+          "new_imagegen_call": false
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Reconciled exact Chain Mail identity, linked-steel description, y/Y roles and its only enumerated fit; original/mod/manual/rejected/patched/contextual/registration evidence and exact model/plate hashes are present. Ordinary-body garment authoring only; this does not accept named Yrame morphology, mutation assembly or native equipment state."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-chain-mail/v1/fittings.json",
+          "sha256": "9f7a9d7528ae78b91b99d4dc5fe7d6c0cd8d157d06abb900ff6cf549f9388db3"
+        },
+        "plate": {
+          "path": "art/conversion/item-chain-mail/v1/body-fittings-comparison.png",
+          "sha256": "7491a2c64b1b5e324cc4b59487ba61b0d980971b0e5feca11fc8edb053e4dfb2"
+        }
+      },
+      "registration_summary": "Chain Mail identity and its only enumerated ordinary Body0 fit are generation-ready. Linked-steel surface, original body depth and native y/Y highlights retained. Named Yrame morphology/mutations/outfit/native acceptance remain unfinished.",
+      "native_acceptance": "Pending full-set generation gate and actual outfit/equipped state"
     },
     {
       "id": "ITEM-CLOTH-ROBE",
@@ -43418,7 +43768,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T15:08:38.391593+00:00",
+  "updated_at": "2026-10-20T15:19:23.235346+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

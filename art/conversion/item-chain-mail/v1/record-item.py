@@ -1,0 +1,19 @@
+"""Reconcile the inventory entry against its enumerated ordinary-body mail fit."""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,shutil
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def write(p,d):p.write_bytes((json.dumps(d,indent=2)+'\n').encode())
+lp=ROOT/'evidence/conversion-ledger.json';data=json.loads(lp.read_text());entry=next(e for e in data['entries'] if e['id']=='ITEM-CHAIN-MAIL');assert data['active_entry']==entry['id'] and not entry['generation_ready']
+fits=[next(e for e in data['entries'] if e['id']==ident) for ident in entry['related_entries']];assert len(fits)==1
+for fit in fits:
+ assert fit['generation_ready'] and fit['art_review']['status']=='PASS';latest={e['step']:e for e in fit['process_log']};assert all(latest[s]['result']=='PASS' for s in fit['required_steps'] if s!='native_equipment_state_review')
+ for a in fit['current_registration'].values():assert ref(ROOT/a['path'])['sha256']==a['sha256']
+packet=dict(item='Chain Mail',workflow='regional-curved-v1',source=entry['metadata']['original_reference'],fittings=[dict(entry=e['id'],registration=e['current_registration'],authoring_review=e['art_review']) for e in fits],scope='Only enumerated Body0 fit: ordinary female baseline for actual Yrame item. Named Big morphology, horns, extra feet and full outfit remain separate unfinished requirements.',native_acceptance='Pending full-set generation gate and actual outfit/equipped state')
+write(HERE/'fittings.json',packet);shutil.copyfile(ROOT/fits[0]['current_registration']['plate']['path'],HERE/'body-fittings-comparison.png')
+review='Reconciled exact Chain Mail identity, linked-steel description, y/Y roles and its only enumerated fit; original/mod/manual/rejected/patched/contextual/registration evidence and exact model/plate hashes are present. Ordinary-body garment authoring only; this does not accept named Yrame morphology, mutation assembly or native equipment state.'
+for step,action in [('resolve_item_identity_description_palette','Resolved original shiny linked-loop steel item and y/Y metal palette.'),('verify_every_body_fitting_log','Reconciled the sole enumerated Body0 chain-mail fit against current authoring evidence and registered assets.')]:entry['process_log'].append(dict(timestamp=datetime.now(timezone.utc).isoformat(),step=step,action=action,inputs=[e['current_registration']['model'] for e in fits],outputs=[ref(HERE/'fittings.json'),ref(HERE/'body-fittings-comparison.png')],review=review,result='PASS',new_imagegen_call=False))
+entry.update(status='UNFINISHED',generation_ready=True,current_step='record_item_acceptance_from_all_fittings',current_registration=dict(model=ref(HERE/'fittings.json'),plate=ref(HERE/'body-fittings-comparison.png')),art_review=dict(status='PASS',reason=review),registration_summary='Chain Mail identity and its only enumerated ordinary Body0 fit are generation-ready. Linked-steel surface, original body depth and native y/Y highlights retained. Named Yrame morphology/mutations/outfit/native acceptance remain unfinished.',native_acceptance='Pending full-set generation gate and actual outfit/equipped state',known_issues=['Named Yrame morphology/mutation/outfit assembly and native acceptance remain unfinished.']);entry['apparel_workflow']['status']='GENERATION READY'
+n=next(e for e in data['entries'] if e['id']=='FIT-YRAME-LEATHER-BOOTS-FEET-16');assert n['status']=='UNFINISHED' and not n['generation_ready'];n.update(status='IN PROGRESS',current_step='source_identity_description_slot_laterality');data['active_entry']=n['id'];data['updated_at']=datetime.now(timezone.utc).isoformat();write(lp,data)
+print('Chain Mail item aggregate generation-ready; Yrame Leather Boots sole active. Full goal unfinished.')

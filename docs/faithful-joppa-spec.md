@@ -672,3 +672,22 @@ named facial detail, late-middle-age appearance, mutation anatomy and full outfi
 remain unfinished. This baseline item does not complete those requirements.
 Stage 3 remains ACTIVE; proceed to Yrame's Chain Mail generation on the ordinary
 human baseline, keeping mutation-granted feet and other anatomy separate.
+
+Chain Mail authoring checkpoint: the ordinary Body287/item574/0 garment fit and
+item aggregate are generation-ready. Actual Vanilla Armour Expanded SEN mail
+references informed steel loops and directional convention, while the Qud glyph
+and description govern the short-sleeved mail shirt, broad upper coverage and
+highlighted sleeve/hem zones. No plates, hood, belt or other outfit is added.
+Initial head ownership exposed shoulders/rectangular neck skin; both rejected
+construction sheets are retained. The corrected curved shirt neckline owns neck
+coverage above the existing head split, with original forearms/hands restored
+above mail. Semantic profile bounds exclude neighboring torso pixels.
+
+One contextual refinement supplies neutral linked-metal surface; generated glow,
+red reflections, mannequin and geometry are excluded. Full metal remains intact
+before body masks, with separate native `y/Y` highlights. Palette evidence uses
+Yrame's actual `w` tileColor override; her named blue detail is still unfinished.
+This baseline garment does not complete her Big silhouette, horns, extra feet,
+mutation-aware outfit or native equipment acceptance. Stage 3 remains ACTIVE;
+proceed to Leather Boots, keeping baseline footwear separate from mutation-part
+binding and final named assembly.
