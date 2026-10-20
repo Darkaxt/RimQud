@@ -21,6 +21,13 @@ remaining clothing fits are pending.
 Adult and child dromad bases are also generation-ready, with centered directional
 body/head layers and separate neutral dulla coverage. Juvenile proportions and
 detail-region placement are documented authoring choices, not new native facts.
+The child dromad's Woven Tunic is generation-ready as an independent garment;
+its report preserves the rejected cuff extraction and corrected coverage masks.
+Tam's adult Cloth Robe and enlarged Shillelagh fittings are also generation-ready.
+Their body, garment and held-item layers remain separate. The report records the
+Shillelagh's exact installed description and actual installed Tribal mod reference.
+There are now 11 generation-ready entries; the next active entry is DirtPath,
+with cobblestone-like paving over grass as the requested visual interpretation.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

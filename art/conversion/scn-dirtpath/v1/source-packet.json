@@ -1,0 +1,95 @@
+{
+  "entry": "SCN-DIRTPATH",
+  "recorded_at": "2026-10-20T03:10:19.154142+00:00",
+  "source": {
+    "blueprint": "DirtPath",
+    "source": "ZoneTerrain.xml",
+    "parent": "DirtFloor",
+    "selected": 310,
+    "render": {
+      "Name": "Render",
+      "DisplayName": "dirt path",
+      "RenderString": "250",
+      "RenderLayer": "0",
+      "RenderIfDark": "true",
+      "Tile": "terrain/sw_ground_dots1.png",
+      "ColorString": "&w",
+      "DetailColor": "w"
+    },
+    "body": null,
+    "description": null
+  },
+  "original": {
+    "tile": "terrain/sw_ground_dots1.png",
+    "description": "",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "dirt path",
+      "RenderString": "250",
+      "RenderLayer": "0",
+      "RenderIfDark": "true",
+      "Tile": "terrain/sw_ground_dots1.png",
+      "ColorString": "&w",
+      "DetailColor": "w"
+    },
+    "kind": "scenery",
+    "blueprint": "DirtPath",
+    "reference_file": "village-originals/dirtpath-reference.png",
+    "native_mask_sha256": "b2019af79f44f1b930c42b380cb8f25503fcc66a79fe71b0ed4e97f9b4d21c61",
+    "reference_sha256": "7ead118d5300382b0e50e8397bc67bce21b83e1f959bff7b0ec5d22e8770e192",
+    "info_id": 11208,
+    "atlas_id": 203,
+    "rect": [
+      432,
+      208,
+      16,
+      24
+    ]
+  },
+  "native_declarations": {
+    "DirtPath": "<object Name=\"DirtPath\" Inherits=\"DirtFloor\">\n    <part Name=\"Render\" DisplayName=\"dirt path\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>",
+    "DirtFloor": "<object Name=\"DirtFloor\" Inherits=\"Floor\">\n    <part Name=\"Render\" DisplayName=\"packed dirt floor\" RenderString=\"250\" ColorString=\"&amp;w\" DetailColor=\"w\" RenderLayer=\"0\" />\n    <part Name=\"RandomTileOnMove\" Tiles=\"Terrain/sw_ground_dots1.png,Terrain/sw_ground_dots2.png,Terrain/sw_ground_dots3.png,Terrain/sw_ground_dots4.png\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>",
+    "Floor": "<object Name=\"Floor\" Inherits=\"CosmeticObject\">\n    <part Name=\"Render\" DisplayName=\"[Ground]\" RenderString=\".\" RenderLayer=\"0\" RenderIfDark=\"true\" Tile=\"terrain/sw_ground_dots1.png\" />\n    <part Name=\"Physics\" Solid=\"false\" Takeable=\"false\" Weight=\"-1\" Category=\"Terrain\" FreezeTemperature=\"-9999\" BrittleTemperature=\"-9999\" FlameTemperature=\"99999\" VaporTemperature=\"9999\" />\n    <tag Name=\"NoPassByMessage\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"IgnoreOccupationChecks\" />\n    <tag Name=\"HideInNearbyItemsList\" />\n  </object>"
+  },
+  "source_files": {
+    "zone_terrain_sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "colors_sha256": "a620a407c705893c6c6d4635f55bcd7f51bc6ee66d644c1a82024193ea327437"
+  },
+  "palette_evidence": {
+    "foreground": "&w",
+    "detail": "w",
+    "native_color_name": {
+      "Name": "brown",
+      "Color": "w",
+      "LightTone": "W",
+      "ShowInPicker": "true"
+    },
+    "interpretation": "Native path color is brown; maintain muted brown stone tonal family over green grass rather than sandy-beige opaque ground."
+  },
+  "description_evidence": "No Description.Short on resolved DirtPath. It inherits DirtFloor; do not invent a native cobblestone description.",
+  "native_variants": [
+    "Terrain/sw_ground_dots1.png",
+    "Terrain/sw_ground_dots2.png",
+    "Terrain/sw_ground_dots3.png",
+    "Terrain/sw_ground_dots4.png"
+  ],
+  "variant_owner": "RandomTileOnMove inherited from DirtFloor. Keep native state ownership and tile provenance; renderer must not reroll simulation.",
+  "donor_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\Textures\\Terrains\\Cobblestone.png",
+    "sha256": "03029a12d17c10f02916b440c7dce355f6d7fcb415f679a358fa78477f7a92d3",
+    "mod": "Vanilla Furniture Expanded - Architect",
+    "package_id": "VanillaExpanded.VFEArchitect",
+    "workshop_id": "2608762624",
+    "about_sha256": "93e4e973d0d2bd8f196cac626d1ec61b5cb32da3453f87ea9af6cf271f4d88c3",
+    "role": "Cobblestone scale, irregular joins and subdued material shading. Exact installed texture is a reference only; no donor ground color or cell-bounded tile is automatically accepted."
+  },
+  "user_visual_contract": "Cobblestone-like paving integrated over green grass, close to original Qud palette/forms; no sand-road substitution. This is an explicitly requested interpretation, distinct from native DirtPath name and sparse ground-dot glyph.",
+  "authoring_requirements": [
+    "Editable stone/coverage suggestion based on source glyph and selected reference before material refinement.",
+    "One top-down surface needs no invented front/side/back object views. Required states are continuous fill and path/grass connectivity: end, straight, bend, junction, isolated and diagonal-neighbor cases.",
+    "Use world-continuous material coordinates and neighbor-aware coverage, not independently framed floor tiles. Transparent gaps permit grass to show through.",
+    "Keep stone tint/detail coverage separate from green grass. Preserve native visibility and path ownership; do not alter passability or simulation.",
+    "Record refined/patch inputs and outputs, selected masks, repeated-surface/connection previews and intended village-scale authoring review. Native validation waits until all conversions."
+  ],
+  "remaining": "Construct and refine the source-bound connected stone/grass surface, register material/coverage/state variants and inspect assembly; no conversion completion credit yet."
+}

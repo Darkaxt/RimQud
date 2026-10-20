@@ -1,0 +1,112 @@
+{
+  "entry": "FIT-DROMAD-SHILLELAGH-HAND-2",
+  "recorded_at": "2026-10-20T03:03:25.462911+00:00",
+  "creature": "Tam",
+  "race": "Dromad",
+  "original": {
+    "instance": 524,
+    "blueprint": "Shillelagh",
+    "description": "Dust powders the puzzling device.\n\n{{K|Weight: 5 lbs.}}",
+    "tile": "Items/sw_cudgel_10.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/shillelagh-reference.png",
+    "native_mask_sha256": "2a0c48f5a33b82de6dc434d91843cb0711355df38795f179455394d31ec86f7a",
+    "reference_sha256": "262b84b51268491734a4ade7e95c346c2e36270c9a8acf5dbf728c3efb935b96",
+    "info_id": 9475,
+    "atlas_id": 185,
+    "rect": [
+      324,
+      182,
+      16,
+      24
+    ]
+  },
+  "observed_binding": {
+    "id": 362,
+    "parent": 361,
+    "type": "Hand",
+    "variant": "Hand",
+    "laterality": 2,
+    "manager": null,
+    "defaultBlueprint": "DefaultFist",
+    "equipped": {
+      "instance": 524,
+      "blueprint": "Shillelagh",
+      "description": "Dust powders the puzzling device.\n\n{{K|Weight: 5 lbs.}}",
+      "tile": "Items/sw_cudgel_10.bmp",
+      "foreground": "&y",
+      "tileColor": "",
+      "detailColor": "y"
+    },
+    "defaultItem": {
+      "instance": 605,
+      "blueprint": "DefaultFist",
+      "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+      "tile": "Creatures/natural-weapon-fist.bmp",
+      "foreground": "&w",
+      "tileColor": "",
+      "detailColor": ""
+    }
+  },
+  "installed_definition": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+    "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+    "inherits": "BaseCudgel",
+    "parts": {
+      "Render": {
+        "Name": "Render",
+        "DisplayName": "shillelagh",
+        "Tile": "Items/sw_cudgel_10.bmp"
+      },
+      "MeleeWeapon": {
+        "Name": "MeleeWeapon",
+        "MaxStrengthBonus": "3",
+        "BaseDamage": "1d2",
+        "Skill": "Cudgel",
+        "Stat": "Strength"
+      },
+      "Commerce": {
+        "Name": "Commerce",
+        "Value": "12"
+      },
+      "Physics": {
+        "Name": "Physics",
+        "Weight": "4"
+      },
+      "Description": {
+        "Name": "Description",
+        "Short": "Across Moghra'yi, wood was hewn from the trunk of a boreal titan and shaved into a stick by practitioners of the foreign art. They shaped one end of the bark into an oaken knot."
+      },
+      "ModSturdy": {
+        "Name": "ModSturdy"
+      }
+    },
+    "object_xml": "<object Name=\"Shillelagh\" Inherits=\"BaseCudgel\">\n    <part Name=\"Render\" DisplayName=\"shillelagh\" Tile=\"Items/sw_cudgel_10.bmp\" />\n    <part Name=\"MeleeWeapon\" MaxStrengthBonus=\"3\" BaseDamage=\"1d2\" Skill=\"Cudgel\" Stat=\"Strength\" />\n    <part Name=\"Commerce\" Value=\"12\" />\n    <part Name=\"Physics\" Weight=\"4\" />\n    <part Name=\"Description\" Short=\"Across Moghra'yi, wood was hewn from the trunk of a boreal titan and shaved into a stick by practitioners of the foreign art. They shaped one end of the bark into an oaken knot.\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"ModSturdy\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"AlwaysEquipAsWeapon\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n\t\t<stag Name=\"Contemporary\" />\n  </object>"
+  },
+  "source_resolution": "Captured runtime description is generic puzzling-device text and weight differs. Exact installed Shillelagh blueprint resolves a wooden stick with an oaken knot. Preserve both; identification state and reason for weight difference were not exported.",
+  "body": {
+    "path": "art/conversion/body-dromad/v1/model.json",
+    "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+  },
+  "robe_context": {
+    "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+    "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+  },
+  "donor_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2454918552\\Textures\\Things\\Item\\Equipment\\WeaponMelee\\LightClub.png",
+    "sha256": "e09218d870db688981fccc943637eea9c7f0d3985b3ca7de7bb430d35adb34a6",
+    "mod": "Vanilla Weapons Expanded - Tribal",
+    "package_id": "VanillaExpanded.VWETB",
+    "about_sha256": "3374daba6ae5a0dcfb9fb535e50299c33b173e7abae422a241e942caf33cfeb3",
+    "workshop_id": "2454918552",
+    "role": "Simple elongated wooden-club silhouette, neutral material and clean outline convention; no direct Qud shape equivalence."
+  },
+  "reference_selection": "Also inspected Vanilla Textures Expanded Club; its spiked head is unsuitable for the described oaken knot, so selected the Tribal light club instead.",
+  "art_policy": "One axial held-item texture, mechanically placed in each facing like a RimWorld held weapon. No invented front/back anatomy; placements and hand/depth ownership are directional.",
+  "authored_scale": "Approximately 500 source pixels end to end, about two thirds of the selected adult height. Enlarged relative to the historical short staff after user feedback; not a native measured length.",
+  "palette": "Neutral equal-RGB source with native equipment &y/detail y; no yellow or brown baked into model.",
+  "native_acceptance": "Deferred until every conversion is generated"
+}

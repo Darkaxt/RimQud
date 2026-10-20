@@ -1,0 +1,138 @@
+{
+  "entry": "FIT-DROMAD-CLOTH-ROBE-BODY-0",
+  "recorded_at": "2026-10-20T02:55:42.707817+00:00",
+  "creature": "Tam",
+  "race": "Dromad",
+  "original": {
+    "instance": 604,
+    "blueprint": "Cloth Robe",
+    "description": "Particulate from the eons-sheared shale sticks in the fibers of goat wool. They make red freckles on the garment.\n\n{{K|Weight: 5 lbs.}}",
+    "tile": "Items/sw_robes1.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/cloth-robe-reference.png",
+    "native_mask_sha256": "005ad8aa6355519ab294aef261d420e291c024901309e1534d011efa61b20c37",
+    "reference_sha256": "fce1d492efe15fd64a88cdeeb0c3c459d291583ae7e01706d0f85aa9ec4dbd7c",
+    "info_id": 9972,
+    "atlas_id": 185,
+    "rect": [
+      612,
+      52,
+      16,
+      24
+    ]
+  },
+  "observed_binding": {
+    "id": 357,
+    "parent": -1,
+    "type": "Body",
+    "variant": "Body",
+    "laterality": 0,
+    "manager": null,
+    "defaultBlueprint": null,
+    "equipped": {
+      "instance": 604,
+      "blueprint": "Cloth Robe",
+      "description": "Particulate from the eons-sheared shale sticks in the fibers of goat wool. They make red freckles on the garment.\n\n{{K|Weight: 5 lbs.}}",
+      "tile": "Items/sw_robes1.bmp",
+      "foreground": "&y",
+      "tileColor": "",
+      "detailColor": "y"
+    },
+    "defaultItem": null
+  },
+  "body": {
+    "path": "art/conversion/body-dromad/v1/model.json",
+    "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+  },
+  "race_metadata": {
+    "path": "art/conversion/body-dromad/v1/source-packet.json",
+    "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+  },
+  "donor_references": [
+    {
+      "file": "worn-robe-north.png",
+      "source_id": 3552,
+      "name": "Duster_Male_north",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        25,
+        39,
+        104,
+        112
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "cutout_bounds": [
+        26,
+        39,
+        103,
+        112
+      ],
+      "png_sha256": "1db00b97c440b30f5874edcb697433d791c546f06fa904ae86be21d3329d46c9"
+    },
+    {
+      "file": "worn-robe-east.png",
+      "source_id": 1828,
+      "name": "Duster_Male_east",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        34,
+        39,
+        90,
+        117
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "cutout_bounds": [
+        34,
+        39,
+        89,
+        117
+      ],
+      "png_sha256": "ca6709176be5dbd2dca20ea9aa4ab8c45b50b1e72e7c313003f25ee3df6f0622"
+    },
+    {
+      "file": "worn-robe-south.png",
+      "source_id": 1625,
+      "name": "Duster_Male_south",
+      "width": 128,
+      "height": 128,
+      "alpha_bounds": [
+        25,
+        39,
+        104,
+        112
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "cutout_bounds": [
+        26,
+        39,
+        103,
+        112
+      ],
+      "png_sha256": "6a69d4952756f8fc786efc6e7d975be448fe71b5517a8082ea91b8c7d8d3d74d"
+    }
+  ],
+  "reference_decision": "Actual RimWorld Duster_Male supplies long-garment outline, view and shading conventions only. It is an open coat, not an exact Qud robe equivalent. The closed goat-wool Qud robe remains authoritative; no coat lapels or fasteners are copied.",
+  "design_constraints": [
+    "One actual Body item, laterality 0; do not add the separately held Shillelagh.",
+    "Closed plain goat-wool robe with long hem, short broad sleeves, transparent long-neck and arm openings, organic hump allowance.",
+    "Description gives shale particles as red freckles. Neutral production artwork uses tonal speckle coverage; native foreground &y/detail y remain separate equipment tint ownership.",
+    "Do not bake jewelry, ink, mutation features, head, hands or feet into the garment. Do not modify the selected adult body.",
+    "Directional cloth follows the full body. Contact (256,950), 512 x 1024 frame, physical scale inherited from the fixed body."
+  ],
+  "source_limits": "Tiny native tile does not establish every seam or sleeve length; these are authored interpretations. No exact donor robe fit is assumed.",
+  "native_acceptance": "Pending all-conversions generation gate"
+}
