@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-METAL-WORKBENCH**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-ORNATE-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -146,8 +146,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-HAMMOCK | Hammock | UNFINISHED | - |  |
 | SCN-JOPPA-BOOKSHELF | Joppa Bookshelf | UNFINISHED | - |  |
 | SCN-MANNEQUIN | Mannequin | UNFINISHED | - |  |
-| SCN-METAL-WORKBENCH | Metal Workbench | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-ORNATE-TABLE | Ornate Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-METAL-WORKBENCH | Metal Workbench | UNFINISHED | - |  |
+| SCN-ORNATE-TABLE | Ornate Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-TABLE | Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### Machinery/appliances (10)
@@ -5751,7 +5751,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 14.
+Current step: native_state_review. Process-log events: 26.
 
 - 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
   Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
@@ -5837,6 +5837,78 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T21:19:11.276082+00:00 / resolve_object_description_original_tile_palette_state / PASS: Retain exact source description/ancestry, native empty/full tiles, Inventory state ownership and primary c versus stock detail C/w/y/W.
+  Review: Actual empty native mask has no covered detail pixels. Occupied marks indicate stock only, not identified inventory or donor crafting mechanics.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/source-packet.json", "sha256": "c4ab519e4cb7d61b57d862d7396dcd73206eca16fddea26f7531dc2fd0493e0b"}, {"path": "art/conversion/scn-metal-workbench/v3/source-reference-construction.png", "sha256": "7aaa872458ab00c4ac870e7d0cdb5994c99aa86c1889ec3596bace764d051e80"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE directional TableMachining S/E/N and matching Core Graphic_Multi/drawSize3.5x1.5/footprint3x1definition with parent/mapping.
+  Review: Reference supplies cardinal cold-steel shading and complete volume; no donor machines/tools/L-plan/footprint copied. Texture frame ratio is not a Qud depth measurement.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/source-packet.json", "sha256": "c4ab519e4cb7d61b57d862d7396dcd73206eca16fddea26f7531dc2fd0493e0b"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/source-reference-construction.png", "sha256": "7aaa872458ab00c4ac870e7d0cdb5994c99aa86c1889ec3596bace764d051e80"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / construct_faithful_shape / PASS: Retain source selected south steel/stock material and construct full end support depth plus separate N/E/W stock plate/round-mark geometry.
+  Review: Same authored13.7width/7.6depth/camera. Source support apertures remain S/N; end outer faces hide them. Unseen stock faces/depth are documented estimates.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/source-packet.json", "sha256": "c4ab519e4cb7d61b57d862d7396dcd73206eca16fddea26f7531dc2fd0493e0b"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/construct-turnaround.py", "sha256": "88f427fb5775db7a54314aceffa1ad04cf4fe9fdf7486cc727913e6ea2b70668"}, {"path": "art/conversion/scn-metal-workbench/v3/retained-base-before-normalization.png", "sha256": "631d5eab8cd79ea3f257c7ab52d16385e25506c3a84339b0308af4cfd861f6c1"}, {"path": "art/conversion/scn-metal-workbench/v3/retained-stock-before-normalization.png", "sha256": "be7f1839ab2b570996427be19f5b33095c66b5f2d124c33fec9b95c3a75bb002"}, {"path": "art/conversion/scn-metal-workbench/v3/empty-front-guided-turnaround.png", "sha256": "89b9d319fdb37bb38ae41e5f638f0e39c0f7c9c38bc893d755a5b0bd95e90e8f"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-manual-turnaround.png", "sha256": "74fd33fdbaf99735725120f91cc8731ca46048145efab9dd0fa5c9e0ecdbacc9"}, {"path": "art/conversion/scn-metal-workbench/v3/manual-structural-review.json", "sha256": "69c56094c2d1f4c75f0cab33feb8256e9fd4c76af5b14f3f84dd6243b6e8090c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / create_front_side_back_furniture_views / PASS: Build S/E/N and independent occupied W with one common0.95registration around8,16, protecting high reverse stock margin without panel/part bounds fitting.
+  Review: Symmetric empty base may mirror E to W, but stock near/far overlap requires its own W projection. Extra views remain unbound authoring assets.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/source-packet.json", "sha256": "c4ab519e4cb7d61b57d862d7396dcd73206eca16fddea26f7531dc2fd0493e0b"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/constructed-east-base.svg", "sha256": "c2e6bb8d04635965b2ba536c61e90e8772695a75f7c47a0045fbf2871167b11a"}, {"path": "art/conversion/scn-metal-workbench/v3/constructed-west-base.svg", "sha256": "c2e6bb8d04635965b2ba536c61e90e8772695a75f7c47a0045fbf2871167b11a"}, {"path": "art/conversion/scn-metal-workbench/v3/constructed-east-stock.svg", "sha256": "ef912a2aa5430372bc9f38fb75dc1c39d2fa4b4f0dd9351914839f68ed896def"}, {"path": "art/conversion/scn-metal-workbench/v3/constructed-north-stock.svg", "sha256": "e167960e5b3429b8e6e7844709338b6d0d4f46de03515fe0d97b98f6130cd87b"}, {"path": "art/conversion/scn-metal-workbench/v3/constructed-west-stock.svg", "sha256": "77ae2b3adfa8d8ee54f0a7ade15339c9d0cc7f75a5e3d9ccaf7b0810778d8b9a"}, {"path": "art/conversion/scn-metal-workbench/v3/empty-front-guided-turnaround.png", "sha256": "89b9d319fdb37bb38ae41e5f638f0e39c0f7c9c38bc893d755a5b0bd95e90e8f"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-manual-turnaround.png", "sha256": "74fd33fdbaf99735725120f91cc8731ca46048145efab9dd0fa5c9e0ecdbacc9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen composed empty refinement, inspected before material extraction.
+  Review: Inspected actual three-view empty refinement before extraction: parallel tabletop/apron, open south/north support holes, full solid end support and restrained steel shading, no stock or donor tools. Generated placement/edge fringe is not geometry. Retain selected S and mirrored N; sample only E material into fixed manual outline, internal divisions and coverage.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/empty-front-guided-turnaround.png", "sha256": "89b9d319fdb37bb38ae41e5f638f0e39c0f7c9c38bc893d755a5b0bd95e90e8f"}, {"path": "art/conversion/scn-metal-workbench/v3/empty-turnaround-prompt.txt", "sha256": "7704f0bc6caae39df5af031f233cb1b55651296d73bf812f1bf79a6734580251"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/refined-empty-raw.png", "sha256": "01c2d7d670886139d14e620697fe98ebea1fdf8fd31ee89d83c9e7246e0e8a1b"}, {"path": "art/conversion/scn-metal-workbench/v3/empty-first-structural-review.json", "sha256": "4efd3dff892bacc9fe06ce4b533170674ef1d0267122423e6a734e81ddbc0626"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-metal-workbench/v3/empty-turnaround-prompt.txt", "sha256": "7704f0bc6caae39df5af031f233cb1b55651296d73bf812f1bf79a6734580251"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-4daf37e5-ef15-4544-b98f-ecdb129454d9.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-metal-workbench\\v3\\empty-front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_east.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-metal-workbench\\v1\\native-states-comparison.png"]}}
+
+- 2026-10-20T21:19:11.276082+00:00 / extract_register_color_coverage / PASS: Sample refined E steel into exact end geometry/ink, retain S/N and mirror symmetric empty E for W, then stage stock over those unchanged bases.
+  Review: Generated alpha/fringe/placement excluded; occupied input now uses the same selected empty bench for every facing.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/empty-first-structural-review.json", "sha256": "4efd3dff892bacc9fe06ce4b533170674ef1d0267122423e6a734e81ddbc0626"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/select-empty-and-prepare-stock.py", "sha256": "916a66286ae314f837fab2e29749eea08207cb6d70c91c2b0c48fea27c4e537a"}, {"path": "art/conversion/scn-metal-workbench/v3/empty-material-selection.json", "sha256": "fb05df51fe390d7c492a0447c90d7d05cb7e692560f3d2000c4d68c0c3e14bed"}, {"path": "art/conversion/scn-metal-workbench/v3/selected-east-base-neutral.png", "sha256": "2d3152615f1fb083f32bc7a0cc1a3373cce4563981333f38c9bca1ae6411d171"}, {"path": "art/conversion/scn-metal-workbench/v3/selected-west-base-neutral.png", "sha256": "57c886fe58e7e2b41ec570ff126a78c47ee5551a194d76443949eadafb5f4493"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-front-guided-turnaround.png", "sha256": "9a8d7da4e8fce4db5a7d28988d4dbc2fb6cbfadb3746b24e17cae70baa643450"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen composed occupied refinement, inspected before material extraction.
+  Review: Inspected full actual occupied refinement before extraction: S/N slotted stock plate plus small mark, opposite stock positions, E plate hiding the mark and W mark visible, broad solid bench ends retained. Stock has readable metal volume without inventing an item identity. Generated bench repaint, new shadows, shifted panel registration and fringes are excluded. Retain every selected empty base and source S stock; sample only new E/N/W stock material into fixed coverage. Add an editable rim to the constructed N slot, matching the source open slot rather than relying on generated boundary.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/occupied-front-guided-turnaround.png", "sha256": "9a8d7da4e8fce4db5a7d28988d4dbc2fb6cbfadb3746b24e17cae70baa643450"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-turnaround-prompt.txt", "sha256": "663def34e0d41c00e7a9a6627be8bd748e38b142ebf3b98b534ad6ba9a41cc21"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/refined-occupied-raw.png", "sha256": "089b820547d8ad17ee1826e5ccd077ec58e61f1962f0bcc409f6e0ea700f3bb0"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-first-structural-review.json", "sha256": "2e08ec138e29c2d3c26987dfb7743989e52d02f53c6fbbe3e990450920e6b943"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-metal-workbench/v3/occupied-turnaround-prompt.txt", "sha256": "663def34e0d41c00e7a9a6627be8bd748e38b142ebf3b98b534ad6ba9a41cc21"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-3e0690be-cb17-4cda-9e86-c0c1b25009a2.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-metal-workbench\\v3\\occupied-front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_east.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-metal-workbench\\v1\\native-states-comparison.png"]}}
+
+- 2026-10-20T21:19:11.276082+00:00 / construct_faithful_shape / PASS: Add editable natural metal rim outside the N stock slot while preserving its actual transparent opening and fixed placement.
+  Review: Geometry/ink correction only; valid generated metal material is reused. No new AI call or second isolation claimed.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/constructed-north-stock.svg", "sha256": "e167960e5b3429b8e6e7844709338b6d0d4f46de03515fe0d97b98f6130cd87b"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-first-structural-review.json", "sha256": "2e08ec138e29c2d3c26987dfb7743989e52d02f53c6fbbe3e990450920e6b943"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/patched-north-stock.svg", "sha256": "1624cf3e6bea96f275692e5de974a9f6b201c0e160aa7aa3c8fdf30e0bc0c24c"}, {"path": "art/conversion/scn-metal-workbench/v3/patched-north-stock.png", "sha256": "a93bdb46c007656d6c5dd7696ca709c461e9f4570f0b99c564dacaf5d3df59e6"}, {"path": "art/conversion/scn-metal-workbench/v3/patched-north-stock-neutral.png", "sha256": "6715eb8f05e63bc3f54e8333215e4fce866c5f9fedddf0dc688dbbd6d7075ba5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / extract_register_color_coverage / PASS: Retain source S stock; select E/N/W refined stock material into exact projected coverage, and register shared bench with separate stock and analytic single-coverage dual-color states.
+  Review: Generated bench repaint/placement/shadows excluded. Material component bounds change RGB sampling coordinates only; production geometry/pivot remain fixed. Native c owns all empty steel.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/occupied-first-structural-review.json", "sha256": "2e08ec138e29c2d3c26987dfb7743989e52d02f53c6fbbe3e990450920e6b943"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/register-workbench.py", "sha256": "ef24a8bce7ec298daede6c65a271980b1632b85f25640692b174a55c80d4f7da"}, {"path": "art/conversion/scn-metal-workbench/v3/occupied-material-selection.json", "sha256": "f0a71136f88d2e46ce9fa093f2b7cb5560cb81edd9ca5ab10f60dea232771bd1"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/model.json", "sha256": "adeb43d7668fe9e373b3500e24f1b496679e1b772cd76b92bbe49aea096ebdba"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/registration-decisions.json", "sha256": "a7c3aa13aaac75bb71d310af1b99ac2bb6b34d635694de042a07aeeb95d97557"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-empty-neutral.png", "sha256": "d72bba4cb782468ad10490f5bb4065f437d8c195c3f650f42d20d2615a8368da"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-neutral.png", "sha256": "0138e12156e4b295b3fbd74efee88ac92ebcdffe504b1a7e162f1681545fee75"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-stock-neutral.png", "sha256": "d16901d43fee801a02ccfadcaf81c2e5a72b757611b79374e410e42c2df73b4e"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-detail-weight.png", "sha256": "a2941acd707d5cb43a21813b8d1cd05e8bccd82da87bc649c2ea510664f864f9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / create_required_state_neighbor_variants / PASS: Export actual empty state and occupied C/w/y/W detail examples in every authored facing with case-safe filenames, identical geometry and independent stock detail.
+  Review: Native Inventory owns actual state/detail choice. Preview selection does not identify stock, reroll state or implement orientation.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/registered/model.json", "sha256": "adeb43d7668fe9e373b3500e24f1b496679e1b772cd76b92bbe49aea096ebdba"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-empty-native-c.png", "sha256": "988f7666f208321744d6ba186d4a5058b20a9cd278fb6195e0113f27a447a04e"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-upper-c.png", "sha256": "d20a641a04c1d9470a2bcfe51b91093de4885766c191468b99e289e671617f0d"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-lower-w.png", "sha256": "c1cdccd365cc7670c66a5a18623d75f72ac29c0deeba3b63904ab4233b5f307b"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-lower-y.png", "sha256": "01ec68e130ebe436bdfef74e4063f6d279098181d781f99a077110b3b8eea239"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-upper-w.png", "sha256": "5145ae48c0a0141d5dbc208f4c61a9fc8f59d9ce3ad895c0874f4bb73006decb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect complete states/neutral/stock/color masks and16x24/24x36/32x48views, source openings, full bench ends, common frame and unchanged base.
+  Review: Reviewed source steel description/ancestry, exact empty/full tiles and c versus C/w/y/W roles, native Inventory state ownership and actual VTE/Core S/E/N texture/Graphic_Multi/drawSize3.5x1.5/size3x1mapping. Retained selected south material under one common0.95registration; symmetric N empty base and full7.6depth E/W plate supports authored in one physical camera. Source support apertures run front/back and are hidden by solid end faces; stock plate/round mark projected independently, with N slot open and E/W near/far overlap differing. Two actual contextual refinements inspected before extraction; exact empty base retained for both states. New stock material sampled inside editable projected coverage, with N slot rim patch and no second isolation call. Neutral masters, independent stock/detail masks, one-coverage native colors and16x24/24x36/32x48views inspected. Hidden depth/stock surfaces are authored estimates, no stock item identity or donor machinery/mechanics inferred. Extra views unbound; native inventory/color/physics/visibility/rare Animated acceptance remains pending full-set generation.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/registered/model.json", "sha256": "adeb43d7668fe9e373b3500e24f1b496679e1b772cd76b92bbe49aea096ebdba"}]
+  Outputs: [{"path": "art/conversion/scn-metal-workbench/v3/record-review.py", "sha256": "ccaeb2c14849dc54fc3ca1c2e31330fe8438d4749672970e67c694396521628f"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-upper-c.png", "sha256": "d20a641a04c1d9470a2bcfe51b91093de4885766c191468b99e289e671617f0d"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/authoring-review.json", "sha256": "1026016bf90d24d897fc2c242aa4521c7c07d13da3d113234ced7857a5bc2fc9"}, {"path": "art/conversion/scn-metal-workbench/v3/artifact-manifest.json", "sha256": "f23d002b2fb9f811956ad678f7f85a66898ba1228e49277581f73ee393ce7cff"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:19:11.276082+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retain native container/inventory/color transitions,100-weight inorganic non-takeable steel, cover/visibility and rare Animated fallback behind full-set generation gate.
+  Review: No native/game/harness launch or production activation. Entry remains UNFINISHED pending final acceptance.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/registered/model.json", "sha256": "adeb43d7668fe9e373b3500e24f1b496679e1b772cd76b92bbe49aea096ebdba"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-ORNATE-TABLE: Ornate Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5845,7 +5917,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/ornate-table-body.png](../art/village/scenery/ornate-table-body.png), [art/village/scenery/ornate-table-detail.png](../art/village/scenery/ornate-table-detail.png).
 
-Current step: not started. Process-log events: 1.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 1.
 
 - 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
   Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.

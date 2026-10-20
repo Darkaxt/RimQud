@@ -1,0 +1,137 @@
+{
+  "helper": {
+    "path": "art/conversion/scn-chest1/v2/select-dark-wood-material.py",
+    "sha256": "5eacea49e52ffd095cc78388b6ad1c739db5f2286756716ed2c941383d8aa77c"
+  },
+  "views": {
+    "south": {
+      "rule": "Retain actual selected v2 front stock at shared0.95registration; no new AI redraw accepted."
+    },
+    "east": {
+      "mapping": [
+        {
+          "source_material_bounds": [
+            292,
+            69,
+            325,
+            255
+          ],
+          "target_component_bounds": [
+            172,
+            96,
+            201,
+            316
+          ]
+        }
+      ],
+      "stats": {
+        "wood": {
+          "selected": 0,
+          "continued": 0,
+          "unsampled_constructed_pixels": 0
+        },
+        "top": {
+          "selected": 2123,
+          "continued": 4281,
+          "unsampled_constructed_pixels": 0
+        }
+      },
+      "rule": "Component bounds transform RGB material coordinates only; final stock alpha/placement/openings/ink copied from fixed projected construction. Internal top role is all stock, wood unused. Gold is removed by max(R,G) luminance; no second AI isolation."
+    },
+    "north": {
+      "mapping": [
+        {
+          "source_material_bounds": [
+            200,
+            34,
+            292,
+            201
+          ],
+          "target_component_bounds": [
+            137,
+            45,
+            226,
+            238
+          ]
+        },
+        {
+          "source_material_bounds": [
+            327,
+            161,
+            350,
+            185
+          ],
+          "target_component_bounds": [
+            261,
+            215,
+            279,
+            233
+          ]
+        }
+      ],
+      "stats": {
+        "wood": {
+          "selected": 0,
+          "continued": 0,
+          "unsampled_constructed_pixels": 0
+        },
+        "top": {
+          "selected": 7293,
+          "continued": 8890,
+          "unsampled_constructed_pixels": 0
+        }
+      },
+      "rule": "Component bounds transform RGB material coordinates only; final stock alpha/placement/openings/ink copied from fixed projected construction. Internal top role is all stock, wood unused. Gold is removed by max(R,G) luminance; no second AI isolation."
+    },
+    "west": {
+      "mapping": [
+        {
+          "source_material_bounds": [
+            389,
+            28,
+            422,
+            216
+          ],
+          "target_component_bounds": [
+            311,
+            29,
+            340,
+            249
+          ]
+        },
+        {
+          "source_material_bounds": [
+            396,
+            222,
+            407,
+            232
+          ],
+          "target_component_bounds": [
+            312,
+            250,
+            330,
+            268
+          ]
+        }
+      ],
+      "stats": {
+        "wood": {
+          "selected": 0,
+          "continued": 0,
+          "unsampled_constructed_pixels": 0
+        },
+        "top": {
+          "selected": 2510,
+          "continued": 4154,
+          "unsampled_constructed_pixels": 0
+        }
+      },
+      "rule": "Component bounds transform RGB material coordinates only; final stock alpha/placement/openings/ink copied from fixed projected construction. Internal top role is all stock, wood unused. Gold is removed by max(R,G) luminance; no second AI isolation."
+    }
+  },
+  "north_slot_patch": {
+    "path": "art/conversion/scn-metal-workbench/v3/patched-north-stock.svg",
+    "sha256": "1624cf3e6bea96f275692e5de974a9f6b201c0e160aa7aa3c8fdf30e0bc0c24c"
+  },
+  "generated_bench_repaint": "Not used. Occupied and empty share the exact same selected bench per facing."
+}

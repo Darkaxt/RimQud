@@ -1,0 +1,215 @@
+{
+  "entry": "SCN-METAL-WORKBENCH",
+  "identity": "Metal Workbench -> Metal Table -> Table -> Furniture",
+  "description": "Steel was anointed with liquid chrome, cooled, and beaten into a flat and workable surface.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Metal Workbench": "<object Name=\"Metal Workbench\" Inherits=\"Metal Table\">\n    <part Name=\"Render\" DisplayName=\"metal workbench\" ColorString=\"&amp;c\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Items/sw_table_metal.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n  </object>",
+      "Metal Table": "<object Name=\"Metal Table\" Inherits=\"Table\">\n    <part Name=\"Render\" DisplayName=\"metal table\" ColorString=\"&amp;c\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Items/sw_table_metal.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"100\" Organic=\"false\" />\n    <tag Name=\"EmptyTile\" Value=\"Items/sw_table_metal.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table_metal_full.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,w,y,W\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <part Name=\"Description\" Short=\"Steel was anointed with liquid chrome, cooled, and beaten into a flat and workable surface.\" />\n    <part Name=\"Metal\" />\n  </object>",
+      "Table": "<object Name=\"Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"table\" ColorString=\"&amp;w\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Assets_Content_Textures_Tiles_sw_table.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <tag Name=\"EmptyTile\" Value=\"Assets_Content_Textures_Tiles_sw_table.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table1.bmp,Items/sw_table2.bmp,Items/sw_table3.bmp,Items/sw_table4.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,c,y,W\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_table\" />\n    <part Name=\"Inventory\" />\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"Table\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,the Relaxed\" />\n    <xtagTextFragments Skin=\"glaze\" PoeticFeatures=\"flat surfaces,artfulness,gentle stillness\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <tag Name=\"AutoexploreChest\" />\n    <stag Name=\"Storage\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_states": {
+    "game_assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "states": [
+      {
+        "state": "empty",
+        "tile": "Assets_Content_Textures_Items_sw_table_metal.bmp",
+        "info_id": 10121,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          390,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-metal-workbench-20261020\\empty-mask.png",
+          "sha256": "9d4fef29b069cd1d3a29c22b892eb92e48d2e68cab960c97d6d01aaa624d7aab"
+        }
+      },
+      {
+        "state": "occupied",
+        "tile": "Assets_Content_Textures_Items_sw_table_metal_full.bmp",
+        "info_id": 10122,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          364,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-metal-workbench-20261020\\occupied-mask.png",
+          "sha256": "9f3b816fee423643662b1ca48b3f1cc687be66fe4e2ba1b430dd33cd14eaa6d9"
+        }
+      }
+    ],
+    "selector": "Inventory.CheckEmptyState/CheckNonEmptyState use inherited Metal Table EmptyTile/FullTile and independent detail-color choice."
+  },
+  "source_shape": "Wide flat trapezoidal top over two broad perforated plate supports; occupied tile adds one tall rectangular handled/slotted mark on the right and one small mark on the left. Exact stock-item identity is not established.",
+  "palette": {
+    "primary": "c",
+    "empty_detail": "C",
+    "occupied_detail_choices": [
+      "C",
+      "w",
+      "y",
+      "W"
+    ],
+    "rule": "Actual empty mask contains no covered detail pixels. Whole chrome-steel structure follows primary c, including its highlights. Occupied decorative marker follows native chosen detail. No bright-metal edge is arbitrarily assigned detail."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "package_id": "VanillaExpanded.VTEXE",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_south.png",
+    "sha256": "8f13ea5fbf2409881b155f94c6a1dc30c79cbde6dafc027d0809d42d59071435",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual Vanilla Textures Expanded TableMachining_south supplies readable cold metal contours, shallow plane shading and restrained edge wear only. No machinery, tools, countertop plan, facing system or crafting mechanics are copied."
+  },
+  "construction": "Retain corrected source south base and stock material at uniform shared scale. Reverse symmetric empty bench for N, construct complete end plate volume and separately project stock in N/E/W, preserving front/back holes and opaque end faces. Unseen support extrusion and stock faces are authored.",
+  "states": "Inherited Metal Table EmptyTile sw_table_metal.bmp; FullTile sw_table_metal_full.bmp. Inventory.CheckEmptyState/CheckNonEmptyState independently choose comma-expanded tile/detail values. Empty C; occupied C/w/y/W. Do not correlate a new item identity to native color or reroll native state.",
+  "inventory_boundary": "Table Container/Inventory population, non-takeable100-weight inorganic metal furniture, cover and sounds stay native. Stock marker represents the native occupied tile, not actual held inventory, a research bench or imported production functionality. Rare animated/custom cases retain native fallback.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "normalization": {
+      "uniform_scale": 0.95,
+      "pivot": [
+        8,
+        16
+      ],
+      "scope": "One whole-object transform for all empty bases and stock components in every view.",
+      "reason": "Opposed view of high upright stock approaches original top border; uniform shared scale supplies reconstruction margin without per-state/view crop."
+    },
+    "rule": "Same source cell, origin and scale for shared base and every stock component/role. No independent state/view bounds fitting."
+  },
+  "native_acceptance": "Pending full-set generation gate; native container/inventory/tile/detail choice,100-weight inorganic/non-takeable metal/cover/visibility, rare Animated fallback and extra-view placement remain unfinished.",
+  "supersedes": {
+    "path": "art/conversion/scn-metal-workbench/v1/source-packet.json",
+    "sha256": "d4b6892c2d02ec2f8aef7e4d08c3fee00035f48e29ceddd667c7b0994c73562e"
+  },
+  "camera": {
+    "classification": "CARDINAL_SOURCE_BOUND",
+    "authored_width": 13.7,
+    "authored_depth": 7.6,
+    "top_depth_factor": 0.4473684210526316,
+    "top_height": 9.15,
+    "apron_thickness": 1.4,
+    "projection": "u=8+rotated_x; v=16.9+(3.4/7.6)*rotated_y-z. Same elevation/physical dimensions for all directions.",
+    "dimension_provenance": "Hidden depth/support extrusion and stock thickness/placement are authored estimates from source parts/front and actual donor camera, not native length fields or a fixed end/front ratio.",
+    "support_rule": "Two source perforated plate supports extrude in depth. Square holes run front/back and remain visible in S/N; solid outer plate faces hide them in end views. Do not paste front holes onto end panel.",
+    "stock": {
+      "upright_x": [
+        1.05,
+        3.85
+      ],
+      "upright_y": [
+        1.88,
+        2.68
+      ],
+      "upright_z": [
+        9.15,
+        15.0
+      ],
+      "small_mark_center": [
+        -0.45,
+        2.148,
+        9.41
+      ],
+      "small_mark_radius": 0.26,
+      "identity": "Unidentified native occupied marks. Plate thickness and round-form unseen placement are authored; no item/tool identity or crafting role inferred."
+    },
+    "west": "Occupied stock must be separately projected: its plate and small mark change depth/overlap, not a whole mirrored occupied image."
+  },
+  "previous_packet": {
+    "path": "art/conversion/scn-metal-workbench/v2/source-packet.json",
+    "sha256": "5f7e07595692073b5b1b26022a09d5522f3f44f2f9364aab94b45ef06d25e6b7"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_south.png",
+        "sha256": "8f13ea5fbf2409881b155f94c6a1dc30c79cbde6dafc027d0809d42d59071435",
+        "frame": [
+          448,
+          192
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          448,
+          192
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_east.png",
+        "sha256": "acde2ef570bf75f25fd78f3dc105ef05e73768466f5c8d98d8fd04f71b90c749",
+        "frame": [
+          192,
+          448
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          192,
+          448
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableMachining_north.png",
+        "sha256": "b05a6711c954c0963ae567fdf918a3870d661b45d3ac964d62724ec6c088ed44",
+        "frame": [
+          448,
+          192
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          448,
+          192
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Production.xml",
+      "sha256": "3221c30adc223498636ac7b6ca86ef9c50fce681b138be8f0919c6e652045a31"
+    },
+    "object": "<ThingDef ParentName=\"BenchBase\">\n    <defName>TableMachining</defName>\n    <label>machining table</label>\n    <description>A work station for assembling machinery like guns and ammunition, or breaking down dead mechanoids.</description>\n    <thingClass>Building_WorkTable</thingClass>\n    <graphicData>\n      <texPath>Things/Building/Production/TableMachining</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <drawSize>(3.5,1.5)</drawSize>\n      <damageData>\n        <cornerTL>Damage/Corner</cornerTL>\n        <cornerTR>Damage/Corner</cornerTR>\n        <cornerBL>Damage/Corner</cornerBL>\n        <cornerBR>Damage/Corner</cornerBR>\n      </damageData>\n    </graphicData>\n    <castEdgeShadows>true</castEdgeShadows>\n    <staticSunShadowHeight>0.20</staticSunShadowHeight>\n    <costList>\n      <Steel>150</Steel>\n      <ComponentIndustrial>5</ComponentIndustrial>\n    </costList>\n    <altitudeLayer>Building</altitudeLayer>\n    <fillPercent>0.5</fillPercent>\n    <useHitPoints>True</useHitPoints>\n    <statBases>\n      <WorkToBuild>3000</WorkToBuild>\n      <MaxHitPoints>180</MaxHitPoints>\n      <Flammability>1.0</Flammability>\n      <Cleanliness>-2</Cleanliness>\n    </statBases>\n    <size>(3,1)</size>\n    <designationCategory>Production</designationCategory>\n    <uiOrder>2520</uiOrder>\n    <passability>PassThroughOnly</passability>\n    <pathCost>50</pathCost>\n    <hasInteractionCell>True</hasInteractionCell>\n    <interactionCellOffset>(0,0,-1)</interactionCellOffset>\n    <surfaceType>Item</surfaceType>\n    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>\n    <recipes>\n      <li>ButcherCorpseMechanoid</li>\n    </recipes>\n    <inspectorTabs>\n      <li>ITab_Bills</li>\n    </inspectorTabs>\n    <comps>\n      <li Class=\"CompProperties_Power\">\n        <compClass>CompPowerTrader</compClass>\n        <shortCircuitInRain>true</shortCircuitInRain>\n        <basePowerConsumption>350</basePowerConsumption>\n      </li>\n      <li Class=\"CompProperties_Flickable\" />\n      <li Class=\"CompProperties_Glower\">\n        <glowRadius>5</glowRadius>\n        <glowColor>(73,123,138,0)</glowColor>\n      </li>\n      <li Class=\"CompProperties_AffectedByFacilities\">\n        <linkableFacilities>\n          <li>ToolCabinet</li>\n        </linkableFacilities>\n      </li>\n      <li Class=\"CompProperties_Breakdownable\" />\n    </comps>\n    <building>\n      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>\n      <workTableRoomRole>Workshop</workTableRoomRole>\n      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>\n    </building>\n    <constructEffect>ConstructMetal</constructEffect>\n    <researchPrerequisites>\n      <li>Machining</li>\n    </researchPrerequisites>\n    <designationHotKey>Misc7</designationHotKey>\n    <placeWorkers>\n      <li>PlaceWorker_ShowFacilitiesConnections</li>\n      <li>PlaceWorker_PreventInteractionSpotOverlap</li>\n    </placeWorkers>\n  </ThingDef>\n\n  ",
+    "parent": "<ThingDef Name=\"BenchBase\" ParentName=\"BuildingBase\" Abstract=\"True\">\n    <canOverlapZones>false</canOverlapZones>\n    <minifiedDef>MinifiedThing</minifiedDef>\n    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>\n    <thingCategories>\n      <li>BuildingsProduction</li>\n    </thingCategories>\n    <statBases>\n      <Mass>20</Mass>\n    </statBases>\n    <interactionCellIcon>DiningChair</interactionCellIcon>\n    <noRightClickDraftAttack>true</noRightClickDraftAttack>\n    <comps>\n      <li Class=\"CompProperties_ReportWorkSpeed\">\n        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>\n      </li>\n    </comps>\n    <placeWorkers>\n      <li>PlaceWorker_ReportWorkSpeedPenalties</li>\n    </placeWorkers>\n    <building>\n      <buildingTags>\n        <li>Production</li>\n      </buildingTags>\n      <workTableRoomRole>Workshop</workTableRoomRole>\n    </building>\n  </ThingDef>\n\n  ",
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_Multi",
+    "drawSize": [
+      3.5,
+      1.5
+    ],
+    "footprint": [
+      3,
+      1
+    ],
+    "mapping": "Actual VTE S/N448x192 and E192x448 directional frames correspond to Core TableMachining texPath; draw frame rotates. Account for transparent margins, no Qud physical width from frame bounds.",
+    "role": "Parallel cardinal metal work-surface convention, complete end volume and restrained wear only. No donor machinery, tools, L plan, production recipes or3x1footprint copied."
+  }
+}
