@@ -1,0 +1,99 @@
+{
+  "entry": "SCN-JOPPA-BOOKSHELF",
+  "kind": "inventory_tinted_furniture_variants",
+  "blueprint": "Joppa Bookshelf",
+  "source": {
+    "path": "art/conversion/scn-joppa-bookshelf/v1/source-packet.json",
+    "sha256": "5fd99279215fa7bc08b820ca67290e130a360ba7d7c339bcb17b0593d084530e"
+  },
+  "variants": [
+    {
+      "variant": 1,
+      "native_tile": "Items/sw_bookshelf1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-1-primary-neutral.png",
+        "sha256": "651eb92e6426b1454e25487d72fa4d840bfeee27e52fba0a47f8145484087333"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-1-detail-neutral.png",
+        "sha256": "f83800a7b574e4b2d4265d0bf5a658b5a5af3788aca6ff94de736e37db2b284c"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-1-coverage.png",
+        "sha256": "73bcc9c3fb219f2fffcf68f9a2ce122caf0e8701aa007123787c80bce5f0297a"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-1-detail-coverage.png",
+        "sha256": "ec932349d226027603d5f46559611b46bea0bc599c9c6b3b3061eb4c1e510ba4"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Items/sw_bookshelf2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-2-primary-neutral.png",
+        "sha256": "007f528c1910f1e0456804607995559dffaeb1a3337bb643275f86e37862c3c7"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-2-detail-neutral.png",
+        "sha256": "5fe6450598ff701a54ef13ff5bef72b1761c4c3124cd3912082097bfbe7afc49"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-2-coverage.png",
+        "sha256": "59fb643379f7736db680a898e83a67aea9e105e08df064d7fc39afdb4d294913"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-2-detail-coverage.png",
+        "sha256": "6ee24cf75ac033462699957d58d85656879fe781f02836b0f14982e08e0151ff"
+      }
+    },
+    {
+      "variant": 3,
+      "native_tile": "Items/sw_bookshelf3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-3-primary-neutral.png",
+        "sha256": "0060e1b3ddef756c86c820a4beb90064da74aad864235e250678c2e82dd5cf13"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-3-detail-neutral.png",
+        "sha256": "9ae438a8219cdd22b4fd21892d636d4a8b323ebe66b506c2dea3bf2bd3fde3cd"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-3-coverage.png",
+        "sha256": "0217faf7c22782e1e9a04f4681024dfbbb026f759170185e20feda9c9cfa4710"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppa-bookshelf/v1/registered/variant-3-detail-coverage.png",
+        "sha256": "b13c35669658eba82bd0385efb504a189a845a41c8367ca9995d37bfd2c2165e"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "Each entire1024x1536layout maps once to256square for frame and every spine mask. No independent book/shelf/layout bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wooden frame w",
+    "stocked_detail": "actual native FullDetailColor W",
+    "empty_detail": "actual native EmptyDetailColor k",
+    "neutral_preview": "All production layers are equal-RGB neutral. Achromatic bands inside spines stay book-owned."
+  },
+  "state_owner": "Inherited RandomTile selects three cosmetic layouts. Inventory.CheckEmptyState/CheckNonEmptyState changes detail tint k/W with the same tile/geometry; no removal/repopulation of pictured book marks. Native inventory items/population remain separate.",
+  "native_behavior": "Preserve mounted organic50-weight furniture, native HangingSupport, container/on interaction, sounds, non-takeability and Joppa inventory population. No JPT research/knowledge mechanics or donor facing model.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

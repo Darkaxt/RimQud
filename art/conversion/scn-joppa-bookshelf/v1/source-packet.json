@@ -1,0 +1,684 @@
+{
+  "entry": "SCN-JOPPA-BOOKSHELF",
+  "identity": "Joppa Bookshelf -> Bookshelf -> BaseBookshelf -> MountedFurniture -> Furniture",
+  "description": "Wood planks are nailed at orthogonal angles, and dust sleeps on the paper jackets.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Joppa Bookshelf": "<object Name=\"Joppa Bookshelf\" Inherits=\"Bookshelf\">\n\t\t<part Name=\"Render\" DisplayName=\"wooden bookshelf\" Tile=\"Items/sw_bookshelf1.bmp\" DetailColor=\"W\" ColorString=\"&amp;w\" />\n\t\t<tag Name=\"NoSparkingQuest\" />\t\t\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"JoppaBookshelf\" />\n\t</object>",
+      "Bookshelf": "<object Name=\"Bookshelf\" Inherits=\"BaseBookshelf\">\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_bookshelf1.bmp,Items/sw_bookshelf2.bmp,Items/sw_bookshelf3.bmp\" />    \n  </object>",
+      "BaseBookshelf": "<object Name=\"BaseBookshelf\" Inherits=\"MountedFurniture\">\n\t\t<part Name=\"Render\" DisplayName=\"wooden bookshelf\" Tile=\"Items/sw_bookshelf1.bmp\" DetailColor=\"W\" ColorString=\"&amp;w\" RenderString=\"182\" />\n\t\t<part Name=\"Description\" Short=\"Wood planks are nailed at orthogonal angles, and dust sleeps on the paper jackets.\" />\n\t\t<part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_bookshelf\" />\n\t\t<part Name=\"Inventory\" />\n\t\t<tag Name=\"FullDetailColor\" Value=\"W\" />\n\t\t<tag Name=\"EmptyDetailColor\" Value=\"k\" />\n\t\t<tag Name=\"NoSparkingQuest\" />\n\t\t<part Name=\"Physics\" Organic=\"true\" Weight=\"50\" />\n\t\t<tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t\t<tag Name=\"OverlayColor\" Value=\"&amp;w\" />\n\t\t<tag Name=\"HangingSupport\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n\t</object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original_states": {
+    "path": "art/conversion/scn-joppa-bookshelf/v1/native-state-index.json",
+    "sha256": "90a911a8924b531eb1aa0b7ddb0b6c2ac266dcd1356547116f06c4b3615e1384"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-joppa-bookshelf/v1/native-states-comparison.png",
+    "sha256": "7fb007a782b84ba8589190c67edb3a62036152bb91a947d2b481dab2f8a58759"
+  },
+  "source_spine_layouts": [
+    {
+      "variant": 1,
+      "shelves": [
+        {
+          "base": 10.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  3,
+                  8
+                ],
+                [
+                  3,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                3,
+                8,
+                4,
+                10
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  5,
+                  8
+                ],
+                [
+                  5,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                5,
+                8,
+                6,
+                10
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  9,
+                  8
+                ],
+                [
+                  8,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                8,
+                8,
+                10,
+                10
+              ],
+              "kind": "leaning"
+            },
+            {
+              "source_pixels": [
+                [
+                  11,
+                  8
+                ],
+                [
+                  11,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                11,
+                8,
+                12,
+                10
+              ],
+              "kind": "upright"
+            }
+          ]
+        },
+        {
+          "base": 15.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  3,
+                  14
+                ],
+                [
+                  4,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                3,
+                14,
+                5,
+                15
+              ],
+              "kind": "horizontal"
+            },
+            {
+              "source_pixels": [
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                6,
+                13,
+                7,
+                15
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  10,
+                  13
+                ],
+                [
+                  10,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                10,
+                13,
+                11,
+                15
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  12,
+                  13
+                ],
+                [
+                  12,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                12,
+                13,
+                13,
+                15
+              ],
+              "kind": "upright"
+            }
+          ]
+        },
+        {
+          "base": 20.4,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  3,
+                  18
+                ],
+                [
+                  3,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                3,
+                18,
+                4,
+                20
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  7,
+                  18
+                ],
+                [
+                  7,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                7,
+                18,
+                8,
+                20
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  9,
+                  18
+                ],
+                [
+                  9,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                9,
+                18,
+                10,
+                20
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  12,
+                  18
+                ],
+                [
+                  12,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                12,
+                18,
+                13,
+                20
+              ],
+              "kind": "upright"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": 2,
+      "shelves": [
+        {
+          "base": 10.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  4,
+                  9
+                ],
+                [
+                  5,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                4,
+                9,
+                6,
+                10
+              ],
+              "kind": "horizontal"
+            },
+            {
+              "source_pixels": [
+                [
+                  7,
+                  8
+                ],
+                [
+                  7,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                7,
+                8,
+                8,
+                10
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                9,
+                8,
+                10,
+                10
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  12,
+                  8
+                ],
+                [
+                  12,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                12,
+                8,
+                13,
+                10
+              ],
+              "kind": "upright"
+            }
+          ]
+        },
+        {
+          "base": 15.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  4,
+                  13
+                ],
+                [
+                  4,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                4,
+                13,
+                5,
+                15
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                6,
+                13,
+                7,
+                15
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  8,
+                  13
+                ],
+                [
+                  9,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                8,
+                13,
+                10,
+                15
+              ],
+              "kind": "leaning"
+            }
+          ]
+        },
+        {
+          "base": 20.4,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  3,
+                  19
+                ],
+                [
+                  4,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                3,
+                19,
+                5,
+                20
+              ],
+              "kind": "horizontal"
+            },
+            {
+              "source_pixels": [
+                [
+                  6,
+                  18
+                ],
+                [
+                  6,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                6,
+                18,
+                7,
+                20
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  10,
+                  18
+                ],
+                [
+                  10,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                10,
+                18,
+                11,
+                20
+              ],
+              "kind": "upright"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": 3,
+      "shelves": [
+        {
+          "base": 10.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  7,
+                  8
+                ],
+                [
+                  7,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                7,
+                8,
+                8,
+                10
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  12,
+                  8
+                ],
+                [
+                  11,
+                  9
+                ]
+              ],
+              "source_bounds": [
+                11,
+                8,
+                13,
+                10
+              ],
+              "kind": "leaning"
+            }
+          ]
+        },
+        {
+          "base": 15.9,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  4,
+                  13
+                ],
+                [
+                  3,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                3,
+                13,
+                5,
+                15
+              ],
+              "kind": "leaning"
+            },
+            {
+              "source_pixels": [
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                6,
+                13,
+                7,
+                15
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  10,
+                  14
+                ],
+                [
+                  11,
+                  14
+                ]
+              ],
+              "source_bounds": [
+                10,
+                14,
+                12,
+                15
+              ],
+              "kind": "horizontal"
+            }
+          ]
+        },
+        {
+          "base": 20.4,
+          "groups": [
+            {
+              "source_pixels": [
+                [
+                  10,
+                  18
+                ],
+                [
+                  10,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                10,
+                18,
+                11,
+                20
+              ],
+              "kind": "upright"
+            },
+            {
+              "source_pixels": [
+                [
+                  12,
+                  18
+                ],
+                [
+                  12,
+                  19
+                ]
+              ],
+              "source_bounds": [
+                12,
+                18,
+                13,
+                20
+              ],
+              "kind": "upright"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "primary": "w",
+    "full_detail": "W",
+    "empty_detail": "k",
+    "native_primary_rgb": "98875f",
+    "native_full_detail_rgb": "cfc041",
+    "native_empty_detail_rgb": "0f3b3a",
+    "rule": "Orthogonal wooden frame stays w. Source book-spine groups use native detail W when stocked and k when empty. Empty state changes tint, not tile/geometry; no invented removal/repopulation of pictured books. Gold is an extraction aid; production layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "[JPT] Human Resources",
+    "package_id": "JPT.HumanResources",
+    "workshop_id": "2119687603",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2119687603\\Textures\\Things\\Building\\BookShelfSparse_south.png",
+    "sha256": "8ba95a3f4c7f47beaf1417d24b42548d32e64dd13695154e7a16a1ceb85df866",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2119687603\\About\\About.xml",
+    "about_sha256": "452338fc50b27b1a493d5090c8626d3a60baf694806d91ccee389f244ec4feb2",
+    "role": "Actual installed BookShelfSparse_south supplies restrained wooden shelf contours, sparse spine readability and low-relief shading. Its broad four-row footprint, exact books, inventory/research mechanics and facing model are not copied."
+  },
+  "construction": "Three editable tall orthogonal-plank frames retain native sparse spine groups and upright/horizontal/leaning arrangement. A shallow bottom support board within the native frame extent and book bases seated on boards are explicit physical-construction interpretation. Open-backed compartments preserve source negative space; actual backing construction is not established by the tiny icon. Exact spine thickness/heights, seams and dust remain authored.",
+  "native_state": {
+    "owner": "RandomTile builder and XRL.World.Parts.Inventory",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "inventory_stdout_sha256": "37dca43dbe6512d6ce734e21aad8308f887704767dd6c1ea900e628b5c963628",
+    "rule": "Inherited RandomTile remains three bookshelf layouts despite child default tile1. Inventory.CheckEmptyState reads EmptyDetailColor k; CheckNonEmptyState reads FullDetailColor W. No EmptyTile/FullTile tags are declared for this chain. Joppa child changes inventory population to JoppaBookshelf; pictured spines are cosmetic source marks, not actual item identities."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One whole-cell transform for each frame and every spine mask. No per-book, shelf or random-layout bbox centering."
+  },
+  "native_behavior": "Preserve mounted organic50-weight storage, non-takeability, native hanging-support tag, inventory/population/container-on interaction and sounds. No donor research/knowledge system.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

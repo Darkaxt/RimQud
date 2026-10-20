@@ -1,0 +1,78 @@
+{
+  "entry": "SCN-HAMMOCK",
+  "kind": "native_state_layered_furniture",
+  "blueprint": "Hammock",
+  "source": {
+    "path": "art/conversion/scn-hammock/v1/source-packet.json",
+    "sha256": "cd87bf8c0d96d5e0ff6752da11f1eade05817d5fdc8916a68e7d942e6a462976"
+  },
+  "states": [
+    {
+      "state": "unhung",
+      "native_tile": "Items/sw_shawl.bmp",
+      "primary": {
+        "path": "art/conversion/scn-hammock/v1/registered/unhung-primary-neutral.png",
+        "sha256": "c98636baef0d3999fa1c2ca23fb2b2635eb35f026c7b7302efaee8b70e7f1b6b"
+      },
+      "detail": {
+        "path": "art/conversion/scn-hammock/v1/registered/unhung-detail-neutral.png",
+        "sha256": "086beb44dec9351c96fd52394d2ed25c013d12a498973cf485f6ea9abf4cc11e"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-hammock/v1/registered/unhung-coverage.png",
+        "sha256": "f1f4319faa64e3dbe2f89a0a17ae067f9928f7e79d666015c9aa3f77b999c3a3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-hammock/v1/registered/unhung-detail-coverage.png",
+        "sha256": "929781e49386ea322aa4e5bf2cbc7a19f3cf57809c2dd3bbe5ca3cde93b6230f"
+      }
+    },
+    {
+      "state": "hanging",
+      "native_tile": "Items/sw_hammock.bmp",
+      "primary": {
+        "path": "art/conversion/scn-hammock/v1/registered/hanging-primary-neutral.png",
+        "sha256": "96928863b8b18fff4d0d942fb244976d0a08aae18a37e4b1936246260c35cfd3"
+      },
+      "detail": {
+        "path": "art/conversion/scn-hammock/v1/registered/hanging-detail-neutral.png",
+        "sha256": "30275391cc8807e68acadcf0765ab076a3c0c1d20aa5d5c9160bbcb4f73a77da"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-hammock/v1/registered/hanging-coverage.png",
+        "sha256": "81a03860d44468eea644210aeb896e3c971eb57a5cecae95967971f7a9194342"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-hammock/v1/registered/hanging-detail-coverage.png",
+        "sha256": "60c61459ff110a33c1b5206205363b9c8e63bec93f37d78074ef31ac719ab00c"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "Each complete native-state1024x1536frame maps once to256square. No independent mesh/fringe/end-tip fitting or per-state alpha-bounds centering."
+  },
+  "palette": {
+    "primary": "explicit native TileColor y, not glyph-only ColorString Y",
+    "detail": "actual native Y bright strands",
+    "neutral_preview": "Main ropes, former warm raw highlights and cyan markers are all neutralized. Selected production RGB channels are equal."
+  },
+  "state_owner": "Native Hangable support/lifecycle owns Hanging. Render changes E.Tile to Items/sw_hammock.bmp only while hanging; default is Items/sw_shawl.bmp. Artwork does not create support rules or switch state.",
+  "native_behavior": "Keep original Bed/Hangable,2-weight organic takeable non-solid physics, Hitpoints5and support checks. No baked trees/stand, moving ropes, fishing/vehicle behavior or unsupported new state. Native acceptance remains pending.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

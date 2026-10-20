@@ -105,7 +105,16 @@ the plain-top variant, with separate neutral lower/front binding. Its default
 thumbnail is visibly equivalent to variant 1 under the native shader contract.
 All six new refinements, original shapes, editable construction and masks are
 recorded in the report. [Selected cushion variants](art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png).
-There are now 43 generation-ready entries; Hammock is active next.
+Hammock covers its actual portable loop/fringe and support-owned hanging sling,
+with open rope lattice and separate bright-strand masks. Its native tile primary
+is pale `y` from `TileColor`, distinct from its white glyph `ColorString`.
+Joppa Bookshelf covers all three inherited sparse layouts and native inventory
+detail tint: stocked `W`, empty `k`, with identical geometry. Whole-spine masks
+retain gray seams/highlights without coloring wooden shelf strokes.
+Their five actual refinements, native source states, installed mod references,
+editable shapes and extraction evidence are in the report. [Hammock states](art/conversion/scn-hammock/v1/registered/registration-comparison.png)
+· [Bookshelf layouts and stock tints](art/conversion/scn-joppa-bookshelf/v1/registered/registration-comparison.png).
+There are now 45 generation-ready entries; Mannequin is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

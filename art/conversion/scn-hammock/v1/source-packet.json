@@ -1,0 +1,76 @@
+{
+  "entry": "SCN-HAMMOCK",
+  "identity": "Hammock -> Furniture",
+  "description": "Brinestraw was braided into a rope lattice saddle for slinging between two old oaks and napping. The fibers on the middle-sag are extra frayed from the center-mass strain of a reclining ass.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Hammock": "<object Name=\"Hammock\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"hammock\" RenderString=\"~\" ColorString=\"&amp;Y\" TileColor=\"&amp;y\" DetailColor=\"Y\" Tile=\"Items/sw_shawl.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"2\" Organic=\"true\" Takeable=\"true\" Solid=\"false\" />\n    <part Name=\"Description\" Short=\"Brinestraw was braided into a rope lattice saddle for slinging between two old oaks and napping. The fibers on the middle-sag are extra frayed from the center-mass strain of a reclining ass.\" />\n    <part Name=\"Bed\" />\n    <part Name=\"Hangable\" HangingTile=\"Items/sw_hammock.bmp\" />\n    <stat Name=\"Hitpoints\" Value=\"5\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <stag Name=\"Basic\" />\n    <stag Name=\"Sleep\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original_states": {
+    "path": "art/conversion/scn-hammock/v1/native-state-index.json",
+    "sha256": "97cffb83b88515e02101b569af0189988fb1d2fbe21c63251d81baaa2e847d96"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-hammock/v1/native-states-comparison.png",
+    "sha256": "60bca8970d50f7513cd01ddd0a96553dc1ba7db0a3eac5254068e5bd1e92caae"
+  },
+  "source_shapes": {
+    "unhung": "Native sw_shawl tile: top loop and two long hanging/draped lattice strips with pale frayed lower ends. This is the portable hammock appearance, not a new clothing item or creature.",
+    "hanging": "Native sw_hammock tile: sagging diagonal rope lattice between a lower-left and upper-right end; open lower weave, selected pale inner edge and bright end tips. No support trees or stand are included in the tile."
+  },
+  "palette": {
+    "primary": "y",
+    "detail": "Y",
+    "native_primary_rgb": "b1c9c3",
+    "native_detail_rgb": "ffffff",
+    "glyph_only_ColorString": "&Y",
+    "tile_specific_TileColor": "&y",
+    "rule": "TileColor explicitly supplies y for tile primary; ColorString Y remains glyph metadata. Native hanging render changes tile only, not colors. Main rope mesh uses y; selected bright strands/fringes/end tips use Y. Cyan authoring strands are an extraction aid; final layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vehicle Framework",
+    "package_id": "SmashPhil.VehicleFramework",
+    "workshop_id": "3014915404",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\3014915404\\LegacyTextures\\Textures\\Animations\\Fishing\\FishingNetMote.png",
+    "sha256": "961f8ac58fa7efb21fcbd1069765a0af6c31cceef353332a961afd8b5c09c861",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\3014915404\\About\\About.xml",
+    "about_sha256": "fa0e5a37af805b398005023fbfaec3362e2c2e3dd5002ca4632e54e18ec68d25",
+    "role": "Actual installed legacy FishingNetMote supplies readable crossed-rope lattice and open mesh spacing only. It is retained legacy mod art, not claimed as an active current hammock asset. Its circular net outline, endpoint dots, fishing/vehicle behavior and source colors are not copied."
+  },
+  "reference_limits": "Focused installed filename search found no direct hammock asset. Melee Animation coiled rope was viewed but not selected; the actual net is the closer lattice-material reference. Qud source tiles control both state silhouettes.",
+  "construction": "Two editable rope-mesh silhouettes use actual open weave because the description specifies a lattice. The portable state keeps the source loop/two draped strips and frayed ends; the hanging state keeps source diagonal sag, end locations and frayed center. Mesh spacing, individual braids/knots and exact fray fibers are authored interpretation. No opaque blanket, clothing mannequin, baked trees, rigid stand or swinging animation.",
+  "native_state": {
+    "owner": "XRL.World.Parts.Hangable",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": {
+      "Hangable": "16a5e7ea813e7ec2a1d67f2fa3aaaf0e8332a61f598b84ce8c6fbb8f1d072741",
+      "Render": "fbe141ca53d6ca3059571969cda3424b3f6bd18323543d18b4f885ddecd9ad69"
+    },
+    "rule": "Hangable.CheckHanging uses actual native support availability; Render replaces E.Tile with HangingTile only while Hanging. Entered/LeftCell and zone lifecycle remain native. Keep2-weight organic takeable non-solid Bed/Hangable behavior, Hitpoints5and native support rules. No art-owned hanging state or new support objects.",
+    "render_color_evidence": "Render.getTileColor returns the explicit TileColor when present; both native states retain the declared y/Y tile roles."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source-cell mapping for each native state and all role masks. Do not separately center mesh, fringes, end tips or state-specific visible alpha bounds."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate"
+}
