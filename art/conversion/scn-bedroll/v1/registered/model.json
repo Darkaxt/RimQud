@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-BEDROLL",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Bedroll",
+  "native_tiles": [
+    "Items/sw_bedroll.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-bedroll/v1/source-packet.json",
+    "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"
+  },
+  "primary": {
+    "path": "art/conversion/scn-bedroll/v1/registered/primary-neutral.png",
+    "sha256": "cf98645cbd7c146cc40e54534ea9876490ae04bc16437e383e7341d314a6134c"
+  },
+  "detail": {
+    "path": "art/conversion/scn-bedroll/v1/registered/detail-neutral.png",
+    "sha256": "729cce3a1a050b9d892cfa43ca99612c5ce1bf4f39d8d9fc7505bbf6271d794a"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-bedroll/v1/registered/coverage.png",
+    "sha256": "a0a1800b508c56a4db0aaf59518f8e5e0c077be07c9615559a57222ef96db8d8"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-bedroll/v1/registered/detail-coverage.png",
+    "sha256": "1373319052b3ab35471678e4f163e7a5c8446ce4a7f5b48ea8f24fa5ca803c9e"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for diagonal wool/fold/canvas fastening. No independent folded-end fitting or bbox centering."
+  },
+  "palette": {
+    "primary": "actual native main wool/canvas w",
+    "detail": "actual native pale folded end y",
+    "neutral_preview": "Both selected layers are equal-RGB neutral; pale cyan segmentation aid is removed."
+  },
+  "state_owner": "One source fixed-map-view Bedroll tile. Native sleeping and takeable-item state stays native; no donor facings or alternate packed/occupied artwork is invented.",
+  "native_behavior": "Preserve native Bed interaction, non-occlusion, takeable4-weight non-solid furniture and custom native fallback. This does not inherit BaseBed mounting/Animated builder. No RimWorld bedroll dimensions or mechanics are transplanted.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-BOOK-TABLE",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Book Table",
+  "native_tiles": [
+    "Items/sw_table_low_drawers.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-book-table/v1/source-packet.json",
+    "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"
+  },
+  "primary": {
+    "path": "art/conversion/scn-book-table/v1/registered/primary-neutral.png",
+    "sha256": "3aeb4198b3f1d681f418a9d8367dd76e71abcb85bea96f3449c749793858fbaf"
+  },
+  "detail": {
+    "path": "art/conversion/scn-book-table/v1/registered/detail-neutral.png",
+    "sha256": "26cce287fd03b26ba33e61cfc56edd7d346315b35bbbe50b1073bd6fec40940d"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-book-table/v1/registered/coverage.png",
+    "sha256": "270ed09c583768c14db5a0ff13ad97cc9a906bed8218d5d112dc75796aa24cb6"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-book-table/v1/registered/detail-coverage.png",
+    "sha256": "6d53e5f9083343d04e0317ce5013fe1eeedcad92a448b76d58e6dfd782d05a01"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for the entire low table and top mask. No independent top/drawer/foot bbox centering."
+  },
+  "palette": {
+    "primary": "actual native drawer/housing/support wood w",
+    "detail": "actual native tabletop W",
+    "neutral_preview": "Both production layers are equal-RGB grayscale. Gold extraction aid is removed."
+  },
+  "state_owner": "One source fixed tile. Book Table inherits Furniture directly, not Table; no generic Table empty/full appearance applies.",
+  "native_behavior": "Preserve native Container/on inventory, non-solid/non-takeable80-weight organic furniture, non-occlusion and rare animated/custom fallback. No donor end-table mechanics.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-CHAIR",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Chair",
+  "native_tiles": [
+    "Items/sw_chair.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-chair/v1/source-packet.json",
+    "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"
+  },
+  "primary": {
+    "path": "art/conversion/scn-chair/v1/registered/primary-neutral.png",
+    "sha256": "36de7cd5d6006d64ebfb89162e1e31b8fe277318832e5eec45bcc86f29e0909a"
+  },
+  "detail": {
+    "path": "art/conversion/scn-chair/v1/registered/detail-neutral.png",
+    "sha256": "fe9435aa95228336328cabf99457de2607dd31d805b441b655d3b02d4d09ea22"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-chair/v1/registered/coverage.png",
+    "sha256": "f2c643b1a0c05a4d00403732e07dd613382c66f4754efd13f1d1dcc184de2e19"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-chair/v1/registered/detail-coverage.png",
+    "sha256": "56cdbae8205b1b2566ba3a162db9cb4a99e5a3d3511010ba3b42d3e7596c011d"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for tall slatted wood back, supports and hard angled seat. No independent seat/back/support fitting or bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wood w",
+    "detail": "actual native hard wooden seat y",
+    "neutral_preview": "Both selected layers are equal-RGB neutral; pale cyan segmentation aid is removed."
+  },
+  "state_owner": "One source fixed-map-view wooden Chair tile. Native sitting stays native; no donor facings or alternate occupied artwork is invented.",
+  "native_behavior": "Preserve native Chair interaction, non-occlusion,20-weight non-takeable organic furniture, MissileCover10and rare Animated/custom fallback. No donor furniture dimensions, facings or mechanics are transplanted.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

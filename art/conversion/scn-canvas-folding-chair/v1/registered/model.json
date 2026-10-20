@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-CANVAS-FOLDING-CHAIR",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Canvas Folding Chair",
+  "native_tiles": [
+    "Items/sw_chair_canvas.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json",
+    "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"
+  },
+  "primary": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/registered/primary-neutral.png",
+    "sha256": "15795c3d26887489cc948e6870e42de6b0061515f477a640464a4423f51089e4"
+  },
+  "detail": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/registered/detail-neutral.png",
+    "sha256": "9d52619b1770a118c83bd95bac1c91e2174ef37fa248d842d9fb131da3b28e0b"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/registered/coverage.png",
+    "sha256": "fc206064bd73fa9ea2a2bf17612111e4ee6cf76c471b83f847690b19f9b41fb9"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/registered/detail-coverage.png",
+    "sha256": "0b58f815d04029726fcc526ba83b4b0314c9d9df387d6e58b2a7abc36d9780c2"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for oblique wooden rails/supports and canvas seat. No independent seat/wood fitting or bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wood w",
+    "detail": "actual native canvas y",
+    "neutral_preview": "Both selected layers are equal-RGB neutral; pale cyan segmentation aid is removed."
+  },
+  "state_owner": "One source fixed-map-view deployed Canvas Folding Chair tile. Native sitting/takeability stays native; no donor facings or alternate folded/packed artwork is invented.",
+  "native_behavior": "Preserve native Chair interaction, non-occlusion, takeable2-weight portable organic furniture and inherited rare Animated/custom fallback. BasePortableChair removes MissileCover. No donor furniture dimensions or mechanics are transplanted.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

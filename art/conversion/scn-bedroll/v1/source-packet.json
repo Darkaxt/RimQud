@@ -1,0 +1,69 @@
+{
+  "entry": "SCN-BEDROLL",
+  "identity": "Bedroll -> Furniture",
+  "description": "A goat wool bed fastened with canvas ties.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Bedroll": "<object Name=\"Bedroll\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"bedroll\" ColorString=\"&amp;w\" RenderString=\"169\" Occluding=\"false\" RenderIfDark=\"true\" Tile=\"Items/sw_bedroll.bmp\" DetailColor=\"y\" />\n    <part Name=\"Physics\" Weight=\"4\" Takeable=\"true\" Solid=\"false\" />\n    <part Name=\"Description\" Short=\"A goat wool bed fastened with canvas ties.\" />\n    <part Name=\"Bed\" />\n\t\t<stag Name=\"Sleep\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\bedroll-mask.png",
+    "sha256": "47bdcea3a7f3c0c121ae3e8a9f2ac78feb0732dd29bc6d2b9e852d4539653393",
+    "tile": "Items/sw_bedroll.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9297,
+    "atlas_id": 185,
+    "rect": [
+      864,
+      234,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Diagonal long soft body extends toward lower-left with rounded lower end. Pale folded/rolled end sits upper-right; heavier primary marks cross their join. The raw hollow outline is not a physically transparent bed.",
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Main wool bed/canvas fastening receive w; the source pale upper folded end receives y. Cyan during authoring only marks the latter region; final production layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_south.png",
+    "sha256": "378532349cd9fbd57ea13d4d7debf16a03482409262a2049868fcdea04922716",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Bedroll_south supplies wool/fabric padding, restrained seams and clean contour shading. Its pillow, straight footprint, large repaired patches and four donor facings are not copied."
+  },
+  "construction": "Editable soft diagonal wool body fills the source outline, a pale upper folded/rolled end follows the detail marks, and one canvas fastening crossing the join has two short tie ends. Fold depth, seam placement and tie interpretation are authored from description and tiny source marks; no separate pillow, frame, zipper or invented occupant.",
+  "native_state": "One fixed tile, takeable4-weight non-solid furniture with native Bed interaction. It does not inherit BaseBed/mounted solidity or the donor sleeping-bag behavior. No source occupied/packed tile switch is declared.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell coordinate transform for entire oblique bedroll and detail coverage. No independent folded-end centering."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

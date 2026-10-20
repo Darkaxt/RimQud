@@ -88,7 +88,15 @@ The hillfolk Bed also retains its original oblique frame and chaff-stuffed fabri
 with separate neutral wood/fabric roles and the native brown/white palette.
 Both entries include source metadata, actual installed mod references, editable
 construction, actual refinement calls and extraction evidence.
-There are now 36 generation-ready entries; Bedroll is active next.
+Bedroll now retains its diagonal goat-wool body, pale folded end and canvas ties.
+Book Table preserves two side-by-side drawers and a broad bare yellow top, without
+invented visible books or generic Table empty/full states. Canvas Folding Chair
+has a thin knit-watervine sling on connected wooden supports; its initial draft
+and two support corrections remain in the report. The ordinary Chair retains its
+tall slatted back and hard plank seat: its pale native seat tint is not fabric.
+Each includes actual source/reference metadata, editable geometry, refinement,
+neutral tint layers and intended-size visual evidence.
+There are now 40 generation-ready entries; Chest1 is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BEDROLL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-CHEST1**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -136,11 +136,11 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BED | Bed | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-BEDROLL | Bedroll | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BEDROLL | Bedroll | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHAIR | Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-CHEST1 | Chest1 | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CHEST1 | Chest1 | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DRESSER | Dresser | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-FLOOR-CUSHION | Floor Cushion | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-HAMMOCK | Hammock | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -1259,7 +1259,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bedroll-body.png](../art/village/scenery/bedroll-body.png), [art/village/scenery/bedroll-detail.png](../art/village/scenery/bedroll-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T07:01:52.510253+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Bedroll/Furniture definitions, original16x24mask/hash, goat-wool/canvas-ties description and native w/y roles.
+  Review: Source has a rounded diagonal lower body, pale upper folded end and primary fastening marks. Hollow glyph is not a transparent physical bed. This is takeable4-weight non-solid furniture with native Bed interaction, not BaseBed/mounted furniture.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/source-packet.json", "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"}, {"path": "art/conversion/scn-bedroll/v1/source-construction-comparison.png", "sha256": "9527e00ad5a597b01b22a98fabdba3ed08ba9197e92dc3afedb9f8c457cea6e5"}]
+  Method/prompt/corrections: {"phase": "Goat-wool bedroll identity, original diagonal fold and native palette"}
+
+- 2026-10-20T07:01:52.510627+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected actual installed Vanilla Textures Expanded Bedroll_south for low-relief padding, modest seams and game-art contours only.
+  Review: Viewed exact donor and package metadata. Its straight footprint, separate pillow, large repaired patches, rotations and mechanics are not copied. Core bedroll was also viewed but not selected for this refinement.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/source-packet.json", "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/source-construction-comparison.png", "sha256": "9527e00ad5a597b01b22a98fabdba3ed08ba9197e92dc3afedb9f8c457cea6e5"}]
+  Method/prompt/corrections: {"phase": "Actual installed VTE wool and seam reference"}
+
+- 2026-10-20T07:01:52.510826+00:00 / construct_faithful_shape / PASS: Constructed explicit wool body, upper folded/rolled end and canvas fastening with two short tie ends.
+  Review: Viewed actual source/manual/donor comparison. Fold depth, seams and fastening interpretation are authored from the small glyph and description. No separate pillow, frame, zipper, repair patchwork or occupant is added.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/source-packet.json", "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/prepare-and-construct.py", "sha256": "ffabee3def78014dc6161c1eede3a6fc55a4b29dbe023b774aee5c5f3ea9de38"}, {"path": "art/conversion/scn-bedroll/v1/constructed-front.svg", "sha256": "52f88afd3f7c5c97216148710a9dca2d40b26c5160dbeffc8c909d38e3990dec"}, {"path": "art/conversion/scn-bedroll/v1/constructed-front.png", "sha256": "0ba02126c912a45000a440d42ec4a3d19cb9ada52da3ee6ca61ca0bc48201e7e"}, {"path": "art/conversion/scn-bedroll/v1/source-construction-comparison.png", "sha256": "9527e00ad5a597b01b22a98fabdba3ed08ba9197e92dc3afedb9f8c457cea6e5"}]
+  Method/prompt/corrections: {"phase": "Editable diagonal wool, pale folded end and canvas fastening"}
+
+- 2026-10-20T07:01:52.511200+00:00 / create_required_state_neighbor_variants / PASS: Retained native Items/sw_bedroll.bmp and its source diagonal presentation rather than importing donor four-way furniture views.
+  Review: No source alternate packed/occupied tile is declared. Main body, pale fold and fastening remain in one full native-cell frame; no independent component centering.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/source-packet.json", "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/constructed-front.png", "sha256": "0ba02126c912a45000a440d42ec4a3d19cb9ada52da3ee6ca61ca0bc48201e7e"}]
+  Method/prompt/corrections: {"phase": "One fixed source tile with shared wool/fold/tie frame"}
+
+- 2026-10-20T07:01:52.511370+00:00 / refine_materials_and_form / PASS: Performed one built-in ImageGen refinement of the explicit diagonal construction using the selected actual installed VTE bedroll reference.
+  Review: Viewed actual saved output. Rounded body, folded end and two tie ends remain coherent. Subtle wool texture/seams refine the existing construction; no new furniture, pillow or occupant is accepted. Exterior soft halo is excluded by structural alpha extraction.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/source-packet.json", "sha256": "7f54f1382e27607e6b609839a38470d13fc0cd90feef255686c1e2cecefdf136"}, {"path": "art/conversion/scn-bedroll/v1/constructed-front.png", "sha256": "0ba02126c912a45000a440d42ec4a3d19cb9ada52da3ee6ca61ca0bc48201e7e"}, {"path": "art/conversion/scn-bedroll/v1/refine-front-prompt.txt", "sha256": "8b60f67363483bef70da199092e5ad20b387e58dbe8becf4b00b4f3d94bde77a"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/refined-proposal.png", "sha256": "9be289dd90a0d0a07b2d17b405d63b3ddf33a7ca66d96a58e2ec3f5cde487521"}]
+  Method/prompt/corrections: {"phase": "Controlled goat-wool and canvas refinement", "tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-bedroll/v1/refine-front-prompt.txt", "sha256": "8b60f67363483bef70da199092e5ad20b387e58dbe8becf4b00b4f3d94bde77a"}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-29bd1ca8-2b42-412b-8ca5-ee93ba5d2fc4.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-bedroll/v1/constructed-front.png", "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/Bed/Bedroll_south.png"]}}
+
+- 2026-10-20T07:01:52.512798+00:00 / extract_register_color_coverage / PASS: Extracted actual cyan folded-end ownership, retained fastening as primary, removed exterior halo and mapped the whole source frame once.
+  Review: Viewed isolated folded-end layer and complete recomposition. Both production layers are equal-RGB grayscale on the shared256-square source-cell mapping. The canvas fastening and tie ends remain primary-owned; no baked cyan remains.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/refined-proposal.png", "sha256": "9be289dd90a0d0a07b2d17b405d63b3ddf33a7ca66d96a58e2ec3f5cde487521"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/register-bedroll.py", "sha256": "9b0e6ca1dcce08ce087b778d35417f0f39e5f7670fde0a5f968746d51b801503"}, {"path": "art/conversion/scn-bedroll/v1/registered/coverage.png", "sha256": "a0a1800b508c56a4db0aaf59518f8e5e0c077be07c9615559a57222ef96db8d8"}, {"path": "art/conversion/scn-bedroll/v1/registered/detail-coverage.png", "sha256": "1373319052b3ab35471678e4f163e7a5c8446ce4a7f5b48ea8f24fa5ca803c9e"}, {"path": "art/conversion/scn-bedroll/v1/registered/detail-neutral.png", "sha256": "729cce3a1a050b9d892cfa43ca99612c5ce1bf4f39d8d9fc7505bbf6271d794a"}, {"path": "art/conversion/scn-bedroll/v1/registered/fabric-neutral-master.png", "sha256": "1474477578ee7cccb6b07769de525bda2b35ff97fb4c841a3eb009bcce92159c"}, {"path": "art/conversion/scn-bedroll/v1/registered/fabric-ownership-mask.png", "sha256": "4766a0a3bcb4174eeda4c0b116f2187ee0a6274de72af21bbd8eb1158d79e144"}, {"path": "art/conversion/scn-bedroll/v1/registered/model.json", "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"}, {"path": "art/conversion/scn-bedroll/v1/registered/native-w-y-preview.png", "sha256": "a272f239c905e19e58339350e188aed62ebd8e0128d9a50f1aa06fb96e9d487b"}, {"path": "art/conversion/scn-bedroll/v1/registered/neutral-master.png", "sha256": "e4b11da8602c847767d56fa723c6b530a263657be43b0c000fabfa90c3249407"}, {"path": "art/conversion/scn-bedroll/v1/registered/opaque-structure-mask.png", "sha256": "3a478f7b5a42972792278d15e7eee3f69ab56bbb9bccf86f36a7cb70a426b994"}, {"path": "art/conversion/scn-bedroll/v1/registered/primary-neutral.png", "sha256": "cf98645cbd7c146cc40e54534ea9876490ae04bc16437e383e7341d314a6134c"}, {"path": "art/conversion/scn-bedroll/v1/registered/registration-comparison.png", "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"}, {"path": "art/conversion/scn-bedroll/v1/registered/registration-decisions.json", "sha256": "27866785256a8efb9bfd2e6748c748255e163ca896c80cedb72d56a0281525d3"}, {"path": "art/conversion/scn-bedroll/v1/registered/selected-edge-mask.png", "sha256": "fa6754faf1522e8bfb3829af0b757ab5a41f4a95046a572f854607e5d164a55e"}]
+  Method/prompt/corrections: {"phase": "Neutral main wool/canvas and folded-end coverage"}
+
+- 2026-10-20T07:01:52.515123+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected the selected neutral/detail/native w/y views enlarged and at16x24/24x36/32x48sizes.
+  Review: Actual saved plate preserves soft diagonal source identity, pale fold and fastening. This is authoring review, not native sleep/takeability/visibility acceptance.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/registered/model.json", "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"}]
+  Outputs: [{"path": "art/conversion/scn-bedroll/v1/registered/registration-comparison.png", "sha256": "ebb7efa6df6b145667f250660b992f974bb0b610e1b0dfae2a3af5f0cedd793e"}, {"path": "art/conversion/scn-bedroll/v1/registered/native-w-y-preview.png", "sha256": "a272f239c905e19e58339350e188aed62ebd8e0128d9a50f1aa06fb96e9d487b"}]
+  Method/prompt/corrections: {"phase": "Diagonal source identity and intended-size palette review"}
+
+- 2026-10-20T07:01:52.515361+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained native sleeping interaction, takeable/non-solid behavior, visibility and custom fallback checks behind the every-conversion-generated gate.
+  Review: No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v1/registered/model.json", "sha256": "7a00ff33ffe5061e6ba4968ecb7c1b18aefeb90601a0a2ed35da5052caa38c53"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native bedroll sleeping, takeability and visibility acceptance deferred"}
 
 ### SCN-BOOK-TABLE: Book Table
 
@@ -1269,7 +1317,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/book-table-body.png](../art/village/scenery/book-table-body.png), [art/village/scenery/book-table-detail.png](../art/village/scenery/book-table-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T07:06:17.740223+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Book Table/Furniture definitions, exact original tile/hash, puzzle-box description and native w/W drawer/top roles.
+  Review: The source has a broad shallow top, two horizontal drawer fronts, low rail and short feet. No visible books/papers are established. Direct Furniture inheritance means the ordinary Table empty/full state tags do not apply; real inventory remains native.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/source-packet.json", "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"}, {"path": "art/conversion/scn-book-table/v1/source-construction-comparison.png", "sha256": "e9f049685ff9ba26bdafd3b286c496c7b1161e75f2fdad6a5c1e5610b7511f82"}]
+  Method/prompt/corrections: {"phase": "Low puzzle-box book table identity, original layout and native palette"}
+
+- 2026-10-20T07:06:17.740508+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected actual installed Vanilla Textures Expanded EndTable_south for shallow wood-front shading, precise drawer seams and furniture outline weight.
+  Review: Viewed exact donor and package/hash metadata. Its vertically stacked drawers, round knobs, footprint and gameplay are not copied; source horizontal layout remains authoritative.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/source-packet.json", "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/source-construction-comparison.png", "sha256": "e9f049685ff9ba26bdafd3b286c496c7b1161e75f2fdad6a5c1e5610b7511f82"}]
+  Method/prompt/corrections: {"phase": "Actual installed VTE drawer-table material reference"}
+
+- 2026-10-20T07:06:17.740667+00:00 / construct_faithful_shape / PASS: Constructed a broad shallow trapezoidal top, two side-by-side drawer fronts with inset pulls, wooden housing, low rail and short feet as explicit SVG.
+  Review: Viewed source/manual/donor comparison. Opaque wood fills native hollow glyphs; precise seams suggest puzzle-box joinery without inventing a mechanism. No books, papers, lamp or arbitrary visible contents are added.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/source-packet.json", "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/prepare-and-construct.py", "sha256": "29248cdc14450db9e6378cf0d9de2cef658a14163b828703655c13ec7ce271fb"}, {"path": "art/conversion/scn-book-table/v1/constructed-front.svg", "sha256": "a25affe945215341d7860848c06e0d72996fc4591c46477c2132b5b8d3fc56fa"}, {"path": "art/conversion/scn-book-table/v1/constructed-front.png", "sha256": "90261c7fadb6a85d3a4e44d63cc811c01246b5a1e3c7337c1c83346da565bec8"}, {"path": "art/conversion/scn-book-table/v1/source-construction-comparison.png", "sha256": "e9f049685ff9ba26bdafd3b286c496c7b1161e75f2fdad6a5c1e5610b7511f82"}]
+  Method/prompt/corrections: {"phase": "Editable broad tabletop, paired drawers and low supports"}
+
+- 2026-10-20T07:06:17.740973+00:00 / create_required_state_neighbor_variants / PASS: Retained one Items/sw_table_low_drawers.bmp fixed map view and a shared full-cell frame for tabletop, drawers, rail and supports.
+  Review: No donor facings, generic Table empty/full appearances or dynamic opening drawer art are fabricated. Book Table is not a Table child; native inventory/rare animation stays native.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/source-packet.json", "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/constructed-front.png", "sha256": "90261c7fadb6a85d3a4e44d63cc811c01246b5a1e3c7337c1c83346da565bec8"}]
+  Method/prompt/corrections: {"phase": "Fixed source table state and full-cell top/drawer registration"}
+
+- 2026-10-20T07:06:17.741150+00:00 / refine_materials_and_form / PASS: Performed one built-in ImageGen call on the explicit source construction with the actual installed VTE end-table style reference.
+  Review: Viewed actual saved proposal. Two source-oriented drawers, broad bare top, low rail and feet remain. Grain/bevels refine the existing surfaces; no unsupported objects, extra drawers or donor round hardware are accepted. Exterior alpha halo is excluded at registration.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/source-packet.json", "sha256": "83dcdf2f7f631d05a85c5847769f5ef685bf8541662e1afcbfdd730b2cfdfbd7"}, {"path": "art/conversion/scn-book-table/v1/constructed-front.png", "sha256": "90261c7fadb6a85d3a4e44d63cc811c01246b5a1e3c7337c1c83346da565bec8"}, {"path": "art/conversion/scn-book-table/v1/refine-front-prompt.txt", "sha256": "465904e134395b1de3f8cdb2441f3bf2a7b4436dbb5facbeaeebdf0e6f3dc5f5"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/refined-proposal.png", "sha256": "bd535dc77deb9d29cbe2da89eeae2cf8dc97adb92fda86e12f89e0aa8ddec489"}]
+  Method/prompt/corrections: {"phase": "Controlled puzzle-box wood and shallow tabletop refinement", "tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-book-table/v1/refine-front-prompt.txt", "sha256": "465904e134395b1de3f8cdb2441f3bf2a7b4436dbb5facbeaeebdf0e6f3dc5f5"}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-25521bfb-0b16-4a1c-99b0-9c4ab1b9e2a6.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-book-table/v1/constructed-front.png", "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/EndTable_south.png"]}}
+
+- 2026-10-20T07:06:17.742485+00:00 / extract_register_color_coverage / PASS: Extracted actual gold tabletop/front-edge ownership, removed exterior halo, neutralized color and mapped the entire source frame once.
+  Review: Viewed isolated top and complete neutral/native recomposition. Wood drawer fronts, inset pulls, housing, low rail and supports remain primary-owned. Both production layers are equal-RGB grayscale in the same256-square frame; no independent component fitting or baked gold remains.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/refined-proposal.png", "sha256": "bd535dc77deb9d29cbe2da89eeae2cf8dc97adb92fda86e12f89e0aa8ddec489"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/register-table.py", "sha256": "ba9e2399e989c980d606c382dd297d23d6e3ef59f12f94285156078305afb099"}, {"path": "art/conversion/scn-book-table/v1/registered/coverage.png", "sha256": "270ed09c583768c14db5a0ff13ad97cc9a906bed8218d5d112dc75796aa24cb6"}, {"path": "art/conversion/scn-book-table/v1/registered/detail-coverage.png", "sha256": "6d53e5f9083343d04e0317ce5013fe1eeedcad92a448b76d58e6dfd782d05a01"}, {"path": "art/conversion/scn-book-table/v1/registered/detail-neutral.png", "sha256": "26cce287fd03b26ba33e61cfc56edd7d346315b35bbbe50b1073bd6fec40940d"}, {"path": "art/conversion/scn-book-table/v1/registered/model.json", "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"}, {"path": "art/conversion/scn-book-table/v1/registered/native-w-W-preview.png", "sha256": "4494055df39b87f79c64b6198e26b42b7d7f110cdba4147fcc90094c0e6f558e"}, {"path": "art/conversion/scn-book-table/v1/registered/neutral-master.png", "sha256": "e9deecd70f963cb38a0ea2591b165c807ca3be245cdb1f896f063bb86ef0a093"}, {"path": "art/conversion/scn-book-table/v1/registered/opaque-structure-mask.png", "sha256": "cf7ee63ef0e5eccde17c08df863241f6c68bcb00aaa44b688e3ca46615c3fb3c"}, {"path": "art/conversion/scn-book-table/v1/registered/primary-neutral.png", "sha256": "3aeb4198b3f1d681f418a9d8367dd76e71abcb85bea96f3449c749793858fbaf"}, {"path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png", "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"}, {"path": "art/conversion/scn-book-table/v1/registered/registration-decisions.json", "sha256": "2c4f66b841b8d95bedec20c44da2a7bbb14f47f3804fe2afdc02607b22522cde"}, {"path": "art/conversion/scn-book-table/v1/registered/selected-edge-mask.png", "sha256": "d60e939ca134bc86bc52b1f5901f7cfe6187c791775d09060bb909e30f513e51"}, {"path": "art/conversion/scn-book-table/v1/registered/top-neutral-master.png", "sha256": "0c0d04bc60c8d62ddb4fe712c3841ef040b488984fa560954f1e15cf90dc5a2c"}, {"path": "art/conversion/scn-book-table/v1/registered/top-ownership-mask.png", "sha256": "c2f2c7652e4eb41dcb9f3df02758988b13f56be904176fbbf345abd049e9f613"}]
+  Method/prompt/corrections: {"phase": "Neutral wood and explicit broad-top ownership extraction"}
+
+- 2026-10-20T07:06:17.744581+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected selected neutral/detail/native w/W views enlarged and at16x24/24x36/32x48sizes.
+  Review: Actual saved plate preserves the broad source top and two horizontal drawers. Top tint stops above housing without foreign yellow drawer edges. This is art authoring review, not native inventory or visibility acceptance.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/registered/model.json", "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"}]
+  Outputs: [{"path": "art/conversion/scn-book-table/v1/registered/registration-comparison.png", "sha256": "5ea6e5a5857edefb42c2b7000c453616062cfa91cefb755efffcc6fa262db9ef"}, {"path": "art/conversion/scn-book-table/v1/registered/native-w-W-preview.png", "sha256": "4494055df39b87f79c64b6198e26b42b7d7f110cdba4147fcc90094c0e6f558e"}]
+  Method/prompt/corrections: {"phase": "Paired-drawer identity and intended-size native palette review"}
+
+- 2026-10-20T07:06:17.744849+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained actual container/on inventory, non-solid/non-takeable metadata, visibility and rare animated/custom fallback behind the every-conversion-generated gate.
+  Review: No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-book-table/v1/registered/model.json", "sha256": "bcab6b153f8a6a924e77d2e00dbe2a3e3258538c346b2f621eaaf15da8e170fc"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native book-table inventory, visibility and rare-animation acceptance deferred"}
 
 ### SCN-CANVAS-FOLDING-CHAIR: Canvas Folding Chair
 
@@ -1279,7 +1375,67 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
+
+- 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
+  Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json", "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/source-construction-comparison.png", "sha256": "c67590dbbef21dbb096a04728fb387dd2a6b6fe01d64745cb98cf7b179c5fbaa"}]
+  Method/prompt/corrections: {"phase": "Portable canvas chair identity, native sling/support glyph and palette"}
+
+- 2026-10-20T07:13:14.360572+00:00 / select_render_reference_or_document_no_equivalent / PASS: Used a focused installed filename search for folding/camp/director/deck chair assets; selected actual installed VTE Bedroll_south for cloth shading/contours only.
+  Review: Actual donor and package hashes are recorded. The viewed VFE school chair and Reskin Combined HD stool were not selected. The bedroll is not a folding-frame structural equivalent: Qud source alone controls sling/support geometry. Donor pillow, repair patches, furniture shape and mechanics are not copied.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json", "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-construction-comparison.png", "sha256": "c67590dbbef21dbb096a04728fb387dd2a6b6fe01d64745cb98cf7b179c5fbaa"}]
+  Method/prompt/corrections: {"phase": "Documented cloth-only reference and lack of a close inspected frame equivalent"}
+
+- 2026-10-20T07:13:14.360786+00:00 / construct_faithful_shape / RECORDED: Constructed explicit source-shaped canvas sling, two oblique rails, crossed near supports and shorter far supports.
+  Review: Initial manual support tops were too short to reach the sling. This draft is preserved as a rejected construction rather than accepted as connected furniture. Exact support overlap/joinery remains authored interpretation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json", "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/prepare-and-construct.py", "sha256": "17985de28b476db98f25e6c55bf149613d63004a665b103bcb6e167b1fa4c882"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front.svg", "sha256": "f0dcf30f7a7dea1683b98d4ed923144852956e204d2e0e299c87312a2a8208bf"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front.png", "sha256": "12ef59ba6e70ceba17a37d50c8edde459ac66feac7a1e44e41a21a12f275308b"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/source-construction-comparison.png", "sha256": "c67590dbbef21dbb096a04728fb387dd2a6b6fe01d64745cb98cf7b179c5fbaa"}]
+  Method/prompt/corrections: {"phase": "Initial editable sling and short-support draft retained"}
+
+- 2026-10-20T07:13:14.361200+00:00 / construct_faithful_shape / RECORDED: Extended wooden support tops while preserving seat, rails and lower foot positions.
+  Review: Viewed comparison. This first correction still left a small near-support attachment gap; its comparison label is superseded. It is not the selected ImageGen input.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front.svg", "sha256": "f0dcf30f7a7dea1683b98d4ed923144852956e204d2e0e299c87312a2a8208bf"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/connect-supports.py", "sha256": "2d2923c8ea2efd6b453a8a64b9c8294215f5f0191dc23ecd0f83043efc6fd8de"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v2.svg", "sha256": "c13e9c467364140d5a797235f1cce8a12a8993bd04d34b2dd8e9a8cb40f4a617"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v2.png", "sha256": "1b82fffe8da192cab4e7da5de067df257ed2c45773571c137d19ce0e85af2f39"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/construction-attachment-comparison.png", "sha256": "b46c7509ffabe9e2c699638e087873f1ed57b390b1ea8b8750fa31e86af784e7"}]
+  Method/prompt/corrections: {"phase": "First support extension retained with residual attachment gap"}
+
+- 2026-10-20T07:13:14.361619+00:00 / construct_faithful_shape / PASS: Extended the near support into actual sling coverage and kept the source lower foot positions and whole-cell registration fixed.
+  Review: Viewed selected third editable construction. Support tops now connect underneath the sling, with explicit seat-in-front occlusion. Earlier two drafts remain unchanged. No tall backrest, armrests, metal mechanism or extra furniture state is invented.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v2.svg", "sha256": "c13e9c467364140d5a797235f1cce8a12a8993bd04d34b2dd8e9a8cb40f4a617"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/finish-support-overlap.py", "sha256": "76406929bcb5c22cdfc603ed547cc87eb9c44b071da2d731c1e6608db0dca012"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v3.svg", "sha256": "3b0cbd0dd0eb674d5e30dfa99c64fa300ac8ab782f181e7ec8c2536036a02b22"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v3.png", "sha256": "b69f22f33e0b5cadbcdac0af40f069524c3ad7de5ecefd6f80bf1b80ca77e5e5"}]
+  Method/prompt/corrections: {"phase": "Selected support tops overlap beneath the unchanged sling"}
+
+- 2026-10-20T07:13:14.361880+00:00 / create_required_state_neighbor_variants / PASS: Retained one native Items/sw_chair_canvas.bmp fixed deployed map-view pose and a common source-cell frame for sling, rails, supports and tint masks.
+  Review: Source declares no fold/unfold part or alternate packed tile. Donor four-way chair rotations and an invented collapsed state are not fabricated. Native Chair/takeability and rare animation remain separate.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json", "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v3.png", "sha256": "b69f22f33e0b5cadbcdac0af40f069524c3ad7de5ecefd6f80bf1b80ca77e5e5"}]
+  Method/prompt/corrections: {"phase": "One deployed source tile with shared sling/frame registration"}
+
+- 2026-10-20T07:13:14.362095+00:00 / refine_materials_and_form / PASS: Performed one built-in ImageGen call on the selected third construction with actual installed VTE cloth rendering reference.
+  Review: Viewed actual saved proposal. Sling remains thin and slightly sagging, supports connect beneath it, and gaps remain open. Wood grain and knit fabric refine existing geometry; no tall backrest, cushion, folding mechanism, occupant or donor bedroll shape is accepted. Exterior halo is excluded at structural registration.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json", "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/constructed-front-v3.png", "sha256": "b69f22f33e0b5cadbcdac0af40f069524c3ad7de5ecefd6f80bf1b80ca77e5e5"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/refine-front-prompt.txt", "sha256": "44f5e358989af0df8a9353328a7b3bdc561dfd96338bbdc498f04159dcf1e498"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/refined-proposal.png", "sha256": "686f9aedeef501a9126a4f42b1998139ec5e5dde1bd32233459fbf8921cd1ee6"}]
+  Method/prompt/corrections: {"phase": "Controlled refinement of the corrected connected sling/frame", "tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-canvas-folding-chair/v1/refine-front-prompt.txt", "sha256": "44f5e358989af0df8a9353328a7b3bdc561dfd96338bbdc498f04159dcf1e498"}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-9320fbdb-a8bc-4225-aea7-28ff35cc095b.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-canvas-folding-chair/v1/constructed-front-v3.png", "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/Bed/Bedroll_south.png"]}}
+
+- 2026-10-20T07:13:14.363757+00:00 / extract_register_color_coverage / PASS: Extracted actual cyan sling ownership, removed detached exterior halo, neutralized color and mapped the complete source frame once.
+  Review: Viewed isolated sling and whole-chair recomposition. Rails, crossed supports and joint mark remain primary wood; canvas alone receives detail y. Selected production layers are equal-RGB grayscale in the same256-square frame. Open support gaps stay transparent; neither fabric nor wood is independently centered.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/refined-proposal.png", "sha256": "686f9aedeef501a9126a4f42b1998139ec5e5dde1bd32233459fbf8921cd1ee6"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/register-chair.py", "sha256": "4e4d811498dc983a5be24df384500a059ef4bb8197f874253a5382a5618281b0"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/coverage.png", "sha256": "fc206064bd73fa9ea2a2bf17612111e4ee6cf76c471b83f847690b19f9b41fb9"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/detail-coverage.png", "sha256": "0b58f815d04029726fcc526ba83b4b0314c9d9df387d6e58b2a7abc36d9780c2"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/detail-neutral.png", "sha256": "9d52619b1770a118c83bd95bac1c91e2174ef37fa248d842d9fb131da3b28e0b"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/fabric-neutral-master.png", "sha256": "18650d24a35f1f86596b158045143943154aa478ba92a7095a5045eabc367329"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/fabric-ownership-mask.png", "sha256": "d16976d62f768d837e8de2d46e1099ad59e18a0471480b2e7927df181014a04d"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json", "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/native-w-y-preview.png", "sha256": "909c6ab3df25e62afa8078a6416a0a873736f1d9a6bf39693ac2404e2e23c5ef"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/neutral-master.png", "sha256": "cbc91adddd144227f1de17ef00e00e60a6cb84dafd8e6b47acbc7321f32a77b1"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/opaque-structure-mask.png", "sha256": "d4fdaa7dc1c9c4426c85892b267f696aaa831ab89351b7e166d7c6d0ecdb4308"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/primary-neutral.png", "sha256": "15795c3d26887489cc948e6870e42de6b0061515f477a640464a4423f51089e4"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png", "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-decisions.json", "sha256": "a0b6bbef57b13dd100b01041a8865bebf75a4ffc92c23f5545d1f4b85d5c7b0c"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/selected-edge-mask.png", "sha256": "3374f8ef3a8e1b9c6dfbfae458e3ba56f99dfd18a1c7cf42582e8a416a33907f"}]
+  Method/prompt/corrections: {"phase": "Neutral wood and separate knit-canvas coverage extraction"}
+
+- 2026-10-20T07:13:14.366160+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected selected neutral/detail/native w/y views enlarged and at16x24/24x36/32x48sizes.
+  Review: Actual saved plate preserves the source low sling, oblique rail edges, connected supports and open gaps. Canvas tint does not spill onto wooden rails. This is art authoring review, not native sitting/takeability or visibility acceptance.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json", "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png", "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/native-w-y-preview.png", "sha256": "909c6ab3df25e62afa8078a6416a0a873736f1d9a6bf39693ac2404e2e23c5ef"}]
+  Method/prompt/corrections: {"phase": "Connected sling/support identity and intended-size palette review"}
+
+- 2026-10-20T07:13:14.366413+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained actual Chair interaction, portable takeability, visibility and inherited animated/custom fallback checks behind the every-conversion-generated gate.
+  Review: No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json", "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native portable seating, visibility and rare-animation acceptance deferred"}
 
 ### SCN-CHAIR: Chair
 
@@ -1289,7 +1445,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 8.
+
+- 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
+  Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-chair/v1/source-packet.json", "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"}, {"path": "art/conversion/scn-chair/v1/source-construction-comparison.png", "sha256": "14ccb03fecc195423b06716efb7332ef2714062175953b395adbbfea6eb366e8"}]
+  Method/prompt/corrections: {"phase": "Marsh-dweller nailed-plank chair identity and actual source palette"}
+
+- 2026-10-20T07:18:20.710229+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected installed legacy Things/Seating/SquareChair/Chair_south from Vanilla Furniture Expanded for straight-frame contour weight and shallow bevel style.
+  Review: Viewed exact donor and package/hash metadata. This retained installed art is not claimed as the current active VFE definition. Its smooth seat, unslatted back, footprint/facings and gameplay are not copied. Viewed Core/VTE round-backed chairs were not selected.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/source-packet.json", "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/source-construction-comparison.png", "sha256": "14ccb03fecc195423b06716efb7332ef2714062175953b395adbbfea6eb366e8"}]
+  Method/prompt/corrections: {"phase": "Actual installed VFE straight-frame contour reference"}
+
+- 2026-10-20T07:18:20.710404+00:00 / construct_faithful_shape / PASS: Constructed explicit straight wood posts, upper/lower back rails, two inner bars, hard seat with board seams, low rim and source-positioned supports.
+  Review: Viewed source/manual/donor comparison. Open back spaces and visible support extents stay source-bound; grain, seams, exact nails and hidden rear-right attachment remain authored. No canvas, cushion, round back or armrests are added.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/source-packet.json", "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/prepare-and-construct.py", "sha256": "c5703a76dfd8d8ca95ef6d1b6d4110ec865c9f9c7939984e00945f5082211bb8"}, {"path": "art/conversion/scn-chair/v1/constructed-front.svg", "sha256": "86e2dd5577a078b1650ba460535046659c925be5545dbd33136590d9a58716c1"}, {"path": "art/conversion/scn-chair/v1/constructed-front.png", "sha256": "00f7c0d0b465fd15204230b27d60329a354c04e4e2b10b0f9b3350cf43bcbadd"}, {"path": "art/conversion/scn-chair/v1/source-construction-comparison.png", "sha256": "14ccb03fecc195423b06716efb7332ef2714062175953b395adbbfea6eb366e8"}]
+  Method/prompt/corrections: {"phase": "Editable tall slatted back and hard angled plank seat"}
+
+- 2026-10-20T07:18:20.710726+00:00 / create_required_state_neighbor_variants / PASS: Retained native Items/sw_chair.bmp fixed map view with one complete cell frame for the slatted back, hard seat, rim, supports and masks.
+  Review: No source facing selector or occupied tile is declared. Donor facings, independently fitted seat/back parts and invented occupied artwork are not fabricated. Native seating/cover/rare animation remains separate.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/source-packet.json", "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/constructed-front.png", "sha256": "00f7c0d0b465fd15204230b27d60329a354c04e4e2b10b0f9b3350cf43bcbadd"}]
+  Method/prompt/corrections: {"phase": "One fixed source chair tile and shared back/seat/support frame"}
+
+- 2026-10-20T07:18:20.710892+00:00 / refine_materials_and_form / PASS: Performed one built-in ImageGen refinement of the explicit source chair with actual installed VFE contour reference.
+  Review: Viewed actual saved output. The two inner bars, tall open back, hard board seams, straight support extents and right-angle joinery remain. Modest grain and nail marks refine the wooden construction; no cushion, fabric, rounded back or occupant is accepted. Exterior halo is excluded at registration.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/source-packet.json", "sha256": "88b16c6e01ef0f0d386583bf3986db4163551080a8dc516e2901f55cd3b40092"}, {"path": "art/conversion/scn-chair/v1/constructed-front.png", "sha256": "00f7c0d0b465fd15204230b27d60329a354c04e4e2b10b0f9b3350cf43bcbadd"}, {"path": "art/conversion/scn-chair/v1/refine-front-prompt.txt", "sha256": "d3f57150d0647ef0ca30d6a71b3f860a3c6aae47e60bfe4b856064effcebf93a"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/refined-proposal.png", "sha256": "1965837cd717702ed6f45bb8639b681744e46bf677114e3af527583b029858e1"}]
+  Method/prompt/corrections: {"phase": "Controlled nailed-wood refinement with hard-seat constraint", "tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-chair/v1/refine-front-prompt.txt", "sha256": "d3f57150d0647ef0ca30d6a71b3f860a3c6aae47e60bfe4b856064effcebf93a"}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-5060fdfa-ed36-4f2d-8741-67ec3212021c.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-chair/v1/constructed-front.png", "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/Things/Seating/SquareChair/Chair_south.png"]}}
+
+- 2026-10-20T07:18:20.712206+00:00 / extract_register_color_coverage / PASS: Extracted actual cyan hard-seat surface, kept back/rim/supports/nails primary-owned, removed exterior halo and mapped the whole frame once.
+  Review: Viewed isolated hard seat and whole-chair recomposition. Both selected production layers are equal-RGB grayscale on the shared256-square source-cell mapping. Back/seat/supports are not independently centered; open back/leg gaps stay transparent. No cyan is baked into production.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/refined-proposal.png", "sha256": "1965837cd717702ed6f45bb8639b681744e46bf677114e3af527583b029858e1"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/register-chair.py", "sha256": "e5d07d0f8fa6493999ebfc0c88e6acc7ec8a19c2ca556ed36d779981f6a941a2"}, {"path": "art/conversion/scn-chair/v1/registered/coverage.png", "sha256": "f2c643b1a0c05a4d00403732e07dd613382c66f4754efd13f1d1dcc184de2e19"}, {"path": "art/conversion/scn-chair/v1/registered/detail-coverage.png", "sha256": "56cdbae8205b1b2566ba3a162db9cb4a99e5a3d3511010ba3b42d3e7596c011d"}, {"path": "art/conversion/scn-chair/v1/registered/detail-neutral.png", "sha256": "fe9435aa95228336328cabf99457de2607dd31d805b441b655d3b02d4d09ea22"}, {"path": "art/conversion/scn-chair/v1/registered/model.json", "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"}, {"path": "art/conversion/scn-chair/v1/registered/native-w-y-preview.png", "sha256": "7f406873a819a1fca3f5715cfd196ac9cee8e9fcc27e484fb13794d165836e42"}, {"path": "art/conversion/scn-chair/v1/registered/neutral-master.png", "sha256": "65d5dc5c01807d0bc462ccbf7f07691fe6faf27d0efa8590fff984e700e2e1d7"}, {"path": "art/conversion/scn-chair/v1/registered/opaque-structure-mask.png", "sha256": "cc2ce44ea07802a6041c4a0fe2dafb10e09d993ff130a05defba97cbdc852e26"}, {"path": "art/conversion/scn-chair/v1/registered/primary-neutral.png", "sha256": "36de7cd5d6006d64ebfb89162e1e31b8fe277318832e5eec45bcc86f29e0909a"}, {"path": "art/conversion/scn-chair/v1/registered/registration-comparison.png", "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"}, {"path": "art/conversion/scn-chair/v1/registered/registration-decisions.json", "sha256": "5063ca1191ce522b8ff15240bf2a6eae1106b748a7723202270741a219086eeb"}, {"path": "art/conversion/scn-chair/v1/registered/seat-neutral-master.png", "sha256": "bce6ff8cfe29258a2808cf263716fb3d863669cd53aec03a34c50db873b0e7ef"}, {"path": "art/conversion/scn-chair/v1/registered/seat-ownership-mask.png", "sha256": "4342894d5dc4a8b8b08a0ed349ce782ae3faac6c4928b596b44769ce89abd510"}, {"path": "art/conversion/scn-chair/v1/registered/selected-edge-mask.png", "sha256": "cd0c8439733cad20c1f12a175b6522aba9d49eb4ce20887b33195139c28dab25"}]
+  Method/prompt/corrections: {"phase": "Neutral back/frame wood and separate hard-seat tint coverage"}
+
+- 2026-10-20T07:18:20.714285+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected selected neutral/detail/native w/y views enlarged and at16x24/24x36/32x48sizes.
+  Review: Actual saved plate retains the tall source back, hard angled seat and straight support extents. Pale native seat color remains distinct without turning the wood into canvas. This is authoring review, not native seating/cover/visibility acceptance.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/registered/model.json", "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"}]
+  Outputs: [{"path": "art/conversion/scn-chair/v1/registered/registration-comparison.png", "sha256": "efac8e4ace660b22a831e69f99d6a031632e833c3ec61288c79329635e7f0b48"}, {"path": "art/conversion/scn-chair/v1/registered/native-w-y-preview.png", "sha256": "7f406873a819a1fca3f5715cfd196ac9cee8e9fcc27e484fb13794d165836e42"}]
+  Method/prompt/corrections: {"phase": "Hard plank identity and intended-size native palette review"}
+
+- 2026-10-20T07:18:20.714529+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retained native Chair interaction, MissileCover, visibility and rare animated/custom fallback checks behind the every-conversion-generated gate.
+  Review: No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-chair/v1/registered/model.json", "sha256": "e51c09300db7ac8e4a6d3db48806e5627a4cde29753df8e83ab5ddba1f787d5c"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native seating, cover and rare-animation acceptance deferred"}
 
 ### SCN-CHEST1: Chest1
 
@@ -1299,7 +1503,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chest1-body.png](../art/village/scenery/chest1-body.png), [art/village/scenery/chest1-detail.png](../art/village/scenery/chest1-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-DRESSER: Dresser
 
