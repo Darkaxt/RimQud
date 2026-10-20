@@ -1,0 +1,63 @@
+{
+  "item": "Woven Tunic",
+  "workflow": "regional-curved-v1",
+  "source": {
+    "instance": 613,
+    "blueprint": "Woven Tunic",
+    "description": "A coarse flax waist is cinched with a watervine hemp rope.\n\n{{K|Weight: 5 lbs.}}",
+    "tile": "Items/sw_chainmail.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/woven-tunic-reference.png",
+    "native_mask_sha256": "90830c26ac48c49c532ac7ce7f8747b0d96f52aeee9b471166444572bd00f6bb",
+    "reference_sha256": "ebfbb1708626b9c0c22e3a7ba3b504eff809c94affca8bd2557660eb5673177b",
+    "info_id": 9398,
+    "atlas_id": 185,
+    "rect": [
+      360,
+      208,
+      16,
+      24
+    ]
+  },
+  "scope": "All enumerated adult body-specific tunic registrations generation-ready. Child template fittings have separate evidence and no native child assignment. Native equipment acceptance pending.",
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-woven-tunic/v1/model.json",
+          "sha256": "5b52916e7927b749811f972a88941839fd6db8db5caecf56f5191d3f994256f7"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-woven-tunic/v1/assembly-comparison.png",
+          "sha256": "af6b370bbbf2b6a5128da23c87996587af4e1690c8a88a24adde5d44a8e4bc00"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-woven-tunic/v1/model.json",
+          "sha256": "a2db0b9840b85fcd9c3fb02010dedad0cfb325744cb3979e9a05d4636f68cc0b"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-woven-tunic/v1/assembly-comparison.png",
+          "sha256": "326aed1787baa3bc85bab7abec94419ada9759ad7d7a41e7eeaa78d0dfc46d3a"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected SEN, mirrored west, intact cloth, original arms, independent Qud body/equipment palette and intended size. Retained registered adult female body, smooth existing sleeve openings and full tunic fabric. Coarse flax material and watervine rope identity come from actual item description; no metal inferred from chainmail glyph filename. Generated backdrop/body excluded and hidden cloth continued before original arms render above it. Native acceptance pending."
+      }
+    }
+  ],
+  "native_acceptance": "Pending final all-conversions gate; individual painted/feathered cosmetic metadata retained, no new cosmetic framework."
+}
