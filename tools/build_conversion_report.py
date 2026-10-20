@@ -62,6 +62,8 @@ def render_entry_body(e,url_prefix):
     if e.get('furniture_views'):
         views=e['furniture_views'];done=views.get('completed_views',[])
         parts.append('<p class="issues"><strong>Required furniture views: front / south, side / east, back / north.</strong> '+h('Complete set pending.' if not done else 'Recorded views: '+', '.join(done)+'.')+' Extra views are unbound authoring assets; wall/table-facing selection is undecided. West mirrors only where the design permits it.</p>')
+    if e.get('apparel_occlusion'):
+        parts.append('<p class="issues"><strong>Mask-first apparel.</strong> Retain intact clothing and a separate per-facing body-over-clothing mask. Show original-body overlay, mask-off/on assemblies and independent body/equipment tint. Baked limb cutouts are superseded; native binding remains pending.</p>')
     parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
     if e.get('current_registration'):
         current=e['current_registration']

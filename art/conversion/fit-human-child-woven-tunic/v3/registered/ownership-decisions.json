@@ -1,0 +1,81 @@
+{
+  "supersedes": {
+    "path": "art/conversion/fit-human-child-woven-tunic/v2/model.json",
+    "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"
+  },
+  "body": {
+    "path": "art/conversion/body-human-child/v1/model.json",
+    "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"
+  },
+  "method": "Per-facing foreground cuff ownership. Preserve existing refined cloth/frame. Remove rear/interior cuff surfaces and foreign lower oval from the foreground layer; extend profile arm transparency through the true visible front cuff edge.",
+  "new_imagegen_call": false,
+  "imagegen_provenance": "Actual v2 context refinement and isolation remain in the entry history; this is extraction/ownership correction, not a new generated proposal.",
+  "views": {
+    "south": {
+      "source": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-south.png",
+        "sha256": "5673284dbfb7fc15a65ce62f78954d3da57bb93aec40c2eab3c7f2e77dfb7c60"
+      },
+      "foreground_cut": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/foreground-cut-south.png",
+        "sha256": "e767f44b8360f6d71a2cf6038d5acb8a412eda199f93d84f1b1f350dd4ae489e"
+      },
+      "output": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/tunic-south.png",
+        "sha256": "24b9daa17800c5e9e1bae22c275d7a7766bec82832dfec6e89c90a6b92c6d644"
+      },
+      "body_unchanged": {
+        "path": "art/conversion/body-human-child/v1/selected-south.png",
+        "sha256": "58b9c9becf365ac984a1d48f57aa04b6d2c228487f45846202a6fddd0aa5aae4"
+      }
+    },
+    "east": {
+      "source": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-east.png",
+        "sha256": "362b50d52f58c6ab5663d8e3af2ce6c70d8ec00de684f64dcd40391d22f9005b"
+      },
+      "foreground_cut": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/foreground-cut-east.png",
+        "sha256": "89a5987ae9f839f3f956bc9baee98aadcfc77ebafdc755c45c2b24096501028e"
+      },
+      "output": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/tunic-east.png",
+        "sha256": "b04f8e024c85c9e91790639d118c28690cb5306561b67ed572628fe984571d94"
+      },
+      "body_unchanged": {
+        "path": "art/conversion/body-human-child/v1/selected-east.png",
+        "sha256": "2d477ce453ed8c39923d7c5c8263b7479942443839de94a0e87a10336104a4e2"
+      }
+    },
+    "north": {
+      "source": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-north.png",
+        "sha256": "070b7ce7dacdad3b6513ecab8050675575513d5b0b5160fd08e2dd1c4200a0c8"
+      },
+      "foreground_cut": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/foreground-cut-north.png",
+        "sha256": "e767f44b8360f6d71a2cf6038d5acb8a412eda199f93d84f1b1f350dd4ae489e"
+      },
+      "output": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/tunic-north.png",
+        "sha256": "cafe34728bd774f2735efc3180a037605c52e13c307d3bf37e396ea091f1765c"
+      },
+      "body_unchanged": {
+        "path": "art/conversion/body-human-child/v1/selected-north.png",
+        "sha256": "8cc3b5623073e471edd5ecd1685b1aeea12ad4f3ce942b66cef2a47115ed193c"
+      }
+    }
+  },
+  "profile_torso_material_continuation": {
+    "source": {
+      "path": "art/conversion/fit-human-child-woven-tunic/v2/intact-tunic-east.png",
+      "sha256": "8f88233ea2570cc102fd67f47e0d13ffdd1856d3d6e972a2ca903a56d0e599b8"
+    },
+    "sample_offset_y": 32,
+    "region": {
+      "path": "art/conversion/fit-human-child-woven-tunic/v3/registered/rear-cuff-cap-region.png",
+      "sha256": "f9ee2bf720452953be07b0b8150ca1de8447f5c07b1ea29ba4f32e7a3fcae8b1"
+    },
+    "purpose": "Remove generated rear-cap RGB/outline and retain actual visible torso cloth outside the exposed-arm mask. No fill is allowed over the exposed limb."
+  }
+}

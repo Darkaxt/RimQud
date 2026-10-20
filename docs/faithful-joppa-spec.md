@@ -359,12 +359,12 @@ and the Stage 3 art blockers remain unchanged.
 
 Foreground apparel ownership correction (2026-10-20): the user identified an
 opaque rear sleeve/inner-cuff cap still painted across the human child arm.
-Foreground garment exports must contain only camera-visible fabric and its
+The final garment composition must preserve camera-visible fabric and its
 actual front cuff edge. Background fills, mannequin pixels, hidden lining/rear
 caps and foreign body contours must not cover exposed limbs. Full-image alpha
 transparency does not establish correct internal opening ownership. Preserve
-visible fabric shading and complete shoulder coverage; remove rear-cap coverage
-through the true exposed-limb boundary rather than a coarse horizontal cut.
+visible fabric shading and complete shoulder coverage; keep rear-cap coverage
+behind the body through the true exposed-limb boundary rather than a coarse horizontal cut.
 Keep intact proposals as provenance. Rear fabric may use an existing supported
 behind-body layer or be excluded from the foreground export; no new renderer
 work is required by this clarification. The affected fitting loses authoring
@@ -390,7 +390,7 @@ neighboring table is reserved for a later integration decision; this request
 does not authorize implementing or testing that placement behavior during
 generation. Other scenery keeps its existing source/state-based view rules.
 
-Current reconciliation after these two user corrections: all 16 furniture entries
+Historical reconciliation before the mask-first correction below: all 16 furniture entries
 have the new three-view requirement recorded, and none has a complete documented
 set yet. Five previously generation-ready single-view entries lose that credit;
 their sources, calls and selected front/state artwork remain preserved. The
@@ -399,6 +399,47 @@ There are 32 generation-ready entries. Human child tunic extraction is the sole
 active entry; Bed remains unfinished and resumes after that correction.
 The missing furniture views are internal A3/A5 advancement blockers, resolved by
 recording and reviewing the required view sets and masks. The sleeve-cap defect
-is an internal A4/A5 blocker, resolved by a foreground-only garment over the
-unchanged body. They block corresponding full-set authoring acceptance and later
+is an internal A4/A5 blocker. The mask-first correction below replaces the
+foreground-cut resolution technique. They block full-set authoring acceptance and later
 native acceptance. Stage 3 stays ACTIVE, with no new tracked deferrals.
+
+Mask-first apparel representation (2026-10-20, explicit user correction): retain
+the whole isolated cloth shape as the canonical garment and author a separate
+per-facing body-over-clothing mask. This supersedes the destructive foreground-cut
+export technique above while preserving its acceptance requirement: no cuff cap,
+foreign contour or rear fabric may obscure exposed body in the final composition.
+Do not solve body/apparel depth by punching limb silhouettes into garment alpha.
+Actual outer transparency and physical garment openings remain legitimate.
+
+Mask white selects unchanged body pixels to appear above the intact garment;
+black selects none and gray represents edge coverage. Body, garment and mask
+share physical scale, pivot, canvas and per-facing alignment. Draw the base,
+intact garment and masked original-body overlay with documented head/detail and
+other-equipment precedence. Garment tint remains equipment-owned; body overlay
+retains body foreground/detail tint. The overlay belongs to that actual equipped
+garment and must not expose bare skin over gloves or other worn/held gear.
+Keep intact cloth, editable mask and original body separate even if an existing
+flat-layer exporter derives a masked body texture for composition.
+
+Generation evidence must show intact garment, mask, body-overlay-only,
+mask-off/mask-on assembly and intended-size facings. Preserve cutoff experiments
+as superseded history without generation-ready credit. Reconcile previously
+ready clothing whose selected models still use baked cutouts; no body regeneration
+is required merely to change this representation. Native binding and outfit
+precedence acceptance remain behind the all-generated gate. This request does
+not authorize a new renderer framework or early game test. RimWorld apparel
+color/shader masks are not automatically evidence of body-occlusion support in
+an unnamed mod; distinguish verified local behavior from the proposed contract.
+
+Current mask-first reconciliation: human child tunic remains the sole active
+entry. Adult dromad Cloth Robe and child dromad tunic also lose generation-ready
+credit because their selected exports still bake body cutouts into cloth. Reuse
+their source bodies/refined intact garments; register separate masks and record
+the required compositions before restoring readiness. There are 30
+generation-ready entries. All furniture view-set blockers remain. Mask-first
+clothing authoring is an internal A4/A5 advancement blocker; final native binding
+and outfit precedence acceptance wait for the existing all-generated gate.
+The [bounded source inspection](../evidence/apparel-occlusion-authoring-contract.json)
+records actual installed classes and existing recipient layer/tint behavior;
+it does not validate runtime mask support. No new renderer stage or early native
+validation is introduced.

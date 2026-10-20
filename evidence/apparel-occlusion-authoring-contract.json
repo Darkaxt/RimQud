@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-20T09:59:56.358778+00:00",
+  "scope": "Read-only source distinction and authoring contract, no native test",
+  "rimworld_assembly_sha256": "5cf1b5be399d5b1c9c56ca72c9d35b4ecf307feacf5859d04ac5a1aa5926356a",
+  "classes": [
+    {
+      "class": "RimWorld.ApparelGraphicRecordGetter",
+      "decompiled_stdout_sha256": "2d1eb5c5568fc6f6824330fe70bbcb99926ffb3a9fe491345b5469e5b85c593e"
+    },
+    {
+      "class": "Verse.PawnRenderNode_Apparel",
+      "decompiled_stdout_sha256": "d04743a0593cd9e54fbbb2aa4f15d0ae7ba7eda1118037a16fcc8b6a30650fa9"
+    }
+  ],
+  "observed": "ApparelGraphicRecordGetter selects CutoutComplex for useWornGraphicMask and creates Graphic_Multi with apparel DrawColor. PawnRenderNode_Apparel consumes that record. This does not establish arbitrary body-over-clothing masks or identify the unnamed mod.",
+  "recipient_sources": [
+    {
+      "path": "probe/JoppaRenderer.cs",
+      "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"
+    },
+    {
+      "path": "probe/VillageArt.cs",
+      "sha256": "0f0762757916881e4c3f9fe7bb2ec2639b606c30ae750140f029fe8f562f4c3e"
+    }
+  ],
+  "recipient_observation": "VillageArt.Layers collects body/equipment layers and sorts numeric layer; Tint distinguishes body from equipment roles. Existing generic flat layers are a possible target for a derived masked original-body overlay. This source inspection is not native binding acceptance.",
+  "required_authoring_sources": [
+    "intact garment",
+    "original registered body",
+    "per-facing painted body-over-clothing mask"
+  ],
+  "native_validation": "Deferred until every pending conversion is generated"
+}

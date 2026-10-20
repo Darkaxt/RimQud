@@ -1,5 +1,13 @@
 # Tam: worked example and current limits
 
+**Representation update:** this example retains the history of the earlier
+alpha-cut robe extraction. The current skill supersedes that production method:
+keep the intact garment and a separate per-facing body-over-clothing mask, then
+composite original body pixels above the cloth. Earlier cuff cutouts and their
+native evidence remain historical; they do not establish the new mask-first
+representation or its final native acceptance. Reuse source art and body facts,
+not the old destructive cutoff technique.
+
 The input chain is Tam → Dromad → native race description, original shader-mask
 sprite, humanoid body tree and actual RimWorld dromedary presentation/anatomy
 references. [Structured input](../../../evidence/tam-conversion-input.json).

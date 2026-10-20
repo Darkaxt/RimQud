@@ -18,6 +18,7 @@ does not supply a value. Do not add a new runtime service merely to fill a packe
 | Description anatomy | Muzzle, neck, hump, dulla, horns, tail, wings, etc., with source description | Some visible features have no dedicated body part. No mechanical Neck/Hump/Dulla node is required for their art. |
 | Donor reference | Exact Core/DLC/mod asset, version/hash, direction and role | Visual convention or anatomical reference is not copied game logic. Note when a reference is an inventory icon instead of a pawn graphic. |
 | Authoring map | Proposed physical body; uncertainty; body/head/addon mapping; contact/seam landmarks; coverage masks; per-view layering | This is authored interpretation, not native metadata. A render layer is not an equipment slot or an articulated bone. |
+| Apparel occlusion | Intact garment source; per-facing body-over-clothing mask; shared body/frame hashes; white/black mask meaning; body versus equipment tint; layer precedence and equipped-item binding | Keep the complete cloth source separate from the painted mask and any derived masked body overlay. Do not bake limb-shaped holes into canonical garment alpha or redraw bare body over other worn gear. |
 
 ## Source hierarchy and conflicts
 

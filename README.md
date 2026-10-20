@@ -17,7 +17,8 @@ generation workflow step by step. Five human body templates are generation-ready
 adult male/female, older male/female, and a shared featureless child base for both
 template labels. The human child Woven Tunic's v2 shoulder correction is retained,
 but its generation-ready credit is withdrawn: an opaque sleeve interior still
-crosses the exposed profile arm. Correcting foreground cloth ownership is the
+crosses the exposed profile arm. Converting that fit to an intact garment plus
+separate body-over-clothing mask is the
 active entry. Native acceptance and the
 remaining clothing fits are pending.
 Adult and child dromad bases are also generation-ready, with centered directional
@@ -27,7 +28,9 @@ The child dromad's corrected Woven Tunic uses an explicit neck/hump pattern and
 refinement-derived flax material. Generated anatomy changes were discarded;
 the body/dulla remain unchanged. Both child fittings preserve rejected cuts and
 show the intact garments separately from effective overlap masks.
-Tam's adult Cloth Robe and enlarged Shillelagh fittings are also generation-ready.
+Tam's enlarged Shillelagh fitting remains generation-ready. His adult Cloth Robe
+and the child dromad tunic now need mask-first export/recomposition updates;
+their existing source art and refinements are retained.
 Their body, garment and held-item layers remain separate. The report records the
 Shillelagh's exact installed description and actual installed Tribal mod reference.
 The DirtPath and shared path-material records now select one source-bound
@@ -126,14 +129,21 @@ Cardinal-camera correction: Chair now has a straight south construction and refi
 
 [Corrected Canvas Folding Chair](art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-comparison.png)
 
-There are now 32 generation-ready entries. Human child tunic foreground-arm
-ownership is the single active correction; Bed remains unfinished.
+There are now 30 generation-ready entries. Human child tunic mask-first
+composition is the single active correction; Bed remains unfinished.
 All 16 furniture entries now require front/south, side/east and back/north
 artwork, even if Qud currently binds one tile. West mirrors only if the design
 permits it. The five previously ready single-view furniture entries were reopened;
 their recorded front/state work remains preserved. Extra views are unbound
 authoring assets: choosing orientation from walls or tables is still undecided.
 Native acceptance waits for every conversion to finish generation.
+
+Clothing now keeps its whole fabric shape and a separate painted mask for body
+pixels drawn above it. Masks share the body's frame/pivot and keep body tint
+separate from equipment tint. Earlier baked-cut exports remain history. The
+[source inspection and authoring contract](evidence/apparel-occlusion-authoring-contract.json)
+distinguish the proposed occlusion behavior from RimWorld's worn shader-mask path;
+no unnamed mod or new native integration is claimed.
 
 The report now has cascading category/subcategory/type filters, including
 Human → Male Child → Equipment and the shared Female Child entry. Its small

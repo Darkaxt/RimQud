@@ -359,7 +359,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/dromad/layered/robe-east.png](../art/dromad/layered/robe-east.png), [art/dromad/layered/robe-north.png](../art/dromad/layered/robe-north.png), [art/dromad/layered/robe-south.png](../art/dromad/layered/robe-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: not started. Process-log events: 11.
 
 - 2026-10-20T02:56:10.663930+00:00 / source_identity_description_slot_laterality / PASS: Bound the actual goat-wool robe to Body part 357, laterality 0, instance 604 from the captured Tam body tree.
   Review: Read item description and equipped binding; source tile Items/sw_robes1.bmp with foreground &y/detail y. Shale freckles are recorded. Held Shillelagh is a separate entry; no new outfit invented.
@@ -420,6 +420,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Inputs: []
   Outputs: []
   Method/prompt/corrections: {"phase": "Native equipment acceptance deferred"}
+
+- 2026-10-20T09:59:56.358778+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / REQUIRES REWORK: Withdrew readiness of the baked-cut export while preserving all performed source/refinement work.
+  Review: Selected clothing model still uses baked body cutouts. Reuse its intact art and body sources, author separate body-over-clothing masks, and record the mask-first model/recomposition before readiness.
+  Inputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json", "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User selected intact clothing with separate body occlusion"}
 
 ### FIT-DROMAD-SHILLELAGH-HAND-2: dromad / Shillelagh / Hand / laterality 2
 
@@ -3533,7 +3539,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/dromad/tunic-east.png](../art/village/age-templates/dromad/tunic-east.png), [art/village/age-templates/dromad/tunic-north.png](../art/village/age-templates/dromad/tunic-north.png), [art/village/age-templates/dromad/tunic-south.png](../art/village/age-templates/dromad/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 27.
+Current step: not started. Process-log events: 28.
 
 - 2026-10-20T02:30:30.102304+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic and retained exact original glyph/palette/description plus captured Body attachment IDs and laterality from its existing source packet.
   Review: Read the item/body source packets. No child-dromad outfit or age selector is inferred; this is a removable authored fitting. Base body/head/dulla and contact remain fixed.
@@ -3697,6 +3703,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 27
   Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/game-scale-review.png", "sha256": "d85b46dcccc8e022bf8c1e0bc2137348e6c39579170272f11b779e7727a4b97d"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-south.png", "sha256": "f40c98a6a82883858d4c51a739f83d768b0b24b7862b7bbd7cedb79e3e81ffa8"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-east.png", "sha256": "f12576be4e0cddb7dd6850aa293c4ef52e34753defdfc2a885dac41569dda55a"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-north.png", "sha256": "3922f481aa457643d84b10aaeaea24c7f022f80dd0f99ccc44a7723b757e77e5"}]
   Method/prompt/corrections: {"phase": "Corrected dromad child tunic authoring review"}
 
+- 2026-10-20T09:59:56.358778+00:00 / extract_register_palette_masks / REQUIRES REWORK: Withdrew readiness of the baked-cut export while preserving all performed source/refinement work.
+  Review: Selected clothing model still uses baked body cutouts. Reuse its intact art and body sources, author separate body-over-clothing masks, and record the mask-first model/recomposition before readiness.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/model.json", "sha256": "623715fda2a66fd6038849d94b7c8217288e22b84a798de8155b0e49574047b1"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "User selected intact clothing with separate body occlusion"}
+
 ### FIT-HUMAN-CHILD-TEMPLATE-TUNIC: human child / tunic
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -3705,7 +3717,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
-Current step: extract_register_palette_masks. Process-log events: 27.
+Current step: extract_register_palette_masks. Process-log events: 29.
 
 - 2026-10-20T01:51:31.357715+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic, preserved its original tile/palette and exact coarse-flax/hemp-rope description, and bound the authored fitting to the unchanged child body.
   Review: Exact original reference hash matched. This resolves the previously generic template garment identity; no child was observed wearing it and no native child selector is assumed. Construction, refinement, extraction and fitting are still unfinished.
@@ -3868,6 +3880,18 @@ Current step: extract_register_palette_masks. Process-log events: 27.
   Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/model.json", "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png", "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"}]
   Outputs: []
   Method/prompt/corrections: {"phase": "Foreground sleeve-cap ownership defect reported"}
+
+- 2026-10-20T09:59:56.358778+00:00 / extract_register_palette_masks / REJECTED: Authored local cuff ownership paths on the unchanged v2 garment/body and inspected the actual recomposition.
+  Review: The material continuation sampled part of the rope and introduced a horizontal stroke; rejected.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v3/correct-cuff-rejected-belt-sample.py", "sha256": "a6fd581082ce3d5f72ccc7ba508d5aa3c3554dc38c77f3c18f8b2f1656e7473c"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v3/model.json", "sha256": "e8e7ec0d916db2a88d5439b7a901817e9779f236cf883a3473643b3c8301ca58"}, {"path": "art/conversion/fit-human-child-woven-tunic/v3/cuff-ownership-before-after.png", "sha256": "0dc43d201c5076e5173cdf212fbb4636d3c44e7aff9e2583892af09549004405"}, {"path": "art/conversion/fit-human-child-woven-tunic/v3/ownership-decisions.json", "sha256": "5fa435b5788b51b9a2c72a857fd2c0d9202e8fbc8da0f08a19d5a117774abd85"}]
+  Method/prompt/corrections: {"phase": "Superseded cutoff experiment before mask-first direction"}
+
+- 2026-10-20T09:59:56.358778+00:00 / extract_register_palette_masks / SUPERSEDED: Authored local cuff ownership paths on the unchanged v2 garment/body and inspected the actual recomposition.
+  Review: The cuff cap was removed, but the result still bakes a limb-shaped hole into garment alpha. Superseded by the user-requested intact-garment plus separate body-mask representation; no generation-ready credit.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v3/correct-cuff-ownership.py", "sha256": "473219abbd3f98caa2251e9816621854263a583460c4cbaa75370235ff08f224"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v3/registered/model.json", "sha256": "ca0a879aff8a5d3d0d325ff7d0af4293f13063ae31527fcc6bc38e1897e66c98"}, {"path": "art/conversion/fit-human-child-woven-tunic/v3/registered/cuff-ownership-before-after.png", "sha256": "5c278ea94ff3ab75f3c6c8b32fbe5839f8ebb3f6d49d76bea8813610adfbacde"}, {"path": "art/conversion/fit-human-child-woven-tunic/v3/registered/ownership-decisions.json", "sha256": "b43088e4c59d2da8d31d7b3ab4761f17f55e6d440fa5948b7cf4f6a5d411150f"}]
+  Method/prompt/corrections: {"phase": "Superseded cutoff experiment before mask-first direction"}
 
 ### SCN-BRINEBRIDGE: BrineBridge
 
