@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-CANVAS-FOLDING-CHAIR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-CHAIR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -138,8 +138,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-BED | Bed | UNFINISHED | - |  |
 | SCN-BEDROLL | Bedroll | UNFINISHED | - |  |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - |  |
-| SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-CHAIR | Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - |  |
+| SCN-CHAIR | Chair | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHEST1 | Chest1 | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DRESSER | Dresser | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-FLOOR-CUSHION | Floor Cushion | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -4567,7 +4567,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 20.
+Current step: native_state_review. Process-log events: 29.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -4689,6 +4689,60 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T19:28:25.725286+00:00 / resolve_object_description_original_tile_palette_state / PASS: Retain source jointed wood/knit-watervine description, original w/y mask and portable-chair ancestry. Confirm one deployed tile rather than inventing folded-state art.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/source-packet.json", "sha256": "c5eab5034304b8c3e996ec9dcba72e7061e53bf0c49c45f3b593faed16485cd9"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/source-reference-camera-comparison.png", "sha256": "2bf945b57adf3c57f3f201aa2949b41cc4f41ba586f36eaa43ee45af61703367"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect legacy directional VFE images and current actual definition/LoadFolders; disclose current SchoolChair texPath mismatch and unknown selected-legacy physical mapping.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/source-packet.json", "sha256": "c5eab5034304b8c3e996ec9dcba72e7061e53bf0c49c45f3b593faed16485cd9"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/source-reference-camera-comparison.png", "sha256": "2bf945b57adf3c57f3f201aa2949b41cc4f41ba586f36eaa43ee45af61703367"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / construct_faithful_shape / PASS: Retain exact corrected S; author complete broad E sling and paired side struts, plus reverse backless frame, with actual source parts and common frame/pivot.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/source-packet.json", "sha256": "c5eab5034304b8c3e996ec9dcba72e7061e53bf0c49c45f3b593faed16485cd9"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/construct-turnaround.py", "sha256": "51b3f6d8f256ff81d68e8285dc3c0b4921d8c5ebc5e900235936b75daa504f3b"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/constructed-turnaround.png", "sha256": "4363b43b07a360b367ef2845bc8fed7406d82ff83e6de828fd23c70c1b70f47a"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/manual-structural-review.json", "sha256": "380b9a3c553ba2334b67d649fb7d158e2c8f2e1dcbf76b19cf65b19721de21a5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / create_front_side_back_furniture_views / PASS: Compose retained selected front with authored complete E and N; preserve symmetric reverse stool identity, without tall backrest or copied frontal X in profile.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/selected-front-neutral.png", "sha256": "0ef99fd2740d205c0b9fb15c2dadc0661be35142155e6adf92ea5cb671246f88"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/constructed-east.png", "sha256": "3331b5740c0e42b8b947727564ee8251aaa2ea38a0e3272f46d02c0e8dec5925"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/constructed-north.png", "sha256": "189ef0ec4a81663e4423b67d564a9dbfed63e95d2ce7d39c435c51a551450147"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/front-guided-turnaround.png", "sha256": "28c398cf9ec3fd61398f09cee2aa6a71fc103380991378a913a85c30f3c440c6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / refine_materials_and_form / PASS: One actual built-in ImageGen selected-front-guided composed refinement, inspected before extraction.
+  Review: Backless sling, crossed front/rear supports and broad complete side with paired edge-on struts retained. No tall backrest, cushion, occupied/folded variant or new mechanism. Some rod thickness and frame positions drift in generation, so original selected S and exact manual E/N alpha/ink remain authoritative. Use generated knit/wood luminance only; reject exterior fringe and changed geometry.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/front-guided-turnaround.png", "sha256": "28c398cf9ec3fd61398f09cee2aa6a71fc103380991378a913a85c30f3c440c6"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/turnaround-prompt.txt", "sha256": "41c7b334c0a0b79fc3c9dfde28fe00cceaec1aa2689467d26ff7ad34a7d0c3d1"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/refined-turnaround-raw.png", "sha256": "146525eac8a7cbb9b6daba5f3526ffe59ccf677647d1bb09630daf741a75a559"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/first-structural-review.json", "sha256": "b7f8ea4593f8cffe2e147a7efc4c87cc96e5c1493af8fbd297517b5648d9866d"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-canvas-folding-chair/v3/turnaround-prompt.txt", "sha256": "41c7b334c0a0b79fc3c9dfde28fe00cceaec1aa2689467d26ff7ad34a7d0c3d1"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-a0dbb5fd-cf48-48bd-b059-257c5d2802ac.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-canvas-folding-chair\\v3\\front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_east.png"]}}
+
+- 2026-10-20T19:28:25.725286+00:00 / extract_register_color_coverage / PASS: Patch generated rod/position drift by taking same-material luminance into fixed E/N masks, retain S pixels and manual ink, derive symmetric W. Reuse recorded surface sampler with explicit temporary R/B color-role normalization.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/refined-turnaround-raw.png", "sha256": "146525eac8a7cbb9b6daba5f3526ffe59ccf677647d1bb09630daf741a75a559"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/first-structural-review.json", "sha256": "b7f8ea4593f8cffe2e147a7efc4c87cc96e5c1493af8fbd297517b5648d9866d"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/register-chair.py", "sha256": "e8958a50019a413c283a5845d8903df670a463fbfd72e9d7499e6bc7b258331c"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/model.json", "sha256": "17d6bd5ae8403a1888c97048b85282c3c9b66bb6761a15867f15f04652101773"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/registration-decisions.json", "sha256": "23bfb2a9ed31275409ec8ce9800cc6b6b74e30d0590a25a19d6d2b56e51951e0"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-neutral.png", "sha256": "9add73f81839a0ba5300f26968ec6670001cfec5a64f2c62d6c59f64c6cc3d9a"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-detail.png", "sha256": "98da99978fb70f49099c62eee4322b8d016b052c5e6eb32d226083d0339e7b4e"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-coverage.png", "sha256": "3f9f4dcda082f18bfcfb04efc8fbc65640e58ac9b2658f338fd7e196653b0a06"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed deployed source tile with no declared folded/packed artwork. Extra facing assets do not add a native folding mechanic.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/source-packet.json", "sha256": "c5eab5034304b8c3e996ec9dcba72e7061e53bf0c49c45f3b593faed16485cd9"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/registered/model.json", "sha256": "17d6bd5ae8403a1888c97048b85282c3c9b66bb6761a15867f15f04652101773"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect complete four-view art at enlarged and16x24/24x36/32x48sizes, retained S, sling/rail attachments, open support gaps, source tint and complete side volume.
+  Review: Reviewed source description/original mask and portable-chair ancestry/state, legacy VFE S/E/N reference versus current different SchoolChair mapping, retained corrected front, authored complete side/rear construction, front-guided composed refinement and structural review before extraction, fixed coverage/ink material selection, separate neutral wood/sling ownership and intended-size native w/y views. Side depth and hidden support relationships are authored, not donor physical measurements; edge-on transverse folding members are not a pasted frontal X. Backless rear remains source-symmetric. Mirrored west justified by unmarked side structure. One deployed tile, native sitting/takeability/non-occlusion, rare Animated fallback and future facing/placement acceptance remain unfinished behind full-set generation.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/registered/model.json", "sha256": "17d6bd5ae8403a1888c97048b85282c3c9b66bb6761a15867f15f04652101773"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-native.png", "sha256": "66599bfbf4b6288d57f888190ce2c0307bce9b237e18a79c03f65c1159ec9a4c"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/authoring-review.json", "sha256": "3fbe3f45bcc1b2607e11281371587a659c512b8ffe4f82150e5d92381a039042"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/artifact-manifest.json", "sha256": "8bf9043772a9642a41507f5255db32351c7e499c59937b074921de974aab653e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T19:28:25.725286+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep actual sitting, portability/takeability, non-occlusion, rare Animated/custom fallback and future facing/placement checks behind full-set generation.
+  Review: No native activation, game/harness launch or current donor mechanics imported. Entry remains UNFINISHED pending native acceptance.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/registered/model.json", "sha256": "17d6bd5ae8403a1888c97048b85282c3c9b66bb6761a15867f15f04652101773"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-CHAIR: Chair
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4697,7 +4751,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: not started. Process-log events: 17.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 17.
 
 - 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
   Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.

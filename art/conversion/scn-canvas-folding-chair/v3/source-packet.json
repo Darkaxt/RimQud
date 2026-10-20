@@ -1,0 +1,160 @@
+{
+  "entry": "SCN-CANVAS-FOLDING-CHAIR",
+  "identity": "Canvas Folding Chair -> BasePortableChair -> BaseChair -> Furniture",
+  "description": "Jointed wood and knit watervine make a movable wharf for the ass.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Canvas Folding Chair": "<object Name=\"Canvas Folding Chair\" Inherits=\"BasePortableChair\">\n    <part Name=\"Render\" DisplayName=\"canvas folding chair\" ColorString=\"&amp;w\" DetailColor=\"y\" Tile=\"Items/sw_chair_canvas.bmp\" />\n    <part Name=\"Physics\" Weight=\"2\" />\n    <part Name=\"Description\" Short=\"Jointed wood and knit watervine make a movable wharf for the ass.\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "BasePortableChair": "<object Name=\"BasePortableChair\" Inherits=\"BaseChair\">\n    <part Name=\"Render\" DisplayName=\"[portablechair]\" />\n    <part Name=\"Physics\" Weight=\"5\" Takeable=\"true\" />\n    <removepart Name=\"MissileCover\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "BaseChair": "<object Name=\"BaseChair\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[chair]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"190\" Tile=\"Items/sw_chair.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"20\" Takeable=\"false\" />   \n    <part Name=\"Chair\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Short-Legged,Straight-Backed,Sturdy,Three-Legged\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Backs,Lumbar,the Tired\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Chair\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"chair\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"60\" />\n    <stag Name=\"Seating\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sit on\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeingSatOn\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\canvas-folding-chair-mask.png",
+    "sha256": "82f476c2194a86101de39efe6f1adc7458e7736f9a75f2728d4f3c26bedafca5",
+    "tile": "Items/sw_chair_canvas.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9402,
+    "atlas_id": 185,
+    "rect": [
+      288,
+      208,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Oblique broad sling seat fills the upper diamond-like region, with thin dark source rails on upper-left and lower-right edges. Primary wooden support marks below show crossed near supports and short farther supports. No tall backrest appears.",
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Jointed wooden rails/supports receive primary w. Knit-watervine canvas seat receives detail y. Cyan seat is only an extraction aid; final layers must be neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bedroll_south.png",
+    "sha256": "378532349cd9fbd57ea13d4d7debf16a03482409262a2049868fcdea04922716",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Bedroll_south supplies restrained fabric folds/seams, soft canvas shading and clean contour convention only. It is a cloth material reference, not a folding-chair structural equivalent. No pillow, sleeping-bag shape, patchwork or mechanics is copied."
+  },
+  "reference_limits": "A focused installed filename search for folding/camp/director/deck chairs found no named close folding-frame reference. VFE school chair and Reskin Combined HD stool were inspected but not selected: rigid backrest/seat and unrelated structure do not establish this source frame. The source sprite/description control all wooden support construction.",
+  "construction": "Backless thin knit-watervine sling between short parallel wooden edge rails, crossed jointed wood supports with one visible central pivot. Far supports overlap in the straight front view. Hidden joinery is authored, not native mechanism metadata.",
+  "native_state": "One fixed source tile in its deployed source pose. No fold/unfold part or alternate packed tile is declared. Native Chair interaction and takeable2-weight portable organic furniture remain native. BasePortableChair removes MissileCover; rare Animated builder is inherited from BaseChair and needs original fallback. Extra S/E/N/W are unbound authoring assets, not native rotation or folding controls.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell transform for entire sling/frame and masks. Support feet and seat are not separately centered or fitted."
+  },
+  "native_acceptance": "Pending full-set generation gate; native sitting/takeability, non-occlusion, rare animated fallback and extra-view placement remain unfinished.",
+  "supersedes": {
+    "path": "art/conversion/scn-canvas-folding-chair/v1/source-packet.json",
+    "sha256": "9d844be8b310c6c8227439789d651ea0063ccd3265e0773a44dcf998271069ae"
+  },
+  "camera_reference": {
+    "mod": "Vanilla Furniture Expanded",
+    "workshop_id": "1718190143",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_south.png",
+    "sha256": "16fb84c463a13b4c7a2dc4ef9485df79d35f9049aff7c6712d081db4b3c494c2",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\About\\About.xml",
+    "about_sha256": "2a52a3f81c98268f54889762e98fa90e891db621e359802da0d1ea934f68afda",
+    "role": "Actual installed VFE Chair_south supplies straight map-facing parallel seat edges, aligned supports and restrained top visibility only. Its tall back, padded seat, mechanics and footprint are not copied."
+  },
+  "camera": {
+    "contract": "Retain corrected south cardinal sling; complete east shows its full longitudinal seat extent rather than a thin edge. Parallel rails, vertical central axis, same16x24cell/pivot in every view. Diagonal X members are intrinsic bracing.",
+    "authored_front_width": 11.1,
+    "authored_depth": 7.6,
+    "depth_status": "Authored estimate guided by source sling footprint and actual directional camera; no Qud hidden length or donor dimension claimed.",
+    "side_structure": "Two transverse X frames fold across stool width. End view sees paired wooden struts edge-on under longitudinal side rails, not another frontal X pasted onto the side. Precise hidden supports are authored.",
+    "rear_structure": "Backless stool has comparable front/rear outline. Rear wooden overlap/dowel face and sling underside are authored; no tall backrest or new folding mechanism.",
+    "west": "Mirror east; no side-specific marks, accessories or asymmetric structure."
+  },
+  "source_camera_boundary": "Original has an oblique seat; preserve its sling and folding wood identity while rebuilding the camera. No actual fold/unfold state or new four-way rotation is introduced.",
+  "recorded_at": "2026-10-20T19:24:59.688334+00:00",
+  "retained_front": {
+    "path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/model.json",
+    "sha256": "ad9e0cf5b12a9fddcd66ffc28d1d297d0053d3186c1aadefe12caa2887e88654"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_south.png",
+        "sha256": "16fb84c463a13b4c7a2dc4ef9485df79d35f9049aff7c6712d081db4b3c494c2",
+        "frame": [
+          64,
+          64
+        ],
+        "alpha_bounds": [
+          11,
+          0,
+          53,
+          62
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_east.png",
+        "sha256": "3d0cec8546a2b6b9f0ebb8b558f5e85e0e01b88bd9a176e626549d48b8cb9edd",
+        "frame": [
+          64,
+          64
+        ],
+        "alpha_bounds": [
+          1,
+          4,
+          57,
+          61
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\Things\\Seating\\SquareChair\\Chair_north.png",
+        "sha256": "427c0dfc3759c3c95177f3cdde8a2a11f4f6af04c7c605436397e7ab3c660b8c",
+        "frame": [
+          64,
+          64
+        ],
+        "alpha_bounds": [
+          10,
+          17,
+          54,
+          62
+        ]
+      }
+    },
+    "definition_inspected": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_BasicSeats.xml",
+      "sha256": "fc692da16af1c9f7bb1200ea730ae5d4bff3dc0e8ed35e39dd0321f70f20d74e"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\LoadFolders.xml",
+      "sha256": "148c4e0d349c9c8c709feb00e2ca92b486a28e5e1d54f9a35c541078e227ea9a"
+    },
+    "binding": "These are actual installed LEGACY SquareChair textures. Current1.6 Seat_SquareChair resolves NewThings/Furniture/SchoolChair/SchoolChair instead, so its Graphic_Multi/drawSize1x1 do not establish a render mapping for the selected legacy images.",
+    "graphic_class": null,
+    "draw_size": null,
+    "footprint": null,
+    "missing": "Active render mapping for selected legacy path is not exported; no physical measurement inferred from alpha width or current unrelated path.",
+    "role": "Legacy S/E/N seat edges and shallow cardinal camera convention only, plus already selected VTE Bedroll knit material reference. Neither supplies the source folding-frame structure or a native dimension."
+  }
+}
