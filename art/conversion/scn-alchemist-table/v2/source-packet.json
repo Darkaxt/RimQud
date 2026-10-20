@@ -1,0 +1,167 @@
+{
+  "entry": "SCN-ALCHEMIST-TABLE",
+  "recorded_at": "2026-10-20T18:17:59.291242+00:00",
+  "identity": "Alchemist Table -> Table -> Furniture",
+  "description": "A table scorched with the radial patterns of hot chemistry holds a phial rack and alembic.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "selected": "<object Name=\"Alchemist Table\" Inherits=\"Table\">\n    <part Name=\"Render\" DisplayName=\"alchemist's table\" Tile=\"Items/sw_alchemist_table.bmp\" />\n    <part Name=\"Description\" Short=\"A table scorched with the radial patterns of hot chemistry holds a phial rack and alembic.\" />\n    <tag Name=\"EmptyTile\" Value=\"*delete\" />\n    <tag Name=\"FullTile\" Value=\"*delete\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"*delete\" />\n    <tag Name=\"FullDetailColor\" Value=\"*delete\" />\n  </object>",
+    "table_parent": "<object Name=\"Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"table\" ColorString=\"&amp;w\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Assets_Content_Textures_Tiles_sw_table.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <tag Name=\"EmptyTile\" Value=\"Assets_Content_Textures_Tiles_sw_table.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table1.bmp,Items/sw_table2.bmp,Items/sw_table3.bmp,Items/sw_table4.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,c,y,W\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_table\" />\n    <part Name=\"Inventory\" />\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"Table\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,the Relaxed\" />\n    <xtagTextFragments Skin=\"glaze\" PoeticFeatures=\"flat surfaces,artfulness,gentle stillness\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <tag Name=\"AutoexploreChest\" />\n    <stag Name=\"Storage\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>"
+  },
+  "original_reference": {
+    "tile": "Items/sw_alchemist_table.bmp",
+    "description": "A table scorched with the radial patterns of hot chemistry holds a phial rack and alembic.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "alchemist's table",
+      "RenderString": "227",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&w",
+      "DetailColor": "C",
+      "Tile": "Items/sw_alchemist_table.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Alchemist Table",
+    "reference_file": "village-originals/alchemist-table-reference.png",
+    "native_mask_sha256": "2e1d41adb5907fb8ce99e60bcebe8161f2778d1cf68ad800d5f6ba42204f4d1d",
+    "reference_sha256": "4c97de37c986b690e2f8e5f125a172749cd25d7c4b7268d8aeed257b52bafc63",
+    "info_id": 9239,
+    "atlas_id": 185,
+    "rect": [
+      270,
+      780,
+      16,
+      24
+    ]
+  },
+  "private_original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\alchemist-table-mask.png",
+    "sha256": "2e1d41adb5907fb8ce99e60bcebe8161f2778d1cf68ad800d5f6ba42204f4d1d"
+  },
+  "source_shape": "Wide two-row wooden tabletop at native y14..15, two visible supports/feet below it, phial rack on the left and tall pale-cyan alembic glass loops/tubing above and to the right. Preserve the upright source-map silhouette rather than replacing it with a flat modern counter.",
+  "palette": {
+    "primary": "w",
+    "detail": "C",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "77bfcf",
+    "rule": "Wood/table/rack/scorch shading is primary; phials/alembic glass is detail. Cyan in the constructed/refined image is an ownership aid; both selected layers become grayscale."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "about": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+      "publication": "Private installed reference, not copied as standalone donor art"
+    },
+    "load_folders": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85",
+      "publication": "Private installed reference, not copied as standalone donor art"
+    },
+    "assets": {
+      "south": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableDrugLab_south.png",
+        "sha256": "dff58c61f7f82903640d8253e02537ce5c70cf5d98029f3076f71e6801a844e7",
+        "publication": "Private installed reference, not copied as standalone donor art"
+      },
+      "east": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableDrugLab_east.png",
+        "sha256": "e81437cf7414c3c7eb0a0607adeb3f3f59039f5d6c136f0a552cc479f94405d1",
+        "publication": "Private installed reference, not copied as standalone donor art"
+      },
+      "north": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Production\\TableDrugLab_north.png",
+        "sha256": "5d578fee66d8ee20a9feb30564bef426b1190b6f68ae5939d0945ef8c65ff48f",
+        "publication": "Private installed reference, not copied as standalone donor art"
+      }
+    },
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Production.xml",
+      "sha256": "3221c30adc223498636ac7b6ca86ef9c50fce681b138be8f0919c6e652045a31",
+      "publication": "Private installed reference, not copied as standalone donor art"
+    },
+    "defName": "DrugLab",
+    "texPath": "Things/Building/Production/TableDrugLab",
+    "drawSize": "(3.5,1.5)",
+    "role": "Cardinal work-surface and glass readability only; donor layout, metal counter, size and drug/crafting mechanics are not imported."
+  },
+  "construction": "One shared authored assembly: rectangular scorched wooden surface, two cross-depth trestles, left three-phial rack and tall glass alembic. Hidden trestle/rack joinery, apparatus depth and reverse glass surfaces are authored interpretation; not new native components.",
+  "states": "Only the declared fixed Alchemist Table tile; inherited empty/full tile/detail tags deleted. Same described rack/alembic in every facing, no invented inventory appearance state.",
+  "inventory_boundary": "Inherited Container/Inventory and population remain native. The rack/alembic in the source bitmap are decorative fixture art; this does not convert or bake independently carried inventory items into the table.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "floor_reference": [
+      8,
+      22.3
+    ],
+    "rule": "All views and both color roles share same full source-cell mapping, scale and pivot. No independent bounds fitting. South is proposed replacement for existing fixed tile; E/N/W are unbound authoring assets."
+  },
+  "native_behavior": "Preserve non-occluding Render, inherited organic/wood furniture, container/cover and actual inventory actions. Rare animated/custom states retain native fallback; no crafting/research/drug mechanic is transplanted.",
+  "native_acceptance": "Pending full-set generation and integrated source-tile/physical-frame/visibility/container state acceptance.",
+  "supersedes": {
+    "path": "art/conversion/scn-alchemist-table/v1/source-packet.json",
+    "sha256": "341c8b49ebd363852c0a9048919731876ac3611c155fb31b8da4720eb00e4ca6"
+  },
+  "camera": {
+    "contract": "Straight south/front, complete east/right end, straight north/back and separately authored west/left end. One fixed shallow map camera, no yaw or converging perspective.",
+    "projection": {
+      "south": {
+        "facing": "south",
+        "projection": "u=cardinal horizontal; v=22.3-height-.24*depth; parallel orthographic edges",
+        "camera_pitch": 13.495733280795811,
+        "native_binding": true,
+        "part_primitives": 118
+      },
+      "east": {
+        "facing": "east",
+        "projection": "u=cardinal horizontal; v=22.3-height-.24*depth; parallel orthographic edges",
+        "camera_pitch": 13.495733280795811,
+        "native_binding": false,
+        "part_primitives": 118
+      },
+      "north": {
+        "facing": "north",
+        "projection": "u=cardinal horizontal; v=22.3-height-.24*depth; parallel orthographic edges",
+        "camera_pitch": 13.495733280795811,
+        "native_binding": false,
+        "part_primitives": 118
+      },
+      "west": {
+        "facing": "west",
+        "projection": "u=cardinal horizontal; v=22.3-height-.24*depth; parallel orthographic edges",
+        "camera_pitch": 13.495733280795811,
+        "native_binding": false,
+        "part_primitives": 118
+      }
+    },
+    "reference": "Actual VTE TableDrugLab cardinal references provide consistent shallow visibility and chemical-glass shading; retain Qud upright wood/rack/alembic identity."
+  },
+  "furniture_views": {
+    "required": [
+      "south",
+      "east",
+      "north"
+    ],
+    "additional": "west explicitly authored because asymmetric rack/alembic makes blind east mirroring unreliable",
+    "native_rotation": "Not implemented; later wall/table-facing decision remains open."
+  }
+}

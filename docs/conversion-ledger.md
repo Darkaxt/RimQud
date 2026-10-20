@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-ALCHEMIST-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-ARGYVE-MULTICABINET**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -133,8 +133,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-ALCHEMIST-TABLE | Alchemist Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - |  |
+| SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BED | Bed | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BEDROLL | Bedroll | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -3863,7 +3863,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/alchemist-table-body.png](../art/village/scenery/alchemist-table-body.png), [art/village/scenery/alchemist-table-detail.png](../art/village/scenery/alchemist-table-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 10.
+Current step: native_state_review. Process-log events: 30.
 
 - 2026-10-20T06:30:33.351102+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Alchemist Table/Table definitions, original tile mask/hash, scorched-table description and deleted inherited empty/full appearance tags.
   Review: Viewed original source decoded with native w wood and C glass. Wide table/visible supports, left rack and tall alembic define its source identity. Inventory/cover/organic furniture metadata remains native; described fixture art is distinct from actual carried inventory.
@@ -3925,6 +3925,126 @@ Current step: resolve_object_description_original_tile_palette_state. Process-lo
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
 
+- 2026-10-20T18:17:59.291242+00:00 / resolve_object_description_original_tile_palette_state / PASS: Recheck exact installed source definition/hash and original w/C fixture; retain deleted inherited empty/full tags and actual inventory boundary.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:17:59.291242+00:00 / select_render_reference_or_document_no_equivalent / PASS: Select actual VTE drug-lab SEN textures and source Core definition as camera/glass convention only, preserving Qud wood/rack/alembic.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-camera-comparison.png", "sha256": "a0b2f9e1a130fbffca97e5cb14f0a42c6b311f4930aca2d040f494cbf61f938b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:17:59.291242+00:00 / construct_faithful_shape / PASS: Correct converging front to a rectangular cardinal tabletop and construct one shared asymmetric apparatus, phial rack and trestle assembly.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/construct-cardinal-views.py", "sha256": "7b9c47c3a4f721662c3d8493e9d5fe9a5f91d720547190cc80c1d02d8ab084b2"}, {"path": "art/conversion/scn-alchemist-table/v2/constructed-south.svg", "sha256": "79eac5276ed31ccfcabe4eb2e5788274459fc766e58979718d8ff46566d61567"}, {"path": "art/conversion/scn-alchemist-table/v2/constructed-south.png", "sha256": "904411c5daa1e4bcaecbd531ae7fd58eff37a3443f1d9b3c15b7fd0cf02752c3"}, {"path": "art/conversion/scn-alchemist-table/v2/camera-and-geometry.json", "sha256": "942700534ec3708558ec1d1a494c25c0574090b7fb5b5c34049dd028a7023693"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:17:59.291242+00:00 / create_front_side_back_furniture_views / PASS: Prepare explicit S/E/N/W geometric proposals from one authored assembly; west is separate, native orientation behavior unchanged.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/constructed-turnaround.png", "sha256": "f62eb225ebc6d00c7f13d229401a3c2765934bc63611bc1683abfbffc5a54367"}, {"path": "art/conversion/scn-alchemist-table/v2/constructed-east.svg", "sha256": "c2e7f3b8940e87fff4ccf3bb934fb57de48cc0e5b82a695f16119b357cc7b73e"}, {"path": "art/conversion/scn-alchemist-table/v2/constructed-north.svg", "sha256": "83accf49488056ca69cd75c0f76bc8a314eb69bd258ca97eeb35af45fa485396"}, {"path": "art/conversion/scn-alchemist-table/v2/constructed-west.svg", "sha256": "b45fc5219a6524b08cb17d70fcbe7a5ff466e915afa9a7d152e05b394a1c5404"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:17:59.291242+00:00 / create_required_state_neighbor_variants / PASS: Retain one source fixture state; child explicitly deletes empty/full tile/detail tags. No neighbor tiling or invented empty-lab state.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/source-packet.json", "sha256": "54aa46d7f477d405c3367ba6d400af08b4fb36f097dcd6cd2812bca731578aee"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:19:30.880070+00:00 / construct_faithful_shape / PASS: Whole-primitive painter order placed the bulb center behind the top board, clipping its lower visible front surface. Render the visible ellipsoid front surface and its neck after the tabletop. Preserve geometry, supports, rack, apparatus scale, native state and all initial images. This fixes authoring depth before the first new refinement.
+  Review: Flask body/neck are continuous and stand on top of the board in every view; no new fixture or inventory state.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v2/constructed-turnaround.png", "sha256": "f62eb225ebc6d00c7f13d229401a3c2765934bc63611bc1683abfbffc5a54367"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v2/flask-depth-correction.json", "sha256": "0f29784e05e3f9a1ea058fc272784ec62f37834cd419b291adb084930a529135"}, {"path": "art/conversion/scn-alchemist-table/v2/patched-turnaround.png", "sha256": "130888e4493d72e43d75ef1b137ad83f79223b226b97caefa147637bc6c8419b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:22:00.461421+00:00 / resolve_object_description_original_tile_palette_state / PASS: Recheck exact installed source definition/hash and original w/C fixture; retain deleted inherited empty/full tags and actual inventory boundary.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:22:00.461421+00:00 / select_render_reference_or_document_no_equivalent / PASS: Select actual VTE drug-lab SEN textures and source Core definition as camera/glass convention only, preserving Qud wood/rack/alembic.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-camera-comparison.png", "sha256": "0818d31ac6d1ae3f96d5ecca59f0183e9ca7199e79323714122244eb824e565c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:22:00.461421+00:00 / construct_faithful_shape / PASS: Correct converging front to a rectangular cardinal tabletop and construct one shared asymmetric apparatus, phial rack and trestle assembly.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/construct-cardinal-views.py", "sha256": "e3cbfd29bc7d6ec76ce31ab9798ea59e4f8cde17a074517003dcea30e08b4bb2"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-south.svg", "sha256": "80c41ac6b4e34f56bfa70be9e4750913aa2ede6200fe04bda2d954800c2aed37"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-south.png", "sha256": "c6f5ee7b737265ece0686f64feb7d900620eff06827b962cfbd8b30c4d4484b2"}, {"path": "art/conversion/scn-alchemist-table/v3/camera-and-geometry.json", "sha256": "942700534ec3708558ec1d1a494c25c0574090b7fb5b5c34049dd028a7023693"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:22:00.461421+00:00 / create_front_side_back_furniture_views / PASS: Prepare explicit S/E/N/W geometric proposals from one authored assembly; west is separate, native orientation behavior unchanged.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/constructed-turnaround.png", "sha256": "4497487c8111b7f44bb58290a8546e03232f8ee52a30d5cd1cffceb55d1ad60e"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-east.svg", "sha256": "270aae0afe7205fa56cb78b5374210c33cbf2feff7b3ea9e9ec590df93436760"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-north.svg", "sha256": "65c3d626aecf75ad379c0c033a07690e4e28a471bd82fdfbaf3715779a089d17"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-west.svg", "sha256": "626360d047b7ed1aff4bf358e3ad99226a0647f3a29d2f3c5dca15bf8cf32dd1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:22:00.461421+00:00 / create_required_state_neighbor_variants / PASS: Retain one source fixture state; child explicitly deletes empty/full tile/detail tags. No neighbor tiling or invented empty-lab state.
+  Review: Shared whole-cell frame and cardinal axes. Wood/scorch and glass ownership stay separate. These are proposals pending refinement; unseen surfaces/joins are authored, not exported native dimensions or new functionality.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:27:00.966828+00:00 / refine_materials_and_form / PASS: Refine the corrected front once, inspect structure before extraction, and retain raw output/prompt.
+  Review: First front structure is usable. Same surface material is selected without a second isolation call; original rectangular camera and source identity remain authoritative. Secondary views still need actual refinement/inspection.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-south.png", "sha256": "c6f5ee7b737265ece0686f64feb7d900620eff06827b962cfbd8b30c4d4484b2"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/refine-front-prompt.txt", "sha256": "63b99a146bbb59e231fdecac1d9cf93ecc667768c3d655ffc253b56465d7ef1e"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-front-raw.png", "sha256": "a36c167aa945f11b404f07a8466153f3fb921aba6b55883f23b3eac98e991fe4"}, {"path": "art/conversion/scn-alchemist-table/v3/first-front-structural-review.json", "sha256": "691cde4a8baf09ea0a63988bc8da6f168c49b561f79f0088eee1da2b10d8ed96"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:27:00.966828+00:00 / extract_register_color_coverage / PASS: Select same front wood/glass surface into fixed source coverage; exclude generated glow/edge/body changes and retain glass highlights in glass ownership.
+  Review: First front structure is usable. Same surface material is selected without a second isolation call; original rectangular camera and source identity remain authoritative. Secondary views still need actual refinement/inspection.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-south.png", "sha256": "c6f5ee7b737265ece0686f64feb7d900620eff06827b962cfbd8b30c4d4484b2"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/selected-front-neutral.png", "sha256": "a66ae4413b2cc7c4a4c0f4ecc5b42e18cc288d6f0903bf6317a9218a9fdd66aa"}, {"path": "art/conversion/scn-alchemist-table/v3/selected-front-detail.png", "sha256": "2b895fe51ce2f0fcf5ec1491e79be5f4908f022b5e5058f9217fca7bc3c1e042"}, {"path": "art/conversion/scn-alchemist-table/v3/front-material-continuation.png", "sha256": "5683f4031b67a9f5de251e3762a024d7ad2813fbc4d11203b7125972184b490c"}, {"path": "art/conversion/scn-alchemist-table/v3/front-material-selection.json", "sha256": "d14f724961f2af8df187c00d181af97bdd5a0963cd03d25806f1e6047955822b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:27:00.966828+00:00 / create_front_side_back_furniture_views / PASS: Use selected corrected front plus shared wider manual geometry to guide E/N and explicit asymmetric W; all views retain one scale/pivot.
+  Review: First front structure is usable. Same surface material is selected without a second isolation call; original rectangular camera and source identity remain authoritative. Secondary views still need actual refinement/inspection.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/constructed-south.png", "sha256": "c6f5ee7b737265ece0686f64feb7d900620eff06827b962cfbd8b30c4d4484b2"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/selected-front-context.png", "sha256": "ff39791d16453fae060ee25e06f4ccb993f6c221b0cbd43f3d8c9005d8e734b7"}, {"path": "art/conversion/scn-alchemist-table/v3/front-guided-turnaround-input.png", "sha256": "13e177f7de71b89148813973d6ea3753d3008a4d0e5900c866ba2e588ec8d9b8"}, {"path": "art/conversion/scn-alchemist-table/v3/turnaround-prompt.txt", "sha256": "b3f194c31058e60b28c03ccf54574cc713054529778683c34fe88b5d6940966b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:28:32.216147+00:00 / extract_register_color_coverage / PASS: Nearest-pixel continuation and sampled generated outlines left streaks at the fixed glass/wood boundary. Select brighter same-material interior, complete excluded boundaries harmonically, restore fixed manual dark contour. Keep all source coverage and glass ownership; no new generation or shifted geometry.
+  Review: Initial transfer retained as superseded evidence. Same raw material and fixed alpha remain; clean front becomes the guide for actual secondary-view refinement.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/refined-front-raw.png", "sha256": "a36c167aa945f11b404f07a8466153f3fb921aba6b55883f23b3eac98e991fe4"}, {"path": "art/conversion/scn-alchemist-table/v3/selected-front-context.png", "sha256": "ff39791d16453fae060ee25e06f4ccb993f6c221b0cbd43f3d8c9005d8e734b7"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/front-clean/material-correction.json", "sha256": "31ae9b38d54f6780036d232e60eb0d336b285d9349cd0d09136983c008be1399"}, {"path": "art/conversion/scn-alchemist-table/v3/front-clean/selected-front-context.png", "sha256": "51317f6646cd2fbaef26c6d349ee5720d2c271fa1e4578c9b09ea1bb2b391ab1"}, {"path": "art/conversion/scn-alchemist-table/v3/front-clean/front-guided-turnaround-input.png", "sha256": "2310f8056ef7b7b8e5b901c6b6a659efeaae99bd886c7b157cb801b015412b95"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:31:47.384834+00:00 / refine_materials_and_form / PASS: Refine E/N/W from the selected front-guided composed sheet, then inspect whole structure before extraction. Retain the first selected front.
+  Review: Directional structures and corrected depth are usable. Generated halo/background and loop fill are rejected via exact fixed coverage; only material inside actual constructed parts is selected. No second isolation call.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/turnaround-prompt.txt", "sha256": "b3f194c31058e60b28c03ccf54574cc713054529778683c34fe88b5d6940966b"}, {"path": "art/conversion/scn-alchemist-table/v3/front-clean/front-guided-turnaround-input.png", "sha256": "2310f8056ef7b7b8e5b901c6b6a659efeaae99bd886c7b157cb801b015412b95"}, {"path": "art/conversion/scn-alchemist-table/v3/front-clean/selected-front-context.png", "sha256": "51317f6646cd2fbaef26c6d349ee5720d2c271fa1e4578c9b09ea1bb2b391ab1"}, {"path": "art/conversion/scn-alchemist-table/v3/source-camera-comparison.png", "sha256": "0818d31ac6d1ae3f96d5ecca59f0183e9ca7199e79323714122244eb824e565c"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/refined-turnaround-raw.png", "sha256": "40e9c6b5c4513703c4e2f01f0d8be90d17da11249600a9c3458584f783b53373"}, {"path": "art/conversion/scn-alchemist-table/v3/secondary-structural-review.json", "sha256": "aa842cc5e62ce3808d59a5d199f9df27cbc46d9aa447d1f658db03fb9c14e497"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:33:40.689936+00:00 / construct_faithful_shape / PASS: Apply user side-width feedback by revising inferred depth and apparatus volume in shared geometry. Preserve v2 thin-side and flask-depth trial evidence; no completed-image stretch.
+  Review: Reviewed original Qud icon/description and actual VTE directional convention, source-state tags, corrected parallel-edge construction, fuller side depth/round flask/coil volume, selected front refinement, front-guided E/N/W refinement, material-transfer patch, neutral surfaces, glass/wood ownership and intended-size w/C previews. Explicit west retains apparatus asymmetry. Whole source coverage excludes generated glow/background and uses one alpha with independent detail weight. All views share cell mapping and pivot; unseen joins/depth are authored, not native dimensions. One declared fixture state remains, and inventory is separate. No native rotation, container, physical-frame or transparency acceptance claimed before full-set generation.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-front-raw.png", "sha256": "a36c167aa945f11b404f07a8466153f3fb921aba6b55883f23b3eac98e991fe4"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-turnaround-raw.png", "sha256": "40e9c6b5c4513703c4e2f01f0d8be90d17da11249600a9c3458584f783b53373"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/depth-before-after.png", "sha256": "21ee5dac7a8940144e304e57f469d93cbfa6e9fca465764fb4ff0e5020790fba"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:33:40.689936+00:00 / extract_register_color_coverage / PASS: Register full front/E/N/W material into exact construction coverage. Keep wood/glass ownership, pale glass highlights and one-alpha native blend; exclude generated halo and loop background fill.
+  Review: Reviewed original Qud icon/description and actual VTE directional convention, source-state tags, corrected parallel-edge construction, fuller side depth/round flask/coil volume, selected front refinement, front-guided E/N/W refinement, material-transfer patch, neutral surfaces, glass/wood ownership and intended-size w/C previews. Explicit west retains apparatus asymmetry. Whole source coverage excludes generated glow/background and uses one alpha with independent detail weight. All views share cell mapping and pivot; unseen joins/depth are authored, not native dimensions. One declared fixture state remains, and inventory is separate. No native rotation, container, physical-frame or transparency acceptance claimed before full-set generation.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-front-raw.png", "sha256": "a36c167aa945f11b404f07a8466153f3fb921aba6b55883f23b3eac98e991fe4"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-turnaround-raw.png", "sha256": "40e9c6b5c4513703c4e2f01f0d8be90d17da11249600a9c3458584f783b53373"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/register-views.py", "sha256": "fa6052785fe517510ceda70db838b963016c53529beeb2c3f64cd60c074d69d1"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/model.json", "sha256": "be982e6340a6e6ce34c7fcf703d2ffd6f8d9f83c44d828021f0e88c23060a942"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/registration-decisions.json", "sha256": "4f0b92b0177992f2b7c97182a553f430c00840bd2b84bde0891f7c70b19b7853"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-coverage.png", "sha256": "7e20fcc963b4dc5465aa8613893b7fe7757e9e7e7591ad6cc88033a89b1263d5"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-glass-ownership.png", "sha256": "31d04d4eaa2a37cbf2a25f08afb9320cf481f5426e15f6d5621d8c0bb846f618"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:33:40.689936+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect corrected cardinal camera, source fixture identity, side depth, phial/rack and tube connections, separate color roles and all views at intended sizes.
+  Review: Reviewed original Qud icon/description and actual VTE directional convention, source-state tags, corrected parallel-edge construction, fuller side depth/round flask/coil volume, selected front refinement, front-guided E/N/W refinement, material-transfer patch, neutral surfaces, glass/wood ownership and intended-size w/C previews. Explicit west retains apparatus asymmetry. Whole source coverage excludes generated glow/background and uses one alpha with independent detail weight. All views share cell mapping and pivot; unseen joins/depth are authored, not native dimensions. One declared fixture state remains, and inventory is separate. No native rotation, container, physical-frame or transparency acceptance claimed before full-set generation.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/source-packet.json", "sha256": "bf9eb255205f7a953fd93ff5879369af0dfee39c6718a464fa333887ce034d06"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-front-raw.png", "sha256": "a36c167aa945f11b404f07a8466153f3fb921aba6b55883f23b3eac98e991fe4"}, {"path": "art/conversion/scn-alchemist-table/v3/refined-turnaround-raw.png", "sha256": "40e9c6b5c4513703c4e2f01f0d8be90d17da11249600a9c3458584f783b53373"}]
+  Outputs: [{"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-neutral.png", "sha256": "ee4fbad085975110f441330c1a24f0dce07bd9bc8279a5315a0fcea9286a5a1e"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-native-palette.png", "sha256": "1440a4683ebe937d83654dc58ed7ddd03512122aba76d49876a65e6d02fb5897"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/authoring-review.json", "sha256": "67f1a83700bf13ba8ed3a3462aff7e86a0bd6a7eb2a3c7e241518fcf5d3473ea"}, {"path": "art/conversion/scn-alchemist-table/v3/artifact-manifest.json", "sha256": "8f71f212cdcb3eb1696ede2933c60b3e81d1a639d8eececb490d62bcc0844120"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:33:40.689936+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native fixed-tile/container/visibility, exact one-alpha material composition, physical placement and future rotation-selection acceptance behind the complete-generation gate.
+  Review: Extra views are unbound authoring assets. No game/harness launch, native orientation logic or drug-lab functionality imported. Native integration remains required and unfinished.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/registered/model.json", "sha256": "be982e6340a6e6ce34c7fcf703d2ffd6f8d9f83c44d828021f0e88c23060a942"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-ARGYVE-MULTICABINET: Argyve Multicabinet
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -3933,7 +4053,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/argyve-multicabinet-body.png](../art/village/scenery/argyve-multicabinet-body.png), [art/village/scenery/argyve-multicabinet-detail.png](../art/village/scenery/argyve-multicabinet-detail.png).
 
-Current step: not started. Process-log events: 11.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 11.
 
 - 2026-10-20T06:49:11.343210+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Argyve/Multicabinet definitions and decoded both actual RandomTile source masks, rather than relying only on the older static thumbnail.
   Review: Both exact16x24source masks/hash/atlas rectangles are retained in the index. The child changes inventory population, not appearance. Native c/W palette, galvanized-metal description, solidity and occlusion are recorded. Tiny partial marks do not prove electronics or dynamic open drawers.
