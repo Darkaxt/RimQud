@@ -67,6 +67,8 @@ def render_entry_body(e,url_prefix):
     parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
     if e.get('current_experiment'):
         trial=e['current_experiment']
+        if trial.get('pipeline'):
+            parts.append('<p><a href="'+url_prefix+h(trial['pipeline']['path'])+'">Whole clothing pipeline: actual images, limitations and proposed three-band fitting</a></p>')
         parts.append('<h3>Current experiment — unfinished</h3><p>'+h(trial['summary'])+'</p><div class="gallery">'+artifact(trial['plate'],url_prefix)+artifact(trial['before_after'],url_prefix)+'</div>')
         if trial.get('scale_preview'):
             parts.append('<p>Authored sprite-size comparison; this is not a native game capture.</p><div class="gallery">'+artifact(trial['scale_preview'],url_prefix)+'</div>')

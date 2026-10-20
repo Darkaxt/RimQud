@@ -462,3 +462,19 @@ view against local deformation, preserving the fixed original body and separate
 depth masks. Record red-cut and complete-garment sources distinctly. A cleaner
 small sprite does not silently waive remaining coverage or native acceptance;
 retain the experiment and defects for the ongoing art discussion.
+
+Latest user correction (2026-10-20): do not pre-cut garment material to expose
+body parts. Paint visibility regions on the fixed unclothed model and apply that
+separate mask after fitting the retained cloth. Keep garment RGB/working alpha,
+body ownership and final composition distinct. Occluded material must be
+explicitly reconstructed where absent; keying out a red body cannot recover it.
+Compare techniques using the same generated drawing, or clearly disclose that
+different source drawings are being compared. The previous affine comparison's
+"red-cut" and "complete" columns used different ImageGen outputs; their changed
+shoulder lines are not an effect of stretching.
+
+The late-mask profile trial demonstrates that separation at authoring time.
+Front/back material completion remains unresolved; all versions stay unfinished
+on the same active robe entry. Original-body restoration is measured separately
+from cloth completeness. No native testing, readiness credit, or general-purpose
+fitting framework is authorized by this bounded experiment.

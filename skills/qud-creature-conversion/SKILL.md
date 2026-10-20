@@ -225,6 +225,21 @@ so no opaque cap or foreign contour crosses the body in the final composition.
 Keep ordinary shading on visible fabric; a fully transparent image background
 alone does not establish correct internal ownership.
 
+Apply body visibility only after fitting the intact cloth. A painted semantic
+map on the fixed unclothed model defines which original body regions appear
+above each garment type; keep that map independent of the garment's RGB and
+working alpha. Red-key body classification is evidence for region ownership,
+not permission to bake hand/arm-shaped holes into cloth before stretching or
+local fitting. Complete missing occluded fabric explicitly and record its
+provenance; deleting a colored body cannot recover fabric it concealed.
+Inspect the retained texture with visibility disabled, including side-connected
+notches as well as closed holes. Neither a clean final assembly nor an intact
+profile proves the other facings have complete cloth.
+
+Technique comparisons must use identical generated source material. If sources
+differ, label each source and do not attribute changed drawing lines to scaling.
+Retain earlier misleading comparisons as history with an explicit correction.
+
 Define each mask in the same registered canvas as garment and body: white means
 draw those original body pixels above this garment; black means no body overlay;
 gray is only antialiased boundary coverage. Follow the actual front cuff edge,

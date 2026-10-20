@@ -1,0 +1,195 @@
+{
+  "scope": "One-source global stretch plus bounded cuff refit experiment",
+  "source": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-visible-clothing-sheet.png",
+    "sha256": "9f43d5a2aacae3eb234d9b8b8e9a334317299b3c855104e767881fc0fba8721c"
+  },
+  "method": "Retain global red-cut stretch. Fill closed internal cut holes from neutral fabric in that same source. Apply smoothly bounded inverse cuff affine fields, zero at outer ink band; numerically limit displacement to keep visible material orientation positive. Apply target body exposure mask afterward. Body never warps.",
+  "older_isolated_source_used": false,
+  "views": {
+    "south": {
+      "source_stretch": {
+        "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-south.png",
+        "sha256": "30d33ffccd1cc5d9d061523d85e9ba2cf88436f2603d119e986765a715f71465"
+      },
+      "source_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+        "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+      },
+      "target_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-south.png",
+        "sha256": "f8d7d748e8cc9739a3a89b84999ce3fcffa43c227d76564c38376b393266dcee"
+      },
+      "constraints": [
+        {
+          "source_arm_bounds": [
+            93,
+            651,
+            162,
+            786
+          ],
+          "target_arm_bounds": [
+            94,
+            681,
+            176,
+            805
+          ],
+          "inverse_affine": [
+            0.8414634146341463,
+            0,
+            13.902439024390247,
+            0,
+            1.0887096774193548,
+            -90.41129032258061
+          ]
+        },
+        {
+          "source_arm_bounds": [
+            352,
+            649,
+            423,
+            785
+          ],
+          "target_arm_bounds": [
+            336,
+            682,
+            418,
+            805
+          ],
+          "inverse_affine": [
+            0.8658536585365854,
+            0,
+            61.07317073170731,
+            0,
+            1.1056910569105691,
+            -105.08130081300817
+          ]
+        }
+      ],
+      "achieved_displacement_strength": 0.7228432893753052,
+      "outer_alpha_changed_pixels": 0,
+      "outer_ink_band_changed_pixels": 0,
+      "exposed_body_interior_changed_pixels": 0,
+      "minimum_visible_inverse_jacobian": 0.2000000307224723,
+      "same_source_internal_fill_pixels": 1,
+      "key_contaminated_pixels_repaired": 3,
+      "new_imagegen_call": false
+    },
+    "east": {
+      "source_stretch": {
+        "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-east.png",
+        "sha256": "ff4f8b0343f3be898b09d4bfd1486ec808eb00d72fa7d6491ce0104bd877c64a"
+      },
+      "source_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+        "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+      },
+      "target_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-east.png",
+        "sha256": "2a7fab6883cd2f435a4fcfc54d2015753af9c53af812b19530cfb4978ce72fd2"
+      },
+      "constraints": [
+        {
+          "source_arm_bounds": [
+            213,
+            678,
+            294,
+            797
+          ],
+          "target_arm_bounds": [
+            195,
+            683,
+            292,
+            815
+          ],
+          "inverse_affine": [
+            0.8350515463917526,
+            0,
+            50.16494845360825,
+            0,
+            0.9015151515151515,
+            62.2651515151515
+          ]
+        }
+      ],
+      "achieved_displacement_strength": 1.0,
+      "outer_alpha_changed_pixels": 0,
+      "outer_ink_band_changed_pixels": 0,
+      "exposed_body_interior_changed_pixels": 0,
+      "minimum_visible_inverse_jacobian": 0.722727357258366,
+      "same_source_internal_fill_pixels": 7606,
+      "key_contaminated_pixels_repaired": 461,
+      "new_imagegen_call": false
+    },
+    "north": {
+      "source_stretch": {
+        "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-north.png",
+        "sha256": "64e17e99d4949f03b0757759d9884add3429ce3606bdc151e152c9fc9de7bdb7"
+      },
+      "source_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+        "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+      },
+      "target_arm_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-north.png",
+        "sha256": "4bc1838b30806bb4f7452f282e3fd30a6f0d2c6db25c4090b6d4429df396d858"
+      },
+      "constraints": [
+        {
+          "source_arm_bounds": [
+            87,
+            665,
+            159,
+            791
+          ],
+          "target_arm_bounds": [
+            88,
+            682,
+            166,
+            804
+          ],
+          "inverse_affine": [
+            0.9230769230769231,
+            0,
+            5.769230769230759,
+            0,
+            1.0327868852459017,
+            -39.360655737704974
+          ]
+        },
+        {
+          "source_arm_bounds": [
+            356,
+            665,
+            427,
+            793
+          ],
+          "target_arm_bounds": [
+            346,
+            683,
+            422,
+            804
+          ],
+          "inverse_affine": [
+            0.9342105263157895,
+            0,
+            32.76315789473682,
+            0,
+            1.0578512396694215,
+            -57.512396694214885
+          ]
+        }
+      ],
+      "achieved_displacement_strength": 1.0,
+      "outer_alpha_changed_pixels": 0,
+      "outer_ink_band_changed_pixels": 0,
+      "exposed_body_interior_changed_pixels": 0,
+      "minimum_visible_inverse_jacobian": 0.3628018400994196,
+      "same_source_internal_fill_pixels": 0,
+      "key_contaminated_pixels_repaired": 7,
+      "new_imagegen_call": false
+    }
+  },
+  "native_acceptance": "Not attempted; full-set gate unchanged",
+  "visual_review": "Pending actual inspection; not selected production art"
+}

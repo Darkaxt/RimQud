@@ -1,0 +1,95 @@
+{
+  "scope": "Explain actual existing clothing profile pipeline; no new fit or native validation",
+  "steps": [
+    {
+      "step": "01 Fixed body",
+      "path": "art/conversion/body-dromad/v2/selected-east.png",
+      "sha256": "7e262e4cc67f9c3354411e9d8dc93e866f31e22903a31652a85cf3f78015a5ca",
+      "note": "Body, canvas and contact remain fixed.",
+      "east_crop": false
+    },
+    {
+      "step": "02 Red body reference",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-sheet.png",
+      "sha256": "3cb7a516750de4ced37bc24f46ecc5e6c8986740979092abc38143a45340c034",
+      "note": "Recolor only; supply the robe reference too.",
+      "east_crop": true
+    },
+    {
+      "step": "03 Robe reference",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/whole-robe-sheet.png",
+      "sha256": "0ab742f74d75ca4e96d919d2e873514591ea9ebf50991c9dc303c7b335163c55",
+      "note": "The actual clothing input to the generation.",
+      "east_crop": true
+    },
+    {
+      "step": "04 ImageGen composite",
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+      "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e",
+      "note": "One drawing. Body preservation was imperfect.",
+      "east_crop": true
+    },
+    {
+      "step": "05 Classify + continue",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/continuous-source-east.png",
+      "sha256": "c0b3db6c393ec48ed0355b782d9bb0a4a545fc1d8acea0c742c7dcca3cbc18d1",
+      "note": "Neutral fabric; fill closed hidden regions. Not exact extraction.",
+      "east_crop": false
+    },
+    {
+      "step": "06 Whole-image stretch",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/stretched-full-texture-east.png",
+      "sha256": "91527a6356c079549aeeda76055020adb972a7611f137e3c10cf8e030ae01d8b",
+      "note": "One X/Y scale and translation. Historical alpha contour reused.",
+      "east_crop": false
+    },
+    {
+      "step": "07 Local cuff refit",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/fitted-full-texture-east.png",
+      "sha256": "6bf97e622a6ee0783c4abcd3a6dc87eeadb57d2f6ff5dbcd4c9ba05ec3cf82da",
+      "note": "Bounded RGB warp; additional hidden cloth fill. Still experimental.",
+      "east_crop": false
+    },
+    {
+      "step": "08 Body visibility mask",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/body-over-cloth-mask-east.png",
+      "sha256": "e9be3fdab859a11e27eed7ad5859dad673578f1e5e8dd1ec84fca8bb59ad4994",
+      "note": "Separate fixed-body mask. White restores original body.",
+      "east_crop": false
+    },
+    {
+      "step": "09 Original body overlay",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/body-overlay-east.png",
+      "sha256": "4bfd0aec0d54cc947ed03921eee7cb8729ccc7a66b295ca30726332d36ab02ee",
+      "note": "Original exposed body, not generated mannequin pixels.",
+      "east_crop": false
+    },
+    {
+      "step": "10 Mask disabled",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/mask-off-east.png",
+      "sha256": "a5e5c88b901ad81cb2321faf08f0d161c99730b173084ff0ee6f68cf00c3eee7",
+      "note": "Shows fabric retained behind the hand.",
+      "east_crop": false
+    },
+    {
+      "step": "11 Final composition",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/assembly-east.png",
+      "sha256": "ff7bf659799201ce21b8b0e4c22b704dc7861d5d85d2911b6e66504b6a9fe82a",
+      "note": "Body + fitted cloth + selected original body.",
+      "east_crop": false
+    },
+    {
+      "step": "12 Proposed three bands",
+      "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/fitted-full-texture-east.png",
+      "sha256": "6bf97e622a6ee0783c4abcd3a6dc87eeadb57d2f6ff5dbcd4c9ba05ec3cf82da",
+      "note": "PROPOSAL ONLY: upper adjust; middle transition; lower freeze.",
+      "east_crop": false
+    }
+  ],
+  "limitations": [
+    "Step 05 only fills closed regions; front/back side-connected notches remain incomplete.",
+    "Step 06 still reuses the alpha contour inherited from the earlier cut derivative.",
+    "Step 07 includes local RGB deformation and later material patches, not just stretching.",
+    "Step 12 shows conceptual bands at authoring landmarks, not implemented deformation."
+  ]
+}
