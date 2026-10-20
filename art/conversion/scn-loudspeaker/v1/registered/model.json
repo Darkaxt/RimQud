@@ -1,0 +1,65 @@
+{
+  "entry": "SCN-LOUDSPEAKER",
+  "kind": "source_dualcolor_static_appliance",
+  "blueprint": "Loudspeaker",
+  "native_tile": "Items/sw_box_grill.bmp",
+  "source": {
+    "path": "art/conversion/scn-loudspeaker/v1/corrected-source-packet.json",
+    "sha256": "a5297b93cc7d1f3691a22e233e6407fbf7ac1ccd99d3b27cfdfb5940c7c210e4"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source cell, fixed cabinet/grille/feet geometry and shared palette roles; no generated bounds fitting."
+  },
+  "camera": "One fixed straight source map face, parallel cabinet edges and shallow bevel; no yaw/converging floor slab.",
+  "palette": {
+    "primary": "w on cabinet, grille recess/diaphragm, top marks and lower vents",
+    "detail": "W on two horizontal grille bars/uprights and two feet",
+    "rule": "Brass grille described by material/readability; native w/W colors remain independent, no fixed yellow brass paint or donor teal/green light."
+  },
+  "native_state_owner": "Ordinary fixed Items/sw_box_grill.bmp. Inherited HighTechInstallation AnimatedMaterialGenericAlternate has AnimationLength300,80=Items/sw_power_cut_small.png,180=default,RequiresAnyUnpoweredActivePart=true. Preserve this native status alternate/fallback rather than painting a second speaker state. No child diaphragm motion frames or audio-wave animation declared.",
+  "native_behavior": "ElectricalPowerTransmission consumer ChargeRate1000, ChargeSink ChargeUse5 NameForStatusSpeaker, weight30, Examiner complexity4/TechTier4, inherited Metal/HP200/AV4/resistances/mounted physics/MissileCover and aggregate Loudspeaker remain native.",
+  "native_acceptance": "Pending full-set generation: native electrical/charge/Speaker status and inherited power-cut alternate cycle, physics/aggregate/examiner/visibility/save-load; no production activation.",
+  "native_activation": false,
+  "view_policy": "One ordinary fixed source/cardinal map face. Inherited HighTechInstallation power-cut alternate remains native,80=status icon,180=default,length300,requires unpowered active part. No new diaphragm/audio animation or orientation binding.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/primary-neutral.png",
+    "sha256": "8fca31bc7359fbbd79e60595b41aedcff75da29342364c27002b1fc71152ba73"
+  },
+  "detail": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/detail-neutral.png",
+    "sha256": "775b11d9bf7b70f1c5e18b75445199b984d007408ecd8eaa8aef8980b70c0862"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/coverage.png",
+    "sha256": "4b61ef14c03e732e7165d27d3592281d5aa36be3d4659b29d0a2a5334d9a399d"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/detail-weight.png",
+    "sha256": "201400aae36de57bce5062d8c32147d0ea17883502e94450892289c124c1c41f"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/detail-coverage.png",
+    "sha256": "e95aab0eef079f684ce3ded6df03f70e6d10d29318ce9277fef009cacf6be295"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-loudspeaker/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "69e8fcfece4714f7afbe2d32eab152e8251774b3e5b81d4758ad6a5548d94ecb"
+  }
+}

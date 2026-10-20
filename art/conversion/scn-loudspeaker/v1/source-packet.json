@@ -1,0 +1,164 @@
+{
+  "entry": "SCN-LOUDSPEAKER",
+  "identity": "Loudspeaker -> HighTechInstallation -> MountedFurniture -> Furniture",
+  "description": "Magnetized innards digest electrical signals and belch out the waveform, while a diaphragm breaths dust onto a brass grill.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Loudspeaker": "<object Name=\"Loudspeaker\" Inherits=\"HighTechInstallation\">\n    <part Name=\"Render\" DisplayName=\"loudspeaker\" RenderString=\"08\" ColorString=\"&amp;w\" DetailColor=\"W\" Tile=\"Items/sw_box_grill.bmp\" RenderLayer=\"6\" />\n    <part Name=\"Physics\" Weight=\"30\" />\n    <part Name=\"Description\" Short=\"Magnetized innards digest electrical signals and belch out the waveform, while a diaphragm breaths dust onto a brass grill.\" />\n    <part Name=\"ElectricalPowerTransmission\" ChargeRate=\"1000\" IsConsumer=\"true\" />\n    <part Name=\"ChargeSink\" ChargeUse=\"5\" NameForStatus=\"Speaker\" />\n    <part Name=\"Examiner\" Complexity=\"4\" />\n    <tag Name=\"TechTier\" Value=\"4\" />\n    <stag Name=\"Scholarly\" />\n    <stag Name=\"Crafts\" />\n    <tag Name=\"GritGateJourneyfriendIdentify\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"DeepPower\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"ElectricalPower\" />\n    <stag Name=\"ElectricalPowerConsumer\" />\n    <stag Name=\"DeepElectricalPowerConsumer\" />\n    <tag Name=\"AggregateWith\" Value=\"Loudspeaker\" />\n  </object>",
+      "HighTechInstallation": "<object Name=\"HighTechInstallation\" Inherits=\"MountedFurniture\">\n    <stat Name=\"HeatResistance\" Value=\"75\" />\n    <stat Name=\"ColdResistance\" Value=\"75\" />\n    <stat Name=\"ElectricResistance\" Value=\"25\" />\n    <stat Name=\"AcidResistance\" Value=\"75\" />\n    <part Name=\"Physics\" />\n    <part Name=\"AnimatedMaterialGenericAlternate\" AnimationLength=\"300\" TileAnimationFrames=\"80=Items/sw_power_cut_small.png,180=default\" RequiresAnyUnpoweredActivePart=\"true\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" />\n    <xtagTextFragments Skin=\"machinery\" PoeticFeatures=\"towering stature,machinic pose,rhythmic piping\" />\n    <part Name=\"Metal\" />\n    <stat Name=\"Hitpoints\" Value=\"200\" />\n    <stat Name=\"AV\" Value=\"4\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_electronic\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_electronic\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "tile": "Items/sw_box_grill.bmp",
+    "description": "Magnetized innards digest electrical signals and belch out the waveform, while a diaphragm breaths dust onto a brass grill.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "loudspeaker",
+      "RenderString": "08",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&w",
+      "DetailColor": "W",
+      "Tile": "Items/sw_box_grill.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Loudspeaker",
+    "reference_file": "village-originals/loudspeaker-reference.png",
+    "native_mask_sha256": "573999ef3985115c4441225a4932d709b1ec553aad81391bf226cbf6dfb1ab58",
+    "reference_sha256": "11b60d477c978a6bb5e0d622b6b6105d2e6e94ab21956a3e0b5976d655827683",
+    "info_id": 9343,
+    "atlas_id": 185,
+    "rect": [
+      234,
+      702,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\loudspeaker-mask.png",
+      "sha256": "573999ef3985115c4441225a4932d709b1ec553aad81391bf226cbf6dfb1ab58"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\loudspeaker-reference.png",
+      "sha256": "11b60d477c978a6bb5e0d622b6b6105d2e6e94ab21956a3e0b5976d655827683"
+    }
+  },
+  "source_shape": "Upright box with large rounded front diaphragm/grille field, three short top marks, two horizontal detail grille bars joined by two detail uprights, lower primary vent lines and two pale detail feet.",
+  "palette": {
+    "primary": "w on cabinet, grille recess/diaphragm, top marks and lower vents",
+    "detail": "W on two horizontal grille bars/uprights and two feet",
+    "rule": "Brass grille described by material/readability; native w/W colors remain independent, no fixed yellow brass paint or donor teal/green light."
+  },
+  "native_state": "Ordinary fixed Items/sw_box_grill.bmp. Inherited HighTechInstallation AnimatedMaterialGenericAlternate has AnimationLength300,80=Items/sw_power_cut_small.png,180=default,RequiresAnyUnpoweredActivePart=true. Preserve this native status alternate/fallback rather than painting a second speaker state. No child diaphragm motion frames or audio-wave animation declared.",
+  "native_code_study": {
+    "ChargeSink": {
+      "path": "E:\\Temp\\rimqud-native-lathe-20261021\\XRL.World.Parts.ChargeSink.decompiled.cs",
+      "sha256": "4c4a4e932d62ae517ce3170d22450e5d0d3eb5594f52481c3c6e43b987c368d6"
+    },
+    "findings": [
+      "Previously inspected same installed ChargeSink class consumes charge via IPoweredPart with no body Tile/Render override.",
+      "HighTechInstallation explicit alternate definition owns native unpowered status image/timing. No new audio playback, vibration or diaphragm animation implemented."
+    ],
+    "scope": "Static source/part metadata only; no live native validation."
+  },
+  "native_behavior": "ElectricalPowerTransmission consumer ChargeRate1000, ChargeSink ChargeUse5 NameForStatusSpeaker, weight30, Examiner complexity4/TechTier4, inherited Metal/HP200/AV4/resistances/mounted physics/MissileCover and aggregate Loudspeaker remain native.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2028381079\\Textures\\NewThings\\Joy\\TelevisionSpeaker_south.png",
+      "sha256": "7d0e80cd4f8f5954071dfadf7dd28d2e5322b92c5b6cc820920ed010ef8119c1"
+    },
+    "frame": [
+      128,
+      128
+    ],
+    "alpha_bounds": [
+      24,
+      1,
+      105,
+      126
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2028381079\\1.6\\Defs\\Buildings_Furniture\\Buildings_Joy.xml",
+      "sha256": "3635578d0a59ec36ab9f5c50d69e0829787a1714a0775560cc770b010e000305"
+    },
+    "child": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>VFES_TelevisionSpeaker</defName>\n    <label>television speaker</label>\n    <description>A high-fidelity audio system designed to enhance the viewing experience of nearby televisions. When placed near a television, it links with the screen to deliver immersive sound, increasing the recreation gain of any colonist watching.</description>\n    <graphicData>\n      <texPath>NewThings/Joy/TelevisionSpeaker</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <damageData>\n        <rectN>(0.19,0,0.62,1)</rectN>\n        <rectS>(0.19,0,0.62,1)</rectS>\n        <rectE>(0.19,0,0.62,1)</rectE>\n        <rectW>(0.19,0,0.62,1)</rectW>\n      </damageData>\n      <shadowData>\n        <volume>(0.45, 0.25, 0.45)</volume>\n      </shadowData>\n      <drawSize>(1,1)</drawSize>\n    </graphicData>\n    <statBases>\n      <Mass>10</Mass>\n      <MaxHitPoints>100</MaxHitPoints>\n      <Flammability>1</Flammability>\n      <WorkToBuild>10000</WorkToBuild>\n    </statBases>\n    <comps>\n      <li Class=\"CompProperties_Facility\">\n        <statOffsets>\n          <JoyGainFactor>0.1</JoyGainFactor>\n        </statOffsets>\n        <maxSimultaneous>2</maxSimultaneous>\n        <maxDistance>6</maxDistance>\n      </li>\n      <li Class=\"CompProperties_Power\">\n        <compClass>CompPowerTrader</compClass>\n        <shortCircuitInRain>true</shortCircuitInRain>\n        <basePowerConsumption>250</basePowerConsumption>\n      </li>\n      <li Class=\"CompProperties_Flickable\" />\n    </comps>\n    <pathCost>42</pathCost>\n    <fillPercent>0.3</fillPercent>\n    <defaultPlacingRot>South</defaultPlacingRot>\n    <altitudeLayer>Building</altitudeLayer>\n    <passability>PassThroughOnly</passability>\n    <canOverlapZones>false</canOverlapZones>\n    <minifiedDef>MinifiedThing</minifiedDef>\n    <placeWorkers>\n      <li>PlaceWorker_ShowFacilitiesConnections</li>\n    </placeWorkers>\n    <researchPrerequisites>\n      <li>SpacerElectronics</li>\n    </researchPrerequisites>\n    <costList>\n      <Steel>60</Steel>\n      <Plasteel>10</Plasteel>\n      <ComponentIndustrial>3</ComponentIndustrial>\n      <ComponentSpacer>1</ComponentSpacer>\n    </costList>\n    <thingCategories>\n      \n      \n      <li>BuildingsFurniture</li>\n    </thingCategories>\n    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>\n    <designationCategory>Joy</designationCategory>\n    <techLevel>Spacer</techLevel>\n  </ThingDef>\n\n",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "parent": "<ThingDef Name=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshOnly</drawerType>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n  </ThingDef>\n  \n  ",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": "(1,1)",
+    "footprint": null,
+    "footprint_note": "No size in child; inherited mapping retained as donor metadata, not Qud dimensions.",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2028381079\\About\\About.xml",
+      "sha256": "ce15edce6832157d0b983b6016114199328b1fa18c588aec3ba78897b0372c27"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2028381079\\LoadFolders.xml",
+      "sha256": "91b31264c0b7923dad36d71b7b4be0d04c4255235a638d40c125bab615d8ca45"
+    },
+    "role": "Actual VFE Spacer television speaker south supplies compact cabinet/diaphragm metal shading and simple outline only. No twin cones, teal shell/green indicator, television facility bonuses,250Wpower,footprint or donor gameplay copied.",
+    "equivalence": "Partial cabinet/cone material style reference. Qud box/grille arrangement and palette authoritative."
+  },
+  "construction": {
+    "camera": "One fixed straight source map face, parallel cabinet edges and shallow bevel; no yaw/converging floor slab.",
+    "source_supported": "Broad source cabinet at rows4..20, rounded diaphragm/grille field, three top marks, paired uprights and crossbars, lower primary vents and two W feet.",
+    "authored": "Filled housing/recess behind source sparse ink, softly rounded corners, diaphragm shading and fine grille mesh supply material volume. Source black/transparency within cabinet is interpreted as recessed solid speaker assembly, not a mechanical through-hole. Exact hidden depth/mesh weave are authored; no extra cone, control screen, glowing indicator or audio particle.",
+    "dimensions": {
+      "cabinet": [
+        1.15,
+        4.15,
+        14.85,
+        20.85
+      ],
+      "diaphragm_center": [
+        8,
+        10.7
+      ],
+      "diaphragm_radii": [
+        5.3,
+        5.7
+      ],
+      "detail_crossbars_y": [
+        8.5,
+        13.5
+      ],
+      "detail_uprights_x": [
+        5.5,
+        10.5
+      ],
+      "feet_y": [
+        22.05,
+        22.8
+      ]
+    },
+    "coverage": "Cabinet/grille assembly is filled physical coverage, explicitly authored. Exterior, gaps above top marks and between feet remain transparent; no generated shadow/halo accepted."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source cell, fixed cabinet/grille/feet geometry and shared palette roles; no generated bounds fitting."
+  },
+  "native_acceptance": "Pending full-set generation: native electrical/charge/Speaker status and inherited power-cut alternate cycle, physics/aggregate/examiner/visibility/save-load; no production activation."
+}

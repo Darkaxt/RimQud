@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-LOUDSPEAKER**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-MILLSTONE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -158,8 +158,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-ELECTRIC-GENERATOR | Electric Generator | UNFINISHED | - |  |
 | SCN-JOPPAOVEN | JoppaOven | UNFINISHED | - |  |
 | SCN-LATHE | Lathe | UNFINISHED | - |  |
-| SCN-LOUDSPEAKER | Loudspeaker | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-MILLSTONE | Millstone | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - |  |
+| SCN-MILLSTONE | Millstone | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -6367,7 +6367,67 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/loudspeaker-body.png](../art/village/scenery/loudspeaker-body.png), [art/village/scenery/loudspeaker-detail.png](../art/village/scenery/loudspeaker-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 10.
+
+- 2026-10-20T22:35:20.121546+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve speaker source identity/ancestry, original box-grille shape and palette, charge and inherited power-cut alternate metadata.
+  Review: Exact native HighTechInstallation alternate/timing/condition recorded. ChargeSink static class reused from same pinned build; no child body motion or audio-wave frame set declared. No game/harness launch.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/source-packet.json", "sha256": "9c567e4a68dcc952cf4eced88f62e0ac3616ab6d227c616db11e6f3543123cd3"}, {"path": "art/conversion/scn-loudspeaker/v1/source-reference-construction.png", "sha256": "6699c330cd713ee3e0a0cdda9090099110b94bc3f6e10d5a2642caff057765bd"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VFE Spacer television speaker south and matching1.6definition/Core parent/load-folder mapping.
+  Review: Graphic_Multi/drawSize1x1, child size unspecified. Cabinet/diaphragm metal style only; Qud single grille and w/W palette authoritative, no donor twin cones, indicator, television facility or power behavior.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/source-packet.json", "sha256": "9c567e4a68dcc952cf4eced88f62e0ac3616ab6d227c616db11e6f3543123cd3"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/source-reference-construction.png", "sha256": "6699c330cd713ee3e0a0cdda9090099110b94bc3f6e10d5a2642caff057765bd"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / construct_faithful_shape / PASS: Construct editable source cabinet/grille, three top marks, lower vents and pale feet.
+  Review: Filled cabinet/recess and mesh are authored physical coverage behind sparse source glyph, explicitly distinguished from original alpha and hidden depth.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/source-packet.json", "sha256": "9c567e4a68dcc952cf4eced88f62e0ac3616ab6d227c616db11e6f3543123cd3"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/construct-speaker.py", "sha256": "faf792bbe9120bd0168bc9f8fc297252050c1fd6bd7a46f377a58eb8cc890e53"}, {"path": "art/conversion/scn-loudspeaker/v1/constructed.svg", "sha256": "4a8c50feccff232e72b1eabfc5173eb0edc99da874ce702bb42e4177dcf7098b"}, {"path": "art/conversion/scn-loudspeaker/v1/constructed.png", "sha256": "ff8c172a7d221d9d6dbeea4baf2e2e7095a19f01275649d55b89cda2bf054909"}, {"path": "art/conversion/scn-loudspeaker/v1/ownership.svg", "sha256": "ca351d91f51ac627137a1597a5172f63e689e1785618baeec590535aa3e90fd2"}, {"path": "art/conversion/scn-loudspeaker/v1/ownership.png", "sha256": "2f230a82dd591de962c0d4a99a0a2abfcd09f710f8c880813b5338dc9c3e4570"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / construct_faithful_shape / PASS: Patch disconnected top marks/feet with narrow supports and recover lower-left source recess marks.
+  Review: Initial suggestion preserved. Cap/foot positions and w/W roles unchanged; physical support interpretation/semantic uncertainty explicit. Inspected full patched shape before refinement.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/constructed.svg", "sha256": "4a8c50feccff232e72b1eabfc5173eb0edc99da874ce702bb42e4177dcf7098b"}, {"path": "art/conversion/scn-loudspeaker/v1/ownership.svg", "sha256": "ca351d91f51ac627137a1597a5172f63e689e1785618baeec590535aa3e90fd2"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/patch-supports.py", "sha256": "e0eaeb90eda199325d6841cd7f158de165b4f10f44a1283f3590dfadb863d9c0"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-constructed.svg", "sha256": "f3422e3dd24a520739f13ba277e4a2ca2868cb1bc6e53b8430380566c2b831c6"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-constructed.png", "sha256": "7f3c01818571783737f1defa75e8f5cc3e4911f10b2ae5b5eb0e0ea68aab7f55"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-ownership.svg", "sha256": "ec25859e55b58a8ae9e03fd338e7143dd799d69ca7ae1396a4a43b99a8bb425f"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-ownership.png", "sha256": "493976a0744445dca44fe79764c1ca4eb89ee3526d3d2999e0bd293380fa2c6a"}, {"path": "art/conversion/scn-loudspeaker/v1/corrected-source-packet.json", "sha256": "a5297b93cc7d1f3691a22e233e6407fbf7ac1ccd99d3b27cfdfb5940c7c210e4"}, {"path": "art/conversion/scn-loudspeaker/v1/source-support-patch.json", "sha256": "573e3026aaf4ede74455d82fa1f389c6c8a58ac49e14cefa5cff22cd8961b987"}, {"path": "art/conversion/scn-loudspeaker/v1/support-patch-comparison.png", "sha256": "1cbfad4d52af4844c5e46730a885c1953a60df4586e8c500d64a37b2fefd2a4f"}, {"path": "art/conversion/scn-loudspeaker/v1/manual-structural-review.json", "sha256": "473bad6330796d5db32650dc428473f6b9f46b7a8ae2f5d1517d1399e2325bc7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / create_required_state_neighbor_variants / PASS: Retain ordinary source speaker body and original unpowered icon alternate under native ownership.
+  Review: HighTechInstallation length300,80=Items/sw_power_cut_small.png,180=default,requires unpowered active part. No new timing, audio, diaphragm animation, off-state cabinet art or rotation binding. Source status icon retains native fallback.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/corrected-source-packet.json", "sha256": "a5297b93cc7d1f3691a22e233e6407fbf7ac1ccd99d3b27cfdfb5940c7c210e4"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/patched-constructed.png", "sha256": "7f3c01818571783737f1defa75e8f5cc3e4911f10b2ae5b5eb0e0ea68aab7f55"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / refine_materials_and_form / PASS: Perform one actual contextual refinement of patched speaker and inspect first output before extraction.
+  Review: Inspected actual full refinement before extraction. One large diaphragm, two grille crossbars/uprights, cabinet/lower vent rows,3supported top marks and2supported pale feet retained. Metal/grille shading usable. Exterior halo, glowing gold feet, generated extra lower-left3holes and displaced/generated edge widths rejected; fixed patched geometry/ink/coverage/roles remain authoritative. Source lower-left3marks use exact authored positions. No second isolation, new twin cones, audio or diaphragm-motion states.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/patched-constructed.png", "sha256": "7f3c01818571783737f1defa75e8f5cc3e4911f10b2ae5b5eb0e0ea68aab7f55"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-refine-prompt.txt", "sha256": "d0d15303f6cee60428e8ba65ff635f1105d90af32fe56441373d0dc21705e8ad"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/refined-raw.png", "sha256": "c96835569afc863789e714fbdf800ea2d33bc7455f6c5c198272ca8aa29b2ecb"}, {"path": "art/conversion/scn-loudspeaker/v1/first-structural-review.json", "sha256": "7ace37e818245d58e1773b746cd64db4c14ec8689260f24b83bd8fea1dafbc49"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-loudspeaker/v1/patched-refine-prompt.txt", "sha256": "d0d15303f6cee60428e8ba65ff635f1105d90af32fe56441373d0dc21705e8ad"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-4b636243-841e-4546-b16e-7c291bef608e.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-loudspeaker\\v1\\patched-constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-loudspeaker\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2028381079\\Textures\\NewThings\\Joy\\TelevisionSpeaker_south.png"]}}
+
+- 2026-10-20T22:35:20.121546+00:00 / extract_register_color_coverage / PASS: Select neutral cabinet/grille/feet material through exact patched geometry, alpha, ink and palette ownership.
+  Review: Existing dark-material helper wood/top names mean cabinet/grille-feet; no wood material. No second AI isolation. Initial material attempt retained, later inspection found faint invented lower-left holes.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/first-structural-review.json", "sha256": "7ace37e818245d58e1773b746cd64db4c14ec8689260f24b83bd8fea1dafbc49"}, {"path": "art/conversion/scn-loudspeaker/v1/patched-ownership.png", "sha256": "493976a0744445dca44fe79764c1ca4eb89ee3526d3d2999e0bd293380fa2c6a"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/register-speaker.py", "sha256": "ea31cf538eb60fbaafa345be406c7d3b6090d0e188c81134c2aebfe600d3652f"}, {"path": "art/conversion/scn-loudspeaker/v1/registered/model.json", "sha256": "4bfa64f61583f2322ff37fd663a90f92aef45b6a73a49ad8b8820457105c1c27"}, {"path": "art/conversion/scn-loudspeaker/v1/registered/registration-decisions.json", "sha256": "a8be9d51f6cd685378e9d546d03fa773608f17fc1a175bf915e70374af6147af"}, {"path": "art/conversion/scn-loudspeaker/v1/registered/registration-comparison.png", "sha256": "f20afe35d02985493fe07e359c84a3daebaee053a4892ec7bdd9e3dba872cea7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / extract_register_color_coverage / PASS: Exclude invented-hole material sampling and continue cabinet tone inside unchanged fixed geometry.
+  Review: Only RGB sampling at source units1.4..4.5,19.4..20.9 excluded; no output alpha/role/position change. Manual ink supplies only source-derived recess marks. Inspected final plate; generated extra holes/halo/glow removed without another AI call.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/registered/registration-comparison.png", "sha256": "f20afe35d02985493fe07e359c84a3daebaee053a4892ec7bdd9e3dba872cea7"}, {"path": "art/conversion/scn-loudspeaker/v1/refined-raw.png", "sha256": "c96835569afc863789e714fbdf800ea2d33bc7455f6c5c198272ca8aa29b2ecb"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/material-correction.json", "sha256": "0cff74dc31b7b6cb701d97cb305cc7de782b28f711b4a5924cc0df2070f14b8b"}, {"path": "art/conversion/scn-loudspeaker/v1/material-excluding-extra-holes.png", "sha256": "d7e1129782be0364d2df76b512c8122de44efedeccf7f1ea395c2278ea6fbb84"}, {"path": "art/conversion/scn-loudspeaker/v1/register-speaker-final.py", "sha256": "16cf66b0dd376c33c2ab5b2f70acbb02debadae4910803873c5804280fbbad33"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/model.json", "sha256": "8a7a1aede7481a893f51feadefd14cbc26ac1992c025dddbbbfc6d4df7d5b80b"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/registration-decisions.json", "sha256": "7a0d2fc544f067a80d49cac106ad06b4d011d293b1953f69bf13ae42690840f8"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/neutral-master.png", "sha256": "14ad151c4ceef21f5f623eadececd1ac9195746f2ee544c5afad8c546daac95f"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/detail-weight.png", "sha256": "201400aae36de57bce5062d8c32147d0ea17883502e94450892289c124c1c41f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source/manual/support patch/refined/registered stages, neutral/grille-feet/source w/W roles and intended-size previews.
+  Review: Reviewed exact Loudspeaker/HighTechInstallation ancestry, native description/box-grille tile and w/W palette: one rounded front diaphragm, two crossbars/two uprights, three top marks, lower vent/recess pattern and two pale feet. Filled cabinet/recess/mesh and shallow bevel are explicitly authored physical coverage, not sparse original alpha or measured depth. Manual inspection found disconnected top marks/feet and missed lower-left recess marks; patched narrow support necks behind unchanged source positions/roles and restored three lower-left marks. Top-cap function is authored uncertainty, not native mechanical metadata. Actual VFE Spacer television speaker south with1.6child/Core BuildingBase/LoadFolders inspected, Graphic_Multi/drawSize1x1; metal/cabinet style only, no twin cones, green LED/teal paint, TV facility or250Wgameplay imported. One actual contextual refinement inspected before extraction. Generated halo/foot glow and extra lower-left holes rejected. Initial registered attempt preserved; material sampling excludes invented-hole area, then same-role continuation and exact patched ink restore source-derived marks. Fixed geometry/coverage/roles/pivot and neutral/one-coverage source w/W preview retained, full plate and16x24/24x36/32x48views inspected. Native consumer1000/ChargeSink5/Speaker status and inherited AnimatedMaterialGenericAlternate length300,80=sw_power_cut_small,180=default,RequiresAnyUnpoweredActivePart true remain native. No new audio, waveform particles, diaphragm animation, status timing or placement. Native charge/power-cut/physics/aggregate/visibility/save-load acceptance pending full generation set.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/registered-final/model.json", "sha256": "8a7a1aede7481a893f51feadefd14cbc26ac1992c025dddbbbfc6d4df7d5b80b"}]
+  Outputs: [{"path": "art/conversion/scn-loudspeaker/v1/record-review.py", "sha256": "259fc4f3132611514a8b19c5aa395bf095a75ddeec4e895308006a32aa82f530"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/registration-comparison.png", "sha256": "01872606e3b98a1fbe4a8997c38b6123ed729cbd989e6b4653901575e5e97579"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/authoring-review.json", "sha256": "7c7b29890a906dbddf98b6f183f325588b48010e3403871904ebd0ffac4bebb9"}, {"path": "art/conversion/scn-loudspeaker/v1/artifact-manifest.json", "sha256": "f6e4a0db5e769f91971701dad39708b08fde92ef474070e2fc8310b3be25cd44"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:35:20.121546+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retain native power/charge/status alternate/physics/aggregate/examiner/visibility/save-load acceptance pending whole generation set.
+  Review: No native/game/harness validation or activation; entry stays UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/registered-final/model.json", "sha256": "8a7a1aede7481a893f51feadefd14cbc26ac1992c025dddbbbfc6d4df7d5b80b"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-MILLSTONE: Millstone
 
@@ -6377,7 +6437,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/millstone-body.png](../art/village/scenery/millstone-body.png), [art/village/scenery/millstone-detail.png](../art/village/scenery/millstone-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-POWERLESS-ELECTROTHING: Powerless Electrothing
 
