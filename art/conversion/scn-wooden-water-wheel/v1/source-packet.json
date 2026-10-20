@@ -1,0 +1,189 @@
+{
+  "entry": "SCN-WOODEN-WATER-WHEEL",
+  "identity": "Wooden Water Wheel -> MountedFurniture -> Furniture",
+  "description": "Wood paddles black with wet-rot catch the force of the babbling brook and set the wheel to the slow motion of centuries.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Wooden Water Wheel": "<object Name=\"Wooden Water Wheel\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"{{w|wooden}} water wheel\" ColorString=\"&amp;w\" DetailColor=\"y\" RenderString=\"21\" Tile=\"Items/sw_waterwheel_1.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"600\" />\n    <part Name=\"Description\" Short=\"Wood paddles black with wet-rot catch the force of the babbling brook and set the wheel to the slow motion of centuries.\" />\n    <part Name=\"HydroTurbine\" MinimumEffectiveVolume=\"400\" MaximumEffectiveVolume=\"4000\" MaximumChargeRate=\"10\" IsTechScannable=\"false\" />\n    <part Name=\"MechanicalPowerTransmission\" ChargeRate=\"100\" IsProducer=\"true\" IsTechScannable=\"false\" />\n    <part Name=\"Circuitry\" MaxCharge=\"100\" IsEMPSensitive=\"false\" IsTechScannable=\"false\" NameForStatus=\"Gearbox\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" Complexity=\"1\" Difficulty=\"1\" />\n    <part Name=\"TinkerItem\" Bits=\"BB\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"400\" />\n    <stat Name=\"ColdResistance\" Value=\"75\" />\n    <stat Name=\"ElectricResistance\" Value=\"25\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Cyclic,Generous,Hydrological,Lavish,Profligate,Replenisher,Rotator\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Clockwork,Engineers,Millers\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"RailedMechanism\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <part Name=\"AnimatedMaterialGeneric\" AnimationLength=\"300\" TileAnimationFrames=\"0=default,100=Items/sw_waterwheel_2.bmp,200=Items/sw_waterwheel_3.bmp\" RequiresOperationalActivePart=\"HydroTurbine\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"infrastructure\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"DeepPower\" />\n    <stag Name=\"MechanicalPower\" />\n    <stag Name=\"MechanicalPowerProducer\" />\n    <stag Name=\"DeepMechanicalPowerProducer\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"HangingSupport\" />\n    <part Name=\"SpawnWithLiquid\" />\n\t\t<stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "native_frames": {
+    "resources": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tile": "Items/sw_waterwheel_1.bmp",
+        "info_id": 10211,
+        "atlas_id": 185,
+        "rect": [
+          270,
+          0,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-waterwheel-20261021\\frame-1-mask.png",
+          "sha256": "6e87dd89b6adc6fe4b47fd09464e66ed2c07161b51c65ed80f378b4ebc02e8dc"
+        }
+      },
+      {
+        "frame": 2,
+        "tile": "Items/sw_waterwheel_2.bmp",
+        "info_id": 10212,
+        "atlas_id": 185,
+        "rect": [
+          252,
+          0,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-waterwheel-20261021\\frame-2-mask.png",
+          "sha256": "85e0f1856a4ac0fdcc284e106787f6a43db0442bf9a740474481ebb0e28622b8"
+        }
+      },
+      {
+        "frame": 3,
+        "tile": "Items/sw_waterwheel_3.bmp",
+        "info_id": 10213,
+        "atlas_id": 185,
+        "rect": [
+          234,
+          0,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-waterwheel-20261021\\frame-3-mask.png",
+          "sha256": "f0904b23d719d9f0d4a34f67ec2cf54d957651b9e2a02da8d09101a6763e0bd8"
+        }
+      }
+    ]
+  },
+  "source_shape": "Tall rounded outer wheel rim, near-left paddle train/inner spine and small segmented right inset mechanism. All3native masks retain rim while primary paddle bands and right detail segments change.",
+  "palette": {
+    "primary": "w on wet-rotted wooden rim/spine/paddles",
+    "detail": "y on exact native right inset segment patterns",
+    "rule": "Neutral wet wood and independent source detail role; no donor brown/metal paint baked into output."
+  },
+  "native_state": {
+    "default_frame": 1,
+    "animation_length": 300,
+    "tile_frames": {
+      "0": "Items/sw_waterwheel_1.bmp",
+      "100": "Items/sw_waterwheel_2.bmp",
+      "200": "Items/sw_waterwheel_3.bmp"
+    },
+    "requires_operational_active_part": "HydroTurbine",
+    "subject_ignore": false,
+    "native_timing": "Retain actual AnimatedMaterialGeneric clock/multiplier/status behavior; offsets are not milliseconds.",
+    "rare_animated": "BuilderAnimatedChanceOneIn15000/RailedMechanism fallback retained natively; no new actor conversion."
+  },
+  "native_code_study": {
+    "HydroTurbine": {
+      "path": "E:\\Temp\\rimqud-native-waterwheel-20261021\\XRL.World.Parts.HydroTurbine.decompiled.cs",
+      "sha256": "f8d9c644169120d47e83c3bef58b5dc6e93bb70d4f96c1088353d97b442cc15e"
+    },
+    "AnimatedMaterialGeneric": {
+      "path": "E:\\Temp\\rimqud-native-fan-20261021\\XRL.World.Parts.AnimatedMaterialGeneric.decompiled.cs",
+      "sha256": "a785f77a4ae6e591d256b84bdcf55a953e54e8cd5c40c70dca702a4fff8036df"
+    },
+    "findings": [
+      "HydroTurbine uses readiness and nearby liquid volume to generate native charge; no wheel Tile/Render override in this part.",
+      "Source minimum400/maximum4000/maximumcharge10 override class defaults. Mechanical producer100/Circuitry100 remain native.",
+      "AnimatedMaterialGeneric gates frames on operational HydroTurbine; subject-ignore remains default false unlike millstone. No new clock, river-direction selection or liquid simulation."
+    ],
+    "scope": "Static installed code/definition study only."
+  },
+  "native_behavior": "Organicweight600/AV3/HP400, non-takeable mounted physics, HydroTurbine volume400..4000/charge10, mechanical producer100, CircuitryMaxCharge100/Gearbox/EMPSensitivefalse, native SpawnWithLiquid and tinker/examiner/rare Animated state retained.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\WatermillGenerator\\WatermillGeneratorBlades.png",
+      "sha256": "6c1861e8afac67fed95f550ae859e5449676c2163efb64a5037a6173a1ab6931"
+    },
+    "frame": [
+      512,
+      128
+    ],
+    "alpha_bounds": [
+      0,
+      0,
+      512,
+      128
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Power.xml",
+      "sha256": "f9213d01681e0d9082447c75a3d31113ba8e6b52f7595ef951d29ca624d0aaba"
+    },
+    "child": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>WatermillGenerator</defName>\n    <label>watermill generator</label>\n    <description>Produces electricity from a river. Must be placed with its wheel in moving water. If watermills are placed too close together, the turbulence they generate will interfere and reduce power generation.</description>\n    <thingClass>Building</thingClass>\n    <drawerType>MapMeshAndRealTime</drawerType>\n    <graphicData>\n      <texPath>Things/Building/Power/WatermillGenerator/WatermillGeneratorBody</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <drawSize>(5,6)</drawSize>\n      <shadowData>\n        <volume>(2.6,1,2.16)</volume>\n        <offset>(-0.20,0,0)</offset>\n      </shadowData>\n      <damageData>\n        <rectN>(0.1,1.2,4.75,3.25)</rectN>\n        <rectE>(1.25,0.2,3.5,4.7)</rectE>\n        <rectS>(0.2,1.2,4.7,3.25)</rectS>\n        <rectW>(1.25,0.2,3.5,4.7)</rectW>\n      </damageData>\n    </graphicData>\n    <castEdgeShadows>false</castEdgeShadows>\n    <staticSunShadowHeight>0</staticSunShadowHeight>\n    <altitudeLayer>Building</altitudeLayer>\n    <passability>Impassable</passability>\n    <blockWind>true</blockWind>\n    <scatterableOnMapGen>false</scatterableOnMapGen>\n    <fillPercent>1</fillPercent>\n    <blockLight>true</blockLight>\n    <canOverlapZones>false</canOverlapZones>\n    <statBases>\n      <MaxHitPoints>400</MaxHitPoints>\n      <WorkToBuild>4000</WorkToBuild>\n      <Flammability>1.0</Flammability>\n      <Beauty>-20</Beauty>\n    </statBases>\n    <tickerType>Normal</tickerType>\n    <size>(5,6)</size>\n    <costList>\n      <WoodLog>280</WoodLog>\n      <Steel>80</Steel>\n      <ComponentIndustrial>3</ComponentIndustrial>\n    </costList>\n    <bringAlongOnGravship>false</bringAlongOnGravship>\n    <comps>\n      <li Class=\"CompProperties_Power\">\n        <compClass>CompPowerPlantWater</compClass>\n        <basePowerConsumption>-1100</basePowerConsumption>\n        <transmitsPower>true</transmitsPower>\n        <soundAmbientProducingPower>WaterMill_Ambience</soundAmbientProducingPower>\n      </li>\n      <li Class=\"CompProperties_Breakdownable\" />\n      <li Class=\"CompProperties_Stunnable\">\n        <useLargeEMPEffecter>true</useLargeEMPEffecter>\n        <empEffecterDimensions>(2.0,0,1.6)</empEffecterDimensions>\n        <empChancePerTick>0.5</empChancePerTick>\n        <affectedDamageDefs>\n          <li>EMP</li>\n        </affectedDamageDefs>\n      </li>\n    </comps>\n    <rotatable>true</rotatable>\n    <terrainAffordanceNeeded /> \n    <designationCategory>Power</designationCategory>\n    <uiOrder>2100</uiOrder>\n    <placeWorkers>\n      <li>PlaceWorker_WatermillGenerator</li>\n    </placeWorkers>\n    <building>\n      <ai_chillDestination>false</ai_chillDestination>\n      <destroySound>BuildingDestroyed_Wood_Big</destroySound>\n    </building>\n    <constructEffect>ConstructWood</constructEffect>\n    <researchPrerequisites><li>WatermillGenerator</li></researchPrerequisites>\n    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>\n  </ThingDef>\n\n",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "parent": "<ThingDef Name=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshOnly</drawerType>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n  </ThingDef>\n  \n  ",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": "(5,6)",
+    "footprint": "(5,6)",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "role": "Actual VTE override of Core watermill separate blade component supplies restrained wet wood/plank grain only. Component is not complete watermill body; main Graphic_Multi/drawSize5x6/size5x6 describe building mapping, not blade or Qud dimensions. No donor roof/generator/axle/footprint/electricity/riverside placement copied.",
+    "equivalence": "Partial paddle-material reference; no whole-object match selected for Qud tall open rim/left paddle train."
+  },
+  "construction": {
+    "camera": "One fixed cardinal source map face: tall rounded rim, parallel near-left paddle faces and source inset segment plane, no new oblique barrel yaw/converging panels.",
+    "source_supported": "Outer tall rim/inner-left spine, left paddle bands per source frame, exact right y detail segment occupancy from3actual masks.",
+    "authored": "Smooth rim band, shallow plank thickness, blackened wet-rot grain and connected left paddle silhouettes replace glyph stair edges. Exact hidden wheel depth/mounting unknown; no inferred metal gearbox shape, generic spoke wheel, roof, motor or extra axle.",
+    "paddle_band_tops": {
+      "1": [
+        5.3,
+        11.3,
+        17.3
+      ],
+      "2": [
+        3.3,
+        7.3,
+        13.3,
+        19.3
+      ],
+      "3": [
+        4.3,
+        9.3,
+        15.3
+      ]
+    },
+    "rule": "Fixed rim/spine and common full cell/scale/pivot. Three primary paddle group placements follow actual source bands; right role is constructed from actual detail pixels as rounded merged runs. One default material refinement reused across all3source appearances."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same rim/centers/full cell/pivot in3native frames, no per-phase bounds fitting."
+  },
+  "native_acceptance": "Pending complete generation: native HydroTurbine operational/liquid/charge/Circuitry/mechanical producer/phase clock/SpawnWithLiquid/physics/rare Animated/visibility/save-load; no activation."
+}

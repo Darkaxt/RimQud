@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-WOODEN-WATER-WHEEL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-WOODENMECHANICALTRANSMISSION**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -162,8 +162,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-MILLSTONE | Millstone | UNFINISHED | - |  |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - |  |
 | SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - |  |
-| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - |  |
+| SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### NPC assemblies (14)
 
@@ -6611,7 +6611,67 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/wooden-water-wheel-body.png](../art/village/scenery/wooden-water-wheel-body.png), [art/village/scenery/wooden-water-wheel-detail.png](../art/village/scenery/wooden-water-wheel-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 10.
+
+- 2026-10-20T23:01:53.999142+00:00 / resolve_object_description_original_tile_palette_state / PASS: Extract and inspect all3actual wheel masks, native wet-rot description/palette, HydroTurbine and source animation/power metadata.
+  Review: Default mask hash matches catalogue; private raw extraction only. Static HydroTurbine/AnimatedMaterialGeneric study: source volume400..4000/charge10, operational gate, subject-ignorefalse and native clock retained. No game launch.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/extract-native-frames.py", "sha256": "6fc2c246fbaf82484d452e6b4d72d86e5fc71d6da3553c0e4aaf323c01fe59f1"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/native-frames.json", "sha256": "731ba6ca85e1bc3747f04695f34a715c268f6120595e5cb9169c070dbfe98d35"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/source-packet.json", "sha256": "6aabc35ffdaa2036a953cafb085b52c8fb6cf83f58494dba6d378dc5d7b01fde"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/source-reference-construction.png", "sha256": "8c6a294ba81fee24e9cf42d04c4af1dd8dd93abe5d8d10912bfc136f4938556d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE separate watermill blade component and matching Core main building/parent mapping.
+  Review: Partial damp wood/plank finish reference; main Graphic_Multi/drawSize5x6/footprint5x6 not blade/Qud dimensions. No whole-object equivalence, roof/generator/axle/electricity/river-placement behavior copied.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/source-packet.json", "sha256": "6aabc35ffdaa2036a953cafb085b52c8fb6cf83f58494dba6d378dc5d7b01fde"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/source-reference-construction.png", "sha256": "8c6a294ba81fee24e9cf42d04c4af1dd8dd93abe5d8d10912bfc136f4938556d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / construct_faithful_shape / PASS: Construct editable tall rim/spine, source3left paddle groups and right detail segment patterns.
+  Review: Rim/paddle silhouette source-bound; shallow plank thickness/curves and hidden mounting authored. Initial detail centers traced from actual masks, not inferred from donor geometry.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/source-packet.json", "sha256": "6aabc35ffdaa2036a953cafb085b52c8fb6cf83f58494dba6d378dc5d7b01fde"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/construct-waterwheel.py", "sha256": "341a788513e410a23d810850ff87755eb59d134f17b385e66e9944f0f38a2dbe"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/rim.svg", "sha256": "80714f54c1dd6951257fc617c88e47f17715496afc1a0abc98da3c4e3c85d3fc"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-1-constructed.svg", "sha256": "abf2596c5ce5d652e93acb800aedf1ccccef75db2eb4d02d34d203988b18db27"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-2-constructed.svg", "sha256": "57dabea915ec9045b2be5c358b38d6e3adb14e88e47d4b298638db553e490e41"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-3-constructed.svg", "sha256": "21781504b8aad1c5a18895babfec882f3d634eb885bb787cb89eb9176cdae9f5"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/constructed-native-phases.png", "sha256": "6059a4ffc3e74619a1c7e151a68e1feb3cffdd7cb6ed2b5caa747296dfdbaeac"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / construct_faithful_shape / PASS: Patch floating pixel-like right inset marks into continuous rounded runs and thin oval brace.
+  Review: Every native detail center/source3phase layout preserved. Brace is authored physical continuity interpretation, not a named native gear mechanism. Initial suggestions retained and patched full set inspected before refinement.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/constructed-native-phases.png", "sha256": "6059a4ffc3e74619a1c7e151a68e1feb3cffdd7cb6ed2b5caa747296dfdbaeac"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/patch-inset-continuity.py", "sha256": "5f069bf98f1fb9283a4010bc068ccf8dc3fe1100fc3c87b5a7c489799f1b205d"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-1-patched-constructed.png", "sha256": "91ad85f00179a0ca39aac8fb9e29f3f3aa178a79930e6eae726824cf482f86d0"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-2-patched-constructed.png", "sha256": "4c59059f3da0838b176e2176b469dbc3166fe4b40897a4b0d36d37c48df7f0e2"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-3-patched-constructed.png", "sha256": "33f3823211d7fd23a80774b068f93002b99b500935c9c5e46faa1b62c5f165a6"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json", "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/inset-continuity-patch.json", "sha256": "1fff5f9dc6b7e059688cd1938d5bfb175fcc9e75236b5b250018dfd8a18cc769"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/inset-patch-comparison.png", "sha256": "057479dc2256cc292116d93793528db04cc7bc1a71a1b9232fd58ce661f7c759"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/patched-native-phases.png", "sha256": "26971615fd30294e5be09af01664237dd9c207aa17421e1596f14b9f91d255ea"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/manual-structural-review.json", "sha256": "bd3c9522ea968af210a4be0f78e84d92329ce1cb84e4efa4be218fe538dafe15"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / create_required_state_neighbor_variants / PASS: Prepare all3source-declared wheel appearances and retain native HydroTurbine operational phase selection.
+  Review: One fixed map face; source offsets0/100/200 and length300 stay native, no new animation clock. Subject-ignore defaultfalse, liquid/power/SpawnWithLiquid/rare Animated fallback retained; no invented dry/off/river/splash state art.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/native-frames.json", "sha256": "731ba6ca85e1bc3747f04695f34a715c268f6120595e5cb9169c070dbfe98d35"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json", "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/patched-native-phases.png", "sha256": "26971615fd30294e5be09af01664237dd9c207aa17421e1596f14b9f91d255ea"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / refine_materials_and_form / PASS: Perform one actual patched-default contextual wet-wood refinement and inspect first output before extraction.
+  Review: Inspected actual full first refinement: tall rim/spine/three left paddles and connected right inset retained; wet-rotted wood grain usable. Generated background/inside dark fill, exterior/gold halo, broad gold glow and enlarged seam/outline widths rejected by exact patched geometry/ink/roles. Right source phase patterns remain controlled native guides, not generated guesses. No roof/generator/motor/spokes/water scenery/extra axle or new effects. Reuse shared wood/detail material in all3frames.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/frame-1-patched-constructed.png", "sha256": "91ad85f00179a0ca39aac8fb9e29f3f3aa178a79930e6eae726824cf482f86d0"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/patched-refine-prompt.txt", "sha256": "87b8a8badcdaacd34f4ffe10c273bd25d3704d246696110ea360a89728404889"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/refined-raw.png", "sha256": "9ad272d41f1ba821b0052bde975a49be16f319b66c144887e3ffe6fb67f166cd"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/first-structural-review.json", "sha256": "8cf38004975ecbb9df397040b03136f018e5547a878c067b8e1eb69b26cc99b0"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-wooden-water-wheel/v1/patched-refine-prompt.txt", "sha256": "87b8a8badcdaacd34f4ffe10c273bd25d3704d246696110ea360a89728404889"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-f77e688b-c224-46eb-9dc9-dd424d661f0e.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-wooden-water-wheel\\v1\\frame-1-patched-constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-wooden-water-wheel\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\WatermillGenerator\\WatermillGeneratorBlades.png"]}}
+
+- 2026-10-20T23:01:53.999142+00:00 / extract_register_color_coverage / PASS: Select actual dark wet wood/detail material and map shared source surfaces into3fixed source-phase constructions.
+  Review: Raw wood luminance measured15/56.67/80.67;45floor selects wet-rot material, detail150floor retained. Exact alpha/ink/roles exclude halo/fill. Shared rim coordinates and local default-paddle material mapping, no independently generated phases/bounds fitting or second AI isolation.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/first-structural-review.json", "sha256": "8cf38004975ecbb9df397040b03136f018e5547a878c067b8e1eb69b26cc99b0"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/frame-1-patched-ownership.png", "sha256": "999d96bbda16b569551bab98e0c2ee9a56f5ee837077c49cd861d5f22ae038b0"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/select-wet-wood-material.py", "sha256": "3e033c71263df93f619d3b6d000c85c579a083f84dbf705fc66ed5dbebde3ea2"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/register-waterwheel.py", "sha256": "a313c322dd6bb2e2419a6a4a37d9d5ba69b5b0de644e619c6a1e9fef6c22cc79"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered/model.json", "sha256": "05b488dc329b9d066e3ddf96db3bb021f7e4b3918547dec747e24dd2ea38ae44"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered/registration-decisions.json", "sha256": "8835060be33d004ea9109fcd41f0b98190edf04f7d3a6b74f5e633b54da21249"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered/registration-comparison.png", "sha256": "55f7af424a31a2fefebe41ca34d4eddc74ba8176d76da092baebbbc9dd0f4106"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / extract_register_color_coverage / PASS: Exclude old detail edge ink from transferred surfaces and restore target-specific edges.
+  Review: Initial registered plate exposed stray seam marks. Final detail plane uses eroded bright material interiors; target masks and ink determine actual boundaries. Geometry/roles/wood/native timing unchanged; initial attempt preserved and final plate inspected.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/registered/registration-comparison.png", "sha256": "55f7af424a31a2fefebe41ca34d4eddc74ba8176d76da092baebbbc9dd0f4106"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/detail-material-correction.json", "sha256": "6ff65f37b7e4aeaccfc6a9c4f596043fb9f9637dc392b096245669107c6acc48"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/register-waterwheel-final.py", "sha256": "8c547a71db42c3586ac41b90b7c18ffce84fffc48dcc6acdfe444bcaf77003c2"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/model.json", "sha256": "9f5769ca89b119f4fa3975e883fc78aa7ee61b724b553ddae2e72fa24653c86c"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-decisions.json", "sha256": "2dd27d790d4f242b9a0eb0acacdc6950d105eb24a10cd86cbbfb8e20499f31a4"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/frame-1-neutral-master.png", "sha256": "bb0c73945b47a6046eebbca4aadf3e5d291418e78ff4d9de200c91221660be1a"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/frame-2-neutral-master.png", "sha256": "687fcdc352d5d89cedfe2c23ead07050c6bde0c9d61c5e10abed38a94184e34c"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/frame-3-neutral-master.png", "sha256": "d09af1f2dbc6960ecff497e451ac561711f3367ce4a29b68dd432da4eed7617f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect actual source3frames, manual/continuity patch/refined/registered phases and neutral/native w/y at intended sizes.
+  Review: Reviewed all3actual source sw_waterwheel masks from pinned resources: tall outer rim/near-left spine, source-specific left paddle bands and changing right detail occupancy. Exact description/wet-rotted wood and w primary/y detail roles retained. Smooth rim/shallow planks/hidden depth and mounting are authored interpretation, not source physical measurements. Manual review found floating pixel-like inset blocks; joined adjacent runs and added thin oval continuity brace while preserving every source detail center and3phase layouts. No new named gearbox mechanism claimed. Actual VTE separate WatermillGeneratorBlades component texture and matching Core WatermillGenerator/BuildingBase mapping inspected; wet wood/plank shading only. Main Graphic_Multi/drawSize5x6/size5x6 belongs to donor building, not Qud wheel/blade component dimensions; no roof/generator/axle/river placement/electricity mechanics copied. One actual patched-default contextual refinement inspected before extraction: usable damp wood grain, generated halo/interior fill/gold glow/displaced seams rejected. Raw mapped primary luminance quantiles15/56.67/80.67 justify45material floor instead of105; dark wet wood preserved without baking brown or normalizing brighter. Shared default wood/detail planes and locally mapped paddle material produce all3native source appearances in exact per-phase geometry/role/frame. Initial registered attempt retained: default detail edge ink caused stray marks in other patterns; final pass samples eroded bright interiors only, then target edges restored. Exact native detail centers retained, all3phase coverage/detail maps distinct, full neutral/source w/y and16x24/24x36/32x48views inspected. Native length300/0,100,200tiles gated by HydroTurbine, subject-ignore defaultfalse, source volume400..4000/charge10/mechanical producer100/Circuitry100/Gearbox/SpawnWithLiquid remain native. No new timing, water/splash scenery, motion blur, generator/actor conversion or activation. Native water/power/phase/physics/rare Animated/visibility/save-load acceptance pending full generation set.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/model.json", "sha256": "9f5769ca89b119f4fa3975e883fc78aa7ee61b724b553ddae2e72fa24653c86c"}]
+  Outputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/record-review.py", "sha256": "7dcfa6bb071e8b0fb31b5b8d906ecb08f76c39dbc879e303147462ba3d8286d1"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png", "sha256": "4927800f6fe86df32f7c683551c6edba892454fe7053c7c80068557395b62d2e"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/authoring-review.json", "sha256": "2b646938a3ed51e4d919f4f963ec36dc6aab13c289765ed9a8ca59ebe2c56aec"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/artifact-manifest.json", "sha256": "2f203b7904a88312daf97fe5e001ab01fbfd0f8a00dc62c45afe7c5ed2a87674"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:01:53.999142+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native liquid/charge/operational phase clock/Circuitry/SpawnWithLiquid/physics/rare Animated/visibility/save-load acceptance behind full-generation gate.
+  Review: No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/model.json", "sha256": "9f5769ca89b119f4fa3975e883fc78aa7ee61b724b553ddae2e72fa24653c86c"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-WOODENMECHANICALTRANSMISSION: WoodenMechanicalTransmission
 
@@ -6621,7 +6681,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png), [art/village/scenery/woodenmechanicaltransmission-detail.png](../art/village/scenery/woodenmechanicaltransmission-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### NPC-ARGYVE: Argyve
 

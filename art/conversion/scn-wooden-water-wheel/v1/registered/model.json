@@ -1,0 +1,138 @@
+{
+  "entry": "SCN-WOODEN-WATER-WHEEL",
+  "kind": "source_dualcolor_native_three_phase_machine",
+  "blueprint": "Wooden Water Wheel",
+  "source": {
+    "path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json",
+    "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same rim/centers/full cell/pivot in3native frames, no per-phase bounds fitting."
+  },
+  "camera": "One fixed cardinal source map face: tall rounded rim, parallel near-left paddle faces and source inset segment plane, no new oblique barrel yaw/converging panels.",
+  "palette": {
+    "primary": "w on wet-rotted wooden rim/spine/paddles",
+    "detail": "y on exact native right inset segment patterns",
+    "rule": "Neutral wet wood and independent source detail role; no donor brown/metal paint baked into output."
+  },
+  "native_state_owner": {
+    "default_frame": 1,
+    "animation_length": 300,
+    "tile_frames": {
+      "0": "Items/sw_waterwheel_1.bmp",
+      "100": "Items/sw_waterwheel_2.bmp",
+      "200": "Items/sw_waterwheel_3.bmp"
+    },
+    "requires_operational_active_part": "HydroTurbine",
+    "subject_ignore": false,
+    "native_timing": "Retain actual AnimatedMaterialGeneric clock/multiplier/status behavior; offsets are not milliseconds.",
+    "rare_animated": "BuilderAnimatedChanceOneIn15000/RailedMechanism fallback retained natively; no new actor conversion."
+  },
+  "native_behavior": "Organicweight600/AV3/HP400, non-takeable mounted physics, HydroTurbine volume400..4000/charge10, mechanical producer100, CircuitryMaxCharge100/Gearbox/EMPSensitivefalse, native SpawnWithLiquid and tinker/examiner/rare Animated state retained.",
+  "native_acceptance": "Pending complete generation: native HydroTurbine operational/liquid/charge/Circuitry/mechanical producer/phase clock/SpawnWithLiquid/physics/rare Animated/visibility/save-load; no activation.",
+  "native_activation": false,
+  "view_policy": "One source cardinal map face,3declared native phases; native HydroTurbine/liquid/charge/status/timing and rare Animated remain native.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "frames": [
+    {
+      "frame": 1,
+      "native_tile": "Items/sw_waterwheel_1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-primary-neutral.png",
+        "sha256": "e48b957ae4bb896a7b5cecaa39c26cc87cd68c1227041cdacbb70fb7917ad4ae"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-detail-neutral.png",
+        "sha256": "4b095f6c4f55e0338b566aea81027e990655e9225fe67ebb9d94715fac749814"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-coverage.png",
+        "sha256": "ebf34c7c9e49821e39a30f8cad3f0f46bf3794faaf0ab4ea3121e9b10f03ca72"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-detail-weight.png",
+        "sha256": "d0eaa559ea2ca9c0201fb93b207f3a7aebf57c8245e62ffe1aca87e2bf6c9128"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-detail-coverage.png",
+        "sha256": "e59b8e988ddd462e6c73201e7377c976d27c8eab727a80073875fe78a3dd2a5c"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-1-authored-dualcolor-mask.png",
+        "sha256": "0d36811893e446e6e22a6f1d62e4e9b24faaf0b402e467fab424ff8bb94e9d84"
+      }
+    },
+    {
+      "frame": 2,
+      "native_tile": "Items/sw_waterwheel_2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-primary-neutral.png",
+        "sha256": "eaf5bba24cdf0033503a2d79be3561040914425128709dd69706f91191938d5d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-detail-neutral.png",
+        "sha256": "667489dc8b32f0b9ddd462992f36873f82555fb3beb1e0eff1930a8c42138625"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-coverage.png",
+        "sha256": "25650cb094b7222ab5832ef4584298d92cc15ca21e193c7a8b4dff9122df05bb"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-detail-weight.png",
+        "sha256": "92b92046fa43f34afeb1809d05689e45cb22bbd03591cfcca6449749c8bb2f9b"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-detail-coverage.png",
+        "sha256": "5952aef9c8fb924688a8a54af10d5dbbd85260f0bed3881331a604d953289982"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-2-authored-dualcolor-mask.png",
+        "sha256": "8db22b0c9691a456eeb51d86992cf206c2405ab49cec9ad9f560c277019a6dcb"
+      }
+    },
+    {
+      "frame": 3,
+      "native_tile": "Items/sw_waterwheel_3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-primary-neutral.png",
+        "sha256": "2510c97228fc7ffe9777922c27072d40ba6398390b5e01ab1c396db96c3994dd"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-detail-neutral.png",
+        "sha256": "f655fbab58c7f48a0568e3805e54a4d24920c58c0f87353f921bc241ecfcb143"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-coverage.png",
+        "sha256": "f3bd0e939b31a9fea9f3c7ea048f514eab1e68a064e6635eaab095d92efa9d4a"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-detail-weight.png",
+        "sha256": "7ff1433942e7de39b36c9e8f59c323f9022455395e948dc07b08f172b1d48d07"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-detail-coverage.png",
+        "sha256": "ace97efc65521781548ebf12c8a18063037c4853d98350cf763490f4a61d8830"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/v1/registered/frame-3-authored-dualcolor-mask.png",
+        "sha256": "6e6e3ca7a10d3b6b42441618a9735ffabd67ca3564a5e666ffd66332421088e6"
+      }
+    }
+  ]
+}
