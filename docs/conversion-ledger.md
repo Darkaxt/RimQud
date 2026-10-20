@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-ELDERBOB**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **NPC-JOPPAFARMERCONVERT**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -170,8 +170,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | NPC-ARGYVE | Argyve | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
-| NPC-ELDERBOB | Irudad (ElderBob) | IN PROGRESS | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 | Separated BODY-IRUDAD art is now generation-ready. Verify current dependency versions, pad actual fittings to the same physical frame and resolve visual attachment of captured Walking Stick541 on changed Hand201/6 alongside the hands-face pose. |
-| NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 |  |
+| NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | IN PROGRESS | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -6785,7 +6785,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 8.
 
 - 2026-10-20T23:30:41.343709+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured ElderBob/Irudad507 ancestry, description, HumanoidWithHandsFace tree and four actual equipped objects.
   Review: Old face and hunched back are explicit source text. Native tree records four arms, Hands-Face under the Hands group and Stinger-managed Tail. Baseline fittings alone are not a named mutation assembly.
@@ -6799,6 +6799,42 @@ Current step: verify_body_and_every_equipped_item_dependencies. Process-log even
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-20T23:53:11.412054+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Reconcile current actor507 anatomy, source palette and four equipped items after the separate mutation-art prerequisite was generated.
+  Review: The original preflight remains history; current packet uses BODY-IRUDAD separate anatomy and exact actual item parts. No new race, invented age/mutation or profession costume.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json", "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"}, {"path": "art/conversion/npc-elderbob/v1/render-source-comparison.py", "sha256": "6eab9d50754fc7586ae69d0d355be8953ff1daf9c8bbe41301b2830ff9c45aed"}, {"path": "art/conversion/npc-elderbob/v1/source-to-assembly.png", "sha256": "9d7f7715a90899206aac1faa7169fcd6da9ff72db04b059cf111d9fe6c5113af"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:53:11.412054+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify all five current dependencies and retain actual source/reference/manual/refinement/secondary/patch/extraction histories.
+  Review: Current model/component hashes verified. Older instruction inputs resolve to exact Git dde9ca9 bytes rather than being silently rehashed. No new generation call was required.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json", "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"}]
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/dependency-lineage.json", "sha256": "55abcda271811386216cd437419e372dd31d507cd801707d1b1bd3be0d1690bf"}, {"path": "art/conversion/npc-elderbob/v1/dependency-evidence.html", "sha256": "e238fb910ace51cce6fd96e4fe6796fbe9b016816ac86d74f3886ccdb594164e"}, {"path": "art/conversion/npc-elderbob/v1/historical-instruction-versions.json", "sha256": "0c93ba7f2b949bc35fad8d2e47b31bafcd0301c6314394fdf8f9865e98c688bb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:53:11.412054+00:00 / assemble_without_baking_equipment / PASS: Assemble all four source items with separate body/mutation textures and integer-padded original fittings.
+  Review: Full body/item geometry and source slot binding unchanged. Exact integer RGBA paste preserves even hidden source RGB, correcting blank-canvas compositing without a visible/alpha change. The existing lower-in-image static palm is an explicit render-art association for Hand201/6, not a renamed lower mechanical hand or source-inferred bone. Native pose/state review remains separate.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json", "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"}, {"path": "art/conversion/npc-elderbob/v1/dependency-lineage.json", "sha256": "55abcda271811386216cd437419e372dd31d507cd801707d1b1bd3be0d1690bf"}]
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/assemble-irudad.py", "sha256": "f82ebddb156b004f8c7d2f4e94b16850891d264c01359db9d9e7635b76e52ce1"}, {"path": "art/conversion/npc-elderbob/v1/preserve-padding-pixels.py", "sha256": "df4cb6f2ff528a0933d5969f22fe41c6b75436a11152ed4091ca1279f6caa014"}, {"path": "art/conversion/npc-elderbob/v1/padding-correction.json", "sha256": "1b2841cd3de263866130a99329f9191f8032ac28e7f56924470e677d1c6a40f9"}, {"path": "art/conversion/npc-elderbob/v1/model.json", "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"}, {"path": "art/conversion/npc-elderbob/v1/hand-attachment-decision.json", "sha256": "1f55ef2655136f2e495b3344ab0dcabf1cae07a0a7fd0e35afd7d3e7e7165986"}, {"path": "art/conversion/npc-elderbob/v1/assembly-stages.png", "sha256": "7cc5ef0bf1994d01c3eed1f33d749de0fbc4d78920625fe7e8e3e884265d7bf7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:53:11.412054+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Review each item independently on the unclothed named body, then the complete outfit in every facing.
+  Review: Robe shoulder/cuff/hem, ordinary head spectacles, source hand grip, sandal height and tail/raised-arm occlusion visually inspected. Full cloth and tail retained, each item applies only its own original-body coverage at final composition; no unrelated body redraw.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/model.json", "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"}]
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/black-robes-comparison.png", "sha256": "0233ae967311f79b2af4dd4e2251fbf59533391b00a49fcaaa8cdb309d9c2583"}, {"path": "art/conversion/npc-elderbob/v1/spectacles-comparison.png", "sha256": "b8c966e435d68fee2a148d3dea2c4e860b3916e5f6f335a984ed8d57ec709260"}, {"path": "art/conversion/npc-elderbob/v1/walking-stick-comparison.png", "sha256": "b5400e773c9c85e5811d4992ac94cb4ee38c673486a15874336477dcf0761cc7"}, {"path": "art/conversion/npc-elderbob/v1/sandals-comparison.png", "sha256": "6b2ca48784744345834f14f6e9f6d8a18c6b7e367df26ea668a5d778c6132ad2"}, {"path": "art/conversion/npc-elderbob/v1/full-neutral-comparison.png", "sha256": "98fab092023b883e4c149006457e7edd1cf696126da0adaab681d30fb73968cc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:53:11.412054+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Review exact independent source palettes, shared registration and intended-size static assembly.
+  Review: Inspected actual original source, metadata, separate body/mutation dependencies, every single item on the unclothed named body, staged assembly, all four full neutral/native views and intended-size evidence. Black Robes539 Body196, Spectacles540 Face198, Walking Stick541 changed Hand201/6 and Sandals546 Feet213 match the captured outfit. Current separate four-arm/hands-face/tail body and all item pixels remain unchanged; integer240px padding aligns old fittings to the larger named-body frame without altering physical scale, contact or masks. Robe coverage hides the tail root naturally while its full texture and exposed barbs remain independent. Local late body ownership preserves original hands without redrawing body over unrelated gear. Actual r/w body, K/K robe, y/Y spectacles, w/g stick and y/w sandals have independent palette roles; neutral bases remain gray. The existing static palm is explicitly associated with captured Hand201/6, without renaming the slot or treating grouped Hands/Face metadata as render bones. This is a disclosed fixed art choice, not native articulation or accepted resting/ready behavior; those remain at integrated Stage3 after full generation. No new ImageGen call, baked costume, mutation framework, game launch or native acceptance. Full input histories and two exact older instruction versions are retained.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/model.json", "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"}]
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/full-native-comparison.png", "sha256": "22d40204c15f082c458cf4496b24f2219a7567860e39ce4b312a7e1545767994"}, {"path": "art/conversion/npc-elderbob/v1/game-scale-comparison.png", "sha256": "594fff8d5471de8238d8c8ef3030bef387fe47fdbcd3064506f13da9a06092d9"}, {"path": "art/conversion/npc-elderbob/v1/hidden-comparison.png", "sha256": "84842e990b9bfbcd8914f37b19e61844073f0c4f24f61600dd2daa5f7e680793"}, {"path": "art/conversion/npc-elderbob/v1/record-review.py", "sha256": "7a17afdda6684ed60aaff97769a9434b7604f9d80551cc56b0fa0cdb950877ca"}, {"path": "art/conversion/npc-elderbob/v1/authoring-review.json", "sha256": "d91a49d99685a54336de1c6da589ff7761f26468ec3fd956255d6d08758cfe71"}, {"path": "art/conversion/npc-elderbob/v1/artifact-manifest.json", "sha256": "e2d285f2803d89fd95be078c0969a6a13457280fd38412e46e63b419c86320c6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:53:11.412054+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Retain integrated native anatomy/equipment/held-state/visibility/hurt/look/save review behind all-generation gate.
+  Review: Authoring hidden previews are empty; native behavior is untested. Actual Hand201/6 near/far, resting/ready grip/angle/state mapping and dynamic mutation/equipment semantics remain required integrated Stage3 work. Entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/model.json", "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### NPC-JOPPAFARMERCONVERT: JoppaFarmerConvert
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -6807,7 +6843,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
 
 ### NPC-MEHMET: Mehmet
 

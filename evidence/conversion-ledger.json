@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "NPC-ELDERBOB",
+  "active_entry": "NPC-JOPPAFARMERCONVERT",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -38685,8 +38685,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "verify_body_and_every_equipped_item_dependencies",
+      "status": "UNFINISHED",
+      "current_step": "native_visibility_equipment_hurt_look_save_review",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -38695,9 +38695,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Separated BODY-IRUDAD art is now generation-ready. Verify current dependency versions, pad actual fittings to the same physical frame and resolve visual attachment of captured Walking Stick541 on changed Hand201/6 alongside the hands-face pose."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "male",
@@ -39052,6 +39050,186 @@
           "outputs": [],
           "review": "BODY-IRUDAD has no current registered separated mutation assembly. Current older-human apparel compatibility proxies do not represent the four arms, Hands-Face211 or barb-crowned Tail214.",
           "result": "UNFINISHED"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Reconcile current actor507 anatomy, source palette and four equipped items after the separate mutation-art prerequisite was generated.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json",
+              "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/render-source-comparison.py",
+              "sha256": "6eab9d50754fc7586ae69d0d355be8953ff1daf9c8bbe41301b2830ff9c45aed"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/source-to-assembly.png",
+              "sha256": "9d7f7715a90899206aac1faa7169fcd6da9ff72db04b059cf111d9fe6c5113af"
+            }
+          ],
+          "review": "The original preflight remains history; current packet uses BODY-IRUDAD separate anatomy and exact actual item parts. No new race, invented age/mutation or profession costume.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify all five current dependencies and retain actual source/reference/manual/refinement/secondary/patch/extraction histories.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json",
+              "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/dependency-lineage.json",
+              "sha256": "55abcda271811386216cd437419e372dd31d507cd801707d1b1bd3be0d1690bf"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/dependency-evidence.html",
+              "sha256": "e238fb910ace51cce6fd96e4fe6796fbe9b016816ac86d74f3886ccdb594164e"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/historical-instruction-versions.json",
+              "sha256": "0c93ba7f2b949bc35fad8d2e47b31bafcd0301c6314394fdf8f9865e98c688bb"
+            }
+          ],
+          "review": "Current model/component hashes verified. Older instruction inputs resolve to exact Git dde9ca9 bytes rather than being silently rehashed. No new generation call was required.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Assemble all four source items with separate body/mutation textures and integer-padded original fittings.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json",
+              "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/dependency-lineage.json",
+              "sha256": "55abcda271811386216cd437419e372dd31d507cd801707d1b1bd3be0d1690bf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/assemble-irudad.py",
+              "sha256": "f82ebddb156b004f8c7d2f4e94b16850891d264c01359db9d9e7635b76e52ce1"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/preserve-padding-pixels.py",
+              "sha256": "df4cb6f2ff528a0933d5969f22fe41c6b75436a11152ed4091ca1279f6caa014"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/padding-correction.json",
+              "sha256": "1b2841cd3de263866130a99329f9191f8032ac28e7f56924470e677d1c6a40f9"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/hand-attachment-decision.json",
+              "sha256": "1f55ef2655136f2e495b3344ab0dcabf1cae07a0a7fd0e35afd7d3e7e7165986"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/assembly-stages.png",
+              "sha256": "7cc5ef0bf1994d01c3eed1f33d749de0fbc4d78920625fe7e8e3e884265d7bf7"
+            }
+          ],
+          "review": "Full body/item geometry and source slot binding unchanged. Exact integer RGBA paste preserves even hidden source RGB, correcting blank-canvas compositing without a visible/alpha change. The existing lower-in-image static palm is an explicit render-art association for Hand201/6, not a renamed lower mechanical hand or source-inferred bone. Native pose/state review remains separate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Review each item independently on the unclothed named body, then the complete outfit in every facing.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/black-robes-comparison.png",
+              "sha256": "0233ae967311f79b2af4dd4e2251fbf59533391b00a49fcaaa8cdb309d9c2583"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/spectacles-comparison.png",
+              "sha256": "b8c966e435d68fee2a148d3dea2c4e860b3916e5f6f335a984ed8d57ec709260"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/walking-stick-comparison.png",
+              "sha256": "b5400e773c9c85e5811d4992ac94cb4ee38c673486a15874336477dcf0761cc7"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/sandals-comparison.png",
+              "sha256": "6b2ca48784744345834f14f6e9f6d8a18c6b7e367df26ea668a5d778c6132ad2"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/full-neutral-comparison.png",
+              "sha256": "98fab092023b883e4c149006457e7edd1cf696126da0adaab681d30fb73968cc"
+            }
+          ],
+          "review": "Robe shoulder/cuff/hem, ordinary head spectacles, source hand grip, sandal height and tail/raised-arm occlusion visually inspected. Full cloth and tail retained, each item applies only its own original-body coverage at final composition; no unrelated body redraw.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Review exact independent source palettes, shared registration and intended-size static assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/full-native-comparison.png",
+              "sha256": "22d40204c15f082c458cf4496b24f2219a7567860e39ce4b312a7e1545767994"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/game-scale-comparison.png",
+              "sha256": "594fff8d5471de8238d8c8ef3030bef387fe47fdbcd3064506f13da9a06092d9"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/hidden-comparison.png",
+              "sha256": "84842e990b9bfbcd8914f37b19e61844073f0c4f24f61600dd2daa5f7e680793"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/record-review.py",
+              "sha256": "7a17afdda6684ed60aaff97769a9434b7604f9d80551cc56b0fa0cdb950877ca"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/authoring-review.json",
+              "sha256": "d91a49d99685a54336de1c6da589ff7761f26468ec3fd956255d6d08758cfe71"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v1/artifact-manifest.json",
+              "sha256": "e2d285f2803d89fd95be078c0969a6a13457280fd38412e46e63b419c86320c6"
+            }
+          ],
+          "review": "Inspected actual original source, metadata, separate body/mutation dependencies, every single item on the unclothed named body, staged assembly, all four full neutral/native views and intended-size evidence. Black Robes539 Body196, Spectacles540 Face198, Walking Stick541 changed Hand201/6 and Sandals546 Feet213 match the captured outfit. Current separate four-arm/hands-face/tail body and all item pixels remain unchanged; integer240px padding aligns old fittings to the larger named-body frame without altering physical scale, contact or masks. Robe coverage hides the tail root naturally while its full texture and exposed barbs remain independent. Local late body ownership preserves original hands without redrawing body over unrelated gear. Actual r/w body, K/K robe, y/Y spectacles, w/g stick and y/w sandals have independent palette roles; neutral bases remain gray. The existing static palm is explicitly associated with captured Hand201/6, without renaming the slot or treating grouped Hands/Face metadata as render bones. This is a disclosed fixed art choice, not native articulation or accepted resting/ready behavior; those remain at integrated Stage3 after full generation. No new ImageGen call, baked costume, mutation framework, game launch or native acceptance. Full input histories and two exact older instruction versions are retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T23:53:11.412054+00:00",
+          "step": "native_visibility_equipment_hurt_look_save_review",
+          "action": "Retain integrated native anatomy/equipment/held-state/visibility/hurt/look/save review behind all-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            }
+          ],
+          "outputs": [],
+          "review": "Authoring hidden previews are empty; native behavior is untested. Actual Hand201/6 near/far, resting/ready grip/angle/state mapping and dynamic mutation/equipment semantics remain required integrated Stage3 work. Entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
       "apparel_dependencies": {
@@ -39061,14 +39239,45 @@
           "FIT-IRUDAD-SPECTACLES-FACE-0",
           "FIT-IRUDAD-SANDALS-FEET-0"
         ],
-        "status": "Pending new garment fittings; no historical outfit approval implied"
+        "status": "Current robe, spectacles and sandals generation-ready; exact padded source pixels verified on separate named anatomy. Native outfit acceptance pending."
       },
-      "advancement_blocker": {
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/npc-elderbob/v1/model.json",
+          "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+        },
+        "plate": {
+          "path": "art/conversion/npc-elderbob/v1/full-neutral-comparison.png",
+          "sha256": "98fab092023b883e4c149006457e7edd1cf696126da0adaab681d30fb73968cc"
+        }
+      },
+      "registration_summary": "Captured Irudad507: current separate older-human/mutation body plus Black Robes, Spectacles, Walking Stick and Sandals. All source pixels and physical scale/contact are retained through integer padding. Hand201/6 keeps its captured identity with an explicit static-art palm association; native articulation/held-state acceptance remains pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected actual original source, metadata, separate body/mutation dependencies, every single item on the unclothed named body, staged assembly, all four full neutral/native views and intended-size evidence. Black Robes539 Body196, Spectacles540 Face198, Walking Stick541 changed Hand201/6 and Sandals546 Feet213 match the captured outfit. Current separate four-arm/hands-face/tail body and all item pixels remain unchanged; integer240px padding aligns old fittings to the larger named-body frame without altering physical scale, contact or masks. Robe coverage hides the tail root naturally while its full texture and exposed barbs remain independent. Local late body ownership preserves original hands without redrawing body over unrelated gear. Actual r/w body, K/K robe, y/Y spectacles, w/g stick and y/w sandals have independent palette roles; neutral bases remain gray. The existing static palm is explicitly associated with captured Hand201/6, without renaming the slot or treating grouped Hands/Face metadata as render bones. This is a disclosed fixed art choice, not native articulation or accepted resting/ready behavior; those remain at integrated Stage3 after full generation. No new ImageGen call, baked costume, mutation framework, game launch or native acceptance. Full input histories and two exact older instruction versions are retained.",
+        "record": {
+          "path": "art/conversion/npc-elderbob/v1/authoring-review.json",
+          "sha256": "d91a49d99685a54336de1c6da589ff7761f26468ec3fd956255d6d08758cfe71"
+        }
+      },
+      "resolved_advancement_blocker": {
         "requirement": "Actual captured individual anatomy and item attachment in all directions",
         "reason": "Separated BODY-IRUDAD art is now generation-ready. Verify current dependency versions, pad actual fittings to the same physical frame and resolve visual attachment of captured Walking Stick541 on changed Hand201/6 alongside the hands-face pose.",
         "classification": "internal",
         "resolution": "Complete the captured four-item authoring assembly with explicit original slot/pose metadata and shared padded frame.",
-        "dependent": "NPC-ELDERBOB generation readiness and eventual native acceptance"
+        "dependent": "NPC-ELDERBOB generation readiness and eventual native acceptance",
+        "status": "RESOLVED FOR GENERATION",
+        "evidence": [
+          {
+            "path": "art/conversion/npc-elderbob/v1/model.json",
+            "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+          },
+          {
+            "path": "art/conversion/npc-elderbob/v1/hand-attachment-decision.json",
+            "sha256": "1f55ef2655136f2e495b3344ab0dcabf1cae07a0a7fd0e35afd7d3e7e7165986"
+          }
+        ]
       }
     },
     {
@@ -39095,8 +39304,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_individual_race_and_runtime_metadata",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -59377,7 +59586,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T23:45:05.291440+00:00",
+  "updated_at": "2026-10-20T23:53:11.412054+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

@@ -1,0 +1,92 @@
+{
+  "reason": "Alpha compositing onto a blank padded canvas clears RGB values stored under source alpha0. Visible pixels and alpha were unchanged, but exact RGBA preservation requires direct paste.",
+  "correction": "Copy source RGBA with integer paste at y+240, retaining transparent RGB as well. Every visible pixel and alpha value verified unchanged; assembled previews remain identical.",
+  "changed": [
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-south.png",
+      "before_sha256": "d492050b607b11de8ffdae1009d50414762909187bac37de5393e11d165b6aec",
+      "after_sha256": "421085017e66a27f63bd442639298472b6d10d411ffe89127372d62621e32815"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-south.png",
+      "before_sha256": "8481751f609fe8a1a493df08d55dd8e529db86fd8283c8c0a68200d5ccffd7ff",
+      "after_sha256": "9dce49e051baf1fa38a39bb176bd9215a0872ae0b31e18818c3ef9f1256ac0ea"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-south.png",
+      "before_sha256": "b793bae94c1b5dbaa61f7bae6fc72410685d6f5decbe68b4b4558ab5c5049e67",
+      "after_sha256": "3eb0314d34bc719f6eef306fcf146cc5f51a4be1bde7f15729df07bf13da53e5"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-south.png",
+      "before_sha256": "b4e950eaf272b4eab9942c32e129216ed264c968fb0a2f5cf48bb88f24b7a918",
+      "after_sha256": "7a6593b6ac9fe0bf1234971a7a78d34cfb12ba1d762aa2d790410e7d6d351068"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-east.png",
+      "before_sha256": "fabac2b2761d7a6585b0720164752a042e935644a21d2601285f0369dcf1361b",
+      "after_sha256": "f15323295136bc92c526dbb2e51b1747a1eec8c59213f4b360a45fa01d856565"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-east.png",
+      "before_sha256": "955c788fe72bdcc7a049f1598efe8ddd2e42a6f3cab7d4dd520a7f55a84f5eba",
+      "after_sha256": "5d6f577814a3401405ffa38a44de808a581cc570e95c64ba971c8836db530e01"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-east.png",
+      "before_sha256": "cbd991f4ba739ca87b86f3412cd6292c3d17451be93494035e67b49ebaafe601",
+      "after_sha256": "34b112f15a2cbeb62d7d833fe429c568912547dc3a216fd75519e755b54330a4"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-east.png",
+      "before_sha256": "2c96c0f67c90a74d2bb2ec1d85f72836e17bf8fda0a2928945ae469897bd6a01",
+      "after_sha256": "396ecf5b57c3b7296137bbd8a6062d4bbaade53774e0cf1a89f2a524c0a11812"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-north.png",
+      "before_sha256": "28f7af37f6c9fa9afadb008b6a3069a37a4a56be156d85615157bc8ba781a281",
+      "after_sha256": "845b72157f34c294d7b5f4cac760897c1037b10c5d5da80568e46a526c155f4d"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-north.png",
+      "before_sha256": "9eddbd726211987dd639a93129043e9cc20dec2124d19f503d7e3a84373e6dd5",
+      "after_sha256": "f97504f4fa40bba5fad4f4d264d55093fa2913411cbb472c35e75b11bdf1db57"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/spectacles/body-overlay-north.png",
+      "before_sha256": "9ee501a17bbb23a7572f42737564a2c674cc09b9ee6df2bf80f774ba962a4983",
+      "after_sha256": "130e8b2f896654700c27fb5038653568730a0f75034bf03bb5564b64f9577ef4"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-north.png",
+      "before_sha256": "7d9dcc900ab57e0128a62400ecd133e06722f7e10b9a0e20bc341ac58058097b",
+      "after_sha256": "7aad856e9e91e5cf9256e0569a61448193753bde5d90b67d1bf1915969de1f02"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-north.png",
+      "before_sha256": "814bce98ff61554d1f5a8c245f94b417abcfdef290bf1da3756fca3ee8cf2123",
+      "after_sha256": "a021e7c882f5882754dd0bf08ebabdcbc2d648f2158c79a417f46df1c04c28fc"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-west.png",
+      "before_sha256": "c5f277e0dadfe94e2eac67117816b1a3ad9cf1ada3d3720d480e0a08ef61feca",
+      "after_sha256": "b0aec27ee139126e75c923844bb294b805669bd4991e9dafcfc5f63b664a9109"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-west.png",
+      "before_sha256": "d62a24de537c582d05e97e878d10a3179fb5547c17d783a1fae1fd78d2588a08",
+      "after_sha256": "cc5c40d8ba596114e3ab0742b734a34c29b3b521dd278e02531949a551ba7efd"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-west.png",
+      "before_sha256": "34f71b868b63f4ecdb94485b15aa073a1485f1fef892445d35eaeb3488851733",
+      "after_sha256": "89907e78d61299d97f861e931ab2f1572866ce8c12d2240b91ce6f9b58197297"
+    },
+    {
+      "path": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-west.png",
+      "before_sha256": "948b59ceff29a97fe982d5dfe218597e659cbe34863a75078a654450a9d0901f",
+      "after_sha256": "ebe89060f2b76cbfc4a8b81c26cc6229bbc9f33ede188458a0a97c94b1d0b813"
+    }
+  ],
+  "native_activation": false
+}

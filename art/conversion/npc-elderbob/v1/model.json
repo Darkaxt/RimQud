@@ -1,0 +1,2119 @@
+{
+  "entry": "NPC-ELDERBOB",
+  "kind": "captured_actor_layered_assembly",
+  "actor": {
+    "instance": 507,
+    "blueprint": "ElderBob",
+    "species": "human",
+    "gender": "male",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "anatomy": "HumanoidWithHandsFace",
+    "tile": "Creatures/npc-irudad.bmp",
+    "foreground": "&r",
+    "tileColor": "&r",
+    "detailColor": "w"
+  },
+  "source": {
+    "path": "art/conversion/npc-elderbob/v1/assembly-source-packet.json",
+    "sha256": "e3f89ececda41be4c9ef5da35979fc6fd2fa89fc6fdaad346db30fbf804697c1"
+  },
+  "body_model": {
+    "path": "art/conversion/body-irudad/v1/registered/model.json",
+    "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"
+  },
+  "equipment_bindings": {
+    "Black Robes": {
+      "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+        "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+      },
+      "equipped_instance": 539,
+      "part_id": 196,
+      "parent_id": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null
+    },
+    "Spectacles": {
+      "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+        "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+      },
+      "equipped_instance": 540,
+      "part_id": 198,
+      "parent_id": 197,
+      "slot": "Face",
+      "laterality": 0,
+      "manager": null
+    },
+    "Walking Stick": {
+      "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+      "model": {
+        "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+        "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+      },
+      "equipped_instance": 541,
+      "part_id": 201,
+      "parent_id": 200,
+      "slot": "Hand",
+      "laterality": 6,
+      "manager": "507::MultipleArms::Change"
+    },
+    "Sandals": {
+      "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+        "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+      },
+      "equipped_instance": 546,
+      "part_id": 213,
+      "parent_id": 196,
+      "slot": "Feet",
+      "laterality": 0,
+      "manager": null
+    }
+  },
+  "views": {
+    "south": {
+      "body": [
+        {
+          "component": "mutation-tail",
+          "file": "tail-south.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/tail-south.png",
+          "sha256": "5b47e8155962e1525a2af9390b734bb9cc5b6cdb19d9144597ffc8d78fab3088",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.003,
+          "anatomy_role": "One posterior Tail214; not a reusable human race feature"
+        },
+        {
+          "component": "mutation-raised-arms",
+          "file": "raised-arms-south.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/raised-arms-south.png",
+          "sha256": "b7adca7c4d68ee2cd0b24fe86b88691e943661ab953aa3d34a08530133495d09",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "anatomy_role": "Two extra raised arms; exact logical hand-pose mapping pending individual assembly"
+        },
+        {
+          "component": "body",
+          "file": "body-south.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/body-south.png",
+          "sha256": "8140eaa0169923cc989755a1deea13abb7098de5eb23fd206b09b4cdc8313743",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/body-south.png",
+            "sha256": "b25c2a6a9b69d6f79f02b4f16b1080c72dac476218ddeb2d274ad52e18080f4b"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "head",
+          "file": "head-south.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/head-south.png",
+          "sha256": "0e100e27755af4d181dd0610dadc27f62adc24f1df44e6dcadf0ea0f4265c072",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/head-south.png",
+            "sha256": "a51dae7026a931ec698ce81105853096618a64cf60d513251dae89ac33ccc869"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "mutation-hands-face",
+          "file": "hands-face-south.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/hands-face-south.png",
+          "sha256": "44bd125718da8570b3b07d7e8bef198a68cd5782cc0f7edd9b51aa6167640697",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 211,
+          "parent_part": 210,
+          "detail_weight": {
+            "path": "art/conversion/body-irudad/v1/registered/hands-face-detail-weight-south.png",
+            "sha256": "cfa990a906439b1ab4b4e0c9302c46c185f7c8164a52e21f3ed5f81172096532"
+          },
+          "detail_color_role": "detail",
+          "anatomy_role": "Joined/interlaced hands forming mouthless face; not an added Head node"
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+            "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+          },
+          "equipped_instance": 539,
+          "part_id": 196,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-south.png",
+              "file": "item-south.png",
+              "sha256": "421085017e66a27f63bd442639298472b6d10d411ffe89127372d62621e32815",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/intact-robes-south.png",
+                "sha256": "79bdd51f05240ace3056d25d35ca1da90974b82e3d8ea92e8a231e4521a18932"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "9dce49e051baf1fa38a39bb176bd9215a0872ae0b31e18818c3ef9f1256ac0ea",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/body-overlay-south.png",
+                "sha256": "a81bae331ff352342b4033c5983cb669dd805fa45378ce91dd8be1fd20223113"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+            "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+          },
+          "equipped_instance": 540,
+          "part_id": 198,
+          "parent_id": 197,
+          "slot": "Face",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-south.png",
+              "file": "item-south.png",
+              "sha256": "00906662282b58b6eb424c1b16796a3036739787ced0d95178da95cb6af7ffcb",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/intact-spectacles-south.png",
+                "sha256": "bae3856958bcda0f1110510770c808b87c2dbd15cebc04260a2c2c89e919d78c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "ea560219c561032108c232243e34c4e0851478be7ab9854ad5b9b00da14f5044",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/item-detail-south.png",
+                "sha256": "c3c69b07ffdda1f95a5afd7553a0ca8090de423f7423cda65e2cec41d6b61b9c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "7d9dcc900ab57e0128a62400ecd133e06722f7e10b9a0e20bc341ac58058097b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/body-overlay-south.png",
+                "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+            "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+          },
+          "equipped_instance": 541,
+          "part_id": 201,
+          "parent_id": 200,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-south.png",
+              "file": "item-south.png",
+              "sha256": "3bece850d095506e4f7a0a5976a6e5b371d9ca80c30d1c69bdb323cbde496118",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/intact-item-south.png",
+                "sha256": "5ddbe4c98d29541ad04b1e40a717f81a7374ca69005a7d6e0fc20b70ff9bddca"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "340c147f472193e2b6d5465fc15ea245b5928e14a8f4260826bbb411c6917b1d",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/item-detail-south.png",
+                "sha256": "44271d29d03f89617b939e46598e39d1faf9737ee95ce061a7569c14a290a397"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "3eb0314d34bc719f6eef306fcf146cc5f51a4be1bde7f15729df07bf13da53e5",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/original-hand-south.png",
+                "sha256": "7e477ac8a8868af98e9863a0f9c4c96831af0f4bae288f63571d17c89cfd66bb"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+            "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+          },
+          "equipped_instance": 546,
+          "part_id": 213,
+          "parent_id": 196,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-south.png",
+              "file": "item-south.png",
+              "sha256": "f011f6d787cdf16e3062fb979ce58640a58353f308fa108c042d84b74cd58608",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/intact-sandals-south.png",
+                "sha256": "f02491f140eb819d6e42a1a481bf241f645bad8aa33d27b8b4fe569342e967e8"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "93e301bdaf34b980d6d640fc506b78b97f7dd45fd507c1a7a7db328aed6946bc",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/item-detail-south.png",
+                "sha256": "c168484eb125fdef44ae6809f590955af5e7218d6d0892bfc581c759a70cd02a"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "7a6593b6ac9fe0bf1234971a7a78d34cfb12ba1d762aa2d790410e7d6d351068",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/body-overlay-south.png",
+                "sha256": "7998b9b70519369aa609b1bed9f6958a551e3d1996a7c430164a04e321039a27"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-neutral-south.png",
+        "sha256": "703f05862ff855b33a66535a0bc2d71e800dd95a5b7f6af6d5f43294ad23d4f7"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-native-south.png",
+        "sha256": "6d776a62b9f0c0b126778917ec3ce26391ec9bc56768c7d9af956f6c46ed72a0"
+      }
+    },
+    "east": {
+      "body": [
+        {
+          "component": "mutation-tail",
+          "file": "tail-east.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/tail-east.png",
+          "sha256": "819b359c1c6e7797e5432ff86c797286707e8e3e5202bcb6700540aefdb9c193",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.003,
+          "anatomy_role": "One posterior Tail214; not a reusable human race feature"
+        },
+        {
+          "component": "mutation-raised-arms",
+          "file": "raised-arms-east.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/raised-arms-east.png",
+          "sha256": "a4b648f217fa80c69fb8f74acd6eadfa35cbef8e4daefe27a61e5a5563d7e5dc",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "anatomy_role": "Two extra raised arms; exact logical hand-pose mapping pending individual assembly"
+        },
+        {
+          "component": "body",
+          "file": "body-east.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/body-east.png",
+          "sha256": "57c196fa142f1dddb8e054618ef2bdae9d9511a5359138bd5a32665d89b4f68a",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/body-east.png",
+            "sha256": "b02e62e26817d3b0ed9fbf0e4b58ea7ed19839d5617b688ebcc1967e761f4ee1"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "head",
+          "file": "head-east.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/head-east.png",
+          "sha256": "da17e637bab4baa5cdb3fa7609301c2486f82bd26ba75072d578b1bebe5262a4",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/head-east.png",
+            "sha256": "fc213613028b8be93f39a5857cd0755830ca0c332483b2ab74ed936cd15905ae"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "mutation-hands-face",
+          "file": "hands-face-east.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/hands-face-east.png",
+          "sha256": "d0542b97d8b193c1eac7d4f3ce58c7016b9bca3912f5f6790d34e90609a67992",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 211,
+          "parent_part": 210,
+          "detail_weight": {
+            "path": "art/conversion/body-irudad/v1/registered/hands-face-detail-weight-east.png",
+            "sha256": "0924864a7925db1e78b8618cc0087e086303ef29aeb273f4d7d0b2f142004d83"
+          },
+          "detail_color_role": "detail",
+          "anatomy_role": "Joined/interlaced hands forming mouthless face; not an added Head node"
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+            "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+          },
+          "equipped_instance": 539,
+          "part_id": 196,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-east.png",
+              "file": "item-east.png",
+              "sha256": "f15323295136bc92c526dbb2e51b1747a1eec8c59213f4b360a45fa01d856565",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/intact-robes-east.png",
+                "sha256": "8cda200615d6dab6a0c620c5e498fd96357e48a4a4472cd5bc32ca73c7d2beb7"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "5d6f577814a3401405ffa38a44de808a581cc570e95c64ba971c8836db530e01",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v3/body-overlay-east.png",
+                "sha256": "6bf0163bbd1d5d22081c274eae14b80f7738de8dfb06ecb9f9c714c4cf47c7b4"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+            "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+          },
+          "equipped_instance": 540,
+          "part_id": 198,
+          "parent_id": 197,
+          "slot": "Face",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-east.png",
+              "file": "item-east.png",
+              "sha256": "76c50e31988785db59bcc5c15da8d7ad420b14512bf5135973d1d4e5482191b0",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/intact-spectacles-east.png",
+                "sha256": "bf5a99cb2d69f8a63280f16c1baff7ade162b031d3db02d71de486c4013175d9"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "db376d774fb8264320bdfbdc03110ee4f2aece40d4ade14f5d452120b2598a70",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/item-detail-east.png",
+                "sha256": "5d2fd95696a4e6f61910407016b19d389aa711939451000890c80d116adc76c6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "7d9dcc900ab57e0128a62400ecd133e06722f7e10b9a0e20bc341ac58058097b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/body-overlay-east.png",
+                "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+            "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+          },
+          "equipped_instance": 541,
+          "part_id": 201,
+          "parent_id": 200,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-east.png",
+              "file": "item-east.png",
+              "sha256": "d6ab5f6d0ad3396b8a5b9fb325bb64ae5ba0fd572d1759f55d0e2a0d7f5354af",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/intact-item-east.png",
+                "sha256": "bfe0a3165d12fd8be8991a71a11b936224796b0fabb48a5a7524c01701b1b44d"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "8dafe30dad11ffb14cece6f5f65bb07ed4a11c321c237d5fe985ac737f156f5a",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/item-detail-east.png",
+                "sha256": "63c57a89c8b674f4fe9d70ed3021ce44fe938580fb02c192961b1547be6efb06"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "34b112f15a2cbeb62d7d833fe429c568912547dc3a216fd75519e755b54330a4",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/original-hand-east.png",
+                "sha256": "ac2e178546b93fc39971a7670b4c0e5326800c0c8cc40d3a587e0716f189dd69"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+            "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+          },
+          "equipped_instance": 546,
+          "part_id": 213,
+          "parent_id": 196,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-east.png",
+              "file": "item-east.png",
+              "sha256": "ade52afb5f591ea60dc4bd45dd6537b96c1120bafce63fc22bf6a6d2390ad3ff",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/intact-sandals-east.png",
+                "sha256": "ba7deffd6500fed3d4c6ecb89753d28bf93443799bc305f0c7650847ffac7d4a"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "0d549d8adc1dee3ce643c75f7fec778a3cb3468f0ab858d9caa9897578f3bcce",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/item-detail-east.png",
+                "sha256": "445d0bce8dc5c94429fbe10c5481feda198981268a978afb314792db85a216d6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "396ecf5b57c3b7296137bbd8a6062d4bbaade53774e0cf1a89f2a524c0a11812",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/body-overlay-east.png",
+                "sha256": "bb9206edfff336284e1784cf72fc403e0710cd2c55d22175037fb469276f4c85"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-neutral-east.png",
+        "sha256": "e6f83df0c673695a82fe6a2abe7c4d194e4151087cb92915c208b786c630081f"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-native-east.png",
+        "sha256": "8de8c809999a50c017e9f3ebf0bd7b776a9ab7a46f4a1a5eb2d4429ca454b8a3"
+      }
+    },
+    "north": {
+      "body": [
+        {
+          "component": "mutation-raised-arms",
+          "file": "raised-arms-north.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/raised-arms-north.png",
+          "sha256": "b7adca7c4d68ee2cd0b24fe86b88691e943661ab953aa3d34a08530133495d09",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "anatomy_role": "Two extra raised arms; exact logical hand-pose mapping pending individual assembly"
+        },
+        {
+          "component": "body",
+          "file": "body-north.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/body-north.png",
+          "sha256": "898ef81c032c2e06e8cf9296c6dd419abc3232d3d1ed1c9ee0aaf8662cd14b47",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/body-north.png",
+            "sha256": "3e13cf2dc56c96f3c9dc5e513edfc5494c788ff86a3dba7522f9e50e4756b800"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "mutation-tail",
+          "file": "tail-north.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/tail-north.png",
+          "sha256": "1529105060a06579a1d8f97171e9788567a83fc31c56279cee86518b3b2d0304",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0005,
+          "anatomy_role": "One posterior Tail214; not a reusable human race feature"
+        },
+        {
+          "component": "head",
+          "file": "head-north.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/head-north.png",
+          "sha256": "9ee501a17bbb23a7572f42737564a2c674cc09b9ee6df2bf80f774ba962a4983",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/head-north.png",
+            "sha256": "771f0b0d627c71b28aaa95f23e404f406a0dce0db0a48c273ec7d4be6454442a"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "mutation-hands-face",
+          "file": "hands-face-north.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/hands-face-north.png",
+          "sha256": "2c25264161033c6e7048d63c03f98c7a27dc92611f30d1f4512862d9b10148e8",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 211,
+          "parent_part": 210,
+          "detail_weight": {
+            "path": "art/conversion/body-irudad/v1/registered/hands-face-detail-weight-north.png",
+            "sha256": "3ef05b2fd2557fbff8cb9537fd6237352d0645136e23f9551ad3b931942194c8"
+          },
+          "detail_color_role": "detail",
+          "anatomy_role": "Joined/interlaced hands forming mouthless face; not an added Head node"
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+            "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+          },
+          "equipped_instance": 539,
+          "part_id": 196,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-north.png",
+              "file": "item-north.png",
+              "sha256": "845b72157f34c294d7b5f4cac760897c1037b10c5d5da80568e46a526c155f4d",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/intact-robes-north.png",
+                "sha256": "2dec65bf2a591da396abc08acb61fa6ab5ad4b7f3f9be0bd9dae88bdfead7f4e"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "f97504f4fa40bba5fad4f4d264d55093fa2913411cbb472c35e75b11bdf1db57",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/body-overlay-north.png",
+                "sha256": "17d6c3437aefd163db9ebcb77f71083693ec60b445ac4d75615803700829f43b"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+            "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+          },
+          "equipped_instance": 540,
+          "part_id": 198,
+          "parent_id": 197,
+          "slot": "Face",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-north.png",
+              "file": "item-north.png",
+              "sha256": "438d3db579711c967e19728889223cac41f0cbffca4312636a8b2f20770a5620",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/intact-spectacles-north.png",
+                "sha256": "b7b5f3351dc403b197999a73d1f1da7e6bee4ea19d040a0a992e39ad5370dda4"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "ea560219c561032108c232243e34c4e0851478be7ab9854ad5b9b00da14f5044",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/item-detail-north.png",
+                "sha256": "c3c69b07ffdda1f95a5afd7553a0ca8090de423f7423cda65e2cec41d6b61b9c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "130e8b2f896654700c27fb5038653568730a0f75034bf03bb5564b64f9577ef4",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/body-overlay-north.png",
+                "sha256": "771f0b0d627c71b28aaa95f23e404f406a0dce0db0a48c273ec7d4be6454442a"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+            "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+          },
+          "equipped_instance": 541,
+          "part_id": 201,
+          "parent_id": 200,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-north.png",
+              "file": "item-north.png",
+              "sha256": "848be1f7bf38832e8772a07b1cf730c59d03006d9bdd13f36089d47990a1712f",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/intact-item-north.png",
+                "sha256": "b107eb64a37dd33818d5a61029db0309c95eeb6e25b3f9255a9e7509426e58cf"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "5915eaf599a17cba4039c5b9cd94c1c63cafccac6169cce8cd8847cfaba0d29f",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/item-detail-north.png",
+                "sha256": "1e3df27d57748673949baba7490b8459a1325bbd7d674cfc3d7682b9f65c4722"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "7aad856e9e91e5cf9256e0569a61448193753bde5d90b67d1bf1915969de1f02",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/original-hand-north.png",
+                "sha256": "60d17adb97bf568a80513cd757ce6d36fa7a9b6ce5e94d541f0f446fc80821c9"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+            "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+          },
+          "equipped_instance": 546,
+          "part_id": 213,
+          "parent_id": 196,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-north.png",
+              "file": "item-north.png",
+              "sha256": "0bd38c45b508258e6a4b3c88cf4f5a781a4eadbe5e5b98c834b2fc4a06c4dcf4",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/intact-sandals-north.png",
+                "sha256": "490ef5d59d8fe3706020e3b08a85fc676ba97d83a14776d52e83e7832dd9a78c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "ee275de16fbf34ea68966a631cb5287cd002acddd6fda91ae232b8ce6cccb0c9",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/item-detail-north.png",
+                "sha256": "ce8488e2c1939931acc5c8fb8b089d701017df6a7434ddcc473c28d3813b1c66"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "a021e7c882f5882754dd0bf08ebabdcbc2d648f2158c79a417f46df1c04c28fc",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/body-overlay-north.png",
+                "sha256": "b2f122c1a604963c325459e4fb05c45448a5b061bad339c87c873103c41b0ab9"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-neutral-north.png",
+        "sha256": "d360ee7e7ca57e1f4fcf95b4ecf9b886ebee12221e5a86cf628199ddf537a69c"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-native-north.png",
+        "sha256": "856953736075049a7b4ab874569f7a5b3c6055e484a91bb07a169d4ec706c3f3"
+      }
+    },
+    "west": {
+      "body": [
+        {
+          "component": "mutation-tail",
+          "file": "tail-west.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/tail-west.png",
+          "sha256": "8951fda5211702d29e7f6466c0f576afbee2a9d084fa0fb327b14d7b9fbf139f",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.003,
+          "anatomy_role": "One posterior Tail214; not a reusable human race feature"
+        },
+        {
+          "component": "mutation-raised-arms",
+          "file": "raised-arms-west.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/raised-arms-west.png",
+          "sha256": "bfee70ac1df0b1a5c8cb5e3fe9273e4aa35eec80350b355cc77159ca5874b52a",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "anatomy_role": "Two extra raised arms; exact logical hand-pose mapping pending individual assembly"
+        },
+        {
+          "component": "body",
+          "file": "body-west.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/body-west.png",
+          "sha256": "71c767c313bb7043a0f7c16ef5c71ca3b4b813b35b021162d32efdcc77d4d366",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/body-east.png",
+            "sha256": "b02e62e26817d3b0ed9fbf0e4b58ea7ed19839d5617b688ebcc1967e761f4ee1"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "head",
+          "file": "head-west.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/head-west.png",
+          "sha256": "c38ef5adc2f9b48dfdfa05893b8b0cc790485b5513c2a7fbfae1d97d15cada04",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-male-older/v2/head-east.png",
+            "sha256": "fc213613028b8be93f39a5857cd0755830ca0c332483b2ab74ed936cd15905ae"
+          },
+          "padding_top": 240
+        },
+        {
+          "component": "mutation-hands-face",
+          "file": "hands-face-west.png",
+          "public_file": "art/conversion/body-irudad/v1/registered/hands-face-west.png",
+          "sha256": "0979c16974b4c5ef4f7c5d9dd61cc6e0b30f43769c247fd8c2305186f94134eb",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 211,
+          "parent_part": 210,
+          "detail_weight": {
+            "path": "art/conversion/body-irudad/v1/registered/hands-face-detail-weight-west.png",
+            "sha256": "46c610cf2acbb699df2c29eb218a3480e651f64947249a80e8c46d7d4b8b4145"
+          },
+          "detail_color_role": "detail",
+          "anatomy_role": "Joined/interlaced hands forming mouthless face; not an added Head node"
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+            "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+          },
+          "equipped_instance": 539,
+          "part_id": 196,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/item-west.png",
+              "file": "item-west.png",
+              "sha256": "b0aec27ee139126e75c923844bb294b805669bd4991e9dafcfc5f63b664a9109",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v2/intact-robes-east.png",
+                "sha256": "8cda200615d6dab6a0c620c5e498fd96357e48a4a4472cd5bc32ca73c7d2beb7"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "black-robes@Body@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/black-robes/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "cc5c40d8ba596114e3ab0742b734a34c29b3b521dd278e02531949a551ba7efd",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-black-robes/v3/body-overlay-east.png",
+                "sha256": "6bf0163bbd1d5d22081c274eae14b80f7738de8dfb06ecb9f9c714c4cf47c7b4"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+            "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+          },
+          "equipped_instance": 540,
+          "part_id": 198,
+          "parent_id": 197,
+          "slot": "Face",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-west.png",
+              "file": "item-west.png",
+              "sha256": "03e2881911769f1ef278a369eb3a1a13d6ced24780b038a0b4e5d05fd683e685",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/intact-spectacles-east.png",
+                "sha256": "bf5a99cb2d69f8a63280f16c1baff7ade162b031d3db02d71de486c4013175d9"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "870ce1a4100b1de50a28fa85d2401bd9073e1eb547dc43604da3d6bfa194094b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/item-detail-east.png",
+                "sha256": "5d2fd95696a4e6f61910407016b19d389aa711939451000890c80d116adc76c6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "spectacles@Face@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/spectacles/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "7d9dcc900ab57e0128a62400ecd133e06722f7e10b9a0e20bc341ac58058097b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-spectacles/v2/body-overlay-east.png",
+                "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+            "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+          },
+          "equipped_instance": 541,
+          "part_id": 201,
+          "parent_id": 200,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-west.png",
+              "file": "item-west.png",
+              "sha256": "c36d70dc080881fffa21f94d59fea363e5786a42e4e5a7eb9cc2fe5bbaf566b3",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/intact-item-east.png",
+                "sha256": "bfe0a3165d12fd8be8991a71a11b936224796b0fabb48a5a7524c01701b1b44d"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "9125543f81cfe5ab6101a031f93b8b737b4085e286f12615dc49213d1d85f334",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/item-detail-east.png",
+                "sha256": "63c57a89c8b674f4fe9d70ed3021ce44fe938580fb02c192961b1547be6efb06"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "walking-stick@Hand@6",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/walking-stick/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "89907e78d61299d97f861e931ab2f1572866ce8c12d2240b91ce6f9b58197297",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-walking-stick/v1/original-hand-east.png",
+                "sha256": "ac2e178546b93fc39971a7670b4c0e5326800c0c8cc40d3a587e0716f189dd69"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        },
+        {
+          "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+            "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+          },
+          "equipped_instance": 546,
+          "part_id": 213,
+          "parent_id": 196,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-west.png",
+              "file": "item-west.png",
+              "sha256": "f1a12266fea04434d15dda97b355fe2d7cda2c2587def369d41aa48728f55bee",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/intact-sandals-east.png",
+                "sha256": "ba7deffd6500fed3d4c6ecb89753d28bf93443799bc305f0c7650847ffac7d4a"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "d40bb94d8cb7544e9f7adeaa4c728bae1676ea025f909165c1f287576804ee43",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/item-detail-east.png",
+                "sha256": "445d0bce8dc5c94429fbe10c5481feda198981268a978afb314792db85a216d6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-elderbob/v1/padded-items/sandals/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "ebe89060f2b76cbfc4a8b81c26cc6229bbc9f33ede188458a0a97c94b1d0b813",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-irudad-sandals/v3/body-overlay-east.png",
+                "sha256": "bb9206edfff336284e1784cf72fc403e0710cd2c55d22175037fb469276f4c85"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true,
+              "padding_method": "Exact integer RGBA copy, including RGB in zero-alpha pixels"
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-neutral-west.png",
+        "sha256": "85005cbec4e71a2e8987eeb88befc097865ed2dc790491ec525b0ac82e1b0527"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-elderbob/v1/full-native-west.png",
+        "sha256": "187642fe5030c412cf89d623245373cca503d5987d3056ce5eecdb43161eabcf"
+      }
+    }
+  },
+  "registration": {
+    "canvas": [
+      512,
+      1264
+    ],
+    "padding_top": 240,
+    "contact": [
+      256,
+      1190
+    ],
+    "baseline_canvas": [
+      512,
+      1024
+    ],
+    "baseline_contact": [
+      256,
+      950
+    ],
+    "method": "Integer transparent top padding only. Original body/head pixels remain unchanged at y+240. Preserve world position/scale by extending render height and center consistently; equipment inherits the same pad.",
+    "width": 0.9938823529411764,
+    "height": 1.6357647058823528,
+    "center_x": 0,
+    "center_z": 0.7221176470588234
+  },
+  "hand_attachment": {
+    "path": "art/conversion/npc-elderbob/v1/hand-attachment-decision.json",
+    "sha256": "1f55ef2655136f2e495b3344ab0dcabf1cae07a0a7fd0e35afd7d3e7e7165986"
+  },
+  "composition": "Far-held item, separate fixed body/mutation components, worn robe/footwear/spectacles, near-held item. Late body ownership local to each item; single coverage for item primary/detail.",
+  "native_activation": false,
+  "native_acceptance": "Pending all-generation gate: real anatomy/parts/equip-unequip/visibility/hurt/look/save-load and source-supported held states. This assembly is static authoring only."
+}
