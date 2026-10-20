@@ -1,0 +1,24 @@
+{
+  "source": {
+    "path": "art/conversion/tile-soil/v1/refined-proposal.png",
+    "sha256": "79acb287a8b1c3104ce8d28b75dccd0b4d994afe841757ef99833d51ae0e74e4"
+  },
+  "source_size": [
+    1254,
+    1254
+  ],
+  "quadrant": [
+    512,
+    512
+  ],
+  "material": [
+    1024,
+    1024
+  ],
+  "opacity_curve": "min(255,max(0,round((luminance-5)*2))) after uniform 512-square resampling; white neutral RGB with this independent alpha",
+  "rationale": "Remove the numeric near-black pedestal, retain subtle compressed earth and make sparse grit readable without copying solid donor brown.",
+  "seam_patch": "Exact horizontal/vertical reflected completion; pixel borders match without smoothing a cell grid. Mirror symmetry remains an authored limitation.",
+  "mean_coverage": 0.04311328962737439,
+  "palette": "Native w deposits over native k background, separate from grassy paint and cobble paving.",
+  "native_state": "No native rendering or game test performed"
+}

@@ -1,0 +1,115 @@
+{
+  "entry": "TILE-WATER-SHALLOW",
+  "recorded_at": "2026-10-20T04:21:23.833634+00:00",
+  "identity": "Visible open water-bearing liquid below native swimming depth; wading and thin puddle states retain native predicates/ownership",
+  "native_description": "A pool of liquid.",
+  "original": {
+    "tile": "Liquids/Water/puddle_1.png",
+    "description": "A pool of liquid.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "pool",
+      "Tile": "Liquids/Water/puddle_1.png",
+      "RenderString": "~",
+      "ColorString": "&b",
+      "RenderLayer": "2",
+      "RenderIfDark": "true"
+    },
+    "kind": "scenery",
+    "blueprint": "Pond",
+    "reference_file": "village-originals/pond-reference.png",
+    "native_mask_sha256": "58a156d85767bd449a0cb13a188af22493e4dad9d9ea6105e4f31c4459c9aadc",
+    "reference_sha256": "5424a8ef8195e091b9ece295980d4ef354f099693bb49b12a7d69c6bd98a7282",
+    "info_id": 10924,
+    "atlas_id": 43,
+    "rect": [
+      0,
+      494,
+      16,
+      24
+    ]
+  },
+  "shared_source": {
+    "entry": "TILE-WATER-DEEP",
+    "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+    "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145",
+    "reuse": "Same installed Water/Pond inheritance, native pool original, exact b/B palette/capture and historical depth-predicate observations; reread hashes now. This does not reuse the deep-water material or its authoring acceptance."
+  },
+  "native_definitions": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+    "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+    "selected": {
+      "Water": "<object Name=\"Water\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"pool\" Tile=\"Liquids/Water/puddle_1.png\" RenderString=\"~\" ColorString=\"&amp;b\" RenderLayer=\"2\" RenderIfDark=\"true\" />\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"0\" InitialLiquid=\"\" NamePreposition=\"of\" />\n    <part Name=\"Physics\" Category=\"Liquids\" Takeable=\"false\" FreezeTemperature=\"0\" Weight=\"0\" BrittleTemperature=\"-100\" FlameTemperature=\"99999\" VaporTemperature=\"100\" />\n    <part Name=\"Inorganic\" />\n    <part Name=\"MentalShield\" />\n    <part Name=\"Description\" Short=\"A pool of liquid.\" />\n    <tag Name=\"PaintedLiquidAtlas\" Value=\"Liquids/Water/\" />\n    <tag Name=\"Pool\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Multipurpose/sfx_liquid_impact\" />\n  </object>\n  ",
+      "Pond": "<object Name=\"Pond\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"500\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n\n  ",
+      "SaltyWaterDeepPool": "<object Name=\"SaltyWaterDeepPool\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"4000\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n  ",
+      "SaltyWaterExtraDeepPool": "<object Name=\"SaltyWaterExtraDeepPool\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"8000\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n  "
+    }
+  },
+  "depth_evidence": {
+    "path": "E:\\Temp\\qud-transplant-probe-joppa-20261019\\joppa-liquid-thresholds.json",
+    "sha256": "461fe1c73e4df58382311b27dc09f600cb4f5e6758266f0e79b9e797c33fb0cd",
+    "observations": [
+      {
+        "volume": 199,
+        "wading": false,
+        "swimming": false
+      },
+      {
+        "volume": 200,
+        "wading": true,
+        "swimming": false
+      },
+      {
+        "volume": 1999,
+        "wading": true,
+        "swimming": false
+      },
+      {
+        "volume": 2000,
+        "wading": true,
+        "swimming": true
+      }
+    ],
+    "meaning": "Historical native diagnostic: wading begins at200 and swimming at2000 drams in that tested state. Runtime predicates remain authoritative; do not reproduce threshold rules from this art file."
+  },
+  "native_capture": {
+    "path": "docs/images/village-original.png",
+    "sha256": "63d9b6451c4c071ff79ec08795271229f415083d62e0b6113dfd2858733dbac7",
+    "sample_rect": [
+      930,
+      136,
+      1004,
+      244
+    ],
+    "exact_palette_counts": {
+      "b": 1834,
+      "B": 1648,
+      "c": 0,
+      "C": 0,
+      "k": 3842
+    },
+    "limit": "Historical original Joppa pool patch, not a new capture or deep-water observation. Dynamic connected liquid display differs from the small default puddle sprite."
+  },
+  "native_state": "Pond declares500drams of water-600,salt-400. Historical diagnostic is wading at200 and swimming at2000 in the tested state. Actual IsWadingDepth/IsSwimmingDepth remain authoritative. A thin puddle is not automatically wading; no fluid amount or traversability change is authorized by art.",
+  "donor_reference": {
+    "file": "water-shallow.png",
+    "source_id": 2778,
+    "name": "WaterShallowRamp",
+    "width": 64,
+    "height": 64,
+    "png_sha256": "d6c8b0aa3c4819dbc12ba717bef08adfd325ccb2bdb75794b82708fba40d43e1",
+    "role": "Actual WaterShallowRamp supplies gentle overhead surface variation only; donor hue, apparent depth, material UV semantics and simulation do not establish Qud behavior."
+  },
+  "source_palette": {
+    "base_role": "b",
+    "base_hex": "0048bd",
+    "ripple_role": "B",
+    "ripple_hex": "0096ff",
+    "interpretation": "Native Water foreground is b and the retained pool capture contains b/B. The shallower state uses more B coverage and finer broken ripples than deep; this distinction is authored rather than a claim that native depth changes hue."
+  },
+  "construction": "Separate editable brighter shallow surface with small irregular ripple loops/broken wavelets, quiet water between them and no opaque gray donor color. Preserve source blue family; no underwater pebbles, caustic polygon web or foam grid.",
+  "required_states": "One world-continuous shallow material; wet/dry shoreline from all eligible wet neighbors; deep-over-shallow blend from swimming neighbors. Shared geometric masks have distinct predicates. Compose against selected deep material only after this shallow art is authored.",
+  "frame": "Single flat overhead surface. No creature turnarounds, body metadata or clothing applies. Texture UV is world-continuous; no rim per cell.",
+  "color_contract": "Separate neutral white base and ripple-alpha layers with actual source liquid colors. Native mixtures or unsupported color states retain original graphics; preview b/B does not generalize all liquids.",
+  "native_acceptance": "Deferred until every conversion is generation-ready"
+}

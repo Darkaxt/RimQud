@@ -1,0 +1,220 @@
+{
+  "entry": "TILE-GRASS-2",
+  "recorded_at": "2026-10-20T03:44:41.159897+00:00",
+  "identity": "Terrain/sw_grass2.bmp, native paint glyph; no independent creature/furniture blueprint or anatomy",
+  "description": "No standalone Description.Short for a cell paint. Reference extraction labels it Basic Grass 2; do not invent a crop, reed, flower or tall grass species.",
+  "original": {
+    "tile": "Terrain/sw_grass2.bmp",
+    "description": "Native visible cell grass paint; not a crop or a new game object",
+    "kind": "paint",
+    "blueprint": "Basic Grass 2",
+    "reference_file": "village-originals/basic-grass-2-reference.png",
+    "native_mask_sha256": "68df3e4ed8fca957df88f3ca22287f32ced47e21acc16b1e2a84b4439f028e51",
+    "reference_sha256": "b6224aacd585b3cb9e6d4110cf3676a90e978b2c5204b9410333b784c3f6d3b7",
+    "info_id": 11192,
+    "atlas_id": 203,
+    "rect": [
+      720,
+      208,
+      16,
+      24
+    ]
+  },
+  "visible_native_coverage": [
+    {
+      "x": 11,
+      "y": 8,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ]
+    }
+  ],
+  "mask_contract": "All sixteen opaque native pixels are black: primary foreground coverage in the audited Kobold mask contract. There is no source detail-color region.",
+  "donor_reference": {
+    "file": "grass.png",
+    "source_id": 1797,
+    "name": "GrassA",
+    "width": 64,
+    "height": 64,
+    "png_sha256": "0853cc134407e5d34b2d39d7fb8cf11145049340fbc843277ccacb4928a88758",
+    "role": "Actual RimWorld GrassA supplies blade taper and plant/shading convention only. Its dense many-blade tuft is not the shape to copy."
+  },
+  "authored_interpretation": "Three sparse shoots inferred from sixteen native coverage pixels: a long leftward blade, a taller middle/right-curving blade and a short rightward blade, with their distinct root heights. Preserve the sparse relative tips/root placement; fine blade width/shading is authored.",
+  "palette": "Neutral equal-RGB production source with native primary tint at binding time. Green g/G previews use exact captured palette values; the reference packet did not export a universal runtime paint color. The same tile is used by orange ClamGrass elsewhere; that does not make Joppa paint a clam species or authorize adding its particle prefab.",
+  "source_usage_limit": "Tile identity alone does not identify a universal plant color or biological species. Preserve per-cell native visibility and color; do not hardcode a green crop object.",
+  "frame": {
+    "canvas": [
+      512,
+      768
+    ],
+    "native_cell": [
+      16,
+      24
+    ],
+    "source_scale": 32,
+    "nominal_anchor": [
+      256,
+      512
+    ],
+    "native_anchor": [
+      8,
+      16
+    ],
+    "policy": "Sparse floor paint stays in its original rectangular cell frame. Do not independently crop/center alpha or give it a humanoid foot pivot."
+  },
+  "states": "One fixed map view. Native grass variants 1 and 3 are separate ledger entries; no invented rotation, growth, flowering or wind animation here.",
+  "native_acceptance": "Deferred until every required conversion is generated"
+}

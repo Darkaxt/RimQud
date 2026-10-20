@@ -1,0 +1,100 @@
+{
+  "entry": "SCN-POND",
+  "recorded_at": "2026-10-20T04:25:16.968641+00:00",
+  "subject": {
+    "blueprint": "Pond",
+    "source": "PhysicalPhenomena.xml",
+    "parent": "Water",
+    "selected": 49,
+    "render": {
+      "Name": "Render",
+      "DisplayName": "pool",
+      "Tile": "Liquids/Water/puddle_1.png",
+      "RenderString": "~",
+      "ColorString": "&b",
+      "RenderLayer": "2",
+      "RenderIfDark": "true"
+    },
+    "body": null,
+    "description": {
+      "Name": "Description",
+      "Short": "A pool of liquid."
+    }
+  },
+  "source_packets": [
+    {
+      "entry": "TILE-WATER-SHALLOW",
+      "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+      "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+    },
+    {
+      "entry": "TILE-WATER-DEEP",
+      "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+      "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+    }
+  ],
+  "reuse": "All original/reference/manual/refinement/extraction steps are the actual recorded producer conversions. This Pond row binds them to its native blueprint and required states; no duplicate ImageGen or new liquid simulation.",
+  "original_limit": "Pond default puddle mask is not its dynamic connected liquid atlas. Retained native pool context and installed LiquidVolume are the source for pool identity and state semantics.",
+  "required_states": {
+    "shallow": "Native thin/wading water state selects the shallow resource without conflating those native movement categories.",
+    "deep": "Native IsSwimmingDepth selects deep material. Do not turn every Pond deep merely because this authored state exists.",
+    "shore": "All visible eligible wet neighbors control shoreline. Swimming neighbors separately control deep-to-shallow blending; a depth edge is not a bank.",
+    "foreground": "Water underlay must not consume the native winning foreground object. Transparent foreground art is drawn afterward using its own tint/visibility, with no water tint, opaque black box or liquid silhouette clipping."
+  },
+  "context_foreground": {
+    "subject": {
+      "blueprint": "Watervine",
+      "source": "ZoneTerrain.xml",
+      "parent": "Plant",
+      "selected": 146,
+      "render": {
+        "Name": "Render",
+        "DisplayName": "watervine",
+        "RenderString": "244",
+        "RenderLayer": "3",
+        "RenderIfDark": "true",
+        "Tile": "Assets_Content_Textures_Tiles_sw_watervine1.bmp",
+        "ColorString": "&g",
+        "Occluding": "false",
+        "TileColor": "&w",
+        "DetailColor": "g"
+      },
+      "body": null,
+      "description": {
+        "Name": "Description",
+        "Short": "Salt gathers in its furrows. It's knotted with moisture-swollen wafers in place of leaves."
+      }
+    },
+    "original_reference": {
+      "tile": "Assets_Content_Textures_Tiles_sw_watervine1.bmp",
+      "description": "Salt gathers in its furrows. It's knotted with moisture-swollen wafers in place of leaves.",
+      "render": {
+        "Name": "Render",
+        "DisplayName": "watervine",
+        "RenderString": "244",
+        "RenderLayer": "3",
+        "RenderIfDark": "true",
+        "Tile": "Assets_Content_Textures_Tiles_sw_watervine1.bmp",
+        "ColorString": "&g",
+        "Occluding": "false",
+        "TileColor": "&w",
+        "DetailColor": "g"
+      },
+      "kind": "scenery",
+      "blueprint": "Watervine",
+      "reference_file": "village-originals/watervine-reference.png",
+      "native_mask_sha256": "c01bb77d1e96d86821dfd848b38281e56c1fd6ad91e7fa07a3ac1fc499f8e861",
+      "reference_sha256": "4a47ba29714d3506d910e90575e7bed127ad386e23c3d92fa5b35068fd08fa2c",
+      "info_id": 14993,
+      "atlas_id": 277,
+      "rect": [
+        1422,
+        702,
+        16,
+        24
+      ]
+    },
+    "role": "Unconverted native Watervine glyph used only to inspect transparent foreground-over-liquid composition. It receives no vegetation conversion credit."
+  },
+  "native_acceptance": "Actual object priority, appearance/visibility, liquid state and moving/equipping behavior remain behind the every-conversion-generated gate"
+}

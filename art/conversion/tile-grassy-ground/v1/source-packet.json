@@ -1,0 +1,160 @@
+{
+  "entry": "TILE-MARSH",
+  "recorded_at": "2026-10-20T03:58:51.343276+00:00",
+  "subject": "Grassy-ground substrate in the bounded village presentation; marsh.png is a historical adapter label, not a new Qud marsh blueprint",
+  "original_field_capture": {
+    "path": "docs/images/village-original.png",
+    "sha256": "63d9b6451c4c071ff79ec08795271229f415083d62e0b6113dfd2858733dbac7"
+  },
+  "capture_context": "Historical native game capture with grass paint, not a new capture or proof of current runtime binding.",
+  "field_sample": {
+    "rect": [
+      0,
+      60,
+      1204,
+      740
+    ],
+    "dominant_rgb": [
+      15,
+      59,
+      58
+    ],
+    "dominant_palette_role": "k",
+    "common_colors": [
+      {
+        "rgb": [
+          15,
+          59,
+          58
+        ],
+        "count": 656470
+      },
+      {
+        "rgb": [
+          13,
+          59,
+          59
+        ],
+        "count": 61339
+      },
+      {
+        "rgb": [
+          152,
+          135,
+          95
+        ],
+        "count": 50840
+      },
+      {
+        "rgb": [
+          177,
+          201,
+          195
+        ],
+        "count": 9799
+      },
+      {
+        "rgb": [
+          13,
+          51,
+          51
+        ],
+        "count": 9571
+      },
+      {
+        "rgb": [
+          0,
+          72,
+          189
+        ],
+        "count": 7360
+      },
+      {
+        "rgb": [
+          0,
+          150,
+          255
+        ],
+        "count": 7087
+      },
+      {
+        "rgb": [
+          21,
+          83,
+          82
+        ],
+        "count": 3615
+      }
+    ]
+  },
+  "native_source": {
+    "floor": {
+      "blueprint": "DirtFloor",
+      "source": "ZoneTerrain.xml",
+      "parent": "Floor",
+      "selected": 1111,
+      "render": {
+        "Name": "Render",
+        "DisplayName": "packed dirt floor",
+        "RenderString": "250",
+        "RenderLayer": "0",
+        "RenderIfDark": "true",
+        "Tile": "terrain/sw_ground_dots1.png",
+        "ColorString": "&w",
+        "DetailColor": "w"
+      },
+      "body": null,
+      "description": null
+    },
+    "paint_sources": [
+      {
+        "path": "art/conversion/tile-grass-1/v1/source-packet.json",
+        "sha256": "864e5ab858f6cad9ff94b29e1d6aff48a017a258c14fb1c9c3485827dcac1173"
+      },
+      {
+        "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+        "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+      },
+      {
+        "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+        "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+      }
+    ],
+    "explanation": "Native floor/paint cells use sparse glyphs over a broad dark-teal background. There is no original full-color turf texture or independent grass-ground Description.Short to extract."
+  },
+  "donor_reference": {
+    "file": "marsh.png",
+    "source_id": 2096,
+    "name": "Marsh",
+    "width": 512,
+    "height": 512,
+    "png_sha256": "a9cac9d40613c4a98cc59966f56b7af91a582d2828cf1da7733826844569265e",
+    "role": "Actual RimWorld Marsh supplies restrained fine organic grain and broad low-contrast material modulation. Its donor color, moisture/terrain mechanics and any liquid interpretation are not adopted."
+  },
+  "historical_draft": {
+    "path": "art/village/scenery/surface-marsh.png",
+    "sha256": "7fe15fb6e0ce5a17816a51f9bb4199c97b0a63041c0936231fef9569bd11ae35"
+  },
+  "palette": {
+    "background_role": "k",
+    "background_hex": "0f3b3a",
+    "grass_paint_role": "native cell primary",
+    "preview_grass_hex": "009403"
+  },
+  "design": "Continuous low-relief substrate tinted by native field background k, with restrained fine fiber/grain. No tall grass, baked shoot icons, sand fill, puddles, banks, water depth or new plant species. Grass1/2/3 remain separate paint layers.",
+  "frame": "Top-down seamless ground surface; no creature views or clothing. Material UV is world-anchored and must not reset in each cell.",
+  "current_adapter_evidence": {
+    "renderer": {
+      "path": "probe/JoppaRenderer.cs",
+      "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"
+    },
+    "capture": {
+      "path": "probe/JoppaSimulation.cs",
+      "sha256": "67c92562743ccc6e65c277d31ec9b14a1ddbe2a4c9f7c33b8e667845bd69a2d9"
+    },
+    "observation": "Current broad ground branch selects marsh.png with Color.white and quad-local UV; the grass flag derives from native PaintTile. New neutral art requires source-aware background tint, world UV and layer/eligibility binding at final integration; the existing broad branch is not proof of that behavior."
+  },
+  "binding_scope": "Visible grassy-field substrate in its source-owned native ground context. Do not blindly recolor every DirtFloor/indoor cell or overwrite native water and bare-soil roles. Preserve actual native visibility and paint/ground ownership.",
+  "required_states": "Continuous filled material plus source-eligible grass/other-ground boundaries. Path coverage belongs to DirtPath above this layer; water depth belongs to water entries. Reuse compatible 8-neighbor coverage geometry, with grassy-ground eligibility semantics, rather than generating another atlas.",
+  "native_acceptance": "Pending every-conversion-generated gate. Renderer/shader behavior is not changed by this authoring script."
+}

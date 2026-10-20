@@ -1,0 +1,23 @@
+{
+  "source": {
+    "path": "art/conversion/tile-water-deep/v1/refined-proposal.png",
+    "sha256": "612d9a5971db0e31a4a450953e6350d9e6a2474ee1a833fa586f0a8d2c055474"
+  },
+  "source_size": [
+    1254,
+    1254
+  ],
+  "quadrant": [
+    512,
+    512
+  ],
+  "material": [
+    1024,
+    1024
+  ],
+  "ripple_curve": "min(210,max(0,round((luminance-18)*1.55))) after uniform resampling",
+  "extraction": "Opaque white neutral base plus white neutral ripples with independent alpha; source colors are separate runtime-owned roles, not baked pixels.",
+  "seam_patch": "Exact mirrored quadrant completion; possible bilateral repeat symmetry remains an authored limitation.",
+  "shoreline": "All-wet predicate must drive the wet mask; deep predicate separately drives deep-over-shallow coverage. Both reuse the existing eight-neighbor mask geometry.",
+  "context_limit": "Shallow entry is unfinished. Its uniform b/B high-mix stand-in in one authoring plate is labeled and receives no conversion credit."
+}

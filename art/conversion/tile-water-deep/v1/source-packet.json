@@ -1,0 +1,120 @@
+{
+  "entry": "TILE-WATER-DEEP",
+  "recorded_at": "2026-10-20T04:17:51.747431+00:00",
+  "identity": "Swimming-depth state of an actual visible open water-bearing LiquidVolume; not a new creature or a fixed volume inferred from the sprite",
+  "native_description": "A pool of liquid.",
+  "original": {
+    "tile": "Liquids/Water/puddle_1.png",
+    "description": "A pool of liquid.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "pool",
+      "Tile": "Liquids/Water/puddle_1.png",
+      "RenderString": "~",
+      "ColorString": "&b",
+      "RenderLayer": "2",
+      "RenderIfDark": "true"
+    },
+    "kind": "scenery",
+    "blueprint": "Pond",
+    "reference_file": "village-originals/pond-reference.png",
+    "native_mask_sha256": "58a156d85767bd449a0cb13a188af22493e4dad9d9ea6105e4f31c4459c9aadc",
+    "reference_sha256": "5424a8ef8195e091b9ece295980d4ef354f099693bb49b12a7d69c6bd98a7282",
+    "info_id": 10924,
+    "atlas_id": 43,
+    "rect": [
+      0,
+      494,
+      16,
+      24
+    ]
+  },
+  "native_definitions": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+    "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+    "selected": {
+      "Water": "<object Name=\"Water\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"pool\" Tile=\"Liquids/Water/puddle_1.png\" RenderString=\"~\" ColorString=\"&amp;b\" RenderLayer=\"2\" RenderIfDark=\"true\" />\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"0\" InitialLiquid=\"\" NamePreposition=\"of\" />\n    <part Name=\"Physics\" Category=\"Liquids\" Takeable=\"false\" FreezeTemperature=\"0\" Weight=\"0\" BrittleTemperature=\"-100\" FlameTemperature=\"99999\" VaporTemperature=\"100\" />\n    <part Name=\"Inorganic\" />\n    <part Name=\"MentalShield\" />\n    <part Name=\"Description\" Short=\"A pool of liquid.\" />\n    <tag Name=\"PaintedLiquidAtlas\" Value=\"Liquids/Water/\" />\n    <tag Name=\"Pool\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Multipurpose/sfx_liquid_impact\" />\n  </object>\n  ",
+      "Pond": "<object Name=\"Pond\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"500\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n\n  ",
+      "SaltyWaterDeepPool": "<object Name=\"SaltyWaterDeepPool\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"4000\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n  ",
+      "SaltyWaterExtraDeepPool": "<object Name=\"SaltyWaterExtraDeepPool\" Inherits=\"Water\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"-1\" Volume=\"8000\" InitialLiquid=\"water-600,salt-400\" />\n  </object>\n  "
+    }
+  },
+  "depth_evidence": {
+    "path": "E:\\Temp\\qud-transplant-probe-joppa-20261019\\joppa-liquid-thresholds.json",
+    "sha256": "461fe1c73e4df58382311b27dc09f600cb4f5e6758266f0e79b9e797c33fb0cd",
+    "observations": [
+      {
+        "volume": 199,
+        "wading": false,
+        "swimming": false
+      },
+      {
+        "volume": 200,
+        "wading": true,
+        "swimming": false
+      },
+      {
+        "volume": 1999,
+        "wading": true,
+        "swimming": false
+      },
+      {
+        "volume": 2000,
+        "wading": true,
+        "swimming": true
+      }
+    ],
+    "meaning": "Historical native diagnostic: wading begins at200 and swimming at2000 drams in that tested state. Runtime predicates remain authoritative; do not reproduce threshold rules from this art file."
+  },
+  "liquid_identity": "Pond declares water-600,salt-400 and500 drams. Deep pool declares4000,extra deep8000. Captured shallow Joppa pools do not prove a naturally occurring swimming-depth cell. Deep is a required authored supported state, not a new spawned pool.",
+  "native_capture": {
+    "path": "docs/images/village-original.png",
+    "sha256": "63d9b6451c4c071ff79ec08795271229f415083d62e0b6113dfd2858733dbac7",
+    "sample_rect": [
+      930,
+      136,
+      1004,
+      244
+    ],
+    "exact_palette_counts": {
+      "b": 1834,
+      "B": 1648,
+      "c": 0,
+      "C": 0,
+      "k": 3842
+    },
+    "limit": "Historical original Joppa pool patch, not a new capture or deep-water observation. Dynamic connected liquid display differs from the small default puddle sprite."
+  },
+  "donor_reference": {
+    "file": "water-deep.png",
+    "source_id": 3315,
+    "name": "WaterDeepRamp",
+    "width": 64,
+    "height": 64,
+    "png_sha256": "70e16bf5994e208ed12f019c2ed6a3635a42555b13b1947ddd4430b0aa80156f",
+    "role": "Actual WaterDeepRamp supplies restrained smooth tonal variation and connected-material presentation only. Its muted donor gray/blue, UV interpretation and water-depth simulation are not transplanted by this art conversion."
+  },
+  "source_palette": {
+    "base_role": "b",
+    "base_hex": "0048bd",
+    "ripple_role": "B",
+    "ripple_hex": "0096ff",
+    "interpretation": "Native Water default foreground is b and the captured pool uses b/B. Separate b/B color roles preserve the source blue family; deeper subdued reflectance is authored, not a native physics statement."
+  },
+  "construction": "Neutral smooth open-water plane with sparse flowing curved ripples, no repeated per-cell rim, pebbles, caustic bottom, foam border or opaque donor color. Deep texture should read darker/calmer than the later shallow state.",
+  "states": "One world-continuous material, wet/dry shore coverage and independent deep/shallow blend coverage using native state ownership. Reuse compatible eight-neighbor geometry with water/depth semantics, not path rules.",
+  "frame": "Flat top-down surface, no creature turnarounds, anatomy or equipment. Material is world-anchored, never independently cropped per water cell.",
+  "bindings": "Actual open-volume visibility and water proportion select eligibility; other liquids, concealed/unsupported states retain native graphics. Depth uses IsSwimmingDepth/IsWadingDepth; no volume mutation or generic liquid-color inference.",
+  "adapter_evidence": {
+    "renderer": {
+      "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaRenderer.cs",
+      "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"
+    },
+    "capture": {
+      "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaSimulation.cs",
+      "sha256": "67c92562743ccc6e65c277d31ec9b14a1ddbe2a4c9f7c33b8e667845bd69a2d9"
+    },
+    "note": "Existing adapter has world-continuous water UV and native depth capture, but uses fixed tints/material selection and a four-cardinal perimeter. New neutral color roles, diagonal coverage and separate depth blending remain final integration work."
+  },
+  "native_acceptance": "Deferred until every conversion is generation-ready"
+}

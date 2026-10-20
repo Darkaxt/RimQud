@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "TILE-GRASS-2",
+  "active_entry": "SCN-BRINESTALKWALL",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -15642,8 +15642,8 @@
       "related_entries": [],
       "required_variants": [],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_metadata",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -15677,7 +15677,289 @@
         }
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T03:45:40.128425+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Grass2 native paint and coverage",
+          "action": "Resolved Terrain/sw_grass2.bmp from the source index and read all sixteen native foreground-coverage pixels in the original cell frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/prepare-and-construct.py",
+              "sha256": "1910f92db001c1dfde09a8a432b48a8a7a862baf4a5f5a4fc6a890dc115c9854"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "review": "Source supports three sparse strokes with different root heights. It is paint, not a named crop/NPC species. All source coverage is primary black in the audited shader. Native tile usage can have non-green color, including orange ClamGrass; actual cell tint/visibility remains authoritative.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:45:40.128774+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "GrassA blade convention, sparse native topology",
+          "action": "Selected the actual extracted RimWorld GrassA as taper/shading reference; original Qud coverage controls the three separate shoot layout.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-construction-comparison.png",
+              "sha256": "0b95cdf34a53b4e00bcfcec6dc8a3b905384093ac804ae0b2602115e4cce0acc"
+            }
+          ],
+          "review": "Viewed native glyph, editable suggestion and donor reference. Dense donor tuft is not copied. No new root mound, flower, growth stage or facing animation inferred.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:45:40.128916+00:00",
+          "step": "construct_shape",
+          "phase": "Editable three-shoot suggestion",
+          "action": "Constructed a left-curving long blade, a taller middle/right-curving blade and a shorter right blade with the native relative tips/root positions.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/prepare-and-construct.py",
+              "sha256": "1910f92db001c1dfde09a8a432b48a8a7a862baf4a5f5a4fc6a890dc115c9854"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/constructed-grass.svg",
+              "sha256": "4c060443835f82ebd95415bcd19d1c155577b1868eb3ea87221eed5d0cec5a5f"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/constructed-grass.png",
+              "sha256": "dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92"
+            }
+          ],
+          "review": "Viewed all three shoots in their whole 16x24-derived frame. Source nominal anchor remains (8,16), not independent alpha centering. Blade width and shading are authored for native-scale readability; the three-shoot count/layout is source-bound.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.432875+00:00",
+          "step": "construct_shape",
+          "phase": "Native three-shoot layout retained",
+          "action": "Reviewed the editable manual three-shoot shape against the selected refined registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/constructed-grass.svg",
+              "sha256": "4c060443835f82ebd95415bcd19d1c155577b1868eb3ea87221eed5d0cec5a5f"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/constructed-grass.png",
+              "sha256": "dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png",
+              "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"
+            }
+          ],
+          "review": "Long left blade, tall middle/right-curving blade and lower short right blade retain their distinct roots and source-relative tips. No dense donor tuft or extra shoot; widths/shading are authored interpretation of the sparse native coverage.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.433265+00:00",
+          "step": "create_required_views_states",
+          "phase": "Fixed paint view and per-cell color roles",
+          "action": "Retained one map-paint view and original rectangular cell frame, with green g/orange O tint previews and repeated-cell authoring context.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/register-grass.py",
+              "sha256": "80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png",
+              "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png",
+              "sha256": "430c5fc9052a282396a20a4d0860eb59654fa0fef6acc92b5c17a8a2e5ffeed0"
+            }
+          ],
+          "review": "Viewed 16x24, 24x36 and 32x48 native-size proportions. This is a paint variant, not a growth/facing animation. Native use of the tile can change color, so no universal green role is invented. Other grass entries are separate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.433523+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Three-blade refinement selected and cleaned",
+          "action": "Refined the neutral manual suggestion using its original/donor comparison, then selected the three complete source components, neutralized RGB, lifted values .82*v+42 and cleared invisible RGB.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/constructed-grass.png",
+              "sha256": "dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-construction-comparison.png",
+              "sha256": "0b95cdf34a53b4e00bcfcec6dc8a3b905384093ac804ae0b2602115e4cce0acc"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/refine-grass-prompt.txt",
+              "sha256": "9eec0cb347012d5bf0e3b399051d30f21e20a4ace638366aac762c0553649821"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/register-grass.py",
+              "sha256": "80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/refined-proposal.png",
+              "sha256": "87de666a89c213a42627dc835fc0c23f26aa4f51e3c7853cfb3e75b113d5afc2"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/cleaned-proposal.png",
+              "sha256": "0bd7d43d0253988377c659dae5e746582ffd53982255d4df0596e295094d36ed"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-decisions.json",
+              "sha256": "67e129a99f74750d5e32a66ecc3f648d5ef5cd2ea424082978db9689fd1b075c"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png",
+              "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"
+            }
+          ],
+          "review": "Viewed refined and final shapes: all three separate blades and unequal root heights retained, with readable native-size widths and no root mound, extra plant or scene. Extraction/value cleanup is deterministic; no second generator loop was necessary for this fixed-view shape.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-bad1b486-df4c-42cb-88d8-09020564594a.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.446122+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Grass2 neutral primary coverage registered",
+          "action": "Registered all three source components together with one .5 scale and translation; kept the nominal native paint anchor and source cell aspect.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/register-grass.py",
+              "sha256": "80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/refined-proposal.png",
+              "sha256": "87de666a89c213a42627dc835fc0c23f26aa4f51e3c7853cfb3e75b113d5afc2"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/model.json",
+              "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-decisions.json",
+              "sha256": "67e129a99f74750d5e32a66ecc3f648d5ef5cd2ea424082978db9689fd1b075c"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/grass2-neutral.png",
+              "sha256": "560c54c0cd4b53128b1dc6cb263c7935f7c9420689670e62fed19646bf91364f"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/grass2-coverage.png",
+              "sha256": "e8e667a4d420027cf0e55870d7ecc180154f270dee79e60a4a97d0fbe5b376eb"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/source-selection-long-left.png",
+              "sha256": "60e5181761e4683a2ca2bd4acab82a83bf4e7b28594a4d2c459ba20c6baecbae"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/source-selection-short-right.png",
+              "sha256": "24aa8d7240f659c1f54ae32e1458d177e04d5b0bbd2fee5358a51ba3a2a03f97"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/source-selection-tall-middle.png",
+              "sha256": "7b0d144f37fa8aeb78fa9e5bebac81fa4910299f073c5b61513e008ca396186e"
+            }
+          ],
+          "review": "Neutral RGB and 512x768 frame inspected. Nominal source anchor (8,16) maps to (256,512); tall middle blade root is a separate recorded landmark (273,451), not a new pivot. Source has no detail-color region; actual native cell color/visibility remain binding-owned. No independent alpha centering of blades.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.447260+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Basic Grass 2 generation ready",
+          "action": "Viewed the registered three-shoot paint under green/orange preview tint, at three small display sizes and in a repeated-cell authoring arrangement.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/model.json",
+              "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/source-packet.json",
+              "sha256": "b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png",
+              "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png",
+              "sha256": "430c5fc9052a282396a20a4d0860eb59654fa0fef6acc92b5c17a8a2e5ffeed0"
+            }
+          ],
+          "review": "Distinct source variant remains readable; production stays grayscale and can receive non-green native colors. Distribution is an authoring example, not a game capture or new native spawn pattern. No ground material or other grass variant receives conversion credit.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:48:33.447499+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native paint acceptance deferred",
+          "action": "Kept native cell color/visibility/draw-order binding checks for the final every-conversion-generated gate.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No game or harness launch; overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-grass-2/v1/registered/model.json",
+          "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"
+        },
+        "plate": {
+          "path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png",
+          "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"
+        }
+      },
+      "registration_summary": "Three sparse shoots retain their source-relative tip/root layout in the original rectangular paint frame. One scale and translation register them together. Production is neutral primary coverage; green/orange panels are color-role examples, and the native cell owns actual tint/visibility. Native integration remains pending.",
+      "native_acceptance": "Pending final all-conversions validation gate"
     },
     {
       "id": "TILE-GRASS-3",
@@ -15724,7 +16006,305 @@
         }
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T03:49:53.066082+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Grass3 distinct native paint coverage",
+          "action": "Resolved Terrain/sw_grass3.bmp and its twelve native foreground pixels in the original rectangular cell frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/prepare-and-construct.py",
+              "sha256": "cc681b28ed2d1c2f658d22121f95441d0e9b60cf2085b3543668e1e469129811"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "review": "Two separate strokes are present: longer left blade rooted low and shorter right blade with a higher tip/root. Source has primary coverage only. No universal paint color, named biological species, crop or growth stage is established.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:49:53.066548+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Shared GrassA convention, original Grass3 layout",
+          "action": "Selected actual extracted RimWorld GrassA for blade taper/shading only; kept the sparse native topology as the shape authority.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-construction-comparison.png",
+              "sha256": "8f84bf0574fb8d91937a6230e5bc2273c9203fbfe11b2c62cbb0f98ee7e4873f"
+            }
+          ],
+          "review": "Viewed original, manual suggestion and donor reference. Neither the dense donor tuft nor Grass1 shape is copied. Same native paint frame is retained; variants 1 and 2 remain distinct assets.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:49:53.066714+00:00",
+          "step": "construct_shape",
+          "phase": "Editable long-left and higher-rooted right blades",
+          "action": "Constructed two source-relative neutral blade paths with the original unequal root heights and tip directions.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/prepare-and-construct.py",
+              "sha256": "cc681b28ed2d1c2f658d22121f95441d0e9b60cf2085b3543668e1e469129811"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/constructed-grass.svg",
+              "sha256": "1a9bde3c8a0efe4eee2ea183da7ef5d53d561fa717f67591374e75ec8345f441"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/constructed-grass.png",
+              "sha256": "7c12024d094362aaf9e2421551170fa14671923f1c4fdc8518062657e06f7b81"
+            }
+          ],
+          "review": "Viewed full frame: longer left stroke and upper short right stroke, rather than Grass1 short-left/long-right arrangement. Blade width/shading are authored. Nominal cell anchor (8,16) stays fixed; the actual low-left root is not forcibly centered.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.478176+00:00",
+          "step": "construct_shape",
+          "phase": "Distinct two-shoot variant selected",
+          "action": "Reviewed the editable long-left/higher-rooted-right source reconstruction against its selected refinement and the other two variant frames.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/constructed-grass.svg",
+              "sha256": "1a9bde3c8a0efe4eee2ea183da7ef5d53d561fa717f67591374e75ec8345f441"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/constructed-grass.png",
+              "sha256": "7c12024d094362aaf9e2421551170fa14671923f1c4fdc8518062657e06f7b81"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png",
+              "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/family-comparison.png",
+              "sha256": "df2823f51bd494dcb03889e132913ca8d3c41492c06984e39a85282aef00e4e4"
+            }
+          ],
+          "review": "Two shoots remain distinct from Grass1 arrangement. Their asymmetric root positions belong to the source shape, not independently recentered sprites. No dense donor tuft, flower, crop or new blade is introduced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.478656+00:00",
+          "step": "create_required_views_states",
+          "phase": "One fixed paint view and three-variant family context",
+          "action": "Retained the source cell orientation/frame and authored native-size/color-role and family comparison views.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/register-grass.py",
+              "sha256": "6d6817ae4aeb31ca1f0bb0588209c1b9da546a3fd0980760cc59c19cd8dc047d"
+            },
+            {
+              "path": "art/conversion/tile-grass-1/v1/registered-v2/model.json",
+              "sha256": "66bd36911cfd95074b52d0ace26a00e90fde1ddb98335c6787f17fcf0baa1b9c"
+            },
+            {
+              "path": "art/conversion/tile-grass-2/v1/registered/model.json",
+              "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png",
+              "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/paint-distribution-comparison.png",
+              "sha256": "c2e83da8e5e88c93abe801bb145a0485cb1d2a60bf95f28e20feb34473bbbf3d"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/family-comparison.png",
+              "sha256": "df2823f51bd494dcb03889e132913ca8d3c41492c06984e39a85282aef00e4e4"
+            }
+          ],
+          "review": "Viewed 16x24, 24x36 and 32x48 paint previews and all three registered variants side by side. No creature perspectives, growth/wind states or randomized game behavior are invented. The common nominal frame/pivot is fixed; visible source layouts differ intentionally.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.479034+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Two-blade material refinement and neutral cleanup",
+          "action": "Refined the manual Grass3 source using its original/donor plate, then selected both complete shoots, neutralized RGB, lifted values .82*v+42 and cleared invisible RGB.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/constructed-grass.png",
+              "sha256": "7c12024d094362aaf9e2421551170fa14671923f1c4fdc8518062657e06f7b81"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-construction-comparison.png",
+              "sha256": "8f84bf0574fb8d91937a6230e5bc2273c9203fbfe11b2c62cbb0f98ee7e4873f"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/refine-grass-prompt.txt",
+              "sha256": "c7a7dc511b57aa6d99dddb876fbea8aa1d38bf1397866e4dba466d3abe35e0fa"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/register-grass.py",
+              "sha256": "6d6817ae4aeb31ca1f0bb0588209c1b9da546a3fd0980760cc59c19cd8dc047d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/refined-proposal.png",
+              "sha256": "00c5b4b085cb723008036073f5f6e54208e831f48d13bd270de9ec2e63e83cc5"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/cleaned-proposal.png",
+              "sha256": "16bf1f102af1d5704ebe753c3cc6a4f3726917feeda779b577b355536a120a63"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-decisions.json",
+              "sha256": "5e075a626449631aff47c162791e4343fd4b8564789db72af5f904edf9a88590"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png",
+              "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"
+            }
+          ],
+          "review": "Viewed output: longer low-rooted left blade and shorter higher-rooted right blade retained without count/layout drift. Readable source-relative widths and values required no second generator loop. Registration uses one .54 scale and shared translation, not separate alpha fitting.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-b272f447-e6ce-45cc-afb1-784a77b38dc9.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.494094+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Grass3 source-frame primary coverage registered",
+          "action": "Registered both components together in the original 16x24-derived frame, keeping the nominal paint anchor separate from the actual low-left blade root.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/register-grass.py",
+              "sha256": "6d6817ae4aeb31ca1f0bb0588209c1b9da546a3fd0980760cc59c19cd8dc047d"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/refined-proposal.png",
+              "sha256": "00c5b4b085cb723008036073f5f6e54208e831f48d13bd270de9ec2e63e83cc5"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/model.json",
+              "sha256": "0cf20b900d24719eafa5325f4f08f4b8add8ea9740d02a2c22058ef821db41c9"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-decisions.json",
+              "sha256": "5e075a626449631aff47c162791e4343fd4b8564789db72af5f904edf9a88590"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/grass3-neutral.png",
+              "sha256": "a3bb3b07ccdc41abba796edc9c67c3abeb32d9f6ec263b8c1c17391941ea6e88"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/grass3-coverage.png",
+              "sha256": "fe48d80f47a12c772a56f71c8430b46bb4079f3fadc4ad94dccf6fdceb5f1852"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/source-selection-high-right.png",
+              "sha256": "5ccb1683931e8c896a56cc3c17fa946764cc7293b44c7915c9427f187358e803"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/source-selection-long-left.png",
+              "sha256": "2140ecb12e807ff83c462424b0cf58bf5ca5f3c65b7710cf2fd3a7e69d81a93f"
+            }
+          ],
+          "review": "Neutral RGB/frame inspected. Source nominal anchor is (8,16)/(256,512); the low-left root landmark is (208,512) because original Grass3 is asymmetric. No independent blade centering or baked color. Actual native cell tint/visibility/draw-order binding remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.495220+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Basic Grass 3 generation ready",
+          "action": "Viewed selected variant enlarged, under green/cyan preview tints, at three small cell sizes, in repeated authoring context and beside variants 1 and 2.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/model.json",
+              "sha256": "0cf20b900d24719eafa5325f4f08f4b8add8ea9740d02a2c22058ef821db41c9"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/source-packet.json",
+              "sha256": "0726fe8b2bfa3c37051aed9d96315ef9c1a09bd426f21dfee817478526b16815"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png",
+              "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/paint-distribution-comparison.png",
+              "sha256": "c2e83da8e5e88c93abe801bb145a0485cb1d2a60bf95f28e20feb34473bbbf3d"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/family-comparison.png",
+              "sha256": "df2823f51bd494dcb03889e132913ca8d3c41492c06984e39a85282aef00e4e4"
+            }
+          ],
+          "review": "Distinct sparse source pattern remains readable and belongs to the same rendering family. Colored panels are tint examples, not universal color assignments; production remains grayscale. Distribution is not a captured zone or spawn change. Ground material and native integration remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:53:12.495543+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native paint acceptance deferred",
+          "action": "Kept cell color/visibility/draw-order binding checks behind the every-conversion-generated gate.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No game or harness launch; overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-grass-3/v1/registered/model.json",
+          "sha256": "0cf20b900d24719eafa5325f4f08f4b8add8ea9740d02a2c22058ef821db41c9"
+        },
+        "plate": {
+          "path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png",
+          "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"
+        }
+      },
+      "registration_summary": "Two source-specific sparse shoots: a longer low-rooted left blade and a shorter higher-rooted right blade. Both share source-frame registration and a fixed nominal cell pivot. Production is neutral primary coverage; color panels/distribution are authoring examples. See the family comparison for all three distinct variants. Native binding remains pending.",
+      "native_acceptance": "Pending final all-conversions validation gate"
     },
     {
       "id": "TILE-SOIL",
@@ -15753,14 +16333,302 @@
       "known_issues": [
         "Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow."
       ],
-      "metadata": {},
+      "metadata": {
+        "source_packet": {
+          "path": "art/conversion/tile-soil/v1/source-packet.json",
+          "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+        }
+      },
       "historical_artifacts": [
         {
           "path": "art/village/scenery/surface-soil.png",
           "sha256": "62a99bf6f2691fa940b05e864c4fda8d5f34b008856bee59dfc5e9c7ed00a3c4"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:12:45.016566+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Packed dirt identity and native foreground/background roles",
+          "action": "Resolved DirtFloor inheritance, installed Render and RandomTileOnMove definitions, original mask and source palette.",
+          "inputs": [
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            },
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/joppa-anatomy-study.json",
+              "sha256": "83a67a07c7e495c2b64b827853013f599fc132ec0a014420e53b982672fcede8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            }
+          ],
+          "review": "Viewed the original and native capture. Six primary and two detail pixels both use native brown w; background stays source-owned k. No standalone Description.Short. Only dots1 original mask is exported; selector aliases do not prove unseen layouts.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:12:45.017188+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Actual Soil grain reference without donor brown fill",
+          "action": "Selected the installed extracted Soil texture for fine irregular packed-earth grain while preserving native sparse color coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-construction-comparison.png",
+              "sha256": "7a813e675079090cdaea75fb9a512fdbd839b20cec733033adfac65bb515f352"
+            }
+          ],
+          "review": "Viewed the actual donor image and source comparison. Name Soil, source_id2815,1024x1024 and exact PNG/package hashes recorded. Its solid brown fill and simulation rules are not adopted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:12:45.017525+00:00",
+          "step": "construct_shape",
+          "phase": "Editable sparse earth construction",
+          "action": "Built a fixed-seed periodic SVG coverage plane with sparse fine grit and restrained scuffs; composed native w deposits over k background.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/prepare-and-construct.py",
+              "sha256": "68b365804129498e12e3e88fb5b339ecffe91ec424d713be9aed92f974738c5f"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-coverage.svg",
+              "sha256": "e28ec459ca654ecb9ba16a4c0c7c8487b34c013c9fc5edf3cd700a25b1f2f635"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-coverage.png",
+              "sha256": "588190bfce24d4c66085b5facb9ade606eb0445fe9075c409076d645c987da13"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-qud-preview.png",
+              "sha256": "214872605078abfc39928dcff2665c4b1dd61077b48ed17aceda2a85bce545dc"
+            }
+          ],
+          "review": "Viewed editable coverage and Qud-colored composition. Broad dark-teal negative space is retained, with no cobbles, dunes, plants or puddles. This manual construction now supplies the refinement target.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.103871+00:00",
+          "step": "construct_shape",
+          "phase": "Source-sparse packed earth selected",
+          "action": "Retained the editable fine-grit construction and source-owned brown-over-teal material split.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-coverage.svg",
+              "sha256": "e28ec459ca654ecb9ba16a4c0c7c8487b34c013c9fc5edf3cd700a25b1f2f635"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-qud-preview.png",
+              "sha256": "214872605078abfc39928dcff2665c4b1dd61077b48ed17aceda2a85bce545dc"
+            }
+          ],
+          "review": "Manual construction and refined native-colored preview viewed. Soil remains fine pigment rather than sand, stone paving or vegetation; native dots1 establishes sparse style, not detailed geology.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.104365+00:00",
+          "step": "create_required_views_states",
+          "phase": "World material and compatible boundary states",
+          "action": "Registered one continuous material period and reused the existing 256 eight-neighbor coverage geometries with bare-soil eligibility semantics.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+              "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/registered/repeat-comparison.png",
+              "sha256": "f51a9d993e5d6a93ee66abe5e161857504c7f0cf77a52b32bb3087a99145628a"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/boundary-examples-comparison.png",
+              "sha256": "4af6c50a47255b326b1cf7e666462df448289d52ce40388f6f980d49e3a73fd9"
+            }
+          ],
+          "review": "Viewed repeat and isolated/straight/bend/filled/concave examples. Native selector aliases retained without inventing unexported dots2/3/4 masks. No creature turnaround, equipment or liquid-depth state applies.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.105730+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Sparse earth refinement with explicit mask interpretation",
+          "action": "Used built-in ImageGen once on the editable coverage with actual private RimWorld Soil as grain reference, then registered the numeric output as pigment coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/refine-soil-prompt.txt",
+              "sha256": "a2cad4745f0b5ad7f257629200e324f3b6b0bce3c188c48e8a7b2c8266990649"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/constructed-coverage.png",
+              "sha256": "588190bfce24d4c66085b5facb9ade606eb0445fe9075c409076d645c987da13"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/refine-soil-prompt.txt",
+              "sha256": "a2cad4745f0b5ad7f257629200e324f3b6b0bce3c188c48e8a7b2c8266990649"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/refined-proposal.png",
+              "sha256": "79acb287a8b1c3104ce8d28b75dccd0b4d994afe841757ef99833d51ae0e74e4"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/register-soil.py",
+              "sha256": "4b8b00d8653e0f51e4ad3ed626820a0d71c77516571e207d54f66c896503f691"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/registration-decisions.json",
+              "sha256": "0d874faae5e2ff75ede0c3eb6c37995c69f07a48cf1a7a2ec2945f034eebff3f"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/registration-comparison.png",
+              "sha256": "3083186ddaa566c59ed476d5c4ec2c4197374e732c59ab7a65b7045ce72a7ce5"
+            }
+          ],
+          "review": "Viewed generated output: sparse fine irregular grit with low dark pedestal, no solid donor brown fill or discrete object. Removed pedestal and doubled weak coverage for readability, kept neutral RGB, and completed exact borders by reflection. Corrected small comparison previews to show one logical cell rather than an entire material period.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\tile-soil\\v1\\constructed-coverage.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/soil.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-170ec5d5-081b-48f9-a6bc-b352991b35cf.png",
+          "interpretation": "Fine earth coverage is authored; native w pigment and k background remain separate. Reflected repeat symmetry is retained as an authored limitation."
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.108655+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Independent neutral earth pigment and coverage",
+          "action": "Selected white neutral albedo with independent alpha, native foreground/background roles, world UV period and source-aware eligibility contract.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/source-packet.json",
+              "sha256": "1c1217a9dbeefe63185fee42de0767c26ff82a924fd0d26776506e3a829bcf8b"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/refined-proposal.png",
+              "sha256": "79acb287a8b1c3104ce8d28b75dccd0b4d994afe841757ef99833d51ae0e74e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/registered/model.json",
+              "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/neutral-material.png",
+              "sha256": "a0d3e91b214eaf66b6cc9c0eb72257b41785feac67a99f43908c2a7f6125bb7b"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/coverage.png",
+              "sha256": "88c0f2a9fa8a78f4deaa911fcaa5350903ceda9a7884a96f5b5892d86a2b2725"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/coverage-quadrant.png",
+              "sha256": "bc53e2e7284f184bea7386d867d6ee5c62415b1f9be8888cd3ec50012b9db282"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/native-color-preview.png",
+              "sha256": "8414903b1fb18542039281e0f89157711115ece357b6e1dceab8725d9365a409"
+            }
+          ],
+          "review": "Equal RGB, alpha matching stored coverage and exact opposing border pixels inspected. Current renderer Color.white/quad-local UV and broad selection are still pending integration; no claim of native support.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.113326+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Soil authoring review in layered field and static Joppa",
+          "action": "Viewed original/manual/refined/selected comparison at 16x24,24x36,32x48 and composed soil beside grassy substrate, three separate paint shapes and cobble paths.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/registered/model.json",
+              "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/registered/registration-comparison.png",
+              "sha256": "3083186ddaa566c59ed476d5c4ec2c4197374e732c59ab7a65b7045ce72a7ce5"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/soil-ground-path-comparison.png",
+              "sha256": "69bcdf0e0fe1f196b510aed9c6896d54c47472dcd86864b902b303d369a7d403"
+            },
+            {
+              "path": "art/conversion/tile-soil/v1/registered/static-joppa-authoring-comparison.png",
+              "sha256": "70993165527275a71218fd1b39ba434ab5f455ac79b7f3f91aa204f4794d0041"
+            }
+          ],
+          "review": "Fine brown grit remains distinct from stone paving and bright green shoots. Static Joppa view places only the 11 explicitly authored DirtFloor cells and386 DirtPath cells; implicit/generated terrain is not inferred. Wall blocks and grass distribution are context. These are authoring plates, not native captures.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:15:41.114932+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native bare-ground acceptance deferred",
+          "action": "Retained actual visibility, source ownership, native tint/layer and world-UV acceptance behind the all-conversions-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-soil/v1/registered/model.json",
+              "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edits. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-soil/v1/registered/model.json",
+          "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"
+        },
+        "plate": {
+          "path": "art/conversion/tile-soil/v1/registered/registration-comparison.png",
+          "sha256": "3083186ddaa566c59ed476d5c4ec2c4197374e732c59ab7a65b7045ce72a7ce5"
+        }
+      },
+      "registration_summary": "Fine bare-earth pigment over the native dark-teal field, preserving sparse brown Qud coverage. Neutral albedo and opacity remain separate from source-owned w/k tints. Small views show one logical cell; repeated/boundary/static-map authoring views are in the process record. Exact native binding and acceptance remain pending."
     },
     {
       "id": "TILE-WATER-DEEP",
@@ -15789,14 +16657,309 @@
       "known_issues": [
         "Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow."
       ],
-      "metadata": {},
+      "metadata": {
+        "source_packet": {
+          "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+          "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+        }
+      },
       "historical_artifacts": [
         {
           "path": "art/village/scenery/surface-water-deep.png",
           "sha256": "b535013b929f98312624b985a688d8e69fc7d136fd61b802a23305bf3df75bb1"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:18:18.199462+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Native pool identity and swimming-depth state",
+          "action": "Resolved Water/Pond/deep-pool definitions, exact original puddle reference, native palette and retained depth-predicate diagnostic.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            },
+            {
+              "path": "evidence/joppa-anatomy-study.json",
+              "sha256": "83a67a07c7e495c2b64b827853013f599fc132ec0a014420e53b982672fcede8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "review": "Viewed native pool context and the exported default mask. Dynamic connected pool appearance differs from the default puddle. Pond is500drams; swimming state is not inferred from that sprite or claimed present in the historical Joppa capture.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:18:18.200046+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Actual WaterDeepRamp, source-owned blue roles",
+          "action": "Selected extracted WaterDeepRamp for restrained overhead material variation, retaining native b/B source-color family.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-construction-comparison.png",
+              "sha256": "8ccfa5cb3100f1e8ffc6f2cf990973097c4a1cde5b583d18db333467dd61dab0"
+            }
+          ],
+          "review": "Viewed actual64x64 donor and constructed/source comparison. Its gray colors and donor depth simulation are not adopted. Current native depth capture is retained evidence; new coverage/blend bindings are pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:18:18.200210+00:00",
+          "step": "construct_shape",
+          "phase": "Editable flowing deep-water plane",
+          "action": "Constructed a periodic neutral surface with sparse curved ripples and quiet broad value modulation.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/prepare-and-construct.py",
+              "sha256": "14874ef0a0483492a43fd8389422d74355b1ed966ea5948071f43913b8a15ea6"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-ripple-mask.svg",
+              "sha256": "14ab37b4fcc400f1eb85922b5908313f0f62ca9c7b44e567b04fae38acf77bbf"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-ripple-mask.png",
+              "sha256": "4584e1e2aaf428755633b94eec6e090748823f529a90a813e10ceaddcf5017bc"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-qud-preview.png",
+              "sha256": "7458667a5f4f31342fdc9650d8bd9b8cd870cc3e2dda1bc8b5032fafd3ab5572"
+            }
+          ],
+          "review": "Viewed source comparison and editable mask. Current U-like arcs are intentionally a manual suggestion; refinement should make them less diagrammatic without adding bottom caustics, white foam or cell circles.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.503664+00:00",
+          "step": "construct_shape",
+          "phase": "Quiet flowing-water construction selected",
+          "action": "Retained the manually authored smooth plane and sparse flowing ripple concept after reviewing its refined material.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-ripple-mask.svg",
+              "sha256": "14ab37b4fcc400f1eb85922b5908313f0f62ca9c7b44e567b04fae38acf77bbf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-qud-preview.png",
+              "sha256": "7458667a5f4f31342fdc9650d8bd9b8cd870cc3e2dda1bc8b5032fafd3ab5572"
+            }
+          ],
+          "review": "No bottom caustics, foam rim or per-cell water circles added. Native-blue family remains authoritative; unseen swimming-water surface detail is an authored interpretation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.504037+00:00",
+          "step": "create_required_views_states",
+          "phase": "Independent wet-shore and deep-state coverage",
+          "action": "Registered one continuous material and reused the256 shared eight-neighbor geometric masks with two separate water/depth predicates.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+              "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/repeat-comparison.png",
+              "sha256": "cdb9e838bc6a6d039c0c61dfd16b7d532abebf02e1162857729022b323551107"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/connected-water-comparison.png",
+              "sha256": "8ffee47abe74593010dad9372fc1ff2de7aefd9a0f8a5662cfbc0dacb8d1692f"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/depth-transition-comparison.png",
+              "sha256": "938e942d9c571b9efa3635b6f27b8df85d37d9d358575f1012cf28ae0875c245"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/boundary-examples-comparison.png",
+              "sha256": "740be9a0e31610db9f84cfaafac2b302342982965e20cac041e68640ebc30808"
+            }
+          ],
+          "review": "Viewed filled repetition, connected wet shape, isolated/straight/bend/concave coverage and deep blend. Shallow comparison is explicitly a flat unfinished stand-in; no shallow conversion credit. One overhead material has no creature viewpoints or clothing.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.505198+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Deep-water flowing reflection refinement",
+          "action": "Refined the editable ripple plane using actual private WaterDeepRamp, replacing uniform U-arcs with elongated broken surface reflections.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/refine-water-prompt.txt",
+              "sha256": "09be67ff64e6129dbd01d9d75fe724caaad9141bf83fead7238671b1e9fb309c"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-ripple-mask.png",
+              "sha256": "4584e1e2aaf428755633b94eec6e090748823f529a90a813e10ceaddcf5017bc"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/refine-water-prompt.txt",
+              "sha256": "09be67ff64e6129dbd01d9d75fe724caaad9141bf83fead7238671b1e9fb309c"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/refined-proposal.png",
+              "sha256": "612d9a5971db0e31a4a450953e6350d9e6a2474ee1a833fa586f0a8d2c055474"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/register-water.py",
+              "sha256": "0468d15189738762aabfa4f9952368cb09f2e4b4f3196ad6c42a70c0c550b8c9"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/registration-decisions.json",
+              "sha256": "f1599647b70916e91f4db6b9c5a6edb289f5aa32930a3fdb25c7cd146a27b174"
+            }
+          ],
+          "review": "Viewed raw output and b/B composition. Refined output is neutral mask data, not gray game water. Controlled value extraction, uniform resampling and mirrored border completion retain quiet deep-water reflectance. No second generation or native run claimed.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\tile-water-deep\\v1\\constructed-ripple-mask.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/water-deep.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-76aa2cb7-0783-4259-952f-4746fb9c5f7d.png"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.506660+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Source-owned blue base and separate ripple layer",
+          "action": "Split neutral opaque base and neutral ripple-alpha layers, recorded exact b/B preview values, seamless world period and independent wet/deep coverage contract.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/refined-proposal.png",
+              "sha256": "612d9a5971db0e31a4a450953e6350d9e6a2474ee1a833fa586f0a8d2c055474"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/neutral-base.png",
+              "sha256": "78d253a08b9a22d27736fefb02c7f33e8c7cfe430dae83e869036d6a78ebde0f"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/neutral-ripples.png",
+              "sha256": "98cb3196804175132af61ec3f8b3c418f56252613054071feda34a939d9ffa5b"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/ripple-blend.png",
+              "sha256": "28f7cfe0b2dbf9b27d2c7c0e9d28967e71baeb9ce84932e4a02a6b12063aad6f"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/coverage.png",
+              "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/native-color-preview.png",
+              "sha256": "100f65ebda5dbae745174b512aa5c9cc7907c4bc25bc5042986b46d477b93c73"
+            }
+          ],
+          "review": "Neutral equal RGB and exact opposite borders inspected. Other liquids/mixes remain native fallback. This art does not transplant donor WaterDepth mechanics, change volumes or prove new runtime tint/boundary integration.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.508634+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Deep-water material and connected-pool authoring review",
+          "action": "Viewed refined, registered and one-logical-cell images at16x24,24x36,32x48, plus repeated and connected/depth-context plates.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/registration-comparison.png",
+              "sha256": "4f0f81766737b1f77816e6b4d67e432436d8c49d6ba1110681e624f0cf32df2b"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/connected-water-comparison.png",
+              "sha256": "8ffee47abe74593010dad9372fc1ff2de7aefd9a0f8a5662cfbc0dacb8d1692f"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/depth-transition-comparison.png",
+              "sha256": "938e942d9c571b9efa3635b6f27b8df85d37d9d358575f1012cf28ae0875c245"
+            }
+          ],
+          "review": "Sparse low-contrast reflections connect across cells without rims. The deep state is darker than the explicitly unfinished shallow stand-in. These are authored composites, not new captures or native animation acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:20:31.509279+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native water/depth acceptance deferred",
+          "action": "Retained tint, visibility, wet/deep predicate and boundary/UV acceptance for the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or renderer modification. Entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+          "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+        },
+        "plate": {
+          "path": "art/conversion/tile-water-deep/v1/registered/connected-water-comparison.png",
+          "sha256": "8ffee47abe74593010dad9372fc1ff2de7aefd9a0f8a5662cfbc0dacb8d1692f"
+        }
+      },
+      "registration_summary": "Connected swimming-depth water in native b/B blues, with separate neutral base/ripple layers and independent wet-shore/deep-blend coverage. Material runs continuously across cells. The depth-history plate uses an explicitly unfinished flat shallow stand-in; native binding and acceptance remain pending."
     },
     {
       "id": "TILE-MARSH",
@@ -15832,7 +16995,361 @@
           "sha256": "7fe15fb6e0ce5a17816a51f9bb4199c97b0a63041c0936231fef9569bd11ae35"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:00:11.973694+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Historical marsh slot resolved to grassy-field substrate",
+          "action": "Read the native village capture, floor/paint metadata and current adapter source to distinguish the broad ground material from native grass paint, soil and water.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/prepare-and-construct.py",
+              "sha256": "507428b5443053ba0f079c8dbc58e86a2793599dcae23f2636c9725a2c2bebb9"
+            },
+            {
+              "path": "docs/images/village-original.png",
+              "sha256": "63d9b6451c4c071ff79ec08795271229f415083d62e0b6113dfd2858733dbac7"
+            },
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaRenderer.cs",
+              "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9",
+              "original_source_path": "probe/JoppaRenderer.cs",
+              "git_revision": "245b8eecff1b30cd3b9c08bbac22fc701fc8a6e5"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaSimulation.cs",
+              "sha256": "67c92562743ccc6e65c277d31ec9b14a1ddbe2a4c9f7c33b8e667845bd69a2d9",
+              "original_source_path": "probe/JoppaSimulation.cs",
+              "git_revision": "245b8eecff1b30cd3b9c08bbac22fc701fc8a6e5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            }
+          ],
+          "review": "Dominant sampled native field is RGB(15,59,58), matching Qud k #0F3B3A. There is no original full turf texture or standalone substrate description. Current broad marsh slot/white tint/quad-local UV is historical integration behavior, not proof of the required new source-aware tint/world-UV/eligibility binding. No renderer behavior is changed now.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:00:11.974466+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Native dark-teal field and actual donor grain reference",
+          "action": "Selected native field background k as the color anchor and actual RimWorld Marsh only for restrained organic grain/material modulation.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-construction-comparison.png",
+              "sha256": "2c3074d2a1ef44ffd487ffe28311f16cd1280f64fbb5cec4b476c221d6294a81"
+            }
+          ],
+          "review": "Viewed native capture, donor material and manual tinted suggestion. No donor hue, puddle, water depth, new plant species or broad indoor green recolor is adopted. Source-owned field context and independent Grass1/2/3 paint remain explicit.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:00:11.974841+00:00",
+          "step": "construct_shape",
+          "phase": "Editable low-relief neutral ground suggestion",
+          "action": "Constructed a periodic editable SVG with quiet broad modulation and fine short material flecks, then composed the three separate grass paints over its native-k preview.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/prepare-and-construct.py",
+              "sha256": "507428b5443053ba0f079c8dbc58e86a2793599dcae23f2636c9725a2c2bebb9"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-ground.svg",
+              "sha256": "8a74533a567cbd03ca3c94852a659ce8b47c74be4e6fc4cfa9bea7272b96ef86"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-neutral.png",
+              "sha256": "6c51b49d6591b11e67a9c616f261f8691f68585e5a7089e0aac161b86507d660"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-qud-ground.png",
+              "sha256": "d2e209c7737324395cab79aed7afa04fb133527d5243f38c3e69016f02af06f6"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-context-comparison.png",
+              "sha256": "204979d04c2f0528e32a15e62a6054dd60ff4ef5f965aa33f0b59aa7732bb50f"
+            }
+          ],
+          "review": "Viewed neutral material and composed authoring arrangement. Surface is deliberately low relief so native green paint and objects remain readable; it contains no baked grass icons or water. Faint manual grain is a suggestion pending material refinement.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:05:29.610384+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Exact adapter source retained as conversion input",
+          "action": "Stored the byte-identical adapter source inspected for material role/tint/UV ownership, so later authorized integration edits cannot overwrite the recorded inputs.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaRenderer.cs",
+              "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9",
+              "original_source_path": "probe/JoppaRenderer.cs",
+              "git_revision": "245b8eecff1b30cd3b9c08bbac22fc701fc8a6e5"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaSimulation.cs",
+              "sha256": "67c92562743ccc6e65c277d31ec9b14a1ddbe2a4c9f7c33b8e667845bd69a2d9",
+              "original_source_path": "probe/JoppaSimulation.cs",
+              "git_revision": "245b8eecff1b30cd3b9c08bbac22fc701fc8a6e5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/adapter-source/provenance.json",
+              "sha256": "bd1277d99dffc107e0bae6aeebadcb8fc45b7d27d04146906dc3b9d4c4686964"
+            }
+          ],
+          "review": "Snapshot hashes equal the previously inspected root source. Original path and Git revision are retained; the source packet remains unchanged. Production adapter files are not modified.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.347830+00:00",
+          "step": "construct_shape",
+          "phase": "Quiet editable substrate design selected",
+          "action": "Retained the manual low-relief continuous plane and separate grass-paint design while selecting the refined grain.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-ground.svg",
+              "sha256": "8a74533a567cbd03ca3c94852a659ce8b47c74be4e6fc4cfa9bea7272b96ef86"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-neutral.png",
+              "sha256": "6c51b49d6591b11e67a9c616f261f8691f68585e5a7089e0aac161b86507d660"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-context-comparison.png",
+              "sha256": "204979d04c2f0528e32a15e62a6054dd60ff4ef5f965aa33f0b59aa7732bb50f"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/material-paint-path-comparison.png",
+              "sha256": "43292ad6ae82f4a644d4c751206901adb20caf79fd202c63ae6531e8080dc0f6"
+            }
+          ],
+          "review": "Native sparse glyphs/background do not supply a full turf bitmap; this material is explicitly authored. Native k background anchor and separate primary-tinted grass are preserved; no sand fill, raised plants or water is invented in the substrate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.349004+00:00",
+          "step": "create_required_views_states",
+          "phase": "Continuous field and shared boundary coverage selected",
+          "action": "Registered a world-repeating field plus compatible geometric eight-neighbor boundary masks, with eligibility semantics owned by native grassy-ground context.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/register-ground.py",
+              "sha256": "e5891e7a6a0b0d3608aa30ceda42a15fb6721c2ebdc94d48dec1a38fe8c8e332"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+              "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/model.json",
+              "sha256": "291312dea82fc18d9b5a58487857f07df1b11b1e70815daec33dd8b597f19c24"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/boundary-examples-comparison.png",
+              "sha256": "ab037305fed5b0cbc19ce46d699be441e2a4c6571132b8c04051fe0272e3baa8"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/repeat-comparison.png",
+              "sha256": "9f24836082f0ea380b4fe0b3704bda6fb99885fa83cd52b8729968d72a43855b"
+            }
+          ],
+          "review": "Viewed continuous fill, isolated/edge/bend/full/concave boundary examples and repeated field. Mask geometry is reused with new grassy-ground eligibility semantics, not DirtPath occupancy rules. Top-down substrate needs no creature facing or clothing. Water depth belongs to separate entries; soil-color boundary backdrop is unfinished context.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.349776+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Refined substrate grain and periodic completion selected",
+          "action": "Refined the manual neutral field with actual donor Marsh grain reference, then neutralized/tonally normalized and completed a periodic field by exact reflection.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/constructed-neutral.png",
+              "sha256": "6c51b49d6591b11e67a9c616f261f8691f68585e5a7089e0aac161b86507d660"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/refine-ground-prompt.txt",
+              "sha256": "698f94e0a7eb43aaf697daca49a16e3485c9209dd9e467a5e6c0f02703b771d9"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/register-ground.py",
+              "sha256": "e5891e7a6a0b0d3608aa30ceda42a15fb6721c2ebdc94d48dec1a38fe8c8e332"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/refined-proposal.png",
+              "sha256": "41aaf02b5682e3194c86a69a5f01aec6d53ac2c4beb706e1ff4cc480879aba5a"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/neutral-quadrant.png",
+              "sha256": "120fa34d1e6a4fbb56e87c85a8adcdf189a72fbd857e142f9ba6dd45cee5e76a"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/neutral-material.png",
+              "sha256": "974b618f3c47386cc8aca6a5aa557f9e3a045d670279821e24be5cd5a9fc7fa8"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/registration-decisions.json",
+              "sha256": "8122b18d69f8638c06ef629ebd6013ea7f67260cd9bb17d6533762d37478234f"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/repeat-comparison.png",
+              "sha256": "9f24836082f0ea380b4fe0b3704bda6fb99885fa83cd52b8729968d72a43855b"
+            }
+          ],
+          "review": "Viewed raw/refined and native-k result. Fine low-relief grain has no baked shoot icons, liquid, beige/green donor hue or deep relief. One successful material refinement followed by deterministic value/seam registration was sufficient; no unnecessary generator loop. Reflected periodic completion can introduce mirror symmetry and is recorded as an authoring limit.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-b966e831-5fba-4b2e-9755-da9fb8058aec.png"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.377136+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Neutral background albedo and independent paint resources registered",
+          "action": "Registered opaque equal-RGB material, native-background tint role, world period and exact shared boundary/paint resources.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/register-ground.py",
+              "sha256": "e5891e7a6a0b0d3608aa30ceda42a15fb6721c2ebdc94d48dec1a38fe8c8e332"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/refined-proposal.png",
+              "sha256": "41aaf02b5682e3194c86a69a5f01aec6d53ac2c4beb706e1ff4cc480879aba5a"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/source-packet.json",
+              "sha256": "c964588d5b3e44fb6e31ea8dbc6579ec4da66c8e24d96b9b916ac92622ff5d81"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+              "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/model.json",
+              "sha256": "291312dea82fc18d9b5a58487857f07df1b11b1e70815daec33dd8b597f19c24"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/registration-decisions.json",
+              "sha256": "8122b18d69f8638c06ef629ebd6013ea7f67260cd9bb17d6533762d37478234f"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/neutral-material.png",
+              "sha256": "974b618f3c47386cc8aca6a5aa557f9e3a045d670279821e24be5cd5a9fc7fa8"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/coverage.png",
+              "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/native-k-preview.png",
+              "sha256": "5692269622394cdf00cbb9c92c18287d8c40094defd503eb4d3542d4d2604b75"
+            }
+          ],
+          "review": "Inspected equal RGB, opaque coverage and matching reflected material borders as asset-authoring diagnostics. Material period is sixteen logical cells, with 64 source texels/cell. Preview tint k matches the captured dominant native field; green paint remains separate. Actual adapter native tint/world-UV/eligibility/layer binding is explicitly pending, not silently assumed from its old marsh filename.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.381219+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Grassy substrate generation ready",
+          "action": "Viewed repeated material, shared boundary cases, separate ground/three-paint/path composition and static Joppa layout at native 16x24 cell proportions.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/model.json",
+              "sha256": "291312dea82fc18d9b5a58487857f07df1b11b1e70815daec33dd8b597f19c24"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/registered/model.json",
+              "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"
+            },
+            {
+              "path": "art/conversion/tile-grass-3/v1/registered/family-comparison.png",
+              "sha256": "df2823f51bd494dcb03889e132913ca8d3c41492c06984e39a85282aef00e4e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/repeat-comparison.png",
+              "sha256": "9f24836082f0ea380b4fe0b3704bda6fb99885fa83cd52b8729968d72a43855b"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/boundary-examples-comparison.png",
+              "sha256": "ab037305fed5b0cbc19ce46d699be441e2a4c6571132b8c04051fe0272e3baa8"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/material-paint-path-comparison.png",
+              "sha256": "43292ad6ae82f4a644d4c751206901adb20caf79fd202c63ae6531e8080dc0f6"
+            },
+            {
+              "path": "art/conversion/tile-grassy-ground/v1/registered/static-joppa-authoring-comparison.png",
+              "sha256": "03785aaba0b2913181a70d2dab6e50c482de4614caed569621c8f52ea23d0c06"
+            }
+          ],
+          "review": "Dark-teal source family retains green paint and brown paths as readable distinct layers; no sandy or brown field substitution. Static layout/paint distribution/wall blocks are authoring context, not a current game capture or converted walls. Bare-soil and water roles remain separate unfinished work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:06:49.382740+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native ground integration acceptance deferred",
+          "action": "Kept actual source-owned tint, world-UV, grass eligibility, layer/occlusion and visibility reconciliation for the every-conversion-generated gate.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No renderer changes, game launch or native harness validation. Broad old adapter branch is not acceptance of the new material contract. Overall entry stays UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-grassy-ground/v1/registered/model.json",
+          "sha256": "291312dea82fc18d9b5a58487857f07df1b11b1e70815daec33dd8b597f19c24"
+        },
+        "plate": {
+          "path": "art/conversion/tile-grassy-ground/v1/registered/material-paint-path-comparison.png",
+          "sha256": "43292ad6ae82f4a644d4c751206901adb20caf79fd202c63ae6531e8080dc0f6"
+        }
+      },
+      "registration_summary": "Neutral low-relief grassy-ground material uses the native field background role; the preview applies captured dark teal k #0F3B3A. Three source-specific grass paints and the selected stone path are separate layers. Static-map placement/wall blocks are context, not current gameplay. Native adapter tint/world-UV/eligibility/layer wiring remains required after generation.",
+      "native_acceptance": "Pending final all-conversions validation gate"
     },
     {
       "id": "TILE-SAND",
@@ -16162,14 +17679,314 @@
       "known_issues": [
         "Procedural draft material only; identity, texture scale and transitions must be reviewed through the complete workflow."
       ],
-      "metadata": {},
+      "metadata": {
+        "source_packet": {
+          "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+          "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+        }
+      },
       "historical_artifacts": [
         {
           "path": "art/village/scenery/surface-water-shallow.png",
           "sha256": "8780a3673213ef15a86e5c7d530de52631fbc7a63f534adf0eec9c3d860c2ab5"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:21:49.528083+00:00",
+          "step": "source_identity_description_metadata",
+          "phase": "Native shallow pool and distinct depth predicates",
+          "action": "Reused the source-bound Water/Pond definitions, exact original/capture and historical depth observations with explicit producer provenance; rechecked installed/private source hashes.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            }
+          ],
+          "review": "Pond is500drams of water/salt. Wading and thin puddles are not equated, and swimming uses its own native predicate. No new depth/volume or movement rules are inferred from art.",
+          "result": "PASS",
+          "reuse_of_entry": "TILE-WATER-DEEP"
+        },
+        {
+          "timestamp": "2026-10-20T04:21:49.528369+00:00",
+          "step": "original_and_render_reference_decision",
+          "phase": "Actual WaterShallowRamp and native pool colors",
+          "action": "Selected actual extracted WaterShallowRamp for smooth overhead tonal modulation, retaining source b/B rather than donor hue.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-construction-comparison.png",
+              "sha256": "46b15694aaf90593a27cc051a35d9c7300f87ec8c5dfee22f0b7560b79532285"
+            }
+          ],
+          "review": "Viewed original pool context, actual64x64 donor and manual comparison. Fine shallow wavelets/more bright-blue coverage are documented design choices; native depth is not a palette lookup.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:21:49.528600+00:00",
+          "step": "construct_shape",
+          "phase": "Editable fine shallow wavelets",
+          "action": "Constructed a brighter neutral plane with many smaller irregular curved strokes and soft broad value modulation.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/prepare-and-construct.py",
+              "sha256": "908ea1752bf614fdb74479037f531919d346f8cc3f7b7bfc71068c27230cdf86"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-ripple-mask.svg",
+              "sha256": "8317921b398e209a923beccfd163b77b20908fcaa117b2ee9fb4aaf6d55cf9c6"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-ripple-mask.png",
+              "sha256": "47ac2873b171f6248b4e924f5da23939509f64aef23db2daea36628b229f01e2"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-qud-preview.png",
+              "sha256": "cbc317385ae5eb2c8668b6c95c44d3774432a6a60786ba69aa4a9467f47d8da0"
+            }
+          ],
+          "review": "Viewed manual surface and mask. Its finer wavelet scale differs from deep, while source blue family/frame remain shared. Refinement will remove diagrammatic repeated U strokes.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.992390+00:00",
+          "step": "construct_shape",
+          "phase": "Fine shallow-water construction selected",
+          "action": "Retained the brighter neutral plane and smaller more frequent ripples, then reviewed the refined material against deep.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-ripple-mask.svg",
+              "sha256": "8317921b398e209a923beccfd163b77b20908fcaa117b2ee9fb4aaf6d55cf9c6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-qud-preview.png",
+              "sha256": "cbc317385ae5eb2c8668b6c95c44d3774432a6a60786ba69aa4a9467f47d8da0"
+            }
+          ],
+          "review": "Shallow is its own material, not a recolored copy of deep. Both preserve the native blue family and omit bottom rocks, caustic web, foam, cell rims or invented simulation behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.992845+00:00",
+          "step": "create_required_views_states",
+          "phase": "Connected shoreline and paired selected depth materials",
+          "action": "Registered one world material and256 shared neighbor shapes with independent wet/deep predicates; composed the selected shallow with the already selected deep resource.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            },
+            {
+              "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+              "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/repeat-comparison.png",
+              "sha256": "e612c86f262b9e26bbb0c7b42474f752dc20ca58dc5b9485419116f2aff17263"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/connected-water-comparison.png",
+              "sha256": "a268357db2ca4f18e4fd50856ee5adf9c16683bb6baf71e59d8da890a961494b"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/depth-transition-comparison.png",
+              "sha256": "f9d5936a9cd2037f94a92f2c4fba958b012bc17a6d1023923c41d31c50da7e26"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/boundary-examples-comparison.png",
+              "sha256": "133c9e4d442866b773dd3eb4fe8944a836b233c5e03d5ec055b544bf159b576e"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/family-comparison.png",
+              "sha256": "3b4eb71e828e69502429881e544d3f04c0b583a566a8e1366b04002507868f54"
+            }
+          ],
+          "review": "Viewed repetition, boundary shapes, two-material family and selected depth blend. Static map shows declared Pond cells only, not runtime spreading. No creature turnarounds or clothing applies. Deep art and its logged stand-in history remain unchanged.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.994237+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Shallow-water small-wavelet refinement",
+          "action": "Used built-in ImageGen once with editable shallow construction and actual WaterShallowRamp, then extracted its brighter blend field.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/refine-water-prompt.txt",
+              "sha256": "b96a753288b56c7a4b36d72bc40a72d8d6ad4b2bf8d530d3f80185a82de175a7"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-ripple-mask.png",
+              "sha256": "47ac2873b171f6248b4e924f5da23939509f64aef23db2daea36628b229f01e2"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/refine-water-prompt.txt",
+              "sha256": "b96a753288b56c7a4b36d72bc40a72d8d6ad4b2bf8d530d3f80185a82de175a7"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/refined-proposal.png",
+              "sha256": "bf58fa3c0a7ffe6143da82fded60696b5ce425611b6406ed27b11683fb18f42f"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/register-water.py",
+              "sha256": "09849bd28678870dd54acf8b956ff3f362aec6ab86b0b1b52643744f90cd25fd"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/registration-decisions.json",
+              "sha256": "a81314106a65058b234a6f0b3c0499146ddf6157a4fab805a9201ea6198046d1"
+            }
+          ],
+          "review": "Viewed raw/refined and b/B surface. Replaced uniform manual U marks with finer broken wavelets. Uniform resampling/value mapping and reflected completion keep exact borders; brighter coverage differentiates it from calmer deep water without adding a new hue.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\tile-water-shallow\\v1\\constructed-ripple-mask.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/water-shallow.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-75bdfcf7-2fb9-43ba-9df4-f75d30773b93.png"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.995706+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Independent shallow base and ripple roles",
+          "action": "Registered separate neutral base and ripple-alpha layers with exact source b/B preview palette, continuous world period and native wet/depth eligibility.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/refined-proposal.png",
+              "sha256": "bf58fa3c0a7ffe6143da82fded60696b5ce425611b6406ed27b11683fb18f42f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+              "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/neutral-base.png",
+              "sha256": "78d253a08b9a22d27736fefb02c7f33e8c7cfe430dae83e869036d6a78ebde0f"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/neutral-ripples.png",
+              "sha256": "c78697ea1d5986b9b38eba90488939370d34d76ad69618b27143faafe83e5bff"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/ripple-blend.png",
+              "sha256": "9b391376b661b8b49e8618cc4298699ab8bd481cca40bc1075393a7e40f4fa22"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/coverage.png",
+              "sha256": "92d103ae3b35360d5c817ca0287ddaf222ce4889a230003c99128f0c56eef900"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/native-color-preview.png",
+              "sha256": "7835de6d5907465c126e0f679b6c0ddb5f0f25a60ca0df53597b8d4bafe420d4"
+            }
+          ],
+          "review": "Equal RGB and exact opposite material borders inspected. The paired deep model is hash-bound; native color resolution, dynamic state/visibility and boundary rendering remain pending. No color is baked into production resources.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.997629+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Selected shallow/deep family and map authoring review",
+          "action": "Viewed one-cell16x24,24x36,32x48 previews, full repeats, connected boundaries and the two selected water materials together.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+              "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/registration-comparison.png",
+              "sha256": "7e9e7a5a5fe164e5393dc6e5dc807c0e06d9d33959d31cf61ab5f4a335e6f980"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/family-comparison.png",
+              "sha256": "3b4eb71e828e69502429881e544d3f04c0b583a566a8e1366b04002507868f54"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/depth-transition-comparison.png",
+              "sha256": "f9d5936a9cd2037f94a92f2c4fba958b012bc17a6d1023923c41d31c50da7e26"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/static-joppa-authoring-comparison.png",
+              "sha256": "a2829d2948611931276ed4f9f4a03c7f059e4c6ed0547ae6bd530bec04a6d130"
+            }
+          ],
+          "review": "Shallow reads lighter with finer wavelets; deep reads darker/calmer. Water coverage has no cell rims, and deep-to-shallow boundary is distinct from shore. Static Joppa plate uses declared Pond/path cells with contextual walls, not a native capture or depth/spreading test.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:23:53.998473+00:00",
+          "step": "native_review_applicable_states",
+          "phase": "Native shallow/deep acceptance deferred",
+          "action": "Kept source tint/visibility, thin/wading/swimming state, layer/UV and boundary acceptance for the all-conversions-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+              "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer changes. Entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+          "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+        },
+        "plate": {
+          "path": "art/conversion/tile-water-shallow/v1/registered/depth-transition-comparison.png",
+          "sha256": "f9d5936a9cd2037f94a92f2c4fba958b012bc17a6d1023923c41d31c50da7e26"
+        }
+      },
+      "registration_summary": "Selected shallow and deep water materials composed with independent wet-shore/depth coverage. Shallow uses finer brighter wavelets; deep remains calmer and darker, both using native b/B preview roles. Neutral layers stay separate from native color/state ownership. These are authoring plates; native acceptance remains pending."
     },
     {
       "id": "FIT-DROMAD-CHILD-TEMPLATE-TUNIC",
@@ -17719,8 +19536,8 @@
         }
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -18958,7 +20775,272 @@
         }
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:25:58.188738+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Pond blueprint and actual liquid state binding",
+          "action": "Bound the Pond source to its installed description/render/volume facts and the two performed water conversion packets.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/source-packet.json",
+              "sha256": "f5b34d0c56997f7600c94da74d3d9951f2f2c484b56098d05c58c9348512c9ca"
+            }
+          ],
+          "review": "Pond is an open500dram water/salt volume in the definitions. State selection remains native; neither the default puddle sprite nor this art changes traversability, mixture or volume.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.189319+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Adopted documented actual shallow/deep references",
+          "action": "Reused actual WaterShallowRamp and WaterDeepRamp reference decisions from the producer records.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-packet.json",
+              "sha256": "43134367f358cffb94d2db48075e4615429894422738daec59c157023d029941"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-packet.json",
+              "sha256": "8230923b0d489de9b6a633692dc5094f212dbbac12584977a6365fd1c443e145"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/source-construction-comparison.png",
+              "sha256": "46b15694aaf90593a27cc051a35d9c7300f87ec8c5dfee22f0b7560b79532285"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/source-construction-comparison.png",
+              "sha256": "8ccfa5cb3100f1e8ffc6f2cf990973097c4a1cde5b583d18db333467dd61dab0"
+            }
+          ],
+          "review": "Source/comparison plates were viewed during those conversions and reread for this binding. Neutral native-blue presentation replaces donor hue; no new reference extraction or ImageGen call is claimed.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.189676+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Adopted editable original-to-water constructions",
+          "action": "Adopted both separately authored ripple constructions as the actual Pond surface inputs.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-ripple-mask.svg",
+              "sha256": "8317921b398e209a923beccfd163b77b20908fcaa117b2ee9fb4aaf6d55cf9c6"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-ripple-mask.svg",
+              "sha256": "14ab37b4fcc400f1eb85922b5908313f0f62ca9c7b44e567b04fae38acf77bbf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/constructed-qud-preview.png",
+              "sha256": "cbc317385ae5eb2c8668b6c95c44d3774432a6a60786ba69aa4a9467f47d8da0"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/constructed-qud-preview.png",
+              "sha256": "7458667a5f4f31342fdc9650d8bd9b8cd870cc3e2dda1bc8b5032fafd3ab5572"
+            }
+          ],
+          "review": "Original native pool context, manual grayscale and native-color suggestions remain linked. This row is the blueprint/state binding of those performed workflows, not a third duplicate texture.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.190038+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Shallow, swimming, mixed-depth and foreground states",
+          "action": "Composed the two selected materials using separate wet/deep masks, then added independently decoded native Watervine foreground only as context.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+              "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            },
+            {
+              "path": "art/conversion/scn-pond/v1/source-packet.json",
+              "sha256": "f5b34d0c56997f7600c94da74d3d9951f2f2c484b56098d05c58c9348512c9ca"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/assemble-pond.py",
+              "sha256": "80b95a20eb08abf63f2b49e94f34ea1f66324a538e00a95c338019d7e0dfc3e5"
+            },
+            {
+              "path": "art/conversion/scn-pond/v1/states-comparison.png",
+              "sha256": "061d303acec51b672932c531f37a99fa9ff0143e1017785d50a2eb3e0194e903"
+            },
+            {
+              "path": "art/conversion/scn-pond/v1/foreground-comparison.png",
+              "sha256": "859d9aa27bb0c4a7894d60514b50319f081f13d9cc913534aacd2162171c65a3"
+            }
+          ],
+          "review": "Viewed the same wet footprint in shallow-only, deep-only and mixed/foreground states at16x24 display-cell proportions. Foreground keeps its own primary/detail tint and alpha without water clipping or opaque black boxes. Native vegetation remains unconverted.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.190817+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Adopted actual refined water outputs and registration patches",
+          "action": "Reused the saved shallow/deep ImageGen outputs, value extraction and exact-border registration decisions; no duplicate generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/registration-decisions.json",
+              "sha256": "a81314106a65058b234a6f0b3c0499146ddf6157a4fab805a9201ea6198046d1"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/registration-decisions.json",
+              "sha256": "f1599647b70916e91f4db6b9c5a6edb289f5aa32930a3fdb25c7cd146a27b174"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/refined-proposal.png",
+              "sha256": "bf58fa3c0a7ffe6143da82fded60696b5ce425611b6406ed27b11683fb18f42f"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/refined-proposal.png",
+              "sha256": "612d9a5971db0e31a4a450953e6350d9e6a2474ee1a833fa586f0a8d2c055474"
+            },
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/family-comparison.png",
+              "sha256": "3b4eb71e828e69502429881e544d3f04c0b583a566a8e1366b04002507868f54"
+            }
+          ],
+          "review": "Both masks/refinements are part of the producer logs with exact prompts/inputs/hashes. Pond binding retains the distinction between source facts and authored reflectance. Native foreground remains contextual and receives no conversion credit.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.193242+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Hash-bound independent water material recipe",
+          "action": "Saved the Pond recipe with separate shallow/deep model references, wet/deep geometry and foreground layer ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+              "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+            },
+            {
+              "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+              "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+            },
+            {
+              "path": "art/conversion/scn-pond/v1/source-packet.json",
+              "sha256": "f5b34d0c56997f7600c94da74d3d9951f2f2c484b56098d05c58c9348512c9ca"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/model.json",
+              "sha256": "803655d3b52a757ed32f018ebf22a3d016cbc1932f8231d59e2e07878f1040bb"
+            }
+          ],
+          "review": "Read back linked material registrations. No neutral source pixel is mutated; native color/eligibility/visibility resolution and runtime selection remain final integration work.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.193502+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Pond identity and foreground authoring review",
+          "action": "Viewed connected shores, depth contrast and original transparent foreground over both selected liquid surfaces.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/model.json",
+              "sha256": "803655d3b52a757ed32f018ebf22a3d016cbc1932f8231d59e2e07878f1040bb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/states-comparison.png",
+              "sha256": "061d303acec51b672932c531f37a99fa9ff0143e1017785d50a2eb3e0194e903"
+            },
+            {
+              "path": "art/conversion/scn-pond/v1/foreground-comparison.png",
+              "sha256": "859d9aa27bb0c4a7894d60514b50319f081f13d9cc913534aacd2162171c65a3"
+            }
+          ],
+          "review": "The original liquid identity, native blue family, distinct shallow/deep materials and separate object layer remain readable. Pool layout is authored; this is not a native state/priority or animation test.",
+          "result": "PASS",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        },
+        {
+          "timestamp": "2026-10-20T04:25:58.194035+00:00",
+          "step": "native_state_review",
+          "phase": "Native Pond acceptance deferred",
+          "action": "Retained actual liquid/foreground priority, visibility, source tint and state acceptance behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-pond/v1/model.json",
+              "sha256": "803655d3b52a757ed32f018ebf22a3d016cbc1932f8231d59e2e07878f1040bb"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or new runtime changes. Overall subject remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED",
+          "reuse_of_entry": [
+            "TILE-WATER-SHALLOW",
+            "TILE-WATER-DEEP"
+          ]
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-pond/v1/model.json",
+          "sha256": "803655d3b52a757ed32f018ebf22a3d016cbc1932f8231d59e2e07878f1040bb"
+        },
+        "plate": {
+          "path": "art/conversion/scn-pond/v1/states-comparison.png",
+          "sha256": "061d303acec51b672932c531f37a99fa9ff0143e1017785d50a2eb3e0194e903"
+        }
+      },
+      "registration_summary": "Pond binds the already authored shallow and deep surfaces to native liquid state and separate wet/deep coverage. Native Watervine is transparent foreground context only, with no conversion credit. Original/reference/manual/refinement evidence is reused explicitly from the two producer entries; no duplicate generation. Native acceptance remains pending."
     },
     {
       "id": "SCN-RUSTEDMETALWALL",

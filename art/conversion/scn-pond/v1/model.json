@@ -1,0 +1,32 @@
+{
+  "kind": "liquid_blueprint_art_binding",
+  "blueprint": "Pond",
+  "native_description": "A pool of liquid.",
+  "materials": {
+    "shallow": {
+      "path": "art/conversion/tile-water-shallow/v1/registered/model.json",
+      "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"
+    },
+    "swimming": {
+      "path": "art/conversion/tile-water-deep/v1/registered/model.json",
+      "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"
+    }
+  },
+  "native_state": "Actual visible open water-bearing LiquidVolume; native depth predicates and actual volume/mixture. No inferred or modified fluids.",
+  "shared_geometry": {
+    "path": "art/conversion/scn-dirtpath/v1/constructed-neighbor-index.json",
+    "sha256": "696e91b7df47c5f0c16666fb8cb96b2f3495028264c661f7240c2cd68722498a"
+  },
+  "source": {
+    "path": "art/conversion/scn-pond/v1/source-packet.json",
+    "sha256": "f5b34d0c56997f7600c94da74d3d9951f2f2c484b56098d05c58c9348512c9ca"
+  },
+  "layer_contract": [
+    "Source-owned ground/background",
+    "Shallow liquid clipped by actual wet coverage",
+    "Deep liquid blended only within the wet domain using native swimming-neighbor coverage",
+    "Independent native visible foreground or its separately converted art, retaining its own tint/alpha and draw priority"
+  ],
+  "separation": "This binding does not replace actors/plants/props with water, tint them blue or mark their unfinished conversions complete. Preserve native fallback on unsupported liquids/states.",
+  "state": "Generation-ready authored recipe only; runtime binding and native acceptance pending"
+}

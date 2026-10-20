@@ -30,10 +30,17 @@ The DirtPath and shared path-material records now select one source-bound
 cobblestone-like surface with native brown tint, independent grass coverage and
 eight-neighbor states. The report includes manual, refined, patched and selected
 material views plus a static Joppa layout; these are not native game captures.
-Basic Grass 1 is generation-ready as sparse neutral paint with its source cell
-frame retained. Its first faint registration and direct width/value correction
-are both recorded. There are now 14 generation-ready entries; Basic Grass 2 is
-active next. Other grass/ground, walls, furniture and remaining entries are unfinished.
+All three Basic Grass variants are generation-ready as sparse neutral paint,
+with their distinct source layouts and common cell frame retained. The report
+records Grass 1's first faint registration and direct width/value correction.
+The grassy-field substrate now uses Qud's native dark-teal background, while bare
+soil adds sparse native-brown grit through separate coverage. Selected shallow
+and deep water use separate refined materials in the native blue family, with
+independent shoreline and depth-blend coverage. Pond binds those two documented
+conversions and preserves separate foreground objects; the native Watervine used
+in its composition is context only. These are authoring plates, not game captures.
+There are now 21 generation-ready entries; Brinestalk Wall is active next.
+Walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

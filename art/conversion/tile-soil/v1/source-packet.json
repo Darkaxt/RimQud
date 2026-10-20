@@ -1,0 +1,120 @@
+{
+  "entry": "TILE-SOIL",
+  "recorded_at": "2026-10-20T04:12:27.904303+00:00",
+  "identity": "DirtFloor -> Floor -> CosmeticObject, packed dirt floor; soil.png is an adapter resource slot, not a replacement for every interior/terrain type",
+  "description": "No native Description.Short on this floor. Render.DisplayName is packed dirt floor. Cosmetic non-solid terrain; no creature anatomy, clothing or movement animation applies.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected_definitions": {
+      "Floor": "<object Name=\"Floor\" Inherits=\"CosmeticObject\">\n    <part Name=\"Render\" DisplayName=\"[Ground]\" RenderString=\".\" RenderLayer=\"0\" RenderIfDark=\"true\" Tile=\"terrain/sw_ground_dots1.png\" />\n    <part Name=\"Physics\" Solid=\"false\" Takeable=\"false\" Weight=\"-1\" Category=\"Terrain\" FreezeTemperature=\"-9999\" BrittleTemperature=\"-9999\" FlameTemperature=\"99999\" VaporTemperature=\"9999\" />\n    <tag Name=\"NoPassByMessage\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"IgnoreOccupationChecks\" />\n    <tag Name=\"HideInNearbyItemsList\" />\n  </object>\n  ",
+      "DirtFloor": "<object Name=\"DirtFloor\" Inherits=\"Floor\">\n    <part Name=\"Render\" DisplayName=\"packed dirt floor\" RenderString=\"250\" ColorString=\"&amp;w\" DetailColor=\"w\" RenderLayer=\"0\" />\n    <part Name=\"RandomTileOnMove\" Tiles=\"Terrain/sw_ground_dots1.png,Terrain/sw_ground_dots2.png,Terrain/sw_ground_dots3.png,Terrain/sw_ground_dots4.png\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>\n  ",
+      "DirtPath": "<object Name=\"DirtPath\" Inherits=\"DirtFloor\">\n    <part Name=\"Render\" DisplayName=\"dirt path\" />\n    <tag Name=\"NoSparkingQuest\" />\n  </object>\n  "
+    }
+  },
+  "original": {
+    "tile": "terrain/sw_ground_dots1.png",
+    "description": "",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "packed dirt floor",
+      "RenderString": "250",
+      "RenderLayer": "0",
+      "RenderIfDark": "true",
+      "Tile": "terrain/sw_ground_dots1.png",
+      "ColorString": "&w",
+      "DetailColor": "w"
+    },
+    "kind": "scenery",
+    "blueprint": "DirtFloor",
+    "reference_file": "village-originals/dirtfloor-reference.png",
+    "native_mask_sha256": "b2019af79f44f1b930c42b380cb8f25503fcc66a79fe71b0ed4e97f9b4d21c61",
+    "reference_sha256": "7ead118d5300382b0e50e8397bc67bce21b83e1f959bff7b0ec5d22e8770e192",
+    "info_id": 11208,
+    "atlas_id": 203,
+    "rect": [
+      432,
+      208,
+      16,
+      24
+    ]
+  },
+  "native_coverage": [
+    {
+      "x": 10,
+      "y": 3,
+      "role": "primary"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "role": "detail"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "role": "primary"
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "role": "primary"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "role": "primary"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "role": "detail"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "role": "primary"
+    },
+    {
+      "x": 4,
+      "y": 23,
+      "role": "primary"
+    }
+  ],
+  "source_color_roles": {
+    "primary": "w",
+    "detail": "w",
+    "brown_hex": "98875f",
+    "field_background": "k",
+    "background_hex": "0f3b3a",
+    "explanation": "The mask has six primary and two detail points; both use native brown w. All other pixels retain native field background. The reference image includes its extraction preview background; it is not the actual shader background."
+  },
+  "native_selectors": [
+    "Terrain/sw_ground_dots1.png",
+    "Terrain/sw_ground_dots2.png",
+    "Terrain/sw_ground_dots3.png",
+    "Terrain/sw_ground_dots4.png"
+  ],
+  "selector_limit": "Only dots1 was exported as an exact original mask. The four selectors are declared native aliases, not four independently observed or reconstructed masks. The authored continuous packed-earth material can serve those aliases without claiming their unexported point layouts.",
+  "donor_reference": {
+    "file": "soil.png",
+    "source_id": 2815,
+    "name": "Soil",
+    "width": 1024,
+    "height": 1024,
+    "png_sha256": "1546958a4f6e2cf1924ad59fd78572f73b4e80ce489692bad14a5662d32cede1",
+    "package_sha256": "5b71f35635d1a45d1727164ebbf05db6c9af48cfb823934d8c9bd9435207c6c7",
+    "role": "Actual extracted RimWorld Soil supplies fine irregular packed-earth grain and scale only. Do not copy its broad solid brown fill, color, mechanics or per-cell material repetition."
+  },
+  "construction": "Editable periodic neutral coverage: quiet fine compressed earth, sparse grit and shallow scuffs. Retain broad native dark-teal negative space and native-brown deposits. No cobblestones, regular slabs, sand dunes, plants or water.",
+  "material_contract": "Independent neutral RGB + opacity; native primary tint w over the source-owned background k. Do not bake the preview colors into production. Where another object owns the visible cell, respect native visibility/layer ownership.",
+  "required_states": "Seamless world-continuous coverage and eight-neighbor transition shapes. These masks use actual bare-soil eligibility, not path occupancy. No liquid depth or humanoid views apply.",
+  "distinction": "DirtPath inherits DirtFloor, but its user-directed cobble interpretation is separate. This entry is fine bare soil/interior ground and must not replace all visible floors with paving.",
+  "registration": "World-anchored repeat independent of cell crop. No body/contact pivot. Preserve Qud rectangular display-cell proportions in comparison views.",
+  "adapter_evidence": {
+    "path": "art/conversion/tile-grassy-ground/v1/adapter-source/JoppaRenderer.cs",
+    "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"
+  },
+  "binding_pending": "Existing broad adapter selection uses Color.white and quad-local UV. The new neutral coverage, native background/foreground tint and precise source eligibility need final integration after every entry is generated.",
+  "native_acceptance": "Deferred until all conversions are generation-ready"
+}
