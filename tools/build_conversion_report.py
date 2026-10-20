@@ -38,10 +38,13 @@ def render(data):
         parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
         if e.get('current_registration'):
             current=e['current_registration']
-            parts.append('<h3>Current registered artwork</h3><p>All facings share the marked canvas center and ground anchor. Side silhouettes may extend forward. Earlier sheets below are retained as process history.</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current layer registration</a></p>')
+            parts.append('<h3>Current registered artwork</h3><p>Use this registered version for layer alignment. The gold guide marks the shared horizontal pivot; the ground guide marks the common contact baseline. Body, head, masks and fitted clothing share that frame. A muzzle, hump or forward-pointing foot can extend beyond the pivot without moving it.</p><div class="gallery">'+artifact(current['plate'])+'</div><p><a href="../'+h(current['model']['path'])+'">Current layer registration</a></p>')
         parts.append('<ol class="workflow">'+''.join(f'<li class="{"pass" if s in passed else "pending"}">{h(s.replace("_"," "))} — {"recorded PASS" if s in passed else "pending"}</li>' for s in e['required_steps'])+'</ol>')
         if e.get('current_registration'):
             parts.append('<h3>Process history, including superseded sheets</h3>')
+            parts.append('<p class="pending">These records include raw ImageGen sheets with uneven placement and superseded registrations. Their placement is not the current runtime alignment. Refer to Current registered artwork above for the selected frame. Native movement acceptance remains pending.</p>')
+        elif logs:
+            parts.append('<p class="pending">No current registered output is selected for this entry. The images below are authoring evidence; their position on a sheet does not establish a stable runtime pivot.</p>')
         parts.append('<div class="timeline">')
         for i,event in enumerate(logs,1):
             parts.append(f'<section class="event"><small>{i:02} / {h(event["timestamp"])} / {h(event.get("result","PENDING"))}</small><h3>{h(event.get("phase",event["step"].replace("_"," ")))}</h3><p>{h(event["action"])}</p><p><strong>Review:</strong> {h(event.get("review","Not yet reviewed"))}</p>')

@@ -14738,7 +14738,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "IN PROGRESS",
-      "current_step": "construct_shape",
+      "current_step": "extract_register_palette_masks",
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -14873,6 +14873,166 @@
           ],
           "review": "Viewed original glyph, fixed camelfolk body and selected tunic material. Human garment placement will not be reused as a dromad fit. Long neck, hump and painted near arm require their own garment coverage.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:38:41.300482+00:00",
+          "step": "construct_shape",
+          "phase": "Editable species-specific tunic suggestion",
+          "action": "Constructed the real Woven Tunic as separate neutral fabric and waist rope around the selected child-dromad neck/hump, without changing body/head pixels. Used the explicit head opening and a static painted-arm cutout.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/construct-garment.py",
+              "sha256": "5aa81a7f4650c2bdfc403f1823d2e914e0641155bb93fd2abe92fc29de6acf02"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-fit-comparison.png",
+              "sha256": "094def255e4752ec238c8976d3157399ee99acf3f44eae30e7d955c173e12784"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-isolated-comparison.png",
+              "sha256": "7cc1eb18885522615b7b12323ee70db1791c5be478e0dbc0f176e46bb0350c56"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-south.svg",
+              "sha256": "0fdf5072f338bbecbcf6d04deb2fd3208eea614f9c78463ccfe2e50e81747526"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-east.svg",
+              "sha256": "a705d20d3f52dd3a421ed884ab28cf03cf613c6f1d474c9b0949e10b73344377"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-north.svg",
+              "sha256": "4898d281eeddecc6e68094bd48e0c98a16116518b34f8011ea63d93c3d2a037d"
+            }
+          ],
+          "review": "Viewed complete assembly. Tunic covers the integrated hump with a long-neck opening, front rope knot and visible side forearm/hand. Neck seam and hump cloth fit are construction suggestions for in-context refinement, not final fitting acceptance.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:38:41.301386+00:00",
+          "step": "create_required_views_states",
+          "phase": "Directional cloth and coverage construction",
+          "action": "Constructed front, true profile and rear fabric/sleeve/rope geometry; rear omits the front knot. West will mirror the finished east view.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-packet.json",
+              "sha256": "f4dbdd2f99bea2ff1b3d7b25db587ff8b82cc5590d2587b8aaa918083c0638c7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/construct-garment.py",
+              "sha256": "5aa81a7f4650c2bdfc403f1823d2e914e0641155bb93fd2abe92fc29de6acf02"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-south.png",
+              "sha256": "2e3c53b3b8ea8da790dc9b10d14b3b3613dc9e21d3c2a34f7cf4dedd04ffb2e8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-east.png",
+              "sha256": "3f65719e377c2266c24045c838a0421222409c5fab946e8b62d24e2b61536452"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-north.png",
+              "sha256": "4a51a3501f85fdc0aa24b1b66c09155f351fcf70756412a11cff44e76a151008"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-arm-cut-south.png",
+              "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-arm-cut-east.png",
+              "sha256": "5c834c3a805831ff0a81171ece7389a3dc091e992bef49f291497553d02be08c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-arm-cut-north.png",
+              "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"
+            }
+          ],
+          "review": "Distinct garment orientation follows the body rather than rotating only the head. No new limb render nodes. Actual native equip/unequip states remain deferred until all conversions.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:40:37.451873+00:00",
+          "step": "correct_errors_and_refine",
+          "phase": "Flax tunic refined in species context",
+          "action": "Refined the single garment around the long neck and integrated hump using the source item/material plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-fit-comparison.png",
+              "sha256": "094def255e4752ec238c8976d3157399ee99acf3f44eae30e7d955c173e12784"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/source-comparison.png",
+              "sha256": "d0908c92414609e45044483a64bb935f4471f03eb28bba8ee245a1ec816b2a67"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/refine-context-prompt.txt",
+              "sha256": "9f3a197419efea4cc7316952501676a5d4d1c69f0e9d6f9a0bb6bde68aa6fbfd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/refined-context.png",
+              "sha256": "64ccdc476c4105faf8d9b0b4aa8d8245711059d2bd2a470cf35957ac3b70e56e"
+            }
+          ],
+          "review": "Viewed refined flax/rope treatment: distinct directional sleeves and visible side forearm/hand, no extra hood or hump object. The generator reframed the figures; their body pixels will not replace the fixed base. Clothing-only extraction and landmark registration still required.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-7364fefe-b4d8-492d-b2ff-23c012f701d5.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:48:53.364065+00:00",
+          "step": "extract_register_palette_masks",
+          "phase": "Clothing-only proposal, registration pending",
+          "action": "Preserved the generated isolated garment proposal and exact prompt before landmark registration and coverage corrections.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/refined-context.png",
+              "sha256": "64ccdc476c4105faf8d9b0b4aa8d8245711059d2bd2a470cf35957ac3b70e56e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/constructed-isolated-comparison.png",
+              "sha256": "7cc1eb18885522615b7b12323ee70db1791c5be478e0dbc0f176e46bb0350c56"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/isolate-garment-prompt.txt",
+              "sha256": "d97373d5adce0d18253f9d45d20d761b786693e4981d5826e0ee1b3ce6123b5a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v1/isolated-proposal.png",
+              "sha256": "eca1260ca3f6ad66d22787454285fc78f7a1fd8bf5ed0a8e8ab024eafa0b7a56"
+            }
+          ],
+          "review": "Viewed all three garment directions. Cloth and rope are isolated, but sleeve interiors are opaque and the profile arm cutout is missing. This proposal is not registered, not generation-ready and must not replace the fixed body. Restore explicit neckline/arm coverage in the shared body frame.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-3905d05e-68dc-48b3-94a9-c164eaa8ce9f.png"
         }
       ],
       "generation_ready": false
