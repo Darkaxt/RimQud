@@ -1,0 +1,65 @@
+{
+  "entry": "SCN-POWERLESS-ELECTROTHING",
+  "kind": "source_dualcolor_static_appliance",
+  "blueprint": "Powerless Electrothing",
+  "native_tile": "Items/sw_electrothing.bmp",
+  "source": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/source-packet.json",
+    "sha256": "27363171f6a5c123d488c550665f1bfef38ac79b3683eb67ba1fd6acfd925d4c"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source cell, shared bulb/support frame/pivot/scale; no component bounds fitting."
+  },
+  "camera": "One fixed straight source map face, front-facing unequal bulbs and parallel columns/base; no donor elevated torus camera or yaw.",
+  "palette": {
+    "primary": "w on both copper bulbs",
+    "detail": "W on necks/collars/support columns/common base",
+    "rule": "Copper finish read from neutral material; native w/W colors retained independently, no donor silver or red coil paint baked into output."
+  },
+  "native_state_owner": "Ordinary Items/sw_electrothing.bmp only. Powerless child explicitly removes ElectricalPowerTransmission and ChargeSink; HydraulicPowerTransmission remains inherited. HighTechInstallation native alternate length300,80=Items/sw_power_cut_small.png,180=default,RequiresAnyUnpoweredActivePart=true remains conditionally native. No declared spark/body tile loop; description is not new visual-effect authorization.",
+  "native_behavior": "Source weight60, hydraulic consumer1000 with DependsOnLiquid empty retained; child removes electrical consumer and ArcGeneratorChargeSink50. Inherited Metal/HP200/AV4/resistances/examiner4/TechTier4/mounted physics/aggregateElectrothing/status fallback stay native. Do not force a powered or unpowered visual state by name.",
+  "native_acceptance": "Pending full-set generation: exact child part removals/hydraulic/status alternate behavior, physics/examiner/aggregate/visibility/save-load; no native activation or new effect.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map face. Child electrical transmission and charge-sink removals, retained hydraulic part and conditional inherited power-cut alternate remain native. No new arc/spark states, timing or orientation binding.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/primary-neutral.png",
+    "sha256": "128f3ec2e2f395349fd3f6f640bfadc9a89c87bb1523a595960941becef3162e"
+  },
+  "detail": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/detail-neutral.png",
+    "sha256": "dfc6da724803cfcadffcfa89b067a4996321b0d67f12fce76ea38dc44dbac68a"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/coverage.png",
+    "sha256": "f48009de0016c01487200356da6f497dc56ab9c3b4ec9e386f92b8a249752d3d"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/detail-weight.png",
+    "sha256": "1117d4b90f9bf6ba75a5550f52ced0d8e07b7c13a0aac4d2a4af23a778a210bc"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/detail-coverage.png",
+    "sha256": "73d04acefa7c4adee79d54f5842df4053ee146588ad5274f73f882ad0a7932dc"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-powerless-electrothing/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "d71898ce417c7b5e850071e1d3c51ca6dae42ce51fce2503ae8f3b059e0d85a3"
+  }
+}

@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-POWERLESS-ELECTROTHING**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-SEWING-MACHINE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -160,8 +160,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-LATHE | Lathe | UNFINISHED | - |  |
 | SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - |  |
 | SCN-MILLSTONE | Millstone | UNFINISHED | - |  |
-| SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - |  |
+| SCN-SEWING-MACHINE | Sewing Machine | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
@@ -6495,7 +6495,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/powerless-electrothing-body.png](../art/village/scenery/powerless-electrothing-body.png), [art/village/scenery/powerless-electrothing-detail.png](../art/village/scenery/powerless-electrothing-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-20T22:47:35.810003+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact powerless child removals, parent hydraulic/status inheritance, original unequal bulbs/supports and w/W palette.
+  Review: Child removes electrical consumer and ChargeSink, hydraulic consumer remains; exact inherited power-cut alternate preserved. No declared body/spark tile loop or forced state by name. Native data study only, no game launch.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/source-packet.json", "sha256": "27363171f6a5c123d488c550665f1bfef38ac79b3683eb67ba1fd6acfd925d4c"}, {"path": "art/conversion/scn-powerless-electrothing/v1/source-reference-construction.png", "sha256": "eaea19d087ff3a1cf89b0073285aa58839cd6793ba660eb3bf8fa66a5ae251fa"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual Rimatomics Tesla_Coil_Arc_Discharger weapon-component texture and matching1.6child/parent.
+  Review: Partial rounded metal/electrode finish reference only; no close whole-apparatus match claimed. Graphic_Single/weapon-component context explicit; torus/red coil/camera/donor gameplay not copied.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/source-packet.json", "sha256": "27363171f6a5c123d488c550665f1bfef38ac79b3683eb67ba1fd6acfd925d4c"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/source-reference-construction.png", "sha256": "eaea19d087ff3a1cf89b0073285aa58839cd6793ba660eb3bf8fa66a5ae251fa"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / construct_faithful_shape / PASS: Construct editable large high left/small lower right bulbs, unequal supports/collars and shared long base.
+  Review: Source positions/roles retained; short neck/base joins and ribbed support sleeves authored to form connected physical structure, exact depth/material unknown. Manual reviewed, no structural patch required.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/source-packet.json", "sha256": "27363171f6a5c123d488c550665f1bfef38ac79b3683eb67ba1fd6acfd925d4c"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/construct-electrothing.py", "sha256": "57f0e44b0a3bbbeff5cb3c34aba9056c097e9df4d87e2514fec2595993368c48"}, {"path": "art/conversion/scn-powerless-electrothing/v1/constructed.svg", "sha256": "0150fc0a87ad2fdd16d5bf25c87c26e57ef31d19422b77d6a591eeaadc77d3f1"}, {"path": "art/conversion/scn-powerless-electrothing/v1/constructed.png", "sha256": "c493b7cfd195e0598dd998d02fd6cd556c9071936a50e0dfe7fedd5eabbf3edf"}, {"path": "art/conversion/scn-powerless-electrothing/v1/ownership.svg", "sha256": "66a682ad956a6b02ea230d84459cf2052921768cf2544b86aa694e42f29d81bb"}, {"path": "art/conversion/scn-powerless-electrothing/v1/ownership.png", "sha256": "15dcb232f8666fa0187db4fcf4478a9cef5a562ee0c9dab5f836ac772dd8f66d"}, {"path": "art/conversion/scn-powerless-electrothing/v1/manual-structural-review.json", "sha256": "7276297a0d743a523602a369891ed8883e96b3cd5a6ea7198522fce68668a8bb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / create_required_state_neighbor_variants / PASS: Retain one ordinary source tile and conditional native status fallback under exact child inheritance.
+  Review: No declared body animation loop, no new spark/arc/audio effect. HighTechInstallation native power-cut alternate retains original length/frames/condition. Machinery entry fixed map view requirement; no extra orientation binding.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/source-packet.json", "sha256": "27363171f6a5c123d488c550665f1bfef38ac79b3683eb67ba1fd6acfd925d4c"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/constructed.png", "sha256": "c493b7cfd195e0598dd998d02fd6cd556c9071936a50e0dfe7fedd5eabbf3edf"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / refine_materials_and_form / PASS: Perform one actual contextual metal refinement and inspect structure before extraction.
+  Review: Inspected actual full refinement before extraction: unequal bulbs/heights, broad left/narrow right ribbed supports, collars and common base retained; continuous physical connections and open gap. Rounded worn-metal shading usable. Generated exterior halo, gold support glow, thick edge widths and shifted rib grooves rejected. Fixed construction alpha/ink/roles will control geometry; no arc bridge, donor torus, extra spheres, new power state or native activation.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/constructed.png", "sha256": "c493b7cfd195e0598dd998d02fd6cd556c9071936a50e0dfe7fedd5eabbf3edf"}, {"path": "art/conversion/scn-powerless-electrothing/v1/refine-prompt.txt", "sha256": "96d254849c58053a547e45572a7d0b5f0a1cd4ad062fad022f54cd75d5bc6f3a"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/refined-raw.png", "sha256": "0a4cda20cefcd5b585e8610d96b22db44ff102f5e4f539611e72ed73c20717ba"}, {"path": "art/conversion/scn-powerless-electrothing/v1/first-structural-review.json", "sha256": "de653a25295f722f21f07cad5edd983c1ddb9f0704247fa0435e901ac3ec82ed"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-powerless-electrothing/v1/refine-prompt.txt", "sha256": "96d254849c58053a547e45572a7d0b5f0a1cd4ad062fad022f54cd75d5bc6f3a"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-84ff8326-43c4-453f-a9de-3c9af1664775.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-powerless-electrothing\\v1\\constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-powerless-electrothing\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\1127530465\\Textures\\Rimatomics\\Things\\RimatomicsBuildings\\teslaCoil.png"]}}
+
+- 2026-10-20T22:47:35.810003+00:00 / extract_register_color_coverage / PASS: Select neutral bulb/support material into exact construction and independent native color roles.
+  Review: One full-frame RGB material mapping only, no generated bounds fitting. Existing helper wood/top names mean copper bulbs/supports. Same-material continuation excludes halo/glow/displaced seams, manual ink retained. No second AI isolation or new native effect.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/first-structural-review.json", "sha256": "de653a25295f722f21f07cad5edd983c1ddb9f0704247fa0435e901ac3ec82ed"}, {"path": "art/conversion/scn-powerless-electrothing/v1/ownership.png", "sha256": "15dcb232f8666fa0187db4fcf4478a9cef5a562ee0c9dab5f836ac772dd8f66d"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/register-electrothing.py", "sha256": "7f3d41733e6a7452c810056de297faf9ca86f2d8ad1a2c94f391df3b43d1853b"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/model.json", "sha256": "1c4d1e74d61d98ec2d854c3498fa8c35f7ddd327aa547d24f01980c088a0c103"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/registration-decisions.json", "sha256": "b250c9c718309b00a8f0d23a2af791b6d4f53e4d0859fc4bfa4dcdd34eaeb336"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/neutral-master.png", "sha256": "8423db721f6e1ce2168583efd98784a0703ddef311723fccc2a243c618ef2e2f"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/primary-neutral.png", "sha256": "128f3ec2e2f395349fd3f6f640bfadc9a89c87bb1523a595960941becef3162e"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/detail-neutral.png", "sha256": "dfc6da724803cfcadffcfa89b067a4996321b0d67f12fce76ea38dc44dbac68a"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/detail-weight.png", "sha256": "1117d4b90f9bf6ba75a5550f52ced0d8e07b7c13a0aac4d2a4af23a778a210bc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source/reference/manual/refined/registered views, connected supports/open gap, neutral and source w/W at intended sizes.
+  Review: Reviewed exact Powerless Electrothing/Electrothing/HighTechInstallation ancestry, description and source w/W tile. Large high left bulb and small lower right bulb, broad/narrow pale supports, collars and shared base retained; open electrode/column gap. Continuous short neck/base joins, smooth copper volume and ribbed support-sleeve material are explicit authored interpretation, exact support material/depth unknown. Actual Rimatomics Tesla_Coil_Arc_Discharger Graphic_Single weapon-component texture and matching1.6child/parent inspected; rounded electrode metal highlight only. No close whole-apparatus equivalent claimed; donor torus/red coil/camera/footprint/arc damage/radar/charge behavior not imported. No LoadFolders.xml present in inspected mod root; installed root texture/version provenance recorded without active-mod assertion. Manual source/reference/construction inspected before one actual contextual refinement. First output inspected before extraction; metal shading usable, generated halo/support glow/thick shifted edges/rib grooves rejected by fixed editable alpha/ink/role and same-material continuation. Full neutral/primary/support/native w/W and16x24/24x36/32x48views reviewed. Child explicitly removes ElectricalPowerTransmission and ChargeSink while inherited HydraulicPowerTransmission1000 remains. Native conditional HighTechInstallation power-cut alternate length300,80=sw_power_cut_small,180=default remains native; powerless name does not force visual state. Description sparks are not declared body-frame art: no new sparks, audio, arc bridge, powered/off art or clock. Native exact part removals/hydraulic/status/physics/aggregate/visibility/save-load acceptance pending full generation set.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/registered/model.json", "sha256": "1c4d1e74d61d98ec2d854c3498fa8c35f7ddd327aa547d24f01980c088a0c103"}]
+  Outputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/record-review.py", "sha256": "eb1b2c24322cb8e6e644d877d54cb2d21041e2db3cfbe443925a75542f8c11a1"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/registration-comparison.png", "sha256": "e696d86d04339de7c5e972a77f51234800096f9e9b2dd64c6c1b15a427947cb3"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/authoring-review.json", "sha256": "b8127d7b6f490580184837e92f5c524b3b0db30cbe9bb535ecc66db5dc148f59"}, {"path": "art/conversion/scn-powerless-electrothing/v1/artifact-manifest.json", "sha256": "60fdac2e29136e30c677612451e9b50716eb4512b3f31f63001e9d94958ff625"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:47:35.810003+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep actual child-removal/hydraulic/status/physics/examiner/aggregate/visibility/save-load acceptance behind full-generation gate.
+  Review: No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/registered/model.json", "sha256": "1c4d1e74d61d98ec2d854c3498fa8c35f7ddd327aa547d24f01980c088a0c103"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-SEWING-MACHINE: Sewing Machine
 
@@ -6505,7 +6553,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/sewing-machine-body.png](../art/village/scenery/sewing-machine-body.png), [art/village/scenery/sewing-machine-detail.png](../art/village/scenery/sewing-machine-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-WOODEN-WATER-WHEEL: Wooden Water Wheel
 

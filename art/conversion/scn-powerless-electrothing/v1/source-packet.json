@@ -1,0 +1,159 @@
+{
+  "entry": "SCN-POWERLESS-ELECTROTHING",
+  "identity": "Powerless Electrothing -> Electrothing -> HighTechInstallation -> MountedFurniture -> Furniture",
+  "description": "Two copper bulbs form a spark gap that facilitates current along a path of ionized gas. The thing snaps and sparks at you.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Powerless Electrothing": "<object Name=\"Powerless Electrothing\" Inherits=\"Electrothing\">\n    <removepart Name=\"ElectricalPowerTransmission\" />\n    <removepart Name=\"ChargeSink\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n  </object>",
+      "Electrothing": "<object Name=\"Electrothing\" Inherits=\"HighTechInstallation\">\n    <part Name=\"Render\" DisplayName=\"electrodicus\" RenderString=\"211\" ColorString=\"&amp;w\" DetailColor=\"W\" Tile=\"Items/sw_electrothing.bmp\" RenderLayer=\"6\" />\n    <part Name=\"Physics\" Weight=\"60\" />\n    <part Name=\"Description\" Short=\"Two copper bulbs form a spark gap that facilitates current along a path of ionized gas. The thing snaps and sparks at you.\" />\n    <part Name=\"HydraulicPowerTransmission\" ChargeRate=\"1000\" IsConsumer=\"true\" DependsOnLiquid=\"\" />\n    <part Name=\"ElectricalPowerTransmission\" ChargeRate=\"1000\" IsConsumer=\"true\" />\n    <part Name=\"ChargeSink\" ChargeUse=\"50\" NameForStatus=\"ArcGenerator\" />\n    <part Name=\"Examiner\" Complexity=\"4\" />\n    <tag Name=\"TechTier\" Value=\"4\" />\n    <stag Name=\"Scholarly\" />\n    <stag Name=\"Crafts\" />\n    <stag Name=\"Torture\" />\n    <tag Name=\"GritGateJourneyfriendIdentify\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"DeepPower\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"ElectricalPower\" />\n    <stag Name=\"ElectricalPowerConsumer\" />\n    <stag Name=\"DeepElectricalPowerConsumer\" />\n    <stag Name=\"HydraulicPower\" />\n    <stag Name=\"HydraulicPowerConsumer\" />\n    <stag Name=\"DeepHydraulicPowerConsumer\" />\n    <tag Name=\"AggregateWith\" Value=\"Electrothing\" />\n  </object>",
+      "HighTechInstallation": "<object Name=\"HighTechInstallation\" Inherits=\"MountedFurniture\">\n    <stat Name=\"HeatResistance\" Value=\"75\" />\n    <stat Name=\"ColdResistance\" Value=\"75\" />\n    <stat Name=\"ElectricResistance\" Value=\"25\" />\n    <stat Name=\"AcidResistance\" Value=\"75\" />\n    <part Name=\"Physics\" />\n    <part Name=\"AnimatedMaterialGenericAlternate\" AnimationLength=\"300\" TileAnimationFrames=\"80=Items/sw_power_cut_small.png,180=default\" RequiresAnyUnpoweredActivePart=\"true\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" />\n    <xtagTextFragments Skin=\"machinery\" PoeticFeatures=\"towering stature,machinic pose,rhythmic piping\" />\n    <part Name=\"Metal\" />\n    <stat Name=\"Hitpoints\" Value=\"200\" />\n    <stat Name=\"AV\" Value=\"4\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_electronic\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_electronic\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "tile": "Items/sw_electrothing.bmp",
+    "description": "Two copper bulbs form a spark gap that facilitates current along a path of ionized gas. The thing snaps and sparks at you.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "electrodicus",
+      "RenderString": "211",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&w",
+      "DetailColor": "W",
+      "Tile": "Items/sw_electrothing.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Powerless Electrothing",
+    "reference_file": "village-originals/powerless-electrothing-reference.png",
+    "native_mask_sha256": "4fd3c08e549b3fe33f50e40c2ae9252383477d4bebce596a2251a988fdfee485",
+    "reference_sha256": "7e7ef1314eaa048aaab14ec4201c984477f3d49a9930a0318ec802a61a87c214",
+    "info_id": 9569,
+    "atlas_id": 185,
+    "rect": [
+      594,
+      156,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\powerless-electrothing-mask.png",
+      "sha256": "4fd3c08e549b3fe33f50e40c2ae9252383477d4bebce596a2251a988fdfee485"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\powerless-electrothing-reference.png",
+      "sha256": "7e7ef1314eaa048aaab14ec4201c984477f3d49a9930a0318ec802a61a87c214"
+    }
+  },
+  "source_shape": "Large high left copper bulb and smaller lower right bulb, pale short left neck/collar, broad left column and narrow right column, common long pale base. Source gap between bulbs and between columns retained.",
+  "palette": {
+    "primary": "w on both copper bulbs",
+    "detail": "W on necks/collars/support columns/common base",
+    "rule": "Copper finish read from neutral material; native w/W colors retained independently, no donor silver or red coil paint baked into output."
+  },
+  "native_state": "Ordinary Items/sw_electrothing.bmp only. Powerless child explicitly removes ElectricalPowerTransmission and ChargeSink; HydraulicPowerTransmission remains inherited. HighTechInstallation native alternate length300,80=Items/sw_power_cut_small.png,180=default,RequiresAnyUnpoweredActivePart=true remains conditionally native. No declared spark/body tile loop; description is not new visual-effect authorization.",
+  "native_behavior": "Source weight60, hydraulic consumer1000 with DependsOnLiquid empty retained; child removes electrical consumer and ArcGeneratorChargeSink50. Inherited Metal/HP200/AV4/resistances/examiner4/TechTier4/mounted physics/aggregateElectrothing/status fallback stay native. Do not force a powered or unpowered visual state by name.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1127530465\\Textures\\Rimatomics\\Things\\RimatomicsBuildings\\teslaCoil.png",
+      "sha256": "ca18d5efc60dd20d154292ad2818cdb6b8cc37bd28c862d1ff77c64a36d3da34"
+    },
+    "frame": [
+      256,
+      256
+    ],
+    "alpha_bounds": [
+      49,
+      41,
+      206,
+      198
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1127530465\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_E_Weapons.xml",
+      "sha256": "594402c2b1b521b43809ab5dda431da769e07e5132a356616930d4b9b2237018"
+    },
+    "child": "<ThingDef ParentName=\"BasedEnergyWeaponGun\" Class=\"Rimatomics.RimatomicsThingDef\">\n\t\t<defName>Tesla_Coil_Arc_Discharger</defName>\n\t\t<label>Tesla Coil Arc Discharger</label>\n\t\t<graphicData>\n\t\t\t<graphicClass>Graphic_Single</graphicClass>\n\t\t\t<texPath>Rimatomics/Things/RimatomicsBuildings/teslaCoil</texPath>\n\t\t</graphicData>\n\t\t<description>Tesla Coil Arc Discharger.</description>\n\t\t<verbs>\n\t\t\t<li>\n\t\t\t\t<verbClass>Rimatomics.Verb_ArcFlash</verbClass>\n\t\t\t\t<hasStandardCommand>true</hasStandardCommand>\n\t\t\t\t<range>19.9</range>\n\t\t\t\t<requireLineOfSight>true</requireLineOfSight>\n\t\t\t\t<burstShotCount>1</burstShotCount>\n\t\t\t\t<soundCast>teslaDischarge</soundCast>\n\t\t\t\t<warmupTime>1</warmupTime>\n\t\t\t</li>\n\t\t</verbs>\n\t\t<EnergyWep>\n\t\t\t<range>19.9</range>\n\t\t\t<PulseSize>500</PulseSize>\n\t\t\t<Damage>60</Damage>\n\t\t\t<NeedsRadar>true</NeedsRadar>\n\t\t\t<HasTurret>false</HasTurret>\n\t\t\t<NeedsManning>false</NeedsManning>\n\t\t\t<canEverForceTarget>true</canEverForceTarget>\n\t\t\t<cooldownForShot>9</cooldownForShot>\n\t\t\t<CanCamo>true</CanCamo>\n\t\t\t<ChargeUpSound>TeslaCharge</ChargeUpSound>\n\t\t</EnergyWep>\n\t</ThingDef>\n\n\n\n\n\n\n\t",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1127530465\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_E_Weapons.xml",
+      "sha256": "594402c2b1b521b43809ab5dda431da769e07e5132a356616930d4b9b2237018"
+    },
+    "parent": "<ThingDef Class=\"Rimatomics.RimatomicsThingDef\" Name=\"BasedEnergyWeaponGun\" Abstract=\"True\">\n\t\t<category>Item</category>\n\t\t<thingClass>ThingWithComps</thingClass>\n\t\t<label>wep error</label>\n\t\t<useHitPoints>false</useHitPoints>\n\t\t<equipmentType>Primary</equipmentType>\n\t\t<tickerType>Never</tickerType>\n\t\t<techLevel>Industrial</techLevel>\n\t\t<destroyOnDrop>True</destroyOnDrop>\n\t\t<tradeability>None</tradeability>\n\t\t<weaponTags Inherit=\"false\">\n\t\t\t<li>TurretGun</li>\n\t\t</weaponTags>\n\t\t<comps>\n\t\t\t<li>\n\t\t\t\t<compClass>CompEquippable</compClass>\n\t\t\t</li>\n\t\t</comps>\n\t\t<statBases>\n\t\t\t<DeteriorationRate>0</DeteriorationRate>\n\t\t\t<Mass>40</Mass>\n\t\t\t<Flammability>0</Flammability>\n\t\t</statBases>\n\t</ThingDef>\n\n\t",
+    "graphic_class": "Graphic_Single",
+    "drawSize": null,
+    "footprint": null,
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1127530465\\About\\About.xml",
+      "sha256": "d6c66b43b09f57dd3b6ff73ce36f5447697f29203a5406a9323b0ca0678418ca"
+    },
+    "load_folders": null,
+    "version_mapping": "Installed root texture with matching1.6definition; no LoadFolders.xml in inspected mod root. No current active-mod claim.",
+    "role": "Actual Rimatomics Tesla_Coil_Arc_Discharger weapon-component Graphic_Single art supplies rounded electrode highlight and subtle metal shading only. It is not an ordinary standalone building graphic. Do not copy torus coil/red insulator, footprint, camera, arc-weapon damage, turret/charge/radar behavior.",
+    "equivalence": "Partial electrode-material reference only; no close whole apparatus equivalent selected. Qud asymmetric bulbs/supports define shape."
+  },
+  "construction": {
+    "camera": "One fixed straight source map face, front-facing unequal bulbs and parallel columns/base; no donor elevated torus camera or yaw.",
+    "source_supported": "Large high left bulb, small lower right bulb, broad/narrow detail support columns, neck/collar marks and long shared detail base; native w/W role placement.",
+    "authored": "Continuous short necks and supporting columns join source-separated cap/body/base fragments. Smooth bulb volume, restrained worn copper highlights and ribbed insulating/support sleeves are authored interpretation; exact support material/depth unknown. No extra sphere, large coil/torus, wiring, spark arc, glow or emitted particles.",
+    "dimensions": {
+      "left_bulb_center": [
+        4.3,
+        5.3
+      ],
+      "left_bulb_radii": [
+        3.2,
+        3.25
+      ],
+      "right_bulb_center": [
+        12.0,
+        9.1
+      ],
+      "right_bulb_radii": [
+        1.7,
+        1.85
+      ],
+      "left_column": [
+        2.5,
+        12.3,
+        6.0,
+        20.1
+      ],
+      "right_column": [
+        11,
+        12.4,
+        13.0,
+        20.1
+      ],
+      "base": [
+        1.15,
+        21.3,
+        14.85,
+        22.15
+      ]
+    },
+    "coverage": "Solid physical bulbs/supports, true open gap between columns/electrodes; source disconnected support pixels joined narrowly as explicit authored structure."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source cell, shared bulb/support frame/pivot/scale; no component bounds fitting."
+  },
+  "native_acceptance": "Pending full-set generation: exact child part removals/hydraulic/status alternate behavior, physics/examiner/aggregate/visibility/save-load; no native activation or new effect."
+}
