@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+  "active_entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -12715,8 +12715,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12770,8 +12770,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12782,9 +12782,7 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "nima",
         "equipment_key": "floating-glowsphere@Floating Nearby@0",
@@ -12817,7 +12815,297 @@
           "sha256": "e08f5a04254d84bb8d8775e6e49e7674f491700c7a0b9304732d92c077833c0e"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:31:33.492244+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve actual Nima Floating Nearby195/0 item538, palm-size opal description, native light radius8 and all four color-animation keys. Preserve native unit and weight-event uncertainty.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:31:33.492718+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select unchanged ordinary female base and actual installed Biomes! Islands Pearl style asset with explicit through1.5/unbound-definition limits; reject angular Jade shape.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-comparison.png",
+              "sha256": "bead253f1bf7f660537e43b0195ae257483c4e7c8d41161be2bd7d56482f1505"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:31:33.493023+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Construct neutral palm-size sphere and independent internal detail region. Reuse rotationally invariant surface across body facings; move profile anchor clear of chest while preserving initial placement evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/prepare-source.py",
+              "sha256": "9d9116b13d625c233a6b80b07f9a5c826f4387370d75de25136b4a3fcb42ce13"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/canonical-pattern.svg",
+              "sha256": "a3c2c233572405180a74dc6180f49a9594b4d095ef1a3b3f7a5b7b98c108feca"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/detail-region.svg",
+              "sha256": "c1dfb231d3edd1a3b560c989d8b1c80c528a47f11ecef004af2a344a18d3f15e"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/fit-controls.json",
+              "sha256": "01659ee6927fb4a3bc73cff01098687d15fd524fa9e9b0129d018a838cd60795"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/constructed-red-item-context.png",
+              "sha256": "0e8004a10c9a04d07ce35616b02752102ac08d6d5a2b5babc78b9733e7d0f84d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/anchor-correction.json",
+              "sha256": "f4efe401940046c8200b0cf3c95af9fbc2a98a8410b810844ea3bf053007735b"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/imagegen-prompt.txt",
+              "sha256": "72dd98eaae66ed2a8d530a7fbcc7277fb9e29f36bc1eb9d69164c6f5a5ffb1b7"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:34:08.825045+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One built-in contextual opal-surface refinement; inspect sphere structure and all body facings before material registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/imagegen-prompt.txt",
+              "sha256": "72dd98eaae66ed2a8d530a7fbcc7277fb9e29f36bc1eb9d69164c6f5a5ffb1b7"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/constructed-red-item-context.png",
+              "sha256": "0e8004a10c9a04d07ce35616b02752102ac08d6d5a2b5babc78b9733e7d0f84d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "review": "Inspected all three contextual spheres before extraction: palm-size continuous round opal, clear of body/skin, consistent unmarked surface, no pupil/eye, mechanical mount, extra limb or changed sphere count. Smooth grayscale cloudy highlight remains usable. Generated glow/backdrop, red spill, body changes and edge/thickness variation are not selected alpha or lighting. Preserve fixed sphere geometry and original body; halo is authored separately.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:37:47.251111+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "User correction: align the same floating sphere vertically above one ordinary baseline palm in each facing. Change display anchors only; preserve source Floating Nearby binding and surface.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/model.json",
+              "sha256": "e6072200e0e41e0399026409a4f5ae990131f388fa1e337f8ceafa58f013d8b8"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/intact-canonical.png",
+              "sha256": "14a43177a42aaa46f7dee8d9c165400e5104ce4463093bbb6e1a437b4b3d0c23"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/fit-controls.json",
+              "sha256": "13cf449b9527c2df1279320f6b314cb007b5dc54c7a9fc1e11ae70fb7d24194f"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/constructed-neutral-context.png",
+              "sha256": "f89d520fe34ef8baf2e8d6f282f05d9dd855b97341af2d2bc70b8840067b9793"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-correction.json",
+              "sha256": "dacc759166ca04ed2e68d1c0035996066406b04ad81855d1a54319fbdfa617b8"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            }
+          ],
+          "review": "South395, east267 and north111 match the existing ordinary palm x coordinates; common y330 retained. West will mirror both east palm and sphere. No new ImageGen call or hand/slot remapping.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Register neutral material from the one contextual refinement into fixed complete opal alpha; retain independent detail and optional halo. No second generative isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/register-aligned-glowsphere.py",
+              "sha256": "5d4c56782ffa84c4b3631e319fb33cf42aa29077ece1b3068eeed4aafd382885"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/registration-decisions.json",
+              "sha256": "38de3d23174ff345eac0bffa28e74fa9fa70f27003cf5e7025e8272a5f8ecf68"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/full-item-comparison.png",
+              "sha256": "0fdf18e397cca193f96d6717f3fcf773c91ac328af3aad53d924f0e6ec94541d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/detail-region-comparison.png",
+              "sha256": "1a6e54289359e14bfd79b352e38a8b3fb42d6ce8f90237e061556b013e54f0fc"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/optional-halo-comparison.png",
+              "sha256": "1aa435716768f48df034213acef7df38202109d383c4fe5617e1a76891929bce"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Apply user-directed vertical alignment over one ordinary palm per facing; preserve fixed body and actual floating slot. Recompose the same separate full sphere without hand cutouts.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+              "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+              "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png",
+              "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/halo-off-comparison.png",
+              "sha256": "785529309e1318f3153b2bc1ab6ff5f3b4db89dda12a5455593b0c664d6aaf9e"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect palm-relative physical size, all source color-animation keys, independent neutral layers and intended-size views. Native light/orbit/animation acceptance stays gated.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/independent-palette-comparison.png",
+              "sha256": "854c5e0b11f39127ce7ee2d3327dcd0b87ef740122981da87f9e8ff809a62bda"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/native-color-keys-comparison.png",
+              "sha256": "8d447aa18f52667984c9a8bae6f764fd172f56798587b094de2ab3a930c0128f"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/game-scale-review.png",
+              "sha256": "68dd33391b1a71ba04a065282fb32efdef47058fb2106b809b8d5040abcee478"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+              "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/artifact-manifest.json",
+              "sha256": "380c1838edcdeb1f9783c598ccc1bc2dce575017c44f1f88e5bbf4f375b5bf1d"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+          "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+          "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+        }
+      },
+      "registration_summary": "Palm-size floating opal, vertically above one baseline palm in every view; unchanged physical size/material, independent native color region and optional separate halo. Actual Nima Floating Nearby195/0 retained; native orbit/light/color-state and individual assembly pending.",
+      "native_acceptance": "Pending complete generation set, native floating-slot/light/material-animation state and Nima individual mutation/outfit assembly."
     },
     {
       "id": "FIT-NIMA-LEATHER-APRON-BODY-0",
@@ -17325,15 +17613,13 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_reference": {
           "instance": 538,
@@ -17361,7 +17647,118 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T17:43:03.488332+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolve actual palm-size floating opal, captured Floating Nearby slot, independent primary/detail color keys and native light metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+              "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+              "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-floating-glowsphere/v1/fittings.json",
+              "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+              "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png",
+              "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"
+            }
+          ],
+          "review": "Reviewed the sole required fitting and its corrected hand-column placement, complete source/refinement chain, original body/frame, neutral layers, independent palette and intended-size views. Actual Floating Nearby binding retained; no new generation or native state acceptance claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:43:03.488332+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconcile the sole listed fitting and user-corrected vertical alignment in every facing; preserve full unchanged sphere and exact original body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+              "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+              "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-floating-glowsphere/v1/fittings.json",
+              "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+              "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png",
+              "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"
+            }
+          ],
+          "review": "Reviewed the sole required fitting and its corrected hand-column placement, complete source/refinement chain, original body/frame, neutral layers, independent palette and intended-size views. Actual Floating Nearby binding retained; no new generation or native state acceptance claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:43:03.488332+00:00",
+          "step": "record_item_acceptance_from_all_fittings",
+          "action": "Index generation-ready authoring only; retain pending native floating/color/light state and individual assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+              "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+              "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-floating-glowsphere/v1/fittings.json",
+              "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+              "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png",
+              "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"
+            }
+          ],
+          "review": "Reviewed the sole required fitting and its corrected hand-column placement, complete source/refinement chain, original body/frame, neutral layers, independent palette and intended-size views. Actual Floating Nearby binding retained; no new generation or native state acceptance claimed.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed the sole required fitting and its corrected hand-column placement, complete source/refinement chain, original body/frame, neutral layers, independent palette and intended-size views. Actual Floating Nearby binding retained; no new generation or native state acceptance claimed."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-floating-glowsphere/v1/fittings.json",
+          "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+          "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+        }
+      },
+      "registration_summary": "Authoring index for Nima floating opal: sphere vertically above one palm, separate native color region and optional halo. Source Floating Nearby binding retained; native acceptance pending.",
+      "native_acceptance": "Pending complete generation set, native floating-slot/light/material-animation state and Nima individual mutation/outfit assembly."
     },
     {
       "id": "ITEM-HORNS",
@@ -48750,7 +49147,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T17:22:31.240437+00:00",
+  "updated_at": "2026-10-20T17:43:03.488332+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

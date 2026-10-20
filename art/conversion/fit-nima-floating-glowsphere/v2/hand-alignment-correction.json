@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-10-20T17:37:47.251111+00:00",
+  "user_requirement": "Floating sphere should lie vertically above one of the hands.",
+  "supersedes": {
+    "path": "art/conversion/fit-nima-floating-glowsphere/v1/model.json",
+    "sha256": "e6072200e0e41e0399026409a4f5ae990131f388fa1e337f8ceafa58f013d8b8"
+  },
+  "prior_centers": {
+    "south": {
+      "center": [
+        444,
+        330
+      ],
+      "crop": [
+        256,
+        128,
+        512,
+        640
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        -188,
+        0,
+        1,
+        182
+      ]
+    },
+    "east": {
+      "center": [
+        380,
+        330
+      ],
+      "crop": [
+        256,
+        128,
+        512,
+        640
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        -124,
+        0,
+        1,
+        182
+      ]
+    },
+    "north": {
+      "center": [
+        64,
+        330
+      ],
+      "crop": [
+        0,
+        128,
+        256,
+        640
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        192,
+        0,
+        1,
+        182
+      ]
+    }
+  },
+  "corrected_controls": {
+    "south": {
+      "center": [
+        395,
+        330
+      ],
+      "palm_landmark": [
+        395,
+        525
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        -139,
+        0,
+        1,
+        182
+      ]
+    },
+    "east": {
+      "center": [
+        267,
+        330
+      ],
+      "palm_landmark": [
+        267,
+        535
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        -11,
+        0,
+        1,
+        182
+      ]
+    },
+    "north": {
+      "center": [
+        111,
+        330
+      ],
+      "palm_landmark": [
+        111,
+        525
+      ],
+      "inverse_affine": [
+        1,
+        0,
+        145,
+        0,
+        1,
+        182
+      ]
+    }
+  },
+  "unchanged": [
+    "Complete opal geometry and selected refined surface",
+    "Internal color region and optional halo source",
+    "Physical size, body/ground frame and every original body pixel",
+    "Actual Floating Nearby slot, native light radius8 and material color keys"
+  ],
+  "new_imagegen_calls": 0,
+  "projection": "Alignment may put the floating item in front of the torso in profile. Keep it a separate foreground item; do not cut the body or invent a supporting arm/hand pose. Native orbit coordinates were not exported."
+}

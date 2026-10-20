@@ -1,0 +1,108 @@
+{
+  "item": "Floating Glowsphere",
+  "source": {
+    "instance": 538,
+    "blueprint": "Floating Glowsphere",
+    "description": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally.\n\n{{K|Weight: 0 lbs.}}",
+    "tile": "Items/sw_glowsphere.bmp",
+    "foreground": "&Y",
+    "tileColor": "",
+    "detailColor": "C",
+    "kind": "equipment",
+    "reference_file": "village-originals/floating-glowsphere-reference.png",
+    "native_mask_sha256": "3aa441b7274396d2a18622823d257e1f06e7af795e8aa4f85b32a2037a357c42",
+    "reference_sha256": "a4b289a90d2677fb15a801fc317fc272a051b0d5be2760799794cd7778867232",
+    "info_id": 9686,
+    "atlas_id": 185,
+    "rect": [
+      144,
+      676,
+      16,
+      24
+    ]
+  },
+  "fittings": [
+    {
+      "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+          "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+          "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+        }
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+        "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+        "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+      },
+      "alignment": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-correction.json",
+        "sha256": "dacc759166ca04ed2e68d1c0035996066406b04ad81855d1a54319fbdfa617b8"
+      }
+    }
+  ],
+  "scope": "Actual Nima item538 on ordinary Floating Nearby195/0; reusable unmutated female body. Named mutations and outfit remain separate.",
+  "source_identity": "Palm-size floating phosphorescent opal. Full neutral sphere, independent native color region and separately retained optional halo.",
+  "placement": "User-directed display alignment vertically above one ordinary palm in every facing; same material/scale, no hand-slot reassignment or supporting-limb invention.",
+  "native_state": {
+    "Physics": {
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "1",
+      "Category": "Light Sources",
+      "Organic": "false",
+      "Conductivity": "20"
+    },
+    "Render": {
+      "DisplayName": "floating {{Y|glowsphere}}",
+      "RenderString": "*",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "Tile": "Items/sw_glowsphere.bmp",
+      "ColorString": "&Y",
+      "DetailColor": "C"
+    },
+    "MeleeWeapon": {
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    "Commerce": {
+      "Value": "200"
+    },
+    "Description": {
+      "Short": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally."
+    },
+    "BurnToAshesIfOrganic": {},
+    "Inorganic": {},
+    "Stacker": {},
+    "MentalShield": {},
+    "LightSource": {
+      "Lit": "true",
+      "Radius": "8"
+    },
+    "ItemElements": {
+      "Elements": "stars::2"
+    },
+    "Armor": {
+      "WornOn": "Floating Nearby"
+    },
+    "GlowsphereProperties": {
+      "AllowedParts": "Hand,Floating Nearby"
+    },
+    "AnimatedMaterialGeneric": {
+      "AnimationLength": "200",
+      "ColorStringAnimationFrames": "0=&Y,50=&y,100=&C,150=&c",
+      "DetailColorAnimationFrames": "0=C,50=c,100=Y,150=y"
+    }
+  },
+  "limits": "Authoring only. Native floating placement/orbit, material timing units, light radius8 behavior, optional halo support and individual Nima assembly remain pending full-set integration.",
+  "new_imagegen_calls": 0
+}

@@ -1,0 +1,346 @@
+{
+  "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+  "recorded_at": "2026-10-20T17:31:05.982831+00:00",
+  "creature": "Nima Ruda506",
+  "race": "Human ordinary female baseline; individual mutations remain separate",
+  "original": {
+    "instance": 538,
+    "blueprint": "Floating Glowsphere",
+    "description": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally.\n\n{{K|Weight: 0 lbs.}}",
+    "tile": "Items/sw_glowsphere.bmp",
+    "foreground": "&Y",
+    "tileColor": "",
+    "detailColor": "C",
+    "kind": "equipment",
+    "reference_file": "village-originals/floating-glowsphere-reference.png",
+    "native_mask_sha256": "3aa441b7274396d2a18622823d257e1f06e7af795e8aa4f85b32a2037a357c42",
+    "reference_sha256": "a4b289a90d2677fb15a801fc317fc272a051b0d5be2760799794cd7778867232",
+    "info_id": 9686,
+    "atlas_id": 185,
+    "rect": [
+      144,
+      676,
+      16,
+      24
+    ]
+  },
+  "observed_bindings": [
+    {
+      "creature": "Nima Ruda",
+      "resident": {
+        "instance": 506,
+        "blueprint": "Nima Ruda",
+        "species": "human",
+        "gender": "female",
+        "description": "Sharp jade eyes are crow-worn to late middle age and her lips are scarred with gas burns. Climbing over her back and neck are the jeweled segments of a great spiral tail and stinger; a bead of smoking gut juice gleams on the tip.",
+        "anatomy": "Humanoid",
+        "tile": "Creatures/npc-nima-ruda.bmp",
+        "foreground": "&g",
+        "tileColor": "&g",
+        "detailColor": "w"
+      },
+      "part": {
+        "id": 195,
+        "parent": 176,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 538,
+          "blueprint": "Floating Glowsphere",
+          "description": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally.\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Items/sw_glowsphere.bmp",
+          "foreground": "&Y",
+          "tileColor": "",
+          "detailColor": "C"
+        },
+        "defaultItem": null
+      }
+    }
+  ],
+  "body": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "inheritance": [
+    {
+      "blueprint": "Floating Glowsphere",
+      "parent": "LightSource",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "parts": [
+        {
+          "Name": "Armor",
+          "WornOn": "Floating Nearby"
+        },
+        {
+          "Name": "Render",
+          "DisplayName": "floating {{Y|glowsphere}}",
+          "RenderString": "*",
+          "RenderLayer": "5",
+          "Tile": "Items/sw_glowsphere.bmp",
+          "ColorString": "&Y",
+          "DetailColor": "C"
+        },
+        {
+          "Name": "GlowsphereProperties",
+          "AllowedParts": "Hand,Floating Nearby"
+        },
+        {
+          "Name": "LightSource",
+          "Lit": "true",
+          "Radius": "8"
+        },
+        {
+          "Name": "Commerce",
+          "Value": "200"
+        },
+        {
+          "Name": "Description",
+          "Short": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally."
+        },
+        {
+          "Name": "AnimatedMaterialGeneric",
+          "AnimationLength": "200",
+          "ColorStringAnimationFrames": "0=&Y,50=&y,100=&C,150=&c",
+          "DetailColorAnimationFrames": "0=C,50=c,100=Y,150=y"
+        }
+      ]
+    },
+    {
+      "blueprint": "LightSource",
+      "parent": "Item",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "[LightSource]",
+          "RenderString": "*",
+          "RenderLayer": "5"
+        },
+        {
+          "Name": "LightSource",
+          "Lit": "true",
+          "Radius": "4"
+        },
+        {
+          "Name": "Physics",
+          "Category": "Light Sources"
+        },
+        {
+          "Name": "ItemElements",
+          "Elements": "stars::2"
+        }
+      ]
+    },
+    {
+      "blueprint": "Item",
+      "parent": "InorganicObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "[Item]",
+          "RenderString": ".",
+          "RenderLayer": "5"
+        },
+        {
+          "Name": "Physics",
+          "Conductivity": "20"
+        },
+        {
+          "Name": "Stacker"
+        },
+        {
+          "Name": "MentalShield"
+        }
+      ]
+    },
+    {
+      "blueprint": "InorganicObject",
+      "parent": "PhysicalObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "parts": [
+        {
+          "Name": "Inorganic"
+        },
+        {
+          "Name": "Physics",
+          "Organic": "false"
+        }
+      ]
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "[Object]",
+          "RenderString": "?",
+          "RenderLayer": "1",
+          "RenderIfDark": "true"
+        },
+        {
+          "Name": "Physics",
+          "Category": "Miscellaneous",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "1"
+        },
+        {
+          "Name": "MeleeWeapon",
+          "BaseDamage": "1d2",
+          "Stat": "Strength",
+          "Skill": "Cudgel"
+        },
+        {
+          "Name": "Commerce",
+          "Value": "0.01"
+        },
+        {
+          "Name": "Description",
+          "Short": "A hideous specimen."
+        },
+        {
+          "Name": "BurnToAshesIfOrganic"
+        }
+      ]
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "parts": [
+        {
+          "Name": "Physics",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "0"
+        }
+      ]
+    }
+  ],
+  "effective_parts": {
+    "Physics": {
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "1",
+      "Category": "Light Sources",
+      "Organic": "false",
+      "Conductivity": "20"
+    },
+    "Render": {
+      "DisplayName": "floating {{Y|glowsphere}}",
+      "RenderString": "*",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "Tile": "Items/sw_glowsphere.bmp",
+      "ColorString": "&Y",
+      "DetailColor": "C"
+    },
+    "MeleeWeapon": {
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    "Commerce": {
+      "Value": "200"
+    },
+    "Description": {
+      "Short": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally."
+    },
+    "BurnToAshesIfOrganic": {},
+    "Inorganic": {},
+    "Stacker": {},
+    "MentalShield": {},
+    "LightSource": {
+      "Lit": "true",
+      "Radius": "8"
+    },
+    "ItemElements": {
+      "Elements": "stars::2"
+    },
+    "Armor": {
+      "WornOn": "Floating Nearby"
+    },
+    "GlowsphereProperties": {
+      "AllowedParts": "Hand,Floating Nearby"
+    },
+    "AnimatedMaterialGeneric": {
+      "AnimationLength": "200",
+      "ColorStringAnimationFrames": "0=&Y,50=&y,100=&C,150=&c",
+      "DetailColorAnimationFrames": "0=C,50=c,100=Y,150=y"
+    }
+  },
+  "donor_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2038001322\\Textures\\BiomesIslands_Things\\Item\\Pearl\\Pearl.png",
+    "sha256": "43e8bfefa8069c99f2d33f83e444dc832f38a33b4aad5d76c31ab0c4ca8637fb",
+    "mod": "Biomes! Islands",
+    "workshop_id": "2038001322",
+    "about_sha256": "4d3d606b8662d6a6d30c735eda03010be76b605028464d54868ca2e6b6c0ab01",
+    "load_folders_sha256": "59ef1cf2c5b88f458ca85aff459f7c734093d136ccec65f2387ded62bcde38a6",
+    "role": "Actual installed Pearl texture: compact rounded opal/pearl outline and smooth shading only. No floating-opal equipment equivalent claimed.",
+    "version_limits": "Installed About/LoadFolders advertise through1.5; no associated Pearl definition found in inspected1.5 Defs. Historical style asset, not proof of active1.6/1.7 support or a mod installation."
+  },
+  "rejected_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Item\\Resource\\Jade\\Jade_a.png",
+    "sha256": "349f100c9ee008fd432bce3ae49172848c4680bf2f6a92f83e0f1c6a23ea4a50",
+    "role": "Actual installed Jade texture inspected; angular rock silhouette does not match palm-sized opal sphere. Not selected."
+  },
+  "design": "Palm-sized smooth opal-like sphere with a broad softly curved internal light region. No pupil/iris, limbs, mount, metal cage, necklace or pedestal. About64px diameter versus68px baseline palm diameter; scale is authored from native qualitative size cue.",
+  "palette": {
+    "foreground": "Y",
+    "detail": "C",
+    "animation": {
+      "AnimationLength": "200",
+      "ColorStringAnimationFrames": "0=&Y,50=&y,100=&C,150=&c",
+      "DetailColorAnimationFrames": "0=C,50=c,100=Y,150=y"
+    },
+    "unit": "Native animation units not resolved; do not interpret200 as turns or seconds.",
+    "neutral": "All production RGB equal-channel grayscale; detail and optional halo own their native tint separately."
+  },
+  "frame": {
+    "canvas": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "canonical_center": [
+      256,
+      512
+    ],
+    "radius": 30,
+    "centers": {
+      "south": [
+        444,
+        330
+      ],
+      "east": [
+        380,
+        330
+      ],
+      "north": [
+        64,
+        330
+      ]
+    },
+    "placement": "Authored shoulder-adjacent floating display anchors, not exported native orbit coordinates. No attachment to a hand or mutation-granted part.",
+    "context_zoom_scale": 2
+  },
+  "views": "One rotationally symmetric, unmarked spherical surface reused in all required body facings. No distinct front/back anatomy or hardware is established; same scale/center basis, per-facing placement only. West mirrors east for authoring.",
+  "light": "Keep lit radius8 under native LightSource ownership. A separate optional low-alpha art halo is an authoring effect, not a replacement world light, orbit or lighting implementation.",
+  "source_conflicts": "Captured Weight0 while inherited static Physics has its own base Weight. No runtime weight-event export or unit conversion inferred; weight is not a sphere dimension.",
+  "native_acceptance": "Pending complete generation set, native floating-slot/light/material-animation state and Nima individual mutation/outfit assembly."
+}
