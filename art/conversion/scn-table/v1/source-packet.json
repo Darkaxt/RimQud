@@ -1,0 +1,237 @@
+{
+  "entry": "SCN-TABLE",
+  "identity": "Table -> Furniture -> InorganicObject",
+  "description": "Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Table": "<object Name=\"Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"table\" ColorString=\"&amp;w\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Assets_Content_Textures_Tiles_sw_table.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <tag Name=\"EmptyTile\" Value=\"Assets_Content_Textures_Tiles_sw_table.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table1.bmp,Items/sw_table2.bmp,Items/sw_table3.bmp,Items/sw_table4.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,c,y,W\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_table\" />\n    <part Name=\"Inventory\" />\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"Table\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,the Relaxed\" />\n    <xtagTextFragments Skin=\"glaze\" PoeticFeatures=\"flat surfaces,artfulness,gentle stillness\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <tag Name=\"AutoexploreChest\" />\n    <stag Name=\"Storage\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    "parsing": "Exact source object fragments independently XML-parsed; no source rewrite."
+  },
+  "native_states": {
+    "assembly": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\Managed\\Assembly-CSharp.dll",
+      "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+    },
+    "resource": {
+      "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "extractor": {
+      "path": "C:\\Users\\darka\\Documents\\Projects\\RimQud\\tools\\extract_village_references.py",
+      "sha256": "e5dd6b20d553d8b468b0f04452691b91f9dabf4af5a01401e35b1bb4ec85ff20"
+    },
+    "states": [
+      {
+        "state": "empty",
+        "tile": "Assets_Content_Textures_Tiles_sw_table.bmp",
+        "info_id": 14988,
+        "atlas_id": 277,
+        "rect": [
+          1512,
+          702,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-table-20261021\\empty-mask.png",
+          "sha256": "007e533411e261795e1faec9b33bf08f0231ea0f1e4f94f91ae27750dd2c0399"
+        }
+      },
+      {
+        "state": "occupied-1",
+        "tile": "Assets_Content_Textures_Items_sw_table1.bmp",
+        "info_id": 10112,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          260,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-table-20261021\\occupied-1-mask.png",
+          "sha256": "b8086f7f6b19c739da053538d973d1ac674de29e997799007de4edd3a1bbaf19"
+        }
+      },
+      {
+        "state": "occupied-2",
+        "tile": "Assets_Content_Textures_Items_sw_table2.bmp",
+        "info_id": 10113,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          234,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-table-20261021\\occupied-2-mask.png",
+          "sha256": "58f4379c0625833b3adf0691335a02da00c6806f94b758b4580df4b42b636ca0"
+        }
+      },
+      {
+        "state": "occupied-3",
+        "tile": "Assets_Content_Textures_Items_sw_table3.bmp",
+        "info_id": 10114,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          208,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-table-20261021\\occupied-3-mask.png",
+          "sha256": "0949cecc8be8a0e85baa093607851568c9d33056d9e2f3ad0c1ee3dad91f4beb"
+        }
+      },
+      {
+        "state": "occupied-4",
+        "tile": "Assets_Content_Textures_Items_sw_table4.bmp",
+        "info_id": 10115,
+        "atlas_id": 185,
+        "rect": [
+          36,
+          182,
+          16,
+          24
+        ],
+        "private_mask": {
+          "path": "E:\\Temp\\rimqud-native-table-20261021\\occupied-4-mask.png",
+          "sha256": "8df37aae917c6726e88c04c541de1ce352911a229dca40add9a60ba527f32717"
+        }
+      }
+    ],
+    "scope": "Read-only exact installed atlas metadata/masks; raw source retained privately. Native Inventory owns state/random choice."
+  },
+  "source_shape": "Broad flat wood top over two separated straight/splayed end supports and a low central stretcher. Upright Qud tile does not provide actual hidden depth or number of planks.",
+  "native_state": "Native Inventory selects empty tile or one of4occupied tiles and independently chooses FullDetailColor C,c,y,W. Do not correlate shape/color to inventory identity or reroll state. One shared source table under all stock overlays.",
+  "palette": {
+    "primary": "w on entire wood structure including scratches/highlights",
+    "empty_detail": "C with zero native covered detail pixels",
+    "occupied_detail_choices": [
+      "C",
+      "c",
+      "y",
+      "W"
+    ],
+    "ownership": "Only source stock belongs to detail. Gold construction key is ownership, not an authored gold item."
+  },
+  "stock_features": {
+    "occupied-1": "Tall narrow-neck vessel-like mark at left plus smaller upright mark toward center. Identity not established.",
+    "occupied-2": "Wide rectangular vessel-like mark with right-side open handle/slot. Identity not established.",
+    "occupied-3": "Rounded shoulder/narrow-top vessel-like form at right, small left upright mark and one tiny tabletop mark. Identity not established.",
+    "occupied-4": "Broad left stock form joined to open right rectangular frame, with two unequal upright projections. Identity not established."
+  },
+  "stock_geometry_provenance": "Vessel-like/handled/round terms describe source silhouettes, not resolved equipment definitions. Depth, roundness, wall thickness, unseen faces and placement are authored estimates; no exact bottle/cup/item inventory identity claimed.",
+  "reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_south.png",
+        "sha256": "3813423f9d3bbb2611dd566268845765aa2aa133aea7844871d5a0eda9dfdf0d",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_east.png",
+        "sha256": "7ef362f5fcab8041f858048a3463cc89fb7ecabbf26f695e431e777ffe48fea4",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_north.png",
+        "sha256": "5cbc625eab07cfd6243b2687ef48df1b3a6843fb48962e3d78538924929f2bdd",
+        "frame": [
+          128,
+          128
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          128,
+          128
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "building_base": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_Multi",
+    "xml_ancestry": [
+      "EndTable",
+      "TableBase",
+      "FurnitureWithQualityBase",
+      "FurnitureBase",
+      "BuildingBase"
+    ],
+    "draw_size": null,
+    "footprint": null,
+    "missing": "No explicit drawSize/size in inspected XML ancestry; runtime defaults not exported. Texture dimensions are not physical dimensions.",
+    "role": "Actual VTE EndTable S/E/N gives restrained wood contours/grain and parallel cardinal map-camera end volume only. No drawer, knob, donor footprint or gameplay copied.",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    }
+  },
+  "camera": {
+    "width": 14,
+    "depth": 8,
+    "height": 9.3,
+    "slab_thickness": 0.7,
+    "depth_projection": 0.45,
+    "projection": "u=8+rotated_x; v=18+.45*rotated_y-z; same dimensions/elevation all facings.",
+    "supports": "Two trestle end boards atX\u00c2\u00b15.3, thickness1.25, depth5.8; splayed end feet and one low X stretcher. Hidden board extrusion/shape is authored, not native limb count.",
+    "provenance": "Numeric dimensions inferred/authored from source broad top/supports plus actual donor presentation; no texture-frame ratio copied. End view retains full depth.",
+    "west": "Empty unmarked table can mirror E; occupied stock requires separate W projection/occlusion."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One common source-cell mapping for entire table and stock in all states/facings. No component/view production bbox fit."
+  },
+  "native_behavior": "Weight50 Takeablefalse Organictrue, Container/on Inventory populationTable, MissileCover10%, non-occluding render, sounds and rare Animated1/15000 BodyTypeTable remain native. Unsupported animated/custom behavior retains source art.",
+  "native_acceptance": "Pending full-set generation gate: native actual inventory/tile/detail choice, physics/visibility/cover, rare Animated fallback and extra-view placement remain unfinished."
+}
