@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-CANVAS-FOLDING-CHAIR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-BED**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -135,10 +135,10 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-BED | Bed | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BED | Bed | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BEDROLL | Bedroll | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BOOK-TABLE | Book Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CANVAS-FOLDING-CHAIR | Canvas Folding Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHAIR | Chair | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CHEST1 | Chest1 | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DRESSER | Dresser | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -1213,7 +1213,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bed-body.png](../art/village/scenery/bed-body.png), [art/village/scenery/bed-detail.png](../art/village/scenery/bed-detail.png).
 
-Current step: not started. Process-log events: 9.
+Current step: select_render_reference_or_document_no_equivalent. Process-log events: 9.
 
 - 2026-10-20T06:54:35.154016+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Bed/BaseBed/MountedFurniture/Furniture inheritance, original16x24mask and native w/Y wood/fabric palette; inspected native Bed part for appearance ownership.
   Review: Actual source/hash, description, open upper-right headboard and lower-left sleeping surface are recorded. Bed part declares no Render/Tile override; source has one tile, native sleep state and rare Animated builder. Hidden structure and curves/seams remain authored interpretation.
@@ -1405,7 +1405,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: select_render_reference_or_document_no_equivalent. Process-log events: 11.
+Current step: generation ready; final acceptance pending. Process-log events: 19.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -1472,6 +1472,54 @@ Current step: select_render_reference_or_document_no_equivalent. Process-log eve
   Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v1/registered/model.json", "sha256": "7e4f16459b06e78b9da93b6c1a68493b9ad3cf45709bbe9b6ec54e48a92f5710"}, {"path": "art/conversion/scn-canvas-folding-chair/v1/registered/registration-comparison.png", "sha256": "b4ea9b4aeb946a2eba16c90d226fa191d41c20b19f035b2c5093c085c551c200"}]
   Outputs: [{"path": "evidence/camera-facing-audit.json", "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"}]
   Method/prompt/corrections: {"phase": "Cardinal camera authoring correction"}
+
+- 2026-10-20T09:35:16.157943+00:00 / resolve_object_description_original_tile_palette_state / PASS: Re-read source item/ancestry and one deployed native tile, material/palette/state boundaries.
+  Review: Knit-watervine sling and jointed wood are identity. Original oblique camera does not govern the target facing. No folded state, backrest or four-way furniture rotation is invented.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/source-packet.json", "sha256": "958a21772951727b845262bcf9cc1f9a1cf8f6346d5919c7f1bc625056506b49"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Source identity retained; source camera rejected"}
+
+- 2026-10-20T09:35:16.158208+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspected actual VFE Chair_south and VTE Bedroll_south, verifying their hashes and installed definition source.
+  Review: Chair reference supplies straight footprint and shallow top convention only; bedroll supplies fabric convention. Neither is claimed a folding-frame equivalent.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/source-packet.json", "sha256": "958a21772951727b845262bcf9cc1f9a1cf8f6346d5919c7f1bc625056506b49"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/camera-construction-comparison.png", "sha256": "2e3731cf7a9755c51f3fade312ecb53fb5136af08777dba75c4b39b66d911b49"}]
+  Method/prompt/corrections: {"phase": "Actual installed south-facing camera reference"}
+
+- 2026-10-20T09:35:16.158548+00:00 / construct_faithful_shape / PASS: Rebuilt source sling, short rails and crossed jointed wood in a straight south map view.
+  Review: Seat is level and symmetric, supports attached, one visible pivot; intrinsic diagonal X braces do not rotate the footprint. Far supports overlap in this authored view.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/construct-cardinal.py", "sha256": "2fcf5571a45d82b41ba202f5be1fc191cdf0f227fde500b8aef017bb1ae9ee8b"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-front.svg", "sha256": "69d1432178fe7905fd0d38176a9af57d24e4d1087cfeeb4cddf5b556b6e62619"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-frame.svg", "sha256": "52c03dc01ad31a93ed9158be6e2a905b140fc205682309583a32b7d7798d18f0"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-fabric.svg", "sha256": "d5c7aa798013f65314f83961b9171d86c349c1db7c298d6828a46beba9a1a111"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-front.png", "sha256": "189ef0ec4a81663e4423b67d564a9dbfed63e95d2ce7d39c435c51a551450147"}]
+  Method/prompt/corrections: {"phase": "Editable cardinal sling-stool construction"}
+
+- 2026-10-20T09:35:16.159034+00:00 / create_required_state_neighbor_variants / PASS: Retained one full-cell object and explicit cloth/wood layers.
+  Review: No native folded/packed alternate or random variant is declared; no new state or turnaround is needed. Native interaction/animated fallback acceptance remains pending.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/source-packet.json", "sha256": "958a21772951727b845262bcf9cc1f9a1cf8f6346d5919c7f1bc625056506b49"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-frame.png", "sha256": "e8151cff762d1ba20414b355ffab74ac14ca297875344c7217bfa8ed78b159a1"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-fabric.png", "sha256": "447f918264a60ff505305f4f22f995f6f885eedae8e52b3c059c69ebd3ff139f"}]
+  Method/prompt/corrections: {"phase": "One source-backed fixed deployed state"}
+
+- 2026-10-20T09:39:37.657337+00:00 / refine_materials_and_form / PASS: Called built-in ImageGen using the straight construction and documented camera comparison.
+  Review: Viewed output: symmetric level sling/rails and attached crossed supports; no tall back, isometric seat, added cushion or packed state. RGB glow in transparent pixels is not selected coverage.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/refine-front-prompt.txt", "sha256": "80014b36f4313f05bbf4c21d43e4dd8b5ab195d6a89aa30ab2e7d54fecaf8782"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/constructed-front.png", "sha256": "189ef0ec4a81663e4423b67d564a9dbfed63e95d2ce7d39c435c51a551450147"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/camera-construction-comparison.png", "sha256": "2e3731cf7a9755c51f3fade312ecb53fb5136af08777dba75c4b39b66d911b49"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/refined-front.png", "sha256": "1d36776a8de8a5c6a847d8e926245815c5dd1a20dcc9f7a25c86fdf9a948a698"}]
+  Method/prompt/corrections: {"phase": "Actual cardinal canvas-stool refinement", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-720417d8-e04c-4bc5-81d1-1bea08e60204.png"}
+
+- 2026-10-20T09:39:37.658999+00:00 / extract_register_color_coverage / REJECTED: Inspected independent Lanczos alpha resampling at the cloth edge.
+  Review: Independent resampling produced 14 pixels where detail alpha exceeded object alpha, maximum14/255. Preserve this version; final material alpha is intersected with total object alpha after resampling.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/register-unclamped-alpha.py", "sha256": "13cff6499b78ce7b0fbc23093760be0d7df534ec76b67d0e386aa75dae78abdb"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/registered/registration-comparison.png", "sha256": "acf421abb94690be8f8f1349f4838bf852dae35fa15fbb2a08cd060e94828b16"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered/detail-neutral.png", "sha256": "228180de86eefb1f7c8af0b24e85ece87fabc4a217141f35341343c378089b0c"}]
+  Method/prompt/corrections: {"phase": "Corrected resampled material ownership"}
+
+- 2026-10-20T09:39:37.659442+00:00 / extract_register_color_coverage / PASS: Translated the complete refined image (0,72) pixels to restore constructed vertical placement, then mapped the full frame once to the recipient cell.
+  Review: No independent bbox/part fitting. Cyan selects fabric ownership then is removed. Equal-channel neutral primary/detail retain native wood w and fabric y; detail alpha is contained by total object coverage, with actual support gaps transparent.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/register-chair.py", "sha256": "87e385206b2f32bd36164bfc19884670631f4680bc9419c815c6cec26728a53e"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/refined-front.png", "sha256": "1d36776a8de8a5c6a847d8e926245815c5dd1a20dcc9f7a25c86fdf9a948a698"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/model.json", "sha256": "ad9e0cf5b12a9fddcd66ffc28d1d297d0053d3186c1aadefe12caa2887e88654"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-decisions.json", "sha256": "37e090cd98be057705dd5a6ef330a05b18b1d1230e0cfae76b6d18d7490d38df"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/primary-neutral.png", "sha256": "f808fd3fce35b17014336f1aa0801a70b24a2b7bb5f426492365b9f1d0fba577"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/detail-neutral.png", "sha256": "7b5555344d889983c1a3d80a1a72b79f2617cb5bd6595ae30bdbf27c1dca87e2"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/coverage.png", "sha256": "330fe9bf3ae4b7c169bdd0bad12fa05d70dc4d673967a293f8565cb535fdcc97"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/detail-coverage.png", "sha256": "36cf3f4d12a217e4032d4b0f817bc83382116e34f0002db7c9dd4bbad693a590"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/fabric-ownership-mask.png", "sha256": "f511e0c56659761298f931be36237dbacecdf0eee871a49cb373ca92b6295751"}, {"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/native-w-y-preview.png", "sha256": "304ee1ed1d93144556084232c725f8647d16587cda383a5c4146d4f120aa44f1"}]
+  Method/prompt/corrections: {"phase": "Registered neutral wood and canvas in the complete cell"}
+
+- 2026-10-20T09:39:37.661335+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected enlarged neutral, fabric-only and native-color recomposition plus intended16x24/24x36/32x48 views.
+  Review: Source sling/jointed-wood identity remains readable, all supports meet the seat, and cardinal frame no longer has a diamond footprint. One deployed fixed source state; native sitting/takeability/visibility/animated fallback acceptance remains pending all-generated gate.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/model.json", "sha256": "ad9e0cf5b12a9fddcd66ffc28d1d297d0053d3186c1aadefe12caa2887e88654"}]
+  Outputs: [{"path": "art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-comparison.png", "sha256": "db0479dead226ba92829ec45ed97f0311e73d3777115701d5d17e45d14c11911"}]
+  Method/prompt/corrections: {"phase": "Cardinal folding-chair authoring ready"}
 
 ### SCN-CHAIR: Chair
 

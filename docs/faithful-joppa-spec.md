@@ -337,7 +337,7 @@ art separately from effective foreground-arm masks, with unchanged body hashes.
 The ledger records actual calls, rejected proposals, corrections and all-view
 authoring plates. Native clothing acceptance remains unsatisfied under the
 all-generated gate; Stage 3 remains ACTIVE with Canvas Folding Chair the sole
-active entry. The overall art blockers above remain; no new tracked deferrals.
+active entry at that checkpoint. The overall art blockers above remain; no new tracked deferrals.
 
 The segmented/filterable report was verified at the served URL, including the
 shared Human child equipment paths, current-art deep link, per-entry asset links,
@@ -346,3 +346,13 @@ confirmed real row expansion/collapse; browser-tool clicks did not activate the
 buttons. [Report navigation evidence](../evidence/report-navigation-result.json)
 records that distinction and measured index sizes. This satisfies the requested
 report feature, not native art or full-village acceptance.
+
+Subsequent cardinal authoring reconciliation: Canvas Folding Chair v2 is
+generation-ready with a level backless sling, parallel rails and attached
+crossed wooden supports. Its single whole-frame registration and neutral
+wood/fabric roles preserve the native fixed-state contract. Resampled detail
+coverage is contained by total object coverage; the earlier unclamped attempt
+is retained in the process log. There are now 38 generation-ready entries;
+Bed is the sole active entry. Three angled furniture families/six layouts and
+six frontal-depth families/nine layouts remain unresolved. Native acceptance
+and the Stage 3 art blockers remain unchanged.
