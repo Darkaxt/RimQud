@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **FIT-IRUDAD-WALKING-STICK-HAND-6**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-ALCHEMIST-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -76,14 +76,14 @@ Creature views/composed refinement and garment in-context refinement must follow
 | FIT-IRUDAD-BLACK-ROBES-BODY-0 | irudad / Black Robes / Body / laterality 0 | UNFINISHED | ITEM-BLACK-ROBES, BODY-IRUDAD | Selected fitting is the unmutated older-human base only. Extra arms/tail and Irudad full actor assembly remain unfinished. Native equipped state and outfit precedence remain behind the all-generated gate. |
 | FIT-IRUDAD-SANDALS-FEET-0 | irudad / Sandals / Feet / laterality 0 | UNFINISHED | ITEM-SANDALS, BODY-IRUDAD | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-IRUDAD-SPECTACLES-FACE-0 | irudad / Spectacles / Face / laterality 0 | UNFINISHED | ITEM-SPECTACLES, BODY-IRUDAD | Irudad mutation-specific body and full outfit/native equipped-state acceptance remain unfinished. |
-| FIT-IRUDAD-WALKING-STICK-HAND-6 | irudad / Walking Stick / Hand / laterality 6 | IN PROGRESS | ITEM-WALKING-STICK, BODY-IRUDAD | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
+| FIT-IRUDAD-WALKING-STICK-HAND-6 | irudad / Walking Stick / Hand / laterality 6 | UNFINISHED | ITEM-WALKING-STICK, BODY-IRUDAD |  |
 | FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | nima / Floating Glowsphere / Floating Nearby / laterality 0 | UNFINISHED | ITEM-FLOATING-GLOWSPHERE, BODY-NIMA |  |
 | FIT-NIMA-LEATHER-APRON-BODY-0 | nima / Leather Apron / Body / laterality 0 | UNFINISHED | ITEM-LEATHER-APRON, BODY-NIMA | Nima mutation body, facial/cosmetic detail and full outfit/native equipped-state acceptance remain unfinished. |
 | FIT-NIMA-PESTLE-HAND-6 | nima / Pestle / Hand / laterality 6 | UNFINISHED | ITEM-PESTLE, BODY-NIMA | Actual mutation-managed Hand181/6 is not placed by this ordinary-hand preview. Resting/ready poses, named appearance/outfit and native held-state acceptance remain unfinished. |
 | FIT-NIMA-SANDALS-FEET-0 | nima / Sandals / Feet / laterality 0 | UNFINISHED | ITEM-SANDALS, BODY-NIMA | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0 | nima / Wide-brimmed Hat / Head / laterality 0 | UNFINISHED | ITEM-WIDE-BRIMMED-HAT, BODY-NIMA | Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records. |
 | FIT-YRAME-CHAIN-MAIL-BODY-0 | yrame / Chain Mail / Body / laterality 0 | UNFINISHED | ITEM-CHAIN-MAIL, BODY-YRAME | Yrame named size/silhouette, mutation anatomy, blue details, complete outfit and native equipped-state acceptance remain unfinished. |
-| FIT-YRAME-HORNS-HEAD-0 | yrame / Horns / Head / laterality 0 | UNFINISHED | ITEM-HORNS, BODY-YRAME | Known defect: the same frontal pair is drawn for every view; side attachment and overlap are wrong. |
+| FIT-YRAME-HORNS-HEAD-0 | yrame / Horns / Head / laterality 0 | UNFINISHED | ITEM-HORNS, BODY-YRAME |  |
 | FIT-YRAME-LEATHER-BOOTS-FEET-16 | yrame / Leather Boots / Feet / laterality 16 | UNFINISHED | ITEM-LEATHER-BOOTS, BODY-YRAME | Yrame mutation-specific Feet297/16 placement, duplication/occlusion on extra legs, named morphology/outfit and native equipped-state acceptance remain unfinished. |
 | FIT-YRAME-VIBRO-BLADE-HAND-2 | yrame / Vibro Blade / Hand / laterality 2 | UNFINISHED | ITEM-VIBRO-BLADE, BODY-YRAME | Captured generic unidentified text and weight3 differ from installed item identity/weight2; both retained. Named Big silhouette/mutations/outfit and native held/resting-ready pose acceptance remain unfinished. |
 
@@ -112,7 +112,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | ITEM-CHAIN-MAIL | Chain Mail | UNFINISHED | FIT-YRAME-CHAIN-MAIL-BODY-0 | Named Yrame morphology/mutation/outfit assembly and native acceptance remain unfinished. |
 | ITEM-CLOTH-ROBE | Cloth Robe | UNFINISHED | FIT-HUMAN-MALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-DROMAD-CLOTH-ROBE-BODY-0 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
 | ITEM-FLOATING-GLOWSPHERE | Floating Glowsphere | UNFINISHED | FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
-| ITEM-HORNS | Horns | UNFINISHED | FIT-YRAME-HORNS-HEAD-0 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
+| ITEM-HORNS | Horns | UNFINISHED | FIT-YRAME-HORNS-HEAD-0 |  |
 | ITEM-IRON-VINEREAPER | Iron Vinereaper | UNFINISHED | FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2 | Runtime actor-specific slot demand and donor runtime drawSize not exported; weapon dimensions remain authored. Horizontal ready/resting pose and named outfit/native acceptance remain unfinished. |
 | ITEM-LEATHER-APRON | Leather Apron | UNFINISHED | FIT-NIMA-LEATHER-APRON-BODY-0 | Native item acceptance and named Nima mutation/outfit assembly remain unfinished. |
 | ITEM-LEATHER-BOOTS | Leather Boots | UNFINISHED | FIT-YRAME-LEATHER-BOOTS-FEET-16 | Actual mutation-managed Feet297/16 binding, extra-foot duplication/occlusion and native named outfit acceptance remain unfinished. |
@@ -124,7 +124,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | ITEM-STEEL-UTILITY-KNIFE | Steel Utility Knife | UNFINISHED | FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-FEMALE-STEEL-UTILITY-KNIFE-HAND-2 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
 | ITEM-TELESCOPIC-MONOCLE | Telescopic Monocle | UNFINISHED | FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0 | Native four-facing criterion remains unsatisfied: current side-direction mapping needs explicit west optical/head-depth binding in final integration. Source does not prescribe exact ocular handedness; the same authored eye is retained throughout. |
 | ITEM-VIBRO-BLADE | Vibro Blade | UNFINISHED | FIT-YRAME-VIBRO-BLADE-HAND-2 | Captured generic description/weight differ from installed identity; records retained. Named Yrame body/mutations/outfit and native equipment/pose acceptance remain unfinished. |
-| ITEM-WALKING-STICK | Walking Stick | UNFINISHED | FIT-IRUDAD-WALKING-STICK-HAND-6 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
+| ITEM-WALKING-STICK | Walking Stick | UNFINISHED | FIT-IRUDAD-WALKING-STICK-HAND-6 |  |
 | ITEM-WIDE-BRIMMED-HAT | Wide-brimmed Hat | UNFINISHED | FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0 | Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records. |
 | ITEM-WOVEN-TUNIC | Woven Tunic | UNFINISHED | FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
 | ITEM-WRENCH | Wrench | UNFINISHED | FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-FEMALE-WRENCH-HAND-1 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
@@ -133,7 +133,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-ALCHEMIST-TABLE | Alchemist Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-ALCHEMIST-TABLE | Alchemist Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-ARGYVE-MULTICABINET | Argyve Multicabinet | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BED | Bed | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BEDROLL | Bedroll | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -2431,7 +2431,55 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/irudad-walking-stick-hand-6-item-east.png](../art/village/equipment/irudad-walking-stick-hand-6-item-east.png), [art/village/equipment/irudad-walking-stick-hand-6-item-north.png](../art/village/equipment/irudad-walking-stick-hand-6-item-north.png), [art/village/equipment/irudad-walking-stick-hand-6-item-south.png](../art/village/equipment/irudad-walking-stick-hand-6-item-south.png).
 
-Current step: source_identity_description_slot_laterality. Process-log events: 0.
+Current step: native_equipment_state_review. Process-log events: 8.
+
+- 2026-10-20T17:48:44.344067+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual ElderBob507 item541, brinestalk/crook description, exact Hand201/6 manager and full inherited one-hand base metadata.
+  Review: Source identity and actual Hand/6 binding retained separately from ordinary-body display proxy. Crook is continuous; donor straight shape is style only. Ready/native mutation attachment not claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/weapon-metadata.json", "sha256": "5333680fc347fd6e8275390edfa27a478e098dcad997d6014b3074b2c4239a5c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:48:44.344067+00:00 / select_correct_body_and_references / PASS: Choose fixed ordinary older male body and actual Primitive Tools walking-stick texture/definition, recording historical version and donor-size limits.
+  Review: Source identity and actual Hand/6 binding retained separately from ordinary-body display proxy. Crook is continuous; donor straight shape is style only. Ready/native mutation attachment not claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-comparison.png", "sha256": "799917ee0f36c82263a7449011823f5f138f9eab61f1668efe0c35d09837bbad"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:48:44.344067+00:00 / construct_and_overlay_one_item / PASS: Construct continuous brinestalk crook and separate native accent; overlay one item at a provisional baseline palm without remapping source mutation hand.
+  Review: Source identity and actual Hand/6 binding retained separately from ordinary-body display proxy. Crook is continuous; donor straight shape is style only. Ready/native mutation attachment not claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/canonical-pattern.svg", "sha256": "216d48d883acc491cb0c7009ca7e25918909e1c7c09c844201bf810db2282467"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/detail-region.svg", "sha256": "13baadce26ae55198e0526ec39778d53ef1e7281ea8334ce0f5d687d83cd2c36"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/fit-controls.json", "sha256": "5d609250ec563a9838330c509a158f9f1ea2ad6830c99b03ff277eb66c594ff1"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/constructed-neutral-context.png", "sha256": "53655b64564971280febc9e2f1a2e29a99823975e27186b2507b76a76f77757a"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/constructed-red-item-context.png", "sha256": "1ac9ad1f689f711de9a577d909d05207310fed1f15cf6097b74b4fb16fb0f0fc"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/imagegen-prompt.txt", "sha256": "f4d0bebd7e941318c6e27e5282a26193986f7c19064b079f02ae7df7a67218e0"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:50:19.617464+00:00 / imagegen_refine_in_context_on_unchanged_body / PASS: One built-in contextual cane refinement followed by structural inspection in all three views before material extraction. Retain generated brown surface as luminance only.
+  Review: Continuous spiraled crook and full stalk are usable. No new body, silhouette, metal hardware or color interpretation is selected from the generated context. Native w/g palette will remain separate.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/imagegen-prompt.txt", "sha256": "f4d0bebd7e941318c6e27e5282a26193986f7c19064b079f02ae7df7a67218e0"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/constructed-red-item-context.png", "sha256": "1ac9ad1f689f711de9a577d909d05207310fed1f15cf6097b74b4fb16fb0f0fc"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/source-comparison.png", "sha256": "799917ee0f36c82263a7449011823f5f138f9eab61f1668efe0c35d09837bbad"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/refined-red-context.png", "sha256": "0d1473955769a4183184864381826cd09cb1f151da2df0906f6421aa1e25252c"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/first-refinement-structural-review.json", "sha256": "e2f4ebc3abeaf21a895f6cb0fbf609d35c5b6c82672ea414ded82ecb3ddd0583"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/first-refinement-review.png", "sha256": "fb84c626035e5cb2038c636f925b0459721e920adc46445eb1b2feffbef70ab6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:53:10.976062+00:00 / retrieve_isolated_item_and_masks / PASS: Select the same contextual wood luminance into complete fixed crook/stalk alpha; complete hidden grip and retain separate source g accent without a second isolation call.
+  Review: Inspected complete dried brinestalk/crook, unobstructed return, stalk continuity, original-palm depth, SEN/mirrored west, source w/g palette and intended-size appearance. One actual contextual refinement supplies neutralized wood surface; hidden grip completed before depth, original alpha/ink/body retained. Actual Hand201/6 under Arm200 with MultipleArms::Change is preserved verbatim. Ordinary older-body palm is only an authoring compatibility proxy, not mutation attachment acceptance. Stationary support grip is near crook; ready horizontal weapon presentation and individual Irudad assembly remain pending.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/refined-red-context.png", "sha256": "0d1473955769a4183184864381826cd09cb1f151da2df0906f6421aa1e25252c"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/first-refinement-structural-review.json", "sha256": "e2f4ebc3abeaf21a895f6cb0fbf609d35c5b6c82672ea414ded82ecb3ddd0583"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/register-stick.py", "sha256": "28f9c6061ccddec73de126b5977aa26d38c9067a377bd84b4bb377633c8579b5"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/registration-decisions.json", "sha256": "b46c12729305fec5235965c8ab1a5ed110a114ea13cdf793fdf8a81a774719fe"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/full-item-comparison.png", "sha256": "cde0ec29a6347bacc542a17edc229cb2faa00916bd9a2e83dc3ad8f11fb3e360"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/canonical-continuation.png", "sha256": "e0492db8b48d247bc233bce8d1981ed12b5c143f8203bc7b4ba2494ddcdeeacb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:53:10.976062+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Recompose original older body with complete cane and original palm/body depth; retain exact mutation binding separately from baseline proxy.
+  Review: Inspected complete dried brinestalk/crook, unobstructed return, stalk continuity, original-palm depth, SEN/mirrored west, source w/g palette and intended-size appearance. One actual contextual refinement supplies neutralized wood surface; hidden grip completed before depth, original alpha/ink/body retained. Actual Hand201/6 under Arm200 with MultipleArms::Change is preserved verbatim. Ordinary older-body palm is only an authoring compatibility proxy, not mutation attachment acceptance. Stationary support grip is near crook; ready horizontal weapon presentation and individual Irudad assembly remain pending.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/refined-red-context.png", "sha256": "0d1473955769a4183184864381826cd09cb1f151da2df0906f6421aa1e25252c"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/first-refinement-structural-review.json", "sha256": "e2f4ebc3abeaf21a895f6cb0fbf609d35c5b6c82672ea414ded82ecb3ddd0583"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/model.json", "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/depth-off-comparison.png", "sha256": "c89f195bc63bae527940c18d6caed9ac5234c68285f8071c93308c50f006d31c"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/grip-comparison.png", "sha256": "47503b129507885073d8c325aff4ca967d21187f73a89686e75ae1b0f8d78f26"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:53:10.976062+00:00 / review_game_scale_and_palette / PASS: Inspect source w/g roles, authored walking-cane size and all cardinal display views at intended size; no native mutation/state acceptance.
+  Review: Inspected complete dried brinestalk/crook, unobstructed return, stalk continuity, original-palm depth, SEN/mirrored west, source w/g palette and intended-size appearance. One actual contextual refinement supplies neutralized wood surface; hidden grip completed before depth, original alpha/ink/body retained. Actual Hand201/6 under Arm200 with MultipleArms::Change is preserved verbatim. Ordinary older-body palm is only an authoring compatibility proxy, not mutation attachment acceptance. Stationary support grip is near crook; ready horizontal weapon presentation and individual Irudad assembly remain pending.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/source-packet.json", "sha256": "b9ddb8caf849ada17c3c3035b9e641b05db2c4667b037fdaf3835320eec3d731"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/refined-red-context.png", "sha256": "0d1473955769a4183184864381826cd09cb1f151da2df0906f6421aa1e25252c"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/first-refinement-structural-review.json", "sha256": "e2f4ebc3abeaf21a895f6cb0fbf609d35c5b6c82672ea414ded82ecb3ddd0583"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/independent-palette-comparison.png", "sha256": "f2d883fd42d66b6c577705fac188e357fcfdb28a00e1839f50abc7b18b8a7cea"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/game-scale-review.png", "sha256": "83a00eab27c3ce0e57985d5cbdad73cc964c4db7eb127a077c215a745af2eb66"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/authoring-review.json", "sha256": "df3a4a4d3ace106f74eb479239ac215169ad05165a62234a5a1d80820f3941ea"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/artifact-manifest.json", "sha256": "abade85efb0b9f8278cfe55a765e5b054deabc48f7f7be958182424ded98e194"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:51.826216+00:00 / source_identity_description_slot_laterality / PASS: Bind the inherited one-hand classification to exact installed Physics default and actor-sensitive slot method evidence.
+  Review: Installed Physics default excludes two-slot bit; Walking Stick ancestry has no UsesTwoSlots/UsesSlots override. One-hand base class supported. Actor-sensitive event result remains unknown; actual captured Hand201/6 is mutation-managed and not relabeled ordinary.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/weapon-metadata.json", "sha256": "5333680fc347fd6e8275390edfa27a478e098dcad997d6014b3074b2c4239a5c"}]
+  Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/handedness-evidence.json", "sha256": "e4e3c037c651c40639c09e7d1eb51a073b780baa00ad79663d666dce76b9ba1a"}]
+  Method/prompt/corrections: {}
 
 ### FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0: nima / Floating Glowsphere / Floating Nearby / laterality 0
 
@@ -2897,7 +2945,79 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/yrame-horns-head-0-item-detail-east.png](../art/village/equipment/yrame-horns-head-0-item-detail-east.png), [art/village/equipment/yrame-horns-head-0-item-detail-north.png](../art/village/equipment/yrame-horns-head-0-item-detail-north.png), [art/village/equipment/yrame-horns-head-0-item-detail-south.png](../art/village/equipment/yrame-horns-head-0-item-detail-south.png), [art/village/equipment/yrame-horns-head-0-item-east.png](../art/village/equipment/yrame-horns-head-0-item-east.png), [art/village/equipment/yrame-horns-head-0-item-north.png](../art/village/equipment/yrame-horns-head-0-item-north.png), [art/village/equipment/yrame-horns-head-0-item-south.png](../art/village/equipment/yrame-horns-head-0-item-south.png).
 
-Current step: not started. Process-log events: 0.
+Current step: native_equipment_state_review. Process-log events: 12.
+
+- 2026-10-20T17:58:58.674245+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual natural Horns575 on Head288/0, paired grooved-bone description, native TileColor w/detail W and separate declared mutation metadata.
+  Review: Pair count is source-supported. Directional near/far/root overlap is explicit; no frontal pair reused for profile, body mutation or unrecorded body rescale.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:58:58.674245+00:00 / select_correct_body_and_references / PASS: Select original ordinary female body and actual Biotech/VTE directional horn references and layer differences; retain great Qud silhouette.
+  Review: Pair count is source-supported. Directional near/far/root overlap is explicit; no frontal pair reused for profile, body mutation or unrecorded body rescale.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-comparison.png", "sha256": "96266739cc7c81799df750ae2788ceedefdaec9de938aa75ebd2cb1e3bdc525b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:58:58.674245+00:00 / construct_and_overlay_one_item / PASS: Rebuild distinct front/profile/rear horn layers. Pad all facing frames equally without resizing body; far profile/rear horns go behind original head.
+  Review: Pair count is source-supported. Directional near/far/root overlap is explicit; no frontal pair reused for profile, body mutation or unrecorded body rescale.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/constructed-neutral-context.png", "sha256": "f969ecdbe74805139e96cded39a0c00e3d2b15ced5adf8676528b96af693eb1f"}, {"path": "art/conversion/fit-yrame-horns/v1/constructed-red-head-context.png", "sha256": "7027cfc107ffa8ecb6ef8298fa7dc3b5f5651bff59866769b8ed80ff2d19ae3d"}, {"path": "art/conversion/fit-yrame-horns/v1/pattern-near-east.svg", "sha256": "435d58ec5166b32718629dff96bf1de33807151c45ef2c3edc1464509923c232"}, {"path": "art/conversion/fit-yrame-horns/v1/pattern-far-east.svg", "sha256": "7f64241fc7714f62d1183ff817e174d3e4f578accba7ca3662470a10bc46a9e2"}, {"path": "art/conversion/fit-yrame-horns/v1/imagegen-prompt.txt", "sha256": "dd7bcd08ae1e7f95f912bdbf2e4a05de3c2e831539a91634345e2583705cb0a9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:00:18.199986+00:00 / construct_and_overlay_one_item / PASS: Manual groove strokes extended a few pixels outside the full horn silhouette. Clip groove ink to its actual horn surface before first contextual refinement.
+  Review: Manual grooves now stop at their own horn boundary. Initial manual art and source packet retained unchanged; no generation retry or new body.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/constructed-red-head-context.png", "sha256": "7027cfc107ffa8ecb6ef8298fa7dc3b5f5651bff59866769b8ed80ff2d19ae3d"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/manual-groove-correction.json", "sha256": "62008529206c9b5ed06946ae9b47b535ca383455f372ee69a7852e46c5c892d3"}, {"path": "art/conversion/fit-yrame-horns/v1/patched-red-head-context.png", "sha256": "dc3b19856f23047baf89cd13cba94ad2bb0b346050f56c8d969b843335c3197c"}, {"path": "art/conversion/fit-yrame-horns/v1/patched-neutral-context.png", "sha256": "9bc804874163311cd8bbee7f87805926b870642b51c33e894312afc4fcb780b9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:02:31.718894+00:00 / imagegen_refine_in_context_on_unchanged_body / PASS: Refine the patched directional horn construction once, then inspect pair continuity, profile overlap and rear head occlusion before extraction.
+  Review: Neutral grooved bone is usable in all required facings. Profile near/far overlap and back root coverage retained. No second isolation or original-body replacement selected.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/imagegen-prompt.txt", "sha256": "dd7bcd08ae1e7f95f912bdbf2e4a05de3c2e831539a91634345e2583705cb0a9"}, {"path": "art/conversion/fit-yrame-horns/v1/patched-red-head-context.png", "sha256": "dc3b19856f23047baf89cd13cba94ad2bb0b346050f56c8d969b843335c3197c"}, {"path": "art/conversion/fit-yrame-horns/v1/source-comparison.png", "sha256": "96266739cc7c81799df750ae2788ceedefdaec9de938aa75ebd2cb1e3bdc525b"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}, {"path": "art/conversion/fit-yrame-horns/v1/first-refinement-structural-review.json", "sha256": "ba622186617bd6aaede9bc43852c40a511a6873b369e0da95a679e7de5e205f0"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:05.617438+00:00 / retrieve_isolated_item_and_masks / PASS: Register same contextual neutral bone into complete per-facing near/far sources; complete hidden roots and retain independent native gold detail without second generative isolation.
+  Review: Inspected pair continuity, tapered grooved-bone silhouette, distinct profile near/far overlap, rear root coverage, full sources before depth, native w/W palette and intended-size views. One contextual refinement selected; manual groove overrun patched before it and all initial evidence retained. Complete roots/hidden bone retained with separate layer order, not body-shaped cutouts. Top padding128 preserves every original body pixel, physical pixel scale and world landmark mapping across all facings. Actual natural Head288/0 binding retained. Native physical-frame/headgear acceptance and Yrame named mutations/outfit remain pending full-set generation.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}, {"path": "art/conversion/fit-yrame-horns/v1/first-refinement-structural-review.json", "sha256": "ba622186617bd6aaede9bc43852c40a511a6873b369e0da95a679e7de5e205f0"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/register-horns.py", "sha256": "a9c460f25244f928ed550f61df5fff4be73925949b910bff70207025147688a1"}, {"path": "art/conversion/fit-yrame-horns/v1/registration-decisions.json", "sha256": "27186648dfeca8d71709d86630e57a361e1c709ad140a18a06197a02f174ddf8"}, {"path": "art/conversion/fit-yrame-horns/v1/full-item-comparison.png", "sha256": "51d1b0b64d204d1cbe38ee715c0105853feaa33ff7cd56bbba3492150b0cf0ff"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:05.617438+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Replace historical frontal-pair profile with distinct near/far head depth and rear root coverage; preserve all body pixels and physical placement through explicit shared top padding.
+  Review: Inspected pair continuity, tapered grooved-bone silhouette, distinct profile near/far overlap, rear root coverage, full sources before depth, native w/W palette and intended-size views. One contextual refinement selected; manual groove overrun patched before it and all initial evidence retained. Complete roots/hidden bone retained with separate layer order, not body-shaped cutouts. Top padding128 preserves every original body pixel, physical pixel scale and world landmark mapping across all facings. Actual natural Head288/0 binding retained. Native physical-frame/headgear acceptance and Yrame named mutations/outfit remain pending full-set generation.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}, {"path": "art/conversion/fit-yrame-horns/v1/first-refinement-structural-review.json", "sha256": "ba622186617bd6aaede9bc43852c40a511a6873b369e0da95a679e7de5e205f0"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}, {"path": "art/conversion/fit-yrame-horns/v1/depth-off-comparison.png", "sha256": "10262b240c58926ff17bdea182454dd8e319307564aec4df97f17a4f59c0bb8a"}, {"path": "art/conversion/fit-yrame-horns/v1/near-far-ownership-comparison.png", "sha256": "b476de29154c18ded825afc37637122cea80dadd2d2e430e8f51d8a6c3721a47"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:05.617438+00:00 / review_game_scale_and_palette / PASS: Inspect source w primary/W gold detail, full pair and intended-size cardinal displays; retain pending natural-head/gear precedence, padded native frame and named mutation assembly.
+  Review: Inspected pair continuity, tapered grooved-bone silhouette, distinct profile near/far overlap, rear root coverage, full sources before depth, native w/W palette and intended-size views. One contextual refinement selected; manual groove overrun patched before it and all initial evidence retained. Complete roots/hidden bone retained with separate layer order, not body-shaped cutouts. Top padding128 preserves every original body pixel, physical pixel scale and world landmark mapping across all facings. Actual natural Head288/0 binding retained. Native physical-frame/headgear acceptance and Yrame named mutations/outfit remain pending full-set generation.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/source-packet.json", "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}, {"path": "art/conversion/fit-yrame-horns/v1/first-refinement-structural-review.json", "sha256": "ba622186617bd6aaede9bc43852c40a511a6873b369e0da95a679e7de5e205f0"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v1/independent-palette-comparison.png", "sha256": "b2fdbb821dd3bd041a0bf62511d243246f05a6b1a341638b6070716c442d569e"}, {"path": "art/conversion/fit-yrame-horns/v1/game-scale-review.png", "sha256": "54bc3207047ddec97c9d8b731d0b66965e579631a341bf38b7d8f0c339a7ff85"}, {"path": "art/conversion/fit-yrame-horns/v1/authoring-review.json", "sha256": "ebd034c956e8541a9b90dc45e6bc9aaa382b1fdb4bfa3417a0722e42d8c4a4c6"}, {"path": "art/conversion/fit-yrame-horns/v1/artifact-manifest.json", "sha256": "fcdcd2892f46a158fa4ddf669afc788574a62e978209f6bbc306c5320d505226"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:09:25.507871+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / REQUIRES REWORK: Withdraw prior horn authoring readiness after user identified inconsistent anatomical root placement across facings.
+  Review: The selected front shows paired forehead roots. Old profile near/far roots were too far back, suggesting a different side attachment. Preserve v1 evidence and correct the profile attachment before readiness.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:09:25.507871+00:00 / construct_and_overlay_one_item / PASS: User correction: keep the selected frontal high-forehead horn roots and move whole profile horns forward to the matching forehead projection.
+  Review: Near profile horn translated51px and far40px. Their roots now project to the same high forehead instead of the mid-side of the skull. South/north and every original body pixel stay fixed; no new generation or native acceptance.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v2/source-packet.json", "sha256": "514f7b8339a700f0997cc465883a1e6e13dc681a3df8c8a3ba8b606c6ec6abdd"}, {"path": "art/conversion/fit-yrame-horns/v2/attachment-controls.json", "sha256": "dc7fde590bd9ec2d2208464eb726c86f0f5cbfe7036b2f5a44d9e878667ac63f"}, {"path": "art/conversion/fit-yrame-horns/v2/model.json", "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"}, {"path": "art/conversion/fit-yrame-horns/v2/profile-root-before-after.png", "sha256": "fedc354089b16d7e32d1a8f720b870791e7d16f1e7972a8350c81f0db59207a7"}, {"path": "art/conversion/fit-yrame-horns/v2/forehead-root-guide.png", "sha256": "a277b28eb18d54a39c6350a8d3c3bf5db42758b3e57148c1e8a3dd94b8d859b5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:10:37.585744+00:00 / recompose_check_cuffs_attachment_occlusion_all_views / PASS: Review one anatomical forehead-root site across all views, including rear roots hidden by original head. Translate full near/far bone and tint together; no silhouette/body redraw.
+  Review: User-identified inconsistency corrected by preserving selected frontal forehead roots and translating complete profile horns forward to the same forehead site: near51px, far40px. Reviewed front/profile/back root guide and before/after. Profile near/far roots now overlap on the anterior forehead instead of the mid-side of the skull; rear forehead roots remain hidden behind original head. South/north source pixels, selected bone material/size, full roots, native tint, body and physical mapping unchanged. No new ImageGen/isolation call. Anatomical landmarks remain authored estimates, not native skull bones; integrated natural-head/gear and Yrame assembly acceptance still pending.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v2/source-packet.json", "sha256": "514f7b8339a700f0997cc465883a1e6e13dc681a3df8c8a3ba8b606c6ec6abdd"}, {"path": "art/conversion/fit-yrame-horns/v2/attachment-controls.json", "sha256": "dc7fde590bd9ec2d2208464eb726c86f0f5cbfe7036b2f5a44d9e878667ac63f"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v2/model.json", "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"}, {"path": "art/conversion/fit-yrame-horns/v2/assembly-comparison.png", "sha256": "3109701a0a282ed61c9c3542a4910d4457c0b98e4ced9dd6daa339b6937443b0"}, {"path": "art/conversion/fit-yrame-horns/v2/profile-root-before-after.png", "sha256": "fedc354089b16d7e32d1a8f720b870791e7d16f1e7972a8350c81f0db59207a7"}, {"path": "art/conversion/fit-yrame-horns/v2/forehead-root-guide.png", "sha256": "a277b28eb18d54a39c6350a8d3c3bf5db42758b3e57148c1e8a3dd94b8d859b5"}, {"path": "art/conversion/fit-yrame-horns/v2/registration-decisions.json", "sha256": "42406251ff906fd1c487a6b0b0c56539e4497690020c6dfbdc6c99c7d6949e4e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:10:37.585744+00:00 / review_game_scale_and_palette / PASS: Review corrected forehead profile at intended size, unchanged source w/W colors and unchanged physical mapping.
+  Review: User-identified inconsistency corrected by preserving selected frontal forehead roots and translating complete profile horns forward to the same forehead site: near51px, far40px. Reviewed front/profile/back root guide and before/after. Profile near/far roots now overlap on the anterior forehead instead of the mid-side of the skull; rear forehead roots remain hidden behind original head. South/north source pixels, selected bone material/size, full roots, native tint, body and physical mapping unchanged. No new ImageGen/isolation call. Anatomical landmarks remain authored estimates, not native skull bones; integrated natural-head/gear and Yrame assembly acceptance still pending.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v2/source-packet.json", "sha256": "514f7b8339a700f0997cc465883a1e6e13dc681a3df8c8a3ba8b606c6ec6abdd"}, {"path": "art/conversion/fit-yrame-horns/v2/attachment-controls.json", "sha256": "dc7fde590bd9ec2d2208464eb726c86f0f5cbfe7036b2f5a44d9e878667ac63f"}, {"path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png", "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v2/independent-palette-comparison.png", "sha256": "2e3b5f00f1902195fd88332674165d8c29a2c3b530749c4870e7f852859fcba1"}, {"path": "art/conversion/fit-yrame-horns/v2/game-scale-review.png", "sha256": "325e07e6d932209b223f0183dffbc7b3e3614401de30f4081a312179b97d4ea1"}, {"path": "art/conversion/fit-yrame-horns/v2/authoring-review.json", "sha256": "807776102fa747ad882394d6c68aa10f03d44cb140ab78453c0d0df9c4ad2f6d"}, {"path": "art/conversion/fit-yrame-horns/v2/artifact-manifest.json", "sha256": "120597e7df5024f17efa5b814df847320d0a359d2c4361425e241e9e4eb51ad4"}]
+  Method/prompt/corrections: {}
 
 ### FIT-YRAME-LEATHER-BOOTS-FEET-16: yrame / Leather Boots / Feet / laterality 16
 
@@ -3229,7 +3349,43 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 6.
+
+- 2026-10-20T18:04:06.448934+00:00 / resolve_item_identity_description_palette / PASS: Resolve exact pair/groove description, natural-equipment Head binding and source TileColor w/detail W roles.
+  Review: Reviewed sole required fitting source/refinement/patch chain, directional full near/far surfaces and original head depth, neutral w/W regions, intended-size views and exact physical-frame mapping. Natural Horns stay separate from ordinary race body; no integrated mutation/headgear acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/authoring-review.json", "sha256": "ebd034c956e8541a9b90dc45e6bc9aaa382b1fdb4bfa3417a0722e42d8c4a4c6"}]
+  Outputs: [{"path": "art/conversion/item-horns/v1/fittings.json", "sha256": "01696a818c357a66ec2ed1eaf4e1da99e4ba2be37c9b06c3ea6b1aa27e6d22ee"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:06.448934+00:00 / verify_every_body_fitting_log / PASS: Reconcile sole directional fitting, patched manual grooves, contextual refinement, hidden-root completion, near/far ordering and original physical frame.
+  Review: Reviewed sole required fitting source/refinement/patch chain, directional full near/far surfaces and original head depth, neutral w/W regions, intended-size views and exact physical-frame mapping. Natural Horns stay separate from ordinary race body; no integrated mutation/headgear acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/authoring-review.json", "sha256": "ebd034c956e8541a9b90dc45e6bc9aaa382b1fdb4bfa3417a0722e42d8c4a4c6"}]
+  Outputs: [{"path": "art/conversion/item-horns/v1/fittings.json", "sha256": "01696a818c357a66ec2ed1eaf4e1da99e4ba2be37c9b06c3ea6b1aa27e6d22ee"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:04:06.448934+00:00 / record_item_acceptance_from_all_fittings / PASS: Index generation-ready Horns art only, preserving native natural-head and Yrame mutation/outfit acceptance requirements.
+  Review: Reviewed sole required fitting source/refinement/patch chain, directional full near/far surfaces and original head depth, neutral w/W regions, intended-size views and exact physical-frame mapping. Natural Horns stay separate from ordinary race body; no integrated mutation/headgear acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v1/model.json", "sha256": "d79ddf55f89ba41a5e5ac3d825fc1caf2273f4a046e954a3b34187e1d544581e"}, {"path": "art/conversion/fit-yrame-horns/v1/authoring-review.json", "sha256": "ebd034c956e8541a9b90dc45e6bc9aaa382b1fdb4bfa3417a0722e42d8c4a4c6"}]
+  Outputs: [{"path": "art/conversion/item-horns/v1/fittings.json", "sha256": "01696a818c357a66ec2ed1eaf4e1da99e4ba2be37c9b06c3ea6b1aa27e6d22ee"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:09:25.507871+00:00 / verify_every_body_fitting_log / REQUIRES REWORK: Withdraw prior horn authoring readiness after user identified inconsistent anatomical root placement across facings.
+  Review: The selected front shows paired forehead roots. Old profile near/far roots were too far back, suggesting a different side attachment. Preserve v1 evidence and correct the profile attachment before readiness.
+  Inputs: [{"path": "art/conversion/item-horns/v1/fittings.json", "sha256": "01696a818c357a66ec2ed1eaf4e1da99e4ba2be37c9b06c3ea6b1aa27e6d22ee"}, {"path": "art/conversion/fit-yrame-horns/v1/assembly-comparison.png", "sha256": "a043c6e58dca1ffe5a734edb512289ba35c9e91d62382c31c4dc3b0188dd7c9a"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:10:38.079818+00:00 / verify_every_body_fitting_log / PASS: Replace superseded v1 index with reviewed v2 forehead-root correction, root guide and preserved source chain.
+  Review: Re-reviewed current v2 fitting after user rejected inconsistent roots. Front forehead design is retained; profile now projects the same root site and rear hides it. Exact old art/logs preserved; no new generation or native acceptance.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v2/model.json", "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"}, {"path": "art/conversion/fit-yrame-horns/v2/authoring-review.json", "sha256": "807776102fa747ad882394d6c68aa10f03d44cb140ab78453c0d0df9c4ad2f6d"}]
+  Outputs: [{"path": "art/conversion/item-horns/v2/fittings.json", "sha256": "7266bca7271a663150893fe965c8fa60be4c53ebcf5d0d00c2ca57756ddfd58d"}, {"path": "art/conversion/fit-yrame-horns/v2/assembly-comparison.png", "sha256": "3109701a0a282ed61c9c3542a4910d4457c0b98e4ced9dd6daa339b6937443b0"}, {"path": "art/conversion/fit-yrame-horns/v2/forehead-root-guide.png", "sha256": "a277b28eb18d54a39c6350a8d3c3bf5db42758b3e57148c1e8a3dd94b8d859b5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T18:10:38.079818+00:00 / record_item_acceptance_from_all_fittings / PASS: Restore generation-ready authoring only for corrected horn fit; native natural-head/gear/mutation assembly remains pending.
+  Review: Re-reviewed current v2 fitting after user rejected inconsistent roots. Front forehead design is retained; profile now projects the same root site and rear hides it. Exact old art/logs preserved; no new generation or native acceptance.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v2/model.json", "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"}, {"path": "art/conversion/fit-yrame-horns/v2/authoring-review.json", "sha256": "807776102fa747ad882394d6c68aa10f03d44cb140ab78453c0d0df9c4ad2f6d"}]
+  Outputs: [{"path": "art/conversion/item-horns/v2/fittings.json", "sha256": "7266bca7271a663150893fe965c8fa60be4c53ebcf5d0d00c2ca57756ddfd58d"}, {"path": "art/conversion/fit-yrame-horns/v2/assembly-comparison.png", "sha256": "3109701a0a282ed61c9c3542a4910d4457c0b98e4ced9dd6daa339b6937443b0"}, {"path": "art/conversion/fit-yrame-horns/v2/forehead-root-guide.png", "sha256": "a277b28eb18d54a39c6350a8d3c3bf5db42758b3e57148c1e8a3dd94b8d859b5"}]
+  Method/prompt/corrections: {}
 
 ### ITEM-IRON-VINEREAPER: Iron Vinereaper
 
@@ -3589,7 +3745,25 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
+
+- 2026-10-20T17:53:12.039378+00:00 / resolve_item_identity_description_palette / PASS: Resolve the brinestalk/crook source, actual altered Hand201/6 binding, one-hand base declaration and w/g palette.
+  Review: Reviewed sole required art fitting, complete crook/shaft source and one contextual refinement, full alpha/material completion, original body/depth, palette and intended-size evidence. Exact mutation Hand201/6 retained; no native or named-assembly acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/model.json", "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/authoring-review.json", "sha256": "df3a4a4d3ace106f74eb479239ac215169ad05165a62234a5a1d80820f3941ea"}]
+  Outputs: [{"path": "art/conversion/item-walking-stick/v1/fittings.json", "sha256": "e7107dd70b3351a5946c8ab6522196ae400bc3a142019ed634aad7afabab0e44"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:53:12.039378+00:00 / verify_every_body_fitting_log / PASS: Reconcile sole required art fitting and all its generation evidence; preserve baseline-proxy and mutation-attachment distinction.
+  Review: Reviewed sole required art fitting, complete crook/shaft source and one contextual refinement, full alpha/material completion, original body/depth, palette and intended-size evidence. Exact mutation Hand201/6 retained; no native or named-assembly acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/model.json", "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/authoring-review.json", "sha256": "df3a4a4d3ace106f74eb479239ac215169ad05165a62234a5a1d80820f3941ea"}]
+  Outputs: [{"path": "art/conversion/item-walking-stick/v1/fittings.json", "sha256": "e7107dd70b3351a5946c8ab6522196ae400bc3a142019ed634aad7afabab0e44"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T17:53:12.039378+00:00 / record_item_acceptance_from_all_fittings / PASS: Index generation-ready art only and retain pending native state/mutation assembly.
+  Review: Reviewed sole required art fitting, complete crook/shaft source and one contextual refinement, full alpha/material completion, original body/depth, palette and intended-size evidence. Exact mutation Hand201/6 retained; no native or named-assembly acceptance claimed.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/model.json", "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/authoring-review.json", "sha256": "df3a4a4d3ace106f74eb479239ac215169ad05165a62234a5a1d80820f3941ea"}]
+  Outputs: [{"path": "art/conversion/item-walking-stick/v1/fittings.json", "sha256": "e7107dd70b3351a5946c8ab6522196ae400bc3a142019ed634aad7afabab0e44"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}]
+  Method/prompt/corrections: {}
 
 ### ITEM-WIDE-BRIMMED-HAT: Wide-brimmed Hat
 
@@ -3689,7 +3863,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/alchemist-table-body.png](../art/village/scenery/alchemist-table-body.png), [art/village/scenery/alchemist-table-detail.png](../art/village/scenery/alchemist-table-detail.png).
 
-Current step: not started. Process-log events: 10.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 10.
 
 - 2026-10-20T06:30:33.351102+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Alchemist Table/Table definitions, original tile mask/hash, scorched-table description and deleted inherited empty/full appearance tags.
   Review: Viewed original source decoded with native w wood and C glass. Wide table/visible supports, left rack and tall alembic define its source identity. Inventory/cover/organic furniture metadata remains native; described fixture art is distinct from actual carried inventory.

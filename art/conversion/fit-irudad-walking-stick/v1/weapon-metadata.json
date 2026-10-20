@@ -1,0 +1,351 @@
+{
+  "item": "Walking Stick",
+  "inheritance": [
+    {
+      "blueprint": "Walking Stick",
+      "parent": "BaseCudgel",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "walking stick",
+          "Tile": "Items/sw_cudgel_11.bmp",
+          "ColorString": "&w",
+          "DetailColor": "g"
+        },
+        {
+          "Name": "Physics",
+          "Weight": "4"
+        },
+        {
+          "Name": "MeleeWeapon",
+          "MaxStrengthBonus": "1",
+          "BaseDamage": "1d2",
+          "Skill": "Cudgel",
+          "Stat": "Strength"
+        },
+        {
+          "Name": "Commerce",
+          "Value": "12"
+        },
+        {
+          "Name": "Description",
+          "Short": "Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook."
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "BaseCudgel",
+      "parent": "MeleeWeapon",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "MeleeWeapon",
+          "Skill": "Cudgel"
+        },
+        {
+          "Name": "Render",
+          "Tile": "Items/sw_cudgel_1.bmp",
+          "DetailColor": "y"
+        },
+        {
+          "Name": "Examiner",
+          "Alternate": "UnknownClub"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "MeleeWeapon",
+      "parent": "Item",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Render",
+          "RenderString": "\\"
+        },
+        {
+          "Name": "Physics",
+          "Weight": "5",
+          "Category": "Melee Weapons"
+        },
+        {
+          "Name": "TinkerItem",
+          "Bits": "00",
+          "CanDisassemble": "false",
+          "CanBuild": "false"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Item",
+      "parent": "InorganicObject",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "[Item]",
+          "RenderString": ".",
+          "RenderLayer": "5"
+        },
+        {
+          "Name": "Physics",
+          "Conductivity": "20"
+        },
+        {
+          "Name": "Stacker"
+        },
+        {
+          "Name": "MentalShield"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "InorganicObject",
+      "parent": "PhysicalObject",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Inorganic"
+        },
+        {
+          "Name": "Physics",
+          "Organic": "false"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Render",
+          "DisplayName": "[Object]",
+          "RenderString": "?",
+          "RenderLayer": "1",
+          "RenderIfDark": "true"
+        },
+        {
+          "Name": "Physics",
+          "Category": "Miscellaneous",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "1"
+        },
+        {
+          "Name": "MeleeWeapon",
+          "BaseDamage": "1d2",
+          "Stat": "Strength",
+          "Skill": "Cudgel"
+        },
+        {
+          "Name": "Commerce",
+          "Value": "0.01"
+        },
+        {
+          "Name": "Description",
+          "Short": "A hideous specimen."
+        },
+        {
+          "Name": "BurnToAshesIfOrganic"
+        }
+      ],
+      "uses_slots": []
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+        "publication": "Private installed reference; not copied as a standalone asset"
+      },
+      "parts": [
+        {
+          "Name": "Physics",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "0"
+        }
+      ],
+      "uses_slots": []
+    }
+  ],
+  "effective_parts": {
+    "Physics": {
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "4",
+      "Category": "Melee Weapons",
+      "Organic": "false",
+      "Conductivity": "20"
+    },
+    "Render": {
+      "DisplayName": "walking stick",
+      "RenderString": "\\",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "Tile": "Items/sw_cudgel_11.bmp",
+      "DetailColor": "g",
+      "ColorString": "&w"
+    },
+    "MeleeWeapon": {
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel",
+      "MaxStrengthBonus": "1"
+    },
+    "Commerce": {
+      "Value": "12"
+    },
+    "Description": {
+      "Short": "Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook."
+    },
+    "BurnToAshesIfOrganic": {},
+    "Inorganic": {},
+    "Stacker": {},
+    "MentalShield": {},
+    "TinkerItem": {
+      "Bits": "00",
+      "CanDisassemble": "false",
+      "CanBuild": "false"
+    },
+    "Examiner": {
+      "Alternate": "UnknownClub"
+    }
+  },
+  "handedness": {
+    "base_class": "one-handed",
+    "inherited_UsesTwoSlots": false,
+    "UsesSlots": null,
+    "runtime_GetSlotsRequiredFor": null,
+    "observed_occupancy": [
+      {
+        "actor": "ElderBob",
+        "instance": 507,
+        "item": 541,
+        "part": {
+          "id": 201,
+          "parent": 200,
+          "type": "Hand",
+          "variant": "Hand",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "defaultBlueprint": "DefaultFist",
+          "equipped": {
+            "instance": 541,
+            "blueprint": "Walking Stick",
+            "description": "Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 4 lbs.}}",
+            "tile": "Items/sw_cudgel_11.bmp",
+            "foreground": "&w",
+            "tileColor": "",
+            "detailColor": "g"
+          },
+          "defaultItem": {
+            "instance": 542,
+            "blueprint": "DefaultFist",
+            "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+            "tile": "Creatures/natural-weapon-fist.bmp",
+            "foreground": "&w",
+            "tileColor": "",
+            "detailColor": ""
+          }
+        },
+        "parent": {
+          "id": 200,
+          "parent": 196,
+          "type": "Arm",
+          "variant": "Arm",
+          "laterality": 6,
+          "manager": "507::MultipleArms::Change",
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        }
+      }
+    ],
+    "qualification": "Base flags and single captured occupancy support one-hand item; actor-specific slot demand was not exported. Hand201/6 is mutation-managed, not an ordinary Hand/2."
+  },
+  "size": {
+    "native_dimensions": null,
+    "weight": 4,
+    "weapon_class": "Cudgel",
+    "description": "Dried brinestalk, spiraled crook",
+    "canonical_bounds": [
+      180,
+      396,
+      278,
+      900
+    ],
+    "item_space_grip": [
+      256,
+      500
+    ],
+    "supporting_grip": null,
+    "raster_scale": 1,
+    "pixel_world_scale": 0.0012941176470588234,
+    "reason": "Authored approximately half-body-height walking cane, about500px including crook. Weight is not length. High grip is explicitly a resting/support display near the crook, not a ready combat grip."
+  },
+  "pose": "Stationary walking/support display only. Separate ready/drafted side presentation must project forward/horizontal; native state and mutation-hand support remain pending.",
+  "donor": {
+    "mod": "Primitive Tools",
+    "workshop_id": "2352893469",
+    "package_id": "PrimitiveTools.velcroboy333",
+    "about": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2352893469\\About\\About.xml",
+      "sha256": "0364fad71a3055edffd4995bdbf396ccff680d9627bd1acc2740c50eb4e9ff2e",
+      "publication": "Private installed reference; not copied as a standalone asset"
+    },
+    "texture": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2352893469\\Common\\Textures\\Things\\Item\\Equipment\\WeaponMelee\\HDM_Walkingstick.png",
+      "sha256": "d3b31f1abb1d57250eb16b828af317e2542cea13e9acbdc3c5aae493b7482ca6",
+      "publication": "Private installed reference; not copied as a standalone asset"
+    },
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2352893469\\1.5\\Defs\\ThingDefs_Misc\\PrimitiveMelee.xml",
+      "sha256": "d7b983862b761207e946b2439249bad4e4106c60da38689475a887a1bf8361be",
+      "publication": "Private installed reference; not copied as a standalone asset"
+    },
+    "defName": "VBY_WalkingStick",
+    "texPath": "Things/Item/Equipment/WeaponMelee/HDM_Walkingstick",
+    "graphicClass": "Graphic_Single",
+    "uiIconScale": "1.25",
+    "explicit_drawSize": null,
+    "base_definition": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2352893469\\1.5\\Defs\\ThingDefs_Misc\\ToolWeapon_Bases.xml",
+      "sha256": "c1e28933b4a989466ee6539a51373e6d6bf7e49a05ab8f90bf4de64598dd08c5",
+      "publication": "Private installed reference; not copied as a standalone asset"
+    },
+    "inherited_equippedAngleOffset": "-65",
+    "qualification": "Installed through1.5 reference; no LoadFolders.xml found, no current1.6/1.7 compatibility or active-mod claim. Actual walking-stick def/texture supplies flat narrow wood outline and shading only. Straight donor silhouette does not replace Qud crook; uiIconScale1.25 is not world length."
+  }
+}

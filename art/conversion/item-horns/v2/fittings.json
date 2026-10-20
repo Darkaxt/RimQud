@@ -1,0 +1,83 @@
+{
+  "item": "Horns",
+  "source": {
+    "instance": 575,
+    "blueprint": "Horns",
+    "description": "A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}",
+    "tile": "items/sw_horns2.bmp",
+    "foreground": "&y",
+    "tileColor": "&w",
+    "detailColor": "W",
+    "kind": "equipment",
+    "reference_file": "village-originals/horns-reference.png",
+    "native_mask_sha256": "5a5ff1e55c47076eb09aad2f0b0918fe01b12533344b14846d069bbe4c55171d",
+    "reference_sha256": "c091779f34465673fad9f07382fc10cc0ddc25a798b5a2901ef2a134c4154743",
+    "info_id": 9732,
+    "atlas_id": 185,
+    "rect": [
+      126,
+      364,
+      16,
+      24
+    ]
+  },
+  "fittings": [
+    {
+      "entry": "FIT-YRAME-HORNS-HEAD-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-yrame-horns/v2/model.json",
+          "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+        },
+        "plate": {
+          "path": "art/conversion/fit-yrame-horns/v2/assembly-comparison.png",
+          "sha256": "3109701a0a282ed61c9c3542a4910d4457c0b98e4ced9dd6daa339b6937443b0"
+        }
+      },
+      "source_packet": {
+        "path": "art/conversion/fit-yrame-horns/v2/source-packet.json",
+        "sha256": "514f7b8339a700f0997cc465883a1e6e13dc681a3df8c8a3ba8b606c6ec6abdd"
+      },
+      "authoring_review": {
+        "path": "art/conversion/fit-yrame-horns/v2/authoring-review.json",
+        "sha256": "807776102fa747ad882394d6c68aa10f03d44cb140ab78453c0d0df9c4ad2f6d"
+      },
+      "attachment_controls": {
+        "path": "art/conversion/fit-yrame-horns/v2/attachment-controls.json",
+        "sha256": "dc7fde590bd9ec2d2208464eb726c86f0f5cbfe7036b2f5a44d9e878667ac63f"
+      }
+    }
+  ],
+  "source_identity": "Pair of grooved bone extrusions, natural Head equipment. Actual TileColor w overrides foreground y; separate W gold detail.",
+  "scope": "Actual Yrame515 Horns575 on ordinary Head288/0. Explicit separate natural-equipment/mutation overlay; unmutated reusable human body unchanged.",
+  "directional_art": "Pair rooted in the high forehead consistently across facings; corrected profile horns translated forward. Same selected full sources, near/far depth, native tint, physical scale and original body. Rear forehead roots hidden behind head.",
+  "physical_frame": {
+    "canvas": [
+      512,
+      1152
+    ],
+    "contact": [
+      256,
+      1078
+    ],
+    "original_canvas": [
+      512,
+      1024
+    ],
+    "original_contact": [
+      256,
+      950
+    ],
+    "padding": [
+      0,
+      128
+    ],
+    "policy": "Pad every facing, source body and masks identically at top; no rescale or independent centering. Preserve original physical pixel mapping. Horn textures use expanded canvas with explicit matching render height/center."
+  },
+  "limits": "Native expanded texture/world mapping, headgear precedence, mutation/NPC appearance and full outfit acceptance remain required behind complete-generation gate.",
+  "new_imagegen_calls": 0,
+  "supersedes": {
+    "path": "art/conversion/item-horns/v1/fittings.json",
+    "sha256": "01696a818c357a66ec2ed1eaf4e1da99e4ba2be37c9b06c3ea6b1aa27e6d22ee"
+  }
+}

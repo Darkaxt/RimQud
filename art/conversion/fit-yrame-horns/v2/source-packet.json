@@ -1,0 +1,260 @@
+{
+  "entry": "FIT-YRAME-HORNS-HEAD-0",
+  "recorded_at": "2026-10-20T18:09:25.507871+00:00",
+  "original": {
+    "instance": 575,
+    "blueprint": "Horns",
+    "description": "A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}",
+    "tile": "items/sw_horns2.bmp",
+    "foreground": "&y",
+    "tileColor": "&w",
+    "detailColor": "W",
+    "kind": "equipment",
+    "reference_file": "village-originals/horns-reference.png",
+    "native_mask_sha256": "5a5ff1e55c47076eb09aad2f0b0918fe01b12533344b14846d069bbe4c55171d",
+    "reference_sha256": "c091779f34465673fad9f07382fc10cc0ddc25a798b5a2901ef2a134c4154743",
+    "info_id": 9732,
+    "atlas_id": 185,
+    "rect": [
+      126,
+      364,
+      16,
+      24
+    ]
+  },
+  "creature": {
+    "instance": 515,
+    "blueprint": "Warden Yrame",
+    "species": "human",
+    "gender": "female",
+    "description": "Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n",
+    "anatomy": "Humanoid",
+    "tile": "Creatures/npc-yrame.bmp",
+    "foreground": "&B",
+    "tileColor": "&w",
+    "detailColor": "B"
+  },
+  "race": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "actual_head_binding": {
+    "id": 288,
+    "parent": 287,
+    "type": "Head",
+    "variant": "Head",
+    "laterality": 0,
+    "manager": null,
+    "defaultBlueprint": null,
+    "equipped": {
+      "instance": 575,
+      "blueprint": "Horns",
+      "description": "A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}",
+      "tile": "items/sw_horns2.bmp",
+      "foreground": "&y",
+      "tileColor": "&w",
+      "detailColor": "W"
+    },
+    "defaultItem": null
+  },
+  "natural_equipment": {
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "publication": "Private installed reference, no standalone donor texture copied"
+    },
+    "parts": [
+      {
+        "Name": "MeleeWeapon",
+        "Slot": "Head",
+        "BaseDamage": "2",
+        "Stat": "Strength",
+        "Skill": "ShortBlades",
+        "MaxStrengthBonus": "100"
+      },
+      {
+        "Name": "Armor",
+        "AV": "0",
+        "DV": "0",
+        "WornOn": "Head"
+      },
+      {
+        "Name": "Render",
+        "DisplayName": "horns",
+        "RenderString": "*",
+        "Tile": "items/sw_horns2.bmp",
+        "TileColor": "&w",
+        "DetailColor": "W"
+      },
+      {
+        "Name": "Commerce",
+        "Value": "0"
+      },
+      {
+        "Name": "Description",
+        "Short": "A pair of bone extrusions trenched with grooves race to a symmetrical point above the head."
+      },
+      {
+        "Name": "NaturalEquipment"
+      },
+      {
+        "Name": "NoDamage"
+      },
+      {
+        "Name": "NoBreak"
+      },
+      {
+        "Name": "Physics",
+        "Category": "Natural Armor",
+        "IsReal": "false",
+        "Weight": "0"
+      },
+      {
+        "Name": "HornsProperties"
+      }
+    ],
+    "tags": [
+      {
+        "Name": "MutationEquipment",
+        "Value": "Horns"
+      },
+      {
+        "Name": "ExcludeFromDynamicEncounters"
+      },
+      {
+        "Name": "NoDefaultBehavior"
+      },
+      {
+        "Name": "NoSparkingQuest"
+      },
+      {
+        "Name": "Gender",
+        "Value": "plural"
+      },
+      {
+        "Name": "NaturalGear"
+      },
+      {
+        "Name": "VisibleAsDefaultBehavior"
+      },
+      {
+        "Name": "ShowAsPhysicalFeature"
+      }
+    ],
+    "static_mutation": {
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+        "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+        "publication": "Private installed reference, no standalone donor texture copied"
+      },
+      "declaration": {
+        "Name": "Horns",
+        "Level": "8",
+        "Variant": "Horns"
+      },
+      "level_meaning": "Declared level8 is not a horn count. Runtime shape description explicitly says a pair."
+    }
+  },
+  "body": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "frame": {
+    "canvas": [
+      512,
+      1152
+    ],
+    "contact": [
+      256,
+      1078
+    ],
+    "original_canvas": [
+      512,
+      1024
+    ],
+    "original_contact": [
+      256,
+      950
+    ],
+    "padding": [
+      0,
+      128
+    ],
+    "policy": "Pad every facing, source body and masks identically at top; no rescale or independent centering. Preserve original physical pixel mapping. Horn textures use expanded canvas with explicit matching render height/center."
+  },
+  "donor": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "package_id": "VanillaExpanded.VTEXE",
+    "about": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+      "publication": "Private installed reference, no standalone donor texture copied"
+    },
+    "load_folders": {
+      "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85",
+      "publication": "Private installed reference, no standalone donor texture copied"
+    },
+    "assets": {
+      "south": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Pawn\\Humanlike\\HeadAttachments\\MiniHorns\\MiniHorns_south.png",
+        "sha256": "1ec81306b51c309a96d9d0c31b693b6e2d0e13ee11ef96d49a079e4daff805b4",
+        "publication": "Private installed reference, no standalone donor texture copied"
+      },
+      "east": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Pawn\\Humanlike\\HeadAttachments\\MiniHorns\\MiniHorns_east.png",
+        "sha256": "a451f4de4b19ad7acfe607ee73b0857fe43b01563d79f2d8b75b01e978918ee0",
+        "publication": "Private installed reference, no standalone donor texture copied"
+      },
+      "north": {
+        "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Pawn\\Humanlike\\HeadAttachments\\MiniHorns\\MiniHorns_north.png",
+        "sha256": "e5f2565e0b43a130ff9cf4dbaece8402d60f5a3f03bacd86bc98ad68f5b021c3",
+        "publication": "Private installed reference, no standalone donor texture copied"
+      }
+    },
+    "definition": {
+      "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Biotech\\Defs\\GeneDefs\\GeneDefs_Endogenes.xml",
+      "sha256": "19e66f0228f6ea6189c27014a27fddb194c82e4ad9285db80443bf643da46e52",
+      "publication": "Private installed reference, no standalone donor texture copied"
+    },
+    "defName": "Headbone_MiniHorns",
+    "nodeClass": "PawnRenderNode_AttachmentHead",
+    "parentTagDef": "Head",
+    "default_layer": "80",
+    "north_layer": "10",
+    "role": "Actual Biotech directional head-attachment convention and VTE replacement textures: pair front/back, overlapping single profile silhouette and north behind head. Small donor knobs do not replace Qud great grooved horns; donor gene/node logic is not ported."
+  },
+  "design": "One pair of large tapered grooved bone horns, symmetric in front/back. East projects near/far roots onto same profile crown, with far horn behind original head and near horn above it; no frontal pair pasted onto profile. Curvature and unseen rear surfaces are authored interpretation of the sparse original and pair description.",
+  "palette": {
+    "primary": "w",
+    "detail": "W",
+    "primary_rgb": "98875f",
+    "detail_rgb": "cfc041",
+    "body": "w",
+    "resolution": "TileColor w overrides ColorString y; W is source gold detail, not white. Neutral production textures and separate groove/highlight detail."
+  },
+  "scope": "Separate mutation/natural-equipment overlay on reusable unmutated female body. Never bake horns, extra legs, freezing hands or named Big morphology into ordinary body. This authoring overlay does not implement a generalized mutation framework.",
+  "native_acceptance": "Pending full-set generation, integrated natural Head288/0 attachment, headgear precedence, physical-frame mapping and Yrame full mutation/outfit assembly.",
+  "source_version": {
+    "path": "art/conversion/fit-yrame-horns/v1/source-packet.json",
+    "sha256": "2fd5bf9f80ed77b4ece66e47d085bf25bd333c804c64b2d85469ac973a97c4b5"
+  },
+  "shared_refinement": {
+    "raw": {
+      "path": "art/conversion/fit-yrame-horns/v1/refined-red-context.png",
+      "sha256": "88ad523095e234065e684684373e202c4d625af1355846852221eee991db1dfc"
+    },
+    "prompt": {
+      "path": "art/conversion/fit-yrame-horns/v1/imagegen-prompt.txt",
+      "sha256": "dd7bcd08ae1e7f95f912bdbf2e4a05de3c2e831539a91634345e2583705cb0a9"
+    },
+    "structural_gate": {
+      "path": "art/conversion/fit-yrame-horns/v1/first-refinement-structural-review.json",
+      "sha256": "ba622186617bd6aaede9bc43852c40a511a6873b369e0da95a679e7de5e205f0"
+    },
+    "new_call": false
+  },
+  "root_correction": "Use one anatomical site: paired high forehead roots. Preserve selected south and north surfaces/depth; translate intact profile near horn51px forward and far horn40px forward so their roots project to the same forehead, not the temple."
+}
