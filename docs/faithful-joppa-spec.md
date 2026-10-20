@@ -542,3 +542,13 @@ v1 retain full soles/straps, native `y` / `w` tint and original-foot visibility
 at the unchanged contact. Their enlarged contextual output is a material source,
 not a replacement for registered foot anatomy. Continue with the remaining
 Sandals fittings; this does not close the item aggregate or any native criterion.
+
+Sandals authoring reconciliation: all four enumerated Feet/0 fits now have
+current source-bound evidence. Human male and Irudad's selected unmutated
+older-human base reuse the continuous Sandals source through recorded per-foot
+fit controls and target-specific visibility. Nima's ordinary Feet group and
+identical shared female base reuse the exact existing art/masks with her own
+captured item/part binding. No redundant ImageGen call or generated body is
+claimed. The Sandals inventory record aggregates all four generation-ready
+fittings. Native gear acceptance and the separate BODY-IRUDAD/BODY-NIMA and
+NPC mutation assemblies remain unfinished; none is completed by this footwear.

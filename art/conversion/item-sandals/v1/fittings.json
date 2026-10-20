@@ -1,0 +1,98 @@
+{
+  "item": "Sandals",
+  "workflow": "regional-curved-v1",
+  "source": {
+    "instance": 618,
+    "blueprint": "Sandals",
+    "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+    "tile": "items/sw_sandals.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "w",
+    "kind": "equipment",
+    "reference_file": "village-originals/sandals-reference.png",
+    "native_mask_sha256": "34ee7254323c09bd09ae36b786ff2406da40ef8caa37ab655d7def7517f96570",
+    "reference_sha256": "ecaf268358b7e7351b6b0eb2b7cf7d075477679b73510bc804f25fdffcb4fa74",
+    "info_id": 9980,
+    "atlas_id": 185,
+    "rect": [
+      468,
+      52,
+      16,
+      24
+    ]
+  },
+  "scope": "All four enumerated Feet/0 fitting authoring records generation-ready. Male and older-base fits reuse the canonical item with per-foot controls; Nima reuses the identical shared female base and artwork with her own actual native item binding.",
+  "fittings": [
+    {
+      "entry": "FIT-HUMAN-MALE-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-sandals/v1/model.json",
+          "sha256": "b83070e1d6ade0d87b68349d56a9b43523261b83d11a70206b0ee2940ec3086d"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-sandals/v1/footwear-comparison.png",
+          "sha256": "fc3d1a44dc18a5e15aaf7ff97450df2fd2d55ee9fb4d75583d0c58299850e1cf"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate."
+      }
+    },
+    {
+      "entry": "FIT-HUMAN-FEMALE-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+          "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-sandals/v1/footwear-comparison.png",
+          "sha256": "fa5fd8ff93138d3227dca895b3318e66a5b9f9d276592647f1c0f5b2d0a2ff26"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected enlarged SEN and mirrored west footwear, original-foot overlay, neutral/y-w palette and intended-size whole body. Original body/feet/contact retained; sole bottom remains y950. Full soles and straps kept before foot restoration; real skin exposure is defined by the separate foot mask, not body-colored fill. Generated enlarged anatomy shifted and is not used: exact same-output strap and sole swatches supply material only. Native Feet-pair binding and outfit precedence remain pending full-set gate."
+      }
+    },
+    {
+      "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-irudad-sandals/v1/model.json",
+          "sha256": "634206bee737bc88b7e181fcf4bbd30c40a4daf3cdbcbf202d3373060590f754"
+        },
+        "plate": {
+          "path": "art/conversion/fit-irudad-sandals/v1/footwear-comparison.png",
+          "sha256": "5c5b27d0cfabedca0c0a9ac2a75e1557e520938249cf27affee547e7f756d985"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected Sandals on the selected older-human base in SEN and mirrored west, neutral/native y-w palette and intended-size views. Captured Irudad Feet/0 is ordinary, not mutation-managed. Whole canonical footwear fitted with recorded horizontal controls at unchanged contact; original base feet and continuous soles/straps retained. This does not complete his separate mutated body/actor assembly or assert native equipment support."
+      }
+    },
+    {
+      "entry": "FIT-NIMA-SANDALS-FEET-0",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-sandals/v1/model.json",
+          "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-sandals/v1/footwear-comparison.png",
+          "sha256": "fa5fd8ff93138d3227dca895b3318e66a5b9f9d276592647f1c0f5b2d0a2ff26"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending."
+      }
+    }
+  ],
+  "palette": "Native primary y / strap detail w; body tint remains independent.",
+  "limits": "Named mutation body/actor assemblies remain incomplete. This closes footwear generation only, not native equipment acceptance or a mutated full character."
+}
