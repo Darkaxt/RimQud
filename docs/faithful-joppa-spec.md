@@ -431,7 +431,7 @@ not authorize a new renderer framework or early game test. RimWorld apparel
 color/shader masks are not automatically evidence of body-occlusion support in
 an unnamed mod; distinguish verified local behavior from the proposed contract.
 
-Current mask-first reconciliation: human child tunic remains the sole active
+Historical mask-first reconciliation before subsequent fitting experiments: human child tunic remains the sole active
 entry. Adult dromad Cloth Robe and child dromad tunic also lose generation-ready
 credit because their selected exports still bake body cutouts into cloth. Reuse
 their source bodies/refined intact garments; register separate masks and record
@@ -443,3 +443,22 @@ The [bounded source inspection](../evidence/apparel-occlusion-authoring-contract
 records actual installed classes and existing recipient layer/tint behavior;
 it does not validate runtime mask support. No new renderer stage or early native
 validation is introduced.
+
+User-authorized fitting experiment (2026-10-20): define body-relative coverage
+and exposure masks per clothing type (T-shirt-like, trousers-like, skirt-like,
+robe-like), and attempt deterministic deformation after the red-body cutoff.
+The bounded sample is the adult dromad Cloth Robe in three cardinal views.
+Keep original body pixels, frame, scale and contact fixed. Use the actual
+red-key extracted garment as the primary material, retaining complete cloth as
+the explicit source for material missing behind body occlusion. Record target
+masks, source/target landmarks, deformation, material provenance, and original
+versus deformed recompositions in the HTML ledger. Other garment types receive
+mask proposals only; no fit or native support is inferred. This is an authoring
+experiment, not automatic acceptance or permission for early native testing.
+
+The user subsequently requested the simpler alternative of recentering and
+stretching the whole garment image. Compare one X/Y scale and translation per
+view against local deformation, preserving the fixed original body and separate
+depth masks. Record red-cut and complete-garment sources distinctly. A cleaner
+small sprite does not silently waive remaining coverage or native acceptance;
+retain the experiment and defects for the ongoing art discussion.

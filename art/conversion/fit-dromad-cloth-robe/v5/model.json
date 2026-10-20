@@ -1,0 +1,214 @@
+{
+  "item": "Cloth Robe",
+  "blueprint": "Cloth Robe",
+  "family": "dromad",
+  "slot": "Body",
+  "laterality": 0,
+  "canvas": [
+    512,
+    1024
+  ],
+  "contact": [
+    256,
+    950
+  ],
+  "views": {
+    "south": [
+      {
+        "component": "item",
+        "file": "dromad-cloth-robe-v5-south.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-south.png",
+        "sha256": "4d2312f721f1e677bbf6329d591522c1715efd85b472bf2f01c74e77c32ef794",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0007,
+        "equipment_key": "cloth-robe@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "dromad-robe-body-overlay-v5-south.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/body-overlay-south.png",
+        "sha256": "de1ebe34ef3a5a9a407e9636a2ec11dc0d464851916c623d9fc0821d9f49f23c",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0008,
+        "equipment_key": "cloth-robe@Body@0"
+      }
+    ],
+    "east": [
+      {
+        "component": "item",
+        "file": "dromad-cloth-robe-v5-east.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-east.png",
+        "sha256": "288d2d75c395a61ae44df0bf10e456db1c43c3e322955438e0568aea73665637",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0007,
+        "equipment_key": "cloth-robe@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "dromad-robe-body-overlay-v5-east.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/body-overlay-east.png",
+        "sha256": "3430439a7160dffcbb4333dadcf77be6af5b276efa581ea81a33102ac8b9756e",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0008,
+        "equipment_key": "cloth-robe@Body@0"
+      }
+    ],
+    "north": [
+      {
+        "component": "item",
+        "file": "dromad-cloth-robe-v5-north.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-north.png",
+        "sha256": "bb0b197cf9d4f96f2ce412cae4cd72c4a1f02a98ddb4b65b31ca0baea2dd1b50",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0007,
+        "equipment_key": "cloth-robe@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "dromad-robe-body-overlay-v5-north.png",
+        "public_file": "art/conversion/fit-dromad-cloth-robe/v5/body-overlay-north.png",
+        "sha256": "83c7c4f0d9efcc32206d227d1bcfbc23fd713efcc097d79d478c00dc44fceb35",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 1.4166007905138338,
+        "height": 1.8888010540184452,
+        "center_x": 0,
+        "center_z": 0.807905138339921,
+        "layer": 0.0008,
+        "equipment_key": "cloth-robe@Body@0"
+      }
+    ]
+  },
+  "base_model": "art/conversion/body-dromad/v2/model.json",
+  "body_sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970",
+  "palette": "Neutral grayscale; separate equipment foreground &y/detail y",
+  "policy": "Actual equipped Cloth Robe on Tam, Body part 357, laterality 0; fixed unmutated adult race base",
+  "native_acceptance": "Deferred until all conversions generated; generic-layer binding and outfit precedence not tested",
+  "representation": "Intact garment plus per-facing painted body-over-clothing mask; original-body overlay is a derived export",
+  "layer_order": "body 0 -> intact robe .0007 -> masked original body .0008 -> head .001 -> head detail .0011; held Shillelagh remains separate above arm",
+  "mask_semantics": "white selects original body above garment; black none; gray antialias; overlay alpha = body alpha * mask",
+  "occlusion_sources": {
+    "south": {
+      "body": {
+        "path": "art/conversion/body-dromad/v2/body-south.png",
+        "sha256": "cb0cef365df01fe1ce95ed49ebba9b199bf7fa54ac30f0eaeba542419ecde7a6"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-south.png",
+        "sha256": "4d2312f721f1e677bbf6329d591522c1715efd85b472bf2f01c74e77c32ef794"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-south.svg",
+        "sha256": "079045d2a306dcf5ad7f69fcd8caf0aa7a88a2a7b34217922a087f96ade04ef6"
+      },
+      "mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-south.png",
+        "sha256": "f8d7d748e8cc9739a3a89b84999ce3fcffa43c227d76564c38376b393266dcee"
+      }
+    },
+    "east": {
+      "body": {
+        "path": "art/conversion/body-dromad/v2/body-east.png",
+        "sha256": "3990ef0733ba6decbb952374dbd195f664d47ce4a0574b092b881ff8a4d13e89"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-east.png",
+        "sha256": "288d2d75c395a61ae44df0bf10e456db1c43c3e322955438e0568aea73665637"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-east.svg",
+        "sha256": "1e2003a47469148fd7fa1495f9d5c9e08c852d7801cfe368eaaf31533507210d"
+      },
+      "mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-east.png",
+        "sha256": "2a7fab6883cd2f435a4fcfc54d2015753af9c53af812b19530cfb4978ce72fd2"
+      }
+    },
+    "north": {
+      "body": {
+        "path": "art/conversion/body-dromad/v2/body-north.png",
+        "sha256": "d8cb51a472438f058df78d18522d25cba13bed4cc1db72d5c2bdb997739d979b"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-north.png",
+        "sha256": "bb0b197cf9d4f96f2ce412cae4cd72c4a1f02a98ddb4b65b31ca0baea2dd1b50"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-north.svg",
+        "sha256": "12a1ac5acdad80072dd53723c562dbcb60924aec081c1a10f2198f46d3c9a357"
+      },
+      "mask": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/body-over-clothing-north.png",
+        "sha256": "4bc1838b30806bb4f7452f282e3fd30a6f0d2c6db25c4090b6d4429df396d858"
+      }
+    }
+  },
+  "outfit_scope": "This authored template wears only this tunic. Do not bind its exposed-hand overlay above gloves/other hand gear; resolve actual outfit precedence at final native integration."
+}

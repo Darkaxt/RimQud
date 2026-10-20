@@ -1,0 +1,41 @@
+{
+  "scope": "Bounded generation-authoring experiment only, not a production garment or native validation",
+  "checks": [
+    {
+      "view": "south",
+      "body_source_unchanged": true,
+      "required_covered_interior_pixels_missing": 0,
+      "exposed_body_interior_pixels_changed": 0,
+      "mesh_inverted_triangles": 36,
+      "mesh_collapsed_triangles": 0,
+      "material_from_red_key_fraction": 0.9746129602050358
+    },
+    {
+      "view": "east",
+      "body_source_unchanged": true,
+      "required_covered_interior_pixels_missing": 0,
+      "exposed_body_interior_pixels_changed": 0,
+      "mesh_inverted_triangles": 9,
+      "mesh_collapsed_triangles": 2,
+      "material_from_red_key_fraction": 0.882475404180397
+    },
+    {
+      "view": "north",
+      "body_source_unchanged": true,
+      "required_covered_interior_pixels_missing": 0,
+      "exposed_body_interior_pixels_changed": 0,
+      "mesh_inverted_triangles": 37,
+      "mesh_collapsed_triangles": 0,
+      "material_from_red_key_fraction": 0.978510387931866
+    }
+  ],
+  "visual_inspection": "Inspected all three deformed cardinal views, fixed-body mask previews, and profile before/after. Coverage/exposure constraints hold; exact body images/frame retained. Triangular fit removes prior scanline tears and unbounded thin-plate overshoot, but collar/shoulder dark-edge distortion and fold stretching remain visible.",
+  "limits": [
+    "Adult dromad only; four type masks are authored templates, not inferred from a species name.",
+    "Only Cloth Robe material tested; T-shirt/trousers/skirt are coverage/exposure proposals only.",
+    "Existing fixed-body arm masks are reused, not automatically inferred anatomy.",
+    "Warped RGB and target alpha are distinct; coverage success does not establish clean seams or an invertible texture map.",
+    "No game launch, runtime garment support or final acceptance claimed."
+  ],
+  "decision": "Keep robe generation_ready false. Preserve this as an inspectable fitting prototype, with mesh orientation and visual defects explicit."
+}

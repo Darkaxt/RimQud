@@ -1,0 +1,84 @@
+{
+  "source": {
+    "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+    "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+  },
+  "previous_model": {
+    "path": "art/conversion/body-dromad/v1/model.json",
+    "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+  },
+  "method": "Same .84 scale, frame and contact as v1. Resample full selected figure once; derive body/head/detail from common registered RGB and final-frame ownership masks.",
+  "anatomy_changed": false,
+  "new_imagegen_call": false,
+  "views": {
+    "south": {
+      "whole_sample": {
+        "path": "art/conversion/body-dromad/v2/unsplit-south.png",
+        "sha256": "cafbdf9f5623abe7be09df6cbcfe3ab9bf333b57887c40dd272df59469eb5a16"
+      },
+      "old_head_ownership": {
+        "path": "art/conversion/body-dromad/v1/head-mask-south.png",
+        "sha256": "91af9578ee8b25be3e6e69343adba91982478b01413ac1e1bf123f1068c43000"
+      },
+      "translation": [
+        93,
+        191,
+        419,
+        950
+      ],
+      "source_region": [
+        51,
+        81,
+        439,
+        985
+      ],
+      "head_body_rgb_source": "Same registered whole image; no independent layer resampling"
+    },
+    "east": {
+      "whole_sample": {
+        "path": "art/conversion/body-dromad/v2/unsplit-east.png",
+        "sha256": "4386dae6ff3c30deef55a8b29fa9ab30256e1d94a13a5a0169f1c778056ed4ad"
+      },
+      "old_head_ownership": {
+        "path": "art/conversion/body-dromad/v1/head-mask-east.png",
+        "sha256": "05d9217d15c6f6025b894e60ae596608ac2a2bd11820bb8d77cdced776836c55"
+      },
+      "translation": [
+        130,
+        187,
+        504,
+        951
+      ],
+      "source_region": [
+        577,
+        76,
+        1022,
+        985
+      ],
+      "head_body_rgb_source": "Same registered whole image; no independent layer resampling"
+    },
+    "north": {
+      "whole_sample": {
+        "path": "art/conversion/body-dromad/v2/unsplit-north.png",
+        "sha256": "9670d923fd2ebdc7909a6531930e6258555268675d52a137000c41d59337d642"
+      },
+      "old_head_ownership": {
+        "path": "art/conversion/body-dromad/v1/head-mask-north.png",
+        "sha256": "6fbd15b478fb0ca9ba95c405def53a669a39d10b1267193c174f6d1df3cac5c6"
+      },
+      "translation": [
+        88,
+        191,
+        423,
+        951
+      ],
+      "source_region": [
+        1053,
+        80,
+        1452,
+        985
+      ],
+      "head_body_rgb_source": "Same registered whole image; no independent layer resampling"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "item": "Woven Tunic",
+  "blueprint": "Woven Tunic",
+  "family": "human-child",
+  "slot": "Body",
+  "laterality": 0,
+  "views": {
+    "south": [
+      {
+        "component": "item",
+        "file": "child-woven-tunic-v5-south.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-south.png",
+        "sha256": "368f800f8495ae5ccdb4da0e42c50ad8ee1f26e5c82a6b1e3699dca9350479fa",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0012,
+        "equipment_key": "woven-tunic@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "child-tunic-body-overlay-v5-south.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/body-overlay-south.png",
+        "sha256": "af0ff623bd35d70263ff7d8c845a36d99df044a691a2d6903ec21e37c4008407",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0013,
+        "equipment_key": "woven-tunic@Body@0"
+      }
+    ],
+    "east": [
+      {
+        "component": "item",
+        "file": "child-woven-tunic-v5-east.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-east.png",
+        "sha256": "8f88233ea2570cc102fd67f47e0d13ffdd1856d3d6e972a2ca903a56d0e599b8",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0012,
+        "equipment_key": "woven-tunic@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "child-tunic-body-overlay-v5-east.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/body-overlay-east.png",
+        "sha256": "0c959b2692624aa44b443d7b10cd3c09a4def466bf219e8f87fb514491e4f90b",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0013,
+        "equipment_key": "woven-tunic@Body@0"
+      }
+    ],
+    "north": [
+      {
+        "component": "item",
+        "file": "child-woven-tunic-v5-north.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-north.png",
+        "sha256": "87714dabb849dada3aef090c332e0f02f1b9e3b301ad044f2021f8860fcc200b",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "equipment",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0012,
+        "equipment_key": "woven-tunic@Body@0"
+      },
+      {
+        "component": "body-overlay",
+        "file": "child-tunic-body-overlay-v5-north.png",
+        "public_file": "art/conversion/fit-human-child-woven-tunic/v5/body-overlay-north.png",
+        "sha256": "f70c3d8b174f8cff67592853c9dda57b7b4568e299422ba0feeb2cc411305ba7",
+        "size": [
+          512,
+          1024
+        ],
+        "contact": [
+          256,
+          950
+        ],
+        "color_role": "foreground",
+        "width": 0.867573812580231,
+        "height": 1.156765083440308,
+        "center_x": 0,
+        "center_z": 0.494788189987163,
+        "layer": 0.0013,
+        "equipment_key": "woven-tunic@Body@0"
+      }
+    ]
+  },
+  "canvas": [
+    512,
+    1024
+  ],
+  "contact": [
+    256,
+    950
+  ],
+  "base_model": "art/conversion/body-human-child/v1/model.json",
+  "palette": "Neutral grayscale; independent native item foreground &y/detail y",
+  "body_sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665",
+  "policy": "Authored child fitting, no observed equipped child or native child selector assumed",
+  "native_acceptance": "Deferred until all conversions generated; generic-layer binding and outfit precedence not tested",
+  "layer_order": "body 0 -> head .001 -> intact tunic .0012 -> masked original body .0013; later gloves/held equipment above exposed-limb overlay",
+  "representation": "Intact garment plus per-facing painted body-over-clothing mask; original-body overlay is a derived export",
+  "mask_semantics": "white selects original body above garment; black none; gray antialias; overlay alpha = body alpha * mask",
+  "occlusion_sources": {
+    "south": {
+      "body": {
+        "path": "art/conversion/body-human-child/v1/body-south.png",
+        "sha256": "a783e5d2987771e803e8299aacce0ddc5b50910dfa6b98022716388d8cdf9bc4"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-south.png",
+        "sha256": "368f800f8495ae5ccdb4da0e42c50ad8ee1f26e5c82a6b1e3699dca9350479fa"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-south.svg",
+        "sha256": "50ae77f277c1d997f86720157663c03da9de2c2841ec8ce2830f9b88215f9ffc"
+      },
+      "mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-south.png",
+        "sha256": "de4085c720a664e0e779dc5516171dfd9976aa8083962033b8102f3ebaf5f98e"
+      }
+    },
+    "east": {
+      "body": {
+        "path": "art/conversion/body-human-child/v1/body-east.png",
+        "sha256": "20a0d8298c1ddf78767140e4db9f7af4ab9921de8918d551ba124b58cf2eb084"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-east.png",
+        "sha256": "8f88233ea2570cc102fd67f47e0d13ffdd1856d3d6e972a2ca903a56d0e599b8"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-east.svg",
+        "sha256": "d50f2dadbd47110fa6f59910c270b2a39732aec9a36086d4cac68c8279699282"
+      },
+      "mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-east.png",
+        "sha256": "a9c323925f4b7f67df2ed44dfbcb6bdcb3a79c60936a1b0d97769b4f03fbb418"
+      }
+    },
+    "north": {
+      "body": {
+        "path": "art/conversion/body-human-child/v1/body-north.png",
+        "sha256": "0325738b8d176d7c84641fcc3c54d6ec49bd650a1062d2eba40afcb380cd99b3"
+      },
+      "intact_cloth": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/intact-tunic-north.png",
+        "sha256": "87714dabb849dada3aef090c332e0f02f1b9e3b301ad044f2021f8860fcc200b"
+      },
+      "editable_mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-north.svg",
+        "sha256": "50ae77f277c1d997f86720157663c03da9de2c2841ec8ce2830f9b88215f9ffc"
+      },
+      "mask": {
+        "path": "art/conversion/fit-human-child-woven-tunic/v5/body-over-clothing-north.png",
+        "sha256": "de4085c720a664e0e779dc5516171dfd9976aa8083962033b8102f3ebaf5f98e"
+      }
+    }
+  },
+  "outfit_scope": "This authored template wears only this tunic. Do not bind its exposed-hand overlay above gloves/other hand gear; resolve actual outfit precedence at final native integration."
+}

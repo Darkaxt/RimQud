@@ -3,7 +3,7 @@
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#BODY-DROMAD">Back to conversion index</a></nav><h1>dromad</h1><div class="entry-body">
 <p class="eyebrow">BODY-DROMAD / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: Existing art/registration and native checks are historical only; restart the logged workflow.</p>
-<h3>Current registered artwork</h3><p>Use this registered version for layer alignment. Gold marks the shared pivot; the ground guide marks contact. Body, head, masks and fitted clothing share that frame. Asymmetric features may extend beyond the pivot.</p><div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/registration-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v1/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc</code></details></figure></div><p><a href="../../art/conversion/body-dromad/v1/model.json">Current asset registration</a></p>
+<h3>Current registered artwork</h3><p>v2 shares one registered RGB sample across body, head and dulla detail, removing split-resampling fringe. Original anatomy, frame, scale and contact preserved; native acceptance pending.</p><div class="gallery"><figure><a href="../../art/conversion/body-dromad/v2/registration-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v2/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v2/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a</code></details></figure></div><p><a href="../../art/conversion/body-dromad/v2/model.json">Current asset registration</a></p>
 <ol class="workflow"><li class="pass">resolve race description original sprite runtime anatomy — recorded PASS</li><li class="pass">select actual core dlc or mod reference — recorded PASS</li><li class="pass">construct front — recorded PASS</li><li class="pass">imagegen side back from front and race facts — recorded PASS</li><li class="pass">correct anatomy then imagegen refine composed views — recorded PASS</li><li class="pass">register required layers and color masks — recorded PASS</li><li class="pass">visual review anatomy orientation palette all views — recorded PASS</li><li class="pending">native body review — pending</li></ol>
 <h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
 <div class="timeline">
@@ -1248,6 +1248,338 @@
     }
   ],
   &quot;review&quot;: &quot;Readable long-necked bipedal camelfolk, continuous hump, elongated side muzzle and paired bare feet. No clothing/staff/jewelry baked into the base. Shared contact and separate neutral detail retained. Native acceptance and actual clothing/staff fittings remain pending the all-conversions gate.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>13 / 2026-10-20T10:17:33.058925+00:00 / PASS</small><h3>Correct independently resampled body/head seam</h3><p>Resampled complete selected refined figure once and extracted body/head/detail from the same registered RGB pixels. Retained previous selection/ownership geometry and all source art.</p><p><strong>Review:</strong> Original unsplit source has no white fringe; previous independently resampled split adds one. Shared-sample extraction removes that fringe without anatomy, scale, pivot, facing or contact changes. No new ImageGen call.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v2/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;family&quot;: &quot;dromad&quot;,
+  &quot;canvas&quot;: [
+    512,
+    1024
+  ],
+  &quot;contact&quot;: [
+    256,
+    950
+  ],
+  &quot;views&quot;: {
+    &quot;south&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v2-body-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/body-south.png&quot;,
+        &quot;sha256&quot;: &quot;cb0cef365df01fe1ce95ed49ebba9b199bf7fa54ac30f0eaeba542419ecde7a6&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v2-head-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/head-south.png&quot;,
+        &quot;sha256&quot;: &quot;44e9d8f0175de1d2fc104f43bbe524c42e925c452ef2ab09ec7ffda96f22e506&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      },
+      {
+        &quot;component&quot;: &quot;head-detail&quot;,
+        &quot;file&quot;: &quot;dromad-v2-head-detail-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/head-detail-south.png&quot;,
+        &quot;sha256&quot;: &quot;20faba81ce29a6a436ff846c7ef3237e536c5d6634abc063bf5be27fed3e76cb&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;detail&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.0011
+      }
+    ],
+    &quot;east&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v2-body-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/body-east.png&quot;,
+        &quot;sha256&quot;: &quot;3990ef0733ba6decbb952374dbd195f664d47ce4a0574b092b881ff8a4d13e89&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v2-head-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/head-east.png&quot;,
+        &quot;sha256&quot;: &quot;95eb38c28b16ce6f6bec515516b1f4d8bac14c16063e0184d77e5154746d24d4&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      },
+      {
+        &quot;component&quot;: &quot;head-detail&quot;,
+        &quot;file&quot;: &quot;dromad-v2-head-detail-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/head-detail-east.png&quot;,
+        &quot;sha256&quot;: &quot;0ab0bf6fc975e43ae7b558c7b494edcad3a9309dad9135c2aa4c1862b6e2beb8&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;detail&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.0011
+      }
+    ],
+    &quot;north&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v2-body-north.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/body-north.png&quot;,
+        &quot;sha256&quot;: &quot;d8cb51a472438f058df78d18522d25cba13bed4cc1db72d5c2bdb997739d979b&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v2-head-north.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v2/head-north.png&quot;,
+        &quot;sha256&quot;: &quot;c711e40222313be9572d523a4ab48f615ad30c1afffde1223abba1814ff345f6&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      }
+    ]
+  },
+  &quot;pixel_world_scale&quot;: 0.001844532279314888,
+  &quot;physical_body_height&quot;: 1.4,
+  &quot;physical_height_kind&quot;: &quot;Authoring scale, not derived from native weight or an exported dromad height&quot;,
+  &quot;geometry&quot;: &quot;Ordinary bipedal camelfolk: one head/long neck/dulla, two painted arms/hands and paired feet; intrinsic upper-back hump. No extra mutation appendages.&quot;,
+  &quot;demographic_policy&quot;: &quot;Observed Tam male; no race-wide age/dimorphism established. No resident reassignment.&quot;,
+  &quot;neutral_palette&quot;: &quot;Equal RGB grayscale in every layer. Foreground head/body and independent detail coverage remain separately tintable.&quot;,
+  &quot;detail_interpretation&quot;: &quot;Dulla detail placement is an authored region for preserving a separate Qud detail role, not proven pixel-to-anatomy mapping of the original glyph.&quot;,
+  &quot;registration&quot;: {
+    &quot;contact&quot;: [
+      256,
+      950
+    ],
+    &quot;method&quot;: &quot;Same .84 scale, frame and contact as v1. Resample full selected figure once; derive body/head/detail from common registered RGB and final-frame ownership masks.&quot;
+  },
+  &quot;state&quot;: &quot;Generation-ready authoring only; native acceptance pending all-conversions gate&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970</code></details></figure><figure><a href="../../art/conversion/body-dromad/v2/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refined-patched-views.png&quot;,
+    &quot;sha256&quot;: &quot;a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c&quot;
+  },
+  &quot;previous_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-dromad/v1/model.json&quot;,
+    &quot;sha256&quot;: &quot;570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15&quot;
+  },
+  &quot;method&quot;: &quot;Same .84 scale, frame and contact as v1. Resample full selected figure once; derive body/head/detail from common registered RGB and final-frame ownership masks.&quot;,
+  &quot;anatomy_changed&quot;: false,
+  &quot;new_imagegen_call&quot;: false,
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;whole_sample&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v2/unsplit-south.png&quot;,
+        &quot;sha256&quot;: &quot;cafbdf9f5623abe7be09df6cbcfe3ab9bf333b57887c40dd272df59469eb5a16&quot;
+      },
+      &quot;old_head_ownership&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v1/head-mask-south.png&quot;,
+        &quot;sha256&quot;: &quot;91af9578ee8b25be3e6e69343adba91982478b01413ac1e1bf123f1068c43000&quot;
+      },
+      &quot;translation&quot;: [
+        93,
+        191,
+        419,
+        950
+      ],
+      &quot;source_region&quot;: [
+        51,
+        81,
+        439,
+        985
+      ],
+      &quot;head_body_rgb_source&quot;: &quot;Same registered whole image; no independent layer resampling&quot;
+    },
+    &quot;east&quot;: {
+      &quot;whole_sample&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v2/unsplit-east.png&quot;,
+        &quot;sha256&quot;: &quot;4386dae6ff3c30deef55a8b29fa9ab30256e1d94a13a5a0169f1c778056ed4ad&quot;
+      },
+      &quot;old_head_ownership&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v1/head-mask-east.png&quot;,
+        &quot;sha256&quot;: &quot;05d9217d15c6f6025b894e60ae596608ac2a2bd11820bb8d77cdced776836c55&quot;
+      },
+      &quot;translation&quot;: [
+        130,
+        187,
+        504,
+        951
+      ],
+      &quot;source_region&quot;: [
+        577,
+        76,
+        1022,
+        985
+      ],
+      &quot;head_body_rgb_source&quot;: &quot;Same registered whole image; no independent layer resampling&quot;
+    },
+    &quot;north&quot;: {
+      &quot;whole_sample&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v2/unsplit-north.png&quot;,
+        &quot;sha256&quot;: &quot;9670d923fd2ebdc7909a6531930e6258555268675d52a137000c41d59337d642&quot;
+      },
+      &quot;old_head_ownership&quot;: {
+        &quot;path&quot;: &quot;art/conversion/body-dromad/v1/head-mask-north.png&quot;,
+        &quot;sha256&quot;: &quot;6fbd15b478fb0ca9ba95c405def53a669a39d10b1267193c174f6d1df3cac5c6&quot;
+      },
+      &quot;translation&quot;: [
+        88,
+        191,
+        423,
+        951
+      ],
+      &quot;source_region&quot;: [
+        1053,
+        80,
+        1452,
+        985
+      ],
+      &quot;head_body_rgb_source&quot;: &quot;Same registered whole image; no independent layer resampling&quot;
+    }
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>da78e3be97283a169d54810a050d86589cb554d036d51d90917b49997122532e</code></details></figure><figure><a href="../../art/conversion/body-dromad/v2/neck-junction-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v2/neck-junction-comparison.png" alt="neck-junction-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v2/neck-junction-comparison.png">neck-junction-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>c9b66f9d04956817b8a40c540f68a5d8b206229606654df28fc4df574bfbdf24</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T10:17:33.058925+00:00&quot;,
+  &quot;step&quot;: &quot;register_required_layers_and_color_masks&quot;,
+  &quot;phase&quot;: &quot;Correct independently resampled body/head seam&quot;,
+  &quot;action&quot;: &quot;Resampled complete selected refined figure once and extracted body/head/detail from the same registered RGB pixels. Retained previous selection/ownership geometry and all source art.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v2/register-shared-sample.py&quot;,
+      &quot;sha256&quot;: &quot;161d8da9575486fddf16037031388e306ba8e469569904576d01e1478949da24&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/model.json&quot;,
+      &quot;sha256&quot;: &quot;570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Original unsplit source has no white fringe; previous independently resampled split adds one. Shared-sample extraction removes that fringe without anatomy, scale, pivot, facing or contact changes. No new ImageGen call.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>14 / 2026-10-20T10:17:33.058925+00:00 / PASS</small><h3>Common-sample all-view authoring review</h3><p>Inspected neutral cardinal views and neck closeup; checked unchanged registration and common RGB at opaque interior joints.</p><p><strong>Review:</strong> Generation authoring only. Same source anatomy and separate body/head/dulla ownership. Native acceptance pending full set.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v2/registration-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v2/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v2/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a</code></details></figure><figure><a href="../../art/conversion/body-dromad/v2/game-scale-review.png"><img loading="lazy" src="../../art/conversion/body-dromad/v2/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/body-dromad/v2/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>2a90317b362307bc9464a0a492aec876ce5c50de989230729386fcd41f632328</code></details></figure><figure><a href="../../art/conversion/body-dromad/v2/authoring-review.json">authoring-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;scope&quot;: &quot;Layer-extraction authoring only; native acceptance deferred&quot;,
+  &quot;checks&quot;: [
+    {
+      &quot;facing&quot;: &quot;south&quot;,
+      &quot;shared_sample_rgb_in_opaque_interior&quot;: &quot;exact&quot;,
+      &quot;frame_scale_contact_layer_roles&quot;: &quot;unchanged&quot;
+    },
+    {
+      &quot;facing&quot;: &quot;east&quot;,
+      &quot;shared_sample_rgb_in_opaque_interior&quot;: &quot;exact&quot;,
+      &quot;frame_scale_contact_layer_roles&quot;: &quot;unchanged&quot;
+    },
+    {
+      &quot;facing&quot;: &quot;north&quot;,
+      &quot;shared_sample_rgb_in_opaque_interior&quot;: &quot;exact&quot;,
+      &quot;frame_scale_contact_layer_roles&quot;: &quot;unchanged&quot;
+    }
+  ],
+  &quot;inspection&quot;: &quot;Neck/hump seam absent in shared-sample composition, matching selected unsplit refined art. Original anatomy, views, contact and scale unchanged. Body/head/dulla detail remain separate.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>8b5e2b7f475ac5f9b688d3e27c1f42f2169fa7b560e877f42d44e7cafa824592</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T10:17:33.058925+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_anatomy_orientation_palette_all_views&quot;,
+  &quot;phase&quot;: &quot;Common-sample all-view authoring review&quot;,
+  &quot;action&quot;: &quot;Inspected neutral cardinal views and neck closeup; checked unchanged registration and common RGB at opaque interior joints.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v2/model.json&quot;,
+      &quot;sha256&quot;: &quot;a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Generation authoring only. Same source anatomy and separate body/head/dulla ownership. Native acceptance pending full set.&quot;,
   &quot;result&quot;: &quot;PASS&quot;
 }</pre></details></section>
 </div></div></main></html>

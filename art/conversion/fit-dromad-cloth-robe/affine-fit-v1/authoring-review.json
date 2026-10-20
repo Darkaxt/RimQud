@@ -1,0 +1,17 @@
+{
+  "scope": "Whole-image stretch experiment; no production or native acceptance",
+  "source": {
+    "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/result.json",
+    "sha256": "373f6879572e5f0329ee6eb60dc6d185ebf76fc564138212bbe2aaf52d93303f"
+  },
+  "body_preserved": "Original body images, frame, scale and contact unchanged. No exposed interior body pixel changes in either variant across the three facings.",
+  "visual_inspection": "Inspected front/profile/back for red-cut and complete sources, profile comparison against local mesh, and small sprite preview. Whole-image stretch preserves smooth outlines/material better than the local mesh. Red-cut result remains a visible-cloth derivative, with residual shoulder/cuff coverage gaps; complete source also has small coverage gaps.",
+  "limitations": [
+    "One global X/Y scale and translation cannot independently align every collar, shoulder and cuff.",
+    "No texture reconstruction or local deformation was applied to these new results.",
+    "Existing exposure masks control depth; they do not repair missing fabric.",
+    "Target rectangles come from the authored adult-dromad robe profile, not automatic semantic recognition.",
+    "Other garment-type masks remain proposals; no fitted trousers/skirt/T-shirt or native selector claimed."
+  ],
+  "decision": "Prefer this simpler technique for the next visual discussion. Keep entry unfinished; no production artwork selection or native validation."
+}

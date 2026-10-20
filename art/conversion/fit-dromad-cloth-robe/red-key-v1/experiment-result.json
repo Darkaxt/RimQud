@@ -1,0 +1,59 @@
+{
+  "scope": "User-requested one-call red-body garment extraction trial",
+  "generation_call": "exec-59fa3bbb-a6cb-47ac-8427-0d753d16d377",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "prompt": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/adapt-clothing-prompt.txt",
+    "sha256": "178016c9b7cd82d372fee8340f393d536bbe19b403c90496d8a01afc24554a85"
+  },
+  "input_packet": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/input-packet.json",
+    "sha256": "40d5ae4f29d572985634c28bc499ed598ea97620839c2d92f22e79282cc4dff5"
+  },
+  "raw_output": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+    "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+  },
+  "extraction": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/key-extraction.json",
+    "sha256": "92382462e5ae5b5fc56e12d8c6b0702cad96395c9f435a518c19211d64e26fe3"
+  },
+  "observations": {
+    "keying": "Saturated red body including red outlines can be removed from the exact dressed output without a second generative isolation call. The profile sleeve opening remains coherent in that generated frame.",
+    "background": "Displayed red/gray glow is mostly RGB in transparent pixels; alpha is used for extraction. Low alpha under 16 excluded.",
+    "body_preservation": "FAILED: the output moves/reinterprets the original body, with measured head/foot displacement. Direct overlay on the unchanged original creates exposed gaps and mismatched forearm/neck contours.",
+    "hidden_cloth": "The key gives visible clothing alpha, not intact rear cloth hidden behind exposed body. Original whole-garment source remains retained.",
+    "decision": "Promising extraction experiment; not a production fit or generation-ready model. No local body warping or additional generation performed."
+  },
+  "measurements": [
+    {
+      "view": "south",
+      "input_head_top_y": 191,
+      "generated_head_top_y": 171,
+      "head_displacement_y": -20,
+      "input_foot_extent_y": 949,
+      "generated_foot_extent_y": 919,
+      "foot_displacement_y": -30
+    },
+    {
+      "view": "east",
+      "input_head_top_y": 188,
+      "generated_head_top_y": 168,
+      "head_displacement_y": -20,
+      "input_foot_extent_y": 951,
+      "generated_foot_extent_y": 919,
+      "foot_displacement_y": -32
+    },
+    {
+      "view": "north",
+      "input_head_top_y": 192,
+      "generated_head_top_y": 171,
+      "head_displacement_y": -21,
+      "input_foot_extent_y": 951,
+      "generated_foot_extent_y": 919,
+      "foot_displacement_y": -32
+    }
+  ],
+  "native_acceptance": "Not attempted; still behind all-generated gate"
+}

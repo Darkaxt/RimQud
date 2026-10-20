@@ -1,0 +1,158 @@
+{
+  "scope": "One adult dromad robe fit; other clothing types are mask proposals only",
+  "method": "Continuous thin-plate inverse mesh from neckline/cuff/hand/hem and outer/arm controls. RGB material warped from actual red-key extraction; complete retained cloth fills absent material. Target coverage/exposure masks determine final visibility. No body pixel deformation; no new ImageGen call.",
+  "inputs": [
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-visible-clothing-sheet.png",
+      "sha256": "9f43d5a2aacae3eb234d9b8b8e9a334317299b3c855104e767881fc0fba8721c"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+      "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+    },
+    {
+      "path": "art/conversion/body-dromad/v2/model.json",
+      "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+    }
+  ],
+  "profile": {
+    "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/body-clothing-profiles.json",
+    "sha256": "1f936af0df558504cb99202ea37baebb4117895a8e8c554d449f746c9cc64d93"
+  },
+  "views": {
+    "south": {
+      "source_y_landmarks": [
+        499.0,
+        577.0,
+        653.0,
+        773.0,
+        874.0
+      ],
+      "target_y_landmarks": [
+        472.0,
+        644.0,
+        681.0,
+        805.0,
+        902.0
+      ],
+      "landmark_names": [
+        "garment_top",
+        "neck_base",
+        "cuff_top",
+        "hand_bottom",
+        "hem"
+      ],
+      "internal_arm_anchor_rows": 21,
+      "required_interior_uncovered_pixels": 0,
+      "exposed_interior_changed_pixels": 0,
+      "red_key_material_pixels": 25547,
+      "full_garment_backfill_pixels": 61072,
+      "material_provenance": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/material-provenance-south.png",
+        "sha256": "a9b3b956cf0024846b5233dc6fa7b85a34869c46484d2808215e2b5185d355f2"
+      },
+      "mesh_controls": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/mesh-controls-south.json",
+        "sha256": "adea9a6434248b54b19661bb35bb73d0c9bb640761ba415aeac337b30391cfff"
+      },
+      "inverse_map": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/inverse-map-south.npz",
+        "sha256": "ef1c9ac6a17c99b809993d3f886d30b817a9225cca746a3777437c7cd14a5729"
+      },
+      "fixed_body": {
+        "path": "art/conversion/body-dromad/v2/selected-south.png",
+        "sha256": "7fdef9dca577a4a00d6b9aa13d2d3b2ac8c385f415c8a12703dc9c474a7e261f"
+      }
+    },
+    "east": {
+      "source_y_landmarks": [
+        482.0,
+        579.0,
+        667.0,
+        775.0,
+        869.0
+      ],
+      "target_y_landmarks": [
+        472.0,
+        643.0,
+        683.0,
+        815.0,
+        902.0
+      ],
+      "landmark_names": [
+        "garment_top",
+        "neck_base",
+        "cuff_top",
+        "hand_bottom",
+        "hem"
+      ],
+      "internal_arm_anchor_rows": 132,
+      "required_interior_uncovered_pixels": 0,
+      "exposed_interior_changed_pixels": 0,
+      "red_key_material_pixels": 73576,
+      "full_garment_backfill_pixels": 10483,
+      "material_provenance": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/material-provenance-east.png",
+        "sha256": "8eb5e531fe9da67778d63ea302581822db67d6d36a46c8063aabf68b77601612"
+      },
+      "mesh_controls": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/mesh-controls-east.json",
+        "sha256": "e1b60f9e2f46731b6e090026cae64620c0fdaa2d59166cad00fbcef59479bba9"
+      },
+      "inverse_map": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/inverse-map-east.npz",
+        "sha256": "fdd3f9b1589c4fde04f817fcfb714474f1914c77cae1504737bad98dda3e5747"
+      },
+      "fixed_body": {
+        "path": "art/conversion/body-dromad/v2/selected-east.png",
+        "sha256": "7e262e4cc67f9c3354411e9d8dc93e866f31e22903a31652a85cf3f78015a5ca"
+      }
+    },
+    "north": {
+      "source_y_landmarks": [
+        474.0,
+        504.0,
+        652.0,
+        774.0,
+        877.0
+      ],
+      "target_y_landmarks": [
+        477.0,
+        540.0,
+        682.0,
+        804.0,
+        902.0
+      ],
+      "landmark_names": [
+        "garment_top",
+        "neck_base",
+        "cuff_top",
+        "hand_bottom",
+        "hem"
+      ],
+      "internal_arm_anchor_rows": 15,
+      "required_interior_uncovered_pixels": 0,
+      "exposed_interior_changed_pixels": 0,
+      "red_key_material_pixels": 82287,
+      "full_garment_backfill_pixels": 21391,
+      "material_provenance": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/material-provenance-north.png",
+        "sha256": "34db6d736ab4db881e474658ddb38d5b23c199edc0bff58ca72905d5c5797908"
+      },
+      "mesh_controls": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/mesh-controls-north.json",
+        "sha256": "72946fa65d249725b0aa89cbea57a542fe357f96910179c3aae642ec7380c7e9"
+      },
+      "inverse_map": {
+        "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/inverse-map-north.npz",
+        "sha256": "8e335a3422f7c7efb1c92fa24beca7b11d5129fa1b9076c8a3f7eae88be2bfa9"
+      },
+      "fixed_body": {
+        "path": "art/conversion/body-dromad/v2/selected-north.png",
+        "sha256": "cac0839b5c18cd351374800c111a4f99263c2d793987451f49350ba8c15f01f0"
+      }
+    }
+  },
+  "native_acceptance": "Not attempted; deferred until all conversions generated",
+  "visual_review": "Pending inspection; metrics alone do not establish garment quality."
+}

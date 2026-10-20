@@ -1,0 +1,250 @@
+{
+  "scope": "Whole-image stretch authoring experiment; adult dromad robe only",
+  "method": "For each source/facing, map its alpha>128 bounding rectangle to the existing robe target rectangle using one nonuniform scale and translation. Resample full RGBA once with bicubic interpolation. Apply existing body exposure mask separately for depth. No local deformation, texture fill, body rescale or additional ImageGen call.",
+  "target_masks": {
+    "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/body-clothing-profiles.json",
+    "sha256": "9d1e674e48b598f098f6558d9415a8100eef6234aa95d03df2a128061add92df"
+  },
+  "body": {
+    "path": "art/conversion/body-dromad/v2/model.json",
+    "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+  },
+  "views": {
+    "south": {
+      "red-cut": {
+        "source_alpha_bounds": [
+          79,
+          499,
+          426,
+          875
+        ],
+        "target_bounds": [
+          82,
+          472,
+          431,
+          903
+        ],
+        "scale_x": 1.005763688760807,
+        "scale_y": 1.1462765957446808,
+        "translation": [
+          2.54466858789624,
+          -99.99202127659566
+        ],
+        "inverse_affine": [
+          0.9942693409742119,
+          0,
+          -2.530085959885373,
+          0,
+          0.8723897911832947,
+          87.23201856148485
+        ],
+        "required_covered_pixels_with_alpha_below_128": 4601,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-south.png",
+          "sha256": "30d33ffccd1cc5d9d061523d85e9ba2cf88436f2603d119e986765a715f71465"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-visible-south.png",
+          "sha256": "7bbdf07230bd1287c7d794ed710eb2e298549922aee5c82bd0b69b3cc2b89781"
+        }
+      },
+      "complete": {
+        "source_alpha_bounds": [
+          84,
+          502,
+          429,
+          898
+        ],
+        "target_bounds": [
+          82,
+          472,
+          431,
+          903
+        ],
+        "scale_x": 1.0115942028985507,
+        "scale_y": 1.0883838383838385,
+        "translation": [
+          -2.9739130434782624,
+          -74.36868686868695
+        ],
+        "inverse_affine": [
+          0.9885386819484241,
+          0,
+          2.9398280802292276,
+          0,
+          0.9187935034802783,
+          68.32946635730866
+        ],
+        "required_covered_pixels_with_alpha_below_128": 2195,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-stretched-south.png",
+          "sha256": "0a2ef89518047e0afa64d13a1b4d1e130917c6f0b1fbc18afe50df8ef4fd63c3"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-visible-south.png",
+          "sha256": "596bac74985f04869c6380bd12f930dda4257e34a0dca327f3b352f1c20288ed"
+        }
+      }
+    },
+    "east": {
+      "red-cut": {
+        "source_alpha_bounds": [
+          133,
+          482,
+          400,
+          870
+        ],
+        "target_bounds": [
+          127,
+          472,
+          403,
+          903
+        ],
+        "scale_x": 1.0337078651685394,
+        "scale_y": 1.1108247422680413,
+        "translation": [
+          -10.483146067415731,
+          -63.41752577319585
+        ],
+        "inverse_affine": [
+          0.967391304347826,
+          0,
+          10.141304347826088,
+          0,
+          0.9002320185614848,
+          57.090487238979094
+        ],
+        "required_covered_pixels_with_alpha_below_128": 983,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-east.png",
+          "sha256": "ff4f8b0343f3be898b09d4bfd1486ec808eb00d72fa7d6491ce0104bd877c64a"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-visible-east.png",
+          "sha256": "295dcd2b09fc03d507880df14330a941a2739ef1375d0754d76b7c4d1941497d"
+        }
+      },
+      "complete": {
+        "source_alpha_bounds": [
+          119,
+          482,
+          409,
+          889
+        ],
+        "target_bounds": [
+          127,
+          472,
+          403,
+          903
+        ],
+        "scale_x": 0.9517241379310345,
+        "scale_y": 1.058968058968059,
+        "translation": [
+          13.744827586206895,
+          -38.42260442260442
+        ],
+        "inverse_affine": [
+          1.0507246376811594,
+          0,
+          -14.442028985507244,
+          0,
+          0.9443155452436195,
+          36.2830626450116
+        ],
+        "required_covered_pixels_with_alpha_below_128": 245,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-stretched-east.png",
+          "sha256": "6e665e25dccf07e9e2d4f812ecb722883d6a13cec89153e5b0624f0796b55337"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-visible-east.png",
+          "sha256": "0062bc637324517fd689996355e948c81456eeb43af89a66faf75c4fe5c16ef5"
+        }
+      }
+    },
+    "north": {
+      "red-cut": {
+        "source_alpha_bounds": [
+          86,
+          474,
+          425,
+          878
+        ],
+        "target_bounds": [
+          82,
+          477,
+          431,
+          903
+        ],
+        "scale_x": 1.0294985250737463,
+        "scale_y": 1.0544554455445545,
+        "translation": [
+          -6.536873156342182,
+          -22.811881188118832
+        ],
+        "inverse_affine": [
+          0.9713467048710602,
+          0,
+          6.349570200573065,
+          0,
+          0.948356807511737,
+          21.633802816901426
+        ],
+        "required_covered_pixels_with_alpha_below_128": 2800,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-stretched-north.png",
+          "sha256": "64e17e99d4949f03b0757759d9884add3429ce3606bdc151e152c9fc9de7bdb7"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-visible-north.png",
+          "sha256": "59e9712a86659acdde2167c74007fa82bafbc6832b0ad0dade271347cd6c1e79"
+        }
+      },
+      "complete": {
+        "source_alpha_bounds": [
+          87,
+          493,
+          425,
+          889
+        ],
+        "target_bounds": [
+          82,
+          477,
+          431,
+          903
+        ],
+        "scale_x": 1.032544378698225,
+        "scale_y": 1.0757575757575757,
+        "translation": [
+          -7.831360946745562,
+          -53.34848484848476
+        ],
+        "inverse_affine": [
+          0.9684813753581661,
+          0,
+          7.584527220630372,
+          0,
+          0.9295774647887325,
+          49.59154929577457
+        ],
+        "required_covered_pixels_with_alpha_below_128": 1857,
+        "exposed_body_interior_pixels_changed": 0,
+        "stretched_source": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-stretched-north.png",
+          "sha256": "07aa44edd5fa861125cc3437295357742db20e59952ebeb5597a2874d0f297da"
+        },
+        "visible": {
+          "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-visible-north.png",
+          "sha256": "407a4757a0e9c2853aefaea573fa92b3095692dbaa8c8012d914a34d45daaab7"
+        }
+      }
+    }
+  },
+  "native_acceptance": "Not attempted; all-generated gate unchanged",
+  "visual_review": "Pending actual image inspection; rectangle fitting does not prove shoulder/hump coverage or correct neckline/cuff placement."
+}

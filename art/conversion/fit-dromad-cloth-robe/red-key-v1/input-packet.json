@@ -1,0 +1,98 @@
+{
+  "scope": "One garment chroma-key generation/extraction experiment; no further generative isolation; no production readiness claim",
+  "body_model": {
+    "path": "art/conversion/body-dromad/v2/model.json",
+    "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+  },
+  "item": "Cloth Robe",
+  "native_description": "Particulate from the eons-sheared shale sticks in the fibers of goat wool. They make red freckles on the garment.",
+  "palette_policy": "For this removable keying experiment body alone is saturated red. Cloth stays neutral grayscale, including tonal freckles, for later equipment tint. Red is not new canonical skin color.",
+  "body_color_mapping": "R=64+191*original_luminance/255; G=.055R; B=.04R; original alpha/coordinates retained. Even body outlines stay dark red.",
+  "sources": [
+    {
+      "facing": "south",
+      "body": {
+        "path": "art/conversion/body-dromad/v2/selected-south.png",
+        "sha256": "7fdef9dca577a4a00d6b9aa13d2d3b2ac8c385f415c8a12703dc9c474a7e261f"
+      },
+      "whole_garment": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-south.png",
+        "sha256": "4d2312f721f1e677bbf6329d591522c1715efd85b472bf2f01c74e77c32ef794"
+      },
+      "red_body": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-south.png",
+        "sha256": "20c9b9a1e063dd2fa25429202bf00c95f72abc0e2c34bb583c3062cdb2ff3f9e"
+      },
+      "cell": [
+        0,
+        0,
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "facing": "east",
+      "body": {
+        "path": "art/conversion/body-dromad/v2/selected-east.png",
+        "sha256": "7e262e4cc67f9c3354411e9d8dc93e866f31e22903a31652a85cf3f78015a5ca"
+      },
+      "whole_garment": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-east.png",
+        "sha256": "288d2d75c395a61ae44df0bf10e456db1c43c3e322955438e0568aea73665637"
+      },
+      "red_body": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-east.png",
+        "sha256": "9a3da99fe9b301a4c8e306c7bc94ca964de38e7a28eb36ae9865057d3dc6f69d"
+      },
+      "cell": [
+        512,
+        0,
+        512,
+        1024
+      ],
+      "contact": [
+        768,
+        950
+      ]
+    },
+    {
+      "facing": "north",
+      "body": {
+        "path": "art/conversion/body-dromad/v2/selected-north.png",
+        "sha256": "cac0839b5c18cd351374800c111a4f99263c2d793987451f49350ba8c15f01f0"
+      },
+      "whole_garment": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-robe-north.png",
+        "sha256": "bb0b197cf9d4f96f2ce412cae4cd72c4a1f02a98ddb4b65b31ca0baea2dd1b50"
+      },
+      "red_body": {
+        "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-north.png",
+        "sha256": "b1081ac96c7cc610d91142684a87e96f6f47b21f414f00c387365b98026245f8"
+      },
+      "cell": [
+        1024,
+        0,
+        512,
+        1024
+      ],
+      "contact": [
+        1280,
+        950
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-sheet.png",
+      "sha256": "3cb7a516750de4ced37bc24f46ecc5e6c8986740979092abc38143a45340c034"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/whole-robe-sheet.png",
+      "sha256": "0ab742f74d75ca4e96d919d2e873514591ea9ebf50991c9dc303c7b335163c55"
+    }
+  ]
+}

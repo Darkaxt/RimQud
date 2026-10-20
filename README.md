@@ -15,12 +15,10 @@ inputs, including Tam and Ctesiphus; no completion credit is carried forward.
 The [HTML conversion report](docs/conversion-report.html) records the new
 generation workflow step by step. Five human body templates are generation-ready:
 adult male/female, older male/female, and a shared featureless child base for both
-template labels. The human child Woven Tunic's v2 shoulder correction is retained,
-but its generation-ready credit is withdrawn: an opaque sleeve interior still
-crosses the exposed profile arm. Converting that fit to an intact garment plus
-separate body-over-clothing mask is the
-active entry. Native acceptance and the
-remaining clothing fits are pending.
+template labels. The human child Woven Tunic now retains intact cloth and separate
+per-facing original-body masks; its v5 authoring fit is generation-ready.
+The active entry is the adult dromad Cloth Robe, where fitting experiments remain
+unfinished. Native acceptance and the remaining clothing fits are pending.
 Adult and child dromad bases are also generation-ready, with centered directional
 body/head layers and separate neutral dulla coverage. Juvenile proportions and
 detail-region placement are documented authoring choices, not new native facts.
@@ -28,9 +26,10 @@ The child dromad's corrected Woven Tunic uses an explicit neck/hump pattern and
 refinement-derived flax material. Generated anatomy changes were discarded;
 the body/dulla remain unchanged. Both child fittings preserve rejected cuts and
 show the intact garments separately from effective overlap masks.
-Tam's enlarged Shillelagh fitting remains generation-ready. His adult Cloth Robe
-and the child dromad tunic now need mask-first export/recomposition updates;
-their existing source art and refinements are retained.
+Tam's enlarged Shillelagh fitting remains generation-ready. His adult base now
+samples the whole figure once before splitting body/head/detail, removing a
+white extraction fringe without changing anatomy or registration. The adult robe
+and child dromad tunic remain unfinished; existing sources and refinements survive.
 Their body, garment and held-item layers remain separate. The report records the
 Shillelagh's exact installed description and actual installed Tribal mod reference.
 The DirtPath and shared path-material records now select one source-bound
@@ -129,8 +128,8 @@ Cardinal-camera correction: Chair now has a straight south construction and refi
 
 [Corrected Canvas Folding Chair](art/conversion/scn-canvas-folding-chair/v2/registered-corrected/registration-comparison.png)
 
-There are now 30 generation-ready entries. Human child tunic mask-first
-composition is the single active correction; Bed remains unfinished.
+There are now 31 generation-ready entries. Adult dromad robe fitting is the
+single active entry; Bed remains unfinished.
 All 16 furniture entries now require front/south, side/east and back/north
 artwork, even if Qud currently binds one tile. West mirrors only if the design
 permits it. The five previously ready single-view furniture entries were reopened;
@@ -144,6 +143,15 @@ separate from equipment tint. Earlier baked-cut exports remain history. The
 [source inspection and authoring contract](evidence/apparel-occlusion-authoring-contract.json)
 distinguish the proposed occlusion behavior from RimWorld's worn shader-mask path;
 no unnamed mod or new native integration is claimed.
+
+The current [robe fitting experiment](art/conversion/fit-dromad-cloth-robe/affine-fit-v1/profile-technique-comparison.png)
+compares whole-image translation/stretch with the earlier local mesh. It uses
+the fixed original body and separate exposure masks. Four body-relative mask
+types are authored (T-shirt, trousers, skirt, robe); only the robe is fitted.
+The simple stretch preserves cleaner outlines, with remaining shoulder/cuff
+coverage gaps. It is an inspectable draft, not accepted production art or a
+native game result. Red-key extraction and rejected mesh attempts are recorded
+in the HTML report.
 
 The report now has cascading category/subcategory/type filters, including
 Human → Male Child → Equipment and the shared Female Child entry. Its small

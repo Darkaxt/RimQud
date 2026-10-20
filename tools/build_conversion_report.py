@@ -65,6 +65,12 @@ def render_entry_body(e,url_prefix):
     if e.get('apparel_occlusion'):
         parts.append('<p class="issues"><strong>Mask-first apparel.</strong> Retain intact clothing and a separate per-facing body-over-clothing mask. Show original-body overlay, mask-off/on assemblies and independent body/equipment tint. Baked limb cutouts are superseded; native binding remains pending.</p>')
     parts.append(f'<p class="eyebrow">{h(e["id"])} / '+('GENERATION READY · NATIVE ACCEPTANCE PENDING' if e.get('generation_ready') else 'GENERATION UNFINISHED')+'</p><p class="issues">Reset findings / historical defects: '+h(' '.join(e['known_issues']))+'</p>')
+    if e.get('current_experiment'):
+        trial=e['current_experiment']
+        parts.append('<h3>Current experiment — unfinished</h3><p>'+h(trial['summary'])+'</p><div class="gallery">'+artifact(trial['plate'],url_prefix)+artifact(trial['before_after'],url_prefix)+'</div>')
+        if trial.get('scale_preview'):
+            parts.append('<p>Authored sprite-size comparison; this is not a native game capture.</p><div class="gallery">'+artifact(trial['scale_preview'],url_prefix)+'</div>')
+        parts.append('<p>Body masks by clothing type: '+', '.join('<a href="'+url_prefix+h(m['path'])+'">'+h(Path(m['path']).name.split('-mask-')[0])+'</a>' for m in trial['masks'])+'. <a href="'+url_prefix+h(trial['review']['path'])+'">Authoring review and limitations</a>.</p>')
     if e.get('current_registration'):
         current=e['current_registration']
         note=e.get('registration_summary','Use this registered version for layer alignment. Gold marks the shared pivot; the ground guide marks contact. Body, head, masks and fitted clothing share that frame. Asymmetric features may extend beyond the pivot.')

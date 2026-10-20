@@ -1,0 +1,33 @@
+{
+  "scope": "One chroma-key extraction experiment; no production selection",
+  "raw_output": {
+    "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+    "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+  },
+  "key_rule": "R-max(G,B)>=4 and R>=1.6*max(G,B); remove saturated red including dark red contours. Preserve non-key RGBA; alpha<16 discarded as low-coverage fringe. No geometry scaling/warping.",
+  "red_pixels_alpha_ge_16": 219107,
+  "retained_pixels_alpha_ge_16": 250222,
+  "outputs": [
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-visible-clothing-sheet.png",
+      "sha256": "9f43d5a2aacae3eb234d9b8b8e9a334317299b3c855104e767881fc0fba8721c"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+      "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-only.png",
+      "sha256": "ab241410955952c476ca1acbea3a8441029446bd5f4671980e4b66827444e0a8"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/direct-original-body-recomposition.png",
+      "sha256": "b86c4568ff24c1ba1aa4bc939e7e45988a634aab4707ba8d1c0898f9277c0bd0"
+    },
+    {
+      "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-key-extraction-comparison.png",
+      "sha256": "221f14a4e8dbdcd670adf6123a70e37162e43c02ffafc5493d7e3f960ea7be7b"
+    }
+  ],
+  "limits": "Chroma-key identifies visible garment/body coverage in the generated frame. It cannot prove unchanged body geometry or recover hidden rear cloth. Original whole garment remains a separate retained source."
+}
