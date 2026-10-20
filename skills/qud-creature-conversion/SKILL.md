@@ -21,7 +21,10 @@ during generation or block baseline art on that later work. Intrinsic species
 anatomy is not removed as a mutation: a cat's normal tail and a dromad's long
 neck/hump remain in their race base. Preserve native art for unsupported shapes.
 
-This is a repository-maintained skill source, not a globally installed skill.
+This skill is maintained in the RimQud repository and can also be installed at
+Codex level. Keep the repository source authoritative. When changing this skill,
+also synchronize an existing installed copy bound to the same checkout, preserve
+its local workspace locator, and verify the deployed skill/reference hashes.
 The [conversion ledger](../../docs/conversion-ledger.md) governs current entry
 status. All entries were explicitly reset unfinished on 2026-10-20, including
 previously selected models. Work one entry at a time and append its actual
@@ -31,7 +34,17 @@ Historical assets or a passing native batch never complete another entry.
 until all pending textures, objects, creatures/NPCs and their required equipment
 have completed the generation workflow. This applies to scenery as well as bodies.
 Follow the gate in section 7; one completed asset is not permission to test it.
-Resolve the repository root from this file, two directories above this folder.
+For a repository-local copy, the repository root is two directories above this
+folder. For a globally installed copy, read `references/workspace-location.json`
+and use its `repository_root`; check that it contains
+`docs/faithful-joppa-spec.md` and `evidence/conversion-ledger.json`. Do not treat
+the Codex skill directory as the project. If no locator exists, use the current
+RimQud checkout or obtain its location before editing project assets.
+
+Links that ascend outside this skill bundle (`../../docs`, `../../../evidence`,
+`../../../art`, etc.) refer to that checkout: remove the leading `../` segments
+and resolve the remainder under the repository root. References within this
+bundle remain relative to the current skill/reference file.
 Read [the metadata contract](references/metadata-packet.md) when preparing an
 input packet and [the Tam example](references/tam-example.md) for the worked case
 and evidence boundaries. Use existing exports rather than launching the game
