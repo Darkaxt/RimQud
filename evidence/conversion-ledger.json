@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-CHEST1",
+  "active_entry": "SCN-HAMMOCK",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -7812,8 +7812,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -7882,7 +7882,264 @@
           "sha256": "5612cbf79f2a8dc823085536caf911102b86a4df9e1ceb9188687b002f0f1df2"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T07:26:22.614516+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Inherited closed chest identity, exact mask and native container appearance boundary",
+          "action": "Read Chest1/Chest/Furniture inheritance, original16x24mask/hash, scratched-wood description and native w/W roles; inspected Container part for appearance overrides.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-packet.json",
+              "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/source-construction-comparison.png",
+              "sha256": "ced949ac826269a72ecc2f9ab2d3ae3baee2ad9ee9e8c9137097b272df8f9784"
+            }
+          ],
+          "review": "Chest1 changes inventory builder/tier/aggregation, not appearance. Two bright side bands use W; center latch remains primary w. No alternate lid/empty/full/random tile is declared and inspected Container code has no Render/Tile appearance override. Native inventory, sounds, organic/source physics and unspecified defaults remain native.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.614893+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed Simple Storage plank reference",
+          "action": "Selected installed [JDS] Simple Storage1.5CrateA_south for wood grain, shallow edge shading and game-art contour style.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-packet.json",
+              "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-construction-comparison.png",
+              "sha256": "ced949ac826269a72ecc2f9ab2d3ae3baee2ad9ee9e8c9137097b272df8f9784"
+            }
+          ],
+          "review": "Viewed exact donor and package/hash metadata. Its crate proportions, flat top, cross-brace, nails, source brown pixels and storage gameplay are not copied. The older1.4crate was viewed but not selected.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.615109+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable hinged wood lid, bands, primary latch and scratched notches",
+          "action": "Constructed explicit opaque wooden case, shouldered closed lid, two bright side bands, source-role recessed latch and sparse abstract scratches.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-packet.json",
+              "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/prepare-and-construct.py",
+              "sha256": "174450b4668666561c0851bfa4afa66a327ec9ee36ca710d4bd9e26dbb5952aa"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/constructed-front.svg",
+              "sha256": "e09b49e519828a5a1a725558845b58ab0fd155d205bcecdbb937bc286447f6c8"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/constructed-front.png",
+              "sha256": "9f76bf6662a8342546322589bb025d403247099d152d91ea629fbc0ae164b0b0"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/source-construction-comparison.png",
+              "sha256": "ced949ac826269a72ecc2f9ab2d3ae3baee2ad9ee9e8c9137097b272df8f9784"
+            }
+          ],
+          "review": "Viewed source/manual/donor comparison. Native hollow glyphs become opaque wood rather than transparent surfaces/detached bands. Band material, precise grain/seams and notch forms remain authored interpretation. No readable text, visible loot, ornate lock, feet or donor brace is added.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.615488+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Single native closed-chest tile and shared wood/band/latch frame",
+          "action": "Retained the one inherited fixed chest appearance and complete native-cell frame for lid, body, bands, seam and latch.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-packet.json",
+              "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/constructed-front.png",
+              "sha256": "9f76bf6662a8342546322589bb025d403247099d152d91ea629fbc0ae164b0b0"
+            }
+          ],
+          "review": "No invented open-lid state, container-empty/full art, donor rotations or independently centered latch is introduced. Real inventory remains native state.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.615709+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled closed-chest wood and band refinement",
+          "action": "Performed one built-in ImageGen refinement of the explicit source construction with actual installed JDS crate material reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/source-packet.json",
+              "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/constructed-front.png",
+              "sha256": "9f76bf6662a8342546322589bb025d403247099d152d91ea629fbc0ae164b0b0"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/refine-front-prompt.txt",
+              "sha256": "582140b5d25c3587778ca6c61e803509d26f947f544078c838e184abdf8c55c5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/refined-proposal.png",
+              "sha256": "34e5d5d77f40d74f90aec1fccc925cc313fe132550ec7e6ad1d05ea9c31f95b3"
+            }
+          ],
+          "review": "Viewed actual saved output. Closed shouldered lid, two side bands, primary latch and source notches remain; grain/bevels refine existing surfaces. No new loot, brace, foot or open-lid view is accepted. Exterior alpha halo is excluded at registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-chest1/v1/refine-front-prompt.txt",
+            "sha256": "582140b5d25c3587778ca6c61e803509d26f947f544078c838e184abdf8c55c5"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-dab02206-7fb6-487b-91f5-b3224888e670.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-chest1/v1/constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/1961098970/1.5/Textures/Things/CrateA/CrateA_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.617269+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral wood/latch and two-band ownership extraction",
+          "action": "Extracted actual gold side-band coverage, retained central latch as primary, removed detached exterior halo and mapped the whole source frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/refined-proposal.png",
+              "sha256": "34e5d5d77f40d74f90aec1fccc925cc313fe132550ec7e6ad1d05ea9c31f95b3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/register-chest.py",
+              "sha256": "5113ae6ca41fedf7afe3df07f09983059b03e736bdfd2413c07358c20de5c87b"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/band-neutral-master.png",
+              "sha256": "4525e2572af0ba7cebdfdab96a0a317143bcf1341106d0a0678ce1afc93104c5"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/band-ownership-mask.png",
+              "sha256": "dba866e636c23047c122e63b863370dd136d2e1b6c27d1c0b44c8679c2817f01"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/coverage.png",
+              "sha256": "93e854dccc4dfaa4e8831c94d7d4731a1fe0670d6c1c6924fd7c86818acf01e1"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/detail-coverage.png",
+              "sha256": "3a5f4df8435bbb088283bdd2273ff5ba8fe6037abf1a56b7530ce76b3d82fd36"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/detail-neutral.png",
+              "sha256": "9e1ea03025149426c8237fd82e6c5f9bbc7f468fdb9f3d9d65e6cae46b14a6b0"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/model.json",
+              "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/native-w-W-preview.png",
+              "sha256": "4ab56c3bc5254d22002c27a1d1101076f0c0cde54bcfa1db71db5afe2e346fc5"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/neutral-master.png",
+              "sha256": "d9f9bd13f1df9855ebf89db36dbf46f51f7d67379137752133a4a5a70848bc28"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/opaque-structure-mask.png",
+              "sha256": "418952927abbc621b0ae2e56606a172c16b885a7b063a3ab68211f70ca4314a6"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/primary-neutral.png",
+              "sha256": "f86c7b9d6d01b1f923595e38df6390c75a8328d1bc8b2116bb38f8867d2e5613"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
+              "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/registration-decisions.json",
+              "sha256": "28505cbffa28bfe82c8038ab292372b5261ffc0ba1d2fae4cf76cf56b066d10b"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/selected-edge-mask.png",
+              "sha256": "2a1441dac2f007b21e8edc3edc46f9f84a06d008c2e2aaee38bbb04d6d6745b1"
+            }
+          ],
+          "review": "Viewed isolated bands and whole recomposition. Both selected256-square production layers are equal-RGB grayscale; no gold is baked in. Only the two bands receive W; lid/case/latch/seam/scratches remain w. No component is independently centered or resized.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.619572+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Closed source silhouette and intended-size palette review",
+          "action": "Inspected selected neutral/detail/native w/W views enlarged and at16x24/24x36/32x48sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/model.json",
+              "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
+              "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/native-w-W-preview.png",
+              "sha256": "4ab56c3bc5254d22002c27a1d1101076f0c0cde54bcfa1db71db5afe2e346fc5"
+            }
+          ],
+          "review": "Actual saved plate preserves the shouldered closed chest, bright outer bands, primary center latch and source abstract marks. This is authoring review, not native container/inventory/physics/visibility acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:26:22.619852+00:00",
+          "step": "native_state_review",
+          "phase": "Native container, inventory, physics and visibility acceptance deferred",
+          "action": "Kept actual inventory builder, smart-use, sound, source physics, visibility and custom fallback checks behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v1/registered/model.json",
+              "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-chest1/v1/registered/model.json",
+          "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+        },
+        "plate": {
+          "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
+          "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+        }
+      },
+      "registration_summary": "Selected Chest1 retains the source shouldered closed lid, two bright side bands, primary-colored center latch and abstract scratches. Production wood/latch and band layers are neutral; preview applies native w/W. Exact source, actual installed JDS wood reference, editable construction, refinement and band extraction are recorded below. No alternate open-lid/empty/full artwork is invented; native container/inventory/physics/visibility acceptance remains pending."
     },
     {
       "id": "SCN-DRESSER",
@@ -7966,7 +8223,264 @@
           "sha256": "9015a6a980da92a7697b435e109fe4467d28320e613e7d3c3fb9c7b4d580ae8e"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T07:30:42.522367+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Source dresser identity, stacked fronts and matching native color roles",
+          "action": "Read Dresser/Furniture definitions, exact original tile/hash and precise-wood/internal-brass-rail description; decoded native primary/detail w/w.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-packet.json",
+              "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/source-construction-comparison.png",
+              "sha256": "2ea993e5ae3880fd748823c9f999ed78355d90afbfa026e443f010f379efbded"
+            }
+          ],
+          "review": "Source supports three stacked fronts, top recessed pull, opposed lower curved motifs, shallow cap and tiny feet. Both color roles are w: no gold hardware is implied. Explicit80-weight non-solid non-takeable organic container/inventory and rare Animated state stay native.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.522737+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VTE inset-drawer reference",
+          "action": "Selected actual installed Vanilla Textures Expanded Dresser_south for restrained wood-front shading, seams and low-relief contour weight.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-packet.json",
+              "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-construction-comparison.png",
+              "sha256": "2ea993e5ae3880fd748823c9f999ed78355d90afbfa026e443f010f379efbded"
+            }
+          ],
+          "review": "Viewed exact donor/package metadata and hashes. Its broad four2x2drawer layout, round knobs, footprint/facings and mechanics are not adopted. The viewed VFE royal dresser was not selected; its gold trim does not establish source gold details.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.522928+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable three-front wood case with source pull motifs",
+          "action": "Constructed explicit shallow cap, three closed fronts, top recessed pull, opposed lower curved source motifs, low rail and tiny feet.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-packet.json",
+              "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/prepare-and-construct.py",
+              "sha256": "6d342c591b019fd68a64a058c204323c4c578ad092e370b025f786a389a4ecea"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/constructed-front.svg",
+              "sha256": "62bcdfae2434cfb1cb396af3ba266fdacd3bcc39bb398f24799cd9b4e22119ce"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/constructed-front.png",
+              "sha256": "325394540aaaf2f6ddb33155445dde0eb346a98dc42d106861dd9bff23a83043"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/source-construction-comparison.png",
+              "sha256": "2ea993e5ae3880fd748823c9f999ed78355d90afbfa026e443f010f379efbded"
+            }
+          ],
+          "review": "Viewed actual source/manual/donor comparison. Hidden drawer segmentation, exact pull construction, wood seams/grain remain authored interpretation. Brass rails stay inside closed drawers. No clothes, mirror, visible rail system or gold ornament is invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.523311+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Single fixed dresser tile and separate source cap/feet role",
+          "action": "Retained one native dresser tile and complete source-cell frame for case/fronts, cap and tiny feet, including independent detail ownership despite identical current tint.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-packet.json",
+              "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/constructed-front.png",
+              "sha256": "325394540aaaf2f6ddb33155445dde0eb346a98dc42d106861dd9bff23a83043"
+            }
+          ],
+          "review": "No source open/closed, empty/full, random variant or donor facing is fabricated. Native inventory and inherited rare/custom animation remain separate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.523509+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled precise-wood dresser refinement",
+          "action": "Performed one built-in ImageGen refinement of the explicit three-front construction with actual installed VTE dresser style reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/source-packet.json",
+              "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/constructed-front.png",
+              "sha256": "325394540aaaf2f6ddb33155445dde0eb346a98dc42d106861dd9bff23a83043"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/refine-front-prompt.txt",
+              "sha256": "fd97fb30b97de5c770e4bcdb72e2c06ba5fcc33e954b7133f5b04fdc5b17b7ca"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/refined-proposal.png",
+              "sha256": "c5c70d67bc7757bbe07d5bfb2974cd176a3f084b131debf610a86f52e3feef6b"
+            }
+          ],
+          "review": "Viewed actual saved output. Three fronts, source pull motifs, cap and tiny feet remain; subtle grain/bevels refine the wood. No new mirror, clothes, gold rails or donor four-drawer layout is accepted. Exterior halo is excluded at registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-dresser/v1/refine-front-prompt.txt",
+            "sha256": "fd97fb30b97de5c770e4bcdb72e2c06ba5fcc33e954b7133f5b04fdc5b17b7ca"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-d719e978-f027-46c9-8cfa-2be54084880d.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-dresser/v1/constructed-front.png",
+              "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/Dresser_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.525218+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral front/case and explicit cap/tiny-feet extraction",
+          "action": "Extracted actual cyan cap/feet ownership, neutralized both roles, removed exterior halo and mapped the whole source frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/refined-proposal.png",
+              "sha256": "c5c70d67bc7757bbe07d5bfb2974cd176a3f084b131debf610a86f52e3feef6b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/register-dresser.py",
+              "sha256": "07265be1ec6f2364e30ae9af0c687017b196e93fb0b23513dc7f227df51921eb"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/cap-feet-neutral-master.png",
+              "sha256": "e0c6b704a1b6b84af9f6d0da44be1d09f27543d47e53bddd9b7201a177e142e6"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/cap-feet-ownership-mask.png",
+              "sha256": "70908882c2e3d053ecc3ba6d4bdb055fb96f473bdfa36e3178ab86391f18b4d3"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/coverage.png",
+              "sha256": "db1d9e22b60422a60354848e9cae100868393bf00db9128d15b461a57a09852d"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/detail-coverage.png",
+              "sha256": "32d3311bd1505973b1fd7aeea49635b50100b6516d4b6f0a9859935206cc155f"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/detail-neutral.png",
+              "sha256": "3590bf493c37fc44e2a6d5b7f1ad5238b8d24ab30da96a67fb4aaac63bb623e2"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/model.json",
+              "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/native-w-w-preview.png",
+              "sha256": "0e015961dbf7384dbac213a9f7d22af25fa2776f8f70ca9c0269665feed58843"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/neutral-master.png",
+              "sha256": "7655565d1829aa0ad5d0252ed2e2132378780a2cf423ad59a62336303d380ca8"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/opaque-structure-mask.png",
+              "sha256": "79e6f7ea1ba681d95b18bc18629f4b4173bbee01b47b99c10cecb34ad6fdbd00"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/primary-neutral.png",
+              "sha256": "eadd77346a9169116887bec60f3835a0ea0ff5ec1887a94226fa91100a9e408f"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
+              "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/registration-decisions.json",
+              "sha256": "f6fd61bb7894f15fb2937821dd64e328f5ccbfb9182178b839d9394407eb9927"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/selected-edge-mask.png",
+              "sha256": "cf92a94d912106ecd0ba2dd0eb87562e364386ba1f50e54f0bcd28cfd908bcd9"
+            }
+          ],
+          "review": "Viewed isolated cap/feet and whole recomposition. Both selected256-square layers have equal RGB. Current native primary/detail both use w; the mask remains separate for correct source role ownership. No independently centered feet/fronts, baked cyan or invented gold remains.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.527906+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Stacked-front identity and intended-size w/w palette review",
+          "action": "Inspected selected neutral/detail/native w/w views enlarged and at16x24/24x36/32x48sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/model.json",
+              "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
+              "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+            },
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/native-w-w-preview.png",
+              "sha256": "0e015961dbf7384dbac213a9f7d22af25fa2776f8f70ca9c0269665feed58843"
+            }
+          ],
+          "review": "Actual saved plate preserves the source stacked fronts and opposed lower motifs with matching brown tints. This is art authoring review, not native inventory, physics, visibility or rare-animation acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:30:42.528178+00:00",
+          "step": "native_state_review",
+          "phase": "Native inventory, furniture physics and rare-animation acceptance deferred",
+          "action": "Kept actual container/inventory builder, source physics, visibility and rare animated/custom fallback checks behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dresser/v1/registered/model.json",
+              "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-dresser/v1/registered/model.json",
+          "sha256": "ee9fc631f997ebb647e16c7210f340b0ef0325dd1c76dd9c9df097a1dcdfad98"
+        },
+        "plate": {
+          "path": "art/conversion/scn-dresser/v1/registered/registration-comparison.png",
+          "sha256": "9c87a375d2b60fb6a7e9d71e1e14f8aacd8ded85a51a46108e8df24876a418ca"
+        }
+      },
+      "registration_summary": "Selected dresser retains three stacked source fronts, top recessed pull, opposed lower motifs, shallow cap and tiny feet. Production case/front and cap/feet roles are neutral, and native preview uses matching w/w brown colors. Internal brass rails do not create gold hardware. Source metadata, actual installed VTE reference, editable construction, refinement and ownership extraction are recorded below. Native inventory/physics/visibility and rare animated fallback acceptance remain pending."
     },
     {
       "id": "SCN-FLOOR-CUSHION",
@@ -8050,7 +8564,567 @@
           "sha256": "c1367a6ad47c6d3d5ad50fc4bd51378c827f00bbb57a1bada8de07d8e4786d54"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T07:41:40.915255+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Buttoned floor-cushion identity and all four native cosmetic patterns",
+          "action": "Read Floor Cushion/BaseChair/Furniture definitions, chaff/glowcrow-feather description and native w/y roles; extracted all four actual RandomTile masks rather than only the older default thumbnail.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/extract-native-states.py",
+              "sha256": "00178968059db95731c63296efd206cf62e5f950f3a2bcdd9fca47e1b085cfc4"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/native-state-index.json",
+              "sha256": "d5a7d7259ab4f4aedb90369c578981d6eb43f8fe4803b2b0ce2c9dfb22aa4da7"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/native-states-comparison.png",
+              "sha256": "2a18334b1451c5166a00392fa5b57de1792b4b7bfcbebd1ef76158539ecd00e7"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            }
+          ],
+          "review": "Viewed exact source patterns. Default thumbnail and variant1 have identical alpha and identical source R wherever covered; invisible RGB differs, so raw RGBA identity is not claimed. Native shader appearance is equivalent. Glowcrow stuffing does not imply glow or loose feathers. Low weight does not override inherited takeability/cover.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.916011+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VFE tufted sitting-cushion reference",
+          "action": "Selected actual installed Vanilla Furniture Expanded NewThings/Furniture/SittingCushion for restrained fabric tufting, folds and clean outlined shading.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-construction-comparison.png",
+              "sha256": "2cc7acf109310339074b89b6dd296a3923655f503796659ab1f821027cf78b98"
+            }
+          ],
+          "review": "Viewed exact donor and package/hash metadata. Its square footprint, exact corner-fold arrangement, source colors and seating mechanics are not copied. Actual Qud patterns control the four cushion designs.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.916191+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Four editable opaque padded-cloth patterns and lower binding",
+          "action": "Constructed four source-shaped low oblique pads with three-dimple/star folds, four diamond tufts, plain top/lower folds and diagonal dimples/creases, each with native lower/front binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/prepare-and-construct.py",
+              "sha256": "b20d27aa51ef039e024688fa5a629b79f10f7ceb9fb41ca70b38a3ab0626de60"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-construction-comparison.png",
+              "sha256": "2cc7acf109310339074b89b6dd296a3923655f503796659ab1f821027cf78b98"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-1.svg",
+              "sha256": "390b59f4e071848bcd53827b59ae86ad8cd2e1a2d01aa71b129d3945be796c3b"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-1.png",
+              "sha256": "d9ec053bfda2019ab7cbaa959db41e9a5c4a34b7d0faa4e8947b783f4952ffe6"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-2.svg",
+              "sha256": "ea588eabd04175682232d9b2115a0bf00aa7734e711fe769f7096a8b7b16ea89"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-2.png",
+              "sha256": "2474e0afdd350ef127fc7f9e53534b64ecb17d11585141837c4cf14ddd0df0d9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-3.svg",
+              "sha256": "f156e07de395d9f975a32763daadf143a1215720b71caf6d78e5a61c5df28aec"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-3.png",
+              "sha256": "1547659211988c5de8213bcdfe6353f8245bc4bb40207ceb0f6b4dc025287ca0"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-4.svg",
+              "sha256": "eab9ce500dcf2657b2de91a6107f9c02e3013f74a63279e5ebd1c26d93499efc"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-4.png",
+              "sha256": "f4285e7c556657448c29419e69ee98e4e46d81163d798257dd29d099063b8052"
+            }
+          ],
+          "review": "Viewed full source/manual/donor comparison. Source gaps become pressed tufts/folds in opaque fabric, not faces or physical holes. Exact buttons, fold depths and seams remain authored interpretation. Variant3 gets no invented upper buttons; no loose stuffing, tassels, embroidery or luminous effects are added.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.917187+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Four cosmetic choices, default visible-equivalent binding and shared whole-cell geometry",
+          "action": "Retained native sw_cushion1..4.bmp as actual cosmetic patterns in one full source-cell mapping; mapped default sw_floor_cushion.png appearance to variant1.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/native-state-index.json",
+              "sha256": "d5a7d7259ab4f4aedb90369c578981d6eb43f8fe4803b2b0ce2c9dfb22aa4da7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-1.png",
+              "sha256": "d9ec053bfda2019ab7cbaa959db41e9a5c4a34b7d0faa4e8947b783f4952ffe6"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-2.png",
+              "sha256": "2474e0afdd350ef127fc7f9e53534b64ecb17d11585141837c4cf14ddd0df0d9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-3.png",
+              "sha256": "1547659211988c5de8213bcdfe6353f8245bc4bb40207ceb0f6b4dc025287ca0"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-4.png",
+              "sha256": "f4285e7c556657448c29419e69ee98e4e46d81163d798257dd29d099063b8052"
+            }
+          ],
+          "review": "These are not four facings, occupied states or packed poses. Default binding is justified by exact shader-visible source coverage/color-role equality. No fifth visibly identical generation or independent tuft/binding centering is invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.917601+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled cushion-pattern refinement / variant1",
+          "action": "Performed one built-in ImageGen call for this exact editable pattern using the actual installed VFE sitting-cushion reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-1.png",
+              "sha256": "d9ec053bfda2019ab7cbaa959db41e9a5c4a34b7d0faa4e8947b783f4952ffe6"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refine-variant-1-prompt.txt",
+              "sha256": "5c51ae9cf8438a5e1cc541a581a756a60807ead700722c7675ee9c03907c347f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-1.png",
+              "sha256": "911447f830d0b26e6af400bf0b40cd890f83a441b1b51a7e225345ec338cc6d8"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Three dimples and central crossing folds remain; no literal face or holes. Original oblique extent and lower binding remain; subtle padding/cloth shading refines the existing design. Exterior halo is excluded during registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v1/refine-variant-1-prompt.txt",
+            "sha256": "5c51ae9cf8438a5e1cc541a581a756a60807ead700722c7675ee9c03907c347f"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-3094fa46-c513-4f8f-9b8a-118ca5f8ce0e.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-floor-cushion/v1/constructed-variant-1.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Furniture/SittingCushion/SittingCushion.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.918708+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled cushion-pattern refinement / variant2",
+          "action": "Performed one built-in ImageGen call for this exact editable pattern using the actual installed VFE sitting-cushion reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-2.png",
+              "sha256": "2474e0afdd350ef127fc7f9e53534b64ecb17d11585141837c4cf14ddd0df0d9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refine-variant-2-prompt.txt",
+              "sha256": "d699da4955fdd6adfdf4631dbe6681405ede6e03c671a5f7039aff9bcf65ccfc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-2.png",
+              "sha256": "1f8d13d613e2458a63c319f3ddf8149379092a0f9f4380797d17cb89b2c257b3"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Exactly four dimples preserve the source diamond arrangement. Original oblique extent and lower binding remain; subtle padding/cloth shading refines the existing design. Exterior halo is excluded during registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v1/refine-variant-2-prompt.txt",
+            "sha256": "d699da4955fdd6adfdf4631dbe6681405ede6e03c671a5f7039aff9bcf65ccfc"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-9ae872d1-06b0-45cc-8df5-3722ff225bb3.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-floor-cushion/v1/constructed-variant-2.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Furniture/SittingCushion/SittingCushion.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.919801+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled cushion-pattern refinement / variant3",
+          "action": "Performed one built-in ImageGen call for this exact editable pattern using the actual installed VFE sitting-cushion reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-3.png",
+              "sha256": "1547659211988c5de8213bcdfe6353f8245bc4bb40207ceb0f6b4dc025287ca0"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refine-variant-3-prompt.txt",
+              "sha256": "1f1e1a215429920374a9ee2170eaff98ce2bb5da56e324947d4863bd576fb168"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-3.png",
+              "sha256": "eac62a625f8ebeeffa2b1f93496d04e5a359514bbbc1281a0496c401d0e44109"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Upper pad remains plain; only lower/front folds are retained. Original oblique extent and lower binding remain; subtle padding/cloth shading refines the existing design. Exterior halo is excluded during registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v1/refine-variant-3-prompt.txt",
+            "sha256": "1f1e1a215429920374a9ee2170eaff98ce2bb5da56e324947d4863bd576fb168"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-9d130ec2-1ba3-4c8d-98fd-9789020288b8.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-floor-cushion/v1/constructed-variant-3.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Furniture/SittingCushion/SittingCushion.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.920881+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Controlled cushion-pattern refinement / variant4",
+          "action": "Performed one built-in ImageGen call for this exact editable pattern using the actual installed VFE sitting-cushion reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/constructed-variant-4.png",
+              "sha256": "f4285e7c556657448c29419e69ee98e4e46d81163d798257dd29d099063b8052"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refine-variant-4-prompt.txt",
+              "sha256": "8018861736958790d2f9ac3a3c021fde8f87e4663ffa32d62439016fcb1420e0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-4.png",
+              "sha256": "ae07ae5467480dbc118dd35baaf06a721db60050a0ab19accfd8aff0652799d4"
+            }
+          ],
+          "review": "Viewed actual saved proposal. Three dimples and connecting creases retain the source stepped diagonal arrangement. Original oblique extent and lower binding remain; subtle padding/cloth shading refines the existing design. Exterior halo is excluded during registration.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v1/refine-variant-4-prompt.txt",
+            "sha256": "8018861736958790d2f9ac3a3c021fde8f87e4663ffa32d62439016fcb1420e0"
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-4ef8d5f1-6e89-497e-b28f-e2258308ab18.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/scn-floor-cushion/v1/constructed-variant-4.png",
+              "D:/Steam/steamapps/workshop/content/294100/1718190143/Textures/NewThings/Furniture/SittingCushion/SittingCushion.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.922996+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Four neutral upper-fabric/binding masks and stable whole-cell registration",
+          "action": "Extracted actual cyan lower/front binding for each refined pattern, neutralized both roles, excluded detached halo and mapped each complete source frame once.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+              "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-1.png",
+              "sha256": "911447f830d0b26e6af400bf0b40cd890f83a441b1b51a7e225345ec338cc6d8"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-2.png",
+              "sha256": "1f8d13d613e2458a63c319f3ddf8149379092a0f9f4380797d17cb89b2c257b3"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-3.png",
+              "sha256": "eac62a625f8ebeeffa2b1f93496d04e5a359514bbbc1281a0496c401d0e44109"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/refined-variant-4.png",
+              "sha256": "ae07ae5467480dbc118dd35baaf06a721db60050a0ab19accfd8aff0652799d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/register-cushions.py",
+              "sha256": "d083d02f381c9d317ec0b9554c3a88725d569505e15e36d3adb84bfed65e3f98"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+              "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
+              "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/registration-decisions.json",
+              "sha256": "0c78649666b585bd5e319d25075a149e26674c6fc863cb3cfba3be7da76fd9c3"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-binding-neutral-master.png",
+              "sha256": "b1a44a2fe204498057f45130c6df02f978e6198ad7e44d4994f46a0a367bb5f9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-binding-ownership-mask.png",
+              "sha256": "c19128e2c4b1ae1a165c115e80f2bbdf891c296795c3556c021245dd11b53c09"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-coverage.png",
+              "sha256": "33ce5aafb4ab162ebaf5ef0ac3b67752bdc0fa12798710a96e611804e7c8fdb5"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-detail-coverage.png",
+              "sha256": "0f52bc4490de9443a431d6da5bcc903b1c73ae0bf051e307ada523b7a04adf76"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-detail-neutral.png",
+              "sha256": "67a25a5d8507e784df27df0eda31b3a317e9f056bad693212d50905dc79fc79f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-native-w-y-preview.png",
+              "sha256": "f1e07bb6ded1cbaf8db10e5c6b94ff5e07b8d9afffc27fc2530be2af86f1126f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-neutral-master.png",
+              "sha256": "69411b7803fb047324951ef61fd981781014b332043ec1a72b332400170e1b45"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-opaque-structure-mask.png",
+              "sha256": "5fedb2150a3f8db8be105066278617254246f910155feba749f742f6980f5627"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-primary-neutral.png",
+              "sha256": "6d3e17c4bc3912e9beb5be42c34832258088a8adf8895f202c702289da594a2d"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-selected-edge-mask.png",
+              "sha256": "6b373233dfa273e2d29926bc02322bbfd920ea79cbcd9bfc5e2d94999c1ab111"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-binding-neutral-master.png",
+              "sha256": "64e5b4e84a0c137badcd2fc75e25ea0da5b7bb9e356ebf3751d289acf7a8e65a"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-binding-ownership-mask.png",
+              "sha256": "d56b6282ab844f361ffa59646b625b464b5656579f83357c3098f0632f743b09"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-coverage.png",
+              "sha256": "5a3efae8f411330e671ef9c84996f299a9a34cdbbaaeb2a43dd0524cb645de42"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-detail-coverage.png",
+              "sha256": "70291006e9f71629a5ddc177da4044039433fcd6f38a6fce6af0d1ececce9901"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-detail-neutral.png",
+              "sha256": "9ac51d654764c54f4c475a5746781994d607b57fdf13bc3800306b6c0e5f0d69"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-native-w-y-preview.png",
+              "sha256": "295ec1264d99c3a51a6a071c83889a0f552a1610748502a3cd748f285de0ebd9"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-neutral-master.png",
+              "sha256": "8f40161c26eb249fb7d02887d1eb80faf5127e62c143f342344d1faf33d9d995"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-opaque-structure-mask.png",
+              "sha256": "777a13ac544903175d89085497f4f79b9c81754daf1de673cbbc7398ac46f2df"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-primary-neutral.png",
+              "sha256": "49721740a8cc7b3d1efce70d0dfed59d4d2195a173a4ddfd9d270dd0c1d721c7"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-selected-edge-mask.png",
+              "sha256": "fe3dbc113ecee6786df85393b304f4c9acefe89d474d2ebecfff1bc9508b9203"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-binding-neutral-master.png",
+              "sha256": "70307c9e6568e95594833f50d476493eafd0438cc38a4adf27c8788fd25801ef"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-binding-ownership-mask.png",
+              "sha256": "ddc431b5e7b1ed9915531476787dfd2da8c9ff9bd4f30d64bf80da38112eafa1"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-coverage.png",
+              "sha256": "daf68d6b1eaeb2da619e58558c0fe2053a2f2ccd778b77bb3fe25187ec7ddd54"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-detail-coverage.png",
+              "sha256": "d1e9b87892333bb30788277add1a7f0542fc96eb35f1556366dd5771bdd7e896"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-detail-neutral.png",
+              "sha256": "36ee5d020d061ed2f7d4c2e2ef58e8e0b33f4b369e398d3a8362ba4ee47fd376"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-native-w-y-preview.png",
+              "sha256": "c52a731430cfcab81b070f6205ea1bda27ac9084612649c09e49127fb19620d8"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-neutral-master.png",
+              "sha256": "23098908710b151099749ca65f6c00ee3896bdd3789dfd2b03adf376707fc721"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-opaque-structure-mask.png",
+              "sha256": "61e309b539ed5a6f9e90386b20a091ed5e2c0e0ab3788cf75357150f2e826533"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-primary-neutral.png",
+              "sha256": "6311dbb776351dbb9c57d7e414a600208202f7cc73622505a22a6b1c6dbf5d7c"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-selected-edge-mask.png",
+              "sha256": "1c338a3253c134ed97bdfa5aeeb71e4e27855ed8d0546ed07af524601fa8d88b"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-binding-neutral-master.png",
+              "sha256": "e5b5b37ab58c94afdeedb33f194d633ed103b21473f0c9e2bdbc56dac449785a"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-binding-ownership-mask.png",
+              "sha256": "962176897e5e1be7e09185c3113d773a35ee9dccc6b80419c5675e0d3802836f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-coverage.png",
+              "sha256": "f5f226d7f84ded18fb8bc62a6385af2104887f966f3d583df3f66bb04a926274"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-detail-coverage.png",
+              "sha256": "e133f3bca9eb3e44cf4c3430ba640b000c12bba223158eb8db3decee86a99f82"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-detail-neutral.png",
+              "sha256": "1829bf832d3c5de24890452f9f3dcaf1a4dab5d4664e3a65a92af6008736ff7e"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-native-w-y-preview.png",
+              "sha256": "cb5d3989af030f1cbc1c57a4c2fdcd52db3f95e7e0e189960b808970ac3ce4db"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-neutral-master.png",
+              "sha256": "e6cfb608efad3f44b57a371662bab51b36910ddc4281c9d7511a12f54ff8ac42"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-opaque-structure-mask.png",
+              "sha256": "898b09313a0e4c48ded71c574c57a21aacd59baa411c1221ed345fc0a00c6d98"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-primary-neutral.png",
+              "sha256": "087594910b194493da41a3c49e2538a4d483b7e198122b64b8cba0ad88693167"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-selected-edge-mask.png",
+              "sha256": "6d47b8b90ac8f62967d1495fb58baaf8c0865cdc69fc4bc54f570a03082a5959"
+            }
+          ],
+          "review": "Viewed isolated binding and whole neutral/native recomposition for all four variants. Inspected opaque cyan bounds are confined to the lower/front edge. Every selected production layer has equal RGB and the same256-square full-cell frame. Button/crease indents remain opaque primary fabric; no baked cyan or per-pattern bbox fitting remains.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.930235+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "All four source patterns, default binding and intended-size palette review",
+          "action": "Inspected neutral/detail/native w/y views for all four cosmetic choices enlarged and at16x24/24x36/32x48sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+              "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
+              "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+            }
+          ],
+          "review": "Actual saved selected plate preserves each source pattern and pale lower binding. Enlarged panels use the same fixed display-only crop after restoring2:3aspect; production textures keep the full cell. Default visibly binds to variant1. This is art authoring review, not native random selection/seating/cover/visibility acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T07:41:40.930541+00:00",
+          "step": "native_state_review",
+          "phase": "Native pattern selection, seating, cover and rare-animation acceptance deferred",
+          "action": "Kept actual native RandomTile/default binding, Chair Level-1, inherited cover/physics/takeability, visibility and rare animated/custom fallback checks behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+              "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edit was performed. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
+          "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+        },
+        "plate": {
+          "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
+          "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+        }
+      },
+      "registration_summary": "All four native floor-cushion cosmetic patterns retain their original tuft/crease differences and pale lower/front binding. Default thumbnail is shader-visibly equivalent to variant1, with exact coverage/source role evidence. Production fabric/binding layers are neutral; previews apply native w/y. Exact sources, actual installed VFE reference, four editable constructions, four real refinement calls and mask extraction are recorded below. No faces, holes, loose feathers or glow are invented; native pattern selection/seating/cover/visibility acceptance remains pending."
     },
     {
       "id": "SCN-HAMMOCK",
@@ -8064,8 +9138,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

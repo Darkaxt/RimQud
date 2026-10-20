@@ -1,0 +1,75 @@
+{
+  "inputs": [
+    {
+      "path": "art/conversion/scn-floor-cushion/v1/register-cushions.py",
+      "sha256": "d083d02f381c9d317ec0b9554c3a88725d569505e15e36d3adb84bfed65e3f98"
+    },
+    {
+      "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+      "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+    }
+  ],
+  "variants": [
+    {
+      "variant": 1,
+      "input": {
+        "path": "art/conversion/scn-floor-cushion/v1/refined-variant-1.png",
+        "sha256": "911447f830d0b26e6af400bf0b40cd890f83a441b1b51a7e225345ec338cc6d8"
+      },
+      "actual_opaque_cyan_bounds": [
+        81,
+        827,
+        939,
+        1081
+      ],
+      "pattern": "Three-dimple/star fold"
+    },
+    {
+      "variant": 2,
+      "input": {
+        "path": "art/conversion/scn-floor-cushion/v1/refined-variant-2.png",
+        "sha256": "1f8d13d613e2458a63c319f3ddf8149379092a0f9f4380797d17cb89b2c257b3"
+      },
+      "actual_opaque_cyan_bounds": [
+        84,
+        826,
+        944,
+        1079
+      ],
+      "pattern": "Four diamond-arranged dimples"
+    },
+    {
+      "variant": 3,
+      "input": {
+        "path": "art/conversion/scn-floor-cushion/v1/refined-variant-3.png",
+        "sha256": "eac62a625f8ebeeffa2b1f93496d04e5a359514bbbc1281a0496c401d0e44109"
+      },
+      "actual_opaque_cyan_bounds": [
+        86,
+        828,
+        940,
+        1080
+      ],
+      "pattern": "Plain top/lower folds"
+    },
+    {
+      "variant": 4,
+      "input": {
+        "path": "art/conversion/scn-floor-cushion/v1/refined-variant-4.png",
+        "sha256": "ae07ae5467480dbc118dd35baaf06a721db60050a0ab19accfd8aff0652799d4"
+      },
+      "actual_opaque_cyan_bounds": [
+        86,
+        828,
+        935,
+        1079
+      ],
+      "pattern": "Three diagonal dimples/crease"
+    }
+  ],
+  "alpha": "Actual opaque structure A>=224plus two-pixel edge allowance; retain actual A>=16only there, normalize>=240and clear invisible RGB. Remove detached exterior halo. Cushion fabric stays opaque through tufts and creases.",
+  "ownership": "Actual cyan binding G-R>=4,B-R>=4,min(G,B)>=20is neutralized with max(G,B). Gray upper fabric/buttons/creases remain mean-RGB primary. Inspected opaque cyan bounds lie only on lower/front binding, not upper fabric.",
+  "registration": "Same full native-cell mapping for all four whole cushions and each role mask. Review crop is a fixed shared window from restored288x432display frames, y125..325; it is not a production texture crop or per-variant centering.",
+  "source_limits": "Tuft count/positions and folds follow native visible patterns as authored cloth interpretation. They are not faces, physical holes, mechanical attachment nodes or loose/luminous stuffing. Variant3 keeps its plain top.",
+  "omitted": "Four source cosmetic patterns require four real refinements. No creature turnarounds, clothing or invented sitting/packed sprite states apply. Native seating/physics/visibility/rare-animation acceptance remains deferred."
+}

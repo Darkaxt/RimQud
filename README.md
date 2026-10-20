@@ -96,7 +96,16 @@ and two support corrections remain in the report. The ordinary Chair retains its
 tall slatted back and hard plank seat: its pale native seat tint is not fabric.
 Each includes actual source/reference metadata, editable geometry, refinement,
 neutral tint layers and intended-size visual evidence.
-There are now 40 generation-ready entries; Chest1 is active next.
+Chest1 now retains its shouldered closed lid, two bright side bands, primary-tinted
+center latch and scratched marks, with actual installed JDS wood-style reference.
+Dresser keeps three stacked fronts and opposed lower motifs, with native brown
+for both primary and detail roles; internal brass rails do not become gold trim.
+Floor Cushion covers all four actual RandomTile tuft/crease patterns, including
+the plain-top variant, with separate neutral lower/front binding. Its default
+thumbnail is visibly equivalent to variant 1 under the native shader contract.
+All six new refinements, original shapes, editable construction and masks are
+recorded in the report. [Selected cushion variants](art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png).
+There are now 43 generation-ready entries; Hammock is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

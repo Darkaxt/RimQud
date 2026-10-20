@@ -1,0 +1,72 @@
+{
+  "entry": "SCN-FLOOR-CUSHION",
+  "identity": "Floor Cushion -> BaseChair -> Furniture",
+  "description": "Stuffed with watervine chaff and glowcrow feathers, this buttoned pillow lets folk repose with crossed legs.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Floor Cushion": "<object Name=\"Floor Cushion\" Inherits=\"BaseChair\">\n    <part Name=\"Render\" DisplayName=\"floor cushion\" ColorString=\"&amp;w\" DetailColor=\"y\" RenderString=\"009\" Tile=\"Items/sw_floor_cushion.png\" />\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_cushion1.bmp,Items/sw_cushion2.bmp,Items/sw_cushion3.bmp,Items/sw_cushion4.bmp\" />\n    <part Name=\"Description\" Short=\"Stuffed with watervine chaff and glowcrow feathers, this buttoned pillow lets folk repose with crossed legs.\" />\n    <part Name=\"Physics\" Weight=\"2\" />\n    <part Name=\"Commerce\" Value=\"1\" />\n    <part Name=\"Chair\" Level=\"-1\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Reclined,Sybaritic,Soft,Voluptuous,Epicurean\" />\n    <tag Name=\"BodyType\" Value=\"Pillow\" />\n    <tag Name=\"PlacementHint\" Value=\"Inside\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stag Name=\"Basic\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "BaseChair": "<object Name=\"BaseChair\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[chair]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"190\" Tile=\"Items/sw_chair.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"20\" Takeable=\"false\" />   \n    <part Name=\"Chair\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Short-Legged,Straight-Backed,Sturdy,Three-Legged\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Backs,Lumbar,the Tired\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Chair\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"chair\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"60\" />\n    <stag Name=\"Seating\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sit on\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeingSatOn\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original_states": {
+    "path": "art/conversion/scn-floor-cushion/v1/native-state-index.json",
+    "sha256": "d5a7d7259ab4f4aedb90369c578981d6eb43f8fe4803b2b0ce2c9dfb22aa4da7"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-floor-cushion/v1/native-states-comparison.png",
+    "sha256": "2a18334b1451c5166a00392fa5b57de1792b4b7bfcbebd1ef76158539ecd00e7"
+  },
+  "default_reference": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\floor-cushion-mask.png",
+    "sha256": "32a6bd94b619acf6aae8befb08baa9d346abd5a1074d562de8457d767912eb1f",
+    "tile": "Items/sw_floor_cushion.png",
+    "binding": "Same alpha coverage and same shader-relevant R wherever covered as RandomTile variant1. Raw RGBA differs only in invisible RGB; no extra visible fifth model is required."
+  },
+  "source_shapes": [
+    "Two upper dimples and central star-like folds, following the first native pattern. These are pillow tufts, not a face.",
+    "Four source dimple positions at top, left, right and lower center; retain the diamond arrangement.",
+    "Plain upper pad with deeper lower-front edge folds; no new visible top buttons are added where the source has none.",
+    "A diagonal sequence of pinched folds/dimples follows the original stepped diagonal marks; no readable slash symbol or embroidery."
+  ],
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Upper stuffed fabric receives w; pale lower/front binding receives y. Crease/button marks are shaded primary fabric, not transparent holes. Cyan binding in authoring is an extraction aid; final layers are neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Furniture Expanded",
+    "workshop_id": "1718190143",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+    "sha256": "50bc51da403a66964733d36df2e8becf936ea5cf1c1762630a9fa6d8925458c8",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\About\\About.xml",
+    "about_sha256": "2a52a3f81c98268f54889762e98fa90e891db621e359802da0d1ea934f68afda",
+    "role": "Actual installed NewThings/Furniture/SittingCushion supplies soft tufting, restrained fabric folds and clean outlined cushion rendering. Its exact four-corner fold layout, square footprint, source colors and seating mechanics are not copied."
+  },
+  "construction": "Four editable low oblique diamond-like stuffed pads retain native pattern differences and pale lower/front binding. Native gaps are interpreted as creases/button indents in opaque fabric, not a face or holes through a stuffed pillow. Exact tuft circles, fold depths and cloth seams are authored interpretation. Chaff/feathers are stuffing, not loose objects or luminous glowcrow effects.",
+  "native_state": "RandomTile chooses sw_cushion1..4.bmp, not four facings. Default thumbnail is visibly equivalent to variant1 under actual shader coverage. Native Chair Level-1,2-weight BaseChair-derived furniture, inherited takeability/cover and rare Animated state stay native. Do not infer portability merely from low weight.",
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same full source-cell transform for every pad/binding mask. Do not separately fit/center different tuft patterns or pale edge."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

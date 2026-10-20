@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-CHEST1",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Chest1",
+  "native_tiles": [
+    "Assets_Content_Textures_Tiles_sw_chest.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-chest1/v1/source-packet.json",
+    "sha256": "756bb45195caadd23375b7e683bad8c0caa6a91baa011298364a981ae8d41e54"
+  },
+  "primary": {
+    "path": "art/conversion/scn-chest1/v1/registered/primary-neutral.png",
+    "sha256": "f86c7b9d6d01b1f923595e38df6390c75a8328d1bc8b2116bb38f8867d2e5613"
+  },
+  "detail": {
+    "path": "art/conversion/scn-chest1/v1/registered/detail-neutral.png",
+    "sha256": "9e1ea03025149426c8237fd82e6c5f9bbc7f468fdb9f3d9d65e6cae46b14a6b0"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-chest1/v1/registered/coverage.png",
+    "sha256": "93e854dccc4dfaa4e8831c94d7d4731a1fe0670d6c1c6924fd7c86818acf01e1"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-chest1/v1/registered/detail-coverage.png",
+    "sha256": "3a5f4df8435bbb088283bdd2273ff5ba8fe6037abf1a56b7530ce76b3d82fd36"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for the entire closed chest and side-band mask. No independent lid/band/latch bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wood and latch w",
+    "detail": "actual native two side bands W",
+    "neutral_preview": "Both production layers are equal-RGB grayscale. Gold extraction aid is removed."
+  },
+  "state_owner": "One inherited fixed closed-chest tile. Chest1 changes inventory builder/tier/aggregation, not appearance. No alternate open/empty/full tile is declared.",
+  "native_behavior": "Preserve native Container/inventory, smart-use, chest sound, organic furniture physics and non-occlusion. Keep unspecified source physics defaults and custom native fallback; no JDS storage gameplay is transplanted.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

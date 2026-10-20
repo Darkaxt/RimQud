@@ -1,0 +1,78 @@
+{
+  "entry": "SCN-CHEST1",
+  "identity": "Chest1 -> Chest -> Furniture",
+  "description": "A wood storage box with a hinged lid and latch. Notches scratched on the surface hint at the full probability array of language, and also its absence.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Chest1": "<object Name=\"Chest1\" Inherits=\"Chest\">\n    <part Name=\"Inventory\" Builder=\"InventoryChestJunk1\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <tag Name=\"DynamicObjectsTable:Chests\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"AggregateWith\" Value=\"Chest1\" />\n  </object>",
+      "Chest": "<object Name=\"Chest\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"chest\" Tile=\"Assets_Content_Textures_Tiles_sw_chest.bmp\" DetailColor=\"W\" ColorString=\"&amp;w\" RenderString=\"254\" Occluding=\"false\" RenderIfDark=\"true\" RenderLayer=\"6\" />\n\t\t<part Name=\"Description\" Short=\"A wood storage box with a hinged lid and latch. Notches scratched on the surface hint at the full probability array of language, and also its absence.\" />\n    <part Name=\"Physics\" Organic=\"true\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;W\" />\n    <part Name=\"Container\" OpenSound=\"Sounds/Interact/sfx_interact_open_chest\" />\n    <part Name=\"Inventory\" />\n    <property Name=\"SparkingQuestBlueprint\" Value=\"Chest\" />    \n    <tag Name=\"AutoexploreChest\" />\n    <tag Name=\"ForceSmartUse\" />\n    <stag Name=\"Storage\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\chest1-mask.png",
+    "sha256": "ee9142fb81d55c406ed7ed1530310f9f3991ecbc044ca82292af498117272af2",
+    "tile": "Assets_Content_Textures_Tiles_sw_chest.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 14698,
+    "atlas_id": 277,
+    "rect": [
+      1512,
+      754,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Low broad closed chest. Raised/shouldered lid at top, two bright bands running down its outer sides with a lid seam, central primary-colored rectangular latch and front-panel marks. Gaps in the tiny glyph do not establish transparent wooden faces or detached straps.",
+  "palette": {
+    "primary": "w",
+    "detail": "W",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "cfc041",
+    "rule": "Wood body/lid, front marks and center latch stay primary w. Only two source-bright side bands use W. Gold bands are an extraction aid; final layers are neutral. A latch is not automatically assigned bright gold because it is hardware."
+  },
+  "donor_reference": {
+    "mod": "[JDS] Simple Storage",
+    "package_id": "JangoDsoul.SimpleStorage",
+    "workshop_id": "1961098970",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_south.png",
+    "sha256": "1bdc4c806b1a304ec8b0fba2c30716bbea4ce8f049588295062efca72b2bc83b",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\About\\About.xml",
+    "about_sha256": "bb46dc392598c276c88e13e65cfc07b739c43a93b2805a25cbdbc0f1ce6c80ee",
+    "role": "Actual installed1.5CrateA_south supplies restrained plank grain, shallow wooden-edge shading and game-art contours. Its flat crate top, cross-brace, nails, dimensions, storage mechanics and brown source pixels are not copied."
+  },
+  "construction": "Editable opaque wood case and shallow shouldered hinged lid, two side reinforcing bands, central recessed primary-role latch and sparse abstract scratched notches. Band material, exact plank seams and notch forms remain authored interpretation; source bright bands do not establish a new native material property. No visible loot, letters, ornate lock or open-lid alternate state.",
+  "native_state": {
+    "tile": "One fixed inherited chest tile; Chest1 changes inventory builder/tier/aggregation rather than appearance. No open/closed, empty/full or random tile is declared.",
+    "part": "XRL.World.Parts.Container",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "37aeebe3fcc73f89d4fb1b245581f6ceb838a4149d31af4e6586d8076841795c",
+    "part_declares_Render_or_Tile": false,
+    "rule": "Keep native container/inventory/smart-use/open sound and original physics. Do not infer a new packed/open appearance or unspecified takeability/solidity defaults."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell transform for wood, lid, bands, latch and masks; no independent strap/latch centering."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

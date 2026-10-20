@@ -1,0 +1,55 @@
+{
+  "entry": "SCN-DRESSER",
+  "kind": "fixed_layered_furniture",
+  "blueprint": "Dresser",
+  "native_tiles": [
+    "Items/sw_dresser.bmp"
+  ],
+  "source": {
+    "path": "art/conversion/scn-dresser/v1/source-packet.json",
+    "sha256": "d06655b31d735798343410c7cd0f739e9203a547d4282f25ef8247a8b541b855"
+  },
+  "primary": {
+    "path": "art/conversion/scn-dresser/v1/registered/primary-neutral.png",
+    "sha256": "eadd77346a9169116887bec60f3835a0ea0ff5ec1887a94226fa91100a9e408f"
+  },
+  "detail": {
+    "path": "art/conversion/scn-dresser/v1/registered/detail-neutral.png",
+    "sha256": "3590bf493c37fc44e2a6d5b7f1ad5238b8d24ab30da96a67fb4aaac63bb623e2"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-dresser/v1/registered/coverage.png",
+    "sha256": "db1d9e22b60422a60354848e9cae100868393bf00db9128d15b461a57a09852d"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-dresser/v1/registered/detail-coverage.png",
+    "sha256": "32d3311bd1505973b1fd7aeea49635b50100b6516d4b6f0a9859935206cc155f"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full1024x1536frame maps once to256square for all three fronts, case, top cap and tiny feet. No independent cap/front/foot bbox centering."
+  },
+  "palette": {
+    "primary": "actual native wood w",
+    "detail": "actual native cap/feet w, identical to primary w",
+    "neutral_preview": "Both selected layers are equal-RGB neutral; pale cyan segmentation aid is removed."
+  },
+  "state_owner": "One source fixed-map-view Dresser tile. Native inventory stays native; no donor facings or alternate open/empty/full artwork is invented.",
+  "native_behavior": "Preserve native Container/inventory/junk builder, non-occlusion,80-weight non-takeable non-solid organic furniture and rare Animated/custom fallback. Described brass rails remain internal; no donor furniture mechanics.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}

@@ -1,0 +1,123 @@
+{
+  "entry": "SCN-FLOOR-CUSHION",
+  "kind": "fixed_layered_furniture_variants",
+  "blueprint": "Floor Cushion",
+  "source": {
+    "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+    "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+  },
+  "variants": [
+    {
+      "variant": 1,
+      "native_tile": "Items/sw_cushion1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-primary-neutral.png",
+        "sha256": "6d3e17c4bc3912e9beb5be42c34832258088a8adf8895f202c702289da594a2d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-detail-neutral.png",
+        "sha256": "67a25a5d8507e784df27df0eda31b3a317e9f056bad693212d50905dc79fc79f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-coverage.png",
+        "sha256": "33ce5aafb4ab162ebaf5ef0ac3b67752bdc0fa12798710a96e611804e7c8fdb5"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-1-detail-coverage.png",
+        "sha256": "0f52bc4490de9443a431d6da5bcc903b1c73ae0bf051e307ada523b7a04adf76"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Items/sw_cushion2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-primary-neutral.png",
+        "sha256": "49721740a8cc7b3d1efce70d0dfed59d4d2195a173a4ddfd9d270dd0c1d721c7"
+      },
+      "detail": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-detail-neutral.png",
+        "sha256": "9ac51d654764c54f4c475a5746781994d607b57fdf13bc3800306b6c0e5f0d69"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-coverage.png",
+        "sha256": "5a3efae8f411330e671ef9c84996f299a9a34cdbbaaeb2a43dd0524cb645de42"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-2-detail-coverage.png",
+        "sha256": "70291006e9f71629a5ddc177da4044039433fcd6f38a6fce6af0d1ececce9901"
+      }
+    },
+    {
+      "variant": 3,
+      "native_tile": "Items/sw_cushion3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-primary-neutral.png",
+        "sha256": "6311dbb776351dbb9c57d7e414a600208202f7cc73622505a22a6b1c6dbf5d7c"
+      },
+      "detail": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-detail-neutral.png",
+        "sha256": "36ee5d020d061ed2f7d4c2e2ef58e8e0b33f4b369e398d3a8362ba4ee47fd376"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-coverage.png",
+        "sha256": "daf68d6b1eaeb2da619e58558c0fe2053a2f2ccd778b77bb3fe25187ec7ddd54"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-3-detail-coverage.png",
+        "sha256": "d1e9b87892333bb30788277add1a7f0542fc96eb35f1556366dd5771bdd7e896"
+      }
+    },
+    {
+      "variant": 4,
+      "native_tile": "Items/sw_cushion4.bmp",
+      "primary": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-primary-neutral.png",
+        "sha256": "087594910b194493da41a3c49e2538a4d483b7e198122b64b8cba0ad88693167"
+      },
+      "detail": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-detail-neutral.png",
+        "sha256": "1829bf832d3c5de24890452f9f3dcaf1a4dab5d4664e3a65a92af6008736ff7e"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-coverage.png",
+        "sha256": "f5f226d7f84ded18fb8bc62a6385af2104887f966f3d583df3f66bb04a926274"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-floor-cushion/v1/registered/variant-4-detail-coverage.png",
+        "sha256": "e133f3bca9eb3e44cf4c3430ba640b000c12bba223158eb8db3decee86a99f82"
+      }
+    }
+  ],
+  "default_tile_binding": {
+    "native_tile": "Items/sw_floor_cushion.png",
+    "variant": 1,
+    "reason": "Exact default coverage and source shader-relevant R wherever covered match variant1. Invisible RGB differs; not raw RGBA identity."
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "Every entire1024x1536frame maps once to256square. No separate tuft-pattern, cushion/body or binding bbox fitting. Review plate uses one identical display-only window after restoring physical2:3aspect; production files retain full canvas."
+  },
+  "palette": {
+    "primary": "actual native stuffed fabric w",
+    "detail": "actual native lower/front binding y",
+    "neutral_preview": "All production layers are equal-RGB neutral; cyan authoring aid is removed. Tuft indents remain shaded opaque primary fabric."
+  },
+  "state_owner": "Native RandomTile chooses four cosmetic patterns, not orientations. Default visible shape binds to variant1; no new packed/occupied state.",
+  "native_behavior": "Preserve native Chair Level-1,2-weight BaseChair-derived furniture, inherited takeability/cover, non-occlusion and rare Animated/custom fallback. Stuffing does not add glow or loose feathers. No donor seating mechanics.",
+  "native_acceptance": "Pending every-conversion-generated gate"
+}
