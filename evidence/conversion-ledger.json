@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+  "active_entry": "FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -3858,8 +3858,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -3964,8 +3964,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -3978,7 +3978,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records."
       ],
       "metadata": {
         "body_family": "human-female",
@@ -4036,6 +4036,252 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:28:18.213677+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Wide-brimmed Hat description (crushed/creased crown, sweat/salt-stained brim), native Head/0 binding, item glyph and primary y/detail b.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/prepare-source.py",
+              "sha256": "af1bae56dfd09c28b28899a9437e475dbeed0732c95d204534039ad81d8040f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            }
+          ],
+          "review": "Inspected cardinal hat on original head: low crown and wide brim fit inside frame, front/profile/back creases differ, body stays behind hat, no sleeve/arm masking.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:28:18.214116+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed human-female v2 and actual RimWorld CowboyHat SEN references for low crown/wide brim/cardinal shading only. No extra cowboy ornament or changed head.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/prepare-source.py",
+              "sha256": "af1bae56dfd09c28b28899a9437e475dbeed0732c95d204534039ad81d8040f8"
+            }
+          ],
+          "outputs": [],
+          "review": "Inspected cardinal hat on original head: low crown and wide brim fit inside frame, front/profile/back creases differ, body stays behind hat, no sleeve/arm masking.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:28:18.214210+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed full worn hat geometry in all cardinal views within existing canvas, lower blue-band ownership and explicit zero body-over-hat mask. Added enlarged head context while retaining original whole body and contact.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/prepare-source.py",
+              "sha256": "af1bae56dfd09c28b28899a9437e475dbeed0732c95d204534039ad81d8040f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-red-context.png",
+              "sha256": "523aed00e1d2359d6b0fc13cfb038ca0e66601bb76a25aee2da0004a8ff4164c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-neutral-context.png",
+              "sha256": "c925ef65f16f4402a764226939dbfdafb8701b0abe0df5f90e2bafeae12621bb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-red-head-context.png",
+              "sha256": "799adc362d0d7624660867160e6a9d9634bc4aaf2da3011965bf9cdb220c49df"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-south.svg",
+              "sha256": "7d5a30bdaa2483f9ee777ca996da69772834e93abe1e06672f30ec6b67f1cd0b"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-east.svg",
+              "sha256": "3a30c3c01424ff54e850377a523a5548bab44c4d7bfc148e93fd552f9d47e580"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-north.svg",
+              "sha256": "961b98d7478f0238d6433d9703e68ef2b22dc5f68ae3ec852d11e3fce99f6d11"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/band-region-south.svg",
+              "sha256": "408ff67fd4a8b65e2d15f17a580829b5cf793920f1f3f8b4d0a10d6ae22a7c51"
+            }
+          ],
+          "review": "Inspected cardinal hat on original head: low crown and wide brim fit inside frame, front/profile/back creases differ, body stays behind hat, no sleeve/arm masking.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:35:45.533122+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Refined the constructed enlarged red head contexts once, with the actual original Qud hat and RimWorld CowboyHat reference. Generated mannequin is not the body source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-red-head-context.png",
+              "sha256": "799adc362d0d7624660867160e6a9d9634bc4aaf2da3011965bf9cdb220c49df"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/imagegen-prompt.txt",
+              "sha256": "63198a50fdb0998c364c9fec8c25828a8f7d98c8f22d0adb7d6c73b666f14753"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            }
+          ],
+          "review": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: precise-object-edit.\nImage 1 is the EDIT TARGET: three enlarged red adult human-female mannequin head/shoulder contexts wearing ONE constructed Wide-brimmed Hat. LEFT straight FRONT/SOUTH, CENTER complete RIGHT PROFILE/EAST, RIGHT straight BACK/NORTH. Preserve the original head, neck, pose, same strict cardinal camera, hat fit and panel layout. All red mannequin pixels remain red with original contours. Do not draw a different body.\nImage 2 is the tiny original Qud hat glyph for identity. Image 3 is the actual RimWorld CowboyHat_south for wide-brim/low-crown outline and restrained shallow top visibility only. Qud design/material remains authoritative. No cowboy badge or new ornament.\nQud description: \"The crown is crushed by wear into a hundred papery creases, and the brim is stained in the fractal signatures of sweat and salt.\"\nRefine ONLY the shown soft low crown, broad brim and simple lower band. Add restrained irregular creases to the crushed crown and subtle branching sweat/salt stains across the brim, worn fiber/papery edge texture, compact game-asset shading and clean dark outlines. Keep the wide soft silhouette and low crown; no tall stiff fedora, pointed crown, feathers, buckle, logos, jewelry, strings or new clothing.\nALL hat pixels, including the band, stay NEUTRAL GRAYSCALE for later separate Qud pale-primary/blue-detail tint. Make the band just a little darker gray. Keep every exposed mannequin surface RED, including head/face/ears/neck/shoulders; no bare red head drawn over the hat. North has the back of this same hat, not front features. Profile shows the complete right side and its own crown crease, not a frontal pinch pasted over a turned head.\nReturn the worn three-head context only, no isolated product sheet or additional viewpoints. Transparent background, original generous margins, no text, checkerboard, vignette, glow or cast shadow. Preserve the underlying registered head exactly; garment isolation will be done deterministically afterward.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "constructed-red-head-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/wide-brimmed-hat-reference.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/worn-hat-south.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T13:35:45.534595+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Mapped the same contextual material into the complete constructed hat, excluded red/backdrop and continued missing surface before restoring its authored contour. No second generative isolation. Retained neutral full hat and independent lower-band detail.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/register-hat.py",
+              "sha256": "20dfa0a79af6ad31316920d3cf5d48577916fd17398ff3819258bd32b178c5ca"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "57e7f0ed824f335b6c6622d44f822656287a75916dbd6466caa9252b03264b5a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-garment-comparison.png",
+              "sha256": "9ab5784f5940de97e2cccae048d88fcc9bd1c81c3711ff60dfe4e83b40cbbdb6"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/continuation-comparison.png",
+              "sha256": "8d2801b30f0cbcf48f02b52beb50e9c36d621113261ef662b9ddc42c4980eb94"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/band-detail-comparison.png",
+              "sha256": "bd2d12027db55de33e8c87b60eee49529614f68500dd98ec62723cc8e364161e"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/body-overlay-comparison.png",
+              "sha256": "1e366aa527e389e171b00337ddd967e2cc43470d6ffb0b3ce007f1c58b9bdf66"
+            }
+          ],
+          "review": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:35:45.535092+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Composed complete hat above the original registered head in SEN and mirrored west. Identity fit already matches head landmarks; zero body visibility and empty overlay explicitly retain skin behind headwear.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/register-hat.py",
+              "sha256": "20dfa0a79af6ad31316920d3cf5d48577916fd17398ff3819258bd32b178c5ca"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "57e7f0ed824f335b6c6622d44f822656287a75916dbd6466caa9252b03264b5a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+              "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/assembly-comparison.png",
+              "sha256": "1e3ae4986c942edfb4d727efe9f5e4ac78a7b7ff768eac47db83b06a2c0a47db"
+            }
+          ],
+          "review": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:35:45.535441+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended-size facings and independent y-primary, b-band palette; body C is illustrative and separate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/independent-palette-comparison.png",
+              "sha256": "e1c798e86b2f61ba6ec8e793f0884c573342d1e9c48954d195b3a06d9e1da0bb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/game-scale-review.png",
+              "sha256": "04fa34370d42b87b1f48332d76cc8598007d4a29eea7aff3f947e020198cc2a8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "e3e7f2ad051546938308fd32ea4663cedf7c343a16cb00ffea35d7e6acec7b88"
+            }
+          ],
+          "review": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:35:45.535783+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Completed this hat entry under the approved continuous-source workflow with class-specific head ownership, original body/frame and transparent item layers. Sleeve/arm masks and regional deformation were unnecessary for this source-bound hat.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/record-review.py",
+              "sha256": "0dd5c367c228512a3c697c64150027d9fcf536d3d1e486da7ccdb92a88f29df3"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "57e7f0ed824f335b6c6622d44f822656287a75916dbd6466caa9252b03264b5a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/artifact-manifest.json",
+              "sha256": "227d7b06b0ba45cad555cd0f5fa809e1f310abcbd22b4087a7fa94ba82c7ff6f"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "e3e7f2ad051546938308fd32ea4663cedf7c343a16cb00ffea35d7e6acec7b88"
+            }
+          ],
+          "review": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set.",
+          "result": "PASS"
         }
       ],
       "apparel_occlusion": {
@@ -4046,19 +4292,31 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Inspected full crown/brim, unchanged original head, cardinal SEN and mirrored west, complete neutral hat, native y primary / b band separation and 48x96 intended-size assembly. Worn creases and salt stains derive from the actual contextual output; backdrop, red mannequin and generated body contours are excluded. Zero body-over-hat visibility is intentional: original skin never overwrites hat. No sleeve fitting or extra isolation call. Native outfit/equipment acceptance remains pending the full generation set."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+          "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+          "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+        }
+      },
+      "registration_summary": "Full neutral creased crown/brim and separate native blue band on unchanged female head; zero skin overlay. SEN + mirrored west. Native acceptance pending.",
+      "native_acceptance": "Pending final all-conversions gate"
     },
     {
       "id": "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
@@ -5850,7 +6108,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -5863,7 +6121,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records."
       ],
       "metadata": {
         "body_family": "human-male",
@@ -5921,6 +6179,290 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.293879+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved actual Wide-brimmed Hat description, sw_hat source/y-b palette and male Head/0 bindings. Captured painted/feathered modifier text is retained; this shared native tile base does not invent unobserved modifier art.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.294290+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected the unmutated male v2 body and same actual Qud/RimWorld CowboyHat reference packet used for this canonical item.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.294745+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused the canonical editable whole crown/brim and band, transformed together by recorded male-head landmarks. Retained fitted editable patterns for all three cardinal views.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-south.svg",
+              "sha256": "3f083b7809c5b2c1a966ec80282b3bbe77a6bcab4a17338ba120c815103d760d"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-east.svg",
+              "sha256": "57c43a1907abb70cc7c615a2c529e31f4618e709f8e904d064f01f1d103455c8"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-north.svg",
+              "sha256": "0921b3d6251ae9b51c163f347e6f3c20ddfeb82204352b18ea06e70223b270db"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.296172+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused the actual one-item contextual refinement and exact prompt. No new generation: only the complete item is fitted; generated mannequin is never a body source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/imagegen-prompt.txt",
+              "sha256": "63198a50fdb0998c364c9fec8c25828a8f7d98c8f22d0adb7d6c73b666f14753"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.296646+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retained canonical continuous hat pixels through one premultiplied transformation per item layer. The independent band follows the same transform. Zero visibility/empty overlay explicitly keep the original head behind headwear.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/intact-garment-comparison.png",
+              "sha256": "a0916b39e0f341318d687b6468b467aa8a1606e2f15e7e8e8570bb713f2aed19"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/band-detail-comparison.png",
+              "sha256": "ab0aaffff003c075dbae6a442c4719e438e82695121d7d46f0388840b92e456f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/body-overlay-comparison.png",
+              "sha256": "bb8a564a9fd111fd4e45c39bf7d5b6ebafe1f39662a792db5992ab06ec401a38"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297129+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspected original male head/body plus full transformed hat in SEN and mirrored west. No arm/sleeve ownership applies to this headwear.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/headwear-comparison.png",
+              "sha256": "d0c44287d088f1d5153fb89d6f89ef1c08873f6dd8284f899e7f4cff1e9cf903"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/assembly-comparison.png",
+              "sha256": "cc72ef43ba9c665784114a9906ea818566ae5169d523f9c2ec147c8c9553a6ac"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297590+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected intended-size facings and separated pale y hat/blue b band; illustrative body tint remains independent.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/game-scale-review.png",
+              "sha256": "f3995bd81d4b7a4cae4bcb8256a7bb6a20316375dcd77fec6ab31bc8ec04beaa"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/independent-palette-comparison.png",
+              "sha256": "51115b7202cf804365d97d99b16dbd7779dec92183dc54f2e5049e5858dd58b8"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "b7fefb900e5d67e20bcae5fce7fb2c1c42eafd6495cba5eb59cab6e6a9b13991"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297952+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled this body-specific fitting under the full-source, fixed-body, late-visibility recipe. A single constrained head-relative transform sufficed; no unnecessary regional warp.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/artifact-manifest.json",
+              "sha256": "9967269dcd1fe3685c56c85d6de87caa3cd2aec7ece341e463eacfb2c28a871c"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
         }
       ],
       "apparel_occlusion": {
@@ -5931,19 +6473,31 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+          "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/headwear-comparison.png",
+          "sha256": "d0c44287d088f1d5153fb89d6f89ef1c08873f6dd8284f899e7f4cff1e9cf903"
+        }
+      },
+      "registration_summary": "Canonical hat fitted whole to male head with recorded controls; original body/contact and separate native band tint retained. Native acceptance pending.",
+      "native_acceptance": "Pending final all-conversions gate"
     },
     {
       "id": "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
@@ -7632,7 +8186,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -7645,7 +8199,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records."
       ],
       "metadata": {
         "body_family": "nima",
@@ -7703,6 +8257,266 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.266891+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Bound actual Nima Ruda ordinary Head/0 and equipped hat to captured identity, sprite, description and palette. Retained independent mutation metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.267286+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected exact shared unmutated female body and the hat original/CowboyHat reference packet; a named actor does not require a different race body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.268029+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused the same whole-hat constructed crown, brim and lower-band region on the same original body/head. No refit or new geometry required.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-neutral-context.png",
+              "sha256": "c925ef65f16f4402a764226939dbfdafb8701b0abe0df5f90e2bafeae12621bb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-south.svg",
+              "sha256": "7d5a30bdaa2483f9ee777ca996da69772834e93abe1e06672f30ec6b67f1cd0b"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-east.svg",
+              "sha256": "3a30c3c01424ff54e850377a523a5548bab44c4d7bfc148e93fd552f9d47e580"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-north.svg",
+              "sha256": "961b98d7478f0238d6433d9703e68ef2b22dc5f68ae3ec852d11e3fce99f6d11"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.269450+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused the actual canonical hat contextual refinement and exact prompt, without a redundant new call or generated body pixels.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/imagegen-prompt.txt",
+              "sha256": "63198a50fdb0998c364c9fec8c25828a8f7d98c8f22d0adb7d6c73b666f14753"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.269931+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Reused exact continuous-hat/band assets, already completed from the same contextual source, and zero body-visibility masks. Kept a distinct named registration and actual binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "57e7f0ed824f335b6c6622d44f822656287a75916dbd6466caa9252b03264b5a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-garment-comparison.png",
+              "sha256": "9ab5784f5940de97e2cccae048d88fcc9bd1c81c3711ff60dfe4e83b40cbbdb6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.270264+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reused applicable reviewed composition for identical body/hat geometry in SEN/mirrored west; original skin stays behind the full hat.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+              "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "5f0772cf882938b05bcdd78c7ac16f47b7e4dad5d3e29dda33f5bbcca7263435"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.270701+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reused applicable intended-size and independent y-primary/b-band review. Body palette remains separately tintable.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/game-scale-review.png",
+              "sha256": "04fa34370d42b87b1f48332d76cc8598007d4a29eea7aff3f947e020198cc2a8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/independent-palette-comparison.png",
+              "sha256": "e1c798e86b2f61ba6ec8e793f0884c573342d1e9c48954d195b3a06d9e1da0bb"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "5f0772cf882938b05bcdd78c7ac16f47b7e4dad5d3e29dda33f5bbcca7263435"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.271091+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled the actual individual binding to the current shared fit under the continuous-source/class-specific mask workflow. Body/NPC mutation entries remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/artifact-manifest.json",
+              "sha256": "97c9963b3b2385c2bbe668fc73ca66be5d060328c81f89c5ec7b0f3cb88bc6ca"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
         }
       ],
       "apparel_occlusion": {
@@ -7713,19 +8527,31 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+          "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+          "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+        }
+      },
+      "registration_summary": "Exact current female hat art/body reused with actual Nima ordinary Head/0 binding; no new drawing or mutation assembly. Native pending.",
+      "native_acceptance": "Pending final all-conversions gate"
     },
     {
       "id": "FIT-YRAME-CHAIN-MAIL-BODY-0",
@@ -10478,7 +11304,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -10486,7 +11312,7 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records."
       ],
       "metadata": {
         "original_reference": {
@@ -10539,21 +11365,139 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:39:30.524862+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolved original wide-brimmed worn hat, crushed crown/sweat-salt stains, actual sw_hat source and pale y/blue b palette.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/aggregate-fittings.py",
+              "sha256": "4a2dbb0a1caa2e9cc02ff69d50db4a2aa116ed90951da6a50ed5e06fa612f80a"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/record-review.py",
+              "sha256": "9c744b60ea43e4cf785f316af0d1cde10dbdbfb4875e65d52cd620e8a7b4747f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/fittings.json",
+              "sha256": "ea10d6d36c93cce5d7d8dd6be5184310e595bf7a669eaa3e63267207d4e143b2"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/body-fittings-comparison.png",
+              "sha256": "5c2f55bb5d6737a417c1e3ba01edfc2d311d514b4ceb834b9683ffba5447905f"
+            }
+          ],
+          "review": "Inspected the three-body SEN hat comparison and reconciled all required authoring steps against each recorded fitting. Female source is complete neutral crown/brim plus independent band, male fit keeps the same item with explicit head-landmark controls, Nima reuses exact current female art with actual Head part 177/item 530. All preserve unmutated original bodies, shared contact and zero skin-over-hat masks. Named mutation assembly, item modifiers without observed geometry and native equip/unequip/outfit acceptance are not claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:39:30.525578+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled required authoring evidence on all three enumerated fits; reviewed canonical material, male head-relative transformation and exact shared Nima binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/aggregate-fittings.py",
+              "sha256": "4a2dbb0a1caa2e9cc02ff69d50db4a2aa116ed90951da6a50ed5e06fa612f80a"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/record-review.py",
+              "sha256": "9c744b60ea43e4cf785f316af0d1cde10dbdbfb4875e65d52cd620e8a7b4747f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/fittings.json",
+              "sha256": "ea10d6d36c93cce5d7d8dd6be5184310e595bf7a669eaa3e63267207d4e143b2"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/body-fittings-comparison.png",
+              "sha256": "5c2f55bb5d6737a417c1e3ba01edfc2d311d514b4ceb834b9683ffba5447905f"
+            }
+          ],
+          "review": "Inspected the three-body SEN hat comparison and reconciled all required authoring steps against each recorded fitting. Female source is complete neutral crown/brim plus independent band, male fit keeps the same item with explicit head-landmark controls, Nima reuses exact current female art with actual Head part 177/item 530. All preserve unmutated original bodies, shared contact and zero skin-over-hat masks. Named mutation assembly, item modifiers without observed geometry and native equip/unequip/outfit acceptance are not claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T13:39:30.526099+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Aggregated actual current full-source, class-specific visibility, cardinal-facing and independent-palette evidence. No blanket historical credit or native validation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/aggregate-fittings.py",
+              "sha256": "4a2dbb0a1caa2e9cc02ff69d50db4a2aa116ed90951da6a50ed5e06fa612f80a"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/record-review.py",
+              "sha256": "9c744b60ea43e4cf785f316af0d1cde10dbdbfb4875e65d52cd620e8a7b4747f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/fittings.json",
+              "sha256": "ea10d6d36c93cce5d7d8dd6be5184310e595bf7a669eaa3e63267207d4e143b2"
+            },
+            {
+              "path": "art/conversion/item-wide-brimmed-hat/v1/body-fittings-comparison.png",
+              "sha256": "5c2f55bb5d6737a417c1e3ba01edfc2d311d514b4ceb834b9683ffba5447905f"
+            }
+          ],
+          "review": "Inspected the three-body SEN hat comparison and reconciled all required authoring steps against each recorded fitting. Female source is complete neutral crown/brim plus independent band, male fit keeps the same item with explicit head-landmark controls, Nima reuses exact current female art with actual Head part 177/item 530. All preserve unmutated original bodies, shared contact and zero skin-over-hat masks. Named mutation assembly, item modifiers without observed geometry and native equip/unequip/outfit acceptance are not claimed.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Inspected the three-body SEN hat comparison and reconciled all required authoring steps against each recorded fitting. Female source is complete neutral crown/brim plus independent band, male fit keeps the same item with explicit head-landmark controls, Nima reuses exact current female art with actual Head part 177/item 530. All preserve unmutated original bodies, shared contact and zero skin-over-hat masks. Named mutation assembly, item modifiers without observed geometry and native equip/unequip/outfit acceptance are not claimed."
+      },
+      "native_acceptance": "Pending final all-conversions gate"
     },
     {
       "id": "ITEM-WOVEN-TUNIC",
@@ -39543,7 +40487,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T13:22:08.128195+00:00",
+  "updated_at": "2026-10-20T13:39:30.526627+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

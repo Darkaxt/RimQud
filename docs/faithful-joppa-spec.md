@@ -552,3 +552,15 @@ captured item/part binding. No redundant ImageGen call or generated body is
 claimed. The Sandals inventory record aggregates all four generation-ready
 fittings. Native gear acceptance and the separate BODY-IRUDAD/BODY-NIMA and
 NPC mutation assemblies remain unfinished; none is completed by this footwear.
+
+Wide-brimmed Hat authoring reconciliation: all three enumerated Head/0 fittings
+now retain the same source-bound low crushed crown, wide stained brim and
+independent native `y` primary / `b` band. Female v1 uses its actual contextual
+refinement as material on the complete editable hat; male v1 reuses that whole
+item with recorded original-head width/top fitting controls. Nima's actual
+ordinary Head part 177 / item 530 reuses the identical current female fit and
+zero skin-overlay mask. Generated mannequin pixels never replace the original
+body. All three authoring logs and the item aggregate are generation-ready;
+native gear/outfit acceptance and named mutation assemblies remain unfinished.
+Stage 3 stays ACTIVE. Continue on the sole active female Telescopic Monocle
+entry; no native validation or mod release is authorized by this art checkpoint.
