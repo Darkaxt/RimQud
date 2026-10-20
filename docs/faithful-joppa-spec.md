@@ -296,9 +296,53 @@ historical sheets. Withhold generation-ready credit for camera corrections or
 unresolved projection review; retain prior outputs/logs unchanged. This is Stage 3
 authoring work, with the same single-entry and generation-first constraints.
 
+Child clothing and report navigation correction (2026-10-20): the user identified
+unintended exposed shoulder strips and awkward garment extraction/cutoff in the
+selected child fittings. Correct the human and dromad child tunics one at a time
+against their unchanged registered bodies. Preserve intentional neckline/cuff
+openings, intact garment art and separately recorded precise occlusion ownership;
+do not remove broad guessed arm/neck regions or call exposed shoulders intentional
+without source support. Authoring acceptance includes enlarged/intended-scale
+front/side/back recomposition and the isolated garment/masks. Native acceptance
+remains behind the all-generated gate. Prior drafts/logs remain unchanged.
+
+The HTML report must support cascading Category -> Subcategory -> Asset type
+filters together with search and the existing evidence-only toggle. Support the
+actual Human -> Male Child -> Equipment path and its shared Female Child entry,
+with no duplicated ledger records or invented demographic differences. Cover all
+156 entries, keep selection/reset/counts coherent, preserve deep-link access,
+and verify the served report controls at desktop and narrow viewport sizes.
+
+Segment the report into a lightweight metadata index and standalone per-entry
+evidence pages. Expanding an entry loads only that subject's history and images;
+collapsing it or hiding it with filters removes its evidence/image nodes and
+cancels an outstanding request. Preserve working relative asset links and hash
+deep links. Do not preload every entry, retain a second JavaScript history cache,
+or introduce a framework/server merely for this report. Removing image nodes
+limits report-owned content; it does not promise immediate browser-cache eviction.
+
 Child body entries follow the user's featureless-mannequin/separate-clothing
 instruction: author and register body/head/palette first. Their existing linked
 template-garment entries own actual garment identity, in-context refinement,
 extraction and fitting; none of that work is removed or accepted by the body entry.
 The earlier combined child-body registration step is named accordingly in the
 enumerator. Age selection remains authored and must not alter resident demographics.
+
+Current authoring reconciliation (2026-10-20): both child tunic corrections are
+generation-ready again. Human v2 corrects shoulder coverage, collar ordering and
+profile sleeve registration. Dromad v2 keeps its explicit neck/hump pattern and
+uses refinement-derived cloth material; generated anatomy/contour changes and a
+streaked material-extension attempt were rejected. Both retain intact garment
+art separately from effective foreground-arm masks, with unchanged body hashes.
+The ledger records actual calls, rejected proposals, corrections and all-view
+authoring plates. Native clothing acceptance remains unsatisfied under the
+all-generated gate; Stage 3 remains ACTIVE with Canvas Folding Chair the sole
+active entry. The overall art blockers above remain; no new tracked deferrals.
+
+The segmented/filterable report was verified at the served URL, including the
+shared Human child equipment paths, current-art deep link, per-entry asset links,
+desktop/narrow layout and removal of loaded evidence on filtering. The user
+confirmed real row expansion/collapse; browser-tool clicks did not activate the
+buttons. [Report navigation evidence](../evidence/report-navigation-result.json)
+records that distinction and measured index sizes. This satisfies the requested
+report feature, not native art or full-village acceptance.

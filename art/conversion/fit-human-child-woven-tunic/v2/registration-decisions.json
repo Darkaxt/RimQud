@@ -1,0 +1,118 @@
+{
+  "source": "isolated-proposal.png",
+  "common_scale": 0.62,
+  "body_unchanged_sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665",
+  "views": {
+    "south": {
+      "region": [
+        0,
+        0,
+        570,
+        1056
+      ],
+      "source_anchor": [
+        265,
+        284
+      ],
+      "target_anchor": [
+        256,
+        418
+      ],
+      "translation": [
+        92,
+        242
+      ],
+      "intact_file": "intact-tunic-south.png",
+      "body_occlusion_mask": "body-occlusion-south.png",
+      "neck_opening": "neck-opening-south.png"
+    },
+    "east": {
+      "region": [
+        570,
+        0,
+        960,
+        1056
+      ],
+      "source_anchor": [
+        748,
+        284
+      ],
+      "target_anchor": [
+        274,
+        418
+      ],
+      "translation": [
+        164,
+        242
+      ],
+      "intact_file": "intact-tunic-east.png",
+      "body_occlusion_mask": "body-occlusion-east.png",
+      "neck_opening": "neck-opening-east.png"
+    },
+    "north": {
+      "region": [
+        960,
+        0,
+        1489,
+        1056
+      ],
+      "source_anchor": [
+        1226,
+        284
+      ],
+      "target_anchor": [
+        256,
+        418
+      ],
+      "translation": [
+        91,
+        242
+      ],
+      "intact_file": "intact-tunic-north.png",
+      "body_occlusion_mask": "body-occlusion-north.png",
+      "neck_opening": "neck-opening-north.png"
+    }
+  },
+  "policy": "Intact art retained; effective alpha removes only registered body-owned forearm/hand below cuff. No new limb render node. Clothing above head extraction seam; no face coverage.",
+  "profile_sleeve_registration": {
+    "target_x_grid": [
+      0,
+      198,
+      225,
+      245,
+      295,
+      325,
+      370,
+      512
+    ],
+    "source_x_grid": [
+      0,
+      198,
+      243,
+      263,
+      307,
+      325,
+      370,
+      512
+    ],
+    "y_grid": [
+      0,
+      430,
+      460,
+      550,
+      575,
+      600,
+      1024
+    ],
+    "y_weights": [
+      0,
+      0,
+      1,
+      1,
+      0.5,
+      0,
+      0
+    ],
+    "reason": "Align proposed sleeve with unchanged painted upper arm; collar and hem remain fixed."
+  }
+}

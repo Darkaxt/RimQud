@@ -15,14 +15,16 @@ inputs, including Tam and Ctesiphus; no completion credit is carried forward.
 The [HTML conversion report](docs/conversion-report.html) records the new
 generation workflow step by step. Five human body templates are generation-ready:
 adult male/female, older male/female, and a shared featureless child base for both
-template labels. The child Woven Tunic is also generation-ready as a separate,
-source-bound garment with recorded coverage cuts. Native acceptance and the
+template labels. The child Woven Tunic's corrected v2 covers the shoulders and
+keeps intact cloth separate from its precise foreground-arm overlap. Native acceptance and the
 remaining clothing fits are pending.
 Adult and child dromad bases are also generation-ready, with centered directional
 body/head layers and separate neutral dulla coverage. Juvenile proportions and
 detail-region placement are documented authoring choices, not new native facts.
-The child dromad's Woven Tunic is generation-ready as an independent garment;
-its report preserves the rejected cuff extraction and corrected coverage masks.
+The child dromad's corrected Woven Tunic uses an explicit neck/hump pattern and
+refinement-derived flax material. Generated anatomy changes were discarded;
+the body/dulla remain unchanged. Both child fittings preserve rejected cuts and
+show the intact garments separately from effective overlap masks.
 Tam's adult Cloth Robe and enlarged Shillelagh fittings are also generation-ready.
 Their body, garment and held-item layers remain separate. The report records the
 Shillelagh's exact installed description and actual installed Tribal mod reference.
@@ -121,6 +123,12 @@ Cardinal-camera correction: Chair now has a straight south construction and refi
 [Corrected Chair](art/conversion/scn-chair/v2/registered/registration-comparison.png) · [Corrected Metal Workbench states](art/conversion/scn-metal-workbench/v2/registered/registration-comparison.png)
 
 There are now 37 generation-ready entries; Canvas Folding Chair is the single active camera correction. Native acceptance still waits for every conversion to finish generation.
+
+The report now has cascading category/subcategory/type filters, including
+Human → Male Child → Equipment and the shared Female Child entry. Its small
+index loads each subject's separate evidence page on expansion and removes that
+history/image content on collapse or filtering. Standalone entry pages and hash
+links preserve direct access; it no longer embeds every conversion history.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

@@ -1405,7 +1405,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: construct_faithful_shape. Process-log events: 11.
+Current step: select_render_reference_or_document_no_equivalent. Process-log events: 11.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -3389,7 +3389,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/dromad/tunic-east.png](../art/village/age-templates/dromad/tunic-east.png), [art/village/age-templates/dromad/tunic-north.png](../art/village/age-templates/dromad/tunic-north.png), [art/village/age-templates/dromad/tunic-south.png](../art/village/age-templates/dromad/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 15.
+Current step: generation ready; final acceptance pending. Process-log events: 27.
 
 - 2026-10-20T02:30:30.102304+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic and retained exact original glyph/palette/description plus captured Body attachment IDs and laterality from its existing source packet.
   Review: Read the item/body source packets. No child-dromad outfit or age selector is inferred; this is a removable authored fitting. Base body/head/dulla and contact remain fixed.
@@ -3481,6 +3481,78 @@ Current step: generation ready; final acceptance pending. Process-log events: 15
   Outputs: []
   Method/prompt/corrections: {"phase": "Native review deferred by generation gate"}
 
+- 2026-10-20T08:53:42.583986+00:00 / visual_review_all_views_at_game_scale / REQUIRES REWORK: Withdrew generation-ready credit after inspecting selected human/dromad child garment and isolated cutouts.
+  Review: User identified unintended exposed shoulders and awkward cut edges. Existing broad arm/neck cuts need precise registered-body ownership and intact-garment review. Keep original body, garment proposals and logs unchanged; native testing remains deferred.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v1/registered/model.json", "sha256": "131aa85dfa844f088e787612f8fbfee7945e4b66595a86178aff8c23c376dacc"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v1/registered/assembly-comparison.png", "sha256": "6839e2e8d42f7030e5a2ac338cd2b86a4f5d3a9b8d6b07e44708cb43d5d9a902"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Child garment fit/extraction correction requested"}
+
+- 2026-10-20T09:22:40.381726+00:00 / source_identity_description_metadata / PASS: Retained actual Qud tunic identity/metadata and the unchanged reusable dromad child body.
+  Review: No juvenile wearer or native selector inferred. Ordinary long neck/hump remain intrinsic body anatomy.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/source-packet.json", "sha256": "44657fba7b155919179bd51cc93b7e25292a4db3ebc2ab8719ec7e6713045e8d"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Source-bound dromad child fit correction"}
+
+- 2026-10-20T09:22:40.382008+00:00 / original_and_render_reference_decision / PASS: Reused actual VTE cardinal child apparel convention and the corrected human tunic material, with exact identities/hashes.
+  Review: Donor controls outline/material convention only; Qud flax/rope identity and actual dromad body govern the fit.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/source-packet.json", "sha256": "44657fba7b155919179bd51cc93b7e25292a4db3ebc2ab8719ec7e6713045e8d"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Installed child apparel and selected material reference"}
+
+- 2026-10-20T09:22:40.382141+00:00 / construct_shape / PASS: Constructed continuous shoulders and an actual long-neck collar edge, avoiding blanket head-alpha subtraction.
+  Review: Front neckline follows long neck base; rear wraps the hump without triangular top notches. Intact cloth remains whole behind foreground arm.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/construct-garment.py", "sha256": "5e17069bd2091fea3d4ff9cf2893135bc45ff7b6c2867596ca93a73514525ae0"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-south.svg", "sha256": "4d3ce0566ca4de67f80474ef33ec3d3f0dca8030109d1dca8e7dab8730e703f3"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-east.svg", "sha256": "ecc2bfa40e23eb41dbb48290ec7e1aa921bc06faec1fa7d875f91c36e8ec3347"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-north.svg", "sha256": "a5f0333a59bdb63ce352c0badc626ba6cfa8f65f852d6ea9ba303c7b086f8a0d"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "f6ce23069757780de7319838682360421d259ab4663bddbd957ec9f14c94db5f"}]
+  Method/prompt/corrections: {"phase": "Explicit neck and hump garment pattern"}
+
+- 2026-10-20T09:22:40.382605+00:00 / create_required_views_states / PASS: Composed front, full profile and rear on the fixed body.
+  Review: Inspected consistent hem/rope height and full shoulder coverage. Profile local painted-arm ownership is separate from intact cloth; no limb render nodes added.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/near-arm-ownership.svg", "sha256": "55651351ec2b038080dfaaab07efad85a0819e28786a6566e8e6c3c66d6c90ee"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-fit-comparison.png", "sha256": "04825a21aadd375670bdcf3d957ebd0d286370f0262c8cf02d4110a308c8aa3c"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/near-arm-ownership.png", "sha256": "dee29aceb609e77f3724dd735f90a1e35ad6c074a8c30508c861dd095fa60359"}]
+  Method/prompt/corrections: {"phase": "Cardinal corrected garment construction"}
+
+- 2026-10-20T09:29:08.580433+00:00 / correct_errors_and_refine / RECORDED: Called built-in ImageGen on the fixed-pattern construction, intact garment, selected human material and actual installed VTE reference.
+  Review: Cloth material/shoulder coverage are usable proposals. The generated mannequin omitted dulla and changed neck proportion, so its body is rejected entirely; no generated anatomy is transferred.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/refine-context-prompt.txt", "sha256": "017fca209c6cb7da40e2e3b98a6f92d301c3ae0ae24c440df4b79fe3e29ec732"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-fit-comparison.png", "sha256": "04825a21aadd375670bdcf3d957ebd0d286370f0262c8cf02d4110a308c8aa3c"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "f6ce23069757780de7319838682360421d259ab4663bddbd957ec9f14c94db5f"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "a59f213db188ecea25f56ed8c5e22a80d3fd6afb66d2146d82fb276ba7c5023a"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/reference-comparison.png", "sha256": "5123e2675e5d7d59f2edef75733ef567b40a8893f5d4b5ecd8a4046a57963dec"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/refined-context.png", "sha256": "03f1f2ca5d6f41075083c8e03b2a9ec142e97c2ae1d25a137aeb27b779f6cdf6"}]
+  Method/prompt/corrections: {"phase": "Actual dromad garment in-context refinement", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 4}, "generation_file": "exec-9571cfdc-25fb-4272-b8c5-693bb27bb18c.png"}
+
+- 2026-10-20T09:29:08.582735+00:00 / extract_register_palette_masks / RECORDED: Called built-in ImageGen to return cloth alone, using the construction as anatomy/neckline authority.
+  Review: Intact cloth contains no body/hand silhouette. It still changes neckline/sleeve proportions; material may be used, but its contours cannot replace the fixed garment pattern.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/isolate-garment-prompt.txt", "sha256": "5727b9d2ec17df2b639886724d20a7a745c4024792bd563cbcb427720a4b74b6"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/refined-context.png", "sha256": "03f1f2ca5d6f41075083c8e03b2a9ec142e97c2ae1d25a137aeb27b779f6cdf6"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "f6ce23069757780de7319838682360421d259ab4663bddbd957ec9f14c94db5f"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/isolated-proposal.png", "sha256": "333acf78e87456db3e1c7286e196465c2705aba43cab105a6435053fe6cd9546"}]
+  Method/prompt/corrections: {"phase": "Actual intact garment retrieval", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-15c94288-a828-47fa-b6c8-84c430aadab1.png"}
+
+- 2026-10-20T09:29:08.585076+00:00 / extract_register_palette_masks / REJECTED: Inspected material projection into the fixed pattern.
+  Review: Nearest-row filling extended high-contrast proposal edges into horizontal streaks and duplicated rope contours. Rejected; do not transfer generated contours into the corrected pattern.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/register-rejected-material-extension.py", "sha256": "2412463ddad4321cc9f3045e6fa2522715b0d0a57a67f4f7079d41cead5b72a4"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembly-rejected-material-extension.png", "sha256": "b7990a96efb52d564fd36179bd7c5aceee61d15f843e17cdae96d754f7c0fe1f"}]
+  Method/prompt/corrections: {"phase": "Rejected proposal-hole material extension"}
+
+- 2026-10-20T09:29:08.585968+00:00 / correct_errors_and_refine / PASS: Retained only a plain interior cloth swatch from the actual refinement; authored collar, shoulders, sleeves, folds and rope keep their fixed editable geometry.
+  Review: No new body or guessed head-alpha subtraction. The selected material swatch is recorded exactly; generated full-garment contours and duplicate rope are discarded. The unchanged body retains its dulla and neck proportions.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/register-garment.py", "sha256": "a5ce02500b85cd54378d69f450ef9778cc6b652709181768e62e8388d6d77a0f"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/isolated-proposal.png", "sha256": "333acf78e87456db3e1c7286e196465c2705aba43cab105a6435053fe6cd9546"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/registration-decisions.json", "sha256": "48a09b43bf359b6ce0b7e37da91777594bb7b0a56a815d62f2b03a2ea5c312d6"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembly-comparison.png", "sha256": "309c75fd83bde7f08d040742c4f36c227578d76b7fe01e1f538e09c4eaba093c"}]
+  Method/prompt/corrections: {"phase": "Explicit pattern owns fit; bounded refined fabric owns material"}
+
+- 2026-10-20T09:29:08.587931+00:00 / create_required_views_states / PASS: Selected front long-neck collar, profile hump pattern and rear pattern, with mirrored west.
+  Review: The front U neckline is an actual authored pattern around the long neck; rear has continuous hump fabric without triangular shoulder notches. Same hem and rope landmarks in the fixed family frame.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/registration-decisions.json", "sha256": "48a09b43bf359b6ce0b7e37da91777594bb7b0a56a815d62f2b03a2ea5c312d6"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/intact-tunic-south.png", "sha256": "64778e00a558c6a3b104c198c2d2c3d22277e5d86f85d5922d6c5299829e6127"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/intact-tunic-east.png", "sha256": "d98265b1d3c46a30cdbd36e6afd0959a62470d4bb7cb9ff444b8daf3f8b9cc70"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/intact-tunic-north.png", "sha256": "02f5592cbec0d807d427dea124796e5277ba826567d1765bca31bbdf3fb1f4b3"}]
+  Method/prompt/corrections: {"phase": "Source-bound directional pattern selected"}
+
+- 2026-10-20T09:29:08.588502+00:00 / extract_register_palette_masks / PASS: Applied explicit pattern coverage and precise body-intersected profile forearm ownership. Body/head/dulla remain unchanged and clothing retains its independent equipment tint.
+  Review: Neutral equal-channel RGBA, full 512x1024 frame, contact (256,950), center_x 0. No blanket head mask or detached circular hand punch. Collar layer .0012 owns the real fabric edge; no new limb nodes.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/register-garment.py", "sha256": "a5ce02500b85cd54378d69f450ef9778cc6b652709181768e62e8388d6d77a0f"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/near-arm-ownership.svg", "sha256": "55651351ec2b038080dfaaab07efad85a0819e28786a6566e8e6c3c66d6c90ee"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/model.json", "sha256": "623715fda2a66fd6038849d94b7c8217288e22b84a798de8155b0e49574047b1"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/registration-decisions.json", "sha256": "48a09b43bf359b6ce0b7e37da91777594bb7b0a56a815d62f2b03a2ea5c312d6"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "d370a36d8971caf7e604c792f0445d5fa368a1452bd533ca4624a86ba6a37d42"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/effective-coverage-comparison.png", "sha256": "b6b4e9e1cbdf950b8f1f8901c49c632f6a1c14a406ecb1150db048b07498ac5e"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/body-occlusion-south.png", "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/body-occlusion-east.png", "sha256": "57451582f90403897826caf445aeccdaa1f1c05e93b9dfa0cfc92689279457ae"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/body-occlusion-north.png", "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/tunic-south.png", "sha256": "df7cdca8c12806e2b0ffd9a07212846c888afe7f6af0fbf632c293de4386d012"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/tunic-east.png", "sha256": "7f3a8551d9a4b8e8b3c38fc336dbf0f7e381317a6186071ab181b3a2e3557c34"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/tunic-north.png", "sha256": "3f9d6434ea1a711ac41397d83df4ada50ebf26553ae7954d0ddae7827e572aaf"}]
+  Method/prompt/corrections: {"phase": "Separate intact garment and local arm overlap"}
+
+- 2026-10-20T09:29:08.589901+00:00 / visual_review_all_views_at_game_scale / PASS: Inspected intact cloth, effective coverage and enlarged/intended-size recomposition in all facings.
+  Review: Continuous shoulder/hump coverage and smooth actual neck border; forearm/hand remain the selected body. Intact clothing is shown separately from its foreground-arm hole. Fixed body model hash and neutral frame/palette checks passed. Native acceptance remains deferred.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/model.json", "sha256": "623715fda2a66fd6038849d94b7c8217288e22b84a798de8155b0e49574047b1"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembly-comparison.png", "sha256": "309c75fd83bde7f08d040742c4f36c227578d76b7fe01e1f538e09c4eaba093c"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "d370a36d8971caf7e604c792f0445d5fa368a1452bd533ca4624a86ba6a37d42"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/effective-coverage-comparison.png", "sha256": "b6b4e9e1cbdf950b8f1f8901c49c632f6a1c14a406ecb1150db048b07498ac5e"}]
+  Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v2/game-scale-review.png", "sha256": "d85b46dcccc8e022bf8c1e0bc2137348e6c39579170272f11b779e7727a4b97d"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-south.png", "sha256": "f40c98a6a82883858d4c51a739f83d768b0b24b7862b7bbd7cedb79e3e81ffa8"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-east.png", "sha256": "f12576be4e0cddb7dd6850aa293c4ef52e34753defdfc2a885dac41569dda55a"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembled-north.png", "sha256": "3922f481aa457643d84b10aaeaea24c7f022f80dd0f99ccc44a7723b757e77e5"}]
+  Method/prompt/corrections: {"phase": "Corrected dromad child tunic authoring review"}
+
 ### FIT-HUMAN-CHILD-TEMPLATE-TUNIC: human child / tunic
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -3489,7 +3561,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 14.
+Current step: generation ready; final acceptance pending. Process-log events: 26.
 
 - 2026-10-20T01:51:31.357715+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic, preserved its original tile/palette and exact coarse-flax/hemp-rope description, and bound the authored fitting to the unchanged child body.
   Review: Exact original reference hash matched. This resolves the previously generic template garment identity; no child was observed wearing it and no native child selector is assumed. Construction, refinement, extraction and fitting are still unfinished.
@@ -3574,6 +3646,78 @@ Current step: generation ready; final acceptance pending. Process-log events: 14
   Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v1/model.json", "sha256": "8f537f326efe47aac7047850ef7e73e60d39feb214b1cdb98c7cb7058ad71cea"}, {"path": "art/conversion/fit-human-child-woven-tunic/v1/assembly-comparison.png", "sha256": "272ce1e35a220debce26e450a6f3295b56d0670a01779c487feef248fe5f164d"}]
   Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v1/game-scale-review.png", "sha256": "5e785054d36b150a17581f24f5ca2699087ea03573602bc7b583567d68b5f46c"}, {"path": "art/conversion/fit-human-child-woven-tunic/v1/assembled-south.png", "sha256": "f9de506041764af281b56fe1dd8e4600b976ba30d5dfeb79555cb4ce92604efb"}, {"path": "art/conversion/fit-human-child-woven-tunic/v1/assembled-east.png", "sha256": "05c879f04e0b78ed7942401949b4f58d378590cb69fd652b4510ff7a8817fff2"}, {"path": "art/conversion/fit-human-child-woven-tunic/v1/assembled-north.png", "sha256": "48cdf45d08693cbd48af484ba64f993a5c93e60fe26a2af2039549d813d9a295"}]
   Method/prompt/corrections: {"phase": "Child Woven Tunic authoring ready"}
+
+- 2026-10-20T08:53:42.583986+00:00 / visual_review_all_views_at_game_scale / REQUIRES REWORK: Withdrew generation-ready credit after inspecting selected human/dromad child garment and isolated cutouts.
+  Review: User identified unintended exposed shoulders and awkward cut edges. Existing broad arm/neck cuts need precise registered-body ownership and intact-garment review. Keep original body, garment proposals and logs unchanged; native testing remains deferred.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v1/model.json", "sha256": "8f537f326efe47aac7047850ef7e73e60d39feb214b1cdb98c7cb7058ad71cea"}, {"path": "art/conversion/fit-human-child-woven-tunic/v1/assembly-comparison.png", "sha256": "272ce1e35a220debce26e450a6f3295b56d0670a01779c487feef248fe5f164d"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Child garment fit/extraction correction requested"}
+
+- 2026-10-20T09:14:27.029607+00:00 / source_identity_description_metadata / PASS: Read captured Woven Tunic description, slot, palette, original sprite identity and fixed child model.
+  Review: Same coarse flax / watervine-hemp waist rope. No observed child resident or age/equipment binding invented.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/source-packet.json", "sha256": "a1eec5bb02833857ffd44dbe4bb8ba2bf6a125c5983686a87eed630fbcd02ac7"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Original item identity retained for correction"}
+
+- 2026-10-20T09:14:27.029917+00:00 / original_and_render_reference_decision / PASS: Inspected actual Vanilla Textures Expanded child shirt south/east/north.
+  Review: Reference supplies compact cardinal material/outline convention only. Sleeveless donor is not authority for Qud tunic sleeve shape.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/source-packet.json", "sha256": "a1eec5bb02833857ffd44dbe4bb8ba2bf6a125c5983686a87eed630fbcd02ac7"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/reference-comparison.png", "sha256": "5123e2675e5d7d59f2edef75733ef567b40a8893f5d4b5ecd8a4046a57963dec"}]
+  Method/prompt/corrections: {"phase": "Actual installed child apparel reference"}
+
+- 2026-10-20T09:14:27.030180+00:00 / construct_shape / PASS: Authored explicit full-frame SVG geometry over the unchanged body.
+  Review: Full shoulder coverage; collar is drawn above the unchanged neck texture so the head extraction rectangle is not exposed. Separate near-arm ownership, not an articulated limb or hand-circle punch.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/construct-garment.py", "sha256": "b4611e2f5a590910a1af72d8124bc6fc1bd074304ece8e7f4d1139331553941d"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-south.svg", "sha256": "cad7641b4676a057047c60b61fb89a89a3426035aa36957bce265b31881c4945"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-east.svg", "sha256": "f251de888997e0b2d1bd993d83887545e252de1b09feb8d069e9e3d28bfcedb1"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-north.svg", "sha256": "3eaa8172c055b68a9566c6ac5d1853d37d60b1f86a581fbeafea868c48bface3"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "b05bdfe1a4a6a7c1685c6d27e9c6c2062779d3b0a127f71fd87aa529ce1707c8"}]
+  Method/prompt/corrections: {"phase": "Reconstructed continuous shoulders and collar ownership"}
+
+- 2026-10-20T09:14:27.030711+00:00 / create_required_views_states / PASS: Composed intact garment and effective coverage against fixed front/profile/rear views.
+  Review: Viewed all three: full shoulders, normal sleeve-to-forearm boundary and uninterrupted hem. West remains the supported east mirror.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "b05bdfe1a4a6a7c1685c6d27e9c6c2062779d3b0a127f71fd87aa529ce1707c8"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/near-arm-ownership.svg", "sha256": "342d1d35984a47716887bf3bdde37a888c9970bef6d79559aeb21fd033205268"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-fit-comparison.png", "sha256": "a6c65dc6a8a82d647e8fc2ec0a0a1738733427e74ddf083c43ebc91a098846a5"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/near-arm-ownership.png", "sha256": "fa7d6b8c43bc20d9bedd6b63b2621bcfa7d48997a7a636e9fbcdac775e8f75b5"}]
+  Method/prompt/corrections: {"phase": "Corrected cardinal fitting construction"}
+
+- 2026-10-20T09:20:25.505234+00:00 / correct_errors_and_refine / PASS: Called built-in ImageGen on corrected full-shoulder construction, intact geometry and documented actual mod reference.
+  Review: Viewed actual output: cloth reaches shoulders; distinct cardinal sleeve/back and plain rope waist. Generated mannequin pixels are context only; fixed base is retained.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/refine-context-prompt.txt", "sha256": "1906e51a1683839be9f71c29ff9bf9b3cd9b538973988f846151506ca5b37684"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-fit-comparison.png", "sha256": "a6c65dc6a8a82d647e8fc2ec0a0a1738733427e74ddf083c43ebc91a098846a5"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "b05bdfe1a4a6a7c1685c6d27e9c6c2062779d3b0a127f71fd87aa529ce1707c8"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/reference-comparison.png", "sha256": "5123e2675e5d7d59f2edef75733ef567b40a8893f5d4b5ecd8a4046a57963dec"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/refined-context.png", "sha256": "92bdd3cd0f074cd4edc806b03cddc138bb17e8f85b61005418d9ee8735667728"}]
+  Method/prompt/corrections: {"phase": "Actual corrected in-context refinement", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 3}, "generation_file": "exec-eab15975-8ff1-4e12-8480-38ceab573171.png"}
+
+- 2026-10-20T09:20:25.507027+00:00 / extract_register_palette_masks / RECORDED: Called built-in ImageGen to return cloth alone, reconstructing the torso hidden by the profile forearm.
+  Review: Viewed whole front/profile/rear garments: no mannequin; no forearm-shaped hole in the intact garment. The profile sleeve must be registered to the actual fixed arm.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/isolate-garment-prompt.txt", "sha256": "d37e0542c4883958c2b48778687f3f0e232b3c8340e29279edd739e2534c048e"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/refined-context.png", "sha256": "92bdd3cd0f074cd4edc806b03cddc138bb17e8f85b61005418d9ee8735667728"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/constructed-intact-comparison.png", "sha256": "b05bdfe1a4a6a7c1685c6d27e9c6c2062779d3b0a127f71fd87aa529ce1707c8"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/isolated-proposal.png", "sha256": "52a696f818d6c9dc640c4e02f529fc714abf4113fcc571246791966a7670538e"}]
+  Method/prompt/corrections: {"phase": "Actual intact garment retrieval", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_images": 2}, "generation_file": "exec-9bac1513-a12f-4039-9e68-e0dad8121494.png"}
+
+- 2026-10-20T09:20:25.509119+00:00 / extract_register_palette_masks / REJECTED: Inspected first full-frame registration over the fixed body.
+  Review: A short horizontal exposed strip remained below the profile sleeve because the isolated proposal placed its sleeve forward of the actual arm. Correct the local fabric registration, not the body.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/register-rejected-cuff-anchor.py", "sha256": "bc9b7c5b182274d903294b5444df29d914879be2ad499421a38157530afc8cb0"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-rejected-cuff-anchor.png", "sha256": "62775672d953760fc26844ea0e64ca57d85b36ac3c5e016e569d4fb356fc79f7"}]
+  Method/prompt/corrections: {"phase": "Rejected sleeve registration"}
+
+- 2026-10-20T09:20:25.509452+00:00 / correct_errors_and_refine / PASS: Locally registered the proposed sleeve pattern to the fixed painted upper arm and kept collar/hem landmarks fixed.
+  Review: The recorded mesh moves the sleeve up to 18 pixels toward the actual arm; no body pixels change. Collar is above the head extraction seam, eliminating its rectangular exposed edge.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/register-garment.py", "sha256": "6c7fcad543293d0b98b297320a136b11f99d474e646ab715b2698aaa82484e5c"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/isolated-proposal.png", "sha256": "52a696f818d6c9dc640c4e02f529fc714abf4113fcc571246791966a7670538e"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/registration-decisions.json", "sha256": "3e72980fa84d0e84f2cb40040a1b28c63809dc398b186b29b707c3dd6b1d9d06"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png", "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"}]
+  Method/prompt/corrections: {"phase": "Registered profile sleeve and collar ownership"}
+
+- 2026-10-20T09:20:25.510754+00:00 / create_required_views_states / PASS: Selected the same corrected short-sleeved tunic in front, right profile and rear, plus supported mirrored west.
+  Review: Distinct full-profile sleeve, straight rear and front-only rope knot. Intact garment remains continuous behind the arm.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/registration-decisions.json", "sha256": "3e72980fa84d0e84f2cb40040a1b28c63809dc398b186b29b707c3dd6b1d9d06"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/intact-tunic-south.png", "sha256": "368f800f8495ae5ccdb4da0e42c50ad8ee1f26e5c82a6b1e3699dca9350479fa"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/intact-tunic-east.png", "sha256": "8f88233ea2570cc102fd67f47e0d13ffdd1856d3d6e972a2ca903a56d0e599b8"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/intact-tunic-north.png", "sha256": "87714dabb849dada3aef090c332e0f02f1b9e3b301ad044f2021f8860fcc200b"}]
+  Method/prompt/corrections: {"phase": "Corrected cardinal apparel views selected"}
+
+- 2026-10-20T09:20:25.511180+00:00 / extract_register_palette_masks / PASS: Registered one .62 scale and documented anchors; retained intact cloth separately from precise body-intersected forearm/cuff masks. Clothing inherits the fixed full canvas/contact.
+  Review: Equal-channel grayscale, 512x1024, contact (256,950), centered model offset. Separate equipment tint retains &y/y; collar layer .0012 is above the head .001 extraction seam. A foreground arm overlap is shown separately from physical cloth. Body model hash unchanged.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/register-garment.py", "sha256": "6c7fcad543293d0b98b297320a136b11f99d474e646ab715b2698aaa82484e5c"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/near-arm-ownership.svg", "sha256": "342d1d35984a47716887bf3bdde37a888c9970bef6d79559aeb21fd033205268"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/model.json", "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/registration-decisions.json", "sha256": "3e72980fa84d0e84f2cb40040a1b28c63809dc398b186b29b707c3dd6b1d9d06"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "a59f213db188ecea25f56ed8c5e22a80d3fd6afb66d2146d82fb276ba7c5023a"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/effective-coverage-comparison.png", "sha256": "8909f66fd3c5c7ff79c66382924f87aef5a4a8d33362ff21bb3a049c9c14663f"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/body-occlusion-south.png", "sha256": "b60c69335db89607f21c0569c0e4b0b2588097fab618c2c8e1bb47259b7bcce9"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/body-occlusion-east.png", "sha256": "1511d5b4547e00d5769476842e6d6548f254865c2d326464dce3b8f6f4f22a02"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/body-occlusion-north.png", "sha256": "7b9511ed46e1b13f9e3dfd09d7cb8a9737e1047125a6491a57bb4bf768a4ee03"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-south.png", "sha256": "5673284dbfb7fc15a65ce62f78954d3da57bb93aec40c2eab3c7f2e77dfb7c60"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-east.png", "sha256": "362b50d52f58c6ab5663d8e3af2ce6c70d8ec00de684f64dcd40391d22f9005b"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/tunic-north.png", "sha256": "070b7ce7dacdad3b6513ecab8050675575513d5b0b5160fd08e2dd1c4200a0c8"}]
+  Method/prompt/corrections: {"phase": "Intact cloth separated from effective overlap coverage"}
+
+- 2026-10-20T09:20:25.512212+00:00 / visual_review_all_views_at_game_scale / PASS: Inspected enlarged intact cloth, effective masks and full recomposition, then intended-size views.
+  Review: Full shoulders, coherent collar, natural sleeve-to-forearm boundary and continuous hem in all views. No copied body/hand outlines in cloth; actual hand remains visible. Authoring ready only, native acceptance remains behind all-generated gate.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/model.json", "sha256": "8330d3305c0edff9790154b4f103dfcc492f42595001697cad2b559b8a8a3e10"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembly-comparison.png", "sha256": "8c15a0f09bec9871a8b5fabb050c884b9063dbe25393873e7b7c2159318e16b2"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/registered-isolated-comparison.png", "sha256": "a59f213db188ecea25f56ed8c5e22a80d3fd6afb66d2146d82fb276ba7c5023a"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/effective-coverage-comparison.png", "sha256": "8909f66fd3c5c7ff79c66382924f87aef5a4a8d33362ff21bb3a049c9c14663f"}]
+  Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v2/game-scale-review.png", "sha256": "4a802e10664d5c3c4d9fea33ab1c2033e4195999ab8b72c56e24b5aa4d8b21b6"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-south.png", "sha256": "712d9a52f66b04ac0c3e55c1b289c9b8fa4d3c99a78c535ef50b2d8bc9489998"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-east.png", "sha256": "0899a34f69b2ce7f74721f63f0c4a4644caf92593a6cedadb6999e443700beed"}, {"path": "art/conversion/fit-human-child-woven-tunic/v2/assembled-north.png", "sha256": "fe11938a3f32b18042db345b685a37ac357b170a2bbc0943abf8c0018ac8538f"}]
+  Method/prompt/corrections: {"phase": "Corrected child tunic authoring review"}
 
 ### SCN-BRINEBRIDGE: BrineBridge
 

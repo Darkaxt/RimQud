@@ -1,0 +1,1253 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>dromad · RimQud evidence</title><style>
+:root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
+.taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
+</style><main><nav><a href="../conversion-report.html#BODY-DROMAD">Back to conversion index</a></nav><h1>dromad</h1><div class="entry-body">
+<p class="eyebrow">BODY-DROMAD / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: Existing art/registration and native checks are historical only; restart the logged workflow.</p>
+<h3>Current registered artwork</h3><p>Use this registered version for layer alignment. Gold marks the shared pivot; the ground guide marks contact. Body, head, masks and fitted clothing share that frame. Asymmetric features may extend beyond the pivot.</p><div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/registration-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v1/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc</code></details></figure></div><p><a href="../../art/conversion/body-dromad/v1/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">resolve race description original sprite runtime anatomy — recorded PASS</li><li class="pass">select actual core dlc or mod reference — recorded PASS</li><li class="pass">construct front — recorded PASS</li><li class="pass">imagegen side back from front and race facts — recorded PASS</li><li class="pass">correct anatomy then imagegen refine composed views — recorded PASS</li><li class="pass">register required layers and color masks — recorded PASS</li><li class="pass">visual review anatomy orientation palette all views — recorded PASS</li><li class="pending">native body review — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
+<div class="timeline">
+<section class="event"><small>01 / 2026-10-20T02:08:30.483483+00:00 / PASS</small><h3>Dromad identity, description and observed body tree</h3><p>Resolved Tam through Dromad ancestry; carried native race/individual descriptions, complete attached part IDs/parents/laterality, natural/actual equipment, source version/hashes and metadata gaps.</p><p><strong>Review:</strong> Read the source packet and viewed original glyph. Humanoid baseline supports two hands and paired feet, while description supplies long neck, dulla and upper-back hump. Runtime mutation list, age and race-wide dimorphism remain unknown; no four-legged camel substitution.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;BODY-DROMAD&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-20T02:07:57.943255+00:00&quot;,
+  &quot;identity&quot;: {
+    &quot;npc_blueprint&quot;: &quot;Tam&quot;,
+    &quot;race_blueprint&quot;: &quot;Dromad&quot;,
+    &quot;species&quot;: &quot;dromad&quot;,
+    &quot;lineage&quot;: [
+      &quot;Tam&quot;,
+      &quot;DromadTrader_Village0&quot;,
+      &quot;DromadTrader&quot;,
+      &quot;Dromad&quot;,
+      &quot;BaseHumanoid&quot;,
+      &quot;Humanoid&quot;,
+      &quot;Creature&quot;
+    ],
+    &quot;gender_observed&quot;: &quot;male&quot;,
+    &quot;age_life_stage&quot;: null,
+    &quot;physical_size&quot;: null
+  },
+  &quot;description&quot;: {
+    &quot;resolved_individual&quot;: &quot;Shot ink decorates the dulla on his long neck in one of the thousand patterns of the camelfolk. His ears are arrayed with gilded rings, and eyelashes flow down his face like watervine fronds. Across his back, a hump of moistured and healthy fat pushes his center of mass skyward.&quot;,
+    &quot;race_template&quot;: &quot;Shot ink decorates the dulla on =pronouns.possessive= long neck in one of the thousand patterns of the camelfolk. =pronouns.Possessive= ears are arrayed with gilded rings, and eyelashes flow down =pronouns.possessive= face like watervine fronds. Across =pronouns.possessive= back, a hump of moistured and healthy fat pushes =pronouns.possessive= center of mass skyward.&quot;
+  },
+  &quot;source&quot;: {
+    &quot;installed_game_version&quot;: &quot;2.0.211.56&quot;,
+    &quot;definition_sha256&quot;: {
+      &quot;Bodies.xml&quot;: &quot;5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292&quot;,
+      &quot;ObjectBlueprints/Creatures.xml&quot;: &quot;66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95&quot;
+    },
+    &quot;runtime_capture&quot;: &quot;Isolated generated Joppa catalogue, 2026-10-20; before artwork authoring&quot;,
+    &quot;raw_catalogue_sha256&quot;: &quot;fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc&quot;,
+    &quot;instance_id&quot;: 525,
+    &quot;ids_are_snapshot_local&quot;: true
+  },
+  &quot;body&quot;: {
+    &quot;anatomy&quot;: &quot;Humanoid&quot;,
+    &quot;attached_parts&quot;: [
+      {
+        &quot;id&quot;: 357,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 604,
+          &quot;blueprint&quot;: &quot;Cloth Robe&quot;,
+          &quot;description&quot;: &quot;Particulate from the eons-sheared shale sticks in the fibers of goat wool. They make red freckles on the garment.\n\n{{K|Weight: 5 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_robes1.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 358,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 359,
+        &quot;parent&quot;: 358,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 360,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 361,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 362,
+        &quot;parent&quot;: 361,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 524,
+          &quot;blueprint&quot;: &quot;Shillelagh&quot;,
+          &quot;description&quot;: &quot;Dust powders the puzzling device.\n\n{{K|Weight: 5 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_cudgel_10.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 605,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 363,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 364,
+        &quot;parent&quot;: 363,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 606,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 365,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 366,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 367,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 368,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 369,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 370,
+        &quot;parent&quot;: 357,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;counts_by_type&quot;: {
+      &quot;Body&quot;: 1,
+      &quot;Head&quot;: 1,
+      &quot;Face&quot;: 1,
+      &quot;Back&quot;: 1,
+      &quot;Arm&quot;: 2,
+      &quot;Hand&quot;: 2,
+      &quot;Missile Weapon&quot;: 2,
+      &quot;Hands&quot;: 1,
+      &quot;Feet&quot;: 1,
+      &quot;Thrown Weapon&quot;: 1,
+      &quot;Floating Nearby&quot;: 1
+    },
+    &quot;feet_encoding&quot;: {
+      &quot;type&quot;: &quot;Feet&quot;,
+      &quot;groups&quot;: 1,
+      &quot;plural&quot;: true,
+      &quot;mobility&quot;: 2,
+      &quot;individual_left_right_foot_nodes&quot;: false,
+      &quot;physical_interpretation&quot;: &quot;Paired humanoid feet / two-legged body is supported, not an explicit legCount field&quot;
+    },
+    &quot;description_features_without_separate_part&quot;: [
+      &quot;long neck&quot;,
+      &quot;dulla&quot;,
+      &quot;back hump&quot;
+    ],
+    &quot;abstract_or_grouped_slots&quot;: [
+      &quot;Floating Nearby&quot;,
+      &quot;Missile Weapon&quot;,
+      &quot;Thrown Weapon&quot;,
+      &quot;Hands&quot;,
+      &quot;Feet&quot;
+    ]
+  },
+  &quot;mutations&quot;: {
+    &quot;resolved_static_declarations&quot;: [],
+    &quot;runtime_active_mutations&quot;: null,
+    &quot;runtime_mutation_levels&quot;: null,
+    &quot;implementation_priority&quot;: &quot;Metadata retained; visual representation and garment adaptations postponed by user&quot;
+  },
+  &quot;appearance&quot;: {
+    &quot;tile&quot;: &quot;Assets_Content_Textures_Creatures_sw_dromad.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;W&quot;,
+    &quot;tileColor&quot;: &quot;&amp;w&quot;,
+    &quot;detailColor&quot;: &quot;W&quot;
+  },
+  &quot;metadata_gaps&quot;: {
+    &quot;active_mutations_and_levels&quot;: &quot;Not exported by the original catalogue&quot;,
+    &quot;dismembered_parts&quot;: &quot;Capture enumerates attached parts only&quot;,
+    &quot;part_primary_and_preferred_flags&quot;: &quot;Not exported by the original catalogue&quot;,
+    &quot;age_life_stage_visual_dimorphism&quot;: &quot;No explicit age/size or race visual dimorphism established&quot;,
+    &quot;future_regeneration&quot;: &quot;Not captured; do not assume the observed tree is immutable&quot;
+  },
+  &quot;original&quot;: {
+    &quot;tile&quot;: &quot;Assets_Content_Textures_Creatures_sw_dromad.bmp&quot;,
+    &quot;description&quot;: &quot;Shot ink decorates the dulla on his long neck in one of the thousand patterns of the camelfolk. His ears are arrayed with gilded rings, and eyelashes flow down his face like watervine fronds. Across his back, a hump of moistured and healthy fat pushes his center of mass skyward.&quot;,
+    &quot;kind&quot;: &quot;creature&quot;,
+    &quot;blueprint&quot;: &quot;Tam&quot;,
+    &quot;reference_file&quot;: &quot;village-originals/tam-reference.png&quot;,
+    &quot;native_mask_sha256&quot;: &quot;c17c63a811c0a1c7dc9eda32dcda5db2f6c4d1ae9b1b2f1439b64fdbd2d08416&quot;,
+    &quot;reference_sha256&quot;: &quot;e9d8dd533cfd080d7781f61d2724f545b6e0713fb77ce1436a2a620ad4979110&quot;,
+    &quot;info_id&quot;: 8177,
+    &quot;atlas_id&quot;: 224,
+    &quot;rect&quot;: [
+      108,
+      338,
+      16,
+      24
+    ]
+  },
+  &quot;donor_references&quot;: [
+    {
+      &quot;file&quot;: &quot;dromedary-reference-north.png&quot;,
+      &quot;source_id&quot;: 3049,
+      &quot;name&quot;: &quot;Dromedary_north&quot;,
+      &quot;width&quot;: 128,
+      &quot;height&quot;: 128,
+      &quot;alpha_bounds&quot;: [
+        42,
+        23,
+        90,
+        106
+      ],
+      &quot;png_sha256&quot;: &quot;5f29088dd9713c0b3a5f06f4ef6db38291b8fcc762f4182f53bb5f7b87d9570e&quot;
+    },
+    {
+      &quot;file&quot;: &quot;dromedary-reference-east.png&quot;,
+      &quot;source_id&quot;: 526,
+      &quot;name&quot;: &quot;Dromedary_east&quot;,
+      &quot;width&quot;: 128,
+      &quot;height&quot;: 128,
+      &quot;alpha_bounds&quot;: [
+        15,
+        30,
+        120,
+        96
+      ],
+      &quot;png_sha256&quot;: &quot;277076d3c830ded08ac925e6e517ed31d245bdfe0dd657f1d20caf36fbbb05bd&quot;
+    },
+    {
+      &quot;file&quot;: &quot;dromedary-reference-south.png&quot;,
+      &quot;source_id&quot;: 2777,
+      &quot;name&quot;: &quot;Dromedary_south&quot;,
+      &quot;width&quot;: 128,
+      &quot;height&quot;: 128,
+      &quot;alpha_bounds&quot;: [
+        42,
+        32,
+        89,
+        101
+      ],
+      &quot;png_sha256&quot;: &quot;a26abcee17541b3b61ff532b22b9903cddbb48418adde59b857c2963f2ab8f7c&quot;
+    }
+  ],
+  &quot;reference_role&quot;: &quot;Actual Core dromedary images supply camel muzzle, neck/hump and clean directional shading. Qud Humanoid tree supplies bipedal hands/feet; donor quadruped legs/tail do not replace it.&quot;,
+  &quot;baseline_policy&quot;: &quot;Reusable unmutated dromad race base. Intrinsic long neck/dulla/hump remain. No mutation appendages, named clothing or staff baked into the body.&quot;,
+  &quot;anatomy_interpretation&quot;: {
+    &quot;heads&quot;: 1,
+    &quot;arms&quot;: 2,
+    &quot;hands&quot;: 2,
+    &quot;legs&quot;: 2,
+    &quot;feet&quot;: 2,
+    &quot;features&quot;: [
+      &quot;elongated camel muzzle&quot;,
+      &quot;long neck&quot;,
+      &quot;dulla&quot;,
+      &quot;pointed ears&quot;,
+      &quot;integrated upper-back hump&quot;
+    ],
+    &quot;interpretation&quot;: &quot;Paired Feet humanoid group supports two feet; fine unseen anatomy and rounded foot forms remain authored. No separate Neck/Hump/Dulla mechanical nodes are required.&quot;
+  },
+  &quot;authoring&quot;: {
+    &quot;front_sources&quot;: [
+      {
+        &quot;path&quot;: &quot;art/dromad/nude/body-south.svg&quot;,
+        &quot;sha256&quot;: &quot;c017414ec56f0671adcaaca2cb6f4dad42879911b1d42daa44b080a52f5c9873&quot;
+      },
+      {
+        &quot;path&quot;: &quot;art/dromad/nude/head-south.svg&quot;,
+        &quot;sha256&quot;: &quot;ca87c5895fe7eb827c92cae1e0716ee4016bf22868ff9940f09815069d589030&quot;
+      }
+    ],
+    &quot;reuse&quot;: &quot;Existing editable construction is an input only. Fresh review/refinement and the reset log are required; no historical acceptance credit.&quot;,
+    &quot;shared_frame&quot;: {
+      &quot;canvas&quot;: [
+        512,
+        1024
+      ],
+      &quot;contact&quot;: [
+        256,
+        950
+      ],
+      &quot;transform&quot;: &quot;Uniform scale 3.6 and translation (-204.8,-122.8) for the complete old construction&quot;
+    },
+    &quot;palette&quot;: &quot;Neutral base and separate detail coverage. Source tileColor &amp;w and detail W retained. Dulla detail-region placement is authored, not a proven pixel-to-anatomy reading of the tiny original.&quot;,
+    &quot;cosmetics&quot;: &quot;Native ear rings, eyelashes and ink descriptions retained; personal/cosmetic layers remain separate from the baseline body.&quot;,
+    &quot;demographic_policy&quot;: &quot;Observed Tam is male. No race-wide visual dimorphism or age selector established; do not invent a native gender/age assignment.&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:08:30.483483+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_race_description_original_sprite_runtime_anatomy&quot;,
+  &quot;phase&quot;: &quot;Dromad identity, description and observed body tree&quot;,
+  &quot;action&quot;: &quot;Resolved Tam through Dromad ancestry; carried native race/individual descriptions, complete attached part IDs/parents/laterality, natural/actual equipment, source version/hashes and metadata gaps.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;evidence/tam-conversion-input.json&quot;,
+      &quot;sha256&quot;: &quot;2dfd8529d919dc160e4dcf05e546d4e8fd5c84340bfe6cac4a3ceb9c8b5ff4fc&quot;
+    },
+    {
+      &quot;path&quot;: &quot;evidence/village-reference-index.json&quot;,
+      &quot;sha256&quot;: &quot;cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Read the source packet and viewed original glyph. Humanoid baseline supports two hands and paired feet, while description supplies long neck, dulla and upper-back hump. Runtime mutation list, age and race-wide dimorphism remain unknown; no four-legged camel substitution.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-20T02:08:30.483865+00:00 / PASS</small><h3>Actual RimWorld dromedary references</h3><p>Selected installed Core Dromedary front/side/back assets for muzzle, hump, perspective, outline and shading conventions.</p><p><strong>Review:</strong> Viewed actual donor front/side and the contextual three-direction plate; all source PNG hashes matched the catalogue. Donor quadruped legs/tail are not copied into the Qud humanoid race.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/source-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/source-comparison.png" alt="source-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v1/source-comparison.png">source-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:08:30.483865+00:00&quot;,
+  &quot;step&quot;: &quot;select_actual_core_dlc_or_mod_reference&quot;,
+  &quot;phase&quot;: &quot;Actual RimWorld dromedary references&quot;,
+  &quot;action&quot;: &quot;Selected installed Core Dromedary front/side/back assets for muzzle, hump, perspective, outline and shading conventions.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;evidence/joppa-creature-catalogue.json&quot;,
+      &quot;sha256&quot;: &quot;de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed actual donor front/side and the contextual three-direction plate; all source PNG hashes matched the catalogue. Donor quadruped legs/tail are not copied into the Qud humanoid race.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-20T02:08:30.484056+00:00 / PASS</small><h3>Reconstructed editable dromad front in the shared frame</h3><p>Reused the earlier editable body/head geometry as source only, composing it with one transform onto the common centered canvas. No historical art acceptance carried forward.</p><p><strong>Review:</strong> Viewed whole front: camel-like head, long neck/dulla, hump, two arms/hands and paired rounded feet. No robe, staff, jewelry or markings. Neck and foot fine shape remain authored; next is restrained front refinement.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/constructed-front.svg"><img loading="lazy" src="../../art/conversion/body-dromad/v1/constructed-front.svg" alt="constructed-front"></a><figcaption><a href="../../art/conversion/body-dromad/v1/constructed-front.svg">constructed-front.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>a2641fded3aed5e5122481e1c58c817fd781b65b8262967e43978fde3b7c12c5</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/constructed-front.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/constructed-front.png" alt="constructed-front"></a><figcaption><a href="../../art/conversion/body-dromad/v1/constructed-front.png">constructed-front.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:08:30.484056+00:00&quot;,
+  &quot;step&quot;: &quot;construct_front&quot;,
+  &quot;phase&quot;: &quot;Reconstructed editable dromad front in the shared frame&quot;,
+  &quot;action&quot;: &quot;Reused the earlier editable body/head geometry as source only, composing it with one transform onto the common centered canvas. No historical art acceptance carried forward.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/dromad/nude/body-south.svg&quot;,
+      &quot;sha256&quot;: &quot;c017414ec56f0671adcaaca2cb6f4dad42879911b1d42daa44b080a52f5c9873&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/dromad/nude/head-south.svg&quot;,
+      &quot;sha256&quot;: &quot;ca87c5895fe7eb827c92cae1e0716ee4016bf22868ff9940f09815069d589030&quot;
+    },
+    {
+      &quot;path&quot;: &quot;tools/construct_dromad_front.py&quot;,
+      &quot;sha256&quot;: &quot;c49052e1b1a572f5b11f502c6ffbbbedc0eec883bd6f2d87daf3b7e4edaa56d6&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed whole front: camel-like head, long neck/dulla, hump, two arms/hands and paired rounded feet. No robe, staff, jewelry or markings. Neck and foot fine shape remain authored; next is restrained front refinement.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-20T02:09:41.098057+00:00 / PASS</small><h3>Refined dromad front selected</h3><p>Refined the constructed front with the native original/description and installed dromedary reference plate.</p><p><strong>Review:</strong> Viewed the complete front. Preserves compact bipedal camelfolk, long neck/dulla, ears/muzzle, integrated body/hump and two hands/feet. No gear or personal adornment. Source foot guide bars remain and will be removed during composed refinement; exact grayscale and contact registration follow.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/refined-front.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-front.png" alt="refined-front"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-front.png">refined-front.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:09:41.098057+00:00&quot;,
+  &quot;step&quot;: &quot;construct_front&quot;,
+  &quot;phase&quot;: &quot;Refined dromad front selected&quot;,
+  &quot;action&quot;: &quot;Refined the constructed front with the native original/description and installed dromedary reference plate.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/constructed-front.png&quot;,
+      &quot;sha256&quot;: &quot;3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/source-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refine-front-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;f0a63ca46c098027385bf907eb13a3d0dc97c83d1c67bbb9d9512573f23e8b8d&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed the complete front. Preserves compact bipedal camelfolk, long neck/dulla, ears/muzzle, integrated body/hump and two hands/feet. No gear or personal adornment. Source foot guide bars remain and will be removed during composed refinement; exact grayscale and contact registration follow.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_images&quot;: 2
+  },
+  &quot;generation_file&quot;: &quot;exec-8b350434-bcdf-4617-b23e-360a80c19a9d.png&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-20T02:13:27.517602+00:00 / RECORDED</small><h3>Front-guided dromad side/back proposals</h3><p>Generated secondary views from the selected dromad front and actual donor camel profile, with explicit humanoid race anatomy.</p><p><strong>Review:</strong> Viewed projecting camel muzzle, long neck, profile feet/limb overlap and continuous side upper-back hump. Rear proposal has an extra rounded lobe beside the neck; correct it to one integrated hump before selecting. Foot guide bars removed.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/secondary-views.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/secondary-views.png" alt="secondary-views"></a><figcaption><a href="../../art/conversion/body-dromad/v1/secondary-views.png">secondary-views.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:13:27.517602+00:00&quot;,
+  &quot;step&quot;: &quot;imagegen_side_back_from_front_and_race_facts&quot;,
+  &quot;phase&quot;: &quot;Front-guided dromad side/back proposals&quot;,
+  &quot;action&quot;: &quot;Generated secondary views from the selected dromad front and actual donor camel profile, with explicit humanoid race anatomy.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refined-front.png&quot;,
+      &quot;sha256&quot;: &quot;df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/secondary-views-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;95ec5c17fc7514d1573883a776e51d29fd6325326ff3e11a1536fd2ddc73b31c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed projecting camel muzzle, long neck, profile feet/limb overlap and continuous side upper-back hump. Rear proposal has an extra rounded lobe beside the neck; correct it to one integrated hump before selecting. Foot guide bars removed.&quot;,
+  &quot;result&quot;: &quot;RECORDED&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_images&quot;: 2,
+    &quot;private_reference&quot;: &quot;dromedary-reference-east.png; exact source/hash in source-packet.json&quot;
+  },
+  &quot;generation_file&quot;: &quot;exec-e74fe33f-d6ba-405a-b174-b8ac24e6531b.png&quot;
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-20T02:13:27.519897+00:00 / REJECTED</small><h3>Rejected panel-boundary segmentation</h3><p>Prepared a first frame/palette patch using rectangular view bands, then inspected connected silhouettes.</p><p><strong>Review:</strong> Source figures overlap in horizontal range: rear silhouette begins at x1047 while the profile extends to x1043. A column band steals or includes pixels from another figure at different heights. Replace it with connected-silhouette ownership.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/patched-views-rejected-panels.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/patched-views-rejected-panels.png" alt="patched-views-rejected-panels"></a><figcaption><a href="../../art/conversion/body-dromad/v1/patched-views-rejected-panels.png">patched-views-rejected-panels.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>ae9c5b93e39e1faa995f6364c2cacd650693eeb25c15ca997468ae8dc62a7baa</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:13:27.519897+00:00&quot;,
+  &quot;step&quot;: &quot;correct_anatomy_then_imagegen_refine_composed_views&quot;,
+  &quot;phase&quot;: &quot;Rejected panel-boundary segmentation&quot;,
+  &quot;action&quot;: &quot;Prepared a first frame/palette patch using rectangular view bands, then inspected connected silhouettes.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/secondary-views.png&quot;,
+      &quot;sha256&quot;: &quot;9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/prepare-views-rejected-panels.py&quot;,
+      &quot;sha256&quot;: &quot;431fe0d8d39c9fd042db1895bb41848099b0b4e76a09fd7cd122cf1c73f015f8&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Source figures overlap in horizontal range: rear silhouette begins at x1047 while the profile extends to x1043. A column band steals or includes pixels from another figure at different heights. Replace it with connected-silhouette ownership.&quot;,
+  &quot;result&quot;: &quot;REJECTED&quot;
+}</pre></details></section>
+<section class="event"><small>07 / 2026-10-20T02:13:27.521619+00:00 / RECORDED</small><h3>Complete-figure ownership, neutral source and common anchors</h3><p>Separated each whole figure by its connected alpha silhouette, cleaned invisible/low-alpha RGB and neutralized grayscale. Used one .84 scale and translated complete figures to centered foot contacts, preserving long profile muzzle.</p><p><strong>Review:</strong> Ownership masks retain whole figures rather than splitting columns. Rear extra upper-back lobe is explicitly pending the targeted composed refinement; no final anatomy acceptance yet.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/patched-views.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/patched-views.png" alt="patched-views"></a><figcaption><a href="../../art/conversion/body-dromad/v1/patched-views.png">patched-views.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/patch-decisions.json">patch-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;common_scale&quot;: 0.84,
+  &quot;contact&quot;: [
+    256,
+    950
+  ],
+  &quot;anatomy_correction_pending&quot;: &quot;Rear proposal has an extra rounded lobe beside the neck; composed refinement must resolve one integrated central upper-back hump.&quot;,
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;region&quot;: [
+        81,
+        26,
+        489,
+        991
+      ],
+      &quot;component_seed&quot;: [
+        285,
+        680
+      ],
+      &quot;selection_mask&quot;: &quot;source-selection-south.png&quot;,
+      &quot;source_contact&quot;: [
+        285,
+        990
+      ],
+      &quot;translation&quot;: [
+        85,
+        140
+      ],
+      &quot;bounds&quot;: [
+        85,
+        140,
+        428,
+        951
+      ]
+    },
+    &quot;east&quot;: {
+      &quot;region&quot;: [
+        584,
+        25,
+        1044,
+        995
+      ],
+      &quot;component_seed&quot;: [
+        780,
+        680
+      ],
+      &quot;selection_mask&quot;: &quot;source-selection-east.png&quot;,
+      &quot;source_contact&quot;: [
+        744,
+        994
+      ],
+      &quot;translation&quot;: [
+        122,
+        136
+      ],
+      &quot;bounds&quot;: [
+        122,
+        136,
+        508,
+        951
+      ]
+    },
+    &quot;north&quot;: {
+      &quot;region&quot;: [
+        1047,
+        25,
+        1461,
+        992
+      ],
+      &quot;component_seed&quot;: [
+        1253,
+        680
+      ],
+      &quot;selection_mask&quot;: &quot;source-selection-north.png&quot;,
+      &quot;source_contact&quot;: [
+        1253,
+        991
+      ],
+      &quot;translation&quot;: [
+        83,
+        139
+      ],
+      &quot;bounds&quot;: [
+        83,
+        139,
+        431,
+        951
+      ]
+    }
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>5fbb9a61ccf17bbccc2001fe528a2feeb6892de6af723203f604cd111bfa10d4</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/source-selection-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/source-selection-south.png" alt="source-selection-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/source-selection-south.png">source-selection-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>61fb34d15b2ce233a309f68556333242cdd0bc485878fb6ef68f33bf8f9dc7bf</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/source-selection-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/source-selection-east.png" alt="source-selection-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/source-selection-east.png">source-selection-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>41ca3059d468ec31386f2b81ee2da0a5396748935a853e180dce6827ed2d9fce</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/source-selection-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/source-selection-north.png" alt="source-selection-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/source-selection-north.png">source-selection-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>ee3d83cf59e76c719d6c728f1832c7db6466368fa70175a8deb79f3d350dcacb</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:13:27.521619+00:00&quot;,
+  &quot;step&quot;: &quot;correct_anatomy_then_imagegen_refine_composed_views&quot;,
+  &quot;phase&quot;: &quot;Complete-figure ownership, neutral source and common anchors&quot;,
+  &quot;action&quot;: &quot;Separated each whole figure by its connected alpha silhouette, cleaned invisible/low-alpha RGB and neutralized grayscale. Used one .84 scale and translated complete figures to centered foot contacts, preserving long profile muzzle.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/secondary-views.png&quot;,
+      &quot;sha256&quot;: &quot;9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/prepare-views.py&quot;,
+      &quot;sha256&quot;: &quot;f4d636cc84a0169e70e8c27a6e5a34fbcf07d674da9941ae83185b6195dd8441&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Ownership masks retain whole figures rather than splitting columns. Rear extra upper-back lobe is explicitly pending the targeted composed refinement; no final anatomy acceptance yet.&quot;,
+  &quot;result&quot;: &quot;RECORDED&quot;
+}</pre></details></section>
+<section class="event"><small>08 / 2026-10-20T02:18:04.980364+00:00 / PASS</small><h3>Selected composed refinement: one rear hump</h3><p>Refined the neutral, ownership-separated sheet with a focused rear upper-back correction while preserving the selected front/profile.</p><p><strong>Review:</strong> Viewed all views: rear extra lobe removed, one continuous central upper-back mound. Profile retains the projecting muzzle, long neck/dulla and properly turned feet; no tail, extra appendages or clothing. Foot guide bars removed.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/refined-patched-views.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-patched-views.png" alt="refined-patched-views"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-patched-views.png">refined-patched-views.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:18:04.980364+00:00&quot;,
+  &quot;step&quot;: &quot;correct_anatomy_then_imagegen_refine_composed_views&quot;,
+  &quot;phase&quot;: &quot;Selected composed refinement: one rear hump&quot;,
+  &quot;action&quot;: &quot;Refined the neutral, ownership-separated sheet with a focused rear upper-back correction while preserving the selected front/profile.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/patched-views.png&quot;,
+      &quot;sha256&quot;: &quot;bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refine-patched-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;4df95d58d75335a1f86596b96b1101e576fe83d4bcdfd2b2e6d6aa27ddb66206&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed all views: rear extra lobe removed, one continuous central upper-back mound. Profile retains the projecting muzzle, long neck/dulla and properly turned feet; no tail, extra appendages or clothing. Foot guide bars removed.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_images&quot;: 1
+  },
+  &quot;generation_file&quot;: &quot;exec-6fdeece5-7c94-4575-86f3-a6e2326b04e7.png&quot;
+}</pre></details></section>
+<section class="event"><small>09 / 2026-10-20T02:18:04.981758+00:00 / PASS</small><h3>Secondary directions selected after correction</h3><p>Selected the corrected front/profile/rear proposal, keeping native humanoid counts and camel-specific description anatomy.</p><p><strong>Review:</strong> A genuine whole-body profile and rear view are now present. Unseen surfaces remain authored interpretation; no donor quadruped anatomy or tail was substituted.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/refined-patched-views.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-patched-views.png" alt="refined-patched-views"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-patched-views.png">refined-patched-views.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:18:04.981758+00:00&quot;,
+  &quot;step&quot;: &quot;imagegen_side_back_from_front_and_race_facts&quot;,
+  &quot;phase&quot;: &quot;Secondary directions selected after correction&quot;,
+  &quot;action&quot;: &quot;Selected the corrected front/profile/rear proposal, keeping native humanoid counts and camel-specific description anatomy.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refined-front.png&quot;,
+      &quot;sha256&quot;: &quot;df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;A genuine whole-body profile and rear view are now present. Unseen surfaces remain authored interpretation; no donor quadruped anatomy or tail was substituted.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>10 / 2026-10-20T02:18:04.983269+00:00 / REJECTED</small><h3>Rejected head ownership at projecting dulla edge</h3><p>Inspected first body/head/detail ownership masks before accepting registration.</p><p><strong>Review:</strong> The straight profile neck boundary assigned the outer edge of the projecting dulla to the body. Reject that ownership split; union the full dulla outline into head/neck before deriving body coverage.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/ownership-rejected-dulla-edge.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/ownership-rejected-dulla-edge.png" alt="ownership-rejected-dulla-edge"></a><figcaption><a href="../../art/conversion/body-dromad/v1/ownership-rejected-dulla-edge.png">ownership-rejected-dulla-edge.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>8776f32228f7845852d05a32681dd36b5b2a7bf964d49fe88d44ca82978bef18</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:18:04.983269+00:00&quot;,
+  &quot;step&quot;: &quot;register_required_layers_and_color_masks&quot;,
+  &quot;phase&quot;: &quot;Rejected head ownership at projecting dulla edge&quot;,
+  &quot;action&quot;: &quot;Inspected first body/head/detail ownership masks before accepting registration.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refined-patched-views.png&quot;,
+      &quot;sha256&quot;: &quot;a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/register-layers-rejected-dulla-edge.py&quot;,
+      &quot;sha256&quot;: &quot;03823231a34f8e954076f5f630bea8e0fe390d09d693587f48c41014c019f4ff&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;The straight profile neck boundary assigned the outer edge of the projecting dulla to the body. Reject that ownership split; union the full dulla outline into head/neck before deriving body coverage.&quot;,
+  &quot;result&quot;: &quot;REJECTED&quot;
+}</pre></details></section>
+<section class="event"><small>11 / 2026-10-20T02:18:04.984176+00:00 / PASS</small><h3>Centered dromad layers and separate neutral detail region</h3><p>Re-established masks on the actual refined image. Used connected whole-figure selection, one .84 image scale, shared contact (256, 950), head ownership including the complete dulla and two-source-pixel body underlap. Kept distinct source/refined selection masks to preserve logged provenance.</p><p><strong>Review:</strong> Viewed neutral recomposition and colored ownership: body owns hump/painted limbs, head owns the complete neck/dulla. No back dulla layer rendered. Dulla detail region is authored, not asserted as a proven original-color location. Every production layer is grayscale; all facings use identical centered anchors. Physical height 1.4 is an explicit authoring choice, not native metadata.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;family&quot;: &quot;dromad&quot;,
+  &quot;canvas&quot;: [
+    512,
+    1024
+  ],
+  &quot;contact&quot;: [
+    256,
+    950
+  ],
+  &quot;views&quot;: {
+    &quot;south&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v1-body-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/body-south.png&quot;,
+        &quot;sha256&quot;: &quot;0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v1-head-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/head-south.png&quot;,
+        &quot;sha256&quot;: &quot;51905c4151f6adbf88714f9f9d5a40f385a71d9fd252133054653d8b6fc996a4&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      },
+      {
+        &quot;component&quot;: &quot;head-detail&quot;,
+        &quot;file&quot;: &quot;dromad-v1-head-detail-south.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/head-detail-south.png&quot;,
+        &quot;sha256&quot;: &quot;1c6b410c0764bd0892c19d46ff24d2546392343fd0d7993755e682b373a80d5f&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;detail&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.0011
+      }
+    ],
+    &quot;east&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v1-body-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/body-east.png&quot;,
+        &quot;sha256&quot;: &quot;5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v1-head-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/head-east.png&quot;,
+        &quot;sha256&quot;: &quot;aef704589190def62ef6376c528f7fb90c0fe74d837bbb4581d3aa299ecafa0e&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      },
+      {
+        &quot;component&quot;: &quot;head-detail&quot;,
+        &quot;file&quot;: &quot;dromad-v1-head-detail-east.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/head-detail-east.png&quot;,
+        &quot;sha256&quot;: &quot;26a83da099933f63b451bd098ca3c561cc5587c5d1c25e6f78da9e05ac3ee7c2&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;detail&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.0011
+      }
+    ],
+    &quot;north&quot;: [
+      {
+        &quot;component&quot;: &quot;body&quot;,
+        &quot;file&quot;: &quot;dromad-v1-body-north.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/body-north.png&quot;,
+        &quot;sha256&quot;: &quot;c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0
+      },
+      {
+        &quot;component&quot;: &quot;head&quot;,
+        &quot;file&quot;: &quot;dromad-v1-head-north.png&quot;,
+        &quot;public_file&quot;: &quot;art/conversion/body-dromad/v1/head-north.png&quot;,
+        &quot;sha256&quot;: &quot;d467695c9dad915efef6c428d19142257d9f914f20f797e336e6b01972f346d3&quot;,
+        &quot;size&quot;: [
+          512,
+          1024
+        ],
+        &quot;contact&quot;: [
+          256,
+          950
+        ],
+        &quot;color_role&quot;: &quot;foreground&quot;,
+        &quot;width&quot;: 1.4166007905138338,
+        &quot;height&quot;: 1.8888010540184452,
+        &quot;center_x&quot;: 0,
+        &quot;center_z&quot;: 0.807905138339921,
+        &quot;layer&quot;: 0.001
+      }
+    ]
+  },
+  &quot;pixel_world_scale&quot;: 0.001844532279314888,
+  &quot;physical_body_height&quot;: 1.4,
+  &quot;physical_height_kind&quot;: &quot;Authoring scale, not derived from native weight or an exported dromad height&quot;,
+  &quot;geometry&quot;: &quot;Ordinary bipedal camelfolk: one head/long neck/dulla, two painted arms/hands and paired feet; intrinsic upper-back hump. No extra mutation appendages.&quot;,
+  &quot;demographic_policy&quot;: &quot;Observed Tam male; no race-wide age/dimorphism established. No resident reassignment.&quot;,
+  &quot;neutral_palette&quot;: &quot;Equal RGB grayscale in every layer. Foreground head/body and independent detail coverage remain separately tintable.&quot;,
+  &quot;detail_interpretation&quot;: &quot;Dulla detail placement is an authored region for preserving a separate Qud detail role, not proven pixel-to-anatomy mapping of the original glyph.&quot;,
+  &quot;registration&quot;: {
+    &quot;contact&quot;: [
+      256,
+      950
+    ],
+    &quot;method&quot;: &quot;One common .84 image scale then whole-figure/layer translation. Source connected silhouettes own the complete views.&quot;
+  },
+  &quot;state&quot;: &quot;Generation-ready authoring only; native acceptance pending all-conversions gate&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;source&quot;: &quot;refined-patched-views.png&quot;,
+  &quot;common_image_scale&quot;: 0.84,
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;seed&quot;: [
+        245,
+        700
+      ],
+      &quot;selection_mask&quot;: &quot;refined-selection-south.png&quot;,
+      &quot;region&quot;: [
+        51,
+        81,
+        439,
+        985
+      ],
+      &quot;source_contact&quot;: [
+        245,
+        984
+      ],
+      &quot;translation&quot;: [
+        93,
+        191
+      ],
+      &quot;head_polygon&quot;: [
+        [
+          0,
+          0
+        ],
+        [
+          1490,
+          0
+        ],
+        [
+          1490,
+          310
+        ],
+        [
+          323,
+          310
+        ],
+        [
+          324,
+          593
+        ],
+        [
+          309,
+          612
+        ],
+        [
+          280,
+          620
+        ],
+        [
+          238,
+          617
+        ],
+        [
+          200,
+          606
+        ],
+        [
+          171,
+          586
+        ],
+        [
+          170,
+          310
+        ],
+        [
+          0,
+          310
+        ]
+      ],
+      &quot;detail_polygon&quot;: [
+        [
+          215,
+          342
+        ],
+        [
+          250,
+          345
+        ],
+        [
+          282,
+          368
+        ],
+        [
+          295,
+          405
+        ],
+        [
+          290,
+          433
+        ],
+        [
+          265,
+          460
+        ],
+        [
+          247,
+          471
+        ],
+        [
+          225,
+          456
+        ],
+        [
+          206,
+          425
+        ],
+        [
+          205,
+          411
+        ]
+      ],
+      &quot;body_underlap_source_pixels&quot;: 2
+    },
+    &quot;east&quot;: {
+      &quot;seed&quot;: [
+        760,
+        700
+      ],
+      &quot;selection_mask&quot;: &quot;refined-selection-east.png&quot;,
+      &quot;region&quot;: [
+        577,
+        76,
+        1022,
+        985
+      ],
+      &quot;source_contact&quot;: [
+        727,
+        984
+      ],
+      &quot;translation&quot;: [
+        130,
+        187
+      ],
+      &quot;head_polygon&quot;: [
+        [
+          0,
+          0
+        ],
+        [
+          1490,
+          0
+        ],
+        [
+          1490,
+          300
+        ],
+        [
+          879,
+          300
+        ],
+        [
+          877,
+          605
+        ],
+        [
+          862,
+          619
+        ],
+        [
+          836,
+          616
+        ],
+        [
+          793,
+          595
+        ],
+        [
+          760,
+          560
+        ],
+        [
+          752,
+          487
+        ],
+        [
+          752,
+          300
+        ],
+        [
+          0,
+          300
+        ]
+      ],
+      &quot;detail_polygon&quot;: [
+        [
+          833,
+          331
+        ],
+        [
+          860,
+          340
+        ],
+        [
+          881,
+          367
+        ],
+        [
+          891,
+          405
+        ],
+        [
+          886,
+          431
+        ],
+        [
+          869,
+          459
+        ],
+        [
+          853,
+          466
+        ],
+        [
+          835,
+          447
+        ],
+        [
+          819,
+          414
+        ],
+        [
+          822,
+          387
+        ]
+      ],
+      &quot;body_underlap_source_pixels&quot;: 2
+    },
+    &quot;north&quot;: {
+      &quot;seed&quot;: [
+        1250,
+        700
+      ],
+      &quot;selection_mask&quot;: &quot;refined-selection-north.png&quot;,
+      &quot;region&quot;: [
+        1053,
+        80,
+        1452,
+        985
+      ],
+      &quot;source_contact&quot;: [
+        1253,
+        984
+      ],
+      &quot;translation&quot;: [
+        88,
+        191
+      ],
+      &quot;head_polygon&quot;: [
+        [
+          0,
+          0
+        ],
+        [
+          1490,
+          0
+        ],
+        [
+          1490,
+          300
+        ],
+        [
+          1322,
+          300
+        ],
+        [
+          1322,
+          495
+        ],
+        [
+          1306,
+          478
+        ],
+        [
+          1273,
+          450
+        ],
+        [
+          1254,
+          444
+        ],
+        [
+          1236,
+          444
+        ],
+        [
+          1207,
+          462
+        ],
+        [
+          1184,
+          487
+        ],
+        [
+          1182,
+          300
+        ],
+        [
+          0,
+          300
+        ]
+      ],
+      &quot;detail_polygon&quot;: [],
+      &quot;body_underlap_source_pixels&quot;: 2
+    }
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>28d1b21eb580dd31dee1807e9cee25567c6490b11ccf0cf02543cba7359aec81</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/registration-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v1/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/ownership-comparison.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/ownership-comparison.png" alt="ownership-comparison"></a><figcaption><a href="../../art/conversion/body-dromad/v1/ownership-comparison.png">ownership-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>2ce666657ec8b30247e04c108e9a868fa885e4bd1cc747b14b68d5c2ce4e1e50</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-south.png" alt="body-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-south.png">body-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-south.png" alt="head-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-south.png">head-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>51905c4151f6adbf88714f9f9d5a40f385a71d9fd252133054653d8b6fc996a4</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-south.png" alt="head-detail-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-south.png">head-detail-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>1c6b410c0764bd0892c19d46ff24d2546392343fd0d7993755e682b373a80d5f</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-mask-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-mask-south.png" alt="body-mask-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-mask-south.png">body-mask-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>9c54b5c720d4ecff3bad080b005eb67e4a035f35fa2dc9f2c0ac40d152703b7c</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-mask-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-mask-south.png" alt="head-mask-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-mask-south.png">head-mask-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>91af9578ee8b25be3e6e69343adba91982478b01413ac1e1bf123f1068c43000</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-mask-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-mask-south.png" alt="head-detail-mask-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-mask-south.png">head-detail-mask-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>54a21bb060c7c68d7f837a2d8d3b784ba44800901fc87c5f260ed05025700667</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/refined-selection-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-selection-south.png" alt="refined-selection-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-selection-south.png">refined-selection-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>1d72d26f5412010d62b4ea096b7ba941c9e794581965df4b2ec297fcfd5b63d8</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-east.png" alt="body-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-east.png">body-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-east.png" alt="head-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-east.png">head-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>aef704589190def62ef6376c528f7fb90c0fe74d837bbb4581d3aa299ecafa0e</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-east.png" alt="head-detail-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-east.png">head-detail-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>26a83da099933f63b451bd098ca3c561cc5587c5d1c25e6f78da9e05ac3ee7c2</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-mask-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-mask-east.png" alt="body-mask-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-mask-east.png">body-mask-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>7eb8fb731cfea20006a8f3c6089404915d4f1d9b6ecd482fe68bbe6ed9425390</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-mask-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-mask-east.png" alt="head-mask-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-mask-east.png">head-mask-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>05d9217d15c6f6025b894e60ae596608ac2a2bd11820bb8d77cdced776836c55</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-mask-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-mask-east.png" alt="head-detail-mask-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-mask-east.png">head-detail-mask-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>9d6a3534cb9c405ef1961285b419a463e5608bae9edae706a1d0587297f28bbe</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/refined-selection-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-selection-east.png" alt="refined-selection-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-selection-east.png">refined-selection-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>030bac3c2342992cd2fe26640d0c93aa6c1f3f362be5e2c883f85bc81cd9c117</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-north.png" alt="body-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-north.png">body-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-north.png" alt="head-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-north.png">head-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>d467695c9dad915efef6c428d19142257d9f914f20f797e336e6b01972f346d3</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-north.png" alt="head-detail-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-north.png">head-detail-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/body-mask-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/body-mask-north.png" alt="body-mask-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/body-mask-north.png">body-mask-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>04bade47e250144bd80f93e7f419c73a44ee30c9c333a7bcd5f7b6760fbbd9fb</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-mask-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-mask-north.png" alt="head-mask-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-mask-north.png">head-mask-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6fbd15b478fb0ca9ba95c405def53a669a39d10b1267193c174f6d1df3cac5c6</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/head-detail-mask-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/head-detail-mask-north.png" alt="head-detail-mask-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/head-detail-mask-north.png">head-detail-mask-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/refined-selection-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/refined-selection-north.png" alt="refined-selection-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/refined-selection-north.png">refined-selection-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>3f924de1b2e46850c06cf73047f80e90e252616323ffbb073e83dae7240d48f6</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:18:04.984176+00:00&quot;,
+  &quot;step&quot;: &quot;register_required_layers_and_color_masks&quot;,
+  &quot;phase&quot;: &quot;Centered dromad layers and separate neutral detail region&quot;,
+  &quot;action&quot;: &quot;Re-established masks on the actual refined image. Used connected whole-figure selection, one .84 image scale, shared contact (256, 950), head ownership including the complete dulla and two-source-pixel body underlap. Kept distinct source/refined selection masks to preserve logged provenance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/refined-patched-views.png&quot;,
+      &quot;sha256&quot;: &quot;a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/register-layers.py&quot;,
+      &quot;sha256&quot;: &quot;4a95ce852c5a9fada0685b7a5860e16f987670ee2ac81fa607032aa365b07b5b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed neutral recomposition and colored ownership: body owns hump/painted limbs, head owns the complete neck/dulla. No back dulla layer rendered. Dulla detail region is authored, not asserted as a proven original-color location. Every production layer is grayscale; all facings use identical centered anchors. Physical height 1.4 is an explicit authoring choice, not native metadata.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>12 / 2026-10-20T02:18:04.986653+00:00 / PASS</small><h3>Dromad base generation-ready</h3><p>Reviewed four facings and intended-size authoring previews of the same registered neutral model.</p><p><strong>Review:</strong> Readable long-necked bipedal camelfolk, continuous hump, elongated side muzzle and paired bare feet. No clothing/staff/jewelry baked into the base. Shared contact and separate neutral detail retained. Native acceptance and actual clothing/staff fittings remain pending the all-conversions gate.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-dromad/v1/game-scale-review.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/body-dromad/v1/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>5be89c1849baf9a53d392db9befcd392be64727d7368a17785639c973724908b</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/selected-south.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/selected-south.png" alt="selected-south"></a><figcaption><a href="../../art/conversion/body-dromad/v1/selected-south.png">selected-south.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>1d1eaded3fcc976dff381ef05c70317565eaabe0b9a0dd558a3c1b5c64aaf694</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/selected-east.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/selected-east.png" alt="selected-east"></a><figcaption><a href="../../art/conversion/body-dromad/v1/selected-east.png">selected-east.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>4e25b4f69b77b132f0b55aaeaf0cf7669661ec4f02c19c1ccf3dc3f889e56caf</code></details></figure><figure><a href="../../art/conversion/body-dromad/v1/selected-north.png"><img loading="lazy" src="../../art/conversion/body-dromad/v1/selected-north.png" alt="selected-north"></a><figcaption><a href="../../art/conversion/body-dromad/v1/selected-north.png">selected-north.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>12a7f74eba51adb597e0ab1add7f42dbc347fc78f3896287d73e191f08c0f955</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T02:18:04.986653+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_anatomy_orientation_palette_all_views&quot;,
+  &quot;phase&quot;: &quot;Dromad base generation-ready&quot;,
+  &quot;action&quot;: &quot;Reviewed four facings and intended-size authoring previews of the same registered neutral model.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/model.json&quot;,
+      &quot;sha256&quot;: &quot;570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/body-dromad/v1/registration-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Readable long-necked bipedal camelfolk, continuous hump, elongated side muzzle and paired bare feet. No clothing/staff/jewelry baked into the base. Shared contact and separate neutral detail retained. Native acceptance and actual clothing/staff fittings remain pending the all-conversions gate.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+</div></div></main></html>

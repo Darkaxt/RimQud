@@ -1,0 +1,534 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Basic Grass 2 · RimQud evidence</title><style>
+:root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
+.taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
+</style><main><nav><a href="../conversion-report.html#TILE-GRASS-2">Back to conversion index</a></nav><h1>Basic Grass 2</h1><div class="entry-body">
+<p class="eyebrow">TILE-GRASS-2 / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: Grass 1 traced candidate only; Grass 2/3 have original references but no converted output. Validate variation and vegetation merging.</p>
+<h3>Current registered artwork</h3><p>Three sparse shoots retain their source-relative tip/root layout in the original rectangular paint frame. One scale and translation register them together. Production is neutral primary coverage; green/orange panels are color-role examples, and the native cell owns actual tint/visibility. Native integration remains pending.</p><div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff</code></details></figure></div><p><a href="../../art/conversion/tile-grass-2/v1/registered/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">source identity description metadata — recorded PASS</li><li class="pass">original and render reference decision — recorded PASS</li><li class="pass">construct shape — recorded PASS</li><li class="pass">create required views states — recorded PASS</li><li class="pass">correct errors and refine — recorded PASS</li><li class="pass">extract register palette masks — recorded PASS</li><li class="pass">visual review all views at game scale — recorded PASS</li><li class="pending">native review applicable states — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
+<div class="timeline">
+<section class="event"><small>01 / 2026-10-20T03:45:40.128425+00:00 / PASS</small><h3>Grass2 native paint and coverage</h3><p>Resolved Terrain/sw_grass2.bmp from the source index and read all sixteen native foreground-coverage pixels in the original cell frame.</p><p><strong>Review:</strong> Source supports three sparse strokes with different root heights. It is paint, not a named crop/NPC species. All source coverage is primary black in the audited shader. Native tile usage can have non-green color, including orange ClamGrass; actual cell tint/visibility remains authoritative.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;TILE-GRASS-2&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-20T03:44:41.159897+00:00&quot;,
+  &quot;identity&quot;: &quot;Terrain/sw_grass2.bmp, native paint glyph; no independent creature/furniture blueprint or anatomy&quot;,
+  &quot;description&quot;: &quot;No standalone Description.Short for a cell paint. Reference extraction labels it Basic Grass 2; do not invent a crop, reed, flower or tall grass species.&quot;,
+  &quot;original&quot;: {
+    &quot;tile&quot;: &quot;Terrain/sw_grass2.bmp&quot;,
+    &quot;description&quot;: &quot;Native visible cell grass paint; not a crop or a new game object&quot;,
+    &quot;kind&quot;: &quot;paint&quot;,
+    &quot;blueprint&quot;: &quot;Basic Grass 2&quot;,
+    &quot;reference_file&quot;: &quot;village-originals/basic-grass-2-reference.png&quot;,
+    &quot;native_mask_sha256&quot;: &quot;68df3e4ed8fca957df88f3ca22287f32ced47e21acc16b1e2a84b4439f028e51&quot;,
+    &quot;reference_sha256&quot;: &quot;b6224aacd585b3cb9e6d4110cf3676a90e978b2c5204b9410333b784c3f6d3b7&quot;,
+    &quot;info_id&quot;: 11192,
+    &quot;atlas_id&quot;: 203,
+    &quot;rect&quot;: [
+      720,
+      208,
+      16,
+      24
+    ]
+  },
+  &quot;visible_native_coverage&quot;: [
+    {
+      &quot;x&quot;: 11,
+      &quot;y&quot;: 8,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 9,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 10,
+      &quot;y&quot;: 9,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 10,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 10,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 11,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 11,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 12,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 12,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 12,
+      &quot;y&quot;: 12,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 5,
+      &quot;y&quot;: 13,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 13,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 11,
+      &quot;y&quot;: 13,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 5,
+      &quot;y&quot;: 14,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 10,
+      &quot;y&quot;: 14,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      &quot;x&quot;: 10,
+      &quot;y&quot;: 15,
+      &quot;rgba&quot;: [
+        0,
+        0,
+        0,
+        255
+      ]
+    }
+  ],
+  &quot;mask_contract&quot;: &quot;All sixteen opaque native pixels are black: primary foreground coverage in the audited Kobold mask contract. There is no source detail-color region.&quot;,
+  &quot;donor_reference&quot;: {
+    &quot;file&quot;: &quot;grass.png&quot;,
+    &quot;source_id&quot;: 1797,
+    &quot;name&quot;: &quot;GrassA&quot;,
+    &quot;width&quot;: 64,
+    &quot;height&quot;: 64,
+    &quot;png_sha256&quot;: &quot;0853cc134407e5d34b2d39d7fb8cf11145049340fbc843277ccacb4928a88758&quot;,
+    &quot;role&quot;: &quot;Actual RimWorld GrassA supplies blade taper and plant/shading convention only. Its dense many-blade tuft is not the shape to copy.&quot;
+  },
+  &quot;authored_interpretation&quot;: &quot;Three sparse shoots inferred from sixteen native coverage pixels: a long leftward blade, a taller middle/right-curving blade and a short rightward blade, with their distinct root heights. Preserve the sparse relative tips/root placement; fine blade width/shading is authored.&quot;,
+  &quot;palette&quot;: &quot;Neutral equal-RGB production source with native primary tint at binding time. Green g/G previews use exact captured palette values; the reference packet did not export a universal runtime paint color. The same tile is used by orange ClamGrass elsewhere; that does not make Joppa paint a clam species or authorize adding its particle prefab.&quot;,
+  &quot;source_usage_limit&quot;: &quot;Tile identity alone does not identify a universal plant color or biological species. Preserve per-cell native visibility and color; do not hardcode a green crop object.&quot;,
+  &quot;frame&quot;: {
+    &quot;canvas&quot;: [
+      512,
+      768
+    ],
+    &quot;native_cell&quot;: [
+      16,
+      24
+    ],
+    &quot;source_scale&quot;: 32,
+    &quot;nominal_anchor&quot;: [
+      256,
+      512
+    ],
+    &quot;native_anchor&quot;: [
+      8,
+      16
+    ],
+    &quot;policy&quot;: &quot;Sparse floor paint stays in its original rectangular cell frame. Do not independently crop/center alpha or give it a humanoid foot pivot.&quot;
+  },
+  &quot;states&quot;: &quot;One fixed map view. Native grass variants 1 and 3 are separate ledger entries; no invented rotation, growth, flowering or wind animation here.&quot;,
+  &quot;native_acceptance&quot;: &quot;Deferred until every required conversion is generated&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:45:40.128425+00:00&quot;,
+  &quot;step&quot;: &quot;source_identity_description_metadata&quot;,
+  &quot;phase&quot;: &quot;Grass2 native paint and coverage&quot;,
+  &quot;action&quot;: &quot;Resolved Terrain/sw_grass2.bmp from the source index and read all sixteen native foreground-coverage pixels in the original cell frame.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/prepare-and-construct.py&quot;,
+      &quot;sha256&quot;: &quot;1910f92db001c1dfde09a8a432b48a8a7a862baf4a5f5a4fc6a890dc115c9854&quot;
+    },
+    {
+      &quot;path&quot;: &quot;evidence/village-reference-index.json&quot;,
+      &quot;sha256&quot;: &quot;cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Source supports three sparse strokes with different root heights. It is paint, not a named crop/NPC species. All source coverage is primary black in the audited shader. Native tile usage can have non-green color, including orange ClamGrass; actual cell tint/visibility remains authoritative.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-20T03:45:40.128774+00:00 / PASS</small><h3>GrassA blade convention, sparse native topology</h3><p>Selected the actual extracted RimWorld GrassA as taper/shading reference; original Qud coverage controls the three separate shoot layout.</p><p><strong>Review:</strong> Viewed native glyph, editable suggestion and donor reference. Dense donor tuft is not copied. No new root mound, flower, growth stage or facing animation inferred.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/source-construction-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/source-construction-comparison.png" alt="source-construction-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/source-construction-comparison.png">source-construction-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0b95cdf34a53b4e00bcfcec6dc8a3b905384093ac804ae0b2602115e4cce0acc</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:45:40.128774+00:00&quot;,
+  &quot;step&quot;: &quot;original_and_render_reference_decision&quot;,
+  &quot;phase&quot;: &quot;GrassA blade convention, sparse native topology&quot;,
+  &quot;action&quot;: &quot;Selected the actual extracted RimWorld GrassA as taper/shading reference; original Qud coverage controls the three separate shoot layout.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed native glyph, editable suggestion and donor reference. Dense donor tuft is not copied. No new root mound, flower, growth stage or facing animation inferred.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-20T03:45:40.128916+00:00 / RECORDED</small><h3>Editable three-shoot suggestion</h3><p>Constructed a left-curving long blade, a taller middle/right-curving blade and a shorter right blade with the native relative tips/root positions.</p><p><strong>Review:</strong> Viewed all three shoots in their whole 16x24-derived frame. Source nominal anchor remains (8,16), not independent alpha centering. Blade width and shading are authored for native-scale readability; the three-shoot count/layout is source-bound.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.svg"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/constructed-grass.svg" alt="constructed-grass"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.svg">constructed-grass.svg</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>4c060443835f82ebd95415bcd19d1c155577b1868eb3ea87221eed5d0cec5a5f</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/constructed-grass.png" alt="constructed-grass"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.png">constructed-grass.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:45:40.128916+00:00&quot;,
+  &quot;step&quot;: &quot;construct_shape&quot;,
+  &quot;phase&quot;: &quot;Editable three-shoot suggestion&quot;,
+  &quot;action&quot;: &quot;Constructed a left-curving long blade, a taller middle/right-curving blade and a shorter right blade with the native relative tips/root positions.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/prepare-and-construct.py&quot;,
+      &quot;sha256&quot;: &quot;1910f92db001c1dfde09a8a432b48a8a7a862baf4a5f5a4fc6a890dc115c9854&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed all three shoots in their whole 16x24-derived frame. Source nominal anchor remains (8,16), not independent alpha centering. Blade width and shading are authored for native-scale readability; the three-shoot count/layout is source-bound.&quot;,
+  &quot;result&quot;: &quot;RECORDED&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-20T03:48:33.432875+00:00 / PASS</small><h3>Native three-shoot layout retained</h3><p>Reviewed the editable manual three-shoot shape against the selected refined registration.</p><p><strong>Review:</strong> Long left blade, tall middle/right-curving blade and lower short right blade retain their distinct roots and source-relative tips. No dense donor tuft or extra shoot; widths/shading are authored interpretation of the sparse native coverage.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/constructed-grass.png" alt="constructed-grass"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/constructed-grass.png">constructed-grass.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.432875+00:00&quot;,
+  &quot;step&quot;: &quot;construct_shape&quot;,
+  &quot;phase&quot;: &quot;Native three-shoot layout retained&quot;,
+  &quot;action&quot;: &quot;Reviewed the editable manual three-shoot shape against the selected refined registration.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/constructed-grass.svg&quot;,
+      &quot;sha256&quot;: &quot;4c060443835f82ebd95415bcd19d1c155577b1868eb3ea87221eed5d0cec5a5f&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Long left blade, tall middle/right-curving blade and lower short right blade retain their distinct roots and source-relative tips. No dense donor tuft or extra shoot; widths/shading are authored interpretation of the sparse native coverage.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-20T03:48:33.433265+00:00 / PASS</small><h3>Fixed paint view and per-cell color roles</h3><p>Retained one map-paint view and original rectangular cell frame, with green g/orange O tint previews and repeated-cell authoring context.</p><p><strong>Review:</strong> Viewed 16x24, 24x36 and 32x48 native-size proportions. This is a paint variant, not a growth/facing animation. Native use of the tile can change color, so no universal green role is invented. Other grass entries are separate.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png" alt="paint-distribution-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png">paint-distribution-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>430c5fc9052a282396a20a4d0860eb59654fa0fef6acc92b5c17a8a2e5ffeed0</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.433265+00:00&quot;,
+  &quot;step&quot;: &quot;create_required_views_states&quot;,
+  &quot;phase&quot;: &quot;Fixed paint view and per-cell color roles&quot;,
+  &quot;action&quot;: &quot;Retained one map-paint view and original rectangular cell frame, with green g/orange O tint previews and repeated-cell authoring context.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/register-grass.py&quot;,
+      &quot;sha256&quot;: &quot;80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed 16x24, 24x36 and 32x48 native-size proportions. This is a paint variant, not a growth/facing animation. Native use of the tile can change color, so no universal green role is invented. Other grass entries are separate.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-20T03:48:33.433523+00:00 / PASS</small><h3>Three-blade refinement selected and cleaned</h3><p>Refined the neutral manual suggestion using its original/donor comparison, then selected the three complete source components, neutralized RGB, lifted values .82*v+42 and cleared invisible RGB.</p><p><strong>Review:</strong> Viewed refined and final shapes: all three separate blades and unequal root heights retained, with readable native-size widths and no root mound, extra plant or scene. Extraction/value cleanup is deterministic; no second generator loop was necessary for this fixed-view shape.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/refined-proposal.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/refined-proposal.png" alt="refined-proposal"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/refined-proposal.png">refined-proposal.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>87de666a89c213a42627dc835fc0c23f26aa4f51e3c7853cfb3e75b113d5afc2</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/cleaned-proposal.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/cleaned-proposal.png" alt="cleaned-proposal"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/cleaned-proposal.png">cleaned-proposal.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>0bd7d43d0253988377c659dae5e746582ffd53982255d4df0596e295094d36ed</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;source&quot;: &quot;../refined-proposal.png&quot;,
+  &quot;source_size&quot;: [
+    1024,
+    1536
+  ],
+  &quot;seeds&quot;: {
+    &quot;long_left&quot;: [
+      340,
+      940
+    ],
+    &quot;tall_middle&quot;: [
+      530,
+      900
+    ],
+    &quot;short_right&quot;: [
+      655,
+      1010
+    ]
+  },
+  &quot;source_root&quot;: [
+    534,
+    932
+  ],
+  &quot;target_root&quot;: [
+    273,
+    451
+  ],
+  &quot;scale&quot;: 0.5,
+  &quot;translation&quot;: [
+    6,
+    -15,
+    518,
+    753
+  ],
+  &quot;canvas&quot;: [
+    512,
+    768
+  ],
+  &quot;correction&quot;: &quot;Selected three complete connected shoots, neutralized RGB, lifted values .82*v+42 for native-size readability and cleared invisible RGB. Tool-preview glow was RGB in alpha-zero pixels, not visible plant coverage.&quot;,
+  &quot;interpretation&quot;: &quot;The three-shoot silhouette and unequal root heights were retained. No structural shape error required another generator loop; extraction/registration completes this fixed-view paint refinement.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>67e129a99f74750d5e32a66ecc3f648d5ef5cd2ea424082978db9689fd1b075c</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.433523+00:00&quot;,
+  &quot;step&quot;: &quot;correct_errors_and_refine&quot;,
+  &quot;phase&quot;: &quot;Three-blade refinement selected and cleaned&quot;,
+  &quot;action&quot;: &quot;Refined the neutral manual suggestion using its original/donor comparison, then selected the three complete source components, neutralized RGB, lifted values .82*v+42 and cleared invisible RGB.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/constructed-grass.png&quot;,
+      &quot;sha256&quot;: &quot;dea33e1511d09274d4095fa97daefb8f23bebd3b93335e4254078228dfa73d92&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-construction-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;0b95cdf34a53b4e00bcfcec6dc8a3b905384093ac804ae0b2602115e4cce0acc&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/refine-grass-prompt.txt&quot;,
+      &quot;sha256&quot;: &quot;9eec0cb347012d5bf0e3b399051d30f21e20a4ace638366aac762c0553649821&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/register-grass.py&quot;,
+      &quot;sha256&quot;: &quot;80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Viewed refined and final shapes: all three separate blades and unequal root heights retained, with readable native-size widths and no root mound, extra plant or scene. Extraction/value cleanup is deterministic; no second generator loop was necessary for this fixed-view shape.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;,
+  &quot;tool&quot;: &quot;image_gen.imagegen&quot;,
+  &quot;settings&quot;: {
+    &quot;transparent_background&quot;: true,
+    &quot;referenced_images&quot;: 2
+  },
+  &quot;generation_file&quot;: &quot;exec-bad1b486-df4c-42cb-88d8-09020564594a.png&quot;
+}</pre></details></section>
+<section class="event"><small>07 / 2026-10-20T03:48:33.446122+00:00 / PASS</small><h3>Grass2 neutral primary coverage registered</h3><p>Registered all three source components together with one .5 scale and translation; kept the nominal native paint anchor and source cell aspect.</p><p><strong>Review:</strong> Neutral RGB and 512x768 frame inspected. Nominal source anchor (8,16) maps to (256,512); tall middle blade root is a separate recorded landmark (273,451), not a new pivot. Source has no detail-color region; actual native cell color/visibility remain binding-owned. No independent alpha centering of blades.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/registered/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;kind&quot;: &quot;native_cell_paint&quot;,
+  &quot;native_tile&quot;: &quot;Terrain/sw_grass2.bmp&quot;,
+  &quot;identity&quot;: &quot;Basic Grass 2&quot;,
+  &quot;canvas&quot;: [
+    512,
+    768
+  ],
+  &quot;native_cell&quot;: [
+    16,
+    24
+  ],
+  &quot;nominal_native_anchor&quot;: [
+    8,
+    16
+  ],
+  &quot;nominal_canvas_anchor&quot;: [
+    256,
+    512
+  ],
+  &quot;refined_main_blade_root&quot;: [
+    273,
+    451
+  ],
+  &quot;neutral&quot;: {
+    &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/registered/grass2-neutral.png&quot;,
+    &quot;sha256&quot;: &quot;560c54c0cd4b53128b1dc6cb263c7935f7c9420689670e62fed19646bf91364f&quot;
+  },
+  &quot;coverage&quot;: {
+    &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/registered/grass2-coverage.png&quot;,
+    &quot;sha256&quot;: &quot;e8e667a4d420027cf0e55870d7ecc180154f270dee79e60a4a97d0fbe5b376eb&quot;
+  },
+  &quot;color_role&quot;: &quot;Native cell primary foreground; no source detail region&quot;,
+  &quot;palette_policy&quot;: &quot;Do not bake preview green into production RGB. Source references do not establish a universal paint color; preserve native cell tint/visibility, including non-green usages.&quot;,
+  &quot;frame_policy&quot;: &quot;Keep the entire 16 x 24 source cell frame; nominal pivot is fixed. All three shoots share one .5 scale and one translation. Their alpha bounds are not independently centered/fitted.&quot;,
+  &quot;view_policy&quot;: &quot;One fixed map-paint view. No biological growth, facing rotation, wind or extra blades invented. Grass variants 1 and 3 are separate entries.&quot;,
+  &quot;layer&quot;: &quot;Native paint layer relative to ground; real draw-order/visibility binding pending final integration&quot;,
+  &quot;state&quot;: &quot;Generation-ready authoring only; native acceptance pending every-conversion-generated gate&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-decisions.json">registration-decisions.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;source&quot;: &quot;../refined-proposal.png&quot;,
+  &quot;source_size&quot;: [
+    1024,
+    1536
+  ],
+  &quot;seeds&quot;: {
+    &quot;long_left&quot;: [
+      340,
+      940
+    ],
+    &quot;tall_middle&quot;: [
+      530,
+      900
+    ],
+    &quot;short_right&quot;: [
+      655,
+      1010
+    ]
+  },
+  &quot;source_root&quot;: [
+    534,
+    932
+  ],
+  &quot;target_root&quot;: [
+    273,
+    451
+  ],
+  &quot;scale&quot;: 0.5,
+  &quot;translation&quot;: [
+    6,
+    -15,
+    518,
+    753
+  ],
+  &quot;canvas&quot;: [
+    512,
+    768
+  ],
+  &quot;correction&quot;: &quot;Selected three complete connected shoots, neutralized RGB, lifted values .82*v+42 for native-size readability and cleared invisible RGB. Tool-preview glow was RGB in alpha-zero pixels, not visible plant coverage.&quot;,
+  &quot;interpretation&quot;: &quot;The three-shoot silhouette and unequal root heights were retained. No structural shape error required another generator loop; extraction/registration completes this fixed-view paint refinement.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>67e129a99f74750d5e32a66ecc3f648d5ef5cd2ea424082978db9689fd1b075c</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/grass2-neutral.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/grass2-neutral.png" alt="grass2-neutral"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/grass2-neutral.png">grass2-neutral.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>560c54c0cd4b53128b1dc6cb263c7935f7c9420689670e62fed19646bf91364f</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/grass2-coverage.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/grass2-coverage.png" alt="grass2-coverage"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/grass2-coverage.png">grass2-coverage.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e8e667a4d420027cf0e55870d7ecc180154f270dee79e60a4a97d0fbe5b376eb</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-long-left.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/source-selection-long-left.png" alt="source-selection-long-left"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-long-left.png">source-selection-long-left.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>60e5181761e4683a2ca2bd4acab82a83bf4e7b28594a4d2c459ba20c6baecbae</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-short-right.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/source-selection-short-right.png" alt="source-selection-short-right"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-short-right.png">source-selection-short-right.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>24aa8d7240f659c1f54ae32e1458d177e04d5b0bbd2fee5358a51ba3a2a03f97</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-tall-middle.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/source-selection-tall-middle.png" alt="source-selection-tall-middle"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/source-selection-tall-middle.png">source-selection-tall-middle.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>7b0d144f37fa8aeb78fa9e5bebac81fa4910299f073c5b61513e008ca396186e</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.446122+00:00&quot;,
+  &quot;step&quot;: &quot;extract_register_palette_masks&quot;,
+  &quot;phase&quot;: &quot;Grass2 neutral primary coverage registered&quot;,
+  &quot;action&quot;: &quot;Registered all three source components together with one .5 scale and translation; kept the nominal native paint anchor and source cell aspect.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/register-grass.py&quot;,
+      &quot;sha256&quot;: &quot;80aae25de5836314078f4633bcbdff7aa7359689ef8daa2716ddf910890fde47&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/refined-proposal.png&quot;,
+      &quot;sha256&quot;: &quot;87de666a89c213a42627dc835fc0c23f26aa4f51e3c7853cfb3e75b113d5afc2&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Neutral RGB and 512x768 frame inspected. Nominal source anchor (8,16) maps to (256,512); tall middle blade root is a separate recorded landmark (273,451), not a new pivot. Source has no detail-color region; actual native cell color/visibility remain binding-owned. No independent alpha centering of blades.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>08 / 2026-10-20T03:48:33.447260+00:00 / PASS</small><h3>Basic Grass 2 generation ready</h3><p>Viewed the registered three-shoot paint under green/orange preview tint, at three small display sizes and in a repeated-cell authoring arrangement.</p><p><strong>Review:</strong> Distinct source variant remains readable; production stays grayscale and can receive non-green native colors. Distribution is an authoring example, not a game capture or new native spawn pattern. No ground material or other grass variant receives conversion credit.</p>
+<div class="gallery"><figure><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png" alt="registration-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/registration-comparison.png">registration-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff</code></details></figure><figure><a href="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png"><img loading="lazy" src="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png" alt="paint-distribution-comparison"></a><figcaption><a href="../../art/conversion/tile-grass-2/v1/registered/paint-distribution-comparison.png">paint-distribution-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>430c5fc9052a282396a20a4d0860eb59654fa0fef6acc92b5c17a8a2e5ffeed0</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.447260+00:00&quot;,
+  &quot;step&quot;: &quot;visual_review_all_views_at_game_scale&quot;,
+  &quot;phase&quot;: &quot;Basic Grass 2 generation ready&quot;,
+  &quot;action&quot;: &quot;Viewed the registered three-shoot paint under green/orange preview tint, at three small display sizes and in a repeated-cell authoring arrangement.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/registered/model.json&quot;,
+      &quot;sha256&quot;: &quot;4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/tile-grass-2/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;b5f6985f8ad710321b042abe816a80b53d3accdbca7f65d30cc2f43dc5d5385f&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Distinct source variant remains readable; production stays grayscale and can receive non-green native colors. Distribution is an authoring example, not a game capture or new native spawn pattern. No ground material or other grass variant receives conversion credit.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>09 / 2026-10-20T03:48:33.447499+00:00 / DEFERRED UNTIL ALL GENERATED</small><h3>Native paint acceptance deferred</h3><p>Kept native cell color/visibility/draw-order binding checks for the final every-conversion-generated gate.</p><p><strong>Review:</strong> No game or harness launch; overall entry remains UNFINISHED.</p>
+<div class="gallery"></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T03:48:33.447499+00:00&quot;,
+  &quot;step&quot;: &quot;native_review_applicable_states&quot;,
+  &quot;phase&quot;: &quot;Native paint acceptance deferred&quot;,
+  &quot;action&quot;: &quot;Kept native cell color/visibility/draw-order binding checks for the final every-conversion-generated gate.&quot;,
+  &quot;inputs&quot;: [],
+  &quot;review&quot;: &quot;No game or harness launch; overall entry remains UNFINISHED.&quot;,
+  &quot;result&quot;: &quot;DEFERRED UNTIL ALL GENERATED&quot;
+}</pre></details></section>
+</div></div></main></html>

@@ -186,6 +186,14 @@ garment's intended outer edge and the unchanged underlying anatomy. Check both
 the isolated shape and its recomposition at enlarged and intended game scale,
 including side/back views. Keep the unmodified generation and mask provenance.
 
+Keep source-intended shoulder coverage continuous into sleeves; an accidental
+strip of bare shoulder is a fit defect, not a new garment design. Preserve intact
+isolated garment art separately from any effective body-occlusion mask. Derive
+arm/neck occlusion from the actual registered silhouette and local cuff/collar
+boundaries; broad guessed polygons or circular hand punches can remove cloth
+outside the body. Show both the garment and its precise recomposition so a
+necessary overlap mask is not mistaken for missing fabric.
+
 Apparel art must fit the supported body family. Do not claim donor clothing is
 automatically deformed for every Qud mutation. Inventory items remain invisible
 until equipped. Laterality controls held-item anchors rather than a universal
