@@ -1,0 +1,258 @@
+{
+  "entry": "SCN-ORNATE-TABLE",
+  "identity": "Ornate Table -> Table -> Furniture -> InorganicObject",
+  "description": "Etched chromium on the lavish legs tapers to claw-and-ball feet, and on the marble surface, geometric imperfections were rasped off and flung into an iron bucket that may still exist somewhere. Eaters spoke here, and planned.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Ornate Table": "<object Name=\"Ornate Table\" Inherits=\"Table\">\n    <part Name=\"Render\" DisplayName=\"ornate table\" ColorString=\"&amp;C\" TileColor=\"&amp;y\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Items/sw_table_ornate_1.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"EmptyTile\" Value=\"Items/sw_table_ornate_1.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table_ornate_1.bmp\" />\n    <tag Name=\"FullDetailColor\" Value=\"*delete\" />\n    <part Name=\"Description\" Short=\"Etched chromium on the lavish legs tapers to claw-and-ball feet, and on the marble surface, geometric imperfections were rasped off and flung into an iron bucket that may still exist somewhere. Eaters spoke here, and planned.\" />\n    <part Name=\"Metal\" />\n  </object>",
+      "Table": "<object Name=\"Table\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"table\" ColorString=\"&amp;w\" DetailColor=\"C\" RenderString=\"227\" Tile=\"Assets_Content_Textures_Tiles_sw_table.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <tag Name=\"EmptyTile\" Value=\"Assets_Content_Textures_Tiles_sw_table.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_table1.bmp,Items/sw_table2.bmp,Items/sw_table3.bmp,Items/sw_table4.bmp\" />\n    <tag Name=\"EmptyDetailColor\" Value=\"C\" />\n    <tag Name=\"FullDetailColor\" Value=\"C,c,y,W\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"Branches of the living tree were resorbed and reformed into trunk knots. Then, hundreds of years later, the oiled saw of a gorge woodworker disarranged the arbor geometry and flattened it for civil use. That history remains cast in two dimensions, powdered with dust and scratched in pencil.\" />\n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" Preposition=\"on\" OpenSound=\"Sounds/Interact/sfx_interact_open_table\" />\n    <part Name=\"Inventory\" />\n\t\t<tag Name=\"InventoryPopulationTable\" Value=\"Table\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Flat,Knobby,Level,L-Shaped,Sturdy,Three-Legged,Wobbly\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Decorators,the Relaxed\" />\n    <xtagTextFragments Skin=\"glaze\" PoeticFeatures=\"flat surfaces,artfulness,gentle stillness\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Table\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"table\" />\n    <tag Name=\"AutoexploreChest\" />\n    <stag Name=\"Storage\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something on\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    "parser_note": "Extracted and XML-parsed exact object fragments because unrelated whole-file control-character numeric entities are not accepted by Python XML parser; original file preserved/hash recorded."
+  },
+  "original": {
+    "tile": "Items/sw_table_ornate_1.bmp",
+    "description": "Etched chromium on the lavish legs tapers to claw-and-ball feet, and on the marble surface, geometric imperfections were rasped off and flung into an iron bucket that may still exist somewhere. Eaters spoke here, and planned.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "ornate table",
+      "RenderString": "227",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&C",
+      "DetailColor": "C",
+      "Tile": "Items/sw_table_ornate_1.bmp",
+      "TileColor": "&y"
+    },
+    "kind": "scenery",
+    "blueprint": "Ornate Table",
+    "reference_file": "village-originals/ornate-table-reference.png",
+    "native_mask_sha256": "13d42f1b9aed3ef0f4fefdb3eee150438b629df1ffb7d917743731f727fbec5a",
+    "reference_sha256": "292a241732519b6bdc0487da8d48521a481590a43f568876ad7b01ed32954b90",
+    "info_id": 10123,
+    "atlas_id": 185,
+    "rect": [
+      36,
+      338,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\ornate-table-mask.png",
+      "sha256": "13d42f1b9aed3ef0f4fefdb3eee150438b629df1ffb7d917743731f727fbec5a"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\ornate-table-reference.png",
+      "sha256": "292a241732519b6bdc0487da8d48521a481590a43f568876ad7b01ed32954b90"
+    }
+  },
+  "source_shape": "Broad marble slab over two visibly splayed/support legs with symmetric inward ornamental scrolls. Description establishes etched chromium and claw-and-ball feet. Hidden rear legs/depth are authored, not inferred from pixel counts.",
+  "palette": {
+    "primary": "y from TileColor, despite glyph ColorString C",
+    "detail": "C on marble slab; black source support/ornament coverage follows y",
+    "shader": "Audited native dual-color: alpha coverage; R0 primary, R1 detail. Preserve source roles rather than assuming chromium must be gray in native preview."
+  },
+  "native_state": "Ornate Table explicitly sets EmptyTile and FullTile to the same Items/sw_table_ornate_1.bmp and deletes inherited FullDetailColor alternatives. EmptyDetailColor C inherited; ordinary starting DetailColor C. Inventory remains native but there is only one source visual shape, no added stock marks or randomized full appearance.",
+  "native_behavior": "Inherited Container/on Inventory with Table population, Weight50 Takeablefalse, Ornate Organicfalse/Metal, MissileCover10%, non-occluding render. Rare Animated builder1/15000 BodyTypeTable retains native fallback. No material/gameplay/physics rewrites.",
+  "reference": {
+    "royal_table": {
+      "texture": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\RoyalTables\\RoyalTable2x2_north.png",
+        "sha256": "d5ab120e9f8e29f2cbc149b28c84713156fffd5bc9e63c4520797ccd971be13f"
+      },
+      "frame": [
+        512,
+        512
+      ],
+      "alpha_bounds": [
+        124,
+        125,
+        388,
+        410
+      ],
+      "definition": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_RoyalTables.xml",
+        "sha256": "86e38cc8f0723447c16eb977374ae828b1f3b79def6380008a6e1c9ac061ae2f"
+      },
+      "child": "<ThingDef ParentName=\"RoyalTableDesc\">\n        <defName>Table_Royal2x2c</defName>\n        <label>royal table (2x2)</label>\n        <graphicData>\n            <texPath>NewThings/Furniture/RoyalTables/RoyalTable2x2</texPath>\n            <drawSize>(4,4)</drawSize>\n            <damageData>\n                <rect>(0.15,0.15,1.7,1.7)</rect>\n            </damageData>\n            <shadowData>\n                <volume>(1.55, 0.25, 1.55)</volume>\n            </shadowData>\n        </graphicData>\n        <statBases>\n            <MaxHitPoints>120</MaxHitPoints>\n            <WorkToBuild>2000</WorkToBuild>\n            <Mass>13</Mass>\n            <Beauty>40</Beauty>\n            <StyleDominance MayRequire=\"Ludeon.RimWorld.Ideology\">20</StyleDominance>\n        </statBases>\n        <size>(2,2)</size>\n        <costStuffCount>65</costStuffCount>\n        <costList>\n            <Gold>40</Gold>\n        </costList>\n        <constructionSkillPrerequisite>7</constructionSkillPrerequisite>\n        <rotatable>false</rotatable>\n    </ThingDef>\n\n    ",
+      "parent": "<ThingDef Name=\"RoyalTableDesc\" ParentName=\"TableGatherSpotBase\" Abstract=\"True\">\n        <description>A finely crafted, gold-trimmed table adorned with intricate carvings and polished surfaces. People eat off tables when chairs are placed facing them.</description>\n        <graphicData>\n            <graphicClass>Graphic_Multi</graphicClass>\n            <shaderType>CutoutComplex</shaderType>\n        </graphicData>\n        <statBases>\n            <Flammability>1.0</Flammability>\n        </statBases>\n        <researchPrerequisites>\n            <li>MF_RoyalFurniture</li>\n        </researchPrerequisites>\n        \n        <castEdgeShadows>false</castEdgeShadows>\n        <staticSunShadowHeight>0</staticSunShadowHeight>\n        <designationCategory>Furniture</designationCategory>\n    </ThingDef>\n\n    ",
+      "graphic_class": "Graphic_Multi",
+      "drawSize": [
+        4,
+        4
+      ],
+      "size": [
+        2,
+        2
+      ],
+      "rotatable": false,
+      "available_views": "Only north texture in selected current texPath; not a three-view donor set.",
+      "role": "Lavish curved supports, clean pale stone/trim separation and restrained map-volume only. Do not copy circular plan, gold trim,2x2footprint or gathering/royal gameplay.",
+      "about": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\About\\About.xml",
+        "sha256": "2a52a3f81c98268f54889762e98fa90e891db621e359802da0d1ea934f68afda"
+      },
+      "load_folders": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\LoadFolders.xml",
+        "sha256": "148c4e0d349c9c8c709feb00e2ca92b486a28e5e1d54f9a35c541078e227ea9a"
+      }
+    },
+    "directional_supplement": {
+      "textures": {
+        "south": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_south.png",
+          "sha256": "3813423f9d3bbb2611dd566268845765aa2aa133aea7844871d5a0eda9dfdf0d",
+          "frame": [
+            128,
+            128
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            128,
+            128
+          ]
+        },
+        "east": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_east.png",
+          "sha256": "7ef362f5fcab8041f858048a3463cc89fb7ecabbf26f695e431e777ffe48fea4",
+          "frame": [
+            128,
+            128
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            128,
+            128
+          ]
+        },
+        "north": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_north.png",
+          "sha256": "5cbc625eab07cfd6243b2687ef48df1b3a6843fb48962e3d78538924929f2bdd",
+          "frame": [
+            128,
+            128
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            128,
+            128
+          ]
+        }
+      },
+      "definition": {
+        "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+        "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+      },
+      "child": "<ThingDef ParentName=\"TableBase\">\n    <defName>EndTable</defName>\n    <label>end table</label>\n    <description>A small bedside table which makes nearby beds a little bit more comfortable. Must be placed directly adjacent to the head of the bed. Placing more than one end table near the same bed has no effect.</description>\n    <surfaceType>Item</surfaceType>\n    <uiOrder>2060</uiOrder>\n    <graphicData>\n      <texPath>Things/Building/Furniture/EndTable</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <shadowData>\n        <volume>(0.3, 0.6, 0.3)</volume>\n      </shadowData>\n    </graphicData>\n    <statBases>\n      <MaxHitPoints>75</MaxHitPoints>\n      <WorkToBuild>1000</WorkToBuild>\n      <Mass>5</Mass>\n      <Flammability>1.0</Flammability>\n      <Beauty>3</Beauty>\n    </statBases>\n    <pathCost>30</pathCost>\n    <defaultPlacingRot>South</defaultPlacingRot>\n    <costStuffCount>30</costStuffCount>\n    <placeWorkers>\n      <li>PlaceWorker_ShowFacilitiesConnections</li>\n    </placeWorkers>\n    <researchPrerequisites>\n      <li>ComplexFurniture</li>\n    </researchPrerequisites>\n    <comps>\n      <li Class=\"CompProperties_Facility\">\n        <statOffsets>\n          <Comfort>0.05</Comfort>\n        </statOffsets>\n        <maxSimultaneous>1</maxSimultaneous>\n        <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>\n      </li>\n    </comps>\n    <staticSunShadowHeight>0</staticSunShadowHeight>\n    <castEdgeShadows>false</castEdgeShadows>\n  </ThingDef>\n\n  ",
+      "mapping": {
+        "textures": {
+          "south": {
+            "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_south.png",
+            "sha256": "3813423f9d3bbb2611dd566268845765aa2aa133aea7844871d5a0eda9dfdf0d",
+            "frame": [
+              128,
+              128
+            ],
+            "alpha_bounds": [
+              0,
+              0,
+              128,
+              128
+            ]
+          },
+          "east": {
+            "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_east.png",
+            "sha256": "7ef362f5fcab8041f858048a3463cc89fb7ecabbf26f695e431e777ffe48fea4",
+            "frame": [
+              128,
+              128
+            ],
+            "alpha_bounds": [
+              0,
+              0,
+              128,
+              128
+            ]
+          },
+          "north": {
+            "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_north.png",
+            "sha256": "5cbc625eab07cfd6243b2687ef48df1b3a6843fb48962e3d78538924929f2bdd",
+            "frame": [
+              128,
+              128
+            ],
+            "alpha_bounds": [
+              0,
+              0,
+              128,
+              128
+            ]
+          }
+        },
+        "definition": {
+          "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+          "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+        },
+        "building_base": {
+          "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+          "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+        },
+        "load_folders": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+          "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+        },
+        "graphic_class": "Graphic_Multi",
+        "xml_ancestry": [
+          "EndTable",
+          "TableBase",
+          "FurnitureWithQualityBase",
+          "FurnitureBase",
+          "BuildingBase"
+        ],
+        "draw_size": null,
+        "footprint": null,
+        "missing": "No explicit drawSize/size in inspected XML ancestry; runtime defaults not exported. Texture dimensions are not physical dimensions.",
+        "role": "Actual directional VTE EndTable surfaces establish parallel top edges and shallow map-camera visibility with front drawer seams, blank side/back panels. No stacked donor drawers, knobs, gameplay or footprint copied."
+      },
+      "role": "Actual VTE EndTable S/E/N supports cardinal parallel planes and complete end depth; no drawers or donor footprint copied. No explicit drawSize/size in inspected ancestry; runtime defaults unknown."
+    }
+  },
+  "camera": {
+    "width": 14,
+    "depth": 8,
+    "height": 9.3,
+    "slab_thickness": 0.55,
+    "top_depth_factor": 0.45,
+    "projection": "u=8+rotated_x; v=18+.45*rotated_y-z. Same physical dimensions and shallow camera all views.",
+    "depth_status": "All numeric dimensions are authored estimates from source silhouette and described table form, not native length metadata or donor frame ratios.",
+    "legs": "Four assumed corner cabriole legs at X\u00b15.65,Y\u00b13.15 with etched chrome scrollwork and ball/claw feet. Source shows two exposed leg silhouettes; rear count/depth is authored interpretation.",
+    "front_retention": "Rebuild Qud oblique staircase tabletop in parallel cardinal map plane, preserving slab/support/ornamental identity rather than old traced camera.",
+    "west": "Geometry/material motifs symmetric: mirror E permitted for W."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One source-cell mapping for all facings, complete table/marble/metal masks. No per-part or per-facing bounding-box fit."
+  },
+  "native_acceptance": "Pending full-set generation gate: native fixed empty/full visual, inventory/detail state, physics/visibility/cover and rare Animated fallback; extra direction placement unbound."
+}

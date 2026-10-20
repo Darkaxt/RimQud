@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-ORNATE-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-TABLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -147,8 +147,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-JOPPA-BOOKSHELF | Joppa Bookshelf | UNFINISHED | - |  |
 | SCN-MANNEQUIN | Mannequin | UNFINISHED | - |  |
 | SCN-METAL-WORKBENCH | Metal Workbench | UNFINISHED | - |  |
-| SCN-ORNATE-TABLE | Ornate Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-TABLE | Table | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-ORNATE-TABLE | Ornate Table | UNFINISHED | - |  |
+| SCN-TABLE | Table | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### Machinery/appliances (10)
 
@@ -5917,13 +5917,79 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/ornate-table-body.png](../art/village/scenery/ornate-table-body.png), [art/village/scenery/ornate-table-detail.png](../art/village/scenery/ornate-table-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 1.
+Current step: native_state_review. Process-log events: 12.
 
 - 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
   Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
   Inputs: []
   Outputs: []
   Method/prompt/corrections: {"phase": "User added mandatory furniture turnaround authoring"}
+
+- 2026-10-20T21:29:38.843516+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve source ornate marble/chromium/claw-and-ball identity, exact tile/mask/ancestry, TileColor y versus C marble and identical empty/full tile.
+  Review: Inherited FullDetailColor alternatives deleted by this blueprint. No invented stock appearance or literal historical bucket. Exact fragments parsed because unrelated whole XML file contains unsupported control entities; source unchanged.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/source-packet.json", "sha256": "709d774ad4d8c93e8700435d0daed064a6ad9d629b6c1cb3949628242763b211"}, {"path": "art/conversion/scn-ornate-table/v1/source-reference-construction.png", "sha256": "84587d58c31909695bc0d94f853c4772143d52b95c530922f89b78765c7ef273"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual current VFE RoyalTable2x2 north and1.6definition/parent/mapping, supplemented by actual VTE EndTable S/E/N and Core ancestry for cardinal camera.
+  Review: VFE Graphic_Multi drawSize4x4/footprint2x2,rotatablefalse but only north texture found in selected texPath. No claimed complete royal donor turnaround. VTE full directional set supplies map planes; no circular plan/gold/drawers/gameplay copied.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/source-packet.json", "sha256": "709d774ad4d8c93e8700435d0daed064a6ad9d629b6c1cb3949628242763b211"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/source-reference-construction.png", "sha256": "84587d58c31909695bc0d94f853c4772143d52b95c530922f89b78765c7ef273"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / construct_faithful_shape / PASS: Construct marble slab, etched chromium scalloped/scroll apron and corner cabriole legs with ball/claw feet from native shape/description.
+  Review: Physical14x8x9.3with .45depth projection is authored, as are hidden rear corner legs. No native body/length metadata claimed. Source oblique staircase camera rebuilt in parallel planes.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/source-packet.json", "sha256": "709d774ad4d8c93e8700435d0daed064a6ad9d629b6c1cb3949628242763b211"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/construct-turnaround.py", "sha256": "083abad81832e2a369bd21072362636314752593309d9de274cbd0b7f3439b02"}, {"path": "art/conversion/scn-ornate-table/v1/constructed-south.svg", "sha256": "291d3e5ca552c09b428b4518c91098c65e983c74c1124ef3b47f1f3e47bc5cee"}, {"path": "art/conversion/scn-ornate-table/v1/constructed-east.svg", "sha256": "8b3ce08d997f16b0dc43ca1dd335112380125b06fa1e08d5ccdf356508267470"}, {"path": "art/conversion/scn-ornate-table/v1/constructed-north.svg", "sha256": "291d3e5ca552c09b428b4518c91098c65e983c74c1124ef3b47f1f3e47bc5cee"}, {"path": "art/conversion/scn-ornate-table/v1/front-guided-turnaround.png", "sha256": "5b052abd4ab4cecd932e1ece429b46840665737ddf1ff9967153d4e34b55881e"}, {"path": "art/conversion/scn-ornate-table/v1/manual-structural-review.json", "sha256": "05a102d587a30383e646774fe62e76ba12904706879d3efc386cb62b4add9895"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / construct_faithful_shape / PASS: Patch wide finger-like manual claws into tighter sculpted claws around their balls; update all matching color-ownership geometry before first refinement.
+  Review: First manual inspection found a drawing defect. Table dimensions/legs/pivot/roles unchanged; original manual suggestion retained.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/constructed-south.svg", "sha256": "291d3e5ca552c09b428b4518c91098c65e983c74c1124ef3b47f1f3e47bc5cee"}, {"path": "art/conversion/scn-ornate-table/v1/constructed-east.svg", "sha256": "8b3ce08d997f16b0dc43ca1dd335112380125b06fa1e08d5ccdf356508267470"}, {"path": "art/conversion/scn-ornate-table/v1/constructed-north.svg", "sha256": "291d3e5ca552c09b428b4518c91098c65e983c74c1124ef3b47f1f3e47bc5cee"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/patch-claw-feet.py", "sha256": "54289114a6ec224813e2cec9a19e9ef22fc7da7a0c6e7c47684334ac93a4bb68"}, {"path": "art/conversion/scn-ornate-table/v1/claw-foot-patch.json", "sha256": "b813a365b3991ebd29c5fe7b13ba6fcd8355dc3d8c7579115271451c94015b23"}, {"path": "art/conversion/scn-ornate-table/v1/patched-constructed-south.svg", "sha256": "afc2fcf8d3a78dc47d9097b911c28708dd676a78966871c03bc35aabccca71e8"}, {"path": "art/conversion/scn-ornate-table/v1/patched-constructed-east.svg", "sha256": "f5e411f2ff6797613b33aba548383a294ac30f4e03f61c1a2dff5586e412c286"}, {"path": "art/conversion/scn-ornate-table/v1/patched-constructed-north.svg", "sha256": "afc2fcf8d3a78dc47d9097b911c28708dd676a78966871c03bc35aabccca71e8"}, {"path": "art/conversion/scn-ornate-table/v1/patched-front-guided-turnaround.png", "sha256": "4b4baef4ce9a471ed07ffa0f6be16d2a0fc8c6582784f546de6a7df23ad1204e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / create_front_side_back_furniture_views / PASS: Provide coherent front-guided S/E/N at shared scale; complete end view derives from same8depth, with symmetric W mirrored only where permitted.
+  Review: No edge-on slab compression, donor ratio target or independently centered bounds. Additional facings stay unbound authoring.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/source-packet.json", "sha256": "709d774ad4d8c93e8700435d0daed064a6ad9d629b6c1cb3949628242763b211"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/patched-front-guided-turnaround.png", "sha256": "4b4baef4ce9a471ed07ffa0f6be16d2a0fc8c6582784f546de6a7df23ad1204e"}, {"path": "art/conversion/scn-ornate-table/v1/patched-constructed-west.svg", "sha256": "f5e411f2ff6797613b33aba548383a294ac30f4e03f61c1a2dff5586e412c286"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / refine_materials_and_form / PASS: Perform one actual built-in ImageGen composed refinement of corrected manual S/E/N, inspect before extraction and reject its converging slab camera while retaining usable material.
+  Review: Inspected actual composed refinement before extraction: three coherent marble slabs, etched silver/chromium curved supports and ball/claw feet, without props or added native states. Raw slab edges converge and its panel positions/widths drift: raw camera/silhouette are NOT selected. Refined material remains usable in fixed editable cardinal coverage/outline and separate slab/metal roles. Generated alpha/fringe, trapezoid edge highlights and independent shape placement are excluded. This is one material refinement of corrected geometry, not a claim that raw output satisfies the camera.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/patched-front-guided-turnaround.png", "sha256": "4b4baef4ce9a471ed07ffa0f6be16d2a0fc8c6582784f546de6a7df23ad1204e"}, {"path": "art/conversion/scn-ornate-table/v1/patched-turnaround-prompt.txt", "sha256": "bf79583980dc70d7982390389fe9e6af882d4c3fdb36c8948a195eee46fe5694"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/refined-turnaround-raw.png", "sha256": "174a001b96e5c2848e20432237fa7319146ebb5e05c17dbd8a665a9db19c0a0b"}, {"path": "art/conversion/scn-ornate-table/v1/first-structural-review.json", "sha256": "7361750ca864d8e0dc31367f0959b33e4584a00ebc86238dd4e357d6183622fe"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-ornate-table/v1/patched-turnaround-prompt.txt", "sha256": "bf79583980dc70d7982390389fe9e6af882d4c3fdb36c8948a195eee46fe5694"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-c565d295-e708-4bc0-bf97-6985ecb99a21.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-ornate-table\\v1\\patched-front-guided-turnaround.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\RoyalTables\\RoyalTable2x2_north.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\EndTable_east.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-ornate-table\\v1\\source-reference-construction.png"]}}
+
+- 2026-10-20T21:29:38.843516+00:00 / extract_register_color_coverage / PASS: Sample refined chromium/marble RGB into exact patched geometry/ink/roles; preserve initial registration to expose remaining generated bevel material contamination.
+  Review: Actual generated figures drifted across equal columns. Opaque figure bounds remap RGB sampling coordinates only; production geometry never bbox-fitted. Material role names map wood=chromium/top=marble, no wood introduced.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/first-structural-review.json", "sha256": "7361750ca864d8e0dc31367f0959b33e4584a00ebc86238dd4e357d6183622fe"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/register-table.py", "sha256": "df30d95a3a410e801f4ea3cb9749e0ea4e425ba3987de9f946188ca94e12076d"}, {"path": "art/conversion/scn-ornate-table/v1/registered/model.json", "sha256": "b79f105ea9d97c3d6b58efb9f9d15b2af7bc603fea7bcd1c8af830997e74f87e"}, {"path": "art/conversion/scn-ornate-table/v1/registered/registration-decisions.json", "sha256": "d47f6f845246c86710f525cc2b4a42518b6a0c0738bbc4a27ca64a0ca0e42048"}, {"path": "art/conversion/scn-ornate-table/v1/registered/all-views-neutral.png", "sha256": "a7a8c6a5388dd962382101e11aa1c1a454f4f8718987f508dabf7af6ff798a49"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / extract_register_color_coverage / PASS: Rectify marble top/front material separately from interior gold-key rows, excluding rejected sloping edge highlights while preserving all chromium pixels, alpha, tint roles and frame.
+  Review: First attempt stopped at eroded source row366 before any master was saved; verified partial copy unchanged, inspected valid rows and selected interior ranges. Final geometry/masks match initial, only slab material changed. No new ImageGen or second isolation.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/registered/model.json", "sha256": "b79f105ea9d97c3d6b58efb9f9d15b2af7bc603fea7bcd1c8af830997e74f87e"}, {"path": "art/conversion/scn-ornate-table/v1/first-structural-review.json", "sha256": "7361750ca864d8e0dc31367f0959b33e4584a00ebc86238dd4e357d6183622fe"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/correct-slab-material.py", "sha256": "66d1e2721fa906a1d8eda2b5a1cee798763a0c909bb450e2fdf8e08e3d48ca33"}, {"path": "art/conversion/scn-ornate-table/v1/slab-material-source-review.json", "sha256": "f9e56be3c985865f9c1d3cf9c71a574335e69cf422d916ff36888dddf77799b2"}, {"path": "art/conversion/scn-ornate-table/v1/slab-material-correction.json", "sha256": "8a9d7430790122449317eed03bae569f204cd90cc3809350ca20d6c4b1ff647e"}, {"path": "art/conversion/scn-ornate-table/v1/slab-material-comparison.png", "sha256": "c8a1eeb93aa0e8819cd701a7f34944bc58e0bbb18606dc6a078b4c6a176c9912"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/model.json", "sha256": "266e97d255851cb81de9059f293d0b1b265c9c8bf0ab8b9a45680572ec819ba9"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/registration-decisions.json", "sha256": "350a106e356ced5859099998f6222844badb2b43495656dee3a35ce28eb688c6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / create_required_state_neighbor_variants / PASS: Retain one source appearance for native empty/full and export actual y+C color over same neutral/mask set in all authored facings.
+  Review: No generic Table stock variants/color alternatives copied through deleted native tag. Primary y on chromium is source palette, not an assertion of gold material.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/source-packet.json", "sha256": "709d774ad4d8c93e8700435d0daed064a6ad9d629b6c1cb3949628242763b211"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/model.json", "sha256": "266e97d255851cb81de9059f293d0b1b265c9c8bf0ab8b9a45680572ec819ba9"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-native-y-C.png", "sha256": "77228c2051dc0d9b70efd858a5a5677f3e9b6ab632be9d57ffefcb23e5b2813c"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-marble-detail.png", "sha256": "5a22b0e79f8092c5c166a0135d914da0e5c9bbc3ac798efe821b8d7df3038c5e"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-coverage.png", "sha256": "67fb18fbc117514b8727adb930b76c807e1925e3e8a7d737f2cbed2052fd189a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source identity, full S/E/N/W volume, sculpted feet, final parallel slab material, neutral/detail/coverage/native colors and16x24/24x36/32x48views.
+  Review: Reviewed exact ornate description/tile/mask/ancestry: marble slab over etched chromium ornate legs and claw-and-ball feet; actual TileColor y supports and C marble distinguished from glyph ColorString C. Empty/full both same tile and inherited FullDetailColor alternatives explicitly deleted, so one visual shape with native container/inventory retained. Actual VFE current RoyalTable2x2 north/Graphic_Multi/drawSize4x4/size2x2/rotatablefalse plus VTE EndTable S/E/N and matching Core ancestry inspected; no circular/gold donor plan or gameplay copied. Authored shared14x8x9.3parallel camera and rear leg geometry, patched hand-like claws before one composed contextual refinement. Raw generated convergence/placement rejected, valid material selected into exact fixed cardinal geometry. Initial material still contained displaced bevel highlights; separate top/front interior remapping excluded generated sloping edges while preserving every chromium pixel, alpha and role mask. Initial/rejected evidence and source-range diagnostic retained. S/E/N/W neutral/detail/coverage/native y+C and intended-size views inspected. Extra directions unbound; native fixed-state/color/physics/visibility/cover/rare Animated acceptance remains pending full-set generation.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/registered-final/model.json", "sha256": "266e97d255851cb81de9059f293d0b1b265c9c8bf0ab8b9a45680572ec819ba9"}]
+  Outputs: [{"path": "art/conversion/scn-ornate-table/v1/record-review.py", "sha256": "9dae455e1f060dad2aee29d4b9b0cffe2d106621f88d038c059f8a0d8d297c8d"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-neutral.png", "sha256": "b3a28b7d3797b59974737b1fe46045a76ec079c088c7897c0999acf3b51c4f88"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-native-y-C.png", "sha256": "77228c2051dc0d9b70efd858a5a5677f3e9b6ab632be9d57ffefcb23e5b2813c"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/authoring-review.json", "sha256": "f9e5013c5d5abf0c47d9cbb17bb7db532ae451d45fc59bc743c99df9fb0564af"}, {"path": "art/conversion/scn-ornate-table/v1/artifact-manifest.json", "sha256": "196c0fe2090b766902ee9beb86d537a2bea1199dca547091f2bd4fceddfba67d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T21:29:38.843516+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep actual native same-tile inventory transitions, detail color,50-weight non-takeable inorganic Metal furniture, visibility/cover and rare Animated fallback behind full-set generation.
+  Review: No game/harness launch or production activation. Entry remains UNFINISHED; extra views have no native orientation-selection binding.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/registered-final/model.json", "sha256": "266e97d255851cb81de9059f293d0b1b265c9c8bf0ab8b9a45680572ec819ba9"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-TABLE: Table
 
@@ -5933,7 +5999,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/table-body.png](../art/village/scenery/table-body.png).
 
-Current step: not started. Process-log events: 1.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 1.
 
 - 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
   Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
