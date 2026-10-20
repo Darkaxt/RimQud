@@ -1,0 +1,212 @@
+{
+  "entry": "SCN-BRINEBRIDGE",
+  "recorded_at": "2026-10-20T05:08:54.404373+00:00",
+  "identity": "BrineBridge -> Furniture",
+  "description": "A bridge made of dried brinestalk.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\ZoneTerrain.xml",
+    "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2",
+    "selected": "<object Name=\"BrineBridge\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"bridge\" RenderString=\"#\" RenderLayer=\"3\" ColorString=\"&amp;w\" Tile=\"tiles/sw_floor_brick1.bmp\" DetailColor=\"W\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Description\" Short=\"A bridge made of dried brinestalk.\" />\n    <part Name=\"Physics\" Weight=\"50\" Takeable=\"false\" Solid=\"false\" Organic=\"true\" />\n    <intproperty Name=\"Bridge\" Value=\"1\" />\n    <part Name=\"PickRandomTile\" Tile=\"Tiles/sw_floor_brickb~#1-4~.bmp\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"SuspendedPlatform\" />\n  </object>\n  "
+  },
+  "originals": {
+    "path": "art/conversion/scn-brinebridge/v1/native-variant-index.json",
+    "sha256": "9946c0963d0c7509072c8edab4221cbcbb48811d0e228a6a73571d66af0073c4"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-brinebridge/v1/native-variants-comparison.png",
+    "sha256": "399373a823b5d935d209ccba65a2b4ebc10bbf02487a1f34073adfd92d5dc18d"
+  },
+  "source_reference_correction": "Static default sw_floor_brick1 from the older reference index is not the declared PickRandomTile set. Actual brickb1..4 masks are now extracted and inspected; old records remain unchanged.",
+  "source_interpretation": "Four sparse rectangular-corner accent layouts across a two-column/four-row field. They are abstract floor glyphs, not proof of stone masonry or missing traversable bridge panels. Dried brinestalk material comes from the description.",
+  "native_accent_positions": {
+    "1": [
+      [
+        1,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        1,
+        19
+      ]
+    ],
+    "2": [
+      [
+        1,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        9,
+        19
+      ]
+    ],
+    "3": [
+      [
+        9,
+        1
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        9,
+        19
+      ]
+    ],
+    "4": [
+      [
+        1,
+        1
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        9,
+        19
+      ]
+    ]
+  },
+  "native_color_contract": {
+    "primary": "w",
+    "detail": "W",
+    "opaque_red_value": 65,
+    "mix": 0.2549019607843137,
+    "explanation": "All opaque actual bridge-source pixels have R65, with green RGB channels irrelevant under the audited Kobold formula. Preserve the native foreground/detail mix, not a binary black/white interpretation or baked literal green."
+  },
+  "donor_reference": {
+    "file": "bridge.png",
+    "width": 1024,
+    "height": 1024,
+    "alpha_bounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "png_sha256": "d3e8be08f540f4c606a7441b06c518c23e7814a19696535e7fa5cb5f043f398c",
+    "source_id": 638,
+    "name": "WoodFloor",
+    "source_package": "RimWorld core",
+    "role": "Actual extracted Core WoodFloor, aliased bridge.png in the earlier probe, supplies overhead dried-fiber/board grain and subtle surface shading. It is not a one-to-one brinestalk bridge object or proof of donor bridge mechanics."
+  },
+  "construction": "Continuous dried-stalk deck made from eight three-slat mats in the shared native cell frame. Original L locations supply worn edge accents; first widely spaced sketch was rejected as stepping islands.",
+  "accent_policy": "All four variants share the same physical deck coverage. Native missing corner accents change surface markings, not collision holes. Use the original L accent positions for light worn edge details.",
+  "native_behaviors": "Non-solid organic Bridge=1 and SuspendedPlatform; non-occluding. Crossing/support and liquid remain native. Preserve water under the bridge and independent foreground above it.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "panel_origins": [
+      [
+        0,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        8,
+        18
+      ]
+    ],
+    "panel_extent": [
+      8,
+      6
+    ],
+    "interpretation": "Native L marks are inset surface accents, not physical panel origins/holes. Keep eight contiguous three-slat mats, separated only by narrow .2-native-unit joints. All four cosmetic variants share this traversable deck coverage."
+  },
+  "states": "Fixed overhead view plus the actual four cosmetic source selectors. No character turnaround or clothing. Water underlay and walking/state acceptance remain final integration work.",
+  "native_acceptance": "Deferred until every conversion is generation-ready",
+  "supersedes_authoring_frame": {
+    "path": "art/conversion/scn-brinebridge/v1/source-packet.json",
+    "sha256": "52e4c51457693ae49ad360a45a8d68497157dd325d113258f3c16ac81b829405"
+  }
+}

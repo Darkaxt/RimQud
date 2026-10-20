@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-BRINEBRIDGE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-DOOR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -246,14 +246,14 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-BRINEBRIDGE | BrineBridge | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-BRINEBRIDGE | BrineBridge | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BRINESTALKFENCE | BrinestalkFence | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BRINESTALKWALL | BrinestalkWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-BRINESTALKWALLWITHGEARBOX | BrinestalkWallWithGearbox | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-CANVASWALL | CanvasWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTFLOOR | DirtFloor | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
-| SCN-DOOR | Door | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-DOOR | Door | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-POND | Pond | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-RUSTEDMETALWALL | RustedMetalWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
@@ -2719,7 +2719,67 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/brinebridge-detail.png](../art/village/scenery/brinebridge-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
+
+- 2026-10-20T05:09:52.809529+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolved BrineBridge and PickRandomTile, extracted the four actual brickb1..4 masks read-only/private and inspected their opaque pixel values.
+  Review: Older default reference is not the declared random variant set. Actual opaque pixels use R65/255 in the audited foreground/detail mix; literal green RGB is not rendered green. Description is dried brinestalk; Bridge=1/SuspendedPlatform/crossing rules remain native.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "evidence/village-reference-index.json", "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/extract-native-variants.py", "sha256": "1ffce3107b79ff75a2f0bee927f60e21bebd4e7871c686a08eddd840bfb0d1a3"}, {"path": "art/conversion/scn-brinebridge/v1/native-variant-index.json", "sha256": "9946c0963d0c7509072c8edab4221cbcbb48811d0e228a6a73571d66af0073c4"}, {"path": "art/conversion/scn-brinebridge/v1/native-variants-comparison.png", "sha256": "399373a823b5d935d209ccba65a2b4ebc10bbf02487a1f34073adfd92d5dc18d"}, {"path": "art/conversion/scn-brinebridge/v1/source-packet.json", "sha256": "52e4c51457693ae49ad360a45a8d68497157dd325d113258f3c16ac81b829405"}]
+  Method/prompt/corrections: {"phase": "Actual four native bridge variants and nonbinary mask colors"}
+
+- 2026-10-20T05:09:52.810294+00:00 / select_render_reference_or_document_no_equivalent / PASS: Selected extracted Core WoodFloor, historically aliased bridge.png, for overhead dried-fiber shading only.
+  Review: Viewed actual donor and source comparison. This is a material reference, not an actual one-to-one brinestalk bridge object or proof of bridge mechanics. Stone bridge mod references are not adopted.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/source-packet.json", "sha256": "52e4c51457693ae49ad360a45a8d68497157dd325d113258f3c16ac81b829405"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/source-construction-comparison.png", "sha256": "75b36e5eaa681344877ee84751a84ead0d641c3bc03c546e675f0572292ea17b"}]
+  Method/prompt/corrections: {"phase": "Actual Core WoodFloor grain reference with explicit alias role"}
+
+- 2026-10-20T05:09:52.810623+00:00 / construct_faithful_shape / RECORDED: Constructed one three-slat dried-stalk mat and an eight-panel deck in the original two-column/four-row field.
+  Review: Viewed one mat and full-deck construction. Native sparse L marks are interpreted as cosmetic corner accents, not stone courses or collision holes. No invented railings, supports, ropes or changed fluid crossing rules.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/source-packet.json", "sha256": "52e4c51457693ae49ad360a45a8d68497157dd325d113258f3c16ac81b829405"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/prepare-and-construct.py", "sha256": "a216846e5a19446a6eaa539fea0fe07ac21f2326b3422f0ecb0ed6e4f9e0aa9a"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-mat.svg", "sha256": "12a3787ad7dafb78afdcea917d6488925c69936879cdcf69caa7ad9e8db96c9c"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-mat.png", "sha256": "833ffe479c69cf9c5a33cd150ab2398003b0582bd7d8373ee6f1a4aaa5bf5561"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck.svg", "sha256": "b730d24ab6b5f9ca0af60a21d9948c47a25a4242e14d2db19bbe96199f7fff99"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck.png", "sha256": "10678b4befadbb8a3f9e3a321c9e036c5f49b17c48f88346d57b2388571d4e4c"}]
+  Method/prompt/corrections: {"phase": "Editable dried-stalk mats at native panel anchors"}
+
+- 2026-10-20T05:11:18.059645+00:00 / construct_faithful_shape / RECORDED: Reviewed the full manual deck and replaced wide separated mats with one contiguous deck containing narrow joints.
+  Review: The first source-corner-as-panel-origin sketch reads as stepping islands. Native sparse glyphs do not establish missing physical panels on a Bridge=1 platform. Correct that interpretation: original L positions become inset wear accents; actual coverage is contiguous dried stalks with narrow open joints. Original sketch and packet remain intact.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/source-packet.json", "sha256": "52e4c51457693ae49ad360a45a8d68497157dd325d113258f3c16ac81b829405"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck.svg", "sha256": "b730d24ab6b5f9ca0af60a21d9948c47a25a4242e14d2db19bbe96199f7fff99"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/construct-continuous-deck.py", "sha256": "b519abc4af86991eb6d5848049b4a90f95d9d4768b759f75b358f46c7e76a608"}, {"path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json", "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-mat-v2.svg", "sha256": "037476df2ff08b50b7b09bece20d9d7c6e7308b2cc8cb85331d99ff47f33c1e2"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-mat-v2.png", "sha256": "472894129da736e42343d28d92ed0887be4061761f79453b433fc3253977ceac"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck-v2.svg", "sha256": "4ea421fc4820dab4bd905512f803b1bc9821fe6c8acdd498c2b96a835e3ae7ed"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck-v2.png", "sha256": "4a736889b66ad0d64380cd0d85e474aa3ba57612fe9b1036cd0b7d740b1ae631"}, {"path": "art/conversion/scn-brinebridge/v1/construction-correction-comparison.png", "sha256": "94c87a1b86bc71fc8b5b7865be2089110b7918662ebe0ed75c3d49f80581f09c"}]
+  Method/prompt/corrections: {"phase": "Rejected spaced deck mats; preserve continuous crossing surface"}
+
+- 2026-10-20T05:15:44.070641+00:00 / construct_faithful_shape / PASS: Selected the corrected contiguous three-slat mats and shared two-column/four-row deck; original L positions remain cosmetic accents.
+  Review: Viewed first sparse sketch and corrected deck. The dried-stalk identity and native field are retained without stone courses, railings, supports or interpreted collision holes. All four selectors share this physical coverage.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json", "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-deck-v2.svg", "sha256": "4ea421fc4820dab4bd905512f803b1bc9821fe6c8acdd498c2b96a835e3ae7ed"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/constructed-deck-v2.png", "sha256": "4a736889b66ad0d64380cd0d85e474aa3ba57612fe9b1036cd0b7d740b1ae631"}, {"path": "art/conversion/scn-brinebridge/v1/construction-correction-comparison.png", "sha256": "94c87a1b86bc71fc8b5b7865be2089110b7918662ebe0ed75c3d49f80581f09c"}]
+  Method/prompt/corrections: {"phase": "Selected continuous dried-stalk deck construction"}
+
+- 2026-10-20T05:15:44.071047+00:00 / create_required_state_neighbor_variants / PASS: Registered brickb1..4 with the actual source accent arrangements over identical shared deck coverage.
+  Review: Viewed all four selected variants and16x24,24x36,32x48cell previews. Fixed overhead bridge does not need creature turnarounds or clothing. Native random selection remains source-owned; variants do not create different traversability.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/native-variant-index.json", "sha256": "9946c0963d0c7509072c8edab4221cbcbb48811d0e228a6a73571d66af0073c4"}, {"path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json", "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/variants-comparison.png", "sha256": "5b573db43758b656d9f5b3dfa0f921dcaa589167180153b3db6a53ef864eb689"}]
+  Method/prompt/corrections: {"phase": "Four actual native cosmetic selectors in a fixed frame"}
+
+- 2026-10-20T05:15:44.071496+00:00 / refine_materials_and_form / PASS: Used built-in ImageGen once on the corrected manual three-slat mat with actual Core WoodFloor as grain reference; cleaned and registered the shared neutral material.
+  Review: Viewed refined output: three dry fibrous slats with slight uneven ends, no added hardware, rails or external scene. Selected complete connected slats by alpha; cleared invisible RGB and fitted the shared mat once. Native L accent positions supply restrained neutral wear, clipped to existing coverage.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/refine-mat-prompt-v2.txt", "sha256": "a843e7a98c6d015d575fd0653716e576b6d7a18e17db2af71460b2bffd5361b0"}, {"path": "art/conversion/scn-brinebridge/v1/constructed-mat-v2.png", "sha256": "472894129da736e42343d28d92ed0887be4061761f79453b433fc3253977ceac"}, {"path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json", "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/refine-mat-prompt-v2.txt", "sha256": "a843e7a98c6d015d575fd0653716e576b6d7a18e17db2af71460b2bffd5361b0"}, {"path": "art/conversion/scn-brinebridge/v1/refined-proposal.png", "sha256": "73d5d3eab2e6df2446c98530bd9649d520ceb36447be38f823c005948a47acd6"}, {"path": "art/conversion/scn-brinebridge/v1/register-bridge.py", "sha256": "9bc8307b5ff17917d908497a28b080b0b56721180dfe416a6456ffec0cc08af7"}, {"path": "art/conversion/scn-brinebridge/v1/registered/registration-decisions.json", "sha256": "28f7a1f37d0bf2632e636a8c66f682983476d61e08fad2243023e8a6dbdc15b2"}, {"path": "art/conversion/scn-brinebridge/v1/registered/source-selection-slats.png", "sha256": "f525dba5098397b2d932c101bb69c649f09483fd5998d51b1dddc4e1e2d1b043"}, {"path": "art/conversion/scn-brinebridge/v1/registered/cleaned-proposal.png", "sha256": "76c3e6352e893221e676d2eca585ee96496ebb356a6f92c3e753c9de0c0e90bc"}, {"path": "art/conversion/scn-brinebridge/v1/registered/mat-master-neutral.png", "sha256": "84df8c8d87691d6d1df4e6e310618abf252e4a30c84fda50ffe5e0cab38815ea"}]
+  Method/prompt/corrections: {"phase": "Dried-stalk mat refinement and source accent registration", "tool": "image_gen.imagegen", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-brinebridge\\v1\\constructed-mat-v2.png", "E:/Temp/qud-transplant-probe-pawns-20261019/donor/bridge.png"]}, "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-ea1b9dfa-ecd3-4348-8a7d-1ac5a8a3b54e.png"}
+
+- 2026-10-20T05:15:44.074862+00:00 / extract_register_color_coverage / PASS: Saved four neutral RGBA materials and coverage files, native aliases, common frame and exact R65/255 foreground/detail tint contract.
+  Review: Equal RGB and identical four-variant coverage inspected. Native actual foreground/detail can be combined into one tint for the existing texture-times-tint path; no fixed brown, literal green or new generic shader is required by this asset. Native binding remains pending.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json", "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"}, {"path": "art/conversion/scn-brinebridge/v1/refined-proposal.png", "sha256": "73d5d3eab2e6df2446c98530bd9649d520ceb36447be38f823c005948a47acd6"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/model.json", "sha256": "fa58efdf11e6b2dcbe8ddb24f6c79223efab98f3fc7989142c4ffa8a8c9c0f0c"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-1-neutral.png", "sha256": "6dbfeb4b1cc6df49ff8310e1bbc77a6e0ccabedb9fc3030b39733a5bdc11ad86"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-2-neutral.png", "sha256": "8134b93d17caf38bf24d57cd1296fadd56cb522463f3837c03fc5c7a926b942c"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-3-neutral.png", "sha256": "d658910943fab5de40a910761f375a02017d67e0e00de6e1d1d8a2ada7815bde"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-4-neutral.png", "sha256": "e70fd9ab67e32bab8ae8b7d013ed268d2ab2f9ec817f7f3198ba6f22e046d72a"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-1-coverage.png", "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-2-coverage.png", "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-3-coverage.png", "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variant-4-coverage.png", "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"}]
+  Method/prompt/corrections: {"phase": "Neutral bridge variants with exact constant native color mix"}
+
+- 2026-10-20T05:15:44.077108+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Viewed the four source-bound cosmetic variants at intended cell proportions and an authored crossing composed over the selected shallow-water material.
+  Review: Continuous dried-stalk deck keeps narrow joints; underlay remains visible through actual transparent seams without opaque black fill. Color follows native w/W mix. The multiple-cell crossing is authoring context, not a new Joppa placement or native walking/support test.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/model.json", "sha256": "fa58efdf11e6b2dcbe8ddb24f6c79223efab98f3fc7989142c4ffa8a8c9c0f0c"}]
+  Outputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/variants-comparison.png", "sha256": "5b573db43758b656d9f5b3dfa0f921dcaa589167180153b3db6a53ef864eb689"}, {"path": "art/conversion/scn-brinebridge/v1/registered/water-underlay-comparison.png", "sha256": "5b425d64ac686ac1c6e6fd5a7ae16e1ad6474deb83528ceee2fd86a7b561b6e1"}]
+  Method/prompt/corrections: {"phase": "Bridge material, palette and liquid-underlay authoring review"}
+
+- 2026-10-20T05:15:44.077491+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Kept native variant/tint/visibility, bridge/underlay/foreground ordering and crossing/state acceptance behind the all-conversions-generated gate.
+  Review: No game/harness launch or production renderer edits. Overall entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/model.json", "sha256": "fa58efdf11e6b2dcbe8ddb24f6c79223efab98f3fc7989142c4ffa8a8c9c0f0c"}]
+  Outputs: []
+  Method/prompt/corrections: {"phase": "Native bridge acceptance deferred"}
 
 ### SCN-BRINESTALKFENCE: BrinestalkFence
 
@@ -3077,7 +3137,7 @@ Required views/states: closed; open; native panel position and occlusion.
 
 Historical artifacts: [art/village/scenery/door-body.png](../art/village/scenery/door-body.png), [art/village/scenery/door-detail.png](../art/village/scenery/door-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-POND: Pond
 

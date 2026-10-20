@@ -1,0 +1,208 @@
+{
+  "kind": "bridge_object_variants",
+  "blueprint": "BrineBridge",
+  "source": {
+    "path": "art/conversion/scn-brinebridge/v1/source-packet-v2.json",
+    "sha256": "2f410a9f0f4daea0632b2e5c5eeec05245b9dd6dbcbe6b67424dc97ec70a2854"
+  },
+  "variants": [
+    {
+      "variant": 1,
+      "source_tile": "Assets_Content_Textures_Tiles_sw_floor_brickb1.bmp",
+      "aliases": [
+        "Tiles/sw_floor_brickb1.bmp",
+        "Assets_Content_Textures_Tiles_sw_floor_brickb1.bmp"
+      ],
+      "neutral": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-1-neutral.png",
+        "sha256": "6dbfeb4b1cc6df49ff8310e1bbc77a6e0ccabedb9fc3030b39733a5bdc11ad86"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-1-coverage.png",
+        "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"
+      },
+      "native_accent_positions": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          1,
+          19
+        ]
+      ]
+    },
+    {
+      "variant": 2,
+      "source_tile": "Assets_Content_Textures_Tiles_sw_floor_brickb2.bmp",
+      "aliases": [
+        "Tiles/sw_floor_brickb2.bmp",
+        "Assets_Content_Textures_Tiles_sw_floor_brickb2.bmp"
+      ],
+      "neutral": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-2-neutral.png",
+        "sha256": "8134b93d17caf38bf24d57cd1296fadd56cb522463f3837c03fc5c7a926b942c"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-2-coverage.png",
+        "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"
+      },
+      "native_accent_positions": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          9,
+          19
+        ]
+      ]
+    },
+    {
+      "variant": 3,
+      "source_tile": "Assets_Content_Textures_Tiles_sw_floor_brickb3.bmp",
+      "aliases": [
+        "Tiles/sw_floor_brickb3.bmp",
+        "Assets_Content_Textures_Tiles_sw_floor_brickb3.bmp"
+      ],
+      "neutral": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-3-neutral.png",
+        "sha256": "d658910943fab5de40a910761f375a02017d67e0e00de6e1d1d8a2ada7815bde"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-3-coverage.png",
+        "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"
+      },
+      "native_accent_positions": [
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          9,
+          19
+        ]
+      ]
+    },
+    {
+      "variant": 4,
+      "source_tile": "Assets_Content_Textures_Tiles_sw_floor_brickb4.bmp",
+      "aliases": [
+        "Tiles/sw_floor_brickb4.bmp",
+        "Assets_Content_Textures_Tiles_sw_floor_brickb4.bmp"
+      ],
+      "neutral": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-4-neutral.png",
+        "sha256": "e70fd9ab67e32bab8ae8b7d013ed268d2ab2f9ec817f7f3198ba6f22e046d72a"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinebridge/v1/registered/variant-4-coverage.png",
+        "sha256": "678fb6a6c303a2aaf3745af8ea98765b10694bafb3c39a8ab34b98456cc42cb2"
+      },
+      "native_accent_positions": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          19
+        ]
+      ]
+    }
+  ],
+  "native_variant_index": {
+    "path": "art/conversion/scn-brinebridge/v1/native-variant-index.json",
+    "sha256": "9946c0963d0c7509072c8edab4221cbcbb48811d0e228a6a73571d66af0073c4"
+  },
+  "registration": {
+    "native_frame": [
+      16,
+      24
+    ],
+    "recipient_frame": [
+      256,
+      256
+    ],
+    "physical_cell": [
+      1,
+      1
+    ],
+    "rule": "All four variants use identical frame/placement/coverage; keep native cosmetic selector ownership."
+  },
+  "native_tint": {
+    "foreground": "actual native foreground",
+    "detail": "actual native detail",
+    "mix": 0.2549019607843137,
+    "source_red": 65,
+    "formula": "nativeTint=(1-65/255)*foreground+(65/255)*detail; output=alpha*neutralAlbedo*nativeTint+(1-alpha)*underlay",
+    "implementation_note": "Constant source mix can use the existing texture-times-tint material path once actual native colors are combined. No new generic multi-color shader is required for this object."
+  },
+  "layer_contract": "Native liquid/ground underlay, then bridge at its native object layer, then independent visible foreground. Transparent joints reveal the actual underlay; no opaque black boxes.",
+  "native_behavior": "Keep Bridge=1, SuspendedPlatform, non-solid/non-occluding, native crossing and random cosmetic selection. This art does not create support rules, rails or bridge simulation.",
+  "state": "Generation-ready four source-bound cosmetic variants; actual native tint/selector/visibility/underlay/foreground binding and acceptance pending all-conversions-generated gate"
+}

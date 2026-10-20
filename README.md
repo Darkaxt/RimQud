@@ -50,7 +50,12 @@ likewise binds the performed packed-earth conversion rather than regenerating it
 Brinestalk Fence is generation-ready with all 16 actual painted source states,
 squared salt-tipped pickets and separate native color layers. Its earlier inherited
 placeholder is documented, and its refinement/edge-on cap correction is recorded.
-There are now 25 generation-ready entries; BrineBridge is active next.
+BrineBridge is generation-ready with its four actual native cosmetic selectors,
+a continuous dried-stalk deck and shared coverage. The report records the rejected
+spaced-mat sketch, correction, refinement and liquid-underlay composition. Its
+nonbinary native source mask uses a constant 65/255 foreground/detail mix;
+neutral art preserves that runtime tint contract rather than baking literal green.
+There are now 26 generation-ready entries; Door is active next.
 Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate

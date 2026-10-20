@@ -1,0 +1,43 @@
+{
+  "source": {
+    "path": "art/conversion/scn-brinebridge/v1/refined-proposal.png",
+    "sha256": "73d5d3eab2e6df2446c98530bd9649d520ceb36447be38f823c005948a47acd6"
+  },
+  "source_size": [
+    1448,
+    1086
+  ],
+  "selected_bounds": [
+    11,
+    146,
+    1439,
+    989
+  ],
+  "cleanup": "Complete connected source slat components selected by actual alpha, grayscale RGB, alpha<16 discarded and >=240 made opaque. Clear RGB in invisible pixels; no generated backdrop/cast shadow retained.",
+  "element_registration": {
+    "panel": [
+      8,
+      6
+    ],
+    "master_pixels": [
+      256,
+      192
+    ],
+    "frame": [
+      16,
+      24
+    ],
+    "construction_pixels": [
+      512,
+      768
+    ],
+    "recipient_pixels": [
+      256,
+      256
+    ],
+    "rule": "One shared refined surface mat fitted once to the constructed panel, then reused at all eight fixed positions and all four variants. No per-variant alpha-bound fitting."
+  },
+  "physical_coverage": "Identical deck coverage across all four variants; narrow slat joints only. Native L-mark differences are cosmetic accents, not missing support/collision panels.",
+  "palette": "All actual native opaque source pixels have R65/255. Resolve that constant mix of actual foreground/detail at draw time, then multiply by neutral albedo. No literal green or fixed brown/ochre in production PNGs.",
+  "accent_patch": "Map original source L positions into restrained neutral wear highlights clipped to the existing deck; accents cannot add coverage outside the bridge or introduce colored foreign outlines."
+}
