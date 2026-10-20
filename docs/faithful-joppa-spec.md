@@ -604,3 +604,25 @@ adjacent original body-outline contamination; full wool/body/contact remain
 unchanged. Both rejected drafts and the actual corrections remain in the report.
 This baseline fit does not complete Irudad's mutation-body, extra limbs/tail or
 native outfit assembly. Stage 3 stays ACTIVE; continue on his Spectacles.
+
+Spectacles visual correction from the user: reject the pointed v1 front lenses
+that resemble swimming goggles and the disconnected rear hook. Interpret the
+source's almond-glass metaphor as softly oval ordinary wire reading lenses,
+with a distinct bridge and slender temples ending at the ears. Preserve the
+fixed selected body; retain complete frames separately while original head/ears
+conceal the rear-facing item. No floating rear arcs or invented straps. Keep v1
+construction, contextual output and rejection in the report; do not grant it
+generation-readiness. Continue this same entry with the corrected construction.
+
+Spectacles corrected authoring checkpoint: v2 uses softly oval ordinary reading
+lenses, a separate bridge, fine temple wires and rounded edge-on profile glass.
+The full rear item is retained under an independent original-head mask; its
+coverage is entirely inside the opaque head/ears, leaving no floating hook.
+The corrected construction received one new contextual refinement and retains
+neutral source layers, independent native `y/Y` tint, actual Face part 198/item
+540 and the fixed older-human body. A contextual comparison now shows the actual
+original glyph, mod SEN reference, manual construction and registered result.
+The user-rejected v1 and exact prompts/outputs remain in history. Current fit
+and item aggregate are generation-ready authoring selections, not user/native
+acceptance or completed Irudad mutation/outfit work. Stage 3 stays ACTIVE;
+continue on Nima's Leather Apron.
