@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-NIMA-PESTLE-HAND-6",
+  "active_entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -2286,7 +2286,8 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Actual native held-state and full outfit acceptance remain pending the full-set generation gate. Authored staff length is preserved; no new user size acceptance claimed."
+        "Actual native held-state and full outfit acceptance remain pending the full-set generation gate. Authored staff length is preserved; no new user size acceptance claimed.",
+        "User flagged grip height as too high; resting/ready weapon presentation remains provisional pending Stage 3 final assembly."
       ],
       "metadata": {
         "body_family": "dromad",
@@ -2918,7 +2919,12 @@
         "status": "PASS",
         "reason": "Inspected single-item primary preview: fixed unclothed dromad body v2 plus corrected inward-grip Shillelagh only, in all required facings. Staff item geometry/scale/attachment and original gripping-hand foreground unchanged from v2; no robe or other equipment included. Independent y/y staff tint and intended-size plates retained. Earlier outfit compositions remain historical evidence; no native/outfit acceptance claimed."
       },
-      "registration_summary": "Primary evidence: Shillelagh alone over fixed unclothed dromad v2. Front/back shaft grips lie inward inside actual palms; original hands own grip foreground. Item scale/profile unchanged. Earlier outfit sheets retained only as history."
+      "registration_summary": "Primary evidence: Shillelagh alone over fixed unclothed dromad v2. Front/back shaft grips lie inward inside actual palms; original hands own grip foreground. Item scale/profile unchanged. Earlier outfit sheets retained only as history.",
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions; map only to actual available Qud state, with no invented drafting mechanic.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0",
@@ -10192,8 +10198,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -10205,7 +10211,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Actual mutation-managed Hand181/6 is not placed by this ordinary-hand preview. Resting/ready poses, named appearance/outfit and native held-state acceptance remain unfinished."
       ],
       "metadata": {
         "body_family": "nima",
@@ -10227,7 +10233,262 @@
           "sha256": "08f853148b3d58fb0e1ec7542ff2d2815fcd8b8a14e600fa147c31b1a58cfa63"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T15:46:14.115645+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Nima Ruda -> human base -> stone Pestle531, original tile y/Y and exact mutation-managed Hand181 parent180/laterality6/manager506::MultipleArms::Change. Installed Pestle definition retained alongside runtime description.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-comparison.png",
+              "sha256": "aa9922ed4409e44ea22b76aaa8123938ac9f89b8a2727265744f173788433409"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.115938+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary human female v2 for illustrative reusable item fit, without remapping native Hand181. Actual Tribal LightClub supplies narrow-grip/bulb convention only; inspected HeavyClub wrapping/scale unsuitable for Qud stone pestle.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-comparison.png",
+              "sha256": "aa9922ed4409e44ea22b76aaa8123938ac9f89b8a2727265744f173788433409"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.116955+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed one complete axial stone bulb/grip, powder detail and affine SEN placements on original bare base. Shared frame/contact; original foreground hand above shaft. No clothing, new body, wooden material, inferred render bones or invented mortar.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/prepare-source.py",
+              "sha256": "d5fc47894460f6ea59f064cb82915d7d7045a26c285d13d726f8786201750011"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-pattern.svg",
+              "sha256": "3fd6658b0c64cdd41ff6a8ffecde1a422908f027be1ed2608976e26677cef15b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-canonical.png",
+              "sha256": "bc6d3a62ab7a22c4e1ea04dd2c75315d2d5299e75607651b8a970166fc7fa33c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-detail.png",
+              "sha256": "68e83dc0b784cac4e89b881440c6fb47d117bcc0f3779846964cb53e8467e72b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-neutral-context.png",
+              "sha256": "8b6818c58db62bc9e10f652de203e868ab8ab407186cb08835477b890dfd522c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "sha256": "5d16b1112fdfd3fe27e7eb6ebef45221592c710a38e0bd6bc30ee9157b6652fa"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/fit-controls.json",
+              "sha256": "c90f3d1d04de3c6b6655549b70d0f7f4ee9c0c407a9ddf5a7a4ba491d80d4d8b"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.118465+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual contextual stone-surface refinement. Raw output changed scale/placement and added opaque red glow; those portions are rejected, not registered as body/item geometry. No second isolation call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "sha256": "5d16b1112fdfd3fe27e7eb6ebef45221592c710a38e0bd6bc30ee9157b6652fa"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/imagegen-prompt.txt",
+              "sha256": "65b68163a1b0f9220646360f00bc5b3f0c8291ed832967df920ef52cc5123439"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/refined-red-context.png",
+              "sha256": "705b8483fdeaa5068cc1edc002cbbd9dd0ba1270edbda75337fd823befa0d6d1"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit target: the first image, a 1536x1024 sheet with three equal 512-pixel columns. Keep its exact layout, scale, transparent margins, and every red mannequin pixel unchanged. Columns show SOUTH/front grip, EAST/right-profile grip and NORTH/back grip. These are close-ups of one small hand-held pestle, not clothing.\n\nQud item description: \"A bulb of stone is dusted by humoric powders.\" The second image is the actual Qud 16x24 source glyph, used for identity only. The third image is the actual RimWorld Vanilla Weapons Expanded - Tribal LightClub: reference only for economical small-sprite shading and clear outlines, NOT wood or its scale. The pestle must remain smooth stone, a bulb tapering into a narrow rounded grip. No wood grain, wraps, spikes, bands, mortar bowl, extra object or invented mechanism.\n\nRefine only the existing neutral gray stone surface with restrained broad shading, subtle stone grain and a few pale powder specks. Preserve every constructed outer contour, grip alignment and occlusion. The original red hand stays above the shaft; the back arm naturally hides the upper bulb. Do not relocate the item to reveal it. Match the first image's gray values and dark clean outline. Neutral equal-RGB gray material, no colored stone, colored powder or red bleed. No captions, guide lines, cast shadows, glow, backdrop or vignette. Keep the exact transparent background. This is one material refinement in context; do not isolate the item or redraw the mannequin.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/pestle-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/2454918552/Textures/Things/Item/Equipment/WeaponMelee/LightClub.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.120010+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Sampled actual neutral stone from refined front bulb through recorded scale/anchor, excluded red/glow/foreign ink and bright generated powder; completed hidden grip before body depth. Complete canonical alpha matches authored source; powder is separate. No AI isolation or destructive hand hole.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/register-pestle.py",
+              "sha256": "3680a4d7c86707f0324a3eaa5b6c08dbe1ce9b526c72cf8a0368091c9ee5336c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/refined-red-context.png",
+              "sha256": "705b8483fdeaa5068cc1edc002cbbd9dd0ba1270edbda75337fd823befa0d6d1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/registration-decisions.json",
+              "sha256": "2966bf7c7707a7c9fa637a264828146310bcc05802c01388904cf32d38a94015"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/intact-canonical.png",
+              "sha256": "f17171ff25df10cd2a8915d169f45b1854a1c77f78da1f53e73b7f266d31a191"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/powder-canonical.png",
+              "sha256": "de6fc32bee61c2983a17a0ce9b927eb74353c2cfb8fde2e3b8511d129463f18d"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-continuation.png",
+              "sha256": "e0c0fa72db54ac0e690349c6d0a0909cc801417ee64e7228c0123af91a0d75d4"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/full-item-comparison.png",
+              "sha256": "1bc1b44588bc650cc66faa88dcfbe0e7c3df95054df08337195fca49c19288e1"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.120795+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Applied user grip-height correction: source grip565 ->585, same body hand/pivot/item scale. Preserved first registered preview; north outward angle corrects total bulb occlusion. Original foreground hand/body own final depth. These are ordinary-hand illustrations, not actual mutation attachment.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/register-pestle.py",
+              "sha256": "3680a4d7c86707f0324a3eaa5b6c08dbe1ce9b526c72cf8a0368091c9ee5336c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/fit-controls.json",
+              "sha256": "c90f3d1d04de3c6b6655549b70d0f7f4ee9c0c407a9ddf5a7a4ba491d80d4d8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/initial-registered-preview/grip-comparison.png",
+              "sha256": "c8d7940c9fbfe0e921979e8da91c452d2c02d0b009025a1a34d5bd5220435ee7"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/grip-comparison.png",
+              "sha256": "914c665d4e56f6b2ba9f5981437ac6984b116c688ef7474e2de783672af85d6b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+              "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.121252+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected SEN/mirrored west at intended size and independent native body g / stone y / powder Y. Neutral production channels equal; original hand pixels retained. Named appearance, mutation placement and ready/resting pose state remain explicit later assembly work.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/independent-palette-comparison.png",
+              "sha256": "6c70e2c4b35700b6d77657f2ecef93916bf9be3e250867c700b083fccb3040d8"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/game-scale-review.png",
+              "sha256": "cd4f336f815240dd64c67024b458b754c7da0ec7e96e7f6fbc03033a5c2f5b58"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/authoring-review.json",
+              "sha256": "34bb75d14c56d6e3382a5d641cbf1a21d1831376591e04496cbb1b2d5f89cf9d"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/artifact-manifest.json",
+              "sha256": "38f38cfbcc898cf3438b9f7e48366a307d5b9c31140272e120b0143d55e2ed8e"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-pestle/v1/model.json",
+          "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+          "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished."
+      },
+      "registration_summary": "Reusable stone Pestle with full source, separate powder and lower item-space grip on unchanged ordinary base. Exact mutation Hand181/6 retained; this preview does not place the extra hand. Resting/ready weapon pose and native named assembly remain unfinished.",
+      "native_acceptance": "Pending full-set generation gate, mutation placement and pose/equipment state",
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions; map only to actual available Qud state, with no invented drafting mechanic.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "FIT-NIMA-SANDALS-FEET-0",
@@ -11917,8 +12178,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -13839,14 +14100,14 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Actual mutation-managed Hand181/6 placement, resting/ready pose, named appearance/outfit and native equipment acceptance remain unfinished."
       ],
       "metadata": {
         "original_reference": {
@@ -13875,7 +14136,86 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T15:46:46.500948+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolved installed/runtime stone bulb dusted with humoric powders, exact original tile and independent native y/Y tint roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-pestle/v1/fittings.json",
+              "sha256": "cedfa9ad026e37e8d8f2bb2f0e203151c83bc261e988fcd1d3788bc84fc98f7d"
+            },
+            {
+              "path": "art/conversion/item-pestle/v1/body-fittings-comparison.png",
+              "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+            }
+          ],
+          "review": "Reconciled exact Pestle stone-bulb/powder identity, original y/Y roles, actual donor convention, complete neutral source and single actual contextual material refinement. One Nima fitting supplies lower-grip SEN/mirrored west evidence over fixed ordinary female base. Exact mutation-managed Hand181/6 is retained, not accepted as placed. No redundant ImageGen; resting/ready pose, named mutation/outfit and native equipment acceptance remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T15:46:46.501532+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled sole Nima source-bound reusable fitting through original/reference/construction/contextual refinement, programmatic full material/masks, grip correction and intended-size views. Mutation hand placement and resting/ready poses remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-pestle/v1/fittings.json",
+              "sha256": "cedfa9ad026e37e8d8f2bb2f0e203151c83bc261e988fcd1d3788bc84fc98f7d"
+            },
+            {
+              "path": "art/conversion/item-pestle/v1/body-fittings-comparison.png",
+              "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+            }
+          ],
+          "review": "Reconciled exact Pestle stone-bulb/powder identity, original y/Y roles, actual donor convention, complete neutral source and single actual contextual material refinement. One Nima fitting supplies lower-grip SEN/mirrored west evidence over fixed ordinary female base. Exact mutation-managed Hand181/6 is retained, not accepted as placed. No redundant ImageGen; resting/ready pose, named mutation/outfit and native equipment acceptance remain unfinished.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions; map only to actual available Qud state, with no invented drafting mechanic.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-pestle/v1/fittings.json",
+          "sha256": "cedfa9ad026e37e8d8f2bb2f0e203151c83bc261e988fcd1d3788bc84fc98f7d"
+        },
+        "plate": {
+          "path": "art/conversion/item-pestle/v1/body-fittings-comparison.png",
+          "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reconciled exact Pestle stone-bulb/powder identity, original y/Y roles, actual donor convention, complete neutral source and single actual contextual material refinement. One Nima fitting supplies lower-grip SEN/mirrored west evidence over fixed ordinary female base. Exact mutation-managed Hand181/6 is retained, not accepted as placed. No redundant ImageGen; resting/ready pose, named mutation/outfit and native equipment acceptance remain unfinished."
+      },
+      "registration_summary": "Pestle reusable source and sole ordinary-base fitting generation-ready; lower item-space grip, full stone, separate powder and original hand retained. Actual Hand181/6 mutation placement and weapon pose/native acceptance remain unfinished.",
+      "native_acceptance": "Pending full-set generation gate, mutation-hand placement and weapon pose/equipment state"
     },
     {
       "id": "ITEM-POCKETED-VEST",
@@ -14269,7 +14609,8 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Observed generic description and weight differ from installed item definition; both source records retained. Authored staff enlargement is not native measured size or new user size approval. Native held-state and outfit acceptance remain unfinished."
+        "Observed generic description and weight differ from installed item definition; both source records retained. Authored staff enlargement is not native measured size or new user size approval. Native held-state and outfit acceptance remain unfinished.",
+        "User flagged grip height as too high; resting/ready weapon presentation remains provisional pending Stage 3 final assembly."
       ],
       "metadata": {
         "original_reference": {
@@ -14372,7 +14713,12 @@
         "reason": "Reconciled exact Shillelagh identity with installed wooden-stick/oaken-knot definition and preserved observed generic-description/weight discrepancy. Current dromad Hand/2 model, corrected inner-palm grip, original gripping-hand foreground, unchanged profile, neutral equipment y/y roles and single-item naked-base plate are source-linked. Authored enlargement is explicit, not native measured size or new user size approval. No redundant generation; native held-state/outfit acceptance remains unfinished."
       },
       "registration_summary": "Shillelagh item identity and sole corrected dromad Hand/2 fit are generation-ready. Inner-palm grips and primary naked-base preview retained; authored scale/discrepant source capture remain explicit. Native held-state acceptance pending.",
-      "native_acceptance": "Pending full-set generation gate and actual equipment/held state"
+      "native_acceptance": "Pending full-set generation gate and actual equipment/held state",
+      "held_pose_review": {
+        "status": "PENDING FINAL ASSEMBLY",
+        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions; map only to actual available Qud state, with no invented drafting mechanic.",
+        "owner": "Stage 3 final assembly after full-set generation gate"
+      }
     },
     {
       "id": "ITEM-SPECTACLES",
@@ -44179,7 +44525,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T15:32:36.420103+00:00",
+  "updated_at": "2026-10-20T15:46:46.502606+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

@@ -719,3 +719,31 @@ The installed wooden-stick/oaken-knot definition and observed generic-descriptio
 weight discrepancy remain explicit. Native held/equipped-state acceptance and
 actual outfit remain unfinished. Stage 3 stays ACTIVE; continue with Nima's Pestle,
 preserving mutation-managed hand metadata separately from reusable item geometry.
+
+User-directed held-pose follow-up: the current weapons appear gripped too high
+on their handles. An inward-palm contact alone does not establish the correct
+longitudinal grip. Retain an explicit item-space grip landmark independently of
+the body hand landmark, complete item texture and body pivot. For the active
+Pestle authoring, move contact toward the rounded lower grip without changing
+body pixels or item scale; preserve the contextual input as history.
+Existing staff compositions remain provisional for grip height and weapon pose.
+Stage 3 final assembly, after the full-set generation gate, owns review of
+resting and ready/drafted visual positions, their item-specific grip/angle/depth,
+and their mapping to actual available Qud state. This does not invent a Qud
+drafting mechanic or authorize an animation-framework detour during generation.
+Native pose/state acceptance requires the real held-state integration; these
+ordinary-base previews do not establish it. Stage 3 remains the sole ACTIVE stage.
+
+Pestle authoring checkpoint: exact stone-bulb/powder description, original y/Y
+glyph roles and actual Tribal LightClub shape convention lead to one reusable
+axial pestle and its ordinary female-base fitting. One contextual refinement
+supplies neutral stone surface; generated glow, mannequin and changed placement
+are rejected. Hidden grip is completed on the full source before original-body
+depth, with separate powder and no destructive hand holes. User feedback moves
+the item-space grip 20 pixels down the handle while body/contact/scale stay fixed;
+the initial back preview's complete bulb occlusion is retained as history, then
+corrected with an outward angle. Intended-size and palette authoring evidence
+are recorded; no native testing was performed. Actual mutation Hand181/6 remains
+unplaced by this ordinary-hand illustration. Both fitting and item-source ledger
+entries are generation-ready, with actual mutation/outfit and weapon pose/state
+acceptance unfinished. Continue one entry at a time with Yrame's Vibro Blade.

@@ -1,0 +1,59 @@
+{
+  "item": "Pestle",
+  "source": {
+    "instance": 531,
+    "blueprint": "Pestle",
+    "description": "A bulb of stone is dusted by humoric powders.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 1 lbs.}}",
+    "tile": "Items/pestle.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "Y",
+    "kind": "equipment",
+    "reference_file": "village-originals/pestle-reference.png",
+    "native_mask_sha256": "c532d4952aaf9bfc348b2caa8bc4a3049dc1cceb6e0310143b8bf6bba17bf7ab",
+    "reference_sha256": "2aad4f5800f28a04c63f9093eeb64d4c78896f2f22633842b86f47395791ad46",
+    "info_id": 9228,
+    "atlas_id": 185,
+    "rect": [
+      324,
+      260,
+      16,
+      24
+    ]
+  },
+  "source_packet": {
+    "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+    "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+  },
+  "installed_definition": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+    "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+    "object_xml": "<object Name=\"Pestle\" Inherits=\"BaseCudgel\">\n\t\t<part Name=\"Render\" DisplayName=\"pestle\" Tile=\"Items/pestle.bmp\" ColorString=\"&amp;y\" DetailColor=\"Y\" />\n\t\t<part Name=\"MeleeWeapon\" MaxStrengthBonus=\"1\" BaseDamage=\"1d2-1\" Skill=\"Cudgel\" Stat=\"Strength\" />\n\t\t<part Name=\"Commerce\" Value=\"3\" />\n\t\t<part Name=\"Description\" Short=\"A bulb of stone is dusted by humoric powders.\" />\n\t\t<tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_stone\" />\n\t\t<tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"ItemElements\" Elements=\"salt::3\" />\n\t\t<part Name=\"Physics\" Weight=\"1\" />\n\t\t<stag Name=\"Contemporary\" />\n\t</object>"
+  },
+  "fittings": [
+    {
+      "entry": "FIT-NIMA-PESTLE-HAND-6",
+      "registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-pestle/v1/model.json",
+          "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+          "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+        }
+      },
+      "authoring_review": {
+        "status": "PASS",
+        "reason": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished."
+      }
+    }
+  ],
+  "scope": "Complete reusable tool source and ordinary-hand authoring illustration; exact mutation binding retained separately.",
+  "pose_review": {
+    "status": "PENDING FINAL ASSEMBLY",
+    "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions; map only to actual available Qud state, with no invented drafting mechanic.",
+    "owner": "Stage 3 final assembly after full-set generation gate"
+  },
+  "native_acceptance": "Pending full-set generation gate, actual mutation hand placement and equipment/pose state"
+}

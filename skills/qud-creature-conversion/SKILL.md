@@ -260,6 +260,12 @@ image bounds. Draw the original gripping hand above the shaft at the contact;
 retain the complete item separately. Preserve accepted profile placement, item
 scale and the fixed body/robe registration when correcting a front/back grip.
 Show the grip and depth in all required facings in the entry's authoring report.
+Keep an item-space grip landmark separate from the body's hand anchor: inward
+palm placement does not establish the correct height along a handle. Record
+provisional grip/pose choices explicitly. Resting and ready/drafted presentations
+need separate item angle/depth controls and a source-supported game-state mapping;
+their implementation/review belongs to the later assembly phase, after the
+full-set generation gate, unless the user explicitly changes that priority.
 Mutation overlays likewise remain separate from reusable unmutated body templates.
 
 ## 7. Validate only after every pending conversion is generated
