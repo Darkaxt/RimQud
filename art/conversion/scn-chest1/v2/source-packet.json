@@ -1,0 +1,223 @@
+{
+  "entry": "SCN-CHEST1",
+  "identity": "Chest1 -> Chest -> Furniture",
+  "description": "A wood storage box with a hinged lid and latch. Notches scratched on the surface hint at the full probability array of language, and also its absence.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Chest1": "<object Name=\"Chest1\" Inherits=\"Chest\">\n    <part Name=\"Inventory\" Builder=\"InventoryChestJunk1\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <tag Name=\"DynamicObjectsTable:Chests\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"AggregateWith\" Value=\"Chest1\" />\n  </object>",
+      "Chest": "<object Name=\"Chest\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"chest\" Tile=\"Assets_Content_Textures_Tiles_sw_chest.bmp\" DetailColor=\"W\" ColorString=\"&amp;w\" RenderString=\"254\" Occluding=\"false\" RenderIfDark=\"true\" RenderLayer=\"6\" />\n\t\t<part Name=\"Description\" Short=\"A wood storage box with a hinged lid and latch. Notches scratched on the surface hint at the full probability array of language, and also its absence.\" />\n    <part Name=\"Physics\" Organic=\"true\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;W\" />\n    <part Name=\"Container\" OpenSound=\"Sounds/Interact/sfx_interact_open_chest\" />\n    <part Name=\"Inventory\" />\n    <property Name=\"SparkingQuestBlueprint\" Value=\"Chest\" />    \n    <tag Name=\"AutoexploreChest\" />\n    <tag Name=\"ForceSmartUse\" />\n    <stag Name=\"Storage\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\chest1-mask.png",
+    "sha256": "ee9142fb81d55c406ed7ed1530310f9f3991ecbc044ca82292af498117272af2",
+    "tile": "Assets_Content_Textures_Tiles_sw_chest.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 14698,
+    "atlas_id": 277,
+    "rect": [
+      1512,
+      754,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Low broad closed chest. Raised/shouldered lid at top, two bright bands running down its outer sides with a lid seam, central primary-colored rectangular latch and front-panel marks. Gaps in the tiny glyph do not establish transparent wooden faces or detached straps.",
+  "palette": {
+    "primary": "w",
+    "detail": "W",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "cfc041",
+    "rule": "Wood body/lid, front marks and center latch stay primary w. Only two source-bright side bands use W. Gold bands are an extraction aid; final layers are neutral. A latch is not automatically assigned bright gold because it is hardware."
+  },
+  "donor_reference": {
+    "mod": "[JDS] Simple Storage",
+    "package_id": "JangoDsoul.SimpleStorage",
+    "workshop_id": "1961098970",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_south.png",
+    "sha256": "1bdc4c806b1a304ec8b0fba2c30716bbea4ce8f049588295062efca72b2bc83b",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\About\\About.xml",
+    "about_sha256": "bb46dc392598c276c88e13e65cfc07b739c43a93b2805a25cbdbc0f1ce6c80ee",
+    "role": "Actual installed1.5CrateA_south supplies restrained plank grain, shallow wooden-edge shading and game-art contours. Its flat crate top, cross-brace, nails, dimensions, storage mechanics and brown source pixels are not copied."
+  },
+  "construction": "Retain original selected front without another front generation. Author broad closed wooden end and shouldered rear, continuing two reinforcing bands in plausible wrap geometry. Abstract front scratches are not readable writing or proof of inventory. Hidden band routing/hinge joins are authored, not native mechanism definitions.",
+  "native_state": {
+    "tile": "One fixed inherited chest tile; Chest1 changes inventory builder/tier/aggregation rather than appearance. No open/closed, empty/full or random tile is declared.",
+    "part": "XRL.World.Parts.Container",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "37aeebe3fcc73f89d4fb1b245581f6ceb838a4149d31af4e6586d8076841795c",
+    "part_declares_Render_or_Tile": false,
+    "rule": "Keep native container/inventory/smart-use/open sound and original physics. Do not infer a new packed/open appearance or unspecified takeability/solidity defaults."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell transform for wood, lid, bands, latch and masks; no independent strap/latch centering."
+  },
+  "native_acceptance": "Pending full-set generation gate; native fixed chest inventory/smart-use/sound/physics/visibility and extra-view placement remain unfinished.",
+  "recorded_at": "2026-10-20T19:47:38.465078+00:00",
+  "retained_front": {
+    "path": "art/conversion/scn-chest1/v1/registered/model.json",
+    "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+  },
+  "directional_reference": {
+    "wood_textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_south.png",
+        "sha256": "1bdc4c806b1a304ec8b0fba2c30716bbea4ce8f049588295062efca72b2bc83b",
+        "frame": [
+          384,
+          384
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          384,
+          384
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_east.png",
+        "sha256": "7e313b1c98842ff389d1dfecb619ae84c59f44a380de545e605b1eda7f798cd4",
+        "frame": [
+          384,
+          384
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          384,
+          384
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_north.png",
+        "sha256": "b69a42d28d22e5cff0ec8aa858ccc75f8e5f91c1164335b5bb6e2e7ec8392d04",
+        "frame": [
+          384,
+          384
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          384,
+          384
+        ]
+      }
+    },
+    "wood_definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Defs\\ThingDefs_Building.xml",
+      "sha256": "45c60a599f1507535deacc165c55cdaaa97c7d9e904180b54f09c39cf93ea53a"
+    },
+    "wood_definition_fields": {
+      "def_name": "JDSS_CrateA",
+      "graphic_class": "Graphic_Multi",
+      "draw_size": "(3,3)",
+      "footprint": "(1,1)"
+    },
+    "wood_reference_version": "Actual installed1.5folder; no LoadFolders.xml present and active current-game binding not claimed.",
+    "wood_limit": "JDS east has diagonal/oblique camera and is REJECTED as the target camera. Wood grain/material reference only; its box/cross brace/nails/gameplay/dimensions are not imported.",
+    "cardinal_camera_reference": {
+      "textures": {
+        "south": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_south.png",
+          "sha256": "c90066fad10832e81dfaf5baf4c636f53059aebb67cb086e433d0c60016a7e2a",
+          "frame": [
+            256,
+            256
+          ],
+          "alpha_bounds": [
+            66,
+            22,
+            190,
+            190
+          ],
+          "visible_width": 124
+        },
+        "east": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_east.png",
+          "sha256": "16f153d611aba507d1da1ff0d1c31bb7842c9db6d72d9622afa83915d9f370ee",
+          "frame": [
+            256,
+            256
+          ],
+          "alpha_bounds": [
+            63,
+            20,
+            146,
+            193
+          ],
+          "visible_width": 83
+        },
+        "north": {
+          "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Misc\\FilingCabinet\\FilingCabinet_north.png",
+          "sha256": "77a06308e4657d4c08e41f7606d201a88a61c443ae1d59220a6cc6e6428e935f",
+          "frame": [
+            256,
+            256
+          ],
+          "alpha_bounds": [
+            66,
+            27,
+            190,
+            195
+          ],
+          "visible_width": 124
+        }
+      },
+      "definition": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_Misc.xml",
+        "sha256": "c2629befbf4d16f144a2443be7c3569001de76652277695d09507caca512cc4d"
+      },
+      "load_folders": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\LoadFolders.xml",
+        "sha256": "148c4e0d349c9c8c709feb00e2ca92b486a28e5e1d54f9a35c541078e227ea9a"
+      },
+      "graphic_class": "Graphic_Multi",
+      "draw_size": [
+        2,
+        2
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "mapping": "Same square2x2 draw frame for S/E/N; source pixels have transparent margins. Actual alpha widths124/83/124; E/S=0.669. This informs a plausible cabinet end, not a measured Qud footprint or copied damage rectangle."
+    },
+    "cardinal_camera_evidence": {
+      "path": "art/conversion/scn-argyve-multicabinet/v2/source-packet.json",
+      "sha256": "86f276e17f290684e4757074775cb9250b948778968eaa75bb65e095d8e836cd"
+    },
+    "role": "Use actual JDS wood surface style plus documented VFE fixed cardinal box planes as camera convention only. Qud raised/shouldered lid, two bright bands and primary latch remain authoritative."
+  },
+  "camera": {
+    "contract": "Front-aligned closed box. Source top outline is physically shouldered: retain raised central lid and sloping shoulders, not a hidden isometric yaw. New end is broad rectangular depth with parallel front/back edges and full body volume.",
+    "front_review": "Original native mask itself steps up at the lid and includes the two outer bright bands. Front walls/latch/bands remain vertically aligned; retained slope is interpreted as a raised shouldered lid, an authored source-bound shape rather than a recovered perspective plane.",
+    "authored_width": 13.4,
+    "authored_depth": 8.4,
+    "depth_status": "Authored hidden depth informed by cardinal box reference and source width; not measured from JDS diagonal image or Qud upright icon.",
+    "side": "Plain wood end, lid seam and visible return of wrap bands along lid shoulder. No new side handle or front latch pasted onto end.",
+    "rear": "Closed rear with the same wrapping bands and two small primary-role hinge joins. Hinged-lid description supports hinges; exact placement/material remains authored. No rear latch or repeated front scratch layout.",
+    "west": "Mirror east; unmarked symmetric end geometry and band returns."
+  }
+}

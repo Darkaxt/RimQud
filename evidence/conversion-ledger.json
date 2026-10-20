@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-CHEST1",
+  "active_entry": "SCN-DRESSER",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -26990,8 +26990,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -27003,9 +27003,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -27338,28 +27336,278 @@
           "outputs": [],
           "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
           "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain shouldered closed-lid source, original bright bands/primary latch and inherited fixed chest tile. Child inventory builder/tier/aggregation changes do not define new art states.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/source-packet.json",
+              "sha256": "49bd6c10492d22b9628affe0b9f99777e02ffa9ad7535fe39c3fbb5c7b05fa3d"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/source-reference-camera-comparison.png",
+              "sha256": "4f8cfc388ce11383450510c34e668bbdb06c1ad9f3b4cf4387c5f6645dac423d"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual JDS1.5 directional textures/definition and reject diagonal east as camera. Supplemental actual VFE cardinal box evidence informs broad end volume, not copied mechanics/dimensions.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/source-packet.json",
+              "sha256": "49bd6c10492d22b9628affe0b9f99777e02ffa9ad7535fe39c3fbb5c7b05fa3d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/source-reference-camera-comparison.png",
+              "sha256": "4f8cfc388ce11383450510c34e668bbdb06c1ad9f3b4cf4387c5f6645dac423d"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Retain original selected front shoulders; author complete parallel-edged closed end and rear with explicit inferred depth, primary hinge joins and plausible band return.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/source-packet.json",
+              "sha256": "49bd6c10492d22b9628affe0b9f99777e02ffa9ad7535fe39c3fbb5c7b05fa3d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/construct-turnaround.py",
+              "sha256": "97b6631b19c113039a9b2c96b0de5b61d39760792baa63707be142a592179287"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/constructed-turnaround.png",
+              "sha256": "96ae0e37cf1279da2987a6940be01d710f78bcde1855039596b28da8d7aaf9b7"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/manual-structural-review.json",
+              "sha256": "25f5a34cfa06e4ec78fe8d148f1ca63cb72316505b9df2ab2e2a3ee4c6ed6a11"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "action": "Compose retained selected S with full E/N, no copied front latch on rear/end or new handle; west derives from symmetric unmarked end.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/selected-front-neutral.png",
+              "sha256": "d2492fb893b17fbae3aa19468e1e4317e317c73014d43490b222a9430b901007"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/constructed-east.png",
+              "sha256": "0e60cc3401cd302c5b1511840f17364c395bdb4d07a1107249fd274aa5c80e3d"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/constructed-north.png",
+              "sha256": "c5c297747b844bfc465f705bcf7da086b954c64701443e36cd0c90650b3a7600"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/front-guided-turnaround.png",
+              "sha256": "cb16a45425961a1064e23b567e9b25619279f00f47e8add449a6affc40397a8a"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen selected-front-guided composed refinement, inspected before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/front-guided-turnaround.png",
+              "sha256": "cb16a45425961a1064e23b567e9b25619279f00f47e8add449a6affc40397a8a"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/turnaround-prompt.txt",
+              "sha256": "8a1ccc5644b640129d03ea2cd3dbc14ed89008e5949a13d9648120503b91290f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/refined-turnaround-raw.png",
+              "sha256": "dc5bb3d484e7cb68c9094694d7e6942153a5fec652f7c0361647f8221ecaf0b6"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/first-structural-review.json",
+              "sha256": "5c755db45ecbcee5c60b97a706ab2557ae99e01ce56ebd4e0060c00515822e06"
+            }
+          ],
+          "review": "Retained shouldered closed lid, two front/rear bright bands, primary-role front latch and rear hinge joins. Complete side has broad closed wood coverage/band return without diagonal crate camera, copied handle, latch or loot. Generated outlines/proportions drift slightly and exterior fringe is rejected; original S and exact E/N masks/ink remain fixed. Material selection only, no second isolation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-chest1/v2/turnaround-prompt.txt",
+            "sha256": "8a1ccc5644b640129d03ea2cd3dbc14ed89008e5949a13d9648120503b91290f"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-b2af30ad-d3bb-4455-8097-4eba93f9be77.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-chest1\\v2\\front-guided-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\1961098970\\1.5\\Textures\\Things\\CrateA\\CrateA_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Patch generative drift with exact geometry/ink/ownership and original S pixels. Preserve initial overly smooth material transfer, diagnose actual darker wood range, select real grain with local wood-only cutoff105 and unchanged band cutoff150; no new generation or alpha change.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/refined-turnaround-raw.png",
+              "sha256": "dc5bb3d484e7cb68c9094694d7e6942153a5fec652f7c0361647f8221ecaf0b6"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/first-structural-review.json",
+              "sha256": "5c755db45ecbcee5c60b97a706ab2557ae99e01ce56ebd4e0060c00515822e06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/register-chest-initial.py",
+              "sha256": "20269f1af7c2363c2d2e6140f2136bc0294c91ea13c2c636988d4ca20cdf1bb9"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered/all-views-native.png",
+              "sha256": "fd04149e9142b3166d74d9ee9eadacc34f995abe1891e35cbad2800f4ce64a58"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/material-selection-correction.json",
+              "sha256": "83fa0760a9266fedf16976f7cf04d28e55083c650bbf1a4f8c617bd527d4867b"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/select-dark-wood-material.py",
+              "sha256": "5eacea49e52ffd095cc78388b6ad1c739db5f2286756716ed2c941383d8aa77c"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/register-chest.py",
+              "sha256": "7c047560c5a2890913240a5c60913fb8822a1a4137f027d5645cb6d18d34f7fa"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/model.json",
+              "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/registration-decisions.json",
+              "sha256": "266772614103e4485967d3d05c50c8f44908cc8eb4e92055b70cb2a134b22d56"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/all-views-neutral.png",
+              "sha256": "43207fbc0ca30abe1293d94802f8ff8c730e048af20c732752b8d8e2d8d9cbc3"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/all-views-detail.png",
+              "sha256": "2061ae6d68e0f67d6f831d1529505622d0b4873f3922d950867ce90cf5355492"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/all-views-coverage.png",
+              "sha256": "d1e27c3586f5d689fa4bf66dd9c10fea293586c37879652791bc893857922cf5"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed chest tile. No declared alternate open/closed, empty/full, packed or random variant is invented from container interaction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/source-packet.json",
+              "sha256": "49bd6c10492d22b9628affe0b9f99777e02ffa9ad7535fe39c3fbb5c7b05fa3d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/model.json",
+              "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Review complete S/E/N/W at enlarged and16x24/24x36/32x48sizes, source shoulder/latch/bands, end volume, rear hinges, wood grain, neutral roles and shared pivot/coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/model.json",
+              "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/all-views-native.png",
+              "sha256": "4f1d7f4ff5393c71723e23026ca23208f69393345b31bf4633827dcbbd57396c"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/authoring-review.json",
+              "sha256": "287130e3e539212b45867949b221b54135352e289f44862ef52100ebfb334361"
+            },
+            {
+              "path": "art/conversion/scn-chest1/v2/artifact-manifest.json",
+              "sha256": "aa0dae7353946d68632a5b7076a48c219e8d1ba9acaeacd38e65c8db8872dc82"
+            }
+          ],
+          "review": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T19:52:45.342687+00:00",
+          "step": "native_state_review",
+          "action": "Keep actual inventory/container/smart-use/chest sound, unspecified physics defaults, visibility and extra-view placement behind full-set generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-chest1/v2/registered-final/model.json",
+              "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"
+            }
+          ],
+          "outputs": [],
+          "review": "No native activation, game/harness launch or donor storage behavior added. Entry remains UNFINISHED pending native acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
-      "native_acceptance": "Pending final all-conversions validation gate",
+      "generation_ready": true,
+      "native_acceptance": "Pending full-set generation gate; native fixed chest inventory/smart-use/sound/physics/visibility and extra-view placement remain unfinished.",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-chest1/v1/registered/model.json",
-          "sha256": "94521ad8d1e1eed56f86d2191de5b038b1d9ee0a51de5595a227b2488c57a766"
+          "path": "art/conversion/scn-chest1/v2/registered-final/model.json",
+          "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"
         },
         "plate": {
-          "path": "art/conversion/scn-chest1/v1/registered/registration-comparison.png",
-          "sha256": "a4f24c5918135a05184e9db94d70832cc80e5df34139ebfcaad4d194cd8304bc"
+          "path": "art/conversion/scn-chest1/v2/registered-final/all-views-native.png",
+          "sha256": "4f1d7f4ff5393c71723e23026ca23208f69393345b31bf4633827dcbbd57396c"
         }
       },
-      "registration_summary": "Selected Chest1 retains the source shouldered closed lid, two bright side bands, primary-colored center latch and abstract scratches. Production wood/latch and band layers are neutral; preview applies native w/W. Exact source, actual installed JDS wood reference, editable construction, refinement and band extraction are recorded below. No alternate open-lid/empty/full artwork is invented; native container/inventory/physics/visibility acceptance remains pending.",
+      "registration_summary": "Retained source shouldered closed chest front, complete broad end/rear and mirrored W. Two bright bands, primary latch/hinges and wood grain preserved; actual JDS wood/cardinal VFE camera limits, manual views, one composed refinement, structural review and darker-material correction logged. Neutral w/W with exact common coverage/pivot; native container/physics/visibility and extra-view acceptance pending.",
       "camera_review": {
-        "status": "REQUIRES REVIEW",
-        "classification": "FRONTAL_DEPTH_REVIEW",
-        "reason": "Front-aligned box with visible narrowing lid plane. Distinguish designed shouldered lid silhouette from invented perspective against the actual donor convention.",
-        "audit": {
-          "path": "evidence/camera-facing-audit.json",
-          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        "status": "PASS",
+        "classification": "CARDINAL_SOURCE_BOUND",
+        "reason": "Original stepped raised lid retained as physical shoulders, front-aligned bands/walls/latch. New complete end uses parallel planes and authored8.4depth, no diagonal JDS camera or thin compression.",
+        "evidence": {
+          "path": "art/conversion/scn-chest1/v2/source-reference-camera-comparison.png",
+          "sha256": "4f8cfc388ce11383450510c34e668bbdb06c1ad9f3b4cf4387c5f6645dac423d"
         }
       },
       "furniture_views": {
@@ -27368,10 +27616,19 @@
           "east",
           "north"
         ],
-        "completed_views": [],
-        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
-        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "completed_views": [
+          "south",
+          "east",
+          "north",
+          "west"
+        ],
+        "west_policy": "Mirror east; symmetric unmarked closed end and band return.",
+        "native_binding": "One fixed inherited chest tile retained; extra views unbound. No open/closed, packed/empty/full variant or placement selector invented.",
         "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed original mask/description and Chest1/Chest ancestry, source shouldered lid/bands/primary latch, one fixed container tile, actual JDS1.5 directional textures/definition and rejected oblique east camera, supplemental actual VFE cardinal box convention, retained front and complete authored end/rear/hinge/band routing, one front-guided composed refinement and structural inspection before extraction, exact coverage/ink material selection and dark-wood range correction, neutral w/W ownership and intended-size views. Hidden depth/hinges/routing are authored and no handles/readable letters/visible inventory/open state are invented. Mirrored west uses symmetric unmarked end. Native inventory/smart-use/sound, unspecified physics defaults, non-occlusion and extra-view placement remain unfinished behind full-set generation."
       }
     },
     {
@@ -27391,8 +27648,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -52253,7 +52510,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T19:40:13.806728+00:00",
+  "updated_at": "2026-10-20T19:52:45.342687+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
