@@ -1,0 +1,19 @@
+"""Reconcile the footwear source and retain actual mutation binding as pending."""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,shutil
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def write(p,d):p.write_bytes((json.dumps(d,indent=2)+'\n').encode())
+lp=ROOT/'evidence/conversion-ledger.json';data=json.loads(lp.read_text());entry=next(e for e in data['entries'] if e['id']=='ITEM-LEATHER-BOOTS');assert data['active_entry']==entry['id'] and not entry['generation_ready']
+fits=[next(e for e in data['entries'] if e['id']==ident) for ident in entry['related_entries']];assert len(fits)==1
+for e in fits:
+ assert e['generation_ready'] and e['art_review']['status']=='PASS';latest={x['step']:x for x in e['process_log']};assert all(latest[s]['result']=='PASS' for s in e['required_steps'] if s!='native_equipment_state_review')
+ for a in e['current_registration'].values():assert ref(ROOT/a['path'])['sha256']==a['sha256']
+packet=dict(item='Leather Boots',workflow='regional-curved-v1',source=entry['metadata']['original_reference'],fittings=[dict(entry=e['id'],registration=e['current_registration'],authoring_review=e['art_review']) for e in fits],scope='Reusable baseline footwear source for the only enumerated actual item. Actual Feet297/laterality16/MultipleLegs placement is unfinished; individual boot files do not accept that binding.',native_acceptance='Pending full-set gate, mutation-specific foot placement and named outfit')
+write(HERE/'fittings.json',packet);shutil.copyfile(ROOT/fits[0]['current_registration']['plate']['path'],HERE/'body-fittings-comparison.png')
+review='Reconciled boar-leather/gold-wire source identity, w/y roles, actual mutation-managed binding and complete reusable footwear authoring evidence. Individual boot sources, full leather, wire and zero skin overlay are retained. Generation-only aggregate; no acceptance of extra-foot placement or native named outfit.'
+for step,action in [('resolve_item_identity_description_palette','Resolved native boot description, original glyph and w/y palette without baking gold color.'),('verify_every_body_fitting_log','Reconciled the only enumerated boot source, all authoring steps, exact current asset hashes and explicitly pending mutation placement.')]:entry['process_log'].append(dict(timestamp=datetime.now(timezone.utc).isoformat(),step=step,action=action,inputs=[e['current_registration']['model'] for e in fits],outputs=[ref(HERE/'fittings.json'),ref(HERE/'body-fittings-comparison.png')],review=review,result='PASS',new_imagegen_call=False))
+entry.update(status='UNFINISHED',generation_ready=True,current_step='record_item_acceptance_from_all_fittings',current_registration=dict(model=ref(HERE/'fittings.json'),plate=ref(HERE/'body-fittings-comparison.png')),art_review=dict(status='PASS',reason=review),registration_summary='Leather Boots reusable source and item identity are generation-ready. Exact Feet297/16 mutation placement, named outfit and native acceptance remain unfinished.',native_acceptance='Pending full-set gate, mutation-specific foot placement and named outfit',known_issues=['Actual mutation-managed Feet297/16 binding, extra-foot duplication/occlusion and native named outfit acceptance remain unfinished.']);entry['apparel_workflow']['status']='GENERATION READY'
+n=next(e for e in data['entries'] if e['id']=='ITEM-SHILLELAGH');assert n['status']=='UNFINISHED' and not n.get('generation_ready');n.update(status='IN PROGRESS',current_step='resolve_item_identity_description_palette');data['active_entry']=n['id'];data['updated_at']=datetime.now(timezone.utc).isoformat();write(lp,data)
+print('Boot item source generation-ready; Shillelagh item aggregate sole active.')

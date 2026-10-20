@@ -691,3 +691,31 @@ This baseline garment does not complete her Big silhouette, horns, extra feet,
 mutation-aware outfit or native equipment acceptance. Stage 3 remains ACTIVE;
 proceed to Leather Boots, keeping baseline footwear separate from mutation-part
 binding and final named assembly.
+
+Leather Boots authoring checkpoint: reusable closed boar-leather footwear and
+its item-source aggregate are generation-ready. Actual Vanilla Apparel Expanded
+Boots.png is an inventory/material reference, not a worn directional graphic.
+The source glyph/description govern the mid-calf shafts, closed toes and recovered
+wire laces; own SEN views preserve the fixed original feet/contact, front/profile
+lacing and rear heel seams. The initial profile cord crossed the leather edge;
+its retained draft and inward correction precede one contextual refinement.
+
+Neutral leather is completed beneath the separate wire geometry before fitting;
+generated glow/red reflections and shifted wire pixels are excluded. Original
+skin is never restored over closed boots. Individual boot/wire sources are
+retained for actual later mutation placement. Native `w/y` roles remain separate
+and no gold/yellow is baked into texture. Yrame's actual Feet297/laterality16 has
+manager `515::MultipleLegs::Change`: it is neither remapped to Feet0 nor accepted
+as placed by these baseline pair previews. Extra-foot duplication/occlusion,
+named body/outfit and native equipment acceptance remain unfinished. Stage 3
+remains ACTIVE; reconcile the already generated Shillelagh item aggregate next.
+
+Shillelagh item reconciliation: the only enumerated dromad Hand/2 fit already
+contains the original/refinement/extraction and later inner-palm grip corrections.
+Its current v3 primary evidence shows only the staff on the unclothed fixed body;
+profile placement and authored enlargement are unchanged. The item aggregate now
+references those exact current models/plates without another generation call.
+The installed wooden-stick/oaken-knot definition and observed generic-description/
+weight discrepancy remain explicit. Native held/equipped-state acceptance and
+actual outfit remain unfinished. Stage 3 stays ACTIVE; continue with Nima's Pestle,
+preserving mutation-managed hand metadata separately from reusable item geometry.
