@@ -156,6 +156,15 @@ def enumerate_entries():
                 original_tile='terrain/sw_crack.bmp' if obj['blueprint']=='PondDown' else None),
             issues=['Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior.'],
             steps=['verify_blueprint_visibility_and_any_tile','record_justified_art_exclusion_or_add_conversion_target'])
+    # User-approved regional/curved apparel workflow is part of the derived
+    # inventory contract, so rebuilding cannot silently drop its reset gate.
+    worn_slots={'Body','Feet','Face','Head','Hands'}
+    for entry in entries:
+        meta=entry['metadata'];category=entry['category']
+        worn=(category=='Template garments'
+              or category=='Body/equipment fittings' and meta.get('slot') in worn_slots and entry['id']!='FIT-YRAME-HORNS-HEAD-0'
+              or category=='Equipment inventory' and entry['name']!='Horns' and bool(worn_slots.intersection(meta.get('actual_slots',[]))))
+        if worn:entry['required_steps'].insert(-1,'reprocess_under_regional_curved_v1')
     return sorted(entries,key=lambda e:(e['category'],e['name'],e['id']))
 
 def validate(data,expected):

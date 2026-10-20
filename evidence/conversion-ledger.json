@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-DROMAD-CLOTH-ROBE-BODY-0",
+  "active_entry": "FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -382,8 +382,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "recompose_check_cuffs_attachment_occlusion_all_views",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -392,6 +392,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -1889,17 +1890,153 @@
           ],
           "review": "Inspected both old/new cuff close-ups. The curved opening removes the polygon spur. Rim is thin and remains a review concern; inherited hand-outline selection issues are not silently accepted. Selected body pixels and composition below edited cuff bands remain unchanged. Profile remains unchanged.",
           "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Register full cloth and separate curved visibility sources",
+          "action": "Reused the approved one-generation material and actual registered body. Selected nine-grid south/north cloth, smooth cuff masks and accepted east full cloth/mask. No secondary generative isolation; canonical cloth remains independent of body visibility.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/source-packet.json",
+              "sha256": "43a22fe8f5d541b74937ea2b29631a452e6c7e251d45ac6e25edde4eee2129eb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/intact-garment-comparison.png",
+              "sha256": "8d9c6ee192f4d0b54bfc599f4bc095ae39cb95ae7ea3d673486b6158a3cc328d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/body-mask-comparison.png",
+              "sha256": "186560e92032db5f1be96c7acfe20ac86e558a06619564fba0b10518284b833f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/body-overlay-comparison.png",
+              "sha256": "9b5f744aff798d0ad1bf0132b1b5a709bff44b1955d436bbc5dd4eeac83641c6"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "Complete approved apparel workflow on the active robe",
+          "action": "Registered and recomposed approved source art under the new workflow. Original body/accepted neutral assemblies preserved exactly, west mirrored, slot Body/0 and separate equipment/body roles retained. No blanket restoration of any other clothing entry.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/registration-decisions.json",
+              "sha256": "df0386ce3435d0410c96759ac83d83f8d71eb871365449ad87fed2bba10facd8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/assembly-comparison.png",
+              "sha256": "3ce241e9c271b8448aa0f59d693fc4a890a6e39117d6149096fe9ac24970f27a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/mask-off-comparison.png",
+              "sha256": "034bc610aeee0a74382aad1260f4f6a8c21e2a195a11aa25ad108d685c310086"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/artifact-manifest.json",
+              "sha256": "e973022a4b9d2e1321ae94bef33810a02cea69ee6c440eb7d66cc0b890cad5bb"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "review_game_scale_and_palette",
+          "phase": "Review all facings, independent Qud tint and intended-size assembly",
+          "action": "Inspected complete authoring plates. Body appearance uses actual Tam tile color w and detail W; robe uses its actual y role. Source/head detail is included only where present in the body model; the north facing has no visible dulla detail layer. Side and all approved neutral assembly bytes remain unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/qud-palette-comparison.png",
+              "sha256": "36486606b5522f441521f0038af5262d1c212a668e75bfcd2fa006bd8f0b665a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/game-scale-review.png",
+              "sha256": "72be20f6912dc29aaafbd6b17529fbe17b15161772bc71aeffdd18667922ae6d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/authoring-review.json",
+              "sha256": "9084a61e69c1ea48bdcbdc68f169ece77fc7eb4e8f4ad267cc73cde3ae8b28f1"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-dromad-cloth-robe/v5/model.json",
-          "sha256": "276d5eff4d26585d50e454a473e00d59226a6c363cf5db39f63993967c3ec2fc"
+          "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+          "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
         },
         "plate": {
-          "path": "art/conversion/fit-dromad-cloth-robe/v5/assembly-comparison.png",
-          "sha256": "398d55af0a73a10664adc584ddb1e59e25c892d87f0304a24d5e7d041713c78f"
+          "path": "art/conversion/fit-dromad-cloth-robe/v6/assembly-comparison.png",
+          "sha256": "3ce241e9c271b8448aa0f59d693fc4a890a6e39117d6149096fe9ac24970f27a"
         }
       },
       "native_acceptance": "Pending final all-conversions validation gate",
@@ -1912,57 +2049,67 @@
         "readiness": "Intact source, per-facing editable masks, original-body overlays, on/off and all-view authoring review recorded in v5; native acceptance pending"
       },
       "art_review": {
-        "status": "REQUIRES REVIEW",
-        "reason": "Front/back pipeline reports, three-band and nine-grid comparisons are recorded. User favors nine-grid and accepts the profile composition. Latest candidate changes only the front/back cuff body-mask geometry to smooth sleeve-opening curves. Thin cuff rim and inherited hand-outline/coverage ownership remain unresolved; robe is not generation-ready."
+        "status": "PASS",
+        "reason": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate."
       },
-      "registration_summary": "Earlier v5 manual draft remains historical; inspect the current mask-fitting experiment above. No new production fit selected.",
-      "current_experiment": {
-        "name": "Nine-grid cloth with curved cuff body mask",
-        "plate": {
-          "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-south.png",
-          "sha256": "215ee940631314fe5a8126818a908f5d831343c29f84230991b7c8cd37625dea"
-        },
-        "before_after": {
-          "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-north.png",
-          "sha256": "efb0d06f8555dbb942eb27ebc2ea3408b705275a498c8bc3cee411e3a0f3798e"
-        },
-        "review": {
-          "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/result.json",
-          "sha256": "504c4afacaee1b824091a12aae71d119458a905cc732074a145bc1a3f059aa21"
-        },
-        "profiles": {
-          "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/body-clothing-profiles.json",
-          "sha256": "9d1e674e48b598f098f6558d9415a8100eef6234aa95d03df2a128061add92df"
-        },
-        "masks": [
-          {
-            "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/robe-mask-comparison.png",
-            "sha256": "d2bd19d346a2fe1b6cfb8f217d3d3d9b8fb6d210ef2cb85adb64d6d2496f0dc4"
-          },
-          {
-            "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/t-shirt-mask-comparison.png",
-            "sha256": "1aab6472312f1724364090aa4bc7b8e8b49b09d436de73ca188c653e248be645"
-          },
-          {
-            "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/trousers-mask-comparison.png",
-            "sha256": "cd5949ff77cacff35f96c8bb3878e988ff9ccae0b0ca05441281587f682834e3"
-          },
-          {
-            "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/skirt-mask-comparison.png",
-            "sha256": "12e30198f714dac9984471f08fbe4627335543b590a58e3d5c63defe710f0a2d"
-          }
-        ],
-        "summary": "Front/back pipeline reports, three-band and nine-grid comparisons are recorded. User favors nine-grid and accepts the profile composition. Latest candidate changes only the front/back cuff body-mask geometry to smooth sleeve-opening curves. Thin cuff rim and inherited hand-outline/coverage ownership remain unresolved; robe is not generation-ready.",
-        "pipeline": {
-          "path": "docs/dromad-curved-cuffs.html",
-          "sha256": "eba4baeffe575694e49965a8834ae65fd1f4fa8982f5e35a687f595db0b7cf4c"
-        }
-      },
+      "registration_summary": "regional-curved-v1: approved nine-grid front/back cloth, natural curved cuff body visibility and unchanged profile. All original body pixels/frame preserved; independent Qud colors and mirrored west recorded. Authoring generation-ready only.",
       "user_art_feedback": {
         "profile": "User says final profile composition looks correct; keep unchanged. This is visual feedback, not native acceptance.",
         "regional_fit": "User says nine-grid looks a little better; angular body-mask cuff boundaries remain the issue.",
         "latest_instruction": "Use a body mask with a natural curved sleeve-opening boundary, not polygon corners."
-      }
+      },
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "GENERATION READY",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "historical_experiments": [
+        {
+          "name": "Nine-grid cloth with curved cuff body mask",
+          "plate": {
+            "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-south.png",
+            "sha256": "215ee940631314fe5a8126818a908f5d831343c29f84230991b7c8cd37625dea"
+          },
+          "before_after": {
+            "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-north.png",
+            "sha256": "efb0d06f8555dbb942eb27ebc2ea3408b705275a498c8bc3cee411e3a0f3798e"
+          },
+          "review": {
+            "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/result.json",
+            "sha256": "504c4afacaee1b824091a12aae71d119458a905cc732074a145bc1a3f059aa21"
+          },
+          "profiles": {
+            "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/body-clothing-profiles.json",
+            "sha256": "9d1e674e48b598f098f6558d9415a8100eef6234aa95d03df2a128061add92df"
+          },
+          "masks": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/robe-mask-comparison.png",
+              "sha256": "d2bd19d346a2fe1b6cfb8f217d3d3d9b8fb6d210ef2cb85adb64d6d2496f0dc4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/t-shirt-mask-comparison.png",
+              "sha256": "1aab6472312f1724364090aa4bc7b8e8b49b09d436de73ca188c653e248be645"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/trousers-mask-comparison.png",
+              "sha256": "cd5949ff77cacff35f96c8bb3878e988ff9ccae0b0ca05441281587f682834e3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/skirt-mask-comparison.png",
+              "sha256": "12e30198f714dac9984471f08fbe4627335543b590a58e3d5c63defe710f0a2d"
+            }
+          ],
+          "summary": "Front/back pipeline reports, three-band and nine-grid comparisons are recorded. User favors nine-grid and accepts the profile composition. Latest candidate changes only the front/back cuff body-mask geometry to smooth sleeve-opening curves. Thin cuff rim and inherited hand-outline/coverage ownership remain unresolved; robe is not generation-ready.",
+          "pipeline": {
+            "path": "docs/dromad-curved-cuffs.html",
+            "sha256": "eba4baeffe575694e49965a8834ae65fd1f4fa8982f5e35a687f595db0b7cf4c"
+          }
+        }
+      ]
     },
     {
       "id": "FIT-DROMAD-SHILLELAGH-HAND-2",
@@ -2444,8 +2591,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -2454,6 +2601,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2491,7 +2639,32 @@
           "sha256": "d01840bf7e7b3dcfbdb802cdcc2e16a5954f3d545797bf68ae4181818ea018ce"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2499,6 +2672,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -2596,6 +2782,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2629,7 +2816,32 @@
           "sha256": "4d67e065b8131517374078443a4732283bc8c3f272ef7e6011b066de9911ac18"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2637,6 +2849,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -2667,6 +2892,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2704,7 +2930,32 @@
           "sha256": "de03c61ceade569a6a82b235e890d159584f14acc3b164d02fd165f32fac975c"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2712,6 +2963,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -2809,6 +3073,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2838,7 +3103,32 @@
           "sha256": "364b2781435d21768db1230149e438afada1b15bf982fcf353e42f901132913d"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2846,6 +3136,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -2876,6 +3179,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2913,7 +3217,32 @@
           "sha256": "950837faa77ccbf04cc8f21044ce3509db66461aab448bb7ff62d21d288af663"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2921,6 +3250,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -2951,6 +3293,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -2988,7 +3331,32 @@
           "sha256": "a9a8a46b9afe9774a085995a90a1e80c840ece5e6e1c4030fc64a964b6ae058e"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -2996,6 +3364,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3081,6 +3462,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3118,7 +3500,32 @@
           "sha256": "5dae6ee51a97b761c6a3566be749613ef6fb530e0c3a2645819af36a2fd825ba"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3126,6 +3533,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3223,6 +3643,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3256,7 +3677,32 @@
           "sha256": "f0141b0a1025e8d54cc3fe1390a54d137062ddc13df7313a2298662d24a01f5b"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3264,6 +3710,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3294,6 +3753,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3331,7 +3791,32 @@
           "sha256": "6b8e806b0b97612c3d5850b1b6c87fe556426aac23db89d56c1883e59ba83ec0"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3339,6 +3824,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3436,6 +3934,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3465,7 +3964,32 @@
           "sha256": "c86153fc35e57f561c1b878e28ebc89eca35f35d2cb63eb83c674a05e8d6a11a"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3473,6 +3997,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3503,6 +4040,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3540,7 +4078,32 @@
           "sha256": "12b5d201fd8168100f8d108d342d75528ffbef7df848c20d3279993805775a6a"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3548,6 +4111,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3578,6 +4154,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3615,7 +4192,32 @@
           "sha256": "de057c367209e8dd0955d6496f7897436706e126f7cb9a8f03e1adebccf57a2a"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3623,6 +4225,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3708,6 +4323,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3745,7 +4361,32 @@
           "sha256": "338821f809df687ea5f3233b2c25b6ece6ae9c2cfedeb9c178ca8c783fde9bb4"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3753,6 +4394,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3783,6 +4437,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3820,7 +4475,32 @@
           "sha256": "72f6f189dc08dd7c0b8db44bf7171e4ceff8af92f79fbcda027848ac62877688"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3828,6 +4508,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -3858,6 +4551,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -3879,7 +4573,32 @@
           "sha256": "7b0918a9f128a3bde959f16f32761f6e53b40c7508ab6f48057d3f6a3ccb068e"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -3887,6 +4606,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -4039,6 +4771,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -4072,7 +4805,32 @@
           "sha256": "89f491192e26af27c8ebea3fde06345caf7532390cf73b87477d4482dcaa8a26"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -4080,6 +4838,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -4165,6 +4936,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -4202,7 +4974,32 @@
           "sha256": "281f1b1d4c3e2e9a1b70cf4e3e98236ead806d7cd59e5c71f0fcac5729150d1b"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -4210,6 +5007,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -4240,6 +5050,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -4277,7 +5088,32 @@
           "sha256": "3a9c3763290d6aba83c000e21b74b104d3b88c1dd5b28809a37876d3241c2c84"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -4285,6 +5121,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -4315,6 +5164,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -4352,7 +5202,32 @@
           "sha256": "b0c99673296a4df14ab3fb62190f7c12866d6d5c940eaadba8de431b1a6d1f88"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -4360,6 +5235,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -4465,6 +5353,7 @@
         "retrieve_isolated_item_and_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
+        "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
       "known_issues": [
@@ -4502,7 +5391,32 @@
           "sha256": "dcbc663f79aacbdb706510a54081126c6299d5495d75b346e3b6ad6c2bed1bb8"
         }
       ],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -4510,6 +5424,19 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
       }
     },
     {
@@ -5453,6 +6380,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5485,7 +6413,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-CHAIN-MAIL",
@@ -5504,6 +6470,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5536,7 +6503,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-CLOTH-ROBE",
@@ -5557,6 +6562,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5589,7 +6595,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-FLOATING-GLOWSPHERE",
@@ -5762,6 +6806,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5794,7 +6839,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-LEATHER-BOOTS",
@@ -5813,6 +6896,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5845,7 +6929,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-PESTLE",
@@ -5916,6 +7038,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -5948,7 +7071,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-SANDALS",
@@ -5970,6 +7131,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -6002,7 +7164,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-SHILLELAGH",
@@ -6072,6 +7272,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -6104,7 +7305,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-STEEL-UTILITY-KNIFE",
@@ -6176,6 +7415,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -6208,7 +7448,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-VIBRO-BLADE",
@@ -6331,6 +7609,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -6363,7 +7642,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-WOVEN-TUNIC",
@@ -6383,6 +7700,7 @@
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
+        "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
@@ -6415,7 +7733,45 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        }
+      ],
+      "generation_ready": false,
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "REPROCESS REQUIRED",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
+      },
+      "art_review": {
+        "status": "REQUIRES REWORK",
+        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
+      }
     },
     {
       "id": "ITEM-WRENCH",
@@ -14960,7 +16316,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-POCKETED-VEST-BODY-0",
+          "FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-ELDERBOB",
@@ -15320,7 +16685,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+          "FIT-IRUDAD-SPECTACLES-FACE-0",
+          "FIT-IRUDAD-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-JOPPAFARMERCONVERT",
@@ -15579,7 +16953,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0",
+          "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-FEMALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-MEHMET",
@@ -15838,7 +17221,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-NIMA-RUDA",
@@ -16196,7 +17588,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-NIMA-LEATHER-APRON-BODY-0",
+          "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-NIMA-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-TAM",
@@ -16437,7 +17838,14 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-DROMAD-CLOTH-ROBE-BODY-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WARDEN-YRAME",
@@ -16715,7 +18123,15 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-YRAME-CHAIN-MAIL-BODY-0",
+          "FIT-YRAME-LEATHER-BOOTS-FEET-16"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-01",
@@ -16977,7 +18393,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-02",
@@ -17239,7 +18664,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-FEMALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-03",
@@ -17501,7 +18935,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-FEMALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-04",
@@ -17763,7 +19206,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-FEMALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-05",
@@ -18025,7 +19477,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-06",
@@ -18287,7 +19748,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "NPC-WATERVINEFARMERJOPPA-07",
@@ -18549,7 +20019,16 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [],
+      "apparel_dependencies": {
+        "workflow": "regional-curved-v1",
+        "entries": [
+          "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+          "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+          "FIT-HUMAN-MALE-SANDALS-FEET-0"
+        ],
+        "status": "Pending new garment fittings; no historical outfit approval implied"
+      }
     },
     {
       "id": "SCN-GARBAGE",
@@ -25353,7 +26832,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_review_applicable_states",
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -25362,6 +26841,7 @@
         "correct_errors_and_refine",
         "extract_register_palette_masks",
         "visual_review_all_views_at_game_scale",
+        "reprocess_under_regional_curved_v1",
         "native_review_applicable_states"
       ],
       "known_issues": [
@@ -26330,25 +27810,221 @@
           "outputs": [],
           "review": "Selected clothing model still uses baked body cutouts. Reuse its intact art and body sources, author separate body-over-clothing masks, and record the mask-first model/recomposition before readiness.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T12:03:39.767864+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "First contextual-cloth and curved child-arm selection",
+          "action": "Reused the actual contextual refinement as fabric source, reconstructed complete body-matched editable tunic with natural sleeve edges, then applied a separate curved original-body mask. No further isolation, adult control coordinates or unnecessary regional stretch. Kept explicit collar-above-head and exposed-arm-above-collar layer ordering.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/reprocess-garment.py",
+              "sha256": "bdc765f7ff6889d81e4141cacc68ac7920fdd5ad75ba40b38f377d97dc3f99d4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v2/refined-context.png",
+              "sha256": "03f1f2ca5d6f41075083c8e03b2a9ec142e97c2ae1d25a137aeb27b779f6cdf6"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/model.json",
+              "sha256": "017b487b0886060a84ab430b6db2619da99f4a97bcaf7a3ebbef2f3d05862194"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/source-packet.json",
+              "sha256": "8e75f2b39c3987d9909ac6a94c4736b0dea66ff4a5aa6c5333efdbf17d7c63b1"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/registration-decisions.json",
+              "sha256": "4e3c872c72cd6649805b027024c206c6336053d7a31b526f5fc0f365b656a1f5"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/contextual-fabric-swatch.png",
+              "sha256": "ed642968fb8ba22b0e2264a215260cfdd92bf633d1ec67ad3e09f9dd8508c9da"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/intact-garment-comparison.png",
+              "sha256": "7e2dec195cc5ee264bc6a2cc594ceaccae9fb2d98b8ea692ed5cab93530cb3a6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/body-mask-comparison.png",
+              "sha256": "179f394361bf8eb68a34f37c622f08c0f20871f065afd2d08ee4d9f4a658576f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/body-overlay-comparison.png",
+              "sha256": "d8deec571df0564ac52d0e6e7c843d5410cdbfe918d14f48f93859938662cda9"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/mask-off-comparison.png",
+              "sha256": "77991a683397a4d476ed5b4ae513cc6d0f76bee4969f9191de5268f99b6fcd6b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/assembly-comparison.png",
+              "sha256": "b04958c713a2ce036e060796427cc36a6cab99fda7e0cb2819d4beea2e22e203"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/independent-palette-comparison.png",
+              "sha256": "ede796269203c92bc5092ed42281c8ab6b9708b5dca6a4c2afd5ba727644c706"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/game-scale-review.png",
+              "sha256": "b4594d038ae27de41fac5d781e7edcd3f89349fbf66f6d213702238ac2d06020"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/authoring-review.json",
+              "sha256": "6113f0fa962a502df89ce79271a8a740e890f47cae943292c7a890d5d1e53e04"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v3/artifact-manifest.json",
+              "sha256": "49764b5f27db4ba3b333107ec319fca3615a9dbe057435bd3e1d2251da4c1f9d"
+            }
+          ],
+          "review": "Initial curved selection included a small torso contour beneath the hands; retained as rejected evidence.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T12:03:39.767864+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "Correct child-arm ownership and complete approved workflow",
+          "action": "Reused the actual contextual refinement as fabric source, reconstructed complete body-matched editable tunic with natural sleeve edges, then applied a separate curved original-body mask. No further isolation, adult control coordinates or unnecessary regional stretch. Kept explicit collar-above-head and exposed-arm-above-collar layer ordering.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/reprocess-garment.py",
+              "sha256": "0b67ac6e0ca8da3e56b30e712109222bf16bb1b070fd34da94d656e00835d58c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v2/refined-context.png",
+              "sha256": "03f1f2ca5d6f41075083c8e03b2a9ec142e97c2ae1d25a137aeb27b779f6cdf6"
+            },
+            {
+              "path": "art/conversion/body-dromad-child/v1/model.json",
+              "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json",
+              "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/source-packet.json",
+              "sha256": "4688a6144147c58cd65ca08a5f60bb58de67998afee569ce74545af2c79e3660"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/registration-decisions.json",
+              "sha256": "17558214cbd1144709cfaf211db8e58dd3f93146d84a2117045f342c544e934d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/contextual-fabric-swatch.png",
+              "sha256": "ed642968fb8ba22b0e2264a215260cfdd92bf633d1ec67ad3e09f9dd8508c9da"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/intact-garment-comparison.png",
+              "sha256": "7e2dec195cc5ee264bc6a2cc594ceaccae9fb2d98b8ea692ed5cab93530cb3a6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/body-mask-comparison.png",
+              "sha256": "1b7c5418497f2067288aed4fd3931bb4e7d642e9efc34eee87a42a285f37723a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/body-overlay-comparison.png",
+              "sha256": "22f58dd15ac12d13dc8226bfc560ce7f4485dd9d0a9affaf1b91fab0b465fa43"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/mask-off-comparison.png",
+              "sha256": "77991a683397a4d476ed5b4ae513cc6d0f76bee4969f9191de5268f99b6fcd6b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/assembly-comparison.png",
+              "sha256": "9bed6e03dfb10aba42988c842bb605b94acb647bbab3895cdcbe0ee3cf2c13f6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/independent-palette-comparison.png",
+              "sha256": "8becbae2732cdac1626193f5a52e9c88446b1ffacc56f87ab1592d7d65fd3e85"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/game-scale-review.png",
+              "sha256": "05d26c1523e39a1230df7f581e61298b9d4574810c334d7809abc0968001cb3f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/authoring-review.json",
+              "sha256": "f81b49fabcb2571c9863c5ff78150dbdc2aae522e63ab2c804f439a6e8c0506d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/artifact-manifest.json",
+              "sha256": "25e8c05497c584860d5ba518e7b42509c16334f46a3a49e893f0c9017051def9"
+            }
+          ],
+          "review": "Inspected all facings, full cloth, body-only overlay, independent tint, mask-off and intended-size plate. Contextual fabric and complete editable pattern supply the garment; no isolated drawing or arm-shaped cloth cut. Corrected masks stop at the actual exposed-hand region. Body/head/contact unchanged; west mirrors east. Template only, no resident assignment. Native validation pending full set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:03:39.767864+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Review reprocessed child fitting in all authored directions",
+          "action": "Inspected the full neutral, independent Qud-role tint, retained-cloth, exposed-body and intended-size plates; selected the corrected mask version.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json",
+              "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/authoring-review.json",
+              "sha256": "f81b49fabcb2571c9863c5ff78150dbdc2aae522e63ab2c804f439a6e8c0506d"
+            }
+          ],
+          "review": "Generation-ready authoring only. Existing contextual refinement is retained in the complete history; native equipment/child-selector acceptance remains pending.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-dromad-child-woven-tunic/v2/model.json",
-          "sha256": "623715fda2a66fd6038849d94b7c8217288e22b84a798de8155b0e49574047b1"
+          "path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json",
+          "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"
         },
         "plate": {
-          "path": "art/conversion/fit-dromad-child-woven-tunic/v2/assembly-comparison.png",
-          "sha256": "309c75fd83bde7f08d040742c4f36c227578d76b7fe01e1f538e09c4eaba093c"
+          "path": "art/conversion/fit-dromad-child-woven-tunic/v4/assembly-comparison.png",
+          "sha256": "9bed6e03dfb10aba42988c842bb605b94acb647bbab3895cdcbe0ee3cf2c13f6"
         }
       },
       "native_acceptance": "Pending final all-conversions validation gate",
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "Selected clothing model still uses baked body cutouts. Reuse its intact art and body sources, author separate body-over-clothing masks, and record the mask-first model/recomposition before readiness."
+        "status": "PASS",
+        "reason": "Inspected all facings, full cloth, body-only overlay, independent tint, mask-off and intended-size plate. Contextual fabric and complete editable pattern supply the garment; no isolated drawing or arm-shaped cloth cut. Corrected masks stop at the actual exposed-hand region. Body/head/contact unchanged; west mirrors east. Template only, no resident assignment. Native validation pending full set."
       },
-      "registration_summary": "Corrected v2: fixed dromad child body/dulla and contact; explicit continuous neck/hump pattern with refinement-derived cloth material, separate intact art and foreground-arm coverage. Native acceptance pending.",
+      "registration_summary": "regional-curved-v1: complete editable tunic with fabric from actual contextual refinement, natural curved original-body visibility, no garment cutouts. This authored child template has no assigned native wearer.",
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -26356,6 +28032,14 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
+      },
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "GENERATION READY",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
       }
     },
     {
@@ -26369,7 +28053,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_review_applicable_states",
       "required_steps": [
         "source_identity_description_metadata",
         "original_and_render_reference_decision",
@@ -26378,6 +28062,7 @@
         "correct_errors_and_refine",
         "extract_register_palette_masks",
         "visual_review_all_views_at_game_scale",
+        "reprocess_under_regional_curved_v1",
         "native_review_applicable_states"
       ],
       "known_issues": [
@@ -27417,25 +29102,149 @@
           ],
           "review": "All facings and intended-size plate inspected. Original exposed forearms/hands sit in front of intact sleeve interiors; torso lines and shoulders stay cloth-owned. West mirrors east. Original head/body and canonical cloth unchanged. Generation-ready only; final native acceptance remains pending.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T12:09:35.962430+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "Rebuild continuous child tunic and natural cuff visibility",
+          "action": "Used original contextual material sample [180,425,310,545] with the child-specific editable tunic pattern; rebuilt near sleeve around the fixed profile arm, retained front rope/back design and physical frame, then composed separate curved body visibility. New full cloth, source metadata, model and overlays recorded.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/reprocess-garment.py",
+              "sha256": "aa105951f11f292f1332d710eb2fcf6ace67fc93a895ebc3a9fb74859b2ed63c"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v2/refined-context.png",
+              "sha256": "92bdd3cd0f074cd4edc806b03cddc138bb17e8f85b61005418d9ee8735667728"
+            },
+            {
+              "path": "art/conversion/body-human-child/v1/model.json",
+              "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/model.json",
+              "sha256": "0b5af6668e5d1e9502bcd5f4cb3a38f287c154ae913abb965c025dfb9fc1415d"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/source-packet.json",
+              "sha256": "b4ce35e6a03cc75ea5c722b9b7fbee4f03a7f2898af73f594a9ef48103641456"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/registration-decisions.json",
+              "sha256": "b890e4bf40fef3a16e93a022a348f33c1049c2c0a7cde74c5fe4d5c7ff43e8bf"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/contextual-fabric-swatch.png",
+              "sha256": "9a5d937532f8dee87028104b4960ffb5fb777f941def54be42c9f0aff90b1e39"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/intact-garment-comparison.png",
+              "sha256": "5bd7f7b3f032fa60b74b27d264a9991805a7ade00921310917857de60c2df9ec"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/body-mask-comparison.png",
+              "sha256": "ab6789a73f2e290ddb2ad3127e9dda10f09d0dfa083d5fb685defa0f079a0ad3"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/body-overlay-comparison.png",
+              "sha256": "0b4131ed98b1f312f06a24ef3840b8ea0dd3f13f9ef1b4892778b29cf84b1109"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/mask-off-comparison.png",
+              "sha256": "70ea595b800cbf87b4670aa959ce59098e5b1e87c93f089396b774fbe3166034"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/assembly-comparison.png",
+              "sha256": "007739f39507cbf9ad61db46e413f6917a608f53115b43e7c8d0de39efee8383"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/artifact-manifest.json",
+              "sha256": "aad7ea150216e99950b494337950cf76ea3d99d777a08f18ee198fcdcea84521"
+            }
+          ],
+          "review": "Inspected full neutral front/profile/back and mirrored west, original-body overlay, retained cloth, mask-off and intended-size output. Reconstructed continuous tunic from editable body-matched geometry and actual contextual fabric sample. Rounded physical cuff ends and natural exposed-arm masks preserve original forearms/hands. Rebuilt the profile sleeve around its actual near arm. No isolated generated drawing, destructive cloth cut, body change or new ImageGen call. Native child selection and outfit acceptance remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:09:35.962430+00:00",
+          "step": "visual_review_all_views_at_game_scale",
+          "phase": "Review shared human-child tunic under updated workflow",
+          "action": "Used original contextual material sample [180,425,310,545] with the child-specific editable tunic pattern; rebuilt near sleeve around the fixed profile arm, retained front rope/back design and physical frame, then composed separate curved body visibility. New full cloth, source metadata, model and overlays recorded.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/reprocess-garment.py",
+              "sha256": "aa105951f11f292f1332d710eb2fcf6ace67fc93a895ebc3a9fb74859b2ed63c"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v2/refined-context.png",
+              "sha256": "92bdd3cd0f074cd4edc806b03cddc138bb17e8f85b61005418d9ee8735667728"
+            },
+            {
+              "path": "art/conversion/body-human-child/v1/model.json",
+              "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/game-scale-review.png",
+              "sha256": "72c9d363de7acd7188df355b9d3e9d6629bfde919870fc7e206cf7f6b040dee8"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/independent-palette-comparison.png",
+              "sha256": "0954820c94ff6d437c915da72982752019cd8d8b98ede6c4b0ddf46fdfde30fb"
+            },
+            {
+              "path": "art/conversion/fit-human-child-woven-tunic/v6/authoring-review.json",
+              "sha256": "f8508f3cdc0f53006c395ad29d2294facc198d78a5cc725e4375fb933bce0b53"
+            }
+          ],
+          "review": "Inspected full neutral front/profile/back and mirrored west, original-body overlay, retained cloth, mask-off and intended-size output. Reconstructed continuous tunic from editable body-matched geometry and actual contextual fabric sample. Rounded physical cuff ends and natural exposed-arm masks preserve original forearms/hands. Rebuilt the profile sleeve around its actual near arm. No isolated generated drawing, destructive cloth cut, body change or new ImageGen call. Native child selection and outfit acceptance remain pending full-set gate.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-human-child-woven-tunic/v5/model.json",
-          "sha256": "3644db3425dd041f73794b32360410ecd1db9ce59416a0da54acf503077a3619"
+          "path": "art/conversion/fit-human-child-woven-tunic/v6/model.json",
+          "sha256": "0b5af6668e5d1e9502bcd5f4cb3a38f287c154ae913abb965c025dfb9fc1415d"
         },
         "plate": {
-          "path": "art/conversion/fit-human-child-woven-tunic/v5/assembly-comparison.png",
-          "sha256": "c1de3ccfdf62fc5e56042f687685cc20f1746d8418f82141c8515c2569380780"
+          "path": "art/conversion/fit-human-child-woven-tunic/v6/assembly-comparison.png",
+          "sha256": "007739f39507cbf9ad61db46e413f6917a608f53115b43e7c8d0de39efee8383"
         }
       },
       "native_acceptance": "Pending final all-conversions validation gate",
       "art_review": {
         "status": "PASS",
-        "reason": "All facings and intended-size plate inspected. Original exposed forearms/hands sit in front of intact sleeve interiors; torso lines and shoulders stay cloth-owned. West mirrors east. Original head/body and canonical cloth unchanged."
+        "reason": "Inspected full neutral front/profile/back and mirrored west, original-body overlay, retained cloth, mask-off and intended-size output. Reconstructed continuous tunic from editable body-matched geometry and actual contextual fabric sample. Rounded physical cuff ends and natural exposed-arm masks preserve original forearms/hands. Rebuilt the profile sleeve around its actual near arm. No isolated generated drawing, destructive cloth cut, body change or new ImageGen call. Native child selection and outfit acceptance remain pending full-set gate."
       },
-      "registration_summary": "Mask-first v5: unchanged centered body and byte-identical intact v2 cloth; separate per-facing masks and original-body overlays. Independent tint/association recorded. Generation authoring only; native binding and outfit precedence pending.",
+      "registration_summary": "regional-curved-v1: contextual flax material on continuous editable tunic, natural curved body visibility and body-matched near sleeve. Template geometry shared by child labels; no native resident assignment.",
       "apparel_occlusion": {
         "representation": "Intact cloth + separate per-facing body-over-clothing mask",
         "mask_semantics": "white=original body above this garment; black=no body overlay; gray=edge coverage",
@@ -27443,6 +29252,14 @@
         "tint": "Overlay keeps body foreground/detail; cloth keeps actual equipment tint",
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Recorded intact cloth, editable masks, original-body overlay, mask-off/on and all-view generation review in v5; native acceptance pending"
+      },
+      "apparel_workflow": {
+        "version": "regional-curved-v1",
+        "status": "GENERATION READY",
+        "reset": {
+          "path": "evidence/apparel-workflow-reset-20261020.json",
+          "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+        }
       }
     },
     {
@@ -34790,5 +36607,17 @@
     "composition": "base body -> garment -> mask-selected original body, respecting head/detail and other equipment precedence",
     "stage": "Authoring now; native binding acceptance after all generated",
     "source": "Explicit user correction2026-10-20"
+  },
+  "apparel_workflow": {
+    "version": "regional-curved-v1",
+    "recipe": {
+      "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+      "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+    },
+    "reset": {
+      "path": "evidence/apparel-workflow-reset-20261020.json",
+      "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+    },
+    "rule": "One entry at a time; no native validation before the full set is generated"
   }
 }

@@ -505,3 +505,21 @@ accepted profile and all prior comparisons. Show the painted unclothed model,
 separate curved mask and same-cloth old/new assemblies; antialias curve edges
 without blurring garment or body artwork. This remains the same bounded A4/A5
 authoring experiment and does not close the robe or Stage 3.
+
+2026-10-20 approved production authoring procedure: the user accepts the regional
+fitting/curved cuff result, asks to document it in the skill, invalidate current
+clothing again and continue generation. `regional-curved-v1` in the conversion
+skill's apparel reference is now the required clothing workflow. Preserve all
+prior art, exact prompts and process logs as inputs/history. Withdraw readiness
+from current clothing, accessories, their body-specific fittings and template
+garments; body/race models, intrinsic horns and held tools are not clothing and
+retain their status. Restore clothing readiness only after actual per-entry
+reprocessing and authoring review under the new procedure. No blanket credit.
+
+The approved adult dromad source, nine-grid front/back cloth, smooth cuff masks
+and unchanged profile can be registered and reviewed without another ImageGen
+call. Its thin rim is accepted as part of the user's visual approval; do not
+restart speculative fitting variants for it. Continue on the sole active robe
+entry, then proceed through required clothing entries individually. This resumes
+the original full-ledger generation objective; Stage 3 remains the only ACTIVE
+stage and final native validation remains behind the all-generated gate.

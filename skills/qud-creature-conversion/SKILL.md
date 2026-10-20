@@ -186,98 +186,52 @@ occlusion and per-facing layer order. Unsupported anatomy retains native art.
 
 ## 6. Fit one garment or held item at a time
 
-Read the actual item's blueprint, description, sprite, palette, equipped part
-and laterality. Start with one real equipped item, not a profession costume.
+Read the actual item's blueprint, description, original sprite/palette, equipped
+part and laterality. Start with one real item, not a profession costume.
 
-1. Overlay its constructed shape on the selected, registered unclothed body.
-2. Refine that item in context, preserving body, camera and contact landmarks.
-3. Retrieve an isolated transparent **intact garment**, plus a separate per-facing
-   **body-over-clothing mask**. Do not bake hand/arm silhouettes into garment alpha.
-   A flattened dressed image does not automatically recover either source.
-4. Recompose with the mask over the unchanged body. Reject baked skin, missing fabric, seams,
-   changed anatomy or incorrect perspective. A side garment must turn with the
-   torso and accommodate actual humps, necks and additional limbs.
+For garments, follow [the approved apparel-fitting recipe](references/apparel-fitting.md)
+before constructing or extracting a replacement. Its production sequence is:
+fixed race/body → one contextual refinement → continuous cloth source →
+registered regional fitting where needed → curved body visibility →
+independent body/equipment tint → authoring review in every required facing.
 
-Inspect **ownership at every cut edge**, especially cuffs, necklines and limb
-openings. A generated isolated garment can retain a hand/body outline or a
-closed cuff oval that crosses the real hand when overlaid. Do not treat those
-strokes as fabric merely because they are inside the extracted asset. Remove
-foreign body outlines from the garment art; preserve the
-garment's intended outer edge and the unchanged underlying anatomy. Check both
-the isolated shape and its recomposition at enlarged and intended game scale,
-including side/back views. Keep the unmodified generation and mask provenance.
+ImageGen may refine the item in context. Do not ask it for a second supposedly
+exact garment isolation: that redraws proportions and loses registration.
+Preserve original body pixels. Classify colored mannequin pixels as ownership
+reference, explicitly complete occluded cloth before fitting, and retain full
+cloth independently of a final body-over-clothing visibility mask. Neither
+closed nor side-connected arm holes are canonical garment alpha.
 
-Keep source-intended shoulder coverage continuous into sleeves; an accidental
-strip of bare shoulder is a fit defect, not a new garment design. Preserve intact
-isolated garment art separately from its body-over-clothing mask. Derive
-arm/neck occlusion from the actual registered silhouette and local cuff/collar
-boundaries; broad guessed polygons or circular hand punches can remove cloth
-outside the body. Show the intact garment, mask and precise recomposition
-separately. Existing baked-cut exports remain historical drafts, not canonical
-garment sources. Transparency for a real neckline/opening or the outer silhouette
-is legitimate; a body-shaped hole used to solve draw order is not the source art.
+Use the simplest fit that meets the actual garment/body landmarks: preserve
+already good regions, try three bands for broad upper/middle/lower differences,
+and use nine cells for independent sleeve/torso adjustment. Use shared boundaries
+and one sampling pass; do not restart an unconstrained local mesh. The selected
+adult dromad example uses nine-grid front/back cloth, natural curved cuff masks,
+and its unchanged accepted profile. Its adult coordinates are not child, human,
+boot or hat defaults. Adapt each garment class to its actual coverage.
 
-**Use masks for body/apparel draw order, not destructive cutoffs.** A garment
-contains cloth only: no backdrop, mannequin-colored fill or copied body pixels.
-It may retain its complete physical cloth shape and fabric interior. The separate
-mask must keep rear sleeve/interior cuff surfaces behind exposed arms/hands/neck,
-so no opaque cap or foreign contour crosses the body in the final composition.
-Keep ordinary shading on visible fabric; a fully transparent image background
-alone does not establish correct internal ownership.
+Draw natural cuff openings as smooth editable curves, following cloth wrapping
+around the arm, rather than polygon spurs. Retain complete exposed forearms/hands
+and the original body contour. Antialias only geometric mask edges. Keep the
+visible front cuff rim and shoulder coverage; no body/background-colored fill,
+foreign body lines, limb-shaped destructive cutoffs or blurred artwork.
 
-Apply body visibility only after fitting the intact cloth. A painted semantic
-map on the fixed unclothed model defines which original body regions appear
-above each garment type; keep that map independent of the garment's RGB and
-working alpha. Red-key body classification is evidence for region ownership,
-not permission to bake hand/arm-shaped holes into cloth before stretching or
-local fitting. Complete missing occluded fabric explicitly and record its
-provenance; deleting a colored body cannot recover fabric it concealed.
-Inspect the retained texture with visibility disabled, including side-connected
-notches as well as closed holes. Neither a clean final assembly nor an intact
-profile proves the other facings have complete cloth.
+White mask means original body above garment, black means none, gray is edge
+coverage. Body, garment and mask share frame, physical scale, pivot and facing.
+Body overlay retains body tint; cloth retains equipment tint. Do not expose bare
+hands above gloves or other worn/held gear. Record actual outfit precedence;
+authoring masks do not prove support in an unnamed RimWorld mod or native runtime.
 
-Technique comparisons must use identical generated source material. If sources
-differ, label each source and do not attribute changed drawing lines to scaling.
-Retain earlier misleading comparisons as history with an explicit correction.
+Retain exact prompts, output hashes, source completion, fit controls, masks,
+mask-off/on and intended-size/palette plates on the one active ledger entry.
+Compare techniques using identical generated material; disclose different inputs.
+Existing failed drafts stay historical. Readiness invalidated by a workflow change
+returns only after that particular entry has been processed and reviewed under
+the new version. Native checks stay behind section 7's full-set generation gate.
 
-Define each mask in the same registered canvas as garment and body: white means
-draw those original body pixels above this garment; black means no body overlay;
-gray is only antialiased boundary coverage. Follow the actual front cuff edge,
-exposed-limb contour and its outline. Multiply by actual body alpha so a painted
-mask cannot create anatomy outside the selected body. Keep one mask per garment,
-body family and facing; do not independently center, resize or infer it from
-generated garment placement. Preserve shoulder coverage.
-
-For ordinary sleeves, draw the body's exposed-arm boundary as a smooth cuff
-cross-section matching the fitted sleeve opening. Use editable continuous curves
-with appropriate tangents, not a diagonal polygon followed by a horizontal spur.
-Keep the forearm/hand together and retain the original body contour. Antialias
-the geometric mask edge; do not blur garment/body art to hide a mismatch. Compare
-the old and curved masks on identical cloth so fit changes remain attributable.
-The garment's visible front cuff edge must retain its intended outline; record
-any rim/overlap issue instead of accepting a smooth mask alone.
-
-The authoring compositor draws the base body, the intact garment, then the
-body pixels selected by the mask, with the documented head/detail order. The
-garment uses its equipment tint; the masked body uses the body's own tint/detail,
-never the clothing color. Activate the overlay only with that equipped garment.
-Only exposed body belongs in the mask: do not paint bare hands over gloves or
-other worn/held equipment. Record required outfit/layer precedence explicitly.
-A derived masked body texture is an export/composition product; retain the full
-garment, original body and editable mask as the authoritative sources.
-
-Inspect the garment, painted mask, body-overlay-only and composed facings at
-enlarged and intended size. Withhold generation-ready credit for cuff caps,
-foreign outlines or incorrect overlap. Show mask-on/mask-off comparison in the
-report. Keep native mask/layer binding pending behind the all-generated gate;
-reuse the existing renderer contract where possible, without adding a new
-rendering framework during generation. Do not call a dye/color mask a body
-occlusion mask, or claim a donor mod implements this behavior without evidence.
-
-Apparel art must fit the supported body family. Do not claim donor clothing is
-automatically deformed for every Qud mutation. Inventory items remain invisible
-until equipped. Laterality controls held-item anchors rather than a universal
-hand location.
+Held tools/weapons retain their separate identity, directional art, attachment,
+slot and laterality workflow. They do not gain sleeve masks or garment deformation.
+Mutation overlays likewise remain separate from reusable unmutated body templates.
 
 ## 7. Validate only after every pending conversion is generated
 

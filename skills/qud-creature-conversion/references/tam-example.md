@@ -1,7 +1,10 @@
 # Tam: worked example and current limits
 
 **Representation update:** this example retains the history of the earlier
-alpha-cut robe extraction. The current skill supersedes that production method:
+alpha-cut robe extraction. Follow [the approved apparel recipe](apparel-fitting.md)
+for current production; the later regional/curved workflow and accepted dromad
+registration are recorded in `art/conversion/fit-dromad-cloth-robe/v6/`.
+The current skill supersedes that historical production method:
 keep the intact garment and a separate per-facing body-over-clothing mask, then
 composite original body pixels above the cloth. Earlier cuff cutouts and their
 native evidence remain historical; they do not establish the new mask-first
