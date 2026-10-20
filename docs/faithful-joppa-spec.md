@@ -826,3 +826,25 @@ under alpha0, retaining alpha and every visible pixel. Item aggregation adds no
 generation call. Stationary display fits do not satisfy horizontal ready/resting
 state, runtime slot-demand, named outfit or native equipped-state acceptance.
 Stage 3 remains the sole ACTIVE stage; continue the female Steel Utility Knife.
+
+Female Steel Utility Knife checkpoint: this is compatibility-template authoring,
+not an observed female equipped NPC. Actual source is male Argyve519/item588 on
+ordinary Hand320/2. Full BaseDagger ancestry supports one-handed base class;
+actor-event slot demand, physical dimensions and donor drawSize are not exported.
+Installed description/original glyph govern the small open folding blade, pivot,
+thumb nick and handle; actual current VWE CombatKnife supplies only small flat
+weapon shading/proportions. Argyve's painted-history/reputation description stays
+in the packet; no separate paint graphic was exported and no narrative scene is
+invented in the generic knife. No fold-toggle mechanic is inferred.
+
+One contextual refinement supplies dull/smudged neutral surface. Generated glow,
+mannequin and geometry changes are excluded; original full source alpha/ink and
+body stay fixed. Hidden handle is completed before depth and Y blade/y handle
+tint remain separate. A copied axe-specific7000-pixel sampling guard exceeded
+the entire4683-pixel knife; the diagnosed helper correction requires actual
+material in both blade/handle components, without changing art acceptance.
+Intended-size and versioned common-body weapon comparison show a roughly170px
+knife rather than equal-bounds sword/axe sizing. These are authored estimates
+and stationary display fits. Actual native female compatibility, equipped and
+individual painted appearance, ready/resting state and outfits remain unfinished
+behind the full-generation gate. Continue the male knife fitting; Stage 3 ACTIVE.
