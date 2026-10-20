@@ -1,0 +1,182 @@
+{
+  "entry": "SCN-ELECTRIC-GENERATOR",
+  "identity": "Electric Generator -> SolidHighTechInstallation -> HighTechInstallation -> MountedFurniture",
+  "description": "A cased rotor is fed charge through a handcrank and supplemented by solar heat. Its scratched metal surfaces vibrate at ground frequency.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Electric Generator": "<object Name=\"Electric Generator\" Inherits=\"SolidHighTechInstallation\">\n    <part Name=\"Render\" DisplayName=\"electric generator\" ColorString=\"&amp;W\" TileColor=\"&amp;c\" DetailColor=\"W\" RenderString=\"232\" Tile=\"Furniture/generator.bmp\" />\n    <part Name=\"Description\" Short=\"A cased rotor is fed charge through a handcrank and supplemented by solar heat. Its scratched metal surfaces vibrate at ground frequency.\" />\n    <part Name=\"SolarArray\" ChargeRate=\"15\" />\n    <part Name=\"Circuitry\" StartCharge=\"1000\" />\n    <part Name=\"ElectricalPowerTransmission\" ChargeRate=\"1000\" IsProducer=\"true\" />\n    <part Name=\"PowerSwitch\" SecurityClearance=\"0\" />\n    <part Name=\"Examiner\" Complexity=\"3\" Difficulty=\"1\" />\n    <part Name=\"TinkerItem\" Bits=\"013\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <stat Name=\"AV\" Value=\"15\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Generous,Lavish,Microstar,Plentiful,Potent,Profligate,Replenisher\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Appliances,Energy Cells,Power Grids,the Depleted,the Jacked,the Power-Hungry,Tinkers\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"RailedMechanism\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"infrastructure\" />\n    <tag Name=\"Tier\" Value=\"3\" />\n    <tag Name=\"Role\" Value=\"Uncommon\" />\n    <stag Name=\"Power\" />\n    <stag Name=\"SurfacePower\" />\n    <stag Name=\"ElectricalPowerProducer\" />\n    <stag Name=\"SurfaceElectricalPowerProducer\" />\n    <tag Name=\"DynamicSemanticTable:ElectricalPowerProducer:Weight\" Value=\"0.2\" />\n    <tag Name=\"DynamicSemanticTable:SurfaceElectricalPowerProducer:Weight\" Value=\"0.2\" />\n    <stag Name=\"Heat\" />\n  </object>",
+      "SolidHighTechInstallation": "<object Name=\"SolidHighTechInstallation\" Inherits=\"HighTechInstallation\">\n    <part Name=\"Render\" RenderLayer=\"7\" Occluding=\"true\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"15000\" Solid=\"true\" />\n    <removepart Name=\"MissileCover\" />\n    <stat Name=\"Hitpoints\" Value=\"800\" />\n    <stat Name=\"AV\" Value=\"10\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n   \n  </object>",
+      "HighTechInstallation": "<object Name=\"HighTechInstallation\" Inherits=\"MountedFurniture\">\n    <stat Name=\"HeatResistance\" Value=\"75\" />\n    <stat Name=\"ColdResistance\" Value=\"75\" />\n    <stat Name=\"ElectricResistance\" Value=\"25\" />\n    <stat Name=\"AcidResistance\" Value=\"75\" />\n    <part Name=\"Physics\" />\n    <part Name=\"AnimatedMaterialGenericAlternate\" AnimationLength=\"300\" TileAnimationFrames=\"80=Items/sw_power_cut_small.png,180=default\" RequiresAnyUnpoweredActivePart=\"true\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownBizarreContraption\" Alternate=\"UnknownBizarreContraption\" />\n    <xtagTextFragments Skin=\"machinery\" PoeticFeatures=\"towering stature,machinic pose,rhythmic piping\" />\n    <part Name=\"Metal\" />\n    <stat Name=\"Hitpoints\" Value=\"200\" />\n    <stat Name=\"AV\" Value=\"4\" />\n    <tag Name=\"ForceRepaintSolid\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_electronic\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_electronic\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "tile": "Furniture/generator.bmp",
+    "description": "A cased rotor is fed charge through a handcrank and supplemented by solar heat. Its scratched metal surfaces vibrate at ground frequency.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "electric generator",
+      "RenderString": "232",
+      "RenderLayer": "7",
+      "RenderIfDark": "true",
+      "Occluding": "true",
+      "ColorString": "&W",
+      "TileColor": "&c",
+      "DetailColor": "W",
+      "Tile": "Furniture/generator.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Electric Generator",
+    "reference_file": "village-originals/electric-generator-reference.png",
+    "native_mask_sha256": "1dc4025a18b33fa3df4d7808122acf92d5aef3e79a54fa89e91f45ca32bc169d",
+    "reference_sha256": "30b7a634d3001033260e4752d06475c60b760866e0bf6f76c2be97fa5c7d6f65",
+    "info_id": 8803,
+    "atlas_id": 121,
+    "rect": [
+      144,
+      26,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\electric-generator-mask.png",
+      "sha256": "1dc4025a18b33fa3df4d7808122acf92d5aef3e79a54fa89e91f45ca32bc169d"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\electric-generator-reference.png",
+      "sha256": "30b7a634d3001033260e4752d06475c60b760866e0bf6f76c2be97fa5c7d6f65"
+    }
+  },
+  "source_shape": "Raised upper rectangular frame/inset bar/open gap, four short left marks at native rows9/13/15/17, a wider left bar around row11, partial primary rail above lower-right detail ring/central point, and low full-width primary rail.",
+  "palette": {
+    "primary": "c from TileColor across body/top/control marks/axial center",
+    "detail": "W on source circular wheel perimeter only",
+    "glyph": "ColorString W belongs to glyph fallback and does not turn whole tiled body gold.",
+    "rule": "Preserve actual c/W roles independently in neutral artwork. Gold construction key is wheel ownership, not paint baked into texture."
+  },
+  "native_state": "One fixed Furniture/generator.bmp body tile. No child operational tile loop or rotor animation declared. SolarArray and Circuitry installed code handles charge/production and does not declare a new body tile. Do not invent spinning crank, vibration frames, on/off paint or extra solar-panel states. Inherited unpowered status indicator remains native UI/status fallback; rare Animated1/15000 RailedMechanism retains native fallback.",
+  "native_code_study": {
+    "classes": {
+      "SolarArray": {
+        "path": "E:\\Temp\\rimqud-native-generator-20261021\\XRL.World.Parts.SolarArray.decompiled.cs",
+        "sha256": "a947254b39ced32f745beb6f1fe7f93d5fa1a00b550aac9ff7b4567a8335735d"
+      },
+      "Circuitry": {
+        "path": "E:\\Temp\\rimqud-native-generator-20261021\\XRL.World.Parts.Circuitry.decompiled.cs",
+        "sha256": "28ba6126465b0f0d0d968cf4c7b66ce7a7fc529988cf2f45c86ae5edefd97a2b"
+      }
+    },
+    "findings": [
+      "SolarArray IPoweredPart participates in charge production at blueprint ChargeRate15; source ChargeUse defaults0. No Tile/Render override in this class.",
+      "Circuitry StartCharge sets Charge/IncomingCharge and ActiveTurn. No Tile/Render override in this class; charge display/flow remains native."
+    ],
+    "boundary": "Static definition/code study only, not native replacement acceptance. Description establishes a handcrank, not a new animation contract."
+  },
+  "native_behavior": "Source SolarArray15, CircuitryStartCharge1000, electrical producer1000, security0PowerSwitch, AV15/HP300. Inherited solid non-takeable15000weight inorganic metal/occluding RenderLayer7 installation. Native solar/charge/grid/switch/examine/tinker, rare Animated state and sounds remain untouched.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\ChemfuelPoweredGenerator.png",
+      "sha256": "0290e50e3183bb42d33ec6d56e7c0492668cc492ce0a978032ec54f15b75e412"
+    },
+    "frame": [
+      256,
+      256
+    ],
+    "alpha_bounds": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Power.xml",
+      "sha256": "f9213d01681e0d9082447c75a3d31113ba8e6b52f7595ef951d29ca624d0aaba"
+    },
+    "object": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>ChemfuelPoweredGenerator</defName>\n    <label>chemfuel powered generator</label>\n    <description>Produces power by consuming chemfuel. Must be periodically refueled by hand.</description>\n    <thingClass>Building</thingClass>\n    <drawerType>MapMeshAndRealTime</drawerType>\n    <graphicData>\n      <texPath>Things/Building/Power/ChemfuelPoweredGenerator</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n      <drawSize>(2,2)</drawSize>\n      <shadowData>\n        <volume>(1.93,1,1.69)</volume>\n        <offset>(-0.03,0,-0.1)</offset>\n      </shadowData>\n    </graphicData>\n    <altitudeLayer>Building</altitudeLayer>\n    <passability>PassThroughOnly</passability>\n    <fillPercent>0.9</fillPercent>\n    <pathCost>50</pathCost>\n    <rotatable>false</rotatable>\n    <blockWind>true</blockWind>\n    <statBases>\n      <MaxHitPoints>300</MaxHitPoints>\n      <WorkToBuild>2500</WorkToBuild>\n      <Flammability>1.0</Flammability>\n      <Beauty>-20</Beauty>\n    </statBases>\n    <tickerType>Normal</tickerType>\n    <canOverlapZones>false</canOverlapZones>\n    <size>(2,2)</size>\n    <building>\n      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>\n    </building>\n    <costList>\n      <Steel>100</Steel>\n      <ComponentIndustrial>3</ComponentIndustrial>\n    </costList>\n    <comps>\n      <li Class=\"CompProperties_Power\">\n        <compClass>CompPowerPlant</compClass>\n        <basePowerConsumption>-1000</basePowerConsumption>\n        <transmitsPower>true</transmitsPower>\n        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>\n      </li>\n      <li Class=\"CompProperties_Flickable\" />\n      <li Class=\"CompProperties_Refuelable\">\n        <fuelConsumptionRate>4.5</fuelConsumptionRate>\n        <fuelCapacity>30.0</fuelCapacity>\n        <fuelFilter>\n          <thingDefs>\n            <li>Chemfuel</li>\n          </thingDefs>\n        </fuelFilter>\n        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>\n        <canEjectFuel>true</canEjectFuel>\n      </li>\n      <li Class=\"CompProperties_Glower\">\n        <glowRadius>6</glowRadius>\n        <glowColor>(80,112,180,0)</glowColor>\n      </li>\n      <li Class=\"CompProperties_HeatPusher\">\n        <compClass>CompHeatPusherPowered</compClass>\n        <heatPerSecond>6</heatPerSecond>\n      </li>\n      <li Class=\"CompProperties_Breakdownable\" />\n      <li Class=\"CompProperties_Explosive\">\n        <explosiveRadius>0</explosiveRadius>\n        <explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>\n        <explosiveDamageType>Flame</explosiveDamageType>\n        <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>\n        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>\n        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>\n        <preExplosionSpawnChance>1</preExplosionSpawnChance>\n        <wickTicks>70~150</wickTicks>\n      </li>\n      <li Class=\"CompProperties_Stunnable\">\n        <useLargeEMPEffecter>true</useLargeEMPEffecter>\n        <affectedDamageDefs>\n          <li>EMP</li>\n        </affectedDamageDefs>\n      </li>\n    </comps>\n    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>\n    <designationCategory>Power</designationCategory>\n    <uiOrder>2100</uiOrder>\n    <designationHotKey>Misc4</designationHotKey>\n    <constructEffect>ConstructMetal</constructEffect>\n    <researchPrerequisites>\n      <li>Electricity</li>\n    </researchPrerequisites>\n    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>\n  </ThingDef>\n\n  ",
+    "building_base": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "graphic_class": "Graphic_Single",
+    "drawSize": [
+      2,
+      2
+    ],
+    "footprint": [
+      2,
+      2
+    ],
+    "rotatable": false,
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "role": "Actual VTE override of Core ChemfuelPoweredGenerator: restrained case/cylindrical metal highlights, wear and shallow cardinal map volume only. No large donor cylinders, caps, fuel tank/color,2x2footprint or fuel gameplay copied.",
+    "equivalence": "Partial machinery finish reference, not source generator geometry."
+  },
+  "construction": {
+    "camera": "One fixed cardinal map face with parallel case edges and small bevels, no three-quarter cabinet/diagonal yaw.",
+    "source_supported": "Upper rectangular frame/inset bar, four short left marks, lower-right ring/central point, low base rail, c primary/W circular detail. Description supports cased rotor and handcrank.",
+    "authored": "Sparse native glyph lines are interpreted as landmarks of a filled lower casing. Panel thickness, closed casing surface, recessed small marks, axle/crank coupling and restrained top-module depth are authored, not native fields. Actual upper opening is left transparent; no bucket, external solar wing, fuel bottle or cable bank added.",
+    "coverage_difference": "Lower casing interior is intentionally reconstructed behind source wheel/marks because description says cased rotor. This is not exact native-alpha upscaling; source landmark positions/outline/roles remain anchor. Wheel interior shows primary casing/axle; no foreign background fill.",
+    "dimensions": {
+      "body_bounds": [
+        2.1,
+        8.5,
+        13.9,
+        19.4
+      ],
+      "top_frame": [
+        2.1,
+        4,
+        13.9,
+        7.6
+      ],
+      "wheel_center": [
+        10.4,
+        14.3
+      ],
+      "wheel_radius": 3.1,
+      "base_y": [
+        19.4,
+        20
+      ]
+    },
+    "dimension_provenance": "Authored source-cell coordinates, not physical lengths recovered from weight or donor texture bounds.",
+    "source_landmark_patch": {
+      "path": "art/conversion/scn-electric-generator/v1/source-landmark-patch.json",
+      "sha256": "3e5aa58b75d9474c1d45d9f9fe971dc1c59e82dc1a85610e0d6d864df3830f59"
+    }
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source-cell mapping for complete casing/wheel/ownership. No individual bounds centering or extra direction binding."
+  },
+  "native_acceptance": "Pending full-set generation: native solar/charge/grid/switch/physics/visibility, inherited status indicator, rare Animated fallback and save/load; no native activation.",
+  "previous_packet": {
+    "path": "art/conversion/scn-electric-generator/v1/source-packet.json",
+    "sha256": "823a13cf22d9ab1b83d59da5b39ab16ea1785ed0f67c450091a0910faa13e33c"
+  }
+}

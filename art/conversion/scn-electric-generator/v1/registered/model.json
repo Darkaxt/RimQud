@@ -1,0 +1,69 @@
+{
+  "entry": "SCN-ELECTRIC-GENERATOR",
+  "kind": "source_dualcolor_static_machinery",
+  "blueprint": "Electric Generator",
+  "native_tile": "Furniture/generator.bmp",
+  "source": {
+    "path": "art/conversion/scn-electric-generator/v1/corrected-source-packet.json",
+    "sha256": "8bbfcee1d11b62a60cafe882088749bad7d50921e30f3b940290be2e33ac4439"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source-cell mapping for complete casing/wheel/ownership. No individual bounds centering or extra direction binding."
+  },
+  "camera": "One fixed cardinal map face with parallel case edges and small bevels, no three-quarter cabinet/diagonal yaw.",
+  "palette": {
+    "primary": "c from TileColor across body/top/control marks/axial center",
+    "detail": "W on source circular wheel perimeter only",
+    "glyph": "ColorString W belongs to glyph fallback and does not turn whole tiled body gold.",
+    "rule": "Preserve actual c/W roles independently in neutral artwork. Gold construction key is wheel ownership, not paint baked into texture."
+  },
+  "native_state_owner": "One fixed Furniture/generator.bmp body tile. No child operational tile loop or rotor animation declared. SolarArray and Circuitry installed code handles charge/production and does not declare a new body tile. Do not invent spinning crank, vibration frames, on/off paint or extra solar-panel states. Inherited unpowered status indicator remains native UI/status fallback; rare Animated1/15000 RailedMechanism retains native fallback.",
+  "native_behavior": "Source SolarArray15, CircuitryStartCharge1000, electrical producer1000, security0PowerSwitch, AV15/HP300. Inherited solid non-takeable15000weight inorganic metal/occluding RenderLayer7 installation. Native solar/charge/grid/switch/examine/tinker, rare Animated state and sounds remain untouched.",
+  "native_acceptance": "Pending full-set generation: native solar/charge/grid/switch/physics/visibility, inherited status indicator, rare Animated fallback and save/load; no native activation.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map view. No alternate motion/charge-state art declared; no extra furniture side views or native orientation logic invented.",
+  "retained_native_status_art": [
+    "Items/sw_power_cut_small.png"
+  ],
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/primary-neutral.png",
+    "sha256": "718ec8d1f04c72222efe7589b7dc750095d3c9af2bc5d1ec868e2132219cfcdc"
+  },
+  "detail": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/detail-neutral.png",
+    "sha256": "faa0df6561da9800ece5f6a442cd1ccbde147ff091286e9c95258724aebf5b47"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/coverage.png",
+    "sha256": "5c2c33886203bbd969f89ee01ba84a1fcf605dc1afc44627c1a6db3cd1d51f4a"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/detail-weight.png",
+    "sha256": "6f62996d831551f9dc2226b32e43ce0bc088efe0650c2ceeb7e0e46281daf482"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/detail-coverage.png",
+    "sha256": "6f62996d831551f9dc2226b32e43ce0bc088efe0650c2ceeb7e0e46281daf482"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-electric-generator/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "94312e3d02c525b2fc626629aec353fa08a98182c389dddda3d618ccf2e52865"
+  }
+}

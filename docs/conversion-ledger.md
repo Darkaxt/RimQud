@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-ELECTRIC-GENERATOR**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-JOPPAOVEN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -155,8 +155,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | SCN-BROKEN-INDUSTRIAL-FAN | Broken Industrial Fan | UNFINISHED | - |  |
-| SCN-ELECTRIC-GENERATOR | Electric Generator | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-JOPPAOVEN | JoppaOven | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-ELECTRIC-GENERATOR | Electric Generator | UNFINISHED | - |  |
+| SCN-JOPPAOVEN | JoppaOven | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-LATHE | Lathe | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-MILLSTONE | Millstone | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -6187,7 +6187,61 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/electric-generator-body.png](../art/village/scenery/electric-generator-body.png), [art/village/scenery/electric-generator-detail.png](../art/village/scenery/electric-generator-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 9.
+
+- 2026-10-20T22:11:40.329985+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve generator source/ancestry, exact native sparse tile/palette, charge/solar/grid/switch defaults and one fixed ordinary body appearance.
+  Review: Bounded installed SolarArray/Circuitry metadata study handles charge/production without body Tile/Render overrides; no child rotor/vibration animation declared. Glyph W differs from tiled primary c. Inherited native status UI and rare Animated fallback preserved, no game launch.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/source-packet.json", "sha256": "823a13cf22d9ab1b83d59da5b39ab16ea1785ed0f67c450091a0910faa13e33c"}, {"path": "art/conversion/scn-electric-generator/v1/source-reference-construction.png", "sha256": "0cc3cfeaeb50d61e35f56e78e2c34e1a8b8834c720b8c7a299833596c2ad6529"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE ChemfuelPoweredGenerator texture and matching Core definition/base/render mapping.
+  Review: Graphic_Single, drawSize2x2, footprint2x2, rotatablefalse. Partial metal finish reference; source handwheel/upper frame remain anchor. No donor cylinders/fuel/red tank/footprint/mechanics copied.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/source-packet.json", "sha256": "823a13cf22d9ab1b83d59da5b39ab16ea1785ed0f67c450091a0910faa13e33c"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/source-reference-construction.png", "sha256": "0cc3cfeaeb50d61e35f56e78e2c34e1a8b8834c720b8c7a299833596c2ad6529"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / construct_faithful_shape / PASS: Rebuild sparse source landmarks as description-supported cased rotor machine with upper open module, left marks, circular wheel/axle and low rail.
+  Review: Filled lower casing and crank coupling are explicit authored interpretation, not source-alpha tracing. Actual upper source opening left transparent. Source primary c/detail W remain independent; no new mechanical state.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/source-packet.json", "sha256": "823a13cf22d9ab1b83d59da5b39ab16ea1785ed0f67c450091a0910faa13e33c"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/construct-generator.py", "sha256": "fdfac44a2d83003b853d99ef9cc81d22bd8f70125054d4e34e36bcc20d4c0b36"}, {"path": "art/conversion/scn-electric-generator/v1/constructed.svg", "sha256": "47e21b06745cd8e44ac55761150e637040eabf6a9af813301599391535128dd5"}, {"path": "art/conversion/scn-electric-generator/v1/constructed.png", "sha256": "3ca2d76863a6ec1e82352819755978c5498e3ccc255d033bec904aca5e50a40f"}, {"path": "art/conversion/scn-electric-generator/v1/ownership.svg", "sha256": "0855784c094f4a830a2b556f08821517a58a6e9dc0b2467d1b5b51e8b42b6b53"}, {"path": "art/conversion/scn-electric-generator/v1/ownership.png", "sha256": "4247f93e1dde1695953dcb0f1a141ec9f1b64034a677915b8498f28c6686ff2d"}, {"path": "art/conversion/scn-electric-generator/v1/manual-structural-review.json", "sha256": "428ebae45e232657da911859641ae56a5cb04ba15b1dc9108405a2afef9459eb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / construct_faithful_shape / PASS: Patch missed wider primary left bar and partial rail above wheel; align four short marks to source rows9/13/15/17 before first refinement.
+  Review: Manual comparison caught omitted source linework. Case/wheel bounds, palette roles, frame and pivot unchanged; initial suggestion retained.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/constructed.svg", "sha256": "47e21b06745cd8e44ac55761150e637040eabf6a9af813301599391535128dd5"}, {"path": "art/conversion/scn-electric-generator/v1/ownership.svg", "sha256": "0855784c094f4a830a2b556f08821517a58a6e9dc0b2467d1b5b51e8b42b6b53"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/patch-source-landmarks.py", "sha256": "dcf220b33c29ab19383b5cdb1662a0ce39b69908312ed4bb8fbe4472a960c5a3"}, {"path": "art/conversion/scn-electric-generator/v1/source-landmark-patch.json", "sha256": "3e5aa58b75d9474c1d45d9f9fe971dc1c59e82dc1a85610e0d6d864df3830f59"}, {"path": "art/conversion/scn-electric-generator/v1/patched-constructed.svg", "sha256": "5b50087858f0555a774c8fb407f416af00902bda0631862c1d82088207d644bb"}, {"path": "art/conversion/scn-electric-generator/v1/patched-constructed.png", "sha256": "4a62a62c14a497d7baa03d2a6791ad63a327fb50ad86948ad3955e9f67b32000"}, {"path": "art/conversion/scn-electric-generator/v1/patched-ownership.svg", "sha256": "453340142e33f1ea31d3dd7f52941d4d6304146c6714cfb3868f2cab2ddaec9f"}, {"path": "art/conversion/scn-electric-generator/v1/corrected-source-packet.json", "sha256": "8bbfcee1d11b62a60cafe882088749bad7d50921e30f3b940290be2e33ac4439"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed native generator body and native solar/charge/switch status behavior, with no invented operating/handcrank/vibration frame set.
+  Review: No source child TileAnimationFrames or alternate physical body declared. Inherited power-cut UI/status tile and rare Animated retain native fallback. One cardinal map face is sufficient for this fixed machinery tile; no new rotation binding.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/corrected-source-packet.json", "sha256": "8bbfcee1d11b62a60cafe882088749bad7d50921e30f3b940290be2e33ac4439"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/patched-constructed.png", "sha256": "4a62a62c14a497d7baa03d2a6791ad63a327fb50ad86948ad3955e9f67b32000"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / refine_materials_and_form / PASS: Perform one actual built-in contextual refinement of corrected manual source generator and inspect structure before extraction.
+  Review: Inspected actual refinement before extraction: upper open frame/inset,4short left marks+wide bar, upper wheel rail, circular wheel/crank/axle and low rail retained; parallel case edges, no donor cylinders/fuel equipment or new props. Generated figure is enlarged/repositioned, upper gap dark/background and exterior halo are not accepted. Use common RGB material mapping into fixed patched construction/role/alpha; preserve true opening. No operational animation or color change is inferred from artwork.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/patched-constructed.png", "sha256": "4a62a62c14a497d7baa03d2a6791ad63a327fb50ad86948ad3955e9f67b32000"}, {"path": "art/conversion/scn-electric-generator/v1/patched-refine-prompt.txt", "sha256": "26c639e34f31967eca67ad7e4105343051d86ee2673a3edee9a4a212a377f9e7"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/refined-raw.png", "sha256": "02446580d8adfedcb03bdcf87a07d759ff6e71fb556ff39036de314f2cae9d00"}, {"path": "art/conversion/scn-electric-generator/v1/first-structural-review.json", "sha256": "4c56cefa25417a686c9ead254e031815fba6ed5157db57693680db236b5b144e"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-electric-generator/v1/patched-refine-prompt.txt", "sha256": "26c639e34f31967eca67ad7e4105343051d86ee2673a3edee9a4a212a377f9e7"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-9d1a419e-6cfb-4b4d-aae8-107750882d18.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-electric-generator\\v1\\patched-constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-electric-generator\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Power\\ChemfuelPoweredGenerator.png"]}}
+
+- 2026-10-20T22:11:40.329985+00:00 / extract_register_color_coverage / PASS: Map actual refined machine RGB material into fixed source construction and restore exact alpha/ink/independent wheel role, excluding generated enlargement/halo/gap background.
+  Review: Common union material extent corrects RGB sampling only; output geometry is never bounds-fitted. Existing material helper wood=case/primary and top=wheel, no wood material. No second AI isolation or detached wheel repositioning.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/first-structural-review.json", "sha256": "4c56cefa25417a686c9ead254e031815fba6ed5157db57693680db236b5b144e"}, {"path": "art/conversion/scn-electric-generator/v1/patched-ownership.png", "sha256": "4247f93e1dde1695953dcb0f1a141ec9f1b64034a677915b8498f28c6686ff2d"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/register-generator.py", "sha256": "b6d8b4e0525d822b06ccc5608a39ba0d4dfad3bb9acaf812a2481ac4f1ad81a0"}, {"path": "art/conversion/scn-electric-generator/v1/mapped-material.png", "sha256": "f201a2ab937d0862c712fb30544036a613c4ab17e9b991316a298ba4bbb362c3"}, {"path": "art/conversion/scn-electric-generator/v1/registered/model.json", "sha256": "22efe081e4baf30e2331818f141a7fcb9ee29cb0b722519b8c3368e1fbf3cc41"}, {"path": "art/conversion/scn-electric-generator/v1/registered/registration-decisions.json", "sha256": "48ff38518c8d4d7a04be9ce4e9906f16f97c0c1f1865c74bcac5b2c5421112b9"}, {"path": "art/conversion/scn-electric-generator/v1/registered/neutral-master.png", "sha256": "e8d9607b25d3e1af453ad6c2aeba7c7571f33810e83d723b622f51c4004367c0"}, {"path": "art/conversion/scn-electric-generator/v1/registered/primary-neutral.png", "sha256": "718ec8d1f04c72222efe7589b7dc750095d3c9af2bc5d1ec868e2132219cfcdc"}, {"path": "art/conversion/scn-electric-generator/v1/registered/detail-neutral.png", "sha256": "faa0df6561da9800ece5f6a442cd1ccbde147ff091286e9c95258724aebf5b47"}, {"path": "art/conversion/scn-electric-generator/v1/registered/detail-weight.png", "sha256": "6f62996d831551f9dc2226b32e43ce0bc088efe0650c2ceeb7e0e46281daf482"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect full source/manual/refined/registered construction, true upper openings, neutral/primary/wheel roles, source c/W color and16x24/24x36/32x48views.
+  Review: Reviewed exact Electric Generator ancestry/description/sparse native tile and c primary/W wheel ownership, distinguishing TileColor c from glyph ColorString W. Source top rectangle/inset/open gap,4short left marks, wide left bar, partial rail above lower-right ring/center and low rail retained. Filled lower casing/recessed marks/crank coupling are explicitly authored surfaces inferred from cased-rotor/handcrank description, not source pixel coverage or native dimension metadata; actual upper openings remain transparent. Source solar15/circuitry1000/electrical producer1000/switch0 and solid15000weight/AV15/HP300 remain native. Bounded SolarArray/Circuitry code study found charge/production handling without body Tile/Render overrides; one fixed body tile, no child motion loop. Inherited status UI and rare Animated retain native fallback. Actual VTE/Core ChemfuelPoweredGenerator Graphic_Single/drawSize2x2/size2x2/rotatablefalse used only for machine-metal finish, no donor fuel/cylinder/footprint/gameplay. Patched missed source bars/mark positions before one actual contextual refinement; full refined output inspected before extraction. Generated enlargement/halo/dark gap fill excluded by common material-coordinate mapping and exact editable alpha/ink/role. Neutral masters, independent wheel mask, one-coverage c/W preview and16x24/24x36/32x48views reviewed. No new charge/off/vibration/crank animation or native activation. Native charge/grid/switch/physics/visibility/status/rare Animated/save-load acceptance pending full-set generation.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/registered/model.json", "sha256": "22efe081e4baf30e2331818f141a7fcb9ee29cb0b722519b8c3368e1fbf3cc41"}]
+  Outputs: [{"path": "art/conversion/scn-electric-generator/v1/record-review.py", "sha256": "f1ad7e503aba6158a412266b012b2b27778702aa39a89b2a3eaff970a58d0c4f"}, {"path": "art/conversion/scn-electric-generator/v1/registered/registration-comparison.png", "sha256": "6c581fda937705ff4912fa2205b5c05c3be45ed07be27ad80654312596883abd"}, {"path": "art/conversion/scn-electric-generator/v1/registered/authoring-review.json", "sha256": "f32af6c280f898c05a92e6ab99a5aa7a929c374d1bcb373b41076254ad2a667b"}, {"path": "art/conversion/scn-electric-generator/v1/artifact-manifest.json", "sha256": "1f4a8f963ff3889bc6e99dc38064443d88289214be7cc209fb1447d901382bf6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:11:40.329985+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep actual solar/charge/grid/switch/physics/visibility/status/rare Animated/save-load acceptance behind full-set generation gate.
+  Review: No native/game/harness launch or production activation. Entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/registered/model.json", "sha256": "22efe081e4baf30e2331818f141a7fcb9ee29cb0b722519b8c3368e1fbf3cc41"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-JOPPAOVEN: JoppaOven
 
@@ -6197,7 +6251,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/joppaoven-body.png](../art/village/scenery/joppaoven-body.png), [art/village/scenery/joppaoven-detail.png](../art/village/scenery/joppaoven-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-LATHE: Lathe
 
