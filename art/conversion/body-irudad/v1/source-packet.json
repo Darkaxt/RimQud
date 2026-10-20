@@ -1,0 +1,431 @@
+{
+  "entry": "BODY-IRUDAD",
+  "recorded_at": "2026-10-20T23:32:56.884455+00:00",
+  "identity_chain": [
+    "ElderBob",
+    "NPC",
+    "BaseHumanoid",
+    "Humanoid",
+    "Creature"
+  ],
+  "captured_actor": {
+    "instance": 507,
+    "blueprint": "ElderBob",
+    "species": "human",
+    "gender": "male",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "anatomy": "HumanoidWithHandsFace",
+    "tile": "Creatures/npc-irudad.bmp",
+    "foreground": "&r",
+    "tileColor": "&r",
+    "detailColor": "w"
+  },
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "source_snapshot": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+  "native_parts": [
+    {
+      "id": 196,
+      "parent": -1,
+      "type": "Body",
+      "variant": "Body",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 539,
+        "blueprint": "Black Robes",
+        "description": "Wool was dyed in a bath of dreadroot and iron salt, and then woven to warm broad shoulders.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/sw_robes1.bmp",
+        "foreground": "&K",
+        "tileColor": "",
+        "detailColor": "K"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 197,
+      "parent": 196,
+      "type": "Head",
+      "variant": "Head",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 198,
+      "parent": 197,
+      "type": "Face",
+      "variant": "Face",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 540,
+        "blueprint": "Spectacles",
+        "description": "Two almonds of glass sit in wireframe cups and resharpen the world's edges.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "Items/sw_spectacles.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "Y"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 199,
+      "parent": 196,
+      "type": "Back",
+      "variant": "Back",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 200,
+      "parent": 196,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 6,
+      "manager": "507::MultipleArms::Change",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 201,
+      "parent": 200,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 6,
+      "manager": "507::MultipleArms::Change",
+      "defaultBlueprint": "DefaultFist",
+      "equipped": {
+        "instance": 541,
+        "blueprint": "Walking Stick",
+        "description": "Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 4 lbs.}}",
+        "tile": "Items/sw_cudgel_11.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": "g"
+      },
+      "defaultItem": {
+        "instance": 542,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 202,
+      "parent": 196,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 5,
+      "manager": "507::MultipleArms::Change",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 203,
+      "parent": 202,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 5,
+      "manager": "507::MultipleArms::Change",
+      "defaultBlueprint": "DefaultFist",
+      "equipped": null,
+      "defaultItem": {
+        "instance": 543,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 204,
+      "parent": 196,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 10,
+      "manager": "507::MultipleArms::Add",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 205,
+      "parent": 204,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 10,
+      "manager": "507::MultipleArms::Add",
+      "defaultBlueprint": "DefaultFist",
+      "equipped": null,
+      "defaultItem": {
+        "instance": 544,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 206,
+      "parent": 196,
+      "type": "Arm",
+      "variant": "Arm",
+      "laterality": 9,
+      "manager": "507::MultipleArms::Add",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 207,
+      "parent": 206,
+      "type": "Hand",
+      "variant": "Hand",
+      "laterality": 9,
+      "manager": "507::MultipleArms::Add",
+      "defaultBlueprint": "DefaultFist",
+      "equipped": null,
+      "defaultItem": {
+        "instance": 545,
+        "blueprint": "DefaultFist",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-fist.bmp",
+        "foreground": "&w",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    },
+    {
+      "id": 208,
+      "parent": 196,
+      "type": "Missile Weapon",
+      "variant": "Missile Weapon",
+      "laterality": 2,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 209,
+      "parent": 196,
+      "type": "Missile Weapon",
+      "variant": "Missile Weapon",
+      "laterality": 1,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 210,
+      "parent": 196,
+      "type": "Hands",
+      "variant": "Hands",
+      "laterality": 4,
+      "manager": "507::MultipleArms::Change",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 211,
+      "parent": 210,
+      "type": "Face",
+      "variant": "Hands-Face",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 212,
+      "parent": 196,
+      "type": "Hands",
+      "variant": "Hands",
+      "laterality": 8,
+      "manager": "507::MultipleArms::Add",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 213,
+      "parent": 196,
+      "type": "Feet",
+      "variant": "Feet",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": {
+        "instance": 546,
+        "blueprint": "Sandals",
+        "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "items/sw_sandals.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "w"
+      },
+      "defaultItem": null
+    },
+    {
+      "id": 214,
+      "parent": 196,
+      "type": "Tail",
+      "variant": "Tail",
+      "laterality": 0,
+      "manager": "507::Stinger",
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": {
+        "instance": 547,
+        "blueprint": "Stinger Confusion",
+        "description": "A caudal barb-thing is tipped with a jewel of venomed dew.\n\n{{rules|Strength Bonus Cap: 0\nWeapon Class: Long Blades (increased penetration on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "items/sw_stinger.bmp",
+        "foreground": "&y",
+        "tileColor": "&w",
+        "detailColor": "B"
+      }
+    },
+    {
+      "id": 215,
+      "parent": 196,
+      "type": "Thrown Weapon",
+      "variant": "Thrown Weapon",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    },
+    {
+      "id": 216,
+      "parent": 196,
+      "type": "Floating Nearby",
+      "variant": "Floating Nearby",
+      "laterality": 0,
+      "manager": null,
+      "defaultBlueprint": null,
+      "equipped": null,
+      "defaultItem": null
+    }
+  ],
+  "original": {
+    "tile": "Creatures/npc-irudad.bmp",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "kind": "creature",
+    "blueprint": "ElderBob",
+    "reference_file": "village-originals/elderbob-reference.png",
+    "native_mask_sha256": "239481d2824d7a5542de66bd5e08c8637fc8a047f6ec80471c06727ac5b2fc61",
+    "reference_sha256": "aad051460416512d0cd78b801b4458ff8c148d2400b72569c790c6555f2bacfc",
+    "info_id": 7704,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      676,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/elderbob-mask.png",
+      "sha256": "239481d2824d7a5542de66bd5e08c8637fc8a047f6ec80471c06727ac5b2fc61"
+    }
+  },
+  "definitions": [
+    {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "fragment": "<object Name=\"ElderBob\" Inherits=\"NPC\">\n    <part Name=\"Body\" Anatomy=\"HumanoidWithHandsFace\" />\n    <part Name=\"Render\" DisplayName=\"Irudad\" Tile=\"Creatures/npc-irudad.bmp\" ColorString=\"&amp;r\" TileColor=\"&amp;r\" DetailColor=\"w\" RenderString=\"f\" />\n    <part Name=\"Description\" Short=\"A warm smile spreads over an old face freckled by time and a million crumbs of salt. =pronouns.Subjective= =verb:shrink:afterpronoun= under a hunched back and =verb:drum:afterpronoun= the ground beneath =pronouns.objective= with a short and barb-crowned tail. A second pair of arms rise over the slump of =pronouns.possessive= shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\" />\n    <part Name=\"Honorifics\" Primary=\"Elder\" />\n    <part Name=\"ConversationScript\" ConversationID=\"Irudad\" />\n    <part Name=\"Brain\" Wanders=\"false\" Factions=\"Joppa-100\" />\n    <part Name=\"AISelfPreservation\" Threshold=\"40\" />\n    <stat Name=\"Hitpoints\" Value=\"225\" />\n    <stat Name=\"Level\" Value=\"29\" />\n    <stat Name=\"Strength\" Boost=\"-1\" />\n    <stat Name=\"Agility\" Boost=\"-1\" />\n    <stat Name=\"Willpower\" Boost=\"1\" />\n    <stat Name=\"Ego\" Boost=\"1\" />\n    <skill Name=\"CookingAndGathering\" />\n    <skill Name=\"CookingAndGathering_Harvestry\" />\n    <skill Name=\"Customs\" />\n    <skill Name=\"Survival_SaltmarshSurvival\" />\n    <inventoryobject Blueprint=\"Black Robes\" Number=\"1\" />\n    <inventoryobject Blueprint=\"Walking Stick\" Number=\"1\" />\n    <inventoryobject Blueprint=\"Sandals\" Number=\"1\" />\n    <inventoryobject Blueprint=\"Spectacles\" Number=\"1\" />\n    <mutation Name=\"MultipleArms\" Level=\"10\" />\n    <mutation Name=\"Stinger\" Level=\"1\" Variant=\"Stinger Confusion\" />\n    <mutation Name=\"Chimera\" />\n    <tag Name=\"Genotype\" Value=\"Mutated Human Chimera\" />\n    <part Name=\"GivesRep\" />\n    <tag Name=\"NoHateFactions\" Value=\"Wardens,Dromad\" />\n    <tag Name=\"Gender\" Value=\"male\" />\n    <tag Name=\"NoSleep\" />\n    <tag Name=\"NoSignpost\" />\n    <tag Name=\"AllowIdleBehavior\" Value=\"*delete\" />\n    <xtagGrammar Proper=\"true\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"Mayor\" Value=\"Joppa\" />\n  </object>"
+    },
+    {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/Bodies.xml",
+      "sha256": "5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292",
+      "fragment": "<anatomy Name=\"HumanoidWithHandsFace\">\n\t\t\t<part Type=\"Head\">\n\t\t\t\t<part Type=\"Face\" />\n\t\t\t</part>\n\t\t\t<part Type=\"Back\" />\n\t\t\t<part Type=\"Arm\" Laterality=\"Right\">\n\t\t\t\t<part Type=\"Hand\" Laterality=\"Right\" SupportsDependent=\"Hands\" />\n\t\t\t</part>\n\t\t\t<part Type=\"Arm\" Laterality=\"Left\">\n\t\t\t\t<part Type=\"Hand\" Laterality=\"Left\" SupportsDependent=\"Hands\" />\n\t\t\t</part>\n\t\t\t<part Type=\"Missile Weapon\" Laterality=\"Right\" />\n\t\t\t<part Type=\"Missile Weapon\" Laterality=\"Left\" />\n\t\t\t<part Type=\"Hands\" DependsOn=\"Hands\">\n\t\t\t\t<part Type=\"Hands-Face\" />\n\t\t\t</part>\n\t\t\t<part Type=\"Feet\" />\t\t\t\n\t\t</anatomy>"
+    }
+  ],
+  "baseline": {
+    "path": "art/conversion/body-human-male-older/v2/model.json",
+    "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"
+  },
+  "baseline_history": {
+    "path": "art/conversion/body-human-male-older/v1/source-packet.json",
+    "sha256": "61ff9a57a6aedd1e37d94fd406471b17c57563406c3bb10e1da161e0ce78d49c"
+  },
+  "donor_references": [
+    {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-south.png",
+      "sha256": "57b37b2c54bd2f5cade7aecd26047ea8f130d59b81aebc4e076f98ad2e436449",
+      "role": "Actual Core humanlike silhouette/outline and limb shading convention only; no equivalent hands-face or barbed mutant tail claimed."
+    },
+    {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-east.png",
+      "sha256": "c7b006a77822d53b2c31f24de04b3ab1d7d51269f60d356450df5afc95288e9b",
+      "role": "Actual Core humanlike silhouette/outline and limb shading convention only; no equivalent hands-face or barbed mutant tail claimed."
+    },
+    {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-north.png",
+      "sha256": "fc14f5193c0c80410071da6c58d2776b64e400b643883442b885ceb57c8ddb2b",
+      "role": "Actual Core humanlike silhouette/outline and limb shading convention only; no equivalent hands-face or barbed mutant tail claimed."
+    },
+    {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-head-south.png",
+      "sha256": "8ea346c40f1391e9309c2dcd8da35d35cfbf4d4aa6c2dbd03b16f4b644c192d0",
+      "role": "Actual Core humanlike silhouette/outline and limb shading convention only; no equivalent hands-face or barbed mutant tail claimed."
+    }
+  ],
+  "donor_limits": "Core human presentation retained. No close installed whole-body equivalent for a four-armed elder whose joined hands form a second face; use exact Qud anatomy and authored separate additions.",
+  "anatomy": {
+    "baseline": "Unchanged selected unmutated older-human body/head; its two arms/hands and paired feet remain intact.",
+    "additions": "Exactly one extra pair of arms, joined/interlaced hands forming a mouthless face with desert-white eyes; one short barb-crowned tail. No extra legs or head graft.",
+    "native_semantics": "Hands-Face211 is a Face variant under Hands210, not an additional Head node. Preserve all exact part IDs/parents/managers/lateralities. Raised-pair geometry is a description-based neutral visual pose, not proof of a bone/part-to-limb mapping.",
+    "attachment_uncertainty": "Captured Walking Stick541 occupies changed Hand201/6. This unarmed anatomy proposal does not establish how that equipped hand and the hands-face pose coexist. Resolve exact attachment/pose in NPC-ELDERBOB authoring; do not silently rename it to another hand."
+  },
+  "frame": {
+    "canvas": [
+      512,
+      1264
+    ],
+    "padding_top": 240,
+    "contact": [
+      256,
+      1190
+    ],
+    "baseline_canvas": [
+      512,
+      1024
+    ],
+    "baseline_contact": [
+      256,
+      950
+    ],
+    "method": "Integer transparent top padding only. Original body/head pixels remain unchanged at y+240. Preserve world position/scale by extending render height and center consistently; equipment inherits the same pad.",
+    "width": 0.9938823529411764,
+    "height": 1.6357647058823528,
+    "center_x": 0,
+    "center_z": 0.7221176470588234
+  },
+  "authored_interpretation": "Raised-arm curves, exact interlacing pattern, barb count and unseen tail curvature are authored. Keep intrinsic anatomy and count source-bound. Tail is posterior; back of hands has no second set of eyes.",
+  "workflow": "Source-bound separate mutation art over existing unmutated body. No race-body replacement, renderer/framework, profession pose, personal cosmetics or game launch.",
+  "native_activation": false,
+  "native_acceptance": "Pending full-set generation and integrated anatomy/equipment/visibility/hurt/look/save review."
+}

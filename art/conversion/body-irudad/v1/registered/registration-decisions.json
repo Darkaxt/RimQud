@@ -1,0 +1,34 @@
+{
+  "body_pixels": "Original current body/head pixels at integer y+240 only; no resampling or silhouette change.",
+  "frame": {
+    "canvas": [
+      512,
+      1264
+    ],
+    "padding_top": 240,
+    "contact": [
+      256,
+      1190
+    ],
+    "baseline_canvas": [
+      512,
+      1024
+    ],
+    "baseline_contact": [
+      256,
+      950
+    ],
+    "method": "Integer transparent top padding only. Original body/head pixels remain unchanged at y+240. Preserve world position/scale by extending render height and center consistently; equipment inherits the same pad.",
+    "width": 0.9938823529411764,
+    "height": 1.6357647058823528,
+    "center_x": 0,
+    "center_z": 0.7221176470588234
+  },
+  "refinement_decision": "Both actual AI outputs retain anatomy but redraw body/head/feet. Reject those body pixels. First output supplies readable interlaced-finger art; composed refinement supplies measured clean skin luminance range for stable geometric continuation. Rejected striped UV transfer retained. No second isolation.",
+  "composed_refinement_skin_luminance_levels": [
+    203.66666666666666,
+    232.0
+  ],
+  "native_part_binding": "All actual IDs/parents/managers retained; mechanical part slots are not articulated render bones. Raised neutral pose versus occupied Hand201/6 remains NPC-ELDERBOB authoring work.",
+  "native_activation": false
+}

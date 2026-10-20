@@ -170,7 +170,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | NPC-ARGYVE | Argyve | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
-| NPC-ELDERBOB | Irudad (ElderBob) | IN PROGRESS | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-ELDERBOB | Irudad (ElderBob) | IN PROGRESS | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 | Separated BODY-IRUDAD art is now generation-ready. Verify current dependency versions, pad actual fittings to the same physical frame and resolve visual attachment of captured Walking Stick541 on changed Hand201/6 alongside the hands-face pose. |
 | NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -204,7 +204,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | BODY-HUMAN-CHILD | human child (featureless body with separate clothing) | UNFINISHED | - | Constructed template only. No native age selector established; do not assign an age to residents by guesswork. |
 | BODY-HUMAN-FEMALE | human-female | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
 | BODY-HUMAN-MALE | human-male | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
-| BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. Native second arm pair/hands-face is supported, but the upright mannequin omits the described hunched back and elderly proportions. Reconstruct the elder silhouette from sprite plus full description. Native description explicitly specifies a short barb-crowned tail and the blueprint includes Stinger. The displayed smooth curled tail does not clearly preserve the barbed tip; review against description in all views. The initial constructed torso shared human geometry, but independently generated/registered turnarounds drifted in torso, leg and head proportions. Derive from the selected shared human base and record each source-supported age/anatomy change. |
+| BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER |  |
 | BODY-NIMA | nima | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. |
 | BODY-RAY-CAT | ray-cat | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
 | BODY-YRAME | yrame | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. ImageGen three-foot proposals were rejected; four-foot geometry was patched afterward without a completed composed refinement. |
@@ -6785,7 +6785,19 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
+Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+
+- 2026-10-20T23:30:41.343709+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured ElderBob/Irudad507 ancestry, description, HumanoidWithHandsFace tree and four actual equipped objects.
+  Review: Old face and hunched back are explicit source text. Native tree records four arms, Hands-Face under the Hands group and Stinger-managed Tail. Baseline fittings alone are not a named mutation assembly.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-elderbob/v1/source-packet.json", "sha256": "6867e5c67ae9617498ff43bc734b8dc2ace709bd639f3cee3b3fd947176b7323"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:30:41.343709+00:00 / verify_body_and_every_equipped_item_dependencies / UNFINISHED: Inspect every current dependency before assembly; return missing BODY-IRUDAD authoring to active work.
+  Review: BODY-IRUDAD has no current registered separated mutation assembly. Current older-human apparel compatibility proxies do not represent the four arms, Hands-Face211 or barb-crowned Tail214.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/source-packet.json", "sha256": "6867e5c67ae9617498ff43bc734b8dc2ace709bd639f3cee3b3fd947176b7323"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-JOPPAFARMERCONVERT: JoppaFarmerConvert
 
@@ -7355,7 +7367,91 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/irudad/body-east.png](../art/village/bodies/irudad/body-east.png), [art/village/bodies/irudad/body-north.png](../art/village/bodies/irudad/body-north.png), [art/village/bodies/irudad/body-south.png](../art/village/bodies/irudad/body-south.png), [art/village/bodies/irudad/brief.json](../art/village/bodies/irudad/brief.json), [art/village/bodies/irudad/front.png](../art/village/bodies/irudad/front.png), [art/village/bodies/irudad/front.svg](../art/village/bodies/irudad/front.svg), [art/village/bodies/irudad/head-east.png](../art/village/bodies/irudad/head-east.png), [art/village/bodies/irudad/head-north.png](../art/village/bodies/irudad/head-north.png), [art/village/bodies/irudad/head-south.png](../art/village/bodies/irudad/head-south.png), [art/village/bodies/irudad/model.json](../art/village/bodies/irudad/model.json), [art/village/bodies/irudad/refinement-prompt.txt](../art/village/bodies/irudad/refinement-prompt.txt), [art/village/bodies/irudad/turnaround-draft.png](../art/village/bodies/irudad/turnaround-draft.png), [art/village/bodies/irudad/turnaround-prompt.txt](../art/village/bodies/irudad/turnaround-prompt.txt), [art/village/bodies/irudad/turnaround.png](../art/village/bodies/irudad/turnaround.png).
 
-Current step: not started. Process-log events: 0.
+Current step: native_body_review. Process-log events: 14.
+
+- 2026-10-20T23:35:14.650649+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve ElderBob507 race, source description, exact captured mutation topology and shared older-human baseline.
+  Review: Native HumanoidWithHandsFace, four Arm/Hand pairs, Hands-Face211 under Hands210 and Tail214/Stinger preserved. Source description and original r/w glyph retained. Extra arms/tail stay separate from reusable human age template; actual equipped Hand201/6 pose unresolved.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/body-irudad/v1/source-packet.json", "sha256": "9704ef7e575dc52f007845bd3a9850a22092f1285a694e4f8cfab6d61083982d"}, {"path": "art/conversion/body-irudad/v1/source-reference-construction.png", "sha256": "ffc779a566c75c0a0b75c9e23736fbfe493778bd79541210636582bc70c6ccf5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:35:14.650649+00:00 / select_actual_core_dlc_or_mod_reference / PASS: Inspect actual Core directional human body/head references; reuse their established presentation through the selected older-human baseline.
+  Review: Exact private reference hashes retained. No close whole mutant equivalent claimed; Core is only an ordinary human rendering reference, not anatomy authority.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/source-packet.json", "sha256": "9704ef7e575dc52f007845bd3a9850a22092f1285a694e4f8cfab6d61083982d"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/source-reference-construction.png", "sha256": "ffc779a566c75c0a0b75c9e23736fbfe493778bd79541210636582bc70c6ccf5"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:35:14.650649+00:00 / construct_front / PASS: Construct independent raised arms, joined-hands face and barbed tail over unchanged older-human body/head pixels.
+  Review: All three editable cardinal constructions preserve the base, two ordinary arms and paired feet. Top padding preserves physical scale/contact. Manual first inspection found side tail root gap and north tail incorrectly hidden by legs; these are corrected in the next recorded action.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/source-packet.json", "sha256": "9704ef7e575dc52f007845bd3a9850a22092f1285a694e4f8cfab6d61083982d"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/construct-irudad.py", "sha256": "707f8845883bcc505202f44f2f84393c908ef055a735dedd5959df345625f153"}, {"path": "art/conversion/body-irudad/v1/constructed-south.png", "sha256": "c03a911cf391149f9645902f4d7f5133aedb60fab444a3b57ab0f905bc0f845e"}, {"path": "art/conversion/body-irudad/v1/constructed-turnaround.png", "sha256": "5728176b650d2d35ff4802eaf7e9fe9e6c8c31a5d55f55cf484e7ecdf8a27cd4"}, {"path": "art/conversion/body-irudad/v1/manual-anatomy-review.json", "sha256": "06f2b1109411c8ba24738f416c444c0d8f68a672c5a57c705672365407675f36"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:35:14.650649+00:00 / construct_front / PASS: Correct the side tail attachment and north tail depth before contextual refinement.
+  Review: Viewed corrected sheet: side tail root now meets posterior hip; north tail visible above back-facing body, front/side behind. Front anchor, base pixels and four-arm count retained. Finger interlacing remains a refinement target.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/constructed-turnaround.png", "sha256": "5728176b650d2d35ff4802eaf7e9fe9e6c8c31a5d55f55cf484e7ecdf8a27cd4"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/patch-construction.py", "sha256": "4817e581444f0ffbb576d22834caeb1f6ce5134e91d3101e969cbc62e18c0c4c"}, {"path": "art/conversion/body-irudad/v1/patched-tail-east.svg", "sha256": "436679d2b4c9bdc4212e8fc4ccb9a99fdcbd3449d32a1c68debba9e3fbf16395"}, {"path": "art/conversion/body-irudad/v1/patched-construction-turnaround.png", "sha256": "a657b3dcedc5bd356eb40d49b8009852286fee39f117f7a19bfa5465b24822d6"}, {"path": "art/conversion/body-irudad/v1/construction-corrections.json", "sha256": "7337a4b4b28a1fd83103f8b00e60ad62e60130cf208a622a3c0477659fbd6318"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:35:14.650649+00:00 / imagegen_side_back_from_front_and_race_facts / IN PROGRESS: Request actual ImageGen front-guided side/back and restrained contextual refinement with native anatomy and fixed baseline constraints.
+  Review: Actual built-in request is running; no generated result or PASS credited yet. Requested transparent grayscale sheet with strict S/E/N, four arms total, interlaced mouthless hands-face and posterior barbed tail. No isolation request.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/secondary-views-prompt.txt", "sha256": "25bdd0596d56e7205bd15c5a7901a776358de4aef259e1c4020e66970c9fd7d9"}, {"path": "art/conversion/body-irudad/v1/patched-construction-turnaround.png", "sha256": "a657b3dcedc5bd356eb40d49b8009852286fee39f117f7a19bfa5465b24822d6"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/prepare-evidence.py", "sha256": "5c63665f5a28ba85e90009fe37d62e4b4a2249816a8fe17e12276ec664a455e0"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/body-irudad/v1/secondary-views-prompt.txt", "sha256": "25bdd0596d56e7205bd15c5a7901a776358de4aef259e1c4020e66970c9fd7d9"}, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\body-irudad\\v1\\patched-construction-turnaround.png", "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-south.png"], "transparent_background": true}
+
+- 2026-10-20T23:39:33.695899+00:00 / imagegen_side_back_from_front_and_race_facts / PASS: Receive actual front-guided ImageGen turnaround and inspect structure before extraction.
+  Review: Actual output has four arms, white-eyed mouthless hands-face in front/profile, no rear eyes, attached posterior barbed tail. Generated base proportions/feet redraw rejected; existing baseline must be restored. Labels/background/stray alpha are not production.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/secondary-views-prompt.txt", "sha256": "25bdd0596d56e7205bd15c5a7901a776358de4aef259e1c4020e66970c9fd7d9"}, {"path": "art/conversion/body-irudad/v1/patched-construction-turnaround.png", "sha256": "a657b3dcedc5bd356eb40d49b8009852286fee39f117f7a19bfa5465b24822d6"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/secondary-views-raw.png", "sha256": "b2023e3a98e56d72f5f4db1597807defeb625448b27a17e97f5ebf1d00ac30fa"}, {"path": "art/conversion/body-irudad/v1/first-structural-review.json", "sha256": "54896cf194aaf12955aebeb9c0ca3ea8ac9d457a62d94c8830f2cf9f48893760"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/body-irudad/v1/secondary-views-prompt.txt", "sha256": "25bdd0596d56e7205bd15c5a7901a776358de4aef259e1c4020e66970c9fd7d9"}, "transparent_background": true}
+
+- 2026-10-20T23:39:33.695899+00:00 / correct_anatomy_then_imagegen_refine_composed_views / PASS: Restore the original base and programmatically transfer usable mutation artwork; reject streaked edge continuation.
+  Review: First UV nearest-valid continuation produced comb-like contour streaks and is rejected. Smooth material values210..232 from actual refinement are continued within unchanged editable arm/tail coverage; crisp ink and generated finger art retained. Original older body/head restored without resampling. Corrected sheet visually inspected before another composed refinement.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/secondary-views-raw.png", "sha256": "b2023e3a98e56d72f5f4db1597807defeb625448b27a17e97f5ebf1d00ac30fa"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/patch-refined-views.py", "sha256": "99b1908831c2d57f1d40fe4e6140d0702011ae7a867f000b4937d50c3d0df837"}, {"path": "art/conversion/body-irudad/v1/patched-refined-turnaround.png", "sha256": "fdc8b6bceeacbccd304853ad5989ceba47b87fd9631015e096c41aa1f72f6fc7"}, {"path": "art/conversion/body-irudad/v1/surface-correction.json", "sha256": "52ff926a872a88e30459e6c4910ecc61458597e2cd6a9d32b2a93a0ff8cea413"}, {"path": "art/conversion/body-irudad/v1/continue-skin-surface.py", "sha256": "6519eb3c4de5ee80c91d134922cbab5d762e07fb5986be81a9564f011e5cc8dc"}, {"path": "art/conversion/body-irudad/v1/corrected-composed-turnaround.png", "sha256": "eeee809af3c85aca6520ac171a00e8ef8ff182eae21894689d836bb4d3667615"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:39:33.695899+00:00 / correct_anatomy_then_imagegen_refine_composed_views / IN PROGRESS: Request restrained refinement of the corrected composed three-view sheet.
+  Review: Actual built-in request running; output not yet received or credited. Exact anatomy, scale, head/body, source barbs and no rear eyes restated; no isolated redraw requested.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/corrected-composed-turnaround.png", "sha256": "eeee809af3c85aca6520ac171a00e8ef8ff182eae21894689d836bb4d3667615"}, {"path": "art/conversion/body-irudad/v1/composed-refinement-prompt.txt", "sha256": "cfc94933b0e50c173d4bb5885890d19aa5d0ccde5058825f567d56d4cfec60a2"}]
+  Outputs: []
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/body-irudad/v1/composed-refinement-prompt.txt", "sha256": "cfc94933b0e50c173d4bb5885890d19aa5d0ccde5058825f567d56d4cfec60a2"}, "transparent_background": true}
+
+- 2026-10-20T23:45:05.291440+00:00 / correct_anatomy_then_imagegen_refine_composed_views / PASS: Receive and inspect composed ImageGen refinement; retain usable skin finish while rejecting another base redraw.
+  Review: Source count/orientation and mouthless joined hands remain usable. Generated body/foot proportions and alpha noise are rejected; no further prompt loop. Final art reuses the original body, first refined finger detail and clean skin levels from this composed output.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/composed-refinement-prompt.txt", "sha256": "cfc94933b0e50c173d4bb5885890d19aa5d0ccde5058825f567d56d4cfec60a2"}, {"path": "art/conversion/body-irudad/v1/corrected-composed-turnaround.png", "sha256": "eeee809af3c85aca6520ac171a00e8ef8ff182eae21894689d836bb4d3667615"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/composed-refinement-raw.png", "sha256": "78528276bd7eb39e73c5802681fa00ed06f761166ebf5932c19f84385dda95e4"}, {"path": "art/conversion/body-irudad/v1/generation-receipts.json", "sha256": "fd4d5f6c153b8a79d0e2f72741dbc475a378a2e2119689b0722997bb5b3f0092"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/body-irudad/v1/composed-refinement-prompt.txt", "sha256": "cfc94933b0e50c173d4bb5885890d19aa5d0ccde5058825f567d56d4cfec60a2"}, "transparent_background": true}
+
+- 2026-10-20T23:45:05.291440+00:00 / register_required_layers_and_color_masks / PASS: Register independent mutation pieces and exact integer-padded original body/head in a shared physical frame.
+  Review: Canvas512x1264/contact256,1190 extends upward by240px. Explicit height/center adjustment preserves the old body world position, scale and ground exactly. Posterior tail depth varies by facing. No mutation is baked into the reusable older-human model or converted to a render bone.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/source-packet.json", "sha256": "9704ef7e575dc52f007845bd3a9850a22092f1285a694e4f8cfab6d61083982d"}, {"path": "art/conversion/body-irudad/v1/composed-refinement-raw.png", "sha256": "78528276bd7eb39e73c5802681fa00ed06f761166ebf5932c19f84385dda95e4"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/register-irudad.py", "sha256": "701630dbd2ae730ab64c62e0b0e89dcee84e2288c94383a8f6797b4c4fcaf6ca"}, {"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}, {"path": "art/conversion/body-irudad/v1/registered/registration-decisions.json", "sha256": "4232201ca03f619b91d997226c674ad174644de311248d44614f931eec3e4d1a"}, {"path": "art/conversion/body-irudad/v1/registered/neutral-comparison.png", "sha256": "e5b99e460b8682747215d39f0198a23d4c7979e5614e63141504a2459f08d7f1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:45:05.291440+00:00 / register_required_layers_and_color_masks / PASS: Replace estimated eye-detail ellipses with actual refined closed eye interiors.
+  Review: First native authoring view exposed partial eye-detail masks. Select the reviewed enclosed white interiors by their actual dark rims; no north mask, west mirrors east. Neutral artwork and all geometry/body pixels unchanged.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/patch-eye-masks.py", "sha256": "e449f0d5f7a24ca3f9733e2d033b9b98d8892fe6f3865824b59d0fc1433d9bc7"}, {"path": "art/conversion/body-irudad/v1/eye-mask-misalignment.png", "sha256": "7929981b2c4e4cf029de6f8a15e0991094d9b06e4e34aa6bffd42eddbe50382e"}, {"path": "art/conversion/body-irudad/v1/eye-mask-correction.json", "sha256": "3aaf97ba339f00bd461d301b3705d5c776d5c329206a6df2076f6f1f7ac90c9d"}, {"path": "art/conversion/body-irudad/v1/registered/native-comparison.png", "sha256": "01e04beb31bc27d84d1b7db8713b92092e1dc128cf807ec36a9e7825bb386eaa"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:45:05.291440+00:00 / register_required_layers_and_color_masks / PASS: Remove the manual mutation ink green cast and recompose the current registered reports.
+  Review: Authoring inspection found #292e2b source SVG ink retained slightly unequal RGB. Mutation-only grayscale preserves its luminance and alpha; original body/head pixels unchanged. Final neutral components and all neutral/source-palette previews now derive from the exact current model.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/neutralize-and-render.py", "sha256": "b620ca4b0b0567e78f88658f7deb6e94c35af97fba77ae94a047114839f3f6c6"}, {"path": "art/conversion/body-irudad/v1/neutral-ink-correction.json", "sha256": "bf00f598acdb6a4bb67eb0165907d0d21bca21765435ea20a80f6cad50afa7fc"}, {"path": "art/conversion/body-irudad/v1/registered/neutral-comparison.png", "sha256": "e5b99e460b8682747215d39f0198a23d4c7979e5614e63141504a2459f08d7f1"}, {"path": "art/conversion/body-irudad/v1/registered/native-comparison.png", "sha256": "01e04beb31bc27d84d1b7db8713b92092e1dc128cf807ec36a9e7825bb386eaa"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:45:05.291440+00:00 / visual_review_anatomy_orientation_palette_all_views / PASS: Review actual all-direction anatomy, separate layers, neutral/source palettes, registration and intended scale.
+  Review: Inspected source r/w glyph, native description/tree, actual Core human reference, shared older-human history, first and corrected manual views, both actual ImageGen outputs, restored base, separate final components and all four neutral/native/intended-size views. Four arms total, one ordinary head plus the mouthless interlaced-hands Face variant, two ordinary feet and one attached posterior barb-crowned tail. No rear eyes. Body/head pixel arrays are unchanged under240px transparent top padding; world pixel scale and ground remain exact. Both AI base redraws were rejected. First refined finger artwork and clean measured skin tones from the composed refinement are retained through explicit fixed coverage. Rejected striped UV continuation, repaired tail-root/depth proposal and misaligned first eye masks remain in history. Corrected detail masks follow actual enclosed white interiors. Manual ink green cast was neutralized on mutation pieces only; all final neutral RGB channels agree. Raised arms, hands-face and tail remain separate from the reusable older-human race template. No clothing, personal cosmetics, renderer/framework or native activation. Exact occupied Hand201/6 versus the neutral hands-face pose remains outstanding NPC-ELDERBOB authoring; native anatomy/equipment/visibility/hurt/look/save acceptance is pending the full-set gate.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}]
+  Outputs: [{"path": "art/conversion/body-irudad/v1/record-review.py", "sha256": "798c9ba357312f3d18168a2893d0da7c549b08d145b02c22c9fc4e2864a49e22"}, {"path": "art/conversion/body-irudad/v1/registered/authoring-review.json", "sha256": "c81ff7dfdb1fccc359bd8c737498ea647adcafc7eafb9c61fe477a0c39e171aa"}, {"path": "art/conversion/body-irudad/v1/registered/game-scale-comparison.png", "sha256": "b104585b5468cde337cd4d322e4be2fba18ff4d45dbeed3a642248c7728553fc"}, {"path": "art/conversion/body-irudad/v1/artifact-manifest.json", "sha256": "26b064c9d27b51861887904120d42f987ce2774743466e5d31ccd826dfd06296"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:45:05.291440+00:00 / native_body_review / DEFERRED UNTIL ALL GENERATED: Keep native named anatomy and outfit acceptance behind all-generation gate.
+  Review: No native/game/harness tests or activation. BODY-IRUDAD generation-ready does not complete NPC-ELDERBOB; exact captured equipment attachment and later integrated anatomy/state/visibility/hurt/look/save remain required.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### BODY-NIMA: nima
 

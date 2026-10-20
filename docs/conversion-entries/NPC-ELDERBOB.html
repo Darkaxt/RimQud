@@ -2,8 +2,432 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#NPC-ELDERBOB">Back to conversion index</a></nav><h1>Irudad (ElderBob)</h1><div class="entry-body">
-<p class="eyebrow">NPC-ELDERBOB / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward.</p>
-<ol class="workflow"><li class="pending">resolve individual race and runtime metadata — pending</li><li class="pending">verify body and every equipped item dependencies — pending</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="eyebrow">NPC-ELDERBOB / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Separated BODY-IRUDAD art is now generation-ready. Verify current dependency versions, pad actual fittings to the same physical frame and resolve visual attachment of captured Walking Stick541 on changed Hand201/6 alongside the hands-face pose.</p>
+<ol class="workflow"><li class="pass">resolve individual race and runtime metadata — recorded PASS</li><li class="pending">verify body and every equipped item dependencies — pending</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="pending">No registered output is selected. Images below are authoring evidence, not proof of stable runtime alignment.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-20T23:30:41.343709+00:00 / PASS</small><h3>resolve individual race and runtime metadata</h3><p>Resolve captured ElderBob/Irudad507 ancestry, description, HumanoidWithHandsFace tree and four actual equipped objects.</p><p><strong>Review:</strong> Old face and hunched back are explicit source text. Native tree records four arms, Hands-Face under the Hands group and Stinger-managed Tail. Baseline fittings alone are not a named mutation assembly.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-elderbob/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-ELDERBOB&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/village/sources.json&quot;,
+    &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+  },
+  &quot;source_snapshot&quot;: &quot;fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc&quot;,
+  &quot;captured_actor&quot;: {
+    &quot;instance&quot;: 507,
+    &quot;blueprint&quot;: &quot;ElderBob&quot;,
+    &quot;species&quot;: &quot;human&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;description&quot;: &quot;A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n&quot;,
+    &quot;anatomy&quot;: &quot;HumanoidWithHandsFace&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: 196,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 539,
+          &quot;blueprint&quot;: &quot;Black Robes&quot;,
+          &quot;description&quot;: &quot;Wool was dyed in a bath of dreadroot and iron salt, and then woven to warm broad shoulders.\n\n{{K|Weight: 1 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_robes1.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;K&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;K&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 197,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 198,
+        &quot;parent&quot;: 197,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 540,
+          &quot;blueprint&quot;: &quot;Spectacles&quot;,
+          &quot;description&quot;: &quot;Two almonds of glass sit in wireframe cups and resharpen the world&#x27;s edges.\n\n{{K|Weight: 1 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_spectacles.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 199,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 200,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 6,
+        &quot;manager&quot;: &quot;507::MultipleArms::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 201,
+        &quot;parent&quot;: 200,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 6,
+        &quot;manager&quot;: &quot;507::MultipleArms::Change&quot;,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 541,
+          &quot;blueprint&quot;: &quot;Walking Stick&quot;,
+          &quot;description&quot;: &quot;Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 4 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_cudgel_11.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;g&quot;
+        },
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 542,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 202,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 5,
+        &quot;manager&quot;: &quot;507::MultipleArms::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 203,
+        &quot;parent&quot;: 202,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 5,
+        &quot;manager&quot;: &quot;507::MultipleArms::Change&quot;,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 543,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 204,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 10,
+        &quot;manager&quot;: &quot;507::MultipleArms::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 205,
+        &quot;parent&quot;: 204,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 10,
+        &quot;manager&quot;: &quot;507::MultipleArms::Add&quot;,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 544,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 206,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 9,
+        &quot;manager&quot;: &quot;507::MultipleArms::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 207,
+        &quot;parent&quot;: 206,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 9,
+        &quot;manager&quot;: &quot;507::MultipleArms::Add&quot;,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 545,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 208,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 209,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 210,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 4,
+        &quot;manager&quot;: &quot;507::MultipleArms::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 211,
+        &quot;parent&quot;: 210,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Hands-Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 212,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 8,
+        &quot;manager&quot;: &quot;507::MultipleArms::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 213,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 546,
+          &quot;blueprint&quot;: &quot;Sandals&quot;,
+          &quot;description&quot;: &quot;A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_sandals.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;w&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 214,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Tail&quot;,
+        &quot;variant&quot;: &quot;Tail&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: &quot;507::Stinger&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 547,
+          &quot;blueprint&quot;: &quot;Stinger Confusion&quot;,
+          &quot;description&quot;: &quot;A caudal barb-thing is tipped with a jewel of venomed dew.\n\n{{rules|Strength Bonus Cap: 0\nWeapon Class: Long Blades (increased penetration on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_stinger.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;w&quot;,
+          &quot;detailColor&quot;: &quot;B&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 215,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 216,
+        &quot;parent&quot;: 196,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;tile&quot;: &quot;Creatures/npc-irudad.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;r&quot;,
+    &quot;tileColor&quot;: &quot;&amp;r&quot;,
+    &quot;detailColor&quot;: &quot;w&quot;
+  },
+  &quot;dependencies&quot;: [
+    {
+      &quot;entry&quot;: &quot;BODY-IRUDAD&quot;,
+      &quot;generation_ready&quot;: false,
+      &quot;current_registration&quot;: null
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-IRUDAD-BLACK-ROBES-BODY-0&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;current_registration&quot;: {
+        &quot;model&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-black-robes/v3/model.json&quot;,
+          &quot;sha256&quot;: &quot;6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d&quot;
+        },
+        &quot;plate&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png&quot;,
+          &quot;sha256&quot;: &quot;2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287&quot;
+        }
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-IRUDAD-SPECTACLES-FACE-0&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;current_registration&quot;: {
+        &quot;model&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-spectacles/v2/model.json&quot;,
+          &quot;sha256&quot;: &quot;cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d&quot;
+        },
+        &quot;plate&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-spectacles/v2/headwear-comparison.png&quot;,
+          &quot;sha256&quot;: &quot;f0d23aa0440547dd39aed38688170ca1492c5fd661d10e3ad70014cf7deb2628&quot;
+        }
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-IRUDAD-WALKING-STICK-HAND-6&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;current_registration&quot;: {
+        &quot;model&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-walking-stick/v1/model.json&quot;,
+          &quot;sha256&quot;: &quot;ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4&quot;
+        },
+        &quot;plate&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png&quot;,
+          &quot;sha256&quot;: &quot;f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb&quot;
+        }
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-IRUDAD-SANDALS-FEET-0&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;current_registration&quot;: {
+        &quot;model&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-sandals/v3/model.json&quot;,
+          &quot;sha256&quot;: &quot;165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25&quot;
+        },
+        &quot;plate&quot;: {
+          &quot;path&quot;: &quot;art/conversion/fit-irudad-sandals/v3/footwear-comparison.png&quot;,
+          &quot;sha256&quot;: &quot;31106cf48de35e5eb3a07fddf70a7196898550884d4add524b37566d038cce97&quot;
+        }
+      }
+    }
+  ],
+  &quot;advancement_blocker&quot;: {
+    &quot;requirement&quot;: &quot;Actual captured individual anatomy and item attachment in all directions&quot;,
+    &quot;reason&quot;: &quot;BODY-IRUDAD has no current registered separated mutation assembly. Current older-human apparel compatibility proxies do not represent the four arms, Hands-Face211 or barb-crowned Tail214.&quot;,
+    &quot;classification&quot;: &quot;internal&quot;,
+    &quot;resolution&quot;: &quot;Author source-bound separate Irudad mutation art over the unchanged older-human base, retaining framework/native binding pending.&quot;,
+    &quot;dependent&quot;: &quot;NPC-ELDERBOB generation readiness and eventual native acceptance&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>6867e5c67ae9617498ff43bc734b8dc2ace709bd639f3cee3b3fd947176b7323</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T23:30:41.343709+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_individual_race_and_runtime_metadata&quot;,
+  &quot;action&quot;: &quot;Resolve captured ElderBob/Irudad507 ancestry, description, HumanoidWithHandsFace tree and four actual equipped objects.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/village/sources.json&quot;,
+      &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Old face and hunched back are explicit source text. Native tree records four arms, Hands-Face under the Hands group and Stinger-managed Tail. Baseline fittings alone are not a named mutation assembly.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-20T23:30:41.343709+00:00 / UNFINISHED</small><h3>verify body and every equipped item dependencies</h3><p>Inspect every current dependency before assembly; return missing BODY-IRUDAD authoring to active work.</p><p><strong>Review:</strong> BODY-IRUDAD has no current registered separated mutation assembly. Current older-human apparel compatibility proxies do not represent the four arms, Hands-Face211 or barb-crowned Tail214.</p>
+<div class="gallery"></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-20T23:30:41.343709+00:00&quot;,
+  &quot;step&quot;: &quot;verify_body_and_every_equipped_item_dependencies&quot;,
+  &quot;action&quot;: &quot;Inspect every current dependency before assembly; return missing BODY-IRUDAD authoring to active work.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-elderbob/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;6867e5c67ae9617498ff43bc734b8dc2ace709bd639f3cee3b3fd947176b7323&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;BODY-IRUDAD has no current registered separated mutation assembly. Current older-human apparel compatibility proxies do not represent the four arms, Hands-Face211 or barb-crowned Tail214.&quot;,
+  &quot;result&quot;: &quot;UNFINISHED&quot;
+}</pre></details></section>
 </div></div></main></html>
