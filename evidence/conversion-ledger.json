@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-FLOOR-CUSHION",
+  "active_entry": "SCN-HAMMOCK",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -28349,8 +28349,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -28362,9 +28362,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -29000,28 +28998,429 @@
           "outputs": [],
           "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
           "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain four actual native RandomTile patterns, default visible-equivalent variant1, hidden chaff/feather stuffing and source w/y roles. No native states inferred from four directions.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-packet.json",
+              "sha256": "d610a8afc21c3af3fafaab115c53156e16128787f6ddc3c4a85d49b9b2a27036"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-reference-construction.png",
+              "sha256": "9351f58a6ab48020349e3d0d1ac7871ea29593ece44b5f8172c57ac211964ec2"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual current VFE SittingCushion PNG, root/1.6 mapping, Graphic_Single and Core XML ancestry; no explicit drawSize/size exported in this ancestry. Single texture supplies broad floor map-plane camera and cloth, not a donor turnaround.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-packet.json",
+              "sha256": "d610a8afc21c3af3fafaab115c53156e16128787f6ddc3c4a85d49b9b2a27036"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-reference-construction.png",
+              "sha256": "9351f58a6ab48020349e3d0d1ac7871ea29593ece44b5f8172c57ac211964ec2"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Replace superseded v1 diamond camera with parallel soft-pad footprints in a shared physical projection. Keep three-star tufts, four-point tufts, plain crown/edge folds and diagonal three tufts distinct.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-packet.json",
+              "sha256": "d610a8afc21c3af3fafaab115c53156e16128787f6ddc3c4a85d49b9b2a27036"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/construct-turnarounds.py",
+              "sha256": "dea7baf767191082534925da065b1d3daea6d34ea587e836eaadb0bf89b40cac"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/manual-structural-review.json",
+              "sha256": "8822e648016a2f189ca4215003ac5b887c23cf1e5b0618a9ab4012058da10ac0"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-reference-construction.png",
+              "sha256": "9351f58a6ab48020349e3d0d1ac7871ea29593ece44b5f8172c57ac211964ec2"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "action": "Use one physical pattern per variant, S0/E90/N180/W270. Preserve broad end depth, common canvas/pivot and source patterns. W is authored, not a feature mirror.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-packet.json",
+              "sha256": "d610a8afc21c3af3fafaab115c53156e16128787f6ddc3c4a85d49b9b2a27036"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-1/constructed-turnaround.png",
+              "sha256": "e178ab90f0f23df16e57dd3c2bfa7da8845f97d5ed742a66c54baa395ccc840f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-2/constructed-turnaround.png",
+              "sha256": "ff21beccbd62e059b684d50801bbfeca11d125ebc3b4251baac75f0ef9ed0cad"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-3/constructed-turnaround.png",
+              "sha256": "4c153e5bfcf5a059fc01fa8670553cb1f97ba4c0fe88a48014152612d013f802"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-4/constructed-turnaround.png",
+              "sha256": "019ccfdc068b4ef14a46eda6bd8fd16795485bc166b0641b28356632c54fed12"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen composed refinement for cosmetic pattern1; inspect structure before material extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-1/constructed-turnaround.png",
+              "sha256": "e178ab90f0f23df16e57dd3c2bfa7da8845f97d5ed742a66c54baa395ccc840f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-1/turnaround-prompt.txt",
+              "sha256": "3a40875d623df06b60df83af6e485192c93967a794b9871769b44231cae8c151"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-1/refined-turnaround-raw.png",
+              "sha256": "a6612da8cedb577eee5375c0f8d54d573613104baceeb8e765f26c64e8dca7f6"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-1/first-structural-review.json",
+              "sha256": "4c60e3e24bc8e1dccdf04b0506a9657d891226a63caaa551dbfaf5ac9a75a8dc"
+            }
+          ],
+          "review": "Three tufts, central star-fold rotates to opposite edge on N. Continuous stuffed fabric and lower cyan role remain intact, no face, holes, occupant or loose/glowing feathers. Broad cardinal pad preserved. Generated panel/frame placement, tuft/outline width and exterior antialias fringe drift from manual input: retain exact manual geometry/ink/owner and map only interior cloth material by explicit crown/binding/side landmarks. No second isolation. This is generation-time art inspection, not native validation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v2/variant-1/turnaround-prompt.txt",
+            "sha256": "3a40875d623df06b60df83af6e485192c93967a794b9871769b44231cae8c151"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-5b417643-65ec-491b-bd33-857d3a04c430.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v2\\variant-1\\constructed-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v1\\native-states-comparison.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen composed refinement for cosmetic pattern2; inspect structure before material extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-2/constructed-turnaround.png",
+              "sha256": "ff21beccbd62e059b684d50801bbfeca11d125ebc3b4251baac75f0ef9ed0cad"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-2/turnaround-prompt.txt",
+              "sha256": "a4943c31dd007fd3804d4978d5f2a8accf0fb458f1fc5fff117cb977734f06e0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-2/refined-turnaround-raw.png",
+              "sha256": "4cbb50be5c4bbf9488c09ffb69ec4fc4a7aef8bbec768598e5bd48a757e2f633"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-2/first-structural-review.json",
+              "sha256": "01bb3a6976a388c20dbc32442495fc2abf5b5e10590383e48ad147e72303736f"
+            }
+          ],
+          "review": "Four diamond-arranged tufts retained across the three broad views. Continuous stuffed fabric and lower cyan role remain intact, no face, holes, occupant or loose/glowing feathers. Broad cardinal pad preserved. Generated panel/frame placement, tuft/outline width and exterior antialias fringe drift from manual input: retain exact manual geometry/ink/owner and map only interior cloth material by explicit crown/binding/side landmarks. No second isolation. This is generation-time art inspection, not native validation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v2/variant-2/turnaround-prompt.txt",
+            "sha256": "a4943c31dd007fd3804d4978d5f2a8accf0fb458f1fc5fff117cb977734f06e0"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-d3adedf7-bb76-4883-872f-1f9b7db42fbd.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v2\\variant-2\\constructed-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v1\\native-states-comparison.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen composed refinement for cosmetic pattern3; inspect structure before material extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-3/constructed-turnaround.png",
+              "sha256": "4c153e5bfcf5a059fc01fa8670553cb1f97ba4c0fe88a48014152612d013f802"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-3/turnaround-prompt.txt",
+              "sha256": "568e253d1fd7acca9cc64ee7ccaa0f20f3f2b9b2e9f37da3d7fdd6f7df08b8d5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-3/refined-turnaround-raw.png",
+              "sha256": "23f0c83bd8c866c5948d51761917283af8b9c2e5b275ddac0751e213c15efbde"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-3/first-structural-review.json",
+              "sha256": "1cc5891dac96785b0ca2a3f96d0df93864c6d941b68b810227cc2c9fc71a1350"
+            }
+          ],
+          "review": "No top buttons added; edge folds rotate S lower edge to E left edge to N upper edge. Continuous stuffed fabric and lower cyan role remain intact, no face, holes, occupant or loose/glowing feathers. Broad cardinal pad preserved. Generated panel/frame placement, tuft/outline width and exterior antialias fringe drift from manual input: retain exact manual geometry/ink/owner and map only interior cloth material by explicit crown/binding/side landmarks. No second isolation. This is generation-time art inspection, not native validation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v2/variant-3/turnaround-prompt.txt",
+            "sha256": "568e253d1fd7acca9cc64ee7ccaa0f20f3f2b9b2e9f37da3d7fdd6f7df08b8d5"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-544eac34-bad0-4249-9995-1430619b1a93.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v2\\variant-3\\constructed-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v1\\native-states-comparison.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "refine_materials_and_form",
+          "action": "One actual built-in ImageGen composed refinement for cosmetic pattern4; inspect structure before material extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-4/constructed-turnaround.png",
+              "sha256": "019ccfdc068b4ef14a46eda6bd8fd16795485bc166b0641b28356632c54fed12"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-4/turnaround-prompt.txt",
+              "sha256": "40d6877fcd4b3d2e8145a1fd0f419b4e7b2608b92fa4a6932d5748840fafc5b0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-4/refined-turnaround-raw.png",
+              "sha256": "2dc21f0487694374832cabcb8b6546989b2a216e38ddf1f8133844824c8dfbe2"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/variant-4/first-structural-review.json",
+              "sha256": "67a7a4905699b665bc730ae6a59ed862f9d60dbe5f8f7b5066a7075526deeb73"
+            }
+          ],
+          "review": "Three diagonal tufts retained, diagonal reverses screen slope in E. Continuous stuffed fabric and lower cyan role remain intact, no face, holes, occupant or loose/glowing feathers. Broad cardinal pad preserved. Generated panel/frame placement, tuft/outline width and exterior antialias fringe drift from manual input: retain exact manual geometry/ink/owner and map only interior cloth material by explicit crown/binding/side landmarks. No second isolation. This is generation-time art inspection, not native validation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-floor-cushion/v2/variant-4/turnaround-prompt.txt",
+            "sha256": "40d6877fcd4b3d2e8145a1fd0f419b4e7b2608b92fa4a6932d5748840fafc5b0"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-3cf81873-e77a-43a8-9367-3d683f4b2954.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v2\\variant-4\\constructed-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-floor-cushion\\v1\\native-states-comparison.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register generated cloth via crown/binding/side material landmarks into fixed constructed alpha/ink. Reject generated geometry/placement/fringe; neutralize cyan and keep independent lower binding ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/first-refinement-reviews.json",
+              "sha256": "9d994bcd419f69fc598ebe6e6a79eb6c7937704696866d9ae62d4055c77be095"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/register-cushions-initial.py",
+              "sha256": "b39e8a4145ecce6c2646e529bd5fe20efa7d22c11c9d914efb3951cac172bcdd"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered/model.json",
+              "sha256": "c11ac938d86515e42c4698a78495ce563a03b01362aa25628ae758672d7e9e59"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered/registration-decisions.json",
+              "sha256": "58c4b5ede55238b8abb25c92a52fdfd250843b5a30268ac0e9154e212efd2525"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered/all-views-neutral.png",
+              "sha256": "99f77069004b03f142ddae98d0147d162dde1959f40a8e8bd1e378598a094709"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered/all-views-native.png",
+              "sha256": "8f70c9fdb8f20445f585647f49ac89b4fb06c66f5c5accfc77ec516a654597af"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Correct west RGB surface orientation from horizontal mirror to actual180-degree opposed top-plane rotation; preserve initial candidate and keep S/E/N byte-identical. No extra AI call.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered/model.json",
+              "sha256": "c11ac938d86515e42c4698a78495ce563a03b01362aa25628ae758672d7e9e59"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/west-material-correction.json",
+              "sha256": "ade9a909f111d52389a999f683c504cc39f09c614a5bdc9e3d5667f23d22a327"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/west-material-correction-comparison.png",
+              "sha256": "48b48ffacdece50b034e690dcb5ef41a9ec331a5d0dbe46d6d25b91262ed49d2"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/register-cushions.py",
+              "sha256": "0891434a06da30de36f7e3373c436bd93238c25cfdcf96707f34566d965d7126"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json",
+              "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/registration-decisions.json",
+              "sha256": "465e8e7f8833bad1c88370c6f597e2fd594e6c67b23840f792e4d098ebecfa10"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-neutral.png",
+              "sha256": "f3605d2bf6d97cb17fee597218c0ee3a07aeec7081607542711c9ce8cb7d6826"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-detail.png",
+              "sha256": "9250c28151850704465403e5382e553fbbbf667d13a5ad3c794fcc0d9439680f"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-coverage.png",
+              "sha256": "b70850bb39f901fc713b7e1e9d37d31ba195fab4ffb818c4c0e7b30f7aee27ae"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Preserve all four cosmetic states and default binding separately from four unbound cardinal views. Do not invent occupied/folded/packed states.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/source-packet.json",
+              "sha256": "d610a8afc21c3af3fafaab115c53156e16128787f6ddc3c4a85d49b9b2a27036"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json",
+              "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect all16views enlarged and16x24/24x36/32x48: opaque tufting, source pattern differences and independent lower binding. Record fixed alpha/neutral palette/frame checks as authoring evidence only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json",
+              "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-native.png",
+              "sha256": "f7812fde15aec5d6ff4697bc2f78a4ff5ff24faf2edeb605c6aa5653857de6eb"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/authoring-review.json",
+              "sha256": "0cf415a7447c0168b6c9d3a7658ff10837789559f240cd9bbe0c06fdb8ea0e41"
+            },
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/artifact-manifest.json",
+              "sha256": "c3f16e176d0ca4a225cd0a11c504f1f6564e43ab0ac2bd5baf03624696cf87b6"
+            }
+          ],
+          "review": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T20:18:33.027694+00:00",
+          "step": "native_state_review",
+          "action": "Keep native RandomTile/default selection, seating/cover/physics/non-takeability/visibility and rare animated fallback plus extra-view placement behind full-set generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json",
+              "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or native activation. Entry remains UNFINISHED pending full-set acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
-      "native_acceptance": "Pending final all-conversions validation gate",
+      "generation_ready": true,
+      "native_acceptance": "Pending full-set generation gate; native RandomTile/default selection, seating/cover/non-takeability and rare Animated fallback plus extra-view placement remain unfinished.",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-floor-cushion/v1/registered/model.json",
-          "sha256": "7ff8b939b2c32fce983c3c9d25a68de822ab0ea00eb14b2234e646552ac27167"
+          "path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json",
+          "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"
         },
         "plate": {
-          "path": "art/conversion/scn-floor-cushion/v1/registered/registration-comparison.png",
-          "sha256": "b67f2ea815bd7e0b24a5283d49ee2c334d9126997d4146c9f7af5ddef3b1cf56"
+          "path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-native.png",
+          "sha256": "f7812fde15aec5d6ff4697bc2f78a4ff5ff24faf2edeb605c6aa5653857de6eb"
         }
       },
-      "registration_summary": "All four native floor-cushion cosmetic patterns retain their original tuft/crease differences and pale lower/front binding. Default thumbnail is shader-visibly equivalent to variant1, with exact coverage/source role evidence. Production fabric/binding layers are neutral; previews apply native w/y. Exact sources, actual installed VFE reference, four editable constructions, four real refinement calls and mask extraction are recorded below. No faces, holes, loose feathers or glow are invented; native pattern selection/seating/cover/visibility acceptance remains pending.",
+      "registration_summary": "Four native cushion patterns, each in S/E/N/W, retain tuft/crease identity and pale lower binding. Corrected broad cardinal floor-pad camera, actual VFE reference/definition mapping, four contextual refinements, fixed-geometry neutral extraction and west surface-rotation correction are recorded. Native w/y previews use one coverage plus independent role weight. Extra views unbound; native acceptance pending.",
       "camera_review": {
-        "status": "REQUIRES REWORK",
-        "classification": "OBLIQUE_OR_DIAGONAL",
-        "reason": "All four layouts use a rotated diamond footprint and isometric-like cushion presentation.",
-        "audit": {
-          "path": "evidence/camera-facing-audit.json",
-          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        "status": "PASS",
+        "classification": "CARDINAL_MAP_PLANE",
+        "reason": "Parallel footprint and broad top, authored width12.8/depth10.8/thickness0.6 at common elevation; actual VFE single floor cushion guides camera/material. S/E/N/W rotate pattern in one physical frame.",
+        "evidence": {
+          "path": "art/conversion/scn-floor-cushion/v2/source-reference-construction.png",
+          "sha256": "9351f58a6ab48020349e3d0d1ac7871ea29593ece44b5f8172c57ac211964ec2"
         }
       },
       "furniture_views": {
@@ -29030,10 +29429,19 @@
           "east",
           "north"
         ],
-        "completed_views": [],
-        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
-        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "completed_views": [
+          "south",
+          "east",
+          "north",
+          "west"
+        ],
+        "west_policy": "Authored270-degree pattern rotation, not mirror;180-degree east crown material rotation and unchanged front perimeter binding material.",
+        "native_binding": "Four actual RandomTile cosmetic patterns; default visible-equivalent variant1. Extra directions unbound, no placement selector or sitting/packed state added.",
         "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed four actual native tuft/crease choices and default visible-equivalent binding, description/ancestry/palette, current VFE single cushion with exact texture/LoadFolders/Graphic_Single mapping and XML size gaps, corrected parallel footprint/shared physical dimensions, all four S/E/N constructions plus authored W, four actual composed refinements with first structural review before extraction, explicit material landmark mapping into fixed coverage/ink, and west crown180-degree material correction. Original w cloth and y lower binding are independent neutral roles with one coverage alpha. Pattern3 crown stays unbuttoned; no faces/holes/glow/loose stuffing. Additional directions remain unbound. Native selection/seating/cover/non-takeability/rare Animated fallback acceptance stays pending behind full-set generation."
       }
     },
     {
@@ -29053,8 +29461,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -52810,7 +53218,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T20:02:46.335605+00:00",
+  "updated_at": "2026-10-20T20:18:33.027694+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

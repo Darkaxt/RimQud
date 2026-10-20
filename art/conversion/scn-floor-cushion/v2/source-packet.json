@@ -1,0 +1,121 @@
+{
+  "entry": "SCN-FLOOR-CUSHION",
+  "identity": "Floor Cushion -> BaseChair -> Furniture",
+  "description": "Stuffed with watervine chaff and glowcrow feathers, this buttoned pillow lets folk repose with crossed legs.",
+  "original_packet": {
+    "path": "art/conversion/scn-floor-cushion/v1/source-packet.json",
+    "sha256": "34829db91c61d2d63f07cf93be21456e59bce61b6829a5c4fde68eb5b7cca6c9"
+  },
+  "original_states": {
+    "path": "art/conversion/scn-floor-cushion/v1/native-state-index.json",
+    "sha256": "d5a7d7259ab4f4aedb90369c578981d6eb43f8fe4803b2b0ce2c9dfb22aa4da7"
+  },
+  "original_context": {
+    "path": "art/conversion/scn-floor-cushion/v1/native-states-comparison.png",
+    "sha256": "2a18334b1451c5166a00392fa5b57de1792b4b7bfcbebd1ef76158539ecd00e7"
+  },
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Floor Cushion": "<object Name=\"Floor Cushion\" Inherits=\"BaseChair\">\n    <part Name=\"Render\" DisplayName=\"floor cushion\" ColorString=\"&amp;w\" DetailColor=\"y\" RenderString=\"009\" Tile=\"Items/sw_floor_cushion.png\" />\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_cushion1.bmp,Items/sw_cushion2.bmp,Items/sw_cushion3.bmp,Items/sw_cushion4.bmp\" />\n    <part Name=\"Description\" Short=\"Stuffed with watervine chaff and glowcrow feathers, this buttoned pillow lets folk repose with crossed legs.\" />\n    <part Name=\"Physics\" Weight=\"2\" />\n    <part Name=\"Commerce\" Value=\"1\" />\n    <part Name=\"Chair\" Level=\"-1\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Reclined,Sybaritic,Soft,Voluptuous,Epicurean\" />\n    <tag Name=\"BodyType\" Value=\"Pillow\" />\n    <tag Name=\"PlacementHint\" Value=\"Inside\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stag Name=\"Basic\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "BaseChair": "<object Name=\"BaseChair\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[chair]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"190\" Tile=\"Items/sw_chair.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"20\" Takeable=\"false\" />   \n    <part Name=\"Chair\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Comfy,Short-Legged,Straight-Backed,Sturdy,Three-Legged\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Backs,Lumbar,the Tired\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Chair\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"chair\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"60\" />\n    <stag Name=\"Seating\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sit on\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeingSatOn\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "source_shapes": [
+    "Two upper dimples and central star-like folds, following the first native pattern. These are pillow tufts, not a face.",
+    "Four source dimple positions at top, left, right and lower center; retain the diamond arrangement.",
+    "Plain upper pad with deeper lower-front edge folds; no new visible top buttons are added where the source has none.",
+    "A diagonal sequence of pinched folds/dimples follows the original stepped diagonal marks; no readable slash symbol or embroidery."
+  ],
+  "palette": {
+    "primary": "w",
+    "detail": "y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "b1c9c3",
+    "rule": "Upper stuffed fabric receives w; pale lower/front binding receives y. Crease/button marks are shaded primary fabric, not transparent holes. Cyan binding in authoring is an extraction aid; final layers are neutral."
+  },
+  "default_reference": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\floor-cushion-mask.png",
+    "sha256": "32a6bd94b619acf6aae8befb08baa9d346abd5a1074d562de8457d767912eb1f",
+    "tile": "Items/sw_floor_cushion.png",
+    "binding": "Same alpha coverage and same shader-relevant R wherever covered as RandomTile variant1. Raw RGBA differs only in invisible RGB; no extra visible fifth model is required."
+  },
+  "render_reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\Textures\\NewThings\\Furniture\\SittingCushion\\SittingCushion.png",
+      "sha256": "50bc51da403a66964733d36df2e8becf936ea5cf1c1762630a9fa6d8925458c8"
+    },
+    "texture_canvas": [
+      128,
+      128
+    ],
+    "alpha_bounds": [
+      5,
+      5,
+      123,
+      124
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\1.6\\Defs\\Buildings_Furniture\\Buildings_BasicSeats.xml",
+      "sha256": "fc692da16af1c9f7bb1200ea730ae5d4bff3dc0e8ed35e39dd0321f70f20d74e"
+    },
+    "core_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "base_definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Base.xml",
+      "sha256": "b16e3a7934febd9ffb7883f18392d524ba376c9657da4c788d1951552f86d142"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1718190143\\LoadFolders.xml",
+      "sha256": "148c4e0d349c9c8c709feb00e2ca92b486a28e5e1d54f9a35c541078e227ea9a"
+    },
+    "objects": {
+      "Seat_Cushion": "<ThingDef ParentName=\"FurnitureWithQualityBase\">\n    <defName>Seat_Cushion</defName>\n    <label>sitting cushion</label>\n    <description>A soft cushion designed for sitting. More comfortable than a stool but still a simple seating option.</description>\n    <graphicData>\n      <texPath>NewThings/Furniture/SittingCushion/SittingCushion</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n      <damageData>\n        <rect>(0.125,0.125,0.75,0.75)</rect>\n      </damageData>\n      <shadowData>\n        <volume>(0.75, 0.23, 0.75)</volume>\n      </shadowData>\n    </graphicData>\n    <altitudeLayer>Building</altitudeLayer>\n    <uiOrder>2415</uiOrder>\n    <statBases>\n      <MaxHitPoints>30</MaxHitPoints>\n      <WorkToBuild>3000</WorkToBuild>\n      <Mass>3</Mass>\n      <Flammability>1.0</Flammability>\n      <Beauty>3</Beauty>\n      <Comfort>0.7</Comfort>\n    </statBases>\n    <socialPropernessMatters>true</socialPropernessMatters>\n    <stuffCategories>\n      <li>Fabric</li>\n      <li>Leathery</li>\n    </stuffCategories>\n    <costStuffCount>30</costStuffCount>\n    <pathCost>24</pathCost>\n    <fillPercent>0.07</fillPercent>\n    <building>\n      <isSittable>true</isSittable>\n      <paintable>true</paintable>\n    </building>\n    <uiIconOffset>(0, -0.05)</uiIconOffset>\n    <designationCategory>Furniture</designationCategory>\n\n\n\n  </ThingDef>\n\n  ",
+      "FurnitureBase": "<ThingDef Name=\"FurnitureBase\" ParentName=\"BuildingBase\" Abstract=\"True\">\n    <designationCategory>Furniture</designationCategory>\n    <minifiedDef>MinifiedThing</minifiedDef>\n    <noRightClickDraftAttack>true</noRightClickDraftAttack>\n    <thingCategories>\n      <li>BuildingsFurniture</li>\n    </thingCategories>\n  </ThingDef>\n  \n  ",
+      "FurnitureWithQualityBase": "<ThingDef Name=\"FurnitureWithQualityBase\" ParentName=\"FurnitureBase\" Abstract=\"True\">\n    <comps>\n      <li>\n        <compClass>CompQuality</compClass>\n      </li>\n    </comps>\n  </ThingDef>\n\n  ",
+      "BuildingBase": "<ThingDef Name=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <thingClass>Building</thingClass>\n    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>\n    <selectable>true</selectable>\n    <drawerType>MapMeshOnly</drawerType>\n    <altitudeLayer>Building</altitudeLayer>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <repairEffect>Repair</repairEffect>\n    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>\n    <filthLeaving>Filth_RubbleBuilding</filthLeaving>\n    <statBases>\n      <SellPriceFactor>0.70</SellPriceFactor>\n    </statBases>\n  </ThingDef>\n  \n  "
+    },
+    "graphic_class": "Graphic_Single",
+    "drawSize": "No explicit value in inspected Seat_Cushion/FurnitureWithQualityBase/FurnitureBase/BuildingBase XML ancestry; runtime default not asserted.",
+    "footprint": "No explicit size in inspected ancestry; runtime default not asserted.",
+    "mapping": "1.6 and1.7 LoadFolders use root textures plus1.6 definitions. Exact Seat_Cushion texPath matches inspected PNG.",
+    "role": "Actual flat broad soft cushion supplies map-plane camera, outlined stuffed cloth and restrained tuft shading. No donor four-corner tuft layout, comforts, footprint or colors copied.",
+    "directional_limit": "One Graphic_Single, not three actual directional donor textures. Additional Qud facings are authored rotations of one physical top-plane design; not donor-verified native rotations."
+  },
+  "camera": {
+    "classification": "CARDINAL_MAP_PLANE",
+    "width": 12.8,
+    "depth": 10.8,
+    "thickness": 0.6,
+    "dimensions_status": "Authored estimates informed by source low pillow and actual broad floor-cushion reference; not recovered native dimensions.",
+    "projection": "u=8+rotated_x; v=11.2+0.8*rotated_y-0.65*z. Same fixed elevation for every view. Parallel footprint axes; no diamond yaw.",
+    "pattern_rotation": "S0,E90,N180,W270 degrees around one center. Pattern3 edge folds rotate with physical pad. Pattern4 diagonal is intrinsic tuft placement, not camera yaw.",
+    "volume": "Soft crown above continuous low perimeter binding; full broad top visible in each facing. Side not a thin engineering edge."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "One full-cell mapping for every view, pattern and role. No alpha-bounds fit; shape center remains8,11.2. Ground/front anchor8,16 remains the native-cell proposal."
+  },
+  "native_state": "RandomTile chooses sw_cushion1..4.bmp, not four facings. Default thumbnail is visibly equivalent to variant1 under actual shader coverage. Native Chair Level-1,2-weight BaseChair-derived furniture, inherited takeability/cover and rare Animated state stay native. Do not infer portability merely from low weight.",
+  "native_behavior": "Preserve native RandomTile four cosmetic patterns, default visibly equivalent to variant1, Chair Level-1, inherited non-takeability/cover/non-occlusion and rare Animated fallback. Extra directions unbound; no new occupied/folded state.",
+  "native_acceptance": "Pending full-set generation gate; native RandomTile/default selection, seating/cover/non-takeability and rare Animated fallback plus extra-view placement remain unfinished."
+}
