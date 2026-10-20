@@ -654,3 +654,21 @@ Full cloth alpha, original body and front/back robe art are preserved; the new
 rim is recorded as a manual geometry repair, not a pure stretch. Update the
 Cloth Robe aggregate to the current fit. Native acceptance remains pending and
 Stage 3 remains ACTIVE; continue the unfinished Nima apron generation.
+
+Leather Apron authoring checkpoint: the actual Nima Body176/item529/0 fit and
+its item aggregate are generation-ready. The design derives from the original
+neck-loop/bib/long-panel glyph, native boar-hide description and lower `W` field,
+with actual Vanilla Apparel Expanded SEN apron references for directional
+construction. Its pockets are not copied. One contextual refinement supplies
+neutral scarred/burned hide; generated glow, red contamination and mannequin
+geometry are excluded. Full material is completed before per-facing body depth:
+the original near arm/hand sits above the profile, and the original body covers
+the rear front-panel while neck band and ties remain visible. No second isolation
+generation, destructive body-shaped garment alpha, extra garment or new body.
+
+Primary evidence shows the apron alone on the fixed ordinary female human base.
+The palette plate distinguishes Nima foreground `g`, apron `w` and lower `W`;
+named facial detail, late-middle-age appearance, mutation anatomy and full outfit
+remain unfinished. This baseline item does not complete those requirements.
+Stage 3 remains ACTIVE; proceed to Yrame's Chain Mail generation on the ordinary
+human baseline, keeping mutation-granted feet and other anatomy separate.

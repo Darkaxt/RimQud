@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+  "active_entry": "FIT-YRAME-CHAIN-MAIL-BODY-0",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -9815,8 +9815,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -9829,7 +9829,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log."
+        "Nima mutation body, facial/cosmetic detail and full outfit/native equipped-state acceptance remain unfinished."
       ],
       "metadata": {
         "body_family": "nima",
@@ -9883,6 +9883,261 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.239075+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Nima Ruda -> ordinary human female base -> actual Body176/item529/laterality0 Leather Apron; retained exact boar-hide/knife-scar/tong-burn description, source glyph and w/W palette, and captured mutation-altered part tree without baking its appendages.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/prepare-source.py",
+              "sha256": "1ce5713b97379bef55afc7d038cc25eb21f0775f22f71646a2d8fd2f832b5aa2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-comparison.png",
+              "sha256": "32eb8742d90ac43d56603064215b4abf43256e8094c7fc80cc92a1d1f5938a32"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.239372+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary human female v2. Actual Vanilla Apparel Expanded Apron_Female SEN references supply neck-loop/bib/side/open-back construction, not their pockets. Native middle-age descriptor does not require inventing a new body for this one garment; named age/cosmetic/mutation assembly remains unfinished.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-comparison.png",
+              "sha256": "32eb8742d90ac43d56603064215b4abf43256e8094c7fc80cc92a1d1f5938a32"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.240525+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed editable full front bib/skirt, neck loop and ties, then cardinal profile and open-back geometry with class-specific original-body visibility. One item only on the unclothed fixed base. No sleeves or generic robe fitting controls; identity fit already matches this body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/prepare-source.py",
+              "sha256": "1ce5713b97379bef55afc7d038cc25eb21f0775f22f71646a2d8fd2f832b5aa2"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-south.svg",
+              "sha256": "d0014a43ceba05ff99bda1bf763c76ee2c1b5302aa59372a5556a84bfd467db5"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-east.svg",
+              "sha256": "ddb9904492ae5e3db4eb342fba03b863e4efefb23e55f48266aae740b4440d03"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-north.svg",
+              "sha256": "d60804cf2d022275302c65268b857cbac69c0c0a5f061970fdab19c1431e7a94"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-neutral-context.png",
+              "sha256": "eb871c471e41cacdddcfc462890af03b5017d24672ca5f48e31141e43b009dd8"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "sha256": "13ef4a0ffaa516c2eafa0650489e135428e22e33c1dc116976506f679dae2d52"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.242635+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One contextual material refinement of the constructed three-view apron. Selected gray scarred hide surface only; generated glow, red contamination and mannequin/placement are excluded. No additional anatomy patch/refinement was needed because registered body and geometry remain the constructed originals.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "sha256": "13ef4a0ffaa516c2eafa0650489e135428e22e33c1dc116976506f679dae2d52"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/imagegen-prompt.txt",
+              "sha256": "b742dd2b842343992bfc8a3a46659e65ec2aba93c72e66c1508bc5f73ea45f84"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/refined-red-context.png",
+              "sha256": "01bdb9da9a26433dcbe5be75099edc66585618dc8eb5e7ce82bc97e280041cd5"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: precise-object-edit / game sprite material refinement.\nImage 1 is the exact edit target: three registered cardinal views of one gray leather apron on a red featureless adult mannequin, SOUTH/front left, EAST/complete right profile center, NORTH/back right. Maintain this three-column 1536x1024 layout, scale, pose and item placement exactly. The red mannequin is an ownership key: preserve its original body contours, arms, hands, neck and legs without moving or redrawing them.\nImages 2 and 3 are supporting references only: the original tiny Caves of Qud item and an actual RimWorld mod apron front. The tiny Qud glyph is normalized two-tone reference, not the final palette. The mod provides restrained sprite shading and construction conventions only; DO NOT copy its pockets.\nNative item: Leather Apron. Description: \"Boar hide was brined, limed, and put in a tanning drum. It was cut and fitted into an apron, and now it's a brown canvas for knife scars and tong burns.\"\nRefine only the EXISTING GRAY APRON: modest neutral grayscale hide shading, subtle leather grain, a few existing knife scars and tong-burn marks, clean dark outlines. Keep the neck loop, long front bib/skirt, waist ties and open back exactly as drawn. Preserve the front panel behind the body in back view, visible only at the sides/between legs; retain the small neck band and waist knot. Keep the original near arm and hand exposed over the apron in profile. No sleeves, pockets, metal buckles, extra costume or equipment. No new pose, anatomy, extra arms or perspective rotation. Avoid glossy plastic, thick new piping, dramatic shadows and fabric-flow exaggeration.\nKeep ALL leather gray/equal RGB, including marks. Do not paint leather brown or gold: final native w/W color roles are applied in separate masks after registration. Keep red mannequin red; no red reflections or background tint on gray hide. Do not isolate or rearrange the garment. This is one contextual refinement, not a new garment drawing.\nOutput the same sheet with a genuinely transparent background and no labels, grid, ground shadow, backdrop or glow. Leave transparent margins. Preserve the exact input positions and all three orientations.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/leather-apron-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814987817/Textures/Things/Apparel/Apron/Apron_Female_south.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.244897+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Programmatically registered the same contextual surface through recorded torso zoom; harmonic same-hide completion fills hidden/excluded source before late body depth. Full item alpha equals constructed geometry in each view. Preserved lower detail masks, open-back controls and original-body overlay separately; no generative isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/register-apron.py",
+              "sha256": "81009bdd5c70e79703ebd1931c880b6f28bbfe34ab42d192ae7b25edc6446731"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/refined-red-context.png",
+              "sha256": "01bdb9da9a26433dcbe5be75099edc66585618dc8eb5e7ce82bc97e280041cd5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/intact-garment-comparison.png",
+              "sha256": "979782da037d7b390bbea1f960b264fbd2b8ffeb6ccd4a43da8724b6e736aa3e"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/continuation-comparison.png",
+              "sha256": "a0c19aff9f556b18c8273307432ea2f7b9071f556af8256a2565f14be84e426a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/detail-comparison.png",
+              "sha256": "921d34aab3c79f2176b68bf62bbb472fa991fa0d081cfc9faeca54ea15d808cd"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-comparison.png",
+              "sha256": "5c2fd3f53f03a0c4bc77a2eba5b354bef5cf8349582e299e8ee597a9b13a4bcd"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.245570+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed full apron with original head/neck, near-arm/hand profile ownership and original body above rear front-panel. Back neck band and ties remain above body. Reviewed SEN and mirrored west, with no unrelated item context.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+              "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/mask-off-comparison.png",
+              "sha256": "9213bef4310ac07a61e1164b8ce5a667adf3d8f0e2fafc214dbb265c2e7c2ecd"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/body-mask-comparison.png",
+              "sha256": "99075a2f59a9216be9a053d9869d450b867896d73eeffe54352ef824fd806278"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.246069+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended-size and independent native Nima foreground g / apron w / lower hide W roles. Baseline human model has no authored Nima cosmetic w detail: named appearance remains pending rather than inventing its mask.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/independent-palette-comparison.png",
+              "sha256": "88cc7604b515cf421dcdf5ffb381b7521b53d70aa8bb68684981bb1784104d7f"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/game-scale-review.png",
+              "sha256": "1edf8bf534556d8e4d0c6ca8b6b826a4d14517c00f4d5002d6bb7d2c66443800"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/authoring-review.json",
+              "sha256": "b041767e0ee84f52242ddeae7a788786cf9388eba51885510a128d34c90f359a"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.246535+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled source-bound one-item context, same-generation material extraction, continuous source, class-specific body depth and untouched registration. Sleeve cuff curves/regional stretch are unnecessary for this sleeveless fitted apron. Native testing remains behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/record-review.py",
+              "sha256": "6de26423e35d6282c7cb866f1a4c3ed2947fc45d7f56e7c4f21afe5f0ad0d5b3"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/artifact-manifest.json",
+              "sha256": "59d1ad1dd9a92b4268f5c4deba8611aec8ed1cb4b0a62b3040cc80a6e86518da"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/authoring-review.json",
+              "sha256": "b041767e0ee84f52242ddeae7a788786cf9388eba51885510a128d34c90f359a"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
         }
       ],
       "apparel_occlusion": {
@@ -9893,19 +10148,31 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+          "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+          "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+        }
+      },
+      "registration_summary": "Source-bound scarred/burned boar-hide apron: neck loop, long front panel and open-back waist ties. Single item over fixed ordinary human female body; full material, lower W field and original near-arm/body visibility separate. Native Nima foreground g / apron w-W preview; named mutations/outfit unfinished.",
+      "native_acceptance": "Pending all-conversions gate and named mutation/outfit acceptance"
     },
     {
       "id": "FIT-NIMA-PESTLE-HAND-6",
@@ -10780,8 +11047,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -12645,7 +12912,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -12653,7 +12920,7 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion."
+        "Native item acceptance and named Nima mutation/outfit assembly remain unfinished."
       ],
       "metadata": {
         "original_reference": {
@@ -12706,21 +12973,81 @@
           ],
           "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
           "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.390435+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reconciled actual boar-hide apron source description, original glyph and w/W palette.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-apron/v1/fittings.json",
+              "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"
+            },
+            {
+              "path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png",
+              "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+            }
+          ],
+          "review": "Verified exact Leather Apron identity/description/w-W palette against the source-bound Nima fit, actual Body176/item529/0, recorded original/mod/manual/context/material/masks/facings/palette evidence and current model/plate hashes. No other enumerated fits. Generation-only item aggregate; no native/actor completion.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.390922+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled the one enumerated Nima apron fit, including all authoring steps and exact registered assets.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-apron/v1/fittings.json",
+              "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"
+            },
+            {
+              "path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png",
+              "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+            }
+          ],
+          "review": "Verified exact Leather Apron identity/description/w-W palette against the source-bound Nima fit, actual Body176/item529/0, recorded original/mod/manual/context/material/masks/facings/palette evidence and current model/plate hashes. No other enumerated fits. Generation-only item aggregate; no native/actor completion.",
+          "result": "PASS",
+          "new_imagegen_call": false
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
-        "status": "REPROCESS REQUIRED",
+        "status": "GENERATION READY",
         "reset": {
           "path": "evidence/apparel-workflow-reset-20261020.json",
           "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow."
-      }
+        "status": "PASS",
+        "reason": "Verified exact Leather Apron identity/description/w-W palette against the source-bound Nima fit, actual Body176/item529/0, recorded original/mod/manual/context/material/masks/facings/palette evidence and current model/plate hashes. No other enumerated fits. Generation-only item aggregate; no native/actor completion."
+      },
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/item-leather-apron/v1/fittings.json",
+          "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"
+        },
+        "plate": {
+          "path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png",
+          "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+        }
+      },
+      "registration_summary": "Leather Apron item identity and its only enumerated Nima ordinary-body fit are generation-ready. Exact w/W hide roles and original-body depth retained; named mutation/outfit/native acceptance pending.",
+      "native_acceptance": "Pending full-set generation gate and actual outfit/equipped state"
     },
     {
       "id": "ITEM-LEATHER-BOOTS",
@@ -43091,7 +43418,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T14:56:27.414272+00:00",
+  "updated_at": "2026-10-20T15:08:38.391593+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
