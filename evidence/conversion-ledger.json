@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-BRINESTALKWALL",
+  "active_entry": "SCN-BRINESTALKWALLWITHGEARBOX",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -19536,8 +19536,8 @@
         }
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": null,
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -19596,6 +19596,10 @@
             16,
             24
           ]
+        },
+        "source_packet": {
+          "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+          "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
         }
       },
       "historical_artifacts": [
@@ -19616,7 +19620,333 @@
           "sha256": "08b4a843bcb23e6d9aad79528ec9d82c10225f4af7608e964fb8f99afeed321b"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-20T04:33:30.781342+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "phase": "Stripped brinestalk trunks and mud, native wall metadata",
+          "action": "Resolved BrinestalkWall source description, original mask/tint roles, solid/organic/occluding identity and painted-wall metadata.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            },
+            {
+              "path": "evidence/joppa-anatomy-study.json",
+              "sha256": "83a67a07c7e495c2b64b827853013f599fc132ec0a014420e53b982672fcede8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            }
+          ],
+          "review": "Viewed original default isolated glyph. Description explicitly establishes several stripped trunks bonded with mud; the four upright lower columns and stippled panel support the construction. Fine unseen material remains authored. Original native eight-neighbor states are not falsely claimed exported.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:33:30.782055+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "phase": "Actual installed VFE Architect log-wall reference",
+          "action": "Selected installed Vanilla Furniture Expanded - Architect LogWall atlas and1.6graphic definition used by its1.7load mapping.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-construction-comparison.png",
+              "sha256": "433d25edec877a569cbbc85c8f96f2c44438ac6e0e9a94be1d5f9ffaa4de0c95"
+            }
+          ],
+          "review": "Viewed actual mod atlas/icon and source comparison. Graphic_Single/CornerFiller supplies face/cap/join presentation only; horizontal log orientation, hue, mod atlas order and simulation do not define the Qud wall.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:33:30.782240+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Editable four-trunk/mud face construction",
+          "action": "Built an explicit neutral four-stalk face with packed mud gaps, fibrous ridges and occasional shallow trunk joints.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/prepare-and-construct.py",
+              "sha256": "c11f60371b7fc518217bff36379e281eea9fcd00d8629dbec306a59b77fd3f75"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-face.svg",
+              "sha256": "971d551d04acb09bc931d963760c388fdbb21001071705a6bf3789b905cb97f6"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-face.png",
+              "sha256": "0cd933174e6b343f19ae47a0b76dac294f4909ff2450f1f182b2f438f03fb81b"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-qud-preview.png",
+              "sha256": "a7bdc91fee6800117846647a4d8713884e0f440af51889e2d57fab3a04f1d09d"
+            }
+          ],
+          "review": "Viewed material and source comparison. It preserves upright brinestalk identity and distinct w/y roles rather than generic beige masonry. Sixteen recipient connection states require explicit geometry, not independently generated shapes.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T04:37:40.344263+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Rejected oversized repeated top cross-sections",
+          "action": "Refined the four-stalk face and built a first deterministic16state raised wall with repeated cut-end caps.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refine-wall-prompt.txt",
+              "sha256": "9374032a4c15803f04c662091da25a598cff346511d592f0f9feae4069280eda"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-face.png",
+              "sha256": "0cd933174e6b343f19ae47a0b76dac294f4909ff2450f1f182b2f438f03fb81b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refine-wall-prompt.txt",
+              "sha256": "9374032a4c15803f04c662091da25a598cff346511d592f0f9feae4069280eda"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png",
+              "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/register-wall.py",
+              "sha256": "ace35511b60a5c60b0e5febb776c2b66627dc40b74f9762423b7ceb89bcb6ec8"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered/model.json",
+              "sha256": "3ad430a9a853972202d6ed6cde9fda02c7eacc784b8a51dd7c75867e35b62c6e"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered/states-comparison.png",
+              "sha256": "33069364265a77f546f209e3f28603202fc69a4cdd56bfb04f52762798ddf1e2"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered/connections-comparison.png",
+              "sha256": "453bd19ca2c08425950446e513daed375f5a1e3b5c920f684f08dc04319eba9d"
+            }
+          ],
+          "review": "Viewed all states and assembled room. Refined upright stalk faces/mud are useful, but the wide top with many large circles reads as a studded panel and hides the intended face. Reject that top geometry/material. Retain output unchanged as history; use a narrower continuous low-relief mud cap and a taller visible face in a sibling registration.",
+          "result": "REJECTED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-brinestalkwall\\v1\\constructed-face.png",
+              "D:/Steam/steamapps/workshop/content/294100/2608762624/Textures/LogWall/LogWall_Atlas.png"
+            ]
+          },
+          "generation_file": "C:/Users/darka/.codex/generated_images/01a15150-6512-7ae1-9634-400d4b94d6cb/exec-34442fbc-aeea-45d9-acc4-bd285dcc426e.png"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.292938+00:00",
+          "step": "construct_faithful_shape",
+          "phase": "Source-bound upright stalk/mud construction selected",
+          "action": "Retained the editable four-trunk face and explicit connected-footprint authoring, choosing the corrected narrower cap/face balance.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-face.svg",
+              "sha256": "971d551d04acb09bc931d963760c388fdbb21001071705a6bf3789b905cb97f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/constructed-qud-preview.png",
+              "sha256": "a7bdc91fee6800117846647a4d8713884e0f440af51889e2d57fab3a04f1d09d"
+            }
+          ],
+          "review": "Source description and original remain binding. No beige masonry, horizontal donor logs, new ropes/leaves or physical mutation behavior introduced. Top construction is an authored low-relief mud interpretation, not a claimed original cross-section.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.293286+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "phase": "Sixteen consistent raised wall states",
+          "action": "Constructed all16recipient cardinal states from a fixed96px footprint in256px frame with56px lift and3x3neighbor context before cropping.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png",
+              "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/states-comparison.png",
+              "sha256": "9c86ecb0707fc2b38110e3c895e0c2f1876b4616a1e2acd96450a60c82b8855a"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png",
+              "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/native-scale-comparison.png",
+              "sha256": "2a2bf62d4840bbb542f0767cd033569e5ea0a03b399ace97db228b992f2c2c02"
+            }
+          ],
+          "review": "Viewed all states and assembled straight/corner/T/open-doorway layouts. Common frame/material is retained across every state. Connected coverage edges match; no new cell-edge outline/endcap is created along a continuous wall. Gearbox walls only participate in compatible static joins; their overlay is unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.295382+00:00",
+          "step": "refine_materials_and_form",
+          "phase": "Corrected low-relief mud cap and visible stalk faces",
+          "action": "Replaced rejected wide studded top with a narrower continuous mud cap sampled from the generated mud gap, retaining the same refined four-stalk face.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png",
+              "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered/model.json",
+              "sha256": "3ad430a9a853972202d6ed6cde9fda02c7eacc784b8a51dd7c75867e35b62c6e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/register-wall-v2.py",
+              "sha256": "f1764305a9ea855cbf563d64efe83ce1a3493fe256dbeff20315d59c776fb9cc"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/registration-decisions.json",
+              "sha256": "e14d75ed4af7d5f19d8685635ac20fee1a5c89e36bad1a1789862a62625adff6"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/face-material.png",
+              "sha256": "cfee78b59f8d02d8d21b3050e1aa0cd2997c0887d017f3ca337dfa6ea23e5a74"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/cap-material.png",
+              "sha256": "6181d00d9f26aa07991a326c366bf537a7c2c57314eac492915f2b5f5e05d361"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png",
+              "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"
+            }
+          ],
+          "review": "Viewed corrected states, room and static-map plates. Packed-mud cap is quieter and upright stripped faces remain readable. Exact face/cap borders patched with restrained paired-band blending. This is a deterministic geometry/material correction, not a second ImageGen run; rejected registration remains intact.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.297588+00:00",
+          "step": "extract_register_color_coverage",
+          "phase": "Neutral primary/detail atlases in a common frame",
+          "action": "Registered separate primary-w and detail-y neutral layers, exact per-state coverage, recipient4x4bottom-origin layout and fixed scale/ground center.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+              "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/refined-proposal.png",
+              "sha256": "97086efa43e1c7976982b02be1586846368bc2dda3a5fc9025f4395d4aa256a1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json",
+              "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/primary-atlas.png",
+              "sha256": "a3eddaee9f352a0e8eea0bb8743e6644e8855713726166fdb736a2df417971ab"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/detail-atlas.png",
+              "sha256": "b88ed26016193fe0a03a099ac0f0184a49c7bec087ec675603cdf8768a46521d"
+            }
+          ],
+          "review": "Equal RGB, detail-inside-primary coverage, all16sizes, opposite material borders and compatible connected coverage edges inspected. Atlas sampling must stay inside its selected state; real native material/UV binding remains pending. No source hue baked into production PNGs.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.299448+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "phase": "Brinestalk wall authoring review",
+          "action": "Viewed the corrected16states enlarged, connected layout at16x24cell proportions and static Joppa brinestalk positions.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json",
+              "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/states-comparison.png",
+              "sha256": "9c86ecb0707fc2b38110e3c895e0c2f1876b4616a1e2acd96450a60c82b8855a"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png",
+              "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/native-scale-comparison.png",
+              "sha256": "2a2bf62d4840bbb542f0767cd033569e5ea0a03b399ace97db228b992f2c2c02"
+            },
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/static-joppa-authoring-comparison.png",
+              "sha256": "1128492892e276b9a1e74f2d84037577e16711f85ef946080c007901687eb964"
+            }
+          ],
+          "review": "Upright plant trunks and mud remain distinct from stonework and the mod horizontal-log reference. Straight connections, corners, T junctions and open gaps remain connected. Static view does not show complete village contents or accept gearbox/graffiti/damage/occlusion states. Native integration remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T04:39:45.300059+00:00",
+          "step": "native_state_review",
+          "phase": "Native connected-wall acceptance deferred",
+          "action": "Retained actual atlas/tint/visibility/contact/foreground/occlusion acceptance behind the every-conversion-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json",
+              "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch or production renderer edits. Overall subject remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "native_acceptance": "Pending final all-conversions validation gate",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json",
+          "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"
+        },
+        "plate": {
+          "path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png",
+          "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"
+        }
+      },
+      "registration_summary": "Selected stripped brinestalk-and-mud wall with 16 fixed-frame recipient connection states, separate native-w/y tint layers and continuous joins. The first oversized round-cap design is retained as rejected history; the selected narrower mud cap exposes the upright faces. Source facts, installed Architect reference and actual refinement are logged below. Native integration remains pending."
     },
     {
       "id": "SCN-BRINESTALKWALLWITHGEARBOX",
@@ -19740,8 +20070,8 @@
         }
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",

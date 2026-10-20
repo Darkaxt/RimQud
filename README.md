@@ -39,8 +39,13 @@ and deep water use separate refined materials in the native blue family, with
 independent shoreline and depth-blend coverage. Pond binds those two documented
 conversions and preserves separate foreground objects; the native Watervine used
 in its composition is context only. These are authoring plates, not game captures.
-There are now 21 generation-ready entries; Brinestalk Wall is active next.
-Walls, furniture and the remaining entries are unfinished.
+Brinestalk Wall is generation-ready with 16 fixed-frame connected states, stripped
+upright trunk faces, a restrained mud cap and separate native primary/detail
+layers. Its installed Architect mod reference, first rejected cap design and
+corrected connected assembly are recorded. Native atlas/visibility/occlusion
+acceptance remains pending.
+There are now 22 generation-ready entries; Brinestalk Wall With Gearbox is active
+next. Other walls, furniture and the remaining entries are unfinished.
 Generate every pending entry before running native validation. Reusable race
 bodies are unmutated; individual mutation appearance belongs to the separate
 framework, with the native metadata retained.

@@ -1,0 +1,469 @@
+{
+  "kind": "connected_wall_atlas",
+  "blueprint": "BrinestalkWall",
+  "source": {
+    "path": "art/conversion/scn-brinestalkwall/v1/source-packet.json",
+    "sha256": "341d719d8a48c86c316e955d56655eedea8cd0b8835125c435fcac8a821415d7"
+  },
+  "primary": {
+    "path": "art/conversion/scn-brinestalkwall/v1/registered/primary-atlas.png",
+    "sha256": "d4ec6cf6ff18415ca0d55e134977563d247cb489471541ccf4fd3116909e1b2a"
+  },
+  "detail": {
+    "path": "art/conversion/scn-brinestalkwall/v1/registered/detail-atlas.png",
+    "sha256": "ac8aada9838c2fc2fad7e913368114f285ce6244c08495a7a5a9f72b4dc2c7c6"
+  },
+  "atlas_size": [
+    1024,
+    1024
+  ],
+  "tile_size": [
+    256,
+    256
+  ],
+  "grid": [
+    4,
+    4
+  ],
+  "row_policy": "Recipient bottom-origin mask layout:col=mask%4,row=3-floor(mask/4). Do not assume donor CornerFiller ordering.",
+  "bits": {
+    "N": 1,
+    "E": 2,
+    "S": 4,
+    "W": 8
+  },
+  "states": [
+    {
+      "mask": 0,
+      "neighbors": [],
+      "atlas_rect": [
+        0,
+        768,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/00-primary.png",
+        "sha256": "563204ef8d341a97ad8f802f605db4ad42de2a8013dd94b974a0a943c50cf321"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/00-detail.png",
+        "sha256": "cc1e70f510525d3849f903791dd85b70b800a0510dabc301f20e0d26641a2b17"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/00-coverage.png",
+        "sha256": "0aa91a859c3f640f4f301c603f07083ed67014116dcd9be1dbaadaae0ac7dd73"
+      }
+    },
+    {
+      "mask": 1,
+      "neighbors": [
+        "N"
+      ],
+      "atlas_rect": [
+        256,
+        768,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/01-primary.png",
+        "sha256": "f862f851190199cd0a514cca291b92d7991f710f50151df0fab2209b279faede"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/01-detail.png",
+        "sha256": "cc1e70f510525d3849f903791dd85b70b800a0510dabc301f20e0d26641a2b17"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/01-coverage.png",
+        "sha256": "0aa91a859c3f640f4f301c603f07083ed67014116dcd9be1dbaadaae0ac7dd73"
+      }
+    },
+    {
+      "mask": 2,
+      "neighbors": [
+        "E"
+      ],
+      "atlas_rect": [
+        512,
+        768,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/02-primary.png",
+        "sha256": "0f51d0157526ec574ea7fdb079ad65cc689c0cc61925d58d6bf5686cc8d3a730"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/02-detail.png",
+        "sha256": "b7603fe4bcfc54921377a943a397a309f3b172dd2b8a73da73b54f0b23167e45"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/02-coverage.png",
+        "sha256": "ff32121fcb5883bdfdc1d1912f163b08bd3813fa9b993fdc34dd12c021f95901"
+      }
+    },
+    {
+      "mask": 3,
+      "neighbors": [
+        "N",
+        "E"
+      ],
+      "atlas_rect": [
+        768,
+        768,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/03-primary.png",
+        "sha256": "6a013fc8db0320bbec5faa8d693168dcdaeafe99e4c4292a7921434b6c55a7af"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/03-detail.png",
+        "sha256": "b7603fe4bcfc54921377a943a397a309f3b172dd2b8a73da73b54f0b23167e45"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/03-coverage.png",
+        "sha256": "ff32121fcb5883bdfdc1d1912f163b08bd3813fa9b993fdc34dd12c021f95901"
+      }
+    },
+    {
+      "mask": 4,
+      "neighbors": [
+        "S"
+      ],
+      "atlas_rect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/04-primary.png",
+        "sha256": "b39b8c59694f76a1085b20868fa780c105e4b0351d803d285e2707b75fa64a54"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/04-detail.png",
+        "sha256": "4297e391de4141244be8beb92067f943c5d88081420de9843d051130a98ea90c"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/04-coverage.png",
+        "sha256": "5023d98659b26fe97ca6a2765f918b6ce46c4ab384e4f2379b4663173ca69cbb"
+      }
+    },
+    {
+      "mask": 5,
+      "neighbors": [
+        "N",
+        "S"
+      ],
+      "atlas_rect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/05-primary.png",
+        "sha256": "8107cdce258821157055b3e32409b512684015daee75d5239746b225858e79ef"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/05-detail.png",
+        "sha256": "4297e391de4141244be8beb92067f943c5d88081420de9843d051130a98ea90c"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/05-coverage.png",
+        "sha256": "5023d98659b26fe97ca6a2765f918b6ce46c4ab384e4f2379b4663173ca69cbb"
+      }
+    },
+    {
+      "mask": 6,
+      "neighbors": [
+        "E",
+        "S"
+      ],
+      "atlas_rect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/06-primary.png",
+        "sha256": "4222c671a3933215ad196f1886833d34424262087a20b2001c9f7c4d6771da9d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/06-detail.png",
+        "sha256": "9d1c610e58b8b12c27f3ff84aae9c23d6897ccfbfb6e9b326f658cca3928b530"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/06-coverage.png",
+        "sha256": "8aaf2d45adefba25cd6509ff26d5a58e770790a1d6763f7d295eb5ebd8b30db4"
+      }
+    },
+    {
+      "mask": 7,
+      "neighbors": [
+        "N",
+        "E",
+        "S"
+      ],
+      "atlas_rect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/07-primary.png",
+        "sha256": "d86edc86a45e83fd8b161758578387eb2c5ba0761eafc2cd02cfad13e9226c5b"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/07-detail.png",
+        "sha256": "9d1c610e58b8b12c27f3ff84aae9c23d6897ccfbfb6e9b326f658cca3928b530"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/07-coverage.png",
+        "sha256": "8aaf2d45adefba25cd6509ff26d5a58e770790a1d6763f7d295eb5ebd8b30db4"
+      }
+    },
+    {
+      "mask": 8,
+      "neighbors": [
+        "W"
+      ],
+      "atlas_rect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/08-primary.png",
+        "sha256": "6c147c87f807004bee5f0abea8010f761fe607a81cfbb1ebaa6dc8d222ac5484"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/08-detail.png",
+        "sha256": "d0bd08874633d99b3fe5933fb29a14ef82dee8537f93c5f8628e3088b3911515"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/08-coverage.png",
+        "sha256": "0b22bee2ace0df9441103c83c93cddb36d376eb4b465be618b9cd3b6240caf7a"
+      }
+    },
+    {
+      "mask": 9,
+      "neighbors": [
+        "N",
+        "W"
+      ],
+      "atlas_rect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/09-primary.png",
+        "sha256": "76b156fcb71bdb635f2f36638dc8a110acdfb8190517a6c1a6ee6b04144d3692"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/09-detail.png",
+        "sha256": "d0bd08874633d99b3fe5933fb29a14ef82dee8537f93c5f8628e3088b3911515"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/09-coverage.png",
+        "sha256": "0b22bee2ace0df9441103c83c93cddb36d376eb4b465be618b9cd3b6240caf7a"
+      }
+    },
+    {
+      "mask": 10,
+      "neighbors": [
+        "E",
+        "W"
+      ],
+      "atlas_rect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/10-primary.png",
+        "sha256": "9175a411a5ef89d954d3189ad7fc77cb9fabb2a0791803857965c08829d50149"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/10-detail.png",
+        "sha256": "9d6da48dc705c00c1efcd9faa44d706261a23d354e909cffad8aac68fdadf3d8"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/10-coverage.png",
+        "sha256": "f693d0e6bc51e9f5988b25f98639b6e702a96b6a08702447bacc3b5dc15a9fa7"
+      }
+    },
+    {
+      "mask": 11,
+      "neighbors": [
+        "N",
+        "E",
+        "W"
+      ],
+      "atlas_rect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/11-primary.png",
+        "sha256": "3b6de76099294d2fa0a5bbbe39378969061a1a60d0a306c6884534ff78c70bdf"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/11-detail.png",
+        "sha256": "9d6da48dc705c00c1efcd9faa44d706261a23d354e909cffad8aac68fdadf3d8"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/11-coverage.png",
+        "sha256": "f693d0e6bc51e9f5988b25f98639b6e702a96b6a08702447bacc3b5dc15a9fa7"
+      }
+    },
+    {
+      "mask": 12,
+      "neighbors": [
+        "S",
+        "W"
+      ],
+      "atlas_rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/12-primary.png",
+        "sha256": "def260520bcc164ab5f15c98c5e6c586cb5bd37dab01ebdf16bdf8b30dbcfe50"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/12-detail.png",
+        "sha256": "f96074442232a67a8b238e00988e9f9bab1a287c4396dd6f80c11ac768800ae4"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/12-coverage.png",
+        "sha256": "f68a2cec4b50a70a0f98a774644c9b5f7b7d74e3c058bd2539c59a443c4b7ce6"
+      }
+    },
+    {
+      "mask": 13,
+      "neighbors": [
+        "N",
+        "S",
+        "W"
+      ],
+      "atlas_rect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/13-primary.png",
+        "sha256": "94e610329f72b4a53c0506e0bf615497a736eea6b173c5ad37c1bdb05027087c"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/13-detail.png",
+        "sha256": "f96074442232a67a8b238e00988e9f9bab1a287c4396dd6f80c11ac768800ae4"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/13-coverage.png",
+        "sha256": "f68a2cec4b50a70a0f98a774644c9b5f7b7d74e3c058bd2539c59a443c4b7ce6"
+      }
+    },
+    {
+      "mask": 14,
+      "neighbors": [
+        "E",
+        "S",
+        "W"
+      ],
+      "atlas_rect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/14-primary.png",
+        "sha256": "e56090d0c6e1b8282497b395ac0e89119259bc7829642d0c20dd5c7d2f1d0cf0"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/14-detail.png",
+        "sha256": "f71883932d05fdd55580628a81d0d8121651706af044823bdb47505d06f2e0e3"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/14-coverage.png",
+        "sha256": "762639d641faa2ceca7e46b180bc70f2fa404dcf7d7a53853f48ef082a1a5578"
+      }
+    },
+    {
+      "mask": 15,
+      "neighbors": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "atlas_rect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "primary": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/15-primary.png",
+        "sha256": "ab149b2a3c4a9440f5881b5de5543a149fcaaea8c151cb1f401398d0001aa8db"
+      },
+      "detail": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/15-detail.png",
+        "sha256": "f71883932d05fdd55580628a81d0d8121651706af044823bdb47505d06f2e0e3"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-brinestalkwall/v1/registered/states/15-coverage.png",
+        "sha256": "762639d641faa2ceca7e46b180bc70f2fa404dcf7d7a53853f48ef082a1a5578"
+      }
+    }
+  ],
+  "registration": {
+    "canvas": [
+      256,
+      256
+    ],
+    "ground_center": [
+      128,
+      128
+    ],
+    "footprint_width": 160,
+    "authored_lift": 48,
+    "physical_cell": [
+      1,
+      1
+    ],
+    "rule": "All states share one cell frame, scale and extrusion. Build neighbor context before lifting/cropping; no independently fitted state bounds or per-cell connected outlines."
+  },
+  "palette": {
+    "primary": "actual native foreground/TileColor, preview w #98875f",
+    "detail": "actual native detail, preview y #b1c9c3"
+  },
+  "material": {
+    "path": "art/conversion/scn-brinestalkwall/v1/registered/face-material.png",
+    "sha256": "cfee78b59f8d02d8d21b3050e1aa0cd2997c0887d017f3ca337dfa6ea23e5a74"
+  },
+  "caps_geometry": {
+    "path": "art/conversion/scn-brinestalkwall/v1/registered/constructed-caps.svg",
+    "sha256": "bf5a3386d7ce2462e3031c8a4076df0504ec597626f4f000f57eea542ab84b04"
+  },
+  "appearance": "Stripped upright brinestalk trunks bonded by mud; raised cut-end/mud cap is an authored 2.5D interpretation. No stone courses or horizontal donor logs.",
+  "connection_scope": "Recipient16cardinal masks only, respecting actual visible compatible brinestalk wall types. Do not link every unrelated wall/fence/material or claim all native eight-neighbor variants exported.",
+  "native_behavior": "Preserve source solid/organic/occlusion, hidden/exploration states and native foreground priority. Damage/graffiti/rare animation and unsupported states retain native fallback.",
+  "native_state": "Generation-ready art only; native atlas selection, tint, visibility/contact/occlusion and state acceptance pending every-conversion-generated gate"
+}

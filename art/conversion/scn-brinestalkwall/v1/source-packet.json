@@ -1,0 +1,74 @@
+{
+  "entry": "SCN-BRINESTALKWALL",
+  "recorded_at": "2026-10-20T04:32:50.513542+00:00",
+  "identity": "BrinestalkWall -> BaseWallWood -> Wall",
+  "description": "Here are several stripped trunks of sallow brinestalk bonded with mud.",
+  "original": {
+    "tile": "Walls/wall_brinestalk-00000000.png",
+    "description": "Here are several stripped trunks of sallow brinestalk bonded with mud.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "brinestalk wall",
+      "RenderString": "215",
+      "RenderLayer": "7",
+      "RenderIfDark": "true",
+      "Tile": "Walls/wall_brinestalk-00000000.png",
+      "ColorString": "&w^y",
+      "Occluding": "true",
+      "TileColor": "&w",
+      "DetailColor": "y"
+    },
+    "kind": "scenery",
+    "blueprint": "BrinestalkWall",
+    "reference_file": "village-originals/brinestalkwall-reference.png",
+    "native_mask_sha256": "8bf1d154d5f3c9aea4d1fd4727cec23baa983beab472f8153666fb3bc9c3ca04",
+    "reference_sha256": "4c5bcd74a4a66314fce61ed09acba622975d59c6557667005024be52bd5d5917",
+    "info_id": 27569,
+    "atlas_id": 239,
+    "rect": [
+      1026,
+      1664,
+      16,
+      24
+    ]
+  },
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Walls.xml",
+    "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e",
+    "selected": "<object Name=\"BrinestalkWall\" Inherits=\"BaseWallWood\">\n\t\t<part Name=\"Render\" DisplayName=\"brinestalk wall\" Tile=\"Walls/wall_brinestalk-00000000.png\" RenderString=\"215\" ColorString=\"&amp;w^y\" TileColor=\"&amp;w\" DetailColor=\"y\" Occluding=\"true\" />\n\t\t<part Name=\"Physics\" Weight=\"10000\" Takeable=\"false\" Solid=\"true\" Organic=\"true\" />\n\t\t<part Name=\"Description\" Short=\"Here are several stripped trunks of sallow brinestalk bonded with mud.\" />\n\t\t<stat Name=\"AV\" Value=\"5\" />\n\t\t<stat Name=\"Hitpoints\" Value=\"100\" />\n\t\t<tag Name=\"BodyType\" Value=\"WoodWall\" />\n\t\t<tag Name=\"PaintedWall\" Value=\"wall_brinestalk\" />\n\t\t<tag Name=\"PaintedWallAtlas\" Value=\"Assets_Content_Textures_Walls_\" />\n\t\t<tag Name=\"PaintedWallExtension\" Value=\".png\" />\n\t\t<tag Name=\"PaintWith\" Value=\"BrinestalkWalls\" />\n\t\t<tag Name=\"ImmutableWhenUnexplored\" Value=\"1\" />\n\t\t<tag Name=\"Category_Settlement\" />\n\t\t<tag Name=\"Tier\" Value=\"0\" />\n\t\t<part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n\t\t<tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitWood\" />\n\t\t<tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n\t\t<tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n\t</object>\n\t"
+  },
+  "source_shape": "Default isolated wall glyph has a mud/lattice-like upper panel and four narrow upright support/stalk columns below. Fine stipple interpretation is uncertain; the description explicitly establishes stripped brinestalk trunks bonded with mud.",
+  "source_palette": {
+    "primary": "w",
+    "primary_hex": "98875f",
+    "detail": "y",
+    "detail_hex": "b1c9c3",
+    "field_background": "Source-owned native background; ColorString includes ^y but visible voids follow actual native appearance/ownership rather than an invented global fill.",
+    "mask_roles": "Original182opaque primary pixels and43opaque detail pixels. Black RGB means primary coverage; white means detail. Transparent pixels are not opaque black."
+  },
+  "donor_reference": {
+    "mod_name": "Vanilla Furniture Expanded - Architect",
+    "package_id": "VanillaExpanded.VFEArchitect",
+    "workshop_id": "2608762624",
+    "atlas": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\Textures\\LogWall\\LogWall_Atlas.png",
+      "sha256": "f6fb5d34abc5c1b85492745c877c283f2e5e9278612437f4ec261546eccf957f"
+    },
+    "icon": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\Textures\\LogWall\\LogWall_MenuIcon.png",
+      "sha256": "1a3c5a771a6a65bcd1f43b15bbbfb4a723f91d9e0edff4186583c52ef7707bba"
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2608762624\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Structure.xml",
+      "sha256": "a6543e988186b83202ecba28cf0fbd4c00a31d323e99910f391c7e2c28f7b6f6",
+      "selected": "<graphicData>\n      <texPath>LogWall/LogWall_Atlas</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n      <linkType>CornerFiller</linkType>\n      <linkFlags>\n        <li>Wall</li>\n        <li>Rock</li>\n      </linkFlags>\n      <damageData>\n        <cornerTL>Damage/Corner</cornerTL>\n        <cornerTR>Damage/Corner</cornerTR>\n        <cornerBL>Damage/Corner</cornerBL>\n        <cornerBR>Damage/Corner</cornerBR>\n        <edgeTop>Damage/Edge</edgeTop>\n        <edgeBot>Damage/Edge</edgeBot>\n        <edgeLeft>Damage/Edge</edgeLeft>\n        <edgeRight>Damage/Edge</edgeRight>\n      </damageData>\n    </graphicData>\n    "
+    },
+    "version_mapping": "Installed LoadFolders maps1.7 to root plus1.6; the recorded1.6 definition uses Graphic_Single and CornerFiller.",
+    "role": "Actual installed Vanilla Furniture Expanded - Architect log wall supplies readable 2.5D wall faces/caps, outlines and linked joins. Its horizontal logs, brown hue and CornerFiller atlas ordering are not copied into Qud."
+  },
+  "construction": "Four stripped vertical stalks bonded by packed mud, with low-relief fibrous grain and light weathered ridges. No brick courses, cut planks, nails, leaves or rope are invented. Author a neutral face material, deterministic raised caps/faces and independent native w/y tint regions.",
+  "state_contract": "The recipient adapter currently selects16N/E/S/W atlas masks, bits1/2/4/8, with a4x4bottom-origin layout. These are recipient states, not a claim that native eight-neighbor PaintedWall atlas bytes were all exported. Do not reuse the mod atlas order.",
+  "geometry_contract": "Connected footprint and fixed-height raised top/visible south faces in one square cell frame. Build3x3neighbor context before extrusion/cropping to avoid per-cell caps/outlines across connected edges. No per-mask independent fitting.",
+  "native_behaviors": "Native solid/organic/occluding wall, damage, visibility, exploration and rare graffiti/animation stay native. This authoring pass does not alter collision, hitpoints, roof mechanics or unknown visual states.",
+  "native_acceptance": "Deferred until every conversion is generation-ready"
+}
