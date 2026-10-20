@@ -1,0 +1,153 @@
+{
+  "entry": "SCN-SEWING-MACHINE",
+  "identity": "Sewing Machine -> MountedFurniture -> Furniture",
+  "description": "Inside the scratched metal C a needle and a bobbin prepare to punch a pair of threads into a lockstitch. Initials are carved all around its pedestal.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Sewing Machine": "<object Name=\"Sewing Machine\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"sewing machine\" ColorString=\"&amp;R\" TileColor=\"&amp;w\" DetailColor=\"C\" RenderString=\"247\" Tile=\"Items/sw_sewing_machine.bmp\" />\n    <part Name=\"Description\" Short=\"Inside the scratched metal C a needle and a bobbin prepare to punch a pair of threads into a lockstitch. Initials are carved all around its pedestal.\" />\n    <part Name=\"Metal\" />\n    <part Name=\"Examiner\" Alternate=\"UnknownBizarreContraption\" Complexity=\"2\" />\n    <part Name=\"Physics\" Weight=\"80\" Solid=\"false\" />\n    <stat Name=\"AV\" Value=\"4\" />\n    <stat Name=\"Hitpoints\" Value=\"200\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Crafts\" />\n    <stag Name=\"Torture\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "tile": "Items/sw_sewing_machine.bmp",
+    "description": "Inside the scratched metal C a needle and a bobbin prepare to punch a pair of threads into a lockstitch. Initials are carved all around its pedestal.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "sewing machine",
+      "RenderString": "247",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&R",
+      "TileColor": "&w",
+      "DetailColor": "C",
+      "Tile": "Items/sw_sewing_machine.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Sewing Machine",
+    "reference_file": "village-originals/sewing-machine-reference.png",
+    "native_mask_sha256": "2dc0a5014a339a5bf38d9798a7ecc7e06421c3516e09791b1cb764e6a6fd0d10",
+    "reference_sha256": "c6058f63abb489909244a4cb51c2e131d33b79c7b0f903dbdd66f47d44fc2c04",
+    "info_id": 9990,
+    "atlas_id": 185,
+    "rect": [
+      288,
+      52,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\sewing-machine-mask.png",
+      "sha256": "2dc0a5014a339a5bf38d9798a7ecc7e06421c3516e09791b1cb764e6a6fd0d10"
+    },
+    "private_reference": {
+      "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\sewing-machine-reference.png",
+      "sha256": "c6058f63abb489909244a4cb51c2e131d33b79c7b0f903dbdd66f47d44fc2c04"
+    }
+  },
+  "source_shape": "Upper metal C/machine head with left guide/lever, long arm to right needle and lower bed; broad horizontal pedestal/table top, two open paired-leg frames and low central crosspiece/outer feet.",
+  "palette": {
+    "primary": "w from TileColor on pedestal and needle; glyph ColorString R is not tiled primary",
+    "detail": "C on machine C/head/guide and bed",
+    "rule": "Neutral metal plus independent machine-head role. No red body from fallback glyph or donor tint; source w/C tiled palette authoritative."
+  },
+  "native_state": "One fixed Items/sw_sewing_machine.bmp. Exact child/MountedFurniture/Furniture declare no power consumer, sewing gameplay part, body frame loop or alternate body tile. Description needle/bobbin action does not authorize sewing motion, power logic or apparel crafting.",
+  "native_behavior": "Metal, non-solid weight80/non-takeable mounted physics, AV4/HP200, Examiner complexity2, native cover/visibility/tier/crafts tags retained. No native sewing/power/crafting implementation added.",
+  "reference": {
+    "texture": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_SewingMachine\\VFEPD_SewingMachine_east.png",
+      "sha256": "ddf8392e8dadf03512dd55d9f992dabf82978fe50930ba7f74b5dd698881dabd"
+    },
+    "frame": [
+      256,
+      256
+    ],
+    "alpha_bounds": [
+      42,
+      61,
+      223,
+      186
+    ],
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_WorkshopProps.xml",
+      "sha256": "e8c7f97902d00525907c3278be96481429ad141f02876bb4ae4d596aaa476a52"
+    },
+    "child": "<ThingDef ParentName=\"VFEPD_ColourableFurnitureBase\">\n\t\t<defName>VFEPD_SewingMachine</defName>\n\t\t<label>sewing machine</label>\n\t\t<description>A small sewing machine. Intended to be placed over an empty workbench. Just for decorative purposes.</description>\n\t\t<graphicData>\n\t\t\t<texPath>Things/Building/WorkshopProps/VFEPD_SewingMachine/VFEPD_SewingMachine</texPath>\n\t\t\t<graphicClass>Graphic_Multi</graphicClass>\n\t\t\t<shaderType>CutoutComplex</shaderType>\n\t\t\t<color>(150,20,20)</color>\n\t\t\t<drawSize>1.25</drawSize>\n\t\t</graphicData>\n\t\t<altitudeLayer>BuildingOnTop</altitudeLayer>\n\t\t<passability>Standable</passability>\n\t\t<pathCost>0</pathCost>\n\t\t<building>\n\t\t\t<isEdifice>false</isEdifice>\n\t\t\t<isInert>true</isInert>\n\t\t</building>\n\t\t<castEdgeShadows>false</castEdgeShadows>\n\t\t<fillPercent>0</fillPercent>\n\t\t<statBases>\n\t\t\t<MaxHitPoints>20</MaxHitPoints>\n\t\t\t<WorkToBuild>0</WorkToBuild>\n\t\t\t<Mass>0.1</Mass>\n\t\t\t<Flammability>0.1</Flammability>\n\t\t</statBases>\n\t\t<size>(1,1)</size>\n\t\t<uiIconScale>1</uiIconScale>\n\t\t<clearBuildingArea>false</clearBuildingArea>\n\t\t<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>\n\t</ThingDef>\n\t",
+    "parent_definition": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\1.6\\Defs\\ThingDefs_Buildings\\Buildings_Bases.xml",
+      "sha256": "35acdf75e815308ea0aa8016e4eddd237c4cf74399e31de2f953b36ac30855d8"
+    },
+    "parent": "<ThingDef Name=\"VFEPD_ColourableFurnitureBase\" ParentName=\"VFEPD_NonColourableFurnitureBase\" Abstract=\"True\">\n\t\t<building>\n\t\t\t<paintable>true</paintable>\n\t\t</building>\n\t</ThingDef>\n\t",
+    "graphic_class": "Graphic_Multi",
+    "drawSize": "1.25",
+    "footprint": "(1,1)",
+    "shader": "CutoutComplex",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+      "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\LoadFolders.xml",
+      "sha256": "7d7c598e4f61e7382a63c0ec62e531011635169f95a3d968610338b98a5d14e6"
+    },
+    "role": "Actual VFE Props sewing machine east texture supplies compact machine-head/needle-bed metal shading only. Its north/south graphic orientation is not the target native facing. No donor red CutoutComplex tint, bench mounting,1x1footprint, decorative mechanics or new tailoring recipe copied.",
+    "equivalence": "Close machine-head style reference, not whole source pedestal; source C orientation/shape and tiled palette authoritative."
+  },
+  "construction": {
+    "camera": "One straight source cardinal map face with broad machine C visible, parallel tabletop/pedestal and open leg frames; no donor yaw/camera import.",
+    "source_supported": "Tall left guide, broad C/head arm to right needle, machine detail/needle primary roles, long pedestal top, paired upright struts/short crossrails, low central mark and outside feet.",
+    "authored": "Smooth C curvature, needle/bobbin foot detail, narrow machine/table mounts, continuous lower crossbrace and shallow wear/initial-like carved strokes form coherent source interpretation. Hidden depth/guide function unknown; no legible invented names, fabric, spools, scissors, garments or motor added.",
+    "dimensions": {
+      "machine_head": [
+        4.1,
+        4.3,
+        13,
+        11.4
+      ],
+      "needle_x": 12.3,
+      "pedestal_top": [
+        1.15,
+        12.2,
+        14.85,
+        13.1
+      ],
+      "left_leg_frame": [
+        2.15,
+        13,
+        4.7,
+        21.2
+      ],
+      "right_leg_frame": [
+        11.3,
+        13,
+        13.85,
+        21.2
+      ],
+      "crossbrace_y": 19.6
+    },
+    "coverage": "True C opening and both open leg frames remain transparent; needle is physical primary metal. No opaque background/fabric filling source openings."
+  },
+  "frame": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source cell, common machine/pedestal/needle scale/pivot and independent native roles; no bounds fitting."
+  },
+  "native_acceptance": "Pending full-set generation: native examiner/cover/non-solid physics/visibility/save-load and exact tiled w/C coloring; no new crafting/animation or activation."
+}

@@ -1,0 +1,65 @@
+{
+  "entry": "SCN-SEWING-MACHINE",
+  "kind": "source_dualcolor_static_appliance",
+  "blueprint": "Sewing Machine",
+  "native_tile": "Items/sw_sewing_machine.bmp",
+  "source": {
+    "path": "art/conversion/scn-sewing-machine/v1/source-packet.json",
+    "sha256": "0a8a841998a0df27a2f891f49b0af468b54d5d437c6b79978bbbb5a0df1918c9"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One complete source cell, common machine/pedestal/needle scale/pivot and independent native roles; no bounds fitting."
+  },
+  "camera": "One straight source cardinal map face with broad machine C visible, parallel tabletop/pedestal and open leg frames; no donor yaw/camera import.",
+  "palette": {
+    "primary": "w from TileColor on pedestal and needle; glyph ColorString R is not tiled primary",
+    "detail": "C on machine C/head/guide and bed",
+    "rule": "Neutral metal plus independent machine-head role. No red body from fallback glyph or donor tint; source w/C tiled palette authoritative."
+  },
+  "native_state_owner": "One fixed Items/sw_sewing_machine.bmp. Exact child/MountedFurniture/Furniture declare no power consumer, sewing gameplay part, body frame loop or alternate body tile. Description needle/bobbin action does not authorize sewing motion, power logic or apparel crafting.",
+  "native_behavior": "Metal, non-solid weight80/non-takeable mounted physics, AV4/HP200, Examiner complexity2, native cover/visibility/tier/crafts tags retained. No native sewing/power/crafting implementation added.",
+  "native_acceptance": "Pending full-set generation: native examiner/cover/non-solid physics/visibility/save-load and exact tiled w/C coloring; no new crafting/animation or activation.",
+  "native_activation": false,
+  "view_policy": "One fixed source/cardinal map face; no declared motion, power consumer or sewing gameplay part. Native non-solid physics/examiner/visibility remain native, no new crafting or orientation binding.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "primary": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/primary-neutral.png",
+    "sha256": "c32575c2ce6b719bd360619d553f2fa327e27590973280dbfe41a2a2f44a757d"
+  },
+  "detail": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/detail-neutral.png",
+    "sha256": "d0359761a83cac7872cd9625f6eba1ca2ae8bf488564da00c3ebe53293ef329c"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/coverage.png",
+    "sha256": "6023717730c1264e186b71ce49860e0691a3b40d616575ab1381609c1afb122e"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/detail-weight.png",
+    "sha256": "e3d4405d034af678e9af02deaeb221cbf07c57c741845322738783327aba569d"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/detail-coverage.png",
+    "sha256": "ee0ff843c5d35bb3796b8e6d35ac8137e35c297cae7157f3b18b0e7801f23832"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-sewing-machine/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "5bfbff6ec656241180c3880cec7397d4ffdee6117f15e4d8891ac396d8b19787"
+  }
+}

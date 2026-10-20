@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-SEWING-MACHINE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-WOODEN-WATER-WHEEL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -161,8 +161,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-LOUDSPEAKER | Loudspeaker | UNFINISHED | - |  |
 | SCN-MILLSTONE | Millstone | UNFINISHED | - |  |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - |  |
-| SCN-SEWING-MACHINE | Sewing Machine | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - |  |
+| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### NPC assemblies (14)
@@ -6553,7 +6553,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/sewing-machine-body.png](../art/village/scenery/sewing-machine-body.png), [art/village/scenery/sewing-machine-detail.png](../art/village/scenery/sewing-machine-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-20T22:52:33.050576+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve original C/needle/pedestal, exact ancestry and TileColorw override versus glyphR, detailC and fixed native appearance.
+  Review: Exact source has Metal, non-solid weight80, examiner2/AV4/HP200; no power/sewing gameplay part, body frame loop or alternate tile declared. No game/harness launch.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/source-packet.json", "sha256": "0a8a841998a0df27a2f891f49b0af468b54d5d437c6b79978bbbb5a0df1918c9"}, {"path": "art/conversion/scn-sewing-machine/v1/source-reference-construction.png", "sha256": "a9bd20263523e70fc356e5b7ca76b08760fbf25d30d6d6d1958c8415f21b089a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VFE sewing-machine east texture and matching1.6definition/parent/render mapping.
+  Review: Graphic_Multi/CutoutComplex,drawSize1.25,size1x1. Head/needle-bed metal shading only; native target source facing unchanged, donor red tint/bench mounting/footprint/decorative mechanics not copied.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/source-packet.json", "sha256": "0a8a841998a0df27a2f891f49b0af468b54d5d437c6b79978bbbb5a0df1918c9"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/source-reference-construction.png", "sha256": "a9bd20263523e70fc356e5b7ca76b08760fbf25d30d6d6d1958c8415f21b089a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / construct_faithful_shape / PASS: Construct editable scratched metal C/right needle/left guide and open paired-leg inscribed pedestal.
+  Review: Source C/pedestal arrangement and separate head/needle roles retained. Narrow mounts/crossbrace/initial-like strokes authored, exact hidden depth/guide function unknown. Manual reviewed, no structural patch required.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/source-packet.json", "sha256": "0a8a841998a0df27a2f891f49b0af468b54d5d437c6b79978bbbb5a0df1918c9"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/construct-sewing.py", "sha256": "3684f143d0b1870ab1bf1237cfc1bfb362172e0c9e88441e2cd6d14523f2945f"}, {"path": "art/conversion/scn-sewing-machine/v1/constructed.svg", "sha256": "638c060b3307ba2318a10defaa8f08a2bb2b31f5e277738d32cbfd6daaf15e5a"}, {"path": "art/conversion/scn-sewing-machine/v1/constructed.png", "sha256": "01eaf841390a8e5f996237f4a1744624ff540ad33292a2bcc4e40ca725088ba2"}, {"path": "art/conversion/scn-sewing-machine/v1/ownership.svg", "sha256": "a693f3bd1e5e37b9a94c4b43f13ece7214baae883c6f4ff53ca6508c803b0131"}, {"path": "art/conversion/scn-sewing-machine/v1/ownership.png", "sha256": "46dcaee3de193b54e6880ac615d611c18e9832c5ae036deaff02c1466435d0a4"}, {"path": "art/conversion/scn-sewing-machine/v1/manual-structural-review.json", "sha256": "7b3ef1dacb52c51288fdf928a2ccc0560482811738bf12b4a77e1d52906ec75c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / create_required_state_neighbor_variants / PASS: Retain one fixed native machine/pedestal appearance without invented needle or sewing motion.
+  Review: Machinery entry fixed map view; no declared body loop/off-state, no new tailoring/power behavior or placement binding. Description action alone does not establish native gameplay or animated state.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/source-packet.json", "sha256": "0a8a841998a0df27a2f891f49b0af468b54d5d437c6b79978bbbb5a0df1918c9"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/constructed.png", "sha256": "01eaf841390a8e5f996237f4a1744624ff540ad33292a2bcc4e40ca725088ba2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / refine_materials_and_form / PASS: Perform one actual contextual metal refinement and inspect structure before extraction.
+  Review: Inspected actual full first refinement before extraction. Upper C/right needle/left guide, open paired-leg pedestal/rails/crosspiece and feet retain construction. Scratched metal shading usable. Generated gold/exterior glow, dark gap fill, extra scratches and expanded edge widths rejected by fixed editable geometry/ink/role; no red paint, cloth/spools/scissors or powered sewing state. Original needle/primary and C/head detail ownership retained.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/constructed.png", "sha256": "01eaf841390a8e5f996237f4a1744624ff540ad33292a2bcc4e40ca725088ba2"}, {"path": "art/conversion/scn-sewing-machine/v1/refine-prompt.txt", "sha256": "62f66a2e622a6015d8995cf260e742f35a50460bdb81e031a5324c6304867085"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/refined-raw.png", "sha256": "8fbbc3abc104861b44976ba891317dab7ca1376a8db3c1387649bd78cfb68764"}, {"path": "art/conversion/scn-sewing-machine/v1/first-structural-review.json", "sha256": "e26cc93993fde0180cfe48c2d8fa936fb4044372398f68fc0c0059232e720c85"}]
+  Method/prompt/corrections: {"tool": "image_gen.imagegen", "prompt_file": {"path": "art/conversion/scn-sewing-machine/v1/refine-prompt.txt", "sha256": "62f66a2e622a6015d8995cf260e742f35a50460bdb81e031a5324c6304867085"}, "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-d4c42a08-798d-45b9-8821-4f17dab9066b.png", "settings": {"transparent_background": true, "referenced_image_paths": ["C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-sewing-machine\\v1\\constructed.png", "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-sewing-machine\\v1\\source-reference-construction.png", "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\WorkshopProps\\VFEPD_SewingMachine\\VFEPD_SewingMachine_east.png"]}}
+
+- 2026-10-20T22:52:33.050576+00:00 / extract_register_color_coverage / PASS: Select neutral pedestal/needle and head material inside fixed alpha/ink/role; register tiled w/C palette.
+  Review: One full-frame material sampling only. Existing helper wood/top names mean pedestal+needle/head. Same-material continuation excludes halo/glow/displaced edges; exact true openings/ink retained. No second AI isolation or native sewing implementation.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/first-structural-review.json", "sha256": "e26cc93993fde0180cfe48c2d8fa936fb4044372398f68fc0c0059232e720c85"}, {"path": "art/conversion/scn-sewing-machine/v1/ownership.png", "sha256": "46dcaee3de193b54e6880ac615d611c18e9832c5ae036deaff02c1466435d0a4"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/register-sewing.py", "sha256": "c36f1fed9ff5a85306355594903204c6b1516120127a5a4ed7dbee35235b2695"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/model.json", "sha256": "af7a71bdc925ef2bf7001a850f02869ea8457627339285733f2e1c7c225ab90a"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/registration-decisions.json", "sha256": "647beef58acf676c41201795647351f39ceb7361bd082754cc5bbe2e086d48bf"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/neutral-master.png", "sha256": "4acf91236f200d01eb078d3bef4aaa971c8651447a713aa33f6d6719a96cfecb"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/primary-neutral.png", "sha256": "c32575c2ce6b719bd360619d553f2fa327e27590973280dbfe41a2a2f44a757d"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/detail-neutral.png", "sha256": "d0359761a83cac7872cd9625f6eba1ca2ae8bf488564da00c3ebe53293ef329c"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/detail-weight.png", "sha256": "e3d4405d034af678e9af02deaeb221cbf07c57c741845322738783327aba569d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source/reference/manual/refined/registered stages, C/leg-frame openings and neutral/source w/C at intended sizes.
+  Review: Reviewed exact Sewing Machine/MountedFurniture/Furniture description and original tile: scratched broad metal C, right primary needle/presser foot, left guide/pin, long pedestal top, two paired open leg frames/crossrails, low central crosspiece and outer feet. Source TileColorw overrides glyph ColorStringR; actual tiled palette w pedestal/needle and C machine head retained independently. Smooth C/needle-bed detail, narrow mounts, continuous lower crossbrace and initial-like carved strokes are explicit authored construction; no invented legible names or known hidden drive mechanism claimed. Actual VFE Props sewing machine east and matching1.6definition/parent/LoadFolders inspected: Graphic_Multi,CutoutComplex,drawSize1.25,size1x1. Close head/metal style reference only; donor facing does not change selected source map face, red tint/bench mounting/decorative mechanics/footprint not imported. Manual original/reference/constructed source reviewed before one actual contextual refinement. First output inspected before extraction; scratched metal shading usable, generated halo/head glow/gap fill/expanded outlines rejected through exact editable alpha/ink/role. Full neutral/pedestal+needle/head/native w/C and16x24/24x36/32x48views inspected; true C and leg-frame openings transparent, original physical primary needle retained. Source declares no power consumer, sewing gameplay part, body animation or alternate tile. No new tailoring recipes, motor, needle motion, fabric, spool, scissors, sound/effect or native activation. Native non-solid physics/examiner/cover/visibility/save-load acceptance pending complete generation set.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/registered/model.json", "sha256": "af7a71bdc925ef2bf7001a850f02869ea8457627339285733f2e1c7c225ab90a"}]
+  Outputs: [{"path": "art/conversion/scn-sewing-machine/v1/record-review.py", "sha256": "2fae176a89c8dc0d4acca25bb3d09445f490d5d76241cf92279706081120d5d9"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/registration-comparison.png", "sha256": "a80902125269d0f13d43677f644d32e1acb3b967b0264c5976c9d024f17f2734"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/authoring-review.json", "sha256": "a2574b4049ac32cb07b7a8353cf22baac07d006708bfa211df4ce5cf037ed0ef"}, {"path": "art/conversion/scn-sewing-machine/v1/artifact-manifest.json", "sha256": "037fc3cfb01b83d51bddab1ec4e304c8015522af07c0545d8af0796cbacc2620"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T22:52:33.050576+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Keep native examiner/cover/non-solid physics/visibility/tiled palette/save-load acceptance behind full-generation gate.
+  Review: No native/game/harness validation or activation; entry remains UNFINISHED pending integrated native acceptance.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/registered/model.json", "sha256": "af7a71bdc925ef2bf7001a850f02869ea8457627339285733f2e1c7c225ab90a"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-WOODEN-WATER-WHEEL: Wooden Water Wheel
 
@@ -6563,7 +6611,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/wooden-water-wheel-body.png](../art/village/scenery/wooden-water-wheel-body.png), [art/village/scenery/wooden-water-wheel-detail.png](../art/village/scenery/wooden-water-wheel-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-WOODENMECHANICALTRANSMISSION: WoodenMechanicalTransmission
 
