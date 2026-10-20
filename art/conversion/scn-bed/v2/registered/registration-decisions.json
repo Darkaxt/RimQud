@@ -1,0 +1,87 @@
+{
+  "views": {
+    "south": {
+      "material": {
+        "selection": {
+          "path": "art/conversion/scn-bed/v2/front-material-selection.json",
+          "sha256": "ba530fb6d360679bb36044a7e5f18d9c8adb9d333a781c7fb6e0afe904c806b3"
+        }
+      },
+      "coverage": "Exact shared spatial construction alpha; original open headboard and leg gaps. Expanded frame mapping explicit, no per-facing geometry normalization.",
+      "color": "One coverage alpha and independent wood/fabric weight; no baked cyan and no double-alpha material overdraw."
+    },
+    "east": {
+      "material": {
+        "material": {
+          "wood": {
+            "selected": 12299,
+            "continued": 12144,
+            "unsampled_constructed_pixels": 0
+          },
+          "fabric": {
+            "selected": 95106,
+            "continued": 2607,
+            "unsampled_constructed_pixels": 0
+          }
+        },
+        "source_fabric_landmarks": [
+          126,
+          310,
+          597,
+          468
+        ],
+        "target_fabric_landmarks": [
+          173,
+          299,
+          595,
+          529
+        ],
+        "rule": "Material-only affine from actual cyan-pad bounds to fixed fabric landmarks; original complete frame/geometry unchanged. Same-material harmonic continuation, constructed dark outline and explicitly counted tiny unsampled wood regions. Cyan removed with shared max-channel luminance."
+      },
+      "coverage": "Exact shared spatial construction alpha; original open headboard and leg gaps. Expanded frame mapping explicit, no per-facing geometry normalization.",
+      "color": "One coverage alpha and independent wood/fabric weight; no baked cyan and no double-alpha material overdraw."
+    },
+    "north": {
+      "material": {
+        "material": {
+          "wood": {
+            "selected": 14448,
+            "continued": 12035,
+            "unsampled_constructed_pixels": 0
+          },
+          "fabric": {
+            "selected": 89314,
+            "continued": 5218,
+            "unsampled_constructed_pixels": 1
+          }
+        },
+        "source_fabric_landmarks": [
+          255,
+          195,
+          473,
+          576
+        ],
+        "target_fabric_landmarks": [
+          268,
+          207,
+          499,
+          624
+        ],
+        "rule": "Material-only affine from actual cyan-pad bounds to fixed fabric landmarks; original complete frame/geometry unchanged. Same-material harmonic continuation, constructed dark outline and explicitly counted tiny unsampled wood regions. Cyan removed with shared max-channel luminance."
+      },
+      "coverage": "Exact shared spatial construction alpha; original open headboard and leg gaps. Expanded frame mapping explicit, no per-facing geometry normalization.",
+      "color": "One coverage alpha and independent wood/fabric weight; no baked cyan and no double-alpha material overdraw."
+    },
+    "west": {
+      "material": {
+        "rule": "Mirror east, symmetric bed structure with no asymmetric markings; common physical pivot retained."
+      },
+      "coverage": "Exact shared spatial construction alpha; original open headboard and leg gaps. Expanded frame mapping explicit, no per-facing geometry normalization.",
+      "color": "One coverage alpha and independent wood/fabric weight; no baked cyan and no double-alpha material overdraw."
+    }
+  },
+  "new_imagegen_calls": 2,
+  "second_isolation_call": false,
+  "manual_geometry": "Fixed shared3D bed and cardinal map projection. Material-only sampling corrects raw size and compressed east pad without changing accepted geometry.",
+  "native_acceptance": "Pending full-set generation gate; source fixed tile/sleeping/animated fallback and expanded-frame mapping acceptance unfinished."
+}

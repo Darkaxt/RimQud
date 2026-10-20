@@ -1,0 +1,180 @@
+{
+  "entry": "SCN-BED",
+  "identity": "Bed -> BaseBed -> MountedFurniture -> Furniture",
+  "description": "Fabrics were stuffed with watervine chaff and laid across wooden slats in the style of the hillfolk.",
+  "native_definition": {
+    "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+    "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae",
+    "objects": {
+      "Bed": "<object Name=\"Bed\" Inherits=\"BaseBed\">\n    <part Name=\"Render\" DisplayName=\"bed\" ColorString=\"&amp;w\" DetailColor=\"Y\" Tile=\"Items/sw_bed.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Description\" Short=\"Fabrics were stuffed with watervine chaff and laid across wooden slats in the style of the hillfolk.\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stag Name=\"Basic\" />\n  </object>",
+      "BaseBed": "<object Name=\"BaseBed\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"[bed]\" ColorString=\"&amp;w\" DetailColor=\"K\" RenderString=\"240\" Tile=\"Items/sw_bed.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Organic=\"true\" Weight=\"200\" />    \n    <part Name=\"Bed\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Restful,Soft,Lumpy,Firm,Luxurious,Comfortable,Short-Sheeted,Unsprung\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"the Weary, the Tired\" />\n    <xtagTextFragments Skin=\"sheets\" PoeticFeatures=\"reclining stature,soft surfaces,inviting flatness\" />\n    <tag Name=\"BodyType\" Value=\"Bed\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"bed\" />\n    <tag Name=\"Mods\" Value=\"CommonMods\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <stat Name=\"AV\" Value=\"3\" />\n    <stat Name=\"Hitpoints\" Value=\"120\" />\n    <stag Name=\"Sleep\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"QuestableVerb\" Value=\"sleep in\" />\n    <tag Name=\"QuestableEvent\" Value=\"SleptIn\" />\n  </object>",
+      "MountedFurniture": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "Furniture": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  },
+  "original": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\bed-mask.png",
+    "sha256": "7a697abb6c2ab7bd54b8b97d655c45dc332382a58fb3e2fa19ee04c0ae1b1e12",
+    "tile": "Items/sw_bed.bmp",
+    "canvas": [
+      16,
+      24
+    ],
+    "info_id": 9291,
+    "atlas_id": 185,
+    "rect": [
+      972,
+      234,
+      16,
+      24
+    ]
+  },
+  "source_shape": "Preserve source open wooden headboard with repeated shallow curves/bars, low foot rail, short supports and single chaff-stuffed fabric pad; replace source oblique camera with actual donor cardinal map view. No pillow, blanket subdivision or modern spring mattress.",
+  "palette": {
+    "primary": "w",
+    "detail": "Y",
+    "native_primary_rgb": "98875f",
+    "native_detail_rgb": "ffffff",
+    "rule": "Wood/slats/frame receive primary w; stuffed-fabric sleeping surface receives Y. Pale cyan fabric in the construction/refinement is only an extraction aid; both final layers must be neutral."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_south.png",
+    "sha256": "cade86a3035469604f0a1abf3be038180dd7ac9e88ef3aa1474afeba41113284",
+    "about_path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\About\\About.xml",
+    "about_sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e",
+    "role": "Actual installed Bed_south supplies restrained fabric folds, padded edge shading, wooden-frame readability and outline weight. Its pillow, blanket subdivision, straight orientation, four facings, bed dimensions and sleeping mechanics are not copied."
+  },
+  "construction": "One shared spatial bed: wooden slats/rails and four short supports; open curved headboard, low foot rail and one continuous chaff-stuffed fabric pad. Rotating this geometry gives E/N; west mirrors east because there are no asymmetric markings or fittings.",
+  "native_state": {
+    "tile": "One fixed Items/sw_bed.bmp; no RandomTile or alternate occupied tile is declared by Bed/BaseBed.",
+    "part": "XRL.World.Parts.Bed",
+    "assembly_sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7",
+    "decompiled_stdout_sha256": "19b8a75e3293e0ee8535a515ab9b9017fa8dcaf4eaaf31ef13414fc1f43e354e",
+    "part_declares_Render_or_Tile": false,
+    "rule": "Native sleeping/occupant state stays native; no donor occupancy sprite or independent furniture rotation is invented. Rare Animated builder needs original fallback at final integration."
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "authoring_extent": [
+      24,
+      24
+    ],
+    "manual_canvas": [
+      768,
+      768
+    ],
+    "recipient_canvas": [
+      384,
+      256
+    ],
+    "source_cell_offset": [
+      4,
+      0
+    ],
+    "authored_source_anchor": [
+      12,
+      16
+    ],
+    "native_original_anchor": [
+      8,
+      16
+    ],
+    "recipient_anchor": [
+      192,
+      170.6666666667
+    ],
+    "proposed_physical_frame_in_cells": [
+      1.5,
+      1
+    ],
+    "rule": "Add4units transparent margin to both horizontal sides of original16x24cell. All views use common24x24frame and source16x24cell mapping;384x256recipient preserves same pixels per source unit as256x256native cell. No independently fitted bounds or per-view scale. Expanded frame is authoring; native physical-frame acceptance pending."
+  },
+  "native_acceptance": "Pending full-set generation gate; source fixed tile/sleeping/animated fallback and expanded-frame mapping acceptance unfinished.",
+  "recorded_at": "2026-10-20T18:54:15.692610+00:00",
+  "source_camera_superseded": {
+    "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
+    "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+  },
+  "directional_reference": {
+    "textures": {
+      "south": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_south.png",
+        "sha256": "cade86a3035469604f0a1abf3be038180dd7ac9e88ef3aa1474afeba41113284",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          256
+        ]
+      },
+      "east": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_east.png",
+        "sha256": "364169b87f924d7f3d3b53a9c9b52bbbb7c6cf6ed54dc3f87fdb854121c4c1ba",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          256
+        ]
+      },
+      "north": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_north.png",
+        "sha256": "00598d740b977ecd85da603ce3bd1b32717ad64fce0908349a153648cc17930b",
+        "frame": [
+          256,
+          256
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          256,
+          256
+        ]
+      }
+    },
+    "definition": {
+      "path": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Buildings\\Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55"
+    },
+    "load_folders": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "resolved_bed": {
+      "graphic_class": "Graphic_Multi",
+      "draw_size": [
+        2,
+        2
+      ],
+      "footprint": [
+        1,
+        2
+      ],
+      "shader": "CutoutComplex"
+    },
+    "role": "Actual VTE textures replace Core Bed paths. Fixed cardinal overhead/map camera and directional footprint swap; fabric/wood rendering only. No donor pillow, blanket, mechanics or physical footprint copied."
+  },
+  "camera": {
+    "projection": "Parallel cardinal map projection: screen u12+rotated_x, v14+rotated_y-0.75*z. No yaw, x/y shear or perspective convergence. S sleeping plane vertical, E horizontal, N vertical reversed.",
+    "authored_dimensions": {
+      "width": 8,
+      "length": 14,
+      "headboard_height": 3.5,
+      "pad_height": 1.4
+    },
+    "uncertainty": "Source identity/proportions guide authored dimensions; no hidden Qud measurements available. VTE map-view camera guides projection, not imported bed definition."
+  }
+}

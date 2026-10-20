@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-BED",
+  "active_entry": "SCN-BEDROLL",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -23112,8 +23112,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -23125,9 +23125,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -23460,28 +23458,337 @@
           "outputs": [],
           "review": "Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.",
           "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain verified source bed description/ancestry, fixed native tile, native w/Y and sleeping/rare animated fallback boundaries; replace superseded oblique-camera interpretation.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/source-packet.json",
+              "sha256": "99021ccd66f8d720fff44340a64f2531728385e93f02d8d754a28b293462e6e3"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/source-reference-camera-comparison.png",
+              "sha256": "b93420bc225296a7dd7288a24c7fa835a9d71bef79dd8580edf2b5ed0295c219"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VTE S/E/N textures with Core Bed graphic class, draw frame and footprint, accounting for source texture margins.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/source-packet.json",
+              "sha256": "99021ccd66f8d720fff44340a64f2531728385e93f02d8d754a28b293462e6e3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/source-reference-camera-comparison.png",
+              "sha256": "b93420bc225296a7dd7288a24c7fa835a9d71bef79dd8580edf2b5ed0295c219"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Reconstruct one shared wooden/slatted bed, open headboard, low rail and one chaff pad under fixed cardinal map projection. Add common transparent frame margin for rotated length; no per-view size normalization.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/source-packet.json",
+              "sha256": "99021ccd66f8d720fff44340a64f2531728385e93f02d8d754a28b293462e6e3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/construct-cardinal-bed.py",
+              "sha256": "25d92dbbff4ceae7063b33034d32d2168796ad93462c21ef4b5b53e8fafc5591"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/constructed-turnaround.png",
+              "sha256": "d635bcd444d9678a6a2fec3fc944173dd6b741425245cfa59c72d72248d70d94"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/manual-structural-review.json",
+              "sha256": "04c4eb381a00de18532f2bb7ea4617bbe112b1375c1626d24af6f1e7539e0091"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Actual built-in ImageGen front refinement; inspect structure before material extraction, retain fixed cardinal geometry over changed generated placement.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/constructed-south.png",
+              "sha256": "7c80658ede29dcabe1ab1ba60d6e7672be39d683241eb9eec61348a190631036"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/refine-front-prompt.txt",
+              "sha256": "c96583a0d949aa02d57761bed74c55cee082964ec95947bb7096f18b2931ca4b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/refined-front-raw.png",
+              "sha256": "54a78f04b1bea5eaac07a77c9c22f944dd6442b68e6bd51cff01d6edbd1a02a6"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/first-front-structural-review.json",
+              "sha256": "ee22371f7a59225205b35c59ed90281ca69ffb4bb3f13187f8df25e46ceb7ddb"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-bed/v2/refine-front-prompt.txt",
+            "sha256": "c96583a0d949aa02d57761bed74c55cee082964ec95947bb7096f18b2931ca4b"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-7efa9b74-09f4-4eca-9934-fd7419732895.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-bed\\v2\\constructed-south.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_south.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register wood/fabric luminance against fixed source-shaped pad landmarks; retain original geometry and headboard gaps. Supply selected front as coherent secondary-view anchor.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/refined-front-raw.png",
+              "sha256": "54a78f04b1bea5eaac07a77c9c22f944dd6442b68e6bd51cff01d6edbd1a02a6"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/first-front-structural-review.json",
+              "sha256": "ee22371f7a59225205b35c59ed90281ca69ffb4bb3f13187f8df25e46ceb7ddb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/select-material.py",
+              "sha256": "a0db2cc0cecb3b63a824c31e6f05b87875027cbc415c7de03f0a410e250af35d"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/front-material-selection.json",
+              "sha256": "ba530fb6d360679bb36044a7e5f18d9c8adb9d333a781c7fb6e0afe904c806b3"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/selected-front-neutral.png",
+              "sha256": "7312e264fecb7f729297652ceb11c5f5c26aab1d2e314eb3887fa6af3f747963"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/selected-front-context.png",
+              "sha256": "f83b4cc2e335b1b10fd3f2d147d8b8c8bfb4d97991af1172101c01b667e99ca9"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "create_front_side_back_furniture_views",
+          "action": "Compose selected south with complete horizontal east and reversed north from the same bed geometry; no invented asymmetric fitting or west redesign.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/selected-front-context.png",
+              "sha256": "f83b4cc2e335b1b10fd3f2d147d8b8c8bfb4d97991af1172101c01b667e99ca9"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/constructed-east.png",
+              "sha256": "53a3b346a676a6959c320dcc5bad9ec896dc7ebd6c19b9ab75daa55722c8ce64"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/constructed-north.png",
+              "sha256": "2a02a27cec8aa49656d251a009bbb8207dfac9f770b3e4ebe4ff63cd7ebee57f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/front-guided-turnaround.png",
+              "sha256": "75118e9a9056b2ca23402150bd1af45534621ab6d1704516282a2835a7a87e5e"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Actual built-in ImageGen front-guided secondary-view refinement; inspect changed east pad proportions before extraction and reject them as output geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/front-guided-turnaround.png",
+              "sha256": "75118e9a9056b2ca23402150bd1af45534621ab6d1704516282a2835a7a87e5e"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/turnaround-prompt.txt",
+              "sha256": "7a81d53985c8e6a25637ed7728a06d26d6ab57cf3117c3195bcff89bf1683b0f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/refined-turnaround-raw.png",
+              "sha256": "3b37950b760664c40544826e3e83afa6ec76b7ac263d5ce05a9ef1d5c2245d69"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/secondary-structural-review.json",
+              "sha256": "10f8d145ef619e0febf53b8519dd32dc3671930e414caaaf8e9904eb66e1bf98"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/scn-bed/v2/turnaround-prompt.txt",
+            "sha256": "7a81d53985c8e6a25637ed7728a06d26d6ab57cf3117c3195bcff89bf1683b0f"
+          },
+          "generation_file": "C:\\Users\\darka\\.codex\\generated_images\\01a15150-6512-7ae1-9634-400d4b94d6cb\\exec-18374a17-012b-4a91-9817-456118790a09.png",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:\\Users\\darka\\Documents\\Projects\\RimQud\\art\\conversion\\scn-bed\\v2\\front-guided-turnaround.png",
+              "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_east.png"
+            ]
+          }
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Patch changed generated proportions through material-only landmark registration into exact manual geometry. Preserve broad side footprint, manual rim ink/open gaps and complete source coverage; derive neutral wood/fabric weight and mirrored west.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/refined-turnaround-raw.png",
+              "sha256": "3b37950b760664c40544826e3e83afa6ec76b7ac263d5ce05a9ef1d5c2245d69"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/secondary-structural-review.json",
+              "sha256": "10f8d145ef619e0febf53b8519dd32dc3671930e414caaaf8e9904eb66e1bf98"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/register-bed.py",
+              "sha256": "960effbf78ace5e9b9279cf25c9009d85d1f8c48fc908b4b9681c537a0dae300"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/model.json",
+              "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/registration-decisions.json",
+              "sha256": "e7e48f867cd73d8b096e2f00596d94e32634ed00708b063f6a049586355b1443"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/all-views-neutral.png",
+              "sha256": "16108855acc099b485213328b2af474ab1ca5c025ef8c4b3aa48d20972ae0365"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/all-views-detail.png",
+              "sha256": "04c7f51a97c42047011ba77b92b999e0069c3655356c3c5c82cb700796bbe06a"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/all-views-coverage.png",
+              "sha256": "90eaed08262062652cc9a6a2d4a408651938a352ed83a633aade1eb072c41512"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed native bed tile. No alternate occupied/empty sprite or animated anatomy is established; retain native state/fallback requirements.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/source-packet.json",
+              "sha256": "99021ccd66f8d720fff44340a64f2531728385e93f02d8d754a28b293462e6e3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/registered/model.json",
+              "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Review complete cardinal bed art at enlarged and24x24/36x36/48x48extended-frame sizes, with shared frame/pivot, clean ownership and exact source palette.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/registered/model.json",
+              "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/registered/all-views-native.png",
+              "sha256": "83a4ba71bcdcc23992b63d1bf9ef17d5bf13596353f9041259836823255a1b38"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/registered/authoring-review.json",
+              "sha256": "078eef33ef06ef245589bcc0a5118af27e0963b3c2ad41c4680d4bcf8d6be909"
+            },
+            {
+              "path": "art/conversion/scn-bed/v2/artifact-manifest.json",
+              "sha256": "4a9dcdedf79a8335054dde5ee1bb32bb1727e55d0e3ff23e6c7221e99ddd0411"
+            }
+          ],
+          "review": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T18:59:10.738443+00:00",
+          "step": "native_state_review",
+          "action": "Keep sleeping/occupant behavior, source rare animated fallback, expanded physical-frame mapping and extra-view binding behind full-set generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-bed/v2/registered/model.json",
+              "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"
+            }
+          ],
+          "outputs": [],
+          "review": "No game/harness launch, runtime activation, copied donor sleeping logic or new placement system. Bed remains UNFINISHED pending native acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
-      "native_acceptance": "Pending final all-conversions validation gate",
+      "generation_ready": true,
+      "native_acceptance": "Pending full-set generation gate; source fixed tile/sleeping/animated fallback and expanded-frame mapping acceptance unfinished.",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-bed/v1/registered/model.json",
-          "sha256": "8360dbb357c3e9d6a495760becb496e3d0b2d06c58a8d3aee193a1eeedee1a80"
+          "path": "art/conversion/scn-bed/v2/registered/model.json",
+          "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"
         },
         "plate": {
-          "path": "art/conversion/scn-bed/v1/registered/registration-comparison.png",
-          "sha256": "a0d5d5f80069564914051b468bfa16464b511b5e1e70b8e8becc8170524b08a2"
+          "path": "art/conversion/scn-bed/v2/registered/all-views-native.png",
+          "sha256": "83a4ba71bcdcc23992b63d1bf9ef17d5bf13596353f9041259836823255a1b38"
         }
       },
-      "registration_summary": "Selected hillfolk bed retains the source oblique wooden frame, open headboard, low foot rail and chaff-stuffed fabric. Production wood/fabric layers are neutral; preview applies native w/Y tint. Actual source, installed VTE reference, editable geometry, refinement and fabric-ownership extraction are recorded below. One fixed source tile is retained; native sleeping/visibility and rare animated-furniture acceptance remain pending.",
+      "registration_summary": "Cardinal-map hillfolk bed replaces rejected diagonal camera. Source open wooden headboard/slats/low foot and one chaff pad retained; actual VTE directional camera/reference, editable shared geometry, two contextual refinements, structural reviews and fixed-coverage material patch recorded. Neutral w/Y ownership; common expanded frame for rotated length. Native sleep/fallback/placement and extra-view acceptance pending.",
       "camera_review": {
-        "status": "REQUIRES REWORK",
-        "classification": "OBLIQUE_OR_DIAGONAL",
-        "reason": "Bed long axis and bed plane shear diagonally relative to the map-facing frame.",
-        "audit": {
-          "path": "evidence/camera-facing-audit.json",
-          "sha256": "ac49afc8ef4787f1d8e538ec89f03ec41fe8b4a3e3b0732fbfa2ed7e81584a13"
+        "status": "PASS",
+        "classification": "CARDINAL_MAP_CAMERA",
+        "reason": "One shared bed geometry rotates on cardinal axes with broad horizontal E surface; no shear or perspective convergence. Expanded frame preserves source-unit scale.",
+        "evidence": {
+          "path": "art/conversion/scn-bed/v2/source-reference-camera-comparison.png",
+          "sha256": "b93420bc225296a7dd7288a24c7fa835a9d71bef79dd8580edf2b5ed0295c219"
         }
       },
       "furniture_views": {
@@ -23490,10 +23797,19 @@
           "east",
           "north"
         ],
-        "completed_views": [],
-        "west_policy": "Mirror east only if actual geometry/markings permit; otherwise author west.",
-        "native_binding": "Additional views are unbound authoring assets; native orientation/footprint and wall/table selection are unchanged.",
+        "completed_views": [
+          "south",
+          "east",
+          "north",
+          "west"
+        ],
+        "west_policy": "Mirror east; symmetrical wooden frame/pad with no asymmetric markings.",
+        "native_binding": "One fixed native source tile retained; extra views and common expanded physical frame unbound pending integration.",
         "acceptance": "Front-guided side/back, corrections/composed refinement, per-view neutral/tint masks and common frame/pivot/scale must be recorded before generation-ready."
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed actual source glyph/description and fixed-tile/sleeping metadata, actual installed VTE directional textures with Core Bed Graphic_Multi/drawSize/footprint, corrected shared cardinal geometry, first front refinement and structural review, material landmark registration, front-guided E/N refinement and pre-extraction review, fixed-coverage patched material, neutral wood/fabric ownership and intended-size source w/Y recomposition. Open curved headboard, low foot and one chaff pad retained. Raw changed proportions are rejected as geometry; fixed cardinal axes and broad E pad remain. Explicit24x24authoring extent preserves physical scale for rotated length. West is a justified mirror. Native sleeping/occupant/animated fallback, physical-frame and directional placement acceptance remain unfinished behind full-set generation."
       }
     },
     {
@@ -23513,8 +23829,8 @@
         "extra views unbound; wall/table orientation selection undecided"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -50914,7 +51230,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-20T18:50:03.261067+00:00",
+  "updated_at": "2026-10-20T18:59:10.738443+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
