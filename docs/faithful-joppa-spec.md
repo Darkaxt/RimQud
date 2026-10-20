@@ -788,3 +788,20 @@ stationary display fits, not final horizontal ready/drafted presentation. Named
 outfits, native equipped-state and resting/ready pose acceptance stay unfinished
 behind the full-generation gate. Continue the male Iron Vinereaper fitting next;
 Stage 3 remains the sole ACTIVE stage.
+
+User weapon-size clarification: conversion must distinguish one-handed and
+two-handed equipment at minimum, with explicit body-relative overall size and
+handle/grip span rather than equal image-bounds normalization. Resolve inherited
+Physics.UsesTwoSlots/UsesSlots and captured actor-specific slot requirements,
+retaining actual occupied parts and metadata gaps. Available native dimensions,
+size information and descriptive lengths take precedence over authored guesses;
+original proportions and actual donor graphic drawSize inform the visual scale.
+Weight and strength requirements alone are not physical dimensions. Two-handed
+poses require a supporting-hand grip and enough handle span; their rendering
+support cannot be assumed from the current one-hand overlays. Keep canonical
+item physical size stable across registered body families unless a source variant
+or explicit user size adjustment justifies a difference. Record these decisions
+on each active weapon entry; separate scale from angle/resting-ready state.
+Existing authored scale estimates remain estimates, not native measured sizes
+or proof of two-handed presentation. The male Iron Vinereaper is still the sole
+active conversion entry; this clarification adds no native-test detour.

@@ -252,6 +252,34 @@ the new version. Native checks stay behind section 7's full-set generation gate.
 
 Held tools/weapons retain their separate identity, directional art, attachment,
 slot and laterality workflow. They do not gain sleeve masks or garment deformation.
+Resolve weapon handedness before choosing size or pose. Read the complete
+blueprint inheritance for `Physics.UsesTwoSlots` and explicit `UsesSlots`, retain
+all occupied parts for the same equipped object, and use the actor-specific
+`GetSlotsRequiredFor(actor, "Hand")` result when already captured. Static slot
+flags and actual actor requirements are separate evidence: modifiers can change
+the latter. One exported Hand link, an item name, or a RimWorld visual reference
+alone does not prove a one-handed weapon. Mark unavailable runtime results unknown.
+
+At minimum, distinguish one-handed and two-handed size/grip classes. Select and
+record a body-relative overall size, head/blade length, handle length/thickness
+and primary grip point; two-handed weapons also need enough handle span and an
+explicit supporting-hand grip. Prefer available native dimensions/size fields
+and descriptive lengths, then original-sprite proportions and the actual donor's
+graphic `drawSize` as visual evidence. Record which measurements are native and
+which are authored. Weapon class, weight and strength requirements are context,
+not measured dimensions; two-handed does not automatically mean twice the length.
+Keep unknown or conflicting metadata explicit instead of inventing measurements.
+
+Preserve one canonical item's physical size across body families using their
+registered pixel/cell-to-world mappings; a larger recipient does not automatically
+enlarge its weapon. Any source-supported size variant or user-directed scale
+change needs its own recorded reason. Do not normalize different weapons to the
+same image bounds. Keep weapon scale independent of grip placement, draw angle
+and resting/ready state. Show the chosen body-relative size at intended render
+scale, and log handedness, source evidence, scale and grip decisions on the active
+entry before selecting the fitting. A two-handed visual pose must not be claimed
+from a one-hand overlay or from unsupported independent-limb rendering.
+
 For a hand-held shaft such as the dromad's Shillelagh, anchor the grip inside the
 palm, toward its body-facing side in south/front and north/back views; do not
 place the shaft against or beyond the hand's outer edge. Derive each facing's
