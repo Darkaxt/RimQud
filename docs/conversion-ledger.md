@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-WATERVINEFARMERJOPPA-01**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-GARBAGE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -176,19 +176,19 @@ Creature views/composed refinement and garment in-context refinement must follow
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 |  |
 | NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 |  |
-| NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | IN PROGRESS | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-04 | WatervineFarmerJoppa / captured resident 4 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-05 | WatervineFarmerJoppa / captured resident 5 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-06 | WatervineFarmerJoppa / captured resident 6 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WATERVINEFARMERJOPPA-07 | WatervineFarmerJoppa / captured resident 7 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-04 | WatervineFarmerJoppa / captured resident 4 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-05 | WatervineFarmerJoppa / captured resident 5 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-06 | WatervineFarmerJoppa / captured resident 6 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
+| NPC-WATERVINEFARMERJOPPA-07 | WatervineFarmerJoppa / captured resident 7 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 
 ### Other props/debris/light (5)
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-GARBAGE | Garbage | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-GARBAGE | Garbage | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-PAINTING | Painting | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-ELECTRONICS | Scrap Electronics | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -7097,7 +7097,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:14:44.934329+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/source-packet.json", "sha256": "91373fd3d2bb8dc0f75e99d5f82f6fa819974dea06d0058c26fa079db0717ccc"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/source-to-assembly.png", "sha256": "7d5c5d450cd124deffc151c7881d376a025a66b0caf9259fd0bf3608a3304d12"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:14:44.934329+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/dependency-lineage.json", "sha256": "0ca328ffa5e4684dd695033af0cc99e25d5d653a36e366842eaaaa0fe0e8c13f"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/dependency-evidence.html", "sha256": "cbfde9dc7c14452dce9c356bb0969b9ecff468e7f5932febcffd09e5b3d2fa9d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:14:44.934329+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/model.json", "sha256": "98f941e37f729f3b6c5c0d2765912c1ae855cb74869dcd671526157293ce9ec9"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/assembly-stages.png", "sha256": "ed990519e6d16f3205169786f68817ac1e073454e81d0fa34e801c13194face9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:15:35.529295+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected actual actor508 original glyph/description and captured Humanoid tree, reused shared male body, all four single-item plates, complete four-view neutral/native outfit and intended-size evidence. Woven Tunic548 Body217/0, Wide-brimmed Hat549 Head218/0, Iron Vinereaper550 Hand222/2, Sandals553 Feet228/0. Tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper palm/far-side depth and sandal instep/ankle/sole coverage remain aligned. No body, garment or tool rescale/reshape was needed. Each late body mask affects its own item only. Kufiya and brown/gnarled-hand prose remain metadata: no unexported neck garment, profession pose, personal cosmetics or fixed biological skin colour is invented.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/model.json", "sha256": "98f941e37f729f3b6c5c0d2765912c1ae855cb74869dcd671526157293ce9ec9"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/woven-tunic-comparison.png", "sha256": "e453c4a1de5ea5a3c02a7affe791edd92e8bb5d72b4f8e5a03f0853cc7ac4adf"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/wide-brimmed-hat-comparison.png", "sha256": "ffc0ae65eb301bd180b2d7e735679dc765e1b34e5d2c45847bf1dbea411ce44b"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/iron-vinereaper-comparison.png", "sha256": "9290760a799089b08fb85996f4a12306ed8ac2e3991a541b034348a3da572ab8"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/sandals-comparison.png", "sha256": "dc748a29a6e00c40079ebd122e024ebdca2c9f86bb9d37b263d404d35a9b7255"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/full-neutral-comparison.png", "sha256": "81ae8852efd4cf17c9eb3e7a978302731684725efb0cdc93b0c7418c72ed6de3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:15:35.529295+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Reviewed neutral grayscale and actual y actor Render tint, independent y/y tunic and vinereaper, y/b hat and y/w sandals in all cardinal views and48x96 previews. Source detail g is retained as original Render metadata without inventing a green skin marking. Source palettes are appearance data, not human biological pigmentation. Shared512x1024/contact256,950 and original physical frame are unchanged. Static tool display only; native ready/resting pose, visibility/equipment/hurt/look/save acceptance remains pending complete generation.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/model.json", "sha256": "98f941e37f729f3b6c5c0d2765912c1ae855cb74869dcd671526157293ce9ec9"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/full-native-comparison.png", "sha256": "fef09af5f03057983b2ccdf8cc2e7a231479b5f730a3d8bdea0714450ddecd70"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/game-scale-comparison.png", "sha256": "3973f2bb748195a1d09b6dd795d83622c8865593f176545ee8ccb3be98067e1c"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/hidden-comparison.png", "sha256": "fc4a919b1aa50a2a28c3a63bfe0e68f3799e6ea9fedd961e72eaab1febf4d247"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/visual-review-notes.json", "sha256": "58483554d08a7df535f16d6c4a9e54303e4943d0d7940ad90ae731c63285ef7e"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/authoring-review.json", "sha256": "ac3b9502cd71b65c9b36a462b2baf543dbb0672bd12fb2660b5fe1db164b1f83"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/artifact-manifest.json", "sha256": "9d2fbb2bb7c294fe12da490c08ade84e35512a2332160c9e51c1918e3e4e038a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:15:35.529295+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/model.json", "sha256": "98f941e37f729f3b6c5c0d2765912c1ae855cb74869dcd671526157293ce9ec9"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-02: WatervineFarmerJoppa / captured resident 2
 
@@ -7107,7 +7143,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:15:45.202191+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/source-packet.json", "sha256": "256e35fe0b8ed1f1f596655db87a5509e4792bef9c76472a519a24923b0840c0"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/source-to-assembly.png", "sha256": "8790aa00def730ccae595481d90394bee7c49107f481343cb9c7abddd9fb11f0"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:15:45.202191+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/dependency-lineage.json", "sha256": "b84410c5b7975c643f1b6cae48804b3171e096e3c2a1df61872d42e6591d0905"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/dependency-evidence.html", "sha256": "f33af61187ace8d0ca9bbac99eec6b72804d7b51e1788c106db6e8739160c186"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:15:45.202191+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/model.json", "sha256": "9e43f629a290b5def7948e92d6abfcd678b4f5592f46ebcba2eee38d4b5f1292"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/assembly-stages.png", "sha256": "02dcf752c399e974299302a1a170c01323d847c33731b05680524929b81578d7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:16:28.031621+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected actor509 original glyph, full description and captured ordinary female Humanoid tree, shared female body, every single-item plate and complete four-view neutral/native/intended-size outfit. Woven Tunic554 Body231/0, Wide-brimmed Hat555 Head232/0, Iron Vinereaper556 Hand236/2, Sandals559 Feet242/0. Tunic shoulder/cuff/waist/hem, hat brim/head fit, static vinereaper palm/far-side depth and sandal ankle/instep/sole coverage remain aligned. Each late original-body coverage affects only its item. No geometry or scale changes needed. Full source prose remains metadata; no invented neck item, cosmetic brown skin, profession pose or extra anatomy.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/model.json", "sha256": "9e43f629a290b5def7948e92d6abfcd678b4f5592f46ebcba2eee38d4b5f1292"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/woven-tunic-comparison.png", "sha256": "c7ed4c53bea79fcd3f70ba362616893a618b64a15376060cfc3e39a014455748"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/wide-brimmed-hat-comparison.png", "sha256": "4323de0ad0f170fabdd0fd5c489e34106d9b176eb397dc8bf943bb5f2997d78e"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/iron-vinereaper-comparison.png", "sha256": "7ceb2a338b35092b171a7ff86e3af2fc94185ee51420b86a11477d513f937063"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/sandals-comparison.png", "sha256": "31676bf4fe28f59e25dedc1da8764c634946dd7bbecaa751c7b269bb826e3fb7"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/full-neutral-comparison.png", "sha256": "60b130eeb47070aa3f2794ea8a8849cb3ea4672a82a74cf4af3a54cbd3b4a002"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:16:28.031621+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Reviewed neutral gray, captured actor y appearance, separate y/y tunic and vinereaper, y/b hat and y/w sandals in all directions and48x96 displays. Native source detail g retained without invented green skin markings; Render palette is not biological pigmentation. Shared512x1024/contact256,950 and original source world frame preserved. No new generation call; exact dependency histories reused. Tool pose is static display only; native visibility/equip/hurt/look/save/ready-resting acceptance waits for full generation.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/model.json", "sha256": "9e43f629a290b5def7948e92d6abfcd678b4f5592f46ebcba2eee38d4b5f1292"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/full-native-comparison.png", "sha256": "ba0fe80a5549faaf0995e50dfcc165944c47d251335961a5b8db45c99c515a1b"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/game-scale-comparison.png", "sha256": "cd928a0f112071ff4af95ba664004c851204891e24f802237aca2d6df48da23d"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/hidden-comparison.png", "sha256": "28a3d3369264550e8c0fb46b61307cfc1b04058f4932e6b66e8f73c0c1822aea"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/visual-review-notes.json", "sha256": "4a67afe1450d9d9d3fdf389b389d8482bdc02cf1311c88ae402e15d91d1fd234"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/authoring-review.json", "sha256": "0d9fbfeedaf0743abe2f84c177ff1bed44b1f2525a2bd155d3c7bf4465e72be7"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/artifact-manifest.json", "sha256": "dad86984e9c1abc06352468cf76a22025f3465ffae5f34d5c82fb2c1ae2722a7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:16:28.031621+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/model.json", "sha256": "9e43f629a290b5def7948e92d6abfcd678b4f5592f46ebcba2eee38d4b5f1292"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-03: WatervineFarmerJoppa / captured resident 3
 
@@ -7117,7 +7189,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:16:39.005726+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/source-packet.json", "sha256": "b7a22478d298a6831d3ceebe6e267dfdf588fc1e77e7756880b127192843c049"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/source-to-assembly.png", "sha256": "5a1a2dae700bf8f154f7bea546844de50d4177558b12222cad0c336cd9ccc8a1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:16:39.005726+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/dependency-lineage.json", "sha256": "b84410c5b7975c643f1b6cae48804b3171e096e3c2a1df61872d42e6591d0905"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/dependency-evidence.html", "sha256": "c4b637755afff775c0db27629be9c0e6241b28c3b677e6ff111dfca9aebc38ef"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:16:39.005726+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/model.json", "sha256": "a32bc921b8ab32f602950efa0cf4308983f3b8630dd003f7a6645b39a7001c38"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/assembly-stages.png", "sha256": "49b3ce8af9df6d111b75b6351f2fe818b4b1757fa80583443eb20cc85abbd445"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:17:31.874292+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected actor510 source-to-assembly plate, original glyph and own captured female Humanoid body/item bindings. Woven Tunic560 Body245/0, Wide-brimmed Hat561 Head246/0, Iron Vinereaper562 Hand250/2, Sandals565 Feet256/0. All36raw directional images are byte-identical to inspected female farmer02: exact shared body, each single item, complete neutral/native outfit and hidden previews. The same reviewed tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper grip/depth and sandal instep/ankle/sole coverage therefore apply without a new shape or fitting. Metadata and part IDs remain individual; reuse is explicit, not a fabricated new ImageGen step. Native scarf/brown-hand prose remains metadata without an invented garment, skin pigment, cosmetics or profession pose.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/model.json", "sha256": "a32bc921b8ab32f602950efa0cf4308983f3b8630dd003f7a6645b39a7001c38"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/woven-tunic-comparison.png", "sha256": "8d838df8706d65724996ad93e3f66558ccedde6ff17f9d0af65b7988803b27a0"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/wide-brimmed-hat-comparison.png", "sha256": "de0ff4d31182a421f9d99f173bb4b3bf5a5c87c8d142d685f55c7201ba8d458c"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/iron-vinereaper-comparison.png", "sha256": "a9258556f5af05a19bdb5179300bf5087ec84554ffe8659ee67094355b7a8f55"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/sandals-comparison.png", "sha256": "d503e3009c9d35c9086aa7f728cd7df61767b5118cbbaba3e97428d32a222cd6"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/full-neutral-comparison.png", "sha256": "39ca2eddb0ee8053094d95ee8e36f8b7289ac30b4165d7b72703076490317f53"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:17:31.874292+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Source y/g Render metadata retained; body preview uses y, with independent y/y tunic/vinereaper, y/b hat and y/w sandals. All actual palette images exactly match the reviewed female reference, including48x96 underlying four-view assemblies. No invented green skin detail, source/body/item rescale, changed512x1024/contact256,950 frame or new generation call. Static tool display only; native held state/equipment/visibility/hurt/look/save acceptance remains behind the full-generation gate.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/model.json", "sha256": "a32bc921b8ab32f602950efa0cf4308983f3b8630dd003f7a6645b39a7001c38"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/full-native-comparison.png", "sha256": "73d059356015140c1f6bce0c33b738180dc5306797567b8388fada96593d3869"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/game-scale-comparison.png", "sha256": "d08cdff2cbc674d8bf958d23891050c759f6fa9f959d286fb600202bd0a1374c"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/hidden-comparison.png", "sha256": "080f7d5edcee0a022f9303a6cd61b9fc7fff6d63bdb0b24654d57a3196f91838"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/visual-review-notes.json", "sha256": "8b78c8a09953211ed907c035562073df6547fd12a6916d51e70f2f71b6ad894d"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/authoring-review.json", "sha256": "966ed0e1ac50f7193a11f64f89698579256e200bc2e60d2c941b8df7f2caf606"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/artifact-manifest.json", "sha256": "13c3233c60062afae068ffbbf07ecc85f44761090ce77ba6af10f7f2f23f5cdf"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:17:31.874292+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/model.json", "sha256": "a32bc921b8ab32f602950efa0cf4308983f3b8630dd003f7a6645b39a7001c38"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-04: WatervineFarmerJoppa / captured resident 4
 
@@ -7127,7 +7235,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:17:41.559712+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/source-packet.json", "sha256": "7b6cc1c81b7fc90a438f2e28fba570d32e4ec5a6da4d4386c49e8a66a82324b4"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/source-to-assembly.png", "sha256": "a1c8430645a5f61b7efcfe872441b2c303626ae58f27b42f2dc46deb4ef3225c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:17:41.559712+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/dependency-lineage.json", "sha256": "b84410c5b7975c643f1b6cae48804b3171e096e3c2a1df61872d42e6591d0905"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/dependency-evidence.html", "sha256": "8d6dacde5c82e2853bb33d1b21bedf5841c4af1c18459f5f126c3ea39d60323e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:17:41.559712+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/model.json", "sha256": "580ba98db35b0faaba36d06211c24e9cd6ffbd0fe5aa321bc5f3ee4e60726d31"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/assembly-stages.png", "sha256": "bef0de7de4eac95128ef8c8de5a795386f50c6f00d0543a676e0cdce5459048e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:40.942810+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Reconciled captured actor514 original glyph, description, ordinary female Humanoid tree and its own four-item bindings: Woven Tunic568 Body273/0, Wide-brimmed Hat569 Head274/0, Iron Vinereaper570 Hand278/2, Sandals573 Feet284/0. All36raw directional body/item/outfit/hidden images are byte-identical to fully inspected farmer02. The exact same reviewed body, tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper palm/far-side depth and sandal ankle/instep/sole coverage apply. This is explicit reuse of inspected image bytes, not a newly invented review of different geometry or a fabricated ImageGen step. Every item remains separate with local late original-body ownership; source body/item pixels and scale are unchanged. Full prose remains metadata; no invented neck garment, biological skin tint, cosmetics, occupation pose or extra anatomy.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/model.json", "sha256": "580ba98db35b0faaba36d06211c24e9cd6ffbd0fe5aa321bc5f3ee4e60726d31"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/woven-tunic-comparison.png", "sha256": "97ec46c91bfef3f4589338956b32fec97babcd9de6f7d73085f59152ab1f66b5"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/wide-brimmed-hat-comparison.png", "sha256": "33d00b2d1127778d1d1b0cccc3f0d3c711b9fce2107c743c7c4d60a49d725981"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/iron-vinereaper-comparison.png", "sha256": "cd4c84505d7fa5a4b514168e81483d4c23206c4687f5a52c8fd64454c6c84b62"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/sandals-comparison.png", "sha256": "c4bb64601e13f7bff48a9b43877f0913c8dcfddaedd488e048cd9e5b96bc525b"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/full-neutral-comparison.png", "sha256": "99fe2f497f34864a3eb26092c4959267ceea6fdff93932369f6b234f55f7b85e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:40.942810+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Actual y/g actor Render metadata retained; body preview uses y. Tunic/vinereaper y/y, hat y/b and sandals y/w remain independent. All palette and neutral directional image bytes match the inspected same-sex farmer reference; intended-size48x96 assemblies therefore reuse the same current pixels. Source detail g does not create a green skin marking. Shared512x1024/contact256,950 and world mapping unchanged. No new generation call. Stationary tool display only; native equip/visibility/held state/hurt/look/save acceptance remains behind full-generation gate.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/model.json", "sha256": "580ba98db35b0faaba36d06211c24e9cd6ffbd0fe5aa321bc5f3ee4e60726d31"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/full-native-comparison.png", "sha256": "7b0554c2f75d17e8e0c95bce6314367ed141768065c52273d7f8d2c07b1f7bbb"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/game-scale-comparison.png", "sha256": "40df64418efa34f12f447a9f6025aa47288147eccb3752ca3100944937e0ec75"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/hidden-comparison.png", "sha256": "d3a01ad5e8dff67485825e26f44ed2f9a25e7b248f30ee274702ce5890f1f4e2"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/visual-review-notes.json", "sha256": "1d9b1e1c88df99986ce4cf5f833ab503310afed1dcfe0f5705aa5d9e053466b3"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/authoring-review.json", "sha256": "28d4c0ece3778ac6ca4fbef51602592bb928c337c5db6ae47027ae53c791d9cd"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/artifact-manifest.json", "sha256": "f7ae4677543a4fc28640317a1b6225954b1d199c57cb5cb7c0d49bfd5f9cde5c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:40.942810+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/model.json", "sha256": "580ba98db35b0faaba36d06211c24e9cd6ffbd0fe5aa321bc5f3ee4e60726d31"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-05: WatervineFarmerJoppa / captured resident 5
 
@@ -7137,7 +7281,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:18:50.817525+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/source-packet.json", "sha256": "0483d231ba7fb96d2aa405b5c878c130452ac5a660517a3bfa294e097515a9e8"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/source-to-assembly.png", "sha256": "fd14fd7934cec7aa5a29ccdfa32e4394bb9481664e137ab6661ca6a38ed9e604"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:50.817525+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/dependency-lineage.json", "sha256": "0ca328ffa5e4684dd695033af0cc99e25d5d653a36e366842eaaaa0fe0e8c13f"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/dependency-evidence.html", "sha256": "60c5ebd7be46526fce465290375c8a12860370aca4bd7f493462ff8797bb94c6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:50.817525+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/model.json", "sha256": "718dc4fededa71dd45d43643dbc896db90a3adb9834003df7d2416100f0c78f3"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/assembly-stages.png", "sha256": "27b4225b157626333eee080a0794192fec5c1fb627a24ff404a492533f49ecc4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:51.540657+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Reconciled captured actor523 original glyph, description, ordinary male Humanoid tree and its own four-item bindings: Woven Tunic598 Body343/0, Wide-brimmed Hat599 Head344/0, Iron Vinereaper600 Hand348/2, Sandals603 Feet354/0. All36raw directional body/item/outfit/hidden images are byte-identical to fully inspected farmer01. The exact same reviewed body, tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper palm/far-side depth and sandal ankle/instep/sole coverage apply. This is explicit reuse of inspected image bytes, not a newly invented review of different geometry or a fabricated ImageGen step. Every item remains separate with local late original-body ownership; source body/item pixels and scale are unchanged. Full prose remains metadata; no invented neck garment, biological skin tint, cosmetics, occupation pose or extra anatomy.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/model.json", "sha256": "718dc4fededa71dd45d43643dbc896db90a3adb9834003df7d2416100f0c78f3"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/woven-tunic-comparison.png", "sha256": "cd27f294b53473dcc671c660fa6a52c06af5383d3903bfb23e5f885d627c4fca"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/wide-brimmed-hat-comparison.png", "sha256": "cfe0f329db7a0c88a4d197a81d52eb028fa167933d87d262e87ab81cd8b10e65"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/iron-vinereaper-comparison.png", "sha256": "e92cd5b65892abd24e24f917dbe61f6bec5475ca3502e74bc2aeafaff2e0a2c8"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/sandals-comparison.png", "sha256": "e0c8c87d6b4afaf9c2b2f197e12e3da21a4f33766ee18592a4bdebc8c22b7191"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/full-neutral-comparison.png", "sha256": "0f2f773b49bdf6ea3727af34e0dfb85b94d05ecb553dd329f0f00784f5faeb1c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:51.540657+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Actual y/g actor Render metadata retained; body preview uses y. Tunic/vinereaper y/y, hat y/b and sandals y/w remain independent. All palette and neutral directional image bytes match the inspected same-sex farmer reference; intended-size48x96 assemblies therefore reuse the same current pixels. Source detail g does not create a green skin marking. Shared512x1024/contact256,950 and world mapping unchanged. No new generation call. Stationary tool display only; native equip/visibility/held state/hurt/look/save acceptance remains behind full-generation gate.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/model.json", "sha256": "718dc4fededa71dd45d43643dbc896db90a3adb9834003df7d2416100f0c78f3"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/full-native-comparison.png", "sha256": "02d54696ddbe935fafe040cd83b33449f6094354e12d73ffcaf98d128c43e3fc"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/game-scale-comparison.png", "sha256": "271f4afcc3cca71fda55e0e0175fa473c6bbb9bede0ae072057360c92c6224f1"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/hidden-comparison.png", "sha256": "e4a231c4de967fa71911113f5c0186c9e0018d7538ed14664ffdc349c59b1ceb"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/visual-review-notes.json", "sha256": "7845c5f3521e0fc048582e2795d82a61289b5b35671a536cc09f238432f6590e"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/authoring-review.json", "sha256": "bbee0b599610cf3bfced5d210af49bd0532572d3be35f3ab60878d4e50694304"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/artifact-manifest.json", "sha256": "4e62b28fd064bcbed97e623859b66125061d092b97c105f35cb92f2b8767791d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:18:51.540657+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/model.json", "sha256": "718dc4fededa71dd45d43643dbc896db90a3adb9834003df7d2416100f0c78f3"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-06: WatervineFarmerJoppa / captured resident 6
 
@@ -7147,7 +7327,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:19:00.682465+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/source-packet.json", "sha256": "0a03e20d0b2aafe76f0716b3f28ea710d5aae6418d3a628bf3caa87e38394877"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/source-to-assembly.png", "sha256": "0c1d8c798ab1ab57f75eba565565278a388374e9a32dec60efd8dcecaf537f65"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:00.682465+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/dependency-lineage.json", "sha256": "0ca328ffa5e4684dd695033af0cc99e25d5d653a36e366842eaaaa0fe0e8c13f"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/dependency-evidence.html", "sha256": "941b68cdfa9f99a8d1722f0ee15a7bc29307a202757a13b291b2d8b314fe3597"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:00.682465+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/model.json", "sha256": "4fa8089b9b9fb48b794149464e4d017fac25ea40f4086a3935bc0565e268c9e4"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/assembly-stages.png", "sha256": "2cc061c297c9e608070223d7a67508db9bfcad35ffa8be128acc486bb8070e0b"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:02.314869+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Reconciled captured actor526 original glyph, description, ordinary male Humanoid tree and its own four-item bindings: Woven Tunic607 Body371/0, Wide-brimmed Hat608 Head372/0, Iron Vinereaper609 Hand376/2, Sandals612 Feet382/0. All36raw directional body/item/outfit/hidden images are byte-identical to fully inspected farmer01. The exact same reviewed body, tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper palm/far-side depth and sandal ankle/instep/sole coverage apply. This is explicit reuse of inspected image bytes, not a newly invented review of different geometry or a fabricated ImageGen step. Every item remains separate with local late original-body ownership; source body/item pixels and scale are unchanged. Full prose remains metadata; no invented neck garment, biological skin tint, cosmetics, occupation pose or extra anatomy.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/model.json", "sha256": "4fa8089b9b9fb48b794149464e4d017fac25ea40f4086a3935bc0565e268c9e4"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/woven-tunic-comparison.png", "sha256": "d04f600c955b8217ea7b30f92cdbfa163c26a633730a40b9af323ce6a8fbf055"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/wide-brimmed-hat-comparison.png", "sha256": "525eea7fb88dd9b7ceda340d29d97874d45ae77de7dc10e6c6bd72f1b82f0a6e"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/iron-vinereaper-comparison.png", "sha256": "f2afec253a234c248095cc7af56206c8eb5031d7e1ee2a9a953fc69e81c38549"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/sandals-comparison.png", "sha256": "15bf7b4b67a410521f56d9603dbe54a09a7c7b9875882a31094865f48f484ab2"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/full-neutral-comparison.png", "sha256": "c9594fe1bec2ccbb74b87b43239612e0d479711c6bfd2218cab10654c8b406a9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:02.314869+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Actual y/g actor Render metadata retained; body preview uses y. Tunic/vinereaper y/y, hat y/b and sandals y/w remain independent. All palette and neutral directional image bytes match the inspected same-sex farmer reference; intended-size48x96 assemblies therefore reuse the same current pixels. Source detail g does not create a green skin marking. Shared512x1024/contact256,950 and world mapping unchanged. No new generation call. Stationary tool display only; native equip/visibility/held state/hurt/look/save acceptance remains behind full-generation gate.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/model.json", "sha256": "4fa8089b9b9fb48b794149464e4d017fac25ea40f4086a3935bc0565e268c9e4"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/full-native-comparison.png", "sha256": "93764463ab5ab9586ea4e4968c20d0cac5967ea1f578c220e3f226ca3f0b7ef1"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/game-scale-comparison.png", "sha256": "0b0095edf149ce6f80be981abbc769a3c601aa9b80d969d2cc89fbafc08c6628"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/hidden-comparison.png", "sha256": "fc74100c07c520161541440e650ebd550603424aded65f9fcd8fe3db5a432ed9"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/visual-review-notes.json", "sha256": "a92175a77a8839bd9f55fce7828fbbb94bab005b04dd2a85b8a3f2ba84a5bfa5"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/authoring-review.json", "sha256": "d66eb7a1cbe225e47567de457a890dcc4e111d40299a99df57f8056507669d0e"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/artifact-manifest.json", "sha256": "f134ded4282a76911f1692bf2e2ed7cae50a99d7a7e7fe88556b4f97b98169f6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:02.314869+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/model.json", "sha256": "4fa8089b9b9fb48b794149464e4d017fac25ea40f4086a3935bc0565e268c9e4"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-07: WatervineFarmerJoppa / captured resident 7
 
@@ -7157,7 +7373,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T01:19:13.075096+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/source-packet.json", "sha256": "6735d86ecfb3ae903efb5c7814e2f24c2a19566fb1acca34836b99f18d0714b2"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/source-to-assembly.png", "sha256": "4a9612dce2fd0e4d9c642ff7a1752ea6c3a131dd443ccc03097b902837d913ef"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:13.075096+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/dependency-lineage.json", "sha256": "0ca328ffa5e4684dd695033af0cc99e25d5d653a36e366842eaaaa0fe0e8c13f"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/dependency-evidence.html", "sha256": "e2b56a7216324bdfc0ee11ee179529923d83e5bcf05c2bfedc207be094943b49"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:13.075096+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/model.json", "sha256": "365ff84eb94e55b894607b6da9bcefefa12e35606b5b50b3af24ad85888f11b0"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/assembly-stages.png", "sha256": "bcbc251c368e4ee00faa13628c512b548d6c673bbcd47b3f549eab61588bf519"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:13.808152+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Reconciled captured actor527 original glyph, description, ordinary male Humanoid tree and its own four-item bindings: Woven Tunic613 Body385/0, Wide-brimmed Hat614 Head386/0, Iron Vinereaper615 Hand390/2, Sandals618 Feet396/0. All36raw directional body/item/outfit/hidden images are byte-identical to fully inspected farmer01. The exact same reviewed body, tunic shoulders/cuffs/waist/hem, hat crown/brim, static vinereaper palm/far-side depth and sandal ankle/instep/sole coverage apply. This is explicit reuse of inspected image bytes, not a newly invented review of different geometry or a fabricated ImageGen step. Every item remains separate with local late original-body ownership; source body/item pixels and scale are unchanged. Full prose remains metadata; no invented neck garment, biological skin tint, cosmetics, occupation pose or extra anatomy.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/model.json", "sha256": "365ff84eb94e55b894607b6da9bcefefa12e35606b5b50b3af24ad85888f11b0"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/woven-tunic-comparison.png", "sha256": "875b0311a3978b72094667ee98fb8ee980900ab2de224a3cd1ce3f5fff47cf5e"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/wide-brimmed-hat-comparison.png", "sha256": "fe628d03938c932e72e18c52c053102ea5c9b84c206f34272660eef6da3edcc5"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/iron-vinereaper-comparison.png", "sha256": "0e3c0f5199a0fee6719095e8afe07239085b913ebf327216e242e9e1071eccf2"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/sandals-comparison.png", "sha256": "e0feee0245eafb81c4700a4acc311003b2ee0a621196e74cb26bd0514ac6b083"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/full-neutral-comparison.png", "sha256": "41aef0142d372f8aa0a9e18a7dfae0a71c162a4b109caf8fd48f7617ea4d322c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:13.808152+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Actual y/g actor Render metadata retained; body preview uses y. Tunic/vinereaper y/y, hat y/b and sandals y/w remain independent. All palette and neutral directional image bytes match the inspected same-sex farmer reference; intended-size48x96 assemblies therefore reuse the same current pixels. Source detail g does not create a green skin marking. Shared512x1024/contact256,950 and world mapping unchanged. No new generation call. Stationary tool display only; native equip/visibility/held state/hurt/look/save acceptance remains behind full-generation gate.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/model.json", "sha256": "365ff84eb94e55b894607b6da9bcefefa12e35606b5b50b3af24ad85888f11b0"}]
+  Outputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/full-native-comparison.png", "sha256": "8963692fbfa4da297eef8ff18ff315224ea163adcb835aeae2a013cece93c0b6"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/game-scale-comparison.png", "sha256": "4632d369ac56f2d85770c917672205d01978148e4ccddcd0afdf1289ae162d7d"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/hidden-comparison.png", "sha256": "91b678a056704217ecf20c90b1821dd530ceb3f2c1e1b65002ef68b26fe45ad4"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/visual-review-notes.json", "sha256": "744d3f554932abad758a49028d921afb13f1135f3edf0bbe1cab55171cef76e6"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/authoring-review.json", "sha256": "00db916039907f0608c6989070a21c842b7dd6b73b4c98f5b6dd57ef40337c09"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/artifact-manifest.json", "sha256": "e3910c2310256cd19066097d43250665147941f8dab6e2f864cb165f537529a4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:19:13.808152+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/model.json", "sha256": "365ff84eb94e55b894607b6da9bcefefa12e35606b5b50b3af24ad85888f11b0"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-GARBAGE: Garbage
 
@@ -7167,7 +7419,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/garbage-body.png](../art/village/scenery/garbage-body.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-PAINTING: Painting
 

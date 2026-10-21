@@ -1,0 +1,2163 @@
+{
+  "dependencies": [
+    {
+      "entry": "BODY-HUMAN-MALE",
+      "model": {
+        "path": "art/conversion/body-human-male/v2/model.json",
+        "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+      },
+      "report": "docs/conversion-entries/BODY-HUMAN-MALE.html",
+      "plate": {
+        "path": "art/conversion/body-human-male/v2/registration-comparison.png",
+        "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T00:49:23.267686+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "phase": "Original shape and body metadata",
+          "action": "Resolved Argyve, Mehmet and captured male watervine farmers to reusable human anatomy. Preserved individual descriptions, attached native body trees, actual gear, source hashes and uncertainty.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
+              "role": "Observed native definitions and parts"
+            },
+            {
+              "path": "evidence/joppa-creature-catalogue.json",
+              "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79",
+              "role": "Source-bound species catalogue"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149",
+              "role": "Original sprite identities"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/source-packet.json",
+              "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6",
+              "role": "Exact source packet and authored anatomy contract"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/source-comparison.png",
+              "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b",
+              "role": "Annotated Qud original shapes alongside donor conventions"
+            }
+          ],
+          "review": "Inspected the exact metadata and contextual source plate. Two arms, two hands and paired feet; no native race-wide appearance prose. The original clothed sprite is not a nude anatomy diagram.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T00:49:23.267847+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "phase": "RimWorld reference decision",
+          "action": "Selected installed Core Naked_Male_south and Male_Average_Normal_south for presentation only. Verified the extracted PNG hashes against the recorded catalogue; DLC/mod references remain eligible for subjects that need them.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/source-packet.json",
+              "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6",
+              "role": "Exact donor IDs/hashes and role"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/source-comparison.png",
+              "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b",
+              "role": "Contextual source/reference comparison"
+            }
+          ],
+          "review": "Viewed donor torso/head reference. Ordinary donor humanlike body has no independent rendered arms/legs; this Qud body keeps them painted into the body graphic. No donor race substitution.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T00:49:23.268142+00:00",
+          "step": "construct_front",
+          "phase": "Manual front suggestion",
+          "action": "Constructed original editable adult front with two visible arms/hands, paired legs and explicit rounded bare feet. Preserved the non-detailed neutral mannequin convention; personal cosmetics and occupation gear remain separate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/source-packet.json",
+              "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6",
+              "role": "Anatomy and design contract"
+            },
+            {
+              "path": "tools/construct_human_base.py",
+              "sha256": "c0edbb92f78c930c49a4328137a7606706b2ff1bfd49c3669b743de15f0cf1dc",
+              "role": "Exact geometry and plate construction method"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/constructed-front.svg",
+              "sha256": "618d5e12a3c6fdfec84456655ea1a3217d60cdb4168ce7722b6c56ce47c0c84c",
+              "role": "Editable source geometry"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/constructed-front.png",
+              "sha256": "f4ccc3be23caca549954021f28af47086157e46fb225f868a5f6c6ccf0e3fd15",
+              "role": "Rendered manual front suggestion"
+            }
+          ],
+          "review": "Viewed the rendered PNG: one head, two arms/hands, two legs and two distinct feet. Foot overlap/ankle contours still require the refinement review. This passes construction only, not final body or native acceptance.",
+          "result": "PASS",
+          "tool": "Python + resvg_py 0.5.0",
+          "settings": "512x1024 transparent SVG render; deterministic authored geometry"
+        },
+        {
+          "timestamp": "2026-10-20T00:50:32.619990+00:00",
+          "step": "construct_front",
+          "phase": "Refined front suggestion",
+          "action": "Refined only the constructed front with built-in ImageGen, using the manual front and the inspected source/reference plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/constructed-front.png",
+              "sha256": "f4ccc3be23caca549954021f28af47086157e46fb225f868a5f6c6ccf0e3fd15"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/source-comparison.png",
+              "sha256": "75421f2e6f2bdaac37601f124f2058094440b4315b6c4b70b7f181a8ef1f1a1b"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/refine-front-prompt.txt",
+              "sha256": "508479e64f8cd2a5600b6ee7f4c15aa55558ea6aef0dd02a7e4ef5b01ee5b87c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/refined-front.png",
+              "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd"
+            }
+          ],
+          "review": "Viewed full output: one blank head, two arms/hands, two legs and distinct short bare feet with toes. Foot stubs corrected. Neutral low-chroma gray; exact alpha inspected. No clothes or personal cosmetics. Front selected as the next view-generation anchor, not final native art.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-9e08c9ab-9d61-47ee-a74a-eb3571e45f4e.png"
+        },
+        {
+          "timestamp": "2026-10-20T00:52:22.047183+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "phase": "Secondary views proposed from the front",
+          "action": "Generated the same adult body in front, right-facing side and back using only the reviewed refined front plus explicit anatomy facts.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/refined-front.png",
+              "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/secondary-views-prompt.txt",
+              "sha256": "abd015f6e250f394157c669fee5aa6f1d3acf71be795c419c885e92c0bdace86",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/source-packet.json",
+              "sha256": "4cf5319cc280332acf3f9fcae315c1e298868cee108f972d656685c93fce57d6",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/secondary-views.png",
+              "sha256": "f75108d6aad2e2be1a2b7a5b3beb6ffb22e317774716307fd13600de6b36308f",
+              "role": "Raw proposed turnaround, including generated labels"
+            }
+          ],
+          "review": "Viewed the raw sheet. Side body/legs/foot rotate coherently and far limbs are occluded. Back has no face features or front toes. Proposal changes the front slightly and low-chroma fill/alpha still require controlled cleanup.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 1
+          },
+          "generation_file": "exec-bf36edf1-fb52-468f-96b5-34557aca3c02.png"
+        },
+        {
+          "timestamp": "2026-10-20T00:52:22.049107+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Patched views before composed refinement",
+          "action": "Restored selected front, cleared labels, normalized neutral grayscale and alpha, and aligned foot contact. No anatomy-count patch was necessary; the side silhouette supports occluded far limbs.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/refined-front.png",
+              "sha256": "68948433e0d49fcae6e6cb6de75c8ee3e7bf102f2b1114479ffd5e8063f2eafd",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/secondary-views.png",
+              "sha256": "f75108d6aad2e2be1a2b7a5b3beb6ffb22e317774716307fd13600de6b36308f",
+              "role": ""
+            },
+            {
+              "path": "tools/patch_human_turnaround.py",
+              "sha256": "84208fe5367aad46134dc12b41a88bc44656aebf11e2c8de2100783a21317dcb",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/patched-views.png",
+              "sha256": "4ec47fba8771fb45c8f22bd00a2ace36c9ba97001132dee1a24464c72d57bfc6",
+              "role": "Patched front / side / back"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/patch-decisions.json",
+              "sha256": "e56bd97b0ab68c42a1f6aae9aeb09636d3438d284e0c1f2f201e27b2998d2c00",
+              "role": "Exact patch regions and registration decisions"
+            }
+          ],
+          "review": "Inspected patched sheet: feet visible in every applicable direction, genuine side profile, no background or labels in sprite panels. Back head/torso breadth consistency is explicitly requested in the composed refinement.",
+          "result": "RECORDED",
+          "tool": "Python Pillow",
+          "settings": {
+            "alpha_clear_below": 16,
+            "alpha_restore_from": 240,
+            "neutral": "equal RGB luminance",
+            "foot_baseline": 930
+          }
+        },
+        {
+          "timestamp": "2026-10-20T00:55:48.198028+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Refined patched views",
+          "action": "Refined the composed patched sheet once, preserving count, directions and bare feet; selected its coherent three-view result.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/patched-views.png",
+              "sha256": "4ec47fba8771fb45c8f22bd00a2ace36c9ba97001132dee1a24464c72d57bfc6",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/refine-patched-prompt.txt",
+              "sha256": "cf04ed7b85464b4dc080bae2d7807b1852cef602b4946db67079e724453e558f",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/refined-patched-views.png",
+              "sha256": "5678c33fb1561c1c1f88a89c07fc5605aa9433e97023bd3c0bf321ea4b14cc25",
+              "role": "Raw composed refinement"
+            }
+          ],
+          "review": "Viewed the complete returned sheet: one head/two arms/hands/two legs/feet; side is a full-body profile and back shows heels rather than front toes. Front/back head and torso remain the same body family. Raw transparent pixels carry irrelevant background RGB; registration explicitly clears it.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 1
+          },
+          "generation_file": "exec-20ed3e12-9f2f-43b4-bb61-88d4fdfd1523.png"
+        },
+        {
+          "timestamp": "2026-10-20T00:55:48.200669+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Registered body, head and explicit masks",
+          "action": "Registered selected views to physical contact, converted source to true grayscale, split body/head with explicit masks and a two-pixel body underlap. Prepared an isolated native contract.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/refined-patched-views.png",
+              "sha256": "5678c33fb1561c1c1f88a89c07fc5605aa9433e97023bd3c0bf321ea4b14cc25",
+              "role": ""
+            },
+            {
+              "path": "tools/register_human_base.py",
+              "sha256": "c246de68cf5c364d589062ce6e8e670bafbc491ab9b9b41e0f36753d78657676",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/model.json",
+              "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e",
+              "role": "Exact layer registration and palette contract"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/registered-assembly.png",
+              "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a",
+              "role": "Recomposed registered front / side / back"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-south.png",
+              "sha256": "0c15a4c60887019c8b12466a1dce728928ede488409997784c9842f92b323934",
+              "role": "body ownership mask / south"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-south.png",
+              "sha256": "91ab4a405e9611f8a388429ac1ee81ea6654fe511b051d805021a50877112d68",
+              "role": "head ownership mask / south"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-east.png",
+              "sha256": "d48a0b98139f37e38d67ccc9ebca99f4b01f598ae2dac8aff23679e7fd4ac742",
+              "role": "body ownership mask / east"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-east.png",
+              "sha256": "442f20d565ab7c3c89e4c726229b2c302caa0274356314ffd609308746b13ef2",
+              "role": "head ownership mask / east"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-north.png",
+              "sha256": "946f68c27c39d659f7c7e7e49c6a83ef923cf79a739af15202544307a3ce7750",
+              "role": "body ownership mask / north"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-north.png",
+              "sha256": "4422afeba5826c44683aeeb7630fd2fd310b79f0fe6bf26589919014caaf7b85",
+              "role": "head ownership mask / north"
+            }
+          ],
+          "review": "Viewed registered assembly and normal-size authoring sheet. Recomposition preserves the body and neck; no separate limb nodes added. Source pixels have equal RGB channels, with body/head under native foreground tint. Historical clothing remains unaccepted and is not regenerated by this body entry.",
+          "result": "PASS",
+          "tool": "Python Pillow",
+          "settings": {
+            "body_height_world": 1.21,
+            "head_body_underlap_pixels": 2,
+            "body_contains_limbs": true
+          }
+        },
+        {
+          "timestamp": "2026-10-20T00:55:48.201291+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "phase": "Authoring-scale review before native acceptance",
+          "action": "Reviewed the same registered model at 48x96 and 2x nearest display; native captures are still pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/model.json",
+              "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/registered-assembly.png",
+              "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/game-scale-review.png",
+              "sha256": "dfcd88d79635ba81e432ed2340917c121264ea1d4526655b66d5953f38d822d8",
+              "role": "Authoring-scale review, not native footage"
+            }
+          ],
+          "review": "Feet remain visible and side foot points right. No shoulder/neck holes or extra hands. The entry remains IN PROGRESS until the real native body evidence and current bindings are reviewed.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T01:00:03.908420+00:00",
+          "step": "native_body_review",
+          "phase": "Native attempt 01: retained diagnostic failure",
+          "action": "Ran isolated hidden native Qud with the registered human body. Four-facing captures rendered, but the existing diagnostic rejected a completed hurt reaction for missing its narrow midpoint window; save/load was not reached.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/native-contract.json",
+              "sha256": "cd588e2e566d2a816a733c67d187670742fc14dfddc6f6d1dbdabb320ce68d4b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/native-attempt-01.json",
+              "sha256": "db4fd1f1529749bb9c634601352b1ec02ad15b520a74add9b809a9d640331f3d"
+            }
+          ],
+          "review": "Failure inspected. Actual hurt start/end exist; no claim of a passing batch or save/load. Diagnostic is corrected without changing animation timing, then a new isolated run will verify completion.",
+          "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-20T01:02:52.068448+00:00",
+          "step": "native_body_review",
+          "phase": "Validation deferred by user instruction",
+          "action": "User requires generation of all pending textures, objects and creatures before native validation. The already-running second probe exited; no new probe will be started. Reverted the diagnostic code change and retained the existing generated artwork.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No validation acceptance or completion credit assigned. Resume generation and its visual corrections. Native checks remain pending until the all-conversions gate.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T01:05:15.309900+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "phase": "Authoring complete: shared human male base",
+          "action": "Concluded visual authoring review of the registered neutral model, including explicit feet and whole-body side orientation. Native acceptance is intentionally pending until all conversions are generated.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/model.json",
+              "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e",
+              "role": ""
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/registered-assembly.png",
+              "sha256": "20883b2586c0045436f258a90e8411eea6909762cda532a6b379fcb3d6e3393a",
+              "role": ""
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/game-scale-review.png",
+              "sha256": "dfcd88d79635ba81e432ed2340917c121264ea1d4526655b66d5953f38d822d8",
+              "role": ""
+            }
+          ],
+          "review": "Body/head layers recompose without a neck gap. Two arms/hands and paired feet are retained; east is a genuine profile, north has rear heels, west uses the documented east mirror. Equal RGB channels preserve neutral source tint. Clothing fitting belongs to the separate fitting entries.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T01:31:29.305480+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Shared centered canvas registration v2",
+          "action": "Translated body, head and segmentation masks together to contact (256, 950) on unchanged 512 x 1024 canvases. Preserved v1 and replaced compensating horizontal render offsets with a common canvas pivot. No resizing or native testing.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-human-male/v1/model.json",
+              "sha256": "62eb59d1943b8f64bdcb2503f171bcb6c908e1d72eb24e882de2ef4cfe1a701e"
+            },
+            {
+              "path": "tools/center_human_registration.py",
+              "sha256": "16beef95e1ebeee0d7329f250b568c49a1264704c7bebdbefc72ae184ab64cff"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-south.png",
+              "sha256": "10f4f1aed4788afe28e3a9af63b4efa3d52c2286022075a9fd2d30bea298f061"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-south.png",
+              "sha256": "0c15a4c60887019c8b12466a1dce728928ede488409997784c9842f92b323934"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-south.png",
+              "sha256": "eebe09d48114fce7ce76d08afa684200f9912573e4268437b9efa5e10bfc777a"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-south.png",
+              "sha256": "91ab4a405e9611f8a388429ac1ee81ea6654fe511b051d805021a50877112d68"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-east.png",
+              "sha256": "31c4f1e51880a225275c38389f6ac31d8512317c8787ede7c33e184692659dd5"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-east.png",
+              "sha256": "d48a0b98139f37e38d67ccc9ebca99f4b01f598ae2dac8aff23679e7fd4ac742"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-east.png",
+              "sha256": "8ff86ae187d5cf612b48fb4938469f09f037ec066da4def773c529dabf31e29b"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-east.png",
+              "sha256": "442f20d565ab7c3c89e4c726229b2c302caa0274356314ffd609308746b13ef2"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-north.png",
+              "sha256": "ca8d56852784783c4900311d66bda6da2d0afe9f2167e8285f4012f48e524b69"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/body-mask-north.png",
+              "sha256": "946f68c27c39d659f7c7e7e49c6a83ef923cf79a739af15202544307a3ce7750"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-north.png",
+              "sha256": "5fade74e67ccef9c2d93b267716e21f4185f6c628239eda44c708127d129a0e6"
+            },
+            {
+              "path": "art/conversion/body-human-male/v1/head-mask-north.png",
+              "sha256": "4422afeba5826c44683aeeb7630fd2fd310b79f0fe6bf26589919014caaf7b85"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-human-male/v2/body-south.png",
+              "sha256": "37833fb63565d9af0e01fa1f5f2986de097761bc0b534a6ed2aebc042cd96b57"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-south.png",
+              "sha256": "95f3d42db6b738ad0a8f16a33211ae545ae230ea8f6e72abb49c5da478b61fbe"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-south.png",
+              "sha256": "9ed0324137804609c9c0e8b430af17d3d2c90f645669f4f9844e2a67903a7b05"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-south.png",
+              "sha256": "0b71145761180ce50a5fe2d07f6264a34091ffa8642620f7c88965d3b12a1cd7"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-south.png",
+              "sha256": "16f2266b29a1fcccb5a44bcf5b8cfea4953fa1ce7e595724cfca9873ee971bd1"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-east.png",
+              "sha256": "10c7b8fbc8118fd46e208c093d4d975eefcbb36c1e74b7840f6de67f0e26f860"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-east.png",
+              "sha256": "3608d456aad367c705c6177bbee7b04887f9da8747eb6bab9f088c4ac9fc90c7"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-east.png",
+              "sha256": "a27cc8e70ed2e46845ea844b748af133a34eb8ebb660fbc1816815cd74d18fa0"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-east.png",
+              "sha256": "eacc182e21ac26760405cc02a623beaf4b199c12cee72592422df6cbceabfba6"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-east.png",
+              "sha256": "24705a71b541a8b416a12ca12a0b7587e4b31082c94a5dbdefd44f0f272a2f56"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-north.png",
+              "sha256": "328499003f02e2d3e4d4792c2e53ac8522896afa3050da5f18a3d6c505de32ee"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/body-mask-north.png",
+              "sha256": "178c8866f8bba7baaea91180f6faf229784bfeba720c810eaa019b725603d5d0"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-north.png",
+              "sha256": "6025b82030de0122cc32787913ce6fce720d88c8131963a477dfee8d335bb7ee"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/head-mask-north.png",
+              "sha256": "cd78bb7e39a7f7626a5ac7da9df8d0e067ec560e4ea0b69a8b605e29c62d780c"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/selected-north.png",
+              "sha256": "4fe07f85bc1f472241a2c22d089b8c4bdf70dc168ca916c077c463140a36cd8c"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/registration-decisions.json",
+              "sha256": "a34709e348b21b170c753fdb35a87d50bd2cf76d4362305cc5d11eef6bd8d87a"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/registration-comparison.png",
+              "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"
+            }
+          ],
+          "review": "Viewed front, side, back and mirrored west with guides: shared horizontal center and ground contact, complete hands/feet and unchanged head/body joins. Exact source pixels inside art bounds survive translation; full-canvas mask padding clips only outside visible art. Side profile retains natural asymmetry.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-woven-tunic/v1/model.json",
+        "sha256": "5b52916e7927b749811f972a88941839fd6db8db5caecf56f5191d3f994256f7"
+      },
+      "report": "docs/conversion-entries/FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0.html",
+      "plate": {
+        "path": "art/conversion/fit-human-male-woven-tunic/v1/assembly-comparison.png",
+        "sha256": "af6b370bbbf2b6a5128da23c87996587af4e1690c8a88a24adde5d44a8e4bc00"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T12:36:53.308738+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved actual Woven Tunic: coarse flax and watervine rope, Body/0 binding and y/y tint. Retained individual description modifiers in source metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/prepare-source.py",
+              "sha256": "417705edc63310404819c75234b6ec7372f0c182fe68fae464d8e6cb6e3c9ec0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            }
+          ],
+          "review": "Inspected cardinal male construction, complete shoulders, clothing coverage, unchanged original body and inherited corrected arm ownership.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:36:53.309219+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected original human-male v2, actual TribalA convention reference and Qud glyph. Description governs flax material despite chainmail filename.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/prepare-source.py",
+              "sha256": "417705edc63310404819c75234b6ec7372f0c182fe68fae464d8e6cb6e3c9ec0"
+            }
+          ],
+          "outputs": [],
+          "review": "Inspected cardinal male construction, complete shoulders, clothing coverage, unchanged original body and inherited corrected arm ownership.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:36:53.309335+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed male tunic/rope/hem around fixed body. Reused corrected male robe v2 natural cuff/forearm/hand masks because body and sleeve locations remain identical.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/prepare-source.py",
+              "sha256": "417705edc63310404819c75234b6ec7372f0c182fe68fae464d8e6cb6e3c9ec0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/constructed-red-context.png",
+              "sha256": "2e857bb4652cd2c2684be5fbb2055dcc2d05a4a2b61be05d27f33a716e6012ce"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/constructed-neutral-context.png",
+              "sha256": "e38a3b15fcf4e31f1955bfd11e246ed9a6e91cca67930bf9853ecab58b52509c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/pattern-south.svg",
+              "sha256": "022c9d0b322fc16333fb483c9ce0213162e8f379adac4900b25e6ea6ca325e08"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/pattern-east.svg",
+              "sha256": "0b24d81cca3fd3ebae982ccffe3c55db2be7af34e102cea8122ea615e1220664"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/pattern-north.svg",
+              "sha256": "b7bf94d5cdb5103c70baa27a383bd5235aa8cc79eb05680b704ebe58c5db8a92"
+            }
+          ],
+          "review": "Inspected cardinal male construction, complete shoulders, clothing coverage, unchanged original body and inherited corrected arm ownership.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:38:44.236765+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual built-in contextual refinement for male flax/rope tunic on red registered construction with actual donor/Qud references. Generated body/backdrop not registered.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/register-garment.py",
+              "sha256": "63db1fca5cf305417b6f118d3bcf646ffa40b54f6800905baa20fa3e29a7b9ad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/imagegen-prompt.txt",
+              "sha256": "aa5d811a93b9e98d07e49e0734c2c7a7ba8511f0d288a0d2cce3333f79b21d5c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/refined-red-context.png",
+              "sha256": "50ddc24cf3174f9c82a77de2bfec1439e3bd33e09cb6b452dd43fa28db497d75"
+            }
+          ],
+          "review": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending.",
+          "result": "PASS",
+          "tool": "Built-in image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_inputs": 3
+          },
+          "prompt": "Use case: precise-object-edit.\nImage 1 is the EDIT TARGET: constructed Woven Tunic on a featureless RED adult human-male game mannequin. Left FRONT/SOUTH, middle complete RIGHT PROFILE/EAST, right BACK/NORTH. Image 2: original Qud inventory tile for identity only (its filename is chainmail but this is NOT metal armor). Image 3: actual RimWorld TribalA reference for compact cardinal shading and outline conventions only, not its asymmetric sleeveless cut.\nRefine only this single garment in context. Qud description: \"A coarse flax waist is cinched with a watervine hemp rope.\"\nPreserve the constructed closed short-sleeved tunic, loose thigh-length hem and natural curved cuffs. Add restrained coarse flax weave and broad fabric folds. Preserve the rope belt and small front knot; back has only the rope wrapping around the waist. No added pockets, buttons, armor, jewelry, shoes or other garments.\nKeep the exact registered body scale, pose, feet contact, strict cardinal camera and full three-panel composition. ALL exposed mannequin surfaces remain RED with red shading and dark outlines; they are segmentation keys. Garment and rope must remain neutral GRAYSCALE for later independent equipment tint. Body is never part of the garment.\nNo body reshaping, no extra limbs, no detached arms or hand-shaped holes drawn into fabric. Return the clothing WORN on the same body only; no second isolated garment. Transparent background, no text or labels, no drop shadow or background glow."
+        },
+        {
+          "timestamp": "2026-10-20T12:38:44.238869+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Transferred same-output flax material to intact male tunic pattern; explicit same-source continuation fills concealed fabric before composition. Retained separate original-body masks with corrected hand geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/register-garment.py",
+              "sha256": "63db1fca5cf305417b6f118d3bcf646ffa40b54f6800905baa20fa3e29a7b9ad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/registration-decisions.json",
+              "sha256": "0bbcebddee66d68138fc4311edb958bb6e73962158cc44267c2d34c6a17f5690"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/intact-garment-comparison.png",
+              "sha256": "e439e9fd49f56b0dc666cdb5fec554d2cbf581be4ed76c50a727e92dd9d60d05"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/continuation-comparison.png",
+              "sha256": "d107d90dd45f6ae8fc129afef92d820364899c9da4b858ba8623b0a58819b7d8"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/body-mask-comparison.png",
+              "sha256": "0c610bafcea0600ac220695b680995f7aff465c1aa064a2317f69369ddb91231"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/body-overlay-comparison.png",
+              "sha256": "7598b16e5b5db419295a3d2a87c05e60714e938d9e849dc0a86d60e52d2dd605"
+            }
+          ],
+          "review": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:38:44.239550+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Composed continuous cloth and restored original arms with the applicable already corrected body mask. No torso-outline slivers reintroduced.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/register-garment.py",
+              "sha256": "63db1fca5cf305417b6f118d3bcf646ffa40b54f6800905baa20fa3e29a7b9ad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/model.json",
+              "sha256": "5b52916e7927b749811f972a88941839fd6db8db5caecf56f5191d3f994256f7"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/assembly-comparison.png",
+              "sha256": "af6b370bbbf2b6a5128da23c87996587af4e1690c8a88a24adde5d44a8e4bc00"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/mask-off-comparison.png",
+              "sha256": "20fb3fe716e3c018c492b2ce8e4fba9c1a19b181f2f297ca4e76d4bbe38f4f72"
+            }
+          ],
+          "review": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:38:44.240140+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed all cardinal views/mirrored west and independent palette at authoring and intended sizes.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/register-garment.py",
+              "sha256": "63db1fca5cf305417b6f118d3bcf646ffa40b54f6800905baa20fa3e29a7b9ad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/game-scale-review.png",
+              "sha256": "77b7bf159c6fa63c2713ef2260d79aa3c6aa557d606c198a46c63e8929f57f83"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/independent-palette-comparison.png",
+              "sha256": "7a7c85444da408f153e43407209f836f029f51ff05e28e694ac51a105865fc0c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/authoring-review.json",
+              "sha256": "1abf029ac2e7abbdcb1440188cff32dde14dc1325639d93d36579b018b16651f"
+            }
+          ],
+          "review": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:38:44.240713+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Completed source-bound contextual fabric, body-matched whole tunic and late natural body visibility process.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/source-packet.json",
+              "sha256": "adfa7e683f2963c8b4fd15bce8a31258c0f190a2e8cc621f19784499d7909cf1"
+            },
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/register-garment.py",
+              "sha256": "63db1fca5cf305417b6f118d3bcf646ffa40b54f6800905baa20fa3e29a7b9ad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-woven-tunic/v1/artifact-manifest.json",
+              "sha256": "238b1159e9e9eaed93bdf5702356a796ba4deb4d54a7295340378adf789f9104"
+            }
+          ],
+          "review": "Inspected SEN and mirrored west, full tunic, independent original-arm overlay, neutral/y-y palette and intended-size output. Original male body, contact and corrected cuff/forearm/hand ownership retained. Coarse flax/rope identity is source-described; contextual material transferred into continuous editable geometry and concealed fabric completed before body overlay. No second isolation generation or baked limb holes. Native acceptance remains pending.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+        "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+      },
+      "report": "docs/conversion-entries/FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0.html",
+      "plate": {
+        "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/headwear-comparison.png",
+        "sha256": "d0c44287d088f1d5153fb89d6f89ef1c08873f6dd8284f899e7f4cff1e9cf903"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.293879+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved actual Wide-brimmed Hat description, sw_hat source/y-b palette and male Head/0 bindings. Captured painted/feathered modifier text is retained; this shared native tile base does not invent unobserved modifier art.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.294290+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected the unmutated male v2 body and same actual Qud/RimWorld CowboyHat reference packet used for this canonical item.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.294745+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused the canonical editable whole crown/brim and band, transformed together by recorded male-head landmarks. Retained fitted editable patterns for all three cardinal views.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-south.svg",
+              "sha256": "3f083b7809c5b2c1a966ec80282b3bbe77a6bcab4a17338ba120c815103d760d"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-east.svg",
+              "sha256": "57c43a1907abb70cc7c615a2c529e31f4618e709f8e904d064f01f1d103455c8"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fitted-pattern-north.svg",
+              "sha256": "0921b3d6251ae9b51c163f347e6f3c20ddfeb82204352b18ea06e70223b270db"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.296172+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused the actual one-item contextual refinement and exact prompt. No new generation: only the complete item is fitted; generated mannequin is never a body source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/imagegen-prompt.txt",
+              "sha256": "63198a50fdb0998c364c9fec8c25828a8f7d98c8f22d0adb7d6c73b666f14753"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.296646+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retained canonical continuous hat pixels through one premultiplied transformation per item layer. The independent band follows the same transform. Zero visibility/empty overlay explicitly keep the original head behind headwear.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/intact-garment-comparison.png",
+              "sha256": "a0916b39e0f341318d687b6468b467aa8a1606e2f15e7e8e8570bb713f2aed19"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/band-detail-comparison.png",
+              "sha256": "ab0aaffff003c075dbae6a442c4719e438e82695121d7d46f0388840b92e456f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/body-overlay-comparison.png",
+              "sha256": "bb8a564a9fd111fd4e45c39bf7d5b6ebafe1f39662a792db5992ab06ec401a38"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297129+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspected original male head/body plus full transformed hat in SEN and mirrored west. No arm/sleeve ownership applies to this headwear.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/headwear-comparison.png",
+              "sha256": "d0c44287d088f1d5153fb89d6f89ef1c08873f6dd8284f899e7f4cff1e9cf903"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/assembly-comparison.png",
+              "sha256": "cc72ef43ba9c665784114a9906ea818566ae5169d523f9c2ec147c8c9553a6ac"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "766861eb730e295fb74ce0484293ddafae2096bad11556369c9dbef3cb485120"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297590+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected intended-size facings and separated pale y hat/blue b band; illustrative body tint remains independent.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/game-scale-review.png",
+              "sha256": "f3995bd81d4b7a4cae4bcb8256a7bb6a20316375dcd77fec6ab31bc8ec04beaa"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/independent-palette-comparison.png",
+              "sha256": "51115b7202cf804365d97d99b16dbd7779dec92183dc54f2e5049e5858dd58b8"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "b7fefb900e5d67e20bcae5fce7fb2c1c42eafd6495cba5eb59cab6e6a9b13991"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:37:46.297952+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled this body-specific fitting under the full-source, fixed-body, late-visibility recipe. A single constrained head-relative transform sufficed; no unnecessary regional warp.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/fit-hat.py",
+              "sha256": "ac94c380f8519fd2dd573c894c55391c968557a7dbd36b58544eba195369c58c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json",
+              "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/artifact-manifest.json",
+              "sha256": "9967269dcd1fe3685c56c85d6de87caa3cd2aec7ece341e463eacfb2c28a871c"
+            }
+          ],
+          "review": "Inspected male full-hat/head assembly in straight SEN and mirrored west, independent y/b palette and intended-size preview. The original head width/top determine the one whole-item x-scale/xy-translation, shared by hat and band. Full body/head pixels, scale and ground contact are unchanged; neutral creases/stains remain the canonical source. Zero skin overlay is correct for this complete hat. No new ImageGen call, local mesh, extra garment isolation or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2",
+      "model": {
+        "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+        "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+      },
+      "report": "docs/conversion-entries/FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2.html",
+      "plate": {
+        "path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png",
+        "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T16:20:18.348974+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved male humans/Mehmet -> actual wrought-iron crescent item -> full Iron Vinereaper/BaseAxe/MeleeWeapon/Item/InorganicObject/PhysicalObject/Object ancestry. Retained five individual ordinary Hand/2 bindings and exact source tile/y-y roles. Static one-hand declaration, snapshot occupancy and unknown actor event result are distinct.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "4f7e2b8bf50147c176ca2dce1164fdd50177db0c0a70be2df120e633dad1fac5"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.349349+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected registered male v2 and identical female canonical tool construction. Traced current VWE_MeleeWeapon_Axe texPath to NewThings/Hatchet through LoadFolders1.6/1.7; female legacy Axe.png remains valid installed visual history but is not the current def texture. Current hatchet description informs one-handed class; explicit XML/live drawSize remains unknown.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-comparison.png",
+              "sha256": "4f7e2b8bf50147c176ca2dce1164fdd50177db0c0a70be2df120e633dad1fac5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png",
+              "sha256": "702d631c642aeaf14bc2116679133b0c89efc34e4aea1f14ea7dd07061f3b3cf"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.350237+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused exact editable Qud crescent/shaft geometry; new male hand landmarks and0.9828877005347593 raster scale retain same item physical size as female world mapping. Primary grip580; no two-hand support pose invented. North accounts for mirrored source pivot255. One item over bare original base, stationary display only.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/prepare-source.py",
+              "sha256": "c5447a05e15cb84bce18d8fc126e06d5e25082dd1c2882d610d087ae29bba1ad"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-pattern.svg",
+              "sha256": "a2d8c7e50fe1523338a3321dbd5cb3d7fda9376904439f82a3bfa560c380ec86"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-canonical.png",
+              "sha256": "854a87ba8141051a50c891dcbdbe7c4ac6b4da7379fa531748eae97266798484"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-neutral-context.png",
+              "sha256": "b059547ab22381560ece05ce2e9654e9ace07ad5d3819ec64e66f84fb8accf08"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "153699de92f4f107632ae5342e305bc8929271af52c95cac45686f0f340ad9a5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "df56697e7a3b43519d2ef2ead7d5fa72a354b6d0c88a89f84dbb85b1308d3563"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.351871+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual male contextual forged-material refinement, with Qud source, current actual Hatchet and cleaned prior full tool reference. Generated body/halo are excluded. Cleaned reference zeroes hidden RGB only where alpha0; no visible source/body change or generative isolation. No consequential geometry patch or second refinement call was needed/invented.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "sha256": "153699de92f4f107632ae5342e305bc8929271af52c95cac45686f0f340ad9a5"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png",
+              "sha256": "702d631c642aeaf14bc2116679133b0c89efc34e4aea1f14ea7dd07061f3b3cf"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/imagegen-prompt.txt",
+              "sha256": "ff37a979b85902f18d2057e8bf94dc301843df1005074c5a0544d9adc0f588b6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/source-packet.json",
+              "sha256": "759297e164402a2a371b08f3415c274610b1420d3ebb8f4d1c48a7c145ea1459"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "6871deeea4f941ae5e7ee9af209c7a50b4d8e22650ebc87268a4c40a5ee467bb"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit the FIRST image, exact1536x1024 three-column close-up sheet. It shows the SAME Iron Vinereaper on a fixed red adult male mannequin: SOUTH/front, EAST/right profile, NORTH/back. Preserve exact crescent geometry, open inner curve, head-to-shaft attachment, straight shaft, lower hand grip, scale, layout and per-view placement. Every red body/hand pixel and its existing occlusion stays unchanged. Transparent background, no labels.\n\nQud description: \"Wrought iron was moulded to a crescent for scything the rough hides of watervine.\" SECOND image is actual Qud glyph, identity/proportions reference. THIRD is actual current RimWorld Vanilla Weapons Expanded Hatchet, single-handed flat-rendering reference only; do not replace the Qud crescent. FOURTH is the already refined COMPLETE canonical vinereaper used for the female fitting: match its forged gray material and the SAME object design, rather than inventing a different male weapon. The male input already corrects for body pixel/world-scale differences; do not enlarge the weapon to fill its column or match the taller body.\n\nRefine the existing iron surface in place with restrained forging texture and subtle cutting-edge shading. Equal-RGB neutral gray, original clean dark contour and two small mounting marks. No wood grain, rope, wraps, teeth, gems, runes, machinery, glow, motion blur or sparks. The shaft material is unspecified: retain the existing simple neutral treatment. Do not redraw the mannequin, change grip or silhouette, isolate the tool, add clothes or reveal hidden material. This is a stationary authoring display, not a drafted/ready pose. No shadows, halo, backdrop, vignette or colored reflections. Preserve transparency. One contextual refinement only.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-human-male-iron-vinereaper/v1/constructed-red-item-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/iron-vinereaper-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814383360/Textures/NewThings/Hatchet.png",
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-human-male-iron-vinereaper/v1/canonical-material-reference.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.353350+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Registered neutral material through recorded male crop/world-scale mapping; completed hidden shaft on full tool before final body ownership. Exact constructed full alpha and own ink retained, shaft detail separate from head, transparent RGB cleared on canonical outputs. No destructive hand hole or second ImageGen isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/register-vinereaper.py",
+              "sha256": "6fbd105c322e06a9d29fb07ad8bed2bcaa2561778ba5cdae2c4229fb7f46878f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/refined-red-context.png",
+              "sha256": "6871deeea4f941ae5e7ee9af209c7a50b4d8e22650ebc87268a4c40a5ee467bb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/registration-decisions.json",
+              "sha256": "7824dffc5918ef31c203221072aae039a52d71c9a8645fc36bda042ccadb5c88"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/intact-canonical.png",
+              "sha256": "67ab522fe413ae75116896e8f9d7671fdb0b9d63fdda471d9a96110d88a4b44c"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/shaft-canonical.png",
+              "sha256": "469047298baf78f24b5e83752d5462bf884fcda5459d4fbff560516bbb3d0e71"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/canonical-continuation.png",
+              "sha256": "6d94045aa3c6e8828ade8bf41e979431b2640fa39194242941ad8e297c50e01a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/full-item-comparison.png",
+              "sha256": "758c844d64f7267a60be7e3a8a6b9d7d1c4f4804460bbb4301d4c2659b3533c0"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.353958+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed full item with original male foreground hand and rear body depth, same registered body/contact. Explicit source grip580 and per-facing hand controls; reflected north/source-pivot and mirrored west reviewed. Display angles do not establish final horizontal ready/resting state.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/fit-controls.json",
+              "sha256": "df56697e7a3b43519d2ef2ead7d5fa72a354b6d0c88a89f84dbb85b1308d3563"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png",
+              "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/grip-comparison.png",
+              "sha256": "f3b8664e943bd3c2ba2819e4fcb0c8da5b3ff2ba20523011d7b615f2a260d4a6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/depth-off-comparison.png",
+              "sha256": "64ccdae8ec62cf830293e7ed5a11cc6279f307ad67abd57215e430673bbbb609"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:20:18.354617+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended size and cross-body common-world-scale plate, equal-channel production RGB, native y/y equipment and independent Mehmet522 W example. Exact width/height mappings confirm same item physical scale; no measured native weapon length or donor drawSize invented. Native tests remain behind all-generated gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json",
+              "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/weapon-metadata.json",
+              "sha256": "9f2998caaf24c18b9fd17872548a862005cf2ea74a8859004e90294aa7ca319a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/cross-body-scale-comparison.png",
+              "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/independent-palette-comparison.png",
+              "sha256": "a883c05c5d49e7179c626e79485d56a6791a598a290f57e6b68ba7ab56966a85"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/game-scale-review.png",
+              "sha256": "de6f2e1cb3c38e35c161bddaf048e22bed9516954d8300c5cacc7d429f93ad18"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/authoring-review.json",
+              "sha256": "a05e15b95d77c816c9b505cb4fe533e76cfbedc340f3173485c42007fe986e1f"
+            },
+            {
+              "path": "art/conversion/fit-human-male-iron-vinereaper/v1/artifact-manifest.json",
+              "sha256": "58fca9b453fb5dc29c3e78a3b5806c6b1986fb829cc6216887193777fad0669f"
+            }
+          ],
+          "review": "Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-HUMAN-MALE-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-human-male-sandals/v3/model.json",
+        "sha256": "d6b64225968ecc379fc6c1310a6f3339c5b9ad7dfa3899f291f8685ad708c3f7"
+      },
+      "report": "docs/conversion-entries/FIT-HUMAN-MALE-SANDALS-FEET-0.html",
+      "plate": {
+        "path": "art/conversion/fit-human-male-sandals/v3/footwear-comparison.png",
+        "sha256": "3b061e4bb0ebebd2e00737f873845451e8e726f9e4c0269c28a8f2a8d133cc6b"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.849245+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved actual Sandals identity, Body-independent Feet/0 binding, gravel-cracked soles, native y/w and observed metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/source-packet.json",
+              "sha256": "b3a47ad31a556cb24bb66a1c819d67704a9a06b69fa110704b7fa33ae7fe6ff3"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.849415+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected registered male human v2, actual Qud/Vanilla Apparel Expanded item references from existing source packet, and complete source-bound Sandals registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.849808+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Fitted each complete canonical sandal to the original male foot footprint; recorded horizontal affine controls, preserved y/contact and generated editable fitted geometry and original-foot overlays.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/registration-decisions.json",
+              "sha256": "ceec7767639c27d11c62093e3dc1999c83d7ad26835be058b2167663a85ce4da"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fitted-pattern-south.svg",
+              "sha256": "68c7b262e5c97616ddf45948eae14015eff71c0ba3bde76b6201eae5c4004a74"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fitted-pattern-east.svg",
+              "sha256": "d7924fe7011fcd9b0d34a5d9c470cab81344e0dc303fc403dd2dade91e18636a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fitted-pattern-north.svg",
+              "sha256": "92cf20e06b916f7da32721f6b7ace28556fd3d6b4105ffdcef53c8304df22e03"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.851142+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused the actual logged Sandals contextual refinement and material source. No new ImageGen call or male-body preservation claim for the original female contextual output. Deterministic fitting handles the new target body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/refined-red-context.png",
+              "sha256": "8a0cf59bd4f5d61fe4b697d7f94eae45a3657b75dfe1a8f7ceeaa850c4853e3c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/imagegen-prompt.txt",
+              "sha256": "c308f42b1979f5c8ffb238e5a447de510c18c8561b3f158ac9775079bc25edbf"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.851475+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Transformed full canonical primary/detail art together in premultiplied alpha and regenerated separate original-foot masks from fitted strap coverage; no body-colored patch or limb cutoff.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/intact-garment-comparison.png",
+              "sha256": "5d84711f0367526d90971c185d4c382ca0bc4e28fefc98e14aca1a20b0a57e88"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/body-overlay-comparison.png",
+              "sha256": "2e012407311ff088265a14308985471cbd832c69ae8134af4c1dfd9465d1fff5"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.851908+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Restored original male feet above full soles while keeping straps above skin in SEN and mirrored west. Original body/contact unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/model.json",
+              "sha256": "b83070e1d6ade0d87b68349d56a9b43523261b83d11a70206b0ee2940ec3086d"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/footwear-comparison.png",
+              "sha256": "fc3d1a44dc18a5e15aaf7ff97450df2fd2d55ee9fb4d75583d0c58299850e1cf"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/mask-off-comparison.png",
+              "sha256": "b50e652d14c536d39853bf129cd029612bc256c19690bf0a48bee29987425d7d"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.852305+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed foot fit, ground/contact, native y/w versus independent body tint and intended size.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/game-scale-review.png",
+              "sha256": "5731ef3af17d98b6be78ae4ef2d48ca3159913727d11ffb2041ed034b2100421"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/independent-palette-comparison.png",
+              "sha256": "891e8701a201b7a9d35e490f2802b361140811323d72b407419cdf8d9545a0bc"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/authoring-review.json",
+              "sha256": "d6950dbbc505394b6e3c57afd01675c42ec2bc1fbc97b4b883a3ab850ddd2766"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:17:17.852498+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Completed source reuse, controlled whole-item fit, intact sole/strap art and foot-specific late visibility.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/fit-sandals.py",
+              "sha256": "b9b73cf9ebc93ea1dc714014be06c8151885bc6fe829cc58a72d09792d7e1c75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v1/artifact-manifest.json",
+              "sha256": "ebb78bff485f9261af100358be743f23a83846fae2cd147c6f37bbdde41add12"
+            }
+          ],
+          "review": "Inspected original male feet with fitted complete sandals in all cardinal facings and mirrored west, independent native y/w palette and intended-size whole body. Reused the actual refined Sandals canonical source, not generated anatomy. Per-foot horizontal fit controls and editable fitted geometry preserve complete soles/straps and y950 contact; target body remains unchanged. New foot visibility exposes original skin outside straps. Native state acceptance pending full-set gate.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T16:41:26.923035+00:00",
+          "step": "structural_review_after_refinement",
+          "action": "Withdraw v1 generation-ready credit following the user-identified shared strap construction defect.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/pattern-east.svg",
+              "sha256": "8b563ab4441c1d8965654a41fbe742a962552142bb6cec893453331dda94a006"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/refined-red-context.png",
+              "sha256": "8a0cf59bd4f5d61fe4b697d7f94eae45a3657b75dfe1a8f7ceeaa850c4853e3c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/independent-palette-comparison.png",
+              "sha256": "8079355e90a18c391c6246e26a21b5336176421be1069e019fa0fbb990b92c62"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/user-rejected-palette.png",
+              "sha256": "e496682e16897cdcd4b0b954da0176c50ce5d9feb6c8e62f1bfe0a7f3d3fec41"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/user-rejected-context.png",
+              "sha256": "33914335795d5a8bbc2a8124d6f226c4c4bcb11ce5b3518fa2bda4e64285e356"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/initial-construction/structural-correction.json",
+              "sha256": "af7065e1b3af3c35a9f0d72fa987e122907aa839af4014fde492471ad3a6b65b",
+              "recorded_path": "art/conversion/fit-human-female-sandals/v2/structural-correction.json",
+              "note": "Exact original hash recovered from deterministic initial construction and preserved newline serialization after pre-refinement source edit. Current construction has a separate record."
+            }
+          ],
+          "review": "Profile straps terminate below the foot upper contour instead of wrapping over full foot height and reaching their anchors. Shared v1 source affects all four fits; previous authoring PASS is withdrawn. No native acceptance performed. Each fit must be corrected and reviewed individually.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Resolve the actual male Feet/0 bindings and fixed male body against the corrected shared Sandals source, native description/palette and original donor role.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/source-packet.json",
+              "sha256": "fd2bdd021184d6f9381f2bfc1204d769bd699925c18267ab0551ca09fe406b4e"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Fit corrected complete soles/straps per foot to the original male bounds; no deformation of body or removal of source material.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/fit-sandals.py",
+              "sha256": "e345f4c7b85240df54d367f3f8ef9d0092216a87fd7a77ec0d5c324e7cc3a0bc"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/registration-decisions.json",
+              "sha256": "5a3598186daf490ca1fcbf609a8f68d05ab499fe6941c18abce45fc59baf31e9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/intact-garment-comparison.png",
+              "sha256": "eace9cd873dc4ff8935187c0619d7651cb35b7879140e675edd2f3f6b69e325d"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse the exact contextual retry and its structural inspection from the shared source; no additional generation call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/source-packet.json",
+              "sha256": "fd2bdd021184d6f9381f2bfc1204d769bd699925c18267ab0551ca09fe406b4e"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retain full fitted item and separate original-foot visibility, with the same coordinate map for leather, tint and masks.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/model.json",
+              "sha256": "cfb6b8f8f72f0e07cdeee8338f45bb966e20875e2491b1b26bdc1840e448daf3"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/body-overlay-comparison.png",
+              "sha256": "d5221bcd1f18a35b0ca914081f46399f5511e0dd1b3e105ed88dfe97186648cc"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/mask-off-comparison.png",
+              "sha256": "7376ca091c13b9b575b3024e096229ce9ec8540872d99ac55fa0c861c5d8e0ff"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspect all directional male fits for connected strap coverage and late body ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/assembly-comparison.png",
+              "sha256": "dbef963f372b7391759f8b95adab4ca05d851267a69c2d6402277b7b0d2488d6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/footwear-comparison.png",
+              "sha256": "7fb4ffd5a3ec54d4321b5625e5fd8133a75ab3bab7d6f6c6fb82663056613c4c"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:47:42.742881+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect intended-size and independent native/body colors; verify file/frame and original body ownership invariants.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/game-scale-review.png",
+              "sha256": "c05fbf4d4ce5562702b8fa1d4f8d440673a06f138bb8620b81f452c163730eac"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/independent-palette-comparison.png",
+              "sha256": "31729a94526f0cdbd2315be01c56174f16a901c574f58ba1d90b3bc54bd0a019"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/authoring-review.json",
+              "sha256": "31a5796ebd2ba7a5bcc15f026794e87cf6acacc6112b610d78eacaa155700233"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v2/artifact-manifest.json",
+              "sha256": "eeae817b210254a8a154bb84cea543d17494896abfdaaa30d2502ce52b530fea"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with crossed front and rear heel supports. Source/refinement reused from female v2; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:53:52.986837+00:00",
+          "step": "structural_review_after_refinement",
+          "action": "Withdraw affected shared sandal readiness after user identified rear ankle coverage gap.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/footwear-comparison.png",
+              "sha256": "45a131b248fdc23246434a12df7593b3f56f01375d91b25cf2b4eb65f4fdddda"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/ankle-width-correction.json",
+              "sha256": "e4908cb67a106bccb31aa8b4a97b0845157b12e6939c33c04e78c44c0d134fcd"
+            }
+          ],
+          "review": "v2 front/back ankle bands did not span the actual ankle width; user identified the remaining rear-view gap. Previous shared-source authoring readiness withdrawn; each fit needs corrected ankle controls and individual review.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Resolve the actual male Feet/0 bindings and fixed male body against the corrected shared Sandals source, native description/palette and original donor role.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/source-packet.json",
+              "sha256": "c4d92dd29edfd47c0a11ea6a484e3137b17b3a2ab2b1756533f37c6ba300313e"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Fit corrected complete soles/straps per foot to the original male bounds; no deformation of body or removal of source material.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/fit-sandals.py",
+              "sha256": "00c19e11f98cd104217d20368a7fbac9e5c15f06fae1a8ab7ef6be4b57d12ee9"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/registration-decisions.json",
+              "sha256": "aa0c2c8af61ead94a054e6404e9605961790800d419811fbe3d967e6a04f9b17"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/intact-garment-comparison.png",
+              "sha256": "c4a0d232391ed40d73897c6f9a067d2db9909fbf79514029e57678347a7fdcc2"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse the exact contextual retry and its structural inspection from the shared source; no additional generation call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/source-packet.json",
+              "sha256": "c4d92dd29edfd47c0a11ea6a484e3137b17b3a2ab2b1756533f37c6ba300313e"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retain full fitted item and separate original-foot visibility, with the same coordinate map for leather, tint and masks.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/model.json",
+              "sha256": "d6b64225968ecc379fc6c1310a6f3339c5b9ad7dfa3899f291f8685ad708c3f7"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/body-overlay-comparison.png",
+              "sha256": "bf32a05d6096883cdb265df91ada17608c546a03baf34b19f0d3647e7985be0b"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/mask-off-comparison.png",
+              "sha256": "de934b2b897d7c8ac96db8385e3b276664500f8cb169d65731832cda698497a5"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspect all directional male fits for connected strap coverage and late body ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/assembly-comparison.png",
+              "sha256": "cafd0aa417ee8d18bcd6170f2cdb95bbfc7cf685449a9c5d263312b11f14778a"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/footwear-comparison.png",
+              "sha256": "3b061e4bb0ebebd2e00737f873845451e8e726f9e4c0269c28a8f2a8d133cc6b"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:25.778944+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect intended-size and independent native/body colors; verify file/frame and original body ownership invariants.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/body-human-male/v2/model.json",
+              "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/game-scale-review.png",
+              "sha256": "b83ffb9a48f07559a5f560774a9aa194e1f6ed9f077846d26c9c93ca22562df6"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/independent-palette-comparison.png",
+              "sha256": "6009921f4e8e08e3efc1dcbbdb9738cd6fd5e7e6bd289955119801fc2163f70d"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/authoring-review.json",
+              "sha256": "5844fb08cfa602d501601404dad998c8191efec70cad086da6af2293665b9825"
+            },
+            {
+              "path": "art/conversion/fit-human-male-sandals/v3/artifact-manifest.json",
+              "sha256": "0507fc48627452c4dca2cced03797b4718bba0daf749880cb84e17d54744c7f7"
+            }
+          ],
+          "review": "Inspected male SEN and mirrored west: continuous profile bands cover the foot height and reach the sole, with front/rear ankle bands spanning both original ankle edges, crossed front straps and rear heel supports. Source/refinement reused from female v3; whole-foot horizontal fitting matches the original male foot bounds, keeping vertical contact and original skin unchanged. Native palette remains sole y / straps w with illustrative body C. No new ImageGen call, native acceptance or named mutation assembly.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    }
+  ],
+  "rule": "Reuse exact earlier source/reference/manual/refinement/secondary/patch/extraction histories; no new body, profession pose, costume or ImageGen call."
+}

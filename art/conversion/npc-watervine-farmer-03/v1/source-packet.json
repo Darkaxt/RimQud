@@ -1,0 +1,380 @@
+{
+  "entry": "NPC-WATERVINEFARMERJOPPA-03",
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "source_snapshot": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+  "identity_chain": [
+    "WatervineFarmerJoppa",
+    "BaseWatervineFarmer",
+    "BaseFarmer",
+    "NPC",
+    "BaseHumanoid",
+    "Humanoid",
+    "Creature"
+  ],
+  "race_description": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "captured_actor": {
+    "instance": 510,
+    "blueprint": "WatervineFarmerJoppa",
+    "species": "human",
+    "gender": "female",
+    "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in her gnarled, brown hand is a curved vinereaper of iron with which she culls moisture-swollen wafers from the viridian plant called watervine.",
+    "anatomy": "Humanoid",
+    "parts": [
+      {
+        "id": 245,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 560,
+          "blueprint": "Woven Tunic",
+          "description": "A coarse flax waist is cinched with a watervine hemp rope.\n\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Artaxerdates III}}:\n\nDeep in the Nomads' District of Anenna, Artaxerdates III discovered Turched Knot. There he befriended birds and fought for everlasting glory.}}\n\n{{rules|+45 reputation with the Cult of Artaxerdates III}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_chainmail.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 246,
+        "parent": 245,
+        "type": "Head",
+        "variant": "Head",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 561,
+          "blueprint": "Wide-brimmed Hat",
+          "description": "The crown is crushed by wear into a hundred papery creases, and the brim is stained in the fractal signatures of sweat and salt.\n\n{{rules|Slender: This item weighs less than normal.}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "items/sw_hat.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "b"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 247,
+        "parent": 246,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 248,
+        "parent": 245,
+        "type": "Back",
+        "variant": "Back",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 249,
+        "parent": 245,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 250,
+        "parent": 249,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 562,
+          "blueprint": "Iron Vinereaper",
+          "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_axe_10.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "y"
+        },
+        "defaultItem": {
+          "instance": 563,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 251,
+        "parent": 245,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 252,
+        "parent": 251,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 564,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 253,
+        "parent": 245,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 254,
+        "parent": 245,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 255,
+        "parent": 245,
+        "type": "Hands",
+        "variant": "Hands",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 256,
+        "parent": 245,
+        "type": "Feet",
+        "variant": "Feet",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 565,
+          "blueprint": "Sandals",
+          "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "items/sw_sandals.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "w"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 257,
+        "parent": 245,
+        "type": "Thrown Weapon",
+        "variant": "Thrown Weapon",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 258,
+        "parent": 245,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      }
+    ],
+    "tile": "Creatures/sw_farmer1.bmp",
+    "foreground": "&y",
+    "tileColor": "",
+    "detailColor": "g"
+  },
+  "original": {
+    "tile": "Creatures/sw_farmer1.bmp",
+    "description": "The tatters of a sweat-stained kufiya thrash in the wind from where they hang about the farmer's neck. Clasped in his gnarled, brown hand is a curved vinereaper of iron with which he culls moisture-swollen wafers from the viridian plant called watervine.",
+    "kind": "creature",
+    "blueprint": "WatervineFarmerJoppa",
+    "reference_file": "village-originals/watervinefarmerjoppa-reference.png",
+    "native_mask_sha256": "79a5de38266c2aebbffc2776c3c364c6c560c2731f99d530b492dcddc0669425",
+    "reference_sha256": "1a7ae3aef72eb52facb495ce20d7eee015867fddb2e4d3a6ffa70c577eb8c3d1",
+    "info_id": 8230,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      78,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/watervinefarmerjoppa-mask.png",
+      "sha256": "79a5de38266c2aebbffc2776c3c364c6c560c2731f99d530b492dcddc0669425"
+    }
+  },
+  "body_model": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "equipment_bindings": {
+    "Woven Tunic": {
+      "entry": "FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-human-female-woven-tunic/v1/model.json",
+        "sha256": "a2db0b9840b85fcd9c3fb02010dedad0cfb325744cb3979e9a05d4636f68cc0b"
+      },
+      "instance": 560,
+      "part_id": 245,
+      "parent": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null,
+      "captured_item": {
+        "instance": 560,
+        "blueprint": "Woven Tunic",
+        "description": "A coarse flax waist is cinched with a watervine hemp rope.\n\n{{cyan|Painted: This item is painted with a scene from the life of the ancient sultan {{magenta|Artaxerdates III}}:\n\nDeep in the Nomads' District of Anenna, Artaxerdates III discovered Turched Knot. There he befriended birds and fought for everlasting glory.}}\n\n{{rules|+45 reputation with the Cult of Artaxerdates III}}\n\n{{K|Weight: 5 lbs.}}",
+        "tile": "Items/sw_chainmail.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "y"
+      }
+    },
+    "Wide-brimmed Hat": {
+      "entry": "FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0",
+      "model": {
+        "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+        "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+      },
+      "instance": 561,
+      "part_id": 246,
+      "parent": 245,
+      "slot": "Head",
+      "laterality": 0,
+      "manager": null,
+      "captured_item": {
+        "instance": 561,
+        "blueprint": "Wide-brimmed Hat",
+        "description": "The crown is crushed by wear into a hundred papery creases, and the brim is stained in the fractal signatures of sweat and salt.\n\n{{rules|Slender: This item weighs less than normal.}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "items/sw_hat.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "b"
+      }
+    },
+    "Iron Vinereaper": {
+      "entry": "FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2",
+      "model": {
+        "path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json",
+        "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"
+      },
+      "instance": 562,
+      "part_id": 250,
+      "parent": 249,
+      "slot": "Hand",
+      "laterality": 2,
+      "manager": null,
+      "captured_item": {
+        "instance": 562,
+        "blueprint": "Iron Vinereaper",
+        "description": "Wrought iron was moulded to a crescent for scything the rough hides of watervine.\n\n{{rules|Strength Bonus Cap: 2\nWeapon Class: Axe (cleaves armor on critical hit)}}\n\n{{K|Weight: 5 lbs.}}",
+        "tile": "Items/sw_axe_10.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "y"
+      }
+    },
+    "Sandals": {
+      "entry": "FIT-HUMAN-FEMALE-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+        "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+      },
+      "instance": 565,
+      "part_id": 256,
+      "parent": 245,
+      "slot": "Feet",
+      "laterality": 0,
+      "manager": null,
+      "captured_item": {
+        "instance": 565,
+        "blueprint": "Sandals",
+        "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+        "tile": "items/sw_sandals.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": "w"
+      }
+    }
+  },
+  "frame": {
+    "size": [
+      512,
+      1024
+    ],
+    "contact": [
+      256,
+      950
+    ],
+    "width": 0.9938823529411764,
+    "height": 1.3251764705882352,
+    "center_x": 0,
+    "center_z": 0.5668235294117646
+  },
+  "new_imagegen_calls": 0,
+  "method": {
+    "path": "art/conversion/npc-watervine-farmer-03/v1/assembly-method.py",
+    "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"
+  },
+  "boundaries": {
+    "anatomy": "Captured ordinary Humanoid attached tree; unavailable active mutation list/age are unknown, not inferred.",
+    "description": "Keep full prose as metadata. Do not invent a profession costume, biological skin color, personal cosmetics or unexported equipment from that prose. Actual captured equipped items govern this assembly.",
+    "palette": "Body authoring preview uses the captured actor Render palette, independently of each real item palette; this is not native biological skin metadata.",
+    "ownership": "Late original-body coverage is local to each item. Retain whole item textures and full body; never draw a whole-body overlay above unrelated equipment.",
+    "pose": "Existing stationary item display only; source-supported resting/ready grip/angle/native state acceptance waits for integrated Stage3 after full generation."
+  },
+  "native_activation": false
+}
