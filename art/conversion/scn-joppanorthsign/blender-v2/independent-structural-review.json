@@ -1,0 +1,85 @@
+{
+  "asset": "SCN-JOPPANORTHSIGN",
+  "reviewer": {
+    "agent": "/root/north_sign_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v1/source-reference-comparison.png",
+      "sha256": "7f3349f86160b960a8c91c2700a950baedd071127b0e808a547654787cd196c2"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v1/manual-neutral-master.png",
+      "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v1/source-packet.json",
+      "sha256": "e7e87a42569fe1e70757cb96a2fe273d6dbcf929b960de278e467ea044d1f571"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v2/three-view-authoring-comparison.png",
+      "sha256": "8fb381aedcdbda79469af592ab025505134a9e0871f07c141ffa833ac4c37084"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v2/south-neutral-master.png",
+      "sha256": "92b238a7920660bbf361766f4255f852f17d4b2c217f59ae3fe79ff7b5d883f4"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v2/east-neutral-master.png",
+      "sha256": "02f62e182daa553dcbbc769c4f6739248cf01f25d21539cad3b9b3c76a3584b3"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v2/north-neutral-master.png",
+      "sha256": "23c640dc9330e5bb800141a480661c49049e3d5230391524149b854fcd0e3821"
+    },
+    {
+      "path": "art/conversion/scn-joppanorthsign/blender-v2/stage-03-refined-model-3d.png",
+      "sha256": "37c797291396d783a555369ab7481d6b06cda0fbdf9fdc4ac896e907aadd4adf"
+    }
+  ],
+  "recommendation": "pass",
+  "production_recommendation": "south only; auxiliary E/N retained as authoring exports",
+  "fix_now": [],
+  "native_acceptance_tested": false,
+  "summary": "No blocking structural finding; registration may proceed for south only.",
+  "findings": [
+    {
+      "view": "south",
+      "region": "pictogram",
+      "observation": "Central stepped grave marker, internal openings and paired lower side marks preserve source arrangement. Dark marks on solid face follow disclosed interpretation, no invented lettering.",
+      "confidence": "high",
+      "severity": "none"
+    },
+    {
+      "view": "S/E/N and diagnostic",
+      "region": "contact/facing",
+      "observation": "Front occludes uprights; back is blank with continuous supports. Narrow side edge is offset from support plane. Coherent attached object.",
+      "confidence": "high",
+      "severity": "none"
+    },
+    {
+      "view": "all",
+      "region": "frame",
+      "observation": "Plaque and upper/lower supports complete and uncropped; front/back alignment visually consistent. Pixels do not independently prove camera/pivot/rotation settings.",
+      "confidence": "high",
+      "severity": "none"
+    },
+    {
+      "view": "intended sizes",
+      "region": "glyph readability",
+      "observation": "South retains useful glyph arrangement, board and supports; internal spaces cramped at16x24. East thin line acceptable as auxiliary export.",
+      "confidence": "medium",
+      "severity": "informational"
+    },
+    {
+      "view": "source versus constructed silhouette",
+      "region": "plaque edging and lower support ends",
+      "observation": "Rectangular source edging steps become diagonal notches/bevels; lower support ends become straight. Observable authored departure, not exact silhouette preservation; physical-plaque contract still coherent.",
+      "confidence": "high",
+      "severity": "minor"
+    }
+  ]
+}

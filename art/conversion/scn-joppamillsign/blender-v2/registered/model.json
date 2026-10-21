@@ -1,0 +1,335 @@
+{
+  "entry": "SCN-JOPPAMILLSIGN",
+  "kind": "painted_terracotta_sign",
+  "blueprint": "JoppaMillSign",
+  "workflow": "blender-first-v1",
+  "source": {
+    "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+    "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+  },
+  "blender_source": {
+    "path": "art/conversion/scn-joppamillsign/blender-v2/sign.blend",
+    "sha256": "fb6289bd92556e6cfc62359bb9641079bce95666de6316b79f688c41d5e4e14f"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-joppamillsign/blender-v2/model-controls.json",
+    "sha256": "cd5b43c6b59a681ba4278eea3210f4c89d863c5e6c43c8f581fe03a68123dc8a"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full cell/pivot for all exports; no bounds-based resizing."
+  },
+  "palette": {
+    "primary": "y from nonempty TileColor override, on two supports",
+    "detail": "r terracotta/painted board",
+    "text_fallback": "ColorString y applies text fallback, not tile-primary y",
+    "rule": "Neutral source-role masks and one coverage; do not import donor colors."
+  },
+  "native_behavior": {
+    "chat_says": "Common Mill",
+    "chat_show_in_short_description": true,
+    "smartuse_looks": true,
+    "no_sparking_quest": true,
+    "occluding": false,
+    "render_if_dark": true,
+    "scope": "Keep native Chat/SmartuseLooks/furniture behavior. Common Mill is chat text, not literal tile lettering."
+  },
+  "glyph_translation": {
+    "cells": [
+      {
+        "x": 3,
+        "y": 7
+      },
+      {
+        "x": 4,
+        "y": 7
+      },
+      {
+        "x": 3,
+        "y": 8
+      },
+      {
+        "x": 4,
+        "y": 8
+      },
+      {
+        "x": 5,
+        "y": 8
+      },
+      {
+        "x": 5,
+        "y": 9
+      },
+      {
+        "x": 6,
+        "y": 9
+      },
+      {
+        "x": 7,
+        "y": 9
+      },
+      {
+        "x": 4,
+        "y": 10
+      },
+      {
+        "x": 5,
+        "y": 10
+      },
+      {
+        "x": 6,
+        "y": 10
+      },
+      {
+        "x": 7,
+        "y": 10
+      },
+      {
+        "x": 12,
+        "y": 10
+      },
+      {
+        "x": 4,
+        "y": 11
+      },
+      {
+        "x": 5,
+        "y": 11
+      },
+      {
+        "x": 7,
+        "y": 11
+      },
+      {
+        "x": 8,
+        "y": 11
+      },
+      {
+        "x": 11,
+        "y": 11
+      },
+      {
+        "x": 12,
+        "y": 11
+      },
+      {
+        "x": 4,
+        "y": 12
+      },
+      {
+        "x": 5,
+        "y": 12
+      },
+      {
+        "x": 6,
+        "y": 12
+      },
+      {
+        "x": 8,
+        "y": 12
+      },
+      {
+        "x": 9,
+        "y": 12
+      },
+      {
+        "x": 10,
+        "y": 12
+      },
+      {
+        "x": 11,
+        "y": 12
+      },
+      {
+        "x": 12,
+        "y": 12
+      },
+      {
+        "x": 5,
+        "y": 13
+      },
+      {
+        "x": 6,
+        "y": 13
+      },
+      {
+        "x": 7,
+        "y": 13
+      },
+      {
+        "x": 8,
+        "y": 13
+      },
+      {
+        "x": 9,
+        "y": 13
+      },
+      {
+        "x": 10,
+        "y": 13
+      },
+      {
+        "x": 11,
+        "y": 13
+      },
+      {
+        "x": 6,
+        "y": 14
+      },
+      {
+        "x": 7,
+        "y": 14
+      },
+      {
+        "x": 8,
+        "y": 14
+      },
+      {
+        "x": 9,
+        "y": 14
+      },
+      {
+        "x": 10,
+        "y": 14
+      }
+    ],
+    "method": "Source negative-space cells become very dark matte paint/recess-like marks on a continuous physical clay face.",
+    "coverage_change": "Those glyph spaces gain opaque dark-painted coverage in the authored solid board. They are not literal cut-through holes: painted-board metadata guides this physical translation. Native palette codes and one-coverage rendering are preserved, not the exact binary16x24 icon alpha.",
+    "not_new_text": "No invented Common Mill lettering or invented botanical detail."
+  },
+  "native_state_owner": "One native fixed sw_sign_pepper tile; Common Mill remains native Chat text. No new native direction/state dispatch.",
+  "view_policy": {
+    "south": "Source plaque and dark source-positioned pictogram; rear supports show above/below and are occluded behind solid face.",
+    "east": "Actual thin plaque edge and rear support offset; no independently compressed panel.",
+    "north": "Blank clay back with the two actual rear uprights; no cloned or mirrored front pictogram.",
+    "production": "One native fixed map tile; retained E/N exports are authoring views only.",
+    "scale": "One16x24 source cell,512x768 manual,256square recipient, anchor8,16. Shared physical scale/pivot/camera."
+  },
+  "frames": [
+    {
+      "native_tile": "Items/sw_sign_pepper.bmp",
+      "primary": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-primary.png",
+        "sha256": "98516106bbb422f2780dc2934df84bf2103fc88434abf71ee6f1a2e80b16e989"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail.png",
+        "sha256": "98516106bbb422f2780dc2934df84bf2103fc88434abf71ee6f1a2e80b16e989"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-coverage.png",
+        "sha256": "a22f5b32cc2fb1609bbd3204581d1c6eaa85dc7921826a2fdeede3850880c501"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail_weight.png",
+        "sha256": "d00285127ccbee9e23536f583f9bca3c9d6d36ccf6f07dbe32da65f667888389"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail_coverage.png",
+        "sha256": "7ed175e6d3271c97520f28ff5ed3316164509ab547e0fbe17b35c9d29a4a69af"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-authored_dualcolor_mask.png",
+        "sha256": "0f39d2a3986ff99fce883d31eb09a70b8e35ba9faec9a2676df09446faa3e093"
+      }
+    }
+  ],
+  "retained_authoring_views": {
+    "south": {
+      "primary": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-primary.png",
+        "sha256": "98516106bbb422f2780dc2934df84bf2103fc88434abf71ee6f1a2e80b16e989"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail.png",
+        "sha256": "98516106bbb422f2780dc2934df84bf2103fc88434abf71ee6f1a2e80b16e989"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-coverage.png",
+        "sha256": "a22f5b32cc2fb1609bbd3204581d1c6eaa85dc7921826a2fdeede3850880c501"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail_weight.png",
+        "sha256": "d00285127ccbee9e23536f583f9bca3c9d6d36ccf6f07dbe32da65f667888389"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-detail_coverage.png",
+        "sha256": "7ed175e6d3271c97520f28ff5ed3316164509ab547e0fbe17b35c9d29a4a69af"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/south-authored_dualcolor_mask.png",
+        "sha256": "0f39d2a3986ff99fce883d31eb09a70b8e35ba9faec9a2676df09446faa3e093"
+      }
+    },
+    "east": {
+      "primary": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-primary.png",
+        "sha256": "abec7551bc6e986d5918698bf6812346938c05bfc508c8958cfb18dc38f5f1da"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-detail.png",
+        "sha256": "abec7551bc6e986d5918698bf6812346938c05bfc508c8958cfb18dc38f5f1da"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-coverage.png",
+        "sha256": "ad25017f6bf029462b0dc3ee2dcf086aba655b7843ab49a580bfb9a2a3512182"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-detail_weight.png",
+        "sha256": "6bd41b8420836271f58d500852607a42fc13e8d889250bf159553f577504a65f"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-detail_coverage.png",
+        "sha256": "28996e7b761d7e29c86d9ceaa30900fe56773975389dc70c36ce06e3d1e93575"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/east-authored_dualcolor_mask.png",
+        "sha256": "3cbe48eb8bbbb0c487b7ec5fe776fc2ddf9f3a5a816810897b69741322563e91"
+      }
+    },
+    "north": {
+      "primary": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-primary.png",
+        "sha256": "3388686c5d55b10b2cda02058979a95d3332d0dead887ab388d72c616003f18f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-detail.png",
+        "sha256": "3388686c5d55b10b2cda02058979a95d3332d0dead887ab388d72c616003f18f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-coverage.png",
+        "sha256": "cb979a8d379866f599a7bd5b4b2000c54017c26f2fe34287188542bf1e57a080"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-detail_weight.png",
+        "sha256": "3502087f883d4bbc36fbda54cc978215d41033254f70676d3a63ae6a1ad3abf0"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-detail_coverage.png",
+        "sha256": "64d72ed6ec332002875ca17176c8b137ce7ea143882316d9cfe4c610ca6016b9"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppamillsign/blender-v2/registered/north-authored_dualcolor_mask.png",
+        "sha256": "8fbcb21135b567439dd08955346b7bd3d709da0b394cf7344d0533e4ba22184b"
+      }
+    }
+  },
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

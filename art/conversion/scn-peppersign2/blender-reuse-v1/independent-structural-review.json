@@ -1,0 +1,81 @@
+{
+  "asset": "SCN-PEPPERSIGN2",
+  "reviewer": {
+    "agent": "/root/pepper_sign_variant_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scn-peppersign2/blender-v1/source-packet.json",
+      "sha256": "94eeded6daa93b603427ee9e279e78e21d018b56ab7f5fdbff116db074552e36"
+    },
+    {
+      "path": "art/conversion/scn-peppersign2/blender-v1/source-reference-comparison.png",
+      "sha256": "1956761501bcf93ddce326259ecee6fc00e16c6a2374e11dd42428a2f8e04e7b"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v1/manual-neutral-master.png",
+      "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v2/three-view-authoring-comparison.png",
+      "sha256": "d7bafbe28470a24e2eea165bfb75ac80cadf36fe4a0159f23744fc0676b84dc8"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v2/south-neutral-master.png",
+      "sha256": "d58e7a7b3f56d8a7c517f5333912f852249b8e672f0d867fda68b91563f78627"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v2/east-neutral-master.png",
+      "sha256": "c5b3385379a41896f0a997f42fda2158700d2444065455de20be8265e8cff7c7"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v2/north-neutral-master.png",
+      "sha256": "fd437650cccabd7c12a5d65392ec46835bf6dab032086d1efc92e41b20a35dc2"
+    },
+    {
+      "path": "art/conversion/scn-joppamillsign/blender-v2/stage-03-refined-model-3d.png",
+      "sha256": "9649b75d28c8e2e2f22305b084e04441606415210c84e37b5cd333537ca3d133"
+    },
+    {
+      "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/registration-comparison.png",
+      "sha256": "513f428fc28b260366cb59d60538716c91131b04d77640960fddd6da36b3325e"
+    }
+  ],
+  "recommendation": "pass",
+  "fix_now": [],
+  "native_acceptance_tested": false,
+  "summary": "Unchanged reuse may proceed for authoring; no blocking visual finding. All nine input hashes and actual private source mask matched.",
+  "findings": [
+    {
+      "view": "source and south",
+      "region": "identity/glyph",
+      "observation": "Terracotta plaque, two pale supports, stepped pepper pictogram direction/outline and two clay cells preserved. Dark paint on solid plaque is the disclosed translation.",
+      "confidence": "high",
+      "severity": "none"
+    },
+    {
+      "view": "S/E/N and3D",
+      "region": "contact/facing/frame",
+      "observation": "Supports behind front, real thin depth, blank supported back. No floating joint, mirrored back glyph, inconsistent frame or clipped extremity.",
+      "confidence": "high",
+      "severity": "none"
+    },
+    {
+      "view": "intended16x24",
+      "region": "interior glyph cells",
+      "observation": "Cells delicate at smallest size but sign/support silhouette and glyph mass recognizable; larger intended sizes resolve more clearly. East naturally becomes thin line, consistent with auxiliary edge role.",
+      "confidence": "high",
+      "severity": "low"
+    },
+    {
+      "view": "native palette comparison",
+      "region": "color roles and interaction",
+      "observation": "Pale y supports and r plaque/paint retained; Herbs and Tonics remains chat, no invented lettering.",
+      "confidence": "high",
+      "severity": "none"
+    }
+  ]
+}

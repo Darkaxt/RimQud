@@ -1,0 +1,287 @@
+{
+  "entry": "SCN-JOPPAMILLSIGN",
+  "identity": "JoppaMillSign -> Sign -> Furniture -> InorganicObject -> PhysicalObject -> Object",
+  "description": "A terracotta board has been painted with ochre and ground iron.",
+  "ancestry": {
+    "JoppaMillSign": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"JoppaMillSign\" Inherits=\"Sign\">\n    <part Name=\"Render\" DisplayName=\"sign\" Tile=\"Items/sw_sign_pepper.bmp\" RenderString=\"=\" ColorString=\"&amp;y\" DetailColor=\"r\" Occluding=\"false\" />\n    <part Name=\"Chat\" Says=\"Common Mill\" ShowInShortDescription=\"true\" />\n  </object>"
+    },
+    "Sign": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Sign\" Inherits=\"Furniture\">\n    <part Name=\"Render\" RenderString=\"=\" ColorString=\"&amp;r\" TileColor=\"&amp;y\" DetailColor=\"r\" />\n    <part Name=\"Description\" Short=\"A terracotta board has been painted with ochre and ground iron.\" />\n    <part Name=\"Chat\" Says=\"[indistinct scribbling.]\" ShowInShortDescription=\"true\" />\n    <tag Name=\"NoSparkingQuest\" />\n\t\t<part Name=\"SmartuseLooks\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;y\" />\n\t\t<stag Name=\"Maps\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>"
+    },
+    "Furniture": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    "InorganicObject": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    "PhysicalObject": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    }
+  },
+  "original_mask": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppamillsign-mask.png",
+    "sha256": "2b582f323f08d2361e4152a3bf27d4bc9515c8bbfd6b75a81ff4dd27e0b80b2b"
+  },
+  "original_tile": {
+    "tile": "Items/sw_sign_pepper.bmp",
+    "description": "A terracotta board has been painted with ochre and ground iron.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "sign",
+      "RenderString": "=",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&y",
+      "TileColor": "&y",
+      "DetailColor": "r",
+      "Tile": "Items/sw_sign_pepper.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "JoppaMillSign",
+    "reference_file": "village-originals/joppamillsign-reference.png",
+    "native_mask_sha256": "2b582f323f08d2361e4152a3bf27d4bc9515c8bbfd6b75a81ff4dd27e0b80b2b",
+    "reference_sha256": "9525718456a3222246d1f07d3ce12b7ae8adae0ff274860bfc1da429fa0ec907",
+    "info_id": 10045,
+    "atlas_id": 185,
+    "rect": [
+      918,
+      26,
+      16,
+      24
+    ]
+  },
+  "source_features": "Terracotta board, two pale supports visible above/below, stepped top/bottom edging and pepper/plant pictogram encoded in negative source spaces.",
+  "palette": {
+    "primary": "y from nonempty TileColor override, on two supports",
+    "detail": "r terracotta/painted board",
+    "text_fallback": "ColorString y applies text fallback, not tile-primary y",
+    "rule": "Neutral source-role masks and one coverage; do not import donor colors."
+  },
+  "native_behavior": {
+    "chat_says": "Common Mill",
+    "chat_show_in_short_description": true,
+    "smartuse_looks": true,
+    "no_sparking_quest": true,
+    "occluding": false,
+    "render_if_dark": true,
+    "scope": "Keep native Chat/SmartuseLooks/furniture behavior. Common Mill is chat text, not literal tile lettering."
+  },
+  "glyph_translation": {
+    "cells": [
+      {
+        "x": 3,
+        "y": 7
+      },
+      {
+        "x": 4,
+        "y": 7
+      },
+      {
+        "x": 3,
+        "y": 8
+      },
+      {
+        "x": 4,
+        "y": 8
+      },
+      {
+        "x": 5,
+        "y": 8
+      },
+      {
+        "x": 5,
+        "y": 9
+      },
+      {
+        "x": 6,
+        "y": 9
+      },
+      {
+        "x": 7,
+        "y": 9
+      },
+      {
+        "x": 4,
+        "y": 10
+      },
+      {
+        "x": 5,
+        "y": 10
+      },
+      {
+        "x": 6,
+        "y": 10
+      },
+      {
+        "x": 7,
+        "y": 10
+      },
+      {
+        "x": 12,
+        "y": 10
+      },
+      {
+        "x": 4,
+        "y": 11
+      },
+      {
+        "x": 5,
+        "y": 11
+      },
+      {
+        "x": 7,
+        "y": 11
+      },
+      {
+        "x": 8,
+        "y": 11
+      },
+      {
+        "x": 11,
+        "y": 11
+      },
+      {
+        "x": 12,
+        "y": 11
+      },
+      {
+        "x": 4,
+        "y": 12
+      },
+      {
+        "x": 5,
+        "y": 12
+      },
+      {
+        "x": 6,
+        "y": 12
+      },
+      {
+        "x": 8,
+        "y": 12
+      },
+      {
+        "x": 9,
+        "y": 12
+      },
+      {
+        "x": 10,
+        "y": 12
+      },
+      {
+        "x": 11,
+        "y": 12
+      },
+      {
+        "x": 12,
+        "y": 12
+      },
+      {
+        "x": 5,
+        "y": 13
+      },
+      {
+        "x": 6,
+        "y": 13
+      },
+      {
+        "x": 7,
+        "y": 13
+      },
+      {
+        "x": 8,
+        "y": 13
+      },
+      {
+        "x": 9,
+        "y": 13
+      },
+      {
+        "x": 10,
+        "y": 13
+      },
+      {
+        "x": 11,
+        "y": 13
+      },
+      {
+        "x": 6,
+        "y": 14
+      },
+      {
+        "x": 7,
+        "y": 14
+      },
+      {
+        "x": 8,
+        "y": 14
+      },
+      {
+        "x": 9,
+        "y": 14
+      },
+      {
+        "x": 10,
+        "y": 14
+      }
+    ],
+    "method": "Source negative-space cells become very dark matte paint/recess-like marks on a continuous physical clay face.",
+    "coverage_change": "Those glyph spaces gain opaque dark-painted coverage in the authored solid board. They are not literal cut-through holes: painted-board metadata guides this physical translation. Native palette codes and one-coverage rendering are preserved, not the exact binary16x24 icon alpha.",
+    "not_new_text": "No invented Common Mill lettering or invented botanical detail."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Furniture Expanded - Props and Decor",
+    "package_id": "VanillaExpanded.VFEPropsandDecor",
+    "workshop_id": "2102143149",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+    "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+      "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+    },
+    "role": "Actual installed standing sign supplies restrained board/support edge convention. Do not copy its single post, wood material, tilt or stone base."
+  },
+  "authored_interpretation": "One continuous beveled terracotta plaque with source-bound edging, two rear uprights and front-only matte pictogram. Hidden thickness and join placement are authored.",
+  "view_contract": {
+    "south": "Source plaque and dark source-positioned pictogram; rear supports show above/below and are occluded behind solid face.",
+    "east": "Actual thin plaque edge and rear support offset; no independently compressed panel.",
+    "north": "Blank clay back with the two actual rear uprights; no cloned or mirrored front pictogram.",
+    "production": "One native fixed map tile; retained E/N exports are authoring views only.",
+    "scale": "One16x24 source cell,512x768 manual,256square recipient, anchor8,16. Shared physical scale/pivot/camera."
+  },
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate",
+  "physical_shape_reuse": {
+    "source_model": {
+      "path": "art/conversion/scn-argyvesign/blender-v1/sign.blend",
+      "sha256": "431953d07427c3a7434725463d3194a2fab881ed874b2491687dd02003b7091d"
+    },
+    "source_controls": {
+      "path": "art/conversion/scn-argyvesign/blender-v1/model-controls.json",
+      "sha256": "7d2bd80b3695b0b06b7496f28682e3a0dec604f01009dd34d84fa031a9b6154e"
+    },
+    "reason": "Original visible source roles and alpha match outside front pictogram field (transparent RGB canonicalized); same painted-board metadata and palette. Reuse complete physical plaque/uprights/camera; replace only own glyph."
+  }
+}

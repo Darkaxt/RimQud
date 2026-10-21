@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-JOPPAMILLSIGN",
+  "active_entry": "SCN-JOPPARESHEPHSHRINE",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -66350,20 +66350,21 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Tiny glyph cells soften at source display size; native Chat/state/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -66422,7 +66423,268 @@
           "sha256": "88724a90ac5caeb41cec772d97d69ca07bfad61129373534fcacef4d61ce2068"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:29:44.894286+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve source pictogram, painted terracotta material, TileColor override and exact Common Mill native chat.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppamillsign-mask.png",
+              "sha256": "2b582f323f08d2361e4152a3bf27d4bc9515c8bbfd6b75a81ff4dd27e0b80b2b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+              "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-reference-comparison.png",
+              "sha256": "961b96dd952fc4f313104663b5d8ed2105114a41097d5ac1e49248c377f623e5"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:29:44.894286+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE standing sign for edge/support convention only.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+              "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671"
+            },
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+              "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+              "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-reference-comparison.png",
+              "sha256": "961b96dd952fc4f313104663b5d8ed2105114a41097d5ac1e49248c377f623e5"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Resume the saved shared physical plaque/support model and retain exact manual image reuse, after source silhouette and material equivalence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+              "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/stage-02-model-3d.png",
+              "sha256": "530e9335cc8688e2fe8b5e10b06e411b27ca73d3e0789c544efd7d0b8c0de1d6"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/manual-neutral-master.png",
+              "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/reuse-receipt.json",
+              "sha256": "7958cb6b03d25b222a4721e68790e0c4f54cf89dfe6c1918a05cd93a8349ea16"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Resume saved model; bevel physical edges and add front-only dark paint from exact source pictogram cells. Select direct Blender rendering; no ImageGen call or second isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/sign.blend",
+              "sha256": "f14aa2879cd18615773b415fc38b7f5dbcd37582191b22fcaf6fe79bc071534e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "9649b75d28c8e2e2f22305b084e04441606415210c84e37b5cd333537ca3d133"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/model-controls.json",
+              "sha256": "cd5b43c6b59a681ba4278eea3210f4c89d863c5e6c43c8f581fe03a68123dc8a"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/independent-structural-review.json",
+              "sha256": "11024dc9761fd6edda9887dcea664726c41932a7f3bae627638a9a7ac974e3fa"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed native map tile and exact native Chat; auxiliary E/N show physical back/depth without creating native direction behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+              "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/three-view-authoring-comparison.png",
+              "sha256": "d7bafbe28470a24e2eea165bfb75ac80cadf36fe4a0159f23744fc0676b84dc8"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/registered/model.json",
+              "sha256": "2f7b21ba5f73b282f3a87f2a3349f4edd1798d2160bf6792668e10b38b217ac9"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render real S/E/N rotations, complete transparent geometry and separate actual detail ownership passes. Reopen saved model and retain immutable shape registry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/sign.blend",
+              "sha256": "fb6289bd92556e6cfc62359bb9641079bce95666de6316b79f688c41d5e4e14f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/blender-receipt.json",
+              "sha256": "8bdc3a9e16cfdcc6ce2487538fd2d15206a6f191f32fde48abc6071fdbfb7ee1"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/south-neutral-master.png",
+              "sha256": "d58e7a7b3f56d8a7c517f5333912f852249b8e672f0d867fda68b91563f78627"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/east-neutral-master.png",
+              "sha256": "c5b3385379a41896f0a997f42fda2158700d2444065455de20be8265e8cff7c7"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/north-neutral-master.png",
+              "sha256": "fd437650cccabd7c12a5d65392ec46835bf6dab032086d1efc92e41b20a35dc2"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/south-detail-pass.png",
+              "sha256": "6a1455f6940d85c37e9cd8b82bf63476995a359ba3d5a4ae6d3ffae5f207ee7c"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/east-detail-pass.png",
+              "sha256": "0332c7d96c4904e189d732899ba6e59fbd7e1cf01745518bf6d23fe7b028ba53"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/north-detail-pass.png",
+              "sha256": "8b0e71ca83ef3612a8e75eca3b5dbbc4805815a8effd91857c6914f0dba5fb72"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/reopen-audit.json",
+              "sha256": "1bd844943868cfe4dbe5456146eaaf259ea8351bf1a0db2dcd2246fb64480e37"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v11.json",
+              "sha256": "8414707576575f8f5b2d9057637ef78bf95a4dfa729f5832739f20655fc19db3"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register tile-primary y supports and detail-r plaque/paint under one coverage; disclose solid-board glyph alpha interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/register-sign.py",
+              "sha256": "2107f9943d0686d4abaa545b9d3867539678005eaed0472e3d4c20c1ec85b10c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/registered/model.json",
+              "sha256": "2f7b21ba5f73b282f3a87f2a3349f4edd1798d2160bf6792668e10b38b217ac9"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/registered/registration-decisions.json",
+              "sha256": "cec4a280117ae0ca70ea1e42805500958b4acd1dccf180124b5f5b37b274914d"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:32:04.486467+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect native palette/intended-size proofs and disposition exact-hash independent structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/independent-structural-review.json",
+              "sha256": "11024dc9761fd6edda9887dcea664726c41932a7f3bae627638a9a7ac974e3fa"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/registered/registration-comparison.png",
+              "sha256": "6f1d8a03fb244dd056be86a7e0b2a2cff78a47591b61bb3586e76224780b6aad"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/registered/authoring-review.json",
+              "sha256": "ef896a00cf641abe25e1556d914424128faee4f2b474e8d19cd3c7c2e34e9069"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v11.json",
+          "sha256": "8414707576575f8f5b2d9057637ef78bf95a4dfa729f5832739f20655fc19db3"
+        },
+        "resume": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/sign.blend",
+          "sha256": "fb6289bd92556e6cfc62359bb9641079bce95666de6316b79f688c41d5e4e14f"
+        },
+        "controls": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/model-controls.json",
+          "sha256": "cd5b43c6b59a681ba4278eea3210f4c89d863c5e6c43c8f581fe03a68123dc8a"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/registered/model.json",
+          "sha256": "2f7b21ba5f73b282f3a87f2a3349f4edd1798d2160bf6792668e10b38b217ac9"
+        },
+        "plate": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/registered/registration-comparison.png",
+          "sha256": "6f1d8a03fb244dd056be86a7e0b2a2cff78a47591b61bb3586e76224780b6aad"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Painted terracotta plaque and two supports derive from exact Sign/JoppaMillSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Common Mill remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/registered/authoring-review.json",
+          "sha256": "ef896a00cf641abe25e1556d914424128faee4f2b474e8d19cd3c7c2e34e9069"
+        }
+      },
+      "registration_summary": "Direct Blender painted terracotta plaque, two rear supports and source-positioned dark pictogram; native y/r tint, original fixed tile and retained S/E/N geometry exports."
     },
     {
       "id": "SCN-JOPPANORTHSIGN",
@@ -66437,19 +66699,20 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Tiny glyph cells soften at source display size; native Chat/state/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -66508,7 +66771,268 @@
           "sha256": "f5b8af98d00f46dd9aa78e6623570bbf339c0ae57e8a3895541f38ac3b17b0f4"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:33:06.004587+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve source pictogram, painted terracotta material, TileColor override and exact To graveyard and shrine native chat.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\joppanorthsign-mask.png",
+              "sha256": "873773c701cb95f5f1128dcc57da95c70270dc622b36a537043cc31c4abd726e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-packet.json",
+              "sha256": "e7e87a42569fe1e70757cb96a2fe273d6dbcf929b960de278e467ea044d1f571"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-reference-comparison.png",
+              "sha256": "7f3349f86160b960a8c91c2700a950baedd071127b0e808a547654787cd196c2"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:33:06.004587+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE standing sign for edge/support convention only.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+              "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671"
+            },
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+              "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-packet.json",
+              "sha256": "e7e87a42569fe1e70757cb96a2fe273d6dbcf929b960de278e467ea044d1f571"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-reference-comparison.png",
+              "sha256": "7f3349f86160b960a8c91c2700a950baedd071127b0e808a547654787cd196c2"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Resume the saved shared physical plaque/support model and retain exact manual image reuse, after source silhouette and material equivalence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-packet.json",
+              "sha256": "e7e87a42569fe1e70757cb96a2fe273d6dbcf929b960de278e467ea044d1f571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/stage-02-model-3d.png",
+              "sha256": "530e9335cc8688e2fe8b5e10b06e411b27ca73d3e0789c544efd7d0b8c0de1d6"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/manual-neutral-master.png",
+              "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/reuse-receipt.json",
+              "sha256": "56628f349e24bd1ddaa6625b2be833cf048f13c6f23307c1b8f8ec0d8dae887b"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Resume saved model; bevel physical edges and add front-only dark paint from exact source pictogram cells. Select direct Blender rendering; no ImageGen call or second isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/sign.blend",
+              "sha256": "f14aa2879cd18615773b415fc38b7f5dbcd37582191b22fcaf6fe79bc071534e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "37c797291396d783a555369ab7481d6b06cda0fbdf9fdc4ac896e907aadd4adf"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/model-controls.json",
+              "sha256": "94d14a5f0b835973647d1a6ffadfe0354a1dfc62fbd8f0b944859cd45e937531"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/independent-structural-review.json",
+              "sha256": "86b23c5ade78d2cc889463544a30e38b5745d73a42fe55b536943b536ad6a7c2"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed native map tile and exact native Chat; auxiliary E/N show physical back/depth without creating native direction behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v1/source-packet.json",
+              "sha256": "e7e87a42569fe1e70757cb96a2fe273d6dbcf929b960de278e467ea044d1f571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/three-view-authoring-comparison.png",
+              "sha256": "8fb381aedcdbda79469af592ab025505134a9e0871f07c141ffa833ac4c37084"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/model.json",
+              "sha256": "a8ed8640efdf470f45e9285e35450db5b881b4d208d8a35c95cc54bbc4483b62"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render real S/E/N rotations, complete transparent geometry and separate actual detail ownership passes. Reopen saved model and retain immutable shape registry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/sign.blend",
+              "sha256": "0a8241bcf46466218ba786495a12f8d9573de9c0b21092103f5a345d32542d8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/blender-receipt.json",
+              "sha256": "ae25478861be4ba0f048ddebc2815090f6e31e5d09aa4688a95e43ab9e17b901"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/south-neutral-master.png",
+              "sha256": "92b238a7920660bbf361766f4255f852f17d4b2c217f59ae3fe79ff7b5d883f4"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/east-neutral-master.png",
+              "sha256": "02f62e182daa553dcbbc769c4f6739248cf01f25d21539cad3b9b3c76a3584b3"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/north-neutral-master.png",
+              "sha256": "23c640dc9330e5bb800141a480661c49049e3d5230391524149b854fcd0e3821"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/south-detail-pass.png",
+              "sha256": "db8c0ff5e154bd2f0b48adf799e0a2a408d9d947a14740c1dc97fcc1214c3b8e"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/east-detail-pass.png",
+              "sha256": "f410ec27135f11ed90c745b346dbae85f367af301096fc2095c4787faaa5cb59"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/north-detail-pass.png",
+              "sha256": "cc0684f51ca06effea82d8a6d181fd2d181500f48f08a5da055943465893225c"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/reopen-audit.json",
+              "sha256": "0ff235439f5e8451f2c5dff49231b0210f7faed2b4b9d1fb6043100f1d1bd8e1"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v12.json",
+              "sha256": "8708bbd3f8ac834dcf1162cbacf305db6c1748681deef08413996327ab122af3"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register tile-primary y supports and detail-r plaque/paint under one coverage; disclose solid-board glyph alpha interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/register-sign.py",
+              "sha256": "4e37d580c3443b03a34c3268f7dbaecd6b0708734d85ba6e0dc1e8b09155ad9c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/model.json",
+              "sha256": "a8ed8640efdf470f45e9285e35450db5b881b4d208d8a35c95cc54bbc4483b62"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/registration-decisions.json",
+              "sha256": "095cde5022eeb692337eb82a52468d900adb5ea6537b0b99e8188723c0c88b1e"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:35:22.896133+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect native palette/intended-size proofs and disposition exact-hash independent structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/independent-structural-review.json",
+              "sha256": "86b23c5ade78d2cc889463544a30e38b5745d73a42fe55b536943b536ad6a7c2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/registration-comparison.png",
+              "sha256": "9479ce54060ab9576a56f0319ff3800673583f79d5f5213b52bb18c04ef1cf6e"
+            },
+            {
+              "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/authoring-review.json",
+              "sha256": "5449e7e48e9ba30cf36b71a34b7db48a7608fb07555276a9ea046eb0f0074cdf"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v12.json",
+          "sha256": "8708bbd3f8ac834dcf1162cbacf305db6c1748681deef08413996327ab122af3"
+        },
+        "resume": {
+          "path": "art/conversion/scn-joppanorthsign/blender-v2/sign.blend",
+          "sha256": "0a8241bcf46466218ba786495a12f8d9573de9c0b21092103f5a345d32542d8b"
+        },
+        "controls": {
+          "path": "art/conversion/scn-joppanorthsign/blender-v2/model-controls.json",
+          "sha256": "94d14a5f0b835973647d1a6ffadfe0354a1dfc62fbd8f0b944859cd45e937531"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/model.json",
+          "sha256": "a8ed8640efdf470f45e9285e35450db5b881b4d208d8a35c95cc54bbc4483b62"
+        },
+        "plate": {
+          "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/registration-comparison.png",
+          "sha256": "9479ce54060ab9576a56f0319ff3800673583f79d5f5213b52bb18c04ef1cf6e"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Painted terracotta plaque and two supports derive from exact Sign/JoppaNorthSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native To graveyard and shrine remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/scn-joppanorthsign/blender-v2/registered/authoring-review.json",
+          "sha256": "5449e7e48e9ba30cf36b71a34b7db48a7608fb07555276a9ea046eb0f0074cdf"
+        }
+      },
+      "registration_summary": "Direct Blender painted terracotta plaque, two rear supports and source-positioned dark pictogram; native y/r tint, original fixed tile and retained S/E/N geometry exports."
     },
     {
       "id": "SCN-JOPPARESHEPHSHRINE",
@@ -66522,8 +67046,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -66607,19 +67131,20 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Inherited intended-size glyph/edge polish is minor; native interaction/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -66678,7 +67203,244 @@
           "sha256": "88724a90ac5caeb41cec772d97d69ca07bfad61129373534fcacef4d61ce2068"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:36:59.527152+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve source pictogram, painted terracotta material, TileColor override and exact Herbs and Tonics native chat.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\peppersign2-mask.png",
+              "sha256": "2b582f323f08d2361e4152a3bf27d4bc9515c8bbfd6b75a81ff4dd27e0b80b2b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-v1/source-packet.json",
+              "sha256": "94eeded6daa93b603427ee9e279e78e21d018b56ab7f5fdbff116db074552e36"
+            },
+            {
+              "path": "art/conversion/scn-peppersign2/blender-v1/source-reference-comparison.png",
+              "sha256": "1956761501bcf93ddce326259ecee6fc00e16c6a2374e11dd42428a2f8e04e7b"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:36:59.527152+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE standing sign for edge/support convention only.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+              "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671"
+            },
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+              "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-v1/source-packet.json",
+              "sha256": "94eeded6daa93b603427ee9e279e78e21d018b56ab7f5fdbff116db074552e36"
+            },
+            {
+              "path": "art/conversion/scn-peppersign2/blender-v1/source-reference-comparison.png",
+              "sha256": "1956761501bcf93ddce326259ecee6fc00e16c6a2374e11dd42428a2f8e04e7b"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Reuse exact source-identical complete clay plaque and two rear supports; retain original manual source evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/source-packet.json",
+              "sha256": "822ab83d4c59486f086ab09cf9137073752c6fa955e3622fa9ddbc2cc45e3311"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v1/manual-neutral-master.png",
+              "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+            },
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/reuse-controls.json",
+              "sha256": "f6eec6c4ac2033bdb57d4c0f62c868c86321bb02c075a93ccd0991a4ac87e5bb"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Reuse unchanged actual direct Blender pictogram/edge refinement; no new generation or rendering.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/sign.blend",
+              "sha256": "fb6289bd92556e6cfc62359bb9641079bce95666de6316b79f688c41d5e4e14f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "9649b75d28c8e2e2f22305b084e04441606415210c84e37b5cd333537ca3d133"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/independent-structural-review.json",
+              "sha256": "11024dc9761fd6edda9887dcea664726c41932a7f3bae627638a9a7ac974e3fa"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain original native fixed tile and own Herbs and Tonics Chat; side/back remain authoring exports only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-v1/source-packet.json",
+              "sha256": "94eeded6daa93b603427ee9e279e78e21d018b56ab7f5fdbff116db074552e36"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/model.json",
+              "sha256": "24719f03b9910445356613bf652fc083c383b3ba2ba8a36b3e66072b4254041e"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Bind actual existing common-frame S/E/N renders and independent material masks, with retained saved-source diagnostics.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/reuse-controls.json",
+              "sha256": "f6eec6c4ac2033bdb57d4c0f62c868c86321bb02c075a93ccd0991a4ac87e5bb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/three-view-authoring-comparison.png",
+              "sha256": "d7bafbe28470a24e2eea165bfb75ac80cadf36fe4a0159f23744fc0676b84dc8"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/south-detail-pass.png",
+              "sha256": "6a1455f6940d85c37e9cd8b82bf63476995a359ba3d5a4ae6d3ffae5f207ee7c"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/east-detail-pass.png",
+              "sha256": "0332c7d96c4904e189d732899ba6e59fbd7e1cf01745518bf6d23fe7b028ba53"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/north-detail-pass.png",
+              "sha256": "8b0e71ca83ef3612a8e75eca3b5dbbc4805815a8effd91857c6914f0dba5fb72"
+            },
+            {
+              "path": "art/conversion/scn-joppamillsign/blender-v2/reopen-audit.json",
+              "sha256": "1bd844943868cfe4dbe5456146eaaf259ea8351bf1a0db2dcd2246fb64480e37"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v13.json",
+              "sha256": "7ee5ee2396e1ad70a4bc9b9c2e9c58b8d0ab98c19bc02171be866d3c009e32f7"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Reuse exact full registered neutral layers/masks/frame and native y/r single coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/prepare-reuse.py",
+              "sha256": "d98034e8a1467fe0c0f003d1c14f6754d7e80235ceb3df46a944177df9b97d7c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/model.json",
+              "sha256": "24719f03b9910445356613bf652fc083c383b3ba2ba8a36b3e66072b4254041e"
+            },
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/registration-decisions.json",
+              "sha256": "655aaa3bd32b6bdacfa9a53e36b7f370a3165a909284c6a3a1248f0ee7bc995e"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:00.792826+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect own source/size/native palette comparison and disposition fresh exact-hash variant review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/independent-structural-review.json",
+              "sha256": "8d82b0095af0e58cb6f2c856452abf412a38c0611915cba51fd5e4e80b130500"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/registration-comparison.png",
+              "sha256": "513f428fc28b260366cb59d60538716c91131b04d77640960fddd6da36b3325e"
+            },
+            {
+              "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/authoring-review.json",
+              "sha256": "97b9a04f1d18603cc87082022d21fccc3ffe0adb224999e724398002ecda2786"
+            }
+          ],
+          "review": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v13.json",
+          "sha256": "7ee5ee2396e1ad70a4bc9b9c2e9c58b8d0ab98c19bc02171be866d3c009e32f7"
+        },
+        "resume": {
+          "path": "art/conversion/scn-joppamillsign/blender-v2/sign.blend",
+          "sha256": "fb6289bd92556e6cfc62359bb9641079bce95666de6316b79f688c41d5e4e14f"
+        },
+        "controls": {
+          "path": "art/conversion/scn-peppersign2/blender-reuse-v1/reuse-controls.json",
+          "sha256": "f6eec6c4ac2033bdb57d4c0f62c868c86321bb02c075a93ccd0991a4ac87e5bb"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/model.json",
+          "sha256": "24719f03b9910445356613bf652fc083c383b3ba2ba8a36b3e66072b4254041e"
+        },
+        "plate": {
+          "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/registration-comparison.png",
+          "sha256": "513f428fc28b260366cb59d60538716c91131b04d77640960fddd6da36b3325e"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "PepperSign2 uses the exact same native pepper-sign mask/tile, painted-board description and actual TileColor y/DetailColor r as JoppaMillSign. Therefore its complete saved physical model, source-cell painted glyph, actual shared-camera cardinal exports, neutral layers, masks and registered frame are reused byte-exactly. No new modeling, refinement, rendering or ImageGen call is claimed. Native Chat Herbs and Tonics and inherited ColorString r text fallback are separately source-bound; nonempty TileColor y still determines tile-primary. Front opaque dark paint and blank supported back retain the explicit physical interpretation rather than exact original binary alpha. Fresh independent variant review and main inspection cover the source/palette/intended-size proof. Reused geometry review and saved-model diagnostics apply to unchanged bytes. Native interaction/state and full-set play-distance acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/scn-peppersign2/blender-reuse-v1/registered/authoring-review.json",
+          "sha256": "97b9a04f1d18603cc87082022d21fccc3ffe0adb224999e724398002ecda2786"
+        }
+      },
+      "registration_summary": "Exact retained pepper-sign Blender shape/views/masks/frame reuse, with own Herbs and Tonics native Chat and correct TileColor override."
     },
     {
       "id": "SCN-TAMSIGN",
@@ -66693,19 +67455,20 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Tiny glyph cells soften at source display size; native Chat/state/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -66764,7 +67527,268 @@
           "sha256": "49ef1516edd3d94e3a883b278bc09d3d5922f1c47d9580bf69368329ec4f8c01"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:39:42.185377+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve source pictogram, painted terracotta material, TileColor override and exact Salt Sundries native chat.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\tamsign-mask.png",
+              "sha256": "ffc6185791e46fe8c2b92b334cd87ffedfd2df4f001dd72cafa251a9de389112"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-packet.json",
+              "sha256": "c8cf5d486550e2d39486ceb33683b1ce84ecc65772adc4ab0a80f12a127c2190"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-reference-comparison.png",
+              "sha256": "57d9eb2057a359b7710e31cc01610e10c8245a8e56a19007dba48ac4a7eae8f7"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:39:42.185377+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE standing sign for edge/support convention only.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+              "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671"
+            },
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+              "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-packet.json",
+              "sha256": "c8cf5d486550e2d39486ceb33683b1ce84ecc65772adc4ab0a80f12a127c2190"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-reference-comparison.png",
+              "sha256": "57d9eb2057a359b7710e31cc01610e10c8245a8e56a19007dba48ac4a7eae8f7"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Resume the saved shared physical plaque/support model and retain exact manual image reuse, after source silhouette and material equivalence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-packet.json",
+              "sha256": "c8cf5d486550e2d39486ceb33683b1ce84ecc65772adc4ab0a80f12a127c2190"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/stage-02-model-3d.png",
+              "sha256": "530e9335cc8688e2fe8b5e10b06e411b27ca73d3e0789c544efd7d0b8c0de1d6"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/manual-neutral-master.png",
+              "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/reuse-receipt.json",
+              "sha256": "08a059fe6ed7b757036745dd4d43a5a67444a6eee300e96f8799e0ecda1e6c5a"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Resume saved model; bevel physical edges and add front-only dark paint from exact source pictogram cells. Select direct Blender rendering; no ImageGen call or second isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/sign.blend",
+              "sha256": "f14aa2879cd18615773b415fc38b7f5dbcd37582191b22fcaf6fe79bc071534e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "050a45637b4d43635be50b85cf7ab6dce0b8d1ada9101f4b55726c1dc92b4ee0"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/model-controls.json",
+              "sha256": "98fba1a3bdb72eca7f48764be77b69a7f752ea30952b37627c321f4e5b0f91a7"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/independent-structural-review.json",
+              "sha256": "9a22f23164578f4578b4b56eccfc0fd3a3ba1d1999aaec5fde0e6e5d4376a67a"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed native map tile and exact native Chat; auxiliary E/N show physical back/depth without creating native direction behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v1/source-packet.json",
+              "sha256": "c8cf5d486550e2d39486ceb33683b1ce84ecc65772adc4ab0a80f12a127c2190"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/three-view-authoring-comparison.png",
+              "sha256": "44a46288a3f7cfd88799221790a5feb6f3b1541f71f5f2c624f5ccca475870e4"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/registered/model.json",
+              "sha256": "8c7c4fc8dd945f8e569a9b1f389610ab35fa7940ecee2c64859dea2e2a6cf5e4"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render real S/E/N rotations, complete transparent geometry and separate actual detail ownership passes. Reopen saved model and retain immutable shape registry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/sign.blend",
+              "sha256": "2d344e07e57fa0a2b92891a8ac332226cbb1780d4660ffdd5c51f78d0e98b9f2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/blender-receipt.json",
+              "sha256": "e9f2ad7d97a26803015a1022b09e2825bc891ced1e2e898cab2d7bebef794b5c"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/south-neutral-master.png",
+              "sha256": "f93e3a1cf83eaed61f6d6b170133a161da04bfeb137faa1985c02852d411694e"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/east-neutral-master.png",
+              "sha256": "5222391bca0b4d3c2e5ab6f3fda65430ba5918684216c0d4003fd756b7201496"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/north-neutral-master.png",
+              "sha256": "6cc507597ea7f3c547be74feb0cd0805c06bf97af61795caa6599fc3c5409687"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/south-detail-pass.png",
+              "sha256": "f92008a229fc4de35427db17911ea0279bc1219f2f1f238dc12e66ee339c759f"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/east-detail-pass.png",
+              "sha256": "eea707e0cebd29f1b9f314d257092f925a38e23d7864b08e447b0e87a482693e"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/north-detail-pass.png",
+              "sha256": "4f23057ec2431a89cf945c8936a036b05688f4fc0fb808467b633050e4283e7d"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/reopen-audit.json",
+              "sha256": "5e9c1b7609cef9f241f786afef6c65cfd6cc9eef753fc044d5d0b394960f5430"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v14.json",
+              "sha256": "18b0f4ea3feea77bceefb4584e2d28db978625fb5953464bc3a0dcfad787d43b"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register tile-primary y supports and detail-r plaque/paint under one coverage; disclose solid-board glyph alpha interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/register-sign.py",
+              "sha256": "ebe3f1a9ac2795d8b2b783a0e18f9b1f2dd557c9c73704ae8b532edc6074ebe2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/registered/model.json",
+              "sha256": "8c7c4fc8dd945f8e569a9b1f389610ab35fa7940ecee2c64859dea2e2a6cf5e4"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/registered/registration-decisions.json",
+              "sha256": "095cde5022eeb692337eb82a52468d900adb5ea6537b0b99e8188723c0c88b1e"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:42:08.268294+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect native palette/intended-size proofs and disposition exact-hash independent structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/independent-structural-review.json",
+              "sha256": "9a22f23164578f4578b4b56eccfc0fd3a3ba1d1999aaec5fde0e6e5d4376a67a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/registered/registration-comparison.png",
+              "sha256": "f3bf6cb871438884dc9379f073a2e16a8015d3ab6b1e85599529078284c801ce"
+            },
+            {
+              "path": "art/conversion/scn-tamsign/blender-v2/registered/authoring-review.json",
+              "sha256": "76720831d1f64b6907d65bcb9c758941a028c6c695e835cc21fa8d700be33da3"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v14.json",
+          "sha256": "18b0f4ea3feea77bceefb4584e2d28db978625fb5953464bc3a0dcfad787d43b"
+        },
+        "resume": {
+          "path": "art/conversion/scn-tamsign/blender-v2/sign.blend",
+          "sha256": "2d344e07e57fa0a2b92891a8ac332226cbb1780d4660ffdd5c51f78d0e98b9f2"
+        },
+        "controls": {
+          "path": "art/conversion/scn-tamsign/blender-v2/model-controls.json",
+          "sha256": "98fba1a3bdb72eca7f48764be77b69a7f752ea30952b37627c321f4e5b0f91a7"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-tamsign/blender-v2/registered/model.json",
+          "sha256": "8c7c4fc8dd945f8e569a9b1f389610ab35fa7940ecee2c64859dea2e2a6cf5e4"
+        },
+        "plate": {
+          "path": "art/conversion/scn-tamsign/blender-v2/registered/registration-comparison.png",
+          "sha256": "f3bf6cb871438884dc9379f073a2e16a8015d3ab6b1e85599529078284c801ce"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Painted terracotta plaque and two supports derive from exact Sign/TamSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. Existing manual plaque/support geometry is explicitly reused after visible source-role/alpha equivalence outside the pictogram field; manual images are reused by hash, not claimed as new renders. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Salt Sundries remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/scn-tamsign/blender-v2/registered/authoring-review.json",
+          "sha256": "76720831d1f64b6907d65bcb9c758941a028c6c695e835cc21fa8d700be33da3"
+        }
+      },
+      "registration_summary": "Direct Blender painted terracotta plaque, two rear supports and source-positioned dark pictogram; native y/r tint, original fixed tile and retained S/E/N geometry exports."
     },
     {
       "id": "TILE-GRASS-1",
@@ -81206,7 +82230,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T13:26:30.905893+00:00",
+  "updated_at": "2026-10-21T13:42:08.268294+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

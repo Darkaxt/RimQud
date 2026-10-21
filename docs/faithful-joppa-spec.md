@@ -15,9 +15,26 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-JOPPAMILLSIGN is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-JOPPARESHEPHSHRINE is the sole active entry.
 
-Current sign checkpoint (2026-10-21): ArgyveSign is generation-ready under
+Current remaining-sign checkpoint (2026-10-21): JoppaMillSign, JoppaNorthSign,
+PepperSign2 and TamSign are generation-ready. Source-equivalent physical plaques
+and rear supports resume the saved manual geometry; their actual new pictogram
+refinements and real S/E/N exports are recorded separately. PepperSign2 reuses the
+mill sign's exact native tile, glyph, palette, geometry, renders and registered
+layers by hash, with its own Herbs and Tonics Chat and inherited text-fallback
+metadata. No new generation/render is claimed for that exact shared variant.
+Fresh bounded reviews and main source/palette/size inspections pass authoring.
+Rectangular pixel edging translated to diagonal physical notches and straight
+support ends is disclosed as minor authored simplification, not exact binary
+silhouette preservation. Native chat strings remain native interactions, not
+new painted English lettering. Immutable registry snapshots11-14 retain all
+saved/shared dependencies and resume rules. There are146 generation-ready entries
+and10 pending: Resheph's shrine, CanvasWall and eight source-based exclusion
+reviews. Every entry remains unfinished for native acceptance. Continue the
+shrine without opening native validation or another implementation stage.
+
+Prior sign checkpoint (2026-10-21): ArgyveSign is generation-ready under
 `scn-argyvesign/blender-v2/registered`. Its saved physical clay plaque, two rear
 uprights, front-only source pictogram and actual S/E/N exports share one model,
 camera and frame. The source's negative pictogram cells become opaque dark paint
@@ -116,7 +133,7 @@ that every component was individually visually inspected or that art is flawless
 At the retrospective screening,19 entries had no current created set and received
 no visual approval; subsequent entries receive their own authoring reviews.
 
-The flagged-art queue is resolved for generation. Continue with JoppaMillSign and keep
+The flagged-art queue is resolved for generation. Continue with Resheph's shrine and keep
 one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.
