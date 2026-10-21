@@ -1,0 +1,117 @@
+{
+  "entry": "FIT-YRAME-LEATHER-BOOTS-FEET-16",
+  "workflow": "regional-curved-v1",
+  "recorded_at": "2026-10-21T05:20:34.832611+00:00",
+  "creature": "Warden Yrame",
+  "race": "Human-based named mutant; selected sheep-like centauroid body variant.",
+  "item": {
+    "instance": 580,
+    "blueprint": "Leather Boots",
+    "description": "A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item's AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}",
+    "tile": "Items/sw_leather_boots.bmp",
+    "foreground": "&w",
+    "tileColor": "",
+    "detailColor": "y",
+    "kind": "equipment",
+    "reference_file": "village-originals/leather-boots-reference.png",
+    "native_mask_sha256": "31715177389af820ac4b09b26dfa79883709a0dec9602a519e3965be8d084271",
+    "reference_sha256": "fa451bc481477f2de9368577796667e6dcce8bd63675c0611d5692c2bb246820",
+    "info_id": 9789,
+    "atlas_id": 185,
+    "rect": [
+      162,
+      104,
+      16,
+      24
+    ]
+  },
+  "actual_binding": {
+    "id": 297,
+    "parent": 287,
+    "type": "Feet",
+    "variant": "Feet",
+    "laterality": 16,
+    "manager": "515::MultipleLegs::Change",
+    "defaultBlueprint": null,
+    "equipped": {
+      "instance": 580,
+      "blueprint": "Leather Boots",
+      "description": "A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item's AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}",
+      "tile": "Items/sw_leather_boots.bmp",
+      "foreground": "&w",
+      "tileColor": "",
+      "detailColor": "y"
+    },
+    "defaultItem": null
+  },
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "source_anatomy": {
+    "fore_group": {
+      "part": 297,
+      "parent": 287,
+      "laterality": 16,
+      "manager": "515::MultipleLegs::Change",
+      "boots_instance": 580
+    },
+    "hind_group": {
+      "part": 298,
+      "parent": 287,
+      "laterality": 64,
+      "manager": "515::MultipleLegs::Add",
+      "equipped": null
+    },
+    "horns": {
+      "part": 288,
+      "instance": 575,
+      "independent_equipment": true
+    },
+    "physical_legs": 4,
+    "mutation_level": "MultipleLegs6 is a level, not six legs.",
+    "joint_coordinates": "Unknown; native slots are not anatomical render bones."
+  },
+  "previous_superseded_source": {
+    "path": "art/conversion/fit-yrame-leather-boots/v1/source-packet.json",
+    "sha256": "d4cd5b1c2aeaf96696a9b77d3b26606b8ed49c668d90bed0129d263fefc863cf"
+  },
+  "donor_reference": {
+    "file": "D:\\Steam\\steamapps\\workshop\\content\\294100\\1814987817\\Textures\\Things\\Footwear\\Boots.png",
+    "sha256": "882788659961f2fdfbacdff4d615aff57f472775222f6337c9743185693b9a81",
+    "mod": "Vanilla Apparel Expanded",
+    "workshop_id": "1814987817",
+    "about_sha256": "50a621338fbd8395945f9897c2ba849104e312d2829e0f057d99141fb9d8e0be",
+    "role": "Actual inventory boot icon: closed leather shaft/toe/sole and neutral outlines. Oblique inventory camera is not a worn cardinal reference and no directional foot-node support is inferred."
+  },
+  "fit_contract": {
+    "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+    "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+  },
+  "design": "One pair of closed boar-leather boots on equipped fore Feet16 only, shaped around the selected hooves. Simple cuff/sole and separate recovered wire; no spurs, plates, open toes or additional hind footwear.",
+  "palette": {
+    "foreground": "w",
+    "detail": "y",
+    "detail_assignment": "Gold wire by native description, through actual y detail role; no gold/yellow baked into neutral texture."
+  },
+  "native_acceptance": "Pending full-set generation gate, actual Feet297/16 equipment/unequip behavior and full named outfit."
+}

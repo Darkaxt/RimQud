@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-YRAME-LEATHER-BOOTS-FEET-16",
+  "active_entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -17111,8 +17111,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -17124,9 +17124,7 @@
         "reprocess_under_regional_curved_v1",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "yrame",
         "equipment_key": "leather-boots@Feet@16",
@@ -17466,6 +17464,327 @@
           "outputs": [],
           "review": "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T05:20:34.832611+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "phase": "Resolve actual equipped fore pair and bare added hind pair",
+          "action": "Boots580 remain on fore Feet297/16; added hind Feet298/64 is unequipped. Joint/anchor and hoof-tailoring geometry are authored estimates.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v1/source-packet.json",
+              "sha256": "d4cd5b1c2aeaf96696a9b77d3b26606b8ed49c668d90bed0129d263fefc863cf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/source-packet.json",
+              "sha256": "8b9647ec7e3110060e60b629affaadf40b13b7bfbe601d51aa035b7ce368952e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            }
+          ],
+          "review": "Boots580 remain on fore Feet297/16; added hind Feet298/64 is unequipped. Joint/anchor and hoof-tailoring geometry are authored estimates.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:20:34.832611+00:00",
+          "step": "select_correct_body_and_references",
+          "phase": "Selected centauroid feet and actual closed-footwear reference",
+          "action": "Selected body and original glyph/current donor icon hashes verified. Source icon supplies leather/form cues only; no foot-node support or oblique worn camera inferred.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v1/source-packet.json",
+              "sha256": "d4cd5b1c2aeaf96696a9b77d3b26606b8ed49c668d90bed0129d263fefc863cf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/bare-foot-landmark-review.png",
+              "sha256": "58fc752c5bb4caaa5ea93756ea711b1e755944c341f94abd43097077e152fad7"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/source-reference-construction.png",
+              "sha256": "c35bd5214a033dd9a9849ba17480b2d58a0edf52d1dc34edea06981d8dab4fab"
+            }
+          ],
+          "review": "Selected body and original glyph/current donor icon hashes verified. Source icon supplies leather/form cues only; no foot-node support or oblique worn camera inferred.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:20:34.832611+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Full boot pair, closed toes and natural fore/hind depth — review pending",
+          "action": "Per-view fit contract predates construction. Full near/far boot sources and independent wire retained; no duplicate hind boots and no bare hoof overlay. Manual structural review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v1/source-packet.json",
+              "sha256": "d4cd5b1c2aeaf96696a9b77d3b26606b8ed49c668d90bed0129d263fefc863cf"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/construct-boots.py",
+              "sha256": "ae8266c01ac34516c258e3bf4a61d07af82fd8f2efbf5f6853aa55dd510a18d0"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/manual-neutral-turnaround.png",
+              "sha256": "47899e8351c58d942a37b197074296de349fe2a97e03fa0ff4e8b97fd340d9ba"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/manual-context-turnaround.png",
+              "sha256": "c1e9880bf022d74ab33db1c0584f94d64c3c2a2431ae73fa9ba7493faee2c07a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/context-crops.json",
+              "sha256": "087cd63ce04476f09de12249b06b6c11d35116b2e1b4e687f54e1d2daf6a91ce"
+            }
+          ],
+          "review": "Per-view fit contract predates construction. Full near/far boot sources and independent wire retained; no duplicate hind boots and no bare hoof overlay. Manual structural review pending.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T05:22:32.445048+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Closed fore boots reviewed before actual refinement",
+          "action": "Compare equipped fore-pair placement, closed toe/sole coverage, curved cuff entry and original bare hind depth against every facing description.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/manual-neutral-turnaround.png",
+              "sha256": "47899e8351c58d942a37b197074296de349fe2a97e03fa0ff4e8b97fd340d9ba"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/manual-structural-review.json",
+              "sha256": "1ddabfd96a0e427e365c3a8df4dc77e291031a5dc875c3c229b711468b599827"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/context-refinement-prompt.txt",
+              "sha256": "2e96329ba3312d952611b429ac25d4dfc0ab90b4fbb9e4428c7d37b9a83c7e37"
+            }
+          ],
+          "review": "Both physical boots stay on fore Feet297/16. Original hind Feet298/64 stays bare, north fore boots mostly hidden. Full sources retained; sole thickness recorded without moving body pivot. Contextual refinement pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:29:26.907651+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Actual boot refinement: fore/hind ownership reviewed",
+          "action": "One actual contextual refinement. Closed fore pair, naturally partial far boot and bare hind hooves retained; original body remains production source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/context-refinement-raw.png",
+              "sha256": "9dd46aeb8881f4b678257624d295de87e8e25c9a6a8dc90aa5fb508eddf64483"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/generation-receipt.json",
+              "sha256": "086fcb97380e05630891cced9de9ac7c544f1e46860c2ccae340304a2ce9fac7"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/context-refinement-raw.png",
+              "sha256": "9dd46aeb8881f4b678257624d295de87e8e25c9a6a8dc90aa5fb508eddf64483"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/first-refinement-solid-review.png",
+              "sha256": "9d8c29d0354cea2d8be4b683e359f176b35a5e232016d48d718870e280c4ed90"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/first-refinement-structural-review.json",
+              "sha256": "45678527e97fe8c393440ee54d00ac04171a5c2d3662bb62258d7fe3c32474da"
+            }
+          ],
+          "review": "One actual contextual refinement. Closed fore pair, naturally partial far boot and bare hind hooves retained; original body remains production source.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:29:26.907651+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Complete leather and wire before original-body cuff/rear depth",
+          "action": "Actual leather registered to intact fixed boot geometry. Wire excluded from leather sampling and retained separately. Full hidden fore boots preserved; no second isolation generation, bare-hoof overlay or body-shaped alpha cutout. Final fit review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/context-refinement-raw.png",
+              "sha256": "9dd46aeb8881f4b678257624d295de87e8e25c9a6a8dc90aa5fb508eddf64483"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/register-boots.py",
+              "sha256": "d6c1da336fc31b1ef077f37d4bb575d3dfaa5b0ec89ed3b085940710065dfb15"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/material-sampling-controls.json",
+              "sha256": "848d3fe4c35e311990244e86960801e9bd4f5c217765036dfe45f65979bf3346"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/registration-decisions.json",
+              "sha256": "ecef7dbb01243bd01fe4cd92d43572f5c071d5d1c8ebcd026047173bd51b91cf"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/intact-boots-comparison.png",
+              "sha256": "5e45da7b83ae1497d39ea76c8505ac998b278a7bc7843ae277b17ad0afee1954"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/wire-detail-comparison.png",
+              "sha256": "fbfa35e34342aef1ae442c94bc112de65a230ea39891d9f77764a69879509bf9"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/continuation-comparison.png",
+              "sha256": "d9ca72d3d055a0d55358663f51ff6a98851f2a4a7b29e91f5441237a942559d9"
+            }
+          ],
+          "review": "Actual leather registered to intact fixed boot geometry. Wire excluded from leather sampling and retained separately. Full hidden fore boots preserved; no second isolation generation, bare-hoof overlay or body-shaped alpha cutout. Final fit review pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:32:55.322223+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Compare closed fore-foot coverage, curved cuff entry and natural near/far/hind depth against every fit-contract row.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/generation-receipt.json",
+              "sha256": "086fcb97380e05630891cced9de9ac7c544f1e46860c2ccae340304a2ce9fac7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/assembly-comparison.png",
+              "sha256": "550d3bba9828f408115286dc1fec90a9db7a872087344e63cd2e024543ff0373"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png",
+              "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/intact-boots-comparison.png",
+              "sha256": "5e45da7b83ae1497d39ea76c8505ac998b278a7bc7843ae277b17ad0afee1954"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/depth-off-comparison.png",
+              "sha256": "611bb03b3b377ecfd04e3d4453c0723a64b8a0ae11d3e69c2ae07d98bc01a6b2"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/body-mask-comparison.png",
+              "sha256": "43a97fe2c54a532b32a0a5a35019fb15aa8872aa8598c4b0a87e4510754c7820"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/body-overlay-comparison.png",
+              "sha256": "7494de004b7cf4a9c4f7768bae223b29890c988268c93c14f97de74744657930"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            }
+          ],
+          "review": "Inspected source glyph/native binding and actual VAE closed-boot icon, selected fore/hind anatomy, preconstruction per-view fit contract, full manual pair, actual contextual refinement, full leather continuation and independent editable wire. Registered geometry covers fore shins/hooves with continuous closed shafts, toes and soles. Curved cuff-entry visibility restores original shin only; no bare fore hoof is painted above leather. Profile near/far overlap is natural. North original bare hind legs/hooves occlude intact fore boots, with no duplicated hind footwear or rear lace ladder. Body and shared physical frame remain fixed. Neutral/native w/y, full-source/depth-off, all facings at matched scale and intended-size art reviewed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:32:55.322223+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Review intended-size footwear and independent native w leather/y wire on unchanged B lower-body anatomy.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/generation-receipt.json",
+              "sha256": "086fcb97380e05630891cced9de9ac7c544f1e46860c2ccae340304a2ce9fac7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png",
+              "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/wire-detail-comparison.png",
+              "sha256": "fbfa35e34342aef1ae442c94bc112de65a230ea39891d9f77764a69879509bf9"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/game-scale-review.png",
+              "sha256": "9de76f3a24c0b53bed7fe49f7d5130e9a8222d1e962f6244b7637c8a2bd850fe"
+            }
+          ],
+          "review": "Inspected source glyph/native binding and actual VAE closed-boot icon, selected fore/hind anatomy, preconstruction per-view fit contract, full manual pair, actual contextual refinement, full leather continuation and independent editable wire. Registered geometry covers fore shins/hooves with continuous closed shafts, toes and soles. Curved cuff-entry visibility restores original shin only; no bare fore hoof is painted above leather. Profile near/far overlap is natural. North original bare hind legs/hooves occlude intact fore boots, with no duplicated hind footwear or rear lace ladder. Body and shared physical frame remain fixed. Neutral/native w/y, full-source/depth-off, all facings at matched scale and intended-size art reviewed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:32:55.322223+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconcile source-bound full boots, actual contextual leather, completed hidden regions and late original-body cuff/rear depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/fit-contract.json",
+              "sha256": "ad65d1e3e7e2979e97d76d0412d6364e0e5bcba677d6b34a2ab2d77bcfd15c86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/generation-receipt.json",
+              "sha256": "086fcb97380e05630891cced9de9ac7c544f1e46860c2ccae340304a2ce9fac7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/artifact-manifest.json",
+              "sha256": "ba3d3462e44b097ccb51613681e59a9ee603ee50e6f7b78cdd282b94e1a7f045"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/registration-decisions.json",
+              "sha256": "ecef7dbb01243bd01fe4cd92d43572f5c071d5d1c8ebcd026047173bd51b91cf"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/continuation-comparison.png",
+              "sha256": "d9ca72d3d055a0d55358663f51ff6a98851f2a4a7b29e91f5441237a942559d9"
+            }
+          ],
+          "review": "Inspected source glyph/native binding and actual VAE closed-boot icon, selected fore/hind anatomy, preconstruction per-view fit contract, full manual pair, actual contextual refinement, full leather continuation and independent editable wire. Registered geometry covers fore shins/hooves with continuous closed shafts, toes and soles. Curved cuff-entry visibility restores original shin only; no bare fore hoof is painted above leather. Profile near/far overlap is natural. North original bare hind legs/hooves occlude intact fore boots, with no duplicated hind footwear or rear lace ladder. Body and shared physical frame remain fixed. Neutral/native w/y, full-source/depth-off, all facings at matched scale and intended-size art reviewed.",
+          "result": "PASS"
         }
       ],
       "apparel_occlusion": {
@@ -17476,7 +17795,7 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -17486,20 +17805,24 @@
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair."
+        "status": "PASS",
+        "reason": "Inspected source glyph/native binding and actual VAE closed-boot icon, selected fore/hind anatomy, preconstruction per-view fit contract, full manual pair, actual contextual refinement, full leather continuation and independent editable wire. Registered geometry covers fore shins/hooves with continuous closed shafts, toes and soles. Curved cuff-entry visibility restores original shin only; no bare fore hoof is painted above leather. Profile near/far overlap is natural. North original bare hind legs/hooves occlude intact fore boots, with no duplicated hind footwear or rear lace ladder. Body and shared physical frame remain fixed. Neutral/native w/y, full-source/depth-off, all facings at matched scale and intended-size art reviewed.",
+        "record": {
+          "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+          "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+        }
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
-          "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+          "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+          "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
         },
         "plate": {
-          "path": "art/conversion/fit-yrame-leather-boots/v1/footwear-comparison.png",
-          "sha256": "db2e1c876cbc7ee0d830d5b771a49a9354862f84af1aed44b16505d0d437de4d"
+          "path": "art/conversion/fit-yrame-leather-boots/v2/assembly-comparison.png",
+          "sha256": "550d3bba9828f408115286dc1fec90a9db7a872087344e63cd2e024543ff0373"
         }
       },
-      "registration_summary": "Reusable closed boar-leather boots with separate wire detail, corrected front/profile lacing and plain heel views. Full leather and individual boot sources retained on fixed ordinary base; no bare foot overlay. Actual mutation-managed Feet297/16 placement and named Yrame/native outfit remain unfinished.",
+      "registration_summary": "Selected v2 closed fore Feet297/16 pair on current centauroid. Full physical leather/wire, curved cuff entry and original hind depth separate; added hind feet remain bare. Shared body/frame unchanged. Actual native equipment and full outfit acceptance pending.",
       "native_acceptance": "Pending full-set gate and actual mutation-specific Feet297/16 placement"
     },
     {
@@ -17520,7 +17843,7 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
@@ -20213,17 +20536,14 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "resolve_item_identity_description_palette",
+      "current_step": null,
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [
-        "Actual mutation-managed Feet297/16 binding, extra-foot duplication/occlusion and native named outfit acceptance remain unfinished.",
-        "Required fitting reconciliation pending: FIT-YRAME-LEATHER-BOOTS-FEET-16"
-      ],
+      "known_issues": [],
       "metadata": {
         "original_reference": {
           "instance": 580,
@@ -20337,9 +20657,137 @@
           "outputs": [],
           "review": "Required fitting reconciliation pending: FIT-YRAME-LEATHER-BOOTS-FEET-16",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T05:34:03.552701+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Resolve current boar-leather/wire identity, actual fore Feet16 binding and unequipped hind Feet64.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-boots/v2/source-packet.json",
+              "sha256": "e1a6beece244c61928d6f19e166df436e109ee4f7798e5716a0164946f368eb2"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png",
+              "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png",
+              "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"
+            }
+          ],
+          "review": "Reconciled the sole required Leather Boots fitting against actual Feet297/16/item580 binding and selected centauroid anatomy: added hind Feet298/64 is unequipped. Current source identity/palette, all non-native generation steps, per-view contract, real refinement receipt and full-source/curved-cuff/rear-depth evidence reviewed. Bare fore hooves are not restored over closed leather, original hind body stays bare, wire is separate. Old ordinary-human fitting remains historical. Native equipment/unequip and full named outfit acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:34:03.552701+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconcile every required current-body boot fitting and its actual generation evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-boots/v2/fittings.json",
+              "sha256": "b52f0b72d7fbe0b9b7c4ff1e9b20c2121d7e7a6b6e954654d18ab3aba33853a4"
+            },
+            {
+              "path": "art/conversion/item-leather-boots/v2/authoring-review.json",
+              "sha256": "363be50787c9630929993b5e3c3e38a5c8b028d27691e022eea099b3fdbef064"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png",
+              "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png",
+              "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"
+            }
+          ],
+          "review": "Reconciled the sole required Leather Boots fitting against actual Feet297/16/item580 binding and selected centauroid anatomy: added hind Feet298/64 is unequipped. Current source identity/palette, all non-native generation steps, per-view contract, real refinement receipt and full-source/curved-cuff/rear-depth evidence reviewed. Bare fore hooves are not restored over closed leather, original hind body stays bare, wire is separate. Old ordinary-human fitting remains historical. Native equipment/unequip and full named outfit acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:34:03.552701+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconcile full physical pair, hidden leather completion, separate wire, curved cuff entry and original hind depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-boots/v2/authoring-review.json",
+              "sha256": "363be50787c9630929993b5e3c3e38a5c8b028d27691e022eea099b3fdbef064"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png",
+              "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png",
+              "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"
+            }
+          ],
+          "review": "Reconciled the sole required Leather Boots fitting against actual Feet297/16/item580 binding and selected centauroid anatomy: added hind Feet298/64 is unequipped. Current source identity/palette, all non-native generation steps, per-view contract, real refinement receipt and full-source/curved-cuff/rear-depth evidence reviewed. Bare fore hooves are not restored over closed leather, original hind body stays bare, wire is separate. Old ordinary-human fitting remains historical. Native equipment/unequip and full named outfit acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:34:03.552701+00:00",
+          "step": "record_item_acceptance_from_all_fittings",
+          "action": "Record generation-ready boot index; retain native equipment/outfit acceptance pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json",
+              "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-leather-boots/v2/artifact-manifest.json",
+              "sha256": "27203b7380b5884dcede66dd7fef24ee99415f0c2f54e1eb4d0e1d28d211af03"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png",
+              "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png",
+              "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"
+            }
+          ],
+          "review": "Reconciled the sole required Leather Boots fitting against actual Feet297/16/item580 binding and selected centauroid anatomy: added hind Feet298/64 is unequipped. Current source identity/palette, all non-native generation steps, per-view contract, real refinement receipt and full-source/curved-cuff/rear-depth evidence reviewed. Bare fore hooves are not restored over closed leather, original hind body stays bare, wire is separate. Old ordinary-human fitting remains historical. Native equipment/unequip and full named outfit acceptance remain pending.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -20350,19 +20798,23 @@
       },
       "art_review": {
         "status": "PASS",
-        "reason": "Reconciled boar-leather/gold-wire source identity, w/y roles, actual mutation-managed binding and complete reusable footwear authoring evidence. Individual boot sources, full leather, wire and zero skin overlay are retained. Generation-only aggregate; no acceptance of extra-foot placement or native named outfit."
+        "reason": "Reconciled the sole required Leather Boots fitting against actual Feet297/16/item580 binding and selected centauroid anatomy: added hind Feet298/64 is unequipped. Current source identity/palette, all non-native generation steps, per-view contract, real refinement receipt and full-source/curved-cuff/rear-depth evidence reviewed. Bare fore hooves are not restored over closed leather, original hind body stays bare, wire is separate. Old ordinary-human fitting remains historical. Native equipment/unequip and full named outfit acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/item-leather-boots/v2/authoring-review.json",
+          "sha256": "363be50787c9630929993b5e3c3e38a5c8b028d27691e022eea099b3fdbef064"
+        }
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/item-leather-boots/v1/fittings.json",
-          "sha256": "ab36f641b41a99a877d98d3fb22cdb37400c7b8c4e40ae10ccf4a23cd8a13d1d"
+          "path": "art/conversion/item-leather-boots/v2/fittings.json",
+          "sha256": "b52f0b72d7fbe0b9b7c4ff1e9b20c2121d7e7a6b6e954654d18ab3aba33853a4"
         },
         "plate": {
-          "path": "art/conversion/item-leather-boots/v1/body-fittings-comparison.png",
-          "sha256": "db2e1c876cbc7ee0d830d5b771a49a9354862f84af1aed44b16505d0d437de4d"
+          "path": "art/conversion/fit-yrame-leather-boots/v2/assembly-comparison.png",
+          "sha256": "550d3bba9828f408115286dc1fec90a9db7a872087344e63cd2e024543ff0373"
         }
       },
-      "registration_summary": "Leather Boots reusable source and item identity are generation-ready. Exact Feet297/16 mutation placement, named outfit and native acceptance remain unfinished.",
+      "registration_summary": "Current Leather Boots source index selects reviewed fore Feet297/16 fit on selected centauroid. Full leather/wire and cuff/rear depth retained; hind group remains bare. Native equipment/unequip and complete Yrame outfit remain pending.",
       "native_acceptance": "Pending full-set gate, mutation-specific foot placement and named outfit"
     },
     {
@@ -66704,7 +67156,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T05:09:20.276889+00:00",
+  "updated_at": "2026-10-21T05:34:03.552701+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

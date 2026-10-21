@@ -8,7 +8,31 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, centauroid mail): the Chain Mail
+Current authoring checkpoint (2026-10-21, equipped fore boots): the Leather Boots
+Feet297/16 fitting and its inventory aggregate are generation-ready under
+`fit-yrame-leather-boots/v2` and `item-leather-boots/v2`. Captured Boots580 equips
+the mutation-changed fore group; added hind Feet298/64 is unequipped. The
+preconstruction fit contract defines one closed physical pair around the fore
+shins/hooves, natural profile overlap and rear occlusion by the original bare
+hind legs. Anchors and hoof-tailoring remain authored estimates, not recovered
+joint coordinates. One actual contextual refinement supplied neutral leather;
+per-part material coordinates do not change the fixed garment/body geometry.
+Bright wire is excluded from leather sampling and retained independently in
+native y; leather remains w. Full hidden far/rear boot sources are retained and
+completed before depth, with rear plain leather continued from actual profile
+material and authored heel seams. Original cuff-entry shin pixels appear above
+the boot mouths; no bare fore hoof is restored over closed leather. The complete
+rear fore pair draws behind the original hind legs rather than being duplicated
+onto their visible feet. Body/frame, physical pair alpha, neutral/wire
+recomposition, bare hind pixels, matched-scale views and intended-size art were
+reviewed. Approximately 4 px leather sole thickness below bare contact is recorded
+without shifting the body pivot. These are authoring results, not native
+equipment/unequip or full-outfit acceptance. There are 130 generation-ready
+entries out of 156, every entry still unfinished for native acceptance. Stage 3
+remains the sole ACTIVE stage; `FIT-YRAME-VIBRO-BLADE-HAND-2` is the sole active
+entry.
+
+Prior authoring checkpoint (2026-10-21, centauroid mail): the Chain Mail
 Body287/0 fitting and its inventory aggregate are generation-ready under
 `fit-yrame-chain-mail/v2/arm-owner-v2` and `item-chain-mail/v2`. One per-view
 contract preceded construction and described connected shoulders, curved short
@@ -25,9 +49,9 @@ arm foreground only; fleece stays below the mail. Exact body/frame, whole mail,
 independent y/Y metal regions, mask-off/on, all facings at matched physical scale
 and intended-size art were reviewed. These are authoring results; equipped-state,
 Yrame's full outfit and native acceptance remain pending behind the full-set
-generation gate. There are 128 generation-ready entries out of 156, every entry
-still unfinished for native acceptance. Stage 3 is the sole ACTIVE stage;
-`FIT-YRAME-LEATHER-BOOTS-FEET-16` is the sole active entry.
+generation gate. There were 128 generation-ready entries out of 156 at that
+checkpoint, every entry still unfinished for native acceptance. Stage 3 remained
+ACTIVE; actual fore-pair boot refitting followed this work.
 
 Prior authoring checkpoint (2026-10-21, horn-root rebuild): Yrame's natural
 Head288/0 Horns575 fitting and its source-item aggregate are generation-ready
