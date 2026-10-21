@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "BODY-NIMA",
+  "active_entry": "NPC-NIMA-RUDA",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -40209,7 +40209,7 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "verify_body_and_every_equipped_item_dependencies",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
@@ -40220,7 +40220,7 @@
         "native_visibility_equipment_hurt_look_save_review"
       ],
       "known_issues": [
-        "BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy."
+        "Separate BODY-NIMA anatomy is generation-ready. Assemble all five actual fittings in the same padded world frame, respect tail detail-w role and explicit west geometry, and review item/tail/arm occlusion and exact Hand181/6 versus FloatingNearby195/0 attachments."
       ],
       "metadata": {
         "species": "human",
@@ -40586,9 +40586,9 @@
       },
       "advancement_blocker": {
         "requirement": "Source-bound individual anatomy and actual five-item assembly in every required direction",
-        "reason": "BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy.",
+        "reason": "Separate BODY-NIMA anatomy is generation-ready. Assemble all five actual fittings in the same padded world frame, respect tail detail-w role and explicit west geometry, and review item/tail/arm occlusion and exact Hand181/6 versus FloatingNearby195/0 attachments.",
         "classification": "internal",
-        "resolution": "Generate source-bound separate Nima mutation layers over the selected unmutated female base, then assemble the five actual item bindings and inspect occlusion/attachment.",
+        "resolution": "Finish the source-bound five-item named assembly without baking gear or changing actual captured slots; keep native state acceptance behind full-generation gate.",
         "dependent": "NPC-NIMA-RUDA generation readiness and later native acceptance"
       }
     },
@@ -46729,8 +46729,8 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_race_description_original_sprite_runtime_anatomy",
+      "status": "UNFINISHED",
+      "current_step": "native_body_review",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
         "select_actual_core_dlc_or_mod_reference",
@@ -46741,10 +46741,7 @@
         "visual_review_anatomy_orientation_palette_all_views",
         "native_body_review"
       ],
-      "known_issues": [
-        "Existing art/registration and native checks are historical only; restart the logged workflow.",
-        "Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "unmutated_base_entry": "BODY-HUMAN-FEMALE",
         "mutation_rendering": "Separate framework; no baked mutant baseline"
@@ -46807,7 +46804,373 @@
           "sha256": "339e2ed6966396b2f561afd7b71f252cca3c9f7069be1c4ba2cf678f5d1aacf7"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "action": "Resolve Nima506 native identity, complete part/managers, source description/shape/palette and existing unmutated female base.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "review": "Four arms/hands and one Stinger-managed Tail193 retained. Late-middle-age prose and jade eyes/scars are metadata under cosmetic scope; no numeric age, profession pose or extra anatomy inferred. Actual five-item bindings remain NPC work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "action": "Inspect actual Core female cardinal body references and installed Megafauna Pulmonoscorpius front/side tail reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "review": "Private exact PNG/About hashes retained. Core supplies human presentation; Megafauna supplies only segment/stinger readability. No whole Nima equivalent selected or animal body/palette/size/mechanics copied.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "construct_front",
+          "action": "Construct separate extra arm pair and one segmented3Dtail, projecting cardinal views over unchanged source body/head.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/construct-nima.py",
+              "sha256": "1f29adbb76e8eab502b84bbe0d9989dd98a7a7acda8ef56912a8f7450afdb351"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/constructed-south.png",
+              "sha256": "de27e692ec45e3763e5116682f9d1fda9d903642ed57ea78be34f43135f00395"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/constructed-turnaround.png",
+              "sha256": "5908a595d663b2245cdefc0c4ad32deb7999157b43874b02edce02b9f77941b0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction.json",
+              "sha256": "cf06ff74fdb03dfa4eb2fc32f8ceef2d298c55f54d5cf23e2f9474776c05e465"
+            }
+          ],
+          "review": "Initial24segment ascending helix read as a zigzag and profile far-arm geometry produced a stub; preserve it as rejected construction rather than refine the wrong form. Original two arms/hands/feet and all base pixels unchanged.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "construct_front",
+          "action": "Correct the spiral centreline and profile overlap before refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/constructed-turnaround.png",
+              "sha256": "5908a595d663b2245cdefc0c4ad32deb7999157b43874b02edce02b9f77941b0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/tail_geometry.py",
+              "sha256": "d12079eeab38d63e8193f9fb42780b74afcda07574c9fe4eab68429edae336c0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patch-spiral-tail.py",
+              "sha256": "45f30ff33f899d58dc3e2d5a89bc7013cfc4f0e65cfb9a589efc4dba496b1080"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction-v2.json",
+              "sha256": "142e66c28d77d7f2f67edc383dc2dddb4c135b751143d575ab1b1b38453d5efd"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-construction-turnaround.png",
+              "sha256": "b203f743d689170b84607377046668749fdcef2e0433192605c1dde3d258ce31"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/manual-corrections.json",
+              "sha256": "661880956c2d04f8c3e338979001dc8fa456b0127cacb1e671f61d6985507cde"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/correct-profile-depth.py",
+              "sha256": "349aa6a3fe9bc015f72e9b75726a7995507d017f3ba716911d17a635207636c6"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/profile-depth-correction.json",
+              "sha256": "9aa6929b1953ac50807407ee9a46e8443c27aab05ea3230aea8fe2e9c5a1ed0d"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/corrected-construction-turnaround.png",
+              "sha256": "291a9e018c5f92d9e610a40eca8db33bf4c7931333262db196dfac865530b6f8"
+            }
+          ],
+          "review": "Selected front now has one inward-coiling tail; all orientations use the same world geometry. Side far extra limb is occluded naturally and the midline tail root stays behind the near arm/body. Surface segments are not mechanical body parts. Corrected sheet visually inspected; ready for actual refinement request.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "action": "Document original g/w palette coverage and explicit separate tail appearance interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-palette-roles.json",
+              "sha256": "18ef5611b2ff2b9daca87ea505387ca570427acbf999b4f45fda0f8878f325ab"
+            }
+          ],
+          "review": "Original detail role occupies the light upper/spiral region. Tail maps to source w and body/arms to g as a stated appearance interpretation, not biological per-limb pigment metadata. Neutral assets remain gray; no unproven natural-item blue recolor.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "action": "Receive actual ImageGen front-guided side/back proposal and inspect structural quality before registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-prompt.txt",
+              "sha256": "bfb026cc93a45b92a2d2c3ae95e89edacae3b794a41b4823dbfb09686dfccc2d"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/corrected-construction-turnaround.png",
+              "sha256": "291a9e018c5f92d9e610a40eca8db33bf4c7931333262db196dfac865530b6f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-raw.png",
+              "sha256": "a456aa0197cdcefe6239b481fd76fc89198bbe7a5a012609a1d0aec521b2860a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/first-structural-review.json",
+              "sha256": "90f4ccf61bd65c4a0f03e8d2dd36b277985aaa817a7bbf9eba5fa3a42e35dcdb"
+            }
+          ],
+          "review": "Four-arm and cardinal view proposal received. Reject changed base pixels and duplicate north stinger/bead anatomy; only neutral surface values are usable. The next correction explicitly restores the source-bound geometry and original base.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/secondary-views-prompt.txt",
+            "sha256": "bfb026cc93a45b92a2d2c3ae95e89edacae3b794a41b4823dbfb09686dfccc2d"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Restore exact base and sole-tail topology; prepare corrected composed refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-raw.png",
+              "sha256": "a456aa0197cdcefe6239b481fd76fc89198bbe7a5a012609a1d0aec521b2860a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/refine-fixed-surfaces.py",
+              "sha256": "58850d07252654212232c3455a83afcfe6b5a58a88ed28e9793859d7a0cedae0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-refined-turnaround.png",
+              "sha256": "0124ca0c25e9d995fa7ec6913f9b5c14889b276edd5e107434422b9cab2262d5"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-topology-evidence.png",
+              "sha256": "f27e1947b8535b0f08af0598ca092fb1fff6a4d5dd242b29db19cdaf372a471b"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+              "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+            }
+          ],
+          "review": "Original4arm body composition and one canonical tail restored. Measured first-refinement material values continued within unchanged coverage; no invalid generated anatomy extracted. Complete-tail diagram distinguishes one root and one tip. Actual composed-refinement request is running; no output or phase completion credited yet.",
+          "result": "IN PROGRESS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+            "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Receive composed refinement and inspect corrected one-tail topology; reject redrawn base pixels.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+              "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-refined-turnaround.png",
+              "sha256": "0124ca0c25e9d995fa7ec6913f9b5c14889b276edd5e107434422b9cab2262d5"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-topology-evidence.png",
+              "sha256": "f27e1947b8535b0f08af0598ca092fb1fff6a4d5dd242b29db19cdaf372a471b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-raw.png",
+              "sha256": "e6a2eefe7c02fa18700a2b4fcf2a0e9fb3405764cd4dde21680594dc6104ae6c"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-structural-review.json",
+              "sha256": "aadc6ff1ac2d8cfcfa9a4665e986639d85d281893b342dd193b72c7ec15e670f"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/generation-receipts.json",
+              "sha256": "a1383796ea9bac05cde90bb5a314168759e3901340e54961d0989140355b452d"
+            }
+          ],
+          "review": "Second actual output has one inner hooked stinger/bead instead of the first duplicate. Ordinary body/head/legs are still redrawn, so return to exact original body and canonical geometry; only usable surface finish retained. No further prompt loop or isolation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+            "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "action": "Register unchanged source body/head and separate extra-arm/spiral-tail layers with explicit four-view projection and source color roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction-v2.json",
+              "sha256": "142e66c28d77d7f2f67edc383dc2dddb4c135b751143d575ab1b1b38453d5efd"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-palette-roles.json",
+              "sha256": "18ef5611b2ff2b9daca87ea505387ca570427acbf999b4f45fda0f8878f325ab"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-raw.png",
+              "sha256": "e6a2eefe7c02fa18700a2b4fcf2a0e9fb3405764cd4dde21680594dc6104ae6c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/tail_geometry_four_views.py",
+              "sha256": "552bef1608a5ed559d4601ecb8a2667112be29042492e3ddb4bc6ebe8a59e5ce"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/register-nima.py",
+              "sha256": "47bc3a6fe865c90a7c17111f0881e0f4be361c5d67ad22e44ee6f72c1d23af06"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/registration-decisions.json",
+              "sha256": "f59b2ab10323d3675445a1dc9d73e3652f621184da0659eba862b094a14b5009"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/neutral-comparison.png",
+              "sha256": "169b4e93a1a3fa18af9bebf508fdcaa9e087d0902d0cdf731544d401bedaa5a6"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/native-comparison.png",
+              "sha256": "cae4f823f7fffc07adf955929aec395815560ee9e660dc89b6b475ff17d3cb78"
+            }
+          ],
+          "review": "Exact RGBA padding preserves world frame/ground. One Tail193 uses near/far draw-order pieces; no duplicated appendage. West tail is an explicit canonical projection because the diagonal spiral is asymmetric. Body/arms use source g, tail uses source w as stated appearance interpretation; neutral RGB remains gray.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "action": "Review actual all-direction anatomy, final palette/registration and intended-size evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/record-review.py",
+              "sha256": "6e4f97cbfb9cde4d5f0a662142006990e4305b5cd3987997b3b14b6cc69d2809"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/authoring-review.json",
+              "sha256": "cefcdc14c5b88ecad3f5faad06008ef083c2c97f0d68d90102f6b796bb7fa19a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/game-scale-comparison.png",
+              "sha256": "dfc7ce773c2b4da70afc500b9e24f04256b7e9fc7fe73e780fe0aff7ef395b7a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/artifact-manifest.json",
+              "sha256": "dc06b7eec90e35a0b6f9b8e2a0f740810a2a812a1ba7572d14f8c83756d617b5"
+            }
+          ],
+          "review": "Inspected original g/w shape and full description/tree, actual Core female and Megafauna Pulmonoscorpius references, original and corrected manual views, both actual ImageGen outputs, sole-tail topology evidence, final separate components and all four neutral/native/intended-size views. Exactly four arms/hands, two ordinary feet, one ordinary blank head and one posterior Tail193 with a segmented inward spiral, one hooked endpoint and one bead. Surface24segments and numerical dimensions are authored, not native body-part counts. Initial zigzag helix, profile overlap defect and generated duplicate north stinger were corrected and retained in history. Second refinement corrects the duplicate but redraws the ordinary body, so only usable surface values are retained. Original female body/head RGBA pixels remain exact under240px top padding; physical scale and ground/contact are unchanged. Extra arm pair and tail front/back are separate from the reusable body. All views use one canonical3Dtail; west tail is explicitly projected, while symmetric base/arm profile may mirror. Profile body/near arm occludes the midline tail root. Neutral RGB is gray. Source g body/arms and w spiral appearance roles are explicit interpretations of original Render appearance, not biological pigment claims. No unproven natural-stinger color is imported. No clothing, personal jade-eye/scar cosmetics, generic mutation framework, new demographic/occupation pose, AI isolation or native activation. Actual five-item Nima outfit and final anatomy/equipment/visibility/hurt/look/save/state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "native_body_review",
+          "action": "Keep native named anatomy and five-item outfit acceptance behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, native/harness test or activation. Actual Pestle Hand181/6 and Glowsphere FloatingNearby195/0, all-item occlusion and integrated anatomy/equipment/state/visibility/hurt/look/save review remain required.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-nima/v1/registered/model.json",
+          "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+        },
+        "plate": {
+          "path": "art/conversion/body-nima/v1/registered/neutral-comparison.png",
+          "sha256": "169b4e93a1a3fa18af9bebf508fdcaa9e087d0902d0cdf731544d401bedaa5a6"
+        }
+      },
+      "registration_summary": "Unchanged shared female body plus separate additional arm pair and one segmented spiral Tail193. All four tail views use the same world geometry, including an explicit west projection. Body ground/physical scale are unchanged by top padding; source palette roles and authored interpretation are recorded. Nima outfit and native acceptance remain pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected original g/w shape and full description/tree, actual Core female and Megafauna Pulmonoscorpius references, original and corrected manual views, both actual ImageGen outputs, sole-tail topology evidence, final separate components and all four neutral/native/intended-size views. Exactly four arms/hands, two ordinary feet, one ordinary blank head and one posterior Tail193 with a segmented inward spiral, one hooked endpoint and one bead. Surface24segments and numerical dimensions are authored, not native body-part counts. Initial zigzag helix, profile overlap defect and generated duplicate north stinger were corrected and retained in history. Second refinement corrects the duplicate but redraws the ordinary body, so only usable surface values are retained. Original female body/head RGBA pixels remain exact under240px top padding; physical scale and ground/contact are unchanged. Extra arm pair and tail front/back are separate from the reusable body. All views use one canonical3Dtail; west tail is explicitly projected, while symmetric base/arm profile may mirror. Profile body/near arm occludes the midline tail root. Neutral RGB is gray. Source g body/arms and w spiral appearance roles are explicit interpretations of original Render appearance, not biological pigment claims. No unproven natural-stinger color is imported. No clothing, personal jade-eye/scar cosmetics, generic mutation framework, new demographic/occupation pose, AI isolation or native activation. Actual five-item Nima outfit and final anatomy/equipment/visibility/hurt/look/save/state acceptance remain unfinished.",
+        "record": {
+          "path": "art/conversion/body-nima/v1/registered/authoring-review.json",
+          "sha256": "cefcdc14c5b88ecad3f5faad06008ef083c2c97f0d68d90102f6b796bb7fa19a"
+        }
+      }
     },
     {
       "id": "BODY-RAY-CAT",
@@ -59995,7 +60358,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T00:02:54.550422+00:00",
+  "updated_at": "2026-10-21T00:31:39.837376+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

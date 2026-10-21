@@ -1,0 +1,43 @@
+"""Record Nima's source/reference/manual progression before actual refinement."""
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+import numpy as np
+from PIL import Image,ImageDraw,ImageFont
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def write(p,d):p.write_bytes((json.dumps(d,indent=2,ensure_ascii=False)+'\n').encode())
+packet=json.loads((HERE/'source-packet.json').read_text());palette=json.loads((ROOT/'evidence/joppa-anatomy-study.json').read_text())['native_palette'];rgb=lambda c:np.frombuffer(bytes.fromhex(palette[c]),dtype=np.uint8)
+a=np.array(Image.open(packet['original']['private_mask']['path']).convert('RGBA'));w=a[:,:,:1].astype(float)/255
+original=Image.fromarray(np.dstack([np.uint8(np.round((1-w)*rgb('g')+w*rgb('w'))),a[:,:,3]]))
+font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',15);sheet=Image.new('RGB',(1400,950),'#142823');d=ImageDraw.Draw(sheet)
+d.text((18,15),'NIMA506 > human female base > separate extra arms / great spiral stinger tail',font=font,fill='#e3cf43')
+for im,x,y,size in [(original,40,90,(160,240)),(Image.open(packet['donor_references'][0]['path']).convert('RGBA'),270,65,(160,160)),(Image.open(packet['donor_references'][4]['path']).convert('RGBA'),270,260,(192,192)),(Image.open(HERE/'baseline-south.png').convert('RGBA'),565,55,(240,593)),(Image.open(HERE/'patched-construction-south.png').convert('RGBA'),1040,55,(240,593))]:
+    im=im.resize(size,Image.Resampling.NEAREST if im is original else Image.Resampling.LANCZOS);sheet.paste(im,(x,y),im)
+for x,label in [(25,'QUD ORIGINAL g/w'),(250,'CORE + MEGAFAUNA'),(530,'UNCHANGED FEMALE BASE'),(1000,'MANUAL SEPARATE ADDITIONS')]:d.text((x,680),label,font=font,fill='#e3cf43')
+lines=['Native description: great jeweled spiral tail and stinger over back/neck, tiny bead at tip. Native tree:4arms,1tail.',
+       'Core female reference: ordinary human rendering. Megafauna Pulmonoscorpius: segment/joint/stinger shading only.',
+       'No whole creature equivalent claimed. No donor claws, legs, purple palette, size or mechanics are imported.',
+       'Tail surface count, length/radius and unseen forms are authored. All views project one corrected3Dcentreline.',
+       'Exact body/head pixels are retained at y+240; original world scale and ground/contact are unchanged.',
+       'No clothing, jade-eye/scar cosmetics, new demographic, profession posture or general mutation framework.']
+for i,line in enumerate(lines):d.text((18,735+i*30),line,font=font,fill='#e5e8d8')
+sheet.save(HERE/'source-reference-construction.png')
+prompt='''Use case: precise-object-edit, source-bound game sprite turnaround.
+Input1 is the edit target: selected manual FRONT/SOUTH, full RIGHT PROFILE/EAST, straight BACK/NORTH, all on the same fixed adult female mannequin. Input2 is a SOURCE/REFERENCE plate: tiny original Caves of Qud icon, actual Core human body, actual Megafauna scorpion tail, existing base and manual front. Samples are not extra characters to reproduce.
+Refine the selected SOUTH design and provide consistent complete east and north views alongside it, respecting the supplied side/back constructions and this anatomy. Same physical scale, fixed cardinal camera, aligned ground, transparent background. Labels SOUTH / EAST / NORTH below the corresponding complete figure. No three-quarter body or independently turned head.
+Subject is Nima Ruda, human female mutant from Caves of Qud. Native source: sharp jade eyes crow-worn to late middle age and gas-burn scars on lips; climbing over her back and neck are the jeweled segments of a GREAT SPIRAL TAIL AND STINGER, a tiny bead at the tip. The current phase leaves the ordinary head blank: no eyes, scar cosmetics, hair or age reassignment. Keep the established human body/head, contours, shape, two legs/feet and proportions unchanged.
+EXACTLY FOUR ARMS TOTAL, FOUR HANDS TOTAL: two existing ordinary arms/hands plus ONLY ONE extra pair as constructed. Both pairs are in a neutral resting anatomical display, not a profession pose. In the complete profile, far limbs are naturally hidden behind the near limbs; do not add a floating stub or extra disconnected hand to show a count. No extra legs/head, no hands-face, no claws or pincers.
+There is ONE posterior segmented tail, rooted at the back of the pelvis, climbing the back and curling into a clear inward spiral behind/over the neck. Follow the same shared spiral across the views, with one hooked stinger and one tiny bead. Read the tail as organic/chitinous JEWELED SEGMENTS, not a metal hose, cable, mechanical antenna, necklace, helmet or second creature. Megafauna is ONLY a reference for segment joints and quiet game-art shading. Do not copy its full scorpion, animal body, purple palette, legs or game mechanics. Do not turn the spiral into a zigzag or duplicate it into two tails. In east, the near arm/body covers the midline tail root as constructed.
+Use neutral grayscale throughout, clean quiet outlines and restrained consistent shading matching the existing body. Make segment transitions and stinger readable without glow, colored gems or jewelry ornament. Keep the coil and attachments, do not rescale the base or invent a new body. Featureless nonsexual adult mannequin, no anatomical sexual details. No apron, hat, sandals, pestle, floating sphere, clothing, background scenery or dramatic smoke effects. The bead is tiny; no detached smoke cloud. Preserve negative space between the spiral and the body where constructed. This is contextual refinement and side/back generation, NOT an isolation request.
+'''
+(HERE/'secondary-views-prompt.txt').write_bytes(prompt.encode())
+now=datetime.now(timezone.utc).isoformat();ledger=json.loads((ROOT/'evidence/conversion-ledger.json').read_text());assert ledger['active_entry']=='BODY-NIMA';entry=next(e for e in ledger['entries'] if e['id']=='BODY-NIMA');assert not entry['process_log']
+def event(step,action,ins,outs,review):entry['process_log'].append(dict(timestamp=now,step=step,action=action,inputs=[ref(HERE/n) for n in ins],outputs=[ref(HERE/n) for n in outs],review=review,result='PASS'))
+event(entry['required_steps'][0],'Resolve Nima506 native identity, complete part/managers, source description/shape/palette and existing unmutated female base.',[],['source-packet.json','source-reference-construction.png'],'Four arms/hands and one Stinger-managed Tail193 retained. Late-middle-age prose and jade eyes/scars are metadata under cosmetic scope; no numeric age, profession pose or extra anatomy inferred. Actual five-item bindings remain NPC work.')
+event(entry['required_steps'][1],'Inspect actual Core female cardinal body references and installed Megafauna Pulmonoscorpius front/side tail reference.',['source-packet.json'],['source-reference-construction.png'],'Private exact PNG/About hashes retained. Core supplies human presentation; Megafauna supplies only segment/stinger readability. No whole Nima equivalent selected or animal body/palette/size/mechanics copied.')
+event(entry['required_steps'][2],'Construct separate extra arm pair and one segmented3Dtail, projecting cardinal views over unchanged source body/head.',['source-packet.json'],['construct-nima.py','constructed-south.png','constructed-turnaround.png','tail-construction.json'],'Initial24segment ascending helix read as a zigzag and profile far-arm geometry produced a stub; preserve it as rejected construction rather than refine the wrong form. Original two arms/hands/feet and all base pixels unchanged.')
+event(entry['required_steps'][2],'Correct the spiral centreline and profile overlap before refinement.',['constructed-turnaround.png'],['tail_geometry.py','patch-spiral-tail.py','tail-construction-v2.json','patched-construction-turnaround.png','manual-corrections.json','correct-profile-depth.py','profile-depth-correction.json','corrected-construction-turnaround.png'],'Selected front now has one inward-coiling tail; all orientations use the same world geometry. Side far extra limb is occluded naturally and the midline tail root stays behind the near arm/body. Surface segments are not mechanical body parts. Corrected sheet visually inspected; ready for actual refinement request.')
+entry['current_step']=entry['required_steps'][3];entry['known_issues']=['Contextual secondary views/refinement, final source-pixel restoration, neutral/detail registration and all-view authoring review remain unfinished.'];ledger['updated_at']=now
+write(ROOT/'evidence/conversion-ledger.json',ledger)
+print('Recorded original/reference/manual/corrected construction progression and exact prepared refinement prompt.')
