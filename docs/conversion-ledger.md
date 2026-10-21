@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-WARDEN-YRAME**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **BODY-YRAME**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -175,7 +175,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 |  |
-| NPC-WARDEN-YRAME | Warden Yrame | IN PROGRESS | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Missing separately authored BODY-YRAME four-foot anatomy prerequisite; four-item assembly and native acceptance remain unfinished. |
 | NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -207,7 +207,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER |  |
 | BODY-NIMA | nima | UNFINISHED | BODY-HUMAN-FEMALE |  |
 | BODY-RAY-CAT | ray-cat | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
-| BODY-YRAME | yrame | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. ImageGen three-foot proposals were rejected; four-foot geometry was patched afterward without a completed composed refinement. |
+| BODY-YRAME | yrame | IN PROGRESS | BODY-HUMAN-FEMALE | Source, actual Feet297/298 managers, paired-feet definition and Core references resolved. Additional-leg construction, actual secondary/refinement calls, patches, registration and review remain unfinished. |
 | BODY-HUMAN-FEMALE-OLDER | human female older template | UNFINISHED | BODY-HUMAN-FEMALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
 | BODY-HUMAN-MALE-OLDER | human male older template | UNFINISHED | BODY-HUMAN-MALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
 
@@ -7039,7 +7039,19 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
+Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+
+- 2026-10-21T00:55:07.608270+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve Yrame515 exact source anatomy, original/palette and four equipped objects.
+  Review: Retain actual item slots, both paired Feet groups and natural Icy Vapor distinction. No profession costume or unexported item inferred.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/source-packet.json", "sha256": "d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:55:07.608270+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify four current fitting models and identify missing source-bound BODY-YRAME prerequisite.
+  Review: Current fitting model hashes match. Named additional-leg art has no current registration, so the NPC assembly cannot receive generation-ready credit.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/source-packet.json", "sha256": "d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50"}]
+  Outputs: [{"path": "art/conversion/body-yrame/v1/source-packet.json", "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"}]
+  Method/prompt/corrections: {}
 
 ### NPC-WATERVINEFARMERJOPPA-01: WatervineFarmerJoppa / captured resident 1
 
@@ -7739,7 +7751,19 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/yrame/body-east.png](../art/village/bodies/yrame/body-east.png), [art/village/bodies/yrame/body-north.png](../art/village/bodies/yrame/body-north.png), [art/village/bodies/yrame/body-south.png](../art/village/bodies/yrame/body-south.png), [art/village/bodies/yrame/brief.json](../art/village/bodies/yrame/brief.json), [art/village/bodies/yrame/four-feet-east.png](../art/village/bodies/yrame/four-feet-east.png), [art/village/bodies/yrame/four-feet-east.svg](../art/village/bodies/yrame/four-feet-east.svg), [art/village/bodies/yrame/four-feet-north.png](../art/village/bodies/yrame/four-feet-north.png), [art/village/bodies/yrame/four-feet-north.svg](../art/village/bodies/yrame/four-feet-north.svg), [art/village/bodies/yrame/four-feet-south.png](../art/village/bodies/yrame/four-feet-south.png), [art/village/bodies/yrame/four-feet-south.svg](../art/village/bodies/yrame/four-feet-south.svg), [art/village/bodies/yrame/front.png](../art/village/bodies/yrame/front.png), [art/village/bodies/yrame/front.svg](../art/village/bodies/yrame/front.svg), [art/village/bodies/yrame/head-east.png](../art/village/bodies/yrame/head-east.png), [art/village/bodies/yrame/head-north.png](../art/village/bodies/yrame/head-north.png), [art/village/bodies/yrame/head-south.png](../art/village/bodies/yrame/head-south.png), [art/village/bodies/yrame/model.json](../art/village/bodies/yrame/model.json), [art/village/bodies/yrame/refinement-prompt.txt](../art/village/bodies/yrame/refinement-prompt.txt), [art/village/bodies/yrame/turnaround-draft.png](../art/village/bodies/yrame/turnaround-draft.png), [art/village/bodies/yrame/turnaround-prompt.txt](../art/village/bodies/yrame/turnaround-prompt.txt), [art/village/bodies/yrame/turnaround-rejected-three-feet.png](../art/village/bodies/yrame/turnaround-rejected-three-feet.png).
 
-Current step: not started. Process-log events: 0.
+Current step: construct_front. Process-log events: 2.
+
+- 2026-10-21T00:55:07.608270+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve Yrame source description, original sprite, actual Feet groups and unmutated female prerequisite.
+  Review: Two paired Feet groups and explicit hind/foreleg prose support four feet; source level6 is not appendage count. Actual slots and natural/equipped distinction retained.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}, {"path": "evidence/joppa-anatomy-study.json", "sha256": "83a67a07c7e495c2b64b827853013f599fc132ec0a014420e53b982672fcede8"}]
+  Outputs: [{"path": "art/conversion/body-yrame/v1/prepare-source.py", "sha256": "9b7983fd5ddef438387c86506b6869a3010a6396c8382cb623bc90c3abc9a495"}, {"path": "art/conversion/body-yrame/v1/source-packet.json", "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"}, {"path": "art/conversion/body-yrame/v1/source-reference-baseline.png", "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:55:07.608270+00:00 / select_actual_core_dlc_or_mod_reference / PASS: Inspect actual Core female cardinal references as baseline rendering guidance.
+  Review: Actual south/east/north donor PNG hashes verified and views inspected. These provide human style/outline only. No whole-body equivalent, donor mechanics or speculative species change. Manual additional-leg design is next; the plate does not claim generated mutant art.
+  Inputs: [{"path": "art/conversion/body-yrame/v1/source-packet.json", "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"}]
+  Outputs: [{"path": "art/conversion/body-yrame/v1/source-reference-baseline.png", "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"}]
+  Method/prompt/corrections: {}
 
 ### SCN-ARGYVESIGN: ArgyveSign
 

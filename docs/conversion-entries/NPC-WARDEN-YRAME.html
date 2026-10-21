@@ -2,8 +2,936 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#NPC-WARDEN-YRAME">Back to conversion index</a></nav><h1>Warden Yrame</h1><div class="entry-body">
-<p class="eyebrow">NPC-WARDEN-YRAME / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward.</p>
-<ol class="workflow"><li class="pending">resolve individual race and runtime metadata — pending</li><li class="pending">verify body and every equipped item dependencies — pending</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="eyebrow">NPC-WARDEN-YRAME / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Missing separately authored BODY-YRAME four-foot anatomy prerequisite; four-item assembly and native acceptance remain unfinished.</p>
+<ol class="workflow"><li class="pass">resolve individual race and runtime metadata — recorded PASS</li><li class="pass">verify body and every equipped item dependencies — recorded PASS</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="pending">No registered output is selected. Images below are authoring evidence, not proof of stable runtime alignment.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-21T00:55:07.608270+00:00 / PASS</small><h3>resolve individual race and runtime metadata</h3><p>Resolve Yrame515 exact source anatomy, original/palette and four equipped objects.</p><p><strong>Review:</strong> Retain actual item slots, both paired Feet groups and natural Icy Vapor distinction. No profession costume or unexported item inferred.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-warden-yrame/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-WARDEN-YRAME&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-21T00:55:07.608270+00:00&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/village/sources.json&quot;,
+    &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+  },
+  &quot;source_snapshot&quot;: &quot;fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc&quot;,
+  &quot;captured_actor&quot;: {
+    &quot;instance&quot;: 515,
+    &quot;blueprint&quot;: &quot;Warden Yrame&quot;,
+    &quot;species&quot;: &quot;human&quot;,
+    &quot;gender&quot;: &quot;female&quot;,
+    &quot;description&quot;: &quot;Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n&quot;,
+    &quot;anatomy&quot;: &quot;Humanoid&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: 287,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 574,
+          &quot;blueprint&quot;: &quot;Chain Mail&quot;,
+          &quot;description&quot;: &quot;A shiny mesh of linked loops that were sourced from the steel heart of the trash sea.\n\n{{K|Weight: 35 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_chainmail.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 288,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 575,
+          &quot;blueprint&quot;: &quot;Horns&quot;,
+          &quot;description&quot;: &quot;A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_horns2.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;w&quot;,
+          &quot;detailColor&quot;: &quot;W&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 289,
+        &quot;parent&quot;: 288,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 290,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 291,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 292,
+        &quot;parent&quot;: 291,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 576,
+          &quot;blueprint&quot;: &quot;Vibro Blade&quot;,
+          &quot;description&quot;: &quot;Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_longblade_10.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;c&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 577,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 293,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 294,
+        &quot;parent&quot;: 293,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 578,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 295,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 296,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 174,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 579,
+          &quot;blueprint&quot;: &quot;Icy Vapor&quot;,
+          &quot;description&quot;: &quot;Particles of ice rain sail in small and circular ribbons.\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_freezing_ray.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;C&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 297,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 16,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 580,
+          &quot;blueprint&quot;: &quot;Leather Boots&quot;,
+          &quot;description&quot;: &quot;A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item&#x27;s AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_leather_boots.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 298,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 64,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 299,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 300,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;tile&quot;: &quot;Creatures/npc-yrame.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;B&quot;,
+    &quot;tileColor&quot;: &quot;&amp;w&quot;,
+    &quot;detailColor&quot;: &quot;B&quot;
+  },
+  &quot;dependencies&quot;: [
+    {
+      &quot;entry&quot;: &quot;BODY-YRAME&quot;,
+      &quot;generation_ready&quot;: false,
+      &quot;model&quot;: null
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-YRAME-CHAIN-MAIL-BODY-0&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;model&quot;: {
+        &quot;path&quot;: &quot;art/conversion/fit-yrame-chain-mail/v1/model.json&quot;,
+        &quot;sha256&quot;: &quot;c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369&quot;
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-YRAME-HORNS-HEAD-0&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;model&quot;: {
+        &quot;path&quot;: &quot;art/conversion/fit-yrame-horns/v2/model.json&quot;,
+        &quot;sha256&quot;: &quot;107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e&quot;
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-YRAME-VIBRO-BLADE-HAND-2&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;model&quot;: {
+        &quot;path&quot;: &quot;art/conversion/fit-yrame-vibro-blade/v1/model.json&quot;,
+        &quot;sha256&quot;: &quot;27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8&quot;
+      }
+    },
+    {
+      &quot;entry&quot;: &quot;FIT-YRAME-LEATHER-BOOTS-FEET-16&quot;,
+      &quot;generation_ready&quot;: true,
+      &quot;model&quot;: {
+        &quot;path&quot;: &quot;art/conversion/fit-yrame-leather-boots/v1/model.json&quot;,
+        &quot;sha256&quot;: &quot;ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c&quot;
+      }
+    }
+  ],
+  &quot;equipped_items&quot;: [
+    {
+      &quot;part_id&quot;: 287,
+      &quot;slot&quot;: &quot;Body&quot;,
+      &quot;laterality&quot;: 0,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 574,
+        &quot;blueprint&quot;: &quot;Chain Mail&quot;,
+        &quot;description&quot;: &quot;A shiny mesh of linked loops that were sourced from the steel heart of the trash sea.\n\n{{K|Weight: 35 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Items/sw_chainmail.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;y&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;Y&quot;
+      }
+    },
+    {
+      &quot;part_id&quot;: 288,
+      &quot;slot&quot;: &quot;Head&quot;,
+      &quot;laterality&quot;: 0,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 575,
+        &quot;blueprint&quot;: &quot;Horns&quot;,
+        &quot;description&quot;: &quot;A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;items/sw_horns2.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;y&quot;,
+        &quot;tileColor&quot;: &quot;&amp;w&quot;,
+        &quot;detailColor&quot;: &quot;W&quot;
+      }
+    },
+    {
+      &quot;part_id&quot;: 292,
+      &quot;slot&quot;: &quot;Hand&quot;,
+      &quot;laterality&quot;: 2,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 576,
+        &quot;blueprint&quot;: &quot;Vibro Blade&quot;,
+        &quot;description&quot;: &quot;Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Items/sw_longblade_10.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;c&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;y&quot;
+      }
+    },
+    {
+      &quot;part_id&quot;: 297,
+      &quot;slot&quot;: &quot;Feet&quot;,
+      &quot;laterality&quot;: 16,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 580,
+        &quot;blueprint&quot;: &quot;Leather Boots&quot;,
+        &quot;description&quot;: &quot;A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item&#x27;s AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Items/sw_leather_boots.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;w&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;y&quot;
+      }
+    }
+  ],
+  &quot;missing_prerequisite&quot;: &quot;BODY-YRAME&quot;,
+  &quot;next_action&quot;: &quot;Generate separate additional leg pair on the unchanged shared female body, retaining both Feet groups and existing item fits. Then return to the four-item NPC assembly.&quot;,
+  &quot;boundaries&quot;: &quot;Horns575 stays actual Head288 equipment. Default Icy Vapor579 on grouped Hands174 is native natural equipment, not an invented extra glove or additional arm. No costume, horn or freezing effect is baked into the baseline body. Native mutation/equipment behavior remains behind the full-generation gate.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T00:55:07.608270+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_individual_race_and_runtime_metadata&quot;,
+  &quot;action&quot;: &quot;Resolve Yrame515 exact source anatomy, original/palette and four equipped objects.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/village/sources.json&quot;,
+      &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Retain actual item slots, both paired Feet groups and natural Icy Vapor distinction. No profession costume or unexported item inferred.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-21T00:55:07.608270+00:00 / PASS</small><h3>verify body and every equipped item dependencies</h3><p>Verify four current fitting models and identify missing source-bound BODY-YRAME prerequisite.</p><p><strong>Review:</strong> Current fitting model hashes match. Named additional-leg art has no current registration, so the NPC assembly cannot receive generation-ready credit.</p>
+<div class="gallery"><figure><a href="../../art/conversion/body-yrame/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;BODY-YRAME&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-21T00:55:07.608270+00:00&quot;,
+  &quot;identity_chain&quot;: [
+    &quot;Warden Yrame&quot;,
+    &quot;NPC&quot;,
+    &quot;BaseHumanoid&quot;,
+    &quot;Humanoid&quot;,
+    &quot;Creature&quot;
+  ],
+  &quot;race_description&quot;: {
+    &quot;blueprint&quot;: &quot;Humanoid&quot;,
+    &quot;description&quot;: &quot;Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.&quot;,
+    &quot;description_kind&quot;: &quot;Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred.&quot;
+  },
+  &quot;captured_actor&quot;: {
+    &quot;instance&quot;: 515,
+    &quot;blueprint&quot;: &quot;Warden Yrame&quot;,
+    &quot;species&quot;: &quot;human&quot;,
+    &quot;gender&quot;: &quot;female&quot;,
+    &quot;description&quot;: &quot;Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n&quot;,
+    &quot;anatomy&quot;: &quot;Humanoid&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: 287,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 574,
+          &quot;blueprint&quot;: &quot;Chain Mail&quot;,
+          &quot;description&quot;: &quot;A shiny mesh of linked loops that were sourced from the steel heart of the trash sea.\n\n{{K|Weight: 35 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_chainmail.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 288,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 575,
+          &quot;blueprint&quot;: &quot;Horns&quot;,
+          &quot;description&quot;: &quot;A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_horns2.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;w&quot;,
+          &quot;detailColor&quot;: &quot;W&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 289,
+        &quot;parent&quot;: 288,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 290,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 291,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 292,
+        &quot;parent&quot;: 291,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 576,
+          &quot;blueprint&quot;: &quot;Vibro Blade&quot;,
+          &quot;description&quot;: &quot;Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_longblade_10.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;c&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 577,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 293,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 294,
+        &quot;parent&quot;: 293,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 578,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 295,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 296,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 174,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 579,
+          &quot;blueprint&quot;: &quot;Icy Vapor&quot;,
+          &quot;description&quot;: &quot;Particles of ice rain sail in small and circular ribbons.\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_freezing_ray.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;C&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 297,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 16,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 580,
+          &quot;blueprint&quot;: &quot;Leather Boots&quot;,
+          &quot;description&quot;: &quot;A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item&#x27;s AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_leather_boots.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 298,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 64,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 299,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 300,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;tile&quot;: &quot;Creatures/npc-yrame.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;B&quot;,
+    &quot;tileColor&quot;: &quot;&amp;w&quot;,
+    &quot;detailColor&quot;: &quot;B&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/village/sources.json&quot;,
+    &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+  },
+  &quot;source_snapshot&quot;: &quot;fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc&quot;,
+  &quot;preflight&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-warden-yrame/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50&quot;
+  },
+  &quot;native_definition&quot;: {
+    &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml&quot;,
+    &quot;sha256&quot;: &quot;66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95&quot;,
+    &quot;fragment&quot;: &quot;&lt;object Name=\&quot;Warden Yrame\&quot; Inherits=\&quot;NPC\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; DisplayName=\&quot;Yrame\&quot; Tile=\&quot;Creatures/npc-yrame.bmp\&quot; ColorString=\&quot;&amp;amp;B\&quot; TileColor=\&quot;&amp;amp;w\&quot; DetailColor=\&quot;B\&quot; RenderString=\&quot;w\&quot; /&gt;\n    &lt;part Name=\&quot;Honorifics\&quot; Primary=\&quot;Warden\&quot; /&gt;\n    &lt;part Name=\&quot;Description\&quot; Short=\&quot;Big Yrame shifts =pronouns.possessive= weight between hind and forelegs. =pronouns.Subjective= =verb:shake:afterpronoun= a storm of rust dander from the tines of =pronouns.possessive= great horns, and =pronouns.subjective= =verb:blow:afterpronoun= a halo of freezing air from =pronouns.possessive= rime-veined hands.\&quot; /&gt;\n    &lt;part Name=\&quot;ConversationScript\&quot; ConversationID=\&quot;WardenYrame\&quot; /&gt;\n    &lt;part Name=\&quot;Brain\&quot; Wanders=\&quot;false\&quot; Factions=\&quot;Wardens-100\&quot; /&gt;\n    &lt;stat Name=\&quot;Level\&quot; sValue=\&quot;25\&quot; /&gt;\n    &lt;stat Name=\&quot;Hitpoints\&quot; Value=\&quot;275\&quot; /&gt;\n    &lt;stat Name=\&quot;Strength\&quot; sValue=\&quot;29\&quot; /&gt;\n    &lt;stat Name=\&quot;Agility\&quot; sValue=\&quot;22\&quot; /&gt;\n    &lt;stat Name=\&quot;Toughness\&quot; sValue=\&quot;28\&quot; /&gt;\n    &lt;stat Name=\&quot;Intelligence\&quot; sValue=\&quot;16\&quot; /&gt;\n    &lt;stat Name=\&quot;Willpower\&quot; sValue=\&quot;22\&quot; /&gt;\n    &lt;stat Name=\&quot;Ego\&quot; sValue=\&quot;18\&quot; /&gt;\n    &lt;inventoryobject Blueprint=\&quot;Chain Mail\&quot; Number=\&quot;1\&quot; /&gt;\n    &lt;inventoryobject Blueprint=\&quot;Vibro Blade\&quot; Number=\&quot;1\&quot; CellChance=\&quot;100\&quot; CellFullChance=\&quot;100\&quot; CellType=\&quot;Chem Cell\&quot; /&gt;\n    &lt;inventoryobject Blueprint=\&quot;Waterskin\&quot; Number=\&quot;3\&quot; /&gt;\n    &lt;inventoryobject Blueprint=\&quot;Leather Boots\&quot; Number=\&quot;1\&quot; /&gt;\n    &lt;skill Name=\&quot;Endurance\&quot; /&gt;\n    &lt;skill Name=\&quot;LongBladesProficiency\&quot; /&gt;\n    &lt;skill Name=\&quot;Rifles\&quot; /&gt;\n    &lt;mutation Name=\&quot;MultipleLegs\&quot; Level=\&quot;6\&quot; /&gt;\n    &lt;mutation Name=\&quot;Horns\&quot; Level=\&quot;8\&quot; Variant=\&quot;Horns\&quot;/&gt;\n    &lt;mutation Name=\&quot;FreezingRay\&quot; Level=\&quot;9\&quot; Variant=\&quot;Icy Vapor\&quot; /&gt;\n    &lt;mutation Name=\&quot;Regeneration\&quot; Level=\&quot;6\&quot; /&gt;\n    &lt;tag Name=\&quot;Genotype\&quot; Value=\&quot;Mutated Human\&quot; /&gt;\n    &lt;part Name=\&quot;GivesRep\&quot; /&gt;\n    &lt;tag Name=\&quot;staticFaction1\&quot; Value=\&quot;Joppa,friend,defending their village\&quot; /&gt;\n    &lt;tag Name=\&quot;NoHateFactions\&quot; Value=\&quot;Joppa,Fish,Dromad\&quot; /&gt;\n    &lt;xtagGrammar Proper=\&quot;true\&quot; /&gt;\n    &lt;tag Name=\&quot;ExcludeFromDynamicEncounters\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n    &lt;xtagWaterRitual SellSkill=\&quot;false\&quot; /&gt;\n    &lt;tag Name=\&quot;NoSleep\&quot; /&gt;\n    &lt;tag Name=\&quot;AllowIdleBehavior\&quot; Value=\&quot;*delete\&quot; /&gt;\n    &lt;tag Name=\&quot;Gender\&quot; Value=\&quot;female\&quot; /&gt;\n  &lt;/object&gt;&quot;
+  },
+  &quot;feet_type&quot;: {
+    &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/Bodies.xml&quot;,
+    &quot;sha256&quot;: &quot;5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292&quot;,
+    &quot;fragment&quot;: &quot;&lt;bodyparttype Type=\&quot;Feet\&quot; LimbBlueprintProperty=\&quot;SeveredFeetBlueprint\&quot; Mobility=\&quot;2\&quot; Plural=\&quot;true\&quot; Appendage=\&quot;true\&quot; UsuallyOn=\&quot;Body\&quot; Branching=\&quot;Longitudinal,Stratal,Lateral,Vertical\&quot; ChimeraWeight=\&quot;3\&quot; /&gt;&quot;
+  },
+  &quot;private_multiple_legs_source&quot;: {
+    &quot;path&quot;: &quot;E:/Temp/qud-transplant-probe-pawns-20261019/scratch/inspect/XRL.World.Parts.Mutation.MultipleLegs.decompiled.cs&quot;,
+    &quot;sha256&quot;: &quot;5dfeb32f73cc58a23b3cb1241fcc71b0692e728fc96ca90a5d181a689d1195a3&quot;
+  },
+  &quot;original&quot;: {
+    &quot;tile&quot;: &quot;Creatures/npc-yrame.bmp&quot;,
+    &quot;description&quot;: &quot;Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n&quot;,
+    &quot;kind&quot;: &quot;creature&quot;,
+    &quot;blueprint&quot;: &quot;Warden Yrame&quot;,
+    &quot;reference_file&quot;: &quot;village-originals/warden-yrame-reference.png&quot;,
+    &quot;native_mask_sha256&quot;: &quot;14ed03b247a90e4581bdbd1f584121b5c3760f1bd05d05030e1d66ad866e4d1e&quot;,
+    &quot;reference_sha256&quot;: &quot;d8d8a1a15273801c36133c11c16517037b7d2179bba6f3b44d3369078a86f70f&quot;,
+    &quot;info_id&quot;: 7707,
+    &quot;atlas_id&quot;: 224,
+    &quot;rect&quot;: [
+      234,
+      598,
+      16,
+      24
+    ],
+    &quot;private_mask&quot;: {
+      &quot;path&quot;: &quot;E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/warden-yrame-mask.png&quot;,
+      &quot;sha256&quot;: &quot;14ed03b247a90e4581bdbd1f584121b5c3760f1bd05d05030e1d66ad866e4d1e&quot;
+    }
+  },
+  &quot;baseline&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-human-female/v2/model.json&quot;,
+    &quot;sha256&quot;: &quot;d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b&quot;
+  },
+  &quot;baseline_history&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-human-female/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;0949e4f13981fe60ebc6eb57acc6766066efe506dbcee1b432e274d2a9a1476e&quot;
+  },
+  &quot;donor_references&quot;: [
+    {
+      &quot;path&quot;: &quot;E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-south.png&quot;,
+      &quot;sha256&quot;: &quot;e550440b2c8a76610c03fe8866ecb40b050bf9ecdc228bb99a09e922b1c29d0b&quot;,
+      &quot;role&quot;: &quot;Actual Core ordinary female body cardinal presentation and outline/shading only.&quot;
+    },
+    {
+      &quot;path&quot;: &quot;E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-east.png&quot;,
+      &quot;sha256&quot;: &quot;60c918265c0ed8b6d698a204385eeb629fb03240584dfcf8201278f11c7c7099&quot;,
+      &quot;role&quot;: &quot;Actual Core ordinary female body cardinal presentation and outline/shading only.&quot;
+    },
+    {
+      &quot;path&quot;: &quot;E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-north.png&quot;,
+      &quot;sha256&quot;: &quot;b5a794665b92954b63c571cafa260b4e237100364fa0c1392b1661d9cd54d95e&quot;,
+      &quot;role&quot;: &quot;Actual Core ordinary female body cardinal presentation and outline/shading only.&quot;
+    }
+  ],
+  &quot;anatomy&quot;: {
+    &quot;baseline&quot;: &quot;Reuse unmutated female human body/head and original two arms/hands and paired legs/feet unchanged.&quot;,
+    &quot;additions&quot;: &quot;One separate extra leg/foot pair: Feet297/16 changed and Feet298/64 added. The paired Feet type has Mobility2 and plural=true; native description explicitly distinguishes hind and forelegs. Four physical feet is the supported interpretation, not mutation Level6 interpreted as six legs.&quot;,
+    &quot;native_parts&quot;: [
+      {
+        &quot;id&quot;: 287,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 574,
+          &quot;blueprint&quot;: &quot;Chain Mail&quot;,
+          &quot;description&quot;: &quot;A shiny mesh of linked loops that were sourced from the steel heart of the trash sea.\n\n{{K|Weight: 35 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_chainmail.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 288,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 575,
+          &quot;blueprint&quot;: &quot;Horns&quot;,
+          &quot;description&quot;: &quot;A pair of bone extrusions trenched with grooves race to a symmetrical point above the head.\n\n{{rules|Strength Bonus Cap: 100\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 20%}}\n{{rules|+5 to hit\r\nOn penetration, this weapon causes bleeding: 1d2+1 damage per round; save difficulty 36.}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_horns2.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;w&quot;,
+          &quot;detailColor&quot;: &quot;W&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 289,
+        &quot;parent&quot;: 288,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 290,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 291,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 292,
+        &quot;parent&quot;: 291,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 576,
+          &quot;blueprint&quot;: &quot;Vibro Blade&quot;,
+          &quot;description&quot;: &quot;Dust powders the puzzling device.\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_longblade_10.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;c&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 577,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 293,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Arm&quot;,
+        &quot;variant&quot;: &quot;Arm&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 294,
+        &quot;parent&quot;: 293,
+        &quot;type&quot;: &quot;Hand&quot;,
+        &quot;variant&quot;: &quot;Hand&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: &quot;DefaultFist&quot;,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 578,
+          &quot;blueprint&quot;: &quot;DefaultFist&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-fist.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 295,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 296,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 174,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Hands&quot;,
+        &quot;variant&quot;: &quot;Hands&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 579,
+          &quot;blueprint&quot;: &quot;Icy Vapor&quot;,
+          &quot;description&quot;: &quot;Particles of ice rain sail in small and circular ribbons.\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;items/sw_freezing_ray.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&amp;C&quot;,
+          &quot;detailColor&quot;: &quot;Y&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 297,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 16,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Change&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: {
+          &quot;instance&quot;: 580,
+          &quot;blueprint&quot;: &quot;Leather Boots&quot;,
+          &quot;description&quot;: &quot;A cord of gold wire fished from the computing guts of the underearth lace the shoe-tailored leather of a dead boar.\n\n{{rules|This item&#x27;s AV bonus is being averaged across all body parts of the same type.}}\n\n{{K|Weight: 3 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Items/sw_leather_boots.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;y&quot;
+        },
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 298,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 64,
+        &quot;manager&quot;: &quot;515::MultipleLegs::Add&quot;,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 299,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 300,
+        &quot;parent&quot;: 287,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;algorithm_summary&quot;: &quot;Installed MultipleLegs adds one Feet group, changes the original group laterality to16 and assigns Add/Change managers. Do not turn grouped slots into render bones.&quot;,
+    &quot;equipment&quot;: &quot;Horns, mail, blade and boots stay separate current fitting entries. Boots580 occupy only Feet297/16, not both pairs. Icy Vapor remains native natural equipment metadata.&quot;
+  },
+  &quot;interpretation&quot;: {
+    &quot;no_whole_body_equivalent&quot;: &quot;Core female cardinal assets supply ordinary human rendering and shading only. No whole four-legged-human donor equivalent is claimed; additional-leg geometry must be authored from Qud facts.&quot;,
+    &quot;geometry&quot;: &quot;Pelvis attachment, spacing, overlap and unseen surfaces remain authored interpretations. Preserve the existing shared body and item frame/contact; do not repeat the rejected three-foot silhouette.&quot;,
+    &quot;palette&quot;: &quot;Native tileColor w and detail B are retained. Per-component assignments require a recorded authoring decision; prose freezing vapour is not permission to flood blue into the neutral base.&quot;,
+    &quot;cosmetics&quot;: &quot;Keep face blank. No new personal hair, eyes, scars, veins or freezing particles in this body phase.&quot;,
+    &quot;native&quot;: &quot;No mutation framework, native body activation, game launch or lifecycle/animation acceptance during generation.&quot;
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T00:55:07.608270+00:00&quot;,
+  &quot;step&quot;: &quot;verify_body_and_every_equipped_item_dependencies&quot;,
+  &quot;action&quot;: &quot;Verify four current fitting models and identify missing source-bound BODY-YRAME prerequisite.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-warden-yrame/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Current fitting model hashes match. Named additional-leg art has no current registration, so the NPC assembly cannot receive generation-ready credit.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
 </div></div></main></html>
