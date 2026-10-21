@@ -1,0 +1,2227 @@
+{
+  "dependencies": [
+    {
+      "entry": "BODY-NIMA",
+      "model": {
+        "path": "art/conversion/body-nima/v1/registered/model.json",
+        "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+      },
+      "report": "docs/conversion-entries/BODY-NIMA.html",
+      "plate": {
+        "path": "art/conversion/body-nima/v1/registered/neutral-comparison.png",
+        "sha256": "169b4e93a1a3fa18af9bebf508fdcaa9e087d0902d0cdf731544d401bedaa5a6"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "action": "Resolve Nima506 native identity, complete part/managers, source description/shape/palette and existing unmutated female base.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "review": "Four arms/hands and one Stinger-managed Tail193 retained. Late-middle-age prose and jade eyes/scars are metadata under cosmetic scope; no numeric age, profession pose or extra anatomy inferred. Actual five-item bindings remain NPC work.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "action": "Inspect actual Core female cardinal body references and installed Megafauna Pulmonoscorpius front/side tail reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "review": "Private exact PNG/About hashes retained. Core supplies human presentation; Megafauna supplies only segment/stinger readability. No whole Nima equivalent selected or animal body/palette/size/mechanics copied.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "construct_front",
+          "action": "Construct separate extra arm pair and one segmented3Dtail, projecting cardinal views over unchanged source body/head.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/construct-nima.py",
+              "sha256": "1f29adbb76e8eab502b84bbe0d9989dd98a7a7acda8ef56912a8f7450afdb351"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/constructed-south.png",
+              "sha256": "de27e692ec45e3763e5116682f9d1fda9d903642ed57ea78be34f43135f00395"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/constructed-turnaround.png",
+              "sha256": "5908a595d663b2245cdefc0c4ad32deb7999157b43874b02edce02b9f77941b0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction.json",
+              "sha256": "cf06ff74fdb03dfa4eb2fc32f8ceef2d298c55f54d5cf23e2f9474776c05e465"
+            }
+          ],
+          "review": "Initial24segment ascending helix read as a zigzag and profile far-arm geometry produced a stub; preserve it as rejected construction rather than refine the wrong form. Original two arms/hands/feet and all base pixels unchanged.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:16:46.738320+00:00",
+          "step": "construct_front",
+          "action": "Correct the spiral centreline and profile overlap before refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/constructed-turnaround.png",
+              "sha256": "5908a595d663b2245cdefc0c4ad32deb7999157b43874b02edce02b9f77941b0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/tail_geometry.py",
+              "sha256": "d12079eeab38d63e8193f9fb42780b74afcda07574c9fe4eab68429edae336c0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patch-spiral-tail.py",
+              "sha256": "45f30ff33f899d58dc3e2d5a89bc7013cfc4f0e65cfb9a589efc4dba496b1080"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction-v2.json",
+              "sha256": "142e66c28d77d7f2f67edc383dc2dddb4c135b751143d575ab1b1b38453d5efd"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-construction-turnaround.png",
+              "sha256": "b203f743d689170b84607377046668749fdcef2e0433192605c1dde3d258ce31"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/manual-corrections.json",
+              "sha256": "661880956c2d04f8c3e338979001dc8fa456b0127cacb1e671f61d6985507cde"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/correct-profile-depth.py",
+              "sha256": "349aa6a3fe9bc015f72e9b75726a7995507d017f3ba716911d17a635207636c6"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/profile-depth-correction.json",
+              "sha256": "9aa6929b1953ac50807407ee9a46e8443c27aab05ea3230aea8fe2e9c5a1ed0d"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/corrected-construction-turnaround.png",
+              "sha256": "291a9e018c5f92d9e610a40eca8db33bf4c7931333262db196dfac865530b6f8"
+            }
+          ],
+          "review": "Selected front now has one inward-coiling tail; all orientations use the same world geometry. Side far extra limb is occluded naturally and the midline tail root stays behind the near arm/body. Surface segments are not mechanical body parts. Corrected sheet visually inspected; ready for actual refinement request.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "action": "Document original g/w palette coverage and explicit separate tail appearance interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-palette-roles.json",
+              "sha256": "18ef5611b2ff2b9daca87ea505387ca570427acbf999b4f45fda0f8878f325ab"
+            }
+          ],
+          "review": "Original detail role occupies the light upper/spiral region. Tail maps to source w and body/arms to g as a stated appearance interpretation, not biological per-limb pigment metadata. Neutral assets remain gray; no unproven natural-item blue recolor.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "action": "Receive actual ImageGen front-guided side/back proposal and inspect structural quality before registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-prompt.txt",
+              "sha256": "bfb026cc93a45b92a2d2c3ae95e89edacae3b794a41b4823dbfb09686dfccc2d"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/corrected-construction-turnaround.png",
+              "sha256": "291a9e018c5f92d9e610a40eca8db33bf4c7931333262db196dfac865530b6f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-reference-construction.png",
+              "sha256": "5d5bd8023bd5b0aad97fd0bd5ff9e8460ad6efa8f68738b4c711eec59ed1cc99"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-raw.png",
+              "sha256": "a456aa0197cdcefe6239b481fd76fc89198bbe7a5a012609a1d0aec521b2860a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/first-structural-review.json",
+              "sha256": "90f4ccf61bd65c4a0f03e8d2dd36b277985aaa817a7bbf9eba5fa3a42e35dcdb"
+            }
+          ],
+          "review": "Four-arm and cardinal view proposal received. Reject changed base pixels and duplicate north stinger/bead anatomy; only neutral surface values are usable. The next correction explicitly restores the source-bound geometry and original base.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/secondary-views-prompt.txt",
+            "sha256": "bfb026cc93a45b92a2d2c3ae95e89edacae3b794a41b4823dbfb09686dfccc2d"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:24:54.814425+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Restore exact base and sole-tail topology; prepare corrected composed refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/secondary-views-raw.png",
+              "sha256": "a456aa0197cdcefe6239b481fd76fc89198bbe7a5a012609a1d0aec521b2860a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/refine-fixed-surfaces.py",
+              "sha256": "58850d07252654212232c3455a83afcfe6b5a58a88ed28e9793859d7a0cedae0"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-refined-turnaround.png",
+              "sha256": "0124ca0c25e9d995fa7ec6913f9b5c14889b276edd5e107434422b9cab2262d5"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-topology-evidence.png",
+              "sha256": "f27e1947b8535b0f08af0598ca092fb1fff6a4d5dd242b29db19cdaf372a471b"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+              "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+            }
+          ],
+          "review": "Original4arm body composition and one canonical tail restored. Measured first-refinement material values continued within unchanged coverage; no invalid generated anatomy extracted. Complete-tail diagram distinguishes one root and one tip. Actual composed-refinement request is running; no output or phase completion credited yet.",
+          "result": "IN PROGRESS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+            "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Receive composed refinement and inspect corrected one-tail topology; reject redrawn base pixels.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+              "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/patched-refined-turnaround.png",
+              "sha256": "0124ca0c25e9d995fa7ec6913f9b5c14889b276edd5e107434422b9cab2262d5"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-topology-evidence.png",
+              "sha256": "f27e1947b8535b0f08af0598ca092fb1fff6a4d5dd242b29db19cdaf372a471b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-raw.png",
+              "sha256": "e6a2eefe7c02fa18700a2b4fcf2a0e9fb3405764cd4dde21680594dc6104ae6c"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-structural-review.json",
+              "sha256": "aadc6ff1ac2d8cfcfa9a4665e986639d85d281893b342dd193b72c7ec15e670f"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/generation-receipts.json",
+              "sha256": "a1383796ea9bac05cde90bb5a314168759e3901340e54961d0989140355b452d"
+            }
+          ],
+          "review": "Second actual output has one inner hooked stinger/bead instead of the first duplicate. Ordinary body/head/legs are still redrawn, so return to exact original body and canonical geometry; only usable surface finish retained. No further prompt loop or isolation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt_file": {
+            "path": "art/conversion/body-nima/v1/composed-refinement-prompt.txt",
+            "sha256": "9ba3848918264c4ae3a9b1b27c87251a27405b01da803d8bf563141e578f7daf"
+          },
+          "transparent_background": true
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "action": "Register unchanged source body/head and separate extra-arm/spiral-tail layers with explicit four-view projection and source color roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/source-packet.json",
+              "sha256": "bef08108af4de1b384f563ff4924ad4fec4a859ee2fb5d2463f4fbc7e2c539f8"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/tail-construction-v2.json",
+              "sha256": "142e66c28d77d7f2f67edc383dc2dddb4c135b751143d575ab1b1b38453d5efd"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/source-palette-roles.json",
+              "sha256": "18ef5611b2ff2b9daca87ea505387ca570427acbf999b4f45fda0f8878f325ab"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/composed-refinement-raw.png",
+              "sha256": "e6a2eefe7c02fa18700a2b4fcf2a0e9fb3405764cd4dde21680594dc6104ae6c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/tail_geometry_four_views.py",
+              "sha256": "552bef1608a5ed559d4601ecb8a2667112be29042492e3ddb4bc6ebe8a59e5ce"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/register-nima.py",
+              "sha256": "47bc3a6fe865c90a7c17111f0881e0f4be361c5d67ad22e44ee6f72c1d23af06"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/registration-decisions.json",
+              "sha256": "f59b2ab10323d3675445a1dc9d73e3652f621184da0659eba862b094a14b5009"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/neutral-comparison.png",
+              "sha256": "169b4e93a1a3fa18af9bebf508fdcaa9e087d0902d0cdf731544d401bedaa5a6"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/native-comparison.png",
+              "sha256": "cae4f823f7fffc07adf955929aec395815560ee9e660dc89b6b475ff17d3cb78"
+            }
+          ],
+          "review": "Exact RGBA padding preserves world frame/ground. One Tail193 uses near/far draw-order pieces; no duplicated appendage. West tail is an explicit canonical projection because the diagonal spiral is asymmetric. Body/arms use source g, tail uses source w as stated appearance interpretation; neutral RGB remains gray.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "action": "Review actual all-direction anatomy, final palette/registration and intended-size evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-nima/v1/record-review.py",
+              "sha256": "6e4f97cbfb9cde4d5f0a662142006990e4305b5cd3987997b3b14b6cc69d2809"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/authoring-review.json",
+              "sha256": "cefcdc14c5b88ecad3f5faad06008ef083c2c97f0d68d90102f6b796bb7fa19a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/registered/game-scale-comparison.png",
+              "sha256": "dfc7ce773c2b4da70afc500b9e24f04256b7e9fc7fe73e780fe0aff7ef395b7a"
+            },
+            {
+              "path": "art/conversion/body-nima/v1/artifact-manifest.json",
+              "sha256": "dc06b7eec90e35a0b6f9b8e2a0f740810a2a812a1ba7572d14f8c83756d617b5"
+            }
+          ],
+          "review": "Inspected original g/w shape and full description/tree, actual Core female and Megafauna Pulmonoscorpius references, original and corrected manual views, both actual ImageGen outputs, sole-tail topology evidence, final separate components and all four neutral/native/intended-size views. Exactly four arms/hands, two ordinary feet, one ordinary blank head and one posterior Tail193 with a segmented inward spiral, one hooked endpoint and one bead. Surface24segments and numerical dimensions are authored, not native body-part counts. Initial zigzag helix, profile overlap defect and generated duplicate north stinger were corrected and retained in history. Second refinement corrects the duplicate but redraws the ordinary body, so only usable surface values are retained. Original female body/head RGBA pixels remain exact under240px top padding; physical scale and ground/contact are unchanged. Extra arm pair and tail front/back are separate from the reusable body. All views use one canonical3Dtail; west tail is explicitly projected, while symmetric base/arm profile may mirror. Profile body/near arm occludes the midline tail root. Neutral RGB is gray. Source g body/arms and w spiral appearance roles are explicit interpretations of original Render appearance, not biological pigment claims. No unproven natural-stinger color is imported. No clothing, personal jade-eye/scar cosmetics, generic mutation framework, new demographic/occupation pose, AI isolation or native activation. Actual five-item Nima outfit and final anatomy/equipment/visibility/hurt/look/save/state acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:31:39.837376+00:00",
+          "step": "native_body_review",
+          "action": "Keep native named anatomy and five-item outfit acceptance behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-nima/v1/registered/model.json",
+              "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, native/harness test or activation. Actual Pestle Hand181/6 and Glowsphere FloatingNearby195/0, all-item occlusion and integrated anatomy/equipment/state/visibility/hurt/look/save review remain required.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+        "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+      },
+      "report": "docs/conversion-entries/FIT-NIMA-LEATHER-APRON-BODY-0.html",
+      "plate": {
+        "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+        "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.239075+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Nima Ruda -> ordinary human female base -> actual Body176/item529/laterality0 Leather Apron; retained exact boar-hide/knife-scar/tong-burn description, source glyph and w/W palette, and captured mutation-altered part tree without baking its appendages.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/prepare-source.py",
+              "sha256": "1ce5713b97379bef55afc7d038cc25eb21f0775f22f71646a2d8fd2f832b5aa2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-comparison.png",
+              "sha256": "32eb8742d90ac43d56603064215b4abf43256e8094c7fc80cc92a1d1f5938a32"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.239372+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary human female v2. Actual Vanilla Apparel Expanded Apron_Female SEN references supply neck-loop/bib/side/open-back construction, not their pockets. Native middle-age descriptor does not require inventing a new body for this one garment; named age/cosmetic/mutation assembly remains unfinished.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-comparison.png",
+              "sha256": "32eb8742d90ac43d56603064215b4abf43256e8094c7fc80cc92a1d1f5938a32"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.240525+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed editable full front bib/skirt, neck loop and ties, then cardinal profile and open-back geometry with class-specific original-body visibility. One item only on the unclothed fixed base. No sleeves or generic robe fitting controls; identity fit already matches this body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/prepare-source.py",
+              "sha256": "1ce5713b97379bef55afc7d038cc25eb21f0775f22f71646a2d8fd2f832b5aa2"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-south.svg",
+              "sha256": "d0014a43ceba05ff99bda1bf763c76ee2c1b5302aa59372a5556a84bfd467db5"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-east.svg",
+              "sha256": "ddb9904492ae5e3db4eb342fba03b863e4efefb23e55f48266aae740b4440d03"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/pattern-north.svg",
+              "sha256": "d60804cf2d022275302c65268b857cbac69c0c0a5f061970fdab19c1431e7a94"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-neutral-context.png",
+              "sha256": "eb871c471e41cacdddcfc462890af03b5017d24672ca5f48e31141e43b009dd8"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "sha256": "13ef4a0ffaa516c2eafa0650489e135428e22e33c1dc116976506f679dae2d52"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.242635+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One contextual material refinement of the constructed three-view apron. Selected gray scarred hide surface only; generated glow, red contamination and mannequin/placement are excluded. No additional anatomy patch/refinement was needed because registered body and geometry remain the constructed originals.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "sha256": "13ef4a0ffaa516c2eafa0650489e135428e22e33c1dc116976506f679dae2d52"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/imagegen-prompt.txt",
+              "sha256": "b742dd2b842343992bfc8a3a46659e65ec2aba93c72e66c1508bc5f73ea45f84"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/refined-red-context.png",
+              "sha256": "01bdb9da9a26433dcbe5be75099edc66585618dc8eb5e7ce82bc97e280041cd5"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: precise-object-edit / game sprite material refinement.\nImage 1 is the exact edit target: three registered cardinal views of one gray leather apron on a red featureless adult mannequin, SOUTH/front left, EAST/complete right profile center, NORTH/back right. Maintain this three-column 1536x1024 layout, scale, pose and item placement exactly. The red mannequin is an ownership key: preserve its original body contours, arms, hands, neck and legs without moving or redrawing them.\nImages 2 and 3 are supporting references only: the original tiny Caves of Qud item and an actual RimWorld mod apron front. The tiny Qud glyph is normalized two-tone reference, not the final palette. The mod provides restrained sprite shading and construction conventions only; DO NOT copy its pockets.\nNative item: Leather Apron. Description: \"Boar hide was brined, limed, and put in a tanning drum. It was cut and fitted into an apron, and now it's a brown canvas for knife scars and tong burns.\"\nRefine only the EXISTING GRAY APRON: modest neutral grayscale hide shading, subtle leather grain, a few existing knife scars and tong-burn marks, clean dark outlines. Keep the neck loop, long front bib/skirt, waist ties and open back exactly as drawn. Preserve the front panel behind the body in back view, visible only at the sides/between legs; retain the small neck band and waist knot. Keep the original near arm and hand exposed over the apron in profile. No sleeves, pockets, metal buckles, extra costume or equipment. No new pose, anatomy, extra arms or perspective rotation. Avoid glossy plastic, thick new piping, dramatic shadows and fabric-flow exaggeration.\nKeep ALL leather gray/equal RGB, including marks. Do not paint leather brown or gold: final native w/W color roles are applied in separate masks after registration. Keep red mannequin red; no red reflections or background tint on gray hide. Do not isolate or rearrange the garment. This is one contextual refinement, not a new garment drawing.\nOutput the same sheet with a genuinely transparent background and no labels, grid, ground shadow, backdrop or glow. Leave transparent margins. Preserve the exact input positions and all three orientations.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-nima-leather-apron/v1/constructed-red-torso-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/leather-apron-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/1814987817/Textures/Things/Apparel/Apron/Apron_Female_south.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.244897+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Programmatically registered the same contextual surface through recorded torso zoom; harmonic same-hide completion fills hidden/excluded source before late body depth. Full item alpha equals constructed geometry in each view. Preserved lower detail masks, open-back controls and original-body overlay separately; no generative isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/register-apron.py",
+              "sha256": "81009bdd5c70e79703ebd1931c880b6f28bbfe34ab42d192ae7b25edc6446731"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/refined-red-context.png",
+              "sha256": "01bdb9da9a26433dcbe5be75099edc66585618dc8eb5e7ce82bc97e280041cd5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/intact-garment-comparison.png",
+              "sha256": "979782da037d7b390bbea1f960b264fbd2b8ffeb6ccd4a43da8724b6e736aa3e"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/continuation-comparison.png",
+              "sha256": "a0c19aff9f556b18c8273307432ea2f7b9071f556af8256a2565f14be84e426a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/detail-comparison.png",
+              "sha256": "921d34aab3c79f2176b68bf62bbb472fa991fa0d081cfc9faeca54ea15d808cd"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-comparison.png",
+              "sha256": "5c2fd3f53f03a0c4bc77a2eba5b354bef5cf8349582e299e8ee597a9b13a4bcd"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.245570+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed full apron with original head/neck, near-arm/hand profile ownership and original body above rear front-panel. Back neck band and ties remain above body. Reviewed SEN and mirrored west, with no unrelated item context.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+              "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/mask-off-comparison.png",
+              "sha256": "9213bef4310ac07a61e1164b8ce5a667adf3d8f0e2fafc214dbb265c2e7c2ecd"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/body-mask-comparison.png",
+              "sha256": "99075a2f59a9216be9a053d9869d450b867896d73eeffe54352ef824fd806278"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.246069+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed intended-size and independent native Nima foreground g / apron w / lower hide W roles. Baseline human model has no authored Nima cosmetic w detail: named appearance remains pending rather than inventing its mask.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+              "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/independent-palette-comparison.png",
+              "sha256": "88cc7604b515cf421dcdf5ffb381b7521b53d70aa8bb68684981bb1784104d7f"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/game-scale-review.png",
+              "sha256": "1edf8bf534556d8e4d0c6ca8b6b826a4d14517c00f4d5002d6bb7d2c66443800"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/authoring-review.json",
+              "sha256": "b041767e0ee84f52242ddeae7a788786cf9388eba51885510a128d34c90f359a"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:08:38.246535+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled source-bound one-item context, same-generation material extraction, continuous source, class-specific body depth and untouched registration. Sleeve cuff curves/regional stretch are unnecessary for this sleeveless fitted apron. Native testing remains behind full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/record-review.py",
+              "sha256": "6de26423e35d6282c7cb866f1a4c3ed2947fc45d7f56e7c4f21afe5f0ad0d5b3"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+              "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/registration-decisions.json",
+              "sha256": "fc9b1eaad951120c74bffab9164fd28498e9c5dc3eac2baeaceaf0c4ca9a1146"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/artifact-manifest.json",
+              "sha256": "59d1ad1dd9a92b4268f5c4deba8611aec8ed1cb4b0a62b3040cc80a6e86518da"
+            },
+            {
+              "path": "art/conversion/fit-nima-leather-apron/v1/authoring-review.json",
+              "sha256": "b041767e0ee84f52242ddeae7a788786cf9388eba51885510a128d34c90f359a"
+            }
+          ],
+          "review": "Inspected original glyph/actual mod SEN/manual construction, the single actual contextual refinement, full registered neutral apron, independent body visibility, original arm/hand, open-back depth, native palette and 48x96 authoring views. Gray hide retains scars/burn marks; lower W field follows original glyph. No sleeves, pockets or new costume; near arm remains original body above profile apron. Complete front panel survives behind back/arm masks; no body-shaped canonical alpha cuts or second isolation call. Body/frame/contact are unchanged. Opaque generated glow and red contamination excluded. Nima uses ordinary adult female baseline; late-middle-age description and actual mutation tree retained, with named facial/mutation/outfit work pending. This is authoring selection only.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+      "model": {
+        "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+        "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+      },
+      "report": "docs/conversion-entries/FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0.html",
+      "plate": {
+        "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+        "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.266891+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Bound actual Nima Ruda ordinary Head/0 and equipped hat to captured identity, sprite, description and palette. Retained independent mutation metadata.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.267286+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected exact shared unmutated female body and the hat original/CowboyHat reference packet; a named actor does not require a different race body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "adc5775b4380e7df4e267c133222b25db43b9da8fb474180c7ef2c8d82dec568"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.268029+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused the same whole-hat constructed crown, brim and lower-band region on the same original body/head. No refit or new geometry required.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/constructed-neutral-context.png",
+              "sha256": "c925ef65f16f4402a764226939dbfdafb8701b0abe0df5f90e2bafeae12621bb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-south.svg",
+              "sha256": "7d5a30bdaa2483f9ee777ca996da69772834e93abe1e06672f30ec6b67f1cd0b"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-east.svg",
+              "sha256": "3a30c3c01424ff54e850377a523a5548bab44c4d7bfc148e93fd552f9d47e580"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/pattern-north.svg",
+              "sha256": "961b98d7478f0238d6433d9703e68ef2b22dc5f68ae3ec852d11e3fce99f6d11"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.269450+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused the actual canonical hat contextual refinement and exact prompt, without a redundant new call or generated body pixels.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/refined-red-context.png",
+              "sha256": "ff2750f5b9e9831c7802c81c74a77caee3e3d95e4507826773ae9a848a146af9"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/imagegen-prompt.txt",
+              "sha256": "63198a50fdb0998c364c9fec8c25828a8f7d98c8f22d0adb7d6c73b666f14753"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.269931+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Reused exact continuous-hat/band assets, already completed from the same contextual source, and zero body-visibility masks. Kept a distinct named registration and actual binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "57e7f0ed824f335b6c6622d44f822656287a75916dbd6466caa9252b03264b5a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-garment-comparison.png",
+              "sha256": "9ab5784f5940de97e2cccae048d88fcc9bd1c81c3711ff60dfe4e83b40cbbdb6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.270264+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reused applicable reviewed composition for identical body/hat geometry in SEN/mirrored west; original skin stays behind the full hat.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+              "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "5f0772cf882938b05bcdd78c7ac16f47b7e4dad5d3e29dda33f5bbcca7263435"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.270701+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reused applicable intended-size and independent y-primary/b-band review. Body palette remains separately tintable.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/game-scale-review.png",
+              "sha256": "04fa34370d42b87b1f48332d76cc8598007d4a29eea7aff3f947e020198cc2a8"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/independent-palette-comparison.png",
+              "sha256": "e1c798e86b2f61ba6ec8e793f0884c573342d1e9c48954d195b3a06d9e1da0bb"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/authoring-review.json",
+              "sha256": "5f0772cf882938b05bcdd78c7ac16f47b7e4dad5d3e29dda33f5bbcca7263435"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:38:29.271091+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled the actual individual binding to the current shared fit under the continuous-source/class-specific mask workflow. Body/NPC mutation entries remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/bind-shared-fit.py",
+              "sha256": "431c8342ed8ee0647ff842e701a529a20138d7c9d44e6a46b36c765a7dd736d1"
+            },
+            {
+              "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json",
+              "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json",
+              "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json",
+              "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+              "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+            },
+            {
+              "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/artifact-manifest.json",
+              "sha256": "97c9963b3b2385c2bbe668fc73ca66be5d060328c81f89c5ec7b0f3cb88bc6ca"
+            }
+          ],
+          "review": "Checked Nima Ruda actual ordinary Head part 177, parent 176, manager null, laterality 0 and Wide-brimmed Hat instance 530. Item sprite and y/b palette match the current female canonical source; exact original unmutated female body, whole hat, band and zero skin-overlay registration are reused. Applicable SEN/mirrored-west, neutral/palette and intended-size inspection therefore covers identical art. Nima mutation/body assembly remains unfinished. No new ImageGen call, changed anatomy or native acceptance is claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-NIMA-PESTLE-HAND-6",
+      "model": {
+        "path": "art/conversion/fit-nima-pestle/v1/model.json",
+        "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+      },
+      "report": "docs/conversion-entries/FIT-NIMA-PESTLE-HAND-6.html",
+      "plate": {
+        "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+        "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T15:46:14.115645+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved Nima Ruda -> human base -> stone Pestle531, original tile y/Y and exact mutation-managed Hand181 parent180/laterality6/manager506::MultipleArms::Change. Installed Pestle definition retained alongside runtime description.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-comparison.png",
+              "sha256": "aa9922ed4409e44ea22b76aaa8123938ac9f89b8a2727265744f173788433409"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.115938+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected fixed ordinary human female v2 for illustrative reusable item fit, without remapping native Hand181. Actual Tribal LightClub supplies narrow-grip/bulb convention only; inspected HeavyClub wrapping/scale unsuitable for Qud stone pestle.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-comparison.png",
+              "sha256": "aa9922ed4409e44ea22b76aaa8123938ac9f89b8a2727265744f173788433409"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.116955+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Constructed one complete axial stone bulb/grip, powder detail and affine SEN placements on original bare base. Shared frame/contact; original foreground hand above shaft. No clothing, new body, wooden material, inferred render bones or invented mortar.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/prepare-source.py",
+              "sha256": "d5fc47894460f6ea59f064cb82915d7d7045a26c285d13d726f8786201750011"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-pattern.svg",
+              "sha256": "3fd6658b0c64cdd41ff6a8ffecde1a422908f027be1ed2608976e26677cef15b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-canonical.png",
+              "sha256": "bc6d3a62ab7a22c4e1ea04dd2c75315d2d5299e75607651b8a970166fc7fa33c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-detail.png",
+              "sha256": "68e83dc0b784cac4e89b881440c6fb47d117bcc0f3779846964cb53e8467e72b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-neutral-context.png",
+              "sha256": "8b6818c58db62bc9e10f652de203e868ab8ab407186cb08835477b890dfd522c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "sha256": "5d16b1112fdfd3fe27e7eb6ebef45221592c710a38e0bd6bc30ee9157b6652fa"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/fit-controls.json",
+              "sha256": "c90f3d1d04de3c6b6655549b70d0f7f4ee9c0c407a9ddf5a7a4ba491d80d4d8b"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.118465+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One actual contextual stone-surface refinement. Raw output changed scale/placement and added opaque red glow; those portions are rejected, not registered as body/item geometry. No second isolation call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "sha256": "5d16b1112fdfd3fe27e7eb6ebef45221592c710a38e0bd6bc30ee9157b6652fa"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/source-packet.json",
+              "sha256": "a1e7398480de78c54f2e021651232d535dbf77d3ddd8064adab8208a39b4a571"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/imagegen-prompt.txt",
+              "sha256": "65b68163a1b0f9220646360f00bc5b3f0c8291ed832967df920ef52cc5123439"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/refined-red-context.png",
+              "sha256": "705b8483fdeaa5068cc1edc002cbbd9dd0ba1270edbda75337fd823befa0d6d1"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "prompt": "Edit target: the first image, a 1536x1024 sheet with three equal 512-pixel columns. Keep its exact layout, scale, transparent margins, and every red mannequin pixel unchanged. Columns show SOUTH/front grip, EAST/right-profile grip and NORTH/back grip. These are close-ups of one small hand-held pestle, not clothing.\n\nQud item description: \"A bulb of stone is dusted by humoric powders.\" The second image is the actual Qud 16x24 source glyph, used for identity only. The third image is the actual RimWorld Vanilla Weapons Expanded - Tribal LightClub: reference only for economical small-sprite shading and clear outlines, NOT wood or its scale. The pestle must remain smooth stone, a bulb tapering into a narrow rounded grip. No wood grain, wraps, spikes, bands, mortar bowl, extra object or invented mechanism.\n\nRefine only the existing neutral gray stone surface with restrained broad shading, subtle stone grain and a few pale powder specks. Preserve every constructed outer contour, grip alignment and occlusion. The original red hand stays above the shaft; the back arm naturally hides the upper bulb. Do not relocate the item to reveal it. Match the first image's gray values and dark clean outline. Neutral equal-RGB gray material, no colored stone, colored powder or red bleed. No captions, guide lines, cast shadows, glow, backdrop or vignette. Keep the exact transparent background. This is one material refinement in context; do not isolate the item or redraw the mannequin.",
+          "settings": {
+            "transparent_background": true,
+            "referenced_image_paths": [
+              "C:/Users/darka/Documents/Projects/RimQud/art/conversion/fit-nima-pestle/v1/constructed-red-grip-context.png",
+              "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/pestle-reference.png",
+              "D:/Steam/steamapps/workshop/content/294100/2454918552/Textures/Things/Item/Equipment/WeaponMelee/LightClub.png"
+            ]
+          },
+          "new_imagegen_call": true
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.120010+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Sampled actual neutral stone from refined front bulb through recorded scale/anchor, excluded red/glow/foreign ink and bright generated powder; completed hidden grip before body depth. Complete canonical alpha matches authored source; powder is separate. No AI isolation or destructive hand hole.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/register-pestle.py",
+              "sha256": "3680a4d7c86707f0324a3eaa5b6c08dbe1ce9b526c72cf8a0368091c9ee5336c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/refined-red-context.png",
+              "sha256": "705b8483fdeaa5068cc1edc002cbbd9dd0ba1270edbda75337fd823befa0d6d1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/registration-decisions.json",
+              "sha256": "2966bf7c7707a7c9fa637a264828146310bcc05802c01388904cf32d38a94015"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/intact-canonical.png",
+              "sha256": "f17171ff25df10cd2a8915d169f45b1854a1c77f78da1f53e73b7f266d31a191"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/powder-canonical.png",
+              "sha256": "de6fc32bee61c2983a17a0ce9b927eb74353c2cfb8fde2e3b8511d129463f18d"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/canonical-continuation.png",
+              "sha256": "e0c0fa72db54ac0e690349c6d0a0909cc801417ee64e7228c0123af91a0d75d4"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/full-item-comparison.png",
+              "sha256": "1bc1b44588bc650cc66faa88dcfbe0e7c3df95054df08337195fca49c19288e1"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.120795+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Applied user grip-height correction: source grip565 ->585, same body hand/pivot/item scale. Preserved first registered preview; north outward angle corrects total bulb occlusion. Original foreground hand/body own final depth. These are ordinary-hand illustrations, not actual mutation attachment.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/register-pestle.py",
+              "sha256": "3680a4d7c86707f0324a3eaa5b6c08dbe1ce9b526c72cf8a0368091c9ee5336c"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/fit-controls.json",
+              "sha256": "c90f3d1d04de3c6b6655549b70d0f7f4ee9c0c407a9ddf5a7a4ba491d80d4d8b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/initial-registered-preview/grip-comparison.png",
+              "sha256": "c8d7940c9fbfe0e921979e8da91c452d2c02d0b009025a1a34d5bd5220435ee7"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/grip-comparison.png",
+              "sha256": "914c665d4e56f6b2ba9f5981437ac6984b116c688ef7474e2de783672af85d6b"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+              "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T15:46:14.121252+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected SEN/mirrored west at intended size and independent native body g / stone y / powder Y. Neutral production channels equal; original hand pixels retained. Named appearance, mutation placement and ready/resting pose state remain explicit later assembly work.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/model.json",
+              "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/independent-palette-comparison.png",
+              "sha256": "6c70e2c4b35700b6d77657f2ecef93916bf9be3e250867c700b083fccb3040d8"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/game-scale-review.png",
+              "sha256": "cd4f336f815240dd64c67024b458b754c7da0ec7e96e7f6fbc03033a5c2f5b58"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/authoring-review.json",
+              "sha256": "34bb75d14c56d6e3382a5d641cbf1a21d1831376591e04496cbb1b2d5f89cf9d"
+            },
+            {
+              "path": "art/conversion/fit-nima-pestle/v1/artifact-manifest.json",
+              "sha256": "38f38cfbcc898cf3438b9f7e48366a307d5b9c31140272e120b0143d55e2ed8e"
+            }
+          ],
+          "review": "Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-NIMA-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-nima-sandals/v3/model.json",
+        "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+      },
+      "report": "docs/conversion-entries/FIT-NIMA-SANDALS-FEET-0.html",
+      "plate": {
+        "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+        "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.405720+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolved actual Nima Ruda Sandals instance 536 on ordinary Feet part 192, parent 176, laterality 0, no mutation manager, native y/w.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.406120+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Selected the exact shared unmutated female base and existing source-bound Sandals fit. Actor mutation requirements remain separate; no new body per individual.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.406483+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reused exact complete canonical sandal geometry and original-foot ownership because target base, item sprite/palette and slot are identical.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.408127+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reused actual unchanged female Sandals contextual refinement, prompt and material provenance. No new ImageGen call or unnamed output.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/refined-red-context.png",
+              "sha256": "8a0cf59bd4f5d61fe4b697d7f94eae45a3657b75dfe1a8f7ceeaa850c4853e3c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/imagegen-prompt.txt",
+              "sha256": "c308f42b1979f5c8ffb238e5a447de510c18c8561b3f158ac9775079bc25edbf"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.408548+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retained exact full sandal primary/detail layers and separate foot visibility from current shared fit; no extraction or destructive cutoff repeated.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.409422+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reviewed shared unmutated female footwear composition for Nima binding; all SEN/mirrored west geometry and masks remain byte-identical to the selected fit.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/footwear-comparison.png",
+              "sha256": "fa5fd8ff93138d3227dca895b3318e66a5b9f9d276592647f1c0f5b2d0a2ff26"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/independent-palette-comparison.png",
+              "sha256": "8079355e90a18c391c6246e26a21b5336176421be1069e019fa0fbb990b92c62"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/game-scale-review.png",
+              "sha256": "6ff26796724712649f56ea005fc8e1153da71b4d5f59129b7118d2edf9467c35"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/authoring-review.json",
+              "sha256": "4a2ea746ed49ece535c0522d11526a4647a262ea693da1385439679fb881ea01"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.410178+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reused applicable reviewed intended-size and y/w palette evidence for identical source body/geometry/material. Nima body palette remains independent.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/footwear-comparison.png",
+              "sha256": "fa5fd8ff93138d3227dca895b3318e66a5b9f9d276592647f1c0f5b2d0a2ff26"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/independent-palette-comparison.png",
+              "sha256": "8079355e90a18c391c6246e26a21b5336176421be1069e019fa0fbb990b92c62"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/game-scale-review.png",
+              "sha256": "6ff26796724712649f56ea005fc8e1153da71b4d5f59129b7118d2edf9467c35"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/authoring-review.json",
+              "sha256": "4a2ea746ed49ece535c0522d11526a4647a262ea693da1385439679fb881ea01"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T13:20:31.410627+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconciled actual individual binding to current approved shared fit without generating a redundant one-off outfit.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/bind-shared-fit.py",
+              "sha256": "9cbc9fe150bfdd2e9c019dc9cf22819111fb675dd2ed86f619f27b98a2dffac5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/model.json",
+              "sha256": "015556b5706af35415ffd33a805c08bd08ae48297b0421a62400b2f47c2efd06"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/source-packet.json",
+              "sha256": "c89e8a1e40bc03f2bc0ed73274727ea17ebf24833e5b2f65c97940ee6afb1eaf"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/registration-decisions.json",
+              "sha256": "bf3b146b7815eae71a42bc2b5d9e2f38590ffb3626b0deff1e13d30539bf6799"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/model.json",
+              "sha256": "bf464ad1e11d8abd6c16f6c69d3b144f6f10a5479b7d257af07c821e963924f3"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v1/artifact-manifest.json",
+              "sha256": "708abb696f5c6885b955ad8286ca4808023e85af2e9951e15bc95618140db5e0"
+            }
+          ],
+          "review": "Re-inspected exact shared female sandal/foot assembly and checked Nima Ruda actual Feet part 192, parent 176, manager null, laterality 0, Sandals instance 536 and identical item sprite/y-w palette. The selected unmutated female body and all artwork/masks are identical to the previously reviewed shared fit, so no redundant image generation or altered anatomy is claimed. BODY-NIMA and full NPC mutation assembly remain unfinished; native equipment acceptance pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T16:41:26.923035+00:00",
+          "step": "structural_review_after_refinement",
+          "action": "Withdraw v1 generation-ready credit following the user-identified shared strap construction defect.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/pattern-east.svg",
+              "sha256": "8b563ab4441c1d8965654a41fbe742a962552142bb6cec893453331dda94a006"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/refined-red-context.png",
+              "sha256": "8a0cf59bd4f5d61fe4b697d7f94eae45a3657b75dfe1a8f7ceeaa850c4853e3c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v1/independent-palette-comparison.png",
+              "sha256": "8079355e90a18c391c6246e26a21b5336176421be1069e019fa0fbb990b92c62"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/user-rejected-palette.png",
+              "sha256": "e496682e16897cdcd4b0b954da0176c50ce5d9feb6c8e62f1bfe0a7f3d3fec41"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/user-rejected-context.png",
+              "sha256": "33914335795d5a8bbc2a8124d6f226c4c4bcb11ce5b3518fa2bda4e64285e356"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/initial-construction/structural-correction.json",
+              "sha256": "af7065e1b3af3c35a9f0d72fa987e122907aa839af4014fde492471ad3a6b65b",
+              "recorded_path": "art/conversion/fit-human-female-sandals/v2/structural-correction.json",
+              "note": "Exact original hash recovered from deterministic initial construction and preserved newline serialization after pre-refinement source edit. Current construction has a separate record."
+            }
+          ],
+          "review": "Profile straps terminate below the foot upper contour instead of wrapping over full foot height and reaching their anchors. Shared v1 source affects all four fits; previous authoring PASS is withdrawn. No native acceptance performed. Each fit must be corrected and reviewed individually.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve Nima actual ordinary Feet/0 Sandals binding and identical native item/palette against the corrected shared source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/source-packet.json",
+              "sha256": "0b38e10de6f63e2ebdeeb9186d8ec132b7ccb03092282cdfc7094a13e0e948df"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Bind exact corrected source geometry on the same unmutated female feet; no redraw or resampling is required.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/bind-shared-fit.py",
+              "sha256": "3215fd5a1764e159aa22957bdc5582e53ce6b3986c15b1f2ee704141f840a529"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/registration-decisions.json",
+              "sha256": "b9ec0a6d6aed7e9803b72b5f8c78e8ef661feb15e12b9ad37386c090b75a65cd"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse the actual corrected contextual retry, prompt and structural review; no new generation call claimed.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/imagegen-prompt.txt",
+              "sha256": "613e185e776b022d891a84765d57d63d493e3d42f9d86a887ffdc71aa332e026"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/first-refinement-structural-review.json",
+              "sha256": "0b2e5f862d459ced4a32bd9041836ca94c99b421d2935d4f27f626ed6a88a44f"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retain identical full Sandals and late foot-ownership masks, separately bound to the actual item.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/model.json",
+              "sha256": "75003d6b88df3c2d8197d7bc8682f0fe48d646e55c3c8d34399f3d01c08415a3"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/intact-garment-comparison.png",
+              "sha256": "3fdba80e306c02fd25ff11912e9860a7cdfffffa472786d11715d5cd820e0e60"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/body-overlay-comparison.png",
+              "sha256": "121dddb5849c53a638f5547f358198fdf44457684170c214a79c61888b86b5e0"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Review exact shared directional footwear and original-foot composition; this does not complete individual mutations.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/footwear-comparison.png",
+              "sha256": "45a131b248fdc23246434a12df7593b3f56f01375d91b25cf2b4eb65f4fdddda"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/mask-off-comparison.png",
+              "sha256": "884bb308059d7cd04c4e0ff229d92c23208dd2936089d10ef284db2a52b3e232"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:49:18.728271+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reconcile actual native item palette and shared neutral/intended-size evidence with Nima ordinary Feet binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/source-packet.json",
+              "sha256": "cf234ed524e759f7b0a4a10c26f790399b4f829f7e3d1acbe15decdd7500f02c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/model.json",
+              "sha256": "b33a085da96c481279870761c13bf5366baf75708983a736c8b7d70d5eb6213c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/game-scale-review.png",
+              "sha256": "00cb5e55bb82cbab48c97f2e12ac034d4a4f0be151260a4b3dec612c2a7d5da5"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/independent-palette-comparison.png",
+              "sha256": "e677d5b1202a63ca75acf6d18b655d7f8906f6657bb7bd26a156f3f2669ab35c"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/authoring-review.json",
+              "sha256": "27febff027fb0bc2ea853cf03ebe04223f3cc7830a1c4dc4b263a1a60ff1df49"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v2/artifact-manifest.json",
+              "sha256": "581445a6b3194060660cf626d9bc9b64fa31e9bb8f38b391918510b44ec9a862"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected shared SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:53:52.986837+00:00",
+          "step": "structural_review_after_refinement",
+          "action": "Withdraw affected shared sandal readiness after user identified rear ankle coverage gap.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/refined-red-context.png",
+              "sha256": "583d9660de0230dbc086f02b62ea576d20e1fddf4614a7601040329d4be43a20"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v2/footwear-comparison.png",
+              "sha256": "45a131b248fdc23246434a12df7593b3f56f01375d91b25cf2b4eb65f4fdddda"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/ankle-width-correction.json",
+              "sha256": "e4908cb67a106bccb31aa8b4a97b0845157b12e6939c33c04e78c44c0d134fcd"
+            }
+          ],
+          "review": "v2 front/back ankle bands did not span the actual ankle width; user identified the remaining rear-view gap. Previous shared-source authoring readiness withdrawn; each fit needs corrected ankle controls and individual review.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve Nima actual ordinary Feet/0 Sandals binding and identical native item/palette against the corrected shared source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/source-packet.json",
+              "sha256": "4792048982d7e8ca4df91347689a1659ef693e002a5fb9700593a85059135a06"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Bind exact corrected source geometry on the same unmutated female feet; no redraw or resampling is required.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/bind-shared-fit.py",
+              "sha256": "ca33b84addff49e4910c28c0daf438d8c0dc94d48dee1e93077fa54cc71eb1c6"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/registration-decisions.json",
+              "sha256": "49ceb0761d071409b8e8a553609f1e6f391a8b71cc9f6349993abc41ca54dff1"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reuse the actual corrected contextual retry, prompt and structural review; no new generation call claimed.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/imagegen-prompt.txt",
+              "sha256": "43e088dab9fb38577119d639d97066cd05518e9db62d09f7f97b228971ee506a"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/refined-red-context.png",
+              "sha256": "08e39c6b56e47997aa949ce0f6c5f45709630fd1fd24390303f2ceeaaf9612db"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/first-refinement-structural-review.json",
+              "sha256": "d6bb4dbeda7b4673f230d7b2b6c341587acae3901604734ece8d33c9a7324570"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Retain identical full Sandals and late foot-ownership masks, separately bound to the actual item.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/model.json",
+              "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/intact-garment-comparison.png",
+              "sha256": "676625971e7e6e845f343a71cc40d906daaaa42b972a7c8306adabf225a81bbb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/body-overlay-comparison.png",
+              "sha256": "3ebcda5fba73d904c6e81f1bf0c1886a1438c8085e1f763e04a1350355e5efdf"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Review exact shared directional footwear and original-foot composition; this does not complete individual mutations.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+              "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/mask-off-comparison.png",
+              "sha256": "fb97b596c04d5174acc0df4a3f9e81dac4a13d82a1420d00599e50b706d972c9"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T16:57:57.186068+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reconcile actual native item palette and shared neutral/intended-size evidence with Nima ordinary Feet binding.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/source-packet.json",
+              "sha256": "248ff4932189e705f4f361af9ec9dbadeb9d5f4e55d22a1b8c317871c014b6f4"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/game-scale-review.png",
+              "sha256": "3f451ad79068be90f98343cd615cb54b6a18c6edba9807d7458428a48e8f3e75"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/independent-palette-comparison.png",
+              "sha256": "ccc332b54dcb3e8503ca7c640f312112cc6dc16e54489ef23d79c00b061e08fe"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/authoring-review.json",
+              "sha256": "3cf84523fb0d1f33dd34e03bbbd312ce52c3646629551fd83585dd5ff02e826e"
+            },
+            {
+              "path": "art/conversion/fit-nima-sandals/v3/artifact-manifest.json",
+              "sha256": "ab5b2e391bff031f0d9a9945947f5e5896ec7d2f02211cb04078fb133455b6f8"
+            }
+          ],
+          "review": "Nima ordinary Feet/0 uses the same fixed unmutated female base and identical Sandals source/palette. Corrected full-width front/rear ankle bands and full-height SEN/profile/west straps, full soles and original foot masks are reused byte-for-byte; reviewed shared footwear and intended-size evidence applies exactly. No extra body or ImageGen call. Body C on shared color plate is illustrative; this is not acceptance of Nima individual body/tail/extra-arm or native outfit assembly.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+      "model": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+        "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+      },
+      "report": "docs/conversion-entries/FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0.html",
+      "plate": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+        "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T17:31:33.492244+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve actual Nima Floating Nearby195/0 item538, palm-size opal description, native light radius8 and all four color-animation keys. Preserve native unit and weight-event uncertainty.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:31:33.492718+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select unchanged ordinary female base and actual installed Biomes! Islands Pearl style asset with explicit through1.5/unbound-definition limits; reject angular Jade shape.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-comparison.png",
+              "sha256": "bead253f1bf7f660537e43b0195ae257483c4e7c8d41161be2bd7d56482f1505"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:31:33.493023+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Construct neutral palm-size sphere and independent internal detail region. Reuse rotationally invariant surface across body facings; move profile anchor clear of chest while preserving initial placement evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/prepare-source.py",
+              "sha256": "9d9116b13d625c233a6b80b07f9a5c826f4387370d75de25136b4a3fcb42ce13"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/canonical-pattern.svg",
+              "sha256": "a3c2c233572405180a74dc6180f49a9594b4d095ef1a3b3f7a5b7b98c108feca"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/detail-region.svg",
+              "sha256": "c1dfb231d3edd1a3b560c989d8b1c80c528a47f11ecef004af2a344a18d3f15e"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/fit-controls.json",
+              "sha256": "01659ee6927fb4a3bc73cff01098687d15fd524fa9e9b0129d018a838cd60795"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/constructed-red-item-context.png",
+              "sha256": "0e8004a10c9a04d07ce35616b02752102ac08d6d5a2b5babc78b9733e7d0f84d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/anchor-correction.json",
+              "sha256": "f4efe401940046c8200b0cf3c95af9fbc2a98a8410b810844ea3bf053007735b"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/imagegen-prompt.txt",
+              "sha256": "72dd98eaae66ed2a8d530a7fbcc7277fb9e29f36bc1eb9d69164c6f5a5ffb1b7"
+            }
+          ],
+          "review": "Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:34:08.825045+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "One built-in contextual opal-surface refinement; inspect sphere structure and all body facings before material registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/imagegen-prompt.txt",
+              "sha256": "72dd98eaae66ed2a8d530a7fbcc7277fb9e29f36bc1eb9d69164c6f5a5ffb1b7"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/constructed-red-item-context.png",
+              "sha256": "0e8004a10c9a04d07ce35616b02752102ac08d6d5a2b5babc78b9733e7d0f84d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/source-packet.json",
+              "sha256": "5d8e9ddced6082999e8b23309dbdfc98945f62ceaddcdf6ea646b2f70c2dc9f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "review": "Inspected all three contextual spheres before extraction: palm-size continuous round opal, clear of body/skin, consistent unmarked surface, no pupil/eye, mechanical mount, extra limb or changed sphere count. Smooth grayscale cloudy highlight remains usable. Generated glow/backdrop, red spill, body changes and edge/thickness variation are not selected alpha or lighting. Preserve fixed sphere geometry and original body; halo is authored separately.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:37:47.251111+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "User correction: align the same floating sphere vertically above one ordinary baseline palm in each facing. Change display anchors only; preserve source Floating Nearby binding and surface.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/model.json",
+              "sha256": "e6072200e0e41e0399026409a4f5ae990131f388fa1e337f8ceafa58f013d8b8"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/intact-canonical.png",
+              "sha256": "14a43177a42aaa46f7dee8d9c165400e5104ce4463093bbb6e1a437b4b3d0c23"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/fit-controls.json",
+              "sha256": "13cf449b9527c2df1279320f6b314cb007b5dc54c7a9fc1e11ae70fb7d24194f"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/constructed-neutral-context.png",
+              "sha256": "f89d520fe34ef8baf2e8d6f282f05d9dd855b97341af2d2bc70b8840067b9793"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-correction.json",
+              "sha256": "dacc759166ca04ed2e68d1c0035996066406b04ad81855d1a54319fbdfa617b8"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            }
+          ],
+          "review": "South395, east267 and north111 match the existing ordinary palm x coordinates; common y330 retained. West will mirror both east palm and sphere. No new ImageGen call or hand/slot remapping.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "action": "Register neutral material from the one contextual refinement into fixed complete opal alpha; retain independent detail and optional halo. No second generative isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/register-aligned-glowsphere.py",
+              "sha256": "5d4c56782ffa84c4b3631e319fb33cf42aa29077ece1b3068eeed4aafd382885"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/registration-decisions.json",
+              "sha256": "38de3d23174ff345eac0bffa28e74fa9fa70f27003cf5e7025e8272a5f8ecf68"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/full-item-comparison.png",
+              "sha256": "0fdf18e397cca193f96d6717f3fcf773c91ac328af3aad53d924f0e6ec94541d"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/detail-region-comparison.png",
+              "sha256": "1a6e54289359e14bfd79b352e38a8b3fb42d6ce8f90237e061556b013e54f0fc"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/optional-halo-comparison.png",
+              "sha256": "1aa435716768f48df034213acef7df38202109d383c4fe5617e1a76891929bce"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Apply user-directed vertical alignment over one ordinary palm per facing; preserve fixed body and actual floating slot. Recompose the same separate full sphere without hand cutouts.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+              "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+              "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png",
+              "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/halo-off-comparison.png",
+              "sha256": "785529309e1318f3153b2bc1ab6ff5f3b4db89dda12a5455593b0c664d6aaf9e"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T17:42:09.076246+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect palm-relative physical size, all source color-animation keys, independent neutral layers and intended-size views. Native light/orbit/animation acceptance stays gated.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/source-packet.json",
+              "sha256": "7b1b133b7512cbfefd70fc546965741e615b0d342c846bffb5257ae1675afda4"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/refined-red-context.png",
+              "sha256": "864493dbd9f93656aeb34b97f8fc8be61be081180a3e590f4f4c83c0d0606612"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v1/first-refinement-structural-review.json",
+              "sha256": "5893bc3cb33423531edd28b738fb225c194348ac62bae038ead2f61c58592c2c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/independent-palette-comparison.png",
+              "sha256": "854c5e0b11f39127ce7ee2d3327dcd0b87ef740122981da87f9e8ff809a62bda"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/native-color-keys-comparison.png",
+              "sha256": "8d447aa18f52667984c9a8bae6f764fd172f56798587b094de2ab3a930c0128f"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/game-scale-review.png",
+              "sha256": "68dd33391b1a71ba04a065282fb32efdef47058fb2106b809b8d5040abcee478"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json",
+              "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"
+            },
+            {
+              "path": "art/conversion/fit-nima-floating-glowsphere/v2/artifact-manifest.json",
+              "sha256": "380c1838edcdeb1f9783c598ccc1bc2dce575017c44f1f88e5bbf4f375b5bf1d"
+            }
+          ],
+          "review": "Inspected the same complete palm-size opal, independent detail region, optional halo, all cardinal display facings, source color keys and intended-size plate. Sphere center matches one existing palm column in every facing, including mirrored west. Only display translations changed; selected material, full alpha, physical size and original body remain unchanged. Source Floating Nearby195/0 binding, light radius8 and animated color keys are preserved. Profile torso overlap is projection of the separate foreground item, not a body edit or new supporting hand. Native state/orbit and Nima mutation/outfit acceptance remain pending the full generation set.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    }
+  ],
+  "rule": "Reuse actual source/reference/manual/refinement/patch/extraction records; no new body, costume or ImageGen call for this assembly."
+}

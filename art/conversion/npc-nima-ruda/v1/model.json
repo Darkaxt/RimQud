@@ -1,0 +1,2424 @@
+{
+  "entry": "NPC-NIMA-RUDA",
+  "kind": "captured_actor_layered_assembly",
+  "actor": {
+    "instance": 506,
+    "blueprint": "Nima Ruda",
+    "species": "human",
+    "gender": "female",
+    "description": "Sharp jade eyes are crow-worn to late middle age and her lips are scarred with gas burns. Climbing over her back and neck are the jeweled segments of a great spiral tail and stinger; a bead of smoking gut juice gleams on the tip.",
+    "anatomy": "Humanoid",
+    "tile": "Creatures/npc-nima-ruda.bmp",
+    "foreground": "&g",
+    "tileColor": "&g",
+    "detailColor": "w"
+  },
+  "source": {
+    "path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json",
+    "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"
+  },
+  "body_model": {
+    "path": "art/conversion/body-nima/v1/registered/model.json",
+    "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"
+  },
+  "equipment_bindings": {
+    "Leather Apron": {
+      "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+        "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+      },
+      "equipped_instance": 529,
+      "part_id": 176,
+      "parent_id": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null
+    },
+    "Wide-brimmed Hat": {
+      "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+      "model": {
+        "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+        "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+      },
+      "equipped_instance": 530,
+      "part_id": 177,
+      "parent_id": 176,
+      "slot": "Head",
+      "laterality": 0,
+      "manager": null
+    },
+    "Pestle": {
+      "entry": "FIT-NIMA-PESTLE-HAND-6",
+      "model": {
+        "path": "art/conversion/fit-nima-pestle/v1/model.json",
+        "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+      },
+      "equipped_instance": 531,
+      "part_id": 181,
+      "parent_id": 180,
+      "slot": "Hand",
+      "laterality": 6,
+      "manager": "506::MultipleArms::Change"
+    },
+    "Sandals": {
+      "entry": "FIT-NIMA-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-nima-sandals/v3/model.json",
+        "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+      },
+      "equipped_instance": 536,
+      "part_id": 192,
+      "parent_id": 176,
+      "slot": "Feet",
+      "laterality": 0,
+      "manager": null
+    },
+    "Floating Glowsphere": {
+      "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+      "model": {
+        "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+        "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+      },
+      "equipped_instance": 538,
+      "part_id": 195,
+      "parent_id": 176,
+      "slot": "Floating Nearby",
+      "laterality": 0,
+      "manager": null
+    }
+  },
+  "views": {
+    "south": {
+      "body": [
+        {
+          "component": "mutation-tail-back",
+          "file": "tail-back-south.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-back-south.png",
+          "sha256": "00c194ce4eca462eb4662679079b5bf9332fba81c460578ae5a8109d1557b672",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.004,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space south view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-extra-arms",
+          "file": "extra-arms-south.png",
+          "public_file": "art/conversion/body-nima/v1/registered/extra-arms-south.png",
+          "sha256": "d56765fd52e74064482ccea973fac8cd8d4a5ea061f68f30c4726b66b734d449",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "native_parts": [
+            184,
+            185,
+            186,
+            187
+          ],
+          "anatomy_role": "Exactly one additional arm/hand pair; far limb occluded in complete profile",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "file": "body-south.png",
+          "public_file": "art/conversion/body-nima/v1/registered/body-south.png",
+          "sha256": "0c068b610cd008805711368618d2052acd2d8dce19227509e372696fc751eb56",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-south.png",
+            "sha256": "a16d522e0f330d76bd3136914eba9c7173ad5598d24f660072a463c3ce7de902"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "file": "head-south.png",
+          "public_file": "art/conversion/body-nima/v1/registered/head-south.png",
+          "sha256": "77fe044a29de68a106d83c3ea864601002ec9205470c6b2a88cc68bffb0e8723",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-south.png",
+            "sha256": "faa3bc3220fe2db08794e0e6b77b7c2795757468306249a13121e8530a5585b8"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-tail-front",
+          "file": "tail-front-south.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-front-south.png",
+          "sha256": "04f6934ceeff6d1adb37f553444fcf1f6c1f5164ecbe23d48b94366a97a9118f",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space south view",
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+            "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+          },
+          "equipped_instance": 529,
+          "part_id": 176,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-south.png",
+              "file": "item-south.png",
+              "sha256": "4ef640fab7e493f4134c8c92896767cf2988e14ba1ceb97e7e96cf7d44102461",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/intact-apron-south.png",
+                "sha256": "dd76e09f2bb64ba225b566dc50076693cb4f73ace67f6434ca0c0e78c7721dfb"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "32bbff35b9f58e21729d561f8dad6363d78a991db9cdf610769db3b2593d6977",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/item-detail-south.png",
+                "sha256": "204f57f82557b6867762359fb4b6bb93406d9908405aac90e22deeddf1c1c896"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0008,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "cfe4844b21cf83cbfeb7a21ade127df47d3acf6334b3acd9b5645a24edd224dd",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-south.png",
+                "sha256": "0e52937438466942ef17350ae5be6d4f254aea20904b7f2390b06f74bc7212db"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+          "model": {
+            "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+            "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+          },
+          "equipped_instance": 530,
+          "part_id": 177,
+          "parent_id": 176,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-south.png",
+              "file": "item-south.png",
+              "sha256": "c275b93ad7978da75bae3979421200195640926cd58a1281669a37fdef62a8f6",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-hat-south.png",
+                "sha256": "9b0d25fdb113def4ed22fc1e924f2a240475793076f48fe48528fa01d4f6f18e"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "2591701978109aa9cd13fe4db09c68180348edffbbb3390e72a8e6942c5fb4f5",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/item-detail-south.png",
+                "sha256": "4e5d2e723b3a66b211b8cbc6635b4432598933d198342e335023a63af9957a0c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-PESTLE-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-nima-pestle/v1/model.json",
+            "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+          },
+          "equipped_instance": 531,
+          "part_id": 181,
+          "parent_id": 180,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "506::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-south.png",
+              "file": "item-south.png",
+              "sha256": "c769edbf8c5edf362f200a7942eef7b91a2dec27423ab5da8ff53d145c97c0bb",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/intact-item-south.png",
+                "sha256": "a2dbee62044cd9429127b39c96f6a0cb5cfd52587927a582e59effe18db06f0c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "67f2efc0d1a9677504d86336969680a7f7acb41722338ea087e527b3466891c3",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/item-detail-south.png",
+                "sha256": "684dcb247031a260aef9894b96e8281f5d5ebb4fabdce9b2af7eb9c8fc1f9a44"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "680a83f90c5c8f8f7907cbe8d4b3fd6162bbbdebb884d20d26ec2c43eefc9811",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/original-hand-south.png",
+                "sha256": "02932cdfa4f9fb698a7ffc5b49e1dbc102cbfffc98fe668da9ed099f09d3cdfe"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-nima-sandals/v3/model.json",
+            "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+          },
+          "equipped_instance": 536,
+          "part_id": 192,
+          "parent_id": 176,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-south.png",
+              "file": "item-south.png",
+              "sha256": "b81b6d7c1362015c943bf467e6fbb39cfa157681f39e15daa388d2372fd5aa35",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/intact-sandals-south.png",
+                "sha256": "43a223dd4ff39c67b4f1eb7b5b4f42b86a09c0b34e4a8d07ea99195ec152b39f"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "7f976126abccc1bf9529dfed162a44bc259174c5d5b3a030f2d62e1c76c0f043",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/item-detail-south.png",
+                "sha256": "e6fe0d0f40f3072a2ccef4e01706c065aa018fb375d7d88a976ba45da428b137"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/body-overlay-south.png",
+              "file": "body-overlay-south.png",
+              "sha256": "20915be0c0cb50151bf1ecc79b731cfa52a958171bfe5ad60f3dc00c16cbf8de",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/body-overlay-south.png",
+                "sha256": "02ad02508a2a44392e4fc284198d9af13a7f5c70324c5a9c98c4060fb253b885"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+            "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+          },
+          "equipped_instance": 538,
+          "part_id": 195,
+          "parent_id": 176,
+          "slot": "Floating Nearby",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-south.png",
+              "file": "item-south.png",
+              "sha256": "650ff22161322ffd4923873dcec5ab9e109205e6b59d1223c7a3f6522abd991c",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/intact-item-south.png",
+                "sha256": "e3241a201583055c769f918d914656fbc69c6285638feac3e3ab1a701931178e"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-detail-south.png",
+              "file": "item-detail-south.png",
+              "sha256": "32076bed54fc09936c18030c3d0396f797555af9996bc24a1e66e0b8dfd59871",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/item-detail-south.png",
+                "sha256": "e719d043c918ef63b5abe171b1169febf345a5441d42a753da70b67256293695"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-neutral-south.png",
+        "sha256": "c4b1a8aee41bf784bb6cc143db3c674f7a4c997972f884c5b6f576b8956ecdac"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-native-south.png",
+        "sha256": "e8d720b6f9d731212b0b04677c198c1efad463a135b5b8d9e4ce9fce313cb717"
+      }
+    },
+    "east": {
+      "body": [
+        {
+          "component": "mutation-tail-back",
+          "file": "tail-back-east.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-back-east.png",
+          "sha256": "ce0b87e836cc1ce55b2891c9135259a79987f5834da0e84e756bc25678242971",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.004,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space east view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-tail-front",
+          "file": "tail-front-east.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-front-east.png",
+          "sha256": "730ca5988d51ecb03ac14336f037d0eef39dec37d8e0d60d267b7b9df3fd5610",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.003,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space east view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-extra-arms",
+          "file": "extra-arms-east.png",
+          "public_file": "art/conversion/body-nima/v1/registered/extra-arms-east.png",
+          "sha256": "67c4accede240c473c99cc84a13f8cab3e2c11e4d6d7ce612ad16c296fadf753",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "native_parts": [
+            184,
+            185,
+            186,
+            187
+          ],
+          "anatomy_role": "Exactly one additional arm/hand pair; far limb occluded in complete profile",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "file": "body-east.png",
+          "public_file": "art/conversion/body-nima/v1/registered/body-east.png",
+          "sha256": "e7371a82ebe69a28a0f653845189ecc3f8edc4c49853fac55114984721bde784",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-east.png",
+            "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "file": "head-east.png",
+          "public_file": "art/conversion/body-nima/v1/registered/head-east.png",
+          "sha256": "39496a71bfe7744359088807f9af768efceb3ab1e991b7be1687d9b33d00aac5",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-east.png",
+            "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+            "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+          },
+          "equipped_instance": 529,
+          "part_id": 176,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-east.png",
+              "file": "item-east.png",
+              "sha256": "c1b34fe3e7bea59be77ce43d82f5eb9ff47dd2d31ce64485aeeaa00087926d7f",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/intact-apron-east.png",
+                "sha256": "f65e5a94484f6b667180a0a52323775311df59c2883a97fe1b8b2c18297c68c7"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "cdbc289c5b9d5394059faac6e536ef91c63b48f0fcc68166d693844c2343605e",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/item-detail-east.png",
+                "sha256": "16f3ef871f4c4ad8a80123284d4c8fac8903aa54903b55d2b995ad36cd3c89e6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0008,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "66009905bb7e24d62dae2f37a4043f02abb4fc212296bdf4afb218bb5fc0142e",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-east.png",
+                "sha256": "08b15f75277d420e8b4e10cd26f8efcea80bb6f2e1a5da37bd079ca64ba0f5ca"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+          "model": {
+            "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+            "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+          },
+          "equipped_instance": 530,
+          "part_id": 177,
+          "parent_id": 176,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-east.png",
+              "file": "item-east.png",
+              "sha256": "5df4c1e343c00f5d0b23c8d89e6f9642ccf47e0ecdc6a51ea261030ccbd93d45",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-hat-east.png",
+                "sha256": "96eff0cb07d3722cabc971385d962605f8805b258f260fbf67b64d23f9edbe1f"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "b18cc3a3175449522f93cfdc13883fd32099f45ccf96e618ab827fa0569e0a8f",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/item-detail-east.png",
+                "sha256": "11e3844bfb129034f0d7b06cdcbf9edce1355a17f75556ad95e7bdc2f54ca732"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-PESTLE-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-nima-pestle/v1/model.json",
+            "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+          },
+          "equipped_instance": 531,
+          "part_id": 181,
+          "parent_id": 180,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "506::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-east.png",
+              "file": "item-east.png",
+              "sha256": "69dfa09e19d5771bedc9fc160248637ff332ce8344d72aaaa4ceb4ec20d67561",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/intact-item-east.png",
+                "sha256": "0ae70a5436dabed174c0632547f2f47a03b37d363ccdcc62491303bd75b2da3c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "ca50d0b4b9383dfdbabf9c43ae4e9e004203da9a3fe06d498589574aceb2167b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/item-detail-east.png",
+                "sha256": "f21db3df3274fbbde4116ca353005e62e28aab035d2076e098e6fd76f865f541"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "538c66104092753b4295c4f4d5b5400f3a21f836c9eec541fdec4dc7ad5a04d1",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/original-hand-east.png",
+                "sha256": "02171c4ef1385b6a86974b740eacc0adaa7f668ffb376e83bdcee963836e3d56"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-nima-sandals/v3/model.json",
+            "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+          },
+          "equipped_instance": 536,
+          "part_id": 192,
+          "parent_id": 176,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-east.png",
+              "file": "item-east.png",
+              "sha256": "764b20bca8f300199d9f0040e51aa7666ed4fd6a05c81559266b7d8fac6e68a4",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/intact-sandals-east.png",
+                "sha256": "97c7a38f5d23311f34c0cc5d4c0064f058e005e50ba15143aa327b7d4b882211"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "3f1f331ff2eb58d2ac2008257b594153a7b406b99daf22e1bbe17d05ef46b76e",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/item-detail-east.png",
+                "sha256": "ab4b629206e52c52f645122df8f2c3c98111be41dcef1e35a135cb6a62e68959"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/body-overlay-east.png",
+              "file": "body-overlay-east.png",
+              "sha256": "3e96fbc39333182cceb769ccc95ec6b6639906b75e26ecdd0928e70c393e8a0b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/body-overlay-east.png",
+                "sha256": "32f3e3b4aed5823e3eb2161613d91d510fe159ba3250d52aa3ed11e77c3abe51"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+            "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+          },
+          "equipped_instance": 538,
+          "part_id": 195,
+          "parent_id": 176,
+          "slot": "Floating Nearby",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-east.png",
+              "file": "item-east.png",
+              "sha256": "04d9ca3eee920413e2275654467157c61c4a5dbc3815a72e932061b4ee858798",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/intact-item-east.png",
+                "sha256": "76e1dbebb4c35f55c9a8dd8149c894018d0baea6af56779ada6a0bdcc2d75f75"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-detail-east.png",
+              "file": "item-detail-east.png",
+              "sha256": "7caae3739e6494186144419e96c2eb5dbd0f4ecf7489790fd24c86c0b9c8c762",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/item-detail-east.png",
+                "sha256": "06f4e595ca2f25dc3f22ed6bc4e265d3bf8dc0db9a18ffbfb53fecbbdff4f97f"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-neutral-east.png",
+        "sha256": "41d05c0cd784ec0fd0b93275948e1e9254cb2cefdf7e44a30646d4aeef5f28e5"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-native-east.png",
+        "sha256": "808a5e247632658e219add419a09cbc862120b948b9fe086d896fca2db3ff112"
+      }
+    },
+    "north": {
+      "body": [
+        {
+          "component": "mutation-tail-back",
+          "file": "tail-back-north.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-back-north.png",
+          "sha256": "04f6934ceeff6d1adb37f553444fcf1f6c1f5164ecbe23d48b94366a97a9118f",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.004,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space north view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-extra-arms",
+          "file": "extra-arms-north.png",
+          "public_file": "art/conversion/body-nima/v1/registered/extra-arms-north.png",
+          "sha256": "d56765fd52e74064482ccea973fac8cd8d4a5ea061f68f30c4726b66b734d449",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "native_parts": [
+            184,
+            185,
+            186,
+            187
+          ],
+          "anatomy_role": "Exactly one additional arm/hand pair; far limb occluded in complete profile",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "file": "body-north.png",
+          "public_file": "art/conversion/body-nima/v1/registered/body-north.png",
+          "sha256": "095631fa19e1b91428152b7d5a3c3941261efaee8bc454b3293db6117f5247ff",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-north.png",
+            "sha256": "f56d658f1e9cb36f9b1f44766ab8e5d95157a83009a848730e8927fd832d3d30"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "file": "head-north.png",
+          "public_file": "art/conversion/body-nima/v1/registered/head-north.png",
+          "sha256": "628242d8f498c810bfae68b69a636efbb2daca2dd03df46749c4e22c6add9be8",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-north.png",
+            "sha256": "894d6930977186ca62f3bcf681242ee3f8131fbcff7136cb8f927dc459eec637"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-tail-front",
+          "file": "tail-front-north.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-front-north.png",
+          "sha256": "095496bdc4159572f5ec2d35f79ea1b2f2fa75cf7c92c701a040e61c15b087e0",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.0012,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space north view",
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+            "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+          },
+          "equipped_instance": 529,
+          "part_id": 176,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-north.png",
+              "file": "item-north.png",
+              "sha256": "5d6b9e3f6786db61be682b877e8722ca4fa1dfa07bfc95c09d692f200811f70d",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/intact-apron-north.png",
+                "sha256": "302683d64c2314c558525d08070987f462dcf4e1d629af0592ddaf183ed41609"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "b9358f500a90deb2197013773f89a502e27e3f29d1aeac1c710200390530927e",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/item-detail-north.png",
+                "sha256": "258eb4daa5630d398305d06b79c516f90276ccdabf8ff9226bb1f7481993d67b"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0008,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "a0d17f5fd8aa7debbaeb1063f1f63e924d9e4b7dcc3e34838dfe22cce62bb3cb",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-north.png",
+                "sha256": "58174cfcbc91fee16f24fa0a77cb40154a5733338d57298689dceea53dcabefd"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+          "model": {
+            "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+            "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+          },
+          "equipped_instance": 530,
+          "part_id": 177,
+          "parent_id": 176,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-north.png",
+              "file": "item-north.png",
+              "sha256": "d9a7b77998d612e71ecf3df61449d17fe4189ab4b1bd7d83f9bac47ebd1fcf9a",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-hat-north.png",
+                "sha256": "916d1ab7de4239ce98817988f90c58421ca2855a2c7f84067e4c53b8748b0cc1"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "dab8da15c6ca728d0004c59ac5a33a350e7430d45adbc403a13e4fdb6b147439",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/item-detail-north.png",
+                "sha256": "6d7ef9dab29ed1834c1bd068ee903a202df0bc8598e779557de1129e0db1bab7"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-PESTLE-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-nima-pestle/v1/model.json",
+            "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+          },
+          "equipped_instance": 531,
+          "part_id": 181,
+          "parent_id": 180,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "506::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-north.png",
+              "file": "item-north.png",
+              "sha256": "57b8e8446a51b73ad6ab747fbcbd2b80a40f7906166c3b2a9c48cde106c5be2b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/intact-item-north.png",
+                "sha256": "0f35ddaab743c63c91375056346cafd8a03d638ed0391ccf3a2cba102d86d412"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "b4b63db7b6abb331728060b945b9393a2c69e29ca21b18915c70c2a02ce227d8",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/item-detail-north.png",
+                "sha256": "ebecb398577a68b38957c5e094785657e5b28a0e4a3c6beca308d836e9062c93"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "0d16abc2cfe34b48c9716f944a3ef866aa61dbd322b28086e54a08e7cea51d27",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/original-hand-north.png",
+                "sha256": "cf3ce2030d3600fc7d47f5b8d2127f10490977aa085b7a62d5eb4a5ba431ed5c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-nima-sandals/v3/model.json",
+            "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+          },
+          "equipped_instance": 536,
+          "part_id": 192,
+          "parent_id": 176,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-north.png",
+              "file": "item-north.png",
+              "sha256": "a37bd8c6dd60938127f5f33437e9c24d4a414fa1473cb3051dc54a2b8b1d1d23",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/intact-sandals-north.png",
+                "sha256": "65c7e9784797661eccda7ac8497ec28e987dbcaaf2ade4190b43cdfebd5dea0a"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "a32f0c2e302da3724122d54e625a805cf70c262eee3d61ac2d279f4410886796",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/item-detail-north.png",
+                "sha256": "26fdbcc2d5253bad7e509b103fceb8197197ff1713b30e07ca9c365a2401f500"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/body-overlay-north.png",
+              "file": "body-overlay-north.png",
+              "sha256": "aa0601f6c7af714dae124caf5f3de77ef379c8f3f428da1a5c31e8e74912f814",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/body-overlay-north.png",
+                "sha256": "d2ecd817557951d8e6ef9dfbbb67774b0a407582e980efe8517af9cbc23de12b"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+            "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+          },
+          "equipped_instance": 538,
+          "part_id": 195,
+          "parent_id": 176,
+          "slot": "Floating Nearby",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-north.png",
+              "file": "item-north.png",
+              "sha256": "4b0affc8f5a20cf33320f67ca01c09e476b6142b3506a2d06286e4533295c230",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/intact-item-north.png",
+                "sha256": "5d865084720ad8a7ea9e2cb755109db69db57d511028d2d76feda17d2894e46c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-detail-north.png",
+              "file": "item-detail-north.png",
+              "sha256": "4165a3b03839e90ee54b13317e52cd6a7b0cf3245fce59b5abbbd542a963b248",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/item-detail-north.png",
+                "sha256": "f578962faa8e9aedf7dd00bae8cbacc09bd3024438706874b188bc631eaaca4b"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-neutral-north.png",
+        "sha256": "6a4fae1726e519c14f323b668c0a789ac441135b8fbd75db5f51aab547592a25"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-native-north.png",
+        "sha256": "29924c14d22be8cfd0c6ab310c77f8f5e7ff97fb4620b24b062dc78feefa3a76"
+      }
+    },
+    "west": {
+      "body": [
+        {
+          "component": "mutation-tail-back",
+          "file": "tail-back-west.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-back-west.png",
+          "sha256": "3d86109b8df2ddc0d4e76f2e9a0d36f393fa8507af23d44604eb79f05436a166",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.004,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space west view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-tail-front",
+          "file": "tail-front-west.png",
+          "public_file": "art/conversion/body-nima/v1/registered/tail-front-west.png",
+          "sha256": "79f8cf9dd7e3c96f03a7e2b2d30264741df43072cfdab39c535545d7614b2a37",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "detail",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.003,
+          "native_part": 193,
+          "parent_part": 176,
+          "manager": "506::Stinger",
+          "render_instance": "one-tail-193",
+          "anatomy_role": "One continuous spiral tail, one terminal stinger/bead; split only for draw order",
+          "projection": "Explicit canonical world-space west view",
+          "mirrored_from_east": false
+        },
+        {
+          "component": "mutation-extra-arms",
+          "file": "extra-arms-west.png",
+          "public_file": "art/conversion/body-nima/v1/registered/extra-arms-west.png",
+          "sha256": "8dd52ba1334d2a92770ac6e7416c8cc3a51997b2fc004ec544ecf6d70c83fd31",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": -0.002,
+          "native_parts": [
+            184,
+            185,
+            186,
+            187
+          ],
+          "anatomy_role": "Exactly one additional arm/hand pair; far limb occluded in complete profile",
+          "mirrored_from_east": true
+        },
+        {
+          "component": "body",
+          "file": "body-west.png",
+          "public_file": "art/conversion/body-nima/v1/registered/body-west.png",
+          "sha256": "4fa6deed9ba5d629de6286fa272e3b359ff6f3e1b4c745b1ed2658a9213a5260",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-east.png",
+            "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": true
+        },
+        {
+          "component": "head",
+          "file": "head-west.png",
+          "public_file": "art/conversion/body-nima/v1/registered/head-west.png",
+          "sha256": "0cdb0d51aca9e6256cdca22927a30cd8b3ef284b6f4591bda79d9d5dfdc14cd8",
+          "size": [
+            512,
+            1264
+          ],
+          "contact": [
+            256,
+            1190
+          ],
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "height": 1.6357647058823528,
+          "center_x": 0,
+          "center_z": 0.7221176470588234,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-east.png",
+            "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+          },
+          "padding_top": 240,
+          "mirrored_from_east": true
+        }
+      ],
+      "equipment": [
+        {
+          "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+            "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+          },
+          "equipped_instance": 529,
+          "part_id": 176,
+          "parent_id": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-west.png",
+              "file": "item-west.png",
+              "sha256": "7fa27007fcfdc187719fa5009e5b328cc8a4804350147f5ecf19efd30e84f717",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/intact-apron-east.png",
+                "sha256": "f65e5a94484f6b667180a0a52323775311df59c2883a97fe1b8b2c18297c68c7"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "f5b9c1de47d0eb8f7b3ee488d65ecdd3db3185d5aab8773684910d14f4792f94",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/item-detail-east.png",
+                "sha256": "16f3ef871f4c4ad8a80123284d4c8fac8903aa54903b55d2b995ad36cd3c89e6"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0008,
+              "equipment_key": "leather-apron@Body@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/leather-apron/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "289cd201ce23d9c22069d00d904f4836af1ea9e568b2960fe99bddb901848bc9",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-leather-apron/v1/body-overlay-east.png",
+                "sha256": "08b15f75277d420e8b4e10cd26f8efcea80bb6f2e1a5da37bd079ca64ba0f5ca"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+          "model": {
+            "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+            "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+          },
+          "equipped_instance": 530,
+          "part_id": 177,
+          "parent_id": 176,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-west.png",
+              "file": "item-west.png",
+              "sha256": "eccf867815c9aeb5938f99e21a43d8ad250a6c4a5cb4cf25fa95e2a26cbda8a1",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/intact-hat-east.png",
+                "sha256": "96eff0cb07d3722cabc971385d962605f8805b258f260fbf67b64d23f9edbe1f"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "wide-brimmed-hat@Head@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/wide-brimmed-hat/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "7fa2a71a0daa498b7150af93aba20e449ba03c09bc82341a443596061baf3ee6",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/item-detail-east.png",
+                "sha256": "11e3844bfb129034f0d7b06cdcbf9edce1355a17f75556ad95e7bdc2f54ca732"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-PESTLE-HAND-6",
+          "model": {
+            "path": "art/conversion/fit-nima-pestle/v1/model.json",
+            "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+          },
+          "equipped_instance": 531,
+          "part_id": 181,
+          "parent_id": 180,
+          "slot": "Hand",
+          "laterality": 6,
+          "manager": "506::MultipleArms::Change",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-west.png",
+              "file": "item-west.png",
+              "sha256": "edb79a46ea924ff4d1a9109b168445a717aba411703226b5fd1d55c74ec2fd1a",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/intact-item-east.png",
+                "sha256": "0ae70a5436dabed174c0632547f2f47a03b37d363ccdcc62491303bd75b2da3c"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "30d224c32fd0d5dff12e7b86e1e8d3a1596a98e5e98b21c467ff06b5750f4a26",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/item-detail-east.png",
+                "sha256": "f21db3df3274fbbde4116ca353005e62e28aab035d2076e098e6fd76f865f541"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "pestle@Hand@6",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/pestle/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "cb18e2551d2cf2eb46efe7bf3218c04385cd60bc8d0ac636503f944b5d63b6a1",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-pestle/v1/original-hand-east.png",
+                "sha256": "02171c4ef1385b6a86974b740eacc0adaa7f668ffb376e83bdcee963836e3d56"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-SANDALS-FEET-0",
+          "model": {
+            "path": "art/conversion/fit-nima-sandals/v3/model.json",
+            "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+          },
+          "equipped_instance": 536,
+          "part_id": 192,
+          "parent_id": 176,
+          "slot": "Feet",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-west.png",
+              "file": "item-west.png",
+              "sha256": "702cb6ab34f0a9a8112218174abdb1a7190d92521d1947a425ec6bd411de210b",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/intact-sandals-east.png",
+                "sha256": "97c7a38f5d23311f34c0cc5d4c0064f058e005e50ba15143aa327b7d4b882211"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "4d851631814bc95190af8fc16386ca744052e8ee2a10c44d983c24acf2601c66",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/item-detail-east.png",
+                "sha256": "ab4b629206e52c52f645122df8f2c3c98111be41dcef1e35a135cb6a62e68959"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "sandals@Feet@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/sandals/body-overlay-west.png",
+              "file": "body-overlay-west.png",
+              "sha256": "bf4705ee3a2181d8b2115afd5e71b7ea4bd612e302e5e875e7e441bc8e1a4631",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-human-female-sandals/v3/body-overlay-east.png",
+                "sha256": "32f3e3b4aed5823e3eb2161613d91d510fe159ba3250d52aa3ed11e77c3abe51"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+          "model": {
+            "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+            "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+          },
+          "equipped_instance": 538,
+          "part_id": 195,
+          "parent_id": 176,
+          "slot": "Floating Nearby",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-west.png",
+              "file": "item-west.png",
+              "sha256": "2043ffb385bf4ca4922fd6b66776b987b2c583675b08e43b432620c34fb1e08d",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/intact-item-east.png",
+                "sha256": "76e1dbebb4c35f55c9a8dd8149c894018d0baea6af56779ada6a0bdcc2d75f75"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "floating-glowsphere@Floating Nearby@0",
+              "public_file": "art/conversion/npc-nima-ruda/v1/padded-items/floating-glowsphere/item-detail-west.png",
+              "file": "item-detail-west.png",
+              "sha256": "e054849123cb1d4089af2f9d8825289b54664067fdc72ba38fdb2386b1fd77b6",
+              "size": [
+                512,
+                1264
+              ],
+              "contact": [
+                256,
+                1190
+              ],
+              "height": 1.6357647058823528,
+              "center_z": 0.7221176470588234,
+              "source_component": {
+                "path": "art/conversion/fit-nima-floating-glowsphere/v2/item-detail-east.png",
+                "sha256": "06f4e595ca2f25dc3f22ed6bc4e265d3bf8dc0db9a18ffbfb53fecbbdff4f97f"
+              },
+              "padding_top": 240,
+              "mirrored_from_east": true
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-neutral-west.png",
+        "sha256": "da75a3c320c95567a4608230bfb1d8160e0ae05bcea3916e2aca6db029a5bc2b"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-nima-ruda/v1/full-native-west.png",
+        "sha256": "a06fdb3c9307bfc4b5a29d2957026d2931fb8de01e1ad2a070aa30a8766562d0"
+      }
+    }
+  },
+  "registration": {
+    "canvas": [
+      512,
+      1264
+    ],
+    "padding_top": 240,
+    "contact": [
+      256,
+      1190
+    ],
+    "baseline_canvas": [
+      512,
+      1024
+    ],
+    "baseline_contact": [
+      256,
+      950
+    ],
+    "width": 0.9938823529411764,
+    "height": 1.6357647058823528,
+    "center_x": 0,
+    "center_z": 0.7221176470588234,
+    "method": "Exact RGBA paste at integer y+240. No body resampling; physical pixel scale and ground remain identical. All equipment must inherit the same padding."
+  },
+  "hand_attachment": {
+    "path": "art/conversion/npc-nima-ruda/v1/hand-attachment-decision.json",
+    "sha256": "e419d8525590827fb625d1ac09efa3b1751d497b968fd0c4fc7dc4a2bbcf26c1"
+  },
+  "floating_attachment": {
+    "path": "art/conversion/npc-nima-ruda/v1/floating-attachment-decision.json",
+    "sha256": "a6688486608777e9f1d9c54bdcc9fd25da4ad2f2baffbbed65ebfeae529eafc6"
+  },
+  "composition": "Far-held pestle, separate fixed body/mutation components with source g/w roles, apron/footwear/hat, near-held pestle, FloatingNearby glowsphere. Late body ownership local to each item; single coverage for item primary/detail.",
+  "native_activation": false,
+  "native_acceptance": "Pending all-generation gate: real anatomy/parts/equip-unequip/visibility/hurt/look/save-load and source-supported held states. This assembly is static authoring only."
+}

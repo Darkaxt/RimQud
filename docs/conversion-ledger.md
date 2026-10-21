@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-NIMA-RUDA**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **NPC-TAM**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -173,8 +173,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 |  |
 | NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
-| NPC-NIMA-RUDA | Nima Ruda | IN PROGRESS | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | Separate BODY-NIMA anatomy is generation-ready. Assemble all five actual fittings in the same padded world frame, respect tail detail-w role and explicit west geometry, and review item/tail/arm occlusion and exact Hand181/6 versus FloatingNearby195/0 attachments. |
-| NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
+| NPC-TAM | Tam | IN PROGRESS | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -6935,7 +6935,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 8.
 
 - 2026-10-21T00:02:54.550422+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured Nima506 race, full description/tree, mutation managers and all five equipped objects.
   Review: Four arms and Stinger Tail193 are source-supported; description requires segmented great spiral tail over back/neck. Pestle retains Hand181/6, Glowsphere retains FloatingNearby195/0. No unexported costume or arm/face slot semantics inferred.
@@ -6949,6 +6949,42 @@ Current step: verify_body_and_every_equipped_item_dependencies. Process-log even
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T00:46:14.183145+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Reconcile actor506 anatomy, source palette and five equipped items after the separate mutation-art prerequisite was generated.
+  Review: Original preflight remains historical. Current packet uses separate BODY-NIMA anatomy and exact actual parts; cosmetic detail remains postponed.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json", "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"}, {"path": "art/conversion/npc-nima-ruda/v1/render-source-comparison.py", "sha256": "8cf522fb825fb660887c512df9b6e8013ff4db19941b036ae68ab4908d0fec6d"}, {"path": "art/conversion/npc-nima-ruda/v1/source-to-assembly.png", "sha256": "7808917ffd89d4901d9791266d965d27db35012167b155976c6ce94026ee8d95"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:46:14.183145+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify six current dependencies and retain all actual source/reference/manual/refinement/secondary/patch/extraction histories.
+  Review: Current model/component hashes verified; older instruction inputs resolve to exact Git bytes. No new generation call.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json", "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"}]
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/dependency-lineage.json", "sha256": "2804f375dc10745fc0a1b8416d87b12e3b87a8b153d9efa24d60b4712260de0a"}, {"path": "art/conversion/npc-nima-ruda/v1/dependency-evidence.html", "sha256": "de1b839f0aaebd8a77ea24b1de2f1beb69bb5631090e4771058c5eefc4279aa8"}, {"path": "art/conversion/npc-nima-ruda/v1/historical-instruction-versions.json", "sha256": "db66213656636c03f53828eaf91044b21f7e35e2d1058679e2e7ac4b8881074e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:46:14.183145+00:00 / assemble_without_baking_equipment / PASS: Assemble five source items with fixed separate body/mutation textures and integer-padded original fittings.
+  Review: Exact RGBA source pixels, common physical scale/contact and actual slot identities retained. Each late mask affects its own item. Tail detail role and explicit west geometry preserved; optional halo not bound.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json", "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"}, {"path": "art/conversion/npc-nima-ruda/v1/dependency-lineage.json", "sha256": "2804f375dc10745fc0a1b8416d87b12e3b87a8b153d9efa24d60b4712260de0a"}]
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/assemble-nima.py", "sha256": "8d6a80b7b00134e734207fd663da3b9bced361484a00f623e46f8c0ecceffa85"}, {"path": "art/conversion/npc-nima-ruda/v1/model.json", "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"}, {"path": "art/conversion/npc-nima-ruda/v1/hand-attachment-decision.json", "sha256": "e419d8525590827fb625d1ac09efa3b1751d497b968fd0c4fc7dc4a2bbcf26c1"}, {"path": "art/conversion/npc-nima-ruda/v1/floating-attachment-decision.json", "sha256": "a6688486608777e9f1d9c54bdcc9fd25da4ad2f2baffbbed65ebfeae529eafc6"}, {"path": "art/conversion/npc-nima-ruda/v1/assembly-stages.png", "sha256": "767d0576fb869c7efbb52cde5b39c0cd1e97ca24733ee433fc1e3a5b641fa4fe"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:46:14.183145+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Review every item independently on the unclothed named body, then the complete outfit in each facing.
+  Review: Apron/hat/sandal coverage, ordinary-palm tool, floating display and extra-arm/tail overlap inspected. Complete item/body pixels remain independently registered; no unrelated body redraw.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/model.json", "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"}]
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/leather-apron-comparison.png", "sha256": "6515f767c1fe2431c4eee534c1e2005573ef8d9bb47c04fb5f88bb2265ee93bf"}, {"path": "art/conversion/npc-nima-ruda/v1/wide-brimmed-hat-comparison.png", "sha256": "53210851c8d7fba4b60d7b447db5e63c4916af68589c7d4f2aeea806cfc61f7d"}, {"path": "art/conversion/npc-nima-ruda/v1/pestle-comparison.png", "sha256": "7e96dc4ef9524a53aea013970836189fb602396def6f481728de4805df40c876"}, {"path": "art/conversion/npc-nima-ruda/v1/sandals-comparison.png", "sha256": "08624215a12068a43050935144090667eb4946fe576b383227b97685aaede756"}, {"path": "art/conversion/npc-nima-ruda/v1/floating-glowsphere-comparison.png", "sha256": "c5e689b291082b2a702218b131b2a0406458bc7e811915e5e183a411c7651fcc"}, {"path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png", "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:46:14.183145+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Review independent source palettes, shared registration and intended-size static assembly.
+  Review: Inspected original Qud sprite, metadata, separate body/mutation art, all five single-item plates, staged assembly and all four neutral/native/intended-size views. Apron529 Body176, Hat530 Head177, Pestle531 Hand181/6, Sandals536 Feet192 and Glowsphere538 FloatingNearby195 match the captured outfit. Original body and item pixels remain unchanged; integer240px transparent padding preserves common scale, contact and masks. Apron straps/bib/hem, hat crown/brim, ordinary-palm pestle, ankle/instep sandal straps and floating sphere were reviewed against the separate extra arms and spiral tail. Tail roots may be occluded by worn gear, while complete tail geometry remains separate. West tail is explicitly projected, not mirrored from east. Every garment applies only its own late body ownership; no global body redraw over other equipment. Neutral layers remain gray; source g body/additional arms and w tail role remain separate from w/W apron, y/b hat, y/Y pestle, y/w sandals and Y/C sphere. The g/w split is the recorded art palette interpretation, not native per-limb colour metadata. Pestle Hand181/6 is retained as a static palm association. FloatingNearby195/0 remains the actual sphere slot despite its vertical-palm display alignment. Optional halo is not registered; native light and animated colour cycle remain native and untested. Jade eyes/scars remain postponed cosmetics. No new ImageGen call, baked costume, source body deformation, mutation framework or native acceptance; held states and lifecycle remain gated.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/model.json", "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"}]
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/full-native-comparison.png", "sha256": "cc28ff4dde616c487253767d7c9aae44c037902a27fb9c712d682e94375397b9"}, {"path": "art/conversion/npc-nima-ruda/v1/game-scale-comparison.png", "sha256": "821e79a47b47022a824f38b5a68109f0d12e08e6ddbc843349684efa9e09c33c"}, {"path": "art/conversion/npc-nima-ruda/v1/hidden-comparison.png", "sha256": "f5ca6552b923d172b383650bf1252e2afd5aa8115f821ff64f86257ec0ab3251"}, {"path": "art/conversion/npc-nima-ruda/v1/record-review.py", "sha256": "8b5f6e68297eed0591c74626da070adb9a4a8e4ca35a58d16e7603ed8c38a0f9"}, {"path": "art/conversion/npc-nima-ruda/v1/authoring-review.json", "sha256": "78f6e766a6465792c8327642782664c4622ddd078b1cd1a177690879104434bf"}, {"path": "art/conversion/npc-nima-ruda/v1/artifact-manifest.json", "sha256": "786f885dafcd315aa5cc026b406baf763260ca4c3bcfbf9465f152cdfbecd7ca"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:46:14.183145+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Retain integrated native anatomy/equipment/held-state/visibility/hurt/look/save review behind all-generation gate.
+  Review: Hidden authoring previews are empty. Real mutation/gear occlusion, equip/unequip, held states, native light/colour cycle and lifecycle remain untested. Entry remains UNFINISHED.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/model.json", "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### NPC-TAM: Tam
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -6957,7 +6993,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
 
 ### NPC-WARDEN-YRAME: Warden Yrame
 

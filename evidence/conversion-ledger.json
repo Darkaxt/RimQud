@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "NPC-NIMA-RUDA",
+  "active_entry": "NPC-TAM",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -40209,8 +40209,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "verify_body_and_every_equipped_item_dependencies",
+      "status": "UNFINISHED",
+      "current_step": "native_visibility_equipment_hurt_look_save_review",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -40219,9 +40219,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Separate BODY-NIMA anatomy is generation-ready. Assemble all five actual fittings in the same padded world frame, respect tail detail-w role and explicit west geometry, and review item/tail/arm occlusion and exact Hand181/6 versus FloatingNearby195/0 attachments."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "female",
@@ -40573,6 +40571,186 @@
           "outputs": [],
           "review": "BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy.",
           "result": "UNFINISHED"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Reconcile actor506 anatomy, source palette and five equipped items after the separate mutation-art prerequisite was generated.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json",
+              "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/render-source-comparison.py",
+              "sha256": "8cf522fb825fb660887c512df9b6e8013ff4db19941b036ae68ab4908d0fec6d"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/source-to-assembly.png",
+              "sha256": "7808917ffd89d4901d9791266d965d27db35012167b155976c6ce94026ee8d95"
+            }
+          ],
+          "review": "Original preflight remains historical. Current packet uses separate BODY-NIMA anatomy and exact actual parts; cosmetic detail remains postponed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify six current dependencies and retain all actual source/reference/manual/refinement/secondary/patch/extraction histories.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json",
+              "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/dependency-lineage.json",
+              "sha256": "2804f375dc10745fc0a1b8416d87b12e3b87a8b153d9efa24d60b4712260de0a"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/dependency-evidence.html",
+              "sha256": "de1b839f0aaebd8a77ea24b1de2f1beb69bb5631090e4771058c5eefc4279aa8"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/historical-instruction-versions.json",
+              "sha256": "db66213656636c03f53828eaf91044b21f7e35e2d1058679e2e7ac4b8881074e"
+            }
+          ],
+          "review": "Current model/component hashes verified; older instruction inputs resolve to exact Git bytes. No new generation call.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Assemble five source items with fixed separate body/mutation textures and integer-padded original fittings.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/assembly-source-packet.json",
+              "sha256": "ca3b369bac659c7d21132e3be47be64903bd420faca8e70cd3ba13cb55d90db0"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/dependency-lineage.json",
+              "sha256": "2804f375dc10745fc0a1b8416d87b12e3b87a8b153d9efa24d60b4712260de0a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/assemble-nima.py",
+              "sha256": "8d6a80b7b00134e734207fd663da3b9bced361484a00f623e46f8c0ecceffa85"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/model.json",
+              "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/hand-attachment-decision.json",
+              "sha256": "e419d8525590827fb625d1ac09efa3b1751d497b968fd0c4fc7dc4a2bbcf26c1"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/floating-attachment-decision.json",
+              "sha256": "a6688486608777e9f1d9c54bdcc9fd25da4ad2f2baffbbed65ebfeae529eafc6"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/assembly-stages.png",
+              "sha256": "767d0576fb869c7efbb52cde5b39c0cd1e97ca24733ee433fc1e3a5b641fa4fe"
+            }
+          ],
+          "review": "Exact RGBA source pixels, common physical scale/contact and actual slot identities retained. Each late mask affects its own item. Tail detail role and explicit west geometry preserved; optional halo not bound.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Review every item independently on the unclothed named body, then the complete outfit in each facing.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/model.json",
+              "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/leather-apron-comparison.png",
+              "sha256": "6515f767c1fe2431c4eee534c1e2005573ef8d9bb47c04fb5f88bb2265ee93bf"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/wide-brimmed-hat-comparison.png",
+              "sha256": "53210851c8d7fba4b60d7b447db5e63c4916af68589c7d4f2aeea806cfc61f7d"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/pestle-comparison.png",
+              "sha256": "7e96dc4ef9524a53aea013970836189fb602396def6f481728de4805df40c876"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/sandals-comparison.png",
+              "sha256": "08624215a12068a43050935144090667eb4946fe576b383227b97685aaede756"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/floating-glowsphere-comparison.png",
+              "sha256": "c5e689b291082b2a702218b131b2a0406458bc7e811915e5e183a411c7651fcc"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png",
+              "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"
+            }
+          ],
+          "review": "Apron/hat/sandal coverage, ordinary-palm tool, floating display and extra-arm/tail overlap inspected. Complete item/body pixels remain independently registered; no unrelated body redraw.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Review independent source palettes, shared registration and intended-size static assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/model.json",
+              "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/full-native-comparison.png",
+              "sha256": "cc28ff4dde616c487253767d7c9aae44c037902a27fb9c712d682e94375397b9"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/game-scale-comparison.png",
+              "sha256": "821e79a47b47022a824f38b5a68109f0d12e08e6ddbc843349684efa9e09c33c"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/hidden-comparison.png",
+              "sha256": "f5ca6552b923d172b383650bf1252e2afd5aa8115f821ff64f86257ec0ab3251"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/record-review.py",
+              "sha256": "8b5f6e68297eed0591c74626da070adb9a4a8e4ca35a58d16e7603ed8c38a0f9"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/authoring-review.json",
+              "sha256": "78f6e766a6465792c8327642782664c4622ddd078b1cd1a177690879104434bf"
+            },
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/artifact-manifest.json",
+              "sha256": "786f885dafcd315aa5cc026b406baf763260ca4c3bcfbf9465f152cdfbecd7ca"
+            }
+          ],
+          "review": "Inspected original Qud sprite, metadata, separate body/mutation art, all five single-item plates, staged assembly and all four neutral/native/intended-size views. Apron529 Body176, Hat530 Head177, Pestle531 Hand181/6, Sandals536 Feet192 and Glowsphere538 FloatingNearby195 match the captured outfit. Original body and item pixels remain unchanged; integer240px transparent padding preserves common scale, contact and masks. Apron straps/bib/hem, hat crown/brim, ordinary-palm pestle, ankle/instep sandal straps and floating sphere were reviewed against the separate extra arms and spiral tail. Tail roots may be occluded by worn gear, while complete tail geometry remains separate. West tail is explicitly projected, not mirrored from east. Every garment applies only its own late body ownership; no global body redraw over other equipment. Neutral layers remain gray; source g body/additional arms and w tail role remain separate from w/W apron, y/b hat, y/Y pestle, y/w sandals and Y/C sphere. The g/w split is the recorded art palette interpretation, not native per-limb colour metadata. Pestle Hand181/6 is retained as a static palm association. FloatingNearby195/0 remains the actual sphere slot despite its vertical-palm display alignment. Optional halo is not registered; native light and animated colour cycle remain native and untested. Jade eyes/scars remain postponed cosmetics. No new ImageGen call, baked costume, source body deformation, mutation framework or native acceptance; held states and lifecycle remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:46:14.183145+00:00",
+          "step": "native_visibility_equipment_hurt_look_save_review",
+          "action": "Retain integrated native anatomy/equipment/held-state/visibility/hurt/look/save review behind all-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-nima-ruda/v1/model.json",
+              "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+            }
+          ],
+          "outputs": [],
+          "review": "Hidden authoring previews are empty. Real mutation/gear occlusion, equip/unequip, held states, native light/colour cycle and lifecycle remain untested. Entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
       "apparel_dependencies": {
@@ -40582,14 +40760,49 @@
           "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
           "FIT-NIMA-SANDALS-FEET-0"
         ],
-        "status": "Pending new garment fittings; no historical outfit approval implied"
+        "status": "Current apron, hat and sandals generation-ready; exact padded source pixels reviewed on separate named anatomy. Native outfit acceptance pending."
       },
-      "advancement_blocker": {
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/npc-nima-ruda/v1/model.json",
+          "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+        },
+        "plate": {
+          "path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png",
+          "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"
+        }
+      },
+      "registration_summary": "Captured Nima506: separate shared female body, additional arms and one spiral tail, plus Apron, Hat, Pestle, Sandals and Floating Glowsphere. Exact source pixels and world frame retained; Hand181/6 and FloatingNearby195/0 stay distinct. Static authoring only; native acceptance pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected original Qud sprite, metadata, separate body/mutation art, all five single-item plates, staged assembly and all four neutral/native/intended-size views. Apron529 Body176, Hat530 Head177, Pestle531 Hand181/6, Sandals536 Feet192 and Glowsphere538 FloatingNearby195 match the captured outfit. Original body and item pixels remain unchanged; integer240px transparent padding preserves common scale, contact and masks. Apron straps/bib/hem, hat crown/brim, ordinary-palm pestle, ankle/instep sandal straps and floating sphere were reviewed against the separate extra arms and spiral tail. Tail roots may be occluded by worn gear, while complete tail geometry remains separate. West tail is explicitly projected, not mirrored from east. Every garment applies only its own late body ownership; no global body redraw over other equipment. Neutral layers remain gray; source g body/additional arms and w tail role remain separate from w/W apron, y/b hat, y/Y pestle, y/w sandals and Y/C sphere. The g/w split is the recorded art palette interpretation, not native per-limb colour metadata. Pestle Hand181/6 is retained as a static palm association. FloatingNearby195/0 remains the actual sphere slot despite its vertical-palm display alignment. Optional halo is not registered; native light and animated colour cycle remain native and untested. Jade eyes/scars remain postponed cosmetics. No new ImageGen call, baked costume, source body deformation, mutation framework or native acceptance; held states and lifecycle remain gated.",
+        "record": {
+          "path": "art/conversion/npc-nima-ruda/v1/authoring-review.json",
+          "sha256": "78f6e766a6465792c8327642782664c4622ddd078b1cd1a177690879104434bf"
+        }
+      },
+      "resolved_advancement_blocker": {
         "requirement": "Source-bound individual anatomy and actual five-item assembly in every required direction",
         "reason": "Separate BODY-NIMA anatomy is generation-ready. Assemble all five actual fittings in the same padded world frame, respect tail detail-w role and explicit west geometry, and review item/tail/arm occlusion and exact Hand181/6 versus FloatingNearby195/0 attachments.",
         "classification": "internal",
         "resolution": "Finish the source-bound five-item named assembly without baking gear or changing actual captured slots; keep native state acceptance behind full-generation gate.",
-        "dependent": "NPC-NIMA-RUDA generation readiness and later native acceptance"
+        "dependent": "NPC-NIMA-RUDA generation readiness and later native acceptance",
+        "status": "RESOLVED FOR GENERATION",
+        "evidence": [
+          {
+            "path": "art/conversion/npc-nima-ruda/v1/model.json",
+            "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+          },
+          {
+            "path": "art/conversion/npc-nima-ruda/v1/hand-attachment-decision.json",
+            "sha256": "e419d8525590827fb625d1ac09efa3b1751d497b968fd0c4fc7dc4a2bbcf26c1"
+          },
+          {
+            "path": "art/conversion/npc-nima-ruda/v1/floating-attachment-decision.json",
+            "sha256": "a6688486608777e9f1d9c54bdcc9fd25da4ad2f2baffbbed65ebfeae529eafc6"
+          }
+        ]
       }
     },
     {
@@ -40614,8 +40827,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_individual_race_and_runtime_metadata",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -60358,7 +60571,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T00:31:39.837376+00:00",
+  "updated_at": "2026-10-21T00:46:14.183145+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
