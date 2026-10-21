@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-YRAME-HORNS-HEAD-0",
+  "active_entry": "SCN-DOOR",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -12126,7 +12126,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction."
+        "Native equipped state and outfit precedence remain behind the full generation gate."
       ],
       "metadata": {
         "body_family": "irudad",
@@ -12664,6 +12664,76 @@
           ],
           "review": "FIX NOW: I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:02:36.217131+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Trace the extra crescent to oversized original-body ownership, correct only that mask, and inspect all views.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+              "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/correct-ownership.py",
+              "sha256": "10ca9c509730967ef3972c279610ffbba2c6f2bdca5b543a858398829721a835"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/correction-decisions.json",
+              "sha256": "69014c28fc9cfa84889278ba1aba3d03defbce3b0b241ab7637e19da7752bc99"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/hand-contour-controls.json",
+              "sha256": "88c04b0e333744ccf07183d875b1ee2732a2de8a167a6240283f4522910e8c59"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/ownership-before-after.png",
+              "sha256": "2fa19da2a2f84943a44340e05b8c4a859f2aa5b1963f03f4f87e0dcec301e615"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "review": "Inspected all four cardinal compositions, original contour/source attribution, cuff closeups, native K/K palette and intended-size sheets. The v3 circle included adjacent torso pixels; v4 selects the actual original hand/wrist contour and removes the pale crescent. Fresh independent review confirms one continuous hand contour and cuff contact in east/mirrored west, with no demonstrated FIX NOW defect. Body RGB, complete wool, front/back ownership and registration remain unchanged. This is a mask correction on retained usable art, not a replacement garment design.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:02:36.217131+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspect native palette, intended-size output and independent structural findings; retain source/body/frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
+              "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/correct-ownership.py",
+              "sha256": "10ca9c509730967ef3972c279610ffbba2c6f2bdca5b543a858398829721a835"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/independent-palette-comparison.png",
+              "sha256": "7c847da4ac8b6694252367d87cab81436beec53298606a677fab63e0fd8827c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/game-scale-review.png",
+              "sha256": "b23ef2b98d798eb1634cfcfa51f0f03f3073104c7cd310953894e2aa9ba54ddb"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/independent-ownership-review.json",
+              "sha256": "61a134b4d8acb44a5ab3ca54fc06680aede9899beb18fcf2c64d5f6399cc95c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/authoring-review.json",
+              "sha256": "a20c2b6054aa342e3585d2b6dafaa2f5d745ab72e9b9c24d8ebf3127fedd2df1"
+            }
+          ],
+          "review": "Inspected all four cardinal compositions, original contour/source attribution, cuff closeups, native K/K palette and intended-size sheets. The v3 circle included adjacent torso pixels; v4 selects the actual original hand/wrist contour and removes the pale crescent. Fresh independent review confirms one continuous hand contour and cuff contact in east/mirrored west, with no demonstrated FIX NOW defect. Body RGB, complete wool, front/back ownership and registration remain unchanged. This is a mask correction on retained usable art, not a replacement garment design.",
+          "result": "PASS"
         }
       ],
       "apparel_occlusion": {
@@ -12674,7 +12744,7 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -12684,24 +12754,24 @@
         }
       },
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction.",
+        "status": "PASS",
+        "reason": "Inspected all four cardinal compositions, original contour/source attribution, cuff closeups, native K/K palette and intended-size sheets. The v3 circle included adjacent torso pixels; v4 selects the actual original hand/wrist contour and removes the pale crescent. Fresh independent review confirms one continuous hand contour and cuff contact in east/mirrored west, with no demonstrated FIX NOW defect. Body RGB, complete wool, front/back ownership and registration remain unchanged. This is a mask correction on retained usable art, not a replacement garment design.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/fit-irudad-black-robes/v4/authoring-review.json",
+          "sha256": "a20c2b6054aa342e3585d2b6dafaa2f5d745ab72e9b9c24d8ebf3127fedd2df1"
         }
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-irudad-black-robes/v3/model.json",
-          "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"
+          "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+          "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
         },
         "plate": {
-          "path": "art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png",
-          "sha256": "2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287"
+          "path": "art/conversion/fit-irudad-black-robes/v4/assembly-comparison.png",
+          "sha256": "5f6cd79261db320502221fad12c702d51a226dc8e2a8970bd919c436dae274de"
         }
       },
-      "registration_summary": "Own dyed-wool Black Robes: corrected shoulder coverage, continuous long sleeves, natural wrist ownership, original older-human body and native K/K tint. v1/v2 rejected ownership drafts retained. Native/mutation acceptance pending.",
+      "registration_summary": "Retained complete source wool and fixed older-human body; actual hand contour ownership removes the side crescent. Native acceptance pending.",
       "native_acceptance": "Pending full-set generation gate, Irudad mutation-body and combined outfit acceptance",
       "retrospective_structural_review": {
         "recorded_at": "2026-10-21T09:22:34.529301+00:00",
@@ -12748,16 +12818,6 @@
           "FIX NOW"
         ],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
-      },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": [
-          "NPC-ELDERBOB",
-          "ITEM-BLACK-ROBES"
-        ]
       }
     },
     {
@@ -17748,7 +17808,7 @@
         {
           "timestamp": "2026-10-21T04:53:18.098382+00:00",
           "step": "construct_and_overlay_one_item",
-          "phase": "Continuous centauroid shirt and curved body-class visibility — review pending",
+          "phase": "Continuous centauroid shirt and curved body-class visibility \u2014 review pending",
           "action": "Per-view coverage/openings contract recorded before drawing. Full mail and late semantic curved masks retained independently; manual review pending.",
           "inputs": [
             {
@@ -18258,22 +18318,21 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "construct_and_overlay_one_item",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
+        "build_blender_recipient_proxy",
         "construct_and_overlay_one_item",
-        "imagegen_refine_in_context_on_unchanged_body",
-        "retrieve_isolated_item_and_masks",
+        "render_blender_views_and_masks",
+        "select_direct_render_or_optional_refinement",
+        "export_whole_item_and_visibility_masks",
         "recompose_check_cuffs_attachment_occlusion_all_views",
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Fresh independent horn critique confirms flat-ended emergence, visually fragmented rear return and unresolved non-root skull clearance. User explicitly rejected rear curl and terminal cutoff. Broad retrospective screening does not override this closer evidence.",
-        "User rejected v7: front/rear curls repeat the same exposed shape; front roots terminate too early against the crown; horn thickness/taper is unsatisfactory. Main inspection confirms the repeated curl, abrupt root boundary, and broad-to-threadlike taper. Numerical clearance did not establish visual correctness."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "yrame",
         "equipment_key": "horns@Head@0",
@@ -18891,7 +18950,7 @@
         {
           "timestamp": "2026-10-21T04:31:43.320104+00:00",
           "step": "construct_and_overlay_one_item",
-          "phase": "Corrected crown-root construction — review pending",
+          "phase": "Corrected crown-root construction \u2014 review pending",
           "action": "Define each facing first, then reconstruct one shared returning curl with broad crown roots and a separate original flesh ear.",
           "inputs": [
             {
@@ -19756,8 +19815,10 @@
           ],
           "outputs": [
             {
-              "path": "evidence/blender-shape-ledger.json",
-              "sha256": "3a19977d1c4c920923e8030c7b519017c9bc7f2032a60d37aa63cd62e37b4a64"
+              "path": "evidence/blender-shape-ledger-history/v1.json",
+              "sha256": "3a19977d1c4c920923e8030c7b519017c9bc7f2032a60d37aa63cd62e37b4a64",
+              "original_path": "evidence/blender-shape-ledger.json",
+              "snapshot_note": "Exact prior registry bytes preserved before version2 update."
             },
             {
               "path": "evidence/blender-shape-reopen-audit.json",
@@ -19770,6 +19831,340 @@
           ],
           "review": "Three files reopen with two editable horns, five orthographic/diagnostic cameras and materials. Body/source dependencies recorded. Root appearance and exact body proxy still require work. No readiness or native claim.",
           "result": "REQUIRES CORRECTION"
+        },
+        {
+          "timestamp": "2026-10-21T10:36:00.377154+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Resume retained .blend without changing horn coordinates or full-item pixels; calibrate head fit proxy to accepted front/profile/back silhouettes and render actual four-view depth ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-trial-v2/horns-trial.blend",
+              "sha256": "4714f2277ca2face98aac9ecf210ac2f9bde50745f0b297e10da3ffa58c2d7ec"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/head-proxy-controls.json",
+              "sha256": "126a3c9f3ba1037b5e00cbb8a46664cd6e8ff09d1f307c5f0bb9a632bf299d4e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/horns-fit.blend",
+              "sha256": "b8e6a6048a1eb5b9a42f070c89a7e29c79a94c0faa0fa485c152a80e79c4dbef"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/blender-receipt.json",
+              "sha256": "0e1531f85d00dba1e1c51ffffc97dc039862a5fd7c42ecd0f933adc20f75d98b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/calibrated-assembly-comparison.png",
+              "sha256": "c47c6c4f7691e05daf66dfe75ae88d0ae32850e18a4ac9d8ec574d69068ba532"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/proxy-source-comparison.png",
+              "sha256": "02d102e59b7b6247d52a69a701a55f0970ef3cfa0e201e51c7ba15946bcaf499"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/composition-diagnostics.json",
+              "sha256": "1a1ab22bce833fccba02ba48ba8782cbbcd74850c6b1be84bac3aceaed3b86e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/trial-contract.json",
+              "sha256": "d636947eb93917855c8c461b1bbf11c5ab2bf9e580e1d2b7d1d3e72a909967e7"
+            }
+          ],
+          "review": "Actual proxy-source silhouette correspondence and unchanged horn pixels recorded. Root appearance pending closer visual review; no generation-ready or native claim.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T10:43:26.893599+00:00",
+          "step": "build_blender_recipient_proxy",
+          "action": "Calibrate the reusable head fitting proxy from exact accepted source silhouettes; preserve original body pixels.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/head-proxy-controls.json",
+              "sha256": "126a3c9f3ba1037b5e00cbb8a46664cd6e8ff09d1f307c5f0bb9a632bf299d4e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/proxy-source-comparison.png",
+              "sha256": "02d102e59b7b6247d52a69a701a55f0970ef3cfa0e201e51c7ba15946bcaf499"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/composition-diagnostics.json",
+              "sha256": "1a1ab22bce833fccba02ba48ba8782cbbcd74850c6b1be84bac3aceaed3b86e4"
+            }
+          ],
+          "review": "Actual image inspection and fresh independent bounded review establish static usable fit; no native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:43:26.893599+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render actual cardinal depth/mask views from the reused saved model; whole horn pixels remain byte-identical.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/blender-receipt.json",
+              "sha256": "0e1531f85d00dba1e1c51ffffc97dc039862a5fd7c42ecd0f933adc20f75d98b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/calibrated-assembly-comparison.png",
+              "sha256": "c47c6c4f7691e05daf66dfe75ae88d0ae32850e18a4ac9d8ec574d69068ba532"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            }
+          ],
+          "review": "Actual image inspection and fresh independent bounded review establish static usable fit; no native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:43:26.893599+00:00",
+          "step": "select_direct_render_or_optional_refinement",
+          "action": "Select direct Blender renders and keep prior optional ImageGen result as style guidance only; no new generation or isolation call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-trial-v2/generation-receipt.json",
+              "sha256": "2dcd34abe98f7a61f6c7203e0c5abae01b7ca7ac79ad7d70441fe717f8438d88"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/source-packet.json",
+              "sha256": "b69fd84e5f1a2b27f75f233962028f42d16579e4b5ad8563a0b762ae542a5345"
+            }
+          ],
+          "review": "Modeled shape, original body, scale and source ownership preserved. Rounded root shading is minor polish; no demonstrated exposed cap or disconnected attachment in calibrated views.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:43:26.893599+00:00",
+          "step": "export_whole_item_and_visibility_masks",
+          "action": "Export full physical item, far/near planes and independent native w/W tint masks; recompose every registered view over original body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/blender-receipt.json",
+              "sha256": "0e1531f85d00dba1e1c51ffffc97dc039862a5fd7c42ecd0f933adc20f75d98b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/registration-decisions.json",
+              "sha256": "fd08c2d69b8ca0fa49f6cd018370bb87c431d105c27c4eed41fa6aff45b46e86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/neutral-comparison.png",
+              "sha256": "8e17758868c81ad4103d50928d5ffcd364dbf1145aee37b11bebf7ad83a2d0d8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/native-comparison.png",
+              "sha256": "66b8bf07cd58129a787742ef9d329e010bb078a99d36b9ca4365a22fee12390e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/full-comparison.png",
+              "sha256": "1c7ce2e38c94cb85556d2792fd143ae4d1e5b8e61f34922e359934d9407c6d28"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/far-comparison.png",
+              "sha256": "f58871cdfd87d340938f4842e5a675406406d5f793c89433b780eab162a907a0"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/near-comparison.png",
+              "sha256": "5e37f6bda76eff06e841e4d928edba64640d96cc5a244d71eeb7da1f64e311ff"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/detail-comparison.png",
+              "sha256": "b7a75117e25b795469b5fe1ab2a478c161d1bf219bd0ae15de800d788047b365"
+            }
+          ],
+          "review": "All exact neutral recomposition, body preservation and shared-frame checks passed. Registered artwork still awaits main-author final palette/intended-size inspection.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T10:45:47.227214+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Select the intact reused Blender shape and calibrated original-head fit.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/source-packet.json",
+              "sha256": "b69fd84e5f1a2b27f75f233962028f42d16579e4b5ad8563a0b762ae542a5345"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/authoring-review.json",
+              "sha256": "1a0420d35c4ccc99de4914867b17277558c490633f3108a91a012e37bfa9db86"
+            }
+          ],
+          "review": "Inspected all four registered neutral/native and intended-size views, full-source and near/far/detail plates. Source-silhouette-calibrated head proxy explains forehead-adjacent roots and distinct rear occlusion; full volume and original human head/ears/body remain intact. Fresh independent review found no demonstrated structural FIX NOW failure. Actual buried root-end faces are not visible in diagnostic renders. Rounded root shading/hard transition remains minor polish, not an exposed cut or disconnected base. Direct Blender source selected; prior AI candidate remains style guidance only. Exact shared frame and independent body w/B versus item w/W tint retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:45:47.227214+00:00",
+          "step": "export_whole_item_and_visibility_masks",
+          "action": "Verify whole volume, neutral material conversion and independent tint/near-far planes without changing source alpha or original body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/registration-decisions.json",
+              "sha256": "fd08c2d69b8ca0fa49f6cd018370bb87c431d105c27c4eed41fa6aff45b46e86"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/full-comparison.png",
+              "sha256": "1c7ce2e38c94cb85556d2792fd143ae4d1e5b8e61f34922e359934d9407c6d28"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/near-comparison.png",
+              "sha256": "5e37f6bda76eff06e841e4d928edba64640d96cc5a244d71eeb7da1f64e311ff"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/far-comparison.png",
+              "sha256": "f58871cdfd87d340938f4842e5a675406406d5f793c89433b780eab162a907a0"
+            }
+          ],
+          "review": "Inspected all four registered neutral/native and intended-size views, full-source and near/far/detail plates. Source-silhouette-calibrated head proxy explains forehead-adjacent roots and distinct rear occlusion; full volume and original human head/ears/body remain intact. Fresh independent review found no demonstrated structural FIX NOW failure. Actual buried root-end faces are not visible in diagnostic renders. Rounded root shading/hard transition remains minor polish, not an exposed cut or disconnected base. Direct Blender source selected; prior AI candidate remains style guidance only. Exact shared frame and independent body w/B versus item w/W tint retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:45:47.227214+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Inspect actual roots, separate flesh ears, curl clearance and front/back/side overlap on the original body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/neutral-comparison.png",
+              "sha256": "8e17758868c81ad4103d50928d5ffcd364dbf1145aee37b11bebf7ad83a2d0d8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/authoring-review.json",
+              "sha256": "1a0420d35c4ccc99de4914867b17277558c490633f3108a91a012e37bfa9db86"
+            }
+          ],
+          "review": "Inspected all four registered neutral/native and intended-size views, full-source and near/far/detail plates. Source-silhouette-calibrated head proxy explains forehead-adjacent roots and distinct rear occlusion; full volume and original human head/ears/body remain intact. Fresh independent review found no demonstrated structural FIX NOW failure. Actual buried root-end faces are not visible in diagnostic renders. Rounded root shading/hard transition remains minor polish, not an exposed cut or disconnected base. Direct Blender source selected; prior AI candidate remains style guidance only. Exact shared frame and independent body w/B versus item w/W tint retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:45:47.227214+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Review native w/W horn roles independently from w/B body at intended render size.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/independent-fit-review.json",
+              "sha256": "e9208cbca14dbde0df256cae33f2dcb54683391259a95f351325ed3757e127bd"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/fit-contract.json",
+              "sha256": "95cbcdcc9d03714d5b3ee2ec35cbec26592d9b149835eaf2a8466792c02394cb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/native-comparison.png",
+              "sha256": "66b8bf07cd58129a787742ef9d329e010bb078a99d36b9ca4365a22fee12390e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/detail-comparison.png",
+              "sha256": "b7a75117e25b795469b5fe1ab2a478c161d1bf219bd0ae15de800d788047b365"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/ledger-workflow-diagnostics.json",
+              "sha256": "4ac6e97f2b41a667a2aae8d3ba7e635438895edcb818c9b68bc17e2f0efc7e6f"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/artifact-manifest.json",
+              "sha256": "0abdcb125a740d8add7db6da55a8c59d29c653a9b7a785c95e043d984d969e81"
+            }
+          ],
+          "review": "Inspected all four registered neutral/native and intended-size views, full-source and near/far/detail plates. Source-silhouette-calibrated head proxy explains forehead-adjacent roots and distinct rear occlusion; full volume and original human head/ears/body remain intact. Fresh independent review found no demonstrated structural FIX NOW failure. Actual buried root-end faces are not visible in diagnostic renders. Rounded root shading/hard transition remains minor polish, not an exposed cut or disconnected base. Direct Blender source selected; prior AI candidate remains style guidance only. Exact shared frame and independent body w/B versus item w/W tint retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:53:06.020564+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Index accepted reusable model and calibrated head proxy; preserve previous registry bytes as an immutable snapshot before updating the live index.",
+          "inputs": [
+            {
+              "path": "evidence/blender-shape-ledger-history/v1.json",
+              "sha256": "3a19977d1c4c920923e8030c7b519017c9bc7f2032a60d37aa63cd62e37b4a64"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/authoring-review.json",
+              "sha256": "1a0420d35c4ccc99de4914867b17277558c490633f3108a91a012e37bfa9db86"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/blender-shape-ledger-history/v2.json",
+              "sha256": "f81a871b7ff72930c673741572555581a67501b03a3626435be4995c1e6d14e6"
+            },
+            {
+              "path": "evidence/blender-shape-reopen-audit-v2.json",
+              "sha256": "6ceb6946d72cfc6350c050e177cc26a7e1fc981d535a977f1118a8f39ae6ff1d"
+            }
+          ],
+          "review": "New .blend reopens with unchanged horn coordinate hashes, editable source, five cameras and body-bound head proxy. Existing versions preserved; not a native pass.",
+          "result": "PASS"
         }
       ],
       "natural_equipment_occlusion": {
@@ -19801,37 +20196,27 @@
         },
         "native_binding": "Pending full-set generation gate"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "Current Blender trial improves shape and physically distinct views; visible anterior root still reads as a blunt cap. Correct actual model emergence before registration.",
+        "status": "PASS",
+        "reason": "Inspected all four registered neutral/native and intended-size views, full-source and near/far/detail plates. Source-silhouette-calibrated head proxy explains forehead-adjacent roots and distinct rear occlusion; full volume and original human head/ears/body remain intact. Fresh independent review found no demonstrated structural FIX NOW failure. Actual buried root-end faces are not visible in diagnostic renders. Rounded root shading/hard transition remains minor polish, not an exposed cut or disconnected base. Direct Blender source selected; prior AI candidate remains style guidance only. Exact shared frame and independent body w/B versus item w/W tint retained.",
         "record": {
-          "path": "art/conversion/fit-yrame-horns/blender-trial-v2/main-review-decision.json",
-          "sha256": "c6191a9217a21f82897afd0e8b17a77dd83a85306385d08fede6ba0171d973cb"
+          "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/authoring-review.json",
+          "sha256": "1a0420d35c4ccc99de4914867b17277558c490633f3108a91a012e37bfa9db86"
         }
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-yrame-horns/v4/model.json",
-          "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+          "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+          "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
         },
         "plate": {
-          "path": "art/conversion/fit-yrame-horns/v4/assembly-comparison.png",
-          "sha256": "4c0ca77075316dde73258a83101e1fae46e6529ea85411a19738c675548233a3"
+          "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/neutral-comparison.png",
+          "sha256": "8e17758868c81ad4103d50928d5ffcd364dbf1145aee37b11bebf7ad83a2d0d8"
         }
       },
-      "registration_summary": "Selected v4 natural Head288/0 horn fit on the unchanged centauroid body. Per-view crown attachment, flesh ears, full roots, shared scale and independent w/W tint reviewed. Named outfit and native acceptance remain pending.",
+      "registration_summary": "Selected direct Blender horn volume on the unchanged accepted body, with calibrated head proxy, full four-view depth, independent native w/W masks and registered fixed physical frame. Native acceptance pending.",
       "native_acceptance": "Pending full-set generation, integrated natural Head288/0 attachment, headgear precedence, physical-frame mapping and Yrame full mutation/outfit assembly.",
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "Current Blender trial improves shape and physically distinct views; visible anterior root still reads as a blunt cap. Correct actual model emergence before registration.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": [
-          "ITEM-HORNS",
-          "NPC-WARDEN-YRAME"
-        ]
-      },
       "retrospective_structural_review": {
         "recorded_at": "2026-10-21T09:22:34.529301+00:00",
         "review": {
@@ -19871,10 +20256,19 @@
       "persistent_3d_sources": {
         "registry": {
           "path": "evidence/blender-shape-ledger.json",
-          "sha256": "3a19977d1c4c920923e8030c7b519017c9bc7f2032a60d37aa63cd62e37b4a64"
+          "sha256": "f81a871b7ff72930c673741572555581a67501b03a3626435be4995c1e6d14e6"
         },
-        "resume_state": "Saved editable trials; root fit not yet approved."
-      }
+        "snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v2.json",
+          "sha256": "f81a871b7ff72930c673741572555581a67501b03a3626435be4995c1e6d14e6"
+        },
+        "resume_model": {
+          "path": "art/conversion/fit-yrame-horns/blender-fit-v4/horns-fit.blend",
+          "sha256": "b8e6a6048a1eb5b9a42f070c89a7e29c79a94c0faa0fa485c152a80e79c4dbef"
+        },
+        "state": "Generation authoring accepted; native acceptance pending."
+      },
+      "workflow_version": "blender-first-v1"
     },
     {
       "id": "FIT-YRAME-LEATHER-BOOTS-FEET-16",
@@ -20307,7 +20701,7 @@
         {
           "timestamp": "2026-10-21T05:20:34.832611+00:00",
           "step": "construct_and_overlay_one_item",
-          "phase": "Full boot pair, closed toes and natural fore/hind depth — review pending",
+          "phase": "Full boot pair, closed toes and natural fore/hind depth \u2014 review pending",
           "action": "Per-view fit contract predates construction. Full near/far boot sources and independent wire retained; no duplicate hind boots and no bare hoof overlay. Manual structural review pending.",
           "inputs": [
             {
@@ -21080,7 +21474,7 @@
         {
           "timestamp": "2026-10-21T05:53:09.389471+00:00",
           "step": "construct_and_overlay_one_item",
-          "phase": "Parametric full-weapon refit on original palms — review pending",
+          "phase": "Parametric full-weapon refit on original palms \u2014 review pending",
           "action": "Same physical tool, new hand anchors and0.9726776 raster scale for frame compensation. South/north grips inward; west mirrors geometry but draws far, without switching equipped hand. Visual review pending.",
           "inputs": [
             {
@@ -23059,9 +23453,7 @@
         "reprocess_under_regional_curved_v1",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [
-        "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_reference": {
           "instance": 539,
@@ -23221,9 +23613,101 @@
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:03:00.536751+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reconcile the retained source item with every current reviewed fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-black-robes/v2/fittings.json",
+              "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
+            },
+            {
+              "path": "art/conversion/item-black-robes/v2/authoring-review.json",
+              "sha256": "52ecbd96ffd3b4abb2449523d8e68e5ac1ec5b967f6cb45ccc449e61462221f6"
+            }
+          ],
+          "review": "Verified all required Black Robes539 Body196/0 fitting dependencies and hashes against the corrected original-hand ownership model. Retained complete wool, native K/K roles and physical size. No new drawing, generation or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:03:00.536751+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconcile the retained source item with every current reviewed fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-black-robes/v2/fittings.json",
+              "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
+            },
+            {
+              "path": "art/conversion/item-black-robes/v2/authoring-review.json",
+              "sha256": "52ecbd96ffd3b4abb2449523d8e68e5ac1ec5b967f6cb45ccc449e61462221f6"
+            }
+          ],
+          "review": "Verified all required Black Robes539 Body196/0 fitting dependencies and hashes against the corrected original-hand ownership model. Retained complete wool, native K/K roles and physical size. No new drawing, generation or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:03:00.536751+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconcile the retained source item with every current reviewed fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-black-robes/v2/fittings.json",
+              "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
+            },
+            {
+              "path": "art/conversion/item-black-robes/v2/authoring-review.json",
+              "sha256": "52ecbd96ffd3b4abb2449523d8e68e5ac1ec5b967f6cb45ccc449e61462221f6"
+            }
+          ],
+          "review": "Verified all required Black Robes539 Body196/0 fitting dependencies and hashes against the corrected original-hand ownership model. Retained complete wool, native K/K roles and physical size. No new drawing, generation or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:03:00.536751+00:00",
+          "step": "record_item_acceptance_from_all_fittings",
+          "action": "Reconcile the retained source item with every current reviewed fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-black-robes/v2/fittings.json",
+              "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
+            },
+            {
+              "path": "art/conversion/item-black-robes/v2/authoring-review.json",
+              "sha256": "52ecbd96ffd3b4abb2449523d8e68e5ac1ec5b967f6cb45ccc449e61462221f6"
+            }
+          ],
+          "review": "Verified all required Black Robes539 Body196/0 fitting dependencies and hashes against the corrected original-hand ownership model. Retained complete wool, native K/K roles and physical size. No new drawing, generation or native acceptance.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -23233,11 +23717,11 @@
         }
       },
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
+        "status": "PASS",
+        "reason": "Verified all required Black Robes539 Body196/0 fitting dependencies and hashes against the corrected original-hand ownership model. Retained complete wool, native K/K roles and physical size. No new drawing, generation or native acceptance.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/item-black-robes/v2/authoring-review.json",
+          "sha256": "52ecbd96ffd3b4abb2449523d8e68e5ac1ec5b967f6cb45ccc449e61462221f6"
         }
       },
       "native_acceptance": "Pending full-set gate, Irudad body/mutation/outfit acceptance",
@@ -23265,14 +23749,9 @@
         "dispositions": [],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": [
-          "FIT-IRUDAD-BLACK-ROBES-BODY-0"
-        ]
+      "current_item_manifest": {
+        "path": "art/conversion/item-black-robes/v2/fittings.json",
+        "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
       }
     },
     {
@@ -24122,15 +24601,13 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_item_acceptance_from_all_fittings",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [
-        "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_reference": {
           "instance": 575,
@@ -24485,15 +24962,108 @@
           ],
           "review": "NOT SUBSTANTIATED: The user selected sheep/ram-like horns and has been reviewing that curl design. A generic natural Horns description does not override this explicit authored choice or require replacing it with straight spikes. The reviewer correctly asks for source reconciliation, but that does not add a new silhouette redesign. Existing independently confirmed crown-root, return-tip and skull-clearance defects remain open and keep horns unready.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T10:47:22.609631+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Retain the captured Horns575 source description, natural Head288/0 binding and native w/W palette.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-horns/v4/fittings.json",
+              "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/source-packet.json",
+              "sha256": "a356013c36c0e9b7e921e2f7c76a64ca04ed6edb6f7f9bcc3c1f76952b9c0f71"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/authoring-review.json",
+              "sha256": "012bbeb2d00bee8ad50e1a70c47c714f5f488d654d14255a25c0998ac89a45e9"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/artifact-manifest.json",
+              "sha256": "bcd27314f5feeed3c707a6c9b9684fc9e89600c54c6be089fc9aa8e0bbe057ea"
+            }
+          ],
+          "review": "Verified the sole captured Horns575 natural Head288/0 fitting against current registered Blender model, source/fit/review hashes, four real facings, unchanged body frame, full source volume and independent w/W tint. Rounded root shading is minor polish after source-calibrated contact and fresh visual review; prior rejected flat/cut sources are superseded. No standalone duplicate item art or new ImageGen call. Native headgear/equipment state remains pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:47:22.609631+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Resolve and verify every current required fitting and direct Blender source.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-horns/v4/fittings.json",
+              "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/source-packet.json",
+              "sha256": "a356013c36c0e9b7e921e2f7c76a64ca04ed6edb6f7f9bcc3c1f76952b9c0f71"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/authoring-review.json",
+              "sha256": "012bbeb2d00bee8ad50e1a70c47c714f5f488d654d14255a25c0998ac89a45e9"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/artifact-manifest.json",
+              "sha256": "bcd27314f5feeed3c707a6c9b9684fc9e89600c54c6be089fc9aa8e0bbe057ea"
+            }
+          ],
+          "review": "Verified the sole captured Horns575 natural Head288/0 fitting against current registered Blender model, source/fit/review hashes, four real facings, unchanged body frame, full source volume and independent w/W tint. Rounded root shading is minor polish after source-calibrated contact and fresh visual review; prior rejected flat/cut sources are superseded. No standalone duplicate item art or new ImageGen call. Native headgear/equipment state remains pending full-set generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:47:22.609631+00:00",
+          "step": "record_item_acceptance_from_all_fittings",
+          "action": "Record aggregate generation acceptance without implying native activation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-horns/v4/fittings.json",
+              "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/source-packet.json",
+              "sha256": "a356013c36c0e9b7e921e2f7c76a64ca04ed6edb6f7f9bcc3c1f76952b9c0f71"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/authoring-review.json",
+              "sha256": "012bbeb2d00bee8ad50e1a70c47c714f5f488d654d14255a25c0998ac89a45e9"
+            },
+            {
+              "path": "art/conversion/item-horns/v4/artifact-manifest.json",
+              "sha256": "bcd27314f5feeed3c707a6c9b9684fc9e89600c54c6be089fc9aa8e0bbe057ea"
+            }
+          ],
+          "review": "Verified the sole captured Horns575 natural Head288/0 fitting against current registered Blender model, source/fit/review hashes, four real facings, unchanged body frame, full source volume and independent w/W tint. Rounded root shading is minor polish after source-calibrated contact and fresh visual review; prior rejected flat/cut sources are superseded. No standalone duplicate item art or new ImageGen call. Native headgear/equipment state remains pending full-set generation.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
+        "status": "PASS",
+        "reason": "Verified the sole captured Horns575 natural Head288/0 fitting against current registered Blender model, source/fit/review hashes, four real facings, unchanged body frame, full source volume and independent w/W tint. Rounded root shading is minor polish after source-calibrated contact and fresh visual review; prior rejected flat/cut sources are superseded. No standalone duplicate item art or new ImageGen call. Native headgear/equipment state remains pending full-set generation.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/item-horns/v4/authoring-review.json",
+          "sha256": "012bbeb2d00bee8ad50e1a70c47c714f5f488d654d14255a25c0998ac89a45e9"
         }
       },
       "current_registration": {
@@ -24534,14 +25104,9 @@
         ],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": [
-          "FIT-YRAME-HORNS-HEAD-0"
-        ]
+      "current_item_manifest": {
+        "path": "art/conversion/item-horns/v4/fittings.json",
+        "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
       }
     },
     {
@@ -47265,9 +47830,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "male",
@@ -47833,6 +48396,199 @@
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Refresh the exact captured outfit from current dependencies and inspect the corrected ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v2/model.json",
+              "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+              "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-native-comparison.png",
+              "sha256": "8776362b1edf59602cbb17f4bf776b602dee4b4411e6d28425e24ab39d5aa2f0"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+              "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
+            }
+          ],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Refresh the exact captured outfit from current dependencies and inspect the corrected ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v2/model.json",
+              "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+              "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-native-comparison.png",
+              "sha256": "8776362b1edf59602cbb17f4bf776b602dee4b4411e6d28425e24ab39d5aa2f0"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+              "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
+            }
+          ],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Refresh the exact captured outfit from current dependencies and inspect the corrected ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v2/model.json",
+              "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+              "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-native-comparison.png",
+              "sha256": "8776362b1edf59602cbb17f4bf776b602dee4b4411e6d28425e24ab39d5aa2f0"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+              "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
+            }
+          ],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Refresh the exact captured outfit from current dependencies and inspect the corrected ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v2/model.json",
+              "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+              "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-native-comparison.png",
+              "sha256": "8776362b1edf59602cbb17f4bf776b602dee4b4411e6d28425e24ab39d5aa2f0"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+              "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
+            }
+          ],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Refresh the exact captured outfit from current dependencies and inspect the corrected ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v2/model.json",
+              "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+              "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/full-native-comparison.png",
+              "sha256": "8776362b1edf59602cbb17f4bf776b602dee4b4411e6d28425e24ab39d5aa2f0"
+            },
+            {
+              "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+              "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
+            }
+          ],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:04:25.555514+00:00",
+          "step": "native_visibility_equipment_hurt_look_save_review",
+          "action": "Retain native acceptance behind the full generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-elderbob/v1/model.json",
+              "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+            },
+            {
+              "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+              "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+            }
+          ],
+          "outputs": [],
+          "review": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
       "apparel_dependencies": {
@@ -47844,24 +48600,24 @@
         ],
         "status": "Current robe, spectacles and sandals generation-ready; exact padded source pixels verified on separate named anatomy. Native outfit acceptance pending."
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/npc-elderbob/v1/model.json",
-          "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"
+          "path": "art/conversion/npc-elderbob/v2/model.json",
+          "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
         },
         "plate": {
-          "path": "art/conversion/npc-elderbob/v1/full-neutral-comparison.png",
-          "sha256": "98fab092023b883e4c149006457e7edd1cf696126da0adaab681d30fb73968cc"
+          "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+          "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
         }
       },
-      "registration_summary": "Captured Irudad507: current separate older-human/mutation body plus Black Robes, Spectacles, Walking Stick and Sandals. All source pixels and physical scale/contact are retained through integer padding. Hand201/6 keeps its captured identity with an explicit static-art palm association; native articulation/held-state acceptance remains pending.",
+      "registration_summary": "Current separate Irudad body/mutations and four exact equipment bindings, with corrected side robe hand ownership. Native acceptance pending.",
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
+        "status": "PASS",
+        "reason": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/npc-elderbob/v2/authoring-review.json",
+          "sha256": "c2d63b2f7d70dff9b4bf6eed97c0e6db1b0988f3fbe9160ac42fa9a09632bda2"
         }
       },
       "resolved_advancement_blocker": {
@@ -47909,13 +48665,6 @@
         },
         "dispositions": [],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
-      },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
       }
     },
     {
@@ -50151,9 +50900,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "female",
@@ -51128,6 +51875,300 @@
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T10:48:05.280128+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/source-packet.json",
+              "sha256": "ba0032147332eb7a2da226a60a9b1c56001322cef61d6ca536174baa8e075606"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/source-to-assembly.png",
+              "sha256": "42c493c5f9b0b34a8368982bb3e95ddd6c48d4df05bed2307e8d25102446bb55"
+            }
+          ],
+          "review": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:48:05.280128+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/dependency-lineage.json",
+              "sha256": "af1c5c015283689c5a0d4fab19a6b4bae885a1c343899d52be388e11efe36a28"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/dependency-evidence.html",
+              "sha256": "ad068123e7f3222e7559bbcd69b74bd7c89b81de63c84f1a8084ec4fb9788ed4"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/assembly-contract.json",
+              "sha256": "28e4d0a26381086567e5960db93cc777f6a894094a80a4f4940f42b7cf68c254"
+            }
+          ],
+          "review": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:48:05.280128+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/assemble.py",
+              "sha256": "52fc3b2c1651cb0148abc3020703b8d29417d7ce7a43ed9397d9c1c6607cd06a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/model.json",
+              "sha256": "f9093f8f897cd924853a060ef2a7df6445fec482315ac0c86c8a854770c8946c"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/base-comparison.png",
+              "sha256": "51c30b805ada2b0f1e2c83a8cb777b3395dd8acafae2db64419a860929d6b197"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/chain-mail-comparison.png",
+              "sha256": "3919b6894a2ef972d2b1c87b59324d9c2cc18f87a198c002f7fb30543dece3d3"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/horns-comparison.png",
+              "sha256": "b503575035e6757f16810d068311cde3d27ae9e8987d6d9f1b5f5dc25266efdf"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/vibro-blade-comparison.png",
+              "sha256": "fdc5e38c668f955448a22b07bb92f80ef77cd00320bde28032cb63026c1e34e2"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/leather-boots-comparison.png",
+              "sha256": "1e133073ac98fb96159bfe0de32bce57d1fbd2569fa911e09f95bc6154bcc91b"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/assembly-stages.png",
+              "sha256": "338b25aec27ad3e89161afc341791fb34166e6159542775ad042d229b6ed4c06"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/full-neutral-comparison.png",
+              "sha256": "c751dbadb06f90cc5e0606933bf79b4c386cfdbe7f2fbc6708ba0e1724c64580"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/full-native-comparison.png",
+              "sha256": "3025ea7aeea2745dd3722a9f11c2d18c2dc53cdec4cd09ff3d4f9c2492a7b14a"
+            }
+          ],
+          "review": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T10:50:46.225651+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/model.json",
+              "sha256": "f9093f8f897cd924853a060ef2a7df6445fec482315ac0c86c8a854770c8946c"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/assembly-stages.png",
+              "sha256": "338b25aec27ad3e89161afc341791fb34166e6159542775ad042d229b6ed4c06"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/dependency-evidence.html",
+              "sha256": "ad068123e7f3222e7559bbcd69b74bd7c89b81de63c84f1a8084ec4fb9788ed4"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:50:46.225651+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/assembly-contract.json",
+              "sha256": "28e4d0a26381086567e5960db93cc777f6a894094a80a4f4940f42b7cf68c254"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/full-neutral-comparison.png",
+              "sha256": "c751dbadb06f90cc5e0606933bf79b4c386cfdbe7f2fbc6708ba0e1724c64580"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/full-native-comparison.png",
+              "sha256": "3025ea7aeea2745dd3722a9f11c2d18c2dc53cdec4cd09ff3d4f9c2492a7b14a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/rejection.json",
+              "sha256": "a1249e263c2e8f42df5843d77eb159d149387d6488793dd2c2805adc555e4fbc"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/authoring-review.json",
+              "sha256": "b4ba752a84d4b7470dff0de67527f4bdd76260c1b0e98946d495862587a01567"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T10:50:46.225651+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/source-to-assembly.png",
+              "sha256": "42c493c5f9b0b34a8368982bb3e95ddd6c48d4df05bed2307e8d25102446bb55"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/original-native-glyph.png",
+              "sha256": "309e27e02269a6a441ec30e704c16d3bac1ad5be0b04cf63904d3270875feb3d"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/game-scale-comparison.png",
+              "sha256": "fafbee78435380576f961f35961bf25ea5cfbe840ab8e2e3b5dddf75b219aea2"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v3/artifact-manifest.json",
+              "sha256": "6d5a04dd083e3e26b56a0ef8cca58c481fc3421ca9dbe8e593fede1183c267f3"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
         }
       ],
       "apparel_dependencies": {
@@ -51138,24 +52179,24 @@
         ],
         "status": "Current mail and boots reviewed on separate named body. Boots580 only on Feet297/16; native outfit acceptance pending."
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/npc-warden-yrame/v2/model.json",
-          "sha256": "c41e2e67a9f1878c0646cd0b2478aaa60d1fd2e5e45f93e995cde6513c096aeb"
+          "path": "art/conversion/npc-warden-yrame/v3/model.json",
+          "sha256": "f9093f8f897cd924853a060ef2a7df6445fec482315ac0c86c8a854770c8946c"
         },
         "plate": {
-          "path": "art/conversion/npc-warden-yrame/v2/full-neutral-comparison.png",
-          "sha256": "66a5c39ea2a02ea387b8a4e987c7e14d2eb22a37cae2068c6f46cd98ba77f66a"
+          "path": "art/conversion/npc-warden-yrame/v3/full-neutral-comparison.png",
+          "sha256": "c751dbadb06f90cc5e0606933bf79b4c386cfdbe7f2fbc6708ba0e1724c64580"
         }
       },
-      "registration_summary": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+      "registration_summary": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
+        "status": "PASS",
+        "reason": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Earlier rejected double-mirrored west assembly is retained as v2 history. Current horns use actual west art with calibrated head proxy and independent w/W tint; no additional mirror. Root shading remains minor polish after current independent fit review. These are generation authoring results, not native equipment or pose acceptance.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/npc-warden-yrame/v3/authoring-review.json",
+          "sha256": "b4ba752a84d4b7470dff0de67527f4bdd76260c1b0e98946d495862587a01567"
         }
       },
       "resolved_advancement_blocker": {
@@ -51203,13 +52244,6 @@
         },
         "dispositions": [],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
-      },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
       }
     },
     {
@@ -73206,8 +74240,8 @@
         "open; native panel position and occlusion"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -78170,7 +79204,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T10:25:50.672835+00:00",
+  "updated_at": "2026-10-21T11:04:25.555514+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
@@ -78219,8 +79253,6 @@
   "current_structural_correction_queue": {
     "owner_stage": "Stage 3",
     "ordered_entries": [
-      "FIT-YRAME-HORNS-HEAD-0",
-      "FIT-IRUDAD-BLACK-ROBES-BODY-0",
       "SCN-DOOR",
       "SCN-DOGTHORN-TREE",
       "SCN-WATERVINE",
@@ -78241,5 +79273,53 @@
     "scope": "Remaining and revised non-body assets; body-fit proxies for complements; bodies remain ImageGen-led",
     "transition": "Finish existing generation and confirmed defects; keep usable existing art provisional; test the complete set after full generation, then prioritize visible replacements. No blanket invalidation.",
     "readiness_reset": false
-  }
+  },
+  "resolved_structural_corrections": [
+    {
+      "entry": "FIT-YRAME-HORNS-HEAD-0",
+      "recorded_at": "2026-10-21T10:53:06.020564+00:00",
+      "fit_review": {
+        "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/authoring-review.json",
+        "sha256": "1a0420d35c4ccc99de4914867b17277558c490633f3108a91a012e37bfa9db86"
+      },
+      "item_review": {
+        "path": "art/conversion/item-horns/v4/authoring-review.json",
+        "sha256": "012bbeb2d00bee8ad50e1a70c47c714f5f488d654d14255a25c0998ac89a45e9"
+      },
+      "named_review": {
+        "path": "art/conversion/npc-warden-yrame/v3/authoring-review.json",
+        "sha256": "b4ba752a84d4b7470dff0de67527f4bdd76260c1b0e98946d495862587a01567"
+      },
+      "scope": "Generation authoring only; current dependent sources refreshed."
+    },
+    {
+      "recorded_at": "2026-10-21T11:04:25.555514+00:00",
+      "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+      "reason": "Inspected refreshed single-robe, complete neutral/native outfit and intended-size views. Corrected robe ownership removes the profile hand crescent while retaining wrist/cuff contact. Current original named body/mutations, spectacles, sandals, walking-stick source/grip, slot bindings and physical frame are unchanged. Exact pixel checks show unchanged front/back full assemblies and all unrelated single-item previews. Complete source garment remains separate. Static display pose only; native equip/unequip, mutation/held-state and animation acceptance remain behind the full generation gate.",
+      "fit": {
+        "model": {
+          "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+          "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+        },
+        "plate": {
+          "path": "art/conversion/fit-irudad-black-robes/v4/assembly-comparison.png",
+          "sha256": "5f6cd79261db320502221fad12c702d51a226dc8e2a8970bd919c436dae274de"
+        }
+      },
+      "aggregate": {
+        "path": "art/conversion/item-black-robes/v2/fittings.json",
+        "sha256": "091812c5930403eddf0824d36baf3f6af0572808dce4ad72eafacaa2a927ab12"
+      },
+      "assembly": {
+        "model": {
+          "path": "art/conversion/npc-elderbob/v2/model.json",
+          "sha256": "178d3e3a85eefc44fb3c359b398dde597c7611e112e37e9e8ddd7e00a890ccc5"
+        },
+        "plate": {
+          "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
+          "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+        }
+      }
+    }
+  ]
 }

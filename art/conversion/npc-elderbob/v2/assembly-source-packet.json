@@ -1,0 +1,418 @@
+{
+  "entry": "NPC-ELDERBOB",
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "source_snapshot": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+  "actor": {
+    "instance": 507,
+    "blueprint": "ElderBob",
+    "species": "human",
+    "gender": "male",
+    "description": "A warm smile spreads over an old face freckled by time and a million crumbs of salt. He shrinks under a hunched back and drums the ground beneath him with a short and barb-crowned tail. A second pair of arms rise over the slump of his shoulders, where hands meet and fingers lace to form another face, this one vacant and prehistoric, no mouth and eyes desert-white.\n{{C|-----}}\nLoved by {{C|the villagers of Joppa}}.\n\nHated by {{C|the villagers of Kiggashur}} for questioning the origins of the moon.\n\nDisliked by {{C|goatfolk}} for casting doubt on their beliefs.\n\nAdmired by {{C|the Daughters of Exile}} for respecting the sanctity of a burial site.\n",
+    "anatomy": "HumanoidWithHandsFace",
+    "parts": [
+      {
+        "id": 196,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 539,
+          "blueprint": "Black Robes",
+          "description": "Wool was dyed in a bath of dreadroot and iron salt, and then woven to warm broad shoulders.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "Items/sw_robes1.bmp",
+          "foreground": "&K",
+          "tileColor": "",
+          "detailColor": "K"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 197,
+        "parent": 196,
+        "type": "Head",
+        "variant": "Head",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 198,
+        "parent": 197,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 540,
+          "blueprint": "Spectacles",
+          "description": "Two almonds of glass sit in wireframe cups and resharpen the world's edges.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "Items/sw_spectacles.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "Y"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 199,
+        "parent": 196,
+        "type": "Back",
+        "variant": "Back",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 200,
+        "parent": 196,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 6,
+        "manager": "507::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 201,
+        "parent": 200,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 6,
+        "manager": "507::MultipleArms::Change",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 541,
+          "blueprint": "Walking Stick",
+          "description": "Brinestalk was scythed from its marsh home and dried in the high salt sun. Its top is spiraled into a crook.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 4 lbs.}}",
+          "tile": "Items/sw_cudgel_11.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": "g"
+        },
+        "defaultItem": {
+          "instance": 542,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 202,
+        "parent": 196,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 5,
+        "manager": "507::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 203,
+        "parent": 202,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 5,
+        "manager": "507::MultipleArms::Change",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 543,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 204,
+        "parent": 196,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 10,
+        "manager": "507::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 205,
+        "parent": 204,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 10,
+        "manager": "507::MultipleArms::Add",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 544,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 206,
+        "parent": 196,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 9,
+        "manager": "507::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 207,
+        "parent": 206,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 9,
+        "manager": "507::MultipleArms::Add",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 545,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 208,
+        "parent": 196,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 209,
+        "parent": 196,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 210,
+        "parent": 196,
+        "type": "Hands",
+        "variant": "Hands",
+        "laterality": 4,
+        "manager": "507::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 211,
+        "parent": 210,
+        "type": "Face",
+        "variant": "Hands-Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 212,
+        "parent": 196,
+        "type": "Hands",
+        "variant": "Hands",
+        "laterality": 8,
+        "manager": "507::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 213,
+        "parent": 196,
+        "type": "Feet",
+        "variant": "Feet",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 546,
+          "blueprint": "Sandals",
+          "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "items/sw_sandals.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "w"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 214,
+        "parent": 196,
+        "type": "Tail",
+        "variant": "Tail",
+        "laterality": 0,
+        "manager": "507::Stinger",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 547,
+          "blueprint": "Stinger Confusion",
+          "description": "A caudal barb-thing is tipped with a jewel of venomed dew.\n\n{{rules|Strength Bonus Cap: 0\nWeapon Class: Long Blades (increased penetration on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "items/sw_stinger.bmp",
+          "foreground": "&y",
+          "tileColor": "&w",
+          "detailColor": "B"
+        }
+      },
+      {
+        "id": 215,
+        "parent": 196,
+        "type": "Thrown Weapon",
+        "variant": "Thrown Weapon",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 216,
+        "parent": 196,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      }
+    ],
+    "tile": "Creatures/npc-irudad.bmp",
+    "foreground": "&r",
+    "tileColor": "&r",
+    "detailColor": "w"
+  },
+  "preflight_history": {
+    "path": "art/conversion/npc-elderbob/v2/source-packet.json",
+    "sha256": "6867e5c67ae9617498ff43bc734b8dc2ace709bd639f3cee3b3fd947176b7323"
+  },
+  "body_model": {
+    "path": "art/conversion/body-irudad/v1/registered/model.json",
+    "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"
+  },
+  "equipment_bindings": {
+    "Black Robes": {
+      "entry": "FIT-IRUDAD-BLACK-ROBES-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-black-robes/v4/model.json",
+        "sha256": "5eec33e9c301ed4224ddf2ff2b8cad9af66495965336170f68df573f6c5bbc67"
+      },
+      "equipped_instance": 539,
+      "part_id": 196,
+      "parent_id": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null
+    },
+    "Spectacles": {
+      "entry": "FIT-IRUDAD-SPECTACLES-FACE-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-spectacles/v2/model.json",
+        "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"
+      },
+      "equipped_instance": 540,
+      "part_id": 198,
+      "parent_id": 197,
+      "slot": "Face",
+      "laterality": 0,
+      "manager": null
+    },
+    "Walking Stick": {
+      "entry": "FIT-IRUDAD-WALKING-STICK-HAND-6",
+      "model": {
+        "path": "art/conversion/fit-irudad-walking-stick/v1/model.json",
+        "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"
+      },
+      "equipped_instance": 541,
+      "part_id": 201,
+      "parent_id": 200,
+      "slot": "Hand",
+      "laterality": 6,
+      "manager": "507::MultipleArms::Change"
+    },
+    "Sandals": {
+      "entry": "FIT-IRUDAD-SANDALS-FEET-0",
+      "model": {
+        "path": "art/conversion/fit-irudad-sandals/v3/model.json",
+        "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"
+      },
+      "equipped_instance": 546,
+      "part_id": 213,
+      "parent_id": 196,
+      "slot": "Feet",
+      "laterality": 0,
+      "manager": null
+    }
+  },
+  "registration": {
+    "canvas": [
+      512,
+      1264
+    ],
+    "padding_top": 240,
+    "contact": [
+      256,
+      1190
+    ],
+    "baseline_canvas": [
+      512,
+      1024
+    ],
+    "baseline_contact": [
+      256,
+      950
+    ],
+    "method": "Integer transparent top padding only. Original body/head pixels remain unchanged at y+240. Preserve world position/scale by extending render height and center consistently; equipment inherits the same pad.",
+    "width": 0.9938823529411764,
+    "height": 1.6357647058823528,
+    "center_x": 0,
+    "center_z": 0.7221176470588234
+  },
+  "hand_attachment": {
+    "path": "art/conversion/npc-elderbob/v2/hand-attachment-decision.json",
+    "sha256": "1f55ef2655136f2e495b3344ab0dcabf1cae07a0a7fd0e35afd7d3e7e7165986"
+  },
+  "new_imagegen_calls": 0,
+  "garment_ownership": "Retain intact robe and each original body visibility mask. Apply each only to its own item alpha at composition. Existing robe may cover posterior tail root; the exposed tail/barbs remain independent body art. No global body redraw above other equipment.",
+  "native_activation": false
+}

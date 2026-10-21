@@ -167,14 +167,35 @@ def enumerate_entries():
         if worn:entry['required_steps'].insert(-1,'reprocess_under_regional_curved_v1')
     return sorted(entries,key=lambda e:(e['category'],e['name'],e['id']))
 
+def blender_required_steps(entry):
+    """Explicit method transition for an active/revised entry, not a blanket reset."""
+    steps=list(entry['required_steps'])
+    category=entry['category']
+    assert category not in ['Race/body templates','NPC assemblies','Creatures','Equipment inventory','Baseline exclusion review'],category
+    if category=='Body/equipment fittings':
+        steps.insert(steps.index('construct_and_overlay_one_item'),'build_blender_recipient_proxy')
+        steps.insert(steps.index('imagegen_refine_in_context_on_unchanged_body'),'render_blender_views_and_masks')
+        steps[steps.index('imagegen_refine_in_context_on_unchanged_body')]='select_direct_render_or_optional_refinement'
+        steps[steps.index('retrieve_isolated_item_and_masks')]='export_whole_item_and_visibility_masks'
+    else:
+        anchor='extract_register_color_coverage' if 'extract_register_color_coverage' in steps else 'extract_register_palette_masks'
+        steps.insert(steps.index(anchor),'render_blender_views_and_masks')
+        if category=='Template garments':steps.insert(steps.index('construct_shape'),'build_blender_recipient_proxy')
+    return steps
+
+
 def validate(data,expected):
     rows=data['entries'];ids=[e['id'] for e in rows];assert len(ids)==len(set(ids)),'Duplicate entry IDs'
     assert set(ids)=={e['id'] for e in expected},'Inventory drift: enumerate and reconcile new/removed targets explicitly'
     index={e['id']:e for e in rows}
     for e in rows:
         fresh=next(x for x in expected if x['id']==e['id'])
-        for key in ['category','name','source_targets','related_entries','required_variants','required_steps']:
+        for key in ['category','name','source_targets','related_entries','required_variants']:
             assert e[key]==fresh[key],(e['id'],'Inventory/workflow drift',key)
+        workflow=e.get('workflow_version')
+        assert workflow in [None,'blender-first-v1'],(e['id'],'Unknown workflow version')
+        required=blender_required_steps(fresh) if workflow else fresh['required_steps']
+        assert e['required_steps']==required,(e['id'],'Inventory/workflow drift','required_steps')
         assert set(e['related_entries'])<=set(ids),(e['id'],'Missing linked entry')
         assert e['status'] in ['UNFINISHED','IN PROGRESS','COMPLETE']
         if e['category']=='Furniture' and e.get('generation_ready'):

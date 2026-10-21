@@ -1,0 +1,1841 @@
+{
+  "entry": "NPC-WARDEN-YRAME",
+  "kind": "captured_actor_layered_assembly",
+  "source": {
+    "path": "art/conversion/npc-warden-yrame/v3/source-packet.json",
+    "sha256": "ba0032147332eb7a2da226a60a9b1c56001322cef61d6ca536174baa8e075606"
+  },
+  "body_model": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "equipment_bindings": {
+    "Chain Mail": {
+      "model": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+        "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+      },
+      "instance": 574,
+      "part_id": 287,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null
+    },
+    "Horns": {
+      "model": {
+        "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+        "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+      },
+      "instance": 575,
+      "part_id": 288,
+      "slot": "Head",
+      "laterality": 0,
+      "manager": null
+    },
+    "Vibro Blade": {
+      "model": {
+        "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+        "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+      },
+      "instance": 576,
+      "part_id": 292,
+      "slot": "Hand",
+      "laterality": 2,
+      "manager": null
+    },
+    "Leather Boots": {
+      "model": {
+        "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+        "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+      },
+      "instance": 580,
+      "part_id": 297,
+      "slot": "Feet",
+      "laterality": 16,
+      "manager": "515::MultipleLegs::Change"
+    }
+  },
+  "registration": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "views": {
+    "south": {
+      "body": [
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "file": "body-foreground-south.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-foreground-south.png",
+          "sha256": "64fcd59c9fc0a913033ff0b6d9b6da4da519ca4e2da2a616a8aeae71bd174913",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "body",
+          "color_role": "detail",
+          "file": "body-detail-south.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-detail-south.png",
+          "sha256": "da58deaa41df908a4db62334bcd7ce16bcfd4c44797212344404c57cea17b7b6",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.0001,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "file": "head-south.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/head-south.png",
+          "sha256": "bfaee281acc5814d2e459cb1e720d0ed7ffd9436240793c39e9fc6ddbd27bd17",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.001,
+          "native_part": 288,
+          "mutation_anatomy": "Head288; Horns575 remain separate equipment."
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+            "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-chain-mail-v2-item-south.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/intact-mail-south.png",
+              "sha256": "bb430fa00f080a328c9e090c21718f02fc4e66f885684c51a3a8ce3c1b68e903",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-chain-mail-v2-item-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/item-detail-south.png",
+              "sha256": "b5fdf161372f81b14643b4fbcfbc0bdbdd9f929c3727db07915fb7a8d477ec26",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-chain-mail-v2-arm-owner-body-overlay-south.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/body-overlay-south.png",
+              "sha256": "17ad1a123e0061fcd3a287cb98a5fe273092ba3940135cf138d271824c12554f",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+            "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-far-south.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-south.png",
+              "sha256": "d33e8d10fcdb91b76a9138fea55d5b2c61d2cfb2660ed67c66aee753d4d0120d",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-far-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-detail-south.png",
+              "sha256": "f097dec7df11d3fe75351a1e914b91ed742c0ee7eb0a018c7abe3cda48bb0235",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-near-south.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-south.png",
+              "sha256": "b0cecdeebd903498cbb924a05a0042c138994e83bd37009a63d2c06dc05bc061",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-near-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-detail-south.png",
+              "sha256": "b22d847b58b47e6befc703883678215fffcf112aecb41a0c2a6c3eb43fc30a05",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+            "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-vibro-blade-v2-item-south.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/intact-item-south.png",
+              "sha256": "4cc5d51d5d921ea1740b58783c9cf31a0205bb2dbc490e6a82e189e23a2d40b5",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-vibro-blade-v2-item-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/item-detail-south.png",
+              "sha256": "d30d024e10546c930a0cf17a61ffdb676e2f7e5ca0f5c9abb7ddde57bcfb8147",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-vibro-blade-v2-body-overlay-south.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/original-hand-south.png",
+              "sha256": "65458dfb70e64ef43d5c76c3f80f44fe0f5ee3b164945d4a84b76a14a4e78b69",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+            "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "components": [
+            {
+              "component": "item-left",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-left-south.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-left-south.png",
+              "sha256": "dd7cb42756a28941e982ef8c9199e290f41a116237db5ad09b81e2487e13f6b6",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-left-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-left-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-left-south.png",
+              "sha256": "33ca0d6776d757136f145e77122aa5304bc5db64c0ac7f48049814dca27d74fd",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00121,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-right",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-right-south.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-right-south.png",
+              "sha256": "81c7e489a8d1c34d436be0bc148df36a67f87c45de740ed41d0e706fde7addd6",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-right-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-right-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-right-south.png",
+              "sha256": "40707e054f0ab0c45277b62bdc3b69513e1422fbd8b736a9a2eedbbff744bce5",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00121,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay-detail",
+              "color_role": "detail",
+              "file": "yrame-leather-boots-v2-body-overlay-detail-south.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/body-overlay-detail-south.png",
+              "sha256": "5d09f6b8cf82d30b39de16a68eb8a8ced084700bd8448e53accbfe13e79ab914",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00161,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-neutral-south.png",
+        "sha256": "4fb8deafb0141befdbb091ccbab0f269c104a967e0c7a3b18dc5be08f8db01d4"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-native-south.png",
+        "sha256": "36b3605bea3af603710b6542ffff56311d9fcbd2ab64911bca082deb0fe83dff"
+      }
+    },
+    "east": {
+      "body": [
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "file": "body-foreground-east.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-foreground-east.png",
+          "sha256": "db27c1b5c641d141e27ac36cd1fc8c01a0c7338835aa77e8d4568b077c3e9741",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "body",
+          "color_role": "detail",
+          "file": "body-detail-east.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-detail-east.png",
+          "sha256": "d0b35eaf7854a2220f8376a604e552c8e3e0606de4cc8593cda8c3668bcff5ef",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.0001,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "file": "head-east.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/head-east.png",
+          "sha256": "b62ba25cf04bd2fb68915b67fe06daf15af903714a97b0da652ff33de6206fff",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.001,
+          "native_part": 288,
+          "mutation_anatomy": "Head288; Horns575 remain separate equipment."
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+            "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-chain-mail-v2-item-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/intact-mail-east.png",
+              "sha256": "7ef1a69ee53a9dced71e22e9c289cdc932f2da67543647f3227fc7981477e594",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-chain-mail-v2-item-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/item-detail-east.png",
+              "sha256": "7ded5477fbf1b4c938626a2a34a900c0b7736c88ae0fedace05465543f758c8d",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-chain-mail-v2-arm-owner-body-overlay-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/body-overlay-east.png",
+              "sha256": "a56cdeb66ea2b7d79d01d06461353058e221fb99b0e93af1eefe2f0e88e04efd",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+            "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-far-east.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-east.png",
+              "sha256": "2402805dfc13d0219982ae134a0a1ec704b1a4171f83bed5d81bb2cfde63cad9",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-far-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-detail-east.png",
+              "sha256": "e1264359a958e3c24a22baa2a67db4eaa1e731772b0cd1e289eb8de9b6c5d974",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-near-east.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-east.png",
+              "sha256": "5c6d9c5aeecddd18f2f499309b428473acfa4a58ab078d182c8ee1d339d930f6",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-near-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-detail-east.png",
+              "sha256": "73a6157db7c4099abc59ca8f1cbbb36a34aeacae1f73e38eb25b0e4248eadecc",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+            "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-vibro-blade-v2-item-east.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/intact-item-east.png",
+              "sha256": "b209483f5815ebc58fd7a6d422986fc84bda7ddd0472c3ee3efd57f7e92ac099",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-vibro-blade-v2-item-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/item-detail-east.png",
+              "sha256": "55db65ac74cce2e7d315912844a1a3ea1e16ff3f8097710bab8ff1966535c058",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-vibro-blade-v2-body-overlay-east.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/original-hand-east.png",
+              "sha256": "2af7170196f909a1a7b8723f97ba40f9c647fd1ba3e977cb73ee1105c2f08be7",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+            "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-far-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-far-east.png",
+              "sha256": "491ff4fe53d7afa25749c07e7e0fd175a0af2acda645d22e421986d2b1818374",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-far-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-far-east.png",
+              "sha256": "9ba313610c22b655706115a986d7c13094e77f454ce59475f2a62c513d8187c9",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00121,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-near-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-near-east.png",
+              "sha256": "2a98d9e9b824f2da07aa8c999897786374105ab66e6155e7d211285e82c89741",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0014,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-near-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-near-east.png",
+              "sha256": "02d481317474b518e6a39aad86842219eafba28d7efbbd2a3c0bb35860b7d7fc",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00141,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay-detail",
+              "color_role": "detail",
+              "file": "yrame-leather-boots-v2-body-overlay-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/body-overlay-detail-east.png",
+              "sha256": "37219147a720cbf1b98ae9d1a66b7eb08af175a2fbaf71bbd64cb80694dc23bb",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00161,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-neutral-east.png",
+        "sha256": "9662b326ce6f59a6e1e14b6cd2afce0e5c35d7af269a2e5b16052b972406ee86"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-native-east.png",
+        "sha256": "8d8fa0a63ee1e20229a23c45f5f62d6b8e3005f546dc5ee2914f4c9f7cb66033"
+      }
+    },
+    "north": {
+      "body": [
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "file": "body-foreground-north.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-foreground-north.png",
+          "sha256": "4c7d293827f708a4c7b576fcedcb8d1acaa38478363959abe31fd72172857793",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "body",
+          "color_role": "detail",
+          "file": "body-detail-north.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-detail-north.png",
+          "sha256": "985bdab5ecf9ee1d9ac3030723f1ee40a9f0d1397292b628848a722d6f7bd77c",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.0001,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones."
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "file": "head-north.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/head-north.png",
+          "sha256": "8c1650c47416d567e316fbaa1958b7875e72c0c7fc91c327fa7897142b735bff",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.001,
+          "native_part": 288,
+          "mutation_anatomy": "Head288; Horns575 remain separate equipment."
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+            "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-chain-mail-v2-item-north.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/intact-mail-north.png",
+              "sha256": "329c316852577f000f7e1b2e850b92a8f02597bd8bd4b9887eca377278415c8a",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-chain-mail-v2-item-detail-north.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/item-detail-north.png",
+              "sha256": "672b5756745818da6ce5da05af5c7897d45510af46b90a1a5c966cd688e63858",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-chain-mail-v2-arm-owner-body-overlay-north.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/body-overlay-north.png",
+              "sha256": "ecebc9d32d98e8191a29293f20c5ca055f42fd14ca5518abf0ee8b622a65a829",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+            "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-far-north.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-north.png",
+              "sha256": "64928d13a59376653e4ea5685dd342ab102e54b3e2e3f7c922e6c494826051be",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-far-detail-north.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-detail-north.png",
+              "sha256": "daf87d13258096f1969dac492fc35cdd630e650a37550cb208afcf97c0cc1f14",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-near-north.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-north.png",
+              "sha256": "04d5f1c70fb007794edcfd38569e123af3cab7d2eed57bb9837711e5c7b2d503",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-near-detail-north.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-detail-north.png",
+              "sha256": "3f6079ce1ce744f08a5218f2046db425f02b052dbcf61b66c966363319abef46",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+            "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-vibro-blade-v2-item-north.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/intact-item-north.png",
+              "sha256": "8b12a5b3a2a4f1973b50d9e341195c4689b9c30f0b9d2888f71d730851fac049",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-vibro-blade-v2-item-detail-north.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/item-detail-north.png",
+              "sha256": "e6be57d6d77bf7226e60ec8d6ff608a574c7227267fffadd101e38175db3251b",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+            "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "components": [
+            {
+              "component": "item-left",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-left-north.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-left-north.png",
+              "sha256": "a3152c720b73fae4103f06295d58ab101f56e17d1e2d17d1710aa3076c575937",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-right",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-right-north.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-right-north.png",
+              "sha256": "1f53cc6eb637cb73d209e39e7eda3819efedee4db074c0f7b1e99d9cd8e114e7",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-neutral-north.png",
+        "sha256": "b92fa11cc0172b103929636ff57a3d453c614c62a281dafe47b1f05d444c73b4"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-native-north.png",
+        "sha256": "5149d5976800bfe8b34d261a706069984ee735c7987804dc9c3bd42634216cc1"
+      }
+    },
+    "west": {
+      "body": [
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "file": "body-foreground-west.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-foreground-west.png",
+          "sha256": "dbaf002f74bae82561bbc0f1dd113d73ef8d092d4bef03a8ab14f5713fa838de",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones.",
+          "mirrored_from_east": true
+        },
+        {
+          "component": "body",
+          "color_role": "detail",
+          "file": "body-detail-west.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/body-detail-west.png",
+          "sha256": "11d33cd91272c6bab5dae2ae4fed108490f0a6f908ff65495e03ff40ec38d8b9",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.0001,
+          "native_part": 287,
+          "mutation_anatomy": "Remodeled lower trunk and four legs are carried by logical body art; no independent render bones.",
+          "mirrored_from_east": true
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "file": "head-west.png",
+          "public_file": "art/conversion/body-yrame/v3/registered-v2/head-west.png",
+          "sha256": "8c8d377428481452c914e7c116e02e0fd5fdd6850673bf552bda995859385b7b",
+          "size": [
+            768,
+            1152
+          ],
+          "contact": [
+            384,
+            1050
+          ],
+          "width": 1.5327005948446792,
+          "height": 1.5327005948446792,
+          "center_x": 0,
+          "center_z": 0.6306424322538003,
+          "layer": 0.001,
+          "native_part": 288,
+          "mutation_anatomy": "Head288; Horns575 remain separate equipment.",
+          "mirrored_from_east": true
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+            "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-chain-mail-v2-item-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/intact-mail-east.png",
+              "sha256": "7ef1a69ee53a9dced71e22e9c289cdc932f2da67543647f3227fc7981477e594",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-chain-mail-v2-item-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/item-detail-east.png",
+              "sha256": "7ded5477fbf1b4c938626a2a34a900c0b7736c88ae0fedace05465543f758c8d",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "file": "yrame-chain-mail-v2-arm-owner-body-overlay-east.png",
+              "public_file": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/body-overlay-east.png",
+              "sha256": "a56cdeb66ea2b7d79d01d06461353058e221fb99b0e93af1eefe2f0e88e04efd",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "needs_assembly_mirror": true
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+            "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-far-west.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-west.png",
+              "sha256": "85429d16fb8b5082256fd2fb755bec4bc3c6b580bd9e5161085218b3b426d5a4",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-far-detail-west.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-far-detail-west.png",
+              "sha256": "e1264359a958e3c24a22baa2a67db4eaa1e731772b0cd1e289eb8de9b6c5d974",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-horns-blender-item-near-west.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-west.png",
+              "sha256": "f8d94d1aced53b619ea82cfac318d4cc19148374aa2f8ae614323c62c373840b",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-horns-blender-item-near-detail-west.png",
+              "public_file": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/item-near-detail-west.png",
+              "sha256": "042a1c1eb4ec01c1e1cd694870933e58eaa8f0f647c0caac86cfef06fc2c3e1d",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+            "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "file": "yrame-vibro-blade-v2-item-west.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/intact-item-west.png",
+              "sha256": "19514fbf4dfba906a1e9b7ce505aaaff964fb8cfb60f878e635d9c8c0a39311c",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.0002,
+              "mirrored_from_east": true,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-vibro-blade-v2-item-detail-west.png",
+              "public_file": "art/conversion/fit-yrame-vibro-blade/v2/item-detail-west.png",
+              "sha256": "1fb051a438d8b9176d5b170b5eac3868caddd6488fdaf54ab976ddb9c9dbf780",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": -0.00019,
+              "mirrored_from_east": true,
+              "equipment_key": "vibro-blade@Hand@2",
+              "needs_assembly_mirror": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+            "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-far-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-far-east.png",
+              "sha256": "491ff4fe53d7afa25749c07e7e0fd175a0af2acda645d22e421986d2b1818374",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0012,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-far-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-far-east.png",
+              "sha256": "9ba313610c22b655706115a986d7c13094e77f454ce59475f2a62c513d8187c9",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00121,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "file": "yrame-leather-boots-v2-item-near-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/intact-near-east.png",
+              "sha256": "2a98d9e9b824f2da07aa8c999897786374105ab66e6155e7d211285e82c89741",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.0014,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "file": "yrame-leather-boots-v2-item-near-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/wire-near-east.png",
+              "sha256": "02d481317474b518e6a39aad86842219eafba28d7efbbd2a3c0bb35860b7d7fc",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00141,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": true
+            },
+            {
+              "component": "body-overlay-detail",
+              "color_role": "detail",
+              "file": "yrame-leather-boots-v2-body-overlay-detail-east.png",
+              "public_file": "art/conversion/fit-yrame-leather-boots/v2/body-overlay-detail-east.png",
+              "sha256": "37219147a720cbf1b98ae9d1a66b7eb08af175a2fbaf71bbd64cb80694dc23bb",
+              "size": [
+                768,
+                1152
+              ],
+              "contact": [
+                384,
+                1050
+              ],
+              "width": 1.5327005948446792,
+              "height": 1.5327005948446792,
+              "center_x": 0,
+              "center_z": 0.6306424322538003,
+              "layer": 0.00161,
+              "equipment_key": "leather-boots@Feet@16",
+              "needs_assembly_mirror": true
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-neutral-west.png",
+        "sha256": "a3ee1175242cc6f7d4a289a5f3aad237ec3a381d0688f3485cb630fdeba742cb"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v3/full-native-west.png",
+        "sha256": "196c25cde02a0c50262f9e4d378bf3e64f1c682e97a7633cbec0ddde83a16cff"
+      }
+    }
+  },
+  "composition": "Stable sort exact current components by recorded depth; far items, original body/head, full near items and original-body ownership overlays. Tint planes remain separate; sources are never body-cut.",
+  "native_activation": false,
+  "native_acceptance": "Static source-bound generation assembly. Icy Vapor stays native metadata/effect. Resting/ready blade display, equip/unequip, visibility, hurt/look/save and native activation await full-set generation gate."
+}

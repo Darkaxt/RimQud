@@ -15,7 +15,7 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage and the horn fit the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-DOOR is the sole active entry.
 
 Current status correction (2026-10-20): **Stage 3 is ACTIVE and every asset is
 unfinished**, including previously selected Tam/Ctesiphus. The user explicitly
@@ -34,8 +34,7 @@ referenced PNGs passed file/hash/neutral-name diagnostics. This is not a claim
 that every component was individually visually inspected or that art is flawless.
 The19 entries with no current created set receive no visual approval.
 
-Correct in Stage3 order: Yrame horns (embedded roots, return path, skull
-clearance); Irudad robe hand-contour ownership; door hinge/leaf connection;
+Correct in Stage3 order: door hinge/leaf connection;
 Dogthorn variant2 crown support; Watervine basal continuity; then resolve the
 water-wheel inset attachment ambiguity. Keep one active entry at a time, then
 resume Random Bottle. The cat-back step and prominent sandal rim are optional
@@ -43,11 +42,18 @@ polish. Bed camera, Nima's shared fitting evidence, the apron lower palette fiel
 and a proposed straight-horn silhouette are not substantiated correction needs.
 Source-specific references and explicit user art choices remain authoritative.
 
-Ten directly affected/dependent ledger rows have readiness withheld. There are
-127 generation-ready entries of156. Every entry remains unfinished for native
-acceptance; Stage3 is the sole ACTIVE stage and the horn fit is the sole active
-entry. The audit is complete; these corrections are **not** implemented or claimed
-fixed. No native/game validation or software release was performed.
+Four directly affected scenery rows still have readiness withheld. There are
+133 generation-ready entries of156. Yrame's direct Blender horn fit, item
+aggregate and named assembly have been refreshed with a calibrated reusable
+head proxy, unchanged complete horn volume and source-bound directional depth.
+Irudad's extra side-hand crescent was traced to torso pixels admitted by an
+oversized body ownership mask; the corrected fitting, aggregate and assembly
+now retain one original hand contour. Both corrections received fresh independent
+authoring review and main-author disposition. Editable Blender source and
+versioned shape-registry snapshots are retained for resuming refinements.
+Every entry remains unfinished for native acceptance; Stage3 is the sole ACTIVE
+stage and SCN-DOOR the sole active entry. The other four audit corrections remain
+unresolved. No native/game validation or software release was performed.
 See [the independent review and main-author triage](texture-review-20261021.html).
 
 Authorized authoring review requirements (2026-10-21): **ART-CRITIC** requires a fast
