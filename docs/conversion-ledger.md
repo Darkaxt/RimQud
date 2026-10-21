@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-SCRAP-ELECTRONICS**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-SCRAP-METAL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -190,8 +190,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | SCN-GARBAGE | Garbage | UNFINISHED | - |  |
 | SCN-PAINTING | Painting | UNFINISHED | - |  |
-| SCN-SCRAP-ELECTRONICS | Scrap Electronics | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-SCRAP-ELECTRONICS | Scrap Electronics | UNFINISHED | - |  |
+| SCN-SCRAP-METAL | Scrap Metal | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-TORCHPOST | Torchpost | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### Race/body templates (12)
@@ -7583,7 +7583,73 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/scrap-metal-body.png](../art/village/scenery/scrap-metal-body.png), [art/village/scenery/scrap-metal-detail.png](../art/village/scenery/scrap-metal-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 11.
+
+- 2026-10-21T02:07:45.703402+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve complete Scrap Electronics inheritance, exact bit11 mask, C/C palette, single native art state and exact-identity replacement boundary.
+  Review: Name is fractured microchip, not a generic metal scrap heap. No inherited RandomTile or TileColor assignment. Source two-color roles remain distinct although both resolve to C. Single fixed map view; physical diamond orientation is intrinsic shape, not a three-quarter camera.
+  Inputs: [{"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml", "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"}, {"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml", "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"}, {"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml", "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"}, {"path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/scrap-electronics-mask.png", "sha256": "09694a7971dab0bad96e992dda6e211d48b81584bc80ef9fab4c548c3ce1978a"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/prepare-source.py", "sha256": "1c640551d6239109ac895805a188b330b0f6238a69f798d6409f400a2e86ee1b"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-packet.json", "sha256": "d1ba2634c7b0e437370a9618bea8decbfc797a7a47fc82b401cbb6fccfa326e7"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-reference.png", "sha256": "3d966956bdf03f428b561d82ce45e6fccc7124a84b3a33b77345beb12f833cb4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:09:27.214356+00:00 / resolve_object_description_original_tile_palette_state / PASS: Correct identity summary to include InorganicObject; preserve original complete ancestry data.
+  Review: The original six-node ancestry was complete; only shorthand identity omitted InorganicObject. Corrected current packet derives identity from actual chain, without changing source behavior.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/source-packet.json", "sha256": "d1ba2634c7b0e437370a9618bea8decbfc797a7a47fc82b401cbb6fccfa326e7"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json", "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:09:27.214356+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual VTE SignalChip and Biotech Graphic_Single definition as compact material/shading reference.
+  Review: Actual reference is resource art, not a creature or furniture. Native fractured diamond/open-pockets shape and C/C palette win; no imported rounded housing, blue rectangles, donor scale or mechanics.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json", "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-reference.png", "sha256": "3d966956bdf03f428b561d82ce45e6fccc7124a84b3a33b77345beb12f833cb4"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/construction-controls.json", "sha256": "8f9a2e809f976ac4c24ba33d92b3c74d878905c149967687a2ca7775e35cd0ec"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:09:27.214356+00:00 / construct_faithful_shape / PASS: Construct editable fractured diamond with two opposing source P/D regions, border bridges and shallow etched traces.
+  Review: Source-centered small8x8extent retained in full16x24cell. Open pockets remain transparent rather than being filled with a generic PCB. Etched traces and fracture edge are explicit authored interpretation. Inspect full shape before refinement.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json", "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/construct-chip.py", "sha256": "bfecb1d77b864d5a923760d75102eb95fd37c732e78bf0c4eea3698da19279ff"}, {"path": "art/conversion/scn-scrap-electronics/v1/constructed-chip.svg", "sha256": "cde63f50e2ee217ad9d8167506c31b6cff12d7234334eca25e7685a5360fb6b0"}, {"path": "art/conversion/scn-scrap-electronics/v1/constructed-chip.png", "sha256": "af07fa4c92028fd7f280b92ae9ddd3525d8e1ba2f0efbc41cc2690e25a162500"}, {"path": "art/conversion/scn-scrap-electronics/v1/manual-suggestion.png", "sha256": "e1a43651f20d3c0562cdcace02a1602e64ea74156b0317b3b71ec2b76156354d"}, {"path": "art/conversion/scn-scrap-electronics/v1/primary-ownership.png", "sha256": "8a87f59fffdf796c30ae98aeba3a8aac43788722f413ff674c3483b224459935"}, {"path": "art/conversion/scn-scrap-electronics/v1/detail-ownership.png", "sha256": "4159cfd021160d30364310739a9b2ad5bf1e42f3bfaf7f8d326954b9b27094cb"}, {"path": "art/conversion/scn-scrap-electronics/v1/refinement-prompt.txt", "sha256": "c2fbcd946355c46d70fefcaac583b2800c33f5439edda8aa2eee34e2a25f04f4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:09:27.214356+00:00 / create_required_state_neighbor_variants / PASS: Resolve required native states and views from complete inherited declaration.
+  Review: One actual fixed tile, no RandomTile builder or source-supported repaired/burning/stack picture. Non-furniture item: no S/E/N turnaround or clothing assembly is needed. Shared bit11 does not grant other scrap identities readiness.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json", "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/construction-controls.json", "sha256": "8f9a2e809f976ac4c24ba33d92b3c74d878905c149967687a2ca7775e35cd0ec"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:10:07.467108+00:00 / construct_faithful_shape / PASS: Extend the two perimeter bridges to contact the opposing fragment endpoints before refinement.
+  Review: Full manual inspection showed tiny gaps between rim ends and lower-right fragment. Exact editable endpoint adjustment closes contacts while preserving source pockets, full-cell scale and native P/D identity. No redraw or arbitrary size normalization.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/constructed-chip.svg", "sha256": "cde63f50e2ee217ad9d8167506c31b6cff12d7234334eca25e7685a5360fb6b0"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/patched-chip.svg", "sha256": "834388cd4e3ac464aca6eb9c2878fcfbf9e038d776e91c440693539221736060"}, {"path": "art/conversion/scn-scrap-electronics/v1/patched-chip.png", "sha256": "c8be879f2070cc55961acfa05507e66f12dde18c360e4b8e88fd625c47bbf351"}, {"path": "art/conversion/scn-scrap-electronics/v1/construction-controls-patched.json", "sha256": "3f92a895b35ea1c5c2316d88ef75fe1ee3838c7448513e16a117f0b11dc78a41"}, {"path": "art/conversion/scn-scrap-electronics/v1/refinement-prompt-patched.txt", "sha256": "1f5021b52f1363c8f90fdc16218ef74e8efbf07d2ad79583f205b0964fbc0a70"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:11:56.517064+00:00 / refine_materials_and_form / REJECTED: Run first actual ImageGen refinement and reject rendered pocket-fill/haze before extraction or fitting.
+  Review: Actual saved alpha shows opaque/translucent content in upper-right empty pocket plus stray haze. First refined proposal is not a usable shape. Retry exact construction once with explicit empty-region constraints; preserve failed evidence.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/refinement-prompt-patched.txt", "sha256": "1f5021b52f1363c8f90fdc16218ef74e8efbf07d2ad79583f205b0964fbc0a70"}, {"path": "art/conversion/scn-scrap-electronics/v1/patched-chip.png", "sha256": "c8be879f2070cc55961acfa05507e66f12dde18c360e4b8e88fd625c47bbf351"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-reference.png", "sha256": "3d966956bdf03f428b561d82ce45e6fccc7124a84b3a33b77345beb12f833cb4"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/refined-first-rejected.png", "sha256": "a62601de7011f67fe004dac9390c010fa4104b4f732230fdc56676130a52be5d"}, {"path": "art/conversion/scn-scrap-electronics/v1/generation-first-receipt.json", "sha256": "b588ee4e5bfa1a4f1eb46f11117bbbdd5fabf8f681a49b9fabef6aeb5f796162"}, {"path": "art/conversion/scn-scrap-electronics/v1/first-structural-review.json", "sha256": "e08a440df43b9a29c6a8508bf927676db54d00939d35a7a447f8424fa57d0d40"}, {"path": "art/conversion/scn-scrap-electronics/v1/refinement-retry-prompt.txt", "sha256": "68e46cfa22cae379fbe9a2eea65234357aee47e27cca071b251529d4d71b14c4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:18:15.015895+00:00 / refine_materials_and_form / PASS: Run targeted second ImageGen refinement and inspect real saved-alpha composite.
+  Review: Retry preserves coherent fragments/bridges and true zero-alpha pockets. Grey RGB in transparent pixels made tool preview misleading; actual alpha composite confirms open background. Subject alignment and weak stray alpha are handled by canonical geometry; no third generation or isolation.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/refinement-retry-prompt.txt", "sha256": "68e46cfa22cae379fbe9a2eea65234357aee47e27cca071b251529d4d71b14c4"}, {"path": "art/conversion/scn-scrap-electronics/v1/patched-chip.png", "sha256": "c8be879f2070cc55961acfa05507e66f12dde18c360e4b8e88fd625c47bbf351"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-reference.png", "sha256": "3d966956bdf03f428b561d82ce45e6fccc7124a84b3a33b77345beb12f833cb4"}, {"path": "art/conversion/scn-scrap-electronics/v1/refined-first-rejected.png", "sha256": "a62601de7011f67fe004dac9390c010fa4104b4f732230fdc56676130a52be5d"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/refined-retry.png", "sha256": "5f386329dfd0c48bace1f487335e7322b8550e8018af45c039f127634096e50a"}, {"path": "art/conversion/scn-scrap-electronics/v1/generation-retry-receipt.json", "sha256": "211ceb818086a061e325ab6ae144c95500ec856d2d7aacbb4d041cedff114bab"}, {"path": "art/conversion/scn-scrap-electronics/v1/retry-alpha-review.png", "sha256": "09df90684cf5600fa3c0a6979c1ad7c4cc9cfc138b6459ff7bd934a44b4ffebf"}, {"path": "art/conversion/scn-scrap-electronics/v1/retry-subject-bounds.json", "sha256": "c7882b42db82d72048af793ebcdf99d0e25e9fa66a147ab092f665bec3e255d8"}, {"path": "art/conversion/scn-scrap-electronics/v1/retry-structural-review.json", "sha256": "c00b4f7e04ca524c66632776fb01655d60cd0e63c2b63e7e0548199d28991764"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:18:15.015895+00:00 / extract_register_color_coverage / PASS: Register actual refined surface onto fixed source geometry and separate neutral P/D weighting.
+  Review: Refinement affects bounded interior material shading only. Exact patched manual alpha/center/scale/circuit marks and source open pockets retained; generated alpha/contours/halo excluded. C/C source tint is applied later through separate colour weight and coverage, not baked into neutral textures.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/construction-controls-patched.json", "sha256": "3f92a895b35ea1c5c2316d88ef75fe1ee3838c7448513e16a117f0b11dc78a41"}, {"path": "art/conversion/scn-scrap-electronics/v1/refined-retry.png", "sha256": "5f386329dfd0c48bace1f487335e7322b8550e8018af45c039f127634096e50a"}, {"path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json", "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/register-chip.py", "sha256": "05fb88d0de1f2adb9d1cf70413463f183fb64f97e27f6834b31f8ddd1f32e955"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/registration-decisions.json", "sha256": "d404dbfeb08a6782a95c89cc2b2b9113bbdb66f8fd682976a237869c6c701d80"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/model.json", "sha256": "6fe182341ad54f9e1f913ed16060484fd2c702542805d4daf27394da2a9b7116"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/surface-transfer-ownership.png", "sha256": "575ef751bee080fd70c38b59805ea4d036323c65621dfeba235d645dfeac8105"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:18:15.015895+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect original/manual/rejected/retry/registered evidence and native C/C at intended map sizes.
+  Review: Reviewed exact Scrap Electronics definition and six-node inherited chain, fractured-microchip identity/prose, source bit11 P/D mask and C/C palette, actual installed VTE SignalChip/Biotech Graphic_Single reference and editable source-bound manual shape. Two opposing occupied triangles, open fracture pockets and diamond rim remain source recognisable; traced/contact marks, shallow edge and fracture notches are explicitly authored. No generic green PCB, intact SignalChip housing, wires/extra pins, pile or donor mechanic imported. Fixed small8x8native-pixel occupancy in full16x24cell maps through512x768master to256square recipient; native orientation belongs to the shape, not an added perspective camera. Two tiny rim-junction gaps were patched by editable endpoint extension before contextual refinement. First actual ImageGen proposal partly filled an empty pocket with alpha154 and stray haze; rejected whole output/prompt/receipt retained. One targeted retry restored both zero-alpha pockets and smooth restrained surfaces. Actual saved-alpha composite, not RGB-only tool thumbnail, confirms transparency. No third call or AI isolation. Retry moved/rescaled the subject and has weak stray exterior alpha. Deterministic material alignment is a sampling correspondence only; canonical geometry, circuit marks, source scale/center and exact coverage remain fixed. Opaque unmarked generated interiors supply bounded broad shading through eroded authored face ownership. No generated alpha, shifted contour, stray fill/halo or extra line transferred. Final master coverage exactly matches patched construction; true holes and outer canvas are transparent. Equal-RGB neutral inputs retain source P/D weighting even though both runtime colours are C=77bfcf. Coverage and colour weight are separate; inputs combine by weight, not duplicate alpha-over. Native C/C intended-size plate reviewed. Bind only exact Scrap Electronics. Scrap Metal/Crystal/Energy reuse bit11 and retain distinct unfinished identities. No source RandomTile or extra repaired/burning/stack image: one fixed map view, no furniture turnaround or clothing integration. Native inventory/stack/disassembly/visibility/palette/cell mapping acceptance remains pending behind full-ledger generation.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/registered/model.json", "sha256": "6fe182341ad54f9e1f913ed16060484fd2c702542805d4daf27394da2a9b7116"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-electronics/v1/registered/source-neutral-native-scale.png", "sha256": "11c35b19cd2eea447320adff6debf40e8d7547691817c9318c322f20d7956793"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/whole-process-comparison.png", "sha256": "9f370f1a64b96f054655763b4438e5d4385c8181930f34aab97e2ca39f9cf514"}, {"path": "art/conversion/scn-scrap-electronics/v1/record-review.py", "sha256": "c718eb30f8d7779d4d28228edc6d525ee011178f0206c92839a3abc90b7bf567"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/authoring-review.json", "sha256": "e4ccd74c8d3d4a6d6d9b960a5fdafa53d677b44457a61a35540916a081e20e8b"}, {"path": "art/conversion/scn-scrap-electronics/v1/artifact-manifest.json", "sha256": "85f4050dfe83f4c4f3fc4ffc24a0cc6fd2f39d59e0960e8050194c851fc14b42"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:18:15.015895+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retain exact-blueprint tile, palette, visibility, stack/pickup/disassembly and cell mapping acceptance for final integrated set.
+  Review: Art authoring only; no native activation, game launch, state simulation or harness test. All pending conversions must finish generation first.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/registered/model.json", "sha256": "6fe182341ad54f9e1f913ed16060484fd2c702542805d4daf27394da2a9b7116"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-SCRAP-METAL: Scrap Metal
 
@@ -7593,7 +7659,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/scrap-metal-body.png](../art/village/scenery/scrap-metal-body.png), [art/village/scenery/scrap-metal-detail.png](../art/village/scenery/scrap-metal-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-TORCHPOST: Torchpost
 

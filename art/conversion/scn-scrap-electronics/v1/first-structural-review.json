@@ -1,0 +1,14 @@
+{
+  "status": "REJECTED",
+  "actual_image": {
+    "path": "art/conversion/scn-scrap-electronics/v1/refined-first-rejected.png",
+    "sha256": "a62601de7011f67fe004dac9390c010fa4104b4f732230fdc56676130a52be5d"
+  },
+  "defects": [
+    "The upper-right source pocket contains rendered translucent grey pixels: savedRGBAat(600,650)=(52,55,55,154). It is not zero-alpha empty space.",
+    "Nonzero alpha extends far beyond the chip as haze/stray pixels; full nonzero bbox(209,125,858,1448)in1024x1536.",
+    "Glossy halo/smoked-glass suggestion and pixelated outline do not follow the clean fixed construction."
+  ],
+  "correction": "Retry from patched manual geometry and original source/reference, with rejected proposal as negative example only. Keep both pockets and outer background zero alpha; forbid glass, halo, shadows and pixel-art outline. Do not isolate an AI garment or fit a new contour.",
+  "preserved": "Complete rejected output and exact call receipt retained; no production registration from this output."
+}

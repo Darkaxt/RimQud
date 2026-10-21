@@ -1,0 +1,101 @@
+{
+  "entry": "SCN-SCRAP-ELECTRONICS",
+  "blueprint": "Scrap Electronics",
+  "display_name": "fractured microchip",
+  "kind": "source-bound fixed-map scrap resource",
+  "source": {
+    "path": "art/conversion/scn-scrap-electronics/v1/source-packet-corrected.json",
+    "sha256": "e39022ef3d49328e50617d0a98f55d379f7e86f33ffc9531eba97bcfd5bff988"
+  },
+  "construction": {
+    "path": "art/conversion/scn-scrap-electronics/v1/construction-controls-patched.json",
+    "sha256": "3f92a895b35ea1c5c2316d88ef75fe1ee3838c7448513e16a117f0b11dc78a41"
+  },
+  "first_refinement": {
+    "path": "art/conversion/scn-scrap-electronics/v1/generation-first-receipt.json",
+    "sha256": "b588ee4e5bfa1a4f1eb46f11117bbbdd5fabf8f681a49b9fabef6aeb5f796162"
+  },
+  "selected_refinement": {
+    "path": "art/conversion/scn-scrap-electronics/v1/generation-retry-receipt.json",
+    "sha256": "211ceb818086a061e325ab6ae144c95500ec856d2d7aacbb4d041cedff114bab"
+  },
+  "first_rejection": {
+    "path": "art/conversion/scn-scrap-electronics/v1/first-structural-review.json",
+    "sha256": "e08a440df43b9a29c6a8508bf927676db54d00939d35a7a447f8424fa57d0d40"
+  },
+  "retry_review": {
+    "path": "art/conversion/scn-scrap-electronics/v1/retry-structural-review.json",
+    "sha256": "c00b4f7e04ca524c66632776fb01655d60cd0e63c2b63e7e0548199d28991764"
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "master": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "center": [
+      8,
+      12
+    ],
+    "policy": "Full-cell mapping; approximate8x8source-visible extent preserved. No independent crop/bounds fitting."
+  },
+  "decisions": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/registration-decisions.json",
+    "sha256": "d404dbfeb08a6782a95c89cc2b2b9113bbdb66f8fd682976a237869c6c701d80"
+  },
+  "master": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/master-neutral.png",
+    "sha256": "0c410c153c3b5529cf081755eca8dc89c29ba142a79a1b8186173302f392fb04"
+  },
+  "master_detail_weight": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/master-detail-weight.png",
+    "sha256": "03a2a25eeee062e42d740ab5d6e79e5e2f238903fb40f6d9f4f71d1166ad2e0e"
+  },
+  "primary": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/primary-neutral.png",
+    "sha256": "5ede12d795ab10204c712791174527b1a293dcbbc312d700dd6898d61dadf6ba"
+  },
+  "detail": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/detail-neutral.png",
+    "sha256": "5ede12d795ab10204c712791174527b1a293dcbbc312d700dd6898d61dadf6ba"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/coverage.png",
+    "sha256": "bb8c3004990bcb70df9443d0f90a2331e4583df93d6aef1b1a77fb41558282ec"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/detail-weight.png",
+    "sha256": "841101aed784e5a9afd32d2f14106e067d92b5924464e32a12b5117304e204f9"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/detail-coverage.png",
+    "sha256": "bd90bb8d58e694bf1c4a27d48d9e70630e486ff5c0d200e769adc9c8d42cb4f1"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/authored-dualcolor-mask.png",
+    "sha256": "4335445d357a170c3a0cbc27d71a448a015222d07d935ba3c204763b3c7cf0e9"
+  },
+  "native_preview": {
+    "path": "art/conversion/scn-scrap-electronics/v1/registered/native-C-C.png",
+    "sha256": "72fec2faf0985003a93bf4b1ebfe4787ddd4260a457f49ef7e950ebb4a7eb54d"
+  },
+  "palette": {
+    "primary": "C",
+    "detail": "C",
+    "TileColor": "Absent throughout resolved inheritance: native tile rendering uses ColorString &C.",
+    "rgb": "77bfcf",
+    "mask_contract": "Retain independent primary/detail roles even though both native tints are currently equal. Neutral artwork plus weight and coverage; do not bake cyan, donor white/blue, green PCB or background."
+  },
+  "binding": "Exact Scrap Electronics only. Shared bit11.bmp is not a global replacement key for Scrap Metal, Crystal or Energy.",
+  "states": "One source-defined map tile. Preserve native stack/disassemble/Takeable/Solid behavior; no invented stack image, repaired state, animation, direction or burning texture.",
+  "views_and_clothing": "One fixed source-bound map resource view. Other facings/furniture turnaround and clothing assembly are inapplicable.",
+  "native_activation": false,
+  "native_acceptance": "Pending integrated Stage3 after full generation: exact identity/tile selection, C/C palette/coverage/cell mapping, pickup/stack/disassembly/visibility behavior. Authoring is not native acceptance."
+}
