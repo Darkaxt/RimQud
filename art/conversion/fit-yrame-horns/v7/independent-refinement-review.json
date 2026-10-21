@@ -1,0 +1,52 @@
+{
+  "status": "REQUIRES CLOSER INSPECTION",
+  "inspected_images": [
+    "art/conversion/fit-yrame-horns/v7/context-refinement-raw.png",
+    "art/conversion/fit-yrame-horns/v7/manual-head-comparison.png",
+    "art/conversion/fit-yrame-horns/v7/manual-context-turnaround.png"
+  ],
+  "findings": [
+    {
+      "view": "east",
+      "region": "broad anterior crown root",
+      "observation": "The pale broad stem ends in a rounded, nearly horizontal boundary on the red crown. Its full breadth remains exposed at that boundary, giving a cuff or tube-on-surface reading. There is no clearly visible skull overlap that establishes the lower stem as embedded. A curved emergence boundary is possible, so pixels do not establish a definite detached cap, but attachment is not convincingly resolved.",
+      "confidence": "medium",
+      "severity": "registration blocker",
+      "correction_principle": "Resolve the root intersection against the unchanged manual skull: show a continuous stem emerging through the crown with the buried portion actually occluded, without painting an exposed end face. Inspect the root alone at native resolution before extraction."
+    },
+    {
+      "view": "south and north",
+      "region": "upper lateral roots and skull overlap",
+      "observation": "Both stems meet the crown cleanly and the flesh ears remain separate below them. However, the rear shows almost the same broad exposed root layout as the front. Symmetry alone is not a fault, but these pixels do not independently resolve whether the rear broad surfaces are posterior stem surfaces or exposed anterior base ends. The intended buried anterior bases cannot be confirmed from this rendering.",
+      "confidence": "medium",
+      "severity": "requires attachment inspection",
+      "correction_principle": "Use the fixed manual volume and skull occlusion to establish rear visibility; preserve legitimate symmetric silhouettes while excluding any base surface that should be hidden by the skull."
+    },
+    {
+      "view": "all",
+      "region": "outer loops and returning tips",
+      "observation": "Each visible horn has a continuous broad sweep into a thin inward returning curl. The loops clear the skull in front and rear; the profile return sits behind the crown silhouette without an obvious disconnected peg. No broken return, extra horn, or exposed cut at a tip is evident. Exact profile can plausibly hide the far horn.",
+      "confidence": "high",
+      "severity": "informational",
+      "correction_principle": "Retain the continuous returning path and taper; do not add a second profile silhouette merely to display the far horn."
+    },
+    {
+      "view": "all",
+      "region": "fixed body and material-transfer boundary",
+      "observation": "The refinement changes the red head/body shading and contours and crops the lower torsos, while leaving all horn extents visible. These altered body pixels must not become authoritative geometry. No foreign facial anatomy or merged flesh ear is apparent.",
+      "confidence": "high",
+      "severity": "transfer constraint",
+      "correction_principle": "Transfer only horn material onto the unchanged manual geometry and fixed frame; exclude the refined body and its crop."
+    }
+  ],
+  "per_view": {
+    "south": "Continuous paired curls and separated ears are usable as material reference; root embedding remains only visually plausible.",
+    "east": "Sweep and tapered return are coherent, and far-horn occlusion is plausible. Broad root termination requires closer inspection before registration approval.",
+    "north": "Full curls clear the skull, with no obvious disconnected rear peg. Actual root depth/occlusion remains uncertain."
+  },
+  "limitations": [
+    "Reviewed the actual three supplied raster images, not a native 3D volume or depth render.",
+    "The fit contract was read for intended geometry and fixed frame only; its numerical claims were not treated as verification.",
+    "No extraction or registration was performed. Structural approval is withheld pending resolution of the visible attachment ambiguity, especially in profile."
+  ]
+}

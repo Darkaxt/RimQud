@@ -1,0 +1,77 @@
+{
+  "entry": "FIT-YRAME-HORNS-HEAD-0",
+  "recorded_at": "2026-10-21T09:51:13.117743+00:00",
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "native_facts": "Horns575, paired grooved bone natural equipment on Head288/0. Native data does not specify skull coordinates.",
+  "user_interpretation": "Symmetric sheep/ram-like grooved horns; preserve this selected interpretation rather than replace it with straight spikes.",
+  "rejection": {
+    "path": "art/conversion/fit-yrame-horns/v5/independent-critical-review.md",
+    "sha256": "710bec7b0f0a9ddf50a4a432e3e85fa9aefddaaad8ebaca5c2d9cdd6df8f3bfe"
+  },
+  "intermediate_manual_review": {
+    "path": "art/conversion/fit-yrame-horns/v6/independent-manual-review.json",
+    "sha256": "5cf10a7bd5d78a8208acd1736608383af336210999d546d511b39e274ea0f82f"
+  },
+  "intermediate_clearance_correction": {
+    "path": "art/conversion/fit-yrame-horns/v6/clearance-correction-plan.json",
+    "sha256": "8cc31c65286a52ad0460376fe7088095b29add2feb718ba4084118e6b4d56715"
+  },
+  "rejected_v7": {
+    "path": "art/conversion/fit-yrame-horns/v7/independent-review-decision.json",
+    "sha256": "f8ced72fff3d1566e47fc7ee2c5fa67a193afb29a2c18b76a9928f467e187ad3"
+  },
+  "root": "Full roots start inside the skull at X+/-45,Y151,Z45, radius17. Initial stem grows upward/outward through the anterior-lateral crown; original head occludes the buried portion. Actual visual emergence must be reviewed, not assumed from proxy depth.",
+  "curl": "Compact thick ram curl: rise outward from crown, sweep backward then downward around lateral skull, return forward and upward to a short tapered point. X, Y and Z vary independently. Posterior broad sweep can hide the anterior short return in north; south shows that return in front of the back sweep. No threadlike second spiral.",
+  "skull_proxy": {
+    "center": [
+      0,
+      185,
+      25
+    ],
+    "radii": [
+      90,
+      90,
+      70
+    ],
+    "meaning": "Authored ellipsoid fitted to existing S/E/N head contours, not native skull coordinates. Used for item/body depth only; original head pixels remain authoritative."
+  },
+  "projection": {
+    "south": "screen384+X,125+relativeY; camera+Z",
+    "east": "screen470+Z,143+relativeY; camera+X",
+    "north": "screen384-X,141+relativeY; camera-Z",
+    "registration": "Y uses the same125 reference; E/N add18/16px to match unchanged source head landmarks. Common physical scale; no per-facing bounds fit."
+  },
+  "views": {
+    "south": "Anterior emerging roots visible at upper lateral crown; short forward return crosses in front of posterior descending sweep. Coil stays mainly beside the skull. Original flesh ears remain separate.",
+    "east": "Full compact loop rises from anterior upper crown, sweeps screen-left/back, drops around lateral skull then turns forward/up into a short point above the ear. Far horn may be hidden. Buried root has no exposed cap.",
+    "north": "Anterior root interiors are behind skull. Posterior broad descending sweep is nearest and hides the overlapping forward return; no copied frontal tip laid over the back sweep. Visible root exit must join crown without a floating end.",
+    "west": "Mirror east geometry and depth for symmetric Head288/0 item; no source/body scale or binding change."
+  },
+  "gates": [
+    "Check complete manual views and root/return closeups before refinement.",
+    "Fresh independent review after each contextual refinement, before extraction or fitting.",
+    "Numerical clearance is diagnostic; visible attachment and flow must also pass."
+  ]
+}

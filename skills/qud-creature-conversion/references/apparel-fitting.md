@@ -1,6 +1,12 @@
 # Regional garment fitting and curved body visibility
 
 Workflow version: **regional-curved-v1**, approved by the user on 2026-10-20.
+New/revised garments now begin with [blender-first-v1](blender-to-2d.md): a
+registered recipient proxy, complete garment model, depth/material masks and
+direct cardinal renders. The regional/curved ownership rules below still apply.
+ImageGen is optional; the generative preparation below applies only when that
+candidate is actually selected. A complete Blender garment needs no AI isolation
+or painted reconstruction of material already present in its hidden mesh.
 This authoring recipe replaces generative garment re-isolation, baked limb
 cutouts, whole-image-only fitting as a universal solution, and polygon cuff tops.
 It does not require regenerating a usable source or deforming an already good fit.
@@ -24,7 +30,7 @@ images or labeled fit controls may supply the explanation. After the contextual
 refinement, compare every facing with that contract before extraction; a usable
 surface or correct anchor point alone does not establish structural fit.
 
-## Context refinement and full cloth preparation
+## Optional contextual refinement and full cloth preparation
 
 1. Construct one actual garment and overlay it on the registered body. A red
    recoloring of the body may preserve its shading and outlines as a segmentation

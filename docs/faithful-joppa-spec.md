@@ -1,5 +1,22 @@
 # Faithful Joppa art and body specification
 
+User-selected route (2026-10-21): **ART-BLENDER-FIRST** applies to remaining and
+revised items/equipment/objects, including garments, furniture, machinery,
+vegetation and appropriate map-plane surfaces. Shape/attachment/view fidelity
+precedes texture complexity. Use an editable Blender model and body-version-bound
+fit proxies where needed; retain calibrated direct cardinal exports and masks.
+Bodies keep the ImageGen route. Optional ImageGen surface/style treatment cannot
+replace model geometry or original body pixels; use direct exports plus manual
+outline/pixel finishing if it damages details. Record screenshots of each actual
+stage in the HTML report, including rejected candidates and source selection.
+
+Transition: finish current generation and confirmed structural corrections,
+retain usable existing art provisionally, then test the complete set in game.
+Do not restart every ledger entry or repeat the completed blanket review solely
+for the method change. Existing known defects still block their entries. Further
+replacements follow visible problems at actual play distance after that gate.
+Stage3 remains the sole ACTIVE stage and the horn fit the sole active entry.
+
 Current status correction (2026-10-20): **Stage 3 is ACTIVE and every asset is
 unfinished**, including previously selected Tam/Ctesiphus. The user explicitly
 reset completion after identifying incomplete scenery and Yrame clothing/horns.

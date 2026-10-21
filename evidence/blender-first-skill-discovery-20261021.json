@@ -1,0 +1,127 @@
+{
+  "candidate_count": 1102,
+  "candidates": [
+    {
+      "classification": "direct",
+      "description": "Control Blender from the shell via Flue - a Python bridge to bpy without an MCP server.",
+      "detail_url": "https://skills.sh/sfkislev/flue/blender",
+      "id": "sfkislev/flue/blender",
+      "installs": 2825,
+      "matched_queries": [
+        "blender"
+      ],
+      "name": "Blender",
+      "score": 56,
+      "score_reasons": [
+        "term overlap: blender",
+        "candidate name exactly matches workflow term",
+        "candidate name matched a query",
+        "public SKILL.md inspected"
+      ],
+      "skill_id": "blender",
+      "source": "sfkislev/flue"
+    },
+    {
+      "classification": "direct",
+      "detail_url": "https://skills.sh/monumentalsystems/atlas-agent-teams/blender",
+      "id": "monumentalsystems/atlas-agent-teams/blender",
+      "installs": 522,
+      "matched_queries": [
+        "blender"
+      ],
+      "name": "blender",
+      "score": 48,
+      "score_reasons": [
+        "term overlap: blender",
+        "candidate name exactly matches workflow term",
+        "candidate name matched a query"
+      ],
+      "skill_id": "blender",
+      "source": "monumentalsystems/atlas-agent-teams"
+    },
+    {
+      "classification": "direct",
+      "detail_url": "https://skills.sh/openai/skills/imagegen",
+      "id": "openai/skills/imagegen",
+      "installs": 5536,
+      "matched_queries": [
+        "sprite"
+      ],
+      "name": "imagegen",
+      "score": 46,
+      "score_reasons": [
+        "term overlap: imagegen",
+        "candidate name exactly matches workflow term",
+        "source owner appears official"
+      ],
+      "skill_id": "imagegen",
+      "source": "openai/skills"
+    }
+  ],
+  "capped_queries": [
+    "blender",
+    "game sprites",
+    "blender model",
+    "2d",
+    "2d game",
+    "game",
+    "equipment",
+    "object",
+    "sprite",
+    "views"
+  ],
+  "compare_local_skill": "qud-creature-conversion",
+  "errors": [],
+  "inspected_candidates": [
+    {
+      "body_excerpt": "This skill lets a coding agent operate **Blender** on the desktop through [Flue](https://github.com/SFKislev/flue), a local shell-to-application bridge. The agent pipes Python into `blender_bridge.py` and gets structured JSON back. Flue is **not an MCP server** \u2014 it is a thinner, simpler shell contract that drives Blender's own `bpy` runtime directly. > agent shell -> `blender_bridge.py` -> bpy -> JSON result ## When to use The human requests work performed **inside Blender** \u2014 inspect the open scene, collections, objects, meshes, materials, selection; make bounded edits; run small `bpy` scripts. A CLI agent cannot act inside Blender without a bridge like Flue. ## How to proceed 1. **Read `FLUE.md` in this directory first.** It explains how Flue works, the bridge contract, a worked `bpy` example, and safety expectations. 2. **If Flue is installed:** also read `C:\\Users\\fredd\\.claude\\skills\\flue\\SKILL.md` and `adapters/blender_adapter/APP.md` for the operational contract, then work from there. 3. **If Flue is not installed:** tell the human. The install command is `pip install flue && flue setup`. Do not install without explicit approval in the current session. ## Other apps Flue al",
+      "branch": "main",
+      "description": "Control Blender from the shell via Flue - a Python bridge to bpy without an MCP server.",
+      "frontmatter": {
+        "description": "Control Blender from the shell via Flue - a Python bridge to bpy without an MCP server.",
+        "name": "Blender"
+      },
+      "id": "sfkislev/flue/blender",
+      "ok": true,
+      "skill_path": "skills/blender/SKILL.md",
+      "source": "sfkislev/flue"
+    }
+  ],
+  "ok": true,
+  "operation": "scout",
+  "queries": [
+    "blender",
+    "game sprites",
+    "blender model to orthographic 2d game equipment and object sprite views optional imagegen texture refinement preserving geometry",
+    "blender model",
+    "model",
+    "model orthographic",
+    "orthographic",
+    "orthographic 2d",
+    "2d",
+    "2d game",
+    "game",
+    "game equipment",
+    "equipment",
+    "equipment object",
+    "object",
+    "object sprite",
+    "sprite",
+    "sprite views",
+    "views",
+    "views optional"
+  ],
+  "recommendation": {
+    "candidate_id": "sfkislev/flue/blender",
+    "category": "Use public skill as inspiration",
+    "rationale": [
+      "term overlap: blender",
+      "candidate name exactly matches workflow term",
+      "candidate name matched a query",
+      "public SKILL.md inspected"
+    ],
+    "summary": "Direct public candidate found for comparison with qud-creature-conversion."
+  },
+  "warnings": [],
+  "workflow": "Blender model to orthographic 2D game equipment and object sprite views, optional ImageGen texture refinement preserving geometry"
+}

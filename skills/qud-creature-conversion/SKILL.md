@@ -5,6 +5,16 @@ description: Convert a Caves of Qud creature into a source-bound layered sprite 
 
 # Qud creature conversion
 
+**Shape first.** For new or revised non-body assets, use
+[the Blender-to-2D object route](references/blender-to-2d.md): one editable model,
+body-fit proxies where needed, fixed cardinal renders, simple materials and
+outlines. ImageGen is an optional surface/style comparison; retain the direct
+render with manual pixel finishing if refinement damages shape or useful detail.
+Bodies keep the front-guided ImageGen route below. Existing usable object art
+stays provisional: finish remaining conversions and confirmed structural fixes,
+then test the complete set in game before deciding further replacements. This
+change does not restart every ledger entry or waive the full generation gate.
+
 **First define the creature without mutations.** Create the reusable unmutated
 race body before any named NPC's mutation-specific appearance. Derive ordinary
 age/sex/body variants from that base, then fit actual equipped items separately.
@@ -133,6 +143,10 @@ when they share a race and body plan.
 
 ## 3. Propose side and back from that front
 
+This section's generative turnaround applies to bodies. For items, equipment,
+furniture and other objects, render their required views from the same Blender
+model under the object route above; do not have ImageGen invent those views.
+
 Supply ImageGen with the selected front and an explicit **race description and
 anatomy summary**. Use the installed image-generation workflow. Request the same
 creature at the same physical scale in strict front, complete right profile and
@@ -150,7 +164,9 @@ surfaces, not new canonical race facts.
 
 For furniture, use the selected front construction plus the Qud description,
 original sprite, material/part metadata and actual directional RimWorld reference
-to generate a complete side and back. Preserve the same object, structural parts,
+to model the complete object in Blender and render its side and back. Optional
+ImageGen styling receives those rendered views and must preserve them. Preserve
+the same object, structural parts,
 material regions, physical scale and consistent map-camera elevation; no oblique
 turntable view or independently fitted bounds. Use a shared placement pivot and
 a common canvas large enough for every facing, with transparent margins. Record
@@ -187,7 +203,8 @@ independently fit its bounds. Log reference measurements, assumptions and the
 before/after correction; this remains authoring, not a native-validation detour.
 
 Review and patch the side/back construction, then refine the coherent composed
-views without changing the selected front design. Show each view and its
+views through simple Blender materials/contours or optional restrained ImageGen
+styling, without changing the selected front design. Show each view and its
 neutral/tint masks in the report. Label unseen construction as authored where
 source evidence is absent. Preserve required cosmetic/occupied/folded states
 separately; do not invent native states. All three views are required for furniture
@@ -231,7 +248,11 @@ regeneration. Preserve the review and decisions with exact image hashes; invalid
 the review when a subsequent refinement changes the reviewed output.
 
 If quality is too low to preserve the intended structure through ordinary
-registration and fitting, reject the output and reattempt contextual generation
+registration and fitting, reject the output. For a Blender-authored object,
+correct its model when structure is wrong, or retain its direct renders and
+finish them manually when only ImageGen damaged the result. Optional refinement
+must not become a prerequisite or an open-ended retry loop. For body generation,
+reattempt contextual generation
 with the specific defects and corrected construction made explicit. Do not
 extract an unusable source or hide its defects with masks, deformation or reduced
 preview size. Preserve the rejected output, exact prompt, defect notes and retry
@@ -313,9 +334,10 @@ does not require regenerating a usable asset. This is generation-time structural
 inspection, not native validation or a new user-approval checkpoint.
 
 For garments, follow [the approved apparel-fitting recipe](references/apparel-fitting.md)
-before constructing or extracting a replacement. Its production sequence is:
-fixed race/body → initial contextual refinement → structural inspection and
-targeted regeneration if unusable → continuous cloth source →
+and the Blender object route before constructing a replacement. Its production
+sequence is: fixed race/body → registered Blender fit proxy → complete garment
+model and direct renders → optional contextual style comparison → structural
+inspection and selection of the intact source →
 registered regional fitting where needed → curved body visibility →
 independent body/equipment tint → authoring review in every required facing.
 
@@ -446,7 +468,7 @@ documenting this method does not itself authorize generating the next creature.
 ## Source-bound scenery adaptation
 
 For furniture, plants and terrain, use object blueprint -> native description,
-original tile and palette -> coverage/detail geometry -> optional material
+original tile and palette -> Blender geometry/material or map-plane surface -> optional material
 refinement -> registered object or connected surface. A donor object is a visual
 reference, not an excuse to replace an unfamiliar Qud machine with a generic bench.
 Apply section 2's camera contract before tracing scenery: source-camera fidelity

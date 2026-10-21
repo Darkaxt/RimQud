@@ -1,0 +1,27 @@
+{
+  "entry": "FIT-YRAME-HORNS-HEAD-0",
+  "review_scope": "Independent saved-pixel visual comparison only; SOUTH, EAST, NORTH, WEST left to right. No native acceptance, extraction, registration or production selection.",
+  "images_inspected": [
+    {"path":"context-refinement-raw.png","sha256":"9ee3d445ef1f960652923e99ec7ed0401f3393afff1c701f44c9a06af077abf6"},
+    {"path":"refinement-input.png","sha256":"7c91f57fae94e4221ac072b30d20195535a9e5a1332164e1b3ee434b63ef21b1"},
+    {"path":"stage-02-model-3d.png","sha256":"8d07cb6dea1866d6f1dd829a0b13108809d69b28a48cef59550fb8e6c363e242"},
+    {"path":"user-ram-reference.png","sha256":"31e1a028d556b5eb8dee7c810182b19b30ed796d00379602316133a4b831362c"}
+  ],
+  "context_read": ["trial-contract.json","generation-receipt.json","blender-receipt.json"],
+  "per_view": {
+    "SOUTH": {"observation":"Paired broad anterior lobes and hanging lateral curls remain recognizable. Human ears remain distinct white flesh shapes inside the horns. The large blunt root faces have closed dark contours and read as rounded tube ends laid over the forehead rather than a gradual skull-emergent base. This ambiguity already exists in the input/model; stronger graphic outlining emphasizes it. Lower tips remain upturned but broad and hooked.","confidence":"high"},
+    "EAST": {"observation":"Backward crown arc, descending rear sweep, forward lower return and short upturned cheek tip are retained. One continuous main horn reads clearly and the ear stays inside the loop. The forehead termination remains a blunt rounded end, with no convincing root transition. Grooves become flatter widely spaced drawn bands; shading is simplified and the lower return is more graphic/angular than the modeled input.","confidence":"high"},
+    "NORTH": {"observation":"The skull visibly occludes the anterior root portions: only small inner wedges remain beside the upper head, unlike SOUTH's full blunt root faces. Thus this is not simply a pasted SOUTH view. Both rear sweeps remain visible outside the skull. Lower inner returns are still visible outside the skull boundary, but their simplified edges make precise front/back tip depth hard to infer. White ears remain separate; the horn is not substituted for an ear.","confidence":"medium-high"},
+    "WEST": {"observation":"Opposite side preserves the same overall curl and cheek-height upward tip. Ear ownership remains clear. Crown root is again a rounded dark-bounded termination against the forehead. Upper arc, descending back and lower return remain continuous, while flatter banding and stronger outlines reduce modeled surface detail.","confidence":"high"}
+  },
+  "issues": [
+    {"id":"root-contact","severity":"high","confidence":"high","origin":"Present in model/input and emphasized by refinement","finding":"Visible anterior roots read as capped tubes rather than broad bases growing continuously out of the skull. The 3D preview shows rounded exposed ends over the red proxy; numerical intersection does not resolve this appearance.","required_action":"Correct the authored root/contact appearance and inspect all four views before another candidate can advance."},
+    {"id":"detail-loss","severity":"medium","confidence":"high","origin":"Refinement","finding":"Refinement retains the principal curl silhouette and segment rhythm, but substitutes flat graphic bands and broad gray shading for the input's more rounded ribbed surface. It is a style simplification, not faithful retention of every modeled detail.","required_action":"If used as style guidance, preserve the authoritative modeled outline, tapered return and groove placement through controlled manual work."},
+    {"id":"body-repaint","severity":"high if used as whole-image replacement","confidence":"high","origin":"Refinement","finding":"The returned image redraws/resizes the head/body context as well as horns; outlines and shading differ. These body pixels cannot establish preservation of the original human body.","required_action":"Do not replace original head, ears or body with refined context pixels."}
+  ],
+  "scale_and_silhouette":"Candidate has a different canvas size and enlarged presentation. Without registration no exact scale-preservation claim is justified. Relative horn/head proportions and principal curl silhouettes are broadly retained, with stronger outlines and simplified local contours. Similar SOUTH/NORTH silhouette is not by itself a failure; the actual root occlusion differs visibly.",
+  "ram_reference_use":"Photo supports a broad crown base and backward/downward/forward curl with upturned end. It supplies no human skull coordinates or license to replace human ears/anatomy. The trial's free lateral loop is recognizable, but the capped-root reading is weaker than the photo's broad integrated root.",
+  "recommendation":"REJECT_ADVANCEMENT_PENDING_ROOT_CORRECTION",
+  "optional_style_use":"Useful as a reference for flatter line/shading treatment only. Not approved for direct isolation/fitting as an accepted horn candidate; first correct the modeled root appearance, then review the resulting pixels independently.",
+  "limitations":"Visual inspection of supplied saved images and receipts only. No source-volume measurement, alpha registration, native game check or anatomy-coordinate recovery. Occlusion conclusions concern visible pixels; exact depth of small lower NORTH returns remains uncertain. No native acceptance is asserted."
+}

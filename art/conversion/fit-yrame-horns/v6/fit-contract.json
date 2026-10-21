@@ -1,0 +1,65 @@
+{
+  "entry": "FIT-YRAME-HORNS-HEAD-0",
+  "recorded_at": "2026-10-21T09:33:49.225481+00:00",
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "native_facts": "Horns575, paired grooved bone natural equipment on Head288/0. Native data does not specify skull coordinates.",
+  "user_interpretation": "Symmetric sheep/ram-like grooved horns; preserve this selected interpretation rather than replace it with straight spikes.",
+  "rejection": {
+    "path": "art/conversion/fit-yrame-horns/v5/independent-critical-review.md",
+    "sha256": "710bec7b0f0a9ddf50a4a432e3e85fa9aefddaaad8ebaca5c2d9cdd6df8f3bfe"
+  },
+  "root": "Each tube starts INSIDE the skull proxy at X+/-32,Y165,Z32, broad radius17. It rises through a curved anterolateral crown emergence region; its hidden starting cross-section is never a flat cap resting on the forehead.",
+  "curl": "Same original side sweep rises/backwards, then returns forward into a continuous tapered tip. Lateral splay0.75 supplies clearance outside the actual projected skull for the returning loop. No independently drawn rear peg.",
+  "skull_proxy": {
+    "center": [
+      0,
+      185,
+      25
+    ],
+    "radii": [
+      90,
+      90,
+      70
+    ],
+    "meaning": "Authored ellipsoid fitted to existing S/E/N head contours, not native skull coordinates. Used for item/body depth only; original head pixels remain authoritative."
+  },
+  "projection": {
+    "south": "screen384+X,125+relativeY; camera+Z",
+    "east": "screen470+Z,143+relativeY; camera+X",
+    "north": "screen384-X,141+relativeY; camera-Z",
+    "registration": "Y uses the same125 reference; E/N add18/16px to match unchanged source head landmarks. Common physical scale; no per-facing bounds fit."
+  },
+  "views": {
+    "south": "Front upper crown root interiors lie behind original skull; only the emerging tapered volume is visible. Returning curls are complete outside the head. Flesh ears are unchanged and separate.",
+    "east": "Anterior root rises above/forward of flesh ear, sweeps backwards to screen-left and returns forward. Far horn overlaps exactly. Root begins below the visible emergence, with no open flat cut.",
+    "north": "Anterior bases are hidden by original skull. Posterior horn surfaces and full returning loop clear the skull, so the thin return is not clipped into a peg and disconnected broad bend. Depth/self-occlusion come from the same volume.",
+    "west": "Mirror east geometry and depth for symmetric Head288/0 item; no source/body scale or binding change."
+  },
+  "gates": [
+    "Check complete manual views and root/return closeups before refinement.",
+    "Fresh independent review after each contextual refinement, before extraction or fitting.",
+    "Numerical clearance is diagnostic; visible attachment and flow must also pass."
+  ]
+}
