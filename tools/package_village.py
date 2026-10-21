@@ -4,7 +4,6 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
-import resvg_py
 
 REPO=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -15,6 +14,7 @@ def topology(actor):
     return sorted(path(p) for p in parts.values())
 
 def main():
+    import resvg_py
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--root',type=Path,required=True);args=ap.parse_args()
     sources=json.loads((REPO/'art/village/sources.json').read_text(encoding='utf-8'))
     models=json.loads((REPO/'art/village/body-models.json').read_text(encoding='utf-8'))

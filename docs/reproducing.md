@@ -5,6 +5,29 @@ overhaul. Windows, Direct3D11 and the exact inspected builds are required. The
 source uses exact IL anchors and rejects a changed Qud assembly. Inspect new game
 versions before changing those guards.
 
+## Current ledger-selected integration inputs
+
+The older village package/run below is historical evidence. It does not test
+the current conversion ledger. The complete-set adapter is still being wired;
+the following commands only prepare its current inputs and compare cast
+composition operations with the reviewed authoring images. They do not launch
+Qud or grant native acceptance.
+
+```powershell
+python -X utf8 -B tools/package_current_village.py --root E:/Temp/qud-transplant-probe-fullset-20261021
+python -X utf8 -B tools/package_current_village.py --root E:/Temp/qud-transplant-probe-fullset-20261021 --prepare-cast --cast-version 2
+python -X utf8 -B tools/check_current_cast_composition.py --root E:/Temp/qud-transplant-probe-fullset-20261021 --cast-version 2
+```
+
+Retain an existing package and its diagnostics; the helpers refuse to overwrite
+completed evidence. Use a fresh explicitly owned `E:/Temp/qud-transplant-probe-*`
+root for a new reproduction. The staged `selected/package.json` pins every ledger
+selection and hashed PNG reference; `selected/cast-v2.json` records the actual
+per-view composition operations. Original model/texture bytes remain unchanged.
+The initial simple-stack contract and failed diagnostic remain retained beside
+the corrected version. See [current integration status](../evidence/current-native-integration-20261021/preparation.json)
+for the exact acceptance boundary and remaining native-adapter blocker.
+
 ## Inputs
 
 - Your installed Qud and RimWorld copies matching the hashes in

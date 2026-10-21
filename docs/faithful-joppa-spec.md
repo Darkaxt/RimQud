@@ -64,6 +64,39 @@ advanced. Rebuilding and fetching the actual served report confirms the current
 156-ready/zero-generation-pending/156-awaiting-final-acceptance counts. These
 overlap deliberately: generation readiness does not grant native acceptance.
 
+Current integration execution (2026-10-21, A5/A6; still within ACTIVE Stage3):
+prepare one exact ledger-selected package, connect it to the existing accepted
+native-frame adapter, then run the complete-set game workflow and reconcile
+actual failures. Preserve the older `art/village/model.json` as historical
+evidence; its generic scenery and earlier body/equipment selections cannot prove
+the new set. `tools/package_current_village.py` stages selected model bytes and
+hashed PNG references in the owned isolated full-set probe root. It does not
+install a mod, launch the game, alter artwork or grant native acceptance.
+
+The current A5 advancement blocker is internal: the existing native adapter and
+verifier still use the older village contract. Resolve it by binding the current
+cast assemblies, production state/tile recipes, tint/coverage and connected
+surfaces, preserving native state selection, underlays and unsupported-state
+fallback. The cast input preparation must preserve per-assembly west operations
+rather than applying the old whole-actor west mirror to already exported west
+pixels. Fixed named assemblies also own their padded equipment/hand attachments;
+raw ordinary-body fittings alone are not an equivalent named-NPC composition.
+Rank authored layer order within each actor without treating ordinal color-plane
+indices as world-scale depth offsets. Full-set native acceptance and Stage3
+closure remain blocked until the adapter, fixtures and actual game evidence pass.
+No stage is parked, no tracked deferral is introduced, and the post-test pause
+remains required.
+
+Integration preparation evidence: [current preparation receipt](../evidence/current-native-integration-20261021/preparation.json).
+The selected package copies exact current model/exclusion documents and declared
+PNG bytes into the isolated full-set root. A rejected simple component stack is
+retained: it failed to reproduce52of64 reviewed neutral cast views. The corrected
+cast-v2 operations reproduce all64 exactly. They retain each item's late local
+ownership and one-coverage primary/detail composition instead of globally
+redrawing body overlays. Explicitly authored depth-layer assemblies retain that
+procedure. This is a preparation diagnostic, not native validation. No source
+artwork, generation status, native profile or game process was changed.
+
 Prior canvas checkpoint (2026-10-21): `scn-canvaswall/blender-v3/registered`
 is generation-ready with all16 actual PaintedFence tent masks: isolated, ends,
 straights, corners, T-junctions and crossing. Complete thin cloth/pickets and
