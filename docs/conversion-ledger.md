@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-JOPPAFARMERCONVERT**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **BODY-NIMA**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -171,9 +171,9 @@ Creature views/composed refinement and garment in-context refinement must follow
 | --- | --- | --- | --- | --- |
 | NPC-ARGYVE | Argyve | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 |  |
-| NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | IN PROGRESS | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
+| NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
+| NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 | BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy. |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -205,7 +205,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | BODY-HUMAN-FEMALE | human-female | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
 | BODY-HUMAN-MALE | human-male | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
 | BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER |  |
-| BODY-NIMA | nima | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. |
+| BODY-NIMA | nima | IN PROGRESS | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. |
 | BODY-RAY-CAT | ray-cat | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
 | BODY-YRAME | yrame | UNFINISHED | BODY-HUMAN-FEMALE | Existing art/registration and native checks are historical only; restart the logged workflow. Latest user rule: reuse the unmutated human base; do not bake individual mutations into a new race body. Preserve mutation metadata for the separate framework. The named mutation assembly remains unfinished. ImageGen three-foot proposals were rejected; four-foot geometry was patched afterward without a completed composed refinement. |
 | BODY-HUMAN-FEMALE-OLDER | human female older template | UNFINISHED | BODY-HUMAN-FEMALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
@@ -6843,7 +6843,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-20T23:58:10.343923+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/source-packet.json", "sha256": "02c9f19892445cc2f3c1fd40c6593946dbc34cb2908d34cb98305cc3c2aefa49"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/source-to-assembly.png", "sha256": "d4119aff994bc34ef08be44fc99d05edc513387bb8910fc7eddb402e9db65ec2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:58:10.343923+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/dependency-lineage.json", "sha256": "33ef73fe7a8c743fcdb7179b7593658b4c83e50f5f32c0633977e48637523195"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/dependency-evidence.html", "sha256": "2a5ccf9dc325ddfb3b7dd50b9fdb2234589bf81a60746350fea77c4c17caa4a0"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:58:10.343923+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/model.json", "sha256": "3112ca8e8f803a6284fc6031cb06aa1a42fb9c86d0c717e5df329c9c9c48213b"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/assembly-stages.png", "sha256": "6a7cb9770d49d14914ac7678d194349649f789fe8f0d17ae445e0213ba690262"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:58:57.853326+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected source glyph and metadata, reused female human body, all four directions for each of Cloth Robe, Wide-brimmed Hat, Iron Vinereaper and Sandals, and the staged/full outfit. Exact captured bindings581 Body301,582 Head302,583 Hand306/2 and586 Feet312 are retained. Robe shoulder/cuff/hem coverage, hat crown/brim/head occlusion, intact sickle/palm depth and full sandal/ankle coverage remain aligned. Source body/item pixels and shared512x1024/contact256,950 frame are unchanged; local per-item ownership prevents another item or the original body from erasing unrelated gear. No correction or new ImageGen call required. Source prose about kufiya/cowl, sheaf and circuitboard talisman is retained as metadata; no separate corresponding equipped object was exported, so no costume/accessory is invented.
+  Inputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/model.json", "sha256": "3112ca8e8f803a6284fc6031cb06aa1a42fb9c86d0c717e5df329c9c9c48213b"}]
+  Outputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/cloth-robe-comparison.png", "sha256": "7ea3358c3ec66d8417725c3c6fcec4fbc0bae2d2d9516a68bec68a16d4799541"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/wide-brimmed-hat-comparison.png", "sha256": "d4e6ca3beb54f41fc3914bd3b99dc7c264d60025f4eea5356fa3a9fe15e4c989"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/iron-vinereaper-comparison.png", "sha256": "7ba7b326c952bd746398db0beccf48725b7991485b655d1f5451245efcb9db00"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/sandals-comparison.png", "sha256": "75c5032c4ffaaa0b361af004d05af8ddee5444d680776b509b9efc0f58eb7e39"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/full-neutral-comparison.png", "sha256": "63f35e107e031db24b8c6b9605986abf9a916f88a823ecad37d226ac83a30e0d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:58:57.853326+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Reviewed actual C actor Render tint, independent y/y robe and vinereaper, y/b hat, y/w sandals, neutral gray versions and48x96 views. Actor Render color is source appearance evidence, not a claim of biological human pigmentation. Normal static item display only; source-supported resting/ready grip/angle/native-state review remains behind the full-set generation gate. Hidden authoring preview is empty; no native integration validation performed.
+  Inputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/model.json", "sha256": "3112ca8e8f803a6284fc6031cb06aa1a42fb9c86d0c717e5df329c9c9c48213b"}]
+  Outputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/full-native-comparison.png", "sha256": "6261bf72098b1c596858b72c49be8a7bf0e88da203358f1f7d19d9d5425fade7"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/game-scale-comparison.png", "sha256": "3018ea9b08a942cbb8bf4e6db1285ccd0b8c2810f57a649dfb8d780972f90dc6"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/hidden-comparison.png", "sha256": "ef9ddeefdb22a46e73150dae9c38d5452512f8064f01ac022391f687b8c53e37"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/visual-review-notes.json", "sha256": "1b4863828f2665a5cd49faedf7ac9df2dd3d06eb279014e790f325ad7422a503"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/authoring-review.json", "sha256": "38a234d2502095f735eba5575e632f9de49beb6ef1f394157b074b57a4439467"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/artifact-manifest.json", "sha256": "734292c7e617400698104d48ff8e070a93b34ee3c0761cbfc47cf4f2df4d3291"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-20T23:58:57.853326+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/model.json", "sha256": "3112ca8e8f803a6284fc6031cb06aa1a42fb9c86d0c717e5df329c9c9c48213b"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-MEHMET: Mehmet
 
@@ -6853,7 +6889,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T00:00:04.907396+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-mehmet/v1/source-packet.json", "sha256": "b39017e13054a566118974c92d714b157c27e542b1e0e64d3566f207b479f7a7"}, {"path": "art/conversion/npc-mehmet/v1/source-to-assembly.png", "sha256": "14bca84dc2d2a197ca3ea4313d79d073927a83bea5f81bfa6514fafe506d8ecc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:00:04.907396+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-mehmet/v1/dependency-lineage.json", "sha256": "0ca328ffa5e4684dd695033af0cc99e25d5d653a36e366842eaaaa0fe0e8c13f"}, {"path": "art/conversion/npc-mehmet/v1/dependency-evidence.html", "sha256": "7d5f6a60d95240330925d7d1ab30e553b22f96295f9919a33b927e7c8199deb1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:00:04.907396+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-mehmet/v1/assembly-method.py", "sha256": "e6e5408119fdeb150d60bef297c625d4c2a46d9dcbc81ecacac2cbfcaccdaac7"}, {"path": "art/conversion/npc-mehmet/v1/model.json", "sha256": "cf47afe7d2137d143fb899ea42edb889c5f29109925af0944644d2a0a811ca98"}, {"path": "art/conversion/npc-mehmet/v1/assembly-stages.png", "sha256": "f88592a1ed70e24dc982f9dcf8d467282fd6ae7dbd75979e8c7454882233f9a7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:00:51.187297+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected original Mehmet shape/description and actual captured actor522, the same shared male body used for Argyve, every single-item view and the full four-view outfit. Captured Woven Tunic592 Body329, Wide-brimmed Hat593 Head330, Iron Vinereaper594 Hand334/2 and Sandals597 Feet340 remain independent. Tunic shoulder/cuff/rope/hem coverage, hat crown/brim/head ownership, vinereaper palm/far-side depth and sandal ankle/sole coverage remain aligned with the fixed body. No body, item, registration or scale changes required. Source profession posture, turquoise eyes, salt/scars and Painted-hat narrative remain metadata; no occupation pose, eye cosmetic or invented literal sultan painting is baked into the race/item art.
+  Inputs: [{"path": "art/conversion/npc-mehmet/v1/model.json", "sha256": "cf47afe7d2137d143fb899ea42edb889c5f29109925af0944644d2a0a811ca98"}]
+  Outputs: [{"path": "art/conversion/npc-mehmet/v1/woven-tunic-comparison.png", "sha256": "2a89d0438b4d420cfad3b081bd32ab620c6d197264649d88bd5500ec2a080cc4"}, {"path": "art/conversion/npc-mehmet/v1/wide-brimmed-hat-comparison.png", "sha256": "3d726ef2de5a6333d940f1a6eed8070ea8a67067237929d5fce18c17b1823025"}, {"path": "art/conversion/npc-mehmet/v1/iron-vinereaper-comparison.png", "sha256": "7520fb5b922df85165764db1b15a3e1b0ade726df8f5360060a28dcc69457244"}, {"path": "art/conversion/npc-mehmet/v1/sandals-comparison.png", "sha256": "0875d2abd5a110877999985b294ef396b153fbd0ce2236aedc405c52e8d72fb9"}, {"path": "art/conversion/npc-mehmet/v1/full-neutral-comparison.png", "sha256": "7887f14cded04cba532758f3d3a6f7d96019d3cb3695901d6558e17f901e94e2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:00:51.187297+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Reviewed neutral gray and actual W actor Render tint, independently y/y tunic and vinereaper, y/b hat, y/w sandals, all cardinal views and48x96 displays. Render color is not biological human pigmentation metadata. Existing static item pose only; no accepted native ready/resting state, simulation, visibility, equip, hurt, look or save testing. Shared512x1024/contact256,950 and unchanged source physical frames are preserved.
+  Inputs: [{"path": "art/conversion/npc-mehmet/v1/model.json", "sha256": "cf47afe7d2137d143fb899ea42edb889c5f29109925af0944644d2a0a811ca98"}]
+  Outputs: [{"path": "art/conversion/npc-mehmet/v1/full-native-comparison.png", "sha256": "7dce0c2a235601db9ef21b35b716f55f52ee285a388b19a48aabc782a2799edb"}, {"path": "art/conversion/npc-mehmet/v1/game-scale-comparison.png", "sha256": "d4b56f4ea64415245c69a18278cb457b550996ca67e63c7ddaa265fa818abb55"}, {"path": "art/conversion/npc-mehmet/v1/hidden-comparison.png", "sha256": "5b17066645c052bdddac5414e748b473ab16ac17658baeb3f33b178cef74f55d"}, {"path": "art/conversion/npc-mehmet/v1/visual-review-notes.json", "sha256": "3c281862ce385787be69a70b1c2ca684d37d0f60e9da713946e86b5e342d3e56"}, {"path": "art/conversion/npc-mehmet/v1/historical-instruction-versions.json", "sha256": "45ee367d3ae69bab8ac0ebfa1ba741491f7007432b0e139ca74e52e34e1f491a"}, {"path": "art/conversion/npc-mehmet/v1/authoring-review.json", "sha256": "c5d4106cddfde782ffce4449f1a25e1b87526ec1a1832cf07361851c70476a09"}, {"path": "art/conversion/npc-mehmet/v1/artifact-manifest.json", "sha256": "96d388d10babad2d4544bf6e3aee11c7a7d4c08989c4dcc40351e274bc8f573c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:00:51.187297+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-mehmet/v1/model.json", "sha256": "cf47afe7d2137d143fb899ea42edb889c5f29109925af0944644d2a0a811ca98"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-NIMA-RUDA: Nima Ruda
 
@@ -6863,7 +6935,19 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+
+- 2026-10-21T00:02:54.550422+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured Nima506 race, full description/tree, mutation managers and all five equipped objects.
+  Review: Four arms and Stinger Tail193 are source-supported; description requires segmented great spiral tail over back/neck. Pestle retains Hand181/6, Glowsphere retains FloatingNearby195/0. No unexported costume or arm/face slot semantics inferred.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-nima-ruda/v1/source-packet.json", "sha256": "e8105d1afb9081c1eebcc8eac0abce9b27d1765045e0e6bcc905054756c03dd6"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:02:54.550422+00:00 / verify_body_and_every_equipped_item_dependencies / UNFINISHED: Check body and every actual fitting dependency before claiming a named assembly.
+  Review: BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/source-packet.json", "sha256": "e8105d1afb9081c1eebcc8eac0abce9b27d1765045e0e6bcc905054756c03dd6"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-TAM: Tam
 
@@ -7497,7 +7581,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/nima/body-east.png](../art/village/bodies/nima/body-east.png), [art/village/bodies/nima/body-north.png](../art/village/bodies/nima/body-north.png), [art/village/bodies/nima/body-south.png](../art/village/bodies/nima/body-south.png), [art/village/bodies/nima/brief.json](../art/village/bodies/nima/brief.json), [art/village/bodies/nima/front.png](../art/village/bodies/nima/front.png), [art/village/bodies/nima/front.svg](../art/village/bodies/nima/front.svg), [art/village/bodies/nima/head-east.png](../art/village/bodies/nima/head-east.png), [art/village/bodies/nima/head-north.png](../art/village/bodies/nima/head-north.png), [art/village/bodies/nima/head-south.png](../art/village/bodies/nima/head-south.png), [art/village/bodies/nima/model.json](../art/village/bodies/nima/model.json), [art/village/bodies/nima/refinement-prompt.txt](../art/village/bodies/nima/refinement-prompt.txt), [art/village/bodies/nima/turnaround-draft.png](../art/village/bodies/nima/turnaround-draft.png), [art/village/bodies/nima/turnaround-prompt.txt](../art/village/bodies/nima/turnaround-prompt.txt), [art/village/bodies/nima/turnaround.png](../art/village/bodies/nima/turnaround.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_race_description_original_sprite_runtime_anatomy. Process-log events: 0.
 
 ### BODY-RAY-CAT: ray-cat
 

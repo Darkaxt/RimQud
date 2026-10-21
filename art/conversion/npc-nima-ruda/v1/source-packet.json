@@ -1,0 +1,425 @@
+{
+  "entry": "NPC-NIMA-RUDA",
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "source_snapshot": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+  "identity_chain": [
+    "Nima Ruda",
+    "NPC",
+    "BaseHumanoid",
+    "Humanoid",
+    "Creature"
+  ],
+  "race_description": {
+    "blueprint": "Humanoid",
+    "description": "Human humanoid anatomy: one torso, head and back; two arms and hands; a paired-feet group. Physical mutations require their actual body variant.",
+    "description_kind": "Source-derived anatomy summary; native Humanoid has no race-wide Description.Short. No occupation or named posture inferred."
+  },
+  "captured_actor": {
+    "instance": 506,
+    "blueprint": "Nima Ruda",
+    "species": "human",
+    "gender": "female",
+    "description": "Sharp jade eyes are crow-worn to late middle age and her lips are scarred with gas burns. Climbing over her back and neck are the jeweled segments of a great spiral tail and stinger; a bead of smoking gut juice gleams on the tip.",
+    "anatomy": "Humanoid",
+    "parts": [
+      {
+        "id": 176,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 529,
+          "blueprint": "Leather Apron",
+          "description": "Boar hide was brined, limed, and put in a tanning drum. It was cut and fitted into an apron, and now it's a brown canvas for knife scars and tong burns.\n\n{{R|+12 Heat Resistance}}\n\n{{K|Weight: 5 lbs.}}",
+          "tile": "Items/sw_apron.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": "W"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 177,
+        "parent": 176,
+        "type": "Head",
+        "variant": "Head",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 530,
+          "blueprint": "Wide-brimmed Hat",
+          "description": "The crown is crushed by wear into a hundred papery creases, and the brim is stained in the fractal signatures of sweat and salt.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "items/sw_hat.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "b"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 178,
+        "parent": 177,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 179,
+        "parent": 176,
+        "type": "Back",
+        "variant": "Back",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 180,
+        "parent": 176,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 6,
+        "manager": "506::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 181,
+        "parent": 180,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 6,
+        "manager": "506::MultipleArms::Change",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": {
+          "instance": 531,
+          "blueprint": "Pestle",
+          "description": "A bulb of stone is dusted by humoric powders.\n\n{{rules|Strength Bonus Cap: 1\nWeapon Class: Cudgel (dazes on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "Items/pestle.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "Y"
+        },
+        "defaultItem": {
+          "instance": 532,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 182,
+        "parent": 176,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 5,
+        "manager": "506::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 183,
+        "parent": 182,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 5,
+        "manager": "506::MultipleArms::Change",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 533,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 184,
+        "parent": 176,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 10,
+        "manager": "506::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 185,
+        "parent": 184,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 10,
+        "manager": "506::MultipleArms::Add",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 534,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 186,
+        "parent": 176,
+        "type": "Arm",
+        "variant": "Arm",
+        "laterality": 9,
+        "manager": "506::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 187,
+        "parent": 186,
+        "type": "Hand",
+        "variant": "Hand",
+        "laterality": 9,
+        "manager": "506::MultipleArms::Add",
+        "defaultBlueprint": "DefaultFist",
+        "equipped": null,
+        "defaultItem": {
+          "instance": 535,
+          "blueprint": "DefaultFist",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Cudgel (dazes on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-fist.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 188,
+        "parent": 176,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 189,
+        "parent": 176,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 190,
+        "parent": 176,
+        "type": "Hands",
+        "variant": "Hands",
+        "laterality": 4,
+        "manager": "506::MultipleArms::Change",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 191,
+        "parent": 176,
+        "type": "Hands",
+        "variant": "Hands",
+        "laterality": 8,
+        "manager": "506::MultipleArms::Add",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 192,
+        "parent": 176,
+        "type": "Feet",
+        "variant": "Feet",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 536,
+          "blueprint": "Sandals",
+          "description": "A pair of strapped shoes are cracked on the soles in sinelike patterns of gravel walking.\n\n{{K|Weight: 1 lbs.}}",
+          "tile": "items/sw_sandals.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": "w"
+        },
+        "defaultItem": null
+      },
+      {
+        "id": 193,
+        "parent": 176,
+        "type": "Tail",
+        "variant": "Tail",
+        "laterality": 0,
+        "manager": "506::Stinger",
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 537,
+          "blueprint": "Stinger Confusion",
+          "description": "A caudal barb-thing is tipped with a jewel of venomed dew.\n\n{{rules|Strength Bonus Cap: 0\nWeapon Class: Long Blades (increased penetration on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "items/sw_stinger.bmp",
+          "foreground": "&y",
+          "tileColor": "&w",
+          "detailColor": "B"
+        }
+      },
+      {
+        "id": 194,
+        "parent": 176,
+        "type": "Thrown Weapon",
+        "variant": "Thrown Weapon",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 195,
+        "parent": 176,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": {
+          "instance": 538,
+          "blueprint": "Floating Glowsphere",
+          "description": "A phosphorescent opal-like fits in the palm of a hand and glows with the light of auroras absorbed chiliads ago. It floats about preternaturally.\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Items/sw_glowsphere.bmp",
+          "foreground": "&Y",
+          "tileColor": "",
+          "detailColor": "C"
+        },
+        "defaultItem": null
+      }
+    ],
+    "tile": "Creatures/npc-nima-ruda.bmp",
+    "foreground": "&g",
+    "tileColor": "&g",
+    "detailColor": "w"
+  },
+  "dependencies": [
+    {
+      "entry": "BODY-NIMA",
+      "generation_ready": false,
+      "current_registration": null
+    },
+    {
+      "entry": "FIT-NIMA-LEATHER-APRON-BODY-0",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+          "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+          "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+        }
+      }
+    },
+    {
+      "entry": "FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json",
+          "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png",
+          "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"
+        }
+      }
+    },
+    {
+      "entry": "FIT-NIMA-PESTLE-HAND-6",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-pestle/v1/model.json",
+          "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png",
+          "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"
+        }
+      }
+    },
+    {
+      "entry": "FIT-NIMA-SANDALS-FEET-0",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-sandals/v3/model.json",
+          "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"
+        },
+        "plate": {
+          "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+          "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+        }
+      }
+    },
+    {
+      "entry": "FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json",
+          "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png",
+          "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"
+        }
+      }
+    }
+  ],
+  "scope_notes": {
+    "source_anatomy": "Captured four arms/hands and Tail193 managed by Stinger. Native description specifies great jeweled segmented spiral tail climbing over back/neck with a stinger and small bead at its tip. Extra pair/tail remain separate from the existing unmutated human-female body.",
+    "age_and_cosmetics": "Late middle age is explicit description, not a captured numeric age field. Jade eyes/scarred lips/personal facial detail remain metadata under the agreed initial cosmetic boundary; do not invent an occupation body or infer a different demographic.",
+    "equipment": "Leather Apron529 Body176, Wide-brimmed Hat530 Head177, Pestle531 changed Hand181/6, Sandals536 Feet192, Floating Glowsphere538 FloatingNearby195/0. Natural fists/stinger defaults are not additional worn objects.",
+    "floating_item": "Glowsphere is actually in Floating Nearby195, not a Hand slot. Preserve that distinction; the one-handed floating-object palm rule does not rename its captured slot.",
+    "native_boundary": "No new framework, game launch or native validation; real mutation/attachment/pose/state acceptance remains behind the all-generation gate."
+  },
+  "advancement_blocker": {
+    "requirement": "Source-bound individual anatomy and actual five-item assembly in every required direction",
+    "reason": "BODY-NIMA has no current registered separate extra-arm/spiral-tail art. Current ordinary-female fitting proxies alone do not represent her captured mutation anatomy.",
+    "classification": "internal",
+    "resolution": "Generate source-bound separate Nima mutation layers over the selected unmutated female base, then assemble the five actual item bindings and inspect occlusion/attachment.",
+    "dependent": "NPC-NIMA-RUDA generation readiness and later native acceptance"
+  }
+}
