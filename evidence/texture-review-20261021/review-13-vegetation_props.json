@@ -1,0 +1,123 @@
+{
+  "batch": "13-vegetation_props",
+  "entries": [
+    {
+      "entry": "SCN-CANTEEN",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-canteen/v1/registered/conversion-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-GARBAGE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-garbage/v1/registered/neutral-family.png",
+        "art/conversion/scn-garbage/v1/registered/native-K-family.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-PAINTING",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-painting/v1/registered/neutral-turnarounds.png",
+        "art/conversion/scn-painting/v1/registered/source-and-native-palettes.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-SCRAP-ELECTRONICS",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-scrap-electronics/v1/registered/source-neutral-native-scale.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-SCRAP-METAL",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-scrap-metal/v1/registered/source-neutral-native-scale.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-TORCHPOST",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-torchpost/v1/registered/neutral-turnarounds.png",
+        "art/conversion/scn-torchpost/v1/registered/native-w-turnarounds.png",
+        "art/conversion/scn-torchpost/v1/registered/source-native-scale-and-palette.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BRINESTALK",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-brinestalk/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-DOGTHORN-TREE",
+      "verdict": "ISSUES",
+      "inspected_images": [
+        "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png",
+        "art/conversion/scn-dogthorn-tree/v1/registered/wood-ownership-comparison.png"
+      ],
+      "findings": [
+        {
+          "view": "Variant 2, neutral and native G+w",
+          "region": "Uppermost canopy tuft, above and left of upper-right crown",
+          "observation": "The highest foliage cluster is surrounded by visible background and does not meet the neighboring foliage or a visible branch. It reads as a floating canopy island. The isolated wood plate supplies no visible connecting limb in this gap.",
+          "confidence": "HIGH",
+          "severity": "STRUCTURAL",
+          "correction_principle": "Resolve the visible crown connection using source-appropriate branch or foliage continuity; do not rely on an imagined hidden support across exposed background."
+        }
+      ]
+    },
+    {
+      "entry": "SCN-STARAPPLE-TREE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-starapple-tree/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-STARAPPLE-TREE-RIPE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-starapple-tree-ripe/v1/binding-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-WATERVINE",
+      "verdict": "ISSUES",
+      "inspected_images": [
+        "art/conversion/scn-watervine/v1/registered/registration-comparison.png",
+        "art/conversion/scn-watervine/v1/registered/unripe-comparison.png"
+      ],
+      "findings": [
+        {
+          "view": "Variants 1-3, neutral, ripe and unripe; clearest in Variant 3",
+          "region": "Basal stem and low curved strokes",
+          "observation": "Several low curved vine strokes do not visibly join their nearby upright stems. Most clearly, Variant 3 has a separate arc below the right stem with background between them; Variant 1 also leaves the long central upright above the low left curve. These curves read as detached plant fragments rather than continuous basal growth. Model/source describe living crooked vine layouts, not debris.",
+          "confidence": "HIGH",
+          "severity": "STRUCTURAL",
+          "correction_principle": "Make intended basal growth visibly continuous with its owning vine, or establish its source-supported independent role; preserve the same corrected geometry in both harvest tints."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Bounded static visual screening of the supplied current plates, not native/game validation or a guarantee of defect absence.",
+    "Fixed map views and declared cosmetic variants were assessed as such; no unsupported requirement for three creature facings was imposed.",
+    "Visible composited shapes were judged. Separate garbage and scrap fragments were allowed by their source descriptions.",
+    "Harvest tint geometry was compared in the supplied plates; runtime state selection, particles, occlusion and bindings were not exercised."
+  ]
+}

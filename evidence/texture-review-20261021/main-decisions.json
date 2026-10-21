@@ -1,0 +1,265 @@
+{
+  "recorded_at": "2026-10-21T09:19:37.979999+00:00",
+  "decisions": [
+    {
+      "finding": "review-02-03-garments.json#FIT-IRUDAD-BLACK-ROBES-BODY-0:0",
+      "disposition": "FIX NOW",
+      "priority": "P2",
+      "reason": "I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction.",
+      "evidence": [
+        {
+          "path": "art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png",
+          "sha256": "2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287"
+        },
+        {
+          "path": "art/conversion/body-irudad/v1/registered/neutral-comparison.png",
+          "sha256": "e5b99e460b8682747215d39f0198a23d4c7979e5614e63141504a2459f08d7f1"
+        },
+        {
+          "path": "art/conversion/fit-irudad-black-robes/v3/body-overlay-east.png",
+          "sha256": "6bf0163bbd1d5d22081c274eae14b80f7738de8dfb06ecb9f9c714c4cf47c7b4"
+        }
+      ],
+      "owner_stage": "Stage 3",
+      "verification": "Corrected single-item east/west assembly has one original hand contour, intact cuff and unchanged body/frame; fresh independent structural review after the correction."
+    },
+    {
+      "finding": "review-04-head_and_feet.json#FIT-NIMA-SANDALS-FEET-0:0",
+      "disposition": "NOT SUBSTANTIATED",
+      "priority": null,
+      "reason": "The shared bare-base fitting is intentional and does not establish that the named assembly is missing. I inspected the existing Nima all-view assembly and verified that it references this exact current fitted model. Hat/sole/ankle placement is present on Nima; no conflicting local attachment is established. The named assembly also receives its own independent review in this sweep.",
+      "evidence": [
+        {
+          "path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png",
+          "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"
+        },
+        {
+          "path": "art/conversion/npc-nima-ruda/v1/model.json",
+          "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+        }
+      ],
+      "owner_stage": "Stage 3",
+      "verification": "Exact current model bindings checked; static assembled placement inspected. No native acceptance inferred."
+    },
+    {
+      "finding": "review-04-head_and_feet.json#FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0:0",
+      "disposition": "NOT SUBSTANTIATED",
+      "priority": null,
+      "reason": "The shared bare-base fitting is intentional and does not establish that the named assembly is missing. I inspected the existing Nima all-view assembly and verified that it references this exact current fitted model. Hat/sole/ankle placement is present on Nima; no conflicting local attachment is established. The named assembly also receives its own independent review in this sweep.",
+      "evidence": [
+        {
+          "path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png",
+          "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"
+        },
+        {
+          "path": "art/conversion/npc-nima-ruda/v1/model.json",
+          "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"
+        }
+      ],
+      "owner_stage": "Stage 3",
+      "verification": "Exact current model bindings checked; static assembled placement inspected. No native acceptance inferred."
+    },
+    {
+      "finding": "review-06-furniture.json#SCN-BED:0",
+      "disposition": "NOT SUBSTANTIATED",
+      "priority": null,
+      "reason": "I inspected the converted all-view bed, its source description/camera contract and the actual installed VTE Bed_south reference. The donor itself uses a cardinal overhead sleeping plane, and the current packet explicitly records that camera and one continuous fabric pad on low slats. The white sleeping plane and thin low frame therefore do not establish an erroneous camera or missing support. Exposing an under-bed volume by changing the angle would contradict this selected reference. Rail readability could be cosmetic polish, but is not a structural correction to make now.",
+      "evidence": [
+        {
+          "path": "art/conversion/scn-bed/v2/source-packet.json",
+          "sha256": "99021ccd66f8d720fff44340a64f2531728385e93f02d8d754a28b293462e6e3"
+        },
+        {
+          "path": "art/conversion/scn-bed/v2/registered/all-views-native.png",
+          "sha256": "83a4ba71bcdcc23992b63d1bf9ef17d5bf13596353f9041259836823255a1b38"
+        }
+      ],
+      "inspected_private_reference": {
+        "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Furniture\\Bed\\Bed_south.png",
+        "sha256": "cade86a3035469604f0a1abf3be038180dd7ac9e88ef3aa1474afeba41113284"
+      },
+      "owner_stage": "Stage 3",
+      "verification": "Source-supported low construction and actual directional donor camera inspected; no native test inferred."
+    },
+    {
+      "finding": "review-07-08-machines.json#SCN-WOODEN-WATER-WHEEL:0",
+      "disposition": "NEEDS CLOSER INSPECTION",
+      "priority": "P2",
+      "reason": "I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready.",
+      "evidence": [
+        {
+          "path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png",
+          "sha256": "4927800f6fe86df32f7c683551c6edba892454fe7053c7c80068557395b62d2e"
+        },
+        {
+          "path": "art/conversion/scn-wooden-water-wheel/v1/source-packet.json",
+          "sha256": "6aabc35ffdaa2036a953cafb085b52c8fb6cf83f58494dba6d378dc5d7b01fde"
+        }
+      ],
+      "blocks_generation_readiness": true,
+      "owner_stage": "Stage 3",
+      "verification": "Establish the inset component role and shared support/clearance geometry from source/reference; make the attachment legible or document evidenced occlusion, then inspect all three phases with the independent fast review."
+    },
+    {
+      "finding": "review-09-10-named.json#NPC-CTESIPHUS:0",
+      "disposition": "MINOR POLISH",
+      "priority": "P3 optional",
+      "reason": "I inspected the neutral assembly and confirmed the small squared profile-back step. It is a connected contour bump, without detached anatomy, a pivot shift or an equipment intersection. Optional silhouette polish does not justify reopening the accepted Ray Cat shape ahead of structural fixes.",
+      "evidence": [
+        {
+          "path": "art/conversion/npc-ctesiphus/v1/neutral-comparison.png",
+          "sha256": "6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890"
+        }
+      ],
+      "blocks_generation_readiness": false,
+      "owner_stage": "Optional art polish outside required correction scope",
+      "verification": "Any later silhouette edit preserves the shared frame and receives independent structural review."
+    },
+    {
+      "finding": "review-09-10-named.json#NPC-NIMA-RUDA:0",
+      "disposition": "NOT SUBSTANTIATED",
+      "priority": null,
+      "reason": "I inspected the native assembly, original apron glyph on the source comparison and source packet. The original has a distinct lower detail-color field; source rows17..21 deliberately map to that lower region. Native W is gold. The horizontal hue change preserves Qud identity; it is not unrelated body color leaking into clothing. Do not invent a seam or erase the source region.",
+      "evidence": [
+        {
+          "path": "art/conversion/npc-nima-ruda/v1/full-native-comparison.png",
+          "sha256": "cc28ff4dde616c487253767d7c9aae44c037902a27fb9c712d682e94375397b9"
+        },
+        {
+          "path": "art/conversion/fit-nima-leather-apron/v1/source-comparison.png",
+          "sha256": "32eb8742d90ac43d56603064215b4abf43256e8094c7fc80cc92a1d1f5938a32"
+        },
+        {
+          "path": "art/conversion/fit-nima-leather-apron/v1/source-packet.json",
+          "sha256": "9910355ba13ab0fda7140c1bbdb566e525b5aaf3d90c4a79eb7c3f0e9b05384a"
+        }
+      ],
+      "blocks_generation_readiness": false,
+      "owner_stage": "Stage 3",
+      "verification": "Actual source lower color field and current native role mapping inspected."
+    },
+    {
+      "finding": "review-11-12-terrain.json#SCN-DOOR:0",
+      "disposition": "FIX NOW",
+      "priority": "P2",
+      "reason": "I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment.",
+      "evidence": [
+        {
+          "path": "art/conversion/scn-door/v1/registered/states-comparison.png",
+          "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"
+        },
+        {
+          "path": "art/conversion/scn-door/v1/source-packet.json",
+          "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+        }
+      ],
+      "blocks_generation_readiness": true,
+      "owner_stage": "Stage 3",
+      "verification": "Open/closed geometry shows a coherent fixed hinge attachment, unchanged frame/anchor and material roles; fresh independent all-state review."
+    },
+    {
+      "finding": "review-13-vegetation_props.json#SCN-DOGTHORN-TREE:0",
+      "disposition": "FIX NOW",
+      "priority": "P2",
+      "reason": "I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles.",
+      "evidence": [
+        {
+          "path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png",
+          "sha256": "508592841bf77192dcbd8ec5058626b23c823fc76e689fb47d4f34e99ccde934"
+        },
+        {
+          "path": "art/conversion/scn-dogthorn-tree/v1/source-packet.json",
+          "sha256": "568c3864ac2c19b283fd5bef7f5beb672a5f8f89849eb4d24a15f37785e1c697"
+        }
+      ],
+      "blocks_generation_readiness": true,
+      "owner_stage": "Stage 3",
+      "verification": "Variant2 upper crown has legible foliage/branch continuity without a floating island; variants, roots, frame and independent G/w tint remain intact; fresh structural review."
+    },
+    {
+      "finding": "review-13-vegetation_props.json#SCN-WATERVINE:0",
+      "disposition": "FIX NOW",
+      "priority": "P2",
+      "reason": "I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints.",
+      "evidence": [
+        {
+          "path": "art/conversion/scn-watervine/v1/registered/registration-comparison.png",
+          "sha256": "9106e54bac0c4c99b61939ae1b31515ce4a4ddf4380fde4b97b2210d057feb3c"
+        },
+        {
+          "path": "art/conversion/scn-watervine/v1/source-packet.json",
+          "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"
+        }
+      ],
+      "blocks_generation_readiness": true,
+      "owner_stage": "Stage 3",
+      "verification": "All intended basal contacts are continuous, or have an evidenced independent role; identical geometry/frame in ripe/unripe states and independent w/g/K roles; fresh all-layout review."
+    },
+    {
+      "finding": "review-14-item_aggregates.json#ITEM-HORNS:0",
+      "disposition": "NOT SUBSTANTIATED",
+      "priority": null,
+      "reason": "The user selected sheep/ram-like horns and has been reviewing that curl design. A generic natural Horns description does not override this explicit authored choice or require replacing it with straight spikes. The reviewer correctly asks for source reconciliation, but that does not add a new silhouette redesign. Existing independently confirmed crown-root, return-tip and skull-clearance defects remain open and keep horns unready.",
+      "evidence": [
+        {
+          "path": "art/conversion/fit-yrame-horns/v5/fit-contract.json",
+          "sha256": "301ba2aa38cb24f348314f3486f60f683fd96d5192c79877b7a93da23b21f65a"
+        },
+        {
+          "path": "art/conversion/fit-yrame-horns/v5/independent-critical-review.md",
+          "sha256": "710bec7b0f0a9ddf50a4a432e3e85fa9aefddaaad8ebaca5c2d9cdd6df8f3bfe"
+        }
+      ],
+      "blocks_generation_readiness": false,
+      "owner_stage": "Stage 3",
+      "verification": "Authored ram-like interpretation reconciled with user direction; separate structural horn correction still required."
+    },
+    {
+      "finding": "review-14-item_aggregates.json#ITEM-SANDALS:0",
+      "disposition": "MINOR POLISH",
+      "priority": "P3 optional",
+      "reason": "I inspected the aggregate, male fit and intact-source plate. The gray arcs belong to the continuous whole outsole outside the original foot; the dark inner boundary belongs to the original toes/foot. No detached duplicate sole piece is established. The protruding rim could be made less conspicuous as optional polish, but should not be removed merely because the sole is wider than the bare foot.",
+      "evidence": [
+        {
+          "path": "art/conversion/item-sandals/v2/body-fittings-comparison.png",
+          "sha256": "90e659432706ff92142fd037d3f63a87116c92ee4a9a0f998063e5a9ae0cbcf9"
+        },
+        {
+          "path": "art/conversion/fit-human-male-sandals/v3/footwear-comparison.png",
+          "sha256": "3b061e4bb0ebebd2e00737f873845451e8e726f9e4c0269c28a8f2a8d133cc6b"
+        },
+        {
+          "path": "art/conversion/fit-human-male-sandals/v3/intact-garment-comparison.png",
+          "sha256": "c4a0d232391ed40d73897c6f9a067d2db9909fbf79514029e57678347a7fdcc2"
+        }
+      ],
+      "blocks_generation_readiness": false,
+      "owner_stage": "Optional art polish outside required correction scope",
+      "verification": "Continuous intact sole and foot/sole ownership inspected; no current structural blocker established."
+    }
+  ],
+  "existing_critical_issues": [
+    {
+      "entry": "FIT-YRAME-HORNS-HEAD-0",
+      "disposition": "FIX NOW",
+      "priority": "P1",
+      "reason": "Fresh independent horn critique confirms flat-ended emergence, visually fragmented rear return and unresolved non-root skull clearance. User explicitly rejected rear curl and terminal cutoff. Broad retrospective screening does not override this closer evidence.",
+      "evidence": [
+        {
+          "path": "art/conversion/fit-yrame-horns/v5/independent-critical-review.md",
+          "sha256": "710bec7b0f0a9ddf50a4a432e3e85fa9aefddaaad8ebaca5c2d9cdd6df8f3bfe"
+        },
+        {
+          "path": "art/conversion/fit-yrame-horns/v5/independent-review-decision.json",
+          "sha256": "ddb2ca2f4861c00e2ec37151275c397be67b7077c3013c8a3da560b04d5754d2"
+        }
+      ],
+      "dependent_entries": [
+        "ITEM-HORNS",
+        "NPC-WARDEN-YRAME"
+      ],
+      "owner_stage": "Stage 3",
+      "verification": "Continuous embedded crown roots, complete tip path and non-root skull clearance explained in every view; fresh review after next refinement before any extraction."
+    }
+  ]
+}

@@ -77,10 +77,10 @@ def render_entry_body(e,url_prefix):
         current=e['current_registration']
         note=e.get('registration_summary','Use this registered version for layer alignment. Gold marks the shared pivot; the ground guide marks contact. Body, head, masks and fitted clothing share that frame. Asymmetric features may extend beyond the pivot.')
         review=e.get('art_review') or e.get('camera_review',{})
-        if review.get('status') in ['REQUIRES REWORK','REQUIRES REVIEW']:
-            label='Garment fit' if e.get('art_review') else 'Camera'
+        if review.get('status','').startswith('REQUIRES'):
+            label='Art fit' if e.get('art_review') else 'Camera'
             parts.append('<p class="issues"><strong>'+label+': '+h(review['status'])+'.</strong> '+h(review['reason'])+'</p>')
-            title='Registered candidate — '+('garment' if e.get('art_review') else 'camera')+' correction/review pending'
+            title='Registered candidate — '+('art' if e.get('art_review') else 'camera')+' correction/review pending'
         else:title='Current registered artwork'
         parts.append('<h3>'+title+'</h3><p>'+h(note)+'</p><div class="gallery">'+artifact(current['plate'],url_prefix)+'</div><p><a href="'+url_prefix+h(current['model']['path'])+'">Current asset registration</a></p>')
     parts.append('<ol class="workflow">'+''.join(f'<li class="{"pass" if s in passed else "pending"}">{h(s.replace("_"," "))} — {"recorded PASS" if s in passed else "pending"}</li>' for s in e['required_steps'])+'</ol>')
@@ -104,7 +104,7 @@ def render(data):
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><div class="eyebrow">RIMQUD / ORIGINAL → CONSTRUCTION → REFINEMENT → INTEGRATION</div>
 <h1>Every shape, with its evidence.</h1><p class="intro">This report shows the conversion as it happens. Source facts, authored interpretations, generated proposals, corrections and actual native results remain distinguishable. A missing step stays visible. Historical drafts receive no completion credit.</p>
-<nav><a href="conversion-ledger.md">Readable ledger</a><a href="../evidence/conversion-ledger.json">Structured record</a><a href="../art/village/preview.html">Historical village draft</a></nav>''']
+<nav><a href="conversion-ledger.md">Readable ledger</a><a href="../evidence/conversion-ledger.json">Structured record</a><a href="texture-review-20261021.html">Independent texture review</a><a href="../art/village/preview.html">Historical village draft</a></nav>''']
     ready=sum(bool(e.get('generation_ready')) for e in rows)
     parts.append('<div class="counts">'+f'<span><strong>{ready}</strong> generation-ready</span>'+''.join(f'<span><strong>{n}</strong> {h(s.lower())}</span>' for s,n in counts.items())+'</div>')
     parts.append(f'<p>Active entry: <strong>{h(data["active_entry"] or "none")}</strong>. Stage 3 remains ACTIVE. Overall conversion is unfinished.</p>')

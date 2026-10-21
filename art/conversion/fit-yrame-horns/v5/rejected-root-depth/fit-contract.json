@@ -1,0 +1,43 @@
+{
+  "entry": "FIT-YRAME-HORNS-HEAD-0",
+  "recorded_at": "2026-10-21T08:38:15.722548+00:00",
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "native_facts": "Horns575, paired grooved bone natural equipment on Head288/0. Native data does not specify skull coordinates.",
+  "authored_estimate": "Ram-like backward curl; 3D tube, root separation, lateral splay and skull depth are authored estimates, not native joint coordinates.",
+  "previous_attempt": {
+    "path": "art/conversion/fit-yrame-horns/v4/authoring-review.json",
+    "sha256": "65cff31c4419de5a839a475b84dc6b7d623dfd24e21d9ade108921321a680705"
+  },
+  "previous_active_entry": "SCN-RANDOM-BOTTLE",
+  "geometry": "One shared tapered round tube. X lateral, Y down, Z forward. Starts at paired upper anterolateral crown; rises then sweeps towards negative Z (back). Returning tip turns forward above ears. Cross sections retain volume, and camera rotation reverses near/far tube surfaces.",
+  "depth": "Intact item retained. Source volume determines near/far ownership; original skull separates anterior roots from posterior arc. Masks are derived only after full item drawing, without changing the bare head or adding ears.",
+  "views": {
+    "south": "Upper anterior crown roots visible. Posterior arc is farther away; inner returning tip has its own self-occlusion. Original flesh ears stay below the coil.",
+    "east": "Root above/forward of original ear. Initial arc rises and sweeps screen-left towards back, then returns forward. Exact right profile, common scale; far horn overlaps near horn.",
+    "north": "Anterior roots are behind original skull. Posterior tube arc is nearer than the skull and overlaps its upper sides. Returning tip can be concealed by that nearer tube surface; never paste the front inner spiral onto the rear. No bone ear.",
+    "west": "Mirror east for the symmetric natural paired item; same binding Head288/0, no independent enlargement."
+  },
+  "acceptance": "Inspect self-occlusion, rear surface, root depth and tip visibility in manual and first refined views before registration. A similar symmetric silhouette alone is neither proof of error nor proof of coherence."
+}

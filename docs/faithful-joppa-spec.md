@@ -8,7 +8,73 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, Canteen): `scn-canteen/v1/registered`
+Current review result (2026-10-21): **ART-CRITIC** is installed and byte-verified
+at Codex level, and the fresh-agent horn critique demonstrates its required
+pre-extraction gate. **ART-RETROSPECTIVE** is complete as a bounded artwork
+screen: ten sequential fresh-context Low-effort reviewers covered all137 current
+sets; all12 findings received main-author inspection and disposition.3253
+referenced PNGs passed file/hash/neutral-name diagnostics. This is not a claim
+that every component was individually visually inspected or that art is flawless.
+The19 entries with no current created set receive no visual approval.
+
+Correct in Stage3 order: Yrame horns (embedded roots, return path, skull
+clearance); Irudad robe hand-contour ownership; door hinge/leaf connection;
+Dogthorn variant2 crown support; Watervine basal continuity; then resolve the
+water-wheel inset attachment ambiguity. Keep one active entry at a time, then
+resume Random Bottle. The cat-back step and prominent sandal rim are optional
+polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
+and a proposed straight-horn silhouette are not substantiated correction needs.
+Source-specific references and explicit user art choices remain authoritative.
+
+Ten directly affected/dependent ledger rows have readiness withheld. There are
+127 generation-ready entries of156. Every entry remains unfinished for native
+acceptance; Stage3 is the sole ACTIVE stage and the horn fit is the sole active
+entry. The audit is complete; these corrections are **not** implemented or claimed
+fixed. No native/game validation or software release was performed.
+See [the independent review and main-author triage](texture-review-20261021.html).
+
+Authorized authoring review requirements (2026-10-21): **ART-CRITIC** requires a fast
+fresh-agent structural review after every refinement/correction output, before
+extraction or fitting, followed by main-agent inspection and disposition of
+findings. Review reports bind exact image hashes. Structural/uncertain failures
+withhold advancement; a superficial pass or a root coordinate inside alpha is
+insufficient. The installed Codex skill and repository source must match.
+
+**ART-RETROSPECTIVE** requires screening all current created texture sets and
+their declared component/view/state evidence, then main-agent triage of flagged
+issues into FIX NOW, NEEDS CLOSER INSPECTION, MINOR POLISH or NOT SUBSTANTIATED.
+Every selected set must be accounted for, including clear sets and missing
+evidence. The inventory contains137 current sets,3253 directly referenced PNG
+files and19 entries with no current created set. Shared components are indexed
+by exact hash; historical/rejected attempts are indexed separately and are not
+silently re-approved as current art. Review reports and dispositions belong to
+the conversion ledger/report. Serious confirmed defects invalidate the relevant
+generation-ready claim and dependent assemblies. This review is generation-time
+artwork inspection only; it does not open native validation or another ACTIVE
+implementation stage. Stage3 and the existing single active correction remain.
+
+Execute within Stage3 in order: deploy and verify the mandatory skill contract;
+complete the bounded current-set review packets; inspect and disposition every
+flagged finding; reconcile complete coverage and affected dependency readiness.
+These are acceptance requirements within the current stage, not new parallel
+stages or authorization to redesign the renderer. The requested review does not
+itself require fixing every cosmetic suggestion or publishing a software release.
+
+Prior correction checkpoint (2026-10-21, Yrame horns): the user rejected the rear curl
+projection and then the terminal curl/head intersection in the new v5 contextual
+refinement. Horn fitting, Horns item aggregate and named Yrame outfit have lost
+generation-ready credit; their existing sources/reviews remain superseded history.
+The v5 attempt is preserved with its actual prompt/output receipt, volume
+construction, first manual depth rejection and user-reported continuity defect.
+No v5 production extraction or model was registered. A fresh independent visual
+critique has now confirmed flat-ended roots and a rear return that reads as
+separate pegs, with unresolved skull clearance. Manual root emergence, complete
+tip paths and non-root clearance must be corrected before another refinement. There are 134 generation-ready
+entries of156, all unfinished for native acceptance. Stage3 remains the sole
+ACTIVE stage; FIT-YRAME-HORNS-HEAD-0 is the sole active entry. Random Bottle
+remains unfinished and will resume after this dependent correction closes.
+
+Prior authoring checkpoint (2026-10-21, Canteen): `scn-canteen/v1/registered`
 is generation-ready. Complete installed Canteen/WaterContainer ancestry, actual
 round source glyph, native g/w palette and liquid/seal declarations preceded
 construction. Actual Core Cloth_a/Chemfuel textures supply textile and container

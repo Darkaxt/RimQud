@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-RANDOM-BOTTLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **FIT-YRAME-HORNS-HEAD-0**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -73,7 +73,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0 | human-male / Wide-brimmed Hat / Head / laterality 0 | UNFINISHED | ITEM-WIDE-BRIMMED-HAT, BODY-HUMAN-MALE | Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records. |
 | FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0 | human-male / Woven Tunic / Body / laterality 0 | UNFINISHED | ITEM-WOVEN-TUNIC, BODY-HUMAN-MALE | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-HUMAN-MALE-WRENCH-HAND-1 | human-male / Wrench / Hand / laterality 1 | UNFINISHED | ITEM-WRENCH, BODY-HUMAN-MALE |  |
-| FIT-IRUDAD-BLACK-ROBES-BODY-0 | irudad / Black Robes / Body / laterality 0 | UNFINISHED | ITEM-BLACK-ROBES, BODY-IRUDAD | Selected fitting is the unmutated older-human base only. Extra arms/tail and Irudad full actor assembly remain unfinished. Native equipped state and outfit precedence remain behind the all-generated gate. |
+| FIT-IRUDAD-BLACK-ROBES-BODY-0 | irudad / Black Robes / Body / laterality 0 | UNFINISHED | ITEM-BLACK-ROBES, BODY-IRUDAD | I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction. |
 | FIT-IRUDAD-SANDALS-FEET-0 | irudad / Sandals / Feet / laterality 0 | UNFINISHED | ITEM-SANDALS, BODY-IRUDAD | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-IRUDAD-SPECTACLES-FACE-0 | irudad / Spectacles / Face / laterality 0 | UNFINISHED | ITEM-SPECTACLES, BODY-IRUDAD | Irudad mutation-specific body and full outfit/native equipped-state acceptance remain unfinished. |
 | FIT-IRUDAD-WALKING-STICK-HAND-6 | irudad / Walking Stick / Hand / laterality 6 | UNFINISHED | ITEM-WALKING-STICK, BODY-IRUDAD |  |
@@ -83,7 +83,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | FIT-NIMA-SANDALS-FEET-0 | nima / Sandals / Feet / laterality 0 | UNFINISHED | ITEM-SANDALS, BODY-NIMA | Generic SVG candidate: no completed one-item in-context refinement/extraction/recomposition log. |
 | FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0 | nima / Wide-brimmed Hat / Head / laterality 0 | UNFINISHED | ITEM-WIDE-BRIMMED-HAT, BODY-NIMA | Native equipment/outfit acceptance awaits the full-set generation gate. Historical generic candidates are superseded by the current source-bound hat records. |
 | FIT-YRAME-CHAIN-MAIL-BODY-0 | yrame / Chain Mail / Body / laterality 0 | UNFINISHED | ITEM-CHAIN-MAIL, BODY-YRAME |  |
-| FIT-YRAME-HORNS-HEAD-0 | yrame / Horns / Head / laterality 0 | UNFINISHED | ITEM-HORNS, BODY-YRAME |  |
+| FIT-YRAME-HORNS-HEAD-0 | yrame / Horns / Head / laterality 0 | IN PROGRESS | ITEM-HORNS, BODY-YRAME | Fresh independent horn critique confirms flat-ended emergence, visually fragmented rear return and unresolved non-root skull clearance. User explicitly rejected rear curl and terminal cutoff. Broad retrospective screening does not override this closer evidence. |
 | FIT-YRAME-LEATHER-BOOTS-FEET-16 | yrame / Leather Boots / Feet / laterality 16 | UNFINISHED | ITEM-LEATHER-BOOTS, BODY-YRAME |  |
 | FIT-YRAME-VIBRO-BLADE-HAND-2 | yrame / Vibro Blade / Hand / laterality 2 | UNFINISHED | ITEM-VIBRO-BLADE, BODY-YRAME |  |
 
@@ -92,7 +92,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | SCN-CANTEEN | Canteen | UNFINISHED | - |  |
-| SCN-RANDOM-BOTTLE | Random Bottle | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-RANDOM-BOTTLE | Random Bottle | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-VASE | Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WINE-VASE | Wine Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOVEN-BASKET | Woven Basket | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -108,11 +108,11 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| ITEM-BLACK-ROBES | Black Robes | UNFINISHED | FIT-IRUDAD-BLACK-ROBES-BODY-0 | Irudad mutation-specific anatomy and native equipped-state/outfit acceptance remain unfinished. |
+| ITEM-BLACK-ROBES | Black Robes | UNFINISHED | FIT-IRUDAD-BLACK-ROBES-BODY-0 | Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed. |
 | ITEM-CHAIN-MAIL | Chain Mail | UNFINISHED | FIT-YRAME-CHAIN-MAIL-BODY-0 |  |
 | ITEM-CLOTH-ROBE | Cloth Robe | UNFINISHED | FIT-HUMAN-MALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-DROMAD-CLOTH-ROBE-BODY-0 | Existing fits are historical candidates. Item completion requires its listed body-specific fittings; a generic garment is not a completed conversion. |
 | ITEM-FLOATING-GLOWSPHERE | Floating Glowsphere | UNFINISHED | FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
-| ITEM-HORNS | Horns | UNFINISHED | FIT-YRAME-HORNS-HEAD-0 |  |
+| ITEM-HORNS | Horns | UNFINISHED | FIT-YRAME-HORNS-HEAD-0 | Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed. |
 | ITEM-IRON-VINEREAPER | Iron Vinereaper | UNFINISHED | FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2 | Runtime actor-specific slot demand and donor runtime drawSize not exported; weapon dimensions remain authored. Horizontal ready/resting pose and named outfit/native acceptance remain unfinished. |
 | ITEM-LEATHER-APRON | Leather Apron | UNFINISHED | FIT-NIMA-LEATHER-APRON-BODY-0 | Native item acceptance and named Nima mutation/outfit assembly remain unfinished. |
 | ITEM-LEATHER-BOOTS | Leather Boots | UNFINISHED | FIT-YRAME-LEATHER-BOOTS-FEET-16 |  |
@@ -162,7 +162,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-MILLSTONE | Millstone | UNFINISHED | - |  |
 | SCN-POWERLESS-ELECTROTHING | Powerless Electrothing | UNFINISHED | - |  |
 | SCN-SEWING-MACHINE | Sewing Machine | UNFINISHED | - |  |
-| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - |  |
+| SCN-WOODEN-WATER-WHEEL | Wooden Water Wheel | UNFINISHED | - | I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready. |
 | SCN-WOODENMECHANICALTRANSMISSION | WoodenMechanicalTransmission | UNFINISHED | - |  |
 
 ### NPC assemblies (14)
@@ -170,12 +170,12 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | NPC-ARGYVE | Argyve | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-POCKETED-VEST-BODY-0, FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0, FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2, FIT-HUMAN-MALE-WRENCH-HAND-1, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
-| NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 |  |
+| NPC-ELDERBOB | Irudad (ElderBob) | UNFINISHED | BODY-IRUDAD, FIT-IRUDAD-BLACK-ROBES-BODY-0, FIT-IRUDAD-SPECTACLES-FACE-0, FIT-IRUDAD-WALKING-STICK-HAND-6, FIT-IRUDAD-SANDALS-FEET-0 | Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed. |
 | NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 |  |
-| NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 |  |
+| NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Dependent current body/item fit requires correction or structural inspection; retain this exact assembled version as superseded evidence until dependency is re-reviewed. |
 | NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
 | NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
@@ -253,7 +253,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-CANVASWALL | CanvasWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTFLOOR | DirtFloor | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-DIRTPATH | DirtPath | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. User requires the original stone/cobblestone-like path integrated over grass and original Qud palette; reject the historical sandy-road interpretation. |
-| SCN-DOOR | Door | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-DOOR | Door | UNFINISHED | - | I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment. |
 | SCN-POND | Pond | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-RUSTEDMETALWALL | RustedMetalWall | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
@@ -262,10 +262,10 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | SCN-BRINESTALK | Brinestalk | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-DOGTHORN-TREE | Dogthorn Tree | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-DOGTHORN-TREE | Dogthorn Tree | UNFINISHED | - | I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles. |
 | SCN-STARAPPLE-TREE | Starapple Tree | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-STARAPPLE-TREE-RIPE | Starapple Tree Ripe | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-WATERVINE | Watervine | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-WATERVINE | Watervine | UNFINISHED | - | I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints. |
 
 ## Per-entry workflow and artifact index
 
@@ -359,7 +359,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/dromad/layered/robe-east.png](../art/dromad/layered/robe-east.png), [art/dromad/layered/robe-north.png](../art/dromad/layered/robe-north.png), [art/dromad/layered/robe-south.png](../art/dromad/layered/robe-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 47.
+Current step: native_equipment_state_review. Process-log events: 48.
 
 - 2026-10-20T02:56:10.663930+00:00 / source_identity_description_slot_laterality / PASS: Bound the actual goat-wool robe to Body part 357, laterality 0, instance 604 from the captured Tam body tree.
   Review: Read item description and equipped binding; source tile Items/sw_robes1.bmp with foreground &y/detail y. Shale freckles are recorded. Held Shillelagh is a separate entry; no new outfit invented.
@@ -643,6 +643,12 @@ Current step: native_equipment_state_review. Process-log events: 47.
   Outputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v7/model.json", "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-dromad-cloth-robe/v7/model.json", "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/assembly-comparison.png", "sha256": "2f4f76459e1439ed168fe18e02ea148923251e401059ba7979ca1408fe657474"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/qud-palette-east.png", "sha256": "1bfbc8c0a9d505636f09a14da4d84723bb1d78ed074d7ca46a07d29a1df92dad"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/profile-cuff-comparison.png", "sha256": "444d730afa335ed5d5a05eeca05c2caefef9ab5e094afa3a74d8c17fa7001dfb"}, {"path": "art/conversion/fit-dromad-cloth-robe/v7/intact-robe-east.png", "sha256": "6c6143bf29447b96325c7c2b748d28bdc7318e92fc283420aa8c83aa1fd94a48"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-DROMAD-SHILLELAGH-HAND-2: dromad / Shillelagh / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -651,7 +657,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/dromad-shillelagh-east.png](../art/village/equipment/dromad-shillelagh-east.png), [art/village/equipment/dromad-shillelagh-north.png](../art/village/equipment/dromad-shillelagh-north.png), [art/village/equipment/dromad-shillelagh-south.png](../art/village/equipment/dromad-shillelagh-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 16.
+Current step: native_equipment_state_review. Process-log events: 17.
 
 - 2026-10-20T03:04:13.289886+00:00 / source_identity_description_slot_laterality / PASS: Read Tam Hand part 362/laterality 2 equipped instance 524 and the exact installed Shillelagh object definition, which inherits BaseCudgel.
   Review: Installed description specifies hewn wood shaped into a stick with an oaken knot. Captured generic puzzling-device description and differing weight remain preserved rather than silently rewritten. Identification state was not exported. No mutation, clothing or other item is invented.
@@ -749,6 +755,12 @@ Current step: native_equipment_state_review. Process-log events: 16.
   Outputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/palette-comparison.png", "sha256": "75a2da04b550dbe9d7867c1fd16ac19fe8db0acdebe2e8d78a3420fd8159dd09"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/game-scale-review.png", "sha256": "752af8613985ab16201e79f4627f40566d2b925fe2e3d30dd2ce777c28ff405d"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/authoring-review.json", "sha256": "65b2b9bc81e8a9edf45f6d3af20576f80473a38b5f715059c6a4f9875e9d6ad9"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/artifact-manifest.json", "sha256": "f93eba18c9cfb2a076f46969d6e4c878e0f9ee0f86b041a7bbae114dd4bf33c7"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-dromad-shillelagh/v3/model.json", "sha256": "171dce6586a6cf84f0b7c1cbf8490eee294fa394f7789603d849f064ba7c6c88"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/assembly-comparison.png", "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"}, {"path": "art/conversion/fit-dromad-shillelagh/v3/palette-comparison.png", "sha256": "75a2da04b550dbe9d7867c1fd16ac19fe8db0acdebe2e8d78a3420fd8159dd09"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0: human-female / Cloth Robe / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -757,7 +769,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-cloth-robe-body-0-item-detail-east.png](../art/village/equipment/human-female-cloth-robe-body-0-item-detail-east.png), [art/village/equipment/human-female-cloth-robe-body-0-item-detail-north.png](../art/village/equipment/human-female-cloth-robe-body-0-item-detail-north.png), [art/village/equipment/human-female-cloth-robe-body-0-item-detail-south.png](../art/village/equipment/human-female-cloth-robe-body-0-item-detail-south.png), [art/village/equipment/human-female-cloth-robe-body-0-item-east.png](../art/village/equipment/human-female-cloth-robe-body-0-item-east.png), [art/village/equipment/human-female-cloth-robe-body-0-item-north.png](../art/village/equipment/human-female-cloth-robe-body-0-item-north.png), [art/village/equipment/human-female-cloth-robe-body-0-item-south.png](../art/village/equipment/human-female-cloth-robe-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -813,6 +825,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-female-cloth-robe/v1/artifact-manifest.json", "sha256": "33af014af51d3aa40ef56747c1c59d6a8191adddc1db1e9b5d0539b018eb4faa"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-cloth-robe/v1/model.json", "sha256": "76a0c9692c070e8a76b06ac6649bfd777f243954f3d32745571a56ad07244b80"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/assembly-comparison.png", "sha256": "bdf711e25542cae517a2f663ad4e2644d5a9175143c33ed0ad56aaec517ae2c6"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/independent-palette-comparison.png", "sha256": "cb2e3c4338f90b65e5930553a1f5bc749a486a942086a194e28e5652c86552c4"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/palette-east.png", "sha256": "e205532714d5523f31134cc27b2db807cdd810df055f5e9d7a5154a3ff4b7d6a"}, {"path": "art/conversion/fit-human-female-cloth-robe/v1/intact-garment-comparison.png", "sha256": "9f5c1a23116464b6e6a29d93a926074810c8282d7bd426fc19d4fa2445a8a6c7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2: human-female / Iron Vinereaper / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -821,7 +839,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-east.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-east.png), [art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-north.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-north.png), [art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-south.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-detail-south.png), [art/village/equipment/human-female-iron-vinereaper-hand-2-item-east.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-east.png), [art/village/equipment/human-female-iron-vinereaper-hand-2-item-north.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-north.png), [art/village/equipment/human-female-iron-vinereaper-hand-2-item-south.png](../art/village/equipment/human-female-iron-vinereaper-hand-2-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T16:05:17.402081+00:00 / source_identity_description_slot_laterality / PASS: Resolved female human farmers/convert -> wrought-iron crescent vinereaper -> original sw_axe_10 glyph and y/y roles. Captured Hand236/250/278/306 and equipped556/562/570/583 links are ordinary Hand/2, no mutation managers; installed description agrees.
   Review: Inspected actual Qud crescent/shaft glyph and wrought-iron/watervine description, actual Vanilla Weapons Expanded Axe and rejected Primitive Tools chipped flint sickle. Four ordinary female Hand/2 equipped bindings recorded individually, with no mutation managers. Own editable crescent/shaft geometry and lower item-space grip580 preserve fixed body/frame/contact. One contextual refinement supplies forged surface only; changed generated anatomy, size and opaque glow are rejected. Registered neutral material/hidden-grip completion keeps original complete alpha/ink and separate shaft region, not destructive hand holes or AI isolation. SEN/mirrored west original-hand depth and48x96 views inspected; convert516 native C illustrates independent body tint, while head/shaft both use original y. Generic fit does not finish named appearance/outfits or actual native held states. These upright/diagonal authoring displays are explicitly not ready/drafted pose evidence: horizontal forward side presentation and resting/ready state remain final assembly work.
@@ -865,6 +883,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-female-iron-vinereaper/v1/independent-palette-comparison.png", "sha256": "9052e6e4c8510f0a84d4815757f98e7da24bc2d15c63982a9d6e136df36da670"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/game-scale-review.png", "sha256": "229c9e8166130eebc9a0ae3f21cfd152f5e470fd50e095d1a6aba7422b5acc93"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/authoring-review.json", "sha256": "05dc36d03ead47240e4c75cea4cba7dbf047ed9a7165da11717246b373729cb1"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/artifact-manifest.json", "sha256": "2f396c0b38c98422bcb7052f675f25f49b44059516e3de4bea8845fe39515307"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-iron-vinereaper/v1/model.json", "sha256": "236f2437ee4b5f10dcecbbd3ad39dc2a8c18f5c2c38f8bd32a3b10305a9caec9"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/assembly-comparison.png", "sha256": "2d5ecfb78a7f01f2cf8763eecb516a2560eb1cda64a1da9c2ca975cd0326ac08"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/independent-palette-comparison.png", "sha256": "9052e6e4c8510f0a84d4815757f98e7da24bc2d15c63982a9d6e136df36da670"}, {"path": "art/conversion/fit-human-female-iron-vinereaper/v1/grip-comparison.png", "sha256": "9fec11b5fad7cbd2e88b0e0e0bb78f2690391a85c3481fa8cd158fbea6cf7f99"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-POCKETED-VEST-BODY-0: human-female / Pocketed Vest / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -873,7 +897,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-pocketed-vest-body-0-item-detail-east.png](../art/village/equipment/human-female-pocketed-vest-body-0-item-detail-east.png), [art/village/equipment/human-female-pocketed-vest-body-0-item-detail-south.png](../art/village/equipment/human-female-pocketed-vest-body-0-item-detail-south.png), [art/village/equipment/human-female-pocketed-vest-body-0-item-east.png](../art/village/equipment/human-female-pocketed-vest-body-0-item-east.png), [art/village/equipment/human-female-pocketed-vest-body-0-item-north.png](../art/village/equipment/human-female-pocketed-vest-body-0-item-north.png), [art/village/equipment/human-female-pocketed-vest-body-0-item-south.png](../art/village/equipment/human-female-pocketed-vest-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -929,6 +953,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-female-pocketed-vest/v1/artifact-manifest.json", "sha256": "4198383a472b422af107591badbddfa6fc92dc930b8e67a44a91561fa2192e1e"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-pocketed-vest/v1/model.json", "sha256": "5dc1bb47ea4879c6c632dfd76738932f4d97214b0a0af40434bf429ee95420e1"}, {"path": "art/conversion/fit-human-female-pocketed-vest/v1/assembly-comparison.png", "sha256": "5e4cf5a206a84cf547ebed78c9817c53dcf2964dfc1ce5b5c53aba2377b7ebc2"}, {"path": "art/conversion/fit-human-female-pocketed-vest/v1/independent-palette-comparison.png", "sha256": "b54f3ba5a09245cc3fa64747464831b56ba48e8be2e42e7951fac2d118890021"}, {"path": "art/conversion/fit-human-female-pocketed-vest/v1/palette-east.png", "sha256": "c8fda3d937465d91a16ab7d131207d7f28c232178833b8c5fbd23af8020d77a8"}, {"path": "art/conversion/fit-human-female-pocketed-vest/v1/intact-garment-comparison.png", "sha256": "9c208f7fd926f931748a063bac9df1b6dd584eaf34df99ff110563c8f0fd093b"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-SANDALS-FEET-0: human-female / Sandals / Feet / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -937,7 +967,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-sandals-feet-0-item-detail-east.png](../art/village/equipment/human-female-sandals-feet-0-item-detail-east.png), [art/village/equipment/human-female-sandals-feet-0-item-detail-north.png](../art/village/equipment/human-female-sandals-feet-0-item-detail-north.png), [art/village/equipment/human-female-sandals-feet-0-item-detail-south.png](../art/village/equipment/human-female-sandals-feet-0-item-detail-south.png), [art/village/equipment/human-female-sandals-feet-0-item-east.png](../art/village/equipment/human-female-sandals-feet-0-item-east.png), [art/village/equipment/human-female-sandals-feet-0-item-north.png](../art/village/equipment/human-female-sandals-feet-0-item-north.png), [art/village/equipment/human-female-sandals-feet-0-item-south.png](../art/village/equipment/human-female-sandals-feet-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 21.
+Current step: native_equipment_state_review. Process-log events: 22.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1065,6 +1095,12 @@ Current step: native_equipment_state_review. Process-log events: 21.
   Outputs: [{"path": "art/conversion/fit-human-female-sandals/v3/independent-palette-comparison.png", "sha256": "ccc332b54dcb3e8503ca7c640f312112cc6dc16e54489ef23d79c00b061e08fe"}, {"path": "art/conversion/fit-human-female-sandals/v3/game-scale-review.png", "sha256": "3f451ad79068be90f98343cd615cb54b6a18c6edba9807d7458428a48e8f3e75"}, {"path": "art/conversion/fit-human-female-sandals/v3/authoring-review.json", "sha256": "a6c953919c20717580dba94f2a2a78e8c3bad13ae7537367c621b7383004fc73"}, {"path": "art/conversion/fit-human-female-sandals/v3/artifact-manifest.json", "sha256": "72c00cd12d045e2a8cc5cb21b355458ded7241f33c3ba6fb3c139c1c58f02207"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-sandals/v3/model.json", "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"}, {"path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png", "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"}, {"path": "art/conversion/fit-human-female-sandals/v3/independent-palette-comparison.png", "sha256": "ccc332b54dcb3e8503ca7c640f312112cc6dc16e54489ef23d79c00b061e08fe"}, {"path": "art/conversion/fit-human-female-sandals/v3/palette-east.png", "sha256": "fdbf39e2d11653694b125ed43f5107770f439e960f22b8604d6eec443bcb163e"}, {"path": "art/conversion/fit-human-female-sandals/v3/strap-detail-comparison.png", "sha256": "7184fb38c943dc9bb9645f8d6d0a1563ec56b400244e83d9240728da14b3b6a2"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-STEEL-UTILITY-KNIFE-HAND-2: human-female / Steel Utility Knife / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -1073,7 +1109,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-east.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-east.png), [art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-north.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-north.png), [art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-south.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-detail-south.png), [art/village/equipment/human-female-steel-utility-knife-hand-2-item-east.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-east.png), [art/village/equipment/human-female-steel-utility-knife-hand-2-item-north.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-north.png), [art/village/equipment/human-female-steel-utility-knife-hand-2-item-south.png](../art/village/equipment/human-female-steel-utility-knife-hand-2-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T16:32:56.009517+00:00 / source_identity_description_slot_laterality / PASS: Resolved Steel Utility Knife -> BaseDagger/full ancestry -> use-dull folding knife, original Y/y tile and actual male Argyve519/item588/Hand320/2. Female recipient is an authored compatibility requirement, not captured equip evidence. Individual painted-history description retained, with no separate graphic exported.
   Review: Inspected original Qud knife glyph, installed use-dull/finger-smudged/folding description and full BaseDagger ancestry. Static declaration supports one-handed base class; actor-specific event result unknown. Only actual equipped observation is male Argyve519/item588/Hand320/2. This entry is required female compatibility artwork, not an observed female NPC loadout. Argyve painted-history/reputation text retained; no separate painting graphic was exported, so no imagined scene is baked into every generic knife. Actual current VWE CombatKnife gives small flat shading/proportions, not a military guard or fixed-blade identity. Own small open blade/pivot/handle is about170px, visibly smaller than the long blade/harvesting tool on identical base; dimensions authored, weight1 not length. One contextual material refinement supplies dull/smudged neutral surface; generated glow/mannequin rejected. Full source alpha/ink/thumb nick and original hand retained, hidden handle completed before depth, independent Y blade/y handle. Initial copied axe7000-pixel material guard exceeded entire4683-pixel knife; diagnosed/corrected to observed material for both components, not a changed art acceptance criterion. SEN/west, grip, native item palette, intended size and versioned one-item-per-panel scale comparison inspected. Stationary display only; actual female native compatibility/equipped, painted-instance appearance and horizontal ready/resting acceptance remain unfinished.
@@ -1117,6 +1153,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-female-steel-utility-knife/v1/weapon-scale-comparison.png", "sha256": "81b8ef082335f838da52869df2cf3a6a1f97fa79e45d3db086151cff3e77e66c"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/independent-palette-comparison.png", "sha256": "ed3b018807a813f477e2df523ee7e91a4356597801fb08e4c46e19b862df33d3"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/game-scale-review.png", "sha256": "334ea008a0db346605cf3bedf052e54f0c909d383f22a2c519873ef88ca26cff"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/authoring-review.json", "sha256": "46f7beae71100c9836933aed6a1aa10a4ab3bf4215d5d4922356c8dabc159841"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/artifact-manifest.json", "sha256": "98fe751d7866526693cbc8c9c2511eb95c39461b092f23a2280471130891d440"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-steel-utility-knife/v1/model.json", "sha256": "d8f9fcf355a878b91daecedb7ab8d968889393889c12c88bbe80a9103522467c"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/assembly-comparison.png", "sha256": "a9e018c3a92d966e1787ebdb0a4071273dbbf3880658ee7d2e88143442025559"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/independent-palette-comparison.png", "sha256": "ed3b018807a813f477e2df523ee7e91a4356597801fb08e4c46e19b862df33d3"}, {"path": "art/conversion/fit-human-female-steel-utility-knife/v1/grip-comparison.png", "sha256": "51eb7fa095399ce15d180396124f2f22f66b6ee3686d59b7b32ebab03bf62406"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-TELESCOPIC-MONOCLE-FACE-0: human-female / Telescopic Monocle / Face / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1125,7 +1167,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-telescopic-monocle-face-0-item-detail-east.png](../art/village/equipment/human-female-telescopic-monocle-face-0-item-detail-east.png), [art/village/equipment/human-female-telescopic-monocle-face-0-item-detail-south.png](../art/village/equipment/human-female-telescopic-monocle-face-0-item-detail-south.png), [art/village/equipment/human-female-telescopic-monocle-face-0-item-east.png](../art/village/equipment/human-female-telescopic-monocle-face-0-item-east.png), [art/village/equipment/human-female-telescopic-monocle-face-0-item-south.png](../art/village/equipment/human-female-telescopic-monocle-face-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 15.
+Current step: native_equipment_state_review. Process-log events: 16.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1217,6 +1259,12 @@ Current step: native_equipment_state_review. Process-log events: 15.
   Outputs: [{"path": "art/conversion/fit-human-female-telescopic-monocle/v2/model.json", "sha256": "35d1d79d18c2dbb2f76cb617eb0fdbb5f0aef70a4b5172dcdca31509cf525b4c"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/headwear-comparison.png", "sha256": "4e9dd6ac1d9e0566e4d60583c0ae9c60ca32941d7c60f2c1f14c12593c803f6d"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/independent-palette-comparison.png", "sha256": "34e3cee33bc715eacb2e128fb8cde50d84ade48bf871d8ae1f8613ec2a0075d4"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/game-scale-review.png", "sha256": "7416936a4a9f4b685f3e43cb673e24fb115b7645b2d5a965b14d0011509d4ab5"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/authoring-review.json", "sha256": "1d43012afbc3e8b1a23578a99851f4344433f98368d7089b94f60d105109fe24"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/artifact-manifest.json", "sha256": "18972c49e2af4f6e7c380010676524037184ef895b3a70cd07c939c8ee28f93a"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-telescopic-monocle/v2/model.json", "sha256": "35d1d79d18c2dbb2f76cb617eb0fdbb5f0aef70a4b5172dcdca31509cf525b4c"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/headwear-comparison.png", "sha256": "4e9dd6ac1d9e0566e4d60583c0ae9c60ca32941d7c60f2c1f14c12593c803f6d"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/independent-palette-comparison.png", "sha256": "34e3cee33bc715eacb2e128fb8cde50d84ade48bf871d8ae1f8613ec2a0075d4"}, {"path": "art/conversion/fit-human-female-telescopic-monocle/v2/palette-east.png", "sha256": "3d50e5be62996007f086afe1b4ee70eafe39c03c492d87b4dafe3aee0e5aa9a4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0: human-female / Wide-brimmed Hat / Head / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1225,7 +1273,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-east.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-east.png), [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-north.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-north.png), [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-south.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-detail-south.png), [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-east.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-east.png), [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-north.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-north.png), [art/village/equipment/human-female-wide-brimmed-hat-head-0-item-south.png](../art/village/equipment/human-female-wide-brimmed-hat-head-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1281,6 +1329,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/artifact-manifest.json", "sha256": "227d7b06b0ba45cad555cd0f5fa809e1f310abcbd22b4087a7fa94ba82c7ff6f"}, {"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/authoring-review.json", "sha256": "e3e7f2ad051546938308fd32ea4663cedf7c343a16cb00ffea35d7e6acec7b88"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/model.json", "sha256": "20f25795c944af5dd58d9d9c45b8f3dbfe8f47b8a6518e4171e4411c339fd2d2"}, {"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png", "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"}, {"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/independent-palette-comparison.png", "sha256": "e1c798e86b2f61ba6ec8e793f0884c573342d1e9c48954d195b3a06d9e1da0bb"}, {"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/palette-east.png", "sha256": "1732251932fe1446c4ec1d0e6d632fe4ae8cad4fb533ccee2b33ca883cb6ebf4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0: human-female / Woven Tunic / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1289,7 +1343,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-woven-tunic-body-0-item-detail-east.png](../art/village/equipment/human-female-woven-tunic-body-0-item-detail-east.png), [art/village/equipment/human-female-woven-tunic-body-0-item-detail-north.png](../art/village/equipment/human-female-woven-tunic-body-0-item-detail-north.png), [art/village/equipment/human-female-woven-tunic-body-0-item-detail-south.png](../art/village/equipment/human-female-woven-tunic-body-0-item-detail-south.png), [art/village/equipment/human-female-woven-tunic-body-0-item-east.png](../art/village/equipment/human-female-woven-tunic-body-0-item-east.png), [art/village/equipment/human-female-woven-tunic-body-0-item-north.png](../art/village/equipment/human-female-woven-tunic-body-0-item-north.png), [art/village/equipment/human-female-woven-tunic-body-0-item-south.png](../art/village/equipment/human-female-woven-tunic-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1345,6 +1399,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-female-woven-tunic/v1/artifact-manifest.json", "sha256": "cae5f8670956dd0ccef219c0002a60328129ec7c9b6f24b5f4734de940330272"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-woven-tunic/v1/model.json", "sha256": "a2db0b9840b85fcd9c3fb02010dedad0cfb325744cb3979e9a05d4636f68cc0b"}, {"path": "art/conversion/fit-human-female-woven-tunic/v1/assembly-comparison.png", "sha256": "326aed1787baa3bc85bab7abec94419ada9759ad7d7a41e7eeaa78d0dfc46d3a"}, {"path": "art/conversion/fit-human-female-woven-tunic/v1/independent-palette-comparison.png", "sha256": "462a34ffdb2d72ab63126f158f6d53f65f7216c824d0f8a0fcdab188dc5b8acf"}, {"path": "art/conversion/fit-human-female-woven-tunic/v1/palette-east.png", "sha256": "a053245c971cea25a5e499712a7b5653291bfbd5568e0079e819a18c65615abe"}, {"path": "art/conversion/fit-human-female-woven-tunic/v1/intact-garment-comparison.png", "sha256": "1534d9ea8cc936e68eff69dd810032366b88ee9772585b154f169e098243985d"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-FEMALE-WRENCH-HAND-1: human-female / Wrench / Hand / laterality 1
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -1353,7 +1413,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-female-wrench-hand-1-item-east.png](../art/village/equipment/human-female-wrench-hand-1-item-east.png), [art/village/equipment/human-female-wrench-hand-1-item-north.png](../art/village/equipment/human-female-wrench-hand-1-item-north.png), [art/village/equipment/human-female-wrench-hand-1-item-south.png](../art/village/equipment/human-female-wrench-hand-1-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T17:15:19.173251+00:00 / source_identity_description_slot_laterality / PASS: Resolve native armlength metal wrench, actual male Argyve ordinary offhand322/1 and Counterweighted text. Female is compatibility only; native primary y overrides foreground c.
   Review: Inspected manual SEN context for connected full tool, hooked opening, correct palm-side position and no new body anatomy. Existing source metadata distinguishes actual male offhand from this female compatibility template. First contextual refinement not yet called.
@@ -1397,6 +1457,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-female-wrench/v1/independent-palette-comparison.png", "sha256": "f5a2e93473bd0308d75295e3b995d0b52fbec3d0fbc5d1123e0aaefa8d7bdca0"}, {"path": "art/conversion/fit-human-female-wrench/v1/game-scale-review.png", "sha256": "8c970c08a112ab4ab08a911f7231c784073b165d8189d25bb624b2226f8128f8"}, {"path": "art/conversion/fit-human-female-wrench/v1/weapon-size-comparison.png", "sha256": "3dea3d282c604953753874b83e9ce0d3bd21931920a0dfb44564b19c13509ccf"}, {"path": "art/conversion/fit-human-female-wrench/v1/scale-comparison-inputs.json", "sha256": "15627994e893074f7bdbc9d75a892344b04d2ed4622cdfa10e3721a99bfd8ff8"}, {"path": "art/conversion/fit-human-female-wrench/v1/authoring-review.json", "sha256": "4a4570bed071075ad83a3d4f198ec1b262e28c58e8cdd5ad7655343f42193fe9"}, {"path": "art/conversion/fit-human-female-wrench/v1/artifact-manifest.json", "sha256": "261d087315f813baf3202aa7332425b83d221fe51666196c1806b44035bf552e"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-female-wrench/v1/model.json", "sha256": "cb56f88e1e4e59411154cbd1b5d9ea9976823556d43bc2e555920ecdb4a80e27"}, {"path": "art/conversion/fit-human-female-wrench/v1/assembly-comparison.png", "sha256": "00a432157d92f294a2cf112c26328df51babf893d9611973f1deb95e04b9d288"}, {"path": "art/conversion/fit-human-female-wrench/v1/independent-palette-comparison.png", "sha256": "f5a2e93473bd0308d75295e3b995d0b52fbec3d0fbc5d1123e0aaefa8d7bdca0"}, {"path": "art/conversion/fit-human-female-wrench/v1/grip-comparison.png", "sha256": "32d8bcd78271bebeb3e73a3ced653df8783e76733842bac1ec9f1a2afce470b7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-CLOTH-ROBE-BODY-0: human-male / Cloth Robe / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1405,7 +1471,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-cloth-robe-body-0-item-detail-east.png](../art/village/equipment/human-male-cloth-robe-body-0-item-detail-east.png), [art/village/equipment/human-male-cloth-robe-body-0-item-detail-north.png](../art/village/equipment/human-male-cloth-robe-body-0-item-detail-north.png), [art/village/equipment/human-male-cloth-robe-body-0-item-detail-south.png](../art/village/equipment/human-male-cloth-robe-body-0-item-detail-south.png), [art/village/equipment/human-male-cloth-robe-body-0-item-east.png](../art/village/equipment/human-male-cloth-robe-body-0-item-east.png), [art/village/equipment/human-male-cloth-robe-body-0-item-north.png](../art/village/equipment/human-male-cloth-robe-body-0-item-north.png), [art/village/equipment/human-male-cloth-robe-body-0-item-south.png](../art/village/equipment/human-male-cloth-robe-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 10.
+Current step: native_equipment_state_review. Process-log events: 11.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1467,6 +1533,12 @@ Current step: native_equipment_state_review. Process-log events: 10.
   Outputs: [{"path": "art/conversion/fit-human-male-cloth-robe/v2/artifact-manifest.json", "sha256": "4efa7b87d533015134e6bff2dbb85e90a6dd45de5792cb954a10a5a12cf94740"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-cloth-robe/v2/model.json", "sha256": "e12cf0975d57259b488ca7d0c206584306ea00877dc9d418e35eae75c4bbbeaa"}, {"path": "art/conversion/fit-human-male-cloth-robe/v2/assembly-comparison.png", "sha256": "8dd3e8e3bc903009544b3934074643c0623ca8f09f7dc9553c085ae8d9a9eb10"}, {"path": "art/conversion/fit-human-male-cloth-robe/v2/independent-palette-comparison.png", "sha256": "817d6f6345d80cf59162991d47a56af6221094cd3c24478801a7c67a8267c49b"}, {"path": "art/conversion/fit-human-male-cloth-robe/v2/palette-east.png", "sha256": "7224d26aca8ab12c54bb28feff6ac59147d8ea9b421aa26a52b1eca4f572e96c"}, {"path": "art/conversion/fit-human-male-cloth-robe/v2/intact-garment-comparison.png", "sha256": "ab730516b57bea5f22c4d44669520d1f31a56dc3bac23668f69d2de538b73ffb"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2: human-male / Iron Vinereaper / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -1475,7 +1547,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-east.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-east.png), [art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-north.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-north.png), [art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-south.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-detail-south.png), [art/village/equipment/human-male-iron-vinereaper-hand-2-item-east.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-east.png), [art/village/equipment/human-male-iron-vinereaper-hand-2-item-north.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-north.png), [art/village/equipment/human-male-iron-vinereaper-hand-2-item-south.png](../art/village/equipment/human-male-iron-vinereaper-hand-2-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T16:20:18.348974+00:00 / source_identity_description_slot_laterality / PASS: Resolved male humans/Mehmet -> actual wrought-iron crescent item -> full Iron Vinereaper/BaseAxe/MeleeWeapon/Item/InorganicObject/PhysicalObject/Object ancestry. Retained five individual ordinary Hand/2 bindings and exact source tile/y-y roles. Static one-hand declaration, snapshot occupancy and unknown actor event result are distinct.
   Review: Inspected actual Qud crescent/shaft, installed full ancestry and five exact ordinary male Hand/2 bindings. Inherited Physics has no UsesTwoSlots/UsesSlots override; audited default excludes two-slot bit, supporting one-handed base class. Captured one-Hand occupancy is recorded separately; actor-specific GetSlotsRequiredFor was not exported and remains unknown. Actual current VWE Hatchet def/LoadFolders/texture supplies single-hand convention; legacy female Axe.png reference is explicitly distinguished, and donor drawSize is not invented where XML/live export is absent. Same canonical geometry as female is fitted with raster scale0.9828877005347593, preserving registered physical size across both world mappings; head/shaft/handle bounds and primary grip580 recorded, no supporting grip claimed. One actual male contextual refinement contributes neutral iron; generated glow/anatomy rejected. Hidden grip completed before original hand/body depth, full source alpha/ink retained, no AI isolation. Clean fourth reference clears only RGB under alpha0, preserving every visible female source pixel. SEN/west, cross-body physical comparison, native y/y item and Mehmet522 W example inspected at intended size. All poses remain stationary authoring displays, not ready/drafted acceptance; named outfits/native state remain unfinished.
@@ -1519,6 +1591,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-male-iron-vinereaper/v1/cross-body-scale-comparison.png", "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/independent-palette-comparison.png", "sha256": "a883c05c5d49e7179c626e79485d56a6791a598a290f57e6b68ba7ab56966a85"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/game-scale-review.png", "sha256": "de6f2e1cb3c38e35c161bddaf048e22bed9516954d8300c5cacc7d429f93ad18"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/authoring-review.json", "sha256": "a05e15b95d77c816c9b505cb4fe533e76cfbedc340f3173485c42007fe986e1f"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/artifact-manifest.json", "sha256": "58fca9b453fb5dc29c3e78a3b5806c6b1986fb829cc6216887193777fad0669f"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-iron-vinereaper/v1/model.json", "sha256": "d3087c34898c67b0f6a828903a52e24241dc3bf670e4c8a136dd2dd32dfbd3a9"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/assembly-comparison.png", "sha256": "2decc78690f2a9f028648ea9a4e5cbdb14695be387e0d5efbc23f7b5aa269377"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/independent-palette-comparison.png", "sha256": "a883c05c5d49e7179c626e79485d56a6791a598a290f57e6b68ba7ab56966a85"}, {"path": "art/conversion/fit-human-male-iron-vinereaper/v1/grip-comparison.png", "sha256": "f3b8664e943bd3c2ba2819e4fcb0c8da5b3ff2ba20523011d7b615f2a260d4a6"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-POCKETED-VEST-BODY-0: human-male / Pocketed Vest / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1527,7 +1605,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-pocketed-vest-body-0-item-detail-east.png](../art/village/equipment/human-male-pocketed-vest-body-0-item-detail-east.png), [art/village/equipment/human-male-pocketed-vest-body-0-item-detail-south.png](../art/village/equipment/human-male-pocketed-vest-body-0-item-detail-south.png), [art/village/equipment/human-male-pocketed-vest-body-0-item-east.png](../art/village/equipment/human-male-pocketed-vest-body-0-item-east.png), [art/village/equipment/human-male-pocketed-vest-body-0-item-north.png](../art/village/equipment/human-male-pocketed-vest-body-0-item-north.png), [art/village/equipment/human-male-pocketed-vest-body-0-item-south.png](../art/village/equipment/human-male-pocketed-vest-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 10.
+Current step: native_equipment_state_review. Process-log events: 11.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1589,6 +1667,12 @@ Current step: native_equipment_state_review. Process-log events: 10.
   Outputs: [{"path": "art/conversion/fit-human-male-pocketed-vest/v1/artifact-manifest.json", "sha256": "c145f37a5cd35c241e6f1c61f840b7118ee051c0a436e2d59176b8c7877f791b"}, {"path": "art/conversion/fit-human-male-pocketed-vest/v2/artifact-manifest.json", "sha256": "73cb7d7c6e81a43bbc4e7209de4d53002dcc819b0a15b4f1332105d02e8dbc1d"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-pocketed-vest/v2/model.json", "sha256": "032bf729e0f1dc8a8d001ea3dbd4836d7bec73ea0689cdca8f3583dc28db5743"}, {"path": "art/conversion/fit-human-male-pocketed-vest/v2/assembly-comparison.png", "sha256": "e757ad89e1f81bbcce4976828bb3efbcee41bd6748e1bd6f2c864df5050e9201"}, {"path": "art/conversion/fit-human-male-pocketed-vest/v2/independent-palette-comparison.png", "sha256": "6fc4e1e71d32a886edfc3099a79ed4f0b60631180e5af5aac13ad0fbeba9cc47"}, {"path": "art/conversion/fit-human-male-pocketed-vest/v2/palette-east.png", "sha256": "7f2c1840685ad35ec64fb7cdaf0579626f79c65a0d9da78c9167ecb5d7094ecc"}, {"path": "art/conversion/fit-human-male-pocketed-vest/v1/intact-vest-east.png", "sha256": "919bff3b7e86800126831334096926f8e6c28b343a66d09ab82c0230bbc7601d"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-SANDALS-FEET-0: human-male / Sandals / Feet / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1597,7 +1681,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-sandals-feet-0-item-detail-east.png](../art/village/equipment/human-male-sandals-feet-0-item-detail-east.png), [art/village/equipment/human-male-sandals-feet-0-item-detail-north.png](../art/village/equipment/human-male-sandals-feet-0-item-detail-north.png), [art/village/equipment/human-male-sandals-feet-0-item-detail-south.png](../art/village/equipment/human-male-sandals-feet-0-item-detail-south.png), [art/village/equipment/human-male-sandals-feet-0-item-east.png](../art/village/equipment/human-male-sandals-feet-0-item-east.png), [art/village/equipment/human-male-sandals-feet-0-item-north.png](../art/village/equipment/human-male-sandals-feet-0-item-north.png), [art/village/equipment/human-male-sandals-feet-0-item-south.png](../art/village/equipment/human-male-sandals-feet-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 23.
+Current step: native_equipment_state_review. Process-log events: 24.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1737,6 +1821,12 @@ Current step: native_equipment_state_review. Process-log events: 23.
   Outputs: [{"path": "art/conversion/fit-human-male-sandals/v3/game-scale-review.png", "sha256": "b83ffb9a48f07559a5f560774a9aa194e1f6ed9f077846d26c9c93ca22562df6"}, {"path": "art/conversion/fit-human-male-sandals/v3/independent-palette-comparison.png", "sha256": "6009921f4e8e08e3efc1dcbbdb9738cd6fd5e7e6bd289955119801fc2163f70d"}, {"path": "art/conversion/fit-human-male-sandals/v3/authoring-review.json", "sha256": "5844fb08cfa602d501601404dad998c8191efec70cad086da6af2293665b9825"}, {"path": "art/conversion/fit-human-male-sandals/v3/artifact-manifest.json", "sha256": "0507fc48627452c4dca2cced03797b4718bba0daf749880cb84e17d54744c7f7"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-sandals/v3/model.json", "sha256": "d6b64225968ecc379fc6c1310a6f3339c5b9ad7dfa3899f291f8685ad708c3f7"}, {"path": "art/conversion/fit-human-male-sandals/v3/footwear-comparison.png", "sha256": "3b061e4bb0ebebd2e00737f873845451e8e726f9e4c0269c28a8f2a8d133cc6b"}, {"path": "art/conversion/fit-human-male-sandals/v3/independent-palette-comparison.png", "sha256": "6009921f4e8e08e3efc1dcbbdb9738cd6fd5e7e6bd289955119801fc2163f70d"}, {"path": "art/conversion/fit-human-male-sandals/v3/palette-east.png", "sha256": "76137bd692a53b746b99f1b494c29f6d722c8e0c9b4f2229d0fec425dd30b441"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-STEEL-UTILITY-KNIFE-HAND-2: human-male / Steel Utility Knife / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -1745,7 +1835,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-east.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-east.png), [art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-north.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-north.png), [art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-south.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-detail-south.png), [art/village/equipment/human-male-steel-utility-knife-hand-2-item-east.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-east.png), [art/village/equipment/human-male-steel-utility-knife-hand-2-item-north.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-north.png), [art/village/equipment/human-male-steel-utility-knife-hand-2-item-south.png](../art/village/equipment/human-male-steel-utility-knife-hand-2-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T17:08:54.923128+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual Argyve519 item588 on ordinary Hand320/2, complete source description and original tile/palette. Recheck inherited one-hand metadata; retain unknown actor-specific slot demand.
   Review: Inspected source comparison, full item, palm close-ups, strict SEN/mirrored west, native c/Y/y colors, intended-size and cross-body scale. Identical canonical knife geometry/material reused; male scale compensates world mapping instead of enlarging the knife. Lower grip retained. North display angle corrected from-15 to-40 so blade is readable beyond rear arm, preserving failed initial preview. No new ImageGen call, body redraw, narrative painting or native ready/resting acceptance.
@@ -1789,6 +1879,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-male-steel-utility-knife/v1/independent-palette-comparison.png", "sha256": "1a70a23227a8565aee84471f4cdcefbccadd2ea226c6ace6d1666d9b13c98b05"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/game-scale-review.png", "sha256": "3f10c062ea42e24993d91514a05c36e37672283ac77b05f14697a98781e5ca31"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/cross-body-scale-comparison.png", "sha256": "beb287921e5cc87dcc7fe057dd59b342363e93abe942d070169d0347b7356b48"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/authoring-review.json", "sha256": "d816edac1981005300d05f9cfb1ecf02f68d11e711660f47e7861a6f92a31707"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/artifact-manifest.json", "sha256": "8d120effc506567ec0bdebe7a52695fda907d87391777e7be3ca5edabf845617"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-steel-utility-knife/v1/model.json", "sha256": "391de99af2476bd516f5605deda6c6b3b041d5786849ad08fd6e78620848153a"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/assembly-comparison.png", "sha256": "6b7df322fc44d5999a86a1380543f56bc2e02d49b5a90f7bf12cfd21721c4336"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/independent-palette-comparison.png", "sha256": "1a70a23227a8565aee84471f4cdcefbccadd2ea226c6ace6d1666d9b13c98b05"}, {"path": "art/conversion/fit-human-male-steel-utility-knife/v1/grip-comparison.png", "sha256": "6e5acdfd21ce5f8d5ba9bdcfe4647daac3a36f1b0cf9939d89db09ef757160fb"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-TELESCOPIC-MONOCLE-FACE-0: human-male / Telescopic Monocle / Face / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1797,7 +1893,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-telescopic-monocle-face-0-item-detail-east.png](../art/village/equipment/human-male-telescopic-monocle-face-0-item-detail-east.png), [art/village/equipment/human-male-telescopic-monocle-face-0-item-detail-south.png](../art/village/equipment/human-male-telescopic-monocle-face-0-item-detail-south.png), [art/village/equipment/human-male-telescopic-monocle-face-0-item-east.png](../art/village/equipment/human-male-telescopic-monocle-face-0-item-east.png), [art/village/equipment/human-male-telescopic-monocle-face-0-item-south.png](../art/village/equipment/human-male-telescopic-monocle-face-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 14.
+Current step: native_equipment_state_review. Process-log events: 15.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1883,6 +1979,12 @@ Current step: native_equipment_state_review. Process-log events: 14.
   Outputs: [{"path": "art/conversion/fit-human-male-telescopic-monocle/v2/model.json", "sha256": "4d69cf76b2fd6ab431899a4178621e8bc2cbe5899164ed080199bb3f16567702"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/headwear-comparison.png", "sha256": "e26b117401a7f2d1c066f92c3c6868b86c1c8c3172a583472df9e22cecf27401"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/independent-palette-comparison.png", "sha256": "76b8e3e168128c8e02da576d666e97199388cf1c102562687afd40c7fc7dc116"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/game-scale-review.png", "sha256": "928ca247260a1709c3b2db4cf35ac33444634c5d479c197fca6dd71094e847d8"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/authoring-review.json", "sha256": "ecd4a829a3f653ac7488277d33bf736f4425cad2360bf6d1596b0e652125e735"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/artifact-manifest.json", "sha256": "f43e4ba2fd78959657740ba034467f59ff55ec1bdd4555bdfec2a0f92d8e2ee5"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-telescopic-monocle/v2/model.json", "sha256": "4d69cf76b2fd6ab431899a4178621e8bc2cbe5899164ed080199bb3f16567702"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/headwear-comparison.png", "sha256": "e26b117401a7f2d1c066f92c3c6868b86c1c8c3172a583472df9e22cecf27401"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/independent-palette-comparison.png", "sha256": "76b8e3e168128c8e02da576d666e97199388cf1c102562687afd40c7fc7dc116"}, {"path": "art/conversion/fit-human-male-telescopic-monocle/v2/palette-east.png", "sha256": "ebfe33094868168150aef6a3d5c11fa5a5eda42cf72e2ffa15dfa4d391cf40b1"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0: human-male / Wide-brimmed Hat / Head / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1891,7 +1993,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-east.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-east.png), [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-north.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-north.png), [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-south.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-detail-south.png), [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-east.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-east.png), [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-north.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-north.png), [art/village/equipment/human-male-wide-brimmed-hat-head-0-item-south.png](../art/village/equipment/human-male-wide-brimmed-hat-head-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -1947,6 +2049,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/source-packet.json", "sha256": "94493a2eb7fdb30cae6642d375558ebb9161451a2ee79d6ea9e7854a76b38218"}, {"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json", "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"}, {"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/artifact-manifest.json", "sha256": "9967269dcd1fe3685c56c85d6de87caa3cd2aec7ece341e463eacfb2c28a871c"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/model.json", "sha256": "22ce17e224c872223ef2e38e69a1d82f2832d2bc58d2b92c7fd0e20870b827c5"}, {"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/headwear-comparison.png", "sha256": "d0c44287d088f1d5153fb89d6f89ef1c08873f6dd8284f899e7f4cff1e9cf903"}, {"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/independent-palette-comparison.png", "sha256": "51115b7202cf804365d97d99b16dbd7779dec92183dc54f2e5049e5858dd58b8"}, {"path": "art/conversion/fit-human-male-wide-brimmed-hat/v1/palette-east.png", "sha256": "1e21d8c1701923fed41958616e8548615ea3e2faaf88ad97eaa792b1634de02c"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0: human-male / Woven Tunic / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -1955,7 +2063,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-woven-tunic-body-0-item-detail-east.png](../art/village/equipment/human-male-woven-tunic-body-0-item-detail-east.png), [art/village/equipment/human-male-woven-tunic-body-0-item-detail-north.png](../art/village/equipment/human-male-woven-tunic-body-0-item-detail-north.png), [art/village/equipment/human-male-woven-tunic-body-0-item-detail-south.png](../art/village/equipment/human-male-woven-tunic-body-0-item-detail-south.png), [art/village/equipment/human-male-woven-tunic-body-0-item-east.png](../art/village/equipment/human-male-woven-tunic-body-0-item-east.png), [art/village/equipment/human-male-woven-tunic-body-0-item-north.png](../art/village/equipment/human-male-woven-tunic-body-0-item-north.png), [art/village/equipment/human-male-woven-tunic-body-0-item-south.png](../art/village/equipment/human-male-woven-tunic-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2011,6 +2119,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-human-male-woven-tunic/v1/artifact-manifest.json", "sha256": "238b1159e9e9eaed93bdf5702356a796ba4deb4d54a7295340378adf789f9104"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-woven-tunic/v1/model.json", "sha256": "5b52916e7927b749811f972a88941839fd6db8db5caecf56f5191d3f994256f7"}, {"path": "art/conversion/fit-human-male-woven-tunic/v1/assembly-comparison.png", "sha256": "af6b370bbbf2b6a5128da23c87996587af4e1690c8a88a24adde5d44a8e4bc00"}, {"path": "art/conversion/fit-human-male-woven-tunic/v1/independent-palette-comparison.png", "sha256": "7a7c85444da408f153e43407209f836f029f51ff05e28e694ac51a105865fc0c"}, {"path": "art/conversion/fit-human-male-woven-tunic/v1/palette-east.png", "sha256": "faa3a3d69b613d5fc943a98b2b81ddcfedae0ac659bf48456f4365e5b8cf0ab2"}, {"path": "art/conversion/fit-human-male-woven-tunic/v1/intact-garment-comparison.png", "sha256": "e439e9fd49f56b0dc666cdb5fec554d2cbf581be4ed76c50a727e92dd9d60d05"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-MALE-WRENCH-HAND-1: human-male / Wrench / Hand / laterality 1
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -2019,7 +2133,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/human-male-wrench-hand-1-item-east.png](../art/village/equipment/human-male-wrench-hand-1-item-east.png), [art/village/equipment/human-male-wrench-hand-1-item-north.png](../art/village/equipment/human-male-wrench-hand-1-item-north.png), [art/village/equipment/human-male-wrench-hand-1-item-south.png](../art/village/equipment/human-male-wrench-hand-1-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T17:21:36.213329+00:00 / source_identity_description_slot_laterality / PASS: Reconcile captured actual ordinary male offhand, full item description, native primary y overriding c, shaft detail c and one-hand declaration/event uncertainty.
   Review: Actual male Argyve519 item590 occupies ordinary offhand322/1. Same full canonical Qud armlength Wrench as compatibility fit, compensated to male world mapping; no new ImageGen call, inferred female NPC or body/limb generation. Native offhand/ready-resting and named outfit pending.
@@ -2063,6 +2177,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-human-male-wrench/v1/independent-palette-comparison.png", "sha256": "de8233cb69e4665e290be1a425b0bf8bf3c2fbcc8e74db193e00aa08e1019924"}, {"path": "art/conversion/fit-human-male-wrench/v1/game-scale-review.png", "sha256": "df49de74b3fbab04ae49982ceb1738552f4399bdfd2ac364217c3f722d566f21"}, {"path": "art/conversion/fit-human-male-wrench/v1/weapon-size-comparison.png", "sha256": "11406334cd766b7e34bec12b3c05d0df521f1a2ed26f277e8bc6d754b3d66591"}, {"path": "art/conversion/fit-human-male-wrench/v1/scale-comparison-inputs.json", "sha256": "d8b53277d6d52adc5d542328c3336ab4bf09761e77d0073436f01f3794359560"}, {"path": "art/conversion/fit-human-male-wrench/v1/authoring-review.json", "sha256": "50e3e7249ae4e5b508d3f47bd95719e7550c90431e3d79e8300b4cc641801395"}, {"path": "art/conversion/fit-human-male-wrench/v1/artifact-manifest.json", "sha256": "221d89f00c2ece393ea0e1569f601caba1dbc993e79b93574a67dbffdd8c8b20"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-male-wrench/v1/model.json", "sha256": "0a48f7d2a6efc52dd2498bfd9409d301aed64949dbc9cd253b37f40f18272401"}, {"path": "art/conversion/fit-human-male-wrench/v1/assembly-comparison.png", "sha256": "deb8c2b6acc5dba6c7807f68db9061661fb3fd26df8b02502c111ab583b1702f"}, {"path": "art/conversion/fit-human-male-wrench/v1/independent-palette-comparison.png", "sha256": "de8233cb69e4665e290be1a425b0bf8bf3c2fbcc8e74db193e00aa08e1019924"}, {"path": "art/conversion/fit-human-male-wrench/v1/grip-comparison.png", "sha256": "1b4c6a1f6ffb02a2f1571e52644dd06bf6842df8a23b6c46cff742978e44f2d4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-IRUDAD-BLACK-ROBES-BODY-0: irudad / Black Robes / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2071,7 +2191,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/irudad-black-robes-body-0-item-detail-east.png](../art/village/equipment/irudad-black-robes-body-0-item-detail-east.png), [art/village/equipment/irudad-black-robes-body-0-item-detail-north.png](../art/village/equipment/irudad-black-robes-body-0-item-detail-north.png), [art/village/equipment/irudad-black-robes-body-0-item-detail-south.png](../art/village/equipment/irudad-black-robes-body-0-item-detail-south.png), [art/village/equipment/irudad-black-robes-body-0-item-east.png](../art/village/equipment/irudad-black-robes-body-0-item-east.png), [art/village/equipment/irudad-black-robes-body-0-item-north.png](../art/village/equipment/irudad-black-robes-body-0-item-north.png), [art/village/equipment/irudad-black-robes-body-0-item-south.png](../art/village/equipment/irudad-black-robes-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 15.
+Current step: native_equipment_state_review. Process-log events: 16.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2163,6 +2283,12 @@ Current step: native_equipment_state_review. Process-log events: 15.
   Outputs: [{"path": "art/conversion/fit-irudad-black-robes/v3/authoring-review.json", "sha256": "4652d5637e7ce83345b3a46f08486f75b2f1905a2646959d0b110cd25af9dac7"}, {"path": "art/conversion/fit-irudad-black-robes/v3/artifact-manifest.json", "sha256": "7b16e79ade9ff9183d506d4c181e0b234899bf43a4960507f4b913a45aafdbe0"}, {"path": "art/conversion/fit-irudad-black-robes/v2/artifact-manifest.json", "sha256": "2a37ce8c670713e6913ee0e885d2f94f81b65fda239f57096535d12b9105c415"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: FIX NOW: I inspected the assembled profile, original bare Irudad body and full item/overlay evidence. An additional hand crescent is visible in the robe assembly while the bare hand has one outline. It repeats the prohibited body/clothing ownership artifact and should be corrected before reusing this fit. Exact component-level cause remains to be traced during that correction.
+  Inputs: [{"path": "art/conversion/fit-irudad-black-robes/v3/model.json", "sha256": "6b65c7505eeb54bc7d923a4adf227fb83a9265281e4a14b20d60dabac6ffd62d"}, {"path": "art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png", "sha256": "2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287"}, {"path": "art/conversion/fit-irudad-black-robes/v3/independent-palette-comparison.png", "sha256": "a536a6a8aa92cc2a16e4247316a860407cae4da3568b694d1424533ee71d9c7c"}, {"path": "art/conversion/fit-irudad-black-robes/v3/palette-east.png", "sha256": "c85b554669617ca07df6999ded9981d150a0090ac92ae0e6b42dbd7c050778dc"}, {"path": "art/conversion/fit-irudad-black-robes/v3/body-overlay-comparison.png", "sha256": "243532e9c063bbfcc26f2b2dc6e8cd752616885f6d3977985221211109b53ebe"}, {"path": "art/conversion/fit-irudad-black-robes/v3/body-overlay-east.png", "sha256": "6bf0163bbd1d5d22081c274eae14b80f7738de8dfb06ecb9f9c714c4cf47c7b4"}, {"path": "art/conversion/fit-irudad-black-robes/v2/intact-robes-east.png", "sha256": "8cda200615d6dab6a0c620c5e498fd96357e48a4a4472cd5bc32ca73c7d2beb7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-IRUDAD-SANDALS-FEET-0: irudad / Sandals / Feet / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2171,7 +2297,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/irudad-sandals-feet-0-item-detail-east.png](../art/village/equipment/irudad-sandals-feet-0-item-detail-east.png), [art/village/equipment/irudad-sandals-feet-0-item-detail-north.png](../art/village/equipment/irudad-sandals-feet-0-item-detail-north.png), [art/village/equipment/irudad-sandals-feet-0-item-detail-south.png](../art/village/equipment/irudad-sandals-feet-0-item-detail-south.png), [art/village/equipment/irudad-sandals-feet-0-item-east.png](../art/village/equipment/irudad-sandals-feet-0-item-east.png), [art/village/equipment/irudad-sandals-feet-0-item-north.png](../art/village/equipment/irudad-sandals-feet-0-item-north.png), [art/village/equipment/irudad-sandals-feet-0-item-south.png](../art/village/equipment/irudad-sandals-feet-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 23.
+Current step: native_equipment_state_review. Process-log events: 24.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2311,6 +2437,12 @@ Current step: native_equipment_state_review. Process-log events: 23.
   Outputs: [{"path": "art/conversion/fit-irudad-sandals/v3/game-scale-review.png", "sha256": "1878bb688e62096b955e0991a0c12a7d50bbe5ec3352745168d51a55a96c0ecb"}, {"path": "art/conversion/fit-irudad-sandals/v3/independent-palette-comparison.png", "sha256": "9e1845f0c9e59b2617fe61b9f8c1025bedd555265b7c9ed834f7194c82b009f0"}, {"path": "art/conversion/fit-irudad-sandals/v3/authoring-review.json", "sha256": "0badeda5838539cf02d23c4bbe697434a6024ee6a5078e527834e8a84c962c5c"}, {"path": "art/conversion/fit-irudad-sandals/v3/artifact-manifest.json", "sha256": "41e7cf1f68384edaf612015b906d2f1602d72715349656c85ad7ad4cd25deb86"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-irudad-sandals/v3/model.json", "sha256": "165856d8d839c026f8ee117201c1b204c7bf6bbdd6402e0daa09f03726ea4c25"}, {"path": "art/conversion/fit-irudad-sandals/v3/footwear-comparison.png", "sha256": "31106cf48de35e5eb3a07fddf70a7196898550884d4add524b37566d038cce97"}, {"path": "art/conversion/fit-irudad-sandals/v3/independent-palette-comparison.png", "sha256": "9e1845f0c9e59b2617fe61b9f8c1025bedd555265b7c9ed834f7194c82b009f0"}, {"path": "art/conversion/fit-irudad-sandals/v3/palette-east.png", "sha256": "e0c8e5b21d96b4d75289021ebc312e634544169269437ad145d37412f2b7ad37"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-IRUDAD-SPECTACLES-FACE-0: irudad / Spectacles / Face / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2319,7 +2451,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/irudad-spectacles-face-0-item-east.png](../art/village/equipment/irudad-spectacles-face-0-item-east.png), [art/village/equipment/irudad-spectacles-face-0-item-south.png](../art/village/equipment/irudad-spectacles-face-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 17.
+Current step: native_equipment_state_review. Process-log events: 18.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2423,6 +2555,12 @@ Current step: native_equipment_state_review. Process-log events: 17.
   Outputs: [{"path": "art/conversion/fit-irudad-spectacles/v2/artifact-manifest.json", "sha256": "2336f07254e7284472011a63c667c71b978e922950f2bf7f2c84859350570947"}, {"path": "art/conversion/fit-irudad-spectacles/v2/authoring-review.json", "sha256": "d46bf91d7a549fc7f9b10a7675b4cc4eeb824a8017e9ac4d999abcca5dde68f0"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-irudad-spectacles/v2/model.json", "sha256": "cf5c7d88eb9bf21a50abfe022d0c4c89425c390d9b598f64e383bb472035b41d"}, {"path": "art/conversion/fit-irudad-spectacles/v2/headwear-comparison.png", "sha256": "f0d23aa0440547dd39aed38688170ca1492c5fd661d10e3ad70014cf7deb2628"}, {"path": "art/conversion/fit-irudad-spectacles/v2/independent-palette-comparison.png", "sha256": "00ea37203efa086bb8064eb8dddea74ba99e4e657f11397972c024cc98f3816a"}, {"path": "art/conversion/fit-irudad-spectacles/v2/palette-east.png", "sha256": "a4188fc479cb5e4f7f0dbef594a979bdc43ec8d8e5d85775b8e947df6b324220"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-IRUDAD-WALKING-STICK-HAND-6: irudad / Walking Stick / Hand / laterality 6
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -2431,7 +2569,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/irudad-walking-stick-hand-6-item-east.png](../art/village/equipment/irudad-walking-stick-hand-6-item-east.png), [art/village/equipment/irudad-walking-stick-hand-6-item-north.png](../art/village/equipment/irudad-walking-stick-hand-6-item-north.png), [art/village/equipment/irudad-walking-stick-hand-6-item-south.png](../art/village/equipment/irudad-walking-stick-hand-6-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 8.
+Current step: native_equipment_state_review. Process-log events: 9.
 
 - 2026-10-20T17:48:44.344067+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual ElderBob507 item541, brinestalk/crook description, exact Hand201/6 manager and full inherited one-hand base metadata.
   Review: Source identity and actual Hand/6 binding retained separately from ordinary-body display proxy. Crook is continuous; donor straight shape is style only. Ready/native mutation attachment not claimed.
@@ -2481,6 +2619,12 @@ Current step: native_equipment_state_review. Process-log events: 8.
   Outputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/handedness-evidence.json", "sha256": "e4e3c037c651c40639c09e7d1eb51a073b780baa00ad79663d666dce76b9ba1a"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-irudad-walking-stick/v1/model.json", "sha256": "ec843cd26529706f8d7593eec7da9c6925fc0de23d7e05f48e2e1f026e7050c4"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/independent-palette-comparison.png", "sha256": "f2d883fd42d66b6c577705fac188e357fcfdb28a00e1839f50abc7b18b8a7cea"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/grip-comparison.png", "sha256": "47503b129507885073d8c325aff4ca967d21187f73a89686e75ae1b0f8d78f26"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0: nima / Floating Glowsphere / Floating Nearby / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -2489,7 +2633,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-east.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-east.png), [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-north.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-north.png), [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-south.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-detail-south.png), [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-east.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-east.png), [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-north.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-north.png), [art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-south.png](../art/village/equipment/nima-floating-glowsphere-floating nearby-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 8.
+Current step: native_equipment_state_review. Process-log events: 9.
 
 - 2026-10-20T17:31:33.492244+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual Nima Floating Nearby195/0 item538, palm-size opal description, native light radius8 and all four color-animation keys. Preserve native unit and weight-event uncertainty.
   Review: Inspected manual source comparison and SEN floating display: round palm-size unmarked sphere, no face, mounting hardware or anatomical additions. Sphere shape needs no different directional anatomy. Placement is authored, not exported orbit metadata; native light/color behavior not replaced.
@@ -2539,6 +2683,12 @@ Current step: native_equipment_state_review. Process-log events: 8.
   Outputs: [{"path": "art/conversion/fit-nima-floating-glowsphere/v2/independent-palette-comparison.png", "sha256": "854c5e0b11f39127ce7ee2d3327dcd0b87ef740122981da87f9e8ff809a62bda"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/native-color-keys-comparison.png", "sha256": "8d447aa18f52667984c9a8bae6f764fd172f56798587b094de2ab3a930c0128f"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/game-scale-review.png", "sha256": "68dd33391b1a71ba04a065282fb32efdef47058fb2106b809b8d5040abcee478"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/authoring-review.json", "sha256": "abb96eb0c92fbeba3fad801e4462e118046cdc3ca92a54cefb9424bc8a9c75e2"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/artifact-manifest.json", "sha256": "380c1838edcdeb1f9783c598ccc1bc2dce575017c44f1f88e5bbf4f375b5bf1d"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-nima-floating-glowsphere/v2/model.json", "sha256": "6ca15bfca16305246b94831d2cc33a1b0303eec3ddcfd0383f2263f951e7afde"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png", "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/independent-palette-comparison.png", "sha256": "854c5e0b11f39127ce7ee2d3327dcd0b87ef740122981da87f9e8ff809a62bda"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/native-color-keys-comparison.png", "sha256": "8d447aa18f52667984c9a8bae6f764fd172f56798587b094de2ab3a930c0128f"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/detail-region-comparison.png", "sha256": "1a6e54289359e14bfd79b352e38a8b3fb42d6ce8f90237e061556b013e54f0fc"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-NIMA-LEATHER-APRON-BODY-0: nima / Leather Apron / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2547,7 +2697,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/nima-leather-apron-body-0-item-detail-east.png](../art/village/equipment/nima-leather-apron-body-0-item-detail-east.png), [art/village/equipment/nima-leather-apron-body-0-item-detail-south.png](../art/village/equipment/nima-leather-apron-body-0-item-detail-south.png), [art/village/equipment/nima-leather-apron-body-0-item-east.png](../art/village/equipment/nima-leather-apron-body-0-item-east.png), [art/village/equipment/nima-leather-apron-body-0-item-north.png](../art/village/equipment/nima-leather-apron-body-0-item-north.png), [art/village/equipment/nima-leather-apron-body-0-item-south.png](../art/village/equipment/nima-leather-apron-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2603,6 +2753,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-nima-leather-apron/v1/artifact-manifest.json", "sha256": "59d1ad1dd9a92b4268f5c4deba8611aec8ed1cb4b0a62b3040cc80a6e86518da"}, {"path": "art/conversion/fit-nima-leather-apron/v1/authoring-review.json", "sha256": "b041767e0ee84f52242ddeae7a788786cf9388eba51885510a128d34c90f359a"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-nima-leather-apron/v1/model.json", "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"}, {"path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png", "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"}, {"path": "art/conversion/fit-nima-leather-apron/v1/independent-palette-comparison.png", "sha256": "88cc7604b515cf421dcdf5ffb381b7521b53d70aa8bb68684981bb1784104d7f"}, {"path": "art/conversion/fit-nima-leather-apron/v1/qud-palette-east.png", "sha256": "14eec3db5c43cfc7a1be5b045c9792dcf48852851487f5aa736271316ad9aad7"}, {"path": "art/conversion/fit-nima-leather-apron/v1/intact-garment-comparison.png", "sha256": "979782da037d7b390bbea1f960b264fbd2b8ffeb6ccd4a43da8724b6e736aa3e"}, {"path": "art/conversion/fit-nima-leather-apron/v1/intact-apron-east.png", "sha256": "f65e5a94484f6b667180a0a52323775311df59c2883a97fe1b8b2c18297c68c7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-NIMA-PESTLE-HAND-6: nima / Pestle / Hand / laterality 6
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -2611,7 +2767,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/nima-pestle-hand-6-item-east.png](../art/village/equipment/nima-pestle-hand-6-item-east.png), [art/village/equipment/nima-pestle-hand-6-item-north.png](../art/village/equipment/nima-pestle-hand-6-item-north.png), [art/village/equipment/nima-pestle-hand-6-item-south.png](../art/village/equipment/nima-pestle-hand-6-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 7.
+Current step: native_equipment_state_review. Process-log events: 8.
 
 - 2026-10-20T15:46:14.115645+00:00 / source_identity_description_slot_laterality / PASS: Resolved Nima Ruda -> human base -> stone Pestle531, original tile y/Y and exact mutation-managed Hand181 parent180/laterality6/manager506::MultipleArms::Change. Installed Pestle definition retained alongside runtime description.
   Review: Inspected exact Qud glyph/stone-powder description, actual Tribal LightClub convention and rejected wrapped HeavyClub; own editable small pestle retains smooth bulb and narrow grip. One contextual refinement contributes neutral stone only; generated glow, shifted body/geometry and powder are excluded. Hidden grip is harmonically completed on full source; original outline and separate powder restored. All facings derive from one axial source, not independently generated items. User grip-height feedback moves item-space contact 20px toward the lower end, without moving body hand or resizing item. Retained initial registered preview hid the bulb completely in back; corrected outward back angle makes it partly visible with proper body depth. SEN/west mirror, independent g/y/Y palette and 48x96 views inspected. Exact Hand181/6 mutation binding preserved; ordinary-hand preview does not place it. Resting/ready poses and actual named/native assembly remain unfinished.
@@ -2655,6 +2811,12 @@ Current step: native_equipment_state_review. Process-log events: 7.
   Outputs: [{"path": "art/conversion/fit-nima-pestle/v1/independent-palette-comparison.png", "sha256": "6c70e2c4b35700b6d77657f2ecef93916bf9be3e250867c700b083fccb3040d8"}, {"path": "art/conversion/fit-nima-pestle/v1/game-scale-review.png", "sha256": "cd4f336f815240dd64c67024b458b754c7da0ec7e96e7f6fbc03033a5c2f5b58"}, {"path": "art/conversion/fit-nima-pestle/v1/authoring-review.json", "sha256": "34bb75d14c56d6e3382a5d641cbf1a21d1831376591e04496cbb1b2d5f89cf9d"}, {"path": "art/conversion/fit-nima-pestle/v1/artifact-manifest.json", "sha256": "38f38cfbcc898cf3438b9f7e48366a307d5b9c31140272e120b0143d55e2ed8e"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-nima-pestle/v1/model.json", "sha256": "5e3c79d5d39ffd4d7f4ed2456a4945229a795f1dbd2348858903b08cf2b6cabb"}, {"path": "art/conversion/fit-nima-pestle/v1/assembly-comparison.png", "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"}, {"path": "art/conversion/fit-nima-pestle/v1/independent-palette-comparison.png", "sha256": "6c70e2c4b35700b6d77657f2ecef93916bf9be3e250867c700b083fccb3040d8"}, {"path": "art/conversion/fit-nima-pestle/v1/grip-comparison.png", "sha256": "914c665d4e56f6b2ba9f5981437ac6984b116c688ef7474e2de783672af85d6b"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-NIMA-SANDALS-FEET-0: nima / Sandals / Feet / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2663,7 +2825,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/nima-sandals-feet-0-item-detail-east.png](../art/village/equipment/nima-sandals-feet-0-item-detail-east.png), [art/village/equipment/nima-sandals-feet-0-item-detail-north.png](../art/village/equipment/nima-sandals-feet-0-item-detail-north.png), [art/village/equipment/nima-sandals-feet-0-item-detail-south.png](../art/village/equipment/nima-sandals-feet-0-item-detail-south.png), [art/village/equipment/nima-sandals-feet-0-item-east.png](../art/village/equipment/nima-sandals-feet-0-item-east.png), [art/village/equipment/nima-sandals-feet-0-item-north.png](../art/village/equipment/nima-sandals-feet-0-item-north.png), [art/village/equipment/nima-sandals-feet-0-item-south.png](../art/village/equipment/nima-sandals-feet-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 23.
+Current step: native_equipment_state_review. Process-log events: 24.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2803,6 +2965,12 @@ Current step: native_equipment_state_review. Process-log events: 23.
   Outputs: [{"path": "art/conversion/fit-human-female-sandals/v3/game-scale-review.png", "sha256": "3f451ad79068be90f98343cd615cb54b6a18c6edba9807d7458428a48e8f3e75"}, {"path": "art/conversion/fit-human-female-sandals/v3/independent-palette-comparison.png", "sha256": "ccc332b54dcb3e8503ca7c640f312112cc6dc16e54489ef23d79c00b061e08fe"}, {"path": "art/conversion/fit-nima-sandals/v3/authoring-review.json", "sha256": "3cf84523fb0d1f33dd34e03bbbd312ce52c3646629551fd83585dd5ff02e826e"}, {"path": "art/conversion/fit-nima-sandals/v3/artifact-manifest.json", "sha256": "ab5b2e391bff031f0d9a9945947f5e5896ec7d2f02211cb04078fb133455b6f8"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NOT SUBSTANTIATED: The shared bare-base fitting is intentional and does not establish that the named assembly is missing. I inspected the existing Nima all-view assembly and verified that it references this exact current fitted model. Hat/sole/ankle placement is present on Nima; no conflicting local attachment is established. The named assembly also receives its own independent review in this sweep.
+  Inputs: [{"path": "art/conversion/fit-nima-sandals/v3/model.json", "sha256": "4471811eaf78bc7c2e00df3c6c5271724ec1f6fb0fa238e41335de1246ca709c"}, {"path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png", "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0: nima / Wide-brimmed Hat / Head / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2811,7 +2979,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-east.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-east.png), [art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-north.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-north.png), [art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-south.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-detail-south.png), [art/village/equipment/nima-wide-brimmed-hat-head-0-item-east.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-east.png), [art/village/equipment/nima-wide-brimmed-hat-head-0-item-north.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-north.png), [art/village/equipment/nima-wide-brimmed-hat-head-0-item-south.png](../art/village/equipment/nima-wide-brimmed-hat-head-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 9.
+Current step: native_equipment_state_review. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -2867,6 +3035,12 @@ Current step: native_equipment_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/fit-nima-wide-brimmed-hat/v1/source-packet.json", "sha256": "49295195d9bdccd8f41635e023a23605bc22b22ea20130a70a298891b09ab8a3"}, {"path": "art/conversion/fit-nima-wide-brimmed-hat/v1/registration-decisions.json", "sha256": "5035694bbdfff08bcbaee3c7a982f55fc8395dca918f3e41571c20a142168a70"}, {"path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json", "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"}, {"path": "art/conversion/fit-nima-wide-brimmed-hat/v1/artifact-manifest.json", "sha256": "97c9963b3b2385c2bbe668fc73ca66be5d060328c81f89c5ec7b0f3cb88bc6ca"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NOT SUBSTANTIATED: The shared bare-base fitting is intentional and does not establish that the named assembly is missing. I inspected the existing Nima all-view assembly and verified that it references this exact current fitted model. Hat/sole/ankle placement is present on Nima; no conflicting local attachment is established. The named assembly also receives its own independent review in this sweep.
+  Inputs: [{"path": "art/conversion/fit-nima-wide-brimmed-hat/v1/model.json", "sha256": "b358fb5356b40e3d644d547ed7bee0495a5343c8f6042a54f0cb5fc010babf32"}, {"path": "art/conversion/fit-human-female-wide-brimmed-hat/v1/headwear-comparison.png", "sha256": "c5d1c62d7900e04bdad9ec676133d176e6a19521c2ae6620d218fcadcb503a7c"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-YRAME-CHAIN-MAIL-BODY-0: yrame / Chain Mail / Body / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -2875,7 +3049,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/yrame-chain-mail-body-0-item-detail-east.png](../art/village/equipment/yrame-chain-mail-body-0-item-detail-east.png), [art/village/equipment/yrame-chain-mail-body-0-item-detail-north.png](../art/village/equipment/yrame-chain-mail-body-0-item-detail-north.png), [art/village/equipment/yrame-chain-mail-body-0-item-detail-south.png](../art/village/equipment/yrame-chain-mail-body-0-item-detail-south.png), [art/village/equipment/yrame-chain-mail-body-0-item-east.png](../art/village/equipment/yrame-chain-mail-body-0-item-east.png), [art/village/equipment/yrame-chain-mail-body-0-item-north.png](../art/village/equipment/yrame-chain-mail-body-0-item-north.png), [art/village/equipment/yrame-chain-mail-body-0-item-south.png](../art/village/equipment/yrame-chain-mail-body-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 23.
+Current step: native_equipment_state_review. Process-log events: 24.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3015,6 +3189,12 @@ Current step: native_equipment_state_review. Process-log events: 23.
   Outputs: [{"path": "art/conversion/fit-yrame-chain-mail/v2/authoring-review.json", "sha256": "183938e27887c5716cd2b034c58117e3054746780cf2bb752fae6f05b5cffcd1"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/artifact-manifest.json", "sha256": "31ec65866061b61af7c84e41fb159b8d6b5038819d5cec653340115aaedbd01c"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/intact-garment-comparison.png", "sha256": "81acbf96f52ba5a80002f5567c7bf1b24d3fd5a7a2fb1f90cb485f2bf868a8b4"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/continuation-comparison.png", "sha256": "2da31e6d11df64b4d0955fe8e8f3bdb9f5dcbd5e0273ea38248f3eaf2170094d"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json", "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/assembly-comparison.png", "sha256": "fa005f1aa58372f51ec86cd41e01662dbf30251eb216aeeff003cdd5c0f165a1"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/independent-palette-comparison.png", "sha256": "d353e3a7a0521665049692970a53fa6ba75c142ff1891eed25bbcf13fbb100f2"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/palette-east.png", "sha256": "0ee4d28785f84d058c05c76964ecabe2661863a38b5cfa920ec85bc79fce24da"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/intact-mail-east.png", "sha256": "7ef1a69ee53a9dced71e22e9c289cdc932f2da67543647f3227fc7981477e594"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-YRAME-HORNS-HEAD-0: yrame / Horns / Head / laterality 0
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -3023,7 +3203,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/yrame-horns-head-0-item-detail-east.png](../art/village/equipment/yrame-horns-head-0-item-detail-east.png), [art/village/equipment/yrame-horns-head-0-item-detail-north.png](../art/village/equipment/yrame-horns-head-0-item-detail-north.png), [art/village/equipment/yrame-horns-head-0-item-detail-south.png](../art/village/equipment/yrame-horns-head-0-item-detail-south.png), [art/village/equipment/yrame-horns-head-0-item-east.png](../art/village/equipment/yrame-horns-head-0-item-east.png), [art/village/equipment/yrame-horns-head-0-item-north.png](../art/village/equipment/yrame-horns-head-0-item-north.png), [art/village/equipment/yrame-horns-head-0-item-south.png](../art/village/equipment/yrame-horns-head-0-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 26.
+Current step: construct_and_overlay_one_item. Process-log events: 31.
 
 - 2026-10-20T17:58:58.674245+00:00 / source_identity_description_slot_laterality / PASS: Resolve actual natural Horns575 on Head288/0, paired grooved-bone description, native TileColor w/detail W and separate declared mutation metadata.
   Review: Pair count is source-supported. Directional near/far/root overlap is explicit; no frontal pair reused for profile, body mutation or unrecorded body rescale.
@@ -3181,6 +3361,36 @@ Current step: native_equipment_state_review. Process-log events: 26.
   Outputs: [{"path": "art/conversion/fit-yrame-horns/v4/game-scale-review.png", "sha256": "756a3ee0f09bec09f0700fb72fff53d986ed994dbbd6adbe78f5574824e25e36"}, {"path": "art/conversion/fit-yrame-horns/v4/independent-palette-comparison.png", "sha256": "b3532474d88a1e4bed0ebf72065f645161a8793d3f26b8a143ebb2f156753c76"}, {"path": "art/conversion/fit-yrame-horns/v4/tint-detail-comparison.png", "sha256": "044f368a040da39771fd0bc788a755ad5bc8debff56ef05722d28bb7a4b494ec"}, {"path": "art/conversion/fit-yrame-horns/v4/artifact-manifest.json", "sha256": "c453836e4a61729d2948af1982ca9a179be3a7c2421a985f9bea56db6a3a694a"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T08:38:15.722548+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T08:39:16.813066+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T08:45:48.435452+00:00 / critical_structural_review_before_extraction / FAIL: Record actual new contextual refinement and user-reported rear continuity defect. Hold extraction and await fresh independent visual critique.
+  Review: No production model created; no generation-ready credit restored.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v5/fit-contract.json", "sha256": "301ba2aa38cb24f348314f3486f60f683fd96d5192c79877b7a93da23b21f65a"}, {"path": "art/conversion/fit-yrame-horns/v5/manual-context-turnaround.png", "sha256": "bee97f8d86c16cfc188271eacda3815b57b5f7874b8e5343520ea4328bea5905"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v5/generation-receipt.json", "sha256": "e174cfc8f871053b9cbc07ff2bf9ff4d33da832e779e5525117f15a5631370ef"}, {"path": "art/conversion/fit-yrame-horns/v5/context-refinement-raw.png", "sha256": "4dcdcc4b1067b1210b4fd8dcc82f5bf60a5ffaaafcc0ffd49aa7939ce7bcfcc6"}, {"path": "art/conversion/fit-yrame-horns/v5/first-refinement-structural-review.json", "sha256": "7435e2514851b40c259660715d1d17f50adfe7ce0145ebd35cd478a735819db2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T08:47:35.224094+00:00 / construct_and_overlay_one_item / FAIL: Fresh agent with no main-thread history critically inspected actual horn images; return ownership to manual construction before further refinement.
+  Review: High-confidence flat roots and visually fragmented rear return; medium-confidence clearance/depth ambiguity. Similar silhouette and exact-profile far-horn occlusion are not themselves defects. No extraction advanced.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v5/context-refinement-raw.png", "sha256": "4dcdcc4b1067b1210b4fd8dcc82f5bf60a5ffaaafcc0ffd49aa7939ce7bcfcc6"}, {"path": "art/conversion/fit-yrame-horns/v5/manual-head-comparison.png", "sha256": "a039d343dd9d96be62a0a7dd847c8977258517dcad83ce57ccb140b7c6eae612"}, {"path": "art/conversion/fit-yrame-horns/v4/head-fit-comparison.png", "sha256": "fa7a5e6433a13d15e19ce5e5ecd4ff4379bafba525122a833e90fc4e572567d8"}]
+  Outputs: [{"path": "art/conversion/fit-yrame-horns/v5/independent-critical-review.md", "sha256": "710bec7b0f0a9ddf50a4a432e3e85fa9aefddaaad8ebaca5c2d9cdd6df8f3bfe"}, {"path": "art/conversion/fit-yrame-horns/v5/independent-review-decision.json", "sha256": "ddb2ca2f4861c00e2ec37151275c397be67b7077c3013c8a3da560b04d5754d2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}, {"path": "art/conversion/fit-yrame-horns/v4/assembly-comparison.png", "sha256": "4c0ca77075316dde73258a83101e1fae46e6529ea85411a19738c675548233a3"}, {"path": "art/conversion/fit-yrame-horns/v4/independent-palette-comparison.png", "sha256": "b3532474d88a1e4bed0ebf72065f645161a8793d3f26b8a143ebb2f156753c76"}, {"path": "art/conversion/fit-yrame-horns/v4/manual-neutral-turnaround.png", "sha256": "552f1d5eca138a93cd586167218b275b4d1c3a79c03186ecad95617cbbe98c94"}, {"path": "art/conversion/fit-yrame-horns/v4/head-fit-comparison.png", "sha256": "fa7a5e6433a13d15e19ce5e5ecd4ff4379bafba525122a833e90fc4e572567d8"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-YRAME-LEATHER-BOOTS-FEET-16: yrame / Leather Boots / Feet / laterality 16
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> reprocess_under_regional_curved_v1 -> native_equipment_state_review.
@@ -3189,7 +3399,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/yrame-leather-boots-feet-16-item-detail-east.png](../art/village/equipment/yrame-leather-boots-feet-16-item-detail-east.png), [art/village/equipment/yrame-leather-boots-feet-16-item-detail-north.png](../art/village/equipment/yrame-leather-boots-feet-16-item-detail-north.png), [art/village/equipment/yrame-leather-boots-feet-16-item-detail-south.png](../art/village/equipment/yrame-leather-boots-feet-16-item-detail-south.png), [art/village/equipment/yrame-leather-boots-feet-16-item-east.png](../art/village/equipment/yrame-leather-boots-feet-16-item-east.png), [art/village/equipment/yrame-leather-boots-feet-16-item-north.png](../art/village/equipment/yrame-leather-boots-feet-16-item-north.png), [art/village/equipment/yrame-leather-boots-feet-16-item-south.png](../art/village/equipment/yrame-leather-boots-feet-16-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 20.
+Current step: native_equipment_state_review. Process-log events: 21.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3311,6 +3521,12 @@ Current step: native_equipment_state_review. Process-log events: 20.
   Outputs: [{"path": "art/conversion/fit-yrame-leather-boots/v2/authoring-review.json", "sha256": "de5d938ed24baea53ec74c09bbabc8acf224cd0c351f14505cad83f847a2914c"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/artifact-manifest.json", "sha256": "ba3d3462e44b097ccb51613681e59a9ee603ee50e6f7b78cdd282b94e1a7f045"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/registration-decisions.json", "sha256": "ecef7dbb01243bd01fe4cd92d43572f5c071d5d1c8ebcd026047173bd51b91cf"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/continuation-comparison.png", "sha256": "d9ca72d3d055a0d55358663f51ff6a98851f2a4a7b29e91f5441237a942559d9"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-yrame-leather-boots/v2/model.json", "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/assembly-comparison.png", "sha256": "550d3bba9828f408115286dc1fec90a9db7a872087344e63cd2e024543ff0373"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png", "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/manual-neutral-turnaround.png", "sha256": "47899e8351c58d942a37b197074296de349fe2a97e03fa0ff4e8b97fd340d9ba"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png", "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/depth-off-comparison.png", "sha256": "611bb03b3b377ecfd04e3d4453c0723a64b8a0ae11d3e69c2ae07d98bc01a6b2"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-04-head_and_feet.json", "sha256": "19fda656bb1ec363696a030994408d45994cf6626cbf24a94166f367c6578f79"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-YRAME-VIBRO-BLADE-HAND-2: yrame / Vibro Blade / Hand / laterality 2
 
 Required steps: source_identity_description_slot_laterality -> select_correct_body_and_references -> construct_and_overlay_one_item -> imagegen_refine_in_context_on_unchanged_body -> retrieve_isolated_item_and_masks -> recompose_check_cuffs_attachment_occlusion_all_views -> review_game_scale_and_palette -> native_equipment_state_review.
@@ -3319,7 +3535,7 @@ Required views/states: south; east; north; west mirror/handedness review.
 
 Historical artifacts: [art/village/equipment/yrame-vibro-blade-hand-2-item-detail-east.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-detail-east.png), [art/village/equipment/yrame-vibro-blade-hand-2-item-detail-north.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-detail-north.png), [art/village/equipment/yrame-vibro-blade-hand-2-item-detail-south.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-detail-south.png), [art/village/equipment/yrame-vibro-blade-hand-2-item-east.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-east.png), [art/village/equipment/yrame-vibro-blade-hand-2-item-north.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-north.png), [art/village/equipment/yrame-vibro-blade-hand-2-item-south.png](../art/village/equipment/yrame-vibro-blade-hand-2-item-south.png).
 
-Current step: native_equipment_state_review. Process-log events: 16.
+Current step: native_equipment_state_review. Process-log events: 17.
 
 - 2026-10-20T15:54:24.111181+00:00 / source_identity_description_slot_laterality / PASS: Resolved Yrame -> ordinary human female baseline -> Vibro Blade576 on actual Hand292 parent291/laterality2, no mutation manager. Retained generic unidentified runtime text/weight3 and exact installed matte ionic-plastifer/finger-rest/weight2 definition, source sprite and c/y roles.
   Review: Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.
@@ -3417,6 +3633,12 @@ Current step: native_equipment_state_review. Process-log events: 16.
   Outputs: [{"path": "art/conversion/fit-yrame-vibro-blade/v2/independent-palette-comparison.png", "sha256": "64b8990173e04f513955dc0a371882f713e9babe9c914a244ae6896105b3c35f"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/game-scale-review.png", "sha256": "48c5e3f69b97bf0f8e5250019299a8fc2936d67c5792c7cee8fb71fbee0b437b"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/artifact-manifest.json", "sha256": "7b7dcaf4206f99387fdd8cefac31d239d5b79932983d7aa66f749a99c62b2081"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-yrame-vibro-blade/v2/model.json", "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png", "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/independent-palette-comparison.png", "sha256": "64b8990173e04f513955dc0a371882f713e9babe9c914a244ae6896105b3c35f"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/grip-comparison.png", "sha256": "6c5695e83fe9a4d00794c33266b8a452e494e2975439c1062e4ca19a5c2482a8"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-05-held_items.json", "sha256": "94a676e3265da02cbad7aa2eea8f7d256d140e208144fdde1cfdaaefaad86c10"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-CANTEEN: Canteen
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -3425,7 +3647,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canteen-body.png](../art/village/scenery/canteen-body.png), [art/village/scenery/canteen-detail.png](../art/village/scenery/canteen-detail.png).
 
-Current step: native_state_review. Process-log events: 9.
+Current step: native_state_review. Process-log events: 10.
 
 - 2026-10-21T06:47:29.113966+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve round cloth-sheathed aluminum canteen from complete installed ancestry, actual source glyph and g/w palette. Declared liquid start/fill range has no alternate static exterior; unknown native dynamic state remains explicit.
   Review: Resolve round cloth-sheathed aluminum canteen from complete installed ancestry, actual source glyph and g/w palette. Declared liquid start/fill range has no alternate static exterior; unknown native dynamic state remains explicit.
@@ -3481,6 +3703,12 @@ Current step: native_state_review. Process-log events: 9.
   Outputs: [{"path": "art/conversion/scn-canteen/v1/registered/conversion-comparison.png", "sha256": "1d621dff5ac3c58d3d604fd85fef9a421f629cf6072c99110f10b9b535a8f556"}, {"path": "art/conversion/scn-canteen/v1/registered/game-scale-review.png", "sha256": "1678e548fb0ab2a134dfc4bec233afd48097c92f67252737abedcff5d7a9b5f7"}, {"path": "art/conversion/scn-canteen/v1/registered/authoring-review.json", "sha256": "fb846ffe7b51ea199828cd03cd72d2f334dae2dd0287a11f514c95f1fbb938a7"}, {"path": "art/conversion/scn-canteen/v1/artifact-manifest.json", "sha256": "ff174f570fa84b28ffc780953dbfbaae39d9a0a215523064e8266ff030236454"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/registered/model.json", "sha256": "8a510c3912f1a3c25c5ea4b86068b495f6993cbcf32b899a87eb88b09b1907f5"}, {"path": "art/conversion/scn-canteen/v1/registered/conversion-comparison.png", "sha256": "1d621dff5ac3c58d3d604fd85fef9a421f629cf6072c99110f10b9b535a8f556"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-RANDOM-BOTTLE: Random Bottle
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -3529,7 +3757,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T06:31:08.503717+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.
   Review: Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.
@@ -3567,6 +3795,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/native-palette-comparison.png", "sha256": "525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb"}, {"path": "art/conversion/npc-ctesiphus/v1/game-scale-review.png", "sha256": "111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344"}, {"path": "art/conversion/npc-ctesiphus/v1/artifact-manifest.json", "sha256": "88d1c36a7477b5910341f1342d7322243ed7d1de02bf8fc201ef8eb08adc48ce"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: MINOR POLISH: I inspected the neutral assembly and confirmed the small squared profile-back step. It is a connected contour bump, without detached anatomy, a pivot shift or an equipment intersection. Optional silhouette polish does not justify reopening the accepted Ray Cat shape ahead of structural fixes.
+  Inputs: [{"path": "art/conversion/npc-ctesiphus/v1/model.json", "sha256": "70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147"}, {"path": "art/conversion/npc-ctesiphus/v1/neutral-comparison.png", "sha256": "6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890"}, {"path": "art/conversion/npc-ctesiphus/v1/native-palette-comparison.png", "sha256": "525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb"}, {"path": "art/conversion/npc-ctesiphus/v1/native-palette-east.png", "sha256": "29fac4ec1194a8a8b6271e0e0a2252ee979173a5c13efc791c66c61a1620eafe"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-GLOWFISH: Glowfish
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -3575,7 +3809,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T06:37:00.738394+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.
   Review: Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.
@@ -3613,6 +3847,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: [{"path": "art/conversion/npc-glowfish/v1/native-palette-comparison.png", "sha256": "209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4"}, {"path": "art/conversion/npc-glowfish/v1/game-scale-review.png", "sha256": "f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba"}, {"path": "art/conversion/npc-glowfish/v1/artifact-manifest.json", "sha256": "6a0ecb9340a0b935c1d8623f334e8361cc6bedf90af0f33f8e434bd3d5f93352"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-glowfish/v1/model.json", "sha256": "618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897"}, {"path": "art/conversion/npc-glowfish/v1/neutral-comparison.png", "sha256": "01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7"}, {"path": "art/conversion/npc-glowfish/v1/native-palette-comparison.png", "sha256": "209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-BLACK-ROBES: Black Robes
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3621,7 +3861,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3647,6 +3887,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Outputs: [{"path": "art/conversion/item-black-robes/v1/fittings.json", "sha256": "90b572cab13c01036f3d4efd22f606ba737049280e76d338387e07b9fa8a213d"}, {"path": "art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png", "sha256": "2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-black-robes/v1/fittings.json", "sha256": "90b572cab13c01036f3d4efd22f606ba737049280e76d338387e07b9fa8a213d"}, {"path": "art/conversion/fit-irudad-black-robes/v3/assembly-comparison.png", "sha256": "2b66dfbe6ff46cdc0a40f650f2ca37e4223960a0e1f1d020c83f2ca1badea287"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-CHAIN-MAIL: Chain Mail
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3655,7 +3901,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3705,6 +3951,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: [{"path": "art/conversion/item-chain-mail/v2/artifact-manifest.json", "sha256": "852e2e7331de9e22a7687c59d9cd8ddcf3f1deb7c5389867281e548a228c3233"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/assembly-comparison.png", "sha256": "fa005f1aa58372f51ec86cd41e01662dbf30251eb216aeeff003cdd5c0f165a1"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/independent-palette-comparison.png", "sha256": "d353e3a7a0521665049692970a53fa6ba75c142ff1891eed25bbcf13fbb100f2"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-chain-mail/v2/fittings.json", "sha256": "7f3c2db0269ac64c78c02c7ecedc646a7b16727174ce0281c72baa6e5a325013"}, {"path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/assembly-comparison.png", "sha256": "fa005f1aa58372f51ec86cd41e01662dbf30251eb216aeeff003cdd5c0f165a1"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-CLOTH-ROBE: Cloth Robe
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3713,7 +3965,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 6.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3745,6 +3997,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
   Outputs: [{"path": "art/conversion/item-cloth-robe/v2/fittings.json", "sha256": "8d1ba6d20a69ac8137cb8300c21a1b334e966c45e6708d30e4f42435dc8dbb83"}, {"path": "art/conversion/item-cloth-robe/v2/body-fittings-comparison.png", "sha256": "b992bf0abab22ccdd554ca67e4f47e467bf25c738dd60e6f4da285947d55f4fe"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-cloth-robe/v2/fittings.json", "sha256": "8d1ba6d20a69ac8137cb8300c21a1b334e966c45e6708d30e4f42435dc8dbb83"}, {"path": "art/conversion/item-cloth-robe/v2/body-fittings-comparison.png", "sha256": "b992bf0abab22ccdd554ca67e4f47e467bf25c738dd60e6f4da285947d55f4fe"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-FLOATING-GLOWSPHERE: Floating Glowsphere
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -3753,7 +4011,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
 
 - 2026-10-20T17:43:03.488332+00:00 / resolve_item_identity_description_palette / PASS: Resolve actual palm-size floating opal, captured Floating Nearby slot, independent primary/detail color keys and native light metadata.
   Review: Reviewed the sole required fitting and its corrected hand-column placement, complete source/refinement chain, original body/frame, neutral layers, independent palette and intended-size views. Actual Floating Nearby binding retained; no new generation or native state acceptance claimed.
@@ -3773,6 +4031,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
   Outputs: [{"path": "art/conversion/item-floating-glowsphere/v1/fittings.json", "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png", "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/hand-alignment-guide.png", "sha256": "7a41cddc06e27d469e7e3267873922d77b3944a77c07ad36b2307dbd6e3ab76e"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-floating-glowsphere/v1/fittings.json", "sha256": "1b183e262621f68bdac10f778362cca62fb7aa83f56ad5a23824d0feefb8261a"}, {"path": "art/conversion/fit-nima-floating-glowsphere/v2/assembly-comparison.png", "sha256": "d478776e7d1d9b0a084da86971cc34bdff18aca3e8d206445e0de5e306786559"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-HORNS: Horns
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -3781,7 +4045,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: not started. Process-log events: 13.
 
 - 2026-10-20T18:04:06.448934+00:00 / resolve_item_identity_description_palette / PASS: Resolve exact pair/groove description, natural-equipment Head binding and source TileColor w/detail W roles.
   Review: Reviewed sole required fitting source/refinement/patch chain, directional full near/far surfaces and original head depth, neutral w/W regions, intended-size views and exact physical-frame mapping. Natural Horns stay separate from ordinary race body; no integrated mutation/headgear acceptance claimed.
@@ -3843,6 +4107,24 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: [{"path": "art/conversion/item-horns/v3/artifact-manifest.json", "sha256": "1fa4198435c5171fe7d8220329737b4474c7a87e9d3dc1bdd59fdf3a04ebd5fc"}, {"path": "art/conversion/fit-yrame-horns/v4/head-fit-comparison.png", "sha256": "fa7a5e6433a13d15e19ce5e5ecd4ff4379bafba525122a833e90fc4e572567d8"}, {"path": "art/conversion/fit-yrame-horns/v4/assembly-comparison.png", "sha256": "4c0ca77075316dde73258a83101e1fae46e6529ea85411a19738c675548233a3"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T08:38:15.722548+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T08:39:16.813066+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NOT SUBSTANTIATED: The user selected sheep/ram-like horns and has been reviewing that curl design. A generic natural Horns description does not override this explicit authored choice or require replacing it with straight spikes. The reviewer correctly asks for source reconciliation, but that does not add a new silhouette redesign. Existing independently confirmed crown-root, return-tip and skull-clearance defects remain open and keep horns unready.
+  Inputs: [{"path": "art/conversion/item-horns/v3/fittings.json", "sha256": "0abea001d4695d2b283748ecf8991b18c0644c44fe15c59bf8261a1be8e9f5df"}, {"path": "art/conversion/fit-yrame-horns/v4/assembly-comparison.png", "sha256": "4c0ca77075316dde73258a83101e1fae46e6529ea85411a19738c675548233a3"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-IRON-VINEREAPER: Iron Vinereaper
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -3851,7 +4133,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
 
 - 2026-10-20T16:21:17.272537+00:00 / resolve_item_identity_description_palette / PASS: Resolved wrought-iron crescent/watervine identity and y/y roles, full ancestry one-handed base declaration, nine captured ordinary hand bindings and explicit unknown runtime actor slot demand. Dimensions/grips are authored estimates; same canonical physical size across bodies.
   Review: Both ordinary female and male Hand/2 fittings have actual source/reference/construction/contextual-refinement/full-source/depth/intended-size evidence. Nine captured item/hand bindings retained. Common installed ancestry and Physics default support a one-handed base class; runtime actor-event results remain unknown rather than inferred. Explicit head/shaft/overall/grip metadata and male raster/world mapping preserve the same canonical tool physical size across both bases; dimensions are authored, weight5 is not length. Female used an installed legacy Axe texture; male traced the current Hatchet texPath/LoadFolders, and both reference roles stay explicit. No donor runtime drawSize invented. Current plates are stationary authoring fits; horizontal ready/resting state, actual runtime slot demand and named outfits/native acceptance remain unfinished.
@@ -3865,6 +4147,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
   Outputs: [{"path": "art/conversion/item-iron-vinereaper/v1/fittings.json", "sha256": "ffe32306fd1d0e06112455a61ce7ecce19d089e0cc69367c8d55c598e30c5301"}, {"path": "art/conversion/item-iron-vinereaper/v1/body-fittings-comparison.png", "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-iron-vinereaper/v1/fittings.json", "sha256": "ffe32306fd1d0e06112455a61ce7ecce19d089e0cc69367c8d55c598e30c5301"}, {"path": "art/conversion/item-iron-vinereaper/v1/body-fittings-comparison.png", "sha256": "8c1faa334d9c3a80c1519196ee642d13fdc8e2ed671eb124960b51448dc05ae9"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-LEATHER-APRON: Leather Apron
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3873,7 +4161,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3893,6 +4181,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
   Outputs: [{"path": "art/conversion/item-leather-apron/v1/fittings.json", "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"}, {"path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png", "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-leather-apron/v1/fittings.json", "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"}, {"path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png", "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-LEATHER-BOOTS: Leather Boots
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3901,7 +4195,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -3951,6 +4245,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: [{"path": "art/conversion/item-leather-boots/v2/artifact-manifest.json", "sha256": "27203b7380b5884dcede66dd7fef24ee99415f0c2f54e1eb4d0e1d28d211af03"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/footwear-comparison.png", "sha256": "fe71685883cb1e3c2b65391e5828947e7d99c71390fc37fa7bfed74c220c7ac4"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/independent-palette-comparison.png", "sha256": "aa4aafa8e4bf68694bf76a69e833c7e9949d8955264cb43f4aaec4fc28031403"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-leather-boots/v2/fittings.json", "sha256": "b52f0b72d7fbe0b9b7c4ff1e9b20c2121d7e7a6b6e954654d18ab3aba33853a4"}, {"path": "art/conversion/fit-yrame-leather-boots/v2/assembly-comparison.png", "sha256": "550d3bba9828f408115286dc1fec90a9db7a872087344e63cd2e024543ff0373"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-PESTLE: Pestle
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -3959,7 +4259,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
 
 - 2026-10-20T15:46:46.500948+00:00 / resolve_item_identity_description_palette / PASS: Resolved installed/runtime stone bulb dusted with humoric powders, exact original tile and independent native y/Y tint roles.
   Review: Reconciled exact Pestle stone-bulb/powder identity, original y/Y roles, actual donor convention, complete neutral source and single actual contextual material refinement. One Nima fitting supplies lower-grip SEN/mirrored west evidence over fixed ordinary female base. Exact mutation-managed Hand181/6 is retained, not accepted as placed. No redundant ImageGen; resting/ready pose, named mutation/outfit and native equipment acceptance remain unfinished.
@@ -3973,6 +4273,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
   Outputs: [{"path": "art/conversion/item-pestle/v1/fittings.json", "sha256": "cedfa9ad026e37e8d8f2bb2f0e203151c83bc261e988fcd1d3788bc84fc98f7d"}, {"path": "art/conversion/item-pestle/v1/body-fittings-comparison.png", "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-pestle/v1/fittings.json", "sha256": "cedfa9ad026e37e8d8f2bb2f0e203151c83bc261e988fcd1d3788bc84fc98f7d"}, {"path": "art/conversion/item-pestle/v1/body-fittings-comparison.png", "sha256": "99aa632f4d1abfebde8e07bd38b726ab6b74d6a576b0445d746b1ff77a7646cc"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-POCKETED-VEST: Pocketed Vest
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -3981,7 +4287,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4007,6 +4313,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Outputs: [{"path": "art/conversion/item-pocketed-vest/v1/fittings.json", "sha256": "6d68511a56ee303ff5a94127d17fbb2f76a5b41eba2fa634477454378193d6c8"}, {"path": "art/conversion/item-pocketed-vest/v1/body-fittings-comparison.png", "sha256": "3dc2f8486c3c00062180c39fbe6aa8ad3ca4153c0ea14e3a5cf57264723bd54f"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-pocketed-vest/v1/fittings.json", "sha256": "6d68511a56ee303ff5a94127d17fbb2f76a5b41eba2fa634477454378193d6c8"}, {"path": "art/conversion/item-pocketed-vest/v1/body-fittings-comparison.png", "sha256": "3dc2f8486c3c00062180c39fbe6aa8ad3ca4153c0ea14e3a5cf57264723bd54f"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-SANDALS: Sandals
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -4015,7 +4327,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 9.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 10.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4071,6 +4383,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 9.
   Outputs: [{"path": "art/conversion/item-sandals/v2/fittings.json", "sha256": "e94bbe1d8729e3963edf40614592c4386871d01aa669145b3cdd52771d586f1c"}, {"path": "art/conversion/item-sandals/v2/body-fittings-comparison.png", "sha256": "90e659432706ff92142fd037d3f63a87116c92ee4a9a0f998063e5a9ae0cbcf9"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: MINOR POLISH: I inspected the aggregate, male fit and intact-source plate. The gray arcs belong to the continuous whole outsole outside the original foot; the dark inner boundary belongs to the original toes/foot. No detached duplicate sole piece is established. The protruding rim could be made less conspicuous as optional polish, but should not be removed merely because the sole is wider than the bare foot.
+  Inputs: [{"path": "art/conversion/item-sandals/v2/fittings.json", "sha256": "e94bbe1d8729e3963edf40614592c4386871d01aa669145b3cdd52771d586f1c"}, {"path": "art/conversion/item-sandals/v2/body-fittings-comparison.png", "sha256": "90e659432706ff92142fd037d3f63a87116c92ee4a9a0f998063e5a9ae0cbcf9"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-SHILLELAGH: Shillelagh
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -4079,7 +4397,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
 
 - 2026-10-20T15:32:36.418724+00:00 / resolve_item_identity_description_palette / PASS: Resolved installed wooden Shillelagh definition, original tile and y/y palette; retained observed generic-description and weight mismatch.
   Review: Reconciled exact Shillelagh identity with installed wooden-stick/oaken-knot definition and preserved observed generic-description/weight discrepancy. Current dromad Hand/2 model, corrected inner-palm grip, original gripping-hand foreground, unchanged profile, neutral equipment y/y roles and single-item naked-base plate are source-linked. Authored enlargement is explicit, not native measured size or new user size approval. No redundant generation; native held-state/outfit acceptance remains unfinished.
@@ -4093,6 +4411,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
   Outputs: [{"path": "art/conversion/item-shillelagh/v1/fittings.json", "sha256": "c39a2d4067d673eacc80e6acb17e718f0c6b34f698946f1d01b244c4db1d9488"}, {"path": "art/conversion/item-shillelagh/v1/body-fittings-comparison.png", "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"}]
   Method/prompt/corrections: {"new_imagegen_call": false}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-shillelagh/v1/fittings.json", "sha256": "c39a2d4067d673eacc80e6acb17e718f0c6b34f698946f1d01b244c4db1d9488"}, {"path": "art/conversion/item-shillelagh/v1/body-fittings-comparison.png", "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-SPECTACLES: Spectacles
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -4101,7 +4425,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4127,6 +4451,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Outputs: [{"path": "art/conversion/item-spectacles/v1/fittings.json", "sha256": "c8bce99ab2f6ddcba416a4aced4224bd75d28f5fc18f6fdf029a15f43e956805"}, {"path": "art/conversion/fit-irudad-spectacles/v2/reference-comparison.png", "sha256": "5839f93061655b5edc14d903defc39020b75741f8590a33537a0404819a1a496"}, {"path": "art/conversion/fit-irudad-spectacles/v2/headwear-comparison.png", "sha256": "f0d23aa0440547dd39aed38688170ca1492c5fd661d10e3ad70014cf7deb2628"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-spectacles/v1/fittings.json", "sha256": "c8bce99ab2f6ddcba416a4aced4224bd75d28f5fc18f6fdf029a15f43e956805"}, {"path": "art/conversion/fit-irudad-spectacles/v2/reference-comparison.png", "sha256": "5839f93061655b5edc14d903defc39020b75741f8590a33537a0404819a1a496"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-STEEL-UTILITY-KNIFE: Steel Utility Knife
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -4135,7 +4465,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
 
 - 2026-10-20T17:09:56.182350+00:00 / resolve_item_identity_description_palette / PASS: Resolve actual dull folding utility knife, native Y/y, inherited base handedness and painted-instance text without inventing a paint surface.
   Review: Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/2 plus explicitly separate female compatibility. Full canonical blade/handle material identical, common physical mapping verified, source palette and painted-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.
@@ -4149,6 +4479,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
   Outputs: [{"path": "art/conversion/item-steel-utility-knife/v1/fittings.json", "sha256": "c8197102afa604b6a07af9f7d571f4c0571b2b2022d9b97f0e038555f9d37368"}, {"path": "art/conversion/item-steel-utility-knife/v1/body-fittings-comparison.png", "sha256": "05ac61e9eb2f69960e673b8ab5fbb6d6d0c5a4a2e97101f14f0d3a4d22c42fbe"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-steel-utility-knife/v1/fittings.json", "sha256": "c8197102afa604b6a07af9f7d571f4c0571b2b2022d9b97f0e038555f9d37368"}, {"path": "art/conversion/item-steel-utility-knife/v1/body-fittings-comparison.png", "sha256": "05ac61e9eb2f69960e673b8ab5fbb6d6d0c5a4a2e97101f14f0d3a4d22c42fbe"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-TELESCOPIC-MONOCLE: Telescopic Monocle
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -4157,7 +4493,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 7.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 8.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4201,6 +4537,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 7.
   Outputs: [{"path": "art/conversion/item-telescopic-monocle/v2/fittings.json", "sha256": "c1b70ab2aa05a0f2741910f2eeb93618bd7806d445a022e9c277dd97197fb08e"}, {"path": "art/conversion/item-telescopic-monocle/v2/body-fittings-comparison.png", "sha256": "c8903e6694333eceb77b3985386cb6ad2dbe96c9d3f303fc94e55deb0cebc984"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-telescopic-monocle/v2/fittings.json", "sha256": "c1b70ab2aa05a0f2741910f2eeb93618bd7806d445a022e9c277dd97197fb08e"}, {"path": "art/conversion/item-telescopic-monocle/v2/body-fittings-comparison.png", "sha256": "c8903e6694333eceb77b3985386cb6ad2dbe96c9d3f303fc94e55deb0cebc984"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-VIBRO-BLADE: Vibro Blade
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -4209,7 +4551,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: native_equipment_state_review. Process-log events: 6.
+Current step: native_equipment_state_review. Process-log events: 7.
 
 - 2026-10-20T15:54:24.248251+00:00 / resolve_item_identity_description_palette / PASS: Resolved installed matte ionic plastifer, long blade/finger-rest hilt, original c/y roles and energy-cell definition; preserved generic runtime description/weight mismatch and unknown charge state.
   Review: Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished.
@@ -4247,6 +4589,12 @@ Current step: native_equipment_state_review. Process-log events: 6.
   Outputs: [{"path": "art/conversion/item-vibro-blade/v2/fittings.json", "sha256": "e87a42795e93a4886df8905b023faca29cd476acc68dbec10e798d1e9c47aff8"}, {"path": "art/conversion/item-vibro-blade/v2/authoring-review.json", "sha256": "c6d91c17aa36f800138a2dde48237a5e14afcf21161f83912d066a155fda3b2b"}, {"path": "art/conversion/item-vibro-blade/v2/artifact-manifest.json", "sha256": "2833677d5dda4d5190072de4d0d1047b6459c319ae062b53b4ffa135565cac40"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-vibro-blade/v2/fittings.json", "sha256": "e87a42795e93a4886df8905b023faca29cd476acc68dbec10e798d1e9c47aff8"}, {"path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png", "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-WALKING-STICK: Walking Stick
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -4255,7 +4603,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
 
 - 2026-10-20T17:53:12.039378+00:00 / resolve_item_identity_description_palette / PASS: Resolve the brinestalk/crook source, actual altered Hand201/6 binding, one-hand base declaration and w/g palette.
   Review: Reviewed sole required art fitting, complete crook/shaft source and one contextual refinement, full alpha/material completion, original body/depth, palette and intended-size evidence. Exact mutation Hand201/6 retained; no native or named-assembly acceptance claimed.
@@ -4275,6 +4623,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
   Outputs: [{"path": "art/conversion/item-walking-stick/v1/fittings.json", "sha256": "e7107dd70b3351a5946c8ab6522196ae400bc3a142019ed634aad7afabab0e44"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-walking-stick/v1/fittings.json", "sha256": "e7107dd70b3351a5946c8ab6522196ae400bc3a142019ed634aad7afabab0e44"}, {"path": "art/conversion/fit-irudad-walking-stick/v1/assembly-comparison.png", "sha256": "f87a33c2bdbd6b7e02cb9e5afcf30df7bccb441902aa7a1dc958c55e5c7c88eb"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-WIDE-BRIMMED-HAT: Wide-brimmed Hat
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -4283,7 +4637,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4309,6 +4663,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Outputs: [{"path": "art/conversion/item-wide-brimmed-hat/v1/fittings.json", "sha256": "ea10d6d36c93cce5d7d8dd6be5184310e595bf7a669eaa3e63267207d4e143b2"}, {"path": "art/conversion/item-wide-brimmed-hat/v1/body-fittings-comparison.png", "sha256": "5c2f55bb5d6737a417c1e3ba01edfc2d311d514b4ceb834b9683ffba5447905f"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-wide-brimmed-hat/v1/fittings.json", "sha256": "ea10d6d36c93cce5d7d8dd6be5184310e595bf7a669eaa3e63267207d4e143b2"}, {"path": "art/conversion/item-wide-brimmed-hat/v1/body-fittings-comparison.png", "sha256": "5c2f55bb5d6737a417c1e3ba01edfc2d311d514b4ceb834b9683ffba5447905f"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-WOVEN-TUNIC: Woven Tunic
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> reprocess_under_regional_curved_v1 -> record_item_acceptance_from_all_fittings.
@@ -4317,7 +4677,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 5.
 
 - 2026-10-20T11:51:22.919034+00:00 / reprocess_under_regional_curved_v1 / INVALIDATED: User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.
   Review: Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.
@@ -4343,6 +4703,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 4.
   Outputs: [{"path": "art/conversion/item-woven-tunic/v1/fittings.json", "sha256": "edc66af5ca10a9d911d1bb8e414267216ac453fd201eb8db69899fb2d1f9cb06"}, {"path": "art/conversion/item-woven-tunic/v1/body-fittings-comparison.png", "sha256": "c5b81f84fed5f2674df1fd0b02540d1bbbea1177cd4f53d8a47631d23ef61eb0"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-woven-tunic/v1/fittings.json", "sha256": "edc66af5ca10a9d911d1bb8e414267216ac453fd201eb8db69899fb2d1f9cb06"}, {"path": "art/conversion/item-woven-tunic/v1/body-fittings-comparison.png", "sha256": "c5b81f84fed5f2674df1fd0b02540d1bbbea1177cd4f53d8a47631d23ef61eb0"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### ITEM-WRENCH: Wrench
 
 Required steps: resolve_item_identity_description_palette -> verify_every_body_fitting_log -> record_item_acceptance_from_all_fittings.
@@ -4351,7 +4717,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
+Current step: record_item_acceptance_from_all_fittings. Process-log events: 3.
 
 - 2026-10-20T17:22:31.237753+00:00 / resolve_item_identity_description_palette / PASS: Resolve actual armlength hooked Wrench, native head y/shaft c, inherited base handedness and counterweighted text without inventing an added weight.
   Review: Reviewed both current fitting logs and registrations: actual Argyve ordinary Hand/1 plus explicitly separate female compatibility. Full canonical jaw/shaft material identical, common physical mapping verified, source palette and counterweight-description uncertainty retained. No new generation, native test or named outfit acceptance claimed.
@@ -4365,6 +4731,12 @@ Current step: record_item_acceptance_from_all_fittings. Process-log events: 2.
   Outputs: [{"path": "art/conversion/item-wrench/v1/fittings.json", "sha256": "3c8b1205a9b7ae47a829961ab332323e74f28d7647559306ef7734d9368d9442"}, {"path": "art/conversion/item-wrench/v1/body-fittings-comparison.png", "sha256": "d3256454d99b299f220090b9662d8bb846497da02f4fc4c5b0615fe9d04503de"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/item-wrench/v1/fittings.json", "sha256": "3c8b1205a9b7ae47a829961ab332323e74f28d7647559306ef7734d9368d9442"}, {"path": "art/conversion/item-wrench/v1/body-fittings-comparison.png", "sha256": "d3256454d99b299f220090b9662d8bb846497da02f4fc4c5b0615fe9d04503de"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-14-item_aggregates.json", "sha256": "ae4144f0bd8f0d4a6f259b178a2c22bb4eb71e756fce894caaaea1c176486fce"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-ALCHEMIST-TABLE: Alchemist Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4373,7 +4745,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/alchemist-table-body.png](../art/village/scenery/alchemist-table-body.png), [art/village/scenery/alchemist-table-detail.png](../art/village/scenery/alchemist-table-detail.png).
 
-Current step: native_state_review. Process-log events: 30.
+Current step: native_state_review. Process-log events: 31.
 
 - 2026-10-20T06:30:33.351102+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Alchemist Table/Table definitions, original tile mask/hash, scorched-table description and deleted inherited empty/full appearance tags.
   Review: Viewed original source decoded with native w wood and C glass. Wide table/visible supports, left rack and tall alembic define its source identity. Inventory/cover/organic furniture metadata remains native; described fixture art is distinct from actual carried inventory.
@@ -4555,6 +4927,12 @@ Current step: native_state_review. Process-log events: 30.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-alchemist-table/v3/registered/model.json", "sha256": "be982e6340a6e6ce34c7fcf703d2ffd6f8d9f83c44d828021f0e88c23060a942"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-native-palette.png", "sha256": "1440a4683ebe937d83654dc58ed7ddd03512122aba76d49876a65e6d02fb5897"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-coverage.png", "sha256": "7e20fcc963b4dc5465aa8613893b7fe7757e9e7e7591ad6cc88033a89b1263d5"}, {"path": "art/conversion/scn-alchemist-table/v3/registered/all-views-glass-ownership.png", "sha256": "31d04d4eaa2a37cbf2a25f08afb9320cf481f5426e15f6d5621d8c0bb846f618"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-ARGYVE-MULTICABINET: Argyve Multicabinet
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4563,7 +4941,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/argyve-multicabinet-body.png](../art/village/scenery/argyve-multicabinet-body.png), [art/village/scenery/argyve-multicabinet-detail.png](../art/village/scenery/argyve-multicabinet-detail.png).
 
-Current step: native_state_review. Process-log events: 19.
+Current step: native_state_review. Process-log events: 20.
 
 - 2026-10-20T06:49:11.343210+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Argyve/Multicabinet definitions and decoded both actual RandomTile source masks, rather than relying only on the older static thumbnail.
   Review: Both exact16x24source masks/hash/atlas rectangles are retained in the index. The child changes inventory population, not appearance. Native c/W palette, galvanized-metal description, solidity and occlusion are recorded. Tiny partial marks do not prove electronics or dynamic open drawers.
@@ -4679,6 +5057,12 @@ Current step: native_state_review. Process-log events: 19.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/model.json", "sha256": "f5a3f776afb260b867f066c8adced322ada4e89d02842b53a49a8e1fc13c6624"}, {"path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-native.png", "sha256": "8416a94433a75189cd5ef6ef259c9c6e2812dd708f291ea6be5d8178f8e994f1"}, {"path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-coverage.png", "sha256": "9c328b4a2d49a0a161258be196d09f1b6e9774ea867c28e2bce6ef7f75200537"}, {"path": "art/conversion/scn-argyve-multicabinet/v2/registered-final/all-layouts-detail.png", "sha256": "699fc35bf7f1ec2942596ec3e47d3524cab8b5f4d9a6e930df12ecd0f5d649bc"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BED: Bed
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4687,7 +5071,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bed-body.png](../art/village/scenery/bed-body.png), [art/village/scenery/bed-detail.png](../art/village/scenery/bed-detail.png).
 
-Current step: native_state_review. Process-log events: 21.
+Current step: native_state_review. Process-log events: 22.
 
 - 2026-10-20T06:54:35.154016+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read exact Bed/BaseBed/MountedFurniture/Furniture inheritance, original16x24mask and native w/Y wood/fabric palette; inspected native Bed part for appearance ownership.
   Review: Actual source/hash, description, open upper-right headboard and lower-left sleeping surface are recorded. Bed part declares no Render/Tile override; source has one tile, native sleep state and rare Animated builder. Hidden structure and curves/seams remain authored interpretation.
@@ -4815,6 +5199,12 @@ Current step: native_state_review. Process-log events: 21.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NOT SUBSTANTIATED: I inspected the converted all-view bed, its source description/camera contract and the actual installed VTE Bed_south reference. The donor itself uses a cardinal overhead sleeping plane, and the current packet explicitly records that camera and one continuous fabric pad on low slats. The white sleeping plane and thin low frame therefore do not establish an erroneous camera or missing support. Exposing an under-bed volume by changing the angle would contradict this selected reference. Rail readability could be cosmetic polish, but is not a structural correction to make now.
+  Inputs: [{"path": "art/conversion/scn-bed/v2/registered/model.json", "sha256": "b030947a7fd6f4d7a71d4d5caff676cc3767c3fc415f10e10a80eb058f94ea4c"}, {"path": "art/conversion/scn-bed/v2/registered/all-views-native.png", "sha256": "83a4ba71bcdcc23992b63d1bf9ef17d5bf13596353f9041259836823255a1b38"}, {"path": "art/conversion/scn-bed/v2/registered/all-views-coverage.png", "sha256": "90eaed08262062652cc9a6a2d4a408651938a352ed83a633aade1eb072c41512"}, {"path": "art/conversion/scn-bed/v2/registered/all-views-detail.png", "sha256": "04c7f51a97c42047011ba77b92b999e0069c3655356c3c5c82cb700796bbe06a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BEDROLL: Bedroll
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4823,7 +5213,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/bedroll-body.png](../art/village/scenery/bedroll-body.png), [art/village/scenery/bedroll-detail.png](../art/village/scenery/bedroll-detail.png).
 
-Current step: native_state_review. Process-log events: 19.
+Current step: native_state_review. Process-log events: 20.
 
 - 2026-10-20T07:01:52.510253+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Bedroll/Furniture definitions, original16x24mask/hash, goat-wool/canvas-ties description and native w/y roles.
   Review: Source has a rounded diagonal lower body, pale upper folded end and primary fastening marks. Hollow glyph is not a transparent physical bed. This is takeable4-weight non-solid furniture with native Bed interaction, not BaseBed/mounted furniture.
@@ -4939,6 +5329,12 @@ Current step: native_state_review. Process-log events: 19.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-bedroll/v2/registered/model.json", "sha256": "7470de0aeaeba253027633c76c2bd7931587bf73c616e777814ab2012c09bac1"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-native.png", "sha256": "d46cec3618492f6e617d15b177f8cafcf0273b82963f1eed2d2b2e54710e06d7"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-coverage.png", "sha256": "65325fa33e5a882e390463d506a02dfd09dfe293df8e30471ee32e0d646ca6c4"}, {"path": "art/conversion/scn-bedroll/v2/registered/all-views-detail.png", "sha256": "a8fda7f99b9a7a7551c7943837e45608e68504559b0380f92b004598e22640e4"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BOOK-TABLE: Book Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -4947,7 +5343,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/book-table-body.png](../art/village/scenery/book-table-body.png), [art/village/scenery/book-table-detail.png](../art/village/scenery/book-table-detail.png).
 
-Current step: native_state_review. Process-log events: 20.
+Current step: native_state_review. Process-log events: 21.
 
 - 2026-10-20T07:06:17.740223+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Book Table/Furniture definitions, exact original tile/hash, puzzle-box description and native w/W drawer/top roles.
   Review: The source has a broad shallow top, two horizontal drawer fronts, low rail and short feet. No visible books/papers are established. Direct Furniture inheritance means the ordinary Table empty/full state tags do not apply; real inventory remains native.
@@ -5069,6 +5465,12 @@ Current step: native_state_review. Process-log events: 20.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-book-table/v2/registered-final/model.json", "sha256": "7ca29fc52f08f9d29ee1bce0d3c8de055c816d1ef447b0d0ebad135e474e0ce3"}, {"path": "art/conversion/scn-book-table/v2/registered-final/all-views-native.png", "sha256": "7085a4cec15433bc7dc5d390b6995312dbf25eb1b0752fee6fbb1338e472c32a"}, {"path": "art/conversion/scn-book-table/v2/registered-final/all-views-coverage.png", "sha256": "969520ea5e30744aa1e34306f8a0038740ebd39815f8cca5809740b765ae2db3"}, {"path": "art/conversion/scn-book-table/v2/registered-final/all-views-detail.png", "sha256": "c62f331f0da9292ae034f4f566530981b7a03e2539c9143d143f34765b02b8bd"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-CANVAS-FOLDING-CHAIR: Canvas Folding Chair
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5077,7 +5479,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canvas-folding-chair-body.png](../art/village/scenery/canvas-folding-chair-body.png), [art/village/scenery/canvas-folding-chair-detail.png](../art/village/scenery/canvas-folding-chair-detail.png).
 
-Current step: native_state_review. Process-log events: 29.
+Current step: native_state_review. Process-log events: 30.
 
 - 2026-10-20T07:13:14.360145+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Canvas Folding Chair/BasePortableChair/BaseChair/Furniture inheritance, exact original tile/hash and jointed-wood/knit-watervine description.
   Review: Source shows an oblique low sling with thin wood rails/support marks, no tall backrest. Native wood w/canvas y roles are retained. Portable2-weight takeability and Chair interaction stay native; MissileCover is removed by BasePortableChair. Inherited rare Animated builder needs native fallback.
@@ -5253,6 +5655,12 @@ Current step: native_state_review. Process-log events: 29.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-canvas-folding-chair/v3/registered/model.json", "sha256": "17d6bd5ae8403a1888c97048b85282c3c9b66bb6761a15867f15f04652101773"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-native.png", "sha256": "66599bfbf4b6288d57f888190ce2c0307bce9b237e18a79c03f65c1159ec9a4c"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-coverage.png", "sha256": "3f9f4dcda082f18bfcfb04efc8fbc65640e58ac9b2658f338fd7e196653b0a06"}, {"path": "art/conversion/scn-canvas-folding-chair/v3/registered/all-views-detail.png", "sha256": "98da99978fb70f49099c62eee4322b8d016b052c5e6eb32d226083d0339e7b4e"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-CHAIR: Chair
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5261,7 +5669,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chair-body.png](../art/village/scenery/chair-body.png), [art/village/scenery/chair-detail.png](../art/village/scenery/chair-detail.png).
 
-Current step: native_state_review. Process-log events: 26.
+Current step: native_state_review. Process-log events: 27.
 
 - 2026-10-20T07:18:20.709845+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chair/BaseChair/Furniture inheritance, exact original tile/hash, nailed-plank description and native w/y frame/seat color roles.
   Review: Tall upper-left slatted back, hard angled seat and support extents follow the actual source. Native detail y is a seat tint, not evidence of fabric. Non-takeable20-weight organic furniture, MissileCover10and rare Animated builder remain native.
@@ -5419,6 +5827,12 @@ Current step: native_state_review. Process-log events: 26.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-chair/v3/registered/model.json", "sha256": "5a45bc16f5f92af8e1b50781df44176ee8c61b178e23bbbc2955f606390a84c8"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-native.png", "sha256": "9e7c0945d8e3309c22331e047ecca084e5fc160a2d778e2c1c5ce52626753bdd"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-coverage.png", "sha256": "9f171f5b46f365e1ab4b5f8f1424b621fbc1b751ddf43f78d99a5620b42b9b4c"}, {"path": "art/conversion/scn-chair/v3/registered/all-views-detail.png", "sha256": "737d83725355343227df39f3a4e73bf80894c517f952af31e50f472e152c7f88"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-CHEST1: Chest1
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5427,7 +5841,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/chest1-body.png](../art/village/scenery/chest1-body.png), [art/village/scenery/chest1-detail.png](../art/village/scenery/chest1-detail.png).
 
-Current step: native_state_review. Process-log events: 19.
+Current step: native_state_review. Process-log events: 20.
 
 - 2026-10-20T07:26:22.614516+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Chest1/Chest/Furniture inheritance, original16x24mask/hash, scratched-wood description and native w/W roles; inspected Container part for appearance overrides.
   Review: Chest1 changes inventory builder/tier/aggregation, not appearance. Two bright side bands use W; center latch remains primary w. No alternate lid/empty/full/random tile is declared and inspected Container code has no Render/Tile appearance override. Native inventory, sounds, organic/source physics and unspecified defaults remain native.
@@ -5543,6 +5957,12 @@ Current step: native_state_review. Process-log events: 19.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-chest1/v2/registered-final/model.json", "sha256": "1943b9006a1daca6c9da45cdccdcee23695a9b60fe3b0fc5d5d9a3bd43155b9c"}, {"path": "art/conversion/scn-chest1/v2/registered-final/all-views-native.png", "sha256": "4f1d7f4ff5393c71723e23026ca23208f69393345b31bf4633827dcbbd57396c"}, {"path": "art/conversion/scn-chest1/v2/registered-final/all-views-coverage.png", "sha256": "d1e27c3586f5d689fa4bf66dd9c10fea293586c37879652791bc893857922cf5"}, {"path": "art/conversion/scn-chest1/v2/registered-final/all-views-detail.png", "sha256": "2061ae6d68e0f67d6f831d1529505622d0b4873f3922d950867ce90cf5355492"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-DRESSER: Dresser
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5551,7 +5971,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/dresser-body.png](../art/village/scenery/dresser-body.png), [art/village/scenery/dresser-detail.png](../art/village/scenery/dresser-detail.png).
 
-Current step: native_state_review. Process-log events: 20.
+Current step: native_state_review. Process-log events: 21.
 
 - 2026-10-20T07:30:42.522367+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Dresser/Furniture definitions, exact original tile/hash and precise-wood/internal-brass-rail description; decoded native primary/detail w/w.
   Review: Source supports three stacked fronts, top recessed pull, opposed lower curved motifs, shallow cap and tiny feet. Both color roles are w: no gold hardware is implied. Explicit80-weight non-solid non-takeable organic container/inventory and rare Animated state stay native.
@@ -5673,6 +6093,12 @@ Current step: native_state_review. Process-log events: 20.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-dresser/v2/registered/model.json", "sha256": "e0c924e7ce35825d19b5a1145b9ae7a85a4a4bb2afb4418efc470cb0848f32f1"}, {"path": "art/conversion/scn-dresser/v2/registered/all-views-native.png", "sha256": "3d7b8b4028798026661c604137f20f359c7fa71e1473ddbfab0f61052008c548"}, {"path": "art/conversion/scn-dresser/v2/registered/all-views-coverage.png", "sha256": "332a9fda6d056fa839adede62037240765af567fb3a7e65fcb95932660cf1b67"}, {"path": "art/conversion/scn-dresser/v2/registered/all-views-detail.png", "sha256": "2180f86c991204340bbd141a9c9e3e7172a62363cb66d8490712355cf62ca86a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-FLOOR-CUSHION: Floor Cushion
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5681,7 +6107,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/floor-cushion-body.png](../art/village/scenery/floor-cushion-body.png), [art/village/scenery/floor-cushion-detail.png](../art/village/scenery/floor-cushion-detail.png).
 
-Current step: native_state_review. Process-log events: 26.
+Current step: native_state_review. Process-log events: 27.
 
 - 2026-10-20T07:41:40.915255+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Floor Cushion/BaseChair/Furniture definitions, chaff/glowcrow-feather description and native w/y roles; extracted all four actual RandomTile masks rather than only the older default thumbnail.
   Review: Viewed exact source patterns. Default thumbnail and variant1 have identical alpha and identical source R wherever covered; invisible RGB differs, so raw RGBA identity is not claimed. Native shader appearance is equivalent. Glowcrow stuffing does not imply glow or loose feathers. Low weight does not override inherited takeability/cover.
@@ -5839,6 +6265,12 @@ Current step: native_state_review. Process-log events: 26.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-floor-cushion/v2/registered-final/model.json", "sha256": "d0ac421c3ed74fde2136343a41b35e465256d93af5f9c90e7d428260d20687ab"}, {"path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-native.png", "sha256": "f7812fde15aec5d6ff4697bc2f78a4ff5ff24faf2edeb605c6aa5653857de6eb"}, {"path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-coverage.png", "sha256": "b70850bb39f901fc713b7e1e9d37d31ba195fab4ffb818c4c0e7b30f7aee27ae"}, {"path": "art/conversion/scn-floor-cushion/v2/registered-final/all-views-detail.png", "sha256": "9250c28151850704465403e5382e553fbbbf667d13a5ad3c794fcc0d9439680f"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-HAMMOCK: Hammock
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5847,7 +6279,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/hammock-body.png](../art/village/scenery/hammock-body.png), [art/village/scenery/hammock-detail.png](../art/village/scenery/hammock-detail.png).
 
-Current step: native_state_review. Process-log events: 22.
+Current step: native_state_review. Process-log events: 23.
 
 - 2026-10-20T07:54:45.894131+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Hammock/Furniture definitions, exact default/hanging masks and lattice/frayed-center description; inspected native Hangable and Render color/state methods.
   Review: Default sw_shawl portable/ground tile differs from actual sw_hammock hanging tile. Hangable support/lifecycle selects HangingTile at render time. Explicit TileColor y supplies primary tile color; glyph ColorString Y remains metadata and detail stays Y. Organic2-weight takeable non-solid Bed/Hangable and Hitpoints5remain native.
@@ -5981,6 +6413,12 @@ Current step: native_state_review. Process-log events: 22.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-hammock/v2/registered-final/model.json", "sha256": "1cc5562c86e43aa44a416331eb2723c51c6e84123f31abf3e0f9cf46c95d1e22"}, {"path": "art/conversion/scn-hammock/v2/registered-final/all-views-native.png", "sha256": "dfe408db7cda6bcb766aba526dfc8971421b3efdbac32148f3ecbcb2c8709829"}, {"path": "art/conversion/scn-hammock/v2/registered-final/all-views-coverage.png", "sha256": "4d98ebe3b26d4f55b7bc6c8df266f0e7c1f9c42cbb4a7caea3e142f8a7ce0c89"}, {"path": "art/conversion/scn-hammock/v2/registered-final/all-views-detail.png", "sha256": "12214e944b18ab5225cf43c6c8cacc0322b577f0f936f72d8d7b1f4e3bfc4eb5"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-JOPPA-BOOKSHELF: Joppa Bookshelf
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -5989,7 +6427,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/joppa-bookshelf-body.png](../art/village/scenery/joppa-bookshelf-body.png), [art/village/scenery/joppa-bookshelf-detail.png](../art/village/scenery/joppa-bookshelf-detail.png).
 
-Current step: native_state_review. Process-log events: 24.
+Current step: native_state_review. Process-log events: 25.
 
 - 2026-10-20T08:06:21.369110+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Joppa Bookshelf/Bookshelf/BaseBookshelf/MountedFurniture/Furniture definitions, exact three RandomTile masks and dusty-paper description; inspected native Inventory state methods.
   Review: Inherited RandomTile retains three layouts despite child default tile1. Native Inventory reads FullDetailColor W/EmptyDetailColor k while wood stays w; this chain declares no alternate empty/full tile. Source spine groups are cosmetic marks, not actual inventory identities. Mounted organic50-weight state and HangingSupport remain native.
@@ -6135,6 +6573,12 @@ Current step: native_state_review. Process-log events: 24.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-joppa-bookshelf/v2/registered/model.json", "sha256": "25e6f728b560e4d581e6bf847a8551a6f5141383d35663d79e60856a7a840ba6"}, {"path": "art/conversion/scn-joppa-bookshelf/v2/registered/all-views-stocked.png", "sha256": "9e13d689b355aef41b726e8c889e1ff42d01c8b56c74ec9140f18470b6067c52"}, {"path": "art/conversion/scn-joppa-bookshelf/v2/registered/all-views-coverage.png", "sha256": "5f8817b87f8a19c02a1b7786f43e0f69d4d705f7ca0a75273693df954f88381a"}, {"path": "art/conversion/scn-joppa-bookshelf/v2/registered/all-views-detail.png", "sha256": "eee07efaab4db1221119832eb79a964bbf53fe8fbe0376fea2497897d55da467"}, {"path": "art/conversion/scn-joppa-bookshelf/v2/registered/all-views-empty.png", "sha256": "34842a0195a5506a4fc9e928cf221be43a3b448b89cd3a4e83ad26ef940055f3"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-06-furniture.json", "sha256": "d8a498cdb7d0b7eb17ccd5cb875e7883fb9fbf3261990d37003de34e55e6f20b"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-MANNEQUIN: Mannequin
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6143,7 +6587,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/mannequin-body.png](../art/village/scenery/mannequin-body.png), [art/village/scenery/mannequin-detail.png](../art/village/scenery/mannequin-detail.png).
 
-Current step: native_state_review. Process-log events: 18.
+Current step: native_state_review. Process-log events: 19.
 
 - 2026-10-20T08:21:56.104589+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed Mannequin/MountedFurniture/Furniture definitions, original mask and native RandomColors behavior.
   Review: Static mounted furniture uses primary y and RandomColors DetailColor=all; R is the blueprint default only. Source head, torso/hip forms, pale stem/base and ambiguous side marks are distinct. BodyType and rare Animated metadata do not establish actor render joints or a mannequin-specific apparel path.
@@ -6253,6 +6697,12 @@ Current step: native_state_review. Process-log events: 18.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-mannequin/v2/registered/model.json", "sha256": "2b5021fbc16eb2236c2936aeeb9757910fc44027ec85eb5d3d1050e12709dcf4"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-default-R.png", "sha256": "f2ee600fa2a731e38a06c378ec387ec7f9d3a056802d7c1365a1ee82f83e2936"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-neutral.png", "sha256": "bba2ba4bcd80daa560e588a34ae2bf7f57d19b30574a89c921c7bfe78d638303"}, {"path": "art/conversion/scn-mannequin/v2/registered/all-views-coverage.png", "sha256": "613610d71d7eded934c96dd09c4c025b2bf2ae51cd69519d5447bfb0e8f665c5"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-METAL-WORKBENCH: Metal Workbench
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6261,7 +6711,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/metal-workbench-body.png](../art/village/scenery/metal-workbench-body.png).
 
-Current step: native_state_review. Process-log events: 26.
+Current step: native_state_review. Process-log events: 27.
 
 - 2026-10-20T08:33:12.911191+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed inheritance and Inventory.CheckEmptyState/CheckNonEmptyState, then extracted both exact native masks privately.
   Review: Metal Workbench inherits Metal Table. Empty uses primary c only; occupied adds a source marker and independent native detail choice C/w/y/W. Native stock/state selection and physical behavior are retained.
@@ -6419,6 +6869,12 @@ Current step: native_state_review. Process-log events: 26.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-metal-workbench/v3/registered/model.json", "sha256": "adeb43d7668fe9e373b3500e24f1b496679e1b772cd76b92bbe49aea096ebdba"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-upper-c.png", "sha256": "d20a641a04c1d9470a2bcfe51b91093de4885766c191468b99e289e671617f0d"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-neutral.png", "sha256": "0138e12156e4b295b3fbd74efee88ac92ebcdffe504b1a7e162f1681545fee75"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-empty-neutral.png", "sha256": "d72bba4cb782468ad10490f5bb4065f437d8c195c3f650f42d20d2615a8368da"}, {"path": "art/conversion/scn-metal-workbench/v3/registered/all-views-coverage.png", "sha256": "6e5bb40a1d2fd12bb929f381e0ab38e063c3a6ff493538683bb65590a200eaca"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-ORNATE-TABLE: Ornate Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6427,7 +6883,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/ornate-table-body.png](../art/village/scenery/ornate-table-body.png), [art/village/scenery/ornate-table-detail.png](../art/village/scenery/ornate-table-detail.png).
 
-Current step: native_state_review. Process-log events: 12.
+Current step: native_state_review. Process-log events: 13.
 
 - 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
   Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
@@ -6501,6 +6957,12 @@ Current step: native_state_review. Process-log events: 12.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-ornate-table/v1/registered-final/model.json", "sha256": "266e97d255851cb81de9059f293d0b1b265c9c8bf0ab8b9a45680572ec819ba9"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-native-y-C.png", "sha256": "77228c2051dc0d9b70efd858a5a5677f3e9b6ab632be9d57ffefcb23e5b2813c"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-neutral.png", "sha256": "b3a28b7d3797b59974737b1fe46045a76ec079c088c7897c0999acf3b51c4f88"}, {"path": "art/conversion/scn-ornate-table/v1/registered-final/all-views-coverage.png", "sha256": "67fb18fbc117514b8727adb930b76c807e1925e3e8a7d737f2cbed2052fd189a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-TABLE: Table
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_front_side_back_furniture_views -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6509,7 +6971,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/table-body.png](../art/village/scenery/table-body.png).
 
-Current step: native_state_review. Process-log events: 18.
+Current step: native_state_review. Process-log events: 19.
 
 - 2026-10-20T09:48:02.870535+00:00 / create_front_side_back_furniture_views / RECORDED: Reconciled this furniture entry with the explicit front/side/back requirement, regardless of current native tile support.
   Review: Existing single-view/cosmetic-state work is preserved, but it does not prove a complete three-view set. Generate, correct and refine the missing views on this entry before generation-ready. No orientation-selection runtime work is authorized by this authoring requirement.
@@ -6619,6 +7081,12 @@ Current step: native_state_review. Process-log events: 18.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-table/v1/registered-final/model.json", "sha256": "3c9cf16d885e233d53efffb93514dad522fa63557be910ba603c06c69d3dde36"}, {"path": "art/conversion/scn-table/v1/registered-final/all-states-native-upper-c.png", "sha256": "dc6a6d294929bca9082f6c0435af6e3ed2cc28fcb00e1c226007e5fae22fc247"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BROKEN-INDUSTRIAL-FAN: Broken Industrial Fan
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6627,7 +7095,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/broken-industrial-fan-body.png](../art/village/scenery/broken-industrial-fan-body.png), [art/village/scenery/broken-industrial-fan-detail.png](../art/village/scenery/broken-industrial-fan-detail.png).
 
-Current step: native_state_review. Process-log events: 10.
+Current step: native_state_review. Process-log events: 11.
 
 - 2026-10-20T21:59:55.714258+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Broken->South->Industrial Fan ancestry, native4phase masks/default3, y rotor/c rim roles and operational/Broken/power state ownership.
   Review: Read-only installed source atlas and bounded Fan/IActivePart/AnimatedMaterialGeneric/Broken metadata study. No game/harness run. Actual frame3hash equals existing source reference. Do not infer missing blades or force broken equipment to spin.
@@ -6689,6 +7157,12 @@ Current step: native_state_review. Process-log events: 10.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-broken-industrial-fan/v1/registered/model.json", "sha256": "0d5f73a6ca63b4db6ec1cd94bc3b62abbbe0367da797e4e4ba2f8edc81ad7ff9"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-native-y-c.png", "sha256": "8eec20121365898830b0ee60c37130953819939ba82d40ff13ca3bd8f6555809"}, {"path": "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-neutral.png", "sha256": "3d4faf4f07bc3832ed35d66411d5020e9b0fd99281c9240eea77b28ea75fa286"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-ELECTRIC-GENERATOR: Electric Generator
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6697,7 +7171,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/electric-generator-body.png](../art/village/scenery/electric-generator-body.png), [art/village/scenery/electric-generator-detail.png](../art/village/scenery/electric-generator-detail.png).
 
-Current step: native_state_review. Process-log events: 9.
+Current step: native_state_review. Process-log events: 10.
 
 - 2026-10-20T22:11:40.329985+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve generator source/ancestry, exact native sparse tile/palette, charge/solar/grid/switch defaults and one fixed ordinary body appearance.
   Review: Bounded installed SolarArray/Circuitry metadata study handles charge/production without body Tile/Render overrides; no child rotor/vibration animation declared. Glyph W differs from tiled primary c. Inherited native status UI and rare Animated fallback preserved, no game launch.
@@ -6753,6 +7227,12 @@ Current step: native_state_review. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-electric-generator/v1/registered/model.json", "sha256": "22efe081e4baf30e2331818f141a7fcb9ee29cb0b722519b8c3368e1fbf3cc41"}, {"path": "art/conversion/scn-electric-generator/v1/registered/registration-comparison.png", "sha256": "6c581fda937705ff4912fa2205b5c05c3be45ed07be27ad80654312596883abd"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-JOPPAOVEN: JoppaOven
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6761,7 +7241,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/joppaoven-body.png](../art/village/scenery/joppaoven-body.png), [art/village/scenery/joppaoven-detail.png](../art/village/scenery/joppaoven-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T22:24:07.833732+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve Joppa clay oven description, ancestry, original tile and palette, cooking preset/heat and declared native visual states.
   Review: Version-pinned definitions plus bounded Campfire code metadata study; AppleMatz preset, CampfireHeatSelfOnly and unset ExtinguishBlueprint recorded. No game launch or invented fire/smoke/off state.
@@ -6811,6 +7291,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-joppaoven/v1/registered/model.json", "sha256": "e747b37e13623bcc6cd4814b3f13b05e50356471e716e2a2597b1ad5c43ccb48"}, {"path": "art/conversion/scn-joppaoven/v1/registered/registration-comparison.png", "sha256": "6985a356f28ab97d1b42b848f0181878c8e22b4e058369dbfffb8e04925ded72"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-LATHE: Lathe
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6819,7 +7305,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/lathe-body.png](../art/village/scenery/lathe-body.png), [art/village/scenery/lathe-detail.png](../art/village/scenery/lathe-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T22:29:22.682708+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve source lathe, ancestry, exact original shape/y/Y palette and native power/rotation status metadata.
   Review: Exact Lathe has hydraulic/electrical consumers1000, ChargeSink10 and Rotation status. Static ChargeSink class study shows charge consumption, no Tile/Render override. No child animation/alternate physical tile declared; inherited status/rare Animated fallback preserved.
@@ -6869,6 +7355,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-lathe/v1/registered/model.json", "sha256": "a94c5dfc1a4e1d82a49ff0b82615cc74be8f23e4a13cdb8b2476afb36d85abd8"}, {"path": "art/conversion/scn-lathe/v1/registered/registration-comparison.png", "sha256": "69c4feacd5f4163d21a3ffa756be80ef0403497ace37cf2565d092e314b8d609"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-LOUDSPEAKER: Loudspeaker
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6877,7 +7369,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/loudspeaker-body.png](../art/village/scenery/loudspeaker-body.png), [art/village/scenery/loudspeaker-detail.png](../art/village/scenery/loudspeaker-detail.png).
 
-Current step: native_state_review. Process-log events: 10.
+Current step: native_state_review. Process-log events: 11.
 
 - 2026-10-20T22:35:20.121546+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve speaker source identity/ancestry, original box-grille shape and palette, charge and inherited power-cut alternate metadata.
   Review: Exact native HighTechInstallation alternate/timing/condition recorded. ChargeSink static class reused from same pinned build; no child body motion or audio-wave frame set declared. No game/harness launch.
@@ -6939,6 +7431,12 @@ Current step: native_state_review. Process-log events: 10.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-loudspeaker/v1/registered-final/model.json", "sha256": "8a7a1aede7481a893f51feadefd14cbc26ac1992c025dddbbbfc6d4df7d5b80b"}, {"path": "art/conversion/scn-loudspeaker/v1/registered-final/registration-comparison.png", "sha256": "01872606e3b98a1fbe4a8997c38b6123ed729cbd989e6b4653901575e5e97579"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-MILLSTONE: Millstone
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -6947,7 +7445,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/millstone-body.png](../art/village/scenery/millstone-body.png), [art/village/scenery/millstone-detail.png](../art/village/scenery/millstone-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T22:42:27.805109+00:00 / resolve_object_description_original_tile_palette_state / PASS: Extract and inspect all3declared millstone masks; resolve native description, ancestry, palette, Mill mechanics and animation gate.
   Review: Bounded extraction to private E:storage; original default hash matches catalogue. Source length300,0/100/200tiles,requires operational Mill and ignores subject status. Static Mill/AnimatedMaterialGeneric class evidence; no game/harness launch.
@@ -6997,6 +7495,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-millstone/v1/registered/model.json", "sha256": "4d0d660808ad573558d07a6e54bcf7b3eaebf869953867f612422883d2f4db63"}, {"path": "art/conversion/scn-millstone/v1/registered/registration-comparison.png", "sha256": "651879e0142fcbd148c2577c514513816064b60d9d3543c90cc7a0cc65ec8198"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-POWERLESS-ELECTROTHING: Powerless Electrothing
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7005,7 +7509,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/powerless-electrothing-body.png](../art/village/scenery/powerless-electrothing-body.png), [art/village/scenery/powerless-electrothing-detail.png](../art/village/scenery/powerless-electrothing-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T22:47:35.810003+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact powerless child removals, parent hydraulic/status inheritance, original unequal bulbs/supports and w/W palette.
   Review: Child removes electrical consumer and ChargeSink, hydraulic consumer remains; exact inherited power-cut alternate preserved. No declared body/spark tile loop or forced state by name. Native data study only, no game launch.
@@ -7055,6 +7559,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-powerless-electrothing/v1/registered/model.json", "sha256": "1c4d1e74d61d98ec2d854c3498fa8c35f7ddd327aa547d24f01980c088a0c103"}, {"path": "art/conversion/scn-powerless-electrothing/v1/registered/registration-comparison.png", "sha256": "e696d86d04339de7c5e972a77f51234800096f9e9b2dd64c6c1b15a427947cb3"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-SEWING-MACHINE: Sewing Machine
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7063,7 +7573,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/sewing-machine-body.png](../art/village/scenery/sewing-machine-body.png), [art/village/scenery/sewing-machine-detail.png](../art/village/scenery/sewing-machine-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T22:52:33.050576+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve original C/needle/pedestal, exact ancestry and TileColorw override versus glyphR, detailC and fixed native appearance.
   Review: Exact source has Metal, non-solid weight80, examiner2/AV4/HP200; no power/sewing gameplay part, body frame loop or alternate tile declared. No game/harness launch.
@@ -7113,6 +7623,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-sewing-machine/v1/registered/model.json", "sha256": "af7a71bdc925ef2bf7001a850f02869ea8457627339285733f2e1c7c225ab90a"}, {"path": "art/conversion/scn-sewing-machine/v1/registered/registration-comparison.png", "sha256": "a80902125269d0f13d43677f644d32e1acb3b967b0264c5976c9d024f17f2734"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-WOODEN-WATER-WHEEL: Wooden Water Wheel
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7121,7 +7637,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/wooden-water-wheel-body.png](../art/village/scenery/wooden-water-wheel-body.png), [art/village/scenery/wooden-water-wheel-detail.png](../art/village/scenery/wooden-water-wheel-detail.png).
 
-Current step: native_state_review. Process-log events: 10.
+Current step: native_state_review. Process-log events: 11.
 
 - 2026-10-20T23:01:53.999142+00:00 / resolve_object_description_original_tile_palette_state / PASS: Extract and inspect all3actual wheel masks, native wet-rot description/palette, HydroTurbine and source animation/power metadata.
   Review: Default mask hash matches catalogue; private raw extraction only. Static HydroTurbine/AnimatedMaterialGeneric study: source volume400..4000/charge10, operational gate, subject-ignorefalse and native clock retained. No game launch.
@@ -7183,6 +7699,12 @@ Current step: native_state_review. Process-log events: 10.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NEEDS CLOSER INSPECTION: I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready.
+  Inputs: [{"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/model.json", "sha256": "9f5769ca89b119f4fa3975e883fc78aa7ee61b724b553ddae2e72fa24653c86c"}, {"path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png", "sha256": "4927800f6fe86df32f7c683551c6edba892454fe7053c7c80068557395b62d2e"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-WOODENMECHANICALTRANSMISSION: WoodenMechanicalTransmission
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7191,7 +7713,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png), [art/village/scenery/woodenmechanicaltransmission-detail.png](../art/village/scenery/woodenmechanicaltransmission-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-20T23:13:16.315878+00:00 / resolve_object_description_original_tile_palette_state / PASS: Extract all48actual sw_axle painted states and bind native phases/neighbor suffixes; correct static catalogue fallback glyph interpretation.
   Review: Private raw extraction from pinned resources. Actual painted48family replaces fallback glyph as shape evidence; native glyph untouched. Static IPowerTransmission/MechanicalPowerTransmission study preserves SyncTile/AnyChargeActivity/unpowered_1/merge/repaint/grid ownership.
@@ -7241,6 +7763,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/model.json", "sha256": "41161d338b69dbb96747e01b7414b420237169991ab4c23a3954cb6950547cad"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/registration-comparison.png", "sha256": "41a360b1b9f895c1f60719d3408f37fe670e8eebfdf866a9c77eed0a73b945ed"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/native-family.png", "sha256": "77f7ab9f4d1a023db56244b85adaec11d76367953c140f585626a35ea5e9b319"}, {"path": "art/conversion/scn-woodenmechanicaltransmission/v1/registered/neutral-family.png", "sha256": "3f46b384f3a27e33badd54e7a7cc8da4c98f7eb9e8c1ba492991925ff8ff0fba"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-07-08-machines.json", "sha256": "7fff34567bd3ad9b348d5274e3616c723661ea30630e3e5d29f874fb777ea701"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-ARGYVE: Argyve
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7249,7 +7777,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-20T23:28:10.544022+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured Argyve519 to the shared unmutated human male family and exact five equipped instances/parts.
   Review: Native description/ancestry, original mask hash, source snapshot and attached parts retained. Personal beard/eyebrow metadata kept under postponed A4 cosmetics; no inferred age, mutation or profession pose.
@@ -7287,6 +7815,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-argyve/v1/model.json", "sha256": "0ebb235fbb56d5e083a652d5e7132c063eee79ff7d7bd2036c27b8454e03f858"}, {"path": "art/conversion/npc-argyve/v1/full-native-comparison.png", "sha256": "47a63eeb04694553673fe7e68c313a2d858081a65feadd1cd767f971da8b2a8f"}, {"path": "art/conversion/npc-argyve/v1/full-neutral-comparison.png", "sha256": "de93a75a7dff44030ec1e43ce43c16f13f2bf8366ac92852d1db852d7d624a76"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-ELDERBOB: Irudad (ElderBob)
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7295,7 +7829,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 8.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 9.
 
 - 2026-10-20T23:30:41.343709+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured ElderBob/Irudad507 ancestry, description, HumanoidWithHandsFace tree and four actual equipped objects.
   Review: Old face and hunched back are explicit source text. Native tree records four arms, Hands-Face under the Hands group and Stinger-managed Tail. Baseline fittings alone are not a named mutation assembly.
@@ -7345,6 +7879,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-elderbob/v1/model.json", "sha256": "4c11c9d99c31e77115b690060633edee33b18b8507a9f3d00ce6d4486ec1c3c1"}, {"path": "art/conversion/npc-elderbob/v1/full-neutral-comparison.png", "sha256": "98fab092023b883e4c149006457e7edd1cf696126da0adaab681d30fb73968cc"}, {"path": "art/conversion/npc-elderbob/v1/full-native-comparison.png", "sha256": "22d40204c15f082c458cf4496b24f2219a7567860e39ce4b312a7e1545767994"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-JOPPAFARMERCONVERT: JoppaFarmerConvert
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7353,7 +7893,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-20T23:58:10.343923+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7391,6 +7931,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-joppafarmerconvert/v1/model.json", "sha256": "3112ca8e8f803a6284fc6031cb06aa1a42fb9c86d0c717e5df329c9c9c48213b"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/full-neutral-comparison.png", "sha256": "63f35e107e031db24b8c6b9605986abf9a916f88a823ecad37d226ac83a30e0d"}, {"path": "art/conversion/npc-joppafarmerconvert/v1/full-native-comparison.png", "sha256": "6261bf72098b1c596858b72c49be8a7bf0e88da203358f1f7d19d9d5425fade7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-MEHMET: Mehmet
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7399,7 +7945,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T00:00:04.907396+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7437,6 +7983,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-mehmet/v1/model.json", "sha256": "cf47afe7d2137d143fb899ea42edb889c5f29109925af0944644d2a0a811ca98"}, {"path": "art/conversion/npc-mehmet/v1/full-neutral-comparison.png", "sha256": "7887f14cded04cba532758f3d3a6f7d96019d3cb3695901d6558e17f901e94e2"}, {"path": "art/conversion/npc-mehmet/v1/full-native-comparison.png", "sha256": "7dce0c2a235601db9ef21b35b716f55f52ee285a388b19a48aabc782a2799edb"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-NIMA-RUDA: Nima Ruda
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7445,7 +7997,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 8.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 9.
 
 - 2026-10-21T00:02:54.550422+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve captured Nima506 race, full description/tree, mutation managers and all five equipped objects.
   Review: Four arms and Stinger Tail193 are source-supported; description requires segmented great spiral tail over back/neck. Pestle retains Hand181/6, Glowsphere retains FloatingNearby195/0. No unexported costume or arm/face slot semantics inferred.
@@ -7495,6 +8047,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: NOT SUBSTANTIATED: I inspected the native assembly, original apron glyph on the source comparison and source packet. The original has a distinct lower detail-color field; source rows17..21 deliberately map to that lower region. Native W is gold. The horizontal hue change preserves Qud identity; it is not unrelated body color leaking into clothing. Do not invent a seam or erase the source region.
+  Inputs: [{"path": "art/conversion/npc-nima-ruda/v1/model.json", "sha256": "300d96de904d445128d58c8c90ad60a5640d0b26e7c58c69015dbead2f5a438b"}, {"path": "art/conversion/npc-nima-ruda/v1/full-neutral-comparison.png", "sha256": "584b799c369776d64b254fc40729ff96b8ee648ae96cfe5d0b26b4f562309f3d"}, {"path": "art/conversion/npc-nima-ruda/v1/full-native-comparison.png", "sha256": "cc28ff4dde616c487253767d7c9aae44c037902a27fb9c712d682e94375397b9"}, {"path": "art/conversion/npc-nima-ruda/v1/full-native-east.png", "sha256": "808a5e247632658e219add419a09cbc862120b948b9fe086d896fca2db3ff112"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-TAM: Tam
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7503,7 +8061,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T00:48:07.290189+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured dromad instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7541,6 +8099,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-tam/v1/model.json", "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"}, {"path": "art/conversion/npc-tam/v1/full-neutral-comparison.png", "sha256": "d36492b7d0689cc78e02104e89dc8b936d4c7ab33c2482b37e2d2895782e41bc"}, {"path": "art/conversion/npc-tam/v1/full-native-comparison.png", "sha256": "dd73114068f4adc805eed9f403836f194523f3e5dea3b0dc6dd6bea445a8c62c"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WARDEN-YRAME: Warden Yrame
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7549,7 +8113,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 18.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 21.
 
 - 2026-10-21T00:55:07.608270+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve Yrame515 exact source anatomy, original/palette and four equipped objects.
   Review: Retain actual item slots, both paired Feet groups and natural Icy Vapor distinction. No profession costume or unexported item inferred.
@@ -7659,6 +8223,24 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: [{"path": "art/conversion/npc-warden-yrame/v2/source-to-assembly.png", "sha256": "237f3c1582ef5a8eda138666af88d63390b28337fa9529d623145bb1797e2c9a"}, {"path": "art/conversion/npc-warden-yrame/v2/original-native-glyph.png", "sha256": "309e27e02269a6a441ec30e704c16d3bac1ad5be0b04cf63904d3270875feb3d"}, {"path": "art/conversion/npc-warden-yrame/v2/game-scale-comparison.png", "sha256": "be8ecbc65a72b8161e9a254fb65e9feb71d32611d6fc3d66a9ec52bb4ccb4357"}, {"path": "art/conversion/npc-warden-yrame/v2/artifact-manifest.json", "sha256": "7aaeaa6cdb920f2bf789991f26dbc06082363bfee6d29b4159b8a9b86e52c3df"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T08:38:15.722548+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T08:39:16.813066+00:00 / reopen_rear_curl_structure / FAIL: User identified repeated front-facing curl in rear view. Retain previous outputs/reviews as superseded evidence; reopen horn fit, aggregate and dependent outfit only.
+  Review: Manual front/back ribbon projection was identical apart from root translation; north was placed wholly behind the skull. Root continuity did not prove a coherent rear curl.
+  Inputs: [{"path": "art/conversion/fit-yrame-horns/v4/model.json", "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v2/model.json", "sha256": "c41e2e67a9f1878c0646cd0b2478aaa60d1fd2e5e45f93e995cde6513c096aeb"}, {"path": "art/conversion/npc-warden-yrame/v2/full-neutral-comparison.png", "sha256": "66a5c39ea2a02ea387b8a4e987c7e14d2eb22a37cae2068c6f46cd98ba77f66a"}, {"path": "art/conversion/npc-warden-yrame/v2/full-native-comparison.png", "sha256": "01d4d2c5529c0461f469348caa34f9451d7b262a7cfbb2c86a81541375e5e787"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-01: WatervineFarmerJoppa / captured resident 1
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7667,7 +8249,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:14:44.934329+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7705,6 +8287,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-01/v1/model.json", "sha256": "98f941e37f729f3b6c5c0d2765912c1ae855cb74869dcd671526157293ce9ec9"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/full-neutral-comparison.png", "sha256": "81ae8852efd4cf17c9eb3e7a978302731684725efb0cdc93b0c7418c72ed6de3"}, {"path": "art/conversion/npc-watervine-farmer-01/v1/full-native-comparison.png", "sha256": "fef09af5f03057983b2ccdf8cc2e7a231479b5f730a3d8bdea0714450ddecd70"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-02: WatervineFarmerJoppa / captured resident 2
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7713,7 +8301,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:15:45.202191+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7751,6 +8339,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-02/v1/model.json", "sha256": "9e43f629a290b5def7948e92d6abfcd678b4f5592f46ebcba2eee38d4b5f1292"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/full-neutral-comparison.png", "sha256": "60b130eeb47070aa3f2794ea8a8849cb3ea4672a82a74cf4af3a54cbd3b4a002"}, {"path": "art/conversion/npc-watervine-farmer-02/v1/full-native-comparison.png", "sha256": "ba0fe80a5549faaf0995e50dfcc165944c47d251335961a5b8db45c99c515a1b"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-03: WatervineFarmerJoppa / captured resident 3
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7759,7 +8353,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:16:39.005726+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7797,6 +8391,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-03/v1/model.json", "sha256": "a32bc921b8ab32f602950efa0cf4308983f3b8630dd003f7a6645b39a7001c38"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/full-neutral-comparison.png", "sha256": "39ca2eddb0ee8053094d95ee8e36f8b7289ac30b4165d7b72703076490317f53"}, {"path": "art/conversion/npc-watervine-farmer-03/v1/full-native-comparison.png", "sha256": "73d059356015140c1f6bce0c33b738180dc5306797567b8388fada96593d3869"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-04: WatervineFarmerJoppa / captured resident 4
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7805,7 +8405,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:17:41.559712+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7843,6 +8443,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-04/v1/model.json", "sha256": "580ba98db35b0faaba36d06211c24e9cd6ffbd0fe5aa321bc5f3ee4e60726d31"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/full-neutral-comparison.png", "sha256": "99fe2f497f34864a3eb26092c4959267ceea6fdff93932369f6b234f55f7b85e"}, {"path": "art/conversion/npc-watervine-farmer-04/v1/full-native-comparison.png", "sha256": "7b0554c2f75d17e8e0c95bce6314367ed141768065c52273d7f8d2c07b1f7bbb"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-05: WatervineFarmerJoppa / captured resident 5
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7851,7 +8457,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:18:50.817525+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7889,6 +8495,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-05/v1/model.json", "sha256": "718dc4fededa71dd45d43643dbc896db90a3adb9834003df7d2416100f0c78f3"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/full-neutral-comparison.png", "sha256": "0f2f773b49bdf6ea3727af34e0dfb85b94d05ecb553dd329f0f00784f5faeb1c"}, {"path": "art/conversion/npc-watervine-farmer-05/v1/full-native-comparison.png", "sha256": "02d54696ddbe935fafe040cd83b33449f6094354e12d73ffcaf98d128c43e3fc"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-06: WatervineFarmerJoppa / captured resident 6
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7897,7 +8509,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:19:00.682465+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7935,6 +8547,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-06/v1/model.json", "sha256": "4fa8089b9b9fb48b794149464e4d017fac25ea40f4086a3935bc0565e268c9e4"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/full-neutral-comparison.png", "sha256": "c9594fe1bec2ccbb74b87b43239612e0d479711c6bfd2218cab10654c8b406a9"}, {"path": "art/conversion/npc-watervine-farmer-06/v1/full-native-comparison.png", "sha256": "93764463ab5ab9586ea4e4968c20d0cac5967ea1f578c220e3f226ca3f0b7ef1"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-07: WatervineFarmerJoppa / captured resident 7
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7943,7 +8561,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 7.
 
 - 2026-10-21T01:19:13.075096+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured human instance, race, description, body tree, source shape/palette and actual equipped parts.
   Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
@@ -7981,6 +8599,12 @@ Current step: native_visibility_equipment_hurt_look_save_review. Process-log eve
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/npc-watervine-farmer-07/v1/model.json", "sha256": "365ff84eb94e55b894607b6da9bcefefa12e35606b5b50b3af24ad85888f11b0"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/full-neutral-comparison.png", "sha256": "41aef0142d372f8aa0a9e18a7dfae0a71c162a4b109caf8fd48f7617ea4d322c"}, {"path": "art/conversion/npc-watervine-farmer-07/v1/full-native-comparison.png", "sha256": "8963692fbfa4da297eef8ff18ff315224ea163adcb835aeae2a013cece93c0b6"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-09-10-named.json", "sha256": "7837fd0113abc7da17b1467b02eaf67a36eaa04e58eaff601d6b37a866502e6a"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-GARBAGE: Garbage
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7989,7 +8613,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/garbage-body.png](../art/village/scenery/garbage-body.png).
 
-Current step: native_state_review. Process-log events: 11.
+Current step: native_state_review. Process-log events: 12.
 
 - 2026-10-21T01:24:51.863538+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Garbage definition and extract all four native RandomTile choices plus declared fallback from version-pinned Qud resources.
   Review: Old catalogue declared tile alone omits four builder-selected shapes. All five source masks retained privately with exact atlas/rect/hash. Native selection, non-solid/takeable behavior and separate burning object ownership retained; final detail-colour mapping remains explicitly unresolved.
@@ -8057,6 +8681,12 @@ Current step: native_state_review. Process-log events: 11.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/registered/model.json", "sha256": "4480ae7d19245e88a87743fc6e4fe6c7f677d44a68ec3c98be584417a7ab3673"}, {"path": "art/conversion/scn-garbage/v1/registered/neutral-family.png", "sha256": "0169693f1634c45dcff99e9f2c062851a65704d6b9ff46ed5e4088c8de83ce7d"}, {"path": "art/conversion/scn-garbage/v1/registered/native-K-family.png", "sha256": "1c3caa909ef98caa5daf76c894e7ef3c012bdc40d8afbd959eacbb59644aadda"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-PAINTING: Painting
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -8065,7 +8695,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/painting-body.png](../art/village/scenery/painting-body.png), [art/village/scenery/painting-detail.png](../art/village/scenery/painting-detail.png).
 
-Current step: native_state_review. Process-log events: 13.
+Current step: native_state_review. Process-log events: 14.
 
 - 2026-10-21T01:54:07.698670+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve Painting ancestry, extract both native RandomTile masks, and trace independent glyph/tile/detail colour assignment.
   Review: Actual source masks and code captured. Tile primary remains w; eight native detail choices, separate randomized glyph main. Furniture inheritance requires S/E/N. Construction and reference visual review remain pending.
@@ -8145,6 +8775,12 @@ Current step: native_state_review. Process-log events: 13.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-painting/v1/registered/model.json", "sha256": "a11a76e5b32ab8cad3af7764c58c18cbc48114bb319c5f56944801c9b684ccb2"}, {"path": "art/conversion/scn-painting/v1/registered/neutral-turnarounds.png", "sha256": "965f3bee2a0de5d4f35a66623b0ee9c195ef1a219141306e5aee8f25997bfd33"}, {"path": "art/conversion/scn-painting/v1/registered/source-and-native-palettes.png", "sha256": "17f60a36c4ecc647f72347fcde4ed56ee2f6125ce2489aae5e0287cb2f5aabd3"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-SCRAP-ELECTRONICS: Scrap Electronics
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -8153,7 +8789,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/scrap-metal-body.png](../art/village/scenery/scrap-metal-body.png), [art/village/scenery/scrap-metal-detail.png](../art/village/scenery/scrap-metal-detail.png).
 
-Current step: native_state_review. Process-log events: 11.
+Current step: native_state_review. Process-log events: 12.
 
 - 2026-10-21T02:07:45.703402+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve complete Scrap Electronics inheritance, exact bit11 mask, C/C palette, single native art state and exact-identity replacement boundary.
   Review: Name is fractured microchip, not a generic metal scrap heap. No inherited RandomTile or TileColor assignment. Source two-color roles remain distinct although both resolve to C. Single fixed map view; physical diamond orientation is intrinsic shape, not a three-quarter camera.
@@ -8221,6 +8857,12 @@ Current step: native_state_review. Process-log events: 11.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-scrap-electronics/v1/registered/model.json", "sha256": "6fe182341ad54f9e1f913ed16060484fd2c702542805d4daf27394da2a9b7116"}, {"path": "art/conversion/scn-scrap-electronics/v1/registered/source-neutral-native-scale.png", "sha256": "11c35b19cd2eea447320adff6debf40e8d7547691817c9318c322f20d7956793"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-SCRAP-METAL: Scrap Metal
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -8229,7 +8871,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/scrap-metal-body.png](../art/village/scenery/scrap-metal-body.png), [art/village/scenery/scrap-metal-detail.png](../art/village/scenery/scrap-metal-detail.png).
 
-Current step: native_state_review. Process-log events: 8.
+Current step: native_state_review. Process-log events: 9.
 
 - 2026-10-21T02:21:57.786404+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Scrap Metal and complete inherited parts; verify native mask and B/C palette independently of electronics.
   Review: Six-node ancestry, bent metal sheet display name, TinkerItem Bits=B, non-solid Takeable/Stacker and no RandomTile established. Same bit11 mask does not justify copying electronics traces or its equal C/C palette. One fixed resource view; native mechanics unchanged.
@@ -8279,6 +8921,12 @@ Current step: native_state_review. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/registered/model.json", "sha256": "6e751b38078b48c8094d3791b13db37cb7740511f65f890cdfe9d9f8604bbfa4"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/source-neutral-native-scale.png", "sha256": "f6b2322060a7402c19c18e4b0666499876df42f705b60b4689bf7074ec4c973a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-TORCHPOST: Torchpost
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -8287,7 +8935,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/torchpost-detail.png](../art/village/scenery/torchpost-detail.png).
 
-Current step: native_state_review. Process-log events: 15.
+Current step: native_state_review. Process-log events: 16.
 
 - 2026-10-21T02:34:31.022144+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve Torchpost ancestry, static holder-only detail mask, native foreground animation and separate flame prefab ownership.
   Review: All visible tile pixels are detail w, not animated fire foreground. Native particle prefab, original visibility/offset and LightSource Radius6 stay native. Unlit Torchpost is separate identity. MountedFurniture requires S/E/N authoring without rewriting fixed enumerator variants; no native validation run.
@@ -8379,6 +9027,12 @@ Current step: native_state_review. Process-log events: 15.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-torchpost/v1/registered/model.json", "sha256": "a97cb00e5e8fa65f5ca13f6e6b20f5a2baddf18a77345137c5c7fffd57ec0733"}, {"path": "art/conversion/scn-torchpost/v1/registered/neutral-turnarounds.png", "sha256": "de6ff1da473dc943e85718b1882a0dc8224f541138b4017b67257dc603bff8d1"}, {"path": "art/conversion/scn-torchpost/v1/registered/native-w-turnarounds.png", "sha256": "8f9043a618af1ab69f3f90c19556e66fffa12e1894e396ae38c4ca92aa43ddf5"}, {"path": "art/conversion/scn-torchpost/v1/registered/source-native-scale-and-palette.png", "sha256": "271e05640bcedeca0b2a20ab3d9fae2394014d4b97393f8d59263061a9f54f28"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-DROMAD: dromad
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8387,7 +9041,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/dromad/layered/body-east.png](../art/dromad/layered/body-east.png), [art/dromad/layered/body-north.png](../art/dromad/layered/body-north.png), [art/dromad/layered/body-south.png](../art/dromad/layered/body-south.png), [art/dromad/layered/head-detail-east.png](../art/dromad/layered/head-detail-east.png), [art/dromad/layered/head-detail-south.png](../art/dromad/layered/head-detail-south.png), [art/dromad/layered/head-east.png](../art/dromad/layered/head-east.png), [art/dromad/layered/head-north.png](../art/dromad/layered/head-north.png), [art/dromad/layered/head-south.png](../art/dromad/layered/head-south.png), [art/dromad/layered/model.json](../art/dromad/layered/model.json), [art/dromad/nude/refinement.json](../art/dromad/nude/refinement.json), [evidence/dromad-refined-result.json](../evidence/dromad-refined-result.json).
 
-Current step: generation ready; final acceptance pending. Process-log events: 14.
+Current step: generation ready; final acceptance pending. Process-log events: 15.
 
 - 2026-10-20T02:08:30.483483+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolved Tam through Dromad ancestry; carried native race/individual descriptions, complete attached part IDs/parents/laterality, natural/actual equipment, source version/hashes and metadata gaps.
   Review: Read the source packet and viewed original glyph. Humanoid baseline supports two hands and paired feet, while description supplies long neck, dulla and upper-back hump. Runtime mutation list, age and race-wide dimorphism remain unknown; no four-legged camel substitution.
@@ -8473,6 +9127,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 14
   Outputs: [{"path": "art/conversion/body-dromad/v2/registration-comparison.png", "sha256": "3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a"}, {"path": "art/conversion/body-dromad/v2/game-scale-review.png", "sha256": "2a90317b362307bc9464a0a492aec876ce5c50de989230729386fcd41f632328"}, {"path": "art/conversion/body-dromad/v2/authoring-review.json", "sha256": "8b5e2b7f475ac5f9b688d3e27c1f42f2169fa7b560e877f42d44e7cafa824592"}]
   Method/prompt/corrections: {"phase": "Common-sample all-view authoring review"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-dromad/v2/model.json", "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"}, {"path": "art/conversion/body-dromad/v2/registration-comparison.png", "sha256": "3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-DROMAD-CHILD: dromad child (featureless body with separate clothing)
 
 Required steps: resolve_age_evidence_and_render_reference -> construct_featureless_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
@@ -8481,7 +9141,7 @@ Required views/states: male/female templates; shared geometry if no supported di
 
 Historical artifacts: [art/village/age-templates/dromad/body-east.png](../art/village/age-templates/dromad/body-east.png), [art/village/age-templates/dromad/body-north.png](../art/village/age-templates/dromad/body-north.png), [art/village/age-templates/dromad/body-south.png](../art/village/age-templates/dromad/body-south.png), [art/village/age-templates/dromad/head-east.png](../art/village/age-templates/dromad/head-east.png), [art/village/age-templates/dromad/head-north.png](../art/village/age-templates/dromad/head-north.png), [art/village/age-templates/dromad/head-south.png](../art/village/age-templates/dromad/head-south.png), [art/village/age-templates/dromad/tunic-east.png](../art/village/age-templates/dromad/tunic-east.png), [art/village/age-templates/dromad/tunic-north.png](../art/village/age-templates/dromad/tunic-north.png), [art/village/age-templates/dromad/tunic-south.png](../art/village/age-templates/dromad/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T02:20:24.309587+00:00 / resolve_age_evidence_and_render_reference / PASS: Carried the complete dromad race description/body tree, original glyph, donor dromedary references and explicit unknowns into the child template. Added actual Biotech child torso as a life-stage presentation reference only.
   Review: Read packet and viewed reference plate. No canonical juvenile dromad, age selector or sex-specific geometry is established. Child hump/dulla development is unknown; small family features are an authored choice, not native biological proof. Male/female labels share geometry.
@@ -8537,6 +9197,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: [{"path": "art/conversion/body-dromad-child/v1/model.json", "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"}]
   Method/prompt/corrections: {"phase": "Juvenile template selection and separate garment policy"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-dromad-child/v1/model.json", "sha256": "32f94245623581bfbbd45d1385f55cf1e4a74ab143f036906cfe34c9c43628d5"}, {"path": "art/conversion/body-dromad-child/v1/registration-comparison.png", "sha256": "f81a14963e11cc6c97a79f0ebe8750e792fb002b9e96414e77875b8dc5db8639"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-GLOWFISH: glowfish
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8545,7 +9211,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/glowfish/body-east.png](../art/village/bodies/glowfish/body-east.png), [art/village/bodies/glowfish/body-north.png](../art/village/bodies/glowfish/body-north.png), [art/village/bodies/glowfish/body-south.png](../art/village/bodies/glowfish/body-south.png), [art/village/bodies/glowfish/model.json](../art/village/bodies/glowfish/model.json), [art/village/bodies/glowfish/turnaround-prompt.txt](../art/village/bodies/glowfish/turnaround-prompt.txt), [art/village/bodies/glowfish/turnaround.png](../art/village/bodies/glowfish/turnaround.png).
 
-Current step: native_body_review. Process-log events: 14.
+Current step: native_body_review. Process-log events: 15.
 
 - 2026-10-21T02:53:24.733792+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve exact Glowfish->catfish identity, full source ancestry, original m/C curled sprite and observed Fish topology before front-first art.
   Review: Normal fish morphology: one head, dorsal+paired+tail fins, no legs. Face default Bite is not outfit; actual worn equipment empty. Gills/DarkVision/light behavior preserved without mutation appendages. Source curl/roles and exact native palette retained; old fixed-colour/east-first proposal receives no credit.
@@ -8631,6 +9297,12 @@ Current step: native_body_review. Process-log events: 14.
   Outputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/neutral-turnarounds.png", "sha256": "0841e3b039c1cc0685a3e9d5af3d805b55dc928e0ff80c057371e1cb68c8618e"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/native-palette-turnarounds.png", "sha256": "531b42b9c43b459f240d839b8927362600e54c8aa42d1a1cf569e981bfc492cc"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/authoring-review.json", "sha256": "bafc8038b85ebbc606272371bd569d9892b558f0f3518b1597c8f24a5978758a"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/artifact-manifest.json", "sha256": "9a0bb75aa4edd68437d4a73ec5a4d6ba5f850887caa5d218ef1f858a8a0704a4"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/neutral-turnarounds.png", "sha256": "0841e3b039c1cc0685a3e9d5af3d805b55dc928e0ff80c057371e1cb68c8618e"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/native-palette-turnarounds.png", "sha256": "531b42b9c43b459f240d839b8927362600e54c8aa42d1a1cf569e981bfc492cc"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-HUMAN-CHILD: human child (featureless body with separate clothing)
 
 Required steps: resolve_age_evidence_and_render_reference -> construct_featureless_front -> generate_other_views -> correct_and_refine_composite -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
@@ -8639,7 +9311,7 @@ Required views/states: male/female templates; shared geometry if no supported di
 
 Historical artifacts: [art/village/age-templates/human/body-east.png](../art/village/age-templates/human/body-east.png), [art/village/age-templates/human/body-north.png](../art/village/age-templates/human/body-north.png), [art/village/age-templates/human/body-south.png](../art/village/age-templates/human/body-south.png), [art/village/age-templates/human/head-east.png](../art/village/age-templates/human/head-east.png), [art/village/age-templates/human/head-north.png](../art/village/age-templates/human/head-north.png), [art/village/age-templates/human/head-south.png](../art/village/age-templates/human/head-south.png), [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T01:45:04.251439+00:00 / resolve_age_evidence_and_render_reference / PASS: Bound the child template to captured unmutated human anatomy, original clothed Qud human glyphs and installed Biotech child torso references.
   Review: Viewed actual donor child torso and contextual source plate. Donor child body provides proportions/shading, not an articulated anatomy. No child resident or sex-specific anatomy is established; both template labels share geometry. Separate garment entries retain the full clothing workflow.
@@ -8695,6 +9367,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: [{"path": "art/conversion/body-human-child/v1/model.json", "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"}]
   Method/prompt/corrections: {"phase": "Child selection policy and separate clothing requirement"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-human-child/v1/model.json", "sha256": "77b2b615a62c4bd0166b644c85e924686d57b4829dbc7cdaee125059483c5665"}, {"path": "art/conversion/body-human-child/v1/registration-comparison.png", "sha256": "946ed8fbd17eeede747c863e0438b7399b91036632e91c0dbc4a2e1c73293b71"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-HUMAN-FEMALE: human-female
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8703,7 +9381,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/human-female/body-east.png](../art/village/bodies/human-female/body-east.png), [art/village/bodies/human-female/body-north.png](../art/village/bodies/human-female/body-north.png), [art/village/bodies/human-female/body-south.png](../art/village/bodies/human-female/body-south.png), [art/village/bodies/human-female/brief.json](../art/village/bodies/human-female/brief.json), [art/village/bodies/human-female/front.png](../art/village/bodies/human-female/front.png), [art/village/bodies/human-female/front.svg](../art/village/bodies/human-female/front.svg), [art/village/bodies/human-female/head-east.png](../art/village/bodies/human-female/head-east.png), [art/village/bodies/human-female/head-north.png](../art/village/bodies/human-female/head-north.png), [art/village/bodies/human-female/head-south.png](../art/village/bodies/human-female/head-south.png), [art/village/bodies/human-female/model.json](../art/village/bodies/human-female/model.json), [art/village/bodies/human-female/turnaround-prompt.txt](../art/village/bodies/human-female/turnaround-prompt.txt), [art/village/bodies/human-female/turnaround.png](../art/village/bodies/human-female/turnaround.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T01:05:15.310631+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolved female humans from the captured JoppaFarmerConvert and watervine farmer instances, retaining source descriptions, ancestry, body trees and actual equipment.
   Review: Inspected the packet and reference plate. The body plan is Humanoid with paired feet, two hands and one head; no race-wide nude description exists. Captured gender does not establish mandatory morphology or a life stage.
@@ -8765,6 +9443,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: [{"path": "art/conversion/body-human-female/v2/body-south.png", "sha256": "a16d522e0f330d76bd3136914eba9c7173ad5598d24f660072a463c3ce7de902"}, {"path": "art/conversion/body-human-female/v2/body-mask-south.png", "sha256": "15fc68744fbe010dcbd9fa07470ae4f83382fed45f1be9682d2abf76fae34a6a"}, {"path": "art/conversion/body-human-female/v2/head-south.png", "sha256": "faa3bc3220fe2db08794e0e6b77b7c2795757468306249a13121e8530a5585b8"}, {"path": "art/conversion/body-human-female/v2/head-mask-south.png", "sha256": "85cea5822341c4c591a8c2a511315408b29db4d8447fb041244f3467aba30c45"}, {"path": "art/conversion/body-human-female/v2/selected-south.png", "sha256": "4be9af44baa01447c0dfaa23abe8c93cd98218aafd681885987c793d62b039e6"}, {"path": "art/conversion/body-human-female/v2/body-east.png", "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"}, {"path": "art/conversion/body-human-female/v2/body-mask-east.png", "sha256": "3599d2f6d099570b72aeb381a7bfe03aaa9ef0b055cd3c2b04bbace68341d22e"}, {"path": "art/conversion/body-human-female/v2/head-east.png", "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"}, {"path": "art/conversion/body-human-female/v2/head-mask-east.png", "sha256": "f17c12f4a0b3e8b1c9863313d7464633a671bcb1e7b3643774f421ec0ee226d9"}, {"path": "art/conversion/body-human-female/v2/selected-east.png", "sha256": "a71914893266ae414176d760e0e1560b399834469f840f3d2cc2e2c5bd7e5762"}, {"path": "art/conversion/body-human-female/v2/body-north.png", "sha256": "f56d658f1e9cb36f9b1f44766ab8e5d95157a83009a848730e8927fd832d3d30"}, {"path": "art/conversion/body-human-female/v2/body-mask-north.png", "sha256": "475ef61e238fd6fa6492d20f33538194175cdd9990b48e97d50b3b83c8026846"}, {"path": "art/conversion/body-human-female/v2/head-north.png", "sha256": "894d6930977186ca62f3bcf681242ee3f8131fbcff7136cb8f927dc459eec637"}, {"path": "art/conversion/body-human-female/v2/head-mask-north.png", "sha256": "7a58309fefcef7f53abf9b6744b2077ee59b029fda7b482df54d9795e0b1c3a9"}, {"path": "art/conversion/body-human-female/v2/selected-north.png", "sha256": "62c7e1757d8301a8528f3c298a60e9dcc8ce2a7664871e287236a8db69104979"}, {"path": "art/conversion/body-human-female/v2/model.json", "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"}, {"path": "art/conversion/body-human-female/v2/registration-decisions.json", "sha256": "b5ef422bf378d890349ac22a708d389a93a68659728d2b5bca511db7ad5fba1d"}, {"path": "art/conversion/body-human-female/v2/registration-comparison.png", "sha256": "b91dddc5eac7c2bc72dc6008ffcc91aa7df706aa3b608981d4800e0dfc972a9a"}]
   Method/prompt/corrections: {"phase": "Shared centered canvas registration v2"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-human-female/v2/model.json", "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"}, {"path": "art/conversion/body-human-female/v2/registration-comparison.png", "sha256": "b91dddc5eac7c2bc72dc6008ffcc91aa7df706aa3b608981d4800e0dfc972a9a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-HUMAN-MALE: human-male
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8773,7 +9457,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/human-male/body-east.png](../art/village/bodies/human-male/body-east.png), [art/village/bodies/human-male/body-north.png](../art/village/bodies/human-male/body-north.png), [art/village/bodies/human-male/body-south.png](../art/village/bodies/human-male/body-south.png), [art/village/bodies/human-male/brief.json](../art/village/bodies/human-male/brief.json), [art/village/bodies/human-male/front.png](../art/village/bodies/human-male/front.png), [art/village/bodies/human-male/front.svg](../art/village/bodies/human-male/front.svg), [art/village/bodies/human-male/head-east.png](../art/village/bodies/human-male/head-east.png), [art/village/bodies/human-male/head-north.png](../art/village/bodies/human-male/head-north.png), [art/village/bodies/human-male/head-south.png](../art/village/bodies/human-male/head-south.png), [art/village/bodies/human-male/model.json](../art/village/bodies/human-male/model.json), [art/village/bodies/human-male/turnaround-prompt.txt](../art/village/bodies/human-male/turnaround-prompt.txt), [art/village/bodies/human-male/turnaround.png](../art/village/bodies/human-male/turnaround.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 13.
+Current step: generation ready; final acceptance pending. Process-log events: 14.
 
 - 2026-10-20T00:49:23.267686+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolved Argyve, Mehmet and captured male watervine farmers to reusable human anatomy. Preserved individual descriptions, attached native body trees, actual gear, source hashes and uncertainty.
   Review: Inspected the exact metadata and contextual source plate. Two arms, two hands and paired feet; no native race-wide appearance prose. The original clothed sprite is not a nude anatomy diagram.
@@ -8853,6 +9537,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 13
   Outputs: [{"path": "art/conversion/body-human-male/v2/body-south.png", "sha256": "37833fb63565d9af0e01fa1f5f2986de097761bc0b534a6ed2aebc042cd96b57"}, {"path": "art/conversion/body-human-male/v2/body-mask-south.png", "sha256": "95f3d42db6b738ad0a8f16a33211ae545ae230ea8f6e72abb49c5da478b61fbe"}, {"path": "art/conversion/body-human-male/v2/head-south.png", "sha256": "9ed0324137804609c9c0e8b430af17d3d2c90f645669f4f9844e2a67903a7b05"}, {"path": "art/conversion/body-human-male/v2/head-mask-south.png", "sha256": "0b71145761180ce50a5fe2d07f6264a34091ffa8642620f7c88965d3b12a1cd7"}, {"path": "art/conversion/body-human-male/v2/selected-south.png", "sha256": "16f2266b29a1fcccb5a44bcf5b8cfea4953fa1ce7e595724cfca9873ee971bd1"}, {"path": "art/conversion/body-human-male/v2/body-east.png", "sha256": "10c7b8fbc8118fd46e208c093d4d975eefcbb36c1e74b7840f6de67f0e26f860"}, {"path": "art/conversion/body-human-male/v2/body-mask-east.png", "sha256": "3608d456aad367c705c6177bbee7b04887f9da8747eb6bab9f088c4ac9fc90c7"}, {"path": "art/conversion/body-human-male/v2/head-east.png", "sha256": "a27cc8e70ed2e46845ea844b748af133a34eb8ebb660fbc1816815cd74d18fa0"}, {"path": "art/conversion/body-human-male/v2/head-mask-east.png", "sha256": "eacc182e21ac26760405cc02a623beaf4b199c12cee72592422df6cbceabfba6"}, {"path": "art/conversion/body-human-male/v2/selected-east.png", "sha256": "24705a71b541a8b416a12ca12a0b7587e4b31082c94a5dbdefd44f0f272a2f56"}, {"path": "art/conversion/body-human-male/v2/body-north.png", "sha256": "328499003f02e2d3e4d4792c2e53ac8522896afa3050da5f18a3d6c505de32ee"}, {"path": "art/conversion/body-human-male/v2/body-mask-north.png", "sha256": "178c8866f8bba7baaea91180f6faf229784bfeba720c810eaa019b725603d5d0"}, {"path": "art/conversion/body-human-male/v2/head-north.png", "sha256": "6025b82030de0122cc32787913ce6fce720d88c8131963a477dfee8d335bb7ee"}, {"path": "art/conversion/body-human-male/v2/head-mask-north.png", "sha256": "cd78bb7e39a7f7626a5ac7da9df8d0e067ec560e4ea0b69a8b605e29c62d780c"}, {"path": "art/conversion/body-human-male/v2/selected-north.png", "sha256": "4fe07f85bc1f472241a2c22d089b8c4bdf70dc168ca916c077c463140a36cd8c"}, {"path": "art/conversion/body-human-male/v2/model.json", "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"}, {"path": "art/conversion/body-human-male/v2/registration-decisions.json", "sha256": "a34709e348b21b170c753fdb35a87d50bd2cf76d4362305cc5d11eef6bd8d87a"}, {"path": "art/conversion/body-human-male/v2/registration-comparison.png", "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"}]
   Method/prompt/corrections: {"phase": "Shared centered canvas registration v2"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-human-male/v2/model.json", "sha256": "a9b6a4b5fab6115794251297bc91dc0e8fce30c2be9835704807b2ab73d535d4"}, {"path": "art/conversion/body-human-male/v2/registration-comparison.png", "sha256": "db04fd4395d5268029e9fed095bd208d050350e7ba1b5b7fd966ac810b881c3f"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-IRUDAD: irudad
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8861,7 +9551,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/irudad/body-east.png](../art/village/bodies/irudad/body-east.png), [art/village/bodies/irudad/body-north.png](../art/village/bodies/irudad/body-north.png), [art/village/bodies/irudad/body-south.png](../art/village/bodies/irudad/body-south.png), [art/village/bodies/irudad/brief.json](../art/village/bodies/irudad/brief.json), [art/village/bodies/irudad/front.png](../art/village/bodies/irudad/front.png), [art/village/bodies/irudad/front.svg](../art/village/bodies/irudad/front.svg), [art/village/bodies/irudad/head-east.png](../art/village/bodies/irudad/head-east.png), [art/village/bodies/irudad/head-north.png](../art/village/bodies/irudad/head-north.png), [art/village/bodies/irudad/head-south.png](../art/village/bodies/irudad/head-south.png), [art/village/bodies/irudad/model.json](../art/village/bodies/irudad/model.json), [art/village/bodies/irudad/refinement-prompt.txt](../art/village/bodies/irudad/refinement-prompt.txt), [art/village/bodies/irudad/turnaround-draft.png](../art/village/bodies/irudad/turnaround-draft.png), [art/village/bodies/irudad/turnaround-prompt.txt](../art/village/bodies/irudad/turnaround-prompt.txt), [art/village/bodies/irudad/turnaround.png](../art/village/bodies/irudad/turnaround.png).
 
-Current step: native_body_review. Process-log events: 14.
+Current step: native_body_review. Process-log events: 15.
 
 - 2026-10-20T23:35:14.650649+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve ElderBob507 race, source description, exact captured mutation topology and shared older-human baseline.
   Review: Native HumanoidWithHandsFace, four Arm/Hand pairs, Hands-Face211 under Hands210 and Tail214/Stinger preserved. Source description and original r/w glyph retained. Extra arms/tail stay separate from reusable human age template; actual equipped Hand201/6 pose unresolved.
@@ -8947,6 +9637,12 @@ Current step: native_body_review. Process-log events: 14.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-irudad/v1/registered/model.json", "sha256": "e63da814b1d98233f9d6ea6759b5544948fb8cdd004f4c6f721a78780cb438f2"}, {"path": "art/conversion/body-irudad/v1/registered/neutral-comparison.png", "sha256": "e5b99e460b8682747215d39f0198a23d4c7979e5614e63141504a2459f08d7f1"}, {"path": "art/conversion/body-irudad/v1/registered/native-comparison.png", "sha256": "01e04beb31bc27d84d1b7db8713b92092e1dc128cf807ec36a9e7825bb386eaa"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-NIMA: nima
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -8955,7 +9651,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/nima/body-east.png](../art/village/bodies/nima/body-east.png), [art/village/bodies/nima/body-north.png](../art/village/bodies/nima/body-north.png), [art/village/bodies/nima/body-south.png](../art/village/bodies/nima/body-south.png), [art/village/bodies/nima/brief.json](../art/village/bodies/nima/brief.json), [art/village/bodies/nima/front.png](../art/village/bodies/nima/front.png), [art/village/bodies/nima/front.svg](../art/village/bodies/nima/front.svg), [art/village/bodies/nima/head-east.png](../art/village/bodies/nima/head-east.png), [art/village/bodies/nima/head-north.png](../art/village/bodies/nima/head-north.png), [art/village/bodies/nima/head-south.png](../art/village/bodies/nima/head-south.png), [art/village/bodies/nima/model.json](../art/village/bodies/nima/model.json), [art/village/bodies/nima/refinement-prompt.txt](../art/village/bodies/nima/refinement-prompt.txt), [art/village/bodies/nima/turnaround-draft.png](../art/village/bodies/nima/turnaround-draft.png), [art/village/bodies/nima/turnaround-prompt.txt](../art/village/bodies/nima/turnaround-prompt.txt), [art/village/bodies/nima/turnaround.png](../art/village/bodies/nima/turnaround.png).
 
-Current step: native_body_review. Process-log events: 11.
+Current step: native_body_review. Process-log events: 12.
 
 - 2026-10-21T00:16:46.738320+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve Nima506 native identity, complete part/managers, source description/shape/palette and existing unmutated female base.
   Review: Four arms/hands and one Stinger-managed Tail193 retained. Late-middle-age prose and jade eyes/scars are metadata under cosmetic scope; no numeric age, profession pose or extra anatomy inferred. Actual five-item bindings remain NPC work.
@@ -9023,6 +9719,12 @@ Current step: native_body_review. Process-log events: 11.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-nima/v1/registered/model.json", "sha256": "6f2aee43511b077310e45cc5aa6158d6131ff691e981bd62998931b88b125403"}, {"path": "art/conversion/body-nima/v1/registered/neutral-comparison.png", "sha256": "169b4e93a1a3fa18af9bebf508fdcaa9e087d0902d0cdf731544d401bedaa5a6"}, {"path": "art/conversion/body-nima/v1/registered/native-comparison.png", "sha256": "cae4f823f7fffc07adf955929aec395815560ee9e660dc89b6b475ff17d3cb78"}, {"path": "art/conversion/body-nima/v1/registered/tail-front-north.png", "sha256": "095496bdc4159572f5ec2d35f79ea1b2f2fa75cf7c92c701a040e61c15b087e0"}, {"path": "art/conversion/body-nima/v1/registered/tail-back-north.png", "sha256": "04f6934ceeff6d1adb37f553444fcf1f6c1f5164ecbe23d48b94366a97a9118f"}, {"path": "art/conversion/body-nima/v1/registered/extra-arms-north.png", "sha256": "d56765fd52e74064482ccea973fac8cd8d4a5ea061f68f30c4726b66b734d449"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-RAY-CAT: ray-cat
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -9031,7 +9733,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/ctesiphus/east-albedo.png](../art/ctesiphus/east-albedo.png), [art/ctesiphus/north-albedo.png](../art/ctesiphus/north-albedo.png), [art/ctesiphus/preview.html](../art/ctesiphus/preview.html), [art/ctesiphus/south-albedo.png](../art/ctesiphus/south-albedo.png), [evidence/faithful-cat-result.json](../evidence/faithful-cat-result.json).
 
-Current step: native_body_review. Process-log events: 10.
+Current step: native_body_review. Process-log events: 11.
 
 - 2026-10-21T06:14:00.177716+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
   Review: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
@@ -9093,6 +9795,12 @@ Current step: native_body_review. Process-log events: 10.
   Outputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/assembly-comparison.png", "sha256": "852895d0a59c7242973b67dc4cdfe22330512061ffbd3f469fd258c0254bdbd8"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/native-palette-comparison.png", "sha256": "fa2bf5499346d483ed8ec780bb60b3b134631fe620f22c4cb1ef0bc86b7faee9"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/game-scale-review.png", "sha256": "111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/authoring-review.json", "sha256": "412af5fd63cf7c0e32a7422d50004a4162d021cda4ee90ff166400ac352c0273"}, {"path": "art/conversion/body-ray-cat/v1/artifact-manifest.json", "sha256": "6a17a395bc3e9c2dbedf7ab9792c05568eb0ae938f4da87d647e38f4104db293"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/assembly-comparison.png", "sha256": "852895d0a59c7242973b67dc4cdfe22330512061ffbd3f469fd258c0254bdbd8"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/native-palette-comparison.png", "sha256": "fa2bf5499346d483ed8ec780bb60b3b134631fe620f22c4cb1ef0bc86b7faee9"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/native-palette-east.png", "sha256": "29fac4ec1194a8a8b6271e0e0a2252ee979173a5c13efc791c66c61a1620eafe"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-YRAME: yrame
 
 Required steps: resolve_race_description_original_sprite_runtime_anatomy -> select_actual_core_dlc_or_mod_reference -> construct_front -> imagegen_side_back_from_front_and_race_facts -> correct_anatomy_then_imagegen_refine_composed_views -> register_required_layers_and_color_masks -> visual_review_anatomy_orientation_palette_all_views -> native_body_review.
@@ -9101,7 +9809,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/yrame/body-east.png](../art/village/bodies/yrame/body-east.png), [art/village/bodies/yrame/body-north.png](../art/village/bodies/yrame/body-north.png), [art/village/bodies/yrame/body-south.png](../art/village/bodies/yrame/body-south.png), [art/village/bodies/yrame/brief.json](../art/village/bodies/yrame/brief.json), [art/village/bodies/yrame/four-feet-east.png](../art/village/bodies/yrame/four-feet-east.png), [art/village/bodies/yrame/four-feet-east.svg](../art/village/bodies/yrame/four-feet-east.svg), [art/village/bodies/yrame/four-feet-north.png](../art/village/bodies/yrame/four-feet-north.png), [art/village/bodies/yrame/four-feet-north.svg](../art/village/bodies/yrame/four-feet-north.svg), [art/village/bodies/yrame/four-feet-south.png](../art/village/bodies/yrame/four-feet-south.png), [art/village/bodies/yrame/four-feet-south.svg](../art/village/bodies/yrame/four-feet-south.svg), [art/village/bodies/yrame/front.png](../art/village/bodies/yrame/front.png), [art/village/bodies/yrame/front.svg](../art/village/bodies/yrame/front.svg), [art/village/bodies/yrame/head-east.png](../art/village/bodies/yrame/head-east.png), [art/village/bodies/yrame/head-north.png](../art/village/bodies/yrame/head-north.png), [art/village/bodies/yrame/head-south.png](../art/village/bodies/yrame/head-south.png), [art/village/bodies/yrame/model.json](../art/village/bodies/yrame/model.json), [art/village/bodies/yrame/refinement-prompt.txt](../art/village/bodies/yrame/refinement-prompt.txt), [art/village/bodies/yrame/turnaround-draft.png](../art/village/bodies/yrame/turnaround-draft.png), [art/village/bodies/yrame/turnaround-prompt.txt](../art/village/bodies/yrame/turnaround-prompt.txt), [art/village/bodies/yrame/turnaround-rejected-three-feet.png](../art/village/bodies/yrame/turnaround-rejected-three-feet.png).
 
-Current step: native_body_review. Process-log events: 22.
+Current step: native_body_review. Process-log events: 23.
 
 - 2026-10-21T00:55:07.608270+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve Yrame source description, original sprite, actual Feet groups and unmutated female prerequisite.
   Review: Two paired Feet groups and explicit hind/foreleg prose support four feet; source level6 is not appendage count. Actual slots and natural/equipped distinction retained.
@@ -9235,6 +9943,12 @@ Current step: native_body_review. Process-log events: 22.
   Outputs: []
   Method/prompt/corrections: {}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-yrame/v3/registered-v2/model.json", "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"}, {"path": "art/conversion/body-yrame/v3/registered-v2/neutral-comparison.png", "sha256": "1956bc9f525bff50753011cd6fab9b2c813df00cace779ba354a23572b7852c6"}, {"path": "art/conversion/body-yrame/v3/registered-v2/native-comparison.png", "sha256": "998e80cc1a4206250f9b03955f555d90f8479446cd015b1335d4214bbe572ef9"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-ARGYVESIGN: ArgyveSign
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -9303,7 +10017,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/scenery/basic-grass.png](../art/village/scenery/basic-grass.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T03:33:34.990854+00:00 / source_identity_description_metadata / PASS: Read the actual native grass1 mask and reference packet, recording its ten primary-color coverage pixels and original 16 x 24 frame.
   Review: This is a floor-paint glyph, not a new crop/NPC species. Native black RGB is foreground coverage in the audited shader, not background. No source detail region. Universal paint color was not exported; preserve native primary tint rather than bake green into the asset. Cyan PrimalGrass is a separate source usage of this tile.
@@ -9365,6 +10079,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native paint acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-grass-1/v1/registered-v2/model.json", "sha256": "66bd36911cfd95074b52d0ace26a00e90fde1ddb98335c6787f17fcf0baa1b9c"}, {"path": "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png", "sha256": "2e995d5f91a0f782c88b85563677785728f74dc95c8448a259accf22915fccbf"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-GRASS-2: Basic Grass 2
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9373,7 +10093,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T03:45:40.128425+00:00 / source_identity_description_metadata / PASS: Resolved Terrain/sw_grass2.bmp from the source index and read all sixteen native foreground-coverage pixels in the original cell frame.
   Review: Source supports three sparse strokes with different root heights. It is paint, not a named crop/NPC species. All source coverage is primary black in the audited shader. Native tile usage can have non-green color, including orange ClamGrass; actual cell tint/visibility remains authoritative.
@@ -9429,6 +10149,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native paint acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-grass-2/v1/registered/model.json", "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"}, {"path": "art/conversion/tile-grass-2/v1/registered/registration-comparison.png", "sha256": "e62136abb31dd1f0a44a3137f6cced7ed4283cfc3c945207f92fc495e5392bff"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-GRASS-3: Basic Grass 3
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9437,7 +10163,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T03:49:53.066082+00:00 / source_identity_description_metadata / PASS: Resolved Terrain/sw_grass3.bmp and its twelve native foreground pixels in the original rectangular cell frame.
   Review: Two separate strokes are present: longer left blade rooted low and shorter right blade with a higher tip/root. Source has primary coverage only. No universal paint color, named biological species, crop or growth stage is established.
@@ -9493,6 +10219,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native paint acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-grass-3/v1/registered/model.json", "sha256": "0cf20b900d24719eafa5325f4f08f4b8add8ea9740d02a2c22058ef821db41c9"}, {"path": "art/conversion/tile-grass-3/v1/registered/registration-comparison.png", "sha256": "f910ff430bfcc1a8df6b8c1c670da08a001eded0c40e7001f879510f1f223840"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-SOIL: bare soil/interior ground
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9501,7 +10233,7 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-soil.png](../art/village/scenery/surface-soil.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T04:12:45.016566+00:00 / source_identity_description_metadata / PASS: Resolved DirtFloor inheritance, installed Render and RandomTileOnMove definitions, original mask and source palette.
   Review: Viewed the original and native capture. Six primary and two detail pixels both use native brown w; background stays source-owned k. No standalone Description.Short. Only dots1 original mask is exported; selector aliases do not prove unseen layouts.
@@ -9557,6 +10289,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native bare-ground acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-soil/v1/registered/model.json", "sha256": "6cafb72c3be45e1d7f9b3ce550170a06f431e582fd3ee7f449046328491ebb4f"}, {"path": "art/conversion/tile-soil/v1/registered/registration-comparison.png", "sha256": "3083186ddaa566c59ed476d5c4ec2c4197374e732c59ab7a65b7045ce72a7ce5"}, {"path": "art/conversion/tile-soil/v1/registered/repeat-comparison.png", "sha256": "f51a9d993e5d6a93ee66abe5e161857504c7f0cf77a52b32bb3087a99145628a"}, {"path": "art/conversion/tile-soil/v1/registered/boundary-examples-comparison.png", "sha256": "4af6c50a47255b326b1cf7e666462df448289d52ce40388f6f980d49e3a73fd9"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-WATER-DEEP: deep/swimming water
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9565,7 +10303,7 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-water-deep.png](../art/village/scenery/surface-water-deep.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T04:18:18.199462+00:00 / source_identity_description_metadata / PASS: Resolved Water/Pond/deep-pool definitions, exact original puddle reference, native palette and retained depth-predicate diagnostic.
   Review: Viewed native pool context and the exported default mask. Dynamic connected pool appearance differs from the default puddle. Pond is500drams; swimming state is not inferred from that sprite or claimed present in the historical Joppa capture.
@@ -9621,6 +10359,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native water/depth acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-water-deep/v1/registered/model.json", "sha256": "5ad0215827964aee5de54c6b0213b19839d879fdcc949541b34f9107759f081a"}, {"path": "art/conversion/tile-water-deep/v1/registered/connected-water-comparison.png", "sha256": "8ffee47abe74593010dad9372fc1ff2de7aefd9a0f8a5662cfbc0dacb8d1692f"}, {"path": "art/conversion/tile-water-deep/v1/registered/depth-transition-comparison.png", "sha256": "938e942d9c571b9efa3635b6f27b8df85d37d9d358575f1012cf28ae0875c245"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-MARSH: marsh/grass ground
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9629,7 +10373,7 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-marsh.png](../art/village/scenery/surface-marsh.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T04:00:11.973694+00:00 / source_identity_description_metadata / PASS: Read the native village capture, floor/paint metadata and current adapter source to distinguish the broad ground material from native grass paint, soil and water.
   Review: Dominant sampled native field is RGB(15,59,58), matching Qud k #0F3B3A. There is no original full turf texture or standalone substrate description. Current broad marsh slot/white tint/quad-local UV is historical integration behavior, not proof of the required new source-aware tint/world-UV/eligibility binding. No renderer behavior is changed now.
@@ -9691,6 +10435,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native ground integration acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-grassy-ground/v1/registered/model.json", "sha256": "291312dea82fc18d9b5a58487857f07df1b11b1e70815daec33dd8b597f19c24"}, {"path": "art/conversion/tile-grassy-ground/v1/registered/material-paint-path-comparison.png", "sha256": "43292ad6ae82f4a644d4c751206901adb20caf79fd202c63ae6531e8080dc0f6"}, {"path": "art/conversion/tile-grassy-ground/v1/registered/repeat-comparison.png", "sha256": "9f24836082f0ea380b4fe0b3704bda6fb99885fa83cd52b8729968d72a43855b"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-SAND: path surface
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9699,7 +10449,7 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-sand.png](../art/village/scenery/surface-sand.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T03:30:22.059278+00:00 / source_identity_description_metadata / PASS: Resolved the historical sand-named surface row to DirtPath, adopted its native description/variants/palette evidence and recorded the exact historical draft that is superseded in the selected authoring binding.
   Review: This is a shared-material catalogue row, not a second environment species or a global sand replacement. Exact native brown, inherited dot selectors and source-metadata limits remain intact. Production application waits for final integration.
@@ -9749,6 +10499,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native material binding review deferred", "reuse_of_entry": "SCN-DIRTPATH"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-path-surface/v1/model.json", "sha256": "ac4015dd29a1a24232f8a26238e72cf7e3070f503607a0cd677d67f0be6fcfaa"}, {"path": "art/conversion/tile-path-surface/v1/material-binding-comparison.png", "sha256": "f95b238e8c5091221123be06d3bb841cd92cb001bbde3e8848f24d065936b165"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### TILE-WATER-SHALLOW: shallow/wading water
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> native_review_applicable_states.
@@ -9757,7 +10513,7 @@ Required views/states: seamless material; native palette; edge/depth transitions
 
 Historical artifacts: [art/village/scenery/surface-water-shallow.png](../art/village/scenery/surface-water-shallow.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T04:21:49.528083+00:00 / source_identity_description_metadata / PASS: Reused the source-bound Water/Pond definitions, exact original/capture and historical depth observations with explicit producer provenance; rechecked installed/private source hashes.
   Review: Pond is500drams of water/salt. Wading and thin puddles are not equated, and swimming uses its own native predicate. No new depth/volume or movement rules are inferred from art.
@@ -9813,6 +10569,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native shallow/deep acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/tile-water-shallow/v1/registered/model.json", "sha256": "f104d9abc7e8be320fa2640ee5efb91a2190d1d0be29c4d437ea96bfec6660de"}, {"path": "art/conversion/tile-water-shallow/v1/registered/depth-transition-comparison.png", "sha256": "f9d5936a9cd2037f94a92f2c4fba958b012bc17a6d1023923c41d31c50da7e26"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-DROMAD-CHILD-TEMPLATE-TUNIC: dromad child / tunic
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> reprocess_under_regional_curved_v1 -> native_review_applicable_states.
@@ -9821,7 +10583,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/dromad/tunic-east.png](../art/village/age-templates/dromad/tunic-east.png), [art/village/age-templates/dromad/tunic-north.png](../art/village/age-templates/dromad/tunic-north.png), [art/village/age-templates/dromad/tunic-south.png](../art/village/age-templates/dromad/tunic-south.png).
 
-Current step: native_review_applicable_states. Process-log events: 32.
+Current step: native_review_applicable_states. Process-log events: 33.
 
 - 2026-10-20T02:30:30.102304+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic and retained exact original glyph/palette/description plus captured Body attachment IDs and laterality from its existing source packet.
   Review: Read the item/body source packets. No child-dromad outfit or age selector is inferred; this is a removable authored fitting. Base body/head/dulla and contact remain fixed.
@@ -10015,6 +10777,12 @@ Current step: native_review_applicable_states. Process-log events: 32.
   Outputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v4/authoring-review.json", "sha256": "f81b49fabcb2571c9863c5ff78150dbdc2aae522e63ab2c804f439a6e8c0506d"}]
   Method/prompt/corrections: {"phase": "Review reprocessed child fitting in all authored directions"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json", "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v4/assembly-comparison.png", "sha256": "9bed6e03dfb10aba42988c842bb605b94acb647bbab3895cdcbe0ee3cf2c13f6"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v4/independent-palette-comparison.png", "sha256": "8becbae2732cdac1626193f5a52e9c88446b1ffacc56f87ab1592d7d65fd3e85"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v4/palette-east.png", "sha256": "2b8f3061183feed36476c66cb52fad36a6057e04a91c8574286b5ee0225a8343"}, {"path": "art/conversion/fit-dromad-child-woven-tunic/v4/intact-garment-comparison.png", "sha256": "7e2dec195cc5ee264bc6a2cc594ceaccae9fb2d98b8ea692ed5cab93530cb3a6"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### FIT-HUMAN-CHILD-TEMPLATE-TUNIC: human child / tunic
 
 Required steps: source_identity_description_metadata -> original_and_render_reference_decision -> construct_shape -> create_required_views_states -> correct_errors_and_refine -> extract_register_palette_masks -> visual_review_all_views_at_game_scale -> reprocess_under_regional_curved_v1 -> native_review_applicable_states.
@@ -10023,7 +10791,7 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: [art/village/age-templates/human/tunic-east.png](../art/village/age-templates/human/tunic-east.png), [art/village/age-templates/human/tunic-north.png](../art/village/age-templates/human/tunic-north.png), [art/village/age-templates/human/tunic-south.png](../art/village/age-templates/human/tunic-south.png).
 
-Current step: native_review_applicable_states. Process-log events: 35.
+Current step: native_review_applicable_states. Process-log events: 36.
 
 - 2026-10-20T01:51:31.357715+00:00 / source_identity_description_metadata / RECORDED: Selected Woven Tunic, preserved its original tile/palette and exact coarse-flax/hemp-rope description, and bound the authored fitting to the unchanged child body.
   Review: Exact original reference hash matched. This resolves the previously generic template garment identity; no child was observed wearing it and no native child selector is assumed. Construction, refinement, extraction and fitting are still unfinished.
@@ -10235,6 +11003,12 @@ Current step: native_review_applicable_states. Process-log events: 35.
   Outputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v6/game-scale-review.png", "sha256": "72c9d363de7acd7188df355b9d3e9d6629bfde919870fc7e206cf7f6b040dee8"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/independent-palette-comparison.png", "sha256": "0954820c94ff6d437c915da72982752019cd8d8b98ede6c4b0ddf46fdfde30fb"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/authoring-review.json", "sha256": "f8508f3cdc0f53006c395ad29d2294facc198d78a5cc725e4375fb933bce0b53"}]
   Method/prompt/corrections: {"phase": "Review shared human-child tunic under updated workflow"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/fit-human-child-woven-tunic/v6/model.json", "sha256": "0b5af6668e5d1e9502bcd5f4cb3a38f287c154ae913abb965c025dfb9fc1415d"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/assembly-comparison.png", "sha256": "007739f39507cbf9ad61db46e413f6917a608f53115b43e7c8d0de39efee8383"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/independent-palette-comparison.png", "sha256": "0954820c94ff6d437c915da72982752019cd8d8b98ede6c4b0ddf46fdfde30fb"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/palette-east.png", "sha256": "79c0c924ba206a7042e96c3df617610d9a703fc6fa77a4ed165dcfab2ad91c31"}, {"path": "art/conversion/fit-human-child-woven-tunic/v6/intact-garment-comparison.png", "sha256": "5bd7f7b3f032fa60b74b27d264a9991805a7ade00921310917857de60c2df9ec"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-01-bodies.json", "sha256": "bd986f70a8c38804391bb84c7894a79ce7fe3798894fe8313633de79abf70411"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BRINEBRIDGE: BrineBridge
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10243,7 +11017,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/brinebridge-detail.png](../art/village/scenery/brinebridge-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T05:09:52.809529+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolved BrineBridge and PickRandomTile, extracted the four actual brickb1..4 masks read-only/private and inspected their opaque pixel values.
   Review: Older default reference is not the declared random variant set. Actual opaque pixels use R65/255 in the audited foreground/detail mix; literal green RGB is not rendered green. Description is dried brinestalk; Bridge=1/SuspendedPlatform/crossing rules remain native.
@@ -10305,6 +11079,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native bridge acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-brinebridge/v1/registered/model.json", "sha256": "fa58efdf11e6b2dcbe8ddb24f6c79223efab98f3fc7989142c4ffa8a8c9c0f0c"}, {"path": "art/conversion/scn-brinebridge/v1/registered/variants-comparison.png", "sha256": "5b573db43758b656d9f5b3dfa0f921dcaa589167180153b3db6a53ef864eb689"}, {"path": "art/conversion/scn-brinebridge/v1/registered/water-underlay-comparison.png", "sha256": "5b425d64ac686ac1c6e6fd5a7ae16e1ad6474deb83528ceee2fd86a7b561b6e1"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BRINESTALKFENCE: BrinestalkFence
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10313,7 +11093,7 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/fence-detail.png](../art/village/scenery/fence-detail.png), [art/village/scenery/fence.png](../art/village/scenery/fence.png), [art/village/scenery/rustedmetalwall-detail.png](../art/village/scenery/rustedmetalwall-detail.png), [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T04:55:13.345360+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the installed BrinestalkFence definition and ZoneManager fence naming, then extracted all16native painted masks read-only into private E-drive storage.
   Review: Viewed all actual painted states. The earlier static tile-0-13 reference is a placeholder, not this fence shape. Native isolated state has three squared salt-tipped stalks; cardinal states include narrow edge-on N/S presentation. Raw atlases/masks remain private.
@@ -10375,6 +11155,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native fence acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/model.json", "sha256": "379aac48cf0fe62efe2a439a0ee583a05ff47c02cf54c721495932f30f73e63a"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/connections-comparison.png", "sha256": "bf8eb6653f4688f8109fd1389cfc40c142c6d7de291cee67c5f2a173c27f4096"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/native-scale-comparison.png", "sha256": "fd0ebed3473bbdd77cbaeec5fc3fe099cc3341a62b34ec930a6b4ef43b9f3b52"}, {"path": "art/conversion/scn-brinestalkfence/v1/registered-v2/states-comparison.png", "sha256": "3d9b1cd5d1346a8794fddeac028b8dbbbad603aed7285d9a55a96a723d87d7d5"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BRINESTALKWALL: BrinestalkWall
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10383,7 +11169,7 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/brinestalkwallwithgearbox-body.png](../art/village/scenery/brinestalkwallwithgearbox-body.png), [art/village/scenery/brinestalkwallwithgearbox-detail.png](../art/village/scenery/brinestalkwallwithgearbox-detail.png), [art/village/scenery/wall-brinestalk-detail.png](../art/village/scenery/wall-brinestalk-detail.png), [art/village/scenery/wall-brinestalk.png](../art/village/scenery/wall-brinestalk.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T04:33:30.781342+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolved BrinestalkWall source description, original mask/tint roles, solid/organic/occluding identity and painted-wall metadata.
   Review: Viewed original default isolated glyph. Description explicitly establishes several stripped trunks bonded with mud; the four upright lower columns and stippled panel support the construction. Fine unseen material remains authored. Original native eight-neighbor states are not falsely claimed exported.
@@ -10445,6 +11231,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native connected-wall acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/model.json", "sha256": "4636fe10a8fae857c5f76fe59ec789b91e6be954a1a36d34bc6a760959680eaa"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png", "sha256": "998dda982eec4f9159cb26dc3a475b3c3b1dae7c7e9f350551c03f25dc959f5b"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/native-scale-comparison.png", "sha256": "2a2bf62d4840bbb542f0767cd033569e5ea0a03b399ace97db228b992f2c2c02"}, {"path": "art/conversion/scn-brinestalkwall/v1/registered-v2/states-comparison.png", "sha256": "9c86ecb0707fc2b38110e3c895e0c2f1876b4616a1e2acd96450a60c82b8855a"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BRINESTALKWALLWITHGEARBOX: BrinestalkWallWithGearbox
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10453,7 +11245,7 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/brinestalkwallwithgearbox-body.png](../art/village/scenery/brinestalkwallwithgearbox-body.png), [art/village/scenery/brinestalkwallwithgearbox-detail.png](../art/village/scenery/brinestalkwallwithgearbox-detail.png), [art/village/scenery/wall-brinestalk-detail.png](../art/village/scenery/wall-brinestalk-detail.png), [art/village/scenery/wall-brinestalk.png](../art/village/scenery/wall-brinestalk.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T04:45:45.853711+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed wall inheritance and scoped ModGearbox, MechanicalPowerTransmission and IPowerTransmission implementation; compared exact exported ordinary reference/mask hashes.
   Review: The added part supplies power transmission and name/description information, not a distinct default visible gear sprite. TileEffects defaults false; changed runtime appearances remain unknown/native. Do not infer exposed machinery from the blueprint name.
@@ -10503,6 +11295,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native gearbox-wall acceptance deferred", "reuse_of_entry": "SCN-BRINESTALKWALL"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-brinestalkwall-gearbox/v1/model.json", "sha256": "a8b5b6338555dffb0237e321a2dc5f4fd58de0b2b9c18765bcc9968b0faa460a"}, {"path": "art/conversion/scn-brinestalkwall-gearbox/v1/shared-appearance-comparison.png", "sha256": "8c08f37ab6351f33352a954df294ca5be58f80aec9508ec03dbb1cbb4f6cc536"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-CANVASWALL: CanvasWall
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10521,7 +11319,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T04:47:22.835630+00:00 / resolve_object_description_original_tile_palette_state / PASS: Bound DirtFloor to its already performed source-bound soil conversion, rechecking installed definition hash.
   Review: Render name packed dirt floor, no native short description, source primary/detail both w. Original mask has eight sparse deposits. Native aliases retained with exported-layout limits explicit.
@@ -10571,6 +11369,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native packed-floor acceptance deferred", "reuse_of_entry": "TILE-SOIL"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-dirtfloor/v1/model.json", "sha256": "f214f1894ad8efaef6b14e66f220316200227ccdd9aae4fcafbc84d65347ffb0"}, {"path": "art/conversion/scn-dirtfloor/v1/binding-comparison.png", "sha256": "570342b4e4a328a97cdb0a51002b9ee79a6f5c2354e9a8a1e92fdac4ed09608c"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-DIRTPATH: DirtPath
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10579,7 +11383,7 @@ Required views/states: continuous interior; 8-neighbor edge/corner blending.
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 12.
+Current step: generation ready; final acceptance pending. Process-log events: 13.
 
 - 2026-10-20T03:10:38.167968+00:00 / resolve_object_description_original_tile_palette_state / PASS: Bound DirtPath to the captured source/16x24 original glyph, exact Floor/DirtFloor/DirtPath declarations and installed color names.
   Review: No native Description.Short. Original palette &w/detail w is named brown in Colors.xml. Four ground-dot tile variants are inherited through RandomTileOnMove; native state ownership is preserved. Stone-over-grass is the user-requested visual interpretation, not a claim that the native definition says cobblestone.
@@ -10653,6 +11457,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 12
   Outputs: []
   Method/prompt/corrections: {"phase": "Native state acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-dirtpath/v1/registered/model.json", "sha256": "a3e478b2f629cdf51cca66846f8062f04d0320c2f79bc9d32969b49531e1b5c9"}, {"path": "art/conversion/scn-dirtpath/v1/registered/connections-comparison.png", "sha256": "f6379c24d0c17c496dd7e2fc16a6d40ebce755f621d5e22a30d274bbc9283e22"}, {"path": "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png", "sha256": "6618bf9efbf3aecd58e331f6cf8acbdb11b7046350ce64ed480f3ff1d2d6ba84"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-DOOR: Door
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10661,7 +11471,7 @@ Required views/states: closed; open; native panel position and occlusion.
 
 Historical artifacts: [art/village/scenery/door-body.png](../art/village/scenery/door-body.png), [art/village/scenery/door-detail.png](../art/village/scenery/door-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: not started. Process-log events: 9.
 
 - 2026-10-20T05:27:56.201183+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read the exact Door blueprint and installed Door class defaults/ObjectCreated/open/close behavior. Extracted the static thumbnail and both actual runtime tiles privately.
   Review: Viewed all three decoded source glyphs. Static sw_doorclosed is not the normal synchronized runtime tile. Closed is basic; open is basic_open. Runtime arch uses detail and slab uses foreground; both are y. Native source, selectors and state ownership are explicit.
@@ -10711,6 +11521,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native Door acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: FIX NOW: I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment.
+  Inputs: [{"path": "art/conversion/scn-door/v1/registered/model.json", "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"}, {"path": "art/conversion/scn-door/v1/registered/states-comparison.png", "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-POND: Pond
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10719,7 +11535,7 @@ Required views/states: wading/shallow; swimming/deep; connected banks/edges; for
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T04:25:58.188738+00:00 / resolve_object_description_original_tile_palette_state / PASS: Bound the Pond source to its installed description/render/volume facts and the two performed water conversion packets.
   Review: Pond is an open500dram water/salt volume in the definitions. State selection remains native; neither the default puddle sprite nor this art changes traversability, mixture or volume.
@@ -10769,6 +11585,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native Pond acceptance deferred", "reuse_of_entry": ["TILE-WATER-SHALLOW", "TILE-WATER-DEEP"]}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-pond/v1/model.json", "sha256": "803655d3b52a757ed32f018ebf22a3d016cbc1932f8231d59e2e07878f1040bb"}, {"path": "art/conversion/scn-pond/v1/states-comparison.png", "sha256": "061d303acec51b672932c531f37a99fa9ff0143e1017785d50a2eb3e0194e903"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-RUSTEDMETALWALL: RustedMetalWall
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10777,7 +11599,7 @@ Required views/states: {"mask": 0, "neighbors": []}; {"mask": 1, "neighbors": ["
 
 Historical artifacts: [art/village/scenery/rustedmetalwall-detail.png](../art/village/scenery/rustedmetalwall-detail.png), [art/village/scenery/wall-metal-detail.png](../art/village/scenery/wall-metal-detail.png), [art/village/scenery/wall-metal.png](../art/village/scenery/wall-metal.png), [art/village/scenery/woodenmechanicaltransmission-body.png](../art/village/scenery/woodenmechanicaltransmission-body.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T05:36:57.878677+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read RustedMetalWall ancestry, description and native eight-neighbor paint selection. Extracted all256installed wall_metal source masks privately, retaining16cardinal source examples.
   Review: Viewed actual r/C source shapes. Earlier tile-0-13 was an inherited placeholder. Source has checker/diamond metal, pale-cyan edging and lower industrial bracing. Native N,NE,E,SE,S,SW,W,NW ordering differs from recipient four-bit order.
@@ -10833,6 +11655,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native wall acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-rustedmetalwall/v1/registered/model.json", "sha256": "1ec35fafa2589913b03d871343824508e51fb0f396945b0ab155a53a25faa14b"}, {"path": "art/conversion/scn-rustedmetalwall/v1/registered/connections-comparison.png", "sha256": "3309924b09204d885994273e94eefeed2e7225235b57b5e925db087e76a38174"}, {"path": "art/conversion/scn-rustedmetalwall/v1/registered/all-native-states-comparison.png", "sha256": "9666840651b5b3c9f0f79d5291ddd5f3fe3bb42aa7f9f4756a04d9c4fd3d2e0c"}, {"path": "art/conversion/scn-rustedmetalwall/v1/registered/native-scale-comparison.png", "sha256": "649804e8018872d50f763e5dfdd3a8972c9bb04f2d694e247a110ecc9780f0a7"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-11-12-terrain.json", "sha256": "355cda3c157a9302d6de221efcf8f143638bcec6989c67b0c2b4b07fbc2ea6f2"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-BRINESTALK: Brinestalk
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10841,7 +11669,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/brinestalk-body.png](../art/village/scenery/brinestalk-body.png), [art/village/scenery/brinestalk-detail.png](../art/village/scenery/brinestalk-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T05:46:14.636453+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Brinestalk/Plant definitions, description, actual original mask and inherited physics; decoded source mask into actual native w/g palette for contextual comparison.
   Review: Original mask/hash matches existing captured source. Three uneven stalks with sparse green knots, not a canopy tree. Historical reference uses standardized pale swatches; packet distinguishes that preview from actual native brown w/green g. Non-solid inheritance and occluding=true remain source-owned.
@@ -10891,6 +11719,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native brinestalk acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-brinestalk/v1/registered/model.json", "sha256": "83ef0bfa56bfc1003c4383523a8d1ff08400dbe009a8090b36657fd522843bdc"}, {"path": "art/conversion/scn-brinestalk/v1/registered/registration-comparison.png", "sha256": "251981310463b6803e00372597b2f83438b313ed3bce96a73df8dd69a50df2c8"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-DOGTHORN-TREE: Dogthorn Tree
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10899,7 +11733,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/dogthorn-tree-body.png](../art/village/scenery/dogthorn-tree-body.png), [art/village/scenery/dogthorn-tree-detail.png](../art/village/scenery/dogthorn-tree-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: not started. Process-log events: 10.
 
 - 2026-10-20T05:53:44.132548+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Dogthorn Tree/Tree/Plant definitions, native description and actual RandomTile choices; privately extracted both installed sw_fattree variants and decoded native G/w roles.
   Review: Viewed both original source shapes. Broad irregular foliage is primary G; exposed branches/trunk/root nest are detail w. Native builder has two cosmetic variants, not a single static image. Actual fixed shape and inherited mechanics remain distinct from authored foliage detail.
@@ -10955,6 +11789,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native dogthorn acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: FIX NOW: I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles.
+  Inputs: [{"path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json", "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"}, {"path": "art/conversion/scn-dogthorn-tree/v1/registered/registration-comparison.png", "sha256": "508592841bf77192dcbd8ec5058626b23c823fc76e689fb47d4f34e99ccde934"}, {"path": "art/conversion/scn-dogthorn-tree/v1/registered/wood-ownership-comparison.png", "sha256": "1c68095baa35fb0fa0373963aaca03f42746002f9c11c7b3d5a2869bba12b1a1"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-STARAPPLE-TREE: Starapple Tree
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -10963,7 +11803,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/starapple-tree-ripe-body.png](../art/village/scenery/starapple-tree-ripe-body.png), [art/village/scenery/starapple-tree-ripe-detail.png](../art/village/scenery/starapple-tree-ripe-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 9.
+Current step: generation ready; final acceptance pending. Process-log events: 10.
 
 - 2026-10-20T06:03:47.806366+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read Starapple Tree and Ripe sibling definitions, source tile mask, six native detail clusters and installed Harvestable state-color behavior.
   Review: Viewed original source decoded with native g/R and g/K palettes. Both states share one tile. Six visual glyph groups are authored as fruit marks; actual harvest yield remains one. Ashen description informs neutral bark texture, while actual native g tint remains authoritative.
@@ -11019,6 +11859,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 9.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native starapple acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree/v1/registered/model.json", "sha256": "6b77dae9461d4e4ccb586a572b7fcbaa9373af7dd1762004f3b6365e6f63fcad"}, {"path": "art/conversion/scn-starapple-tree/v1/registered/registration-comparison.png", "sha256": "c893c9291cfb79eec92c855f8870d2105afde1c3796d00f8ed01f9a0d0c39978"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-STARAPPLE-TREE-RIPE: Starapple Tree Ripe
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -11027,7 +11873,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/starapple-tree-ripe-body.png](../art/village/scenery/starapple-tree-ripe-body.png), [art/village/scenery/starapple-tree-ripe-detail.png](../art/village/scenery/starapple-tree-ripe-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 8.
+Current step: generation ready; final acceptance pending. Process-log events: 9.
 
 - 2026-10-20T06:05:45.161842+00:00 / resolve_object_description_original_tile_palette_state / PASS: Compared installed normal/ripe Render, Description, Tree ancestry, native original mask hashes and Harvestable appearance fields.
   Review: Render and Description attributes match exactly; both inherit Tree. All harvest fields match except starting ripe chance1:5versus1:1. Both still become unripe through native harvest state; no permanently-red frozen binding is appropriate.
@@ -11077,6 +11923,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 8.
   Outputs: []
   Method/prompt/corrections: {"phase": "Native ripe-sibling acceptance deferred", "reuse_of_entry": "SCN-STARAPPLE-TREE"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/scn-starapple-tree-ripe/v1/model.json", "sha256": "45614425769333f08e2bf2b53db66c329875f7fbef86e4b85b109167cc71810e"}, {"path": "art/conversion/scn-starapple-tree-ripe/v1/binding-comparison.png", "sha256": "a1deded7d3787ecafa095d1519f91e4df9dbcc70c570f32e5dce246984670102"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### SCN-WATERVINE: Watervine
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -11085,7 +11937,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/watervine-body.png](../art/village/scenery/watervine-body.png), [art/village/scenery/watervine-detail.png](../art/village/scenery/watervine-detail.png).
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: not started. Process-log events: 11.
 
 - 2026-10-20T06:10:44.859605+00:00 / resolve_object_description_original_tile_palette_state / PASS: Read installed Watervine/Plant definitions, actual three RandomTile masks, native Harvestable colors/yield and Fireflies particle-event implementation.
   Review: Viewed all three source glyphs decoded with native w/g. Vine stays w; swollen wafers use ripe g/unripe K. Fireflies adds a separate native night particle, not a required baked glow on this plant image. Actual yield remains one Vinewafer; native behavior stays source-owned.
@@ -11147,6 +11999,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: []
   Method/prompt/corrections: {"phase": "Native watervine acceptance deferred"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / FAIL: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: FIX NOW: I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints.
+  Inputs: [{"path": "art/conversion/scn-watervine/v1/registered/model.json", "sha256": "81ecd614f6f2aa5126ddc8e8528552bf9fc6391cff9a9f4ba659835c6b7e0797"}, {"path": "art/conversion/scn-watervine/v1/registered/registration-comparison.png", "sha256": "9106e54bac0c4c99b61939ae1b31515ce4a4ddf4380fde4b97b2210d057feb3c"}, {"path": "art/conversion/scn-watervine/v1/registered/unripe-comparison.png", "sha256": "eee14dabd7f486d091f9fb4e11b8234e0763d861ee89abb92f4ab04ddd110281"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-13-vegetation_props.json", "sha256": "bb80dfc4f9c7105461af51265b5ecb357fd4b3999498b8937c29c2d3a7005358"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-HUMAN-FEMALE-OLDER: human female older template
 
 Required steps: resolve_age_evidence_and_render_reference -> construct_front_from_shared_human_base -> refine_front -> generate_other_views -> patch_and_refine_composed_views -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
@@ -11155,7 +12013,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 10.
+Current step: generation ready; final acceptance pending. Process-log events: 11.
 
 - 2026-10-20T01:35:46.927092+00:00 / resolve_age_evidence_and_render_reference / PASS: Resolved the authored older-female variant from the shared unmutated human base, original clothed female Qud glyphs and exact installed Core female torso/head references. Used Irudad only as an explicit old-age prose reference.
   Review: Viewed source/reference plate and read packet. Humanoid baseline has one head, two arms/hands and paired feet. No canonical older-female villager or age-specific donor torso is established. Mutations stay separate; no demographic reassignment.
@@ -11217,6 +12075,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 10
   Outputs: [{"path": "art/conversion/body-human-female-older/v1/model.json", "sha256": "c638d348c491a9081d26626d1d8fd818d7630a37d43cdf10c9d0cdf7b5dff20a"}]
   Method/prompt/corrections: {"phase": "Age-template selection policy"}
 
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-human-female-older/v1/model.json", "sha256": "c638d348c491a9081d26626d1d8fd818d7630a37d43cdf10c9d0cdf7b5dff20a"}, {"path": "art/conversion/body-human-female-older/v1/registration-comparison.png", "sha256": "ae56c2d39bbf36476532f3dda161d94e0a2a2ee65ec060f39b7cea852f6859de"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
+
 ### BODY-HUMAN-MALE-OLDER: human male older template
 
 Required steps: resolve_age_evidence_and_render_reference -> construct_front_from_shared_human_base -> refine_front -> generate_other_views -> patch_and_refine_composed_views -> register_body_head_and_palette -> visual_review_all_views -> record_native_selection_policy_without_changing_demographics.
@@ -11225,7 +12089,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: none recorded.
 
-Current step: generation ready; final acceptance pending. Process-log events: 12.
+Current step: generation ready; final acceptance pending. Process-log events: 13.
 
 - 2026-10-20T01:13:36.283910+00:00 / resolve_age_evidence_and_render_reference / PASS: Recorded the requested older human variant, original Qud age reference, actual adult donor references, and the source hierarchy.
   Review: Inspected the plate and packet. Irudad supplies explicit old-face/hunched-back prose, but extra arms/tail are individual mutations, not generic aging. No distinct aged donor torso or native age selector is established; age variation is authored.
@@ -11298,6 +12162,12 @@ Current step: generation ready; final acceptance pending. Process-log events: 12
   Inputs: [{"path": "art/conversion/body-human-male-older/v1/model.json", "sha256": "1dc629200b2a9ae71466230a4e130d2709fecc8441f162a45dc5729007bcbded"}, {"path": "tools/center_human_registration.py", "sha256": "16beef95e1ebeee0d7329f250b568c49a1264704c7bebdbefc72ae184ab64cff"}, {"path": "art/conversion/body-human-male-older/v1/body-south.png", "sha256": "d40f6caeaffa194d223c96fe7a652e228464c7f133e62c6e997caf1c819f51e6"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-south.png", "sha256": "9121d6f63dfac84ff2b45667220b2e9fb5e52f2abf127a509f0a9dc8cb929d2e"}, {"path": "art/conversion/body-human-male-older/v1/head-south.png", "sha256": "c625aa2cf9a2f968d4f0d4d9c5b78a7d399180b4347df30b28758c229b53edda"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-south.png", "sha256": "7d401843cb09cd8fb3e0b0e2674800e999d0b40c8a389d4683e36a8294e9dc49"}, {"path": "art/conversion/body-human-male-older/v1/body-east.png", "sha256": "8dc37ee37a1ff2f9eb0efb42124e1da27f0c1efee004ca32cf831e55ff8cd438"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-east.png", "sha256": "d185b9f68316bf22f51c7b29d75ba7625d46c373034fa74a27999e9f5e22cf30"}, {"path": "art/conversion/body-human-male-older/v1/head-east.png", "sha256": "177c7e9ebe7693125d918c4dacb9cb7893e0e395be5968fee9c2f9b3fcba3ba9"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-east.png", "sha256": "84b3dd4bf3bd026e7dc034e6766b4f1f3764c730871e60d281dce237850eea98"}, {"path": "art/conversion/body-human-male-older/v1/body-north.png", "sha256": "8dc54232a51a0dd928147fb1d3123011fde595289f67bae32bc6a18afd387d17"}, {"path": "art/conversion/body-human-male-older/v1/body-mask-north.png", "sha256": "32ebe6a168b6f62e45ae7716b1195f650d59c591b51ae470b28b3e6a65aa756b"}, {"path": "art/conversion/body-human-male-older/v1/head-north.png", "sha256": "a1086c735aa423f41b3a892e4cc045f657ab045d258eabc485f2b4e8fb1927e1"}, {"path": "art/conversion/body-human-male-older/v1/head-mask-north.png", "sha256": "abcab997a3c75c19e963532dd595a4b6131cb86e84b5bede865d6943feae5372"}]
   Outputs: [{"path": "art/conversion/body-human-male-older/v2/body-south.png", "sha256": "b25c2a6a9b69d6f79f02b4f16b1080c72dac476218ddeb2d274ad52e18080f4b"}, {"path": "art/conversion/body-human-male-older/v2/body-mask-south.png", "sha256": "63a25ef4f65b169d23fb5bcf5a03ab8fecb942c2a437599dc101924411fd1d71"}, {"path": "art/conversion/body-human-male-older/v2/head-south.png", "sha256": "a51dae7026a931ec698ce81105853096618a64cf60d513251dae89ac33ccc869"}, {"path": "art/conversion/body-human-male-older/v2/head-mask-south.png", "sha256": "7c313cf6dffc1c74f4def1d126b433ef38e23275089ecaf68208c0ef93feb73b"}, {"path": "art/conversion/body-human-male-older/v2/selected-south.png", "sha256": "4003d3a7e8ebe80de3146b346f271674ff9989805dc19deeee570f6a5b55b506"}, {"path": "art/conversion/body-human-male-older/v2/body-east.png", "sha256": "b02e62e26817d3b0ed9fbf0e4b58ea7ed19839d5617b688ebcc1967e761f4ee1"}, {"path": "art/conversion/body-human-male-older/v2/body-mask-east.png", "sha256": "cf968b40f96aeb4499c998ed67f4ef9a7a239703cd34bdad782f6d7dc2d33883"}, {"path": "art/conversion/body-human-male-older/v2/head-east.png", "sha256": "fc213613028b8be93f39a5857cd0755830ca0c332483b2ab74ed936cd15905ae"}, {"path": "art/conversion/body-human-male-older/v2/head-mask-east.png", "sha256": "3dbc3e537cb869d06253e55f8ee9092ae60e36bd1248fd5750ff7c28cfda6ba9"}, {"path": "art/conversion/body-human-male-older/v2/selected-east.png", "sha256": "d0a10e7cc510a0bb8949f7699304e10b74033c38862e145521c29559ed740fa6"}, {"path": "art/conversion/body-human-male-older/v2/body-north.png", "sha256": "3e13cf2dc56c96f3c9dc5e513edfc5494c788ff86a3dba7522f9e50e4756b800"}, {"path": "art/conversion/body-human-male-older/v2/body-mask-north.png", "sha256": "e416ab62c176bc0de75b67f5135d9016b9b33eac6ca638794aae596c299ecd72"}, {"path": "art/conversion/body-human-male-older/v2/head-north.png", "sha256": "771f0b0d627c71b28aaa95f23e404f406a0dce0db0a48c273ec7d4be6454442a"}, {"path": "art/conversion/body-human-male-older/v2/head-mask-north.png", "sha256": "b552c1ce29633802fca437003493f949f4cb5e2bb3592c0e3e749be2acd9366a"}, {"path": "art/conversion/body-human-male-older/v2/selected-north.png", "sha256": "18f21eec1e2ba53057f222ddbd07fe370389664ebd648299d82552a2120a5db1"}, {"path": "art/conversion/body-human-male-older/v2/model.json", "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"}, {"path": "art/conversion/body-human-male-older/v2/registration-decisions.json", "sha256": "4470036b2b635e32b0eea7d35eccbd30628396a5792909928ab3d1bae45c1cbc"}, {"path": "art/conversion/body-human-male-older/v2/registration-comparison.png", "sha256": "31a39a0be4ca5b1ea6d36cf65be29a8b05c5a7fc2e4019c7072903a9ccb0e262"}]
   Method/prompt/corrections: {"phase": "Shared centered canvas registration v2"}
+
+- 2026-10-21T09:22:34.529301+00:00 / independent_retrospective_structural_review / PASS: Fresh-context Low-effort agent screened actual current view/state plates; main author inspected and dispositioned flagged regions.
+  Review: No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.
+  Inputs: [{"path": "art/conversion/body-human-male-older/v2/model.json", "sha256": "07bee6d989188dff1e551a89d2f1e0752026e1ba6b5693f64665d5d174db1369"}, {"path": "art/conversion/body-human-male-older/v2/registration-comparison.png", "sha256": "31a39a0be4ca5b1ea6d36cf65be29a8b05c5a7fc2e4019c7072903a9ccb0e262"}]
+  Outputs: [{"path": "evidence/texture-review-20261021/review-02-03-garments.json", "sha256": "c4bca6d4b601f88b1372cbbc2c3f429753073b8980a5a2186ac6840cec7ccff1"}, {"path": "evidence/texture-review-20261021/main-decisions.json", "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"}]
+  Method/prompt/corrections: {}
 
 ## Sources and exclusions
 

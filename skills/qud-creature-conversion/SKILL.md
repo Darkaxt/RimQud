@@ -207,14 +207,28 @@ refinement while keeping anatomy, scale and pose. Do not try to correct a wrong
 body by repeatedly asking for a prettier image. If the same invariant keeps
 failing, return to the constructed geometry instead of extending a prompt loop.
 
-**Inspect structural quality immediately after the first refinement, before
-extraction or fitting.** Apply this to bodies, equipment, furniture and scenery.
+**Mandatory fast independent review after every refinement, before extraction
+or fitting.** Use a fresh agent with a bounded visual packet and no authoring
+conversation history; follow [the fast structural review contract](references/fast-structural-review.md).
+This applies to every ImageGen refinement/correction output, including retries,
+for bodies, equipment, furniture, scenery and tiles. The author's own inspection
+does not replace this review. Keep one reviewer active at a time and obey the
+applicable model/delegation policy. If a permitted reviewer cannot run, record
+the unmet review requirement and withhold advancement rather than claiming a pass.
+
+Inspect structural quality at that same point. Apply this to every required view.
 Compare every required facing with the fixed construction and source metadata:
 check part continuity, attachment, thickness, coverage, openings and consistent
 orientation. Inspect both the full refined output and its intended-size view;
 small display size does not excuse broken construction. For example, sandal
 straps must wrap over the foot's actual height/instep and connect to their intended
 anchors, rather than ending halfway up the foot as disconnected strips.
+The main author must read the independent findings, inspect flagged regions and
+record a reasoned disposition. Serious attachment, continuity, coverage, camera,
+anatomy or cross-view defects block advancement. Minor polish suggestions or
+ambiguous but physically possible projections do not automatically require a
+regeneration. Preserve the review and decisions with exact image hashes; invalidate
+the review when a subsequent refinement changes the reviewed output.
 
 If quality is too low to preserve the intended structure through ordinary
 registration and fitting, reject the output and reattempt contextual generation

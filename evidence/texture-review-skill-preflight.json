@@ -1,0 +1,126 @@
+{
+  "candidate_count": 1226,
+  "candidates": [
+    {
+      "classification": "direct",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \\\"review since X\\\".",
+      "detail_url": "https://skills.sh/mattpocock/skills/review",
+      "id": "mattpocock/skills/review",
+      "installs": 89883,
+      "matched_queries": [
+        "review"
+      ],
+      "name": "review",
+      "score": 56,
+      "score_reasons": [
+        "term overlap: review",
+        "candidate name exactly matches workflow term",
+        "candidate name matched a query",
+        "public SKILL.md inspected"
+      ],
+      "skill_id": "review",
+      "source": "mattpocock/skills"
+    },
+    {
+      "classification": "direct",
+      "detail_url": "https://skills.sh/jsmastery-pro/skills/review",
+      "id": "jsmastery-pro/skills/review",
+      "installs": 2267,
+      "matched_queries": [
+        "review after"
+      ],
+      "name": "review",
+      "score": 36,
+      "score_reasons": [
+        "term overlap: review",
+        "candidate name exactly matches workflow term"
+      ],
+      "skill_id": "review",
+      "source": "jsmastery-pro/skills"
+    },
+    {
+      "classification": "direct",
+      "detail_url": "https://skills.sh/jsmastery-pro/jsm-agent-skill/review",
+      "id": "jsmastery-pro/jsm-agent-skill/review",
+      "installs": 934,
+      "matched_queries": [
+        "review after"
+      ],
+      "name": "review",
+      "score": 36,
+      "score_reasons": [
+        "term overlap: review",
+        "candidate name exactly matches workflow term"
+      ],
+      "skill_id": "review",
+      "source": "jsmastery-pro/jsm-agent-skill"
+    }
+  ],
+  "capped_queries": [
+    "fast",
+    "independent",
+    "independent visual",
+    "visual",
+    "visual structural",
+    "structural",
+    "structural review",
+    "review",
+    "review after",
+    "after",
+    "sprite",
+    "refinement"
+  ],
+  "compare_local_skill": "qud-creature-conversion",
+  "errors": [],
+  "inspected_candidates": [
+    {
+      "body_excerpt": "Two-axis review of the diff between `HEAD` and a fixed point the user supplies: - **Standards**: does the code conform to this repo's documented coding standards? - **Spec**: does the code faithfully implement the originating issue / spec? Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`. ## Process ### 1. Pin the fixed point Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it. Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`. Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here, not inside two parallel sub-agents. ### 2. Identify the spec source Look for the originating spec, in this order: 1. Issue references in the commit messages (`#123`, `Closes #45`, GitLab `!67`",
+      "branch": "main",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \\\"review since X\\\".",
+      "frontmatter": {
+        "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \\\"review since X\\\".",
+        "name": "code-review"
+      },
+      "id": "mattpocock/skills/review",
+      "ok": true,
+      "skill_path": "skills/engineering/code-review/SKILL.md",
+      "source": "mattpocock/skills"
+    }
+  ],
+  "ok": true,
+  "operation": "scout",
+  "queries": [
+    "qud-creature-conversion",
+    "fast independent visual structural review after qud sprite refinement",
+    "fast",
+    "fast independent",
+    "independent",
+    "independent visual",
+    "visual",
+    "visual structural",
+    "structural",
+    "structural review",
+    "review",
+    "review after",
+    "after",
+    "after qud",
+    "qud",
+    "qud sprite",
+    "sprite",
+    "sprite refinement",
+    "refinement"
+  ],
+  "recommendation": {
+    "candidate_id": "mattpocock/skills/review",
+    "category": "Use public skill as inspiration",
+    "rationale": [
+      "term overlap: review",
+      "candidate name exactly matches workflow term",
+      "candidate name matched a query",
+      "public SKILL.md inspected"
+    ],
+    "summary": "Direct public candidate found for comparison with qud-creature-conversion."
+  },
+  "warnings": [],
+  "workflow": "Fast independent visual structural review after Qud sprite refinement"
+}

@@ -1,0 +1,170 @@
+{
+  "batch": "11-12-terrain",
+  "entries": [
+    {
+      "entry": "TILE-GRASS-1",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-grass-1/v1/registered-v2/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-GRASS-2",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-grass-2/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-GRASS-3",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-grass-3/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-SOIL",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-soil/v1/registered/registration-comparison.png",
+        "art/conversion/tile-soil/v1/registered/repeat-comparison.png",
+        "art/conversion/tile-soil/v1/registered/boundary-examples-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-WATER-DEEP",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-water-deep/v1/registered/connected-water-comparison.png",
+        "art/conversion/tile-water-deep/v1/registered/depth-transition-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-MARSH",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-grassy-ground/v1/registered/material-paint-path-comparison.png",
+        "art/conversion/tile-grassy-ground/v1/registered/repeat-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-SAND",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-path-surface/v1/material-binding-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "TILE-WATER-SHALLOW",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/tile-water-shallow/v1/registered/depth-transition-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BRINEBRIDGE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-brinebridge/v1/registered/variants-comparison.png",
+        "art/conversion/scn-brinebridge/v1/registered/water-underlay-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BRINESTALKFENCE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-brinestalkfence/v1/registered-v2/connections-comparison.png",
+        "art/conversion/scn-brinestalkfence/v1/registered-v2/native-scale-comparison.png",
+        "art/conversion/scn-brinestalkfence/v1/registered-v2/states-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BRINESTALKWALL",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-brinestalkwall/v1/registered-v2/connections-comparison.png",
+        "art/conversion/scn-brinestalkwall/v1/registered-v2/native-scale-comparison.png",
+        "art/conversion/scn-brinestalkwall/v1/registered-v2/states-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BRINESTALKWALLWITHGEARBOX",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-brinestalkwall-gearbox/v1/shared-appearance-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-DIRTFLOOR",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-dirtfloor/v1/binding-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-DIRTPATH",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-dirtpath/v1/registered/connections-comparison.png",
+        "art/conversion/scn-dirtpath/v1/registered/neighbor-examples-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-DOOR",
+      "verdict": "ISSUES",
+      "inspected_images": [
+        "art/conversion/scn-door/v1/registered/states-comparison.png"
+      ],
+      "findings": [
+        {
+          "view": "art/conversion/scn-door/v1/registered/states-comparison.png",
+          "region": "open / neutral and open / native y: left side of aperture",
+          "observation": "The narrow open leaf reads as a detached upright slab: a continuous visible ground gap separates its full height from the left jamb, and neither hinge nor attachment bridges that gap. At enlarged scale this weakens the mechanical reading of an attached open door; the small source mask establishes a narrow open leaf but does not establish this added arch-to-leaf relationship.",
+          "confidence": "MEDIUM",
+          "severity": "STRUCTURAL",
+          "correction_principle": "Keep the fixed frame and state anchor, but make the open leaf visibly pivot from the hinge-side jamb through coherent hinge/edge geometry rather than floating inside the opening."
+        }
+      ]
+    },
+    {
+      "entry": "SCN-POND",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-pond/v1/states-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-RUSTEDMETALWALL",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-rustedmetalwall/v1/registered/connections-comparison.png",
+        "art/conversion/scn-rustedmetalwall/v1/registered/all-native-states-comparison.png",
+        "art/conversion/scn-rustedmetalwall/v1/registered/native-scale-comparison.png"
+      ],
+      "findings": []
+    }
+  ],
+  "limitations": [
+    "Bounded visual screening of supplied authoring composites; no game launch, native render validation, collision, state selection, runtime filtering or acceptance guarantee.",
+    "Every listed primary image was actually viewed. The 256-state rusted-metal atlas was screened as a whole at the available display scale, alongside its connection and native-scale plates; individual state pixels and every possible neighbor pairing were not independently enlarged or exhaustively verified.",
+    "All16 fence and brinestalk-wall states were viewed in their state plates; connected examples cover straight runs, corners, T junctions and openings, not every possible map arrangement. Native salt-tip stripes, fence open gaps and rusted-wall motifs were not classified as defects merely for being patterned or visibly open.",
+    "Soil boundary examples and repeats, grassy-ground repeats, deep/shallow depth plates, bridge water underlay and path neighbor examples supplement the primary plates. Historical deep-water depth plate uses a flat shallow stand-in; the shallow-water primary plate supplies the current mixed-depth comparison.",
+    "Door native open source mask E:/Temp/rimqud-native-door-20261020/3-mask.png and model were inspected narrowly. Source mask is tiny; door attachment finding is a medium-confidence visual construction concern rather than a proven native behavior defect.",
+    "No raw alpha-zero RGB was used to infer matte seams; visible composited results formed the screening basis."
+  ]
+}

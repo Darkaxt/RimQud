@@ -1,0 +1,143 @@
+{
+  "batch": "07-furniture + 08-machinery",
+  "entries": [
+    {
+      "entry": "SCN-MANNEQUIN",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-mannequin/v2/registered/all-views-default-R.png",
+        "art/conversion/scn-mannequin/v2/registered/all-views-neutral.png",
+        "art/conversion/scn-mannequin/v2/registered/all-views-coverage.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-METAL-WORKBENCH",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-upper-c.png",
+        "art/conversion/scn-metal-workbench/v3/registered/all-views-occupied-neutral.png",
+        "art/conversion/scn-metal-workbench/v3/registered/all-views-empty-neutral.png",
+        "art/conversion/scn-metal-workbench/v3/registered/all-views-coverage.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-ORNATE-TABLE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-ornate-table/v1/registered-final/all-views-native-y-C.png",
+        "art/conversion/scn-ornate-table/v1/registered-final/all-views-neutral.png",
+        "art/conversion/scn-ornate-table/v1/registered-final/all-views-coverage.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-TABLE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-table/v1/registered-final/all-states-native-upper-c.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-BROKEN-INDUSTRIAL-FAN",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-native-y-c.png",
+        "art/conversion/scn-broken-industrial-fan/v1/registered/all-phases-neutral.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-ELECTRIC-GENERATOR",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-electric-generator/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-JOPPAOVEN",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-joppaoven/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-LATHE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-lathe/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-LOUDSPEAKER",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-loudspeaker/v1/registered-final/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-MILLSTONE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-millstone/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-POWERLESS-ELECTROTHING",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-powerless-electrothing/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-SEWING-MACHINE",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-sewing-machine/v1/registered/registration-comparison.png"
+      ],
+      "findings": []
+    },
+    {
+      "entry": "SCN-WOODEN-WATER-WHEEL",
+      "verdict": "ISSUES",
+      "inspected_images": [
+        "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png"
+      ],
+      "findings": [
+        {
+          "view": "Fixed cardinal face, all three phases, neutral and source palette",
+          "region": "Right inset oval and light rectangular segments",
+          "observation": "The inset oval/segment assembly reads as a separate floating loop inside the outer wooden rim: no visible spoke or bridge joins it to the central spine or outer rim. The model explicitly calls this a source inset segment plane, so this is a readability/attachment uncertainty rather than proof that a hidden axle is absent or that the source silhouette must change.",
+          "confidence": "MEDIUM",
+          "severity": "UNCERTAIN",
+          "correction_principle": "Check intended source role before changing geometry; if it is meant to be physically attached, make the existing attachment legible without inventing a new mechanism or erasing source openings."
+        }
+      ]
+    },
+    {
+      "entry": "SCN-WOODENMECHANICALTRANSMISSION",
+      "verdict": "SCREEN_CLEAR",
+      "inspected_images": [
+        "art/conversion/scn-woodenmechanicaltransmission/v1/registered/registration-comparison.png",
+        "art/conversion/scn-woodenmechanicaltransmission/v1/registered/native-family.png",
+        "art/conversion/scn-woodenmechanicaltransmission/v1/registered/neutral-family.png"
+      ],
+      "findings": []
+    }
+  ],
+  "limitations": [
+    "Fast bounded generation-time visual screening only; no game launch, native runtime validation, animation playback, or guarantee.",
+    "All 14 sets accounted for. Furniture cardinal views and table occupied states were inspected in assembled plates; all 48 transmission connection/phase layouts inspected.",
+    "Single-face machinery is assessed in its declared source map face; absence of additional cardinal faces is not a defect.",
+    "Broken fan open housing/rotor presentation was not classified as an intact-machine attachment defect. Narrow profiles and flat projected tops alone were not classified as defects.",
+    "Water-wheel model was consulted narrowly for inset-plane intent; source/native gameplay correctness remains outside this screen."
+  ]
+}
