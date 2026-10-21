@@ -1,0 +1,80 @@
+{
+  "review_type": "Independent bounded structural authoring review",
+  "scope": "Static authored geometry and registered imagery only; no art edits, native activation, game checks, topology recovery or physical rotation claim.",
+  "verdict": "PASS_WITH_MINOR_POLISH",
+  "fix_now": [],
+  "findings": [
+    {
+      "criterion": "Supported inset attachment",
+      "result": "PASS",
+      "evidence": "Two horizontal rear braces visibly span from the left spine across the oval carrier to the right rim in all three neutral masters. The angled model view demonstrates their rear depth and carrier overlap. The previously isolated detail assembly now reads as part of one authored structure."
+    },
+    {
+      "criterion": "Detail run ownership",
+      "result": "PASS",
+      "evidence": "All visible phase-specific bright source detail runs touch or overlap the narrow continuous oval carrier, including the staggered small runs in phases 2 and 3. Registration retains their source-side arrangement."
+    },
+    {
+      "criterion": "Paddle/rim/spine continuity",
+      "result": "PASS",
+      "evidence": "All left paddle faces overlap the vertical spine and meet/overlap the outer rim. The spine reaches the upper and lower rim. No visibly detached paddle group appears in the three masters."
+    },
+    {
+      "criterion": "Source identity, frame and camera",
+      "result": "PASS",
+      "evidence": "Tall rounded open rim, near-left paddle train, vertical spine and right segmented inset remain recognizable against the three actual source masks on the construction sheet. Neutral masters use the same cardinal face and full-cell frame; the angled stage-02 view is a construction diagnostic, not the registered camera."
+    },
+    {
+      "criterion": "Palette and coverage",
+      "result": "PASS_WITH_LIMITATION",
+      "evidence": "Neutral masters visibly use grayscale material and contour. Registration comparison shows independent source w/y roles with the same silhouettes. registration-decisions.json reports equal neutral RGB and detail coverage subset in every phase; these numeric assertions were read, not independently recomputed."
+    }
+  ],
+  "minor_polish": [
+    "The thin oval carrier and narrow rear braces have less visual weight than the rim/paddles and may be difficult to read at the smallest displayed preview. This is a readability polish issue; their connection is clear in the inspected masters and construction view."
+  ],
+  "limitations": [
+    "Supports, carrier construction and hidden low-relief depth are authored interpretations, not established native topology.",
+    "Image inspection demonstrates projected continuity and depth cues, not mesh manifoldness, object parenting or precise solid intersection.",
+    "No native state, timing, liquid, charge, save/load, activation, cardinal variants beyond the supplied fixed-face renders, or game integration was tested. Existing native three phase semantics are not reinterpreted as simulated rotation.",
+    "Source consistency was assessed against the supplied source-reference construction image and corrected-source packet, not by re-extracting original game resources."
+  ],
+  "inspected_images": [
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-comparison.png",
+      "sha256": "c33e9a65299de690f7291fc6cf6b855cefafa8a1bbab2874bbb2c7f25e6db85f",
+      "actually_viewed": true
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-1-neutral-master.png",
+      "sha256": "ea9720a5d49a939b5b233fd33610994bb704151bc2f5df030789c8f6ff03a125",
+      "actually_viewed": true
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-2-neutral-master.png",
+      "sha256": "d60489d09b3389b7f9d3586c190c6c47faea7a9ebfe2de2a4f27bc08f0301bc1",
+      "actually_viewed": true
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-3-neutral-master.png",
+      "sha256": "35dfa434d58283f18591309fa3ffbd2c24f755fca96d4c5dc37eacb0efac9f8d",
+      "actually_viewed": true
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/blender-v2/stage-02-model-phase-1.png",
+      "sha256": "2d9c5cd9b047bcd4467c4dd5d161d5868e124edbdea38172b774c3fd276021dc",
+      "actually_viewed": true
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/source-reference-construction.png",
+      "sha256": "8c6a294ba81fee24e9cf42d04c4af1dd8dd93abe5d8d10912bfc136f4938556d",
+      "actually_viewed": true
+    }
+  ],
+  "read_records": [
+    "art/conversion/scn-wooden-water-wheel/blender-v2/model-controls.json",
+    "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-decisions.json",
+    "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json"
+  ],
+  "new_imagegen_call": false
+}

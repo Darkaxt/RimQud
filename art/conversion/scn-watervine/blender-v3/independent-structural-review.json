@@ -1,0 +1,82 @@
+{
+  "review": "Independent bounded structural authoring review",
+  "date": "2026-10-21",
+  "verdict": "PASS - no demonstrated structural FIX NOW concern",
+  "inspected_images": [
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/registered/registration-comparison.png",
+      "sha256": "e0d6bfd671105a350889cfd1d8e9af483cbd6a5a7d0df118caac22e086756809",
+      "inspection": "Viewed actual image pixels with view_image"
+    },
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/registered/basal-before-after.png",
+      "sha256": "541a12bb1bc07f93cf92ff9a93d0d4539ceec3e9c914356ba514a2fadc1c2190",
+      "inspection": "Viewed actual image pixels with view_image"
+    },
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/variant-1-neutral-master.png",
+      "sha256": "5bc6d969cf806625aa5411996c51e971966813b832fc257ff95eb922b45229f8",
+      "inspection": "Viewed actual image pixels with view_image"
+    },
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/variant-2-neutral-master.png",
+      "sha256": "5f35ede7bd6681687d712f63ddbaf674abbdaa6720dff9beb5aad88e6451c73c",
+      "inspection": "Viewed actual image pixels with view_image"
+    },
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/variant-3-neutral-master.png",
+      "sha256": "9e4811c9e862282838d3a6bb0d7d9cbb942e185d87e288948176e88b96f50433",
+      "inspection": "Viewed actual image pixels with view_image"
+    },
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/stage-02-model-variant-3.png",
+      "sha256": "6f6a0d1f08d2237f0ce8bf810bc7623c437320347d69999a4e2a62e1a976dcef",
+      "inspection": "Viewed actual image pixels with view_image"
+    }
+  ],
+  "read_documents": [
+    {
+      "path": "art/conversion/scn-watervine/blender-v3/model-controls.json",
+      "sha256": "77d9e37ac974d9fd1ed5c65d400799ebc1fa989399169a4f379e86952fe1cabb"
+    },
+    {
+      "path": "art/conversion/scn-watervine/v1/source-packet.json",
+      "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "PASS",
+      "subject": "Basal continuity",
+      "evidence": "All eight stem bases (variant 1: three; variant 2: three; variant 3: two) visibly meet their own paired basal tendrils in the NEW comparison and neutral masters. The detached old variant 1 middle and variant 3 right basal strokes are corrected. Variant 2 follows each staggered stem base rather than one copied global height."
+    },
+    {
+      "severity": "PASS",
+      "subject": "Wafers and tethers",
+      "evidence": "Visible oval swollen wafer forms connect through tethers or overlap the stem across all three neutral masters. No demonstrably floating wafer or interrupted main stem is visible. Controls explicitly correct tether anchors to evaluated Bezier stems."
+    },
+    {
+      "severity": "PASS",
+      "subject": "Identity and layout",
+      "evidence": "Three distinct layouts retain crooked narrow vines, sparse irregularly distributed swollen oval wafers, and furrow-like stem highlights. Variant 1 and 2 have three stems; variant 3 has two, matching source-packet layout counts. They do not read as cereal heads or broad leaf foliage."
+    },
+    {
+      "severity": "PASS",
+      "subject": "Camera, frame and coverage",
+      "evidence": "All master silhouettes and basal tips remain inside the canvas. Controls retain orthographic camera, 16x24 source frame, 512x768 canvas, and anchor [8,16]. No consequential clipping, unintended camera rotation, or visible coverage discontinuity is demonstrated."
+    },
+    {
+      "severity": "PASS",
+      "subject": "Harvest states",
+      "evidence": "Registration comparison shows matching stem, wafer and tether silhouettes in neutral, ripe and unripe rows for each variant. Ripe and unripe preserve brown w stems while wafer detail changes between green g and dark teal K, consistent with source-packet native roles."
+    }
+  ],
+  "fix_now": [],
+  "minor_polish": [],
+  "limits": [
+    "Static authoring review only; no native game, runtime, package or acceptance claim.",
+    "Depth is authored low relief; the source supplies no measured depth. No extra views or anatomy inferred.",
+    "Visual silhouette agreement is assessed from the supplied comparison and masters, not a pixelwise proof of every output state or Blender mesh topology.",
+    "Stage-02 variant 3 is an earlier render with different apparent framing; current neutral master and registered comparison govern the reviewed output."
+  ]
+}

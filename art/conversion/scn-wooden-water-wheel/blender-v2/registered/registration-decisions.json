@@ -1,0 +1,56 @@
+{
+  "method": "Common full source-cell projection for all three native phases. Same registration/clock/behavior fields retained.",
+  "checks": {
+    "1": {
+      "common_full_frame": [
+        512,
+        768
+      ],
+      "recipient_frame": [
+        256,
+        256
+      ],
+      "anchor": [
+        8,
+        16
+      ],
+      "detail_coverage_subset": true,
+      "neutral_equal_rgb": true
+    },
+    "2": {
+      "common_full_frame": [
+        512,
+        768
+      ],
+      "recipient_frame": [
+        256,
+        256
+      ],
+      "anchor": [
+        8,
+        16
+      ],
+      "detail_coverage_subset": true,
+      "neutral_equal_rgb": true
+    },
+    "3": {
+      "common_full_frame": [
+        512,
+        768
+      ],
+      "recipient_frame": [
+        256,
+        256
+      ],
+      "anchor": [
+        8,
+        16
+      ],
+      "detail_coverage_subset": true,
+      "neutral_equal_rgb": true
+    }
+  },
+  "source_selection": "Direct neutral Blender geometry with simple material/contour. No new ImageGen call or 2D isolation.",
+  "color_formula": "A*L*((1-weight)*foreground+weight*detail); detail coverage is conditional ownership, never an added coverage layer.",
+  "native_activation": false
+}

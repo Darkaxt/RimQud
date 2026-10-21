@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "Independent structural authoring review of supplied fixed-map closed/open states only",
+  "images": [
+    {
+      "path": "art/conversion/scn-door/blender-v5/registered/states-comparison.png",
+      "sha256": "30361222e8115f6055f4078f5807a94c7dfdfe57cf380a73b146c9566af5f942",
+      "inspected_with": "view_image"
+    },
+    {
+      "path": "art/conversion/scn-door/blender-v5/registered/hinge-before-after.png",
+      "sha256": "cc7160879b22c3291a447a668cfe89c19d66264292fb805e8cbe0f5b599d5937",
+      "inspected_with": "view_image"
+    },
+    {
+      "path": "art/conversion/scn-door/blender-v5/stage-02-model-3d.png",
+      "sha256": "792187740103e2950e4702c30a864549aecbb8132da4aeb72e094bc1d623f330",
+      "inspected_with": "view_image"
+    },
+    {
+      "path": "art/conversion/scn-door/blender-v5/raw-closed-full.png",
+      "sha256": "817500895e8271cb5d4f9fec3afed1230b550dc9ace77cdee9286c32efd15216",
+      "inspected_with": "view_image"
+    },
+    {
+      "path": "art/conversion/scn-door/blender-v5/raw-open-full.png",
+      "sha256": "6ccc428867d9942939a8a781374a9b710fdbb67cbae78fbdd3e0c93e6fd2213a",
+      "inspected_with": "view_image"
+    }
+  ],
+  "controls_read": [
+    "art/conversion/scn-door/blender-v5/model-controls.json",
+    "art/conversion/scn-door/blender-v5/surface-preparation.json",
+    "art/conversion/scn-door/blender-v5/registered/registration-decisions.json"
+  ],
+  "findings": [
+    {
+      "id": "hinge-connection",
+      "severity": "none",
+      "observation": "Both upper and lower fixed straps visibly overlap the left jamb, cross the jamb-to-leaf gap, meet a dark barrel, and overlap the closed leaf. In the open state the same fixed straps terminate at the same barrel positions and meet the narrow edge-on leaf. The before/after crop demonstrates replacement of detached painted hardware with a continuous jamb/strap/barrel/leaf connection.",
+      "disposition": "Accept authoring connection; no demonstrated floating slab."
+    },
+    {
+      "id": "shared-leaf-pivot",
+      "severity": "none",
+      "observation": "Closed leaf and open vertical edge share left-side hinge heights and a stable vertical axis. Open edge spans the same leaf top and bottom levels. Controls declare pivot [2.9,-0.27,0], rotations 0 and 90 degrees, common camera and unchanged geometry; supplied renders are visually consistent with that construction.",
+      "disposition": "Accept coherent same-leaf fixed-pivot authoring evidence."
+    },
+    {
+      "id": "source-identity-frame",
+      "severity": "none",
+      "observation": "Closed state preserves the clipped upper leaf corners, horizontal slate seams, mottled wear, handprint, and recessed right handle. The angular arch remains fixed across the closed/open comparison. Native-tinted examples retain this identity. Edge-on open state necessarily hides most broad-face detail.",
+      "disposition": "Accept retained source identity and fixed source frame within supplied evidence."
+    },
+    {
+      "id": "hardware-polish",
+      "severity": "minor",
+      "observation": "Straps and barrels read as very dark, comparatively plain blocks against the worn slate; the open leaf thickness face is flat grey. These are visible material/detail polish differences, not evidence of disconnected hinges or a different leaf.",
+      "disposition": "Optional polish only; no structural rework required by these images."
+    }
+  ],
+  "conclusion": "PASS for the bounded structural authoring review: connected jamb-to-leaf hinges, coherent closed/open leaf and pivot, retained source identity, and fixed frame are supported. No consequential structural defect demonstrated.",
+  "limitations": [
+    "Static rendered images and declared controls support visual authoring acceptance; they do not independently prove mesh topology, collision clearance throughout rotation, or in-game behavior.",
+    "No game/native checks performed. Native mechanics, visibility, scale and activation acceptance remain gated.",
+    "Source identity comparison is bounded to the supplied before/after and state evidence plus declared retained inputs; no new source or unrelated views requested."
+  ],
+  "edits": "Only this review JSON was written; no art, geometry or configuration changes."
+}

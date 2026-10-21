@@ -15,7 +15,7 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-DOOR is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-RANDOM-BOTTLE is the sole active entry.
 
 Current status correction (2026-10-20): **Stage 3 is ACTIVE and every asset is
 unfinished**, including previously selected Tam/Ctesiphus. The user explicitly
@@ -34,16 +34,15 @@ referenced PNGs passed file/hash/neutral-name diagnostics. This is not a claim
 that every component was individually visually inspected or that art is flawless.
 The19 entries with no current created set receive no visual approval.
 
-Correct in Stage3 order: door hinge/leaf connection;
-Dogthorn variant2 crown support; Watervine basal continuity; then resolve the
-water-wheel inset attachment ambiguity. Keep one active entry at a time, then
-resume Random Bottle. The cat-back step and prominent sandal rim are optional
+The flagged-art queue is resolved for generation. Resume Random Bottle and keep
+one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.
 Source-specific references and explicit user art choices remain authoritative.
 
-Four directly affected scenery rows still have readiness withheld. There are
-133 generation-ready entries of156. Yrame's direct Blender horn fit, item
+No directly affected audit row still has readiness withheld. There are
+137 generation-ready entries of156, with19 pending entries including source-based
+exclusion reviews. Yrame's direct Blender horn fit, item
 aggregate and named assembly have been refreshed with a calibrated reusable
 head proxy, unchanged complete horn volume and source-bound directional depth.
 Irudad's extra side-hand crescent was traced to torso pixels admitted by an
@@ -52,8 +51,23 @@ now retain one original hand contour. Both corrections received fresh independen
 authoring review and main-author disposition. Editable Blender source and
 versioned shape-registry snapshots are retained for resuming refinements.
 Every entry remains unfinished for native acceptance; Stage3 is the sole ACTIVE
-stage and SCN-DOOR the sole active entry. The other four audit corrections remain
-unresolved. No native/game validation or software release was performed.
+stage and SCN-RANDOM-BOTTLE the sole active entry. The door now derives both
+states from an editable Blender slab and shared connected hinge axis; static
+independent review passed, with dark hardware material as minor polish. Its
+source slate wear and state/palette/frame bindings remain intact. Closer original-alpha
+and independent visual inspection did not substantiate Dogthorn's floating-crown
+allegation: upper foliage overlaps its neighboring crown. Its existing art is
+retained, with the earlier screening disposition preserved as history. Watervine's
+three Blender layouts now derive basal tendrils from each actual stem endpoint;
+wafer tethers meet evaluated curved stems, with source wafer positions/counts and
+harvest bindings retained. Independent authoring review passed all three layouts.
+The water wheel now uses an editable low-relief Blender construction with two
+explicitly authored rear wood supports, an inset carrier and attached source-bound
+detail runs. All three native phase layouts, palette/coverage formula and state
+behavior fields remain intact. Independent review passed with thin-support
+readability as minor polish for the later full-set test. This resolves visible
+attachment without claiming native mounting topology, a recovered gearbox or new
+mechanics. No native/game validation or software release was performed.
 See [the independent review and main-author triage](texture-review-20261021.html).
 
 Authorized authoring review requirements (2026-10-21): **ART-CRITIC** requires a fast

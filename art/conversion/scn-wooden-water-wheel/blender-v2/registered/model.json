@@ -1,0 +1,148 @@
+{
+  "entry": "SCN-WOODEN-WATER-WHEEL",
+  "kind": "source_dualcolor_native_three_phase_machine",
+  "blueprint": "Wooden Water Wheel",
+  "source": {
+    "path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json",
+    "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Same rim/centers/full cell/pivot in3native frames, no per-phase bounds fitting."
+  },
+  "camera": "One fixed cardinal source map face: tall rounded rim, parallel near-left paddle faces and source inset segment plane, no new oblique barrel yaw/converging panels.",
+  "palette": {
+    "primary": "w on wet-rotted wooden rim/spine/paddles",
+    "detail": "y on exact native right inset segment patterns",
+    "rule": "Neutral wet wood and independent source detail role; no donor brown/metal paint baked into output."
+  },
+  "native_state_owner": {
+    "default_frame": 1,
+    "animation_length": 300,
+    "tile_frames": {
+      "0": "Items/sw_waterwheel_1.bmp",
+      "100": "Items/sw_waterwheel_2.bmp",
+      "200": "Items/sw_waterwheel_3.bmp"
+    },
+    "requires_operational_active_part": "HydroTurbine",
+    "subject_ignore": false,
+    "native_timing": "Retain actual AnimatedMaterialGeneric clock/multiplier/status behavior; offsets are not milliseconds.",
+    "rare_animated": "BuilderAnimatedChanceOneIn15000/RailedMechanism fallback retained natively; no new actor conversion."
+  },
+  "native_behavior": "Organicweight600/AV3/HP400, non-takeable mounted physics, HydroTurbine volume400..4000/charge10, mechanical producer100, CircuitryMaxCharge100/Gearbox/EMPSensitivefalse, native SpawnWithLiquid and tinker/examiner/rare Animated state retained.",
+  "native_acceptance": "Pending full generation gate; no native activation",
+  "native_activation": false,
+  "view_policy": "One source cardinal map face,3declared native phases; native HydroTurbine/liquid/charge/status/timing and rare Animated remain native.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "frames": [
+    {
+      "frame": 1,
+      "native_tile": "Items/sw_waterwheel_1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-primary.png",
+        "sha256": "c39021dcedee5bcd8deecd1e7bd9b512139611cc33247081f01947a371c1cd5d"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-detail.png",
+        "sha256": "5942c69951295667a9714567d70ff58da3301cee2fe9b084459822102cbcba65"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-coverage.png",
+        "sha256": "9cfeb4e7f91f43cc9f29c075d25cb44fb855003edadb921c0ccc342fc5d86402"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-detail_weight.png",
+        "sha256": "d8084585589df85d2a6eb1dfd616828b59bbe515f0413518aa2a582dc12f41a3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-detail_coverage.png",
+        "sha256": "58b6c8c3ac68e858dc29a12ba83f1d12bb666dc7ba04886f8d7698bddbada397"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-1-authored_dualcolor_mask.png",
+        "sha256": "e914761f16ca17df8432f0b9baee4785a7b42969ef2359eecd3a7b32fc2146dd"
+      }
+    },
+    {
+      "frame": 2,
+      "native_tile": "Items/sw_waterwheel_2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-primary.png",
+        "sha256": "52eff883fbb41809945044f17958cfe0b578a2fd38d95a2891a4f1894f3b7277"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-detail.png",
+        "sha256": "de9dfc60aa526f78abc9139b4e2e25a03b6c35b3cb8bad90e91cb7ebfab58559"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-coverage.png",
+        "sha256": "9e0908e6df16431044089193f62e7c05a2155f5123828da7ba24e8d13053d743"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-detail_weight.png",
+        "sha256": "a07f40b7cffc863494d106a324011089a7633b4e0ff3602122b382edd52df299"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-detail_coverage.png",
+        "sha256": "9e6e83693be30a37909fb8ce6b37986640017dbedf31b685f27f7cfb747b4b4e"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-2-authored_dualcolor_mask.png",
+        "sha256": "089978629bb0bc60c48d7ef504f2479d1604fcb950f629784cc419d1b3331014"
+      }
+    },
+    {
+      "frame": 3,
+      "native_tile": "Items/sw_waterwheel_3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-primary.png",
+        "sha256": "487788d2d5a1ea5a7fe0a232737f8b9849fe41ad13e4d1222809688149721f44"
+      },
+      "detail": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-detail.png",
+        "sha256": "f3c7f22d15a6dbc5e716a7603ca953957f711754ac4ea63716a21d307a97fce0"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-coverage.png",
+        "sha256": "24e848743cc3b9cddb1295dee12d19ffc20581ac99ba4b1fb1ecfe1c042ea821"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-detail_weight.png",
+        "sha256": "4adcf10a131cde09c0184150bde7d2a45be8ec38da32a7fe314c091b6574787b"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-detail_coverage.png",
+        "sha256": "8d6a45fb2f19583069d3290ab4e5fdde7ea644850165c28ebe31809ad58f66cc"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/frame-3-authored_dualcolor_mask.png",
+        "sha256": "63c1b58900080a83bdf3c2c42c479a1a50d0ae7e0e46f7f9d1d86bfa85205307"
+      }
+    }
+  ],
+  "workflow": "blender-first-v1",
+  "blender_source": {
+    "path": "art/conversion/scn-wooden-water-wheel/blender-v2/wheel.blend",
+    "sha256": "387e3b949af63f0b5d9c324dac9c1c0909b4c06536afd19c9bcf83b0939a2462"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-wooden-water-wheel/blender-v2/model-controls.json",
+    "sha256": "e7dc4514b77e50452217febb41aabafae0e016b2acff1f6d39460b55ec753cf1"
+  },
+  "authored_support_interpretation": "Two rear wet-wood crossmembers attach the inset carrier to existing spine/rim. Detail runs keep source-bound positions and connect to this carrier. Supports are authored, not recovered native topology."
+}

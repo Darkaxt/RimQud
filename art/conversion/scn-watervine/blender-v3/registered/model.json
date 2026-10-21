@@ -1,0 +1,120 @@
+{
+  "entry": "SCN-WATERVINE",
+  "kind": "harvest_tinted_plant_variants",
+  "blueprint": "Watervine",
+  "source": {
+    "path": "art/conversion/scn-watervine/v1/source-packet.json",
+    "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"
+  },
+  "states": [
+    {
+      "variant": 1,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine1.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-1-primary-neutral.png",
+        "sha256": "7a4e557bfb778ec2e4f7a6b84ac6df26e96f2b59052e7d77514ff4b9c583dce8"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-1-detail-neutral.png",
+        "sha256": "dad4495cc1c35de98eefa4ac7484889d0866dc56bf2ba97b21374259d7616280"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-1-coverage.png",
+        "sha256": "c42cc2ea3716f8129cd9375211de0d074e909824748c67c13f904eab54ea12f3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-1-detail_coverage.png",
+        "sha256": "9a2e7fd6f14b404e3f2c8b792385f04eba5da0c5e20f9f41c1a7934648085082"
+      }
+    },
+    {
+      "variant": 2,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-2-primary-neutral.png",
+        "sha256": "7762da913fd2309c91c3ed988fad32e3dfa760c1474085daae3b0e867dabfebb"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-2-detail-neutral.png",
+        "sha256": "242e20990f0cc68d123098bbcf5aaaa13704fab3e656358d9fb1a131f04e0f13"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-2-coverage.png",
+        "sha256": "6372bb2ec85ac7a8d6c1cb62463b5c34008c72d386f97d3a451dce77fe5d6fad"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-2-detail_coverage.png",
+        "sha256": "98e750cb80fda69ddd95f3ffc060696e3b781639b07859511587922b2eaadcc9"
+      }
+    },
+    {
+      "variant": 3,
+      "native_tile": "Assets_Content_Textures_Tiles_sw_watervine3.bmp",
+      "primary": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-3-primary-neutral.png",
+        "sha256": "a21031808149c2276cf1fc66ff8266f9a83d5aafdf3a608ea56e4a2a0cc315b4"
+      },
+      "detail": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-3-detail-neutral.png",
+        "sha256": "dbc720d094a390e8e24fcb153e98646ba630345adc61e643847bc5aa6f9ec24a"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-3-coverage.png",
+        "sha256": "74f32afedd76a475d57865c8af70990b74ca81098d6717f9e0b46302cf4b4a9b"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-watervine/blender-v3/registered/variant-3-detail_coverage.png",
+        "sha256": "ec382c036877c0bed12e6de0de321a119b39ba58b2147095fa2a39be0d81708d"
+      }
+    }
+  ],
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "method": "All three source-inspired layouts use the same full-cell coordinate transform. Within each variant, ripe/unripe shares exactly the same layers and anchor."
+  },
+  "palette": {
+    "primary": "actual native TileColor w",
+    "detail": "actual native DetailColor: g when ripe, K when unripe",
+    "neutral_preview": "Equal RGB in both saved layers; green extraction aid removed from neutral albedo."
+  },
+  "harvest_states": {
+    "ripe": {
+      "primary": "w",
+      "detail": "g"
+    },
+    "unripe": {
+      "primary": "w",
+      "detail": "K"
+    }
+  },
+  "state_owner": "Native RandomTile chooses one of three layouts; native Harvestable owns ripeness, yield1 and regeneration. No new vine-merging, growth or state machine.",
+  "native_effects": "Keep Fireflies.BeforeRenderEvent and its native night particle separately; no firefly/glow is baked into plant material.",
+  "appearance": "Crooked furrowed salt-bearing vines with small thick moisture-swollen wafer knots instead of leaf sprays. Donor HaygrassA only informs narrow-stroke rendering.",
+  "native_behavior": "Preserve inherited non-solid plant physics, non-occluding Render, LiquidNative water, harvest interaction and original particles. Native binding/state/visibility acceptance remains pending.",
+  "native_acceptance": "Pending full generation gate",
+  "workflow": "blender-first-v1",
+  "blender_source": {
+    "path": "art/conversion/scn-watervine/blender-v3/vines.blend",
+    "sha256": "05c6392499528a7f4b5b61f6770e6ca241278b303c7227c467a67e432a39a86a"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-watervine/blender-v3/model-controls.json",
+    "sha256": "77d9e37ac974d9fd1ed5c65d400799ebc1fa989399169a4f379e86952fe1cabb"
+  },
+  "correction": "Each creeping tendril starts inside its own actual stem endpoint. One editable layout supplies both harvest colors; native wafer positions and counts retained."
+}

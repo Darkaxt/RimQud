@@ -1,0 +1,114 @@
+{
+  "entry": "SCN-DOOR",
+  "kind": "stateful_object",
+  "native_frame": [
+    16,
+    24
+  ],
+  "manual_frame": [
+    512,
+    768
+  ],
+  "recipient_frame": [
+    256,
+    256
+  ],
+  "anchor": [
+    8,
+    16
+  ],
+  "state_owner": "Native Door.SyncRender selects exact ClosedTile/OpenTile. No donor motion, state timer, solid/occlusion or input code is added.",
+  "mapping_rule": "One full-canvas mapping for both states and all layers; never fit each alpha bounding box. Closed/basic and original blueprint thumbnail resolve to closed. Unknown/custom tiles retain native fallback.",
+  "original_states": {
+    "path": "art/conversion/scn-door/v1/native-state-index.json",
+    "sha256": "cb7cea81b5c4000d97ebb4f8999e2e7d2e8f2e31699c99144c4e50630d838502"
+  },
+  "source_packet": {
+    "path": "art/conversion/scn-door/v1/source-packet.json",
+    "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+  },
+  "palette": {
+    "primary": "actual native foreground y",
+    "detail": "actual native detail y",
+    "current_rgb": "b1c9c3",
+    "rule": "Separate neutral leaf/frame roles; no baked tan, teal or rust orange."
+  },
+  "states": {
+    "closed": {
+      "native_tiles": [
+        "Assets_Content_Textures_Tiles_sw_doorclosed.bmp",
+        "Assets_Content_Textures_Tiles_sw_door_basic.bmp"
+      ],
+      "layers": [
+        {
+          "component": "frame",
+          "color_role": "detail",
+          "texture": {
+            "path": "art/conversion/scn-door/blender-v5/registered/closed-frame-neutral.png",
+            "sha256": "2f9157b2ef6e8566f3921e7cb59380d7b9ce63d80d4ad8d289edc7b7f8a91bf0"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/blender-v5/registered/closed-frame-coverage.png",
+            "sha256": "700bd12c00dc9d0994b4cfb3626e4d5f06850c064c3343ea654704e6c36e5ac3"
+          }
+        },
+        {
+          "component": "leaf",
+          "color_role": "foreground",
+          "texture": {
+            "path": "art/conversion/scn-door/blender-v5/registered/closed-leaf-neutral.png",
+            "sha256": "06fdc5e03aa1c67f560d72f85a9d06fee3feac2752ae0885b4301e3b503ae654"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/blender-v5/registered/closed-leaf-coverage.png",
+            "sha256": "8db013c8a69475e00ae53ceccd02c654d152a2764e55e91e3779638dbf0c412e"
+          }
+        }
+      ],
+      "solid_occluding": "native closed"
+    },
+    "open": {
+      "native_tiles": [
+        "Assets_Content_Textures_Tiles_sw_door_basic_open.bmp"
+      ],
+      "layers": [
+        {
+          "component": "frame",
+          "color_role": "detail",
+          "texture": {
+            "path": "art/conversion/scn-door/blender-v5/registered/open-frame-neutral.png",
+            "sha256": "2f9157b2ef6e8566f3921e7cb59380d7b9ce63d80d4ad8d289edc7b7f8a91bf0"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/blender-v5/registered/open-frame-coverage.png",
+            "sha256": "700bd12c00dc9d0994b4cfb3626e4d5f06850c064c3343ea654704e6c36e5ac3"
+          }
+        },
+        {
+          "component": "leaf",
+          "color_role": "foreground",
+          "texture": {
+            "path": "art/conversion/scn-door/blender-v5/registered/open-leaf-neutral.png",
+            "sha256": "e1e50d260411e523505321feb0f667d4013d24448014d2518b38dbf9ff49725d"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-door/blender-v5/registered/open-leaf-coverage.png",
+            "sha256": "e1ade099a793519d4dac4940a2d36ca53f6266c6d33081f40d3dd74757ce9e90"
+          }
+        }
+      ],
+      "solid_occluding": "native open"
+    }
+  },
+  "native_acceptance": "Pending full generation gate; authoring only",
+  "workflow": "blender-first-v1",
+  "blender_source": {
+    "path": "art/conversion/scn-door/blender-v5/door.blend",
+    "sha256": "ea93cdf0f6d080477302cc7731941d53e3d7250aa99206cfce57146b472ec02d"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-door/blender-v5/model-controls.json",
+    "sha256": "d0cf7b089101eb22f3759b556cab232b0a4afe81c3860cb682575b2588a1c651"
+  },
+  "correction": "Fixed jamb straps, shared hinge barrels and rotating leaf straps physically bridge frame and slate in both source states. One complete 3D leaf rotates around a shared left hinge axis."
+}

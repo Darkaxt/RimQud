@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-DOOR",
+  "active_entry": "SCN-RANDOM-BOTTLE",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -20255,8 +20255,10 @@
       },
       "persistent_3d_sources": {
         "registry": {
-          "path": "evidence/blender-shape-ledger.json",
-          "sha256": "f81a871b7ff72930c673741572555581a67501b03a3626435be4995c1e6d14e6"
+          "path": "evidence/blender-shape-ledger-history/v2.json",
+          "sha256": "f81a871b7ff72930c673741572555581a67501b03a3626435be4995c1e6d14e6",
+          "original_path": "evidence/blender-shape-ledger.json",
+          "snapshot_note": "Exact prior registry bytes retained before advancing the mutable index."
         },
         "snapshot": {
           "path": "evidence/blender-shape-ledger-history/v2.json",
@@ -22198,7 +22200,7 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
@@ -46339,12 +46341,13 @@
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready."
+        "Thin support readability is minor polish; native behavior remains unvalidated."
       ],
       "metadata": {
         "description": {
@@ -46754,28 +46757,212 @@
           ],
           "review": "NEEDS CLOSER INSPECTION: I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain installed source shape/description, native three phase tiles and w/y roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json",
+              "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/source-packet.json",
+              "sha256": "9f99c88a2d7c2840f28215e7a88d73918d7ade45e6e7edcfe8d91ef8adae253c"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Reuse the actual VTE watermill blade material/reference evidence without copying a whole donor mill.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/v1/source-reference-construction.png",
+              "sha256": "8c6a294ba81fee24e9cf42d04c4af1dd8dd93abe5d8d10912bfc136f4938556d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/source-packet.json",
+              "sha256": "9f99c88a2d7c2840f28215e7a88d73918d7ade45e6e7edcfe8d91ef8adae253c"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Resolve inset relationship with explicitly authored supported carrier in a complete editable low-relief Blender model.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/inspection-v2/independent-inspection.json",
+              "sha256": "e619517a3b953a9077965815b4435fd38203163adba8cb8757fc9362f55c9308"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/build-wheel.py",
+              "sha256": "d3845e3d33c011575bab9695518e2014a7b1933094bc60a9dca16b1cd418028f"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/stage-02-model-phase-1.png",
+              "sha256": "2d9c5cd9b047bcd4467c4dd5d161d5868e124edbdea38172b774c3fd276021dc"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Preserve the three source-bound paddle/detail patterns, common frame and original native clock ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/model-controls.json",
+              "sha256": "e7dc4514b77e50452217febb41aabafae0e016b2acff1f6d39460b55ec753cf1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/stage-02-model-phase-2.png",
+              "sha256": "43b1ffaf98de29ce07cf805d9c07f825f713669da67c9f405c5088e05577e80c"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/stage-02-model-phase-3.png",
+              "sha256": "6997ec19d9073d206e193348b5a5b470485fe2fc3e91b31d5152dbe4b7ebfd73"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Select direct simple neutral Blender wood/detail material and contours; no additional AI or 2D isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/model-controls.json",
+              "sha256": "e7dc4514b77e50452217febb41aabafae0e016b2acff1f6d39460b55ec753cf1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-1-neutral-master.png",
+              "sha256": "ea9720a5d49a939b5b233fd33610994bb704151bc2f5df030789c8f6ff03a125"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-2-neutral-master.png",
+              "sha256": "d60489d09b3389b7f9d3586c190c6c47faea7a9ebfe2de2a4f27bc08f0301bc1"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/frame-3-neutral-master.png",
+              "sha256": "35dfa434d58283f18591309fa3ffbd2c24f755fca96d4c5dc37eacb0efac9f8d"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render complete phase objects and independent visible detail masks; verify editable model reopens.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/wheel.blend",
+              "sha256": "387e3b949af63f0b5d9c324dac9c1c0909b4c06536afd19c9bcf83b0939a2462"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/blender-receipt.json",
+              "sha256": "9b10d107f5e53819aa941ccfc2b89e9ec3e25bcf8df2905a2129c3f4f299d360"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/reopen-audit.json",
+              "sha256": "58e139e5d539fca6516287420085346dacf4eb23e1885897da4ca992f8e6712f"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v5.json",
+              "sha256": "fdefed867156326e34321dc92fca104c60f1eacab485e34fc06322f58ab2fc1a"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register source-fixed phases with exact one-coverage native w/y formula and detail ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/register-wheel.py",
+              "sha256": "507016676e892d291cd01b8ae72fca75c86ae8c8ee430031fbcc35f68ae383e3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/model.json",
+              "sha256": "24628e75b32fa4ec3c01807d817f71bd9f6968a0d714b855f29f9e24a63dacdc"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-decisions.json",
+              "sha256": "24011573aece774caf32f97da52dd12a0559d76570f8fa35a7c93365b23e584a"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:36:28.880383+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect all phase/tint/size views and disposition fresh independent structural findings.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/independent-structural-review.json",
+              "sha256": "342c0d3280db3fec5b75d67f523dc084e4f520965f8f662e805ef935367fb727"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-comparison.png",
+              "sha256": "c33e9a65299de690f7291fc6cf6b855cefafa8a1bbab2874bbb2c7f25e6db85f"
+            },
+            {
+              "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/authoring-review.json",
+              "sha256": "e7de08759344036286a6d7ebe85126aea385aa08b06e985298231eeab676c619"
+            }
+          ],
+          "review": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready.",
+        "status": "PASS",
+        "reason": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/authoring-review.json",
+          "sha256": "e7de08759344036286a6d7ebe85126aea385aa08b06e985298231eeab676c619"
         }
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/model.json",
-          "sha256": "9f5769ca89b119f4fa3975e883fc78aa7ee61b724b553ddae2e72fa24653c86c"
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/model.json",
+          "sha256": "24628e75b32fa4ec3c01807d817f71bd9f6968a0d714b855f29f9e24a63dacdc"
         },
         "plate": {
-          "path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png",
-          "sha256": "4927800f6fe86df32f7c683551c6edba892454fe7053c7c80068557395b62d2e"
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-comparison.png",
+          "sha256": "c33e9a65299de690f7291fc6cf6b855cefafa8a1bbab2874bbb2c7f25e6db85f"
         }
       },
-      "registration_summary": "All3actual source wheel phases, wet-rot description, native w/y and HydroTurbine state studied. Tall rim/left paddle train/right detail patterns retained; continuity brace interpretation explicit. Actual VTE blade material reference, editable manual phases/patch, one refinement, dark-material selection and corrected shared3phase extraction logged. Native water/power/timing unchanged; acceptance pending.",
+      "registration_summary": "Direct Blender low-relief source wheel with authored rear supports and connected inset carrier in all three native phases. Original palette/frame/state behavior fields retained; native acceptance pending.",
       "native_acceptance": "Pending complete generation: native HydroTurbine operational/liquid/charge/Circuitry/mechanical producer/phase clock/SpawnWithLiquid/physics/rare Animated/visibility/save-load; no activation.",
       "camera_review": {
         "status": "PASS",
@@ -46825,13 +47012,22 @@
         ],
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "I inspected all three neutral/native phases and the actual source packet. The right segmented oval visibly floats inside the larger wheel; source glyph occupancy supports its shape but does not establish how it attaches mechanically. I cannot substantiate a missing hidden axle, and will not invent a bridge from that assumption. This ambiguity affects the physical construction and should be resolved in Stage3 before treating the conversion as generation-ready.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
-      }
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v5.json",
+          "sha256": "fdefed867156326e34321dc92fca104c60f1eacab485e34fc06322f58ab2fc1a"
+        },
+        "resume": {
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/wheel.blend",
+          "sha256": "387e3b949af63f0b5d9c324dac9c1c0909b4c06536afd19c9bcf83b0939a2462"
+        },
+        "controls": {
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/model-controls.json",
+          "sha256": "e7dc4514b77e50452217febb41aabafae0e016b2acff1f6d39460b55ec753cf1"
+        }
+      },
+      "workflow_version": "blender-first-v1"
     },
     {
       "id": "SCN-WOODENMECHANICALTRANSMISSION",
@@ -74240,20 +74436,21 @@
         "open; native panel position and occlusion"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment."
+        "Minor hardware/open-face material polish; native state/visibility remains pending."
       ],
       "metadata": {
         "description": {
@@ -74649,21 +74846,208 @@
           ],
           "review": "FIX NOW: I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain exact installed Door description, actual runtime open/closed tiles and native y/y roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-packet.json",
+              "sha256": "09851116791a233ba4b1d75dbfd0396c2258196400a0c62a440f6e4d34178a90"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/source-packet.json",
+              "sha256": "6926347d144c50c33d37a01f545c6d8387ee2c9639dd210cca13dc74b4a705bc"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Reuse the actual Core DoorSimple_Mover reference for restrained panel shading only; no donor sliding mechanics.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/v1/source-construction-comparison.png",
+              "sha256": "956f07ee32ad5cbdaea126dd24809fd4e9300f289317ef03ebce64d84c7db689"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/source-packet.json",
+              "sha256": "6926347d144c50c33d37a01f545c6d8387ee2c9639dd210cca13dc74b4a705bc"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Model fixed source arch, complete slate slab and connected jamb/barrel/moving straps in Blender.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v2/stage-02-model-3d.png",
+              "sha256": "bde35f062050298c89fd5ee3d584769b33d3d578320d409f7b0e0532ff27087e"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v2/rejection.json",
+              "sha256": "18a1d3b876b226bcbf83b79de11e6c481bca96b7d20e817522b5334832ea737b"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v3/rejection.json",
+              "sha256": "38f3f1e1ceaef670105d608e8effe23c80a3aefbb57983baedb7060671315a47"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v4/rejection.json",
+              "sha256": "f19e7e73682053095c70872c9d5fd30e6d1b3a037e35c55981e3987fede0f9f3"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/stage-02-model-3d.png",
+              "sha256": "792187740103e2950e4702c30a864549aecbb8132da4aeb72e094bc1d623f330"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Derive closed and 90-degree open from the same physical pivot/leaf; retain source-fixed map views only.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/model-controls.json",
+              "sha256": "d0cf7b089101eb22f3759b556cab232b0a4afe81c3860cb682575b2588a1c651"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/raw-closed-full.png",
+              "sha256": "817500895e8271cb5d4f9fec3afed1230b550dc9ace77cdee9286c32efd15216"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/raw-open-full.png",
+              "sha256": "6ccc428867d9942939a8a781374a9b710fdbb67cbae78fbdd3e0c93e6fd2213a"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Retain usable source slate wear, remove baked fake hinges, solve neutral material continuation and finish inner contours. No new AI call.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/surface-preparation.json",
+              "sha256": "7751bb124c615d5420c1bdc898f45aa626841e196f03ec1f812f9ea7cdc28401"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/slate-surface-without-old-hardware.png",
+              "sha256": "a5d1f58c56c8f49c5fa9a1c8a867df93ccd9e927cb3d03aa5e1758bd885101ed"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/registered/hinge-before-after.png",
+              "sha256": "cc7160879b22c3291a447a668cfe89c19d66264292fb805e8cbe0f5b599d5937"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Export whole leaf/hardware and fixed frame separately from actual saved Blender state views.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/door.blend",
+              "sha256": "ea93cdf0f6d080477302cc7731941d53e3d7250aa99206cfce57146b472ec02d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/blender-receipt.json",
+              "sha256": "6692ff8545104809d9f06fc71ee461b018da86a86adeece64ad30d4d6f0bb3af"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/reopen-audit.json",
+              "sha256": "f67b5d4be1bef1f6be68024b482bcff7af3371023c1f19178ba80170243a5c45"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v3.json",
+              "sha256": "503f62d9090331304c9ac849a7889a914689e950de759afbf8eb1d4b9494e558"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register common full-canvas frame and source palette ownership without state recentering.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/register-door.py",
+              "sha256": "64eb8d5331ff2cb8d00f2885b187fa3c8bd1e387cbadd15229c7f8a86fde1b95"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/registered/model.json",
+              "sha256": "2bc9e2949ac062264c7b073fb7f8d98367e6e3f201c4e886f4ba8cb9b94f5348"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/registered/registration-decisions.json",
+              "sha256": "8e63982e2dab71887a914ba58748a5f768a912edb57d928a76a0b67dfa84279d"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:15:17.315810+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect all state/color/size evidence and disposition fresh independent structural findings.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/independent-structural-review.json",
+              "sha256": "90b403a4790d79e86adf896d24e8b9dcd0cd3a53aea33448c153a6070e6e958e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-door/blender-v5/registered/states-comparison.png",
+              "sha256": "30361222e8115f6055f4078f5807a94c7dfdfe57cf380a73b146c9566af5f942"
+            },
+            {
+              "path": "art/conversion/scn-door/blender-v5/registered/authoring-review.json",
+              "sha256": "5b22794e9384cec7898df389798adfb3986b1b87caf58c9f17b3d66b8337d30c"
+            }
+          ],
+          "review": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-door/v1/registered/model.json",
-          "sha256": "e7b561076bf5357ecbca8b8e4a23eda4c0356a0051ab52446e8b3563be07c4a3"
+          "path": "art/conversion/scn-door/blender-v5/registered/model.json",
+          "sha256": "2bc9e2949ac062264c7b073fb7f8d98367e6e3f201c4e886f4ba8cb9b94f5348"
         },
         "plate": {
-          "path": "art/conversion/scn-door/v1/registered/states-comparison.png",
-          "sha256": "32f9952be0ed5995e94b9d9c1ad7284802ce12083cdb56ef776c2c63a2d6fa03"
+          "path": "art/conversion/scn-door/blender-v5/registered/states-comparison.png",
+          "sha256": "30361222e8115f6055f4078f5807a94c7dfdfe57cf380a73b146c9566af5f942"
         }
       },
-      "registration_summary": "Selected source-faithful slate Door states: one byte-identical arched surround, a closed worn slab and a source-positioned left edge when open. Runtime Door tiles supersede the old blueprint thumbnail. Neutral leaf/arch preserve foreground/detail ownership and native y colors; state/solid/occlusion acceptance remains pending.",
+      "registration_summary": "Direct Blender source door with complete slate leaf, connected shared hinges and fixed arch in both native states. Palette/frame/state bindings retained; native acceptance pending.",
       "retrospective_structural_review": {
         "recorded_at": "2026-10-21T09:22:34.529301+00:00",
         "review": {
@@ -74691,20 +75075,29 @@
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment.",
+        "status": "PASS",
+        "reason": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/scn-door/blender-v5/registered/authoring-review.json",
+          "sha256": "5b22794e9384cec7898df389798adfb3986b1b87caf58c9f17b3d66b8337d30c"
         }
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "I inspected open/closed neutral/native states and source description. The open slab has a full-height gap to its jamb with no visible pivot connection. Closed hinge pieces also fail to explain attachment across that gap. Source text explicitly describes hinges. Preserve the common frame/state anchor and construct coherent hinge-side attachment.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
-      }
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v3.json",
+          "sha256": "503f62d9090331304c9ac849a7889a914689e950de759afbf8eb1d4b9494e558"
+        },
+        "resume": {
+          "path": "art/conversion/scn-door/blender-v5/door.blend",
+          "sha256": "ea93cdf0f6d080477302cc7731941d53e3d7250aa99206cfce57146b472ec02d"
+        },
+        "controls": {
+          "path": "art/conversion/scn-door/blender-v5/model-controls.json",
+          "sha256": "d0cf7b089101eb22f3759b556cab232b0a4afe81c3860cb682575b2588a1c651"
+        }
+      },
+      "workflow_version": "blender-first-v1"
     },
     {
       "id": "SCN-POND",
@@ -76135,7 +76528,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -76146,9 +76539,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -76582,9 +76973,40 @@
           ],
           "review": "FIX NOW: I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:18:21.398783+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect original-alpha crown closeup, full variants and isolated wood; reconsider screening finding before modifying source.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/v1/registered/model.json",
+              "sha256": "38acc4443ad0bd433c289ad0778472e5d6ef2f1ff95ea7a348323ce59301ec41"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-dogthorn-tree/blender-v2/crown-source-closeup.png",
+              "sha256": "004eaca4fd26d86cbb4f490115a3678edd3237a11a99effe3d1bd158f4eb2297"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/blender-v2/closer-inspection.json",
+              "sha256": "617326e39bb7171ab71967d4387f645c5f7949567cdcc794fc2b32787b322348"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/blender-v2/alpha-continuity-diagnostics.json",
+              "sha256": "8b94d19dce68a3e149b5c3d97c8bbbd5aa7e99156611f08d3be9f9d38c01436f"
+            },
+            {
+              "path": "art/conversion/scn-dogthorn-tree/blender-v2/authoring-review.json",
+              "sha256": "8c91e623bca70739bcd1d704f702877f7fd00271846063eb7f5f049acde20851"
+            }
+          ],
+          "review": "Closer actual-alpha inspection corrects the earlier screening conclusion: the highest variant2 cluster overlaps the upper-right neighboring foliage, which continues toward the visible rising branch. Background beneath the tuft does not fully isolate it. Fresh independent inspection found no demonstrated consequential detachment. Solid alpha remains connected through two-pixel erosion at thresholds128/240, supporting the visible overlap but not proving hidden wood anatomy. Requiring exposed wood through all foliage would invent a requirement. Retain existing two source variants, palette masks, frame and pixels; no crown repair or new model is justified solely by this allegation.",
+          "result": "PASS / PRIOR FINDING NOT SUBSTANTIATED"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
@@ -76628,19 +77050,16 @@
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles.",
+        "status": "PASS",
+        "reason": "Closer actual-alpha inspection corrects the earlier screening conclusion: the highest variant2 cluster overlaps the upper-right neighboring foliage, which continues toward the visible rising branch. Background beneath the tuft does not fully isolate it. Fresh independent inspection found no demonstrated consequential detachment. Solid alpha remains connected through two-pixel erosion at thresholds128/240, supporting the visible overlap but not proving hidden wood anatomy. Requiring exposed wood through all foliage would invent a requirement. Retain existing two source variants, palette masks, frame and pixels; no crown repair or new model is justified solely by this allegation.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/scn-dogthorn-tree/blender-v2/authoring-review.json",
+          "sha256": "8c91e623bca70739bcd1d704f702877f7fd00271846063eb7f5f049acde20851"
         }
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "I inspected neutral/native variant2 and the source description. The highest foliage tuft is separated by exposed background from its neighboring crown and visible branch system. It has no visible owning support; this is a source-appropriate crown/branch continuity defect to fix before further reuse. Preserve the two native crown variants and palette roles.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
+      "retrospective_finding_reconsideration": {
+        "path": "art/conversion/scn-dogthorn-tree/blender-v2/authoring-review.json",
+        "sha256": "8c91e623bca70739bcd1d704f702877f7fd00271846063eb7f5f049acde20851"
       }
     },
     {
@@ -77481,20 +77900,19 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -78045,21 +78463,200 @@
           ],
           "review": "FIX NOW: I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints.",
           "result": "FAIL"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Retain installed Watervine description, three native layouts, actual wafer roles and harvest colors.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/v1/source-packet.json",
+              "sha256": "8217c9aa2b3a3215d69dc172bf2fc14447eb9fd59867c439a7d78c2dcfbbc626"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/source-packet.json",
+              "sha256": "bb745d6c905d79e64258867cffe2fd6b79c7e7db68bdf0baf5d0d912ae31bf84"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Reuse the actual Core HaygrassA narrow-stroke reference, without copying cereal heads or crop behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/v1/source-construction-comparison.png",
+              "sha256": "9d9cff0ed2df98bc8fe6bb16e5824fa9120047820e232f1a3683eba34d6aac60"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/source-packet.json",
+              "sha256": "bb745d6c905d79e64258867cffe2fd6b79c7e7db68bdf0baf5d0d912ae31bf84"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Build editable complete curved stems, attached basal tendrils, tethers and low-relief wafers from source layout controls.",
+          "inputs": [],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v2/build-vines.py",
+              "sha256": "f92516b51e7a7c07f923beb63e174eed9b5de1239e0d7bdd801f00649d90a1d9"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/stage-02-model-variant-1.png",
+              "sha256": "dea2bd61bd1afa3c02df56b50b14671c5d20cd33825dc160aa683162cc0873a5"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/stage-02-model-variant-2.png",
+              "sha256": "5b3e670d845a5ebdaad47d6738f0edd2ce98d9606138db734ce8b2dbfd2abe84"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/stage-02-model-variant-3.png",
+              "sha256": "6f6a0d1f08d2237f0ce8bf810bc7623c437320347d69999a4e2a62e1a976dcef"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain three distinct source layouts with identical geometry for both native harvest color states.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/model-controls.json",
+              "sha256": "77d9e37ac974d9fd1ed5c65d400799ebc1fa989399169a4f379e86952fe1cabb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/registration-comparison.png",
+              "sha256": "e0d6bfd671105a350889cfd1d8e9af483cbd6a5a7d0df118caac22e086756809"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Use restrained Blender normal-based tones, salt-furrow highlights and contour; correct tethers on the reused saved geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v2/rejection.json",
+              "sha256": "22309c789edb75709c511352e7be0d873680662ab098e1c638b42204dd1760dc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/refine-tethers.py",
+              "sha256": "c8a63da657b285e6cde64794afd7b8c6ba408dafcb43cd4dda59ec0dd53472f1"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/blender-receipt.json",
+              "sha256": "c153e548995ddbac080084ff38962ea0d01cf50a27c487f2b1b2f84017496260"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render complete fixed map views and separate wafer ownership; retain reopenable model.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/vines.blend",
+              "sha256": "05c6392499528a7f4b5b61f6770e6ca241278b303c7227c467a67e432a39a86a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/reopen-audit.json",
+              "sha256": "010b54938ea8d9c74efb5bad40897cce9defaaef4dac665336ecf8945dee5464"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v4.json",
+              "sha256": "fd286afb39f652b645f680bfdf03ca9d131261a7c68fce9b146e82a874f8f957"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Apply common full-cell mapping and independent stem/wafer masks; keep native state/anchor bindings.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/register-vines.py",
+              "sha256": "14b773c553e221146db386a9257661133174cd8190b608f86db411ec61911d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/model.json",
+              "sha256": "c9ea800d3d5e80c3d972645a6f9f450e9fba79f2a4d498500a3c1a1ed316c911"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/registration-decisions.json",
+              "sha256": "e8f15a20038a7d89df74bb697d4a12decd5bfdd46434b8eb88aa8339e3630c5b"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T11:25:34.068150+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Review actual bases, tethers, wafer identity and all three tint/size rows; disposition independent findings.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/independent-structural-review.json",
+              "sha256": "ff5580dc765b4fff6dbd7f0c69846c390d796fc9fabcd3cbb14f6e3f8fef36f7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/basal-before-after.png",
+              "sha256": "541a12bb1bc07f93cf92ff9a93d0d4539ceec3e9c914356ba514a2fadc1c2190"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/registration-comparison.png",
+              "sha256": "e0d6bfd671105a350889cfd1d8e9af483cbd6a5a7d0df118caac22e086756809"
+            },
+            {
+              "path": "art/conversion/scn-watervine/blender-v3/registered/authoring-review.json",
+              "sha256": "0489c05e7ee59fc80582b5249301664188c12fb58ec960441935501ae690b161"
+            }
+          ],
+          "review": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "native_acceptance": "Pending final all-conversions validation gate",
       "current_registration": {
         "model": {
-          "path": "art/conversion/scn-watervine/v1/registered/model.json",
-          "sha256": "81ecd614f6f2aa5126ddc8e8528552bf9fc6391cff9a9f4ba659835c6b7e0797"
+          "path": "art/conversion/scn-watervine/blender-v3/registered/model.json",
+          "sha256": "c9ea800d3d5e80c3d972645a6f9f450e9fba79f2a4d498500a3c1a1ed316c911"
         },
         "plate": {
-          "path": "art/conversion/scn-watervine/v1/registered/registration-comparison.png",
-          "sha256": "9106e54bac0c4c99b61939ae1b31515ce4a4ddf4380fde4b97b2210d057feb3c"
+          "path": "art/conversion/scn-watervine/blender-v3/registered/registration-comparison.png",
+          "sha256": "e0d6bfd671105a350889cfd1d8e9af483cbd6a5a7d0df118caac22e086756809"
         }
       },
-      "registration_summary": "All three native watervine layouts have source-positioned crooked furrowed vines and swollen wafer knots. Each was manually constructed and independently refined. Neutral vine/wafer ownership keeps native w/g ripe and w/K unripe colors without baked green or glow; harvest states share identical geometry. Native night fireflies remain separate particles. Native state/visibility acceptance is pending.",
+      "registration_summary": "Direct Blender source layouts: continuous basal tendrils, actual curved-stem wafer attachments and unchanged native harvest frame/palette/state bindings. Native acceptance pending.",
       "retrospective_structural_review": {
         "recorded_at": "2026-10-21T09:22:34.529301+00:00",
         "review": {
@@ -78091,20 +78688,29 @@
         "scope": "Static current-set visual screening and main-author triage; no native validation."
       },
       "art_review": {
-        "status": "REQUIRES CORRECTION",
-        "reason": "I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints.",
+        "status": "PASS",
+        "reason": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
         "record": {
-          "path": "evidence/texture-review-20261021/main-decisions.json",
-          "sha256": "3344cd180ba17240692f8be16c52b2c3bebc82d62381752a5a734ea33d23d6dc"
+          "path": "art/conversion/scn-watervine/blender-v3/registered/authoring-review.json",
+          "sha256": "0489c05e7ee59fc80582b5249301664188c12fb58ec960441935501ae690b161"
         }
       },
-      "advancement_blocker": {
-        "requirement": "Coherent current-generation attachment/continuity in required views/states, including current dependency models.",
-        "reason": "I inspected the neutral/ripe layouts and source description. Variant3 right stem visibly stops above its basal curve; other low strokes similarly fail to explain continuous growth. No source-supported debris or separate ground-object role is established. Resolve these basal contacts consistently in all three layouts and both harvest tints.",
-        "classification": "internal",
-        "resolution_condition": "Complete the named current-stage geometry/ownership correction or source-backed inspection and pass fresh structural review; rebuild dependent item/assembly evidence.",
-        "dependent_work": []
-      }
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v4.json",
+          "sha256": "fd286afb39f652b645f680bfdf03ca9d131261a7c68fce9b146e82a874f8f957"
+        },
+        "resume": {
+          "path": "art/conversion/scn-watervine/blender-v3/vines.blend",
+          "sha256": "05c6392499528a7f4b5b61f6770e6ca241278b303c7227c467a67e432a39a86a"
+        },
+        "controls": {
+          "path": "art/conversion/scn-watervine/blender-v3/model-controls.json",
+          "sha256": "77d9e37ac974d9fd1ed5c65d400799ebc1fa989399169a4f379e86952fe1cabb"
+        }
+      },
+      "workflow_version": "blender-first-v1"
     },
     {
       "id": "BODY-HUMAN-FEMALE-OLDER",
@@ -79204,7 +79810,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T11:04:25.555514+00:00",
+  "updated_at": "2026-10-21T11:36:28.880383+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
@@ -79252,12 +79858,7 @@
   },
   "current_structural_correction_queue": {
     "owner_stage": "Stage 3",
-    "ordered_entries": [
-      "SCN-DOOR",
-      "SCN-DOGTHORN-TREE",
-      "SCN-WATERVINE",
-      "SCN-WOODEN-WATER-WHEEL"
-    ],
+    "ordered_entries": [],
     "resume_after": "SCN-RANDOM-BOTTLE",
     "audit": {
       "path": "evidence/texture-review-20261021/main-decisions.json",
@@ -79318,6 +79919,60 @@
         "plate": {
           "path": "art/conversion/npc-elderbob/v2/full-neutral-comparison.png",
           "sha256": "1184b464bf0ec80df271f0041e6562f45fc1b300594bc8f4e93a512fdad841d3"
+        }
+      }
+    },
+    {
+      "entry": "SCN-DOOR",
+      "recorded_at": "2026-10-21T11:15:17.315810+00:00",
+      "reason": "Inspected both direct source-bound states, 3D model, registered neutral/native colors, intended-size rows and hinge closeups. Fixed straps overlap actual jamb and barrel; rotating straps overlap the same complete slate leaf. Open/closed share one physical axis and common frame, without an independently placed floating strip. Old painted hinge fragments were removed from the retained slate material before mapping; hand wear, seams and right recessed handle remain. Independent reviewer found no consequential structural defect. Plain dark hardware and flat open thickness are minor material polish; retained for full-set play-distance assessment. Native collision/visibility/state mechanics remain pending.",
+      "registration": {
+        "model": {
+          "path": "art/conversion/scn-door/blender-v5/registered/model.json",
+          "sha256": "2bc9e2949ac062264c7b073fb7f8d98367e6e3f201c4e886f4ba8cb9b94f5348"
+        },
+        "plate": {
+          "path": "art/conversion/scn-door/blender-v5/registered/states-comparison.png",
+          "sha256": "30361222e8115f6055f4078f5807a94c7dfdfe57cf380a73b146c9566af5f942"
+        }
+      }
+    },
+    {
+      "entry": "SCN-DOGTHORN-TREE",
+      "recorded_at": "2026-10-21T11:18:21.398783+00:00",
+      "disposition": "NOT SUBSTANTIATED / source retained",
+      "review": {
+        "path": "art/conversion/scn-dogthorn-tree/blender-v2/authoring-review.json",
+        "sha256": "8c91e623bca70739bcd1d704f702877f7fd00271846063eb7f5f049acde20851"
+      }
+    },
+    {
+      "entry": "SCN-WATERVINE",
+      "recorded_at": "2026-10-21T11:25:34.068150+00:00",
+      "reason": "Inspected all three layouts, original/new basal closeups, source metadata, exact wafer positions, neutral/ripe/unripe rows and intended-size examples. Basal tendrils now begin inside their own eight actual stem bases rather than a shared copied y row. Wafer tethers meet evaluated curved stems; source crooked paths/wafer centers and counts remain bound to the native layouts. Main stems and low-relief swollen wafers are editable in the saved Blender source, with simple neutral tones and black contours. Fresh independent review found no demonstrated structural FIX NOW defect. Native RandomTile, Harvestable colors/yield, Fireflies and physics/state bindings are unchanged and unvalidated behind the full generation gate.",
+      "registration": {
+        "model": {
+          "path": "art/conversion/scn-watervine/blender-v3/registered/model.json",
+          "sha256": "c9ea800d3d5e80c3d972645a6f9f450e9fba79f2a4d498500a3c1a1ed316c911"
+        },
+        "plate": {
+          "path": "art/conversion/scn-watervine/blender-v3/registered/registration-comparison.png",
+          "sha256": "e0d6bfd671105a350889cfd1d8e9af483cbd6a5a7d0df118caac22e086756809"
+        }
+      }
+    },
+    {
+      "entry": "SCN-WOODEN-WATER-WHEEL",
+      "recorded_at": "2026-10-21T11:36:28.880383+00:00",
+      "reason": "Inspected all three Blender source-map phases, native w/y compositions, intended-size rows and oblique construction diagnostic. Two minimal rear wet-wood supports join the inset carrier to the existing spine/rim; every source-bound detail run meets that carrier. This resolves visible ownership without claiming a native axle, motor or uniquely recovered mounting topology. Source shape/paddle phase identity and native detail positions remain bound to the earlier source guide; low-relief depth/supports are explicitly authored. Fresh independent review found no consequential structural FIX NOW issue. Thin support readability is minor polish for full-set play-distance assessment. Exact frame, palette/one-coverage formula and native HydroTurbine/animation behavior fields are retained; native acceptance remains gated.",
+      "registration": {
+        "model": {
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/model.json",
+          "sha256": "24628e75b32fa4ec3c01807d817f71bd9f6968a0d714b855f29f9e24a63dacdc"
+        },
+        "plate": {
+          "path": "art/conversion/scn-wooden-water-wheel/blender-v2/registered/registration-comparison.png",
+          "sha256": "c33e9a65299de690f7291fc6cf6b855cefafa8a1bbab2874bbb2c7f25e6db85f"
         }
       }
     }

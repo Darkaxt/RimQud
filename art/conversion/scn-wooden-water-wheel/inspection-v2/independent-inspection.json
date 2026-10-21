@@ -1,0 +1,77 @@
+{
+  "inspection": "independent bounded visual inspection",
+  "scope": "Read supplied images and JSON only; no art edits, generation, native/game verification or mechanical design inference.",
+  "evidence": [
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/registered-final/registration-comparison.png",
+      "sha256": "4927800f6fe86df32f7c683551c6edba892454fe7053c7c80068557395b62d2e"
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/source-reference-construction.png",
+      "sha256": "8c6a294ba81fee24e9cf42d04c4af1dd8dd93abe5d8d10912bfc136f4938556d"
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/patched-native-phases.png",
+      "sha256": "26971615fd30294e5be09af01664237dd9c207aa17421e1596f14b9f91d255ea"
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/corrected-source-packet.json",
+      "sha256": "fdb7dd3447859e452420d8590611be422251257dbf4d04bbdea69cedfa5f5b65"
+    },
+    {
+      "path": "art/conversion/scn-wooden-water-wheel/v1/inset-continuity-patch.json",
+      "sha256": "1fff5f9dc6b7e059688cd1938d5bfb175fcc9e75236b5b250018dfd8a18cc769"
+    }
+  ],
+  "observations": [
+    {
+      "id": "visible-current",
+      "finding": "The registered comparison shows a thin closed segmented oval in the right open field of every phase. Its segments are visibly joined by a slender loop, but no visible member joins that loop to the main outer rim, central vertical spine or left paddles. The intervening dark field remains open.",
+      "confidence": "high"
+    },
+    {
+      "id": "patch-effect",
+      "finding": "The patched native phases explicitly show the same separation. The patch establishes continuity among inset marks, not a visible attachment between the inset assembly and the surrounding wheel. Some phase-end rectangles sit beside or beyond the loop curve; their precise contact is less legible than the primary runs.",
+      "confidence": "high for overall separation; limited for tiny segment contacts"
+    },
+    {
+      "id": "source-comparison",
+      "finding": "The source-reference-construction sheet displays three small symbolic source masks with separate right detail marks and no explicit mounting drawn across their open field. Its initial authored manual drawing also leaves these marks disconnected. This supports the presence and phase-dependent occupancy of right detail, not a particular physical support design.",
+      "confidence": "high within supplied sheet"
+    }
+  ],
+  "source_supported_facts": [
+    "Packet identifies native Wooden Water Wheel as MountedFurniture, with wet-rotted wood paddles, HydroTurbine, mechanical power production and Circuitry status name Gearbox.",
+    "Supplied source masks show tall outer contour, left paddle bands and changing right detail marks in three phases.",
+    "Native metadata does not identify the right detail marks as a specific gearbox shape or state how they are mounted. Gearbox status naming alone does not establish their geometry."
+  ],
+  "authored_interpretations": [
+    "Smooth thickness and planar construction of the large rim and paddles.",
+    "Thin oval brace connecting right marks and merging adjacent same-column marks.",
+    "Any claim of hidden support, particular depth, axle, motor, bridge or gear mechanism. Hidden support is possible, but not demonstrated."
+  ],
+  "uncertainty": [
+    "Images establish absence of a visible connection, not absence of a possible occluded or out-of-plane mounting.",
+    "Symbolic source detail is too sparse to determine a uniquely correct physical attachment.",
+    "This inspection does not establish native runtime appearance, animation, integration or acceptance."
+  ],
+  "consequential_geometry_question": {
+    "finding": "The current enlarged authored construction reads as a separate segmented loop suspended inside an open wheel; therefore visible attachment clarity is unresolved if a physically legible constructed object is required.",
+    "required_clarification": "Main construction decision should state whether the inset intentionally remains symbolic with unknown mounting, or whether a minimal authored contact/occlusion cue is needed. That is a geometry interpretation decision, not proof that a specific new mechanical part is missing.",
+    "do_not_infer": "Do not require an axle, bridge, motor or particular machine design from this evidence."
+  },
+  "optional_polish": [
+    "Subtle material shading, edge wear and finish of the thin loop.",
+    "Tiny contact/readability refinements among inset segments, provided they do not change the chosen structural interpretation."
+  ],
+  "conclusion": {
+    "visible_attachment_demonstrated": false,
+    "physical_floating_proven": false,
+    "unexplained_visible_separation": true,
+    "verdict": "There is a demonstrated visible separation in the current authored construction, but no demonstrated physically impossible floating attachment. Unknown hidden mounting remains consistent with the symbolic source. The continuity patch resolves isolated inset marks into a loop without resolving its relationship to the main structure. Treat that relationship as consequential construction ambiguity when judging physical legibility; do not present an invented mounting as a recovered native fact."
+  },
+  "verification": {
+    "method": "All three actual PNGs visually inspected; both JSON packets read; SHA256 computed from disk.",
+    "boundary": "Independent inspection only; main agent retains construction and acceptance decision."
+  }
+}
