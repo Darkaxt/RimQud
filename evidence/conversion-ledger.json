@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "NPC-TAM",
+  "active_entry": "NPC-WARDEN-YRAME",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -40827,8 +40827,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_individual_race_and_runtime_metadata",
+      "status": "UNFINISHED",
+      "current_step": "native_visibility_equipment_hurt_look_save_review",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -40837,9 +40837,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "dromad",
         "captured_gender": "male",
@@ -41044,13 +41042,195 @@
         ]
       },
       "historical_artifacts": [],
-      "process_log": [],
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T00:48:07.290189+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Resolve exact captured dromad instance, race, description, body tree, source shape/palette and actual equipped parts.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/source-packet.json",
+              "sha256": "bfc91145fd9fc4b0a27461d247a27d4a2bbd40f395661ec8b51ab5b00abb69a8"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/source-to-assembly.png",
+              "sha256": "db12eff9adf8db292b6709fe40061cb23497966ed6536e750c1aa642d10b7235"
+            }
+          ],
+          "review": "Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:48:07.290189+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/dependency-lineage.json",
+              "sha256": "db08ea23240e277549500677dbbea8aebc5baec1abc118113da4fee2eddfc15a"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/dependency-evidence.html",
+              "sha256": "0180ea16d5febe4e6ec65fc0a1d709218b788fbc4e57da2e8cf327986113b098"
+            }
+          ],
+          "review": "Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:48:07.290189+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.",
+          "inputs": [
+            {
+              "path": "art/village/sources.json",
+              "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/assembly-method.py",
+              "sha256": "45096217911eea26235418f74017685283f1cb14df81873d5d6faf2327b9e8e3"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/model.json",
+              "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/assembly-stages.png",
+              "sha256": "5d6fe5b7d0a21b3e4b1cfb2298cf752c065d23b30fb20949a374e3f65d067dbd"
+            }
+          ],
+          "review": "Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:51:08.942918+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/model.json",
+              "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/cloth-robe-comparison.png",
+              "sha256": "59aa671cc9c2387b68accc61ec437088f3842f02afac911162864d2c3879ae7e"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/shillelagh-comparison.png",
+              "sha256": "5a532fc85a3e9e7844ab4790f4663245b91430ba698a3caad8a9d1a024953101"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/full-neutral-comparison.png",
+              "sha256": "d36492b7d0689cc78e02104e89dc8b936d4c7ab33c2482b37e2d2895782e41bc"
+            }
+          ],
+          "review": "Inspected original Tam glyph and full captured metadata, current shared adult dromad body, robe-only and staff-only four-view plates, complete neutral/native assembly and intended-size evidence. Cloth Robe604 Body357 and Shillelagh524 Hand362/2 match the captured instance exactly. Current robe v7 retains the covered upper hump and curved front/back cuffs with its corrected accepted side opening; original arms emerge from those openings. Current staff v3 retains inward south/north palm contact and accepted profile placement. Full cloth and staff remain independent; each item's late original-body ownership affects only that item, so neither mask redraws the body over the other item. Original body/head/neck/dulla and item pixels, scale, frame and contact remain unchanged. West mirrors the documented compatible east geometry. All actual source/reference/manual/refinement/secondary/patch/extraction histories are linked; this assembly required no new ImageGen call. Source dromad description and baseline Humanoid metadata are retained without inventing mutations, extra feet, age, cosmetic rings or a profession pose. Static held display only; real near/far state and weapon ready/resting behavior remain required integrated work after full generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:51:08.942918+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Inspect exact independent source palettes, original registration and game-size full assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/model.json",
+              "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/record-review.py",
+              "sha256": "98bb3f3ec603755dc1bf2bdbb57ad83e9725c839eb183f64fc0d6daa5c60ee38"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/full-native-comparison.png",
+              "sha256": "dd73114068f4adc805eed9f403836f194523f3e5dea3b0dc6dd6bea445a8c62c"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/game-scale-comparison.png",
+              "sha256": "9cb0fc29241835dd563d248f9a693354dc3e081c3e4effc6ab9b52d612e16ece"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/hidden-comparison.png",
+              "sha256": "16a29dee129dd2cad426b5d843a728f87a9212a544873f34db9ede70bcb10b58"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/visual-review-notes.json",
+              "sha256": "c4bc3c1705aba34af73d34040c2bb7c8c98c5e90c16988b703933c8c487208e9"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/historical-instruction-versions.json",
+              "sha256": "c8145d03e1ca36d745ec6afe46dfcada2b7365349a120a1ac7729a007f2c7c33"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/authoring-review.json",
+              "sha256": "c4a77cf32968dd9f03c11ec525660b26f156b2208d1d4ea87712420013489bfd"
+            },
+            {
+              "path": "art/conversion/npc-tam/v1/artifact-manifest.json",
+              "sha256": "26c00733d6b2249cdbdb6f28d2fd6a849fae48a72ae620e054b54c56c1a18aa8"
+            }
+          ],
+          "review": "Reviewed neutral and captured Qud palettes in all four facings and 48x96 frame previews with nearest enlarged companions. Neutral components remain grayscale. Body/head use actual tileColor w, separate dulla/head-detail uses W, and Cloth Robe and Shillelagh each use their own captured y/y palette. Shared512x1024 canvas, contact256,950 and each row's unchanged world mapping preserve the larger dromad scale; the staff is not normalized or resized to the body. Hidden authoring previews are empty. These are art inspections, not native visibility, equipment, motion, hurt, look or save/load acceptance; no native activation or game/harness test was performed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:51:08.942918+00:00",
+          "step": "native_visibility_equipment_hurt_look_save_review",
+          "action": "Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-tam/v1/model.json",
+              "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"
+            }
+          ],
+          "outputs": [],
+          "review": "Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
       "apparel_dependencies": {
         "workflow": "regional-curved-v1",
         "entries": [
           "FIT-DROMAD-CLOTH-ROBE-BODY-0"
         ],
-        "status": "Pending new garment fittings; no historical outfit approval implied"
+        "status": "Current generation-ready fittings and exact instance/part bindings verified in this static assembly. Native outfit acceptance pending."
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/npc-tam/v1/model.json",
+          "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"
+        },
+        "plate": {
+          "path": "art/conversion/npc-tam/v1/full-neutral-comparison.png",
+          "sha256": "d36492b7d0689cc78e02104e89dc8b936d4c7ab33c2482b37e2d2895782e41bc"
+        }
+      },
+      "registration_summary": "Captured actor525 assembled from its unchanged shared dromad body and exact source-equipped items. Each item remains independent; neutral/native palettes, single-item/staged views and complete dependency histories are recorded. Static display only; native acceptance pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected original Tam glyph and full captured metadata, current shared adult dromad body, robe-only and staff-only four-view plates, complete neutral/native assembly and intended-size evidence. Cloth Robe604 Body357 and Shillelagh524 Hand362/2 match the captured instance exactly. Current robe v7 retains the covered upper hump and curved front/back cuffs with its corrected accepted side opening; original arms emerge from those openings. Current staff v3 retains inward south/north palm contact and accepted profile placement. Full cloth and staff remain independent; each item's late original-body ownership affects only that item, so neither mask redraws the body over the other item. Original body/head/neck/dulla and item pixels, scale, frame and contact remain unchanged. West mirrors the documented compatible east geometry. All actual source/reference/manual/refinement/secondary/patch/extraction histories are linked; this assembly required no new ImageGen call. Source dromad description and baseline Humanoid metadata are retained without inventing mutations, extra feet, age, cosmetic rings or a profession pose. Static held display only; real near/far state and weapon ready/resting behavior remain required integrated work after full generation.",
+        "record": {
+          "path": "art/conversion/npc-tam/v1/authoring-review.json",
+          "sha256": "c4a77cf32968dd9f03c11ec525660b26f156b2208d1d4ea87712420013489bfd"
+        }
       }
     },
     {
@@ -41077,8 +41257,8 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_individual_race_and_runtime_metadata",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -60571,7 +60751,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T00:46:14.183145+00:00",
+  "updated_at": "2026-10-21T00:51:08.942918+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

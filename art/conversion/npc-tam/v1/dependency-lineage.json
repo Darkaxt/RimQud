@@ -1,0 +1,2897 @@
+{
+  "dependencies": [
+    {
+      "entry": "BODY-DROMAD",
+      "model": {
+        "path": "art/conversion/body-dromad/v2/model.json",
+        "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+      },
+      "report": "docs/conversion-entries/BODY-DROMAD.html",
+      "plate": {
+        "path": "art/conversion/body-dromad/v2/registration-comparison.png",
+        "sha256": "3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T02:08:30.483483+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "phase": "Dromad identity, description and observed body tree",
+          "action": "Resolved Tam through Dromad ancestry; carried native race/individual descriptions, complete attached part IDs/parents/laterality, natural/actual equipment, source version/hashes and metadata gaps.",
+          "inputs": [
+            {
+              "path": "evidence/tam-conversion-input.json",
+              "sha256": "2dfd8529d919dc160e4dcf05e546d4e8fd5c84340bfe6cac4a3ceb9c8b5ff4fc"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "review": "Read the source packet and viewed original glyph. Humanoid baseline supports two hands and paired feet, while description supplies long neck, dulla and upper-back hump. Runtime mutation list, age and race-wide dimorphism remain unknown; no four-legged camel substitution.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:08:30.483865+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "phase": "Actual RimWorld dromedary references",
+          "action": "Selected installed Core Dromedary front/side/back assets for muzzle, hump, perspective, outline and shading conventions.",
+          "inputs": [
+            {
+              "path": "evidence/joppa-creature-catalogue.json",
+              "sha256": "de8affadee7f4260a8ec68a81e6d6e5f7c98c627a7b29ddcbae3668c6cfd4a79"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/source-comparison.png",
+              "sha256": "e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5"
+            }
+          ],
+          "review": "Viewed actual donor front/side and the contextual three-direction plate; all source PNG hashes matched the catalogue. Donor quadruped legs/tail are not copied into the Qud humanoid race.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:08:30.484056+00:00",
+          "step": "construct_front",
+          "phase": "Reconstructed editable dromad front in the shared frame",
+          "action": "Reused the earlier editable body/head geometry as source only, composing it with one transform onto the common centered canvas. No historical art acceptance carried forward.",
+          "inputs": [
+            {
+              "path": "art/dromad/nude/body-south.svg",
+              "sha256": "c017414ec56f0671adcaaca2cb6f4dad42879911b1d42daa44b080a52f5c9873"
+            },
+            {
+              "path": "art/dromad/nude/head-south.svg",
+              "sha256": "ca87c5895fe7eb827c92cae1e0716ee4016bf22868ff9940f09815069d589030"
+            },
+            {
+              "path": "tools/construct_dromad_front.py",
+              "sha256": "c49052e1b1a572f5b11f502c6ffbbbedc0eec883bd6f2d87daf3b7e4edaa56d6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.svg",
+              "sha256": "a2641fded3aed5e5122481e1c58c817fd781b65b8262967e43978fde3b7c12c5"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.png",
+              "sha256": "3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64"
+            }
+          ],
+          "review": "Viewed whole front: camel-like head, long neck/dulla, hump, two arms/hands and paired rounded feet. No robe, staff, jewelry or markings. Neck and foot fine shape remain authored; next is restrained front refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:09:41.098057+00:00",
+          "step": "construct_front",
+          "phase": "Refined dromad front selected",
+          "action": "Refined the constructed front with the native original/description and installed dromedary reference plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/constructed-front.png",
+              "sha256": "3677a61c4d6f12336d1cbe727c99792a0b0ff124f6d74c412d5017a92cf0ce64"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-comparison.png",
+              "sha256": "e4a310f131c608f85f17d4a9eb01f06d0486cc2445f1886830b601dfa57c7fe5"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refine-front-prompt.txt",
+              "sha256": "f0a63ca46c098027385bf907eb13a3d0dc97c83d1c67bbb9d9512573f23e8b8d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            }
+          ],
+          "review": "Viewed the complete front. Preserves compact bipedal camelfolk, long neck/dulla, ears/muzzle, integrated body/hump and two hands/feet. No gear or personal adornment. Source foot guide bars remain and will be removed during composed refinement; exact grayscale and contact registration follow.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-8b350434-bcdf-4617-b23e-360a80c19a9d.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.517602+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "phase": "Front-guided dromad side/back proposals",
+          "action": "Generated secondary views from the selected dromad front and actual donor camel profile, with explicit humanoid race anatomy.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views-prompt.txt",
+              "sha256": "95ec5c17fc7514d1573883a776e51d29fd6325326ff3e11a1536fd2ddc73b31c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            }
+          ],
+          "review": "Viewed projecting camel muzzle, long neck, profile feet/limb overlap and continuous side upper-back hump. Rear proposal has an extra rounded lobe beside the neck; correct it to one integrated hump before selecting. Foot guide bars removed.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2,
+            "private_reference": "dromedary-reference-east.png; exact source/hash in source-packet.json"
+          },
+          "generation_file": "exec-e74fe33f-d6ba-405a-b174-b8ac24e6531b.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.519897+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Rejected panel-boundary segmentation",
+          "action": "Prepared a first frame/palette patch using rectangular view bands, then inspected connected silhouettes.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/prepare-views-rejected-panels.py",
+              "sha256": "431fe0d8d39c9fd042db1895bb41848099b0b4e76a09fd7cd122cf1c73f015f8"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views-rejected-panels.png",
+              "sha256": "ae9c5b93e39e1faa995f6364c2cacd650693eeb25c15ca997468ae8dc62a7baa"
+            }
+          ],
+          "review": "Source figures overlap in horizontal range: rear silhouette begins at x1047 while the profile extends to x1043. A column band steals or includes pixels from another figure at different heights. Replace it with connected-silhouette ownership.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T02:13:27.521619+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Complete-figure ownership, neutral source and common anchors",
+          "action": "Separated each whole figure by its connected alpha silhouette, cleaned invisible/low-alpha RGB and neutralized grayscale. Used one .84 scale and translated complete figures to centered foot contacts, preserving long profile muzzle.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/secondary-views.png",
+              "sha256": "9f74ec4cb06116cc7a6c106871e1587ef5d0429fa28d9fa818507f7cf5dbcb8c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/prepare-views.py",
+              "sha256": "f4d636cc84a0169e70e8c27a6e5a34fbcf07d674da9941ae83185b6195dd8441"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views.png",
+              "sha256": "bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/patch-decisions.json",
+              "sha256": "5fbb9a61ccf17bbccc2001fe528a2feeb6892de6af723203f604cd111bfa10d4"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-south.png",
+              "sha256": "61fb34d15b2ce233a309f68556333242cdd0bc485878fb6ef68f33bf8f9dc7bf"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-east.png",
+              "sha256": "41ca3059d468ec31386f2b81ee2da0a5396748935a853e180dce6827ed2d9fce"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-selection-north.png",
+              "sha256": "ee3d83cf59e76c719d6c728f1832c7db6466368fa70175a8deb79f3d350dcacb"
+            }
+          ],
+          "review": "Ownership masks retain whole figures rather than splitting columns. Rear extra upper-back lobe is explicitly pending the targeted composed refinement; no final anatomy acceptance yet.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.980364+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "phase": "Selected composed refinement: one rear hump",
+          "action": "Refined the neutral, ownership-separated sheet with a focused rear upper-back correction while preserving the selected front/profile.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/patched-views.png",
+              "sha256": "bef036de226c6f464a732614ee2657784529d4d6542a19a93aca418aa774199d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refine-patched-prompt.txt",
+              "sha256": "4df95d58d75335a1f86596b96b1101e576fe83d4bcdfd2b2e6d6aa27ddb66206"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            }
+          ],
+          "review": "Viewed all views: rear extra lobe removed, one continuous central upper-back mound. Profile retains the projecting muzzle, long neck/dulla and properly turned feet; no tail, extra appendages or clothing. Foot guide bars removed.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 1
+          },
+          "generation_file": "exec-6fdeece5-7c94-4575-86f3-a6e2326b04e7.png"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.981758+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "phase": "Secondary directions selected after correction",
+          "action": "Selected the corrected front/profile/rear proposal, keeping native humanoid counts and camel-specific description anatomy.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-front.png",
+              "sha256": "df23e042c0f627dddf66c2090025a7985e8874fcd07a094c09bc957e16083a11"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            }
+          ],
+          "review": "A genuine whole-body profile and rear view are now present. Unseen surfaces remain authored interpretation; no donor quadruped anatomy or tail was substituted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.983269+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Rejected head ownership at projecting dulla edge",
+          "action": "Inspected first body/head/detail ownership masks before accepting registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/register-layers-rejected-dulla-edge.py",
+              "sha256": "03823231a34f8e954076f5f630bea8e0fe390d09d693587f48c41014c019f4ff"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/ownership-rejected-dulla-edge.png",
+              "sha256": "8776f32228f7845852d05a32681dd36b5b2a7bf964d49fe88d44ca82978bef18"
+            }
+          ],
+          "review": "The straight profile neck boundary assigned the outer edge of the projecting dulla to the body. Reject that ownership split; union the full dulla outline into head/neck before deriving body coverage.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.984176+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Centered dromad layers and separate neutral detail region",
+          "action": "Re-established masks on the actual refined image. Used connected whole-figure selection, one .84 image scale, shared contact (256, 950), head ownership including the complete dulla and two-source-pixel body underlap. Kept distinct source/refined selection masks to preserve logged provenance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/refined-patched-views.png",
+              "sha256": "a946adad77a02bf3567d1d8f7f83e0d8f26d9c2bb6629d4a127b7ec215730b3c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/register-layers.py",
+              "sha256": "4a95ce852c5a9fada0685b7a5860e16f987670ee2ac81fa607032aa365b07b5b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-decisions.json",
+              "sha256": "28d1b21eb580dd31dee1807e9cee25567c6490b11ccf0cf02543cba7359aec81"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+              "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/ownership-comparison.png",
+              "sha256": "2ce666657ec8b30247e04c108e9a868fa885e4bd1cc747b14b68d5c2ce4e1e50"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-south.png",
+              "sha256": "0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-south.png",
+              "sha256": "51905c4151f6adbf88714f9f9d5a40f385a71d9fd252133054653d8b6fc996a4"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-south.png",
+              "sha256": "1c6b410c0764bd0892c19d46ff24d2546392343fd0d7993755e682b373a80d5f"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-south.png",
+              "sha256": "9c54b5c720d4ecff3bad080b005eb67e4a035f35fa2dc9f2c0ac40d152703b7c"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-south.png",
+              "sha256": "91af9578ee8b25be3e6e69343adba91982478b01413ac1e1bf123f1068c43000"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-south.png",
+              "sha256": "54a21bb060c7c68d7f837a2d8d3b784ba44800901fc87c5f260ed05025700667"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-south.png",
+              "sha256": "1d72d26f5412010d62b4ea096b7ba941c9e794581965df4b2ec297fcfd5b63d8"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-east.png",
+              "sha256": "5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-east.png",
+              "sha256": "aef704589190def62ef6376c528f7fb90c0fe74d837bbb4581d3aa299ecafa0e"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-east.png",
+              "sha256": "26a83da099933f63b451bd098ca3c561cc5587c5d1c25e6f78da9e05ac3ee7c2"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-east.png",
+              "sha256": "7eb8fb731cfea20006a8f3c6089404915d4f1d9b6ecd482fe68bbe6ed9425390"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-east.png",
+              "sha256": "05d9217d15c6f6025b894e60ae596608ac2a2bd11820bb8d77cdced776836c55"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-east.png",
+              "sha256": "9d6a3534cb9c405ef1961285b419a463e5608bae9edae706a1d0587297f28bbe"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-east.png",
+              "sha256": "030bac3c2342992cd2fe26640d0c93aa6c1f3f362be5e2c883f85bc81cd9c117"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-north.png",
+              "sha256": "c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-north.png",
+              "sha256": "d467695c9dad915efef6c428d19142257d9f914f20f797e336e6b01972f346d3"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-north.png",
+              "sha256": "2acc469cc3de6a04146417767c4c3312adc41d8b3d9270af3094068c2a66832d"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-mask-north.png",
+              "sha256": "04bade47e250144bd80f93e7f419c73a44ee30c9c333a7bcd5f7b6760fbbd9fb"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-mask-north.png",
+              "sha256": "6fbd15b478fb0ca9ba95c405def53a669a39d10b1267193c174f6d1df3cac5c6"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-detail-mask-north.png",
+              "sha256": "52848c292a9768d088119562c36fcd5fa3ca7b485fba3187cf50e4c6aa8b4988"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/refined-selection-north.png",
+              "sha256": "3f924de1b2e46850c06cf73047f80e90e252616323ffbb073e83dae7240d48f6"
+            }
+          ],
+          "review": "Viewed neutral recomposition and colored ownership: body owns hump/painted limbs, head owns the complete neck/dulla. No back dulla layer rendered. Dulla detail region is authored, not asserted as a proven original-color location. Every production layer is grayscale; all facings use identical centered anchors. Physical height 1.4 is an explicit authoring choice, not native metadata.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:18:04.986653+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "phase": "Dromad base generation-ready",
+          "action": "Reviewed four facings and intended-size authoring previews of the same registered neutral model.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/registration-comparison.png",
+              "sha256": "de546996093ebdf5b60a6eac960e17a512959690859a87c7e67e664cd36398dc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v1/game-scale-review.png",
+              "sha256": "5be89c1849baf9a53d392db9befcd392be64727d7368a17785639c973724908b"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-south.png",
+              "sha256": "1d1eaded3fcc976dff381ef05c70317565eaabe0b9a0dd558a3c1b5c64aaf694"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-east.png",
+              "sha256": "4e25b4f69b77b132f0b55aaeaf0cf7669661ec4f02c19c1ccf3dc3f889e56caf"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/selected-north.png",
+              "sha256": "12a7f74eba51adb597e0ab1add7f42dbc347fc78f3896287d73e191f08c0f955"
+            }
+          ],
+          "review": "Readable long-necked bipedal camelfolk, continuous hump, elongated side muzzle and paired bare feet. No clothing/staff/jewelry baked into the base. Shared contact and separate neutral detail retained. Native acceptance and actual clothing/staff fittings remain pending the all-conversions gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:17:33.058925+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "phase": "Correct independently resampled body/head seam",
+          "action": "Resampled complete selected refined figure once and extracted body/head/detail from the same registered RGB pixels. Retained previous selection/ownership geometry and all source art.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v2/register-shared-sample.py",
+              "sha256": "161d8da9575486fddf16037031388e306ba8e469569904576d01e1478949da24"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v2/model.json",
+              "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/registration-decisions.json",
+              "sha256": "da78e3be97283a169d54810a050d86589cb554d036d51d90917b49997122532e"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/neck-junction-comparison.png",
+              "sha256": "c9b66f9d04956817b8a40c540f68a5d8b206229606654df28fc4df574bfbdf24"
+            }
+          ],
+          "review": "Original unsplit source has no white fringe; previous independently resampled split adds one. Shared-sample extraction removes that fringe without anatomy, scale, pivot, facing or contact changes. No new ImageGen call.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:17:33.058925+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "phase": "Common-sample all-view authoring review",
+          "action": "Inspected neutral cardinal views and neck closeup; checked unchanged registration and common RGB at opaque interior joints.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-dromad/v2/model.json",
+              "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-dromad/v2/registration-comparison.png",
+              "sha256": "3e12216b6a727497b692f575fc9c4811725172374a3cce053db9fe5b0908f13a"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/game-scale-review.png",
+              "sha256": "2a90317b362307bc9464a0a492aec876ce5c50de989230729386fcd41f632328"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/authoring-review.json",
+              "sha256": "8b5e2b7f475ac5f9b688d3e27c1f42f2169fa7b560e877f42d44e7cafa824592"
+            }
+          ],
+          "review": "Generation authoring only. Same source anatomy and separate body/head/dulla ownership. Native acceptance pending full set.",
+          "result": "PASS"
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-DROMAD-CLOTH-ROBE-BODY-0",
+      "model": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v7/model.json",
+        "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"
+      },
+      "report": "docs/conversion-entries/FIT-DROMAD-CLOTH-ROBE-BODY-0.html",
+      "plate": {
+        "path": "art/conversion/fit-dromad-cloth-robe/v7/assembly-comparison.png",
+        "sha256": "2f4f76459e1439ed168fe18e02ea148923251e401059ba7979ca1408fe657474"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T02:56:10.663930+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "phase": "Tam equipped Cloth Robe metadata",
+          "action": "Bound the actual goat-wool robe to Body part 357, laterality 0, instance 604 from the captured Tam body tree.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/prepare-source.py",
+              "sha256": "0279bd028ea0ea6fd663dde109256036f3b27a64a407a700f8741fcf9cde82a6"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-packet.json",
+              "sha256": "0aa41955c3de4eca5775d8c3ffac5c20c822e30cfc9dce367a55295888f210bc"
+            }
+          ],
+          "review": "Read item description and equipped binding; source tile Items/sw_robes1.bmp with foreground &y/detail y. Shale freckles are recorded. Held Shillelagh is a separate entry; no new outfit invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:56:10.664408+00:00",
+          "step": "select_correct_body_and_references",
+          "phase": "Fixed adult body and actual donor convention",
+          "action": "Selected the current unmutated adult dromad base and three actual RimWorld Duster_Male references. Original Qud shape/description govern the closed robe.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-packet.json",
+              "sha256": "0aa41955c3de4eca5775d8c3ffac5c20c822e30cfc9dce367a55295888f210bc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-comparison.png",
+              "sha256": "c81802388a4c039d6f918e5707e4bacc53a6126d5b3a0216b20f2d754860fa62"
+            }
+          ],
+          "review": "Viewed source plate: native garment silhouette and body are distinct from donor open-coat convention. There is no exact donor robe equivalent; long-garment outline/perspective are the documented reference roles. Personal cosmetics stay separate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T02:56:10.664685+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Editable adult dromad robe in all directions",
+          "action": "Constructed a closed long robe with separate front/profile/rear SVG geometry around the fixed long neck and hump, exposing the real hands and feet.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/construct-garment.py",
+              "sha256": "61b001500eb1b3d04516c1bd86f320d01b3f2f24084a73f3fbf0d60e5beb658b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-packet.json",
+              "sha256": "0aa41955c3de4eca5775d8c3ffac5c20c822e30cfc9dce367a55295888f210bc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-fit-comparison.png",
+              "sha256": "c2cb2f99120dddb9aad0d091a0b9028c088a1e03de4cf7d18983422d5315bbd6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-isolated-comparison.png",
+              "sha256": "e89f2f1b0dcadbb569af867f274067235622f4e7e94044eb5f8c9a8238e9db97"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-south.svg",
+              "sha256": "2a41fbd0ff2c585d91704c12775601be8028960db7e6fa4e06a05950d202a5c7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-east.svg",
+              "sha256": "226fdf55c43422a36a3de09cf1b9341c6638a9377c466bf1ec5dc684774ee7e0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-north.svg",
+              "sha256": "8c36be917e19d2f93b5e346df744098592016b0e02af88ea09879905ab5b6362"
+            }
+          ],
+          "review": "Viewed manual suggestions. Directional hump allowance and long hem are present; flat cloth and rough neckline/sleeve seams still need in-context refinement. No body pixels replaced.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T02:57:22.124448+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Closed wool robe refined in adult species context",
+          "action": "Used the constructed three-view overlay and source plate to refine the single actual Cloth Robe.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-fit-comparison.png",
+              "sha256": "c2cb2f99120dddb9aad0d091a0b9028c088a1e03de4cf7d18983422d5315bbd6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-comparison.png",
+              "sha256": "c81802388a4c039d6f918e5707e4bacc53a6126d5b3a0216b20f2d754860fa62"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/refine-context-prompt.txt",
+              "sha256": "6bf889417672e20216429c799916c0e4ea45f6e2025d5998e2d772ba591d3899"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/refined-context.png",
+              "sha256": "ee119bce4136e6b7e579860a560e268be2d28d5d326be9979795fd138f22d24b"
+            }
+          ],
+          "review": "Viewed the full generated output: closed long wool garment, sparse tonal freckles, directional sleeve, continuous hump drape and visible original hands/feet. No belt, open coat or staff. Generator reframed the assembled figures; body pixels will not replace the fixed base. Isolated extraction and actual registration remain required.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-7de5855c-dc5c-4326-988b-8b8cbd032e22.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.278563+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Constructed robe design retained",
+          "action": "Reviewed the manual plain-robe silhouette against the selected isolated/refined garment and its final unchanged-body fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/source-packet.json",
+              "sha256": "0aa41955c3de4eca5775d8c3ffac5c20c822e30cfc9dce367a55295888f210bc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/construct-garment.py",
+              "sha256": "61b001500eb1b3d04516c1bd86f320d01b3f2f24084a73f3fbf0d60e5beb658b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-fit-comparison.png",
+              "sha256": "c2cb2f99120dddb9aad0d091a0b9028c088a1e03de4cf7d18983422d5315bbd6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-isolated-comparison.png",
+              "sha256": "e89f2f1b0dcadbb569af867f274067235622f4e7e94044eb5f8c9a8238e9db97"
+            }
+          ],
+          "review": "The manual suggestion supplied closed garment identity, short broad sleeves, long hem and intrinsic hump allowance. No staff or personal cosmetic was added.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.279151+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Refined closed robe selected for cloth only",
+          "action": "Selected the in-context wool/freckle treatment after recomposing its isolated cloth on the original fixed body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/refine-context-prompt.txt",
+              "sha256": "6bf889417672e20216429c799916c0e4ea45f6e2025d5998e2d772ba591d3899"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/refined-context.png",
+              "sha256": "ee119bce4136e6b7e579860a560e268be2d28d5d326be9979795fd138f22d24b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/register-garment.py",
+              "sha256": "05c85008a99e7d22200ad66583081211bb5695b1b08be5022befec6326b19c94"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembly-comparison.png",
+              "sha256": "2b12f9ade35a22b0fa4219df549786616c2c8bb0d1eb500049c578b8ad0dd749"
+            }
+          ],
+          "review": "Viewed selected fit: whole profile and rear garment follow the torso/hump. Underlying body/head assets are unchanged; the generated mannequin pixels were not used. Current contact remains (256,950).",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.280377+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Clothing-only proposal and explicit coverage",
+          "action": "Retrieved the robe alone, selected complete connected figures, neutralized RGB and opened neck/near-arm coverage with recorded masks.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/refined-context.png",
+              "sha256": "ee119bce4136e6b7e579860a560e268be2d28d5d326be9979795fd138f22d24b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/constructed-isolated-comparison.png",
+              "sha256": "e89f2f1b0dcadbb569af867f274067235622f4e7e94044eb5f8c9a8238e9db97"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/isolate-garment-prompt.txt",
+              "sha256": "bd704e86a7d909f27098a8de934e0a8335ece77a8b6de977f995d05c9815c06b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/register-garment.py",
+              "sha256": "05c85008a99e7d22200ad66583081211bb5695b1b08be5022befec6326b19c94"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/isolated-proposal.png",
+              "sha256": "826bf859a332f0bba7250f69dec33dd5afc74da1b034cd9e8556799cea35cb56"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-isolated-comparison.png",
+              "sha256": "fb387dbc93914305c3bda384f0ecaebd078f1bd16883d5e126279a38aef1cac6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registration-decisions.json",
+              "sha256": "d3ad8db225bb3ccca24d461178d32ae39b49c39340198fdd32ba9f4d2a1206dc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-east.png",
+              "sha256": "8d1b7f0aac550a4aac348eed32a598c7a4f123ff98e7b135e7dc1b8bdcc8c5d7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-north.png",
+              "sha256": "78446ee01dd9e5969d7154e4a327ee55b9e21a4b11a1581f1779d27c97f279be"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-south.png",
+              "sha256": "78446ee01dd9e5969d7154e4a327ee55b9e21a4b11a1581f1779d27c97f279be"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-east.png",
+              "sha256": "dfbd7113f0ed8e905c7d54a0591ba7cc64bb60517be1b5dcffa5666b1ceaca61"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-north.png",
+              "sha256": "6af3e738e400eb962dc5a3e3510e59132c58c2ea95be9fc564082785f6556e20"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-south.png",
+              "sha256": "088e1ab39c0804f9f9ee3387b46520ffebee60b52920660582997b983f2b0a37"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-east.png",
+              "sha256": "eb76dae06d4b9b2c4abe0589d3bd0d794420e955ccad13e7b74e03747a69e4d1"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-north.png",
+              "sha256": "bb0b197cf9d4f96f2ce412cae4cd72c4a1f02a98ddb4b65b31ca0baea2dd1b50"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-south.png",
+              "sha256": "4d2312f721f1e677bbf6329d591522c1715efd85b472bf2f01c74e77c32ef794"
+            }
+          ],
+          "review": "Viewed source and extracted cloth: no head, hands, feet or copied body outlines. Source sleeve openings alone were insufficient for the near forearm; explicit fixed-body coverage removes the closing cuff and exposes real anatomy. Neck uses actual head alpha rather than broad segmentation.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-7551e040-2d08-4d86-ab63-258e8296bef3.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.302284+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Fixed-frame adult fitting and cut ownership",
+          "action": "Registered the separate robe in the adult canvas and recomposed body -> garment -> head in every direction.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/register-garment.py",
+              "sha256": "05c85008a99e7d22200ad66583081211bb5695b1b08be5022befec6326b19c94"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-south.png",
+              "sha256": "0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-east.png",
+              "sha256": "5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-north.png",
+              "sha256": "c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-south.png",
+              "sha256": "51905c4151f6adbf88714f9f9d5a40f385a71d9fd252133054653d8b6fc996a4"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-east.png",
+              "sha256": "aef704589190def62ef6376c528f7fb90c0fe74d837bbb4581d3aa299ecafa0e"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/head-north.png",
+              "sha256": "d467695c9dad915efef6c428d19142257d9f914f20f797e336e6b01972f346d3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registration-decisions.json",
+              "sha256": "d3ad8db225bb3ccca24d461178d32ae39b49c39340198fdd32ba9f4d2a1206dc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-east.png",
+              "sha256": "8d1b7f0aac550a4aac348eed32a598c7a4f123ff98e7b135e7dc1b8bdcc8c5d7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-north.png",
+              "sha256": "78446ee01dd9e5969d7154e4a327ee55b9e21a4b11a1581f1779d27c97f279be"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/arm-coverage-cut-south.png",
+              "sha256": "78446ee01dd9e5969d7154e4a327ee55b9e21a4b11a1581f1779d27c97f279be"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembled-east.png",
+              "sha256": "0edc76cdcb439eca9f5f6193f8878e1153c858f75b207fbb18ed6a6365f719ef"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembled-north.png",
+              "sha256": "b625c9e150782c43d05c664246c79a3dbaaa4a731424a5f090370b564a7584f6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembled-south.png",
+              "sha256": "ad75c74145bc149946bb37ddb45e9c1ebb22ee6602ed8b2921f2a8ba3bfbacbb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembly-comparison.png",
+              "sha256": "2b12f9ade35a22b0fa4219df549786616c2c8bb0d1eb500049c578b8ad0dd749"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-east.png",
+              "sha256": "dfbd7113f0ed8e905c7d54a0591ba7cc64bb60517be1b5dcffa5666b1ceaca61"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-north.png",
+              "sha256": "6af3e738e400eb962dc5a3e3510e59132c58c2ea95be9fc564082785f6556e20"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/coverage-cut-south.png",
+              "sha256": "088e1ab39c0804f9f9ee3387b46520ffebee60b52920660582997b983f2b0a37"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/game-scale-review.png",
+              "sha256": "0a0f69336d4f6f8b8d3f06f1f3f3571812a55cefd730747ff440cb05c9d56b76"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-isolated-comparison.png",
+              "sha256": "fb387dbc93914305c3bda384f0ecaebd078f1bd16883d5e126279a38aef1cac6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-east.png",
+              "sha256": "eb76dae06d4b9b2c4abe0589d3bd0d794420e955ccad13e7b74e03747a69e4d1"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-north.png",
+              "sha256": "bb0b197cf9d4f96f2ce412cae4cd72c4a1f02a98ddb4b65b31ca0baea2dd1b50"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/registered-uncut-south.png",
+              "sha256": "4d2312f721f1e677bbf6329d591522c1715efd85b472bf2f01c74e77c32ef794"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/robe-east.png",
+              "sha256": "e92b22915e08326a5a1064065eca8f887c0247b657a1bda0c3efb14a5b905f1b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/robe-north.png",
+              "sha256": "3b363aa44ddd8487bc3ad19af01c91455c5a84335bf0c8b8ba6252ad868902aa"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/robe-south.png",
+              "sha256": "f381533006d4b397cee3498a9cda9bfa9ab20148a218375cc7ee75f6815ee225"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/selection-east.png",
+              "sha256": "dc8cb7745776dcd03cc79b27f61bbe74c9d272041ce5b10d3a64a4430e76865f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/selection-north.png",
+              "sha256": "e1015edd8b8ec35363730af51d93b8a5b3e0de994d39b088842048f177e059c9"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/selection-south.png",
+              "sha256": "a5e1e643b91ee9fddad7223ad79c2ec020847bd83b58e6f581feb9ca079b8d76"
+            }
+          ],
+          "review": "Viewed enlarged front/profile/rear/mirrored west. The actual forearms/hands and full neck remain visible without copied hand strokes. All rows inherit body dimensions/contact and equipment layer .0007. Shared material height scale .76; profile width explicitly fitted x1.18 to fixed hump/breast landmarks, not auto-centered to alpha bounds. No body distortion or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.304780+00:00",
+          "step": "review_game_scale_and_palette",
+          "phase": "Adult Cloth Robe generation ready",
+          "action": "Viewed enlarged and 48 x 96 assemblies with the current neutral garment on the fixed adult base.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/assembly-comparison.png",
+              "sha256": "2b12f9ade35a22b0fa4219df549786616c2c8bb0d1eb500049c578b8ad0dd749"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/game-scale-review.png",
+              "sha256": "0a0f69336d4f6f8b8d3f06f1f3f3571812a55cefd730747ff440cb05c9d56b76"
+            }
+          ],
+          "review": "Long closed robe and side sleeve remain readable; hem clears feet. Every production garment RGB channel is grayscale, independent equipment key cloth-robe@Body@0. Shale freckles are neutral tonal material in this tintable source; their described red hue is not baked in. Original foreground &y/detail y ownership is retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:00:16.305090+00:00",
+          "step": "native_equipment_state_review",
+          "phase": "Native equipment acceptance deferred",
+          "action": "Kept equip/unequip, tint, facing and native state review behind the every-conversion-generated gate.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No native/game launch. Overall entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T09:59:56.358778+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "User selected intact clothing with separate body occlusion",
+          "action": "Withdrew readiness of the baked-cut export while preserving all performed source/refinement work.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            }
+          ],
+          "outputs": [],
+          "review": "Selected clothing model still uses baked body cutouts. Reuse its intact art and body sources, author separate body-over-clothing masks, and record the mask-first model/recomposition before readiness.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:16:36.178770+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Mask-first alignment draft v2",
+          "action": "Kept intact v1 registered robe and fixed body; painted separate masks and inspected actual composition. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/compose-masked-garment.py",
+              "sha256": "373c54fd1e117fca95d7f516c7f4df453107a368f0aeb80e31803bb5a12e2490"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/model.json",
+              "sha256": "c7ca8bfd2cfb3edeb7c9c36319180cfc4e0680bd99de43c3a407e1185a951388"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/composition-decisions.json",
+              "sha256": "041fd77c75c440d00d39d511fb506d3831c81ea737f2379eb3d38bf2e23cbffd"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/body-overlay-comparison.png",
+              "sha256": "740426012c05ec7f9682ddce3593f631e2e1d9992aee8f0a1d66a29ef1911ef3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/assembly-comparison.png",
+              "sha256": "2f7d945c0f7a941881d336e1ec009959139f55997f9f48076aa4c7873a9d608d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v2/cuff-mask-off-on-comparison.png",
+              "sha256": "1e2a20bfa8cfac5480ca6bbb9528b693ba04acd9e927d2c6a2741ae14268d18b"
+            }
+          ],
+          "review": "Mask-first preview exposes torso near hand outlines; profile sleeve-to-arm mismatch remains.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:16:36.178770+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Mask-first alignment draft v3",
+          "action": "Kept intact v1 registered robe and fixed body; painted separate masks and inspected actual composition. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/compose-masked-garment.py",
+              "sha256": "9f78d26dd6e11a83d016749f103c154d39d269f267f39e7757be71e69eb49309"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/model.json",
+              "sha256": "a78b1564896938d5e1466dce3cfe01e87e5129de0f1d825f25a390365d30c7ec"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/composition-decisions.json",
+              "sha256": "58c186334112ca42acd25df90a88e84f0c7d543bbd375f6ff176eafad61a4195"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/body-overlay-comparison.png",
+              "sha256": "ad3c0cffa3a2a52936313896a976d254077f5b519f8449f147c8f26f28ae2b35"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/assembly-comparison.png",
+              "sha256": "b128e64b75845d87a8d0744900bfaea25df9ee213baea404a95f9d1a89468d38"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v3/cuff-mask-off-on-comparison.png",
+              "sha256": "2f2e9516895926f5fbd4f214bfac7f571aff6c4983b176c0abfce5dc2ef7e598"
+            }
+          ],
+          "review": "Tighter hand masks improve ownership, but profile cuff and forearm contours fail to meet.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:16:36.178770+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Mask-first alignment draft v4",
+          "action": "Kept intact v1 registered robe and fixed body; painted separate masks and inspected actual composition. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/compose-masked-garment.py",
+              "sha256": "8ece443cf3f0bdb30bccfced504efc8c98ba68dc4db7465a5f6d5e2f3347fb15"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/model.json",
+              "sha256": "ff69b5d30e6dc2692b866e817ece0900b2bb63c6f7d3dca7206ac7ea317bb195"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/composition-decisions.json",
+              "sha256": "fb2894c0213506d451727b8435d3f9c2b7bc445324de61e46ab3c2ec091ff016"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/body-overlay-comparison.png",
+              "sha256": "07917d6e4dece0e70bf8b828a0f3545c81754e71cc4eb9f81976c0b9b7814a04"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/assembly-comparison.png",
+              "sha256": "fe9820b2294572b586c016d732bd8787d021cd6535c078de870ff461ee622431"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v4/cuff-mask-off-on-comparison.png",
+              "sha256": "b9cc0b4a91a06ce5b89588c4f8ca1f6dd7f4e1bed44429ef6419ba1df4daa211"
+            }
+          ],
+          "review": "Full exposed-arm mask still cannot correct sleeve placement; source bare-body neck fringe also remains. User reported alignment defects. No readiness credit.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:18:41.100069+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Register intact profile sleeve to the actual fixed arm",
+          "action": "Reused the real refined/isolation source; shifted the local intact sleeve pattern 10px toward the actual arm, leaving collar, hump, hem, body and global placement fixed.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/compose-masked-garment.py",
+              "sha256": "8755d7ce7fe7fba37996d355705007f5cad8c398b91f0404cc5b5b5985d2428b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/model.json",
+              "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/source-packet.json",
+              "sha256": "fd19758cf224a1024a2c068dd8bd7f29e03c58f8d0e07f2d5cbfd9bbe915afe2"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/model.json",
+              "sha256": "276d5eff4d26585d50e454a473e00d59226a6c363cf5db39f63993967c3ec2fc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/composition-decisions.json",
+              "sha256": "841fed32318d813d5d708d6f69360539bba4cf278a494bd948556b296c8f4586"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/intact-garment-comparison.png",
+              "sha256": "f617568adacdc9051e9093fb0b815bccd1b00ab3e75193e941f014aa0fdbec09"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/painted-mask-comparison.png",
+              "sha256": "9dfd90c826f754d648745e0d1d0db75093440683d10e66d11c10980fa825929a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/body-overlay-comparison.png",
+              "sha256": "07917d6e4dece0e70bf8b828a0f3545c81754e71cc4eb9f81976c0b9b7814a04"
+            }
+          ],
+          "review": "Common-sample body v2 is the corrected prerequisite. No new ImageGen call. Whole cloth remains canonical; independent per-facing mask selects original exposed limbs. Body/equipment tint roles and equipment association recorded.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:18:41.100069+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Recompose fitted sleeve and corrected bare-base seam",
+          "action": "Composed original body, whole robe, exposed-limb overlay and original head in documented order.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/model.json",
+              "sha256": "276d5eff4d26585d50e454a473e00d59226a6c363cf5db39f63993967c3ec2fc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/assembly-comparison.png",
+              "sha256": "398d55af0a73a10664adc584ddb1e59e25c892d87f0304a24d5e7d041713c78f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/alignment-before-after-comparison.png",
+              "sha256": "a0c77fb7e8b00503b4272062156aed34334a10de5b677d79e76cec6b96f3a055"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/mask-off-comparison.png",
+              "sha256": "ab75b5e1edba41be90eabbf47ba923b91cc848d651d04e1bfd367f59b46f6954"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/cuff-mask-off-on-comparison.png",
+              "sha256": "0c391b14f067b7c6ebb61239ad188d6cced36a1002c23c64d809151cd37f394d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/independent-tint-comparison.png",
+              "sha256": "30c970692f70032c86e9eafd74c641f3c4df6c8bc881c9e5d2c381d97f85b9c8"
+            }
+          ],
+          "review": "Inspected all cardinal facings and closeup. Cuff joins fixed arm after local cloth registration; neck/hump seam removed at body extraction source. No anatomy or global recentering. Other worn/held precedence remains final native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:18:41.100069+00:00",
+          "step": "review_game_scale_and_palette",
+          "phase": "Review mask-first robe authoring",
+          "action": "Inspected full-size and intended-size facings, original-body-only coverage and independent tint demonstration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/model.json",
+              "sha256": "276d5eff4d26585d50e454a473e00d59226a6c363cf5db39f63993967c3ec2fc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/game-scale-review.png",
+              "sha256": "bedea065d7d25082ad42099579495efd58bdf26596ce41104ac162cb7329e799"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v5/authoring-review.json",
+              "sha256": "241a3b47fef67e66a9452b0c89a65d13bcf35c18be931b398cb994351400b615"
+            }
+          ],
+          "review": "Inspected front, right profile, back, mirrored west, cuff closeup and intended-size plate. Local sleeve shift joins cuff to actual arm; no cuff interior crosses the exposed arm. Common-sample body removes original white neck/hump extraction fringe. Whole garment retained; masks and original body remain separate. Generation-ready art only.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:29:36.174317+00:00",
+          "step": "select_correct_body_and_references",
+          "phase": "User-requested shaded red body experiment",
+          "action": "Prepared original bare dromad in saturated red, including dark-red linework, alongside the existing complete neutral robe. Kept original input alpha and cell coordinates.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/prepare-red-key.py",
+              "sha256": "d6d3d1a88e71abf259ac4b7f9cdb6e88f0302c0254aada88b12d6fa133d6909a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/input-packet.json",
+              "sha256": "40d5ae4f29d572985634c28bc499ed598ea97620839c2d92f22e79282cc4dff5"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-sheet.png",
+              "sha256": "3cb7a516750de4ced37bc24f46ecc5e6c8986740979092abc38143a45340c034"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/whole-robe-sheet.png",
+              "sha256": "0ab742f74d75ca4e96d919d2e873514591ea9ebf50991c9dc303c7b335163c55"
+            }
+          ],
+          "review": "One bounded experiment after the broader conversion pause; no native integration or production model selection.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:29:36.174317+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "One dressed red-body adaptation call",
+          "action": "Asked built-in ImageGen to adapt the robe on the fixed red body and return dressed creatures, without subsequent generative isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-body-sheet.png",
+              "sha256": "3cb7a516750de4ced37bc24f46ecc5e6c8986740979092abc38143a45340c034"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/whole-robe-sheet.png",
+              "sha256": "0ab742f74d75ca4e96d919d2e873514591ea9ebf50991c9dc303c7b335163c55"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/adapt-clothing-prompt.txt",
+              "sha256": "178016c9b7cd82d372fee8340f393d536bbe19b403c90496d8a01afc24554a85"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+              "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+            }
+          ],
+          "review": "Cuff visually coherent in its generated frame, but fixed-body constraint not met: the output shifts/reinterprets body geometry.",
+          "result": "REQUIRES REWORK",
+          "tool": "image_gen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-59fa3bbb-a6cb-47ac-8427-0d753d16d377.png",
+          "prompt_sha256": "178016c9b7cd82d372fee8340f393d536bbe19b403c90496d8a01afc24554a85"
+        },
+        {
+          "timestamp": "2026-10-20T10:29:36.174317+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Programmatic red-body removal from the same pixels",
+          "action": "Removed saturated red body pixels and low-alpha fringe directly from the dressed output. Preserved all remaining clothing pixels and coordinates; no second generation or local warp.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extract-red-key.py",
+              "sha256": "3764c6726506f21db1f670d42f2e72f8ead2afae9653b41c112e36af672f978b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+              "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/key-extraction.json",
+              "sha256": "92382462e5ae5b5fc56e12d8c6b0702cad96395c9f435a518c19211d64e26fe3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+              "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-only.png",
+              "sha256": "ab241410955952c476ca1acbea3a8441029446bd5f4671980e4b66827444e0a8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-clothing-preview.png",
+              "sha256": "f5a157f8a26ceef49892fe8a61d221644a819304347c4c270d69374d3df141bb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-visible-clothing-sheet.png",
+              "sha256": "9f43d5a2aacae3eb234d9b8b8e9a334317299b3c855104e767881fc0fba8721c"
+            }
+          ],
+          "review": "Color separation works in the generated coordinate frame. It produces visible clothing coverage, not unseen rear garment material. Original intact garment remains retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:29:36.174317+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Unchanged-body recomposition rejects production fit",
+          "action": "Overlaid extracted clothing directly on the original neutral bare body, without resizing or independent fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/extracted-visible-clothing-sheet.png",
+              "sha256": "9f43d5a2aacae3eb234d9b8b8e9a334317299b3c855104e767881fc0fba8721c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/direct-original-body-recomposition.png",
+              "sha256": "b86c4568ff24c1ba1aa4bc939e7e45988a634aab4707ba8d1c0898f9277c0bd0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/red-key-extraction-comparison.png",
+              "sha256": "221f14a4e8dbdcd670adf6123a70e37162e43c02ffafc5493d7e3f960ea7be7b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/experiment-result.json",
+              "sha256": "ca39d1b24a01a434b326692e9122a49879379f44b96e2cdb1813100f4047c6b0"
+            }
+          ],
+          "review": "Original-body fit fails: heads moved up 20-21px, feet 30-32px, and forearm/neck coverage no longer matches. User rejected this result as insufficient. Masks cannot replace geometric garment fitting.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:44:09.627016+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Four type-specific body masks on the unchanged adult dromad",
+          "action": "Authored required-cover, exposed-body and garment-drape regions for robe, T-shirt, trousers and skirt in three cardinal views. Existing exact body/arm coverage supplies anatomical registration.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/fit-body-masks.py",
+              "sha256": "e9b0b6f66ee24d5c79feb7e6d8d1099c7a05c8529021d19510873e837da91e02"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/model.json",
+              "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/body-clothing-profiles.json",
+              "sha256": "9d1e674e48b598f098f6558d9415a8100eef6234aa95d03df2a128061add92df"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/robe-mask-comparison.png",
+              "sha256": "d2bd19d346a2fe1b6cfb8f217d3d3d9b8fb6d210ef2cb85adb64d6d2496f0dc4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/t-shirt-mask-comparison.png",
+              "sha256": "1aab6472312f1724364090aa4bc7b8e8b49b09d436de73ca188c653e248be645"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/trousers-mask-comparison.png",
+              "sha256": "cd5949ff77cacff35f96c8bb3878e988ff9ccae0b0ca05441281587f682834e3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/skirt-mask-comparison.png",
+              "sha256": "12e30198f714dac9984471f08fbe4627335543b590a58e3d5c63defe710f0a2d"
+            }
+          ],
+          "review": "Masks are reusable authored rules for this adult body/facing only. Other three types have no fitted garment or runtime support claim.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T10:44:09.627016+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Rejected deterministic deformation mask-fit-v1",
+          "action": "Warped actual red-key extracted garment pixels toward fixed body masks; reused intact cloth material where body cutoff left missing fabric. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v1/fit-body-masks.py",
+              "sha256": "66f2281f99079612a8f975ff96c713ff83e1b21912bcbfb66b4a70874ee7949e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v1/fit-result.json",
+              "sha256": "7bfdecdc45e3f6dc91927a8c58370706c8ff4e43091b6517caa3abb53df10e53"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v1/fitted-assembly-comparison.png",
+              "sha256": "13a532a23859e0cebf8b01431e12a5f448b934a3de81a348199bb940404ebc53"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v1/profile-before-after-comparison.png",
+              "sha256": "4c2279f7ab27489635403c60d009b054b84c3eec7c59f466e62b878a2cb35adc"
+            }
+          ],
+          "review": "Row-wise switches tear the fabric horizontally; rejected.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T10:44:09.627016+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Rejected deterministic deformation mask-fit-v2",
+          "action": "Warped actual red-key extracted garment pixels toward fixed body masks; reused intact cloth material where body cutoff left missing fabric. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/fit-body-masks.py",
+              "sha256": "80173f12869b79365109017e192eea9b9e2639eb2c419ec223486b8f941b1782"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/fit-result.json",
+              "sha256": "5eb067fa37e2fe27c377074dd48251fec15fc6688404d3d563acf0d7c115e74b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/fitted-assembly-comparison.png",
+              "sha256": "4f449b7352586b988f5f65aad9c10ef3be38f2545bb762878b6445b81ac92aeb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v2/profile-before-after-comparison.png",
+              "sha256": "f95fd5f6794fbaa7aab519001f91fdcc64e1338e02e6f65a3e22673fc8a31dc4"
+            }
+          ],
+          "review": "Unbounded thin-plate interpolation overshoots for mismatched shoulder lobes; front/back material folds are unacceptable.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T10:44:09.627016+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Rejected deterministic deformation mask-fit-v3",
+          "action": "Warped actual red-key extracted garment pixels toward fixed body masks; reused intact cloth material where body cutoff left missing fabric. No new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v3/fit-body-masks.py",
+              "sha256": "4dcd13dff855a66b42984c9419af73463ead7387b7b5136fd3969ed7a1912aad"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v3/fit-result.json",
+              "sha256": "395981961a7f7f6980232b57c4fd9670413fcc1861a1372280d04f3a97a2d60e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v3/fitted-assembly-comparison.png",
+              "sha256": "1475e2f9bb8159c7dd37fa9fceb73cd3e9b4e70acd798957f5bc0323b8d6d746"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v3/profile-before-after-comparison.png",
+              "sha256": "f0187c958bd6187fdf34b923552eaabc2270263da35d13c1247513036f00aef8"
+            }
+          ],
+          "review": "Shoulder-lobe matching improves registration, but globally smooth interpolation still distorts front/back material; rejected.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T10:44:09.627016+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Triangular garment morph after red cutoff",
+          "action": "Matched separate shoulder lobes and cuff/hand/hem controls, then applied a continuous piecewise-affine deformation to the extracted cloth. Body pixels remain fixed; complete retained garment supplies explicitly tracked missing material.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/fit-body-masks.py",
+              "sha256": "e9b0b6f66ee24d5c79feb7e6d8d1099c7a05c8529021d19510873e837da91e02"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/key-extraction.json",
+              "sha256": "92382462e5ae5b5fc56e12d8c6b0702cad96395c9f435a518c19211d64e26fe3"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/fit-result.json",
+              "sha256": "7c23b6cd2f0867a84c1a5766de8fa2e159b9f754e7722ad86058c41cb50a96dc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/fitted-assembly-comparison.png",
+              "sha256": "c9473fb0f8b8be8c45eb570aca7629f017b162ed877d798c17b04ec5c00e819c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/profile-before-after-comparison.png",
+              "sha256": "9d99a4b49234a99141132b0e3aef8c50414cd6211bdd9257830aa3fc060ef985"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/fitted-clothing-comparison.png",
+              "sha256": "2241efd37ba72b9961e10de6027ba1ea77a06f16e6345dfce27e07656ab5da4f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/material-provenance-east.png",
+              "sha256": "063a64565054fd6261752b3efb9ba3ddb7050f31934afc0ea303da2d8a45da0f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/game-scale-preview.png",
+              "sha256": "729548726a3ffb5f37a9437d1e8473c61e6b4c23397a4f99e827beb744f9908d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/authoring-review.json",
+              "sha256": "0ea39686d8fcc1aa9dd6354beaf05852ccf302f1cd267d01d61489fb7f1644f0"
+            }
+          ],
+          "review": "Inspected all three deformed cardinal views, fixed-body mask previews, and profile before/after. Coverage/exposure constraints hold; exact body images/frame retained. Triangular fit removes prior scanline tears and unbounded thin-plate overshoot, but collar/shoulder dark-edge distortion and fold stretching remain visible. Mesh orientation is recorded in the review; metrics do not accept visual quality.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T10:49:51.049168+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "User-requested whole-image translation and stretch",
+          "action": "Mapped each garment alpha rectangle to the existing robe-profile rectangle with one X scale, Y scale and translation. Compared actual red-cut source with retained complete garment. Applied body exposure masks for depth only; no local reshaping, material filling or new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/stretch-garment.py",
+              "sha256": "fb3c9e9c35ccdfd45b767caa7f4346a987420ddc47f9080f715433b9e4c31e0a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/key-extraction.json",
+              "sha256": "92382462e5ae5b5fc56e12d8c6b0702cad96395c9f435a518c19211d64e26fe3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/mask-fit-v4/body-clothing-profiles.json",
+              "sha256": "9d1e674e48b598f098f6558d9415a8100eef6234aa95d03df2a128061add92df"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/result.json",
+              "sha256": "373f6879572e5f0329ee6eb60dc6d185ebf76fc564138212bbe2aaf52d93303f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/red-cut-assembly-comparison.png",
+              "sha256": "5db05c5d28a28e0363d67819e68cf0784afe3a3a1e4a955b0b4a8a9632af6326"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/complete-assembly-comparison.png",
+              "sha256": "3737da2b1ad82653f8cc4dfe17280f18ceb5cff700eb12234697ff97a64119af"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/profile-technique-comparison.png",
+              "sha256": "b29bee1df89de7ace8edcb50bd50210941f37b5274f2b3d67b1fa766e9070d3f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/readability-comparison.png",
+              "sha256": "806f964e909c1a39f60149ad90ca8a3092d677a7e630d24d776cce9b20539ef3"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/authoring-review.json",
+              "sha256": "609769d65f85dcb780ea68d1647834a3e577b65c445095e4aa6be8e88eecf0bd"
+            }
+          ],
+          "review": "Inspected front/profile/back for red-cut and complete sources, profile comparison against local mesh, and small sprite preview. Whole-image stretch preserves smooth outlines/material better than the local mesh. Red-cut result remains a visible-cloth derivative, with residual shoulder/cuff coverage gaps; complete source also has small coverage gaps. Prefer this simpler technique for the next visual discussion. Keep entry unfinished; no production artwork selection or native validation.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.870957+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Same-source whole stretch with bounded internal cuff fitting",
+          "action": "Preserved stretched exterior, filled internal holes and fitted internal cuff coordinates using only the recent red-key generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v1/refit-internal-openings.py",
+              "sha256": "1dc996d5f5d13ad0b7ca3b32de56917470fcfd510b64ccd578ef6bb5671ba103"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v1/result.json",
+              "sha256": "506f6424153a3a84a2df466581cee237297bc10f01c17f119f5ec45dbf8378a5"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v1/artifact-manifest.json",
+              "sha256": "0a51bf6a5a85674b6a3d224617220a6fd7868c22a481ef575d7d14c2d9eab289"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v1/same-source-profile-comparison.png",
+              "sha256": "317f6e9562407b94431e784536267d9328047713715ad7a4ad24ccf552e95729"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v1/assembly-comparison.png",
+              "sha256": "2db093dbc1d898d87ffdbf76d17a09c3bc32e5bf34e9f9f585f5fc099629c8bc"
+            }
+          ],
+          "review": "Brown key fringe remained; rejected.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.883742+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Repair mixed red-key fringe in the same-source cuff trial",
+          "action": "Repaired mixed red/fabric pixels and reused the bounded cuff map. No older isolated garment and no new ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v2/refit-internal-openings.py",
+              "sha256": "2272d368755a7daead43daed077c63172688583da37f10a22f1870a84d3b9517"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v2/result.json",
+              "sha256": "d3da18f9f13ff808a77e0d3e23e701c3201f4174a524446bd342f6280a851ac8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v2/artifact-manifest.json",
+              "sha256": "02acc39517fcdb707d9e349a0d7aa219902d99c655f345861893934e7f708f53"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v2/same-source-profile-comparison.png",
+              "sha256": "50de90b138ca61ccab79a8dcf242121080482b174427f944ac745a50b9779692"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/hybrid-fit-v2/assembly-comparison.png",
+              "sha256": "0880ac3d590e03662ce77476ad0202e9cd41a2e9f77b91470a809afce0e20e60"
+            }
+          ],
+          "review": "Colored fringe reduced, but early-cut material and pale hand-edge artifacts remained; superseded.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.896736+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Separate retained cloth and final body visibility",
+          "action": "Classified neutral fabric directly from the raw dressed generation; continued closed hidden regions, stretched and refitted it, then applied fixed-body visibility. Reused the earlier stretched alpha contour.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/compose-late-mask.py",
+              "sha256": "40d6f0abb7e195ce1583faec44b3d3d0011cd58000b6efb4d53a624d6c7b0ebc"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/result.json",
+              "sha256": "b19fee196e95d3d0c8e066457d6e525cedd383e1dca042bc7ef35d1fcd68acc0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/artifact-manifest.json",
+              "sha256": "91349b9d40e25db0b477564566a31e50668ce0ea6deb2f0e1f9a353d095d8aa0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/profile-comparison.png",
+              "sha256": "342ca21387115a3d930474aa960b45ad5c9c6f250f5c55077805e5fc2a6cc785"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/assembly-comparison.png",
+              "sha256": "cccb982000a1217b66ce1f96b4432e28a2b6a1161350a3120d389c7fb35aff11"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v1/full-texture-comparison.png",
+              "sha256": "39aeea40dfc92f2846464b90e80264337c4c4ecac3084c0be2220a8ba47e06a7"
+            }
+          ],
+          "review": "Profile demonstrates final mask ownership; front/back side-connected notches remain. Double alpha composition slightly changed selected body RGB; superseded.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.903051+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Restore original body RGBA once and attempt notch completion",
+          "action": "Used masked replacement of original body pixels instead of double alpha composition, then attempted hidden arm-material completion.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/compose-late-mask.py",
+              "sha256": "c7bfb775b4c66ad91974cbc8d2a78985bcf4b9a30636be7d55b36be2308a77e2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/result.json",
+              "sha256": "b1f55b2867a0979e10aba233d90f04bf5641bbd54179dbfc85dceedb6bcf4be8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/artifact-manifest.json",
+              "sha256": "30def469e592652e21c2c97c6bdc7fa50499f3d88e56c68437c18fe04b423703"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/profile-comparison.png",
+              "sha256": "6357f2c80b440db5ccda08ff54b486b6371a11409d5e21368e16922e94825fbf"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/assembly-comparison.png",
+              "sha256": "72046ba7cce4d2af5a61fef78eae604320c240e9cd33c70c7b07f0294f64cb91"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v2/full-texture-comparison.png",
+              "sha256": "b98260e25e0507a1774ff9783a5143fcc4dea598371979f97e76a32d8af46ff8"
+            }
+          ],
+          "review": "Diagnostic draft rejected: opaque envelope PNG alpha was mistakenly treated as its shape, producing excessive hidden fill. Source and result preserved.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.909492+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Read painted envelope luminance and retain final body mask",
+          "action": "Corrected envelope interpretation. Preserved original selected body RGBA, separate cloth and visibility mask; reconstructed additional hidden material from the same cloth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/compose-late-mask.py",
+              "sha256": "680a5b6f3df70a85c2213f62f67f604b10fa437493127f65b76ad91a6d18b93d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/result.json",
+              "sha256": "52eb5719d5d01888b953f1606ed5db8d12b16cf734e0a9fba22dd1179b0a7331"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/artifact-manifest.json",
+              "sha256": "9cf49568400ffcc321a0a0c6d6478cdae12d9f434f1497903dd418d8302c72e0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/profile-comparison.png",
+              "sha256": "fb89858e338df8388b69b91a67af925834ebe432c500a5b17942c4e6c5de4a6c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/assembly-comparison.png",
+              "sha256": "72046ba7cce4d2af5a61fef78eae604320c240e9cd33c70c7b07f0294f64cb91"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/late-mask-v3/full-texture-comparison.png",
+              "sha256": "0c214b620edb040499cabc85e3862e07cedaba1b2a9dfeca45bf47af611ff6cf"
+            }
+          ],
+          "review": "Inspected profile and all-facing assemblies plus cloth-only plate. Profile shows mask-off/on separation. Front/back cloth-only image still has notches/fragments; reused cutoff-derived alpha and post-fit patches mean intact-cloth-first is not fully implemented. No readiness credit.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:13:59.910391+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Explain actual pipeline and correct comparison provenance",
+          "action": "Created a walkthrough from existing profile artifacts. The older affine red-cut and complete columns used different generated drawings; changed shoulder lines cannot be attributed to scaling. Stages 01-11 show actual inputs/intermediates; stage 12 is a three-band proposal only. No new fit or generation performed for the walkthrough.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v1/pipeline-sources.json",
+              "sha256": "31799efe32a4d9320ce540252942d7d7eb93e8f5518e6f0fd003e27c92d598f9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "docs/dromad-clothing-pipeline.html",
+              "sha256": "c2bc88b036c748a804e9facb7e7cd654ea7b103227b4ffa92dad64d03fc06d7c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v1/pipeline-overview.png",
+              "sha256": "3c5845541518d1853467da183987fdccbb32c871eadd1a9387edfa413d058a45"
+            }
+          ],
+          "review": "User requested pipeline review before further fitting. Proposed three bands: upper adjust, middle continuous transition, lower freeze. 3-by-3 grid reserved for independent sleeve requirements. Existing art remains unfinished; broad goal stays paused.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:38:43.780200+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Equivalent front and back pipeline walkthroughs",
+          "action": "Generated south/front and north/back walkthroughs from the same actual 01-11 saved intermediates used by the profile report; proposal panel 12 remains explicitly historical.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v2/build-view-reports.py",
+              "sha256": "fa0acd081d33f8988dccb2876ba2ab4c26a8a6f59c4dac13f0cd9299234c4189"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v1/pipeline-sources.json",
+              "sha256": "31799efe32a4d9320ce540252942d7d7eb93e8f5518e6f0fd003e27c92d598f9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "docs/dromad-clothing-pipeline-south.html",
+              "sha256": "0b470bf6fcd46ce8cd639ad003a4385012c2d236a9f92380cc016f9539ec3440"
+            },
+            {
+              "path": "docs/dromad-clothing-pipeline-north.html",
+              "sha256": "fc84063de7560bd00abc0e987d57afdc9c3f81f9dad397e892c11cd8b0dda156"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v2/pipeline-south.png",
+              "sha256": "21ca747f99b19299e42616d4f7ad80329da8f6ae71175eee1584c65cc81aa022"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v2/pipeline-north.png",
+              "sha256": "c0a6f15322c14971a8ced6a4f8e6775abceaf3acecd46e4f099bc90214bc2e49"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/pipeline-review-v2/artifact-manifest.json",
+              "sha256": "5678c49cbe3e9bf87fa2f836b6b91596061c50e7288ba416c14747fffee058de"
+            }
+          ],
+          "review": "Inspected both equivalent twelve-panel reports before generating the regional fitting experiments. Profile report/artwork unchanged.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:38:43.781141+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Construct one continuous clothing source before regional fitting",
+          "action": "Read neutral fabric from the raw dressed red generation, bridged exterior hand occlusions between visible side-edge rows and continued hidden fabric harmonically. Recorded all bridges and raw/target arm rectangles. No pre-cut alpha or older isolated drawing supplies cloth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/fit-regions.py",
+              "sha256": "eb0e4e481b893d83881e36c648d10e7280efe17cf91eb265cedc94908ceab1f6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+              "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/keyed-body-mask.png",
+              "sha256": "e8ce0f3a8e58f749eab6477886c0238ac847bf85882d0abc25afbaa9402a90a9"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/affine-fit-v1/result.json",
+              "sha256": "373f6879572e5f0329ee6eb60dc6d185ebf76fc564138212bbe2aaf52d93303f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/source-packet.json",
+              "sha256": "25114a551f462dbce31a31d4564e50961e6a34c1930eea3aebeb246943749b3e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/full-source-south.png",
+              "sha256": "afe0215201b0848c76518c13963d95c819937f513b6823484e6da2a45570e978"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/full-source-north.png",
+              "sha256": "411048eecdcba6c7469b891d076dddb33fb983e1b99d22208bfc8a1ddb206158"
+            }
+          ],
+          "review": "The cloth-only source is continuous through the arm occlusions. Continued material and cuff shadows are authored reconstruction; source preparation changes are separated from transform comparisons.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:38:43.783271+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Execute three-band fitting on front and back",
+          "action": "Used common source and fixed exposure masks. Matched upper cuff-row height and arm-center span; joined through middle to the existing lower baseline. One premultiplied sampling pass; original profile copied unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/source-packet.json",
+              "sha256": "25114a551f462dbce31a31d4564e50961e6a34c1930eea3aebeb246943749b3e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/fit-regions.py",
+              "sha256": "eb0e4e481b893d83881e36c648d10e7280efe17cf91eb265cedc94908ceab1f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/three-band/result.json",
+              "sha256": "faae2046a92909eb4cac85831d9c86b25629502c9e3459324214569d95209c75"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/three-band/controls-south.json",
+              "sha256": "8da3312d58fb1d8c39259a483dc756463c95a3ac3992cc9630e35382ee509a1a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/three-band/controls-north.json",
+              "sha256": "298dff862a1559be79df35cb158ea296b0fdd008f560f7630ab5ab30156310b0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/three-band/assembly-south.png",
+              "sha256": "b1996542c34795c5e071686886878bd49b763cd6657237b1e60da50e199b7187"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/three-band/assembly-north.png",
+              "sha256": "35b2b0303dc798586a64ce33b3f8b955bffa961ff643eff030946316d23304d8"
+            }
+          ],
+          "review": "Inspected both facings. Lower common-baseline pixels and fully selected body pixels unchanged. Cuff height is closer to the existing mask, but sleeve/exposure boundaries still conflict. No readiness credit.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:38:43.783951+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Execute nine-cell comparison with independent sleeve widths",
+          "action": "Added left sleeve, torso and right sleeve columns to the same three shared rows, targeting the two arm rectangles independently. Used identical source, body and mask to the three-band experiment; retained lower pixels and profile.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/source-packet.json",
+              "sha256": "25114a551f462dbce31a31d4564e50961e6a34c1930eea3aebeb246943749b3e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/fit-regions.py",
+              "sha256": "eb0e4e481b893d83881e36c648d10e7280efe17cf91eb265cedc94908ceab1f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/nine-grid/result.json",
+              "sha256": "6b5c92ade24b8ee37bae482d60ad9f9b382ca5abc2c082ad1c8b1b6980f6011a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/nine-grid/controls-south.json",
+              "sha256": "4839084344373c6536ee8275ddeae047197f9ba6c90efe5b48b1871583edb7b1"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/nine-grid/controls-north.json",
+              "sha256": "e2088faac951f614f1ea5cef228fa85dd8d08133d5cbfe4f669fdf771f109a42"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/comparison-south.png",
+              "sha256": "2da91ce588382150a614d772bcdf5779200d28c04e42ad4cbc3d116fdee06089"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/comparison-north.png",
+              "sha256": "651d20c00707c12769920dd2d38c015f3663982a721ab73ba9480cc32637df66"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/cloth-south.png",
+              "sha256": "b2f6c8c5543028accf78afdbd9bbcaec971a56d80096f099af8b3e6835fd1f7b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/cloth-north.png",
+              "sha256": "68a8fc219d056e9af2c80ba4fb04876a65c032e6ac92bb91a7649287eacf82dc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/cuff-ownership-south.png",
+              "sha256": "4b6820c420e1e3008d603fa6d08231f814f5e3a5d72ea6f42922d27368f1267d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/cuff-ownership-north.png",
+              "sha256": "6f675fc370378c127419c59498027c01f61d207afb47dafb6ba684686acab677"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/authoring-review.json",
+              "sha256": "44ac324bbd8191829f2fe11c4fee4e3710cc9bcc73de02abc95f758f062f8b02"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/artifact-manifest.json",
+              "sha256": "0e0cc4791305280874e776ceaa78b168f793eda9c8c31a837912d303e897afa9"
+            },
+            {
+              "path": "docs/dromad-regional-fitting.html",
+              "sha256": "0ae2416bb30b29ead740f279debffc7bf5b3b2931a1dc85fcab61d74cf1219c4"
+            }
+          ],
+          "review": "User reports nine-grid looks a little better. Both original-mask trials remain unfinished. Ownership close-ups expose angular cuff selection and parts of actual hand outlines absent from the inherited mask. Coverage-map counts are diagnostic, not a clean production target.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T11:38:43.785422+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Replace polygon cuff selection with natural sleeve-opening body curves",
+          "action": "Held nine-grid cloth and body fixed. Sampled the dark cuff openings, fitted editable quadratic Bezier cross-sections and rasterized upper-arm mask geometry at 4x before reduction. Applied the separate body mask at composition time; no body/cloth blur, redraw, new generation or game launch.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/curve-cuffs.py",
+              "sha256": "56281fc2c2bcbbb7f6a12a0a2141fbabc437cc4607cc3afc7e097235da9ffffc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/nine-grid/result.json",
+              "sha256": "6b5c92ade24b8ee37bae482d60ad9f9b382ca5abc2c082ad1c8b1b6980f6011a"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/result.json",
+              "sha256": "504c4afacaee1b824091a12aae71d119458a905cc732074a145bc1a3f059aa21"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-south.png",
+              "sha256": "215ee940631314fe5a8126818a908f5d831343c29f84230991b7c8cd37625dea"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/comparison-north.png",
+              "sha256": "efb0d06f8555dbb942eb27ebc2ea3408b705275a498c8bc3cee411e3a0f3798e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/cuffs-south.png",
+              "sha256": "6605f9c40a4c61dd434625242a5c912cad103a39bf09e84b63282fef39165f71"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/cuffs-north.png",
+              "sha256": "aeaa6f190a13698364812831fc12a2c358c122c7e7cdc45fea90b70d882f5dda"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/painted-body-south.png",
+              "sha256": "d63ad50a06d2c37b423dddde3a544f4ad97d0e509237a001f1f58ac1f904efeb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/painted-body-north.png",
+              "sha256": "46f981ae60eb4c38b897cde82ee274bdb69083e8a915293719cede3cfff1eebc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/cuff-curves-south.svg",
+              "sha256": "04b8c4707317cf7166407d655477d6ea1468d48bf376d4f359513ab1e02e52dc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/cuff-curves-north.svg",
+              "sha256": "17cb4a5433533885f04ff6e17543242b8ea4ee479efc5af54238426be9960f9d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/curved-mask-v1/artifact-manifest.json",
+              "sha256": "5fdaee464f40454e41fc09dd787e8b99c2ded2295eee684182e248c535a81997"
+            },
+            {
+              "path": "docs/dromad-curved-cuffs.html",
+              "sha256": "eba4baeffe575694e49965a8834ae65fd1f4fa8982f5e35a687f595db0b7cf4c"
+            }
+          ],
+          "review": "Inspected both old/new cuff close-ups. The curved opening removes the polygon spur. Rim is thin and remains a review concern; inherited hand-outline selection issues are not silently accepted. Selected body pixels and composition below edited cuff bands remain unchanged. Profile remains unchanged.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-20T11:51:22.919034+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "User-authorized clothing workflow invalidation",
+          "action": "User reset: reprocess this entry under regional-curved-v1. Preserve source history; use full cloth before fitting, registered regional controls where applicable, and natural curved body visibility. Older readiness/registration does not satisfy the new workflow.",
+          "inputs": [
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "74d6f7498dad0e0079c152649b2b40143cbf201a748b48d0a5cd110a73975af2"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/apparel-workflow-reset-20261020.json",
+              "sha256": "c95ffc14b46c537ff3020ea671fc95139995cc06b0d73fe0b8c5b01720a586a7"
+            }
+          ],
+          "review": "Prior prompts, images, masks, models and process records are retained. Reuse usable source art, but restore readiness one entry at a time only after actual reprocessing. No native validation.",
+          "result": "INVALIDATED"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Register full cloth and separate curved visibility sources",
+          "action": "Reused the approved one-generation material and actual registered body. Selected nine-grid south/north cloth, smooth cuff masks and accepted east full cloth/mask. No secondary generative isolation; canonical cloth remains independent of body visibility.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/source-packet.json",
+              "sha256": "43a22fe8f5d541b74937ea2b29631a452e6c7e251d45ac6e25edde4eee2129eb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/intact-garment-comparison.png",
+              "sha256": "8d9c6ee192f4d0b54bfc599f4bc095ae39cb95ae7ea3d673486b6158a3cc328d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/body-mask-comparison.png",
+              "sha256": "186560e92032db5f1be96c7acfe20ac86e558a06619564fba0b10518284b833f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/body-overlay-comparison.png",
+              "sha256": "9b5f744aff798d0ad1bf0132b1b5a709bff44b1955d436bbc5dd4eeac83641c6"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "phase": "Complete approved apparel workflow on the active robe",
+          "action": "Registered and recomposed approved source art under the new workflow. Original body/accepted neutral assemblies preserved exactly, west mirrored, slot Body/0 and separate equipment/body roles retained. No blanket restoration of any other clothing entry.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/registration-decisions.json",
+              "sha256": "df0386ce3435d0410c96759ac83d83f8d71eb871365449ad87fed2bba10facd8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/assembly-comparison.png",
+              "sha256": "3ce241e9c271b8448aa0f59d693fc4a890a6e39117d6149096fe9ac24970f27a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/mask-off-comparison.png",
+              "sha256": "034bc610aeee0a74382aad1260f4f6a8c21e2a195a11aa25ad108d685c310086"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/artifact-manifest.json",
+              "sha256": "e973022a4b9d2e1321ae94bef33810a02cea69ee6c440eb7d66cc0b890cad5bb"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T11:55:52.448080+00:00",
+          "step": "review_game_scale_and_palette",
+          "phase": "Review all facings, independent Qud tint and intended-size assembly",
+          "action": "Inspected complete authoring plates. Body appearance uses actual Tam tile color w and detail W; robe uses its actual y role. Source/head detail is included only where present in the body model; the north facing has no visible dulla detail layer. Side and all approved neutral assembly bytes remain unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            },
+            {
+              "path": "skills/qud-creature-conversion/references/apparel-fitting.md",
+              "sha256": "3549a1e4702f4b24dfcea5238880d092ef84a5809bd07bdcb6ececbf601f1f13"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/qud-palette-comparison.png",
+              "sha256": "36486606b5522f441521f0038af5262d1c212a668e75bfcd2fa006bd8f0b665a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/game-scale-review.png",
+              "sha256": "72be20f6912dc29aaafbd6b17529fbe17b15161772bc71aeffdd18667922ae6d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/authoring-review.json",
+              "sha256": "9084a61e69c1ea48bdcbdc68f169ece77fc7eb4e8f4ad267cc73cde3ae8b28f1"
+            }
+          ],
+          "review": "Inspected neutral south/east/north and mirrored west, actual Tam w/W body/detail versus robe y, and 48x96 authoring preview. All approved neutral assemblies and cloth bytes preserved. The side composition is unchanged. No new ImageGen call or deformation. Separate source cloth, curved body masks and derived overlays retained. Native renderer/outfit precedence remain pending full-set gate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:31:02.303589+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Reconcile approved current registration with historical pending step",
+          "action": "Reconciled the retained single contextual source to the current recipe: use garment material only, discard generated anatomy/placement and retain the unchanged registered body through regional fitting and late visibility. This does not change the historical failed body-preservation finding or claim ImageGen preserved the body.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/adapt-clothing-prompt.txt",
+              "sha256": "178016c9b7cd82d372fee8340f393d536bbe19b403c90496d8a01afc24554a85"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/red-key-v1/dressed-red-output.png",
+              "sha256": "8355a627edfb9c302930588fbe66a8c1b83a8933eb3305936efa7de79264515e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/regional-fit-v1/source-packet.json",
+              "sha256": "25114a551f462dbce31a31d4564e50961e6a34c1930eea3aebeb246943749b3e"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/registration-decisions.json",
+              "sha256": "df0386ce3435d0410c96759ac83d83f8d71eb871365449ad87fed2bba10facd8"
+            }
+          ],
+          "review": "Current generation recipe is satisfied by reusing the actual contextual source, deterministic fitting/masks and the unchanged original body. User accepted curved result; native acceptance pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T12:31:02.306593+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Reconcile approved current registration with historical pending step",
+          "action": "Recorded the user-approved curved-cuff result registered in v6 as the current assembly review; front/back and accepted profile inspected again. Original body and complete cloth remain separate. Previous pending review is retained in history.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/register-approved-fit.py",
+              "sha256": "0976b97468d3c9537d1bab375be2a7549a6733eface57a37652cca2d9816db7f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/assembly-comparison.png",
+              "sha256": "3ce241e9c271b8448aa0f59d693fc4a890a6e39117d6149096fe9ac24970f27a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/authoring-review.json",
+              "sha256": "9084a61e69c1ea48bdcbdc68f169ece77fc7eb4e8f4ad267cc73cde3ae8b28f1"
+            }
+          ],
+          "review": "Current generation recipe is satisfied by reusing the actual contextual source, deterministic fitting/masks and the unchanged original body. User accepted curved result; native acceptance pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T14:55:27.271694+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Corrected profile cuff and original-arm ownership through a shared source-opening curve; discarded the lower-mouth diagnostic because it exposed an excessive dark cavity. Current full source remains intact; no body redraw.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py",
+              "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/profile-cuff-comparison.png",
+              "sha256": "444d730afa335ed5d5a05eeca05c2caefef9ab5e094afa3a74d8c17fa7001dfb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/assembly-comparison.png",
+              "sha256": "2f4f76459e1439ed168fe18e02ea148923251e401059ba7979ca1408fe657474"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/registration-decisions.json",
+              "sha256": "62e7e67c70b28e91eff16ce21b4fd8101d7a47ebb10932dd987ed6f5a9c4599a"
+            }
+          ],
+          "review": "Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:55:27.272347+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed one robe over its unclothed base, independent actual Qud palette and intended-size preview. Preserved selected front/back and body/contact.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py",
+              "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/qud-palette-east.png",
+              "sha256": "1bfbc8c0a9d505636f09a14da4d84723bb1d78ed074d7ca46a07d29a1df92dad"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/game-scale-review.png",
+              "sha256": "c3eb4513d4bc73e842c008d69cd0c25e11eff12fc27e19146c4ae816ee2bd131"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/authoring-review.json",
+              "sha256": "94159da076e8699cb5927b718a3bd5831815849ae6f41495c6b6b5cdf555ffb1"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/artifact-manifest.json",
+              "sha256": "38ea3b907c1f79270998411b9c7178444a1d41521d1d5840e95b6810ac55009d"
+            }
+          ],
+          "review": "Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:55:27.272889+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Recorded full source, explicit cuff ink, shared curve, original-body visibility and exact retained facings. Native and combined outfit acceptance remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/align-profile-cuff.py",
+              "sha256": "fc3f7fc7e2fc308ad49423c9042fdf651c199bb437521f3b8aad73f203b07fde"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v7/model.json",
+              "sha256": "d54f8e8f23a19378ca46950bd136c74c362de3f3f518654d47e4c633ef39ad26"
+            }
+          ],
+          "review": "Inspected profile cuff close-up, all neutral facings, native w/W body and y cloth, and intended-size plate. Existing sleeve-opening ink supplies one editable quadratic for cuff rim and original-arm visibility. Complete cloth alpha unchanged; explicit neutral seam-ink repair is recorded rather than described as a stretch. Semantic original forearm/hand spans exclude adjacent torso from foreground paint. Fixed body untouched; front/back v6 art unchanged. Current front hump is already cloth-covered; old Shillelagh sheet used obsolete robe v1. No ImageGen or native testing.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "new_imagegen_calls": 0
+    },
+    {
+      "entry": "FIT-DROMAD-SHILLELAGH-HAND-2",
+      "model": {
+        "path": "art/conversion/fit-dromad-shillelagh/v3/model.json",
+        "sha256": "171dce6586a6cf84f0b7c1cbf8490eee294fa394f7789603d849f064ba7c6c88"
+      },
+      "report": "docs/conversion-entries/FIT-DROMAD-SHILLELAGH-HAND-2.html",
+      "plate": {
+        "path": "art/conversion/fit-dromad-shillelagh/v3/assembly-comparison.png",
+        "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"
+      },
+      "reused_generation_evidence": [
+        {
+          "timestamp": "2026-10-20T03:04:13.289886+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "phase": "Exact wooden-stick blueprint resolves generic runtime description",
+          "action": "Read Tam Hand part 362/laterality 2 equipped instance 524 and the exact installed Shillelagh object definition, which inherits BaseCudgel.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/prepare-and-construct.py",
+              "sha256": "5d23ed14c579e0c8097421dc8d4819e458b913d97be0bd1ff2b0e919a8717446"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/source-packet.json",
+              "sha256": "0f0de31f0629223665e998790882de647d147569c78a4de7d754e115ed4a0709"
+            },
+            {
+              "path": "evidence/village-reference-index.json",
+              "sha256": "cc00cbf6f72d5d4134efb3879d83b30988fcec4ae822cec8a340b072024ca149"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-packet.json",
+              "sha256": "891a44c60f3618b6ab6d1d5e8006a9d7d29edb363ae188b65dca50168870c370"
+            }
+          ],
+          "review": "Installed description specifies hewn wood shaped into a stick with an oaken knot. Captured generic puzzling-device description and differing weight remain preserved rather than silently rewritten. Identification state was not exported. No mutation, clothing or other item is invented.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:04:13.290413+00:00",
+          "step": "select_correct_body_and_references",
+          "phase": "Installed Tribal club reference and fixed adult context",
+          "action": "Selected the actual Vanilla Weapons Expanded - Tribal LightClub texture as a neutral wooden-club/outline reference, alongside the original Qud glyph and fixed adult dromad robe assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-packet.json",
+              "sha256": "891a44c60f3618b6ab6d1d5e8006a9d7d29edb363ae188b65dca50168870c370"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-comparison.png",
+              "sha256": "2a58ea3282d25a30ca7267a054f8dc124681b15a47db9f66747cfb14ad43e224"
+            }
+          ],
+          "review": "Viewed selected reference and comparison. Rejected the inspected Vanilla Textures Expanded club as a shape reference because of its spikes. Mod package, Workshop id, source texture hash and About metadata hash are recorded. No exact donor Shillelagh equivalent is assumed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:04:13.290762+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Editable enlarged knotted stick and held placements",
+          "action": "Constructed one axial held-item texture, larger than the historical short staff, and front/profile/rear placements with explicit grip/hand occlusion and front/back depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/prepare-and-construct.py",
+              "sha256": "5d23ed14c579e0c8097421dc8d4819e458b913d97be0bd1ff2b0e919a8717446"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-packet.json",
+              "sha256": "891a44c60f3618b6ab6d1d5e8006a9d7d29edb363ae188b65dca50168870c370"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-item.svg",
+              "sha256": "30ea267dcc056dcf5fdcbebba94e55312ffdbbaf21cd145c18a108f9cb2601f4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-item.png",
+              "sha256": "02fdda616f9cbb5de7523881cda34e5f79ae455905dbc763f17a8dfbaf482fe7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/placement-suggestion.json",
+              "sha256": "f2bb029976a1c54181a84cc7c46e692432f600febc86bcf32c52486bcbd8d63f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-fit-comparison.png",
+              "sha256": "7a1808711a2e673ca8f534a4d7148ba7d604e9976ddf8ca4f2c4f65522152f2c"
+            }
+          ],
+          "review": "Viewed full suggestion: front grip overlaps the actual right-hand region; profile leans forward to clear the long neck; back reverses screen side and draws behind the pawn. Length is authored, not native measured. Flat knot/grain marks still need refinement, including avoiding a rune-like knot stroke. Same axial texture is reused like a held-weapon graphic; directional placements supply views.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-20T03:05:22.033953+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Wooden knot and grain refined in context",
+          "action": "Refined the one enlarged held stick using the actual item description, manual held placements and original/mod reference plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-fit-comparison.png",
+              "sha256": "7a1808711a2e673ca8f534a4d7148ba7d604e9976ddf8ca4f2c4f65522152f2c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-comparison.png",
+              "sha256": "2a58ea3282d25a30ca7267a054f8dc124681b15a47db9f66747cfb14ad43e224"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/refine-context-prompt.txt",
+              "sha256": "b215c2565625a3f1c13109a05e01a8f13e7c259a96ac79f5d094ede7c56116da"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/refined-context.png",
+              "sha256": "6c074e31159c5bf5fe096de8cc9b12919948678a2b06e2b8b6720fc3c38e0b90"
+            }
+          ],
+          "review": "Viewed front/profile/back: natural wood-grain knot replaces the rune-like manual stroke, long shaft and authored enlarged scale remain, no metal/spikes/gems. The generated context was reframed and is not a replacement body/robe. Retrieve one complete isolated axial item for exact mechanical placement.",
+          "result": "RECORDED",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-5501dd5f-feb1-4137-b884-ba08986aae79.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.378364+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Manual enlarged held-stick design selected",
+          "action": "Reviewed the editable oaken-knot stick and its directional grip suggestion against the final fixed-body assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/source-packet.json",
+              "sha256": "891a44c60f3618b6ab6d1d5e8006a9d7d29edb363ae188b65dca50168870c370"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/prepare-and-construct.py",
+              "sha256": "5d23ed14c579e0c8097421dc8d4819e458b913d97be0bd1ff2b0e919a8717446"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-item.svg",
+              "sha256": "30ea267dcc056dcf5fdcbebba94e55312ffdbbaf21cd145c18a108f9cb2601f4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-fit-comparison.png",
+              "sha256": "7a1808711a2e673ca8f534a4d7148ba7d604e9976ddf8ca4f2c4f65522152f2c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/placement-suggestion.json",
+              "sha256": "f2bb029976a1c54181a84cc7c46e692432f600febc86bcf32c52486bcbd8d63f"
+            }
+          ],
+          "review": "Manual length and grip direction retained; rune-like construction mark was rejected and replaced by natural grain in the refined output. This is one actual Hand item, not a profession costume or generic sword.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.379159+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Natural wooden knot selected in fixed context",
+          "action": "Selected the refined wooden material/knob from the context proposal, using only the item in the final assembly.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/refine-context-prompt.txt",
+              "sha256": "b215c2565625a3f1c13109a05e01a8f13e7c259a96ac79f5d094ede7c56116da"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/refined-context.png",
+              "sha256": "6c074e31159c5bf5fe096de8cc9b12919948678a2b06e2b8b6720fc3c38e0b90"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/register-item.py",
+              "sha256": "e8d340aa535210928177c727acb137ab447420dc9acd6b50974381ee36c5d866"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembly-comparison.png",
+              "sha256": "d7f5081c2c37bab37b768d1f3e11f4027d3f1e2041d535c30b59aee6eec5f0c6"
+            }
+          ],
+          "review": "Viewed front, profile, back and mirrored west. Enlarged stick reaches from below shoulder height to near ground in front/back; profile leans ahead of long neck. Original body/robe pixels are unchanged. Natural wood grain has no letter/rune or added magic.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.380197+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "One continuous isolated held-weapon texture",
+          "action": "Retrieved a complete upright Shillelagh with the occluded grip reconstructed as continuous wood, then selected and neutralized its complete connected silhouette.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/isolate-item-prompt.txt",
+              "sha256": "2e37c2db030832ac2553b5db5607790caaa4b58b126346ba7fe6bd08c4ee13a2"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/refined-context.png",
+              "sha256": "6c074e31159c5bf5fe096de8cc9b12919948678a2b06e2b8b6720fc3c38e0b90"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/constructed-item.png",
+              "sha256": "02fdda616f9cbb5de7523881cda34e5f79ae455905dbc763f17a8dfbaf482fe7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/register-item.py",
+              "sha256": "e8d340aa535210928177c727acb137ab447420dc9acd6b50974381ee36c5d866"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/isolated-proposal.png",
+              "sha256": "0824ed284b5f5b41768a9ff0c0795347685917d248c1ede1b01c6c1d16ea6caf"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/canonical-item.png",
+              "sha256": "79ac40dd01043204a397e6895dfd4374aecfecc66e56a4662bcf3c28cd0b6870"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/source-selection.png",
+              "sha256": "7aa436505095364518c2bfb7880844eff3c4f1058dfb5e2f4469adf382e0e7d8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/registered-isolated-comparison.png",
+              "sha256": "39000fafc6107fb2df689972c2496c53b995d8a8790c897229caec947fea97e6"
+            }
+          ],
+          "review": "Viewed isolated original and final layers: one knob and continuous shaft, no copied hands/body/robe pixels. Source is neutralized to equal RGB. Directional hand gaps are explicit masks applied after canonical item registration; north remains continuous behind the pawn. One axial texture is the appropriate held-item convention, so no invented front/back item variants are generated.",
+          "result": "PASS",
+          "tool": "image_gen.imagegen",
+          "settings": {
+            "transparent_background": true,
+            "referenced_images": 2
+          },
+          "generation_file": "exec-845e01a8-7318-446e-987a-fbe857ec5721.png"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.401688+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "phase": "Recorded grip, hand coverage and rear depth",
+          "action": "Placed the one canonical item using recorded per-facing transforms and the actual fixed hand coverage; recomposed above or behind the unchanged pawn as appropriate.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/register-item.py",
+              "sha256": "e8d340aa535210928177c727acb137ab447420dc9acd6b50974381ee36c5d866"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/placement-suggestion.json",
+              "sha256": "f2bb029976a1c54181a84cc7c46e692432f600febc86bcf32c52486bcbd8d63f"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-south.png",
+              "sha256": "0a7ff06446a4e8c5243b9c30b144b6a9f352dda0f796f126a7a969cfb25bbedc"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-east.png",
+              "sha256": "5f918d3d71c345d88ccd3530571110d33f70c2984cbe028f31e44d09019feb75"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/body-north.png",
+              "sha256": "c97b1b02983c1f299c22c35cf1b55034fd1a6c65246d698b80dbe84d28e94872"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json",
+              "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/registration-decisions.json",
+              "sha256": "3ffaed2a72e47bebbd04cb6c7b7224dd5041e30587f58430c2706b518d0bb7e0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembled-east.png",
+              "sha256": "89b06b730144f00d4187c77a9bc606b0c2fe899f8125d5de686ab138a72003bc"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembled-north.png",
+              "sha256": "04f3a43480934055dc21f8d378ad6a43bba59ae4baf83558ccb8fe16976900ac"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembled-south.png",
+              "sha256": "2244e4b2b36e128551f3f147c0402e42c2e27cd0cdd4e9fd42c57d9a3d16d0e0"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembly-comparison.png",
+              "sha256": "d7f5081c2c37bab37b768d1f3e11f4027d3f1e2041d535c30b59aee6eec5f0c6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/canonical-item.png",
+              "sha256": "79ac40dd01043204a397e6895dfd4374aecfecc66e56a4662bcf3c28cd0b6870"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/game-scale-review.png",
+              "sha256": "d9c598764445e56f0b7888d6fa4094ecd14e3fd12556e665e4d28f2921494de4"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/hand-coverage-east.png",
+              "sha256": "86ae2da2e130cb9fe4938835bebf64a85a11fb1bc944da99b3c11d103ed22624"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/hand-coverage-north.png",
+              "sha256": "3efb812ad2c5f85069848bcbeebd2a444104c17c9403d46d003fc926d027e5f6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/hand-coverage-south.png",
+              "sha256": "9d8bcd52fbc9f9c94802b431c9a7088d2813b10a4370e05d5c27df5c37f8403f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/item-east.png",
+              "sha256": "75bd97d95b5fef5ecd33418152f75cd81fdb71f4e3d56ef93b159bb3ac161d9b"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/item-north.png",
+              "sha256": "f8b8c5cd6a3f4319bb4dd24c92405e1a41038a23d985e1223c1696f881500b81"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/item-south.png",
+              "sha256": "564626c1fe977f96a436ef655f4db754233f795dd46a738ab3b966e9db4ec5a7"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/registered-isolated-comparison.png",
+              "sha256": "39000fafc6107fb2df689972c2496c53b995d8a8790c897229caec947fea97e6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/source-selection.png",
+              "sha256": "7aa436505095364518c2bfb7880844eff3c4f1058dfb5e2f4469adf382e0e7d8"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/unoccluded-east.png",
+              "sha256": "60f96e707d09c6a732ecec6672dbc619d603a32e3f673fa271a50a2d2d3d4b57"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/unoccluded-north.png",
+              "sha256": "f8b8c5cd6a3f4319bb4dd24c92405e1a41038a23d985e1223c1696f881500b81"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/unoccluded-south.png",
+              "sha256": "38cd3b7330714725a3c3881f8ab1faa418b624cee28a0a5c4ede36ebc9018c79"
+            }
+          ],
+          "review": "Viewed enlarged assembly and isolated layers. Front/profile rod is in front with actual hand pixels owning grip occlusion; rear rod draws behind the pawn. Frame/contact and physical dimensions inherit the fixed adult body. Hand masks intersect the real body alpha so they do not erase wood in empty space. West mirrors east under the current bounded art convention; native handedness/state review remains pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.403640+00:00",
+          "step": "review_game_scale_and_palette",
+          "phase": "Shillelagh fitting generation ready",
+          "action": "Viewed all assembled directions enlarged and at 48 x 96 with nearest-neighbor enlargement.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json",
+              "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"
+            },
+            {
+              "path": "art/conversion/body-dromad/v1/model.json",
+              "sha256": "570e35bd698e21f5ab0fcfe89f9886ef8bf70276cd6efdbc90227dc071d57c15"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v1/registered/model.json",
+              "sha256": "12bc7e9aa594ab0d57e66fe59915ed8d101049a07294d84b2407fb546cae0beb"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembly-comparison.png",
+              "sha256": "d7f5081c2c37bab37b768d1f3e11f4027d3f1e2041d535c30b59aee6eec5f0c6"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/game-scale-review.png",
+              "sha256": "d9c598764445e56f0b7888d6fa4094ecd14e3fd12556e665e4d28f2921494de4"
+            }
+          ],
+          "review": "Wooden knot and larger full-length silhouette remain recognizable. Neutral equipment is separate from body and robe, with key shillelagh@Hand@2 and per-facing depth. Authored length and native source-description discrepancy are explicit; no native equip or demographic claim.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-20T03:08:14.404003+00:00",
+          "step": "native_equipment_state_review",
+          "phase": "Native held-state acceptance deferred",
+          "action": "Kept native hand binding, movement, facing, equip/unequip and state acceptance behind the all-generation gate.",
+          "inputs": [],
+          "outputs": [],
+          "review": "No game/harness launch. Overall ledger entry remains UNFINISHED.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-20T14:45:54.013987+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reopened this held-item fit for the user-priority inner-palm correction. Nima apron generation remains unfinished and resumes after this entry.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json",
+              "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/assembly-comparison.png",
+              "sha256": "d7f5081c2c37bab37b768d1f3e11f4027d3f1e2041d535c30b59aee6eec5f0c6"
+            }
+          ],
+          "outputs": [],
+          "review": "v1 front/back grip lies toward the external hand edge. Authoring correction only; no native tests or new generative isolation.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-20T14:46:55.440176+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Corrected front/back grip by integer translation of the identical full staff. Preserve scale/rotation and accepted profile. Original actual hand supplies foreground, separately from intact item.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/registered/model.json",
+              "sha256": "ee82f53332a44bf1e6786ac98a17edc23e21b757bd88d02ef31e608ed4aac0ac"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v1/placement-suggestion.json",
+              "sha256": "f2bb029976a1c54181a84cc7c46e692432f600febc86bcf32c52486bcbd8d63f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/refit-grip.py",
+              "sha256": "54d05c18651042c05cf03f5fe260c78d55c99c60a93e58edc34d5b201a3c67e6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/registration-decisions.json",
+              "sha256": "bc32b0e8f87d32e600e53ef451608a1d81c867ef603a9e116629ccfe06a2f40f"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/intact-item-comparison.png",
+              "sha256": "aa0330780418ac654f037a19fa48742cc86a2c7c262503d19b17b7da79b06cb2"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/before-after-comparison.png",
+              "sha256": "9130f0caa20747a758136fcd12dd5746e481669e96a04923c78e350fecb25e31"
+            }
+          ],
+          "review": "Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:46:55.442150+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reviewed inner-palm grip and original-hand ownership in every required facing on the current fixed body/robe. Full front staff remains uncut; rear staff remains behind original body. Profile item and attachment unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/model.json",
+              "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"
+            },
+            {
+              "path": "art/conversion/body-dromad/v2/model.json",
+              "sha256": "a17c336854fc786b897e1530c581c70cabc947084febef8f574db405fec82970"
+            },
+            {
+              "path": "art/conversion/fit-dromad-cloth-robe/v6/model.json",
+              "sha256": "071431fa3ce69bfdec5d233dd9e8d7d8d9cc67b5d29a7c06e025a611a2c5e2ff"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/assembly-comparison.png",
+              "sha256": "37eba6f29c7f485924b4b3a2a66f684e8d32f71385ab0159b087b80ec4952c4d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/hand-overlay-south.png",
+              "sha256": "bbdaf16de500cb686b93f32c99d18591fcb545cea0f0f71c314a98dbf1b56388"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/hand-overlay-north.png",
+              "sha256": "46236664b5c021b1c4e2eb9a49a6ee5cc170a6dd5b08488f58b8e18238657e0e"
+            }
+          ],
+          "review": "Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:46:55.443350+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Inspected intended-size held silhouette and independent y/y equipment tint; original body/robe/contact unchanged. Skill now records inner-palm attachment and original gripping-hand foreground.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/model.json",
+              "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"
+            },
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "10f273adafdd19c554bc4cf32f1beaa22bda03c8f929330fff19002d83b74add"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/palette-comparison.png",
+              "sha256": "b086fd57c577bc753f2d9b29034e7d132ba3af4693d3af137b14422e1e460b4a"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/game-scale-review.png",
+              "sha256": "3cc6e453ceb12b7d92540d9fe771784b150942ece3c37cec6fa205c498b4423c"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/authoring-review.json",
+              "sha256": "8e81a9e21e5d5f3204a2298ffa4511a192e42276d02e43c5a5fbdff63f92e6fb"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/artifact-manifest.json",
+              "sha256": "c5c6bec32e2bf2b64279d4d316906ff1dda55699a10f0debccde5c92fcbb4de6"
+            }
+          ],
+          "review": "Inspected full front/profile/back/west, separate intact item, native equipment y/y tint and 48x96 intended-size plate. Front shaft grip moved from (105,777) to (140,777), toward body from palm center (126,777); back from (408,777) to (374,777), toward body from palm center (388,777). Both now pass inside the palm with original hand foreground. Integer translation only: same complete source, length and angle. Accepted east item bytes/attachment unchanged; west remains its mirror. Preview now uses the already selected unchanged v2 body/v6 robe instead of obsolete robe v1. No new ImageGen call, isolation, anatomy change or native game test. Native attachment/outfit acceptance remains pending.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:56:27.412425+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Recomposed unchanged registered staff on current fixed unclothed base, with no unrelated robe. This is the primary fitting evidence; old outfit sheets stay historical.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/compose-single-item.py",
+              "sha256": "37bdf4c82729188292b46c42affe59e2b967ed4e01656114ccaa641908086126"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/model.json",
+              "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"
+            },
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "0168b8e281b81f758c01cd3c2256a0193d6305aad65cd9eae699b3c1d317c414"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/composition-inputs.json",
+              "sha256": "e515d1c708ecd17cf0cea0c58cf546e9dcf06326aaf631e3443b1b52be6f38ed"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/assembly-comparison.png",
+              "sha256": "7e8f5621150ab8fadcdf519a339d88958a34844f1bc008dd5db17c1f8dfacad0"
+            }
+          ],
+          "review": "Inspected single-item primary preview: fixed unclothed dromad body v2 plus corrected inward-grip Shillelagh only, in all required facings. Staff item geometry/scale/attachment and original gripping-hand foreground unchanged from v2; no robe or other equipment included. Independent y/y staff tint and intended-size plates retained. Earlier outfit compositions remain historical evidence; no native/outfit acceptance claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-20T14:56:27.413160+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed single-item neutral and independent equipment tint plus intended-size views; no other equipment or new generation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/compose-single-item.py",
+              "sha256": "37bdf4c82729188292b46c42affe59e2b967ed4e01656114ccaa641908086126"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v2/model.json",
+              "sha256": "6361cef247fe8e94aaabf1d62fd4944b1f5a21b25c165c03fda9de22697de41a"
+            },
+            {
+              "path": "skills/qud-creature-conversion/SKILL.md",
+              "sha256": "0168b8e281b81f758c01cd3c2256a0193d6305aad65cd9eae699b3c1d317c414"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/palette-comparison.png",
+              "sha256": "75a2da04b550dbe9d7867c1fd16ac19fe8db0acdebe2e8d78a3420fd8159dd09"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/game-scale-review.png",
+              "sha256": "752af8613985ab16201e79f4627f40566d2b925fe2e3d30dd2ce777c28ff405d"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/authoring-review.json",
+              "sha256": "65b2b9bc81e8a9edf45f6d3af20576f80473a38b5f715059c6a4f9875e9d6ad9"
+            },
+            {
+              "path": "art/conversion/fit-dromad-shillelagh/v3/artifact-manifest.json",
+              "sha256": "f93eba18c9cfb2a076f46969d6e4c878e0f9ee0f86b041a7bbae114dd4bf33c7"
+            }
+          ],
+          "review": "Inspected single-item primary preview: fixed unclothed dromad body v2 plus corrected inward-grip Shillelagh only, in all required facings. Staff item geometry/scale/attachment and original gripping-hand foreground unchanged from v2; no robe or other equipment included. Independent y/y staff tint and intended-size plates retained. Earlier outfit compositions remain historical evidence; no native/outfit acceptance claimed.",
+          "result": "PASS",
+          "new_imagegen_call": false
+        }
+      ],
+      "new_imagegen_calls": 0
+    }
+  ],
+  "rule": "Reuse exact earlier source/reference/manual/refinement/secondary/patch/extraction histories; no new body, profession pose, costume or ImageGen call."
+}

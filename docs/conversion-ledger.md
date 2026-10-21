@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-TAM**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **NPC-WARDEN-YRAME**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -174,8 +174,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | NPC-JOPPAFARMERCONVERT | JoppaFarmerConvert | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-CLOTH-ROBE-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 |  |
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
-| NPC-TAM | Tam | IN PROGRESS | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 |  |
+| NPC-WARDEN-YRAME | Warden Yrame | IN PROGRESS | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -6993,7 +6993,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T00:48:07.290189+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve exact captured dromad instance, race, description, body tree, source shape/palette and actual equipped parts.
+  Review: Actual export matches this ledger instance/body tree. No mutation or demographic change inferred; narrative-only cosmetics/props are retained as metadata rather than invented equipment.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-tam/v1/source-packet.json", "sha256": "bfc91145fd9fc4b0a27461d247a27d4a2bbd40f395661ec8b51ab5b00abb69a8"}, {"path": "art/conversion/npc-tam/v1/source-to-assembly.png", "sha256": "db12eff9adf8db292b6709fe40061cb23497966ed6536e750c1aa642d10b7235"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:48:07.290189+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify the current body and all equipped fitting dependencies; preserve their performed generation histories.
+  Review: Every current model/component hash and physical frame matches. Natural default equipment and inventory do not become extra worn items; no new generation call.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-tam/v1/dependency-lineage.json", "sha256": "db08ea23240e277549500677dbbea8aebc5baec1abc118113da4fee2eddfc15a"}, {"path": "art/conversion/npc-tam/v1/dependency-evidence.html", "sha256": "0180ea16d5febe4e6ec65fc0a1d709218b788fbc4e57da2e8cf327986113b098"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:48:07.290189+00:00 / assemble_without_baking_equipment / PASS: Compose exact separate body/item pixels with independent palettes and per-item late original-body ownership.
+  Review: Far/near held depth follows current source fittings. No whole-body overlay can erase unrelated gear. These are source-bound static previews; visual review still pending.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/npc-tam/v1/assembly-method.py", "sha256": "45096217911eea26235418f74017685283f1cb14df81873d5d6faf2327b9e8e3"}, {"path": "art/conversion/npc-tam/v1/model.json", "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"}, {"path": "art/conversion/npc-tam/v1/assembly-stages.png", "sha256": "5d6fe5b7d0a21b3e4b1cfb2298cf752c065d23b30fb20949a374e3f65d067dbd"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:51:08.942918+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect all four directions and every actual item separately on the unclothed fixed body, then the complete outfit.
+  Review: Inspected original Tam glyph and full captured metadata, current shared adult dromad body, robe-only and staff-only four-view plates, complete neutral/native assembly and intended-size evidence. Cloth Robe604 Body357 and Shillelagh524 Hand362/2 match the captured instance exactly. Current robe v7 retains the covered upper hump and curved front/back cuffs with its corrected accepted side opening; original arms emerge from those openings. Current staff v3 retains inward south/north palm contact and accepted profile placement. Full cloth and staff remain independent; each item's late original-body ownership affects only that item, so neither mask redraws the body over the other item. Original body/head/neck/dulla and item pixels, scale, frame and contact remain unchanged. West mirrors the documented compatible east geometry. All actual source/reference/manual/refinement/secondary/patch/extraction histories are linked; this assembly required no new ImageGen call. Source dromad description and baseline Humanoid metadata are retained without inventing mutations, extra feet, age, cosmetic rings or a profession pose. Static held display only; real near/far state and weapon ready/resting behavior remain required integrated work after full generation.
+  Inputs: [{"path": "art/conversion/npc-tam/v1/model.json", "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"}]
+  Outputs: [{"path": "art/conversion/npc-tam/v1/cloth-robe-comparison.png", "sha256": "59aa671cc9c2387b68accc61ec437088f3842f02afac911162864d2c3879ae7e"}, {"path": "art/conversion/npc-tam/v1/shillelagh-comparison.png", "sha256": "5a532fc85a3e9e7844ab4790f4663245b91430ba698a3caad8a9d1a024953101"}, {"path": "art/conversion/npc-tam/v1/full-neutral-comparison.png", "sha256": "d36492b7d0689cc78e02104e89dc8b936d4c7ab33c2482b37e2d2895782e41bc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:51:08.942918+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect exact independent source palettes, original registration and game-size full assembly.
+  Review: Reviewed neutral and captured Qud palettes in all four facings and 48x96 frame previews with nearest enlarged companions. Neutral components remain grayscale. Body/head use actual tileColor w, separate dulla/head-detail uses W, and Cloth Robe and Shillelagh each use their own captured y/y palette. Shared512x1024 canvas, contact256,950 and each row's unchanged world mapping preserve the larger dromad scale; the staff is not normalized or resized to the body. Hidden authoring previews are empty. These are art inspections, not native visibility, equipment, motion, hurt, look or save/load acceptance; no native activation or game/harness test was performed.
+  Inputs: [{"path": "art/conversion/npc-tam/v1/model.json", "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"}]
+  Outputs: [{"path": "art/conversion/npc-tam/v1/record-review.py", "sha256": "98bb3f3ec603755dc1bf2bdbb57ad83e9725c839eb183f64fc0d6daa5c60ee38"}, {"path": "art/conversion/npc-tam/v1/full-native-comparison.png", "sha256": "dd73114068f4adc805eed9f403836f194523f3e5dea3b0dc6dd6bea445a8c62c"}, {"path": "art/conversion/npc-tam/v1/game-scale-comparison.png", "sha256": "9cb0fc29241835dd563d248f9a693354dc3e081c3e4effc6ab9b52d612e16ece"}, {"path": "art/conversion/npc-tam/v1/hidden-comparison.png", "sha256": "16a29dee129dd2cad426b5d843a728f87a9212a544873f34db9ede70bcb10b58"}, {"path": "art/conversion/npc-tam/v1/visual-review-notes.json", "sha256": "c4bc3c1705aba34af73d34040c2bb7c8c98c5e90c16988b703933c8c487208e9"}, {"path": "art/conversion/npc-tam/v1/historical-instruction-versions.json", "sha256": "c8145d03e1ca36d745ec6afe46dfcada2b7365349a120a1ac7729a007f2c7c33"}, {"path": "art/conversion/npc-tam/v1/authoring-review.json", "sha256": "c4a77cf32968dd9f03c11ec525660b26f156b2208d1d4ea87712420013489bfd"}, {"path": "art/conversion/npc-tam/v1/artifact-manifest.json", "sha256": "26c00733d6b2249cdbdb6f28d2fd6a849fae48a72ae620e054b54c56c1a18aa8"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T00:51:08.942918+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Keep native visibility/equipment/hurt/look/save and supported held-state acceptance behind the complete generation gate.
+  Review: Static authoring only. Empty hidden preview is not a native visibility test. No game launch or harness validation. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/npc-tam/v1/model.json", "sha256": "81189dba3f955a648a264ec482932d6aceb4ae8e21d3de251f8bba14a6b7626a"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### NPC-WARDEN-YRAME: Warden Yrame
 
@@ -7003,7 +7039,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
 
 ### NPC-WATERVINEFARMERJOPPA-01: WatervineFarmerJoppa / captured resident 1
 
