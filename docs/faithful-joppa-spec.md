@@ -133,6 +133,21 @@ general mutation resolver. Unknown changed topology retains native art. Personal
 cosmetic customization remains outside this first conversion; no profession pose
 is baked into a shared human body. Age/sex templates do not change demographics.
 
+2026-10-21 body-plan correction: the user identifies Yrame's original sprite as
+a centaur-like configuration with sheep-like curled horns. Rebuild her changed
+lower-body silhouette from that source rather than adding legs behind an intact
+biped; the intervening X-stance proposal is superseded. Her captured human
+species, two fore/hind Feet groups and four physical legs remain source facts.
+The wiki confirms four legs and great horns but does not independently specify
+an equine species or sheep horn taxonomy; keep those distinctions explicit in
+the art packet. Ordinary human race templates remain reusable and unchanged.
+Across all creatures, select the visual body family from the confirmed race,
+description, original sprite and runtime anatomy. Human/Humanoid art is only a
+starting point for human-based races, never the default for every race. A mutant
+may need separately authored replacement trunk/pelvis art, not only additions.
+Reconcile Yrame's body-dependent fittings and assembly after that change; this
+does not authorize a general mutation renderer or early native validation.
+
 - A1: Inventory actual Joppa art targets and inhabitants from the installed,
   hash-pinned Qud definitions and retained generated-game evidence. Separate
   mechanical body slots, visible anatomy, gender and age. Do not infer species

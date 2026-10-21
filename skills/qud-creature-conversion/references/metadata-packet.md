@@ -25,6 +25,14 @@ does not supply a value. Do not add a new runtime service merely to fill a packe
 
 ## Source hierarchy and conflicts
 
+Record the selected visual body family separately from the mechanical anatomy
+template, with original-sprite evidence and the reason that family applies.
+Human/Humanoid presentation applies to confirmed human-based races, not every
+creature with familiar slots. For a remodeled mutant, identify which ordinary
+body regions are reused and which require separate replacement art; appendage
+count alone does not establish torso shape or joint placement. Distinguish
+source facts, visible silhouette interpretation and explicit user art direction.
+
 Use runtime state for the observed actor, resolved installed definitions for
 defaults, and version-labelled wiki facts as supplements. Keep disagreements
 visible rather than silently replacing a live actor with a wiki template.

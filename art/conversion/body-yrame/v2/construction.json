@@ -1,0 +1,65 @@
+{
+  "source_packet": {
+    "path": "art/conversion/body-yrame/v1/source-packet.json",
+    "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+  },
+  "previous": {
+    "path": "art/conversion/body-yrame/v1/registered/model.json",
+    "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+  },
+  "baseline_model": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "source_facts": {
+    "fore": {
+      "part": 297,
+      "parent": 287,
+      "laterality": 16,
+      "boots": 580
+    },
+    "hind": {
+      "part": 298,
+      "parent": 287,
+      "laterality": 64,
+      "boots": null
+    },
+    "description": "shifts her weight between hind and forelegs",
+    "joint_coordinates": "not provided"
+  },
+  "authored_roots": {
+    "south_hind_left": [
+      190,
+      625
+    ],
+    "north_hind_left": [
+      182,
+      625
+    ],
+    "east_hind": [
+      225,
+      625
+    ],
+    "meaning": "Lower pelvic/upper-thigh attachment. Knee bends/stance are authored estimates."
+  },
+  "paths": {
+    "south_left": "M172 602 Q158 628 145 675 Q123 724 113 764 Q108 790 117 817 L103 898 Q78 913 73 932 Q74 946 96 950 L135 950 Q153 945 150 932 Q146 919 132 911 L139 815 Q155 795 155 774 Q166 721 197 682 L217 625 Z",
+    "north_left": "M161 603 Q174 594 192 612 Q212 637 202 675 Q173 720 157 770 Q155 795 143 817 L136 910 Q158 927 153 940 Q149 951 130 950 L93 950 Q72 948 72 934 Q75 920 103 903 L115 815 Q109 784 117 758 Q132 702 151 655 Z",
+    "east_near": "M217 607 Q242 600 253 623 Q256 645 235 673 Q198 710 177 751 Q165 779 173 806 L168 898 Q174 915 199 924 Q213 931 207 941 Q202 949 181 950 L119 950 Q98 948 101 933 Q108 914 136 897 L138 807 Q122 779 134 747 Q154 694 191 650 Q204 635 217 607 Z"
+  },
+  "facing_depth": {
+    "south": "hind pair behind ordinary fore pair",
+    "east": "far hind behind near hind, both behind ordinary near fore leg",
+    "north": "hind pair in front of ordinary fore pair; roots overlap lower pelvis",
+    "west": "horizontal mirror of east; semantic fore/hind identities unchanged"
+  },
+  "invariants": [
+    "Shared512x1024 frame and contact256,950",
+    "Ordinary female body/head files remain byte-identical",
+    "No root along high buttock outline",
+    "No six legs or new torso/animal body",
+    "Do not force all feet visible in exact profile",
+    "No native activation or mutation framework"
+  ],
+  "interpretation": "Four human legs: fore and hind pairs share the lower pelvic region. Art interpretation, not a source-specified skeleton."
+}

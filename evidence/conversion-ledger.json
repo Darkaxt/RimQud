@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "BODY-RAY-CAT",
+  "active_entry": "BODY-YRAME",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -15289,7 +15289,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "native_equipment_state_review",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -15302,7 +15302,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Yrame named size/silhouette, mutation anatomy, blue details, complete outfit and native equipped-state acceptance remain unfinished."
+        "Rebuilt lower trunk changes mail coverage, silhouette and body-visibility ownership."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -15638,6 +15638,24 @@
           ],
           "review": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Withdraw fitting generation-readiness pending corrected Yrame body/attachment reconciliation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+              "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Rebuilt lower trunk changes mail coverage, silhouette and body-visibility ownership. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
+          "result": "REQUIRES REWORK"
         }
       ],
       "apparel_occlusion": {
@@ -15648,7 +15666,7 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -15658,8 +15676,8 @@
         }
       },
       "art_review": {
-        "status": "PASS",
-        "reason": "Inspected source glyph, exact Yrame Body287/item574/0 metadata, actual Vanilla Armour Expanded SEN mail, initial rejected construction and corrected round neckline/forearm depth, actual single contextual output, complete neutral source, masks, all facings, native palette and 48x96 preview. Mail remains a shiny linked-loop steel shirt with short sleeves and thigh-length hem; no hood, padded plates, belt or new outfit. Corrected neck ownership before generation: natural shirt neckline owns coverage above the head-layer split; rectangular skin restoration is excluded. Profile semantic arm bounds exclude torso pixels. Complete source alpha retained, original body unchanged, hidden metal explicitly continued before masks. Opaque generated glow/red reflections/anatomy are not registered. Ordinary human baseline only; Yrame Big named shape, horns, extra feet, blue detail, outfit and native acceptance remain unfinished."
+        "status": "REQUIRES REWORK",
+        "reason": "Rebuilt lower trunk changes mail coverage, silhouette and body-visibility ownership."
       },
       "current_registration": {
         "model": {
@@ -15693,7 +15711,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "native_equipment_state_review",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -15704,7 +15722,9 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [],
+      "known_issues": [
+        "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field."
+      ],
       "metadata": {
         "body_family": "yrame",
         "equipment_key": "horns@Head@0",
@@ -16120,6 +16140,24 @@
           ],
           "review": "User-identified inconsistency corrected by preserving selected frontal forehead roots and translating complete profile horns forward to the same forehead site: near51px, far40px. Reviewed front/profile/back root guide and before/after. Profile near/far roots now overlap on the anterior forehead instead of the mid-side of the skull; rear forehead roots remain hidden behind original head. South/north source pixels, selected bone material/size, full roots, native tint, body and physical mapping unchanged. No new ImageGen/isolation call. Anatomical landmarks remain authored estimates, not native skull bones; integrated natural-head/gear and Yrame assembly acceptance still pending.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Withdraw fitting generation-readiness pending corrected Yrame body/attachment reconciliation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v2/model.json",
+              "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
+          "result": "REQUIRES REWORK"
         }
       ],
       "natural_equipment_occlusion": {
@@ -16151,10 +16189,10 @@
         },
         "native_binding": "Pending full-set generation gate"
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "art_review": {
-        "status": "PASS",
-        "reason": "User-identified inconsistency corrected by preserving selected frontal forehead roots and translating complete profile horns forward to the same forehead site: near51px, far40px. Reviewed front/profile/back root guide and before/after. Profile near/far roots now overlap on the anterior forehead instead of the mid-side of the skull; rear forehead roots remain hidden behind original head. South/north source pixels, selected bone material/size, full roots, native tint, body and physical mapping unchanged. No new ImageGen/isolation call. Anatomical landmarks remain authored estimates, not native skull bones; integrated natural-head/gear and Yrame assembly acceptance still pending."
+        "status": "REQUIRES REWORK",
+        "reason": "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field."
       },
       "current_registration": {
         "model": {
@@ -16188,7 +16226,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "native_equipment_state_review",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -16201,7 +16239,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Yrame mutation-specific Feet297/16 placement, duplication/occlusion on extra legs, named morphology/outfit and native equipped-state acceptance remain unfinished."
+        "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -16524,6 +16562,24 @@
           ],
           "review": "Inspected exact boar-leather/gold-wire description, original glyph, actual Vanilla Apparel Expanded inventory-only boot reference, own cardinal construction and lace-edge patch, one contextual refinement, full neutral leather, separate deterministic wire, closed-foot coverage, zero skin overlay, individual boot sources, native w/y palette and intended-size previews. No worn directional donor or standard RimWorld foot bones are claimed. Raw glow, red contamination and generated geometry excluded; leather completed beneath wire before precise original lace paths. Original body/contact unchanged; no bare toes or invented back laces. Actual Feet297/laterality16/MultipleLegs manager is retained, not remapped. These are reusable baseline footwear sources: placement on Yrame added feet, named outfit and native acceptance remain unfinished.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Withdraw fitting generation-readiness pending corrected Yrame body/attachment reconciliation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+              "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
+          "result": "REQUIRES REWORK"
         }
       ],
       "apparel_occlusion": {
@@ -16534,7 +16590,7 @@
         "native_binding": "Pending final all-generated gate; no native game run or renderer framework change",
         "readiness": "Intact source, masks, overlay-only, mask-off/on assemblies and all-view authoring review required"
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -16544,8 +16600,8 @@
         }
       },
       "art_review": {
-        "status": "PASS",
-        "reason": "Inspected exact boar-leather/gold-wire description, original glyph, actual Vanilla Apparel Expanded inventory-only boot reference, own cardinal construction and lace-edge patch, one contextual refinement, full neutral leather, separate deterministic wire, closed-foot coverage, zero skin overlay, individual boot sources, native w/y palette and intended-size previews. No worn directional donor or standard RimWorld foot bones are claimed. Raw glow, red contamination and generated geometry excluded; leather completed beneath wire before precise original lace paths. Original body/contact unchanged; no bare toes or invented back laces. Actual Feet297/laterality16/MultipleLegs manager is retained, not remapped. These are reusable baseline footwear sources: placement on Yrame added feet, named outfit and native acceptance remain unfinished."
+        "status": "REQUIRES REWORK",
+        "reason": "Rebuilt fore/hind arrangement changes foot geometry and fore-pair boot anchors; no duplicate boots on added pair."
       },
       "current_registration": {
         "model": {
@@ -16579,7 +16635,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "native_equipment_state_review",
+      "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -16591,7 +16647,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "Captured generic unidentified text and weight3 differ from installed item identity/weight2; both retained. Named Big silhouette/mutations/outfit and native held/resting-ready pose acceptance remain unfinished."
+        "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -16857,9 +16913,27 @@
           ],
           "review": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Withdraw fitting generation-readiness pending corrected Yrame body/attachment reconciliation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+              "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "current_registration": {
         "model": {
           "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
@@ -16871,8 +16945,8 @@
         }
       },
       "art_review": {
-        "status": "PASS",
-        "reason": "Inspected actual Qud glyph, captured unidentified item and installed matte ionic-plastifer/finger-rest definition; kept generic description and weight3 versus installed2 discrepancy. Actual Core Longsword supplies flat long-weapon convention, not polished steel or its guard; actual mod knife rejected for short proportions. One constructed full blade/hilt, one contextual refinement, deterministic neutral surface registration and hidden-grip completion retain original alpha/ink and body. Generated red glow/backdrop/body are excluded; there is no second isolation call, charged glow or attack effect. Independent c blade / y hilt and Yrame w override inspected in SEN/mirrored west and48x96. Item-space grip570 sits30px above pommel and below finger-rest, inside original palm. Actual ordinary Hand292/2 retained. Named Big body/mutations/outfit and native attachment/resting-ready state acceptance remain unfinished."
+        "status": "REQUIRES REWORK",
+        "reason": "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse."
       },
       "registration_summary": "Matte Vibro Blade, sparse root grooves and finger-rest hilt; one complete neutral tool and separate c/y tint, lower item-space grip on unchanged ordinary female baseline. Actual Hand292/2 retained; named Big body/mutations/outfit and resting-ready/native state unfinished.",
       "native_acceptance": "Pending full-set generation gate and actual native named/equipment/pose state",
@@ -17924,7 +17998,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "record_item_acceptance_from_all_fittings",
+      "current_step": "resolve_item_identity_description_palette",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -17932,7 +18006,8 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Named Yrame morphology/mutation/outfit assembly and native acceptance remain unfinished."
+        "Named Yrame morphology/mutation/outfit assembly and native acceptance remain unfinished.",
+        "Required fitting reconciliation pending: FIT-YRAME-CHAIN-MAIL-BODY-0"
       ],
       "metadata": {
         "original_reference": {
@@ -18033,9 +18108,23 @@
           "review": "Reconciled exact Chain Mail identity, linked-steel description, y/Y roles and its only enumerated fit; original/mod/manual/rejected/patched/contextual/registration evidence and exact model/plate hashes are present. Ordinary-body garment authoring only; this does not accept named Yrame morphology, mutation assembly or native equipment state.",
           "result": "PASS",
           "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reopen equipment aggregate because a required Yrame fitting is superseded.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Required fitting reconciliation pending: FIT-YRAME-CHAIN-MAIL-BODY-0",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -18461,13 +18550,15 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "record_item_acceptance_from_all_fittings",
+      "current_step": "resolve_item_identity_description_palette",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [],
+      "known_issues": [
+        "Required fitting reconciliation pending: FIT-YRAME-HORNS-HEAD-0"
+      ],
       "metadata": {
         "original_reference": {
           "instance": 575,
@@ -18656,9 +18747,23 @@
           ],
           "review": "Re-reviewed current v2 fitting after user rejected inconsistent roots. Front forehead design is retained; profile now projects the same root site and rear hides it. Exact old art/logs preserved; no new generation or native acceptance.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reopen equipment aggregate because a required Yrame fitting is superseded.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Required fitting reconciliation pending: FIT-YRAME-HORNS-HEAD-0",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "art_review": {
         "status": "PASS",
         "reason": "Re-reviewed current v2 fitting after user rejected inconsistent roots. Front forehead design is retained; profile now projects the same root site and rear hides it. Exact old art/logs preserved; no new generation or native acceptance."
@@ -18994,7 +19099,7 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "record_item_acceptance_from_all_fittings",
+      "current_step": "resolve_item_identity_description_palette",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
@@ -19002,7 +19107,8 @@
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Actual mutation-managed Feet297/16 binding, extra-foot duplication/occlusion and native named outfit acceptance remain unfinished."
+        "Actual mutation-managed Feet297/16 binding, extra-foot duplication/occlusion and native named outfit acceptance remain unfinished.",
+        "Required fitting reconciliation pending: FIT-YRAME-LEATHER-BOOTS-FEET-16"
       ],
       "metadata": {
         "original_reference": {
@@ -19103,9 +19209,23 @@
           "review": "Reconciled boar-leather/gold-wire source identity, w/y roles, actual mutation-managed binding and complete reusable footwear authoring evidence. Individual boot sources, full leather, wire and zero skin overlay are retained. Generation-only aggregate; no acceptance of extra-foot placement or native named outfit.",
           "result": "PASS",
           "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reopen equipment aggregate because a required Yrame fitting is superseded.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Required fitting reconciliation pending: FIT-YRAME-LEATHER-BOOTS-FEET-16",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "apparel_workflow": {
         "version": "regional-curved-v1",
         "status": "GENERATION READY",
@@ -20558,14 +20678,15 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "record_item_acceptance_from_all_fittings",
+      "current_step": "resolve_item_identity_description_palette",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
       "known_issues": [
-        "Captured generic description/weight differ from installed identity; records retained. Named Yrame body/mutations/outfit and native equipment/pose acceptance remain unfinished."
+        "Captured generic description/weight differ from installed identity; records retained. Named Yrame body/mutations/outfit and native equipment/pose acceptance remain unfinished.",
+        "Required fitting reconciliation pending: FIT-YRAME-VIBRO-BLADE-HAND-2"
       ],
       "metadata": {
         "original_reference": {
@@ -20650,6 +20771,20 @@
           "review": "Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished.",
           "result": "PASS",
           "new_imagegen_call": false
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reopen equipment aggregate because a required Yrame fitting is superseded.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [],
+          "review": "Required fitting reconciliation pending: FIT-YRAME-VIBRO-BLADE-HAND-2",
+          "result": "REQUIRES REWORK"
         }
       ],
       "held_pose_review": {
@@ -20657,7 +20792,7 @@
         "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
         "owner": "Stage 3 final assembly after full-set generation gate"
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "current_registration": {
         "model": {
           "path": "art/conversion/item-vibro-blade/v1/fittings.json",
@@ -41258,7 +41393,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "native_visibility_equipment_hurt_look_save_review",
+      "current_step": "verify_body_and_every_equipped_item_dependencies",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -41267,7 +41402,9 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [],
+      "known_issues": [
+        "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged."
+      ],
       "metadata": {
         "species": "human",
         "captured_gender": "female",
@@ -41718,6 +41855,24 @@
           "outputs": [],
           "review": "Authoring hidden preview is empty. Native Horns/Feet precedence, equip/unequip, supported held states and Icy Vapor effects remain untested; entry stays UNFINISHED.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-21T03:26:41.199330+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Withdraw generation-ready credit after confirmed attachment and facing-depth defect.",
+          "inputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v1/model.json",
+              "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/leg-construction.json",
+              "sha256": "d069a7d1f545c66a504bd5309756671369783b35aba1bdc7bcec976a0081d6c3"
+            }
+          ],
+          "outputs": [],
+          "review": "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged.",
+          "result": "REQUIRES REWORK"
         }
       ],
       "apparel_dependencies": {
@@ -41728,7 +41883,7 @@
         ],
         "status": "Current mail and boots reviewed on separate named body. Boots580 only on Feet297/16; native outfit acceptance pending."
       },
-      "generation_ready": true,
+      "generation_ready": false,
       "current_registration": {
         "model": {
           "path": "art/conversion/npc-warden-yrame/v1/model.json",
@@ -41741,12 +41896,8 @@
       },
       "registration_summary": "Yrame515: separate four-foot body with actual mail, near/far forehead horns, static blade and boots on changed Feet297 only. Source pixels and world scale/contact preserved in horn-compatible frame; actual natural/equipped state retained. Native acceptance pending.",
       "art_review": {
-        "status": "PASS",
-        "reason": "Inspected original glyph, full captured metadata, separate four-foot anatomy, all four single-item plates, assembly stages, complete neutral/native and intended-size views. Mail574 Body287, natural Horns575 Head288, Blade576 Hand292/2 and Boots580 changed Feet297/16 match the capture. Added Feet298/64 remains unequipped; no duplicate boots or invented frozen-hand garment. High-forehead horns retain existing near/far layers: north roots are behind the original head, profiles overlap naturally, south roots remain on forehead. No temple-root substitution or baked horn anatomy. Existing1152px horn canvas governs the assembly. Exact body/mail/blade/boots RGBA is copied at y+128 while existing horn pixels stay at y+0; physical pixel scale and ground/contact are unchanged. Mail cuffs/shoulders/hem, boots on the original pair, independent added bare feet, and static blade palm/depth reviewed in all facings. Each late mask affects only its own item; no original body redraw erases another piece. Neutral RGB remains gray. Body uses captured tileColor w; horns use w/W, mail y/Y, blade c/y and boots w/y independently. Source B detail and natural Icy Vapor metadata remain retained without an invented permanent-skin region or new particle effect. All five dependencies retain actual original/reference/manual/refinement/secondary/patch/extraction histories; no new ImageGen call or costume for this assembly. Static blade display is not ready/resting or native held-state acceptance. No mutation framework, game launch or native acceptance; those remain required after full generation.",
-        "record": {
-          "path": "art/conversion/npc-warden-yrame/v1/authoring-review.json",
-          "sha256": "7b28c0e97f8bbef3029bbe1c03e9a87db24593e16faccf34a770a64a46fba539"
-        }
+        "status": "REQUIRES REWORK",
+        "reason": "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged."
       },
       "resolved_advancement_blocker": {
         "requirement": "Source-bound four-foot named anatomy and actual four-item assembly",
@@ -51566,7 +51717,7 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
+      "status": "UNFINISHED",
       "current_step": "resolve_race_description_original_sprite_runtime_anatomy",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
@@ -51624,8 +51775,8 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": "native_body_review",
+      "status": "IN PROGRESS",
+      "current_step": "correct_anatomy_then_imagegen_refine_composed_views",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
         "select_actual_core_dlc_or_mod_reference",
@@ -51636,7 +51787,9 @@
         "visual_review_anatomy_orientation_palette_all_views",
         "native_body_review"
       ],
-      "known_issues": [],
+      "known_issues": [
+        "Source silhouette requires centaur-like lower trunk; v1 biped-plus-pair and v2 lowered-root proposal superseded. Rebuild source-bound anatomy before fitting."
+      ],
       "metadata": {
         "unmutated_base_entry": "BODY-HUMAN-FEMALE",
         "mutation_rendering": "Separate framework; no baked mutant baseline"
@@ -52045,9 +52198,81 @@
           "outputs": [],
           "review": "No native activation or game/harness run. Complete actual four-item NPC assembly next; body remains UNFINISHED pending integrated native acceptance.",
           "result": "DEFERRED UNTIL ALL GENERATED"
+        },
+        {
+          "timestamp": "2026-10-21T03:26:41.198883+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Withdraw generation-ready credit after confirmed attachment and facing-depth defect.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/registered/model.json",
+              "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/leg-construction.json",
+              "sha256": "d069a7d1f545c66a504bd5309756671369783b35aba1bdc7bcec976a0081d6c3"
+            }
+          ],
+          "outputs": [],
+          "review": "User-identified structural defect confirmed in both the first generated sheet and selected v1: added thighs emerge too high on the posterior contour, and the added pair is behind the base in all facings. V1 is superseded; four-foot count alone did not establish coherent pelvic attachment or depth.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T03:26:41.713653+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Reconstruct lower pelvic attachments and facing-dependent overlap before another refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/source-packet.json",
+              "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/model.json",
+              "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/construction.json",
+              "sha256": "839d0a8c40aab0300bfb6ccec23900067a70e2e3bb72b8279b89bffb813863d0"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/construct-correction.py",
+              "sha256": "f665f319d7012024006bda7005a10975f287f7b238514dfe5f283bcda82c6303"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/constructed-turnaround.png",
+              "sha256": "e0ca328e63364bac59611c6fb70dbaca3f6c4636b53d55a14c0fc4744f1c63ce"
+            }
+          ],
+          "review": "Manual candidate awaiting visual inspection. Native source supplies fore/hind slots, not socket coordinates.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T03:35:36.136236+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Reconcile actual source sprite and latest user body-plan direction; reject biped-only interpretation and intervening X stance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/source-packet.json",
+              "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/construction.json",
+              "sha256": "839d0a8c40aab0300bfb6ccec23900067a70e2e3bb72b8279b89bffb813863d0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "review": "Upright upper body joins horizontal four-legged lower body. Original source silhouette governs remodeled lower trunk; no ordinary biped pelvis with extra posterior legs. Source and authored interpretation remain distinct. Ordinary human base is unchanged. No new ImageGen call.",
+          "result": "REQUIRES REWORK"
         }
       ],
-      "generation_ready": true,
+      "generation_ready": false,
       "current_registration": {
         "model": {
           "path": "art/conversion/body-yrame/v1/registered/model.json",
@@ -52060,11 +52285,11 @@
       },
       "registration_summary": "Yrame515 source-exact shared female body/head with one separate added human leg pair. Four foot contours, captured Feet297/298 managers, source frame/contact and independent neutral/native metadata retained. Boots and horns remain separate actual items; native acceptance pending.",
       "art_review": {
-        "status": "PASS",
-        "reason": "Inspected original w/B glyph and full native description/body tree, actual Core female directional references, unchanged reusable base, editable front/profile/back construction, both actual ImageGen outputs, patched feet and final four-view neutral/native/component/intended-size plates. Two plural Feet groups with Mobility2 and native hind/foreleg prose support four physical feet; level6 is not six appendages. Original two arms/hands/head/body and paired baseline legs remain exact. Additional leg pair is a separate texture bound as art to added Feet298/64, parent Body287, manager515::MultipleLegs::Add. Changed Feet297/16 retains Boots580; added group remains unequipped. Horns575 remain separate equipment, not baseline anatomy. Both generated proposals preserve four-foot anatomy but redraw baseline pixels. Keep only measured neutral surface range in fixed editable added-leg gradients; no generated baseline replacement or AI isolation. Rounded feet and subtle toe curves retained. Final12px outward spacing in front/back separates toe silhouettes without changing body, contact, leg lengths, physical frame or accepted profiles; previous registration retained. Neutral RGB is grayscale. Native body preview uses captured tileColor w. B detail remains documented but has no guessed permanent-skin region; icy/rime cosmetics and natural Icy Vapor effect are outside the initial body phase. West mirrors the symmetric east body/leg geometry. No new human race, centaur/horse anatomy, general mutation framework, gear, fixed skin color, personal cosmetics or native activation. Actual four-item Yrame assembly and full native acceptance remain unfinished.",
+        "status": "REQUIRES REWORK",
+        "reason": "Source silhouette requires centaur-like lower trunk; v1 biped-plus-pair and v2 lowered-root proposal superseded. Rebuild source-bound anatomy before fitting.",
         "record": {
-          "path": "art/conversion/body-yrame/v1/registered/authoring-review.json",
-          "sha256": "1dd4b9149f9fd36e8a5fa2ce0ad55ec8f8b1e4fa1c5d7ec9aa8f51b0059db726"
+          "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+          "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
         }
       }
     },
@@ -65075,7 +65300,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T03:10:50.087963+00:00",
+  "updated_at": "2026-10-21T03:35:36.136236+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

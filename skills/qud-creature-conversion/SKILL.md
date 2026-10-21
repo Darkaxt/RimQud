@@ -61,6 +61,18 @@ Build this input chain:
   Wiki data supplements them; record its revision/game version and conflicts.
 - Keep mechanical body tree, description-based visible features, and authored
   interpretation distinct. A slot name or sprite blob is not proof of anatomy.
+- Select a body family from the confirmed race and visible body plan. Use a
+  human/Humanoid template only for human-based races; never make it the fallback
+  for every creature. Shared equipment slots do not imply shared silhouettes.
+  Inspect the actual original sprite alongside the description and runtime tree
+  before choosing torso proportions, limb roots or a whole-body donor reference.
+- A human-based mutant need not retain an ordinary bipedal lower body. If the
+  source silhouette requires a remodeled trunk or pelvis, author that changed
+  region separately from the reusable unmutated base. Do not force all base
+  pixels to remain visible and then attach extra legs to its rear contour. Keep
+  attachment, fore/hind identity and occlusion consistent across facings. Label
+  uncertain hidden anatomy and user-selected interpretations explicitly; do not
+  turn equipment slots into anatomical coordinates or invent an animal species.
 - Resolve the unmutated race/body plan separately from the captured individual's
   mutation-altered tree. Do not make Irudad's extra arms/tail, Nima's extra arms
   or Yrame's extra feet the baseline for ordinary humans. Existing named-mutant
