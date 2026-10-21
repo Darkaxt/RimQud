@@ -1,5 +1,12 @@
 # Faithful Joppa art and body specification
 
+Requested visual review surface (2026-10-21): present current integration
+preparation through a small HTML preview, not a JSON-only handoff. Show prepared
+cast compositions beside reviewed reference images, all four views, neutral and
+captured colors, separate-body/equipped choices and smaller display sizes. Load
+only the selected resident/view. Label this as authoring/prepared-operation
+rendering; actual native adapter integration and in-game acceptance stay pending.
+
 User-directed stop boundary (2026-10-21): finish the current remaining generation
 and fully check the complete conversion set in game, then PAUSE before redesigning
 the art/body/equipment procedure. Do not begin another blanket rebuild or apply

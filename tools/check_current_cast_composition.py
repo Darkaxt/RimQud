@@ -14,6 +14,61 @@ from PIL import Image, ImageChops, ImageOps
 REPO = Path(__file__).resolve().parents[1]
 
 
+def compose_item(operation, image, colors=None):
+    rows = operation['components']
+    primary = np.array(image(next(row for row in rows if row['component'] == 'item'))).astype(float)
+    alpha = primary[:, :, 3] / 255
+    detail_row = next((row for row in rows if row['component'] == 'item-detail'), None)
+    detail = np.array(image(detail_row)).astype(float) if detail_row else np.zeros_like(primary)
+    da = np.minimum(detail[:, :, 3] / 255, alpha)
+    pc, dc = colors(operation['key']) if colors else (np.ones(3), np.ones(3))
+    premul = primary[:, :, :3] * pc * (alpha - da)[:, :, None] + detail[:, :, :3] * dc * da[:, :, None]
+    result = np.zeros_like(primary, dtype=np.uint8)
+    result[:, :, :3] = np.uint8(np.clip(np.round(np.divide(premul, alpha[:, :, None], out=np.zeros_like(premul), where=alpha[:, :, None] > 0)), 0, 255))
+    result[:, :, 3] = np.uint8(np.round(alpha * 255))
+    ownership = next((row for row in rows if row['component'] == 'body-overlay'), None)
+    if ownership:
+        mask = np.array(image(ownership))[:, :, 3].astype(float) / 255
+        result[:, :, 3] = np.uint8(np.round(result[:, :, 3].astype(float) * (1 - mask)))
+    result[result[:, :, 3] == 0, :3] = 0
+    return Image.fromarray(result)
+
+
+def compose_view(view, image, colors=None, equipped=True):
+    """Render the prepared operations; an optional palette supplies native tints."""
+    def body_layer(row):
+        value = image(row)
+        if colors is None or row['color_role'] == 'fixed':
+            return value
+        pc, dc = colors(row.get('equipment_key'))
+        array = np.array(value)
+        tint = dc if row['color_role'] in ['detail', 'equipment-detail'] else pc
+        if row.get('detail_weight'):
+            mask = dict(row['detail_weight'], public_file=row['detail_weight']['path'], assembly_mirror=row['assembly_mirror'])
+            weight = np.array(image(mask).convert('L')).astype(float)[:, :, None] / 255
+            tint = (1 - weight) * pc + weight * dc
+        array[:, :, :3] = np.uint8(np.clip(np.round(array[:, :, :3].astype(float) * tint), 0, 255))
+        array[array[:, :, 3] == 0, :3] = 0
+        return Image.fromarray(array)
+
+    first = view['body'][0]
+    actual = Image.new('RGBA', tuple(first['size']))
+    if not equipped:
+        for row in view['body']:
+            actual.alpha_composite(body_layer(row))
+    elif view['composition_mode'] == 'authored_depth_layers':
+        for row in view['layers']:
+            actual.alpha_composite(body_layer(row))
+    else:
+        for operation in view['draw_sequence']:
+            if operation['kind'] == 'body':
+                for row in operation['components']:
+                    actual.alpha_composite(body_layer(row))
+            else:
+                actual.alpha_composite(compose_item(operation, image, colors))
+    return actual
+
+
 def check(root, version):
     staged = root / 'selected'
     source = staged / f'cast-v{version}.json'
@@ -26,24 +81,6 @@ def check(root, version):
         value = Image.open(path).convert('RGBA')
         return ImageOps.mirror(value) if row['assembly_mirror'] else value
 
-    def item(operation):
-        rows = operation['components']
-        primary = np.array(image(next(row for row in rows if row['component'] == 'item'))).astype(float)
-        alpha = primary[:, :, 3] / 255
-        detail_row = next((row for row in rows if row['component'] == 'item-detail'), None)
-        detail = np.array(image(detail_row)).astype(float) if detail_row else np.zeros_like(primary)
-        da = np.minimum(detail[:, :, 3] / 255, alpha)
-        premul = primary[:, :, :3] * (alpha - da)[:, :, None] + detail[:, :, :3] * da[:, :, None]
-        result = np.zeros_like(primary, dtype=np.uint8)
-        result[:, :, :3] = np.uint8(np.clip(np.round(np.divide(premul, alpha[:, :, None], out=np.zeros_like(premul), where=alpha[:, :, None] > 0)), 0, 255))
-        result[:, :, 3] = np.uint8(np.round(alpha * 255))
-        ownership = next((row for row in rows if row['component'] == 'body-overlay'), None)
-        if ownership:
-            mask = np.array(image(ownership))[:, :, 3].astype(float) / 255
-            result[:, :, 3] = np.uint8(np.round(result[:, :, 3].astype(float) * (1 - mask)))
-        result[result[:, :, 3] == 0, :3] = 0
-        return Image.fromarray(result)
-
     for ident, actor in cast['cast'].items():
         model_blob = (staged / actor['model']['package_file']).read_bytes()
         assert hashlib.sha256(model_blob).hexdigest() == actor['model']['sha256']
@@ -54,17 +91,7 @@ def check(root, version):
             expected_blob = (REPO / reference['path']).read_bytes()
             assert hashlib.sha256(expected_blob).hexdigest() == reference['sha256']
             expected = Image.open(REPO / reference['path']).convert('RGBA')
-            actual = Image.new('RGBA', expected.size)
-            if view['composition_mode'] == 'authored_depth_layers':
-                for row in view['layers']:
-                    actual.alpha_composite(image(row))
-            else:
-                for operation in view['draw_sequence']:
-                    if operation['kind'] == 'body':
-                        for row in operation['components']:
-                            actual.alpha_composite(image(row))
-                    else:
-                        actual.alpha_composite(item(operation))
+            actual = compose_view(view, image)
             delta = ImageChops.difference(actual, expected)
             visible = ImageChops.lighter(actual.getchannel('A'), expected.getchannel('A'))
             rgb = delta.convert('RGB')
