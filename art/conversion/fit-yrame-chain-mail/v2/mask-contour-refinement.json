@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-10-21T04:56:52.949931+00:00",
+  "reason": "First patch followed connected dark hand ink into nearby body ink. Keep original good front/back masks; refine only profile hand ownership from its closed light interior and original rim.",
+  "previous": {
+    "path": "art/conversion/fit-yrame-chain-mail/v2/hand-ownership-correction.json",
+    "sha256": "a5809aab7b434c4eef12d1fbe39bda55c0bda29df76840418247f14e0af927ee"
+  },
+  "body_and_cloth_unchanged": true,
+  "views": {
+    "south": {
+      "method": "Retain the inspected initial curved forearm/hand mask; no correction needed."
+    },
+    "east": {
+      "seed": [
+        529,
+        585
+      ],
+      "roi": [
+        480,
+        552,
+        577,
+        625
+      ],
+      "replace_below": 557,
+      "interior_pixels": 1415,
+      "rim_distance_limit": 8,
+      "method": "Original closed light hand interior plus nearby original dark rim only; exclude surrounding torso/fleece light pixels."
+    },
+    "north": {
+      "method": "Retain the inspected initial curved forearm/hand mask; no correction needed."
+    }
+  },
+  "final_masks": [
+    {
+      "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-south.png",
+      "sha256": "d9d831b3babcc3835aeef71ff0dd0e44e6184c563ca024701e1843bf5abb8fc5"
+    },
+    {
+      "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-east.png",
+      "sha256": "08aafa68c8cca510ae11bb9db6311ca0cd75180620e6ad4395c9b7cae120152a"
+    },
+    {
+      "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-north.png",
+      "sha256": "1cc53e1f1572354a5bfc07af6ad1ab1e19fe9a33b987f58445a3cb3a9651b173"
+    }
+  ]
+}

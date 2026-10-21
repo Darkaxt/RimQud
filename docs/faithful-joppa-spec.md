@@ -8,7 +8,28 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, horn-root rebuild): Yrame's natural
+Current authoring checkpoint (2026-10-21, centauroid mail): the Chain Mail
+Body287/0 fitting and its inventory aggregate are generation-ready under
+`fit-yrame-chain-mail/v2/arm-owner-v2` and `item-chain-mail/v2`. One per-view
+contract preceded construction and described connected shoulders, curved short
+sleeves, a long anterior drop and a short dorsal hem at the animal-back junction.
+The cut is an authored adaptation of the existing linked-steel shirt, not an
+inferred native barding item. One actual contextual refinement supplied metal;
+the complete manual garment alpha remained unchanged, concealed/excluded steel
+was continued before fitting, and original-body visibility was applied last.
+No garment warp was needed after construction at the selected body landmarks.
+Initial hand-mask patches are preserved: profile torso leakage was removed by
+using the original hand interior/rim, and native-palette review then revealed
+fleece restoration beside hands. The final overlay selects the original human
+arm foreground only; fleece stays below the mail. Exact body/frame, whole mail,
+independent y/Y metal regions, mask-off/on, all facings at matched physical scale
+and intended-size art were reviewed. These are authoring results; equipped-state,
+Yrame's full outfit and native acceptance remain pending behind the full-set
+generation gate. There are 128 generation-ready entries out of 156, every entry
+still unfinished for native acceptance. Stage 3 is the sole ACTIVE stage;
+`FIT-YRAME-LEATHER-BOOTS-FEET-16` is the sole active entry.
+
+Prior authoring checkpoint (2026-10-21, horn-root rebuild): Yrame's natural
 Head288/0 Horns575 fitting and its source-item aggregate are generation-ready
 under `fit-yrame-horns/v4` and `item-horns/v3`. The rejected v3 construction and
 contextual refinement remain preserved. Before the new construction, a per-view
@@ -24,8 +45,8 @@ were reviewed. Gray RGB left under alpha0 by bicubic registration was normalized
 without altering visible pixels; the previous encodings and decision log remain
 preserved. These are generation-authoring results, not native acceptance or
 approval of Yrame's unfinished outfit. There are 126 generation-ready entries
-out of 156, with every entry still unfinished for native acceptance. Stage 3 is
-the sole ACTIVE stage; `FIT-YRAME-CHAIN-MAIL-BODY-0` is the sole active entry.
+out of 156 at that checkpoint, with every entry still unfinished for native
+acceptance. Stage 3 remained ACTIVE; chain-mail refitting followed this work.
 
 Authority: already_authorized. The user requested a new tileset close to Qud's
 original art, proper models for the village's races including male/female/child

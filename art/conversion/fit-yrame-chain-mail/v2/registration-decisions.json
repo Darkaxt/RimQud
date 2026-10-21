@@ -1,0 +1,91 @@
+{
+  "recorded_at": "2026-10-21T05:02:55.266064+00:00",
+  "source": {
+    "path": "art/conversion/fit-yrame-chain-mail/v2/context-refinement-raw.png",
+    "sha256": "193ea02be1afe787edca0739ec18637bfa0a8594e581b786f905473be944c6dd"
+  },
+  "first_structural_review": {
+    "path": "art/conversion/fit-yrame-chain-mail/v2/first-refinement-structural-review.json",
+    "sha256": "b9b9155a6404b311d84ab2d5896971ec5bf12ec361845610478f818983317d50"
+  },
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "sampling": {
+    "context_crop": [
+      144,
+      240,
+      624,
+      720
+    ],
+    "input_sheet": [
+      1440,
+      540
+    ],
+    "actual_output": [
+      2048,
+      768
+    ],
+    "mapping": "sx=(body_x-144+facing_index*480)*raw_width/1440; sy=(body_y-240)*raw_height/540"
+  },
+  "material_tone_curve": "gray=70+0.65*sampled/completed_gray; preserve manual ink below90. Contrast reduction only, no blur.",
+  "views": {
+    "south": {
+      "known_visible_steel_pixels": 82549,
+      "authored_continuation_pixels": 4781,
+      "tiny_authored_island_pixels": 0,
+      "full_alpha_preserved": true,
+      "fit": "Identity fit at body landmarks. No exterior stretch or internal warp required; full source constructed directly for this body.",
+      "unchanged_body": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/original-body-south.png",
+        "sha256": "7b5dd4d40c03dd0a29a05260a88ca2642c86791f3609301853e865191d9e933a"
+      },
+      "mask": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-south.png",
+        "sha256": "d9d831b3babcc3835aeef71ff0dd0e44e6184c563ca024701e1843bf5abb8fc5"
+      },
+      "body_overlay_pixels": 18911,
+      "continuation": "Harmonic continuation within complete manual garment for arm-hidden, excluded or edge-unsampled steel. Retain authored source ink. No unseen generated-body pixels copied."
+    },
+    "east": {
+      "known_visible_steel_pixels": 41239,
+      "authored_continuation_pixels": 11888,
+      "tiny_authored_island_pixels": 0,
+      "full_alpha_preserved": true,
+      "fit": "Identity fit at body landmarks. No exterior stretch or internal warp required; full source constructed directly for this body.",
+      "unchanged_body": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/original-body-east.png",
+        "sha256": "c93bb2d766828a71d8caab5582631859eedb222128a8bae20660bd43acfe439a"
+      },
+      "mask": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-east.png",
+        "sha256": "08aafa68c8cca510ae11bb9db6311ca0cd75180620e6ad4395c9b7cae120152a"
+      },
+      "body_overlay_pixels": 8524,
+      "continuation": "Harmonic continuation within complete manual garment for arm-hidden, excluded or edge-unsampled steel. Retain authored source ink. No unseen generated-body pixels copied."
+    },
+    "north": {
+      "known_visible_steel_pixels": 53768,
+      "authored_continuation_pixels": 3893,
+      "tiny_authored_island_pixels": 0,
+      "full_alpha_preserved": true,
+      "fit": "Identity fit at body landmarks. No exterior stretch or internal warp required; full source constructed directly for this body.",
+      "unchanged_body": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/original-body-north.png",
+        "sha256": "ae57f7e8a5a24bccec9edd3b17ae26220f362cc1cdb47ff28d9ce64d2ee59bc4"
+      },
+      "mask": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/body-visibility-ready-north.png",
+        "sha256": "1cc53e1f1572354a5bfc07af6ad1ab1e19fe9a33b987f58445a3cb3a9651b173"
+      },
+      "body_overlay_pixels": 19378,
+      "continuation": "Harmonic continuation within complete manual garment for arm-hidden, excluded or edge-unsampled steel. Retain authored source ink. No unseen generated-body pixels copied."
+    }
+  },
+  "body_and_physical_frame_unchanged": true,
+  "full_source_before_fitting_and_visibility": true,
+  "second_isolation_call": false,
+  "deformation": "Identity. Regional controls were needed for body-class cuff/hand visibility, not a forced garment warp.",
+  "native_acceptance": "Pending full-generation gate, actual equipped-state and complete named outfit."
+}
