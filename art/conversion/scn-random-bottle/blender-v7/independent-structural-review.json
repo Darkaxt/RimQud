@@ -1,0 +1,56 @@
+{
+  "review_scope": "Independent visual structural review of exact supplied authoring evidence; no runtime acceptance",
+  "recommendation": "pass",
+  "inputs": [
+    {
+      "path": "blender-v7/registered/registration-comparison.png",
+      "sha256": "a2dedcbebc10c2d30933b25694dbcabd1bdc51dec985e0475f2b422c75832b03"
+    },
+    {
+      "path": "blender-v7/stage-02-model-3d.png",
+      "sha256": "6aa16f0bc5c83c2e1c5d6cf051287500c1ae76dd1dd51c5533e14f800c63430e"
+    },
+    {
+      "path": "blender-v7/raw-filled-neutral.png",
+      "sha256": "07e3e5b4ce5773c3f8e6cd396bd66cc3fbb8458eb0e4e908378d360de363bc6d"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"
+    },
+    {
+      "path": "blender-v1/source-packet.json",
+      "sha256": "2e8b04c24e3630a2ff0ea09778e60da970fb5665102d98a62002803fccc22e4d"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "pass",
+      "subject": "Source identity",
+      "evidence": "Source comparison shows long neck, flared mouth, rounded lower vessel and right loop handle. Registered v7 retains these defining features and avoids the donor beer label, cap and straight silhouette."
+    },
+    {
+      "severity": "pass",
+      "subject": "Hollow translucent glass",
+      "evidence": "Registered empty layer exposes the dark backdrop through the central body and neck, with brighter wall edges and a readable mouth opening. Filled layer retains the same shell and adds a distinct low liquid band."
+    },
+    {
+      "severity": "pass",
+      "subject": "Handle roots and containment",
+      "evidence": "Registered handle meets the right neck and upper-right shoulder without a visible gap. Liquid has a level top and remains inside the bottom vessel outline, including the color probe."
+    },
+    {
+      "severity": "minor",
+      "subject": "High-resolution root and shading polish",
+      "evidence": "Oblique stage-02 lower handle root ends in a bright rounded highlight that reads slightly like a tube tip; raw neutral image also has granular highlights. Registered view resolves the root into the shoulder and these details do not undermine the intended-size silhouette.",
+      "action": "No fix-now required for structural acceptance."
+    },
+    {
+      "severity": "pass",
+      "subject": "Intended-size readability",
+      "evidence": "The 16x24, 24x36 and 32x48 samples in registration-comparison preserve the long neck, low bulb and right handle. The smallest handle is faint but remains distinct; liquid color reads at the base."
+    }
+  ],
+  "consequential_structural_flaws": [],
+  "limitations": "Static authoring images establish visual structure only. Native content, sealing, palette and in-game delivery are outside this review."
+}

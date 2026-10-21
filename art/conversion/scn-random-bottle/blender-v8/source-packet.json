@@ -1,0 +1,128 @@
+{
+  "entry": "SCN-RANDOM-BOTTLE",
+  "recorded_at": "2026-10-21T11:43:01.455658+00:00",
+  "identity": "Random Bottle -> Bottle -> Vessel -> WaterContainer -> Item",
+  "description": "A vessel of freeblown glass curves at the lunar arc. The style hints that it originates from the coast of the Fuming God Sea, on the far side of Moghra'yi, and that it was likely exported by the dromads.",
+  "ancestry": {
+    "Random Bottle": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Random Bottle\" Inherits=\"Bottle\">\n    <part Name=\"LiquidVolume\" StartVolume=\"0\" MaxVolume=\"16\" />\n    <part Name=\"PopulationLiquidFiller\" Table=\"RandomLiquid\" Volume=\"1d8\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n  </object>"
+    },
+    "Bottle": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Bottle\" Inherits=\"Vessel\">\n    <part Name=\"Render\" DisplayName=\"glass bottle\" ColorString=\"&amp;c\" DetailColor=\"c\" Tile=\"Items/sw_jug2.bmp\" RenderLayer=\"6\" Occluding=\"false\" />\n    <part Name=\"Physics\" Weight=\"5\" Takeable=\"true\" />\n    <part Name=\"Description\" Short=\"A vessel of freeblown glass curves at the lunar arc. The style hints that it originates from the coast of the Fuming God Sea, on the far side of Moghra'yi, and that it was likely exported by the dromads.\" />\n    <part Name=\"LiquidVolume\" StartVolume=\"0\" MaxVolume=\"16\" ManualSeal=\"true\" LiquidVisibleWhenSealed=\"true\" />\n    <tag Name=\"DetailColorByLiquid\" Value=\"c\" />\n    <tag Name=\"Transparent\" />\n    <part Name=\"ShattersOnHit\" />\n    <part Name=\"PopulationLiquidFiller\" Table=\"VesselLiquid_Standard\" Volume=\"1d4\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_glass\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_glass\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>"
+    },
+    "Vessel": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Vessel\" Inherits=\"WaterContainer\">\n    <part Name=\"Render\" DisplayName=\"[vase]\" RenderString=\"168\" ColorString=\"&amp;w\" DetailColor=\"g\" Tile=\"Items/sw_jug.bmp\" RenderLayer=\"6\" Occluding=\"false\" TileColor=\"\" />\n    <part Name=\"Physics\" Weight=\"15\" Takeable=\"false\" Organic=\"false\" />\n    <part Name=\"LeakWhenBroken\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Mods\" Value=\"PotteryMods\" />\n    <tag Name=\"QuestableVerb\" Value=\"drink from\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeforeDrink\" />\n    <stag Name=\"LiquidStorage\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"Vessel\" />\n  </object>"
+    },
+    "WaterContainer": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "selected": "<object Name=\"WaterContainer\" Inherits=\"Item\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"64\" Volume=\"0\" />\n    <part Name=\"Render\" DisplayName=\"[Water Container]\" ColorString=\"&amp;b\" RenderString=\"168\" RenderLayer=\"5\" Tile=\"Items/sw_waterskin.bmp\" TileColor=\"&amp;w\" DetailColor=\"y\" />\n    <part Name=\"Physics\" Category=\"Water Containers\" SpecificHeat=\"4.1813\" />\n    <part Name=\"LeakWhenBroken\" />\n    <part Name=\"Commerce\" Value=\"5\" />\n    <part Name=\"NotNameable\" />\n    <part Name=\"LiquidRepellent\" Liquids=\"water,cider,goo,oil,ooze,proteangunk,slime,sludge,wine\" />\n    <stat Name=\"Hitpoints\" Value=\"30\" sValue=\"30\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_liquidContainer\" />\n    <tag Name=\"WaterContainer\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t\t<stag Name=\"Storage\" />\n  </object>"
+    },
+    "Item": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "selected": "<object Name=\"Item\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Item]\" RenderString=\".\" RenderLayer=\"5\" />\n    <part Name=\"Physics\" Conductivity=\"20\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;Y^k\" />\n    <part Name=\"Stacker\" />\n    <part Name=\"MentalShield\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_organic\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_material\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TinkerCategory\" Value=\"utility\" />\n    <tag Name=\"Item\" />\n    <tag Name=\"DynamicObjectsTable:Items\" />\n  </object>"
+    }
+  },
+  "original_mask": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\random-bottle-mask.png",
+    "sha256": "bb983a4f765d05e5d4cf36bcbe169be228fe90e5802a2ce46cdcdb6f58e75ecf"
+  },
+  "original_tile": {
+    "tile": "Items/sw_jug2.bmp",
+    "description": "A vessel of freeblown glass curves at the lunar arc. The style hints that it originates from the coast of the Fuming God Sea, on the far side of Moghra'yi, and that it was likely exported by the dromads.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "glass bottle",
+      "RenderString": "168",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "ColorString": "&c",
+      "Tile": "Items/sw_jug2.bmp",
+      "TileColor": "",
+      "DetailColor": "c",
+      "Occluding": "false"
+    },
+    "kind": "scenery",
+    "blueprint": "Random Bottle",
+    "reference_file": "village-originals/random-bottle-reference.png",
+    "native_mask_sha256": "bb983a4f765d05e5d4cf36bcbe169be228fe90e5802a2ce46cdcdb6f58e75ecf",
+    "reference_sha256": "96cbbaa21b58678b52859ef6d0661612e25733dc1af94c89594686a3f24d6f19",
+    "info_id": 9763,
+    "atlas_id": 185,
+    "rect": [
+      612,
+      104,
+      16,
+      24
+    ]
+  },
+  "source_features": "Long neck, flared mouth, round lower vessel and right loop handle. Lower source detail region is independently liquid-colored; the separate top pixel marker does not establish a floating physical cap.",
+  "source_behavior": {
+    "capacity": 16,
+    "initial_volume": 0,
+    "population_filler": "RandomLiquid 1d8",
+    "manual_seal": true,
+    "liquid_visible_when_sealed": true,
+    "detail_color_by_liquid": "c",
+    "transparent_tag": true,
+    "shatters_on_hit": true,
+    "scope": "Native part/tag contracts retained, not evidence of measured glass opacity or a new tile/state family."
+  },
+  "palette": {
+    "primary": "c",
+    "detail": "c or native liquid-driven detail",
+    "rule": "Neutral independent body/detail roles. Actual native palette, contents and seal behavior remain native."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Item\\Drug\\Beer\\Beer_a.png",
+    "sha256": "c3c567f41e61b01a53b953215278110b08b8f409552d5601fba6406034a53d9b",
+    "role": "Actual beer-bottle asset supplies restrained bottle highlights and edge weight only. No beer label, amber color, cap, straight silhouette or content is copied."
+  },
+  "authored_interpretation": "Hollow freeblown glass body and connected C-shaped handle, rolled mouth and low-complexity glass shading. Source top marker becomes a joined mouth glint, not a detached stopper. Depth, wall thickness and smoothing are authored.",
+  "states": "One original fixed map tile. Preserve native random contents, color, seal, breakage and empty/filled dispatch. No new native tile family or volume simulation.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "anchor": [
+      8,
+      16
+    ],
+    "rule": "One full-cell mapping; no alpha-bound fitting."
+  },
+  "native_acceptance": "Pending every-conversion-generated gate",
+  "historical_source_packet": {
+    "path": "art/conversion/scn-random-bottle/blender-v1/source-packet.json",
+    "sha256": "2e8b04c24e3630a2ff0ea09778e60da970fb5665102d98a62002803fccc22e4d"
+  },
+  "authored_liquid": "Independent static liquid geometry at the source lower band makes the user-selected transparent-glass interpretation visible. Its fill extent is an art interpretation, not a measured native volume.",
+  "selected_optics": "Translucent hollow glass shell and separate contained liquid; opaque earlier renders are geometry drafts."
+}

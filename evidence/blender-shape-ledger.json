@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T11:35:37.537710+00:00",
+  "updated_at": "2026-10-21T12:13:28.140737+00:00",
   "purpose": "Persistent editable 3D source registry; models are intentional project outputs, not disposable cache.",
   "reuse_rule": "Open the selected .blend and save a new version for local corrections. Preserve prior versions. Use construction replay for recovery or deliberate geometry regeneration, not as a requirement to restart.",
   "assets": [
@@ -370,13 +370,194 @@
         "path": "art/conversion/scn-wooden-water-wheel/blender-v2/reopen-audit.json",
         "sha256": "58e139e5d539fca6516287420085346dacf4eb23e1885897da4ca992f8e6712f"
       }
+    },
+    {
+      "entry": "SCN-RANDOM-BOTTLE",
+      "native_item": "Random Bottle / native glass and random contents",
+      "versions": [
+        {
+          "version": "blender-v1",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v1/bottle.blend",
+            "sha256": "18304844c6c5552e6ffbdd8c307c3c79443dd2139bc2b8f6e355a508f3ff74fb"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v1/build-bottle.py",
+            "sha256": "65c15a340087588234dd331391a3dadf24ffeea2062715a0d6076fd9a4bf1afc"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v1/model-controls.json",
+            "sha256": "40b37a83006f9732c9d29601a81244485d348d56e4259678168a465a07c3c038"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v1/blender-receipt.json",
+            "sha256": "18d1f9ec5d7c52b999bf37e9ee7ad187864e39b8a704fb3403e22f4524b3608d"
+          },
+          "status": "Initial complete editable hollow vessel; angular bowl/opaque geometry draft superseded."
+        },
+        {
+          "version": "blender-v2",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v2/bottle.blend",
+            "sha256": "a92f3ab3280a198a4c7ceb770fecc84fdc81a23cf324bb40a25808a7f4d9e972"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v2/refine-saved-bottle.py",
+            "sha256": "e0ca7559894ff3f1d7aafcb37229abf452adc14d12149ce2b05df2f6968c99b8"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v2/model-controls.json",
+            "sha256": "0420e4592cab0b04e33c9efee563385d38d9b84ef75a9a1b1879eaaea166cf3a"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v2/blender-receipt.json",
+            "sha256": "a41a7fe94f75526e61d10b0f6dea60878b6ba0df8a58f3140d2df368a90afeac"
+          },
+          "status": "Rounded glass geometry; independent review found abrupt/flat handle roots."
+        },
+        {
+          "version": "blender-v3",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v3/bottle.blend",
+            "sha256": "abc3621d0912497c4215e0225e46922dd570e315757d0b31b4d5bf9da8776664"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v3/fuse-saved-handle.py",
+            "sha256": "efc05adef3a1002a42d6e7b084cd32f100855f8750a6158f45f934d066c32a23"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v3/model-controls.json",
+            "sha256": "b4ca7d422d10c119f76b0aee0165914400eb826fee83ee60caba4d8960da0ba3"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v3/blender-receipt.json",
+            "sha256": "db6091bde03ac057caa13eb23f4161d9541b3a806c52dcaa0bfa7d8047dee787"
+          },
+          "status": "Actual manifold handle union; opaque geometry draft superseded by user transparency direction."
+        },
+        {
+          "version": "blender-v4",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v4/bottle.blend",
+            "sha256": "cf79fcc35e96abffff69fc5a9010d16a7acc52352fbcc4632dcfd701c111916a"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v4/glass-and-liquid.py",
+            "sha256": "23d61b6d3b042e20cee0eb60890178f8c86fcebac93592949bf6b09ae191f101"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v4/model-controls.json",
+            "sha256": "b789b03dd131902beae14929a005ab78fac584e39893be62b3adfe988c3d529f"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v4/blender-receipt.json",
+            "sha256": "7cbb9203ec0617789570c08de4651f6646c3ab8c40ba66a161356b9630d08eb2"
+          },
+          "status": "Translucent shell, separate liquid, roots seated in actual wall; visual root termination unresolved."
+        },
+        {
+          "version": "blender-v5",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v5/bottle.blend",
+            "sha256": "ce3f4601df9ad65bf43531ae04f6be021eb5196106cd595be4eadb113eff5af8"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v5/round-glass-roots.py",
+            "sha256": "5b8ab8741b123bee4c3a9e4e5128ab10d773512abc7aa4a79385554deb0cecc3"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v5/model-controls.json",
+            "sha256": "7146e281e804ffcb8405080413c6d47871ee6c0a6d43f656e30af10b37b24108"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v5/blender-receipt.json",
+            "sha256": "0024def989d86a0b78df1612a4ca223af041547ce3204b57102fe30bfaa5d2cb"
+          },
+          "status": "Rejected: equal-radius sphere cap unions introduced64 nonmanifold edges and7 zero-area faces."
+        },
+        {
+          "version": "blender-v6",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v6/bottle.blend",
+            "sha256": "a63c692c758fba45da1884b7a901599f5893f663b189fcdc8163bccc81e45c89"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v6/refine-root-overlap.py",
+            "sha256": "9e518437898153a08240733cc04a0e13380cfab9398c765a647e44d42097a288"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v6/model-controls.json",
+            "sha256": "7036fe5814d4f246e58ecf7bc00991575792e8b3cdab4da0efe3898a38b47cd7"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v6/blender-receipt.json",
+            "sha256": "a6ca4c1004f73c2363b9f68803e65291a01fb5ca43875a1ab71339cb9bfff30f"
+          },
+          "status": "Rejected: changed sphere overlap still produced degenerate Boolean warnings; no approval."
+        },
+        {
+          "version": "blender-v7",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v7/bottle.blend",
+            "sha256": "22fdf95fa0a35b89e92d7ac19a459c4abd3eb8c73433fad2a3ef8798a4f06575"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v7/round-terminal-mesh.py",
+            "sha256": "04b80bb0b5a02600c1ebfb880db426bd91c4fd08d329816fc30eef09a106bdd4"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v7/model-controls.json",
+            "sha256": "e5d69ab53c7b0b9106847fcf157ee0d710b7e023c48210104ee00efd32694031"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v7/blender-receipt.json",
+            "sha256": "77e87f7995f49199739b54cb51b15a5b0a4a6d9f06c81fec31044767ab5cf47d"
+          },
+          "status": "Rounded terminal mesh fixed handle geometry and passed visual review; sampled liquid/base overlap -.0443 blocks selection."
+        },
+        {
+          "version": "blender-v8",
+          "blend": {
+            "path": "art/conversion/scn-random-bottle/blender-v8/bottle.blend",
+            "sha256": "1f601ad40f6c8357e9f0277872244df6f40da2dcf95508b77cf40ebc4638b9b7"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-random-bottle/blender-v8/refine-liquid-clearance.py",
+            "sha256": "61c373ac2742df780c7b531cd0ba4ee5b008a722405164e6062e5d48ee61d62f"
+          },
+          "controls": {
+            "path": "art/conversion/scn-random-bottle/blender-v8/model-controls.json",
+            "sha256": "360846a78be2bffe4bdccf6eade128974d562f24a3d1bd3db24b7ea18fa3ae49"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-random-bottle/blender-v8/blender-receipt.json",
+            "sha256": "22a20dcbf7bd9bcfa0b9fe5eba18fc40edbeba665be56f95a128f3b4e82caf54"
+          },
+          "status": "Selected: unchanged sound glass/handle and6percent radial liquid reduction, positive sampled clearance and final independent visual pass."
+        }
+      ],
+      "approved_generation_version": "blender-v8",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scn-random-bottle/blender-v8/bottle.blend",
+      "registered_model": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/model.json",
+        "sha256": "726a793631c57b57a236605404e7cb17486fa2a77d830468644c8beb89185bc1"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/authoring-review.json",
+        "sha256": "91107ab63509e54fdb2973e0d586d787b59eeee8188d1db6357c524deacaabd6"
+      },
+      "reopen_verification": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/reopen-audit.json",
+        "sha256": "339e3899ff9b2a5644042a24d22655371a20bf6d02224c56751bac58e7522389"
+      }
     }
   ],
   "reopen_verification": {
     "path": "evidence/blender-shape-reopen-audit-v2.json",
     "sha256": "6ceb6946d72cfc6350c050e177cc26a7e1fc981d535a977f1118a8f39ae6ff1d"
   },
-  "revision": 5,
+  "revision": 6,
   "prior_snapshots": [
     {
       "path": "evidence/blender-shape-ledger-history/v1.json",
@@ -393,6 +574,10 @@
     {
       "path": "evidence/blender-shape-ledger-history/v4.json",
       "sha256": "fd286afb39f652b645f680bfdf03ca9d131261a7c68fce9b146e82a874f8f957"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v5.json",
+      "sha256": "fdefed867156326e34321dc92fca104c60f1eacab485e34fc06322f58ab2fc1a"
     }
   ],
   "reusable_fit_proxies": [

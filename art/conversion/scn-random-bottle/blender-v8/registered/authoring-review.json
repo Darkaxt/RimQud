@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "reason": "Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.",
+  "independent_review": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/independent-structural-review.json",
+    "sha256": "c810a742fbbb4289247d67ec02630755e3a9be91bceb5843ac2d474ea97c1660"
+  },
+  "reopen_audit": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/reopen-audit.json",
+    "sha256": "339e3899ff9b2a5644042a24d22655371a20bf6d02224c56751bac58e7522389"
+  },
+  "reviewer": {
+    "agent": "/root/bottle_selected_render_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "checks": {
+    "neutral_equal_rgb": true,
+    "detail_coverage_subset": true,
+    "single_coverage_native_c_c_exact": true,
+    "fixed_full_cell_registration": true,
+    "source_state_family_unchanged": true
+  },
+  "dispositions": [
+    {
+      "finding": "Root glint, bright neutral glass and subtle frontal mouth opening",
+      "decision": "MINOR POLISH",
+      "reason": "Main inspection shows actual transparent centers in the selected source-cyan face and a hollow rim in the angled diagnostic. Fixed cardinal camera makes the opening shallow. Fresh review agrees the source identity remains coherent; full-set native play-distance assessment remains required."
+    }
+  ],
+  "native_acceptance": "Pending full generation gate"
+}

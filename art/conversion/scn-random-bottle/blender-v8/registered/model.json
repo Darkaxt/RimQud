@@ -1,0 +1,86 @@
+{
+  "entry": "SCN-RANDOM-BOTTLE",
+  "kind": "source_dualcolor_translucent_glass_container",
+  "blueprint": "Random Bottle",
+  "workflow": "blender-first-v1",
+  "source": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/source-packet.json",
+    "sha256": "61a4747538f62ca8cabb982fed053c721064035d91f3b2830be6f239d469a8fa"
+  },
+  "blender_source": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/bottle.blend",
+    "sha256": "1f601ad40f6c8357e9f0277872244df6f40da2dcf95508b77cf40ebc4638b9b7"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/model-controls.json",
+    "sha256": "360846a78be2bffe4bdccf6eade128974d562f24a3d1bd3db24b7ea18fa3ae49"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One full source-cell projection. No alpha-bounds recentering."
+  },
+  "palette": {
+    "primary": "c glass shell",
+    "detail": "c default; native DetailColorByLiquid controls liquid color",
+    "rule": "Single coverage, conditional liquid contribution. Glass stays translucent."
+  },
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "frames": [
+    {
+      "native_tile": "Items/sw_jug2.bmp",
+      "primary": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-primary.png",
+        "sha256": "2bc0edcc3d7240299f8ea00a229bf42010910c064925ab9e8a127da414dcccf4"
+      },
+      "detail": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-detail.png",
+        "sha256": "6f9142946c3c0f2b7e51d582f3daabe13352c35898ae4eb5004c61d81ebfbb5e"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-coverage.png",
+        "sha256": "7d9f31ceb1a2f2bd0696e966bec278de09a50c9ba952a29d7fb8170ad258590e"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-detail_weight.png",
+        "sha256": "ae10589d987687ea896eac88cdbd894506e9a58b4cd62c1bfb6207d0d2a30658"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-detail_coverage.png",
+        "sha256": "cafe7ad6dae1041e0eccf7fc85d1166cb29a1a93ea412d3f17ea5fbc3eaab63c"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-random-bottle/blender-v8/registered/bottle-authored_dualcolor_mask.png",
+        "sha256": "37f54a27f651f90ca9065bb2a9d3d513c6ecdc7a3ecd4627f59046d19bc046b4"
+      }
+    }
+  ],
+  "glass_and_liquid": {
+    "shell": "Actual hollow connected glass wall and handle with Fresnel opacity",
+    "liquid": "Independent closed geometry inside the bowl",
+    "fill_height": "Authored from original lower detail band, not a measured native volume",
+    "empty_authoring_layer": {
+      "path": "art/conversion/scn-random-bottle/blender-v8/registered/empty-glass-authoring-layer.png",
+      "sha256": "e6c629ea8321919d26863fb82738d0abd88bd4c4205c094d7d0a9a73c1a8201c"
+    },
+    "native_dispatch": "Actual contents, volume, empty/filled state and seal dispatch remain native; no new state tiles or simulation authored."
+  },
+  "native_behavior": "Capacity16, RandomLiquid1d8 filler, ManualSeal, LiquidVisibleWhenSealed, Transparent, ShattersOnHit and original physics/contents remain native.",
+  "view_policy": "One fixed source map tile, no unsupported rotation/state family.",
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

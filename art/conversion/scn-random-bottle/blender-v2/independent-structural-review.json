@@ -1,0 +1,60 @@
+{
+  "review_type": "independent structural image review before registration",
+  "inspected_images": [
+    {
+      "path": "art/conversion/scn-random-bottle/blender-v2/raw-neutral-master.png",
+      "sha256": "c4fead4021ad83f18684a5bf9f1989171c118776853895318fe6e4c1589a54e3"
+    },
+    {
+      "path": "art/conversion/scn-random-bottle/blender-v2/stage-02-model-3d.png",
+      "sha256": "957ceb8fafa11fac6cdf5c605a13e4a5dc760bf720f6e06229954f0e5ce68300"
+    },
+    {
+      "path": "art/conversion/scn-random-bottle/blender-v1/source-reference-comparison.png",
+      "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"
+    },
+    {
+      "path": "art/conversion/scn-random-bottle/blender-v1/random-bottle-mask.png",
+      "sha256": "b4a2662632da8d75d9d09e22c08850c87faf222615733f01c0e3cb697fa49c61"
+    },
+    {
+      "path": "art/conversion/scn-random-bottle/blender-v1/raw-neutral-master.png",
+      "sha256": "d4a60f7d27146e2251f9b1203b19a6078fd7577a19108660225467dad64409d2"
+    }
+  ],
+  "read_documents": [
+    "art/conversion/scn-random-bottle/blender-v1/source-packet.json",
+    "art/conversion/scn-random-bottle/blender-v2/model-controls.json"
+  ],
+  "findings": [
+    {
+      "topic": "source identity",
+      "severity": "pass",
+      "evidence": "Cardinal v2 master retains round lower bowl, long narrow neck, flared mouth and right lunar-arc loop. No copied beer label, cap, amber body or detached top glint is visible."
+    },
+    {
+      "topic": "actual wall rounding",
+      "severity": "pass",
+      "evidence": "Compared with v1 master, v2 visibly rounds the bowl, shoulder and flared mouth. Oblique diagnostic shows an open hollow mouth with visible inner wall; cardinal master has a joined rim highlight, not a floating object."
+    },
+    {
+      "topic": "handle root continuity in 3D diagnostic",
+      "severity": "consequential structural issue",
+      "evidence": "In stage-02-model-3d.png the lower handle terminates as a visibly exposed flat-ended tube over the right shoulder surface. A small light cap/end face is visible at its left tip rather than a continuous blended root. The upper handle also meets the neck with an abrupt cut-looking end. Cardinal master masks this problem by silhouette overlap, so cardinal appearance alone does not establish connected 3D roots.",
+      "required_resolution": "Inspect actual handle/body intersection and extend or join the lower root into the vessel wall so no exposed terminal cap remains in the diagnostic; verify both roots."
+    },
+    {
+      "topic": "cardinal rim readability",
+      "severity": "minor polish",
+      "evidence": "Hollow opening is explicit in oblique diagnostic but appears as a narrow horizontal highlight in the fixed cardinal master. This is compatible with the level cardinal camera and is not by itself evidence of a sealed cap."
+    }
+  ],
+  "conclusion": "Source identity and rounding are supported. Hold unconditional structural acceptance of the 3D model until the exposed lower handle end is resolved or geometry inspection demonstrates a continuous root. Fixed cardinal master reads connected, but oblique diagnostic reveals the endpoint concern.",
+  "limits": [
+    "Image review only: no Blender mesh/topology inspection, generation, game activation or native acceptance.",
+    "Model-controls reports reuse of saved v1 Blender geometry, authored wall rounding and no new ImageGen call; this review does not independently audit process execution.",
+    "Depth, wall thickness and opaque stylized glass are authored interpretations.",
+    "Native liquid, manual seal, liquid-dependent detail and Transparent behavior remain unvalidated and unchanged.",
+    "Oblique image is a structural diagnostic, not an additional native orientation or replacement for the fixed cardinal master."
+  ]
+}

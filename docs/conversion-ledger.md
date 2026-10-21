@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-RANDOM-BOTTLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-VASE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -92,8 +92,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
 | SCN-CANTEEN | Canteen | UNFINISHED | - |  |
-| SCN-RANDOM-BOTTLE | Random Bottle | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-VASE | Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-RANDOM-BOTTLE | Random Bottle | UNFINISHED | - | High-resolution glass grain/root highlight is minor polish; native liquid/seal/volume behavior and play-distance acceptance pending. |
+| SCN-VASE | Vase | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WINE-VASE | Wine Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOVEN-BASKET | Woven Basket | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
@@ -3849,13 +3849,79 @@ Current step: native_state_review. Process-log events: 10.
 
 ### SCN-RANDOM-BOTTLE: Random Bottle
 
-Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
+Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> render_blender_views_and_masks -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
 
 Required views/states: fixed map view; source palette/coverage and native supported states.
 
 Historical artifacts: [art/village/scenery/random-bottle-body.png](../art/village/scenery/random-bottle-body.png), [art/village/scenery/random-bottle-detail.png](../art/village/scenery/random-bottle-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 11.
+
+- 2026-10-21T11:43:01.593666+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact bottle ancestry, native content/color/seal contracts and original mask before construction.
+  Review: No new random shape/state inferred; glass opacity/depth are authored.
+  Inputs: [{"path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\random-bottle-mask.png", "sha256": "bb983a4f765d05e5d4cf36bcbe169be228fe90e5802a2ce46cdcdb6f58e75ecf"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v1/source-packet.json", "sha256": "2e8b04c24e3630a2ff0ea09778e60da970fb5665102d98a62002803fccc22e4d"}, {"path": "art/conversion/scn-random-bottle/blender-v1/source-reference-comparison.png", "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T11:43:01.593666+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual installed VTE bottle for rendering conventions only.
+  Review: Actual beer-bottle asset supplies restrained bottle highlights and edge weight only. No beer label, amber color, cap, straight silhouette or content is copied.
+  Inputs: [{"path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Item\\Drug\\Beer\\Beer_a.png", "sha256": "c3c567f41e61b01a53b953215278110b08b8f409552d5601fba6406034a53d9b"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v1/source-reference-comparison.png", "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / construct_faithful_shape / RECORDED: Construct an actual hollow freeblown vessel, neck, rolled mouth and complete loop handle in Blender.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v1/source-packet.json", "sha256": "2e8b04c24e3630a2ff0ea09778e60da970fb5665102d98a62002803fccc22e4d"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v1/stage-02-model-3d.png", "sha256": "b9a4026d959f2fb116516fc7226cdf568bbf2ae9b6b377efc1cb3f27405895d7"}, {"path": "art/conversion/scn-random-bottle/blender-v1/build-bottle.py", "sha256": "65c15a340087588234dd331391a3dadf24ffeea2062715a0d6076fd9a4bf1afc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / refine_materials_and_form / RECORDED: Round bowl and join actual handle; retain independent root critique and actual corrections.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v2/independent-structural-review.json", "sha256": "48dd6f7a480655fb16333dedf5d4c11d876dd0c4f40e23b74cac6fe0ffe7d4f4"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v3/reopen-audit.json", "sha256": "4df32d95ae1e46faafb2ceb17b9c73624ebf4e15c56f67dbe625eae936d93cca"}, {"path": "art/conversion/scn-random-bottle/blender-v4/glass-liquid-authoring-comparison.png", "sha256": "b5f22e255a7295e6f413da5f13f88220f32ca74b6f81c3f4107b2701ae82ed2d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / refine_materials_and_form / REJECTED: Retain rejected rounded-root Boolean trials and failed liquid-clearance version; no discarded failure or fabricated AI refinement.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v5/reopen-audit.json", "sha256": "cc2a474c65aefa9662b3372017c551d999d7019a257f5215e2175c43ee995437"}, {"path": "art/conversion/scn-random-bottle/blender-v7/reopen-audit.json", "sha256": "a8ce21b6728cb857bffcf6a7ab6f7cabebb09bfb44a1844729b640d2cab8b266"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/iteration-decisions.json", "sha256": "76ceaeb3103026f3c1215bb71a61e16705e01ae818a7da034143ba34e6ac9157"}, {"path": "art/conversion/scn-random-bottle/blender-v7/independent-structural-review.json", "sha256": "76085f4029b6510b79b2465c1d4b75ce1d1d7820a6452d10a66c823a9d422e69"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / construct_faithful_shape / PASS: Select complete retained glass with rounded actual terminal mesh; separate native-detail liquid fits its actual cavity.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/source-packet.json", "sha256": "61a4747538f62ca8cabb982fed053c721064035d91f3b2830be6f239d469a8fa"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/stage-02-model-3d.png", "sha256": "08b90e8187179732114353ebe2822e45bc4c5171d970ab74eb7709426784ead7"}, {"path": "art/conversion/scn-random-bottle/blender-v8/model-controls.json", "sha256": "360846a78be2bffe4bdccf6eade128974d562f24a3d1bd3db24b7ea18fa3ae49"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / create_required_state_neighbor_variants / PASS: Keep the single native map tile. Empty shell is authoring evidence; no new seal/fill/rotated state family.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/source-packet.json", "sha256": "61a4747538f62ca8cabb982fed053c721064035d91f3b2830be6f239d469a8fa"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/raw-empty-glass.png", "sha256": "240562b22db76efef8b06508d9e27c42dce58fd4005cc7cf40a6b1da3ad2b0d8"}, {"path": "art/conversion/scn-random-bottle/blender-v8/registered/model.json", "sha256": "726a793631c57b57a236605404e7cb17486fa2a77d830468644c8beb89185bc1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / refine_materials_and_form / PASS: Use direct translucent Blender materials and separate visible contents; no ImageGen or second isolation call.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/iteration-decisions.json", "sha256": "76ceaeb3103026f3c1215bb71a61e16705e01ae818a7da034143ba34e6ac9157"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/raw-filled-neutral.png", "sha256": "8c5f91e679a05c975df29c445a618de489c815de08920985aa5400621caccff2"}, {"path": "art/conversion/scn-random-bottle/blender-v8/raw-liquid-contribution.png", "sha256": "6ed63124fdc926448a8649fbfd8fb616eed16b3785780028891c949f0c50dfcc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / render_blender_views_and_masks / PASS: Render fixed original map face, empty-glass layer and conditional liquid contribution; retain editable model and immutable registry.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/bottle.blend", "sha256": "1f601ad40f6c8357e9f0277872244df6f40da2dcf95508b77cf40ebc4638b9b7"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/blender-receipt.json", "sha256": "22a20dcbf7bd9bcfa0b9fe5eba18fc40edbeba665be56f95a128f3b4e82caf54"}, {"path": "art/conversion/scn-random-bottle/blender-v8/reopen-audit.json", "sha256": "339e3899ff9b2a5644042a24d22655371a20bf6d02224c56751bac58e7522389"}, {"path": "evidence/blender-shape-ledger-history/v6.json", "sha256": "6b966766b714dc34149acf4f133f2d921f280fcfc2367fe6d7ec361eb95c1e0f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / extract_register_color_coverage / PASS: Preserve one translucent coverage and conditional glass/liquid tint under the full-cell frame/anchor.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/register-glass.py", "sha256": "cf1ce5f69b6d99379966097f8cad74bbc05bdcc7bd41edc84891de5783a16d47"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/registered/model.json", "sha256": "726a793631c57b57a236605404e7cb17486fa2a77d830468644c8beb89185bc1"}, {"path": "art/conversion/scn-random-bottle/blender-v8/registered/registration-decisions.json", "sha256": "0a6823d4d1db598dc21eba26a660de743bdf65640aee9a72c26f29ae73f3c1bf"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T12:13:28.140737+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect source identity, actual handle/glass volume, liquid visibility and intended-size native/color-role comparison.
+  Review: Selected direct Blender translucent hollow glass with separate contained liquid, matching the user interpretation and actual freeblown-glass/Transparent/LiquidVisibleWhenSealed/DetailColorByLiquid source contracts. Original long neck, flared mouth, rounded bowl and right loop remain source-bound. Handle roots are rounded on the actual terminal mesh and joined to the wall. Retained v5/v6 sphere-union attempts were rejected for geometry defects; v7 retained a small sampled liquid/base overlap and was corrected by a6percent radial reduction of liquid only. Reopened v8 has one manifold glass/handle component, a separate closed liquid and positive sampled cavity/floor clearance. Fresh independent rendered-image review found no fix-now structural issue. High-resolution root highlights/grain are minor polish. Native liquid/color/seal/volume and full-set play-distance acceptance remain gated.
+  Inputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/independent-structural-review.json", "sha256": "c810a742fbbb4289247d67ec02630755e3a9be91bceb5843ac2d474ea97c1660"}]
+  Outputs: [{"path": "art/conversion/scn-random-bottle/blender-v8/registered/registration-comparison.png", "sha256": "67e79efd6a34bf28dff324c55cde876c410351fa111bed68092cdfdad89a1c8a"}, {"path": "art/conversion/scn-random-bottle/blender-v8/registered/authoring-review.json", "sha256": "91107ab63509e54fdb2973e0d586d787b59eeee8188d1db6357c524deacaabd6"}]
+  Method/prompt/corrections: {}
 
 ### SCN-VASE: Vase
 
@@ -3865,7 +3931,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/wine-vase-body.png](../art/village/scenery/wine-vase-body.png), [art/village/scenery/wine-vase-detail.png](../art/village/scenery/wine-vase-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-WINE-VASE: Wine Vase
 

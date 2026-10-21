@@ -1,0 +1,43 @@
+{
+  "reopened": true,
+  "blend": {
+    "path": "art/conversion/scn-random-bottle/blender-v8/bottle.blend",
+    "sha256": "1f601ad40f6c8357e9f0277872244df6f40da2dcf95508b77cf40ebc4638b9b7"
+  },
+  "evaluated_surface": {
+    "vertices": 35212,
+    "edges": 70337,
+    "faces": 35125,
+    "connected_components": 1,
+    "nonmanifold_edges": 0,
+    "zero_area_faces": 0,
+    "euler_characteristic": 0
+  },
+  "modifiers": [
+    {
+      "name": "Round freeblown bowl and continuous rolled mouth",
+      "type": "SUBSURF"
+    },
+    {
+      "name": "Actual joined glass handle roots",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "Small fused glass root fillets",
+      "type": "BEVEL"
+    }
+  ],
+  "scope": "Actual evaluated joined surface diagnostics. Does not by itself establish visually flowing glass roots or native behavior.",
+  "liquid": {
+    "separate_object": true,
+    "nonmanifold_edges": 0,
+    "zero_area_faces": 0,
+    "sample_count": 866,
+    "minimum_radial_cavity_clearance": 0.06665659919888345,
+    "minimum_floor_clearance": 0.08001947402954102,
+    "bvh_candidate_pairs": 0,
+    "candidate_note": "BVH overlap returns candidate polygon bounding-box pairs, not proof of triangle intersections. Do not classify these pairs as leaks.",
+    "scope": "Samples compare liquid vertices/triangle centroids against the evaluated radial cavity and floor; the passed field records the actual outcome. Static authoring diagnostics only.",
+    "passed": true
+  }
+}

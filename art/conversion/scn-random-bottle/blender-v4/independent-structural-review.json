@@ -1,0 +1,63 @@
+{
+  "review_type": "Independent bounded visual structural review",
+  "reviewed_at": "2026-10-21T12:02:51.4647595Z",
+  "disposition": "ISSUES",
+  "scope": "Rendered authoring images only; no mesh topology, game or runtime validation",
+  "inputs": [
+    {
+      "path": "blender-v4/glass-liquid-authoring-comparison.png",
+      "sha256": "b5f22e255a7295e6f413da5f13f88220f32ca74b6f81c3f4107b2701ae82ed2d"
+    },
+    {
+      "path": "blender-v4/raw-filled-neutral.png",
+      "sha256": "f9840c79a38dfae068d2ff3d7daeb5d2a4f32d91b052f80e46d276b263ea810d"
+    },
+    {
+      "path": "blender-v4/raw-empty-glass.png",
+      "sha256": "891c0af45b6f2bf6a185a524fece37adb94d2cd935ef248a2832ef49d5202e78"
+    },
+    {
+      "path": "blender-v4/stage-02-model-3d.png",
+      "sha256": "2f4db40a59f67dcd8dc22a2a4476323be8b4935b374d732dcc3e879304a21a27"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"
+    },
+    {
+      "path": "blender-v1/source-packet.json",
+      "sha256": "2e8b04c24e3630a2ff0ea09778e60da970fb5665102d98a62002803fccc22e4d"
+    }
+  ],
+  "findings": [
+    {
+      "id": "V4-01",
+      "severity": "medium",
+      "view": "stage-02-model-3d.png and comparison right panel",
+      "location": "Lower handle root on right shoulder; approximately x=334..365 y=403..430 in 512x768 render",
+      "finding": "Handle root reads as two sharp parallel cut lines over the shoulder rather than a blended glass attachment.",
+      "evidence": "Both narrow handle edges continue inward past the body silhouette and terminate separately on its front surface. The frontal views hide the termination behind the silhouette, while the oblique view exposes it.",
+      "recommendation": "Inspect and finish the lower root transition so the handle visibly joins the wall without exposed cut-like ends."
+    },
+    {
+      "id": "V4-02",
+      "severity": "low",
+      "view": "glass-liquid-authoring-comparison.png, all panels",
+      "location": "Body wall highlights and bottom liquid region",
+      "finding": "Broad white wall bands dominate the glass and reduce the visual distinction between the pale liquid and glass base.",
+      "evidence": "The center remains background-readable and the fill has a distinct level, but the liquid is close in value to the thick white base/side shading. This is a readability limitation rather than evidence of leakage.",
+      "recommendation": "Consider reducing dominant wall bands or increasing liquid/glass value separation while retaining neutral authoring roles."
+    }
+  ],
+  "passes": [
+    "Long neck, flared mouth, rounded lower vessel and right loop handle preserve the source identity.",
+    "Oblique view shows an open elliptical mouth and continuous rim; no detached stopper is visible.",
+    "Glass has a coherent continuous outer silhouette and background-readable central volume.",
+    "Filled versus empty frontal images distinguish the separate liquid region; oblique liquid ellipse remains within the bowl silhouette.",
+    "Upper handle meets the neck visibly; no obvious floating gap is visible at the supplied scale."
+  ],
+  "limitations": [
+    "Rendered images cannot prove watertightness, handle union or exact internal liquid-wall clearance.",
+    "No native palette, small game-scale readability or runtime behavior claim is made."
+  ]
+}

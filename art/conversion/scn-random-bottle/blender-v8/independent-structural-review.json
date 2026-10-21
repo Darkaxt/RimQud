@@ -1,0 +1,56 @@
+{
+  "review_type": "independent visual structural review",
+  "scope": "Only supplied final renders and source comparison; no runtime validation",
+  "inputs": [
+    {
+      "path": "blender-v8/registered/registration-comparison.png",
+      "sha256": "67e79efd6a34bf28dff324c55cde876c410351fa111bed68092cdfdad89a1c8a"
+    },
+    {
+      "path": "blender-v8/stage-02-model-3d.png",
+      "sha256": "08b90e8187179732114353ebe2822e45bc4c5171d970ab74eb7709426784ead7"
+    },
+    {
+      "path": "blender-v8/raw-filled-neutral.png",
+      "sha256": "8c5f91e679a05c975df29c445a618de489c815de08920985aa5400621caccff2"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "e8aa249a928c8504d794b304bbdf30398a0a024620512f22e13deac6ea625e32"
+    }
+  ],
+  "findings": [
+    {
+      "area": "transparent glass",
+      "severity": "pass with minor polish",
+      "finding": "Empty registered shell reveals the green field through its central cavity; white contour and highlights establish glass. Raw neutral render is milky and very bright, but the registered transparency remains readable."
+    },
+    {
+      "area": "liquid containment and visibility",
+      "severity": "pass",
+      "finding": "The low horizontal liquid surface and curved lower volume remain inside the shell. Filled versus empty registered images and the gold probe distinguish independent liquid from glass; no visible leak or exposed liquid edge."
+    },
+    {
+      "area": "hollow mouth",
+      "severity": "minor polish",
+      "finding": "Angled 3D view shows a coherent open elliptical rim and inner throat. Front registered view compresses the opening to a small dark slit, and raw neutral highlights nearly erase it; this is a view/readability limitation rather than a demonstrated closed cap."
+    },
+    {
+      "area": "handle and source silhouette",
+      "severity": "pass",
+      "finding": "Long neck, pear-shaped lower body, flared mouth and right loop preserve the source identity. Both handle attachments appear coherent; angled lower attachment has a bright exposed-end-looking glint, but the front view joins cleanly."
+    },
+    {
+      "area": "intended-size readability",
+      "severity": "pass with minor polish",
+      "finding": "Bottle body, long neck and right handle survive the shown 16x24, 24x36 and 32x48 cells. Hollow mouth and fill distinction become subtle at the smallest cell; the probe still establishes the lower liquid role."
+    }
+  ],
+  "consequential_defects": [],
+  "fix_now": [],
+  "optional_polish": [
+    "If an additional pass is justified, reduce frontal rim highlight enough to retain a dark mouth opening at small size.",
+    "Consider slightly less opaque-looking white highlight coverage in the neutral raw rendering while preserving the registered glass contour."
+  ],
+  "recommendation": "Accept these renders for author selection on structural visual grounds. No consequential defect requires another geometry/render iteration. Runtime and actual game acceptance remain unverified."
+}
