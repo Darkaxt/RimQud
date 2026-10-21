@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T13:42:08.268294+00:00",
+  "updated_at": "2026-10-21T14:16:04.441685+00:00",
   "purpose": "Persistent editable 3D source registry; models are intentional project outputs, not disposable cache.",
   "reuse_rule": "Open the selected .blend and save a new version for local corrections. Preserve prior versions. Use construction replay for recovery or deliberate geometry regeneration, not as a requirement to restart.",
   "assets": [
@@ -1083,13 +1083,114 @@
         "path": "art/conversion/scn-tamsign/blender-v2/reopen-audit.json",
         "sha256": "5e9c1b7609cef9f241f786afef6c65cfd6cc9eef753fc044d5d0b394960f5430"
       }
+    },
+    {
+      "entry": "SCN-JOPPARESHEPHSHRINE",
+      "native_item": "JoppaReshephShrine / catalogue fallback, four temporary tombstones and normal Resheph statue",
+      "versions": [
+        {
+          "version": "blender-v1",
+          "blend": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v1/monuments.blend",
+            "sha256": "052ea24372be8c59c4782098f06f50b6611e71f7df83f2960e2f49b4371f3ff0"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v1/build-monuments.py",
+            "sha256": "1067042f23bf07c84d60cfc70eaa4ebff674530003c38c056c4a35394c6df5ec"
+          },
+          "controls": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v1/model-controls.json",
+            "sha256": "184cf73cc6464d8ebb6a3c1b0a98b9bb5dbc91db721cd03b20b4e566e846a3d9"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v1/blender-receipt.json",
+            "sha256": "50d8c73abaff790185e7c6c8d669f91849255141b27aa569de893c49d17f4ab0"
+          },
+          "status": "Manual six-state complete geometry"
+        },
+        {
+          "version": "blender-v2",
+          "blend": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v2/monuments.blend",
+            "sha256": "736616efd4af94c78e28c56a92b85d09f8972febb804b71854331778b54f56aa"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v2/refine-monuments.py",
+            "sha256": "b13b2fd91b3809a7e928c7a1f80e585e2cd4a00be12e21dd2b3b188f20e00b45"
+          },
+          "controls": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v2/model-controls.json",
+            "sha256": "964b2653a82aef4565916fb5d1948648294e92b46c95fd348fce0c31177a77ca"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v2/blender-receipt.json",
+            "sha256": "3578c56970a384f91fe743a8d7cde220330c35885ef5811bd5e474ddbdcd7f22"
+          },
+          "status": "REJECTED / alternatives unintentionally overlaid"
+        },
+        {
+          "version": "blender-v3",
+          "blend": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v3/monuments.blend",
+            "sha256": "2febb0d63d55a70831a3b0b5336bd2e84c5e35b83a2a0f6bcefe5ff36b20007f"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v3/correct-state-visibility.py",
+            "sha256": "090d5763f5b6e02a71049451aa82716056723e32f6501601367922bf613ff1bb"
+          },
+          "controls": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v3/model-controls.json",
+            "sha256": "c7fa7ea4e9877c3b6a70d5659627e5286dcc02ca8e747bf9fd37a98e4d9db1ee"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v3/blender-receipt.json",
+            "sha256": "601c3765ea066d363582f4a9624ef3bf331fd7cf9a7e82235e4374c83f6bc857"
+          },
+          "status": "State isolation fixed; Resheph source upper identity correction required"
+        },
+        {
+          "version": "blender-v4",
+          "blend": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v4/monuments.blend",
+            "sha256": "b8b9c7075c2f2bfc16e4ec3cebfc7849a9dcfc9d0e32a40c875b65b542f8c518"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v4/correct-resheph-features.py",
+            "sha256": "689dbf36f6d617ce148ba944b5d47720fb8b084472fcedc98e04f65d1757083d"
+          },
+          "controls": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v4/model-controls.json",
+            "sha256": "d45a91f73920cc51f4cb62112a3c12350d72832c6c494b49f63120dd3647e275"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-joppareshephshrine/blender-v4/blender-receipt.json",
+            "sha256": "be620f2ed451e61f4a19785077fcec05ee1a2ca4a20252939564c8a6212c5fdd"
+          },
+          "status": "GENERATION SELECTED / native pending"
+        }
+      ],
+      "approved_generation_version": "blender-v4",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scn-joppareshephshrine/blender-v4/monuments.blend",
+      "registered_model": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/model.json",
+        "sha256": "5b57cc023b624a6006fbb1ca49da9c7253f3212593aec0da345cd695d360a196"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/authoring-review.json",
+        "sha256": "1a467b0a115dc0d2a948d07a3f8cf5d75267be5c74fe9a07190a94f6760e0ba8"
+      },
+      "reopen_verification": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/reopen-audit.json",
+        "sha256": "ddeffc442981f9fd168cfad31d8115a3bc8345b96c39723535915c64942f327b"
+      }
     }
   ],
   "reopen_verification": {
     "path": "evidence/blender-shape-reopen-audit-v2.json",
     "sha256": "6ceb6946d72cfc6350c050e177cc26a7e1fc981d535a977f1118a8f39ae6ff1d"
   },
-  "revision": 14,
+  "revision": 15,
   "prior_snapshots": [
     {
       "path": "evidence/blender-shape-ledger-history/v1.json",
@@ -1142,6 +1243,10 @@
     {
       "path": "evidence/blender-shape-ledger-history/v13.json",
       "sha256": "7ee5ee2396e1ad70a4bc9b9c2e9c58b8d0ab98c19bc02171be866d3c009e32f7"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v14.json",
+      "sha256": "18b0f4ea3feea77bceefb4584e2d28db978625fb5953464bc3a0dcfad787d43b"
     }
   ],
   "reusable_fit_proxies": [

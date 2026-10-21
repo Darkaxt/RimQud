@@ -1,0 +1,981 @@
+{
+  "entry": "SCN-JOPPARESHEPHSHRINE",
+  "kind": "source_guided_carved_shrine_variants",
+  "blueprint": "JoppaReshephShrine",
+  "workflow": "blender-first-v1",
+  "source": {
+    "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-packet.json",
+    "sha256": "5e13f29f32522a0a7fb05930a6f2b30ccbbba9165d42a0dd2d86b943d8387e6b"
+  },
+  "blender_source": {
+    "path": "art/conversion/scn-joppareshephshrine/blender-v4/monuments.blend",
+    "sha256": "b8b9c7075c2f2bfc16e4ec3cebfc7849a9dcfc9d0e32a40c875b65b542f8c518"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-joppareshephshrine/blender-v4/model-controls.json",
+    "sha256": "d45a91f73920cc51f4cb62112a3c12350d72832c6c494b49f63120dd3647e275"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "Common full-cell physical frame; state-relative source heights retained. No per-facing bounds normalization."
+  },
+  "palette": {
+    "primary": "Declared ColorString y, black background k; no TileColor override declared",
+    "detail": "Declared g, with native RandomSubterraneanColors DetailColor r,c,w,Y for inside zones only",
+    "worship": "Native WorshipColorString Y / WorshipDetailColor C; preserve event-owned appearance",
+    "rule": "Use semantic neutral primary/detail and one coverage; do not freeze all runtime states to a single preview palette."
+  },
+  "native_behavior": {
+    "preset_gospel_by_property": "JoppaShrine",
+    "pregenerated_name": "Resheph",
+    "epithet": "the Last Sultan",
+    "worship_faction": "Resheph",
+    "worship_power": 3,
+    "quest_events": [
+      "Prayed",
+      "Desecrated"
+    ],
+    "zone_landmark_radius": 6,
+    "solid": true,
+    "takeable": false,
+    "occluding": false,
+    "render_layer": 8,
+    "scope": "Keep native history initialization, look/reveal, worship, interior random-color behavior and solid mounted-furniture ownership. No new animation, clock or history content.",
+    "default_initialized": false,
+    "current_runtime_initialized": "Not captured this turn"
+  },
+  "native_state_owner": "SultanShrine owns initialization, historical snapshot/gospel and actual tile choice; declared catalogue plus four temporary tombstones and normal Resheph statue map only within selected JoppaReshephShrine blueprint. Do not replace other shrines globally or invent a new chooser.",
+  "frames": [
+    {
+      "state": "catalogue",
+      "native_tile": "Terrain/tile_tombstone1.png",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-primary.png",
+        "sha256": "3dba5ef5ac03ab1fcb2d50daf1fecf6ed06500286d2b1dcc1f14436bc9351323"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail.png",
+        "sha256": "3dba5ef5ac03ab1fcb2d50daf1fecf6ed06500286d2b1dcc1f14436bc9351323"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-coverage.png",
+        "sha256": "6f53e89fc4aa1c2da69912c502f4708ac774df2d5fbe33eec937a72736c1c54d"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail_weight.png",
+        "sha256": "daf1f30247d50cd11ff6717ec15453120735315be23920be9fe6c603ed0d1fac"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail_coverage.png",
+        "sha256": "7db0434182573977cef21130454a51eefe991acb5147226aa48ee5e295a416fc"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-authored_dualcolor_mask.png",
+        "sha256": "b0b9cd4a77efa8f8c75c5a0747f12780c8b7f933f011c1236dfbccbd5cab73c6"
+      }
+    },
+    {
+      "state": "tombstone1",
+      "native_tile": "terrain/sw_tombstone_1.bmp",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-primary.png",
+        "sha256": "d8aab918a13dfeb4a9d8e38f0ea94eabbedd1a208f054811a12e89d2ac47556b"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail.png",
+        "sha256": "d8aab918a13dfeb4a9d8e38f0ea94eabbedd1a208f054811a12e89d2ac47556b"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-coverage.png",
+        "sha256": "b7a5a74c0cb9e021a2a46700955842c761193f77441a30d87a5a5dbede052b44"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail_weight.png",
+        "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail_coverage.png",
+        "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-authored_dualcolor_mask.png",
+        "sha256": "fe4b1481996b74df4a7c2c9ef95d1a871215e278f59389b0c10da72516e01325"
+      }
+    },
+    {
+      "state": "tombstone2",
+      "native_tile": "terrain/sw_tombstone_2.bmp",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-primary.png",
+        "sha256": "6e659783d71b7a66b90ff4b56078a72f5fe5870ac391b4da018029620eea89e1"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail.png",
+        "sha256": "6e659783d71b7a66b90ff4b56078a72f5fe5870ac391b4da018029620eea89e1"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-coverage.png",
+        "sha256": "8dce9d654fe1b1cbeb6529a3b37dbf93b634069a0550b2e88af11157d3d52030"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail_weight.png",
+        "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail_coverage.png",
+        "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-authored_dualcolor_mask.png",
+        "sha256": "09b889ee1c3be1518e2b044bbf6e034a044a0d488ff4e5ffd995b4817ffa2291"
+      }
+    },
+    {
+      "state": "tombstone3",
+      "native_tile": "terrain/sw_tombstone_3.bmp",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-primary.png",
+        "sha256": "055cf7bb03627116230540adca161bfecea1819e20fbb993dc076ee431e5d766"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail.png",
+        "sha256": "055cf7bb03627116230540adca161bfecea1819e20fbb993dc076ee431e5d766"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-coverage.png",
+        "sha256": "8aef2ec6e736e4bbf3648b6034f72fdd940e10eb2e63f60085c8e0cc7782a139"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail_weight.png",
+        "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail_coverage.png",
+        "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-authored_dualcolor_mask.png",
+        "sha256": "d1882ab36350d680a6d4f41248d1e9e73a935de0bddaf5386d9300d0177e94a7"
+      }
+    },
+    {
+      "state": "tombstone4",
+      "native_tile": "terrain/sw_tombstone_4.bmp",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-primary.png",
+        "sha256": "a0bf286b80acd3f53d15a485fd287a22485687be8bcfcf77d3a2833bcd47fcf0"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail.png",
+        "sha256": "a0bf286b80acd3f53d15a485fd287a22485687be8bcfcf77d3a2833bcd47fcf0"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-coverage.png",
+        "sha256": "59319be17f8dafc50d53f1dbdef5244fe6618bf57043a0675ef70a57c7410a86"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail_weight.png",
+        "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail_coverage.png",
+        "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-authored_dualcolor_mask.png",
+        "sha256": "dac8b360c4a8d5b2ee13fb4966fdb2a52e836691faf088eff9493be42d253547"
+      }
+    },
+    {
+      "state": "resheph",
+      "native_tile": "Terrain/sw_resheph_sultanstatue.bmp",
+      "conditional_blueprint": "JoppaReshephShrine",
+      "primary": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-primary.png",
+        "sha256": "cc7d9bc47c8875b08e5b42469e2bb5f785a2a327076562c6b24c08a74b6e06b0"
+      },
+      "detail": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail.png",
+        "sha256": "cc7d9bc47c8875b08e5b42469e2bb5f785a2a327076562c6b24c08a74b6e06b0"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-coverage.png",
+        "sha256": "0f8ca1cc77c3616249b921a3c4fac8f5bc95127e66f3d3c21379e11d42f661f3"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail_weight.png",
+        "sha256": "e4bc2f78f07e75abdb82bf3ab5cbd03a8cff46ea0162043f890383d578e10a6e"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail_coverage.png",
+        "sha256": "bc7c249a158804df53867135c88b94455f7da3d33122c81b51e94d057c2dd3da"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-authored_dualcolor_mask.png",
+        "sha256": "7c599230be1b8d5ee00d0c469f16749ea79a077855c42720149906b6bc1a5c67"
+      }
+    }
+  ],
+  "retained_authoring_views": {
+    "catalogue": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-primary.png",
+          "sha256": "3dba5ef5ac03ab1fcb2d50daf1fecf6ed06500286d2b1dcc1f14436bc9351323"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail.png",
+          "sha256": "3dba5ef5ac03ab1fcb2d50daf1fecf6ed06500286d2b1dcc1f14436bc9351323"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-coverage.png",
+          "sha256": "6f53e89fc4aa1c2da69912c502f4708ac774df2d5fbe33eec937a72736c1c54d"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail_weight.png",
+          "sha256": "daf1f30247d50cd11ff6717ec15453120735315be23920be9fe6c603ed0d1fac"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-detail_coverage.png",
+          "sha256": "7db0434182573977cef21130454a51eefe991acb5147226aa48ee5e295a416fc"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-south-authored_dualcolor_mask.png",
+          "sha256": "b0b9cd4a77efa8f8c75c5a0747f12780c8b7f933f011c1236dfbccbd5cab73c6"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-primary.png",
+          "sha256": "93555ae0b0c938cc4e18b9f00779f1351785ac1dbb8251ffac60654c9614d342"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-detail.png",
+          "sha256": "93555ae0b0c938cc4e18b9f00779f1351785ac1dbb8251ffac60654c9614d342"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-coverage.png",
+          "sha256": "40ce2e087da8c26ad47fbc588e46323f345ed41940fb1fffb0ea419928de5bf2"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-detail_weight.png",
+          "sha256": "70806375b5f2dedcde86a47ead0fd932ee249e3135a14121de7fdb7c594c19f5"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-detail_coverage.png",
+          "sha256": "a3b9a7b492e6a2cfd453ffebd9d7f02877157ba036cdd7a01fb840ac9319f95c"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-east-authored_dualcolor_mask.png",
+          "sha256": "9bff67134d4d3582133f76b76109b8d9a15ce7633640c18f67cb09e98ca69b67"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-primary.png",
+          "sha256": "baa63b06fadcc4b40ec653ac761811ca331d627c527a60a26c3ce9f9b29046b7"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-detail.png",
+          "sha256": "baa63b06fadcc4b40ec653ac761811ca331d627c527a60a26c3ce9f9b29046b7"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-coverage.png",
+          "sha256": "cb5d67a83724581a089d56ec575f2f64ef06bd6e799e83bb1790cc87eb0be422"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-detail_weight.png",
+          "sha256": "7313dd93e37698a26e276c3e24ac53cd4693587428a52273c0fd3f86127adeea"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-detail_coverage.png",
+          "sha256": "053781670975445836fdb6caa87319090549c2c8c00237dfa483d9e3437c3373"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/catalogue-north-authored_dualcolor_mask.png",
+          "sha256": "5db1ec7b0b44b25d732316d9fc73b3e5380e05c020b17008989b1581891dfd42"
+        }
+      }
+    },
+    "tombstone1": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-primary.png",
+          "sha256": "d8aab918a13dfeb4a9d8e38f0ea94eabbedd1a208f054811a12e89d2ac47556b"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail.png",
+          "sha256": "d8aab918a13dfeb4a9d8e38f0ea94eabbedd1a208f054811a12e89d2ac47556b"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-coverage.png",
+          "sha256": "b7a5a74c0cb9e021a2a46700955842c761193f77441a30d87a5a5dbede052b44"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail_weight.png",
+          "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-detail_coverage.png",
+          "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-south-authored_dualcolor_mask.png",
+          "sha256": "fe4b1481996b74df4a7c2c9ef95d1a871215e278f59389b0c10da72516e01325"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-primary.png",
+          "sha256": "f89cb1eced55eef5dbabc2becdecd758b6081440a84f735feb12976d3949bdd7"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-detail.png",
+          "sha256": "f89cb1eced55eef5dbabc2becdecd758b6081440a84f735feb12976d3949bdd7"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-coverage.png",
+          "sha256": "cba215249e6920c0c1b80774294c3e8934df17c8705f32752c1ae18338d2bd7e"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-detail_weight.png",
+          "sha256": "5d927d22792359fb8d2f5e63103e76a60b4e9ab8a193e2a7d9764c6e544395fd"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-detail_coverage.png",
+          "sha256": "61efb300016cc9262ccb9d25368fff6c777a17ef20e9e35c6ebe950d08357a4d"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-east-authored_dualcolor_mask.png",
+          "sha256": "ca61b365902a3450cca1042ae6ce141e09dab4292a524fd7733b1576033bd83a"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-primary.png",
+          "sha256": "bf14cfc132c1b68d8344c883fa7ca79eaf7d34747065a75bbb6d1808bd88c232"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-detail.png",
+          "sha256": "bf14cfc132c1b68d8344c883fa7ca79eaf7d34747065a75bbb6d1808bd88c232"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-coverage.png",
+          "sha256": "2a03334dc1115c1031e33da4da0786f287aa63ee7b73a9f09fb41b47da28b6fc"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-detail_weight.png",
+          "sha256": "b7438598662f326ca2d4e380ed027b207b47696f37041b09a345be157622902d"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-detail_coverage.png",
+          "sha256": "5b2cae32b09caf22f74c9b3614b45d012b4bba0f6ed4f067428f65ddb4b26e17"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone1-north-authored_dualcolor_mask.png",
+          "sha256": "a7e3f319c4c86a519d8166793131783948055395abba825a069e9bd545dbb36f"
+        }
+      }
+    },
+    "tombstone2": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-primary.png",
+          "sha256": "6e659783d71b7a66b90ff4b56078a72f5fe5870ac391b4da018029620eea89e1"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail.png",
+          "sha256": "6e659783d71b7a66b90ff4b56078a72f5fe5870ac391b4da018029620eea89e1"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-coverage.png",
+          "sha256": "8dce9d654fe1b1cbeb6529a3b37dbf93b634069a0550b2e88af11157d3d52030"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail_weight.png",
+          "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-detail_coverage.png",
+          "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-south-authored_dualcolor_mask.png",
+          "sha256": "09b889ee1c3be1518e2b044bbf6e034a044a0d488ff4e5ffd995b4817ffa2291"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-primary.png",
+          "sha256": "4f378e9d405efc96b3d32965c626517555519deb770a8d2e4231f567846bd814"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-detail.png",
+          "sha256": "4f378e9d405efc96b3d32965c626517555519deb770a8d2e4231f567846bd814"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-coverage.png",
+          "sha256": "4ab1e618c7770826eba119193fe7fff094dd6176497227b804798fe3e655f7c7"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-detail_weight.png",
+          "sha256": "5d927d22792359fb8d2f5e63103e76a60b4e9ab8a193e2a7d9764c6e544395fd"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-detail_coverage.png",
+          "sha256": "61efb300016cc9262ccb9d25368fff6c777a17ef20e9e35c6ebe950d08357a4d"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-east-authored_dualcolor_mask.png",
+          "sha256": "8d9802b4644e0176b8f037cefb028cf63b2b9574c546de8ef384f64d762e2c7a"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-primary.png",
+          "sha256": "fc7063504b3d822056cfeb58f59fe8b514cc0a7285f3e74d382112bbf60475df"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-detail.png",
+          "sha256": "fc7063504b3d822056cfeb58f59fe8b514cc0a7285f3e74d382112bbf60475df"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-coverage.png",
+          "sha256": "57fd37dcab5704a4b376c28498bc0257b5565dbfefdf257dfdce43d5fc43743b"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-detail_weight.png",
+          "sha256": "b7438598662f326ca2d4e380ed027b207b47696f37041b09a345be157622902d"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-detail_coverage.png",
+          "sha256": "5b2cae32b09caf22f74c9b3614b45d012b4bba0f6ed4f067428f65ddb4b26e17"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone2-north-authored_dualcolor_mask.png",
+          "sha256": "8c3abddccf0894dbfeb89a9d46dfa05924a0fd7bc476c2ac0e84cd586a5abeb3"
+        }
+      }
+    },
+    "tombstone3": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-primary.png",
+          "sha256": "055cf7bb03627116230540adca161bfecea1819e20fbb993dc076ee431e5d766"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail.png",
+          "sha256": "055cf7bb03627116230540adca161bfecea1819e20fbb993dc076ee431e5d766"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-coverage.png",
+          "sha256": "8aef2ec6e736e4bbf3648b6034f72fdd940e10eb2e63f60085c8e0cc7782a139"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail_weight.png",
+          "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-detail_coverage.png",
+          "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-south-authored_dualcolor_mask.png",
+          "sha256": "d1882ab36350d680a6d4f41248d1e9e73a935de0bddaf5386d9300d0177e94a7"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-primary.png",
+          "sha256": "b1d2dfb7f661490f866c02a3581620e0c1c85e8d05397ae2755229755499fc42"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-detail.png",
+          "sha256": "b1d2dfb7f661490f866c02a3581620e0c1c85e8d05397ae2755229755499fc42"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-coverage.png",
+          "sha256": "740a502fe280d378d4e27bb7b065acea8361064ef94d9489e7e430fe9c1d1164"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-detail_weight.png",
+          "sha256": "5d927d22792359fb8d2f5e63103e76a60b4e9ab8a193e2a7d9764c6e544395fd"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-detail_coverage.png",
+          "sha256": "61efb300016cc9262ccb9d25368fff6c777a17ef20e9e35c6ebe950d08357a4d"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-east-authored_dualcolor_mask.png",
+          "sha256": "37fe4d5981bf30748cbba807a32f1d780a1ec415df16a0c5932a72e1d81785a0"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-primary.png",
+          "sha256": "70097ea7b707e8fbcc3f3fddabd63af180d2dc05a06a47523036b12168348472"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-detail.png",
+          "sha256": "70097ea7b707e8fbcc3f3fddabd63af180d2dc05a06a47523036b12168348472"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-coverage.png",
+          "sha256": "72b7d464ac15d337a6ea517b0350ea3fabd66bd95d0805b5d169e98ee481e466"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-detail_weight.png",
+          "sha256": "b7438598662f326ca2d4e380ed027b207b47696f37041b09a345be157622902d"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-detail_coverage.png",
+          "sha256": "5b2cae32b09caf22f74c9b3614b45d012b4bba0f6ed4f067428f65ddb4b26e17"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone3-north-authored_dualcolor_mask.png",
+          "sha256": "88cdd437cdf0e6ec36d2763612d93f6b57ab0266592e06f5691c2be2a7d48b70"
+        }
+      }
+    },
+    "tombstone4": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-primary.png",
+          "sha256": "a0bf286b80acd3f53d15a485fd287a22485687be8bcfcf77d3a2833bcd47fcf0"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail.png",
+          "sha256": "a0bf286b80acd3f53d15a485fd287a22485687be8bcfcf77d3a2833bcd47fcf0"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-coverage.png",
+          "sha256": "59319be17f8dafc50d53f1dbdef5244fe6618bf57043a0675ef70a57c7410a86"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail_weight.png",
+          "sha256": "ce437ad7c288972d519142c4653f4d790dd57a1ad60a002349ded7d37695d358"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-detail_coverage.png",
+          "sha256": "ccc57a73374cd10dfff1bf6c6f83137497a63270dd338212fbc6090c464005e8"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-south-authored_dualcolor_mask.png",
+          "sha256": "dac8b360c4a8d5b2ee13fb4966fdb2a52e836691faf088eff9493be42d253547"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-primary.png",
+          "sha256": "99c0c08c496fc35121753b10d1ee23faa798b6f30413fb48fa431df0033519d6"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-detail.png",
+          "sha256": "99c0c08c496fc35121753b10d1ee23faa798b6f30413fb48fa431df0033519d6"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-coverage.png",
+          "sha256": "495a4479ad5e1195d463ca6adbb9dce25cddbfc4e14d25246a7b73b35ac02187"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-detail_weight.png",
+          "sha256": "5d927d22792359fb8d2f5e63103e76a60b4e9ab8a193e2a7d9764c6e544395fd"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-detail_coverage.png",
+          "sha256": "61efb300016cc9262ccb9d25368fff6c777a17ef20e9e35c6ebe950d08357a4d"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-east-authored_dualcolor_mask.png",
+          "sha256": "5e63a8d54398bc6576ec99391818c670f09094a44da47d73a64f07fc2ce706ec"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-primary.png",
+          "sha256": "617792f9bc58d16b6016b579775b5b01323e31416e423f9c4b5f8003562c491e"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-detail.png",
+          "sha256": "617792f9bc58d16b6016b579775b5b01323e31416e423f9c4b5f8003562c491e"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-coverage.png",
+          "sha256": "dc3800508cae8c80dc7f211704724cc9a790fd6683366fc1cdd4ac7da3a11e41"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-detail_weight.png",
+          "sha256": "b7438598662f326ca2d4e380ed027b207b47696f37041b09a345be157622902d"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-detail_coverage.png",
+          "sha256": "5b2cae32b09caf22f74c9b3614b45d012b4bba0f6ed4f067428f65ddb4b26e17"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/tombstone4-north-authored_dualcolor_mask.png",
+          "sha256": "094e247bead3afdffba211476b1a872447d28cd009f9dee663a8256ed09d9af4"
+        }
+      }
+    },
+    "resheph": {
+      "south": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-primary.png",
+          "sha256": "cc7d9bc47c8875b08e5b42469e2bb5f785a2a327076562c6b24c08a74b6e06b0"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail.png",
+          "sha256": "cc7d9bc47c8875b08e5b42469e2bb5f785a2a327076562c6b24c08a74b6e06b0"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-coverage.png",
+          "sha256": "0f8ca1cc77c3616249b921a3c4fac8f5bc95127e66f3d3c21379e11d42f661f3"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail_weight.png",
+          "sha256": "e4bc2f78f07e75abdb82bf3ab5cbd03a8cff46ea0162043f890383d578e10a6e"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-detail_coverage.png",
+          "sha256": "bc7c249a158804df53867135c88b94455f7da3d33122c81b51e94d057c2dd3da"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-south-authored_dualcolor_mask.png",
+          "sha256": "7c599230be1b8d5ee00d0c469f16749ea79a077855c42720149906b6bc1a5c67"
+        }
+      },
+      "east": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-primary.png",
+          "sha256": "aa66fb0916c5377286012356da45a51bc6ef3cd53d195e1e05fb04b02726e5a6"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-detail.png",
+          "sha256": "aa66fb0916c5377286012356da45a51bc6ef3cd53d195e1e05fb04b02726e5a6"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-coverage.png",
+          "sha256": "03d17afa7c50bf8d0b1fc067ed8e8f4ce989429e75aa2cc2dc87d3bb2ab67539"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-detail_weight.png",
+          "sha256": "6b785cb6d0f45ed7e4238f1911a95ecfed38dbdfeb30659c4595ddb87377c2e8"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-detail_coverage.png",
+          "sha256": "3a208f58e94a9d5de67af01616f5420ab26615de5b5c0ab4e00695ab26ceb6ce"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-east-authored_dualcolor_mask.png",
+          "sha256": "fd0784f17a7cb805aa875f1513fffbd2578e8a7ef166eed12a809d607285b985"
+        }
+      },
+      "north": {
+        "primary": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-primary.png",
+          "sha256": "dbe83570a9f6ca2eebfbe74a43f78a853f7291419abe8d3060ad28d88713d93c"
+        },
+        "detail": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-detail.png",
+          "sha256": "dbe83570a9f6ca2eebfbe74a43f78a853f7291419abe8d3060ad28d88713d93c"
+        },
+        "coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-coverage.png",
+          "sha256": "23ebbdd3b5bb2c3084974f4d853d4c13c0f8a70be629e824df64980e41708068"
+        },
+        "detail_weight": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-detail_weight.png",
+          "sha256": "9701f565aa9129b9bca5961af37338ac80e76adeeb29cbc64c0e090728dc3efa"
+        },
+        "detail_coverage": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-detail_coverage.png",
+          "sha256": "8dc2efde3b90a533f9654993f8397f484554f20ed64a708f8f073fe802475a13"
+        },
+        "authored_dualcolor_mask": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/resheph-north-authored_dualcolor_mask.png",
+          "sha256": "8aa72644bf5d1a598a41c368358d95d73c8db9ada4a5e9cea65a15d1d9310b90"
+        }
+      }
+    }
+  },
+  "view_policy": {
+    "required": [
+      "south",
+      "east",
+      "north"
+    ],
+    "reason": "MountedFurniture ancestry requires complete cardinal authoring views. Source-supported tile state stays native, auxiliary facings do not establish native direction dispatch.",
+    "frame": "Each source16x24 cell retains common full-cell registration and anchor; physical model rotation rather than per-facing bounds resizing."
+  },
+  "physical_translation": "Complete connected monuments replace symbolic interior gaps with surface carving. Source ground bars become supported plinths using rear keys; catalogue positions and state-relative heights remain in one source cell. These are authored support/volume estimates, not native dimensions.",
+  "resheph_correction": {
+    "previous_profile": [
+      [
+        7.1,
+        1.5
+      ],
+      [
+        8.2,
+        1.2
+      ],
+      [
+        9.8,
+        1.8
+      ],
+      [
+        10.3,
+        3
+      ],
+      [
+        9.4,
+        3.5
+      ],
+      [
+        10,
+        4.6
+      ],
+      [
+        10,
+        5.7
+      ],
+      [
+        9.1,
+        6.4
+      ],
+      [
+        9,
+        8.4
+      ],
+      [
+        10.8,
+        9.8
+      ],
+      [
+        12.3,
+        10.7
+      ],
+      [
+        13.6,
+        12.4
+      ],
+      [
+        13.5,
+        13.8
+      ],
+      [
+        12.3,
+        14.7
+      ],
+      [
+        12.7,
+        16.7
+      ],
+      [
+        12.7,
+        18.8
+      ],
+      [
+        13.2,
+        19.2
+      ],
+      [
+        12.9,
+        20.8
+      ],
+      [
+        5,
+        20.8
+      ],
+      [
+        5.1,
+        18
+      ],
+      [
+        5.3,
+        15.8
+      ],
+      [
+        5,
+        14.7
+      ],
+      [
+        3.4,
+        14.7
+      ],
+      [
+        2.1,
+        13.5
+      ],
+      [
+        2.1,
+        5.3
+      ],
+      [
+        3.1,
+        4.4
+      ],
+      [
+        3.6,
+        5.2
+      ],
+      [
+        3.4,
+        8.7
+      ],
+      [
+        5.1,
+        8.7
+      ],
+      [
+        6.7,
+        10
+      ],
+      [
+        7.1,
+        8.3
+      ],
+      [
+        7.1,
+        6.3
+      ],
+      [
+        6,
+        5.5
+      ],
+      [
+        6.1,
+        4.5
+      ],
+      [
+        7.1,
+        3.9
+      ],
+      [
+        7.8,
+        3.9
+      ],
+      [
+        7.2,
+        3.2
+      ]
+    ],
+    "main_head": "One source-connected head; isolated upper marks no longer merged into an extra head-like lobe.",
+    "upper_marks": [
+      [
+        7.5,
+        1.5
+      ],
+      [
+        9.5,
+        1.5
+      ],
+      [
+        10.5,
+        2.5
+      ],
+      [
+        11.5,
+        4.5
+      ]
+    ],
+    "upper_mark_support": "Authored thin rear rail connects marks to the same head; rail is a structural estimate, not a claim that Qud defines a halo/crown.",
+    "central_front_carving_cells": [
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    "unchanged_alternatives": "Other five exact v3 model/renders retained; no new render claimed for them."
+  },
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

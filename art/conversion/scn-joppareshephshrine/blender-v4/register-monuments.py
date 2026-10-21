@@ -1,0 +1,28 @@
+"""Six native shrine source shapes with neutral role masks and one coverage, no activation."""
+from pathlib import Path
+import json,hashlib
+import numpy as np
+from PIL import Image,ImageDraw,ImageFont
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3];OUT=HERE/'registered'
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def write(p,v):p.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8',newline='\n')
+review=json.loads((HERE/'independent-structural-review.json').read_text());assert review['recommendation']=='pass' and not review['fix_now'];assert not (OUT/'model.json').exists();OUT.mkdir(exist_ok=True)
+source=json.loads((HERE.parent/'blender-v1/source-packet.json').read_text());controls=json.loads((HERE/'model-controls.json').read_text());pal=json.loads((ROOT/'evidence/joppa-anatomy-study.json').read_text())['native_palette'];fg=np.array(list(bytes.fromhex(pal['y'])));dt=np.array(list(bytes.fromhex(pal['g'])));frames=[];views={}
+for st in controls['states']:
+ sid=st['id'];views[sid]={}
+ for facing in ['south','east','north']:
+  a=np.array(Image.open(HERE/f'{sid}-{facing}-neutral.png').convert('RGBA'));a[:,:,:3]=np.uint8(np.round(a[:,:,:3].mean(2)))[:,:,None];a[a[:,:,3]==0,:3]=0;p=np.array(Image.fromarray(a).resize((256,256),Image.Resampling.LANCZOS));p[p[:,:,3]<4]=0;da=np.array(Image.open(HERE/f'{sid}-{facing}-detail.png').convert('RGBA').resize((256,256),Image.Resampling.LANCZOS))[:,:,3];da=np.minimum(da,p[:,:,3]);w=np.uint8(np.round(np.divide(da.astype(float)*255,p[:,:,3],out=np.zeros_like(da,dtype=float),where=p[:,:,3]>0)));row={}
+  for key,im in dict(primary=Image.fromarray(p),detail=Image.fromarray(p),coverage=Image.fromarray(p[:,:,3]),detail_weight=Image.fromarray(w),detail_coverage=Image.fromarray(da),authored_dualcolor_mask=Image.fromarray(np.dstack([w,w,w,p[:,:,3]]))).items():
+   target=OUT/f'{sid}-{facing}-{key}.png';im.save(target);row[key]=ref(target)
+  tinted=p.copy();tinted[:,:,:3]=np.uint8(np.round(p[:,:,:3].astype(float)*((1-w[:,:,None]/255)*fg+w[:,:,None]/255*dt)/255));tinted[tinted[:,:,3]==0,:3]=0;Image.fromarray(tinted).save(OUT/f'{sid}-{facing}-native-y-g.png');views[sid][facing]=row
+ frames.append(dict(state=sid,native_tile=st['native_tile'],conditional_blueprint='JoppaReshephShrine',**views[sid]['south']))
+model=dict(entry='SCN-JOPPARESHEPHSHRINE',kind='source_guided_carved_shrine_variants',blueprint='JoppaReshephShrine',workflow='blender-first-v1',source=ref(HERE.parent/'blender-v1/source-packet.json'),blender_source=ref(HERE/'monuments.blend'),blender_controls=ref(HERE/'model-controls.json'),registration=dict(native_canvas=[16,24],manual_canvas=[512,768],recipient_canvas=[256,256],authored_source_anchor=[8,16],rule='Common full-cell physical frame; state-relative source heights retained. No per-facing bounds normalization.'),palette=source['palette'],native_behavior=source['native_behavior'],native_state_owner='SultanShrine owns initialization, historical snapshot/gospel and actual tile choice; declared catalogue plus four temporary tombstones and normal Resheph statue map only within selected JoppaReshephShrine blueprint. Do not replace other shrines globally or invent a new chooser.',frames=frames,retained_authoring_views=views,view_policy=source['view_contract'],physical_translation=controls['physical_translation'],resheph_correction=controls['resheph_correction'],formula='coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background',native_activation=False,native_acceptance='Pending full generation gate')
+write(OUT/'model.json',model);write(OUT/'registration-decisions.json',dict(source_states=6,production_facing='south',auxiliary_facings=['east','north'],new_native_direction_dispatch=False,conditional_blueprint='JoppaReshephShrine',single_coverage=True,source_negative_spaces='Surface incisions and connected sculpture interpretation; exact binary source alpha is not claimed.',upper_marks='Actual separated source grouping on an explicitly authored thin rear rail, no canonical halo/crown claim.',palette_proof='Declared y/g only; runtime interior detail and worship appearance remain native.',new_imagegen_call=False,native_activation=False))
+font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',14);plate=Image.new('RGB',(1440,1580),'#142823');d=ImageDraw.Draw(plate)
+for i,st in enumerate(controls['states']):
+ mask=np.array(Image.open(st['source_mask']['path']).convert('RGBA'));w=mask[:,:,:1].astype(float)/255;original=Image.fromarray(np.dstack([np.uint8(np.round((1-w)*fg+w*dt)),mask[:,:,3]]))
+ for j,(label,im) in enumerate([('SOURCE / y+g',original),('SOUTH',Image.open(OUT/f'{st["id"]}-south-native-y-g.png')),('EAST',Image.open(OUT/f'{st["id"]}-east-native-y-g.png')),('NORTH',Image.open(OUT/f'{st["id"]}-north-native-y-g.png'))]):
+  im=im.convert('RGBA');bg=Image.new('RGBA',im.size,'#20382d');bg.alpha_composite(im);plate.paste(bg.convert('RGB').resize((220,330),Image.Resampling.NEAREST if j==0 else Image.Resampling.LANCZOS),(10+i*240,35+j*365));d.text((10+i*240,10+j*365),st['id']+' / '+label,font=font,fill='#e3cf43')
+ for k,size in enumerate([(16,24),(24,36),(32,48)]):
+  sm=Image.open(OUT/f'{st["id"]}-south-native-y-g.png').convert('RGBA').resize(size,Image.Resampling.LANCZOS);plate.paste(sm,(30+i*240+k*65,1470),sm)
+d.text((15,1540),'Declared y/g proof only; native tile choice, worship/history and interior random colors remain pending full-set acceptance.',font=font,fill='#e5e8d8');plate.save(OUT/'registration-comparison.png');print('Six source shrine tile shapes registered under original blueprint, common frame and native semantic tint ownership.')

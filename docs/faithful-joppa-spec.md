@@ -33,9 +33,35 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-JOPPARESHEPHSHRINE is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-CANVASWALL is the sole active entry.
 
-Current remaining-sign checkpoint (2026-10-21): JoppaMillSign, JoppaNorthSign,
+Current shrine checkpoint (2026-10-21): `scn-joppareshephshrine/blender-v4/registered`
+is generation-ready with the declared catalogue monument, four temporary native
+tombstones and normal Resheph statue. Six source-guided carved interpretations
+share the original cell frame and real S/E/N model rotations. Source negative
+strokes become front incisions on solid stone; hidden depth and rear plinth keys
+are authored, and exact binary source alpha is not claimed. Rejected v2 views
+accidentally combined alternative models through a shared outline collection;
+v3 per-object isolation corrects that. Fresh review then caught an extra head-like
+upper tier and missing central Resheph fork. Selected v4 retains one main head,
+four separated source marks on an explicit thin rear support rail, and the dark
+front fork. That rail is an authored structural estimate with mechanical
+appearance, not a native halo/crown claim; its smallest-size readability and the
+lower patch simplification are provisional presentation limitations for the
+whole-set test. Five unchanged alternatives reuse35 prior renders by hash;
+only seven new Resheph renders are claimed. Fresh review and main source/palette/
+size inspection pass authoring; saved physical elements reopen closed with no
+zero-area faces or external render-image dependencies, and all18 state/view
+frames fit the shared canvas. Immutable shape-registry snapshot15 retains all
+four editable versions and rejection/correction dependencies. Native gospel,
+worship, inside-only random detail and actual tile selection remain native;
+conditional aliases must not replace unrelated shrines globally. There are147
+generation-ready entries and9 pending: CanvasWall and eight source-based
+exclusion reviews. All remain unfinished for native acceptance. Continue the
+Blender structural-wall route, then finish those source reviews before opening
+the full-set native test and honoring the requested post-test pause.
+
+Prior remaining-sign checkpoint (2026-10-21): JoppaMillSign, JoppaNorthSign,
 PepperSign2 and TamSign are generation-ready. Source-equivalent physical plaques
 and rear supports resume the saved manual geometry; their actual new pictogram
 refinements and real S/E/N exports are recorded separately. PepperSign2 reuses the
@@ -52,7 +78,7 @@ and10 pending: Resheph's shrine, CanvasWall and eight source-based exclusion
 reviews. Every entry remains unfinished for native acceptance. Continue the
 shrine without opening native validation or another implementation stage.
 
-Active shrine source correction (2026-10-21): installed SultanShrine code changes
+Prior shrine source correction (2026-10-21): installed SultanShrine code changes
 the declared catalogue `Terrain/tile_tombstone1.png` to one of four temporary
 `terrain/sw_tombstone_1..4.bmp` choices, then selects
 `Terrain/sw_resheph_sultanstatue.bmp` for Resheph when history initialization has
@@ -60,11 +86,11 @@ the required snapshot. The earlier diagnostic observed tombstone3 as native
 fallback; it does not establish the normal statue appearance or current runtime
 initialization. All six actual masks and exact source/code hashes are now retained
 in `scn-joppareshephshrine/blender-v1`, with source/reference images in the report.
-No shrine construction or readiness is claimed yet. Preserve native gospel/look
+At that checkpoint no shrine construction or readiness was claimed. Preserve native gospel/look
 revelation, shrine/worship and inside-only random-detail behavior; the declared
 y/g preview is not a fixed palette for every runtime state. Next work is distinct
 source-supported shape construction, rather than modeling only the catalogue
-fallback. Stage3 and this shrine remain the sole active stage/entry.
+fallback. Stage3 and the shrine were the sole active stage/entry at that point.
 
 Prior sign checkpoint (2026-10-21): ArgyveSign is generation-ready under
 `scn-argyvesign/blender-v2/registered`. Its saved physical clay plaque, two rear
@@ -165,7 +191,7 @@ that every component was individually visually inspected or that art is flawless
 At the retrospective screening,19 entries had no current created set and received
 no visual approval; subsequent entries receive their own authoring reviews.
 
-The flagged-art queue is resolved for generation. Continue with Resheph's shrine and keep
+The flagged-art queue is resolved for generation. Continue with CanvasWall and keep
 one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.

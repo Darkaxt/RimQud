@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-JOPPARESHEPHSHRINE",
+  "active_entry": "SCN-CANVASWALL",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -67046,20 +67046,21 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "construct_faithful_shape",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Actual shrine initialization selects a Resheph statue; six source masks resolved, geometry and cardinal/material authoring still required."
+        "Authored upper support rail and smallest-size patch simplification are provisional presentation limitations; native history/worship/tile-choice/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -67194,8 +67195,268 @@
           ],
           "review": "Catalogue fallback is not the normal Resheph appearance. Exact six native source shapes and code are retained; construction remains required and native behavior is not replaced.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Construct six source-guided complete sculptural profiles and supported plinths; retain actual manual south/diagnostic renders.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-packet.json",
+              "sha256": "5e13f29f32522a0a7fb05930a6f2b30ccbbba9165d42a0dd2d86b943d8387e6b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/monuments.blend",
+              "sha256": "052ea24372be8c59c4782098f06f50b6611e71f7df83f2960e2f49b4371f3ff0"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/model-controls.json",
+              "sha256": "184cf73cc6464d8ebb6a3c1b0a98b9bb5dbc91db721cd03b20b4e566e846a3d9"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/catalogue-manual-south.png",
+              "sha256": "ec4c40aceac6bc20444cba815ad972dd0d8902ca48199cf9bc08d21902abc59f"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/tombstone1-manual-south.png",
+              "sha256": "4fe6ee47f4409b26f5ebec02e3d57a8649bb7b54b58ac89c7a90edeea32aff3f"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/tombstone2-manual-south.png",
+              "sha256": "5fce09f0a3dcebc77e94283d792680ae136029d97b4e4fec364e1a266ac21038"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/tombstone3-manual-south.png",
+              "sha256": "d4b1e932a3bc0a47cfca5f99da2afef71b6263928d115f8167ad3c6644aec8ad"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/tombstone4-manual-south.png",
+              "sha256": "fef0badac06ec2c97858f3a71c60ff4649843124b84b2645ccc5b6215d99a342"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/resheph-manual-south.png",
+              "sha256": "a7559d1e09f73dfd3023fcf62561d504aa0aa1fdc12e596f7641197a05d10dcc"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Add physical bevels, source-positioned semantic regions/incisions and rendered contours; preserve first failed batch and fresh rejection.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/monuments.blend",
+              "sha256": "052ea24372be8c59c4782098f06f50b6611e71f7df83f2960e2f49b4371f3ff0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v2/all-state-view-overview.png",
+              "sha256": "24a8dffe123ef184c74d02e19da9bef2fad996722da2ae5316cb02f89b306c00"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v2/independent-structural-review.json",
+              "sha256": "9f93c692335fe4caa2fdba0aae1bc6b3c1ae5fda47888025c9a0bbb45a5f7e4e"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Correct cross-collection state visibility and redundant decoration vertices; fresh review retains Resheph source-feature hold.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v2/monuments.blend",
+              "sha256": "736616efd4af94c78e28c56a92b85d09f8972febb804b71854331778b54f56aa"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v3/all-state-view-overview.png",
+              "sha256": "2d0a51d3bfedd6969526660959408d52cd3de53ce8c98beb396797b6a9c30a10"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v3/independent-structural-review.json",
+              "sha256": "31b9d5b35879d00857b3bd4dc261633ebf2bd7c76a962b8b5c6f1a3a2ca901c1"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v3/input-geometry-diagnostic.json",
+              "sha256": "02ebbb0723f1231786ee972c3db3d40d4c686702a21be22bd0b22d47c3825028"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Correct Resheph upper source groups and central fork; retain one main head and separate supported marks, while reusing unchanged five alternatives.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v3/monuments.blend",
+              "sha256": "2febb0d63d55a70831a3b0b5336bd2e84c5e35b83a2a0f6bcefe5ff36b20007f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/resheph-refined-3d.png",
+              "sha256": "e1244249f93c144b4195fa23d850220040397720670012728afb4fcfa6f89619"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/model-controls.json",
+              "sha256": "d45a91f73920cc51f4cb62112a3c12350d72832c6c494b49f63120dd3647e275"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/unchanged-render-reuse.json",
+              "sha256": "2eb32cc5a688548fc594dd8808a4d9a23063f4ff75063f6c843c969937622806"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/independent-structural-review.json",
+              "sha256": "f9174746399e4535a19d26ae77d053535b6bc884ab1c54e8ff5594ffe323fbcd"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Keep all six source-supported tile shapes and original native initialization/history ownership; auxiliary views do not add native directional behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/native-state-index.json",
+              "sha256": "d4255b6e6183df457cbe12d29bfcaff2d57eda65fd8a0f0032f4423362b7d801"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/model.json",
+              "sha256": "5b57cc023b624a6006fbb1ca49da9c7253f3212593aec0da345cd695d360a196"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render actual common-frame cardinal states with semantic masks, retain editable versions and saved geometry/frame audit.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/monuments.blend",
+              "sha256": "b8b9c7075c2f2bfc16e4ec3cebfc7849a9dcfc9d0e32a40c875b65b542f8c518"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/all-state-view-overview.png",
+              "sha256": "9b5fcd9a1a91173fc113f0de0c07bb2ff9c92c6c5e3ac8fdd620996a9e3e939d"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/reopen-audit.json",
+              "sha256": "ddeffc442981f9fd168cfad31d8115a3bc8345b96c39723535915c64942f327b"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/blender-receipt.json",
+              "sha256": "be620f2ed451e61f4a19785077fcec05ee1a2ca4a20252939564c8a6212c5fdd"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v15.json",
+              "sha256": "df80d2014ebbb8dc2e032b01206c5f03eb981b9c96a7672a710d0d54a8772d7d"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register full neutral primary/detail layers with one coverage; conditional native tile aliases belong only to selected shrine blueprint.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/register-monuments.py",
+              "sha256": "085d3b317e3cc41e976379a15d777feed6b55fc784c428a94e8fabff7e433106"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/model.json",
+              "sha256": "5b57cc023b624a6006fbb1ca49da9c7253f3212593aec0da345cd695d360a196"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/registration-decisions.json",
+              "sha256": "cd68b7695de29817bda8206a3802adf841a52083c571348bb452893f97d903e4"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:16:04.441685+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect source/palette/intended-size proof and disposition both rejected reviews plus exact-hash final structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/independent-structural-review.json",
+              "sha256": "f9174746399e4535a19d26ae77d053535b6bc884ab1c54e8ff5594ffe323fbcd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/registration-comparison.png",
+              "sha256": "87c85ef8d7ddc5b2306db56b43e64acc5b9b51e9e233a2946fcdf5ea9ba7efce"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/authoring-review.json",
+              "sha256": "1a467b0a115dc0d2a948d07a3f8cf5d75267be5c74fe9a07190a94f6760e0ba8"
+            }
+          ],
+          "review": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+          "result": "PASS"
         }
-      ]
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v15.json",
+          "sha256": "df80d2014ebbb8dc2e032b01206c5f03eb981b9c96a7672a710d0d54a8772d7d"
+        },
+        "resume": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/monuments.blend",
+          "sha256": "b8b9c7075c2f2bfc16e4ec3cebfc7849a9dcfc9d0e32a40c875b65b542f8c518"
+        },
+        "controls": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/model-controls.json",
+          "sha256": "d45a91f73920cc51f4cb62112a3c12350d72832c6c494b49f63120dd3647e275"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/model.json",
+          "sha256": "5b57cc023b624a6006fbb1ca49da9c7253f3212593aec0da345cd695d360a196"
+        },
+        "plate": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/registration-comparison.png",
+          "sha256": "87c85ef8d7ddc5b2306db56b43e64acc5b9b51e9e233a2946fcdf5ea9ba7efce"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Exact installed shrine ancestry and decompiled initialization show that the catalogue crown tile is a fallback, four temporary tombstones are possible, and normal Resheph resolves its own statue tile. All six actual masks were extracted before construction; the prior diagnostic tombstone3 is retained as historical fallback evidence, not normal-world proof. Actual VTE stele supplies restrained carved-monument edge/material convention only. Complete source-guided shallow monuments share one physical frame and actual S/E/N rotations; solid source-incision interpretation, hidden depth, rear plinth keys and the upper-mark rail are explicit authored estimates. A shared outline collection initially kept other alternatives visible; rejected v2 renders and fresh hold review are retained. Per-object state isolation corrects that issue without changing the five source tombstone/crown forms. A fresh review then caught a merged extra head-like tier and missing central Resheph negative fork. Selected v4 restores one main head, four separated marks on a narrow supporting rear rail and source-positioned front fork carving; the other35 renders reuse unchanged v3 bytes explicitly. Fresh independent review and main source/palette/size inspection pass authoring. Rail mechanical appearance and smallest-size patch loss are minor presentation limitations for the provisional whole-set test. Reopened physical elements have closed geometry, no zero-area faces or external image dependencies, and all18 state/facing bounds stay inside the common frame. Neutral primary/detail masks preserve one coverage; y/g is only the declared preview, while inside-only random detail, worship/history and actual tile selection stay native. Conditional blueprint-scoped aliases must not replace unrelated shrines globally. No new game state, chooser, animation, historical text or native activation is claimed.",
+        "record": {
+          "path": "art/conversion/scn-joppareshephshrine/blender-v4/registered/authoring-review.json",
+          "sha256": "1a467b0a115dc0d2a948d07a3f8cf5d75267be5c74fe9a07190a94f6760e0ba8"
+        }
+      },
+      "registration_summary": "Six source-supported shrine tile shapes from retained Blender models; corrected state isolation and Resheph upper groups, semantic tint masks and original native state/history ownership."
     },
     {
       "id": "SCN-PEPPERSIGN2",
@@ -75933,8 +76194,8 @@
         }
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -82309,7 +82570,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T13:48:39.437216+00:00",
+  "updated_at": "2026-10-21T14:16:04.441685+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
