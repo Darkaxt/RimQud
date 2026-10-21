@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "BODY-YRAME",
+  "active_entry": "FIT-YRAME-HORNS-HEAD-0",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -15710,7 +15710,7 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "source_identity_description_slot_laterality",
       "required_steps": [
         "source_identity_description_slot_laterality",
@@ -51775,8 +51775,8 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "correct_anatomy_then_imagegen_refine_composed_views",
+      "status": "UNFINISHED",
+      "current_step": "native_body_review",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
         "select_actual_core_dlc_or_mod_reference",
@@ -51787,9 +51787,7 @@
         "visual_review_anatomy_orientation_palette_all_views",
         "native_body_review"
       ],
-      "known_issues": [
-        "Source silhouette requires centaur-like lower trunk; v1 biped-plus-pair and v2 lowered-root proposal superseded. Rebuild source-bound anatomy before fitting."
-      ],
+      "known_issues": [],
       "metadata": {
         "unmutated_base_entry": "BODY-HUMAN-FEMALE",
         "mutation_rendering": "Separate framework; no baked mutant baseline"
@@ -52270,26 +52268,318 @@
           ],
           "review": "Upright upper body joins horizontal four-legged lower body. Original source silhouette governs remodeled lower trunk; no ordinary biped pelvis with extra posterior legs. Source and authored interpretation remain distinct. Ordinary human base is unchanged. No new ImageGen call.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T03:49:17.995238+00:00",
+          "step": "resolve_race_description_original_sprite_runtime_anatomy",
+          "action": "Resolve actual centauroid silhouette and preserve both user-created alternatives with honest generation provenance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/source-packet.json",
+              "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+            },
+            {
+              "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+              "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/source-packet.json",
+              "sha256": "e579b8dc0c3b2a20452653508ef0e9b5f9bdb1c6034735ed591ac550c9886566"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/user-horse-turnaround.png",
+              "sha256": "cb7a13eed8ccab0c698cbb3794a76424f8ef9eed225fadec562f61dbae920ffb"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+              "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+            }
+          ],
+          "review": "Source confirms four legs and fore/hind slots. Compact sheep-like coat/hoof anatomy is an authored choice, not a new native race. User image generation is not claimed as a Codex tool call.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:49:17.998333+00:00",
+          "step": "select_actual_core_dlc_or_mod_reference",
+          "action": "Inspect actual Core female, horse and sheep directional assets for their limited visual-reference roles.",
+          "inputs": [
+            {
+              "path": "E:/Temp/rimqud-yrame-centauroid-20261021/donor-references.json",
+              "sha256": "5916959595a8ae601de7d8f6afcfa1dfc4035b74d061fcf21d363bdb030cfacb"
+            },
+            {
+              "path": "E:/Temp/rimqud-yrame-centauroid-20261021/sheep-references.json",
+              "sha256": "99e80b46d070709d4684fb5b8cb6efbab8c97ef14a3f268da1ce33db48b89006"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/source-reference-alternatives.png",
+              "sha256": "1943acda2755864e66b2a472e3a210b745c1eb7a86c48353d2974b94021a88b0"
+            }
+          ],
+          "review": "Actual Core animals supply mass/shading rather than separate leg nodes. Both original and alternative silhouettes are visible in context; private raw donor textures stay out of the public bundle.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:49:17.999175+00:00",
+          "step": "construct_front",
+          "action": "Select user-supplied corrected front and establish editable coat/attachment guides in the coherent turnaround.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+              "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/manual-attachment-guides.svg",
+              "sha256": "6a298061794985ca1ad34375680947c9976e8e3cfa5f518afcea33acff5df8e2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/manual-direction.json",
+              "sha256": "d8298f97a847b16e933011b0dc521fd94fc0d95b2a0827f67c49b05e783b12b0"
+            }
+          ],
+          "review": "The corrected front replaces the rejected biped-plus-pair design. This records user-generated geometry reuse and manual art direction without pretending it was hand-drawn from scratch.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:49:18.000693+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "action": "Reuse the user-provided complete profile and back produced with the corrected front family.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+              "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+            }
+          ],
+          "outputs": [],
+          "review": "All three supplied views show the compact horizontal lower trunk and quadrupedal legs. Exact original user generation inputs/settings are unknown and recorded as such. Tail/fleece corrections and alpha recovery remain required.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T03:49:18.001951+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Prepare one contextual refinement of the selected user-supplied body, with explicit source facts and bounded corrections.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+              "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/source-reference-alternatives.png",
+              "sha256": "1943acda2755864e66b2a472e3a210b745c1eb7a86c48353d2974b94021a88b0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/prepare-rebuild.py",
+              "sha256": "fbff4adabb98e45a8dba93891b8af2aa626c19236d44177d110411a1fc6d7389"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/composed-refinement-prompt.txt",
+              "sha256": "019809b76a519f9b6b0f73e9b345cae7290622ff66f8f79eec5070d458cf3cdd"
+            }
+          ],
+          "review": "Actual tool call and output pending; no generation-readiness or native acceptance claimed.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T04:00:40.148508+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Execute and inspect one actual composed refinement of the user-selected compact centauroid direction.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+              "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/source-reference-alternatives.png",
+              "sha256": "1943acda2755864e66b2a472e3a210b745c1eb7a86c48353d2974b94021a88b0"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/composed-refinement-prompt.txt",
+              "sha256": "019809b76a519f9b6b0f73e9b345cae7290622ff66f8f79eec5070d458cf3cdd"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/generation-receipt.json",
+              "sha256": "5bd14365b214f4bae3f49133699cf12445126ba967bb615c001c1c840500d227"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/composed-refinement-raw.png",
+              "sha256": "26921ed5da74d9d93e82158e2e220ebb21d1023eff81275d9e3c90f836e01685"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/raw-composite-east.png",
+              "sha256": "f04065b04b4e9577da8f0f9f55985f4f6291be500aaa219aa62ffc901f5637dd"
+            }
+          ],
+          "review": "Actual saved RGBA has transparent background; gray halo was hidden RGB. Horizontal trunk and fore/hind attachments preserved, tail removed and fleece reduced. Retained full output and exact input/prompt provenance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:00:40.148508+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "action": "Register common physical frame, recover only actual figure alpha and split body/head plus separate source tint roles.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/composed-refinement-raw.png",
+              "sha256": "26921ed5da74d9d93e82158e2e220ebb21d1023eff81275d9e3c90f836e01685"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/source-packet.json",
+              "sha256": "e579b8dc0c3b2a20452653508ef0e9b5f9bdb1c6034735ed591ac550c9886566"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/register-body-initial.py",
+              "sha256": "3b285fe7b30cb832a6fcc3b85007327655e91cf377a7b68b13cdadf2cdf79c84"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered/model.json",
+              "sha256": "8dc520d192c7b5ee077fd5f3f58f6b551da352abd2d67a47bc2796f3b2e707b6"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered/head-comparison.png",
+              "sha256": "ab49fa95025e6b5bedb2c57eee5d67333c03f801e753762095a4235829ba1f4c"
+            }
+          ],
+          "review": "Initial head boundary includes small shoulder corners; registration retained as rejected extraction experiment. Neutral recomposition itself remains intact.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T04:00:40.148508+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "action": "Move head boundary into neck strip and retain the same body geometry and w/B ownership.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered/model.json",
+              "sha256": "8dc520d192c7b5ee077fd5f3f58f6b551da352abd2d67a47bc2796f3b2e707b6"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/composed-refinement-raw.png",
+              "sha256": "26921ed5da74d9d93e82158e2e220ebb21d1023eff81275d9e3c90f836e01685"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/register-body.py",
+              "sha256": "a777aff7936c6f8e50d9cff1137bf51e568a6ca7653c00c1528c90a261f85323"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/lower-body-ownership-south.svg",
+              "sha256": "8af515fec12f386ba76f7b310dcaf1648a4882a8ccec99821be489681719b2a8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/lower-body-ownership-east.svg",
+              "sha256": "e5441d9d7ea28b21d0ae542dab592132c88b3b20308c9722c80f4517db66904f"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/lower-body-ownership-north.svg",
+              "sha256": "1b33b77f66c7df08b8f046db5ad9a799f8dc7c4aaebdde724a2d39afcfed0b1c"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/registration-decisions.json",
+              "sha256": "4ad2281ca6a81a0fc20842d628f2c73abc8176e722772aca70c6f467cd7d4347"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/head-comparison.png",
+              "sha256": "44822437299aec4df7dfeeef8e2fb54f50e61afa8ab4c99aacb30f7c601d145f"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/body-foreground-comparison.png",
+              "sha256": "e1d46d84002eee877a8f287c86015ca001564b98175393f14f7ff89330f40ad0"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/body-detail-comparison.png",
+              "sha256": "ecb3a1fd4e56b8d62abcaa60871d898062332ea84915056c07486825c69ab0ed"
+            }
+          ],
+          "review": "Selected registration retains exact refined shape apart from remote low-alpha noise. Shared frame and one physical scale; no new arm/leg nodes. Separate tint planes reconstruct original neutral pixels to RGB0/alpha<=1; ordinary race source unchanged.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:00:40.148508+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "action": "Inspect corrected anatomy, orientations, neutral/native tint, components and intended-size previews.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/neutral-comparison.png",
+              "sha256": "1956bc9f525bff50753011cd6fab9b2c813df00cace779ba354a23572b7852c6"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/native-comparison.png",
+              "sha256": "998e80cc1a4206250f9b03955f555d90f8479446cd015b1335d4214bbe572ef9"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/before-after-anatomy.png",
+              "sha256": "66a00e4a66af62ba8a979a618c0f6d313f48a4664fcf83dd5ac6ad2fb1a3dd1e"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/authoring-review.json",
+              "sha256": "728a371c616aeb0b365538b2b4fa44ef2352c79c084e65fc716611bc57eeb2d8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/record-selection.py",
+              "sha256": "833cef1669136f6185a95003865d6a3a6135a3e1d8e936fc037cdf901ea06e7c"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/artifact-manifest.json",
+              "sha256": "07716f1bd1ff473e9bf38a93594ccdb609bf5714599d1c4090f6c06a246f7b67"
+            }
+          ],
+          "review": "Selected the user-created sheep-centauroid body plan and one actual contextual refinement. Continuous horizontal lower trunk replaces the rejected visible biped pelvis plus posterior extra pair. Forelegs sit beneath the upright torso/front trunk and hindlegs beneath the rear mass. Four hooves are distinct in south; the east far foreleg overlaps naturally and north forefeet are occluded by the hind pair. No extra legs are invented to make all four visible in every facing. Fleece is quieter, tail removed, blank head/two arms retained. Compact sheep-like coat and cloven hooves are explicitly authored interpretation, not a native sheep race. Actual Core human/sheep/horse assets supply only their documented rendering/mass roles. Neutral RGB is grayscale; w upper body/arms/head and B lower-body regions are separate tint planes on one logical body transform. Arm/hand ownership is retained; no frozen blue coat is baked into albedo. Shared768x1152 frame/contact384,1050 and common head-calibrated physical scale preserve the selected geometry across cardinal views. The head cut now lies inside the neck strip; initial shoulder-corner extraction is preserved as rejected registration. Recomposition RGB error0 and alpha error<=1. Saved alpha is genuinely transparent; remote low-alpha noise is removed, not the actual contour. Ordinary human female source remains unchanged. Horns575, mail574, boots580 and blade576 are absent and remain unfinished fitting work. Boots580 apply only to fore Feet297/16; added hind Feet298/64 is unequipped. No articulated limb nodes, mutation framework, game launch or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:00:40.148508+00:00",
+          "step": "native_body_review",
+          "action": "Defer native body/mutation, equipment, visibility and lifecycle acceptance until the entire generation set is ready.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [],
+          "review": "Generation-ready art is not native acceptance. Reopened Yrame equipment fits and assembly remain unfinished.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/body-yrame/v1/registered/model.json",
-          "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+          "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+          "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
         },
         "plate": {
-          "path": "art/conversion/body-yrame/v1/registered/neutral-comparison.png",
-          "sha256": "055762541899fcf6699b9a56045406c7abab222e7c91ddd50de2fb6a32781e04"
+          "path": "art/conversion/body-yrame/v3/registered-v2/neutral-comparison.png",
+          "sha256": "1956bc9f525bff50753011cd6fab9b2c813df00cace779ba354a23572b7852c6"
         }
       },
-      "registration_summary": "Yrame515 source-exact shared female body/head with one separate added human leg pair. Four foot contours, captured Feet297/298 managers, source frame/contact and independent neutral/native metadata retained. Boots and horns remain separate actual items; native acceptance pending.",
+      "registration_summary": "Selected sheep-like centauroid interpretation from user-supplied turnaround plus one actual refinement. Shared stance pivot/scale, real alpha, independent upper w/lower B tint, bare body/head only. Ordinary human base unchanged; all Yrame equipment refitting and native acceptance remain pending.",
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "Source silhouette requires centaur-like lower trunk; v1 biped-plus-pair and v2 lowered-root proposal superseded. Rebuild source-bound anatomy before fitting.",
+        "status": "PASS",
+        "reason": "Selected the user-created sheep-centauroid body plan and one actual contextual refinement. Continuous horizontal lower trunk replaces the rejected visible biped pelvis plus posterior extra pair. Forelegs sit beneath the upright torso/front trunk and hindlegs beneath the rear mass. Four hooves are distinct in south; the east far foreleg overlaps naturally and north forefeet are occluded by the hind pair. No extra legs are invented to make all four visible in every facing. Fleece is quieter, tail removed, blank head/two arms retained. Compact sheep-like coat and cloven hooves are explicitly authored interpretation, not a native sheep race. Actual Core human/sheep/horse assets supply only their documented rendering/mass roles. Neutral RGB is grayscale; w upper body/arms/head and B lower-body regions are separate tint planes on one logical body transform. Arm/hand ownership is retained; no frozen blue coat is baked into albedo. Shared768x1152 frame/contact384,1050 and common head-calibrated physical scale preserve the selected geometry across cardinal views. The head cut now lies inside the neck strip; initial shoulder-corner extraction is preserved as rejected registration. Recomposition RGB error0 and alpha error<=1. Saved alpha is genuinely transparent; remote low-alpha noise is removed, not the actual contour. Ordinary human female source remains unchanged. Horns575, mail574, boots580 and blade576 are absent and remain unfinished fitting work. Boots580 apply only to fore Feet297/16; added hind Feet298/64 is unequipped. No articulated limb nodes, mutation framework, game launch or native acceptance.",
         "record": {
-          "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
-          "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+          "path": "art/conversion/body-yrame/v3/registered-v2/authoring-review.json",
+          "sha256": "728a371c616aeb0b365538b2b4fa44ef2352c79c084e65fc716611bc57eeb2d8"
         }
       }
     },
@@ -65300,7 +65590,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T03:35:36.136236+00:00",
+  "updated_at": "2026-10-21T04:00:40.148508+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

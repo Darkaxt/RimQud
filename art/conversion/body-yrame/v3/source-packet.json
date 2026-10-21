@@ -1,0 +1,207 @@
+{
+  "entry": "BODY-YRAME",
+  "recorded_at": "2026-10-21T03:49:17.835714+00:00",
+  "resolved_identity": [
+    "Warden Yrame",
+    "NPC",
+    "BaseHumanoid",
+    "Humanoid",
+    "Creature"
+  ],
+  "captured_species": "human",
+  "captured_gender": "female",
+  "native_metadata": {
+    "path": "art/conversion/body-yrame/v1/source-packet.json",
+    "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+  },
+  "correction": {
+    "path": "art/conversion/body-yrame/v2/source-body-plan-correction.json",
+    "sha256": "a375d98532704348c9c50e787ed76897a5e1644af4dd2ef9428f93de7f51fb7f"
+  },
+  "original": {
+    "tile": "Creatures/npc-yrame.bmp",
+    "description": "Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n",
+    "kind": "creature",
+    "blueprint": "Warden Yrame",
+    "reference_file": "village-originals/warden-yrame-reference.png",
+    "native_mask_sha256": "14ed03b247a90e4581bdbd1f584121b5c3760f1bd05d05030e1d66ad866e4d1e",
+    "reference_sha256": "d8d8a1a15273801c36133c11c16517037b7d2179bba6f3b44d3369078a86f70f",
+    "info_id": 7707,
+    "atlas_id": 224,
+    "rect": [
+      234,
+      598,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/warden-yrame-mask.png",
+      "sha256": "14ed03b247a90e4581bdbd1f584121b5c3760f1bd05d05030e1d66ad866e4d1e"
+    }
+  },
+  "source_description": "Big Yrame shifts her weight between hind and forelegs. She shakes a storm of rust dander from the tines of her great horns, and she blows a halo of freezing air from her rime-veined hands.\n{{C|-----}}\nLoved by {{C|the Fellowship of Wardens}}.\n\nAdmired by {{C|the villagers of Joppa}} for defending their village.\n\nDisliked by {{C|the villagers of Tuwan}} for disparaging a famous poet.\n\nDisliked by {{C|trees}} for eating one of their young.\n",
+  "visual_family": "Human-based mutant with upright upper body and horizontal four-legged lower trunk; not the ordinary bipedal visual template.",
+  "source_facts": {
+    "fore_group": {
+      "part": 297,
+      "parent": 287,
+      "laterality": 16,
+      "manager": "515::MultipleLegs::Change",
+      "boots_instance": 580
+    },
+    "hind_group": {
+      "part": 298,
+      "parent": 287,
+      "laterality": 64,
+      "manager": "515::MultipleLegs::Add",
+      "equipped": null
+    },
+    "horns": {
+      "part": 288,
+      "instance": 575,
+      "independent_equipment": true
+    },
+    "physical_legs": 4,
+    "mutation_level": "MultipleLegs6 is a level, not six legs.",
+    "joint_coordinates": "Unknown; native slots are not anatomical render bones."
+  },
+  "body_plan_decision": {
+    "status": "Authoring choice based on source silhouette and user-supplied alternatives",
+    "selected_start": "user-sheep-turnaround.png",
+    "reason": "Compact sheep-like lower mass and ram-horn reading fit the source better than an elongated equine tail/body.",
+    "uncertain": "Exact lower-body species, fleece, hoof anatomy and hidden joint positions are not established by native prose or slots.",
+    "direction": "Keep the user-created centauroid attachments; reduce giant wool clumps to restrained map-readable fleece. Horns remain separate.",
+    "tail": "Supplied alternatives add a tail. No Tail part, tail mutation or descriptive tail is captured; omit the unconfirmed tail in selected body art."
+  },
+  "palette": {
+    "native_tileColor": "w",
+    "native_detailColor": "B",
+    "neutral": "Grayscale albedo with independent palette ownership.",
+    "authored_mapping": "Upper torso/arms/head use w; predominantly blue lower source silhouette maps lower trunk/legs to B. This is render-region ownership, not a claim of permanent biological coat color. Head cosmetics remain outside this pass."
+  },
+  "ordinary_base": {
+    "path": "art/conversion/body-human-female/v2/model.json",
+    "sha256": "d98a479b61e27de71f0a616e400a53ea88ddcff1adce25ea90056e83c140c09b"
+  },
+  "supplied_generations": [
+    {
+      "kind": "horse",
+      "original": {
+        "path": "C:/Users/darka/AppData/Local/Temp/codex-clipboard-e35cfa32-3dea-48ed-b987-778c1c579b57.png",
+        "sha256": "cb7a13eed8ccab0c698cbb3794a76424f8ef9eed225fadec562f61dbae920ffb"
+      },
+      "project_copy": {
+        "path": "art/conversion/body-yrame/v3/user-horse-turnaround.png",
+        "sha256": "cb7a13eed8ccab0c698cbb3794a76424f8ef9eed225fadec562f61dbae920ffb"
+      },
+      "reported_generator": "ImageGen, reported by user; not a Codex-executed call",
+      "reported_prompt": "Make our female human into a centaur (user paraphrase).",
+      "original_generation_inputs": "Exact uploaded source files and generator receipt were not supplied.",
+      "format": "RGB black-matted sheet, not transparent RGBA"
+    },
+    {
+      "kind": "sheep",
+      "original": {
+        "path": "C:/Users/darka/AppData/Local/Temp/codex-clipboard-948f20ca-e407-42f3-be5b-70acda9976c0.png",
+        "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+      },
+      "project_copy": {
+        "path": "art/conversion/body-yrame/v3/user-sheep-turnaround.png",
+        "sha256": "cd6d8c9a4418a76bd1788af23058761dbdd0070330bc3249d5253d617a3ee215"
+      },
+      "reported_generator": "ImageGen, reported by user; not a Codex-executed call",
+      "reported_prompt": "Not supplied; user describes a sheep-like alternative.",
+      "original_generation_inputs": "Exact uploaded source files and generator receipt were not supplied.",
+      "format": "RGB black-matted sheet, not transparent RGBA"
+    }
+  ],
+  "references": {
+    "core_packed_asset": {
+      "path": "D:/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/resources.assets",
+      "sha256": "7c0c69bde01910dde60205bc1417cd56a39e27affd2de36735dcedd6facd6155"
+    },
+    "horse": [
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/Horse_south.png",
+        "sha256": "4b1e7238c7da2527c23cf4fe69afdb40203a518fb474bc8b98f4fccb549d0a9a",
+        "texture_id": 170,
+        "name": "Horse_south"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/Horse_east.png",
+        "sha256": "74dc285f4f59d1fb645348ade47f35559b8a1044a11ca96427bb5f08f707142e",
+        "texture_id": 825,
+        "name": "Horse_east"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/Horse_north.png",
+        "sha256": "e0d05553646ade5d5e1e862d2ec77bf46efa3ea8fb44f04cbb6c1871bddfd020",
+        "texture_id": 1767,
+        "name": "Horse_north"
+      }
+    ],
+    "sheep": [
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepMale_south.png",
+        "sha256": "8e717ccca21f3b449d9764eec8a1c7e2d7b7f5c40f1dbe198897ce0f81ba9df4",
+        "texture_id": 668,
+        "name": "SheepMale_south"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepMale_east.png",
+        "sha256": "a9c307252b3cf096832af407b84b0c4ee236a1a1f4ce31cc66390de69e371599",
+        "texture_id": 2138,
+        "name": "SheepMale_east"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepFemale_east.png",
+        "sha256": "8693db6d44bfa7adafaf413ec2e7dd8d66fae3553f6ddd559f6f3a92234f5c22",
+        "texture_id": 2411,
+        "name": "SheepFemale_east"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepFemale_north.png",
+        "sha256": "89dccabfa526811f314e991a9991574eeffc3c931681ff5c3d137d2580a5787a",
+        "texture_id": 2443,
+        "name": "SheepFemale_north"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepMale_north.png",
+        "sha256": "c98f321564dd9ef5242cae5358b4f9404c910b49dc2637199791ed58cc21a9c9",
+        "texture_id": 3158,
+        "name": "SheepMale_north"
+      },
+      {
+        "path": "E:/Temp/rimqud-yrame-centauroid-20261021/SheepFemale_south.png",
+        "sha256": "fdd4b29359acb3b6f15c863bbc15ea4c1cf537426a58309618a17ac42d34325a",
+        "texture_id": 3489,
+        "name": "SheepFemale_south"
+      }
+    ],
+    "sheep_definition": {
+      "path": "D:/Steam/steamapps/common/RimWorld/Data/Core/Defs/ThingDefs_Races/Races_Animal_SheepGroup.xml",
+      "sha256": "92475fbf8ed1ac470d9be9068e7bfd915e8befa66303eee32c829723700ded54"
+    },
+    "human": [
+      {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-south.png",
+        "sha256": "e550440b2c8a76610c03fe8866ecb40b050bf9ecdc228bb99a09e922b1c29d0b",
+        "role": "Actual Core ordinary female body cardinal presentation and outline/shading only."
+      },
+      {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-east.png",
+        "sha256": "60c918265c0ed8b6d698a204385eeb629fb03240584dfcf8201278f11c7c7099",
+        "role": "Actual Core ordinary female body cardinal presentation and outline/shading only."
+      },
+      {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/human-body-female-north.png",
+        "sha256": "b5a794665b92954b63c571cafa260b4e237100364fa0c1392b1661d9cd54d95e",
+        "role": "Actual Core ordinary female body cardinal presentation and outline/shading only."
+      }
+    ],
+    "roles": "Human assets: upper-body cardinal convention. Sheep: compact quadruped mass, quiet fleece shading; male texture also supplies a later horn cue. Horse: alternative horizontal body proportions only. Core animal textures do not themselves draw individual legs; four legs come from Qud and the selected authoring candidate. No donor mane/tail/animal head/species, footprint or runtime behavior is transplanted."
+  },
+  "renderer": "Authored fixed named body/Head art and ownership masks only. No new articulated legs, general mutation resolver or native activation.",
+  "registration": "Use common contact/pivot and one physical pixel scale across facings; do not fit independent alpha bounds.",
+  "acceptance": "Generation-time structural review and registration only. All native integration checks remain behind the full-generation gate."
+}
