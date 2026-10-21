@@ -8,6 +8,25 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
+Current authoring checkpoint (2026-10-21, horn-root rebuild): Yrame's natural
+Head288/0 Horns575 fitting and its source-item aggregate are generation-ready
+under `fit-yrame-horns/v4` and `item-horns/v3`. The rejected v3 construction and
+contextual refinement remain preserved. Before the new construction, a per-view
+fit contract defined broad upper anterolateral crown roots, growth/curl direction,
+flesh-ear ownership and north/profile occlusion. One actual contextual refinement
+followed the corrected editable construction. Its bone pixels were separated by
+color ownership, neutralized and registered at one common scale to the unchanged
+selected centauroid body. Hidden north root interiors were continued from manual
+geometry behind the original opaque skull; no second isolation generation or
+body-shaped item cutout was used. The exact original body/frame, separate w/W
+bone tint, full item, all-view head/full-body composites and intended-size art
+were reviewed. Gray RGB left under alpha0 by bicubic registration was normalized
+without altering visible pixels; the previous encodings and decision log remain
+preserved. These are generation-authoring results, not native acceptance or
+approval of Yrame's unfinished outfit. There are 126 generation-ready entries
+out of 156, with every entry still unfinished for native acceptance. Stage 3 is
+the sole ACTIVE stage; `FIT-YRAME-CHAIN-MAIL-BODY-0` is the sole active entry.
+
 Authority: already_authorized. The user requested a new tileset close to Qud's
 original art, proper models for the village's races including male/female/child
 variants, and a study of mutations/variable appendages against RimWorld clothing.
