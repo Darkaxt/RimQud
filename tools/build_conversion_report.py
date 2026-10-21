@@ -1,5 +1,4 @@
 """Render the actual per-entry ledger events as a static HTML evidence report."""
-from collections import Counter
 from html import escape as h
 import json
 from pathlib import Path
@@ -57,7 +56,10 @@ def entry_paths(entry,index):
     return [['Other',category,'Entries']]
 
 def render_entry_body(e,url_prefix):
-    logs=e['process_log'];latest={l['step']:l for l in logs};passed={s for s,l in latest.items() if l.get('result')=='PASS'}
+    logs=e['process_log'];passed=set()
+    for event in logs:
+        if event.get('result')=='PASS':passed.add(event['step'])
+        elif event.get('result') in ['REJECTED','INVALIDATED','REQUIRES REWORK']:passed.discard(event['step'])
     parts=['<div class="entry-body">']
     if e.get('furniture_views'):
         views=e['furniture_views'];done=views.get('completed_views',[])
@@ -97,7 +99,7 @@ def render_entry_body(e,url_prefix):
     return '\n'.join(parts)
 
 def render(data):
-    rows=data['entries'];counts=Counter(e['status'] for e in rows)
+    rows=data['entries']
     parts=['''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RimQud · conversion evidence</title><style>
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
@@ -106,7 +108,9 @@ def render(data):
 <h1>Every shape, with its evidence.</h1><p class="intro">This report shows the conversion as it happens. Source facts, authored interpretations, generated proposals, corrections and actual native results remain distinguishable. A missing step stays visible. Historical drafts receive no completion credit.</p>
 <nav><a href="conversion-ledger.md">Readable ledger</a><a href="../evidence/conversion-ledger.json">Structured record</a><a href="texture-review-20261021.html">Independent texture review</a><a href="yrame-horns-blender-trial.html">Blender trial stages</a><a href="../evidence/blender-shape-ledger.json">Reusable 3D shapes</a><a href="../art/village/preview.html">Historical village draft</a></nav>''']
     ready=sum(bool(e.get('generation_ready')) for e in rows)
-    parts.append('<div class="counts">'+f'<span><strong>{ready}</strong> generation-ready</span>'+''.join(f'<span><strong>{n}</strong> {h(s.lower())}</span>' for s,n in counts.items())+'</div>')
+    awaiting=sum(e['status']!='COMPLETE' for e in rows)
+    parts.append('<div class="counts">'+f'<span><strong>{ready}</strong> generation-ready</span><span><strong>{len(rows)-ready}</strong> generation pending</span><span><strong>{awaiting}</strong> awaiting final acceptance</span></div>')
+    parts.append('<p class="intro">These counts overlap: generation-ready entries still await final acceptance. Generation pending counts only entries whose authoring is unfinished.</p>')
     parts.append(f'<p>Active entry: <strong>{h(data["active_entry"] or "none")}</strong>. Stage 3 remains ACTIVE. Overall conversion is unfinished.</p>')
     parts.append('<p class="intro"><strong>Generation first.</strong> Native and formal integration validation waits until every pending conversion is generation-ready. Generation-ready is an authoring milestone; overall ledger status stays unfinished until applicable final acceptance. Image inspection, patches and recomposition remain generation work.</p>')
     if data.get('camera_policy'):

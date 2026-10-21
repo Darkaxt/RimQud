@@ -1,0 +1,85 @@
+{
+  "entry": "SCOPE-LANDMARKJOPPATAMTENT",
+  "blueprint": "LandmarkJoppaTamTent",
+  "ancestry": [
+    {
+      "name": "LandmarkJoppaTamTent",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml",
+        "sha256": "106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb"
+      },
+      "selected": "<object Name=\"LandmarkJoppaTamTent\" Inherits=\"Widget\">\n    <part Name=\"ZoneLandmarkBox\" DisplayName=\"tent\" Preposition=\"in\" OwnerBlueprint=\"Tam\" Width=\"5\" Height=\"5\" RequireBlueprint=\"CanvasWall\" RequireCount=\"5\" />\n  </object>"
+    },
+    {
+      "name": "Widget",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml",
+        "sha256": "106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb"
+      },
+      "selected": "<object Name=\"Widget\" Inherits=\"Object\">\n    <part Name=\"Render\" Visible=\"false\" DisplayName=\"[Widget]\" RenderString=\"*\" RenderLayer=\"0\" />\n    <part Name=\"Physics\" Weight=\"10000\" Takeable=\"false\" Solid=\"false\" IsReal=\"false\" />\n    <part Name=\"NoDamage\" />\n    <part Name=\"NoMove\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"Non\" />\n    <tag Name=\"Important\"></tag>\n  </object>"
+    },
+    {
+      "name": "Object",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "selected": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "effective_render": {
+    "Name": "Render",
+    "Visible": "false",
+    "DisplayName": "[Widget]",
+    "RenderString": "*",
+    "RenderLayer": "0"
+  },
+  "effective_parts": {
+    "Physics": {
+      "Name": "Physics",
+      "IsReal": "false",
+      "Solid": "false",
+      "Weight": "10000",
+      "Takeable": "false"
+    },
+    "Render": {
+      "Name": "Render",
+      "Visible": "false",
+      "DisplayName": "[Widget]",
+      "RenderString": "*",
+      "RenderLayer": "0"
+    },
+    "NoDamage": {
+      "Name": "NoDamage"
+    },
+    "NoMove": {
+      "Name": "NoMove"
+    },
+    "ZoneLandmarkBox": {
+      "Name": "ZoneLandmarkBox",
+      "DisplayName": "tent",
+      "Preposition": "in",
+      "OwnerBlueprint": "Tam",
+      "Width": "5",
+      "Height": "5",
+      "RequireBlueprint": "CanvasWall",
+      "RequireCount": "5"
+    }
+  },
+  "code_evidence": [
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/ZoneLandmarkBox.cs",
+      "sha256": "402f0e5768e9984634de54001710061b0d8a2ab2572bfaa3d54ebd22c54e7d60"
+    },
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/IZoneLandmark.cs",
+      "sha256": "56e21b8cacc0fc9ceeb7d648e856bd15e292d1ef3189c462f189efa106d45c5a"
+    }
+  ],
+  "decision": "No independent visible texture to convert",
+  "main_source_evaluation": "LandmarkJoppaTamTent inherits invisible Widget and no tile. Its ZoneLandmarkBox is Tam-owned5x5 tent region requiring5 CanvasWall objects; inspected source applies native bounds/count and owner/location prose only. It does not construct a roof, draw a tent sprite or alter wall/gate connectivity. Explicit debug wishes remain native diagnostics. CanvasWall has its full16 actual connected states in a separate generation-ready entry; keep that art and native tent-region semantics separate.",
+  "preserve": "Keep native placement, effects, lighting, discovery, transition and interaction ownership. Do not turn an invisible marker into a drawn prop or remove it from the native zone.",
+  "limit": "Installed definitions/part-code scope audit, not a new runtime/game verification.",
+  "generation_ready": true,
+  "native_activation": false
+}

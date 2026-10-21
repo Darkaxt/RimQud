@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "reason": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+  "checks": [
+    {
+      "state": "dirt1",
+      "neutral_equal_rgb": true,
+      "coverage_exact": true,
+      "all_native_tint_previews_exact": true,
+      "unattached_borders_clear": true,
+      "covered_fraction": 0.001956037134906046
+    },
+    {
+      "state": "legacy-grass1",
+      "neutral_equal_rgb": true,
+      "coverage_exact": true,
+      "all_native_tint_previews_exact": true,
+      "unattached_borders_clear": true,
+      "covered_fraction": 0.02418353510837929
+    }
+  ],
+  "independent_review": {
+    "path": "art/conversion/scope-source-reviews/dirty/blender-v2/independent-structural-review.json",
+    "sha256": "a18e80a019ca3a0ed222745e3745de49dcb375c52e89ac2474381afbc18e29d1"
+  },
+  "saved_model_audit": {
+    "path": "art/conversion/scope-source-reviews/dirty/blender-v2/reopen-audit.json",
+    "sha256": "b96eaff9948e0281480e82b00e5961898cf089f1b3292992744a88b583e96ce3"
+  },
+  "native_acceptance": "Pending full generation gate"
+}

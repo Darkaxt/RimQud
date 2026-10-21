@@ -1,0 +1,98 @@
+{
+  "entry": "FIT-DROMAD-CHILD-TEMPLATE-TUNIC",
+  "step": "extract_register_palette_masks",
+  "scope": "Generation evidence reconciliation only; unchanged selected art",
+  "model": {
+    "path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json",
+    "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"
+  },
+  "checks": [
+    {
+      "view": "south",
+      "component": "item",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/intact-tunic-south.png",
+      "sha256": "55758cf6c2c31d612b0596f7a6fe4455ecb8788a3b7f67488ba704ba616f9d6b",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "view": "south",
+      "component": "body-overlay",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/body-overlay-south.png",
+      "sha256": "1a9ae195463744e24f71c3196c6fb3f925828c649908736f5252c44d2462f30f",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "view": "east",
+      "component": "item",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/intact-tunic-east.png",
+      "sha256": "1801fe7fefbed78263bdc32be7f20193aec28aef2338065368d3e46b72ab4de0",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "view": "east",
+      "component": "body-overlay",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/body-overlay-east.png",
+      "sha256": "37b6e59272b0a886d2f3575fd5fc6db2205b82efe89e48108547410f39bac6ce",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "view": "north",
+      "component": "item",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/intact-tunic-north.png",
+      "sha256": "a0149c120e611a9c5f96e483cee022d5cdf9e7d30e120703830e7a75cbaa9889",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    },
+    {
+      "view": "north",
+      "component": "body-overlay",
+      "path": "art/conversion/fit-dromad-child-woven-tunic/v4/body-overlay-north.png",
+      "sha256": "fb1990e2865129de7c79b598f9433be5ece165f49fcdde49103ab59dbe75495f",
+      "size": [
+        512,
+        1024
+      ],
+      "contact": [
+        256,
+        950
+      ]
+    }
+  ],
+  "reason": "The older extraction step was left at REQUIRES REWORK when baked-cut exports were invalidated. Later regional-curved-v1 v4 successfully rebuilt complete tunic art and separate natural body visibility, with PASS authoring/retrospective review. This reconciliation checks the exact currently selected v4 model and all3view item/body-overlay export hashes, fixed512x1024 canvas and contact. It records current extraction PASS against that superseding export; it does not accept the rejected baked-cut source, change art, imply a native child selector or invent a new refinement.",
+  "new_generation_calls": 0,
+  "native_acceptance": false
+}

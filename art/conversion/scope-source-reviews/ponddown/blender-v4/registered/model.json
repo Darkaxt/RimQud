@@ -1,0 +1,70 @@
+{
+  "kind": "native_hidden_feature",
+  "blueprint": "PondDown",
+  "native_tile": "terrain/sw_crack.bmp",
+  "conditional_blueprint": "PondDown",
+  "source": {
+    "path": "art/conversion/scope-source-reviews/ponddown/source-packet.json",
+    "sha256": "9aa3d7e07959b5d4b18728a8b955081cff4f034cbc3387e8c4ea8e4bf09688ae"
+  },
+  "reference_correction": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/reference-correction.json",
+    "sha256": "805869140c73ccc0aba4701a07df6845b1a06c640c3cdd5cdb80cf4520b7f13f"
+  },
+  "blender_source": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/cleft.blend",
+    "sha256": "5e6eaf8391b6810ec891b0a92c4b1930ffeb64a93ab2696308da60a790aa8887"
+  },
+  "controls": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/model-controls.json",
+    "sha256": "f9125de38dce2d3d3893bf476c4dc1dbbd8e3843fc33d43b48a2e54b62a3fbb3"
+  },
+  "primary": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/primary.png",
+    "sha256": "8f688b3b207a486b973377650cc8d4ad05f22667b665e14ccc4f864f38f2c3dc"
+  },
+  "detail": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/detail.png",
+    "sha256": "8f688b3b207a486b973377650cc8d4ad05f22667b665e14ccc4f864f38f2c3dc"
+  },
+  "coverage": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/coverage.png",
+    "sha256": "a1d99df4951804ce9d8e41d8e9b6784dd23673750591eab01c852cad633c1e21"
+  },
+  "detail_coverage": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/detail_coverage.png",
+    "sha256": "bf32afcf4f92d25f1f493871495ec4a9490889f9595fc02e1a506b4580229962"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/detail_weight.png",
+    "sha256": "6d8c7a31ad352a4acba70cbeaa38c9b11a7d01e81ad1d04ba51489e0c51041f9"
+  },
+  "authored_dualcolor_mask": {
+    "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/authored_dualcolor_mask.png",
+    "sha256": "141ec007da73fa9c5b27251cab734a71daf562714f8b225fcc59965c7a659e7c"
+  },
+  "registration": {
+    "native_cell": [
+      16,
+      24
+    ],
+    "canvas": [
+      512,
+      768
+    ],
+    "rule": "Original complete rectangular map frame; no alpha recenter/fit or extra facings."
+  },
+  "native_states": {
+    "unfound": "Render.Visible=false, small crack name, y foreground/layer1 defaults; do not draw or reveal it from art.",
+    "found": "HiddenRender.Reveal sets Visible=true, stone crack name, same sw_crack tile, foregroundY/layer3; searched Intelligence+Bonus difficulty2 or Radar/LitRadar can reveal.",
+    "liquid": "RenderLiquidBackground delegates to existing open liquid primary/secondary background; preserve current background and source detail, do not bake water or animate a new spray."
+  },
+  "native_behavior": "Keep HiddenRender discovery, search/radar, native navigation weighting, Connect direction d/type StairsUp and StairsDown interaction, MentalShield/NoDamage and RenderLiquidBackground. No new transition, reveal trigger, liquid state or world geometry.",
+  "visibility_policy": "Read actual native Render.Visible each frame. Hidden must draw nothing; HiddenRender alone owns discovery/reveal and layer/name/foreground changes. Do not infer visibility from tile-name presence.",
+  "palette_policy": "Native primary foreground and renderer-resolved detail/background. Default detail string empty and reveal does not overwrite it; never freeze illustrative k/blue values.",
+  "liquid_background": "Native RenderLiquidBackground result must survive unchanged behind coverage; no water baked into art.",
+  "formula": "coverage*luminance*((1-detail_weight)*native_primary+detail_weight*native_detail)+(1-coverage)*native_background",
+  "new_native_state_chooser": false,
+  "native_activation": false,
+  "native_acceptance": "Pending full-set hidden/reveal/search/radar/liquid-background and stairs interaction review"
+}

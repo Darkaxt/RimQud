@@ -1,0 +1,73 @@
+{
+  "asset": "SCOPE-PONDDOWN",
+  "reviewer": {
+    "agent": "/root/ponddown_cleft_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/source-reference-comparison.png",
+      "sha256": "2fafc682e40081541958a039416b2697c8af9fb67b8fc2883b7a591e5a0b13f9"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/reference-correction.json",
+      "sha256": "805869140c73ccc0aba4701a07df6845b1a06c640c3cdd5cdb80cf4520b7f13f"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/source-manual-refined-comparison.png",
+      "sha256": "c3d114d1466c2661635a82589ed466b5bbda365f11122c63234488faec9ade77"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/manual-map.png",
+      "sha256": "ffb3ff35f74ddd03f6c3aeb601ea52f4ee6b5ef8392d573af2bbb5cf09264537"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/refined-map-neutral.png",
+      "sha256": "88469ee0703159304339b2b1f3ce14489630313e63bebb1997281217e73b4b14"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/refined-map-detail.png",
+      "sha256": "b99b1f468103c8d855e6d266ad26ab419cca4b66ddaaea8f01809cda6a57f2f5"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/refined-3d.png",
+      "sha256": "255a880709a1d4fa91117916d5f5746de2e6caecd12734fae9713e712a5778ab"
+    }
+  ],
+  "recommendation": "hold",
+  "fix_now": [
+    "Artificial straight cross-face seams"
+  ],
+  "findings": [
+    {
+      "state": "neutral map/3D central and lower recess",
+      "observation": "Repeated straight horizontal lines traverse recess like stacked strips, unrelated to source branches or selected stone facets.",
+      "severity": "medium",
+      "confidence": "high",
+      "correction": "Remove internal strip boundaries, retain continuous recess shading and contour-following lip edges."
+    },
+    {
+      "state": "revealed primary strokes",
+      "observation": "Source branching identity, detached lower strokes and principal gaps recognizable; no boulder or stairs.",
+      "severity": "none",
+      "confidence": "high"
+    },
+    {
+      "state": "frame and state contexts",
+      "observation": "Portrait frame/margins and small readability retained; hidden proof empty, revealed lips/recess distinguished and liquid surrounds decal.",
+      "severity": "none",
+      "confidence": "high"
+    }
+  ],
+  "limits": "Broad neutral recess is a detail-role diagnostic, not opaque new stone slab. Visual review only; no native runtime/alpha verification.",
+  "main_dispositions": [
+    {
+      "finding": "Cross-face seams",
+      "decision": "FIX NOW",
+      "reason": "Main saved-geometry audit confirms pretriangulated caps include zero-area faces; bevel/contour exposes artificial triangulation strips. Replace caps in saved model with continuous polygon faces, retaining original outline/role/height and fresh-review correction."
+    }
+  ],
+  "native_acceptance": false
+}

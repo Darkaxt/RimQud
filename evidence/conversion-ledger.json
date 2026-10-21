@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCOPE-DIRTY",
+  "active_entry": null,
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -128,16 +128,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
-      "status": "IN PROGRESS",
+      "disposition": "Invisible producer preserved; all5 visible paint outputs resolved (2new,3exact reused)",
+      "status": "UNFINISHED",
       "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Invisible marker generates visible cell paint. Two aliases still require source-bound art/binding: tile-dirt1 single point and legacy tile-grass1 two tufts. Existing sw_grass1..3 sources match exactly."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "Dirty",
@@ -189,14 +187,162 @@
           ],
           "review": "Dirty inherits invisible FloorPainter/Widget, but its EnteredCell handler paints visible cells. Dirty.PaintCell selects Tiles/tile-dirt1.png with w or y and k detail in6/8 branches; g or G grass in2/8 branches. DirtPicker chooses legacy tile-grass1 plus sw_grass1/2/3 equally. Three sw_grass masks exactly match existing source-bound completed grass conversions. The sparse single dirt1 point and legacy two-tuft grass1 are different actual source shapes; DirtFloor dots and existing three grass aliases do not establish their conversion. Do not mark Dirty generation-ready from invisible Render alone. Preserve native random selection, floor-texture option, paint strings, source color/detail and native placement.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:01:42.761930+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Actual source, donor reference and fixed-cell plan",
+          "action": "Bind actual5 native paint masks, native Dirty/DirtPicker behavior and actual RimWorld Soil/GrassA surface references.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/source-scope-hold.json",
+              "sha256": "5801f74be77cf415371d521a17f99b7fd445bf0e35dfa7f76c2ae6861aba7efe"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/source-and-reference-supplement.json",
+              "sha256": "93adb79df25e4c6af866e1f409eb2bf1f2597e38b3455d3ab109094ec5d2c54b"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png",
+              "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"
+            }
+          ],
+          "review": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:01:42.761930+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Manual map-plane construction",
+          "action": "Construct2 distinct source-bound map-plane states in Blender; retain common16x24 frame and manual outputs.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/painted-tile-index.json",
+              "sha256": "fd75296346ef5cab992f8422a2fd1d2802aa9d72b61c35697114ecca9e865016"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v1/paint.blend",
+              "sha256": "f3f5c02e376eb8211e4000296dde3cf23d3f6f777a0d0e19a526c8fb6d0217b2"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v1/model-controls.json",
+              "sha256": "4a3be574a8e3ab0bfe048e00f724d40ccb4f26be999c92afe14969248ea6c759"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v1/dirt1-manual.png",
+              "sha256": "b64f1d0135cd159a212cbf009e305e0f3fd083c49957d7d360c0391e0525c10e"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v1/legacy-grass1-manual.png",
+              "sha256": "96641c72cee0d3aadc83125ff53710ceece278fa0b3886f8ac8b8acdbaa93581"
+            }
+          ],
+          "review": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:01:42.761930+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Refinement and fresh structural review",
+          "action": "Resume saved manual geometry for earth grain, blade center shading and fine contours; inspect both states independently.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v1/paint.blend",
+              "sha256": "f3f5c02e376eb8211e4000296dde3cf23d3f6f777a0d0e19a526c8fb6d0217b2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/source-manual-refined-comparison.png",
+              "sha256": "1df7b3bd5d092e0d8998a0247f732df61fbe8ab5a1ff02795359dc3efd55e8bf"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/independent-structural-review.json",
+              "sha256": "a18e80a019ca3a0ed222745e3745de49dcb375c52e89ac2474381afbc18e29d1"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/reopen-audit.json",
+              "sha256": "b96eaff9948e0281480e82b00e5961898cf089f1b3292992744a88b583e96ce3"
+            }
+          ],
+          "review": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:01:42.761930+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Registration, reused aliases and final source scope",
+          "action": "Register2 fixed-cell primary/coverage maps, reuse3 exact prior models and account for all5 visible outputs while preserving invisible native producer.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/paint.blend",
+              "sha256": "b89b4dd6faa0b16764baafb3ceeb7963f83b61a9af988a2d82b10571bae6b70e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/model.json",
+              "sha256": "af662db1fad2922237d49041535ab60ef2a703570e1fd4ae0516e85ee1cd8574"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/registration-comparison.png",
+              "sha256": "d07f764f8edfdc02026102710dc3e317ac96524116391e4c5ccb57039dc0e7f7"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/authoring-review.json",
+              "sha256": "5bfe6b179abf77a9bcce01f99503537039e9d9ca886b3792dda096f224e5818a"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v17.json",
+              "sha256": "212546700ddd7da4e830ac17a3a0266b84363fc7269cadfa9718cfe188883d21"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/preview-name-correction.json",
+              "sha256": "a03ca04db3ba37b0d0344413c2c2d47d7b4da907608a1ed4e8004203bcd575e3"
+            }
+          ],
+          "review": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+          "result": "PASS"
         }
       ],
-      "advancement_blocker": {
-        "requirement": "Account for every visible texture/state before justified exclusion or generation readiness",
-        "reason": "Dirty dynamically produces2 actual visible source aliases not covered by existing DirtFloor or sw_grass1..3 registrations.",
-        "classification": "internal",
-        "resolution": "Author/register and review2 source-bound sparse paint variants or establish justified existing-art bindings; retain all5 mappings and native random palette/options.",
-        "dependent_work": "Dirty readiness, remaining scope review sequence and full-set native generation gate"
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v17.json",
+          "sha256": "212546700ddd7da4e830ac17a3a0266b84363fc7269cadfa9718cfe188883d21"
+        },
+        "resume": {
+          "path": "art/conversion/scope-source-reviews/dirty/blender-v2/paint.blend",
+          "sha256": "b89b4dd6faa0b16764baafb3ceeb7963f83b61a9af988a2d82b10571bae6b70e"
+        },
+        "controls": {
+          "path": "art/conversion/scope-source-reviews/dirty/blender-v2/model-controls.json",
+          "sha256": "096a53e9f2c82375483de9be449e09e4a9400ebec80c52b11fc9adcd7daee3db"
+        }
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/model.json",
+          "sha256": "af662db1fad2922237d49041535ab60ef2a703570e1fd4ae0516e85ee1cd8574"
+        },
+        "plate": {
+          "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/registration-comparison.png",
+          "sha256": "d07f764f8edfdc02026102710dc3e317ac96524116391e4c5ccb57039dc0e7f7"
+        }
+      },
+      "registration_summary": "Dirty itself remains invisible. Two previously uncovered source-cell paint maps are registered; three sw_grass aliases reuse exact existing models. Native options/random colors/draw order remain pending whole-set acceptance.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Dirty is an invisible FloorPainter/Widget but its part paints visible cells on EnteredCell. Actual installed source extraction found5 aliases. Existing sw_grass1/2/3 masks exactly match prior source-bound grass registrations and reuse those unchanged models/art. Two uncovered states now have complete fixed-frame Blender map-plane art: the single tile-dirt1 point remains one tiny irregular earth fleck, and legacy tile-grass1 remains3separated sparse rising blades at source-relative roots/tips. Actual RimWorld Soil/GrassA references guide grain and blade shading only. Manual and restrained direct material/contour refinements are retained separately. A mutable-object iteration diagnostic failed after saving the intact manual model; recovery resumed that model, used a frozen list, and recreated an unsaved unused highlight material. No failed refined image or restart is claimed. Fresh independent visual review and main source/registered/intended-size palette inspection pass both new maps. Saved open map-plane meshes have no degenerate faces or frame spill and no external render-image dependencies. Primary-only equal-RGB textures and one coverage preserve all per-cell native tint/background; dirt w/y+k and grass g/G with prior detail remain native-owned. The native floor-texture option, random choices, strings, visibility and ordering are retained. Source widget itself receives no drawn prop. No native activation/game acceptance yet.",
+        "record": {
+          "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/authoring-review.json",
+          "sha256": "5bfe6b179abf77a9bcce01f99503537039e9d9ca886b3792dda096f224e5818a"
+        }
       }
     },
     {
@@ -208,16 +354,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Source-reviewed invisible marker / no independent art",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "LandmarkJoppaArgyveWorkshop",
@@ -238,7 +382,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:02:30.396652+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppaargyveworkshop/source-scope-review.json",
+              "sha256": "e09098d0239d9f31c3dce6fd943f112ec4999303c6efe1149dfe4f096516c20c"
+            }
+          ],
+          "review": "LandmarkJoppaArgyveWorkshop inherits Widget Visible=false, no tile. ZoneLandmarkBox defines an8x5 applicability region requiring5 RustedMetalWall objects, owner Argyve and workshop/preposition text; it does not create/draw workshop props. IZoneLandmark supplies native owner/location prose. Its explicitly invoked showlandmarks debug wish draws numbered diagnostic cells, not normal world art or a standalone texture. Preserve location/owner/count checks and debug behavior; actual workshop walls and props have their own conversion entries. No independent visible art omitted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:02:30.396652+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppaargyveworkshop/source-scope-review.json",
+              "sha256": "e09098d0239d9f31c3dce6fd943f112ec4999303c6efe1149dfe4f096516c20c"
+            }
+          ],
+          "review": "LandmarkJoppaArgyveWorkshop inherits Widget Visible=false, no tile. ZoneLandmarkBox defines an8x5 applicability region requiring5 RustedMetalWall objects, owner Argyve and workshop/preposition text; it does not create/draw workshop props. IZoneLandmark supplies native owner/location prose. Its explicitly invoked showlandmarks debug wish draws numbered diagnostic cells, not normal world art or a standalone texture. Preserve location/owner/count checks and debug behavior; actual workshop walls and props have their own conversion entries. No independent visible art omitted.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/landmarkjoppaargyveworkshop/source-scope-review.json",
+        "sha256": "e09098d0239d9f31c3dce6fd943f112ec4999303c6efe1149dfe4f096516c20c"
+      }
     },
     {
       "id": "SCOPE-LANDMARKJOPPAIRUDADHUT",
@@ -249,16 +437,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Source-reviewed invisible marker / no independent art",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "LandmarkJoppaIrudadHut",
@@ -279,7 +465,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:02:43.811460+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppairudadhut/source-scope-review.json",
+              "sha256": "1bd8c9d0a76ccf3294db6e5ba043796d7c65d42701b012df49d8fe7690e22171"
+            }
+          ],
+          "review": "LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:02:43.811460+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppairudadhut/source-scope-review.json",
+              "sha256": "1bd8c9d0a76ccf3294db6e5ba043796d7c65d42701b012df49d8fe7690e22171"
+            }
+          ],
+          "review": "LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/landmarkjoppairudadhut/source-scope-review.json",
+        "sha256": "1bd8c9d0a76ccf3294db6e5ba043796d7c65d42701b012df49d8fe7690e22171"
+      }
     },
     {
       "id": "SCOPE-LANDMARKJOPPAMILL",
@@ -290,16 +520,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Source-reviewed invisible marker / no independent art",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "LandmarkJoppaMill",
@@ -320,7 +548,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:02:55.686289+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppamill/source-scope-review.json",
+              "sha256": "99e0a49789489ad58eee6a4a74d32651c9f4860e6dd973745847fd5bfe10a4d5"
+            }
+          ],
+          "review": "LandmarkJoppaMill inherits invisible Widget, no tile. Its ZoneLandmarkBox names village mill with preposition by,7x5 region and one required Millstone; no owner blueprint. Exact class/base inspection shows native bounds/requirement checks and location prose, no normal drawing or generated mill geometry. Optional explicit debug wishes use numbered console cells only. Preserve mill landmark applicability and text. Actual Millstone, water wheel/transmission and mill sign retain their separate art entries.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:02:55.686289+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppamill/source-scope-review.json",
+              "sha256": "99e0a49789489ad58eee6a4a74d32651c9f4860e6dd973745847fd5bfe10a4d5"
+            }
+          ],
+          "review": "LandmarkJoppaMill inherits invisible Widget, no tile. Its ZoneLandmarkBox names village mill with preposition by,7x5 region and one required Millstone; no owner blueprint. Exact class/base inspection shows native bounds/requirement checks and location prose, no normal drawing or generated mill geometry. Optional explicit debug wishes use numbered console cells only. Preserve mill landmark applicability and text. Actual Millstone, water wheel/transmission and mill sign retain their separate art entries.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/landmarkjoppamill/source-scope-review.json",
+        "sha256": "99e0a49789489ad58eee6a4a74d32651c9f4860e6dd973745847fd5bfe10a4d5"
+      }
     },
     {
       "id": "SCOPE-LANDMARKJOPPATAMTENT",
@@ -331,16 +603,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Source-reviewed invisible marker / no independent art",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "LandmarkJoppaTamTent",
@@ -361,7 +631,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:03:08.805152+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppatamtent/source-scope-review.json",
+              "sha256": "935fddb28900c8565a70bc19a2b3a01bfb62e5c04d14aa41ecc143752c5097dd"
+            }
+          ],
+          "review": "LandmarkJoppaTamTent inherits invisible Widget and no tile. Its ZoneLandmarkBox is Tam-owned5x5 tent region requiring5 CanvasWall objects; inspected source applies native bounds/count and owner/location prose only. It does not construct a roof, draw a tent sprite or alter wall/gate connectivity. Explicit debug wishes remain native diagnostics. CanvasWall has its full16 actual connected states in a separate generation-ready entry; keep that art and native tent-region semantics separate.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:03:08.805152+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppatamtent/source-scope-review.json",
+              "sha256": "935fddb28900c8565a70bc19a2b3a01bfb62e5c04d14aa41ecc143752c5097dd"
+            }
+          ],
+          "review": "LandmarkJoppaTamTent inherits invisible Widget and no tile. Its ZoneLandmarkBox is Tam-owned5x5 tent region requiring5 CanvasWall objects; inspected source applies native bounds/count and owner/location prose only. It does not construct a roof, draw a tent sprite or alter wall/gate connectivity. Explicit debug wishes remain native diagnostics. CanvasWall has its full16 actual connected states in a separate generation-ready entry; keep that art and native tent-region semantics separate.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/landmarkjoppatamtent/source-scope-review.json",
+        "sha256": "935fddb28900c8565a70bc19a2b3a01bfb62e5c04d14aa41ecc143752c5097dd"
+      }
     },
     {
       "id": "SCOPE-LANDMARKJOPPAWATERVINE",
@@ -372,16 +686,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Source-reviewed invisible marker / no independent art",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "LandmarkJoppaWatervine",
@@ -402,7 +714,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:03:26.024446+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppawatervine/source-scope-review.json",
+              "sha256": "5ada7021cf1e05abd774719e9b1f7b2eefa4e8de124ac06c335a126d34accb70"
+            }
+          ],
+          "review": "LandmarkJoppaWatervine inherits invisible Widget and no tile. ZoneLandmarkGroup names watervine patch with preposition by, Blueprint Watervine, Count5 and Padding1. Exact code scans existing connected Watervine cells and caches bounded applicability; it neither creates nor draws vines/ground. Base supplies native landmark prose and explicit diagnostic wishes only. Preserve count, padding, connectivity scan/cache and text. Visible Watervine plant and ground/water art are separate conversion entries.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:03:26.024446+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/landmarkjoppawatervine/source-scope-review.json",
+              "sha256": "5ada7021cf1e05abd774719e9b1f7b2eefa4e8de124ac06c335a126d34accb70"
+            }
+          ],
+          "review": "LandmarkJoppaWatervine inherits invisible Widget and no tile. ZoneLandmarkGroup names watervine patch with preposition by, Blueprint Watervine, Count5 and Padding1. Exact code scans existing connected Watervine cells and caches bounded applicability; it neither creates nor draws vines/ground. Base supplies native landmark prose and explicit diagnostic wishes only. Preserve count, padding, connectivity scan/cache and text. Visible Watervine plant and ground/water art are separate conversion entries.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/landmarkjoppawatervine/source-scope-review.json",
+        "sha256": "5ada7021cf1e05abd774719e9b1f7b2eefa4e8de124ac06c335a126d34accb70"
+      }
     },
     {
       "id": "SCOPE-PONDDOWN",
@@ -413,16 +769,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
+      "disposition": "Native hidden/revealed feature; source crack art generated, native discovery/background retained",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "PondDown",
@@ -443,7 +797,214 @@
         "original_tile": "terrain/sw_crack.bmp"
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T15:05:37.298417+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect actual PondDown ancestry, HiddenRender reveal and liquid background; extract exact sw_crack source and actual rough-stone reference.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/resolve-ponddown.py",
+              "sha256": "5f19c346dbd1484e7e5193feb06d54b0f2798b2c06654ecc0e7a4bd6ba5bd28f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/source-packet.json",
+              "sha256": "9aa3d7e07959b5d4b18728a8b955081cff4f034cbc3387e8c4ea8e4bf09688ae"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/source-reference-comparison.png",
+              "sha256": "2fafc682e40081541958a039416b2697c8af9fb67b8fc2883b7a591e5a0b13f9"
+            }
+          ],
+          "review": "PondDown becomes visible through native HiddenRender.Reveal. It needs source-bound crack art and state-preserving binding; default Visible=false is not an art exclusion.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:18:00.514347+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Source/reference decision and manual cleft",
+          "action": "Resolve native hidden/reveal behavior; replace rejected shader-auxiliary reference with actual VTE stone; construct source lips/recess in common Blender map frame.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/source-packet.json",
+              "sha256": "9aa3d7e07959b5d4b18728a8b955081cff4f034cbc3387e8c4ea8e4bf09688ae"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/reference-correction.json",
+              "sha256": "805869140c73ccc0aba4701a07df6845b1a06c640c3cdd5cdb80cf4520b7f13f"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/cleft.blend",
+              "sha256": "00633b459a883dea3767c184a86c560f7e7d4f1a0acb1f8b647df3e60f23aab1"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/manual-map.png",
+              "sha256": "ffb3ff35f74ddd03f6c3aeb601ea52f4ee6b5ef8392d573af2bbb5cf09264537"
+            }
+          ],
+          "review": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:18:00.514347+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "First refined cleft / rejected cross-face strips",
+          "action": "Retain actual bevel/material/contour refinement and fresh hold; diagnose cap degeneracies before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/cleft.blend",
+              "sha256": "00633b459a883dea3767c184a86c560f7e7d4f1a0acb1f8b647df3e60f23aab1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/source-manual-refined-comparison.png",
+              "sha256": "c3d114d1466c2661635a82589ed466b5bbda365f11122c63234488faec9ade77"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/independent-structural-review.json",
+              "sha256": "fb163ba48dc8648b15500a0cb3e29eb556f5d91baf61e4f72c7274d4388bcafb"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/reopen-audit.json",
+              "sha256": "a3cdcb0a685d080fa949f14737b74d8d6e2fb435534517291f21492e0ec95649"
+            }
+          ],
+          "review": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-21T15:18:00.514347+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Continuous cap correction / residual contour hairline",
+          "action": "Resume saved geometry and replace only caps; retain fresh hold on remaining diagnostic hairline.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/cleft.blend",
+              "sha256": "54c23e733ea177cdbbe09d367d2918d1863c9442bdd3fee3c9faf2fe7b5cee46"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/cleft.blend",
+              "sha256": "609f54a11e7e6e838862c54302c707029e236f73fa757fd8466a359fcbef4184"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/independent-structural-review.json",
+              "sha256": "de94857e967afbf544486ad160cd5a9759abaede45675b4c895404af63c62574"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/reopen-audit.json",
+              "sha256": "798197cc0edbcfe15a7f0f30a430889ead445e6689fe1bd31fd3891e2bc35cfb"
+            }
+          ],
+          "review": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-21T15:18:00.514347+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Direct decal correction and fresh structural review",
+          "action": "Omit redundant physical-object contour overlay on thin layered decal; preserve corrected geometry and source-role contrast.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/cleft.blend",
+              "sha256": "609f54a11e7e6e838862c54302c707029e236f73fa757fd8466a359fcbef4184"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/refined-3d.png",
+              "sha256": "f67dc2e5276b6d5fbbdf27dede119bd7cc731e3bce3d7bcdf2edc27669353010"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/source-manual-refined-comparison.png",
+              "sha256": "7c162209b127f0a0994342fd8fbb1aa78ae7685501ebf3494d5d5d994f8c9abf"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/independent-structural-review.json",
+              "sha256": "3b858970a53df37b54465ffc1e8dbfb3706ae793db7c0185f485bc7b6e5d3d01"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/reopen-audit.json",
+              "sha256": "8b2e1d46dc84f5d7faa29c8afe9ce659d1bbb4fa417d2a0656a062ec61faffe2"
+            }
+          ],
+          "review": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:18:00.514347+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "phase": "Registration and hidden/native state contract",
+          "action": "Register semantic neutral/tint-weight/one-coverage art and explicit native visibility/liquid/reveal binding; resolve scope as visible when revealed.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/cleft.blend",
+              "sha256": "5e6eaf8391b6810ec891b0a92c4b1930ffeb64a93ab2696308da60a790aa8887"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/model.json",
+              "sha256": "f52aec528cc1262a2cc5a53d1fe3c992f70a8cd8119202c499358aed2f1fc4c8"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/registration-comparison.png",
+              "sha256": "d37cca506fe0cffe77261db0a320aff3574e6f8c6a9e8769db16b14d1fc29fa0"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/authoring-review.json",
+              "sha256": "0c651ea796804193205c2fd4997f2626fca142d7313190f19c462c3cd2a487b1"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v18.json",
+              "sha256": "513ec52286b08bd3da04f9c6126a1c267ed994815a53629d7431dcb2ba466cc0"
+            }
+          ],
+          "review": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v18.json",
+          "sha256": "513ec52286b08bd3da04f9c6126a1c267ed994815a53629d7431dcb2ba466cc0"
+        },
+        "resume": {
+          "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/cleft.blend",
+          "sha256": "5e6eaf8391b6810ec891b0a92c4b1930ffeb64a93ab2696308da60a790aa8887"
+        },
+        "controls": {
+          "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/model-controls.json",
+          "sha256": "f9125de38dce2d3d3893bf476c4dc1dbbd8e3843fc33d43b48a2e54b62a3fbb3"
+        }
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/model.json",
+          "sha256": "f52aec528cc1262a2cc5a53d1fe3c992f70a8cd8119202c499358aed2f1fc4c8"
+        },
+        "plate": {
+          "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/registration-comparison.png",
+          "sha256": "d37cca506fe0cffe77261db0a320aff3574e6f8c6a9e8769db16b14d1fc29fa0"
+        }
+      },
+      "registration_summary": "Source-bound revealed stone-crack map-plane art with closed corrected caps, neutral primary/detail and one coverage. Hidden state draws nothing. Native discovery, foreground/detail/liquid background and stair transition remain authoritative.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "PondDown default Render.Visible=false is not a permanent exclusion. Exact native HiddenRender reveals same sw_crack tile through search/radar, changing name/foreground/layer/visibility while preserving native transition and liquid background. Actual source mask is a branching cleft with asymmetric primary lit lips around detail recess and small detached highlights. Source-bound shallow3D map-plane fragments retain topology, semantic roles and fixed16x24 frame, with authored small corner rounding/depth. Initial RoughAlphaAdd was rejected as shader auxiliary after viewing; actual VTE neutral stone supplies surface/contrast convention only. Direct refinement first exposed cross-face strips: fresh hold and saved-mesh audit showed zero-area triangles from pretriangulated caps. Resumed continuous polygon caps remove all degeneracies while retaining boundary/material/depth. A second fresh hold caught one residual diagnostic hairline; matched geometry without physical-object Freestyle contours removes that shallow-layer overlay artifact. Final direct-decal candidate keeps source primary/detail contrast, restrained grain/bevels, and fresh independent review plus main registered/state/intended-size inspection pass. Ten saved closed elements reopen with no zero-area/nonmanifold geometry, external image dependencies or frame spill. Production neutral/detail-weight/one-coverage maps do not bake illustrative k/blue contexts. Actual native Render.Visible, search/radar/reveal, source/event tint/detail/background, RenderLiquidBackground, Connect/StairsDown and navigation remain authoritative. No forced discovery, terrain cut, new chooser or game acceptance is claimed.",
+        "record": {
+          "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/authoring-review.json",
+          "sha256": "0c651ea796804193205c2fd4997f2626fca142d7313190f19c462c3cd2a487b1"
+        }
+      }
     },
     {
       "id": "FIT-DROMAD-CLOTH-ROBE-BODY-0",
@@ -5213,6 +5774,60 @@
             }
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:31:06.119376+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reconcile final source-step acceptance labels against exact current corrected sole/strap geometry and selected contextual material evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/authoring-review.json",
+              "sha256": "a6c953919c20717580dba94f2a2a78e8c3bad13ae7537367c621b7383004fc73"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/generation-gate-reconciliation-20261021/female-sandals-source-step-record.json",
+              "sha256": "2bbccda96b17984ed1df4f00a22ac342e9741701b0535cb7b0bf1ef061b9eaeb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+              "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+            }
+          ],
+          "review": "Current v3 source-step events used STRUCTURE INSPECTED; MATERIAL SELECTED rather than final PASS. Exact selected v3 authoring review records full-width front/rear ankle band correction and contextual refinement/material selection; later export/composition/palette and independent retrospective review pass the same saved model. Main refreshed inspection of current SEN/west foot plate confirms the source ankle edges, instep bands and complete soles are retained. Reconcile those two authoring steps to this already-selected reviewed source, without a new ImageGen call, changed geometry or native acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:31:06.119376+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Reconcile final source-step acceptance labels against exact current corrected sole/strap geometry and selected contextual material evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/model.json",
+              "sha256": "fd1da9e416ab6cc097dc01206b2a0d894228a07dc6e37e83bca28f62e4108973"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/authoring-review.json",
+              "sha256": "a6c953919c20717580dba94f2a2a78e8c3bad13ae7537367c621b7383004fc73"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/generation-gate-reconciliation-20261021/female-sandals-source-step-record.json",
+              "sha256": "2bbccda96b17984ed1df4f00a22ac342e9741701b0535cb7b0bf1ef061b9eaeb"
+            },
+            {
+              "path": "art/conversion/fit-human-female-sandals/v3/footwear-comparison.png",
+              "sha256": "f78a6a3f75f67f74680e84b5c803c341813ee939cd725f68f924c3766df1140f"
+            }
+          ],
+          "review": "Current v3 source-step events used STRUCTURE INSPECTED; MATERIAL SELECTED rather than final PASS. Exact selected v3 authoring review records full-width front/rear ankle band correction and contextual refinement/material selection; later export/composition/palette and independent retrospective review pass the same saved model. Main refreshed inspection of current SEN/west foot plate confirms the source ankle edges, instep bands and complete soles are retained. Reconcile those two authoring steps to this already-selected reviewed source, without a new ImageGen call, changed geometry or native acceptance.",
           "result": "PASS"
         }
       ],
@@ -25828,7 +26443,9 @@
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [],
+      "known_issues": [
+        "Final native item acceptance remains pending full-set test."
+      ],
       "metadata": {
         "original_reference": {
           "instance": 575,
@@ -26276,6 +26893,33 @@
           ],
           "review": "Verified the sole captured Horns575 natural Head288/0 fitting against current registered Blender model, source/fit/review hashes, four real facings, unchanged body frame, full source volume and independent w/W tint. Rounded root shading is minor polish after source-calibrated contact and fresh visual review; prior rejected flat/cut sources are superseded. No standalone duplicate item art or new ImageGen call. Native headgear/equipment state remains pending full-set generation.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:24:16.201488+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Refresh stale Horns inventory aggregate to exact selected Blender fitting; retain old aggregate as history.",
+          "inputs": [
+            {
+              "path": "art/conversion/item-horns/v3/fittings.json",
+              "sha256": "0abea001d4695d2b283748ecf8991b18c0644c44fe15c59bf8261a1be8e9f5df"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/model.json",
+              "sha256": "878a39c8c1edf81078b911bb1dd976a0f290f5bed9c8035fd3993e45162b61e4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-horns/v4/fittings.json",
+              "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/neutral-comparison.png",
+              "sha256": "8e17758868c81ad4103d50928d5ffcd364dbf1145aee37b11bebf7ad83a2d0d8"
+            }
+          ],
+          "review": "Whole-ledger authoring dependency reconciliation found the ledger Horns aggregate still referenced pre-Blender v3 while its already-prepared v4 aggregate, fitted source and current Yrame NPC used blender-fit-v4/registered-v1. Select the existing exact v4 aggregate without changing it. Its current fitting, fixed body, actual slot/laterality, source/fit contract and existing authoring review match. The reviewed plate is reused by hash. No art regeneration, style refinement, duplicate item, runtime acceptance or gameplay change.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
@@ -26289,15 +26933,15 @@
       },
       "current_registration": {
         "model": {
-          "path": "art/conversion/item-horns/v3/fittings.json",
-          "sha256": "0abea001d4695d2b283748ecf8991b18c0644c44fe15c59bf8261a1be8e9f5df"
+          "path": "art/conversion/item-horns/v4/fittings.json",
+          "sha256": "3b190f7cd47d7dcfe936ffb905418ea2fca6adab2780ea12e92b792d9b5fb69e"
         },
         "plate": {
-          "path": "art/conversion/fit-yrame-horns/v4/assembly-comparison.png",
-          "sha256": "4c0ca77075316dde73258a83101e1fae46e6529ea85411a19738c675548233a3"
+          "path": "art/conversion/fit-yrame-horns/blender-fit-v4/registered-v1/neutral-comparison.png",
+          "sha256": "8e17758868c81ad4103d50928d5ffcd364dbf1145aee37b11bebf7ad83a2d0d8"
         }
       },
-      "registration_summary": "Current horn source index selects the v4 crown-root fit on the unchanged sheep-like centauroid body. All required generation evidence reconciled; natural headgear/outfit/native acceptance pending.",
+      "registration_summary": "Exact current saved-Blender horn fitting reused; pre-Blender aggregate superseded. Native item acceptance remains pending.",
       "native_acceptance": "Pending full-set generation, integrated natural Head288/0 attachment, headgear precedence, physical-frame mapping and Yrame full mutation/outfit assembly.",
       "retrospective_structural_review": {
         "recorded_at": "2026-10-21T09:22:34.529301+00:00",
@@ -26684,6 +27328,29 @@
             }
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:27:07.150756+00:00",
+          "step": "reprocess_under_regional_curved_v1",
+          "action": "Reconcile stale authoring-step record to exact selected superseding production exports.",
+          "inputs": [
+            {
+              "path": "art/conversion/item-leather-apron/v1/fittings.json",
+              "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/generation-gate-reconciliation-20261021/item-leather-apron-authoring-record.json",
+              "sha256": "95c3bdfb9385393533702970a2821464526e7b46f439cb5e53a86277995f8c9a"
+            },
+            {
+              "path": "art/conversion/item-leather-apron/v1/body-fittings-comparison.png",
+              "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+            }
+          ],
+          "review": "The Leather Apron aggregate already selects the exact completed regional-curved-v1 Nima fitting, complete cloth and separate original-body masks, but its aggregate reprocess step retained only the earlier INVALIDATED event. Exact current fitting/model hashes and the fitting reprocess PASS are inspected here; record generation-only aggregate workflow reconciliation without new art or native acceptance. Named outfit/equipped-state acceptance remains required in final Stage3 native review.",
           "result": "PASS"
         }
       ],
@@ -72601,6 +73268,29 @@
           ],
           "review": "No material issue established in this bounded current-set screen. Previously confirmed failures are not cleared by a broad screening pass.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T15:27:07.090452+00:00",
+          "step": "extract_register_palette_masks",
+          "action": "Reconcile stale authoring-step record to exact selected superseding production exports.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/model.json",
+              "sha256": "f852b9060413a4ac40f586024aa80fae64e2f631b0a606369f0a8a42e925697f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "evidence/generation-gate-reconciliation-20261021/fit-dromad-child-template-tunic-authoring-record.json",
+              "sha256": "18ee1aa1195e2fbf1200322f65f0c97519a85b06e0d302223b1406cb761165b5"
+            },
+            {
+              "path": "art/conversion/fit-dromad-child-woven-tunic/v4/assembly-comparison.png",
+              "sha256": "9bed6e03dfb10aba42988c842bb605b94acb647bbab3895cdcbe0ee3cf2c13f6"
+            }
+          ],
+          "review": "The older extraction step was left at REQUIRES REWORK when baked-cut exports were invalidated. Later regional-curved-v1 v4 successfully rebuilt complete tunic art and separate natural body visibility, with PASS authoring/retrospective review. This reconciliation checks the exact currently selected v4 model and all3view item/body-overlay export hashes, fixed512x1024 canvas and contact. It records current extraction PASS against that superseding export; it does not accept the rejected baked-cut source, change art, imply a native child selector or invent a new refinement.",
+          "result": "PASS"
         }
       ],
       "generation_ready": true,
@@ -82964,7 +83654,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T14:51:47.955077+00:00",
+  "updated_at": "2026-10-21T15:31:06.119376+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

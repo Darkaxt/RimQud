@@ -1,0 +1,34 @@
+{
+  "entry": "SCOPE-DIRTY / two newly uncovered paint aliases",
+  "inputs": [
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png",
+      "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/source-manual-refined-comparison.png",
+      "sha256": "1df7b3bd5d092e0d8998a0247f732df61fbe8ab5a1ff02795359dc3efd55e8bf"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v1/dirt1-manual.png",
+      "sha256": "b64f1d0135cd159a212cbf009e305e0f3fd083c49957d7d360c0391e0525c10e"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v1/legacy-grass1-manual.png",
+      "sha256": "96641c72cee0d3aadc83125ff53710ceece278fa0b3886f8ac8b8acdbaa93581"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/dirt1-refined.png",
+      "sha256": "81996f6684580dfbb4f30a2224d53eaa45a3cec1b62a86f04fea3d215819ffa7"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/legacy-grass1-refined.png",
+      "sha256": "a4f01ad62fd0382c8a9987be48eaf6065680bcce609436cf4e4f9d0f2b95bfb3"
+    }
+  ],
+  "source": "Dirt1 has one primary pixel at7,11; legacy grass1 has16 primary pixels in3 separated rising strokes. No source detail pixels. Dirty randomly assigns w/y + k detail for dirt, g/G grass with prior detail retained.",
+  "contract": "Native16x24 retained as512x768 full cell. Nominal source anchor8,16 is not a foot pivot. One fixed ground-plane camera, no extra facings.",
+  "authored": "One small irregular earth fleck and3 sparse tapered map-plane blades preserve original occupancy/roots/tips. Fine grain, taper and center shading are authored, not a new plant species/animation.",
+  "required": "One fixed map view for each source alias; compare actual source layout, sparse coverage/roots/tips and intended16x24 size. No broad ground fill, new species, rotation, wind, fixed green/brown or drawn widget. Neutral raw art remains primary-only.3 other grass aliases reuse exact prior source-bound registrations; no new generation claimed for those.",
+  "expected_output": "Compact findings/confidence/severity/correction and pass/hold for registration; read-only, no generation/tests/delegation."
+}

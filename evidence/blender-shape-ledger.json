@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T14:44:25.942352+00:00",
+  "updated_at": "2026-10-21T15:18:00.514347+00:00",
   "purpose": "Persistent editable 3D source registry; models are intentional project outputs, not disposable cache.",
   "reuse_rule": "Open the selected .blend and save a new version for local corrections. Preserve prior versions. Use construction replay for recovery or deliberate geometry regeneration, not as a requirement to restart.",
   "assets": [
@@ -1265,13 +1265,167 @@
         "path": "art/conversion/scn-canvaswall/blender-v3/reopen-audit.json",
         "sha256": "7e3baba8642f6055f5f3feff1c03bfbe6980a05246607ef0c27e6037910e3558"
       }
+    },
+    {
+      "entry": "SCOPE-DIRTY",
+      "native_item": "Dirty dynamic cell paint / dirt1 and legacy grass1",
+      "versions": [
+        {
+          "version": "blender-v1",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v1/paint.blend",
+            "sha256": "f3f5c02e376eb8211e4000296dde3cf23d3f6f777a0d0e19a526c8fb6d0217b2"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/dirty/build-paint.py",
+            "sha256": "4c59a0c92a91b5c074bffd86014bb0e84797783b87dd479b7959533facd68fbf"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v1/model-controls.json",
+            "sha256": "4a3be574a8e3ab0bfe048e00f724d40ccb4f26be999c92afe14969248ea6c759"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v1/blender-receipt.json",
+            "sha256": "e230227c8fd546e597de00ddbc7f2e4a5b043cd33c6b7ad7cf17d1fc51d93814"
+          },
+          "status": "Manual2 source-bound map-plane states"
+        },
+        {
+          "version": "blender-v2",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v2/paint.blend",
+            "sha256": "b89b4dd6faa0b16764baafb3ceeb7963f83b61a9af988a2d82b10571bae6b70e"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/dirty/refine-paint.py",
+            "sha256": "740f843cbe25337d2ec92ebb168abbcbdb5097b8715c81d7a50c3fe42160b325"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v2/model-controls.json",
+            "sha256": "096a53e9f2c82375483de9be449e09e4a9400ebec80c52b11fc9adcd7daee3db"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/dirty/blender-v2/blender-receipt.json",
+            "sha256": "3b94690d8ba279b2f49b33315328502538ddd668d35f09541ba4e8673d840bd8"
+          },
+          "status": "GENERATION SELECTED /2 source-bound paint states; native pending"
+        }
+      ],
+      "approved_generation_version": "blender-v2",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scope-source-reviews/dirty/blender-v2/paint.blend",
+      "registered_model": {
+        "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/model.json",
+        "sha256": "af662db1fad2922237d49041535ab60ef2a703570e1fd4ae0516e85ee1cd8574"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scope-source-reviews/dirty/blender-v2/registered/authoring-review.json",
+        "sha256": "5bfe6b179abf77a9bcce01f99503537039e9d9ca886b3792dda096f224e5818a"
+      }
+    },
+    {
+      "entry": "SCOPE-PONDDOWN",
+      "native_item": "PondDown / native HiddenRender revealed stone crack",
+      "versions": [
+        {
+          "version": "blender-v1",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/cleft.blend",
+            "sha256": "00633b459a883dea3767c184a86c560f7e7d4f1a0acb1f8b647df3e60f23aab1"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/ponddown/build-cleft.py",
+            "sha256": "b40ab531a7357cb31e0f20ee7208915f1acfbacdec22ed4f37db004f03734ab5"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/model-controls.json",
+            "sha256": "64824400242c30f17f4e611a516bdab4ffc78161273eef294bc43a7058fdb59a"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/blender-receipt.json",
+            "sha256": "94cdb99a567ccb4355e7f42aa467cffa47ebbc893763495fbb689c852f95e77f"
+          },
+          "status": "Manual source-guided cleft geometry"
+        },
+        {
+          "version": "blender-v2",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/cleft.blend",
+            "sha256": "54c23e733ea177cdbbe09d367d2918d1863c9442bdd3fee3c9faf2fe7b5cee46"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/ponddown/refine-cleft.py",
+            "sha256": "22e79bf640b2e8c45e041bea2fce39feb320389f0d105ba9446fdae2b2006c16"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/model-controls.json",
+            "sha256": "6b068c6cfcfcf7eee788722a924acb4b40fbd26c67dad0dd837d6bebbc593779"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v2/blender-receipt.json",
+            "sha256": "73d44dcd33e1b8c8d0fcf39116f31a1c797214760e3137f5f1cba4a7a8ef7f19"
+          },
+          "status": "REJECTED / cap degeneracies and cross-face strips"
+        },
+        {
+          "version": "blender-v3",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/cleft.blend",
+            "sha256": "609f54a11e7e6e838862c54302c707029e236f73fa757fd8466a359fcbef4184"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/ponddown/correct-cap-topology.py",
+            "sha256": "93f2980f0e34bb1753c6a3dd6ffe3a0150deec1f91c9fb0593c0a6dbf3fc37a3"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/model-controls.json",
+            "sha256": "5c640d55518a03e00b210a505e7fbf7c2caea5bfea07cd68e0c0bc94fa8cdfa6"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v3/blender-receipt.json",
+            "sha256": "b0c52ae60bdde9c115daad6ab96016fa08f716aa504b8615f23f172d42fdf65d"
+          },
+          "status": "Cap geometry corrected / residual contour diagnostic hairline"
+        },
+        {
+          "version": "blender-v4",
+          "blend": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/cleft.blend",
+            "sha256": "5e6eaf8391b6810ec891b0a92c4b1930ffeb64a93ab2696308da60a790aa8887"
+          },
+          "construction_script": {
+            "path": "art/conversion/scope-source-reviews/ponddown/correct-contour-pass.py",
+            "sha256": "a1481b04359f6326b95806db9b3faffa79347db5b6510820cf2592288c1a5939"
+          },
+          "controls": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/model-controls.json",
+            "sha256": "f9125de38dce2d3d3893bf476c4dc1dbbd8e3843fc33d43b48a2e54b62a3fbb3"
+          },
+          "receipt": {
+            "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/blender-receipt.json",
+            "sha256": "7045a0797b3e6f62f4b19c4a6a7ea4ab1252981015d7b690d3cfab87ca3c049b"
+          },
+          "status": "GENERATION SELECTED / continuous direct decal; native pending"
+        }
+      ],
+      "approved_generation_version": "blender-v4",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scope-source-reviews/ponddown/blender-v4/cleft.blend",
+      "registered_model": {
+        "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/model.json",
+        "sha256": "f52aec528cc1262a2cc5a53d1fe3c992f70a8cd8119202c499358aed2f1fc4c8"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/registered/authoring-review.json",
+        "sha256": "0c651ea796804193205c2fd4997f2626fca142d7313190f19c462c3cd2a487b1"
+      }
     }
   ],
   "reopen_verification": {
     "path": "evidence/blender-shape-reopen-audit-v2.json",
     "sha256": "6ceb6946d72cfc6350c050e177cc26a7e1fc981d535a977f1118a8f39ae6ff1d"
   },
-  "revision": 16,
+  "revision": 18,
   "prior_snapshots": [
     {
       "path": "evidence/blender-shape-ledger-history/v1.json",
@@ -1332,6 +1486,14 @@
     {
       "path": "evidence/blender-shape-ledger-history/v15.json",
       "sha256": "df80d2014ebbb8dc2e032b01206c5f03eb981b9c96a7672a710d0d54a8772d7d"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v16.json",
+      "sha256": "817aa52a21242dc6d954f5bc05b7338b31665735a77f75a408703d82c451583a"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v17.json",
+      "sha256": "212546700ddd7da4e830ac17a3a0266b84363fc7269cadfa9718cfe188883d21"
     }
   ],
   "reusable_fit_proxies": [

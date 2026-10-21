@@ -2,8 +2,206 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#SCOPE-LANDMARKJOPPAIRUDADHUT">Back to conversion index</a></nav><h1>LandmarkJoppaIrudadHut</h1><div class="entry-body">
-<p class="eyebrow">SCOPE-LANDMARKJOPPAIRUDADHUT / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior.</p>
-<ol class="workflow"><li class="pending">verify blueprint visibility and any tile — pending</li><li class="pending">record justified art exclusion or add conversion target — pending</li></ol>
+<p class="eyebrow">SCOPE-LANDMARKJOPPAIRUDADHUT / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: </p>
+<ol class="workflow"><li class="pass">verify blueprint visibility and any tile — recorded PASS</li><li class="pass">record justified art exclusion or add conversion target — recorded PASS</li></ol>
+<p class="pending">No registered output is selected. Images below are authoring evidence, not proof of stable runtime alignment.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-21T15:02:43.811460+00:00 / PASS</small><h3>verify blueprint visibility and any tile</h3><p>Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.</p><p><strong>Review:</strong> LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scope-source-reviews/landmarkjoppairudadhut/source-scope-review.json">source-scope-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCOPE-LANDMARKJOPPAIRUDADHUT&quot;,
+  &quot;blueprint&quot;: &quot;LandmarkJoppaIrudadHut&quot;,
+  &quot;ancestry&quot;: [
+    {
+      &quot;name&quot;: &quot;LandmarkJoppaIrudadHut&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml&quot;,
+        &quot;sha256&quot;: &quot;106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;LandmarkJoppaIrudadHut\&quot; Inherits=\&quot;Widget\&quot;&gt;\n    &lt;part Name=\&quot;ZoneLandmarkBox\&quot; DisplayName=\&quot;hut\&quot; Preposition=\&quot;in\&quot; OwnerBlueprint=\&quot;ElderBob\&quot; Width=\&quot;14\&quot; Height=\&quot;4\&quot; RequireBlueprint=\&quot;BrinestalkWall\&quot; RequireCount=\&quot;5\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Widget&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml&quot;,
+        &quot;sha256&quot;: &quot;106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;Widget\&quot; Inherits=\&quot;Object\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; Visible=\&quot;false\&quot; DisplayName=\&quot;[Widget]\&quot; RenderString=\&quot;*\&quot; RenderLayer=\&quot;0\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Weight=\&quot;10000\&quot; Takeable=\&quot;false\&quot; Solid=\&quot;false\&quot; IsReal=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;NoDamage\&quot; /&gt;\n    &lt;part Name=\&quot;NoMove\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n    &lt;tag Name=\&quot;ExcludeFromDynamicEncounters\&quot; /&gt;\n    &lt;tag Name=\&quot;NoSparkingQuest\&quot; /&gt;\n    &lt;tag Name=\&quot;Non\&quot; /&gt;\n    &lt;tag Name=\&quot;Important\&quot;&gt;&lt;/tag&gt;\n  &lt;/object&gt;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Object&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml&quot;,
+        &quot;sha256&quot;: &quot;a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;Object\&quot;&gt;\n    &lt;part Name=\&quot;Physics\&quot; IsReal=\&quot;true\&quot; Solid=\&quot;false\&quot; Weight=\&quot;0\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    }
+  ],
+  &quot;effective_render&quot;: {
+    &quot;Name&quot;: &quot;Render&quot;,
+    &quot;Visible&quot;: &quot;false&quot;,
+    &quot;DisplayName&quot;: &quot;[Widget]&quot;,
+    &quot;RenderString&quot;: &quot;*&quot;,
+    &quot;RenderLayer&quot;: &quot;0&quot;
+  },
+  &quot;effective_parts&quot;: {
+    &quot;Physics&quot;: {
+      &quot;Name&quot;: &quot;Physics&quot;,
+      &quot;IsReal&quot;: &quot;false&quot;,
+      &quot;Solid&quot;: &quot;false&quot;,
+      &quot;Weight&quot;: &quot;10000&quot;,
+      &quot;Takeable&quot;: &quot;false&quot;
+    },
+    &quot;Render&quot;: {
+      &quot;Name&quot;: &quot;Render&quot;,
+      &quot;Visible&quot;: &quot;false&quot;,
+      &quot;DisplayName&quot;: &quot;[Widget]&quot;,
+      &quot;RenderString&quot;: &quot;*&quot;,
+      &quot;RenderLayer&quot;: &quot;0&quot;
+    },
+    &quot;NoDamage&quot;: {
+      &quot;Name&quot;: &quot;NoDamage&quot;
+    },
+    &quot;NoMove&quot;: {
+      &quot;Name&quot;: &quot;NoMove&quot;
+    },
+    &quot;ZoneLandmarkBox&quot;: {
+      &quot;Name&quot;: &quot;ZoneLandmarkBox&quot;,
+      &quot;DisplayName&quot;: &quot;hut&quot;,
+      &quot;Preposition&quot;: &quot;in&quot;,
+      &quot;OwnerBlueprint&quot;: &quot;ElderBob&quot;,
+      &quot;Width&quot;: &quot;14&quot;,
+      &quot;Height&quot;: &quot;4&quot;,
+      &quot;RequireBlueprint&quot;: &quot;BrinestalkWall&quot;,
+      &quot;RequireCount&quot;: &quot;5&quot;
+    }
+  },
+  &quot;code_evidence&quot;: [
+    {
+      &quot;path&quot;: &quot;E:/Temp/rimqud-native-scope-review-20261021/ZoneLandmarkBox.cs&quot;,
+      &quot;sha256&quot;: &quot;402f0e5768e9984634de54001710061b0d8a2ab2572bfaa3d54ebd22c54e7d60&quot;
+    },
+    {
+      &quot;path&quot;: &quot;E:/Temp/rimqud-native-scope-review-20261021/IZoneLandmark.cs&quot;,
+      &quot;sha256&quot;: &quot;56e21b8cacc0fc9ceeb7d648e856bd15e292d1ef3189c462f189efa106d45c5a&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;No independent visible texture to convert&quot;,
+  &quot;main_source_evaluation&quot;: &quot;LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.&quot;,
+  &quot;preserve&quot;: &quot;Keep native placement, effects, lighting, discovery, transition and interaction ownership. Do not turn an invisible marker into a drawn prop or remove it from the native zone.&quot;,
+  &quot;limit&quot;: &quot;Installed definitions/part-code scope audit, not a new runtime/game verification.&quot;,
+  &quot;generation_ready&quot;: true,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>1bd8c9d0a76ccf3294db6e5ba043796d7c65d42701b012df49d8fe7690e22171</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T15:02:43.811460+00:00&quot;,
+  &quot;step&quot;: &quot;verify_blueprint_visibility_and_any_tile&quot;,
+  &quot;action&quot;: &quot;Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scope-source-reviews/record-review.py&quot;,
+      &quot;sha256&quot;: &quot;b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-21T15:02:43.811460+00:00 / PASS</small><h3>record justified art exclusion or add conversion target</h3><p>Record the source-bound no-independent-art decision while preserving native behavior.</p><p><strong>Review:</strong> LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.</p>
+<div class="gallery"><figure><a href="../../art/conversion/scope-source-reviews/landmarkjoppairudadhut/source-scope-review.json">source-scope-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;SCOPE-LANDMARKJOPPAIRUDADHUT&quot;,
+  &quot;blueprint&quot;: &quot;LandmarkJoppaIrudadHut&quot;,
+  &quot;ancestry&quot;: [
+    {
+      &quot;name&quot;: &quot;LandmarkJoppaIrudadHut&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml&quot;,
+        &quot;sha256&quot;: &quot;106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;LandmarkJoppaIrudadHut\&quot; Inherits=\&quot;Widget\&quot;&gt;\n    &lt;part Name=\&quot;ZoneLandmarkBox\&quot; DisplayName=\&quot;hut\&quot; Preposition=\&quot;in\&quot; OwnerBlueprint=\&quot;ElderBob\&quot; Width=\&quot;14\&quot; Height=\&quot;4\&quot; RequireBlueprint=\&quot;BrinestalkWall\&quot; RequireCount=\&quot;5\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Widget&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml&quot;,
+        &quot;sha256&quot;: &quot;106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;Widget\&quot; Inherits=\&quot;Object\&quot;&gt;\n    &lt;part Name=\&quot;Render\&quot; Visible=\&quot;false\&quot; DisplayName=\&quot;[Widget]\&quot; RenderString=\&quot;*\&quot; RenderLayer=\&quot;0\&quot; /&gt;\n    &lt;part Name=\&quot;Physics\&quot; Weight=\&quot;10000\&quot; Takeable=\&quot;false\&quot; Solid=\&quot;false\&quot; IsReal=\&quot;false\&quot; /&gt;\n    &lt;part Name=\&quot;NoDamage\&quot; /&gt;\n    &lt;part Name=\&quot;NoMove\&quot; /&gt;\n    &lt;tag Name=\&quot;BaseObject\&quot; Value=\&quot;*noinherit\&quot; /&gt;\n    &lt;tag Name=\&quot;ExcludeFromDynamicEncounters\&quot; /&gt;\n    &lt;tag Name=\&quot;NoSparkingQuest\&quot; /&gt;\n    &lt;tag Name=\&quot;Non\&quot; /&gt;\n    &lt;tag Name=\&quot;Important\&quot;&gt;&lt;/tag&gt;\n  &lt;/object&gt;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Object&quot;,
+      &quot;definition&quot;: {
+        &quot;path&quot;: &quot;D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml&quot;,
+        &quot;sha256&quot;: &quot;a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e&quot;
+      },
+      &quot;selected&quot;: &quot;&lt;object Name=\&quot;Object\&quot;&gt;\n    &lt;part Name=\&quot;Physics\&quot; IsReal=\&quot;true\&quot; Solid=\&quot;false\&quot; Weight=\&quot;0\&quot; /&gt;\n  &lt;/object&gt;&quot;
+    }
+  ],
+  &quot;effective_render&quot;: {
+    &quot;Name&quot;: &quot;Render&quot;,
+    &quot;Visible&quot;: &quot;false&quot;,
+    &quot;DisplayName&quot;: &quot;[Widget]&quot;,
+    &quot;RenderString&quot;: &quot;*&quot;,
+    &quot;RenderLayer&quot;: &quot;0&quot;
+  },
+  &quot;effective_parts&quot;: {
+    &quot;Physics&quot;: {
+      &quot;Name&quot;: &quot;Physics&quot;,
+      &quot;IsReal&quot;: &quot;false&quot;,
+      &quot;Solid&quot;: &quot;false&quot;,
+      &quot;Weight&quot;: &quot;10000&quot;,
+      &quot;Takeable&quot;: &quot;false&quot;
+    },
+    &quot;Render&quot;: {
+      &quot;Name&quot;: &quot;Render&quot;,
+      &quot;Visible&quot;: &quot;false&quot;,
+      &quot;DisplayName&quot;: &quot;[Widget]&quot;,
+      &quot;RenderString&quot;: &quot;*&quot;,
+      &quot;RenderLayer&quot;: &quot;0&quot;
+    },
+    &quot;NoDamage&quot;: {
+      &quot;Name&quot;: &quot;NoDamage&quot;
+    },
+    &quot;NoMove&quot;: {
+      &quot;Name&quot;: &quot;NoMove&quot;
+    },
+    &quot;ZoneLandmarkBox&quot;: {
+      &quot;Name&quot;: &quot;ZoneLandmarkBox&quot;,
+      &quot;DisplayName&quot;: &quot;hut&quot;,
+      &quot;Preposition&quot;: &quot;in&quot;,
+      &quot;OwnerBlueprint&quot;: &quot;ElderBob&quot;,
+      &quot;Width&quot;: &quot;14&quot;,
+      &quot;Height&quot;: &quot;4&quot;,
+      &quot;RequireBlueprint&quot;: &quot;BrinestalkWall&quot;,
+      &quot;RequireCount&quot;: &quot;5&quot;
+    }
+  },
+  &quot;code_evidence&quot;: [
+    {
+      &quot;path&quot;: &quot;E:/Temp/rimqud-native-scope-review-20261021/ZoneLandmarkBox.cs&quot;,
+      &quot;sha256&quot;: &quot;402f0e5768e9984634de54001710061b0d8a2ab2572bfaa3d54ebd22c54e7d60&quot;
+    },
+    {
+      &quot;path&quot;: &quot;E:/Temp/rimqud-native-scope-review-20261021/IZoneLandmark.cs&quot;,
+      &quot;sha256&quot;: &quot;56e21b8cacc0fc9ceeb7d648e856bd15e292d1ef3189c462f189efa106d45c5a&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;No independent visible texture to convert&quot;,
+  &quot;main_source_evaluation&quot;: &quot;LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.&quot;,
+  &quot;preserve&quot;: &quot;Keep native placement, effects, lighting, discovery, transition and interaction ownership. Do not turn an invisible marker into a drawn prop or remove it from the native zone.&quot;,
+  &quot;limit&quot;: &quot;Installed definitions/part-code scope audit, not a new runtime/game verification.&quot;,
+  &quot;generation_ready&quot;: true,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>1bd8c9d0a76ccf3294db6e5ba043796d7c65d42701b012df49d8fe7690e22171</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T15:02:43.811460+00:00&quot;,
+  &quot;step&quot;: &quot;record_justified_art_exclusion_or_add_conversion_target&quot;,
+  &quot;action&quot;: &quot;Record the source-bound no-independent-art decision while preserving native behavior.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/scope-source-reviews/record-review.py&quot;,
+      &quot;sha256&quot;: &quot;b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;LandmarkJoppaIrudadHut inherits invisible Widget and no tile. Its only ZoneLandmarkBox is a14x4 hut region owned by ElderBob, applicable when5 BrinestalkWall objects remain. Inspected same exact source class/base handles bounds/count checks and owner/location prose, with optional explicit diagnostic wishes only; no normal draw or spawned hut geometry. Preserve native landmark and debug behavior. BrinestalkWall, Irudad and actual furniture are independently converted entries, not art baked into this marker.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
 </div></div></main></html>

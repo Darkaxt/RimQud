@@ -1,0 +1,28 @@
+{
+  "entry": "ITEM-LEATHER-APRON",
+  "step": "reprocess_under_regional_curved_v1",
+  "scope": "Generation evidence reconciliation only; unchanged selected art",
+  "model": {
+    "path": "art/conversion/item-leather-apron/v1/fittings.json",
+    "sha256": "390eea1150b5ee18071095e8e7bb4277e6ba8be782aea93aa6afe1a27846b1b4"
+  },
+  "checks": [
+    {
+      "fitting": "FIT-NIMA-LEATHER-APRON-BODY-0",
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/model.json",
+          "sha256": "67ccb1747babbe10ef0b3190fbebb39e8b02f16b5cfa88c5ead1dead11467914"
+        },
+        "plate": {
+          "path": "art/conversion/fit-nima-leather-apron/v1/assembly-comparison.png",
+          "sha256": "bb81ad9b31ce0a9bf686f5711471e61512389578104e6c80aa0e9fd56aae35d4"
+        }
+      },
+      "workflow": "regional-curved-v1"
+    }
+  ],
+  "reason": "The Leather Apron aggregate already selects the exact completed regional-curved-v1 Nima fitting, complete cloth and separate original-body masks, but its aggregate reprocess step retained only the earlier INVALIDATED event. Exact current fitting/model hashes and the fitting reprocess PASS are inspected here; record generation-only aggregate workflow reconciliation without new art or native acceptance. Named outfit/equipped-state acceptance remains required in final Stage3 native review.",
+  "new_generation_calls": 0,
+  "native_acceptance": false
+}

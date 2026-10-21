@@ -1,0 +1,82 @@
+{
+  "asset": "SCOPE-PONDDOWN",
+  "reviewer": {
+    "agent": "/root/ponddown_decal_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited current main model; no override",
+    "configuration_limit": "No independent runtime model/effort readout exposed"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/source-reference-comparison.png",
+      "sha256": "2fafc682e40081541958a039416b2697c8af9fb67b8fc2883b7a591e5a0b13f9"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/reference-correction.json",
+      "sha256": "805869140c73ccc0aba4701a07df6845b1a06c640c3cdd5cdb80cf4520b7f13f"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/source-manual-refined-comparison.png",
+      "sha256": "7c162209b127f0a0994342fd8fbb1aa78ae7685501ebf3494d5d5d994f8c9abf"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v1/manual-map.png",
+      "sha256": "ffb3ff35f74ddd03f6c3aeb601ea52f4ee6b5ef8392d573af2bbb5cf09264537"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/refined-map-neutral.png",
+      "sha256": "7a546cc722d1984aec702d3f058b37a57db4e6835695eb4de7d45ce32dc49efa"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/refined-map-detail.png",
+      "sha256": "3f8c7c12ca9b9f6cd31eebba37fd60eff641db3d037488ef6e6e8965cdfefc3d"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/ponddown/blender-v4/refined-3d.png",
+      "sha256": "f67dc2e5276b6d5fbbdf27dede119bd7cc731e3bce3d7bcdf2edc27669353010"
+    }
+  ],
+  "recommendation": "pass",
+  "fix_now": [],
+  "findings": [
+    {
+      "state": "raw neutral/detail maps and3D",
+      "observation": "Coherent shallow fragments and continuous recess geometry; restrained bevel/grain, no stray cross-face lines/intrusive borders/boulder/stairs.",
+      "severity": "none",
+      "confidence": "high"
+    },
+    {
+      "state": "source role/placement",
+      "observation": "Upper branch, left diagonal, lower-right lip and lower terminal marks preserved; detached highlights read as source-supported marks, not accidental debris.",
+      "severity": "none",
+      "confidence": "high"
+    },
+    {
+      "state": "frame/intended size",
+      "observation": "Full16x24 placement, clear margins and readable branching; no obvious crop/displacement.",
+      "severity": "none",
+      "confidence": "moderate"
+    },
+    {
+      "state": "hidden/revealed/liquid context",
+      "observation": "Hidden panel empty, same revealed geometry, illustrative k/blue labels retain native runtime detail/background ownership.",
+      "severity": "none",
+      "confidence": "high"
+    }
+  ],
+  "main_dispositions": [
+    {
+      "finding": "Cross-face seam and residual diagnostic hairline",
+      "decision": "FIX NOW RESOLVED",
+      "reason": "Saved continuous polygon caps eliminate zero-area faces. Matched geometry without Freestyle eliminates remaining shallow-layer contour leak; fresh direct-decal review passes. Source role contrast preserves necessary silhouette without extra physical-object outline."
+    },
+    {
+      "finding": "Reference selection",
+      "decision": "FIX NOW RESOLVED",
+      "reason": "Initial multicolor RoughAlphaAdd was shader auxiliary, not visible stone albedo. Retained rejected reference/correction record and selected actual VTE stone image. No auxiliary colors used in output."
+    }
+  ],
+  "limits": "Static art only. Native search/radar, renderer color/layering and installed size still require whole-set game acceptance.",
+  "native_acceptance": false
+}

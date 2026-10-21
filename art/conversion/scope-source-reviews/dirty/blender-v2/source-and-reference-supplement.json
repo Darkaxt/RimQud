@@ -1,0 +1,57 @@
+{
+  "entry": "SCOPE-DIRTY",
+  "source_index": {
+    "path": "art/conversion/scope-source-reviews/dirty/painted-tile-index.json",
+    "sha256": "fd75296346ef5cab992f8422a2fd1d2802aa9d72b61c35697114ecca9e865016"
+  },
+  "scope_source_hold": {
+    "path": "art/conversion/scope-source-reviews/dirty/source-scope-hold.json",
+    "sha256": "5801f74be77cf415371d521a17f99b7fd445bf0e35dfa7f76c2ae6861aba7efe"
+  },
+  "additional_visible_states": [
+    "Tiles/tile-dirt1.png",
+    "assets_content_textures_tiles_tile-grass1.png"
+  ],
+  "donors": [
+    {
+      "asset": {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/soil.png",
+        "sha256": "1546958a4f6e2cf1924ad59fd78572f73b4e80ce489692bad14a5662d32cede1"
+      },
+      "metadata": {
+        "file": "soil.png",
+        "source_id": 2815,
+        "name": "Soil",
+        "width": 1024,
+        "height": 1024,
+        "png_sha256": "1546958a4f6e2cf1924ad59fd78572f73b4e80ce489692bad14a5662d32cede1",
+        "package_sha256": "5b71f35635d1a45d1727164ebbf05db6c9af48cfb823934d8c9bd9435207c6c7",
+        "role": "Actual extracted RimWorld Soil supplies fine irregular packed-earth grain and scale only. Do not copy its broad solid brown fill, color, mechanics or per-cell material repetition."
+      },
+      "role": "Fine earth grain only, not filled terrain"
+    },
+    {
+      "asset": {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/grass.png",
+        "sha256": "0853cc134407e5d34b2d39d7fb8cf11145049340fbc843277ccacb4928a88758"
+      },
+      "metadata": {
+        "file": "grass.png",
+        "source_id": 1797,
+        "name": "GrassA",
+        "width": 64,
+        "height": 64,
+        "png_sha256": "0853cc134407e5d34b2d39d7fb8cf11145049340fbc843277ccacb4928a88758",
+        "role": "Actual RimWorld GrassA supplies blade taper and plant/shading convention only. Its dense many-blade tuft is not the shape to copy."
+      },
+      "role": "Blade taper and primary shading only, not dense tuft/species"
+    }
+  ],
+  "frame": "Native16x24 retained as512x768 full cell. Nominal source anchor8,16 is not a foot pivot. One fixed ground-plane camera, no extra facings.",
+  "source_facts": "Dirt1 has one primary pixel at7,11; legacy grass1 has16 primary pixels in3 separated rising strokes. No source detail pixels. Dirty randomly assigns w/y + k detail for dirt, g/G grass with prior detail retained.",
+  "authored_interpretation": "One small irregular earth fleck and3 sparse tapered map-plane blades preserve original occupancy/roots/tips. Fine grain, taper and center shading are authored, not a new plant species/animation.",
+  "native_behavior": "Keep native options, paint distribution/tile random choice, strings, per-cell foreground/detail/background, visibility and draw order. Invisible widget itself has no drawn sprite.",
+  "new_imagegen_call": false,
+  "selection": "Direct Blender map-plane geometry preserves sparse cell layout; optional ImageGen omitted.",
+  "native_acceptance": "Pending full generation gate"
+}

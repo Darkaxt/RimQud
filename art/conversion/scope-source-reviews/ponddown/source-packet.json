@@ -1,0 +1,107 @@
+{
+  "entry": "SCOPE-PONDDOWN",
+  "identity": "PondDown -> InorganicObject -> PhysicalObject -> Object",
+  "description": "A cleft in the red stone opens to a waterspray of underearth.",
+  "ancestry": [
+    {
+      "name": "PondDown",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/ZoneTerrain.xml",
+        "sha256": "4a4565f8f2c57c43683b527aa6633d4528a570863a0dd1b151ddb296339fc8e2"
+      },
+      "selected": "<object Name=\"PondDown\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"small crack\" Tile=\"terrain/sw_crack.bmp\" RenderString=\".\" Occluding=\"false\" RenderIfDark=\"true\" ColorString=\"&amp;y\" RenderLayer=\"1\" Visible=\"false\" />\n    <part Name=\"HiddenRender\" Difficulty=\"2\" DisplayName=\"stone crack\" Tile=\"terrain/sw_crack.bmp\" RenderString=\"&gt;\" ColorString=\"&amp;Y\" RenderLayer=\"3\" />\n    <part Name=\"Physics\" Solid=\"false\" Takeable=\"false\" Weight=\"999999\" FlameTemperature=\"999999\" VaporTemperature=\"999999\" />\n    <part Name=\"Description\" Short=\"A cleft in the red stone opens to a waterspray of underearth.\" />\n    <stat Name=\"Hitpoints\" Value=\"9999\" />\n    <part Name=\"Connect\" Direction=\"d\" Type=\"StairsUp\" />\n    <part Name=\"StairsDown\" />\n    <part Name=\"MentalShield\" />\n    <part Name=\"NoDamage\" />\n    <part Name=\"RenderLiquidBackground\" />\n    <part Name=\"Interesting\" Order=\"2000\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;M^k\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"ExcavatoryTerrainFeature\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" />\n  </object>"
+    },
+    {
+      "name": "InorganicObject",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    {
+      "name": "PhysicalObject",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    },
+    {
+      "name": "Object",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "selected": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "source_tile": {
+    "native_tile": "terrain/sw_crack.bmp",
+    "info_id": 11138,
+    "atlas_id": 203,
+    "rect": [
+      378,
+      234,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/sw_crack-mask.png",
+      "sha256": "6bd80867c553308e1ca0f0f0f0a208103915f65ba056c2a2d4ffc41a422a144d"
+    }
+  },
+  "native_code": [
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/HiddenRender.cs",
+      "sha256": "f1c05b1f13f87ae1ba871974c9c5a79edc6f2fa04a432aff3869b667b727b4e5"
+    },
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/RenderLiquidBackground.cs",
+      "sha256": "d21d03b2870583481122cc3c7d89f0ee41c592a0408d6c862c9e04cbe731a562"
+    }
+  ],
+  "assembly": {
+    "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/Managed/Assembly-CSharp.dll",
+    "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+  },
+  "native_states": {
+    "unfound": "Render.Visible=false, small crack name, y foreground/layer1 defaults; do not draw or reveal it from art.",
+    "found": "HiddenRender.Reveal sets Visible=true, stone crack name, same sw_crack tile, foregroundY/layer3; searched Intelligence+Bonus difficulty2 or Radar/LitRadar can reveal.",
+    "liquid": "RenderLiquidBackground delegates to existing open liquid primary/secondary background; preserve current background and source detail, do not bake water or animate a new spray."
+  },
+  "palette": "Primary source foreground y before reveal and Y after reveal; exact native detail/background stays source/event owned. No fixed red stone color despite description.",
+  "source_shape": "Inspect actual sparse primary/detail crack strokes before construction; visible revealed state is not an invisible-widget exclusion.",
+  "donor_reference": {
+    "asset": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/rough.png",
+      "sha256": "a3b04ff60af70bb1b1fbcda69077acfa187911a28b611107240785d582709b48"
+    },
+    "metadata": {
+      "file": "rough.png",
+      "source_id": 3231,
+      "name": "RoughAlphaAdd",
+      "width": 256,
+      "height": 256,
+      "source_manifest": {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/package.json",
+        "sha256": "5b71f35635d1a45d1727164ebbf05db6c9af48cfb823934d8c9bd9435207c6c7"
+      }
+    },
+    "role": "Actual RimWorld rough stone surface/edge contrast only; no filled rock tile, new boulder, different stairs or changed world geometry."
+  },
+  "frame": {
+    "native_cell": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "rule": "One fixed ground-plane frame, no independent alpha fitting or extra facing/rotation."
+  },
+  "native_behavior": "Keep HiddenRender discovery, search/radar, native navigation weighting, Connect direction d/type StairsUp and StairsDown interaction, MentalShield/NoDamage and RenderLiquidBackground. No new transition, reveal trigger, liquid state or world geometry.",
+  "native_acceptance": "Pending all generation; require hidden/revealed/liquid-background checks in final whole-set test.",
+  "native_activation": false
+}

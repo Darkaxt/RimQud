@@ -33,21 +33,36 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCOPE-DIRTY is the sole active entry.
+Stage3 remains the sole ACTIVE stage; no individual authoring entry is active.
 
-Current scope checkpoint (2026-10-21): DaylightWidget is source-reviewed as an
-invisible lighting/exploration controller with no independent object texture.
-There are149 generation-ready entries and seven pending. Dirty is invisible too,
-but its actual part paints visible ground: dirt1 with native w/y and k detail,
-or g/G one of four grass aliases. Exact installed mask extraction confirms that
-sw_grass1/2/3 match the existing three grass conversions. The legacy tile-grass1
-two-tuft shape and single sparse tile-dirt1 point remain uncovered visible paint
-outputs. This is an internal advancement blocker, not a justified blanket
-invisible exclusion. Keep Dirty active; author or source-justify its two remaining
-bindings, preserve all five mappings and native random/options/color ownership,
-then continue the other six scope reviews. No game/native validation is allowed
-while these generation requirements remain. The whole-set native check and the
-user's subsequent pause/redesign discussion are still required.
+Current generation checkpoint (2026-10-21): all156 entries are generation-ready.
+The generation-gate reconciliation checks their actual required authoring
+records, selected artifacts,73 current aggregate/actor bindings and connected
+wall states. The artifact audit verifies9904 exact files with no unresolved
+issues; explicitly pinned historical provenance is distinct from current asset
+bindings. RustedMetalWall retains all256 native eight-neighbor states plus its
+16 cardinal atlas mappings. See
+[the gate reconciliation](../evidence/generation-gate-reconciliation-20261021/generation-gate.json).
+This passes generation only: all156 entries remain UNFINISHED overall, with144
+native acceptance steps still owned by Stage3. Complete-set native integration,
+installed behavior and game testing remain required before the requested pause.
+
+Dirty's two previously missing visible paint states now have retained editable
+Blender models, refinement/review, registered neutral layers and all five source
+alias mappings. The other three grass states reuse exact existing conversions.
+Native random/options/color ownership is preserved. The five Joppa landmark
+widgets are source-reviewed invisible location/owner metadata, not new textures.
+PondDown retains hidden/revealed crack artwork under native discovery, palette
+and liquid-background ownership; its rejected cap and contour artifacts and
+saved-model corrections remain recorded. Shape-registry snapshots17/18 preserve
+the new editable models. No native game validation was performed during this
+authoring work.
+
+Report synchronization correction (2026-10-21): a user screenshot correctly
+showed the old149-ready/155-unfinished/one-in-progress HTML after the ledger had
+advanced. Rebuilding and fetching the actual served report confirms the current
+156-ready/zero-generation-pending/156-awaiting-final-acceptance counts. These
+overlap deliberately: generation readiness does not grant native acceptance.
 
 Prior canvas checkpoint (2026-10-21): `scn-canvaswall/blender-v3/registered`
 is generation-ready with all16 actual PaintedFence tent masks: isolated, ends,

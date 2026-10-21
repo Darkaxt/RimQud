@@ -1,0 +1,68 @@
+{
+  "asset": "SCOPE-DIRTY / dirt1 and legacy grass1",
+  "reviewer": {
+    "agent": "/root/dirty_paint_structural_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited current main model; no override",
+    "configuration_limit": "No separate model/effort readout exposed"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png",
+      "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/source-manual-refined-comparison.png",
+      "sha256": "1df7b3bd5d092e0d8998a0247f732df61fbe8ab5a1ff02795359dc3efd55e8bf"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v1/dirt1-manual.png",
+      "sha256": "b64f1d0135cd159a212cbf009e305e0f3fd083c49957d7d360c0391e0525c10e"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v1/legacy-grass1-manual.png",
+      "sha256": "96641c72cee0d3aadc83125ff53710ceece278fa0b3886f8ac8b8acdbaa93581"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/dirt1-refined.png",
+      "sha256": "81996f6684580dfbb4f30a2224d53eaa45a3cec1b62a86f04fea3d215819ffa7"
+    },
+    {
+      "path": "art/conversion/scope-source-reviews/dirty/blender-v2/legacy-grass1-refined.png",
+      "sha256": "a4f01ad62fd0382c8a9987be48eaf6065680bcce609436cf4e4f9d0f2b95bfb3"
+    }
+  ],
+  "recommendation": "pass",
+  "fix_now": [],
+  "findings": [
+    {
+      "state": "dirt1",
+      "observation": "One small irregular fleck at original single-pixel location. Sparse coverage, generous borders, no ground fill/clipping; tiny earth-mark thumbnail.",
+      "severity": "none",
+      "confidence": "high"
+    },
+    {
+      "state": "legacy-grass1",
+      "observation": "Three separated tapered blades retain relative roots/tips/rising direction/spacing. Restrained shading, no filled gaps/dense tuft, fixed-cell bounds and three intended-size strokes.",
+      "severity": "none",
+      "confidence": "high"
+    },
+    {
+      "state": "raw maps",
+      "observation": "Visually neutral grayscale. Brown/green comparison consistent with tint demonstration.",
+      "severity": "none",
+      "confidence": "high"
+    }
+  ],
+  "correction_principle": "Preserve full-cell registration and source roots/tips; do not enlarge bounds, merge blades or spread soil coverage.",
+  "limits": "Visual suitability only, not runtime tint/channel behavior or native integration. Fine shading at native size moderate confidence. Three reused grass outputs not reviewed anew.",
+  "main_dispositions": [
+    {
+      "finding": "No structural finding",
+      "decision": "NOT SUBSTANTIATED",
+      "reason": "Main source/full-frame/intended-size inspection agrees; single fleck and3separated blades remain sparse and correctly registered."
+    }
+  ],
+  "native_acceptance": false
+}
