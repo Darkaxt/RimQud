@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-SCRAP-METAL**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-TORCHPOST**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -191,8 +191,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | SCN-GARBAGE | Garbage | UNFINISHED | - |  |
 | SCN-PAINTING | Painting | UNFINISHED | - |  |
 | SCN-SCRAP-ELECTRONICS | Scrap Electronics | UNFINISHED | - |  |
-| SCN-SCRAP-METAL | Scrap Metal | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-TORCHPOST | Torchpost | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - |  |
+| SCN-TORCHPOST | Torchpost | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 
 ### Race/body templates (12)
 
@@ -7659,7 +7659,55 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/scrap-metal-body.png](../art/village/scenery/scrap-metal-body.png), [art/village/scenery/scrap-metal-detail.png](../art/village/scenery/scrap-metal-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 8.
+
+- 2026-10-21T02:21:57.786404+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Scrap Metal and complete inherited parts; verify native mask and B/C palette independently of electronics.
+  Review: Six-node ancestry, bent metal sheet display name, TinkerItem Bits=B, non-solid Takeable/Stacker and no RandomTile established. Same bit11 mask does not justify copying electronics traces or its equal C/C palette. One fixed resource view; native mechanics unchanged.
+  Inputs: [{"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml", "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"}, {"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml", "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"}, {"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml", "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"}, {"path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/scrap-metal-mask.png", "sha256": "09694a7971dab0bad96e992dda6e211d48b81584bc80ef9fab4c548c3ce1978a"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/prepare-source.py", "sha256": "6f870c44f9964acb1ac2b55cf98e1eaaa1e73b36d2a6281ee8633df106776cf8"}, {"path": "art/conversion/scn-scrap-metal/v1/source-packet.json", "sha256": "f7793076614f7a8a77ae493502d6bd9b5674f5735cf5ebbc2f582a682a6cbb55"}, {"path": "art/conversion/scn-scrap-metal/v1/source-reference.png", "sha256": "c02b7f39ee0c6318e5399052feb69be1086c775587778cf16441b1c3fec220bf"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:23:27.130113+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual installed VTE Steel_a and Core Steel resource definition; record material-only reference.
+  Review: Reference rounded lump is not a whole bent-sheet equivalent. Use only broad metal facets/shading; do not import nugget geometry, dull brown palette, stack-count variants, metallurgy or donor physical size.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/source-packet.json", "sha256": "f7793076614f7a8a77ae493502d6bd9b5674f5735cf5ebbc2f582a682a6cbb55"}, {"path": "art/conversion/scn-scrap-metal/v1/source-reference.png", "sha256": "c02b7f39ee0c6318e5399052feb69be1086c775587778cf16441b1c3fec220bf"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/construction-controls.json", "sha256": "a09348493a3fc5b09b386be36cb20381de9195a162ad196d1d9fb1602a0b48ab"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:23:27.130113+00:00 / construct_faithful_shape / PASS: Construct editable bent sheet with source-opposing regions, open pockets, continuous rim contacts and shallow curled folds.
+  Review: Native source silhouette/occupancy and B/C ownership govern. Folds/dents are authored; electronics traces/pads are excluded despite same source tile as Scrap Electronics. Inspect before actual refinement.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/source-packet.json", "sha256": "f7793076614f7a8a77ae493502d6bd9b5674f5735cf5ebbc2f582a682a6cbb55"}, {"path": "art/conversion/scn-scrap-metal/v1/source-reference.png", "sha256": "c02b7f39ee0c6318e5399052feb69be1086c775587778cf16441b1c3fec220bf"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/construct-sheet.py", "sha256": "3f3a9099064e28ba90bbef9060c84edff3658c6be78f04c84ce8dafd52bbcae4"}, {"path": "art/conversion/scn-scrap-metal/v1/constructed-sheet.svg", "sha256": "d87d49a480cddbb2abf2d4f5c975bdad55a55a20e3f18ab6f9a59f46d72b98e4"}, {"path": "art/conversion/scn-scrap-metal/v1/constructed-sheet.png", "sha256": "be38a5c02ececcae9eff4a2cae83b8bdc4cd6dbca717a0c9421cf8ea3a7f457c"}, {"path": "art/conversion/scn-scrap-metal/v1/manual-suggestion.png", "sha256": "41bee5c87e235ea7fd1a8c0c800bdf411b79ac6de497ce6d762f88ba3becc7e6"}, {"path": "art/conversion/scn-scrap-metal/v1/primary-ownership.png", "sha256": "447faa110f5f57687525d0d984122997d92e7a09345306e1b64fda9522d0695f"}, {"path": "art/conversion/scn-scrap-metal/v1/detail-ownership.png", "sha256": "3b7777efd98762aa2541ec42e20699dd40dfd111005bcbd7c22017d35032cf1d"}, {"path": "art/conversion/scn-scrap-metal/v1/refinement-prompt.txt", "sha256": "c6875fdab0b78af0dba3e23bdfa677343dcfd5c0396186a81bcd298c4f2f0d89"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:23:27.130113+00:00 / create_required_state_neighbor_variants / PASS: Resolve complete source-supported state and view requirements.
+  Review: One fixed native bit11 resource view. No inherited RandomTile, furniture directions, clothing fit, stack image or hypothetical repair/burning state. Exact Scrap Metal binding stays separate from other bit11 identities.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/source-packet.json", "sha256": "f7793076614f7a8a77ae493502d6bd9b5674f5735cf5ebbc2f582a682a6cbb55"}, {"path": "art/conversion/scn-scrap-metal/v1/source-reference.png", "sha256": "c02b7f39ee0c6318e5399052feb69be1086c775587778cf16441b1c3fec220bf"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/construction-controls.json", "sha256": "a09348493a3fc5b09b386be36cb20381de9195a162ad196d1d9fb1602a0b48ab"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:27:47.775194+00:00 / refine_materials_and_form / PASS: Run actual bent-sheet ImageGen refinement; inspect form and real saved-alpha pockets before registration.
+  Review: One actual proposal retains bent folds, two source surfaces, perimeter bridges and real zero-alpha pockets. No circuit marks/round nugget. Actual alpha composite resolves invisible RGB grey in tool thumbnail. No retry required for usable material reference.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/refinement-prompt.txt", "sha256": "c6875fdab0b78af0dba3e23bdfa677343dcfd5c0396186a81bcd298c4f2f0d89"}, {"path": "art/conversion/scn-scrap-metal/v1/constructed-sheet.png", "sha256": "be38a5c02ececcae9eff4a2cae83b8bdc4cd6dbca717a0c9421cf8ea3a7f457c"}, {"path": "art/conversion/scn-scrap-metal/v1/source-reference.png", "sha256": "c02b7f39ee0c6318e5399052feb69be1086c775587778cf16441b1c3fec220bf"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/refined-raw.png", "sha256": "52321231bb8c943efd003a629785215bb888f6ce2618409a2bf4853176d74179"}, {"path": "art/conversion/scn-scrap-metal/v1/generation-receipt.json", "sha256": "3b9a0be150d2198523719a00caf69d1bb01add337bd787642f356d1aec880b17"}, {"path": "art/conversion/scn-scrap-metal/v1/refined-alpha-review.png", "sha256": "e1d67cb52360d1097ee8020403fecbadd627f78b48c8b885c67535db7e4872fb"}, {"path": "art/conversion/scn-scrap-metal/v1/refined-subject-bounds.json", "sha256": "9a4adedc8d1c34b7d2cfa397a29dc32c2f82e00de0eaaf12d23311a99520a049"}, {"path": "art/conversion/scn-scrap-metal/v1/first-structural-review.json", "sha256": "3bfa7012b2abebe3cc2d24032821437d259b4bf565b04eaee21079de26c5db7a"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:27:47.775194+00:00 / extract_register_color_coverage / PASS: Patch generated surface through fixed geometry, canonical coverage and native B/C weighting.
+  Review: Geometry/frame/center and manual fold/crease marks stay fixed. Align material sampling only, transfer bounded opaque interior shading; reject generated outlines, alpha and exterior haze. Separate detail weight plus single coverage retain exact source B/C tint semantics.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/construction-controls.json", "sha256": "a09348493a3fc5b09b386be36cb20381de9195a162ad196d1d9fb1602a0b48ab"}, {"path": "art/conversion/scn-scrap-metal/v1/source-packet.json", "sha256": "f7793076614f7a8a77ae493502d6bd9b5674f5735cf5ebbc2f582a682a6cbb55"}, {"path": "art/conversion/scn-scrap-metal/v1/refined-raw.png", "sha256": "52321231bb8c943efd003a629785215bb888f6ce2618409a2bf4853176d74179"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/register-sheet.py", "sha256": "492b647617e5b17f9bd77786c044a674fa27283a9c4778a867138bb7105bd78c"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/model.json", "sha256": "6e751b38078b48c8094d3791b13db37cb7740511f65f890cdfe9d9f8604bbfa4"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/registration-decisions.json", "sha256": "eb98dd196e3fbd90f912c2ba27906138f13328449c04d21d6a6ee5e80be348fd"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/primary-detail-ownership-view.png", "sha256": "bccb4c6615813d676257e8bac02115a8a6b5ca8bbfe704742eba77becf636b4a"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/surface-transfer-ownership.png", "sha256": "545f021371e60822a5ca0e7dd1b86bc740642e2fa50d295d5284120340d594ba"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:27:47.775194+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Review source/manual/refinement/registered comparison and native intended-size colors.
+  Review: Inspected exact Scrap Metal definition, complete six-node inherited metadata and source bit11 mask: bent metal sheet from machine-fossil scrap, primary B=0096ff and detail C=77bfcf, no source RandomTile or TileColor override. Actual installed VTE Steel_a/Core Steel reference supplies broad quiet metal facets/contrast only; its rounded lump, brown palette, stack pictures and smelting mechanics are not imported. Source diamond perimeter/two opposing occupied regions/open quadrants and small cell occupancy remain authoritative. Editable manual sheet includes source-bound P/D regions with shallow curled folds/dents and fine creases, explicitly authored unseen material interpretation. No electronic circuit traces/pads/pins, intact modern chip, stack of plates or generic nugget despite shared source tile with other scrap. One actual contextual ImageGen refinement retained complete. Both internal pockets are genuinely zero alpha in saved output, confirmed with actual colored-background composite; RGB-only preview of invisible grey/haze is not used as transparency evidence. Refined surfaces/bridges/folds are usable, so no retry or second isolation was invented. Generated subject placement/extent differs slightly and weak stray exterior alpha remains. Material correspondence aligns sampling only; final source frame/center/scale/geometry/creases and exact manual coverage stay fixed. Bounded broad shading from valid opaque generated interiors transfers through eroded authored face ownership; generated outline, alpha, stray fill/halo and shifted details excluded. Neutral master/recipient RGB channels match. Production uses one coverage plane and independent P/D weight: native blue B and cyan C remain separate. Neutral colour inputs share coverage and combine by weight, not duplicate alpha-over. Full-cell512x768master to256square recipient mapping and intended-size B/C views inspected. Source empty quadrants and outer canvas remain transparent. This entry binds exact Scrap Metal only; other bit11 identities do not inherit readiness or its palette. One source-supported fixed map view; furniture turnarounds and clothing integration inapplicable. Native pickup/stack/disassembly, exact identity/tile, palette/coverage, visibility and cell mapping acceptance stay pending after all ledger generation.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/registered/model.json", "sha256": "6e751b38078b48c8094d3791b13db37cb7740511f65f890cdfe9d9f8604bbfa4"}]
+  Outputs: [{"path": "art/conversion/scn-scrap-metal/v1/registered/source-neutral-native-scale.png", "sha256": "f6b2322060a7402c19c18e4b0666499876df42f705b60b4689bf7074ec4c973a"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/whole-process-comparison.png", "sha256": "2a504cafe79b14e95c6fa20dd6f93918bbba9bdcd36651b867ec349be1e0fc9c"}, {"path": "art/conversion/scn-scrap-metal/v1/record-review.py", "sha256": "7e266f50fa8ee3f8193f28569788c31b7ac37f61143312ff4ce00bb5dc8e0b91"}, {"path": "art/conversion/scn-scrap-metal/v1/registered/authoring-review.json", "sha256": "a3ebb7adc6dbef8413384bd47d02aebd49f4f52e26735fc032d6bbcb64db6fd6"}, {"path": "art/conversion/scn-scrap-metal/v1/artifact-manifest.json", "sha256": "36da76b3ba001c4daafee27c762331a5e72315481a2f6b8875a9fd9a8da642a8"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T02:27:47.775194+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Defer exact identity/tile, B/C palette/coverage, cell mapping and native item lifecycle acceptance until all generation.
+  Review: No runtime activation, game launch, inventory-state test, native batch or harness. Full-ledger generation gate remains binding.
+  Inputs: [{"path": "art/conversion/scn-scrap-metal/v1/registered/model.json", "sha256": "6e751b38078b48c8094d3791b13db37cb7740511f65f890cdfe9d9f8604bbfa4"}]
+  Outputs: []
+  Method/prompt/corrections: {}
 
 ### SCN-TORCHPOST: Torchpost
 
@@ -7669,7 +7717,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/torchpost-detail.png](../art/village/scenery/torchpost-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### BODY-DROMAD: dromad
 

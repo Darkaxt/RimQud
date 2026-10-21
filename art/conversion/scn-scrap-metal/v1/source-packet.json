@@ -1,0 +1,237 @@
+{
+  "entry": "SCN-SCRAP-METAL",
+  "timestamp": "2026-10-21T02:21:57.770440+00:00",
+  "identity": "Scrap Metal -> Scrap -> Item -> InorganicObject -> PhysicalObject -> Object",
+  "display_name": "bent metal sheet",
+  "description": "A piece of scrap was shed or peeled off a machine fossil.",
+  "ancestry": [
+    {
+      "name": "Scrap Metal",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "object": "<object Name=\"Scrap Metal\" Inherits=\"Scrap\">\n    <part Name=\"Render\" Tile=\"items/bit11.bmp\" DetailColor=\"C\" ColorString=\"&amp;B\" DisplayName=\"bent metal sheet\" />\n    <part Name=\"TinkerItem\" Bits=\"B\" />\n  </object>"
+    },
+    {
+      "name": "Scrap",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "object": "<object Name=\"Scrap\" Inherits=\"Item\">\n    <part Name=\"Render\" DisplayName=\"[scrap]\" ColorString=\"&amp;K\" RenderString=\"232\" RenderLayer=\"4\" Tile=\"Assets_Content_Textures_Items_sw_gadget.bmp\" />\n    <part Name=\"Physics\" Weight=\"2\" Category=\"Scrap\" />\n    <part Name=\"Description\" Short=\"A piece of scrap was shed or peeled off a machine fossil.\" />\n    <part Name=\"Metal\" />\n    <part Name=\"TinkerItem\" Bits=\"0\" CanDisassemble=\"true\" CanBuild=\"false\" />\n    <part Name=\"Commerce\" Value=\"5\" />\n    <tag Name=\"Scrap\" />\n    <tag Name=\"DefaultDisassemble\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_metal\" />\n\t\t<stag Name=\"Scrap\" />\n    <part Name=\"NoBreak\" />\n    <tag Name=\"Breakable\" Value=\"*delete\"/>\n    <part Name=\"NoRust\" />\n    <part Name=\"ItemElements\" Elements=\"circuitry::1\" />\n  </object>"
+    },
+    {
+      "name": "Item",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "object": "<object Name=\"Item\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Item]\" RenderString=\".\" RenderLayer=\"5\" />\n    <part Name=\"Physics\" Conductivity=\"20\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;Y^k\" />\n    <part Name=\"Stacker\" />\n    <part Name=\"MentalShield\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_organic\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_material\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TinkerCategory\" Value=\"utility\" />\n    <tag Name=\"Item\" />\n    <tag Name=\"DynamicObjectsTable:Items\" />\n  </object>"
+    },
+    {
+      "name": "InorganicObject",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "object": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    {
+      "name": "PhysicalObject",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "object": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    },
+    {
+      "name": "Object",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "object": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "resolved_parts": {
+    "Physics": {
+      "Name": "Physics",
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "2",
+      "Category": "Scrap",
+      "Organic": "false",
+      "Conductivity": "20"
+    },
+    "Render": {
+      "Name": "Render",
+      "DisplayName": "bent metal sheet",
+      "RenderString": "232",
+      "RenderLayer": "4",
+      "RenderIfDark": "true",
+      "ColorString": "&B",
+      "Tile": "items/bit11.bmp",
+      "DetailColor": "C"
+    },
+    "MeleeWeapon": {
+      "Name": "MeleeWeapon",
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    "Commerce": {
+      "Name": "Commerce",
+      "Value": "5"
+    },
+    "Description": {
+      "Name": "Description",
+      "Short": "A piece of scrap was shed or peeled off a machine fossil."
+    },
+    "BurnToAshesIfOrganic": {
+      "Name": "BurnToAshesIfOrganic"
+    },
+    "Inorganic": {
+      "Name": "Inorganic"
+    },
+    "Stacker": {
+      "Name": "Stacker"
+    },
+    "MentalShield": {
+      "Name": "MentalShield"
+    },
+    "Metal": {
+      "Name": "Metal"
+    },
+    "TinkerItem": {
+      "Name": "TinkerItem",
+      "Bits": "B",
+      "CanDisassemble": "true",
+      "CanBuild": "false"
+    },
+    "NoBreak": {
+      "Name": "NoBreak"
+    },
+    "NoRust": {
+      "Name": "NoRust"
+    },
+    "ItemElements": {
+      "Name": "ItemElements",
+      "Elements": "circuitry::1"
+    }
+  },
+  "original": {
+    "tile": "items/bit11.bmp",
+    "description": "A piece of scrap was shed or peeled off a machine fossil.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "bent metal sheet",
+      "RenderString": "232",
+      "RenderLayer": "4",
+      "RenderIfDark": "true",
+      "ColorString": "&B",
+      "Tile": "items/bit11.bmp",
+      "DetailColor": "C"
+    },
+    "kind": "scenery",
+    "blueprint": "Scrap Metal",
+    "reference_file": "village-originals/scrap-metal-reference.png",
+    "native_mask_sha256": "09694a7971dab0bad96e992dda6e211d48b81584bc80ef9fab4c548c3ce1978a",
+    "reference_sha256": "9525e983ed7feeaf0fb002ea55fd550f8e794079abb3d3135439dad599f35fc8",
+    "info_id": 8894,
+    "atlas_id": 185,
+    "rect": [
+      792,
+      364,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/scrap-metal-mask.png",
+      "sha256": "09694a7971dab0bad96e992dda6e211d48b81584bc80ef9fab4c548c3ce1978a"
+    },
+    "size": [
+      16,
+      24
+    ],
+    "visible_bbox": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "roles": "Source alpha=coverage; opaque R0=primary B; opaque R255=detail C. No baked background."
+  },
+  "palette": {
+    "primary": "B",
+    "detail": "C",
+    "primary_rgb": "0096ff",
+    "detail_rgb": "77bfcf",
+    "TileColor": "Absent throughout resolved inheritance, so native tile uses ColorString &B.",
+    "policy": "Neutral gray planes plus independent P/D weight and one coverage plane. Apply native blue/cyan later; do not import dull brown/steel donor palette or global tint bit11."
+  },
+  "variants": {
+    "native_tiles": [
+      "items/bit11.bmp"
+    ],
+    "random_builder": false,
+    "views": [
+      "one fixed source-bound map resource view"
+    ],
+    "binding": "Exact Scrap Metal only. Scrap Electronics, Crystal and Energy share bit11 but have separate identity and palette.",
+    "not_applicable": [
+      "Furniture S/E/N turnaround",
+      "Clothing/body integration",
+      "Invented pile-by-stack count",
+      "Unsupported polished/repaired/burning appearance"
+    ]
+  },
+  "donor_reference": {
+    "name": "Actual installed Vanilla Textures Expanded Steel_a resource art; Core Steel definition",
+    "asset": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Item/Resource/Steel/Steel_a.png",
+      "sha256": "418416bbe444a4b0c3847c99c4864f11b178e87168856ab8f37a8a4c832283f7"
+    },
+    "definition": {
+      "path": "D:/Steam/steamapps/common/RimWorld/Data/Core/Defs/ThingDefs_Items/Items_Resource_Stuff.xml",
+      "sha256": "8cdc15befea94055a946a1131c7724acc0cf999b866a5fad474a0816731c9088",
+      "object": "<ThingDef ParentName=\"ResourceBase\">\n    <defName>Steel</defName>\n    <label>steel</label>\n    <description>An iron-carbon metal alloy used for building a huge variety of structures, weapons, and machines.</description>\n    <graphicData>\n      <texPath>Things/Item/Resource/Steel</texPath>\n      <graphicClass>Graphic_StackCount</graphicClass>\n    </graphicData>\n    <soundInteract>Metal_Drop</soundInteract>\n    <soundDrop>Metal_Drop</soundDrop>\n    <statBases>\n      <MarketValue>1.9</MarketValue>\n      <Mass>0.5</Mass>\n      <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>\n      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>\n      <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>\n      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>\n      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>\n      <SharpDamageMultiplier>1</SharpDamageMultiplier>\n      <BluntDamageMultiplier>1</BluntDamageMultiplier>\n    </statBases>\n    <useHitPoints>false</useHitPoints>\n    <healthAffectsPrice>false</healthAffectsPrice>\n    <slagDef>ChunkSlagSteel</slagDef>\n    <thingCategories>\n      <li>ResourcesRaw</li>\n    </thingCategories>\n    <deepCommonality>4</deepCommonality>\n    <deepCountPerPortion>45</deepCountPerPortion>\n    <deepLumpSizeRange>20~30</deepLumpSizeRange>\n    <burnableByRecipe>false</burnableByRecipe>\n    <smeltable>true</smeltable>\n    <stuffProps>\n      <categories>\n        <li>Metallic</li>\n      </categories>\n      <appearance>Metal</appearance>\n      <commonality>1.00</commonality>\n      <constructEffect>ConstructMetal</constructEffect>\n      <isAirtight>true</isAirtight>\n      <color>(105,105,105)</color>\n      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>\n      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>\n      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>\n      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>\n      <statFactors>\n        <MaxHitPoints>1</MaxHitPoints>\n        <Beauty>1</Beauty>\n        <Flammability>0.4</Flammability>\n      </statFactors>\n      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>\n    </stuffProps>\n    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>\n    <allowedArchonexusCount>80</allowedArchonexusCount>\n  </ThingDef>\n\n  "
+    },
+    "about": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/About/About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "graphic_class": "Graphic_StackCount",
+    "tex_path": "Things/Item/Resource/Steel",
+    "role": "Quiet broad metallic facets, edge contrast and compact resource-art shading only. The actual donor is a rounded steel lump, not a bent sheet; no close complete equivalent selected. Do not copy nugget outline, brown palette, stack variants or steel-smelting mechanics. Source Qud silhouette and bent-sheet identity govern."
+  },
+  "interpretation": {
+    "source_supported": "Bent metal sheet from machine-fossil scrap, two opposing P/D triangular areas within diamond-like border, native B/C contrast, takeable non-solid stackable/disassemblable scrap.",
+    "authored": "Shallow curled fold along each occupied sheet edge, broad dent, fine crease and a thin surviving rim. Native empty quadrants stay open rather than becoming solid gray sheet.",
+    "prohibited": "No electronic traces/pads, chip housing, pins, wires, gears, riveted plate stack or intact rectangular sheet replacing source form."
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "master": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "source_center": [
+      8,
+      12
+    ],
+    "policy": "Preserve source8x8visible extent in common full-cell frame; do not fill image bounds or normalize each source scrap independently."
+  },
+  "native_activation": false
+}
