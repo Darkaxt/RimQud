@@ -269,6 +269,35 @@ parameters. Any additional outfit comparison must be separate, explicitly
 labeled and list the exact versions of every included item; it does not replace
 the single-item evidence or establish native outfit acceptance.
 
+**Define the fit in every required view before construction/refinement.** Record
+a short per-view fit contract as prose/table, annotated drawings, or labeled
+geometry controls with equivalent information. Include the exact body/item
+versions and shared scale/frame; anatomical attachment surface or coverage
+boundary; the extent of the root/contact/grip region and the item's exit
+direction; visible and hidden portions with layer order; and ownership of nearby
+body features. Record west's actual mirror/asymmetry rule and distinguish native
+facts from authored estimates. Cardinal labels or a list of point coordinates
+alone do not describe a fit. Every facing must represent the same physical item
+and attachment, rather than independently plausible drawings.
+
+Carry this contract into the contextual prompt and the entry's HTML evidence.
+Compare both the manual composition and first refined output against each row
+before extraction. Record the observed result per facing, with an image reference
+and a concrete correction for any failure. A root point falling inside body
+alpha is not proof of attachment: the visible base must join the intended body
+surface, and an ear/body contour must not become part of the item. For example,
+paired horns cannot float outside the skull in front, originate at the rear in
+profile and merge with ears in back. Garment openings, sandal straps and weapon
+grips need the same item-specific explanation at their actual contact regions.
+
+If attachment/continuity/ownership fails, withhold extraction/fitting advancement
+and generation-ready credit; correct the geometry or contextual source first.
+Surface detail from a failed drawing may be retained as a material reference,
+but cannot make the structurally failed item fit pass. Existing equivalent
+annotated/parameterized evidence can satisfy this record; a prose-only rewrite
+does not require regenerating a usable asset. This is generation-time structural
+inspection, not native validation or a new user-approval checkpoint.
+
 For garments, follow [the approved apparel-fitting recipe](references/apparel-fitting.md)
 before constructing or extracting a replacement. Its production sequence is:
 fixed race/body → initial contextual refinement → structural inspection and

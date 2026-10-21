@@ -17,6 +17,13 @@ Lock the body, cardinal camera, physical scale, common canvas and contact. The
 current examples use 512×1024 at contact (256,950); these are authoring coordinates,
 not a universal native sprite size. West mirrors east only when permitted.
 
+Before construction, record the per-view fit contract from section 6 of the
+main skill: contact/coverage regions and their extent, orientation, visible/hidden
+portions, depth and body/item ownership on the exact selected model. Annotated
+images or labeled fit controls may supply the explanation. After the contextual
+refinement, compare every facing with that contract before extraction; a usable
+surface or correct anchor point alone does not establish structural fit.
+
 ## Context refinement and full cloth preparation
 
 1. Construct one actual garment and overlay it on the registered body. A red

@@ -15711,7 +15711,7 @@
       ],
       "disposition": "Convert and review",
       "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "current_step": "construct_and_overlay_one_item",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -15723,7 +15723,7 @@
         "native_equipment_state_review"
       ],
       "known_issues": [
-        "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field."
+        "v3 manual construction and actual contextual refinement rejected: front roots read external to the skull; profile origin reads posterior; back curls borrow ear contours. Per-view fit description and comparison are now required before extraction."
       ],
       "metadata": {
         "body_family": "yrame",
@@ -16158,6 +16158,186 @@
           "outputs": [],
           "review": "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T04:11:28.374443+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "action": "Resolve captured mutation-created Horns575 on Head288 and latest ram-like interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v2/source-packet.json",
+              "sha256": "514f7b8339a700f0997cc465883a1e6e13dc681a3df8c8a3ba8b606c6ec6abdd"
+            },
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/source-packet.json",
+              "sha256": "b3928030b9602ccea18f64a05b39cda1d0830a9f16ddcdf67830baa188894bf7"
+            }
+          ],
+          "review": "One paired natural Head item, w/W bone roles. Generic point/groove description retained; no hand grip/drafted pose or invented sheep race.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:11:28.374443+00:00",
+          "step": "select_correct_body_and_references",
+          "action": "Select current bare centauroid head plus actual directional ram and existing head-attachment references.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/source-reference-construction.png",
+              "sha256": "5cb34847e499fbdb7b20755e2fc446d19653bb8a2bf54cf992925a82e47efa71"
+            }
+          ],
+          "review": "Body scale/pivot fixed. Core curl and Biotech/VTE depth conventions only; no sheep head or donor gene logic transplanted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:11:28.374443+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Construct one shared tapered curl, project paired crown roots consistently and overlay only this item.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/construct-horns.py",
+              "sha256": "a3b64e5e84ca9ba16cac2018815694d753d6829dcf3b071f21293cbadf3eeb44"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/attachment-controls.json",
+              "sha256": "94db252d7258f8fdaea2983719189f10f8e7c5d3dd74dbf7c247e41b28dbe0da"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/horns-south.svg",
+              "sha256": "c3fafda3ffe28234cf2a5c696dbbdb9a9248c7515f583a37064aee39963359c3"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/horns-east.svg",
+              "sha256": "ccf49e89ccb7a5146e8c7756bde815d1f73841960ed732b6a67180e6d169c83f"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/horns-north.svg",
+              "sha256": "11da1d88f0c3462cce7d029534016d1652fc9c3409fbdef02fbd40b5c257648f"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/manual-context-turnaround.png",
+              "sha256": "c4e1717b0c1681bacbf7f3ad67a16f2abcda2e0a4d436030f5a3ec76825051d5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/context-crops.json",
+              "sha256": "92dafe756fbea99f799162d2f1b25d4015862c6252571c0aa676418288933e31"
+            }
+          ],
+          "review": "Source-body pixels untouched. North is behind head; complete profile naturally hides far coil. Review manual geometry before actual contextual refinement.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T04:11:28.374443+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "action": "Prepare one contextual horn-surface refinement on a red ownership mannequin.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/manual-context-turnaround.png",
+              "sha256": "c4e1717b0c1681bacbf7f3ad67a16f2abcda2e0a4d436030f5a3ec76825051d5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/source-reference-construction.png",
+              "sha256": "5cb34847e499fbdb7b20755e2fc446d19653bb8a2bf54cf992925a82e47efa71"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/context-refinement-prompt.txt",
+              "sha256": "a3282dfa30950e3d36bc4037c1e5af8d48cca99647cbb94dfc3b09b3d7fa1477"
+            }
+          ],
+          "review": "Actual tool call pending; no isolated-item generation or native acceptance.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T04:26:35.005615+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Per-view horn fit: rejected construction",
+          "action": "v3 manual construction and actual contextual refinement rejected: front roots read external to the skull; profile origin reads posterior; back curls borrow ear contours. Per-view fit description and comparison are now required before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/manual-context-turnaround.png",
+              "sha256": "c4e1717b0c1681bacbf7f3ad67a16f2abcda2e0a4d436030f5a3ec76825051d5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/context-refinement-raw.png",
+              "sha256": "2ead0b10bf8308146ce99a1d8fcb42e64b533ef0ddc285892a6683a12969bb03"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/generation-receipt.json",
+              "sha256": "5465e9d72d1c752b2ad4a0db23ac0a152567a651b7fae96793403ee894f12529"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/per-view-fit-review.md",
+              "sha256": "7a84a84c3cd853772c11257b8a3c85bc03093fb5c3bed3ef4ab463ad30808d40"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/per-view-fit-review.json",
+              "sha256": "6593a917589a0f416353fdaf21995327d48a691a06b8d601acfc59fb41d4fa37"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/artifact-manifest.json",
+              "sha256": "61e82ab1eeecd7d5c029167928ec2f823c6bbb7623de391bfdfeac53f51f5956"
+            }
+          ],
+          "review": "SOUTH / front: A paired horn item emerges continuously from broad upper anterolateral skull surfaces above the ears. Roots belong to the skull surface; horns grow outward/upward and curl backward. Show the near root transitions and distinct tapering bone tips; preserve the original ears below them. Observed: Broad flat-ended horn bases sit beside the upper head without a convincing continuous skull transition. Mathematical root containment did not establish a visible attachment. EAST / right profile: Show the same upper anterolateral root above and forward of the ear, with bone leaving the skull outward/upward before curling backward. Near horn may hide the far horn in exact profile. Preserve a separate flesh ear and the same anatomical origin as front. Observed: The large curl occupies the posterior side of the head and reads as originating near the rear; the open flat cap does not establish the intended crown origin. NORTH / back: Show the rear surfaces of the same paired curls. The original skull occludes anterior roots where appropriate; exposed root transitions must still join the skull. Both original ears remain flesh below the roots, separate from bone. Observed: Inner curls wrap around the ear silhouettes and read as bone extensions of the ears; root continuity is obscured rather than explained. WEST / left profile: Mirror the corrected east anatomy for this symmetric paired natural Head item. Preserve the same root, curl direction relative to the skull, ear separation and near/far visibility. Observed: No independently authored west view in this attempt; it would inherit the rejected east geometry.",
+          "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T04:26:35.005615+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Actual contextual refinement: structural rejection",
+          "action": "v3 manual construction and actual contextual refinement rejected: front roots read external to the skull; profile origin reads posterior; back curls borrow ear contours. Per-view fit description and comparison are now required before extraction.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/manual-context-turnaround.png",
+              "sha256": "c4e1717b0c1681bacbf7f3ad67a16f2abcda2e0a4d436030f5a3ec76825051d5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/context-refinement-raw.png",
+              "sha256": "2ead0b10bf8308146ce99a1d8fcb42e64b533ef0ddc285892a6683a12969bb03"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/generation-receipt.json",
+              "sha256": "5465e9d72d1c752b2ad4a0db23ac0a152567a651b7fae96793403ee894f12529"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/per-view-fit-review.md",
+              "sha256": "7a84a84c3cd853772c11257b8a3c85bc03093fb5c3bed3ef4ab463ad30808d40"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/per-view-fit-review.json",
+              "sha256": "6593a917589a0f416353fdaf21995327d48a691a06b8d601acfc59fb41d4fa37"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v3/artifact-manifest.json",
+              "sha256": "61e82ab1eeecd7d5c029167928ec2f823c6bbb7623de391bfdfeac53f51f5956"
+            }
+          ],
+          "review": "SOUTH / front: A paired horn item emerges continuously from broad upper anterolateral skull surfaces above the ears. Roots belong to the skull surface; horns grow outward/upward and curl backward. Show the near root transitions and distinct tapering bone tips; preserve the original ears below them. Observed: The same external, flat-ended bases remain. Improved ribbing/shading does not repair attachment. EAST / right profile: Show the same upper anterolateral root above and forward of the ear, with bone leaving the skull outward/upward before curling backward. Near horn may hide the far horn in exact profile. Preserve a separate flesh ear and the same anatomical origin as front. Observed: Posterior-origin reading persists, and the inner curl competes with the ear contour. NORTH / back: Show the rear surfaces of the same paired curls. The original skull occludes anterior roots where appropriate; exposed root transitions must still join the skull. Both original ears remain flesh below the roots, separate from bone. Observed: The ear/bone ambiguity remains, producing the boned-ear appearance identified by the user. WEST / left profile: Mirror the corrected east anatomy for this symmetric paired natural Head item. Preserve the same root, curl direction relative to the skull, ear separation and near/far visibility. Observed: Not generated separately; east failure prevents west acceptance.",
+          "result": "REQUIRES REWORK"
         }
       ],
       "natural_equipment_occlusion": {
@@ -16192,7 +16372,7 @@
       "generation_ready": false,
       "art_review": {
         "status": "REQUIRES REWORK",
-        "reason": "User clarified sheep-like curled horns; reconcile shape and roots across all facings without treating that art direction as a native species field."
+        "reason": "v3 manual construction and actual contextual refinement rejected: front roots read external to the skull; profile origin reads posterior; back curls borrow ear contours. Per-view fit description and comparison are now required before extraction."
       },
       "current_registration": {
         "model": {
@@ -16204,7 +16384,7 @@
           "sha256": "3109701a0a282ed61c9c3542a4910d4457c0b98e4ced9dd6daa339b6937443b0"
         }
       },
-      "registration_summary": "Corrected paired high-forehead horn attachment across front/profile/back. Same full bone/material and original body; profile near/far moved forward, rear roots hidden. Source Head288/0 retained; native acceptance and full Yrame assembly pending.",
+      "registration_summary": "Historical v2 registration on the earlier body; superseded and not accepted for the selected centauroid body. v3 is rejected before extraction. Corrected horn geometry is pending.",
       "native_acceptance": "Pending full-set generation, integrated natural Head288/0 attachment, headgear precedence, physical-frame mapping and Yrame full mutation/outfit assembly."
     },
     {
@@ -65590,7 +65770,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T04:00:40.148508+00:00",
+  "updated_at": "2026-10-21T04:26:35.005615+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

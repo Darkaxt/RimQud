@@ -1,0 +1,18 @@
+# Yrame horns: fit description and rejected v3 audit
+
+Status: **REQUIRES REWORK**. Recorded after the failed attempt, not presented as a pre-generation contract.
+
+Body: `art/conversion/body-yrame/v3/registered-v2/model.json`, SHA-256 `a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4`. Natural item: Horns575 on Head288, laterality0. Common canvas 768 × 1152, contact (384, 1050); body and scale stay fixed.
+
+The native description supports paired grooved bone; ram-like curls and exact skull attachment surfaces are authored estimates. Corrected root extents must be drawn and reviewed before another refinement.
+
+| View | Required fit | Observed defects | Required correction |
+| --- | --- | --- | --- |
+| SOUTH / front | A paired horn item emerges continuously from broad upper anterolateral skull surfaces above the ears. Roots belong to the skull surface; horns grow outward/upward and curl backward. Show the near root transitions and distinct tapering bone tips; preserve the original ears below them. | Manual: Broad flat-ended horn bases sit beside the upper head without a convincing continuous skull transition. Mathematical root containment did not establish a visible attachment. Refined: The same external, flat-ended bases remain. Improved ribbing/shading does not repair attachment. | Rebuild the root transition into the upper crown surface before drawing the return curl; inspect continuous attachment on the unchanged head. |
+| EAST / right profile | Show the same upper anterolateral root above and forward of the ear, with bone leaving the skull outward/upward before curling backward. Near horn may hide the far horn in exact profile. Preserve a separate flesh ear and the same anatomical origin as front. | Manual: The large curl occupies the posterior side of the head and reads as originating near the rear; the open flat cap does not establish the intended crown origin. Refined: Posterior-origin reading persists, and the inner curl competes with the ear contour. | Reproject the corrected shared crown attachment; retain a distinct ear and separate bone volume instead of moving a plausible-looking coil independently. |
+| NORTH / back | Show the rear surfaces of the same paired curls. The original skull occludes anterior roots where appropriate; exposed root transitions must still join the skull. Both original ears remain flesh below the roots, separate from bone. | Manual: Inner curls wrap around the ear silhouettes and read as bone extensions of the ears; root continuity is obscured rather than explained. Refined: The ear/bone ambiguity remains, producing the boned-ear appearance identified by the user. | Separate the horn volume and ear contour, with explicit skull occlusion; do not use the ear silhouette as a horn segment. |
+| WEST / left profile | Mirror the corrected east anatomy for this symmetric paired natural Head item. Preserve the same root, curl direction relative to the skull, ear separation and near/far visibility. | Manual: No independently authored west view in this attempt; it would inherit the rejected east geometry. Refined: Not generated separately; east failure prevents west acceptance. | Derive west only after corrected east attachment and the symmetric-pair interpretation are visually reviewed. |
+
+Both construction and refinement are rejected. No production extraction or fitted registration followed this output. Points within head alpha did not prove visible structural continuity.
+
+The new skill rule requires this description (or equivalent annotated geometry) **before** construction/refinement, carries it into the prompt/report, and compares the actual result against every view before extraction.

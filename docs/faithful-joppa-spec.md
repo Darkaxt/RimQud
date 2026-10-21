@@ -148,6 +148,18 @@ may need separately authored replacement trunk/pelvis art, not only additions.
 Reconcile Yrame's body-dependent fittings and assembly after that change; this
 does not authorize a general mutation renderer or early native validation.
 
+2026-10-21 item-fit clarification: before item construction/context refinement,
+record how the item fits each required facing through prose, annotated drawings
+or equivalently labeled geometry. Bind the body/item versions and scale/frame;
+explain attachment/contact extent, orientation, visible/hidden regions, layer
+order, nearby body/item feature ownership, west policy and authored assumptions.
+Compare manual and first refined compositions with that record before extraction.
+Floating roots, changing anatomical origin or borrowed body/ear contours require
+rework; material-only refinement cannot make such a fit pass. Equivalent existing
+evidence is reusable. This strengthens generation-time structural inspection
+without moving native validation ahead of the all-generation gate or adding a
+user-approval checkpoint.
+
 - A1: Inventory actual Joppa art targets and inhabitants from the installed,
   hash-pinned Qud definitions and retained generated-game evidence. Separate
   mechanical body slots, visible anatomy, gender and age. Do not infer species
