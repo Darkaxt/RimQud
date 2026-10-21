@@ -1,0 +1,40 @@
+{
+  "actual_source": {
+    "path": "art/conversion/scn-torchpost/v1/refined-raw.png",
+    "sha256": "918a384f1ea700387c64fcefb7ccef8f5c82c1190b49d09e0b105e25fac64285"
+  },
+  "materials": {
+    "wood": {
+      "box": [
+        354,
+        424,
+        400,
+        500
+      ],
+      "specimen": {
+        "path": "art/conversion/scn-torchpost/v1/selected-wood.png",
+        "sha256": "910f50d487fb9cf0ae9b02cba1e5fa006f5c0bda0b540bba83f5e11857ff0f7e"
+      },
+      "alpha_min": 252,
+      "limit_gray_levels": 3,
+      "role": "Opaque unmarked material interior; no source chroma, mean lighting, contour, alpha or generated geometry transferred."
+    },
+    "iron": {
+      "box": [
+        206,
+        188,
+        315,
+        199
+      ],
+      "specimen": {
+        "path": "art/conversion/scn-torchpost/v1/selected-iron.png",
+        "sha256": "f28cdca8fba3266c66870af0bfe4c56d24586c76702b585612d306b8314757c3"
+      },
+      "alpha_min": 253,
+      "limit_gray_levels": 1.5,
+      "role": "Opaque unmarked material interior; no source chroma, mean lighting, contour, alpha or generated geometry transferred."
+    }
+  },
+  "initial_box_note": "Initial wood diagnostic box touched a dark boundary/strut. Final narrower/lower interior excludes it; initial box file retained as diagnostic history.",
+  "method": "Mean RGB to neutral luminance; subtract Gaussian2 broad shading, attenuate15percent, clamp wood+/-3/iron+/-1.5. Fixed material ownership/ink/alpha remain authoritative. No warm generated wood hue, shiny border, flame or second isolation."
+}

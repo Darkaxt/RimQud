@@ -1,0 +1,251 @@
+{
+  "entry": "SCN-TORCHPOST",
+  "blueprint": "Torchpost",
+  "kind": "native-particle sconce: static detail-only holder furniture",
+  "source": {
+    "path": "art/conversion/scn-torchpost/v1/source-packet.json",
+    "sha256": "eea2239f7af446a09596b79c7fe95234cd408b18700de19032e32e9187d01dc9"
+  },
+  "construction": {
+    "path": "art/conversion/scn-torchpost/v1/construction-v3/construction-controls.json",
+    "sha256": "081e89454d0afaf91242853232040ef527671092258f51d0b1f848b1182b582b"
+  },
+  "refinement": {
+    "path": "art/conversion/scn-torchpost/v1/generation-receipt.json",
+    "sha256": "e29f8aa472576894ff90ec0d3ac09624312f60ac1af5babad0b35e923bcba0f1"
+  },
+  "material_selection": {
+    "path": "art/conversion/scn-torchpost/v1/material-selection.json",
+    "sha256": "6061d669dfb230662b07d0cf89875c10b1463cb032cc62c1c6a99d0ea2fbdca9"
+  },
+  "structural_review": {
+    "path": "art/conversion/scn-torchpost/v1/first-structural-review.json",
+    "sha256": "599d8c30d267cac85b41691c0d2cbba58b5782f4ffcf6df7fc779b71a7516034"
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "master": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "pivot": [
+      8,
+      12
+    ],
+    "body_contact_y": 21,
+    "policy": "Shared full source-cell mapping; body remains at bottom-cell x4..12,y16..21 region with upper cell transparent for retained native prefab. No per-view bounds fitting or moving flame origin."
+  },
+  "physical_dimensions": {
+    "rim_width": 7.5,
+    "rim_depth": 3.2,
+    "rim_height": 0.3,
+    "rim_top_z": 4.6,
+    "wood_stem_width": 1.7,
+    "wood_stem_depth": 1.2,
+    "wood_stem_height": 2.5,
+    "strut_thickness": 0.32,
+    "pixels_per_source_unit": 32,
+    "camera_elevation_degrees": 14,
+    "projection_baseline": 667.3550996044863
+  },
+  "dimension_provenance": "Source supports broad rim, short central stem, flanking support marks, wood+iron and bottom-cell position. Rectangular open rim depth, solid square-section struts, back and material subdivisions are authored estimates, not source-measured unseen geometry. Core WallTorch S/E/N guides cardinal wood-end/light shading only; no donor wall offset or footprint copied.",
+  "palette": {
+    "declared_primary": "R",
+    "native_animated_primary_sequence": [
+      "R",
+      "W",
+      "r",
+      "W"
+    ],
+    "native_cycle": "AnimatedMaterialFire uses(CurrentFrame+FrameOffset)%60,15-frame sections, ApplyColors(foreground,priority30), cosmetic offset updates native-owned. No new clock or custom animated art.",
+    "detail": "w",
+    "detail_rgb": "98875f",
+    "holder_role": "All source opaque pixels are detail. Registered body must have empty primary, full detail coverage, neutral gray luma. Do not tint holder bright flame red/yellow or bake brown into neutral."
+  },
+  "effects": {
+    "flame": "Preserve existing Prefabs/Particles/TorchpostFlames, separate from flame-free tile. No new drawn flame/halo/particle texture or duplicate sprite animation.",
+    "light": "Native LightSource Lit=true Radius=6 remains unchanged; donor glow/fuel/heat/radius not imported.",
+    "prefab_visibility": "PrefabImposter.Render adds prefab only when not Disabled, RenderEvent.Visible and RenderEvent.Lit>1. Defaults X/Y/Z/Layer remain native; do not change flame anchor to fit artwork.",
+    "code": [
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/AnimatedMaterialFire.cs",
+        "sha256": "b5112e865136b2d08936b60bb079d2ce66b51ab80eb6570aed66485941a68c11"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/RenderEvent.cs",
+        "sha256": "8bbc0a396b326933332f21cf4dee658780033cbd84cbd3083fef244df8cad9d0"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/PrefabImposter.cs",
+        "sha256": "9b84165cf82220d888aab792bcc4daf474aacc10dbf1b5ffc1d8859d9b7ea10f"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/BasePrefabImposter.cs",
+        "sha256": "0f40ab62a137771d99e3bf839bb065e434cc2a24097acf1ef0bfbcdf554c6aaf"
+      }
+    ],
+    "resources": {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "unlit": {
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Unlit Torchpost\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"torch sconce\" RenderString=\"249\" ColorString=\"&amp;R\" DetailColor=\"w\" Tile=\"tiles/sw_torch_nofire.png\" RenderLayer=\"6\" Occluding=\"false\" />\n\t\t<part Name=\"Description\" Short=\"A sconce of wood and iron hangs lightless.\" />\n    <part Name=\"Physics\" Weight=\"13\" />\n    <part Name=\"Metal\" />\n  </object>",
+      "ownership": "Separate Unlit Torchpost blueprint with same holder tile, not proof that Torchpost has a toggle/state transition. This entry does not grant another blueprint readiness or implement extinguishing."
+    }
+  },
+  "views": {
+    "south": {
+      "master": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/master-neutral.png",
+        "sha256": "db7f3ade4eeefb1e001365be1cd849ca1fe02206971a32b402f557cceb341e22"
+      },
+      "primary": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/primary-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/detail-neutral.png",
+        "sha256": "f8c7b9eed9e6e25a786b3b461748d9bfe3a9c3c435083a7ce30445824c6a6a5b"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/coverage.png",
+        "sha256": "c350cb7cc2c51edaed50ec793a86225923213eeefc40338ba2b0329317fb58c6"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/detail-weight.png",
+        "sha256": "d880d1bd5a63e1f6dee5fc06422e155c9c8e27019c3900eb7834b4afff6c7ec3"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/detail-coverage.png",
+        "sha256": "c350cb7cc2c51edaed50ec793a86225923213eeefc40338ba2b0329317fb58c6"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/authored-dualcolor-mask.png",
+        "sha256": "66f7c7e4cd7f42e82fe0166c1ef51b9cb48d74fe90eb1e0225c5fb0d0281aefe"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-torchpost/v1/registered/south/native-detail-w.png",
+        "sha256": "b009d10c7f9cabd5e16f5f4b75437cf470096f8586c4f19091a41265dfb701a1"
+      }
+    },
+    "east": {
+      "master": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/master-neutral.png",
+        "sha256": "23ff427603ac21daa88bd87d4c3219ed041a1a6d864a8f6d458dbdc6ac0b6e58"
+      },
+      "primary": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/primary-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/detail-neutral.png",
+        "sha256": "a327e966fc95644f31272a3e52093712cd25d692155ac8156517dccc64ccee1a"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/coverage.png",
+        "sha256": "a5d9b70f5b50097cccebd625c2b8c851725a51b130d687ef4bec00136632290c"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/detail-weight.png",
+        "sha256": "a9d82e14971039d770bee0355b2d15fb3dfe13a076c8f1dda96bdec844bcb95b"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/detail-coverage.png",
+        "sha256": "a5d9b70f5b50097cccebd625c2b8c851725a51b130d687ef4bec00136632290c"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/authored-dualcolor-mask.png",
+        "sha256": "a49de219152040653d72158ab1c75f01cd3b20b9cba4adb7263b63c7d7a0fc80"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-torchpost/v1/registered/east/native-detail-w.png",
+        "sha256": "bbb7d2d9f3d16f4084617e5c2d417d21dfb6ee0e73632ec8b3bcffdaf034f1e2"
+      }
+    },
+    "north": {
+      "master": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/master-neutral.png",
+        "sha256": "cf73bf27e7f7d653f1913be117d7b3cddf5ad96346647dc8e3ba1d81d484e2ca"
+      },
+      "primary": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/primary-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/detail-neutral.png",
+        "sha256": "fff0f7ff1952a2303428b3a201627b24ec4b76893c1503902b90f793ac5449ed"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/coverage.png",
+        "sha256": "71452566acd71f9a6cbc81ca3c0e9b3017e8394331735f75c8fcf5c92a748f7f"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/detail-weight.png",
+        "sha256": "d6c3ae1ce3ba0ebb08fb23742f22dcc85bd082295a47a48c581cf5c35be16b95"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/detail-coverage.png",
+        "sha256": "71452566acd71f9a6cbc81ca3c0e9b3017e8394331735f75c8fcf5c92a748f7f"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/authored-dualcolor-mask.png",
+        "sha256": "6de8f739ef95a6b425cef1c0f22ba75e8d86bdd9e2fdcacf77229a3eb8344479"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-torchpost/v1/registered/north/native-detail-w.png",
+        "sha256": "736ac35eb2e3d5b4a075962fe5ad642575de896945017004af3352490a99b005"
+      }
+    },
+    "west": {
+      "master": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/master-neutral.png",
+        "sha256": "0ea958f37c4bc23023b582f8938e2a95c9a3643ea358a77e70a0b250eb97f0a7"
+      },
+      "primary": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/primary-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/detail-neutral.png",
+        "sha256": "40f05397249408968374658582007ad34aae31615f3355b0a6ecbde6b19c2706"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/coverage.png",
+        "sha256": "3c6f8f91fa38ac3ad3a6fb9dfdf1f9a07c10d1c70a666fb413fdd35689b193a9"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/detail-weight.png",
+        "sha256": "f0f9a2d19ef7f9c39fff8af6d645ca9ee2b591f075fa8f0d5885a30551bff668"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/detail-coverage.png",
+        "sha256": "3c6f8f91fa38ac3ad3a6fb9dfdf1f9a07c10d1c70a666fb413fdd35689b193a9"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/authored-dualcolor-mask.png",
+        "sha256": "f79035efa1e0a03cfe7de032afe1300c47bf538b0d65e84a109c98bb41679395"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-torchpost/v1/registered/west/native-detail-w.png",
+        "sha256": "e5008d7e5e30316fccb3b9a16ba0926be58529bb250ed918909ad61fd7ac9ae9"
+      }
+    }
+  },
+  "binding": "Exact Torchpost static nofire tile only. Native TorchpostFlames prefab/origin/visibility and LightSource Radius6 retained. Other furniture facings are unbound authoring; no runtime rotation or wall placement implemented.",
+  "states": "Native foreground R/W/r/W animation and separate particle fire remain under existing owners. All static holder pixels are detail w, so foreground changes do not recolor it. Unlit Torchpost is separate blueprint, not an invented toggle/converted identity.",
+  "clothing": "Not applicable to fixed sconce.",
+  "native_activation": false,
+  "native_acceptance": "Pending full-ledger generation, then integrated exact tile/cell/pivot/detail-w/prefab visibility/lighting behavior and supported placement review. No native effect or state test during authoring.",
+  "west_policy": "Mirror east for this bilaterally symmetric structure/material convention; no markings or asymmetric source anatomy are mirrored onto another face."
+}

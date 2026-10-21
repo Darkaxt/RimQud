@@ -1,0 +1,301 @@
+{
+  "entry": "SCN-TORCHPOST",
+  "timestamp": "2026-10-21T02:34:31.004336+00:00",
+  "identity": "Torchpost -> MountedFurniture -> Furniture -> InorganicObject -> PhysicalObject -> Object",
+  "description": "A brightly burning handfire hangs across wood and iron.",
+  "ancestry": [
+    {
+      "name": "Torchpost",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Torchpost\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"torch sconce\" RenderString=\"249\" ColorString=\"&amp;R\" DetailColor=\"w\" Tile=\"tiles/sw_torch_nofire.png\" RenderLayer=\"6\" Occluding=\"false\" />\n    <part Name=\"Physics\" Weight=\"13\" />\n    <part Name=\"AnimatedMaterialFire\" />\n    <part Name=\"LightSource\" Lit=\"true\" Radius=\"6\" />\n\t\t<part Name=\"Description\" Short=\"A brightly burning handfire hangs across wood and iron.\" />\n    <part Name=\"Metal\" />\n    <part Name=\"PrefabImposter\" Prefab=\"Prefabs/Particles/TorchpostFlames\" />\n    <intproperty Name=\"NavigationWeight\" Value=\"10\" />\n    <stag Name=\"LightSource\" />\t  \n  </object>"
+    },
+    {
+      "name": "MountedFurniture",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>"
+    },
+    {
+      "name": "Furniture",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    {
+      "name": "InorganicObject",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "object": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    {
+      "name": "PhysicalObject",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "object": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    },
+    {
+      "name": "Object",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "object": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "resolved_parts": {
+    "Physics": {
+      "Name": "Physics",
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "13",
+      "Category": "Miscellaneous",
+      "Organic": "false",
+      "Conductivity": "20",
+      "Takeable": "false"
+    },
+    "Render": {
+      "Name": "Render",
+      "DisplayName": "torch sconce",
+      "RenderString": "249",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&R",
+      "DetailColor": "w",
+      "Tile": "tiles/sw_torch_nofire.png"
+    },
+    "MeleeWeapon": {
+      "Name": "MeleeWeapon",
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    "Commerce": {
+      "Name": "Commerce",
+      "Value": "0.01"
+    },
+    "Description": {
+      "Name": "Description",
+      "Short": "A brightly burning handfire hangs across wood and iron."
+    },
+    "BurnToAshesIfOrganic": {
+      "Name": "BurnToAshesIfOrganic"
+    },
+    "Inorganic": {
+      "Name": "Inorganic"
+    },
+    "Examiner": {
+      "Name": "Examiner",
+      "Unknown": "UnknownStrangeFurniture",
+      "KeepTile": "true"
+    },
+    "Graffitied": {
+      "Name": "Graffitied",
+      "ChanceOneIn": "300"
+    },
+    "MountedFurniture": {
+      "Name": "MountedFurniture"
+    },
+    "MissileCover": {
+      "Name": "MissileCover",
+      "Percentage": "10"
+    },
+    "AnimatedMaterialFire": {
+      "Name": "AnimatedMaterialFire"
+    },
+    "LightSource": {
+      "Name": "LightSource",
+      "Lit": "true",
+      "Radius": "6"
+    },
+    "Metal": {
+      "Name": "Metal"
+    },
+    "PrefabImposter": {
+      "Name": "PrefabImposter",
+      "Prefab": "Prefabs/Particles/TorchpostFlames"
+    }
+  },
+  "original": {
+    "tile": "tiles/sw_torch_nofire.png",
+    "description": "A brightly burning handfire hangs across wood and iron.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "torch sconce",
+      "RenderString": "249",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&R",
+      "DetailColor": "w",
+      "Tile": "tiles/sw_torch_nofire.png"
+    },
+    "kind": "scenery",
+    "blueprint": "Torchpost",
+    "reference_file": "village-originals/torchpost-reference.png",
+    "native_mask_sha256": "2f20fb9e03be9d86f5f46f92b629f45fa3ddbc45660fcd0cf4123090639371da",
+    "reference_sha256": "a5a84def3127b1c3b3822b2765b7d315d966e52f673578374a9e785ea4796456",
+    "info_id": 14990,
+    "atlas_id": 277,
+    "rect": [
+      1476,
+      702,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/torchpost-mask.png",
+      "sha256": "2f20fb9e03be9d86f5f46f92b629f45fa3ddbc45660fcd0cf4123090639371da"
+    },
+    "size": [
+      16,
+      24
+    ],
+    "visible_bbox": [
+      4,
+      16,
+      12,
+      21
+    ],
+    "source_roles": "Every visible pixel is R255/detail. Static wood/iron holder is detail w; source primary R/W/r fire colour is not static holder colour."
+  },
+  "palette": {
+    "declared_primary": "R",
+    "native_animated_primary_sequence": [
+      "R",
+      "W",
+      "r",
+      "W"
+    ],
+    "native_cycle": "AnimatedMaterialFire uses(CurrentFrame+FrameOffset)%60,15-frame sections, ApplyColors(foreground,priority30), cosmetic offset updates native-owned. No new clock or custom animated art.",
+    "detail": "w",
+    "detail_rgb": "98875f",
+    "holder_role": "All source opaque pixels are detail. Registered body must have empty primary, full detail coverage, neutral gray luma. Do not tint holder bright flame red/yellow or bake brown into neutral."
+  },
+  "effects": {
+    "flame": "Preserve existing Prefabs/Particles/TorchpostFlames, separate from flame-free tile. No new drawn flame/halo/particle texture or duplicate sprite animation.",
+    "light": "Native LightSource Lit=true Radius=6 remains unchanged; donor glow/fuel/heat/radius not imported.",
+    "prefab_visibility": "PrefabImposter.Render adds prefab only when not Disabled, RenderEvent.Visible and RenderEvent.Lit>1. Defaults X/Y/Z/Layer remain native; do not change flame anchor to fit artwork.",
+    "code": [
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/AnimatedMaterialFire.cs",
+        "sha256": "b5112e865136b2d08936b60bb079d2ce66b51ab80eb6570aed66485941a68c11"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/RenderEvent.cs",
+        "sha256": "8bbc0a396b326933332f21cf4dee658780033cbd84cbd3083fef244df8cad9d0"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/PrefabImposter.cs",
+        "sha256": "9b84165cf82220d888aab792bcc4daf474aacc10dbf1b5ffc1d8859d9b7ea10f"
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/BasePrefabImposter.cs",
+        "sha256": "0f40ab62a137771d99e3bf839bb065e434cc2a24097acf1ef0bfbcdf554c6aaf"
+      }
+    ],
+    "resources": {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/resources.assets",
+      "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+    },
+    "unlit": {
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Unlit Torchpost\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"torch sconce\" RenderString=\"249\" ColorString=\"&amp;R\" DetailColor=\"w\" Tile=\"tiles/sw_torch_nofire.png\" RenderLayer=\"6\" Occluding=\"false\" />\n\t\t<part Name=\"Description\" Short=\"A sconce of wood and iron hangs lightless.\" />\n    <part Name=\"Physics\" Weight=\"13\" />\n    <part Name=\"Metal\" />\n  </object>",
+      "ownership": "Separate Unlit Torchpost blueprint with same holder tile, not proof that Torchpost has a toggle/state transition. This entry does not grant another blueprint readiness or implement extinguishing."
+    }
+  },
+  "variants": {
+    "native_body_tiles": [
+      "tiles/sw_torch_nofire.png"
+    ],
+    "random_tile": false,
+    "required_authoring_views": [
+      "south",
+      "east",
+      "north"
+    ],
+    "west": "Mirror east only if the chosen structure is symmetric; no native orientation/placement implementation.",
+    "reason": "MountedFurniture ancestry requires furniture views despite generic prop ledger category; native fixed tile remains current binding. Extra views unbound."
+  },
+  "donor_reference": {
+    "name": "Actual Core TorchWallLamp S/E/N texture set",
+    "definition": {
+      "path": "D:/Steam/steamapps/common/RimWorld/Data/Core/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+      "sha256": "cea362ca9451f0762f8a104b2344bd540b5f6e8663dd9a4e75f3c39b46607c55",
+      "objects": [
+        "<ThingDef ParentName=\"TorchLamp\">\n    <defName>TorchWallLamp</defName>\n    <label>wall torch lamp</label>\n    <description>A wall-mounted wooden torch for lighting an area. It is not as bright as a regular torch lamp, but it can be mounted on walls. Produces a small amount of heat.</description>\n    <rotatable>true</rotatable>\n    <graphicData>\n      <texPath>Things/Building/Misc/WallTorch/WallTorch</texPath>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>\n      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>\n      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>\n      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>\n      <damageData>\n        <enabled>false</enabled>\n      </damageData>\n    </graphicData>\n    <uiIconPath>Things/Building/Misc/WallTorch/WallTorch_MenuIcon</uiIconPath>\n    <altitudeLayer>BuildingOnTop</altitudeLayer>\n    <passability>Standable</passability>\n    <terrainAffordanceNeeded IsNull=\"True\" />\n    <pathCost>0</pathCost>\n    <costList>\n      <WoodLog>15</WoodLog>\n    </costList>\n    <building>\n      <isEdifice>false</isEdifice>\n      <isAttachment>true</isAttachment>\n    </building>\n    <statBases>\n      <MaxHitPoints>50</MaxHitPoints>\n    </statBases>\n    <placeWorkers>\n      <li>Placeworker_AttachedToWall</li>\n    </placeWorkers>\n    <comps Inherit=\"False\">\n      <li Class=\"CompProperties_Glower\">\n        <glowRadius>9</glowRadius>\n        <glowColor>(184,136,83,0)</glowColor>\n      </li>\n      <li Class=\"CompProperties_FireOverlay\">\n        <fireSize>0.4</fireSize>\n        <offsetNorth>(0,0,0)</offsetNorth>\n        <offsetSouth>(0,0,0.55)</offsetSouth>\n        <offsetWest>(0.45,0,0.35)</offsetWest>\n        <offsetEast>(-0.45,0,0.35)</offsetEast>\n      </li>\n      <li Class=\"CompProperties_Styleable\" />\n      <li Class=\"CompProperties_Refuelable\">\n        <fuelConsumptionRate>2.0</fuelConsumptionRate>\n        <fuelCapacity>15.0</fuelCapacity>\n        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>\n        <fuelFilter>\n          <thingDefs>\n            <li>WoodLog</li>\n          </thingDefs>\n        </fuelFilter>\n        <initialFuelPercent>1</initialFuelPercent>\n        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>\n        <functionsInVacuum>false</functionsInVacuum>\n      </li>\n      <li Class=\"CompProperties_HeatPusher\">\n        <compClass>CompHeatPusherPowered</compClass>\n        <heatPerSecond>3.5</heatPerSecond>\n        <heatPushMaxTemperature>23</heatPushMaxTemperature>\n      </li>\n      <li Class=\"CompProperties_MeditationFocus\">\n        <statDef>MeditationFocusStrength</statDef>\n        <focusTypes><li>Flame</li></focusTypes>\n        <offsets>\n          <li Class=\"FocusStrengthOffset_Lit\">\n            <offset>0.1</offset>\n          </li>\n          <li Class=\"FocusStrengthOffset_BuildingDefsLit\">\n            <defs>\n              <li>Campfire</li>\n              <li>TorchLamp</li>\n              <li>TorchWallLamp</li>\n              <li MayRequire=\"Ludeon.RimWorld.Royalty\">Brazier</li>\n              <li MayRequire=\"Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology\">DarklightBrazier</li>\n              <li MayRequire=\"Ludeon.RimWorld.Ideology\">Darktorch</li>\n              <li MayRequire=\"Ludeon.RimWorld.Ideology\">DarktorchFungus</li>\n            </defs>\n            <offsetPerBuilding>0.01</offsetPerBuilding>\n            <radius>9.9</radius>\n            <maxBuildings>8</maxBuildings>\n            <explanationKey>MeditationFocusPerFlame</explanationKey>\n            <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>\n            <drawRingRadius>false</drawRingRadius>\n          </li>\n        </offsets>\n      </li>\n    </comps>\n  </ThingDef>\n  \n  ",
+        "<ThingDef Name=\"TorchLamp\" ParentName=\"TorchBase\">\n    <defName>TorchLamp</defName>\n    <label>torch lamp</label>\n    <description>A wooden torch for lighting an area. People need light to move and work at full speed. Can be automatically refueled with wood. Produces a small amount of heat.</description>\n    <graphicData>\n      <texPath>Things/Building/Misc/TorchLamp</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n      <drawRotated>false</drawRotated>\n      <damageData>\n        <rect>(0.35,0.35,0.3,0.3)</rect>\n      </damageData>\n    </graphicData>\n    <uiIconPath>Things/Building/Misc/TorchLamp_MenuIcon</uiIconPath>\n    <uiIconScale>0.85</uiIconScale>\n    <statBases>\n      <StyleDominance MayRequire=\"Ludeon.RimWorld.Ideology\">5</StyleDominance>\n    </statBases>\n    <placeWorkers>\n      <li>PlaceWorker_Heater</li>\n      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>\n    </placeWorkers>\n    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>\n    <comps>\n      <li Class=\"CompProperties_Styleable\" />\n      <li Class=\"CompProperties_Glower\">\n        <glowRadius>10</glowRadius>\n        <glowColor>(184,136,83,0)</glowColor>\n      </li>\n    </comps>\n    <designationCategory>Furniture</designationCategory>\n    <uiOrder>2800</uiOrder>\n    <designationHotKey>Misc10</designationHotKey>\n  </ThingDef>\n\n  ",
+        "<ThingDef Name=\"TorchBase\" ParentName=\"BuildingBase\" Abstract=\"True\">\n    <category>Building</category>\n    <rotatable>false</rotatable>\n    <altitudeLayer>Building</altitudeLayer>\n    <passability>PassThroughOnly</passability>\n    <pathCost>14</pathCost>\n    <constructEffect>ConstructWood</constructEffect>\n    <tickerType>Normal</tickerType>\n    <drawerType>RealtimeOnly</drawerType>\n    <fillPercent>0.15</fillPercent>\n    <noRightClickDraftAttack>true</noRightClickDraftAttack>\n    <statBases>\n      <MaxHitPoints>75</MaxHitPoints>\n      <WorkToBuild>100</WorkToBuild>\n      <Flammability>0</Flammability>\n      <MeditationFocusStrength>0.0</MeditationFocusStrength>\n    </statBases>\n    <selectable>true</selectable>\n    <costList>\n      <WoodLog>20</WoodLog>\n    </costList>\n    <building>\n      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>\n    </building>\n    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>\n    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>\n    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>\n    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>\n    <placeWorkers>\n      <li>PlaceWorker_GlowRadius</li>\n    </placeWorkers>\n    <comps>\n      <li Class=\"CompProperties_Refuelable\">\n        <fuelConsumptionRate>2.0</fuelConsumptionRate>\n        <fuelCapacity>20.0</fuelCapacity>\n        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>\n        <fuelFilter>\n          <thingDefs>\n            <li>WoodLog</li>\n          </thingDefs>\n        </fuelFilter>\n        <initialFuelPercent>1</initialFuelPercent>\n        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>\n        <functionsInVacuum>false</functionsInVacuum>\n      </li>\n      <li Class=\"CompProperties_HeatPusher\">\n        <compClass>CompHeatPusherPowered</compClass>\n        <heatPerSecond>3.5</heatPerSecond>\n        <heatPushMaxTemperature>23</heatPushMaxTemperature>\n      </li>\n      <li Class=\"CompProperties_FireOverlay\">\n        <fireSize>0.4</fireSize>\n        <offset>(0,0,0.2)</offset>\n      </li>\n      <li Class=\"CompProperties_MeditationFocus\">\n        <statDef>MeditationFocusStrength</statDef>\n        <focusTypes>\n          <li>Flame</li>\n        </focusTypes>\n        <offsets>\n          <li Class=\"FocusStrengthOffset_Lit\">\n            <offset>0.1</offset>\n          </li>\n          <li Class=\"FocusStrengthOffset_BuildingDefsLit\">\n            <defs>\n              <li>Campfire</li>\n              <li>TorchLamp</li>\n              <li>TorchWallLamp</li>\n              <li MayRequire=\"Ludeon.RimWorld.Royalty\">Brazier</li>\n              <li MayRequire=\"Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology\">DarklightBrazier</li>\n              <li MayRequire=\"Ludeon.RimWorld.Ideology\">Darktorch</li>\n              <li MayRequire=\"Ludeon.RimWorld.Ideology\">DarktorchFungus</li>\n            </defs>\n            <offsetPerBuilding>0.01</offsetPerBuilding>\n            <radius>9.9</radius>\n            <maxBuildings>8</maxBuildings>\n            <explanationKey>MeditationFocusPerFlame</explanationKey>\n            <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>\n            <drawRingRadius>false</drawRingRadius>\n          </li>\n        </offsets>\n      </li>\n    </comps>\n  </ThingDef>\n\n  "
+      ]
+    },
+    "resources": {
+      "path": "D:/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/resources.assets",
+      "sha256": "7c0c69bde01910dde60205bc1417cd56a39e27affd2de36735dcedd6facd6155"
+    },
+    "assets": [
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/WallTorch_east.png",
+        "sha256": "77d8ef1d43b97fd3a1d8340b161392f770741740f54ec8a751ce828e02352d02",
+        "name": "WallTorch_east",
+        "path_id": 991
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/WallTorch_north.png",
+        "sha256": "008b6f100f45232a5cd7159094db8a95a1a9367a6285fb5015a420ac45c433be",
+        "name": "WallTorch_north",
+        "path_id": 1698
+      },
+      {
+        "path": "E:/Temp/rimqud-native-torchpost-20261021/WallTorch_south.png",
+        "sha256": "ee54c1ac0f4e6ea4f9b6b31a9eed5f0f4e81c17a65ed4187d76fff3c5393a97e",
+        "name": "WallTorch_south",
+        "path_id": 2898
+      }
+    ],
+    "mapping": {
+      "GraphicClass": "Graphic_Multi",
+      "parent": "TorchLamp/TorchBase",
+      "drawRotated_in_parent": false,
+      "draw_offsets": {
+        "north": [
+          0,
+          0,
+          0.9
+        ],
+        "south": [
+          0,
+          0,
+          -0.9
+        ],
+        "east": [
+          0.9,
+          0,
+          0
+        ],
+        "west": [
+          -0.9,
+          0,
+          0
+        ]
+      },
+      "interpretation": "Inspect actual directional wood ends and source render mapping; donor wall offsets/radius/placement are not recipient offsets."
+    },
+    "role": "Cardinal small wood/iron support readability, restrained edge and material shading only. Actual Core torch is a slender wood support, not a complete Qud sconce equivalent. Preserve Qud broad rim, short stem, open support gaps, source cell placement and native particle relationship."
+  },
+  "construction_contract": "Shared front width/depth/camera/component thickness must enter geometry and exact refinement prompt. Source holder covers x4..12,y16..21 only; do not enlarge to a full-cell tall torch. Unseen rim depth/back/strut arrangement are authored estimates. All new pixels remain detail role w. Keep upper cell region transparent for native flame.",
+  "native_activation": false
+}
