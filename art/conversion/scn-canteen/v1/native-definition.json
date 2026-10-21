@@ -1,0 +1,213 @@
+{
+  "ancestry": [
+    {
+      "blueprint": "Canteen",
+      "parent": "WaterContainer",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "xml": "<object Name=\"Canteen\" Inherits=\"WaterContainer\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"64\" Volume=\"64\" StartVolume=\"1d65-1\" InitialLiquid=\"water-1000\" ManualSeal=\"true\" />\n    <part Name=\"Render\" DisplayName=\"canteen\" ColorString=\"&amp;g\" TileColor=\"&amp;g\" DetailColor=\"w\" Tile=\"Items/sw_canteen.png\" />\n    <part Name=\"Description\" Short=\"A jug of aluminum has been sheathed in an olive green cloth for waterkeeping.\" />\n    <property Name=\"SparkingQuestBlueprint\" Value=\"Canteen\" />\n  </object>\n\t"
+    },
+    {
+      "blueprint": "WaterContainer",
+      "parent": "Item",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "xml": "<object Name=\"WaterContainer\" Inherits=\"Item\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"64\" Volume=\"0\" />\n    <part Name=\"Render\" DisplayName=\"[Water Container]\" ColorString=\"&amp;b\" RenderString=\"168\" RenderLayer=\"5\" Tile=\"Items/sw_waterskin.bmp\" TileColor=\"&amp;w\" DetailColor=\"y\" />\n    <part Name=\"Physics\" Category=\"Water Containers\" SpecificHeat=\"4.1813\" />\n    <part Name=\"LeakWhenBroken\" />\n    <part Name=\"Commerce\" Value=\"5\" />\n    <part Name=\"NotNameable\" />\n    <part Name=\"LiquidRepellent\" Liquids=\"water,cider,goo,oil,ooze,proteangunk,slime,sludge,wine\" />\n    <stat Name=\"Hitpoints\" Value=\"30\" sValue=\"30\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_liquidContainer\" />\n    <tag Name=\"WaterContainer\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t\t<stag Name=\"Storage\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "Item",
+      "parent": "InorganicObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "xml": "<object Name=\"Item\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Item]\" RenderString=\".\" RenderLayer=\"5\" />\n    <part Name=\"Physics\" Conductivity=\"20\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;Y^k\" />\n    <part Name=\"Stacker\" />\n    <part Name=\"MentalShield\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_organic\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_material\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TinkerCategory\" Value=\"utility\" />\n    <tag Name=\"Item\" />\n    <tag Name=\"DynamicObjectsTable:Items\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "InorganicObject",
+      "parent": "PhysicalObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "xml": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "xml": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>\n  "
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "xml": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>\n  "
+    }
+  ],
+  "resolved": [
+    {
+      "kind": "part",
+      "Name": "Physics",
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "1",
+      "Category": "Water Containers",
+      "Organic": "false",
+      "Conductivity": "20",
+      "SpecificHeat": "4.1813"
+    },
+    {
+      "kind": "part",
+      "Name": "Render",
+      "DisplayName": "canteen",
+      "RenderString": "168",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "ColorString": "&g",
+      "Tile": "Items/sw_canteen.png",
+      "TileColor": "&g",
+      "DetailColor": "w"
+    },
+    {
+      "kind": "part",
+      "Name": "MeleeWeapon",
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    {
+      "kind": "part",
+      "Name": "Commerce",
+      "Value": "5"
+    },
+    {
+      "kind": "part",
+      "Name": "Description",
+      "Short": "A jug of aluminum has been sheathed in an olive green cloth for waterkeeping."
+    },
+    {
+      "kind": "part",
+      "Name": "BurnToAshesIfOrganic"
+    },
+    {
+      "kind": "stat",
+      "Name": "Hitpoints",
+      "ShortName": "HP",
+      "Min": "0",
+      "Max": "64000",
+      "Value": "30",
+      "sValue": "30"
+    },
+    {
+      "kind": "stat",
+      "Name": "AV",
+      "ShortName": "AV",
+      "Min": "0",
+      "Max": "100",
+      "Value": "2"
+    },
+    {
+      "kind": "stat",
+      "Name": "DV",
+      "ShortName": "DV",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "-20"
+    },
+    {
+      "kind": "tag",
+      "Name": "BaseObject",
+      "Value": "*noinherit"
+    },
+    {
+      "kind": "tag",
+      "Name": "Category",
+      "Value": "object"
+    },
+    {
+      "kind": "part",
+      "Name": "Inorganic"
+    },
+    {
+      "kind": "tag",
+      "Name": "Gender",
+      "Value": "neuter"
+    },
+    {
+      "kind": "tag",
+      "Name": "Breakable"
+    },
+    {
+      "kind": "tag",
+      "Name": "OverlayColor",
+      "Value": "&Y^k"
+    },
+    {
+      "kind": "part",
+      "Name": "Stacker"
+    },
+    {
+      "kind": "part",
+      "Name": "MentalShield"
+    },
+    {
+      "kind": "tag",
+      "Name": "EquipSound",
+      "Value": "sfx_equip_material_liquidContainer"
+    },
+    {
+      "kind": "tag",
+      "Name": "UnequipSound",
+      "Value": "sfx_unequip_material"
+    },
+    {
+      "kind": "tag",
+      "Name": "TinkerCategory",
+      "Value": "utility"
+    },
+    {
+      "kind": "tag",
+      "Name": "Item"
+    },
+    {
+      "kind": "tag",
+      "Name": "DynamicObjectsTable:Items"
+    },
+    {
+      "kind": "part",
+      "Name": "LiquidVolume",
+      "MaxVolume": "64",
+      "Volume": "64",
+      "StartVolume": "1d65-1",
+      "InitialLiquid": "water-1000",
+      "ManualSeal": "true"
+    },
+    {
+      "kind": "part",
+      "Name": "LeakWhenBroken"
+    },
+    {
+      "kind": "part",
+      "Name": "NotNameable"
+    },
+    {
+      "kind": "part",
+      "Name": "LiquidRepellent",
+      "Liquids": "water,cider,goo,oil,ooze,proteangunk,slime,sludge,wine"
+    },
+    {
+      "kind": "tag",
+      "Name": "WaterContainer",
+      "Value": "1"
+    },
+    {
+      "kind": "stag",
+      "Name": "Storage"
+    },
+    {
+      "kind": "property",
+      "Name": "SparkingQuestBlueprint",
+      "Value": "Canteen"
+    }
+  ],
+  "empty_canteen_xml": "<object Name=\"Empty Canteen\" Inherits=\"Canteen\">\n\t\t<part Name=\"LiquidVolume\" StartVolume=\"0-1\" />\t\t\n\t\t<tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n\t</object>\n  "
+}

@@ -1,0 +1,46 @@
+{
+  "recorded_at": "2026-10-21T06:58:37.729683+00:00",
+  "refinement": {
+    "path": "art/conversion/scn-canteen/v1/context-refinement-raw.png",
+    "sha256": "18eb8481d8d657d180876a084ba0c494e735c2d1cec433b07697c2edfe9e912a"
+  },
+  "sample_review": {
+    "path": "art/conversion/scn-canteen/v1/sample-inspection.png",
+    "sha256": "839325e5dfe1b0d87d345d2d00c0e65a1e12ab6e2eaab1c44040d2df32a6c917"
+  },
+  "regions": {
+    "cloth": {
+      "source_roi": [
+        270,
+        800,
+        315,
+        930
+      ],
+      "source_alpha_range": [
+        252,
+        254
+      ],
+      "residual_sigma": 3,
+      "amplitude_bound_gray": 4,
+      "source_gray_std": 9.157199220245952,
+      "policy": "Inspected unmarked material; subtract low-frequency lighting and bound gray residual. No generated contour, stitches, logos, green chroma or alpha is transferred."
+    },
+    "metal": {
+      "source_roi": [
+        423,
+        400,
+        543,
+        425
+      ],
+      "source_alpha_range": [
+        252,
+        253
+      ],
+      "residual_sigma": 4,
+      "amplitude_bound_gray": 2,
+      "source_gray_std": 31.075767095008448,
+      "policy": "Inspected unmarked material; subtract low-frequency lighting and bound gray residual. No generated contour, stitches, logos, green chroma or alpha is transferred."
+    }
+  },
+  "method": "Only bounded zero-mean grayscale microtexture inside eroded manual material interiors. Full manual alpha, part connection, neck/body overlap, stitch/edge lines and g/w region mask stay fixed. No second generation or isolation."
+}

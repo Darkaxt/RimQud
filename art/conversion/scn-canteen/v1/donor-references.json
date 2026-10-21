@@ -1,0 +1,39 @@
+{
+  "source": "Actual installed Core textures, retained privately; exact roles do not redefine Qud identity.",
+  "references": [
+    {
+      "texture": "Cloth_a",
+      "source_id": 1591,
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\canteen-core-cloth_a.png",
+      "sha256": "d5cb4791e10c60bb5bd2fa3e58efdbeaef29205d18cff56e4c118e6d0548d17d",
+      "resources_sha256": "7c0c69bde01910dde60205bc1417cd56a39e27affd2de36735dcedd6facd6155",
+      "size": [
+        64,
+        64
+      ],
+      "role": "Core Cloth: restrained textile shading/weave and contour density only; no rolled-bolt shape.",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Items\\Items_Resource_Stuff.xml",
+        "sha256": "8cdc15befea94055a946a1131c7724acc0cf999b866a5fad474a0816731c9088",
+        "xml": "<ThingDef ParentName=\"ResourceBase\">\n    <defName>Cloth</defName>\n    <label>cloth</label>\n    <description>Cloth woven from organic fibers.</description>\n    <graphicData>\n      <texPath>Things/Item/Resource/Cloth</texPath>\n      <graphicClass>Graphic_StackCount</graphicClass>\n      <color>(162,157,152)</color>\n    </graphicData>\n    <statBases>\n      <StuffPower_Armor_Sharp>0.36</StuffPower_Armor_Sharp>\n      <StuffPower_Armor_Blunt>0</StuffPower_Armor_Blunt>\n      <StuffPower_Armor_Heat>0.18</StuffPower_Armor_Heat>\n      <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>\n      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>\n      <MaxHitPoints>80</MaxHitPoints>\n      <MarketValue>1.5</MarketValue>\n      <Mass>0.026</Mass>\n      <Flammability>1.2</Flammability>\n      <DeteriorationRate>4</DeteriorationRate>\n    </statBases>\n    <burnableByRecipe>true</burnableByRecipe>\n    <healthAffectsPrice>false</healthAffectsPrice>\n    <minRewardCount>30</minRewardCount>\n    <stuffProps>\n      <statFactors>\n        <Flammability>1.2</Flammability>\n        <Beauty>1</Beauty>\n      </statFactors>\n      <categories>\n        <li>Fabric</li>\n      </categories>\n      <color>(162,157,152)</color>\n      <commonality>1.4</commonality>\n      <allowColorGenerators>true</allowColorGenerators>\n      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>\n    </stuffProps>\n    <thingCategories>\n      <li>Textiles</li>\n    </thingCategories>\n    <comps>\n      <li>\n        <compClass>CompColorable</compClass>\n      </li>\n    </comps>\n    <colorGeneratorInTraderStock Class=\"ColorGenerator_Options\">\n      <options>\n        <li>\n          <weight>5</weight>\n          <only>(0.33,0.33,0.33,1)</only>\n        </li>\n        <li>\n          <weight>10</weight>\n          <min>(0.3,0.3,0.3,1)</min>\n          <max>(0.9,0.9,0.9,1)</max>\n        </li>\n        <li>\n          <weight>5</weight>\n          <only>(0.9,0.9,0.9,1)</only>\n        </li>\n      </options>\n    </colorGeneratorInTraderStock>\n    <allowedArchonexusCount>80</allowedArchonexusCount>\n  </ThingDef>\n\n  "
+      }
+    },
+    {
+      "texture": "Chemfuel",
+      "source_id": 2252,
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\canteen-core-chemfuel.png",
+      "sha256": "0fd73a4b40333b6c787e45c9861d0cbb09cb519bbaf56ba140e4b37acc316a4f",
+      "resources_sha256": "7c0c69bde01910dde60205bc1417cd56a39e27affd2de36735dcedd6facd6155",
+      "size": [
+        64,
+        64
+      ],
+      "role": "Core Chemfuel: small manufactured-container outline and cap/edge shading only; no jerrycan proportions, hazard marks, fuel contents or metal body colour.",
+      "definition": {
+        "file": "D:\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs\\ThingDefs_Items\\Items_Resource_Manufactured.xml",
+        "sha256": "a13061a6b2ddf7d22e29583903a359fbe1a74c4a6b27ec634c4f054ed66a7f7a",
+        "xml": "<ThingDef ParentName=\"ResourceBase\">\n    <defName>Chemfuel</defName>\n    <label>chemfuel</label>\n    <description>A volatile liquid chemical. Used to fuel engines and rockets, or to transmute into propellant for projectiles, or as an incendiary weapon.</description>\n    <possessionCount>20</possessionCount>\n    <tickerType>Normal</tickerType>\n    <graphicData>\n      <texPath>Things/Item/Resource/Chemfuel</texPath>\n      <graphicClass>Graphic_Single</graphicClass>\n      <drawSize>0.85</drawSize>\n    </graphicData>\n    <stackLimit>150</stackLimit>\n    <healthAffectsPrice>false</healthAffectsPrice>\n    <intricate>true</intricate> \n    <statBases>\n      <MaxHitPoints>50</MaxHitPoints>\n      <MarketValue>2.3</MarketValue>\n      <Mass>0.05</Mass>\n      <Flammability>2.0</Flammability>\n      <DeteriorationRate>1.0</DeteriorationRate>\n    </statBases>\n    <thingCategories>\n      <li>Manufactured</li>\n    </thingCategories>\n    <comps>\n      <li Class=\"CompProperties_Explosive\">\n        <explosiveRadius>1.1</explosiveRadius>\n        <explosiveDamageType>Flame</explosiveDamageType>\n        <explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>\n        <startWickOnDamageTaken>\n          <li>Flame</li>\n        </startWickOnDamageTaken>\n        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>\n        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>\n        <preExplosionSpawnChance>1</preExplosionSpawnChance>\n        <wickTicks>70~150</wickTicks>\n      </li>\n    </comps>\n    <allowedArchonexusCount>100</allowedArchonexusCount>\n  </ThingDef>\n\n  "
+      }
+    }
+  ]
+}

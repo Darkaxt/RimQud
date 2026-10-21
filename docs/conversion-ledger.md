@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-CANTEEN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-RANDOM-BOTTLE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -91,8 +91,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-CANTEEN | Canteen | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
-| SCN-RANDOM-BOTTLE | Random Bottle | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CANTEEN | Canteen | UNFINISHED | - |  |
+| SCN-RANDOM-BOTTLE | Random Bottle | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-VASE | Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WINE-VASE | Wine Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WOVEN-BASKET | Woven Basket | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -3425,7 +3425,61 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canteen-body.png](../art/village/scenery/canteen-body.png), [art/village/scenery/canteen-detail.png](../art/village/scenery/canteen-detail.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: native_state_review. Process-log events: 9.
+
+- 2026-10-21T06:47:29.113966+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve round cloth-sheathed aluminum canteen from complete installed ancestry, actual source glyph and g/w palette. Declared liquid start/fill range has no alternate static exterior; unknown native dynamic state remains explicit.
+  Review: Resolve round cloth-sheathed aluminum canteen from complete installed ancestry, actual source glyph and g/w palette. Declared liquid start/fill range has no alternate static exterior; unknown native dynamic state remains explicit.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}, {"path": "art/conversion/scn-canteen/v1/native-definition.json", "sha256": "3df0f519f4195602af3c2ea52f566ea0df6489203e050ac43770ff5771b40d8d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:47:29.113966+00:00 / select_render_reference_or_document_no_equivalent / PASS: Select exact actual Core Cloth and Chemfuel only for restrained textile/manufactured-edge shading. Preserve round Qud jug, upper cap and short side loop; no jerrycan/bolt shape, labels, fuel or donor gameplay.
+  Review: Select exact actual Core Cloth and Chemfuel only for restrained textile/manufactured-edge shading. Preserve round Qud jug, upper cap and short side loop; no jerrycan/bolt shape, labels, fuel or donor gameplay.
+  Inputs: []
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/donor-references.json", "sha256": "d5aea88ca48af5b93141bb46eba0919fa543608664b32259bac8cf6e3cd5a796"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:50:16.257871+00:00 / construct_faithful_shape / REQUIRES REVIEW: Construct one round cloth-sheathed aluminum jug, connected cap/neck and short side loop, with editable complete shapes and source-specific g/w ownership. Actual manual review before generation.
+  Review: Construct one round cloth-sheathed aluminum jug, connected cap/neck and short side loop, with editable complete shapes and source-specific g/w ownership. Actual manual review before generation.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/construction.json", "sha256": "8334603aa13fa8f03a72ab5399ed8bfed1694d6ef0ea158cf956e35eb01795e1"}, {"path": "art/conversion/scn-canteen/v1/construction.svg", "sha256": "627f4ce38e2d38f383618170bd78995c65a8942ddc5fbdc4cb47fa142310015b"}, {"path": "art/conversion/scn-canteen/v1/construction.png", "sha256": "9a00d66a53a1e3ca00a922d71540555cb15c195980dd0f5a6c8f331f6ccc2084"}, {"path": "art/conversion/scn-canteen/v1/detail-weight.png", "sha256": "b84c37a7a1f028e8f86a9f989011f5a8d71b553a45eb14a32895fc790860e19c"}, {"path": "art/conversion/scn-canteen/v1/source-reference-construction.png", "sha256": "3a8434f336daf00146e17ab2fc259413489e2f4c8330a591398b89271d66d733"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:50:16.257871+00:00 / create_required_state_neighbor_variants / PASS: Document one fixed closed exterior for declared Canteen/Empty Canteen fill states. No alternate static tile or neighbor connection declared; do not invent open/window/fill-level art. Unknown native dynamic state retains fallback at final integration.
+  Review: Document one fixed closed exterior for declared Canteen/Empty Canteen fill states. No alternate static tile or neighbor connection declared; do not invent open/window/fill-level art. Unknown native dynamic state retains fallback at final integration.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}, {"path": "art/conversion/scn-canteen/v1/native-definition.json", "sha256": "3df0f519f4195602af3c2ea52f566ea0df6489203e050ac43770ff5771b40d8d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:52:19.491711+00:00 / construct_faithful_shape / PASS: Inspected the manual full canteen and found its first carry-hook disconnected. Patched closed cloth loop into body shoulder, with open center and complete cap/neck join. Exact geometry mask now has one connected component; loop center remains transparent. Actual contextual refinement still pending.
+  Review: Inspected the manual full canteen and found its first carry-hook disconnected. Patched closed cloth loop into body shoulder, with open center and complete cap/neck join. Exact geometry mask now has one connected component; loop center remains transparent. Actual contextual refinement still pending.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/construction.json", "sha256": "8334603aa13fa8f03a72ab5399ed8bfed1694d6ef0ea158cf956e35eb01795e1"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/construction-v2/construction.json", "sha256": "850bb1a2e9366d3331f13a9207e40af1da71fedc3055f6bf88b802590b8d85ca"}, {"path": "art/conversion/scn-canteen/v1/construction-v2/construction.svg", "sha256": "ce5872b29fac972814a06153c59514ac7d4feb75921ae94a810c06205abd0d9b"}, {"path": "art/conversion/scn-canteen/v1/construction-v2/construction.png", "sha256": "f049ac711ff1b773ac1bcbff387000be04355f05ed0b17d8ee4f60ce6c6b5d86"}, {"path": "art/conversion/scn-canteen/v1/construction-v2/refinement-input.png", "sha256": "e863fa2decc31606aed6b884184ffd9121d6d6697106e063adb662c0c40cc1eb"}, {"path": "art/conversion/scn-canteen/v1/construction-v2/loop-attachment-patch.png", "sha256": "1c74320aa5d24efb0783044772c0750604c7f2b2ecc2ea0d76bc43871f4fde8d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:58:37.729683+00:00 / refine_materials_and_form / PASS: Run one actual contextual refinement on the structurally patched manual canteen with exact actual Core material references. Inspect connected circular body/cap/loop, preserve raw output; select unmarked cloth/metal samples only.
+  Review: Run one actual contextual refinement on the structurally patched manual canteen with exact actual Core material references. Inspect connected circular body/cap/loop, preserve raw output; select unmarked cloth/metal samples only.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/construction-v2/construction.json", "sha256": "850bb1a2e9366d3331f13a9207e40af1da71fedc3055f6bf88b802590b8d85ca"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/generation-receipt.json", "sha256": "532556e9beafed442f9b480469f54e415c7b8bb1471ade383b93d68f253a267e"}, {"path": "art/conversion/scn-canteen/v1/context-refinement-raw.png", "sha256": "18eb8481d8d657d180876a084ba0c494e735c2d1cec433b07697c2edfe9e912a"}, {"path": "art/conversion/scn-canteen/v1/first-refinement-structural-review.json", "sha256": "d0763f37406f4244f42a886973ec106ddfbe2032ca567ce146d5affd7723ead1"}, {"path": "art/conversion/scn-canteen/v1/sample-inspection.png", "sha256": "839325e5dfe1b0d87d345d2d00c0e65a1e12ab6e2eaab1c44040d2df32a6c917"}, {"path": "art/conversion/scn-canteen/v1/material-selection.json", "sha256": "157cae09f30fc30d42084dd2c38c26049521b0aeff592e873de5bbfd0426c6ce"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:58:37.729683+00:00 / extract_register_color_coverage / REQUIRES REVIEW: Retain full manual canteen alpha/part joins and transfer bounded gray material inside it. Register full source-cell mapping with independent g/w planes and exact neutral RGBA recomposition. Actual intended-size review pending.
+  Review: Retain full manual canteen alpha/part joins and transfer bounded gray material inside it. Register full source-cell mapping with independent g/w planes and exact neutral RGBA recomposition. Actual intended-size review pending.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/construction-v2/construction.json", "sha256": "850bb1a2e9366d3331f13a9207e40af1da71fedc3055f6bf88b802590b8d85ca"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/registered/model.json", "sha256": "8a510c3912f1a3c25c5ea4b86068b495f6993cbcf32b899a87eb88b09b1907f5"}, {"path": "art/conversion/scn-canteen/v1/registered/registration-decisions.json", "sha256": "1b08a54bce66f46d043d37517f63364df901c8932d60d3aa249bae86fd5af1ba"}, {"path": "art/conversion/scn-canteen/v1/registered/conversion-comparison.png", "sha256": "1d621dff5ac3c58d3d604fd85fef9a421f629cf6072c99110f10b9b535a8f556"}, {"path": "art/conversion/scn-canteen/v1/registered/game-scale-review.png", "sha256": "1678e548fb0ab2a134dfc4bec233afd48097c92f67252737abedcff5d7a9b5f7"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T07:00:04.987450+00:00 / extract_register_color_coverage / PASS: Inspected original g/w glyph, exact scoped Core references, editable initial and corrected manual forms, actual contextual refinement, unmarked cloth/metal specimens, registered neutral/native conversion and16x24/32x48/64x96 views. Initial disconnected carry hook is rejected; final closed loop and tab join the shoulder, and cap/neck joins the continuous circular cloth-covered body. One actual refinement supplies bounded neutral material only. Complete manual alpha, seams, source-relative cell placement and cap/cloth role boundaries remain fixed; generated contours, chroma and faint off-object alpha are excluded. Neutral planes reconstruct recipient RGBA exactly without doubled coverage. Native g cloth and w cap stay source-exact. Same closed exterior covers declared fill states; unknown native dynamic paint/seal state keeps fallback at final integration. Generation authoring only.
+  Review: Inspected original g/w glyph, exact scoped Core references, editable initial and corrected manual forms, actual contextual refinement, unmarked cloth/metal specimens, registered neutral/native conversion and16x24/32x48/64x96 views. Initial disconnected carry hook is rejected; final closed loop and tab join the shoulder, and cap/neck joins the continuous circular cloth-covered body. One actual refinement supplies bounded neutral material only. Complete manual alpha, seams, source-relative cell placement and cap/cloth role boundaries remain fixed; generated contours, chroma and faint off-object alpha are excluded. Neutral planes reconstruct recipient RGBA exactly without doubled coverage. Native g cloth and w cap stay source-exact. Same closed exterior covers declared fill states; unknown native dynamic paint/seal state keeps fallback at final integration. Generation authoring only.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/registered/model.json", "sha256": "8a510c3912f1a3c25c5ea4b86068b495f6993cbcf32b899a87eb88b09b1907f5"}, {"path": "art/conversion/scn-canteen/v1/registered/registration-decisions.json", "sha256": "1b08a54bce66f46d043d37517f63364df901c8932d60d3aa249bae86fd5af1ba"}, {"path": "art/conversion/scn-canteen/v1/registered/primary-neutral.png", "sha256": "cbf4d0c9a05cfbc2ef169789788ab80608dd4e6e45d3d2bb90b937655bd565e1"}, {"path": "art/conversion/scn-canteen/v1/registered/detail-neutral.png", "sha256": "5a2a0c010d899ba8792060a384ecbffeff23b55f8b205c08b58ade485ee4d877"}, {"path": "art/conversion/scn-canteen/v1/registered/coverage.png", "sha256": "276894eac48825b6bb3d52fbf55bdaa9e9227a958f7d801ee0956c23cac8d7d4"}, {"path": "art/conversion/scn-canteen/v1/registered/detail-weight.png", "sha256": "85ca5f56b89272641560516277c780d3cbdf83d3870ee4f75d878eb0df54b90d"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T07:00:04.987450+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspected original g/w glyph, exact scoped Core references, editable initial and corrected manual forms, actual contextual refinement, unmarked cloth/metal specimens, registered neutral/native conversion and16x24/32x48/64x96 views. Initial disconnected carry hook is rejected; final closed loop and tab join the shoulder, and cap/neck joins the continuous circular cloth-covered body. One actual refinement supplies bounded neutral material only. Complete manual alpha, seams, source-relative cell placement and cap/cloth role boundaries remain fixed; generated contours, chroma and faint off-object alpha are excluded. Neutral planes reconstruct recipient RGBA exactly without doubled coverage. Native g cloth and w cap stay source-exact. Same closed exterior covers declared fill states; unknown native dynamic paint/seal state keeps fallback at final integration. Generation authoring only.
+  Review: Inspected original g/w glyph, exact scoped Core references, editable initial and corrected manual forms, actual contextual refinement, unmarked cloth/metal specimens, registered neutral/native conversion and16x24/32x48/64x96 views. Initial disconnected carry hook is rejected; final closed loop and tab join the shoulder, and cap/neck joins the continuous circular cloth-covered body. One actual refinement supplies bounded neutral material only. Complete manual alpha, seams, source-relative cell placement and cap/cloth role boundaries remain fixed; generated contours, chroma and faint off-object alpha are excluded. Neutral planes reconstruct recipient RGBA exactly without doubled coverage. Native g cloth and w cap stay source-exact. Same closed exterior covers declared fill states; unknown native dynamic paint/seal state keeps fallback at final integration. Generation authoring only.
+  Inputs: [{"path": "art/conversion/scn-canteen/v1/source-packet.json", "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"}]
+  Outputs: [{"path": "art/conversion/scn-canteen/v1/registered/conversion-comparison.png", "sha256": "1d621dff5ac3c58d3d604fd85fef9a421f629cf6072c99110f10b9b535a8f556"}, {"path": "art/conversion/scn-canteen/v1/registered/game-scale-review.png", "sha256": "1678e548fb0ab2a134dfc4bec233afd48097c92f67252737abedcff5d7a9b5f7"}, {"path": "art/conversion/scn-canteen/v1/registered/authoring-review.json", "sha256": "fb846ffe7b51ea199828cd03cd72d2f334dae2dd0287a11f514c95f1fbb938a7"}, {"path": "art/conversion/scn-canteen/v1/artifact-manifest.json", "sha256": "ff174f570fa84b28ffc780953dbfbaae39d9a0a215523064e8266ff030236454"}]
+  Method/prompt/corrections: {}
 
 ### SCN-RANDOM-BOTTLE: Random Bottle
 
@@ -3435,7 +3489,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/random-bottle-body.png](../art/village/scenery/random-bottle-body.png), [art/village/scenery/random-bottle-detail.png](../art/village/scenery/random-bottle-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-VASE: Vase
 

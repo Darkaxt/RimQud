@@ -1,0 +1,117 @@
+{
+  "entry": "SCN-CANTEEN",
+  "blueprint": "Canteen",
+  "kind": "fixed_source_dualcolor_container",
+  "source": {
+    "path": "art/conversion/scn-canteen/v1/source-packet.json",
+    "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"
+  },
+  "construction": {
+    "path": "art/conversion/scn-canteen/v1/construction-v2/construction.json",
+    "sha256": "850bb1a2e9366d3331f13a9207e40af1da71fedc3055f6bf88b802590b8d85ca"
+  },
+  "refinement": {
+    "path": "art/conversion/scn-canteen/v1/generation-receipt.json",
+    "sha256": "532556e9beafed442f9b480469f54e415c7b8bb1471ade383b93d68f253a267e"
+  },
+  "material": {
+    "path": "art/conversion/scn-canteen/v1/material-selection.json",
+    "sha256": "157cae09f30fc30d42084dd2c38c26049521b0aeff592e873de5bbfd0426c6ce"
+  },
+  "structural_review": {
+    "path": "art/conversion/scn-canteen/v1/first-refinement-structural-review.json",
+    "sha256": "d0763f37406f4244f42a886973ec106ddfbe2032ca567ce146d5affd7723ead1"
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "master": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "pivot": [
+      8,
+      12
+    ],
+    "world": [
+      0.6666666666666666,
+      1
+    ],
+    "policy": "Full original cell mapping, no object-bound fit. Recipient square texture is UV-compressed vertically relative to authoring; existing rectangular Qud world quad restores isotropic physical pixels."
+  },
+  "palette": {
+    "primary": "g",
+    "detail": "w",
+    "primary_rgb": "009403",
+    "detail_rgb": "98875f",
+    "meaning": "Source green cloth body/side loop; native w cap/exposed neck is tan-gray, not automatically silver white. Aluminum and cloth are materials, palette codes remain exact."
+  },
+  "states": {
+    "liquid": {
+      "Name": "LiquidVolume",
+      "MaxVolume": "64",
+      "Volume": "64",
+      "StartVolume": "1d65-1",
+      "InitialLiquid": "water-1000",
+      "ManualSeal": "true"
+    },
+    "static_tiles": "Inspected complete ancestry declares one fixed Canteen tile. Empty Canteen changes StartVolume only; no alternate static exterior is declared.",
+    "mapping": "Reuse the same closed exterior for declared fill range, without painting exposed water, inventing an open lid/fill-level window or liquid animation. Actual current fill/seal and dynamic liquid painting are not exported; unsupported native state must retain native fallback at final integration."
+  },
+  "camera": "One fixed cardinal map-icon view, front of circular canteen; mild controlled cap top shading only. No object turnaround required for this fixed container entry.",
+  "views": {
+    "south": {
+      "primary": {
+        "path": "art/conversion/scn-canteen/v1/registered/primary-neutral.png",
+        "sha256": "cbf4d0c9a05cfbc2ef169789788ab80608dd4e6e45d3d2bb90b937655bd565e1"
+      },
+      "detail": {
+        "path": "art/conversion/scn-canteen/v1/registered/detail-neutral.png",
+        "sha256": "5a2a0c010d899ba8792060a384ecbffeff23b55f8b205c08b58ade485ee4d877"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-canteen/v1/registered/coverage.png",
+        "sha256": "276894eac48825b6bb3d52fbf55bdaa9e9227a958f7d801ee0956c23cac8d7d4"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-canteen/v1/registered/detail-weight.png",
+        "sha256": "85ca5f56b89272641560516277c780d3cbdf83d3870ee4f75d878eb0df54b90d"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-canteen/v1/registered/detail-coverage.png",
+        "sha256": "8eba2163a32f13e4f23a0cc06b40ff92ca7dfa4111a57543dfcafc696855fe83"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-canteen/v1/registered/authored-dualcolor-mask.png",
+        "sha256": "a8f60c299af2efbfa22b7eceb9e691c05e31c50e12475ba7a93469c55725bff7"
+      },
+      "canvas": [
+        256,
+        256
+      ],
+      "authoring_canvas": [
+        512,
+        768
+      ],
+      "source_cell": [
+        16,
+        24
+      ],
+      "authored_anchor": [
+        8,
+        12
+      ],
+      "native_bound_proposal": true,
+      "native_activation": false
+    }
+  },
+  "native_behavior": "Native liquid fill/seal/capacity and dynamic state stay authoritative. Unknown alternate painting retains native fallback at final integration.",
+  "native_activation": false,
+  "native_acceptance": "Pending full-generation gate: actual static canteen/empty exterior, source palette/coverage, liquid/seal state and native fallback. No game/harness validation during authoring."
+}

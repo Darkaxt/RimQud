@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-21T06:50:16.257871+00:00",
+  "manual": {
+    "path": "art/conversion/scn-canteen/v1/construction.svg",
+    "sha256": "627f4ce38e2d38f383618170bd78995c65a8942ddc5fbdc4cb47fa142310015b"
+  },
+  "source": {
+    "path": "art/conversion/scn-canteen/v1/source-packet.json",
+    "sha256": "7adaa94c3c2f91804a18ccf744f3b962a4dbb864e2bacf2cebde25b2acf2ced4"
+  },
+  "frame": {
+    "canvas": [
+      512,
+      768
+    ],
+    "pivot": [
+      256,
+      384
+    ],
+    "world": [
+      0.6666666666666666,
+      1
+    ],
+    "width_cells": 1,
+    "height_world": 1,
+    "pixel_world_size": 0.0013020833333333333,
+    "meaning": "Authoring cell frame follows original16x24 rectangular Qud cell at isotropic world pixel scale. Circle/cap/loop remains at source-relative location; no native measured jug volume inferred."
+  },
+  "parts": {
+    "body": "Round continuous cloth-covered jug face, centered240,432/radius144. Central cloth reinforcement and quiet double seam; original ring glyph does not become a hole.",
+    "cap": "Short knurled aluminum screw-cap at top and a connected short neck. No detached floating cap or glass bottle lip.",
+    "loop": "Short attached cloth carry loop at upper right, primary g. No long shoulder strap or donor handle/jerrycan shape."
+  },
+  "ownership": "Full source silhouette and cloth/aluminum parts retained. Body covers lower neck; no cap stroke crosses the cloth. Native g primary and w cap roles independent.",
+  "states": {
+    "liquid": {
+      "Name": "LiquidVolume",
+      "MaxVolume": "64",
+      "Volume": "64",
+      "StartVolume": "1d65-1",
+      "InitialLiquid": "water-1000",
+      "ManualSeal": "true"
+    },
+    "static_tiles": "Inspected complete ancestry declares one fixed Canteen tile. Empty Canteen changes StartVolume only; no alternate static exterior is declared.",
+    "mapping": "Reuse the same closed exterior for declared fill range, without painting exposed water, inventing an open lid/fill-level window or liquid animation. Actual current fill/seal and dynamic liquid painting are not exported; unsupported native state must retain native fallback at final integration."
+  },
+  "camera": "One fixed cardinal map-icon view, front of circular canteen; mild controlled cap top shading only. No object turnaround required for this fixed container entry.",
+  "geometry_policy": "Manual geometry controls silhouette, connectivity, seams and palette ownership. Actual ImageGen may supply restrained local material/outline refinement; any proposed contour is reviewed before selection. No second isolation generation."
+}

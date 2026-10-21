@@ -8,7 +8,32 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, ray-cat and fish assemblies): the
+Current authoring checkpoint (2026-10-21, Canteen): `scn-canteen/v1/registered`
+is generation-ready. Complete installed Canteen/WaterContainer ancestry, actual
+round source glyph, native g/w palette and liquid/seal declarations preceded
+construction. Actual Core Cloth_a/Chemfuel textures supply textile and container
+edge grammar only; the Qud jug remains round rather than a bolt or jerrycan.
+Editable geometry preserves the cloth-covered aluminum body, short connected
+cap/neck and upper-right cloth loop. The first disconnected carry-hook suggestion
+was rejected before generation; a closed loop/tab was joined to the shoulder.
+One actual contextual ImageGen refinement followed that patch. Only inspected
+unmarked cloth/metal specimens supply bounded grayscale microtexture; the full
+manual alpha, seams, cell-relative placement and material regions stay fixed.
+Generated contours, chroma and faint off-object alpha are excluded. Independent
+neutral g/w planes reconstruct recipient RGBA exactly. Source16x24 -> manual
+512x768 -> recipient256square UV mapping retains the physical rectangular cell;
+no object-bounds fit or detached cap/loop remains. Native g green cloth and w
+cap roles were reviewed at16x24/32x48/64x96. Empty Canteen changes fill only in
+inspected definitions, so no alternate static exterior was invented. Actual
+unknown dynamic liquid/seal painting retains native fallback at final integration.
+
+There are 137 generation-ready entries out of 156. All remain unfinished for
+native acceptance. Nineteen generation entries remain: four containers, six
+signs/shrine, canvas wall and eight source-based exclusion reviews. Stage 3 is
+the sole ACTIVE stage and `SCN-RANDOM-BOTTLE` is the sole active entry. No native
+validation, gameplay change or release was performed at this authoring checkpoint.
+
+Prior authoring checkpoint (2026-10-21, ray-cat and fish assemblies): the
 accepted Ray Cat design is generation-ready under
 `body-ray-cat/v1/registered-v3`, and named Ctesiphus under `npc-ctesiphus/v1`.
 All three selected historical generated images are byte-exact recovered outputs;

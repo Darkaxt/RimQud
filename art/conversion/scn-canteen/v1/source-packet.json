@@ -1,0 +1,87 @@
+{
+  "entry": "SCN-CANTEEN",
+  "recorded_at": "2026-10-21T06:47:29.113966+00:00",
+  "identity": "Canteen -> WaterContainer",
+  "description": "A jug of aluminum has been sheathed in an olive green cloth for waterkeeping.",
+  "definition": {
+    "path": "art/conversion/scn-canteen/v1/native-definition.json",
+    "sha256": "3df0f519f4195602af3c2ea52f566ea0df6489203e050ac43770ff5771b40d8d"
+  },
+  "original": {
+    "tile": "Items/sw_canteen.png",
+    "description": "A jug of aluminum has been sheathed in an olive green cloth for waterkeeping.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "canteen",
+      "RenderString": "168",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "ColorString": "&g",
+      "Tile": "Items/sw_canteen.png",
+      "TileColor": "&g",
+      "DetailColor": "w"
+    },
+    "kind": "scenery",
+    "blueprint": "Canteen",
+    "reference_file": "village-originals/canteen-reference.png",
+    "native_mask_sha256": "2f6fffe43c57374bafc353de71304906318b7ebbcdf5f86afe7feb3b1ad7c688",
+    "reference_sha256": "5f7fac126706fc54f5a62b4984912b89d58aa077b8ddfcf0dd954df310cd470e",
+    "info_id": 9373,
+    "atlas_id": 185,
+    "rect": [
+      810,
+      208,
+      16,
+      24
+    ],
+    "private_mask": {
+      "file": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\canteen-mask.png",
+      "sha256": "2f6fffe43c57374bafc353de71304906318b7ebbcdf5f86afe7feb3b1ad7c688"
+    }
+  },
+  "palette": {
+    "primary": "g",
+    "detail": "w",
+    "primary_rgb": "009403",
+    "detail_rgb": "98875f",
+    "meaning": "Source green cloth body/side loop; native w cap/exposed neck is tan-gray, not automatically silver white. Aluminum and cloth are materials, palette codes remain exact."
+  },
+  "donor": {
+    "path": "art/conversion/scn-canteen/v1/donor-references.json",
+    "sha256": "d5aea88ca48af5b93141bb46eba0919fa543608664b32259bac8cf6e3cd5a796"
+  },
+  "source_shape": "Small round-bodied jug, short top cap, circular cloth-covered face with central reinforcement and a short loop to upper right. Glyph gaps/isolated interior strokes do not establish holes through the physical flask or a disconnected cap.",
+  "camera": "One fixed cardinal map-icon view, front of circular canteen; mild controlled cap top shading only. No object turnaround required for this fixed container entry.",
+  "states": {
+    "liquid": {
+      "Name": "LiquidVolume",
+      "MaxVolume": "64",
+      "Volume": "64",
+      "StartVolume": "1d65-1",
+      "InitialLiquid": "water-1000",
+      "ManualSeal": "true"
+    },
+    "static_tiles": "Inspected complete ancestry declares one fixed Canteen tile. Empty Canteen changes StartVolume only; no alternate static exterior is declared.",
+    "mapping": "Reuse the same closed exterior for declared fill range, without painting exposed water, inventing an open lid/fill-level window or liquid animation. Actual current fill/seal and dynamic liquid painting are not exported; unsupported native state must retain native fallback at final integration."
+  },
+  "frame": {
+    "canvas": [
+      512,
+      768
+    ],
+    "pivot": [
+      256,
+      384
+    ],
+    "world": [
+      0.6666666666666666,
+      1
+    ],
+    "width_cells": 1,
+    "height_world": 1,
+    "pixel_world_size": 0.0013020833333333333,
+    "meaning": "Authoring cell frame follows original16x24 rectangular Qud cell at isotropic world pixel scale. Circle/cap/loop remains at source-relative location; no native measured jug volume inferred."
+  },
+  "boundaries": "Cloth and aluminum materials only. No human body, hand fit, clothing framework, furniture rotation or gameplay state implementation. Do not change water/seal/capacity.",
+  "current_state": "Source/reference resolved; construct editable silhouette and region masks next."
+}
