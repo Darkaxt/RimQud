@@ -1,0 +1,137 @@
+{
+  "entry": "SCN-JOPPARESHEPHSHRINE",
+  "identity": "JoppaReshephShrine -> SultanShrine -> MountedFurniture -> Furniture -> InorganicObject -> PhysicalObject -> Object",
+  "declared_description": "",
+  "ancestry": {
+    "JoppaReshephShrine": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"JoppaReshephShrine\" Inherits=\"SultanShrine\">\n    <part Name=\"Render\" DisplayName=\"shrine to Resheph\" RenderString=\"|\" ColorString=\"&amp;y^k\" Occluding=\"false\" Tile=\"Terrain/tile_tombstone1.png\" />\n    <part Name=\"Epithets\" Primary=\", the Last Sultan\" />\n    <part Name=\"SultanShrine\" PresetGospelByProperty=\"JoppaShrine\" />\n    <part Name=\"ZoneLandmarkObject\" Preposition=\"by\" Radius=\"6\" />\n    <tag Name=\"HasPregeneratedName\" />\n    <tag Name=\"PregeneratedSultanName\" Value=\"Resheph\" />\n    <tag Name=\"Worshippable\" />\n    <tag Name=\"WorshippedAs\" Value=\"Resheph\" />\n    <tag Name=\"WorshipFaction\" Value=\"Resheph\" />\n    <tag Name=\"WorshipPower\" Value=\"3\" />\n    <tag Name=\"WorshipColorString\" Value=\"&amp;Y\" />\n    <tag Name=\"WorshipDetailColor\" Value=\"C\" />\n    <tag Name=\"WorshipColorPool\" Value=\"*delete\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n  </object>"
+    },
+    "SultanShrine": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"SultanShrine\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"shrine\" RenderString=\"228\" ColorString=\"&amp;y\" DetailColor=\"g\" Occluding=\"true\" Tile=\"Terrain/tile_tombstone1.png\" RenderLayer=\"8\"/>\n    <part Name=\"Physics\" Weight=\"10000\" FlameTemperature=\"99999\" VaporTemperature=\"1500\" Solid=\"true\" />\n    <stat Name=\"AV\" Value=\"20\" />\n    <stat Name=\"Hitpoints\" Value=\"6000\" />\n    <part Name=\"SultanShrine\" />\n    <part Name=\"Shrine\" />\n    <part Name=\"RandomSubterraneanColors\" DetailColor=\"r,c,w,Y\" />\n    <part Name=\"SmartuseTwiddles\" />\n    <part Name=\"Description\" Short=\"\" />\n    <removepart Name=\"MissileCover\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"VaporObject\" Value=\"LavaPuddle\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;m^k\" />\n    <tag Name=\"NoVillageStrip\" />\n    <tag Name=\"WorshipColorPool\" Value=\"Sultans\" />\n    <tag Name=\"QuestableVerb\" Value=\"pray at,desecrate\" />\n    <tag Name=\"QuestableEvent\" Value=\"Prayed,Desecrated\" />\n  </object>"
+    },
+    "MountedFurniture": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>"
+    },
+    "Furniture": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    "InorganicObject": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    "PhysicalObject": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    }
+  },
+  "native_states": {
+    "path": "art/conversion/scn-joppareshephshrine/blender-v1/native-state-index.json",
+    "sha256": "d4255b6e6183df457cbe12d29bfcaff2d57eda65fd8a0f0032f4423362b7d801"
+  },
+  "native_code": {
+    "SultanShrine": {
+      "path": "E:/Temp/rimqud-native-shrine-20261021/SultanShrine.cs",
+      "sha256": "6f00bc2a57836b775d6cd5c62c1be6b2d30806f88148b41f08af40593bc2ca2e"
+    },
+    "Shrine": {
+      "path": "E:/Temp/rimqud-native-shrine-20261021/Shrine.cs",
+      "sha256": "fbcde27d6ea06a71f9c021e3e46daf109870bbc40eaf44fb005d713f76ddb938"
+    },
+    "RandomSubterraneanColors": {
+      "path": "E:/Temp/rimqud-native-shrine-20261021/RandomSubterraneanColors.cs",
+      "sha256": "730334d4b54a9ebe8ab90fd749164dc5be6a8ac3d6989e52de8e20eee7026779"
+    }
+  },
+  "source_resolution": {
+    "catalogue_tile": "Terrain/tile_tombstone1.png",
+    "preinitialization_fallbacks": [
+      "terrain/sw_tombstone_1.bmp",
+      "terrain/sw_tombstone_2.bmp",
+      "terrain/sw_tombstone_3.bmp",
+      "terrain/sw_tombstone_4.bmp"
+    ],
+    "normal_resheph_tile": "Terrain/sw_resheph_sultanstatue.bmp",
+    "reason": "EnteredCell assigns one of four native tombstones, then ShrineInitialize selects the named Resheph statue when a historical snapshot is available. Declared catalogue icon alone is not the stable native identity.",
+    "gospel": "Description is supplied from native sultan history and JoppaShrine gospel; do not invent a fixed historical scene or inscription."
+  },
+  "palette": {
+    "primary": "Declared ColorString y, black background k; no TileColor override declared",
+    "detail": "Declared g, with native RandomSubterraneanColors DetailColor r,c,w,Y for inside zones only",
+    "worship": "Native WorshipColorString Y / WorshipDetailColor C; preserve event-owned appearance",
+    "rule": "Use semantic neutral primary/detail and one coverage; do not freeze all runtime states to a single preview palette."
+  },
+  "native_behavior": {
+    "preset_gospel_by_property": "JoppaShrine",
+    "pregenerated_name": "Resheph",
+    "epithet": "the Last Sultan",
+    "worship_faction": "Resheph",
+    "worship_power": 3,
+    "quest_events": [
+      "Prayed",
+      "Desecrated"
+    ],
+    "zone_landmark_radius": 6,
+    "solid": true,
+    "takeable": false,
+    "occluding": false,
+    "render_layer": 8,
+    "scope": "Keep native history initialization, look/reveal, worship, interior random-color behavior and solid mounted-furniture ownership. No new animation, clock or history content.",
+    "default_initialized": false,
+    "current_runtime_initialized": "Not captured this turn"
+  },
+  "donor_reference": {
+    "name": "Vanilla Textures Expanded LargeSteleA",
+    "package_id": "VanillaExpanded.VTEXE",
+    "workshop_id": "2016436324",
+    "asset": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/LargeSteleA.png",
+      "sha256": "f117e138956b1444dbd3afd361f07453b98b4c3fa598dcb11c00313693166264"
+    },
+    "about": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/About/About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "role": "Actual installed neutral engraved-monument shading/edge reference only; do not copy its slab silhouette, iconography, size or gameplay."
+  },
+  "authored_interpretation": "Pending inspection of all six actual source masks. Stone-like surface and hidden depth will be explicit construction estimates, not recovered native dimensions.",
+  "view_contract": {
+    "required": [
+      "south",
+      "east",
+      "north"
+    ],
+    "reason": "MountedFurniture ancestry requires complete cardinal authoring views. Source-supported tile state stays native, auxiliary facings do not establish native direction dispatch.",
+    "frame": "Each source16x24 cell retains common full-cell registration and anchor; physical model rotation rather than per-facing bounds resizing."
+  },
+  "next_action": "Inspect six decoded masks and model their source-supported distinct silhouettes/material roles. No geometry or generation-ready credit yet.",
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate",
+  "captured_prior_runtime": {
+    "path": "evidence/joppa-stage3-result.json",
+    "sha256": "ea0644244baa66b36487950e0b1741b7a84e95aeee5162595bf45711c8a2aa96",
+    "observed_tile": "terrain/sw_tombstone_3.bmp",
+    "scope": "Historical diagnostic capture retained native fallback; it does not prove current shrine initialization or a normal-world appearance."
+  }
+}

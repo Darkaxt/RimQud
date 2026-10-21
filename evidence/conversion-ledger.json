@@ -67047,7 +67047,7 @@
       ],
       "disposition": "Convert and review",
       "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "current_step": "construct_faithful_shape",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -67059,7 +67059,7 @@
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Actual shrine initialization selects a Resheph statue; six source masks resolved, geometry and cardinal/material authoring still required."
       ],
       "metadata": {
         "description": {
@@ -67116,7 +67116,86 @@
           "sha256": "d8b87c56a471967b027ef6d6d692f92376801c16de39624ecf9f3ccfe732c908"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:48:39.437216+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve shrine ancestry, actual initialization/statue tile replacement, interior random colors and worship ownership; extract all six source masks.",
+          "inputs": [
+            {
+              "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/Managed/Assembly-CSharp.dll",
+              "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+            },
+            {
+              "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/resources.assets",
+              "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+            },
+            {
+              "path": "E:/Temp/rimqud-native-shrine-20261021/SultanShrine.cs",
+              "sha256": "6f00bc2a57836b775d6cd5c62c1be6b2d30806f88148b41f08af40593bc2ca2e"
+            },
+            {
+              "path": "E:/Temp/rimqud-native-shrine-20261021/Shrine.cs",
+              "sha256": "fbcde27d6ea06a71f9c021e3e46daf109870bbc40eaf44fb005d713f76ddb938"
+            },
+            {
+              "path": "E:/Temp/rimqud-native-shrine-20261021/RandomSubterraneanColors.cs",
+              "sha256": "730334d4b54a9ebe8ab90fd749164dc5be6a8ac3d6989e52de8e20eee7026779"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/resolve-source.py",
+              "sha256": "ecfd02be4fa5a21908eb7abc7b18b4a164aa91313c9a786ecde85bb0695a4390"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-packet.json",
+              "sha256": "5e13f29f32522a0a7fb05930a6f2b30ccbbba9165d42a0dd2d86b943d8387e6b"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/native-state-index.json",
+              "sha256": "d4255b6e6183df457cbe12d29bfcaff2d57eda65fd8a0f0032f4423362b7d801"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-state-reference-comparison.png",
+              "sha256": "d17586d967a6d23c47cc10d55b77c0c50a4dd98be0e2ee9d23befefaeb2c97b1"
+            }
+          ],
+          "review": "Catalogue fallback is not the normal Resheph appearance. Exact six native source shapes and code are retained; construction remains required and native behavior is not replaced.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:48:39.437216+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual installed VTE LargeSteleA for restrained engraved monument materials and edges only.",
+          "inputs": [
+            {
+              "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Furniture/LargeSteleA.png",
+              "sha256": "f117e138956b1444dbd3afd361f07453b98b4c3fa598dcb11c00313693166264"
+            },
+            {
+              "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/About/About.xml",
+              "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-packet.json",
+              "sha256": "5e13f29f32522a0a7fb05930a6f2b30ccbbba9165d42a0dd2d86b943d8387e6b"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/native-state-index.json",
+              "sha256": "d4255b6e6183df457cbe12d29bfcaff2d57eda65fd8a0f0032f4423362b7d801"
+            },
+            {
+              "path": "art/conversion/scn-joppareshephshrine/blender-v1/source-state-reference-comparison.png",
+              "sha256": "d17586d967a6d23c47cc10d55b77c0c50a4dd98be0e2ee9d23befefaeb2c97b1"
+            }
+          ],
+          "review": "Catalogue fallback is not the normal Resheph appearance. Exact six native source shapes and code are retained; construction remains required and native behavior is not replaced.",
+          "result": "PASS"
+        }
+      ]
     },
     {
       "id": "SCN-PEPPERSIGN2",
@@ -82230,7 +82309,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T13:42:08.268294+00:00",
+  "updated_at": "2026-10-21T13:48:39.437216+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

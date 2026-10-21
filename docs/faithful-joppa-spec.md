@@ -1,5 +1,23 @@
 # Faithful Joppa art and body specification
 
+User-directed stop boundary (2026-10-21): finish the current remaining generation
+and fully check the complete conversion set in game, then PAUSE before redesigning
+the art/body/equipment procedure. Do not begin another blanket rebuild or apply
+the proposed body redesign during the present test. Keep native acceptance
+findings and the editable assets as evidence for that discussion. This is a
+conditional future pause, not a request to stop the current generation now.
+
+Next redesign brief, not current implementation: target a more RimWorld-like
+presentation with simplified bodies, floating hands rather than detailed arms
+and legs, and simpler equipment attachments. The user has a custom Human NPC
+model to supply as the intended base. Discuss that actual model before choosing
+the replacement implementation. Prefer a lightly indicated animal-like lower
+body without excessive anatomical detail; extra arms/legs should not dominate
+the visual workflow, with extra heads considered where needed. Native mutation
+mechanics and supported behavior are not removed by this visual direction.
+No replacement assets, body invalidation or renderer changes are authorized by
+recording this future brief. Preserve the current generation/native-test scope.
+
 User-selected route (2026-10-21): **ART-BLENDER-FIRST** applies to remaining and
 revised items/equipment/objects, including garments, furniture, machinery,
 vegetation and appropriate map-plane surfaces. Shape/attachment/view fidelity
@@ -33,6 +51,20 @@ saved/shared dependencies and resume rules. There are146 generation-ready entrie
 and10 pending: Resheph's shrine, CanvasWall and eight source-based exclusion
 reviews. Every entry remains unfinished for native acceptance. Continue the
 shrine without opening native validation or another implementation stage.
+
+Active shrine source correction (2026-10-21): installed SultanShrine code changes
+the declared catalogue `Terrain/tile_tombstone1.png` to one of four temporary
+`terrain/sw_tombstone_1..4.bmp` choices, then selects
+`Terrain/sw_resheph_sultanstatue.bmp` for Resheph when history initialization has
+the required snapshot. The earlier diagnostic observed tombstone3 as native
+fallback; it does not establish the normal statue appearance or current runtime
+initialization. All six actual masks and exact source/code hashes are now retained
+in `scn-joppareshephshrine/blender-v1`, with source/reference images in the report.
+No shrine construction or readiness is claimed yet. Preserve native gospel/look
+revelation, shrine/worship and inside-only random-detail behavior; the declared
+y/g preview is not a fixed palette for every runtime state. Next work is distinct
+source-supported shape construction, rather than modeling only the catalogue
+fallback. Stage3 and this shrine remain the sole active stage/entry.
 
 Prior sign checkpoint (2026-10-21): ArgyveSign is generation-ready under
 `scn-argyvesign/blender-v2/registered`. Its saved physical clay plaque, two rear
