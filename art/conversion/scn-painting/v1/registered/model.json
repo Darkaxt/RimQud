@@ -1,0 +1,424 @@
+{
+  "entry": "SCN-PAINTING",
+  "blueprint": "Painting",
+  "kind": "source-bound two-design furniture turnaround with native palette roles",
+  "source": {
+    "path": "art/conversion/scn-painting/v1/source-packet.json",
+    "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+  },
+  "native_states": {
+    "path": "art/conversion/scn-painting/v1/native-state-index.json",
+    "sha256": "254046589a39a18a462aeb9d4abeb5f4226171422de9c5ee01a489e1421664d1"
+  },
+  "construction": {
+    "path": "art/conversion/scn-painting/v1/construction-v2/construction-controls.json",
+    "sha256": "418c1ce1f0aac1d38fe4153c639c7722f1863f15d3e942b54f6e2a3ac9e003f6"
+  },
+  "refinement": {
+    "path": "art/conversion/scn-painting/v1/generation-receipt.json",
+    "sha256": "e92e77c33e6389422ddba52bd91c698ab688257f59b25a00b9158ddde694930a"
+  },
+  "first_structural_review": {
+    "path": "art/conversion/scn-painting/v1/first-structural-review.json",
+    "sha256": "57ace5441dd981e6310dcda80b64ed193013f6bba305494079ad0db89770a29e"
+  },
+  "material_selection": {
+    "path": "art/conversion/scn-painting/v1/material-selection.json",
+    "sha256": "99ad549d327d09a40f1d15d8e6437868677dedbd7b30bf67cd62b955ccbc4636"
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "master": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "common_pivot": [
+      256,
+      712
+    ],
+    "policy": "Shared full source-cell frame for both designs/all views; no individual alpha-bounds fitting. Projected support contact varies naturally with shared depth/camera, not independent recentering."
+  },
+  "camera": {
+    "elevation_degrees": 14,
+    "physical_dimensions": {
+      "front_foot_span": 11.6,
+      "depth": 5.6,
+      "canvas_thickness": 0.36,
+      "leg_thickness": 0.52,
+      "source_unit_in_cells": 0.0625
+    },
+    "provenance": "Canvas aspect/height, ledge, spreading legs and abstract two-role motifs follow each native tile. Hidden easel depth, tilt, stretcher and rear brace are authored estimates. Actual Lectern Graphic_Multi drawSize/size1x1 is rendering context only; no donor ratio copied.",
+    "contract": "Front feet y=1, rear foot y=-4.6; shared14-degree shallow map-camera, not edge-on elevations. Profile retains tilted panel thickness and spread stand. No independent bounds fit or side compression."
+  },
+  "palette": {
+    "declared_tile_primary": "w",
+    "declared_detail": "R",
+    "random_glyph_main": [
+      "m",
+      "W",
+      "r",
+      "R",
+      "b",
+      "B",
+      "g",
+      "G"
+    ],
+    "random_detail": [
+      "m",
+      "W",
+      "r",
+      "R",
+      "b",
+      "B",
+      "g",
+      "G"
+    ],
+    "effective_tile_primary": "w: RandomColors.MainColor changes ColorString only. TileColor is unspecified on the builder, so declared Render.TileColor=&w remains and Cell prefers it for tile rendering.",
+    "effective_detail": "Native creation chooses one of eight DetailColor values independently of glyph MainColor (PairDetailWithForeground defaults false). Declared R is a fallback/example, not every painting.",
+    "ownership": "Opaque source R=0 is primary, R=255 detail; A is object coverage. Keep masks separate and apply runtime values. No palette clocks or resampling of native random choices.",
+    "evidence": [
+      {
+        "path": "E:/Temp/rimqud-native-painting-20261021/RandomColors.cs",
+        "sha256": "319ff7640f7d672335fb8c33a6583f9b0010c7ff8fbe961eca87dc4561208866"
+      },
+      {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/scratch/inspect/XRL.World.Cell.decompiled.cs",
+        "sha256": "8537fcec4e09b64276122526155be72219bb6f56e27e541ccaeb1c8f254f350f"
+      }
+    ]
+  },
+  "state_owner": "Native RandomTile selects one of two designs. RandomColors sets glyph ColorString independently; tile primary remains declared w, detail one of m/W/r/R/b/B/g/G. Preserve captured/runtime values; no authored animation/palette timer.",
+  "reverse": "Unpainted linen/stretcher/rear brace, authored unseen structure; source front motif never mirrored onto reverse.",
+  "non_applicable": "Equipment/clothing assembly is not applicable to Painting; no inventory outfit or fabricated body fit.",
+  "native_activation": false,
+  "native_acceptance": "Pending integrated Stage3 after every pending entry is generated: exact tile choice, runtime palette, visibility and cell mapping. Only current bound fixed map view is a binding candidate; other furniture views are unbound authoring.",
+  "states": [
+    {
+      "id": "design-1",
+      "native_tile": "Items/sw_painting_1.bmp",
+      "role": "Native RandomTile choice",
+      "views": {
+        "south": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/master-neutral.png",
+            "sha256": "59390e4dbea0656e3ef6c63ba76ea2edc0faee8761547a1472ce7e8fcc7c6fe8"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/master-detail-weight.png",
+            "sha256": "2fcb43344bb0509b29f4e04ce0498736c463392d0568dd618a85f7ab40537581"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/primary-neutral.png",
+            "sha256": "7dc75125bddb238738e6387c17c62baf9083b511e7b18fc4f6df622d41b166b9"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/detail-neutral.png",
+            "sha256": "7dc75125bddb238738e6387c17c62baf9083b511e7b18fc4f6df622d41b166b9"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/coverage.png",
+            "sha256": "8bf5258eadff901573b27d633360f60a5e446842065effd4944e000950067226"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/detail-weight.png",
+            "sha256": "e2f2acbfa2725224416f3dd750aaa2b425bb9ec94b22fd2a3595af77cc1ba22b"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/detail-coverage.png",
+            "sha256": "12097de4af063175adce3ad8f6787fc5dfe3c7b9341c136f9d5c6e2c62561a8b"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/authored-dualcolor-mask.png",
+            "sha256": "fecc01b8a9db43b82a12fceb76267439132dece4d12a36fca18b50359495b67e"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/south/native-w-R.png",
+            "sha256": "3a19e17b642e8d32600d84386efc5375d2b43d0dec9a25d84d6623cef1f8bcef"
+          }
+        },
+        "east": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/master-neutral.png",
+            "sha256": "195e72ef119846f6610e06d5a6d054cb53c3dd13b072ca7f91159af805d525c5"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/primary-neutral.png",
+            "sha256": "25bcfa66fafc113ccae007a63bcd810e53c45f6d866c975c681020aaaf620a93"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/detail-neutral.png",
+            "sha256": "25bcfa66fafc113ccae007a63bcd810e53c45f6d866c975c681020aaaf620a93"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/coverage.png",
+            "sha256": "34541c47f0eeba455ba79d19849a09779a7e4d0ea5b73d7754055d725d65740c"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/authored-dualcolor-mask.png",
+            "sha256": "430cbbcb48b70f9905836f0bd8f9ab0a8b42e40f5c841d49b0bd169e9c538b79"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/east/native-w-R.png",
+            "sha256": "4712802b5e6679f419136c12ddc91457c26c92a7f57be7ed4d1dce4cbf5d9c7c"
+          }
+        },
+        "north": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/master-neutral.png",
+            "sha256": "8c4a9690cf89bbbcf0d4d346a6b5a86b934c9ff0ddb046f349fe34f692eaeab9"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/primary-neutral.png",
+            "sha256": "33d45aae78c5e6b4229501d9068912706b3bb6df85c7c6134de61f5b60c77005"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/detail-neutral.png",
+            "sha256": "33d45aae78c5e6b4229501d9068912706b3bb6df85c7c6134de61f5b60c77005"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/coverage.png",
+            "sha256": "d5987277a6972ccfc0caff42a2d7559ef7f89fd7db1a15a5f9098060616d26a1"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/authored-dualcolor-mask.png",
+            "sha256": "27afe78fd0060dc0278518fd338e52bcb0938c237cc2ff51f34b2074506d9b7b"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/north/native-w-R.png",
+            "sha256": "f70387c4cae7db620d27b93b6998b0afc92d771dc073961b5205a8c0ad20e7df"
+          }
+        },
+        "west": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/master-neutral.png",
+            "sha256": "14ccb2c6900605f8742039b1c522064f7c3ecb3f802d28562c1612e210278782"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/primary-neutral.png",
+            "sha256": "998afd27c8c796da59ba652089176ac804faeea3ebe12d53f64e739fb6d9f699"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/detail-neutral.png",
+            "sha256": "998afd27c8c796da59ba652089176ac804faeea3ebe12d53f64e739fb6d9f699"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/coverage.png",
+            "sha256": "d126955997c7bb1e844713f22b0daff293c22a74f3bbfbfe0915302bad280407"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/authored-dualcolor-mask.png",
+            "sha256": "6bd57e631802f41c20aa3dc1221ed3a0c01698873d9039f5aca5a54ccd39f15f"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-1/west/native-w-R.png",
+            "sha256": "84d632f625058247a9703e8ff2aadaa46b774e49203bde8aef2edb0865cfa7ee"
+          }
+        }
+      },
+      "west_policy": "Mirror east in common frame, source geometry is bilaterally symmetric; no front motif visible in profile."
+    },
+    {
+      "id": "design-2",
+      "native_tile": "Items/sw_painting_2.bmp",
+      "role": "Native RandomTile choice",
+      "views": {
+        "south": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/master-neutral.png",
+            "sha256": "2604a4c4e0dd88596ab24aed0c56f87f84543e0b4e163f78dc0ad8f7502c33f7"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/master-detail-weight.png",
+            "sha256": "60d17e4b3646ed22d4c2a5a89d78e128d96dbab606ae818e1fea7f4bb68275e5"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/primary-neutral.png",
+            "sha256": "cac720d94e8feb01a4c63d557d191fae3e7f7506208e27f479e29759f5851a12"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/detail-neutral.png",
+            "sha256": "cac720d94e8feb01a4c63d557d191fae3e7f7506208e27f479e29759f5851a12"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/coverage.png",
+            "sha256": "de0740b25be500cad35f88552ce675de736beff968515808a79ff5014baf1bd3"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/detail-weight.png",
+            "sha256": "4927fd02a8ed85eda98ad87759785a763fc6851eff9b0e434527941122ccd9d7"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/detail-coverage.png",
+            "sha256": "8ea35845ae78ab5f95dd1b7e00d9ef4d528903efe96849a4ca26dadce1e32a31"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/authored-dualcolor-mask.png",
+            "sha256": "9a3912e7da3e0a8775e1dc89d5fb5f3672ee7298a4543c9b49b3ac74a6c37a1d"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/south/native-w-R.png",
+            "sha256": "2a3bf4cbcc0d25fb27d64d06ae4821b441723d57e30f55abcbfafcdecee3b177"
+          }
+        },
+        "east": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/master-neutral.png",
+            "sha256": "34bded9392af7d06ceb9cac67dc079acdd67b16ca45105640f36d42607222ced"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/primary-neutral.png",
+            "sha256": "64c1baafd0daaf9306e8ae5747f6331a152b60dbb1802c4daa53e6c5b405beb5"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/detail-neutral.png",
+            "sha256": "64c1baafd0daaf9306e8ae5747f6331a152b60dbb1802c4daa53e6c5b405beb5"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/coverage.png",
+            "sha256": "9bc46ffff03455b5d3155511741e706d691fadfe6e02a42b76cdfc53616ee0d8"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/authored-dualcolor-mask.png",
+            "sha256": "823bb7cee8a4a9adc91caffc60bb502ae9bdf82c1a61fb820a3bca82abd018ff"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/east/native-w-R.png",
+            "sha256": "d3155cb1e0ca0c6bac1beb044d9971e77db8668a9b0d2336b62a52b3979ae807"
+          }
+        },
+        "north": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/master-neutral.png",
+            "sha256": "a0ff733f29840aff85b07cf1290fdb3c04d2bc1363fd99fc07590d2af914cacc"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/primary-neutral.png",
+            "sha256": "e8150346dfd79b09c7053f32131e1c85ad3042f559a836ab267622745edcfd8b"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/detail-neutral.png",
+            "sha256": "e8150346dfd79b09c7053f32131e1c85ad3042f559a836ab267622745edcfd8b"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/coverage.png",
+            "sha256": "bf332539174d0e8244f90bb068b9464a3d16b5355eacbda7ca15a39c22b6d285"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/authored-dualcolor-mask.png",
+            "sha256": "39734d4f90986689c68f6538ad3a1639d5ee253277fcfc45be9cb12be3122ba3"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/north/native-w-R.png",
+            "sha256": "8f886a2c2f4f19226c1993920e6b8ca2dd01dc48827763b917b3643c075f00ef"
+          }
+        },
+        "west": {
+          "master": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/master-neutral.png",
+            "sha256": "83a00a955f7124665f769a8bf0168e91b7d1d549f0e3386269ce2e17a4f3483f"
+          },
+          "master_detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/master-detail-weight.png",
+            "sha256": "7c1f43be103c3932fe59e9b9f49902e2949707348dc3557593150fd82eabbb74"
+          },
+          "primary": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/primary-neutral.png",
+            "sha256": "8cdc18423884484bcf5101f72c5f322eda28cec849a92ae0a54c36cf6ab83549"
+          },
+          "detail": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/detail-neutral.png",
+            "sha256": "8cdc18423884484bcf5101f72c5f322eda28cec849a92ae0a54c36cf6ab83549"
+          },
+          "coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/coverage.png",
+            "sha256": "25f86376a1962f0ebe9cfd5d7ed7640fb8acbbac92da0caecdbbb67164c31d38"
+          },
+          "detail_weight": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/detail-weight.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "detail_coverage": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/detail-coverage.png",
+            "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+          },
+          "authored_dualcolor_mask": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/authored-dualcolor-mask.png",
+            "sha256": "f27d8f9d5513b37009a21296352fb8793d3ec3b377d4175a20ad22a0115bee5b"
+          },
+          "native_preview": {
+            "path": "art/conversion/scn-painting/v1/registered/design-2/west/native-w-R.png",
+            "sha256": "21d3c0d8703e7bd578aa3bccee6c719ce46764b77a251e84b5135c7d0254e59e"
+          }
+        }
+      },
+      "west_policy": "Mirror east in common frame, source geometry is bilaterally symmetric; no front motif visible in profile."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "entry": "SCN-PAINTING",
+  "timestamp": "2026-10-21T01:54:07.680718+00:00",
+  "identity": "Painting -> MountedFurniture -> Furniture",
+  "description": "Nacreous oil wets the ecru linen and has dripped onto the easel. From the plane of the canvas, an image is pressed out.",
+  "ancestry": [
+    {
+      "name": "Painting",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Painting\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" DisplayName=\"painting\" ColorString=\"&amp;w\" TileColor=\"&amp;w\" DetailColor=\"R\" RenderString=\"223\" Tile=\"Items/sw_painting_1.bmp\" />\n    <part Name=\"Description\" Short=\"Nacreous oil wets the ecru linen and has dripped onto the easel. From the plane of the canvas, an image is pressed out.\" />\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_painting_1.bmp,Items/sw_painting_2.bmp\" />\n    <part Name=\"RandomColors\" MainColor=\"m,W,r,R,b,B,g,G\" DetailColor=\"m,W,r,R,b,B,g,G\" />\n    <part Name=\"Physics\" Weight=\"20\" Solid=\"true\" />\n    <stat Name=\"AV\" Value=\"1\" />\n    <stat Name=\"Hitpoints\" Value=\"50\" />\n    <tag Name=\"Tier\" Value=\"2\" />\n    <stag Name=\"Centerpiece\" />\n    <stag Name=\"Crafts\" />\n\t\t<stag Name=\"Beauty\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>"
+    },
+    {
+      "name": "MountedFurniture",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>"
+    },
+    {
+      "name": "Furniture",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "object": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    }
+  ],
+  "native_states": {
+    "path": "art/conversion/scn-painting/v1/native-state-index.json",
+    "sha256": "254046589a39a18a462aeb9d4abeb5f4226171422de9c5ee01a489e1421664d1"
+  },
+  "native_parts": {
+    "Render": {
+      "Name": "Render",
+      "DisplayName": "painting",
+      "ColorString": "&w",
+      "TileColor": "&w",
+      "DetailColor": "R",
+      "RenderString": "223",
+      "Tile": "Items/sw_painting_1.bmp"
+    },
+    "Description": {
+      "Name": "Description",
+      "Short": "Nacreous oil wets the ecru linen and has dripped onto the easel. From the plane of the canvas, an image is pressed out."
+    },
+    "RandomColors": {
+      "Name": "RandomColors",
+      "MainColor": "m,W,r,R,b,B,g,G",
+      "DetailColor": "m,W,r,R,b,B,g,G"
+    },
+    "Physics": {
+      "Name": "Physics",
+      "Weight": "20",
+      "Solid": "true"
+    }
+  },
+  "palette": {
+    "declared_tile_primary": "w",
+    "declared_detail": "R",
+    "random_glyph_main": [
+      "m",
+      "W",
+      "r",
+      "R",
+      "b",
+      "B",
+      "g",
+      "G"
+    ],
+    "random_detail": [
+      "m",
+      "W",
+      "r",
+      "R",
+      "b",
+      "B",
+      "g",
+      "G"
+    ],
+    "effective_tile_primary": "w: RandomColors.MainColor changes ColorString only. TileColor is unspecified on the builder, so declared Render.TileColor=&w remains and Cell prefers it for tile rendering.",
+    "effective_detail": "Native creation chooses one of eight DetailColor values independently of glyph MainColor (PairDetailWithForeground defaults false). Declared R is a fallback/example, not every painting.",
+    "ownership": "Opaque source R=0 is primary, R=255 detail; A is object coverage. Keep masks separate and apply runtime values. No palette clocks or resampling of native random choices.",
+    "evidence": [
+      {
+        "path": "E:/Temp/rimqud-native-painting-20261021/RandomColors.cs",
+        "sha256": "319ff7640f7d672335fb8c33a6583f9b0010c7ff8fbe961eca87dc4561208866"
+      },
+      {
+        "path": "E:/Temp/qud-transplant-probe-pawns-20261019/scratch/inspect/XRL.World.Cell.decompiled.cs",
+        "sha256": "8537fcec4e09b64276122526155be72219bb6f56e27e541ccaeb1c8f254f350f"
+      }
+    ]
+  },
+  "donor_reference": {
+    "name": "Vanilla Textures Expanded / Ideology Lectern",
+    "definition": {
+      "path": "D:/Steam/steamapps/common/RimWorld/Data/Ideology/Defs/ThingDefs_Buildings/Buildings_Misc.xml",
+      "sha256": "98aa869e76ca2ba5c254600c86ad1b400d19aaadb3edf4e44d1d9acf3a4d57cc",
+      "object": "<ThingDef ParentName=\"BuildingBase\">\n    <defName>Lectern</defName>\n    <label>lectern</label>\n    <description>A slanted platform that holds a text in front of a speaker. Place it near the focus of rituals and speeches to extend the duration of their positive effects.</description>\n    <graphicData>\n      <graphicClass>Graphic_Multi</graphicClass>\n      <texPath>Things/Building/Misc/Lectern/Lectern</texPath>\n      <drawSize>(1,1)</drawSize>\n      <shadowData>\n        <volume>(0.8, 1, 0.8)</volume>\n      </shadowData>\n    </graphicData>\n    <minifiedDef>MinifiedThing</minifiedDef>\n    <designationCategory>Ideology</designationCategory>\n    <uiOrder>2020</uiOrder>\n    <fillPercent>0.35</fillPercent>\n    <selectable>true</selectable>\n    <useHitPoints>true</useHitPoints>\n    <size>(1,1)</size>\n    <thingCategories>\n      <li>BuildingsMisc</li>\n    </thingCategories>\n    <stuffCategories>\n      <li>Metallic</li>\n      <li>Woody</li>\n      <li>Stony</li>\n    </stuffCategories>\n    <costStuffCount>50</costStuffCount>\n    <statBases>\n      <MaxHitPoints>100</MaxHitPoints>\n      <WorkToBuild>5000</WorkToBuild>\n      <Beauty>10</Beauty>\n      <Flammability>1.0</Flammability>\n      <Mass>25</Mass>\n    </statBases>\n    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>\n    <hasInteractionCell>True</hasInteractionCell>\n    <interactionCellOffset>(0,0,-1)</interactionCellOffset>\n    <building>\n      <buildingTags>\n        <li>RitualFocus</li>\n      </buildingTags>\n      <paintable>true</paintable>\n    </building>\n    <comps>\n      <li Class=\"CompProperties_Styleable\" />\n    </comps>\n    <ritualFocus>\n      <spectateDistance>2</spectateDistance>\n      <allowedSpectateSides>Up</allowedSpectateSides>\n    </ritualFocus>\n    <placeWorkers>\n      <li>PlaceWorker_RitualPosition</li>\n      <li>PlaceWorker_PreventInteractionSpotOverlap</li>\n    </placeWorkers>\n    <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>\n  </ThingDef>\n  \n  "
+    },
+    "about": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/About/About.xml",
+      "sha256": "c40be693ed35a8d20e32e60ff09566291b9df2ccc13a836724eb8fa6c9e6771e"
+    },
+    "load_folders": {
+      "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/LoadFolders.xml",
+      "sha256": "62ef7625841904177d51d8dea0bd13740b0d776da36b37ea52b427776c161a85"
+    },
+    "assets": [
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Misc/Lectern/Lectern_south.png",
+        "sha256": "db881f7e66751e9f1782fe80503ff3b747d530f6a81d9378a61e796c3b429347",
+        "facing": "south"
+      },
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Misc/Lectern/Lectern_east.png",
+        "sha256": "f74ef0b32aa1ca91830e629cdf80696b6870fbea1884617dd0eeeeba8618e4f4",
+        "facing": "east"
+      },
+      {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2016436324/Textures/Things/Building/Misc/Lectern/Lectern_north.png",
+        "sha256": "7cc469bcc1e80bdf2892f053a909dbcc48ffe9508005a409cd2c070cb7aa9573",
+        "facing": "north"
+      }
+    ],
+    "mapping": {
+      "GraphicClass": "Graphic_Multi",
+      "drawSize": [
+        1,
+        1
+      ],
+      "size": [
+        1,
+        1
+      ],
+      "interpretation": "Actual texture/margins and shared one-cell drawing frame; not an easel footprint or width-ratio target."
+    },
+    "role": "Supported panel, quiet outline/material shading and cardinal map-camera reference only. No close whole easel equivalent found in bounded installed filename inventory. Do not substitute the lectern, ritual behavior or pedestal."
+  },
+  "views": {
+    "required": [
+      "south",
+      "east",
+      "north"
+    ],
+    "west": "Author or mirror only if geometry permits; this construction is bilaterally symmetric in structure, back motif is not mirrored onto canvas reverse.",
+    "reason": "MountedFurniture inheritance requires furniture turnaround despite catalogue fixed-prop category. Extra facings remain unbound authoring assets."
+  },
+  "uncertainties": [
+    "Painting subject is unspecified: preserve the two actual abstract source motifs; do not invent a portrait, landscape or text.",
+    "Easel depth, canvas thickness, rear brace and unseen reverse are authored estimates, not metadata dimensions."
+  ],
+  "process": "Exact original masks -> editable physical easel and distinct abstract paint motifs -> three coherent cardinal views -> actual restrained ImageGen material proposal -> inspect/patch while preserving geometry -> registered neutral primary/detail/coverage and native palette examples.",
+  "native_activation": false
+}

@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-PAINTING",
+  "active_entry": "SCN-SCRAP-ELECTRONICS",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -45422,8 +45422,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -45434,9 +45434,7 @@
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
-      "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "description": {
           "Name": "Description",
@@ -45494,7 +45492,479 @@
           "sha256": "5e79f231a4d872f107b787399371e3f98ce443cb48c82906f943b196d055f22e"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T01:54:07.698670+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve Painting ancestry, extract both native RandomTile masks, and trace independent glyph/tile/detail colour assignment.",
+          "inputs": [
+            {
+              "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+              "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+            },
+            {
+              "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/resources.assets",
+              "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+            },
+            {
+              "path": "E:/Temp/rimqud-native-painting-20261021/RandomColors.cs",
+              "sha256": "319ff7640f7d672335fb8c33a6583f9b0010c7ff8fbe961eca87dc4561208866"
+            },
+            {
+              "path": "E:/Temp/qud-transplant-probe-pawns-20261019/scratch/inspect/XRL.World.Cell.decompiled.cs",
+              "sha256": "8537fcec4e09b64276122526155be72219bb6f56e27e541ccaeb1c8f254f350f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/prepare-source.py",
+              "sha256": "5ab655292aef866e780c8095d4bd12d7799ee3b716e78bfea8930f21b4fbfabd"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/native-state-index.json",
+              "sha256": "254046589a39a18a462aeb9d4abeb5f4226171422de9c5ee01a489e1421664d1"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "review": "Actual source masks and code captured. Tile primary remains w; eight native detail choices, separate randomized glyph main. Furniture inheritance requires S/E/N. Construction and reference visual review remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:56:55.109952+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual Qud designs and installed Lectern S/E/N reference; record narrow visual-only role and source colour precedence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-controls.json",
+              "sha256": "f302543ea5914c94d3b463f0587a373380fc220d65d02b08cb26933d7981d5c7"
+            }
+          ],
+          "review": "Actual Lectern has quiet rectangular panels/supports and a sloping directional profile. Its Graphic_Multi/1x1 frame is not a target easel ratio. Low nonzero background alpha in donor PNGs is reference-only; no donor coverage imported. No close whole easel equivalent.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:56:55.109952+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Build editable projected easels with native landscape/portrait canvas shapes and source-bound abstract paint regions.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construct-painting.py",
+              "sha256": "2ce852c3bd8f8f5d4ad96f407b1733b82b33e279f20d1af9284c4ec1d3710abd"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/manual-suggestion.png",
+              "sha256": "709e8445c6e329df57f54c666bb313c667d7f82e2be834cc3d9fd085beab3fb1"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/constructed-turnarounds.png",
+              "sha256": "887086a5a912fa4ec59cfac6ad32775ad066e444a1853fbb2d33678e60df6fc1"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/refinement-prompt.txt",
+              "sha256": "38abc535bd615f07e4a135f8d3d5c0ce0758ab31ff751525e6507d5e211b61d6"
+            }
+          ],
+          "review": "Shared width/depth/camera/component thickness carried into exact prompt. Negative source image pixels interpreted as dark painted space on continuous linen, not physical holes. Hidden stand/stretcher are explicitly authored. Original P/D motif layout preserved.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:56:55.109952+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Construct complete S/E/N variants of both actual tile choices, keeping reverse unpainted and projected stand depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-controls.json",
+              "sha256": "f302543ea5914c94d3b463f0587a373380fc220d65d02b08cb26933d7981d5c7"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-1-south.svg",
+              "sha256": "e2d8a3939b90c7017fa4084454f98840fff8c7aa4b8cf3c44f7cad54f9d66a0b"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-1-east.svg",
+              "sha256": "fe9fb079c1c61e7af2a1d96b6697f075b491585ebeec3573bb6094ac90df8b45"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-1-north.svg",
+              "sha256": "f57c0cca18887fb306cb287d60de0b5823cb45aeaea40928e50882222058f78b"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-2-south.svg",
+              "sha256": "4b9dbb22936dd88640a00fcae5d8b4bda7930746f2a0efec31f97699f6b15007"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-2-east.svg",
+              "sha256": "847a3b55fa7bf04d4be3f56da54ebcad0225dc17edd0f7dda7aee83acce640dd"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/design-2-north.svg",
+              "sha256": "ec5f2e93ff27a6823061407daa8d8aa43db9846b29ca8f3f729542da3c0cc690"
+            }
+          ],
+          "review": "Extra cardinal views are unbound authoring, not native rotation. Common frame/pivot/scale; planar canvas edge remains thin, while stand has5.6unitsdepth. All geometry awaits pre-refinement visual inspection.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:57:53.915303+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual Qud designs and installed Lectern S/E/N reference; record narrow visual-only role and source colour precedence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construction-controls.json",
+              "sha256": "418c1ce1f0aac1d38fe4153c639c7722f1863f15d3e942b54f6e2a3ac9e003f6"
+            }
+          ],
+          "review": "Actual Lectern has quiet rectangular panels/supports and a sloping directional profile. Its Graphic_Multi/1x1 frame is not a target easel ratio. Low nonzero background alpha in donor PNGs is reference-only; no donor coverage imported. No close whole easel equivalent.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:57:53.915303+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Build editable projected easels with native landscape/portrait canvas shapes and source-bound abstract paint regions.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construct-painting.py",
+              "sha256": "87c8ee68965ac84b982291d37ae39cec0309ece6008538165e708ecab2c5c2ff"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/manual-suggestion.png",
+              "sha256": "ec041bc327e704cfa503c2bab4ef0f02576530e57bbabb46acd44193ef45c9d9"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/constructed-turnarounds.png",
+              "sha256": "d71f416a04053aad6356b279ba1665c62404212d48428bc9e3afabec7694581b"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/refinement-prompt.txt",
+              "sha256": "38abc535bd615f07e4a135f8d3d5c0ce0758ab31ff751525e6507d5e211b61d6"
+            }
+          ],
+          "review": "Shared width/depth/camera/component thickness carried into exact prompt. Negative source image pixels interpreted as dark painted space on continuous linen, not physical holes. Hidden stand/stretcher are explicitly authored. Original P/D motif layout preserved.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:57:53.915303+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Construct complete S/E/N variants of both actual tile choices, keeping reverse unpainted and projected stand depth.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construction-controls.json",
+              "sha256": "418c1ce1f0aac1d38fe4153c639c7722f1863f15d3e942b54f6e2a3ac9e003f6"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-1-south.svg",
+              "sha256": "b30e8330428d2e53eb912aade0d861861636af2f5b330613521131117b51dbcf"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-1-east.svg",
+              "sha256": "0717b72fb5d81411f7b1efe856838a956c246770782b80ee641d8c4c2807327e"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-1-north.svg",
+              "sha256": "7219176d1fbac9fd4d025d4aba573f653f98eb6f2ebfe68d74a0a294e69b1e80"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-2-south.svg",
+              "sha256": "f9df4092e66cb92f1bbc6d841579ff59bce5490da3e821be2cc5abbd169ac2b5"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-2-east.svg",
+              "sha256": "0391d752fbcc4d37ef0942c8592e4dda9668b806be9b1e635e8dfba100defb5a"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/design-2-north.svg",
+              "sha256": "e6520fe5d29a7fb6270bed0b75d897b804ba259762738940051bf1c0171c5c2b"
+            }
+          ],
+          "review": "Extra cardinal views are unbound authoring, not native rotation. Common frame/pivot/scale; planar canvas edge remains thin, while stand has5.6unitsdepth. All geometry awaits pre-refinement visual inspection.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Inspect first profiles; replace collapsed flat support strips with projected solid square-section beams, retaining source designs.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/manual-suggestion.png",
+              "sha256": "709e8445c6e329df57f54c666bb313c667d7f82e2be834cc3d9fd085beab3fb1"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-controls.json",
+              "sha256": "f302543ea5914c94d3b463f0587a373380fc220d65d02b08cb26933d7981d5c7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/manual-suggestion.png",
+              "sha256": "ec041bc327e704cfa503c2bab4ef0f02576530e57bbabb46acd44193ef45c9d9"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/constructed-turnarounds.png",
+              "sha256": "d71f416a04053aad6356b279ba1665c62404212d48428bc9e3afabec7694581b"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construct-painting.py",
+              "sha256": "87c8ee68965ac84b982291d37ae39cec0309ece6008538165e708ecab2c5c2ff"
+            }
+          ],
+          "review": "First profile beam width vanished because its flat strip normal aligned with view. New physical square sections reproject in every facing; no stretching or independent side bounds. Initial views remain as rejected construction evidence.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Run and inspect actual six-view contextual ImageGen material refinement from corrected construction and native/reference plate.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/refinement-prompt.txt",
+              "sha256": "38abc535bd615f07e4a135f8d3d5c0ce0758ab31ff751525e6507d5e211b61d6"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/constructed-turnarounds.png",
+              "sha256": "d71f416a04053aad6356b279ba1665c62404212d48428bc9e3afabec7694581b"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-reference.png",
+              "sha256": "bce892b0c0bb98f167c747654c64ccb7957f83b25a6da062e987df0e072b7110"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/refined-raw.png",
+              "sha256": "3d3bb273061a1c0b242491edd9f076ea32a4c454476e663e3efb6458ea758b9d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/generation-receipt.json",
+              "sha256": "e92e77c33e6389422ddba52bd91c698ab688257f59b25a00b9158ddde694930a"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/first-structural-review.json",
+              "sha256": "57ace5441dd981e6310dcda80b64ed193013f6bba305494079ad0db89770a29e"
+            }
+          ],
+          "review": "Six corresponding easels and both native abstract designs retained, with profile stand depth and unpainted reverse. Reject added corner metal/bolts, heavier shading and changed alpha as canonical art; useful interior surface texture retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Patch refinement through authoritative geometry and selected quiet material interiors.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/refined-raw.png",
+              "sha256": "3d3bb273061a1c0b242491edd9f076ea32a4c454476e663e3efb6458ea758b9d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construction-controls.json",
+              "sha256": "418c1ce1f0aac1d38fe4153c639c7722f1863f15d3e942b54f6e2a3ac9e003f6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/material-selection-preview.png",
+              "sha256": "e21f17c5052da83fa30f28a92812d35b18f5a11b26b53ed454c3507b63399fb4"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/material-selection.json",
+              "sha256": "99ad549d327d09a40f1d15d8e6437868677dedbd7b30bf67cd62b955ccbc4636"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/selected-linen.png",
+              "sha256": "ef660d70dc108fcc0f8cbbd6a47b12b119303cc2bc3e6bb234ad15117f11b5f5"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/selected-wood.png",
+              "sha256": "0b5ee737b2bc247d4647c37c2d44b70d6818bd48f2362856f70e84516e5a7c0c"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/register-painting.py",
+              "sha256": "866a45dda47a488f0438caca0a73d7565b3db7fe2cb419bf118c47d4bef0a4ff"
+            }
+          ],
+          "review": "No second AI isolation. Actual inspected unmarked linen/wood interiors supply only bounded high-pass neutral grain; no generated border, alpha, metal fittings, changed paint layout or specular shading. Patch shown in registered neutral S/E/N views.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register two designs with S/E/N and mirrored W, gray textures, one coverage plane and native primary/detail weighting.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/construction-v2/construction-controls.json",
+              "sha256": "418c1ce1f0aac1d38fe4153c639c7722f1863f15d3e942b54f6e2a3ac9e003f6"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/source-packet.json",
+              "sha256": "9951333bf635cf1f8849020bcdb6f5d4f632706621ea4551394a7a3d3b85d37d"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/material-selection.json",
+              "sha256": "99ad549d327d09a40f1d15d8e6437868677dedbd7b30bf67cd62b955ccbc4636"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/registered/model.json",
+              "sha256": "a11a76e5b32ab8cad3af7764c58c18cbc48114bb319c5f56944801c9b684ccb2"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/registered/registration-decisions.json",
+              "sha256": "f5e57fc07b74b2842774fd13b4ace385b0a7dae8f2a15609e0d6bbc44627e220"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/registered/ownership-turnarounds.png",
+              "sha256": "29bf210ddbbe2da1af4d945d6bf5982e8eafaa5238ab085a1d3fb0576dad9ebb"
+            }
+          ],
+          "review": "Shared full-cell mapping; master alpha exactly canonical geometry. Runtime tile foreground w and eight actual native detail options remain source-owned. Separate colour inputs combine by weight, not duplicate alpha-over. Reverse/profile detail planes empty.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Review complete turnarounds, source palette comparison and intended-size silhouettes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/registered/model.json",
+              "sha256": "a11a76e5b32ab8cad3af7764c58c18cbc48114bb319c5f56944801c9b684ccb2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/registered/neutral-turnarounds.png",
+              "sha256": "965f3bee2a0de5d4f35a66623b0ee9c195ef1a219141306e5aee8f25997bfd33"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/registered/source-and-native-palettes.png",
+              "sha256": "17f60a36c4ecc647f72347fcde4ed56ee2f6125ce2489aae5e0287cb2f5aabd3"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/record-review.py",
+              "sha256": "751be5610b6e3bd591ddeb6002297aca19800c5ee628ecb490f60def3603942a"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/registered/authoring-review.json",
+              "sha256": "9bc6fc652090a1ba2be5e7e30bbc0d148077712da2b7a2a8a45887e4b931db36"
+            },
+            {
+              "path": "art/conversion/scn-painting/v1/artifact-manifest.json",
+              "sha256": "b6a44689226b32f4e5fff2436bf3de391818743f597cfd4461727dc1826ef38e"
+            }
+          ],
+          "review": "Reviewed both actual native Painting masks, exact Painting/MountedFurniture/Furniture ancestry, description and colour-selection code, actual installed VTE/Ideology Lectern S/E/N reference, editable landscape/portrait easels and full physical turnarounds. Source paint motifs stay abstract and distinct; negative pixels inside canvas are explicitly interpreted as dark image space on continuous linen rather than holes. No invented depicted subject or lectern identity/ritual mechanics. Initial flat support strips collapsed in profile; rejected first construction retained. Corrected square-section solid support projection retains shared5.6unitdepth, canvas thickness and14degree map-camera before actual ImageGen refinement. All directions share full source-cell frame, physical dimensions and placement pivot; no panel-width target, independent bounds fitting or inflated edge-on canvas. One actual composed six-view ImageGen proposal retained. It added unsupported metal fittings and excessive grain; canonical manual geometry, alpha and source paint ownership remain authoritative, with only bounded neutral high-frequency material grain transferred. Rejected generated details and complete raw output are retained; no second isolation or fabricated refinement. Eight native tile-detail examples shown beside both original source designs at intended sizes. RandomColors.MainColor affects glyph ColorString only, while Cell uses declared TileColor w; native independently selects detail fromm/W/r/R/b/B/g/G. Neutral gray textures, single coverage and separate detail weight prevent baked colours or background fill. Reverse is unpainted; profile retains full stand depth; W mirrors symmetric E. Both designs have S/E/N plus mirroredW authoring. Extra furniture views are unbound; no native rotation, automatic placement or altered random selector. Clothing integration is inapplicable. Source/reference/prompt/artifact hashes checked and coverage/tint contracts inspected. Native palette/state/visibility/cell binding acceptance remains pending after full-ledger generation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T02:03:19.512748+00:00",
+          "step": "native_state_review",
+          "action": "Keep exact source tile/random colour mapping, visibility and native registration acceptance pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-painting/v1/registered/model.json",
+              "sha256": "a11a76e5b32ab8cad3af7764c58c18cbc48114bb319c5f56944801c9b684ccb2"
+            }
+          ],
+          "outputs": [],
+          "review": "No game launch, runtime activation, rotation logic, native batch or test harness. Art authoring only; full-ledger generation gate remains binding.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
+        }
+      ],
+      "authoring_views": {
+        "required": [
+          "south",
+          "east",
+          "north"
+        ],
+        "west": "Author or mirror only if geometry permits; this construction is bilaterally symmetric in structure, back motif is not mirrored onto canvas reverse.",
+        "reason": "MountedFurniture inheritance requires furniture turnaround despite catalogue fixed-prop category. Extra facings remain unbound authoring assets."
+      },
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-painting/v1/registered/model.json",
+          "sha256": "a11a76e5b32ab8cad3af7764c58c18cbc48114bb319c5f56944801c9b684ccb2"
+        },
+        "plate": {
+          "path": "art/conversion/scn-painting/v1/registered/neutral-turnarounds.png",
+          "sha256": "965f3bee2a0de5d4f35a66623b0ee9c195ef1a219141306e5aee8f25997bfd33"
+        }
+      },
+      "registration_summary": "Painting: two actual landscape/portrait native choices, source-bound abstract motifs, corrected solid supports and shared physical S/E/N (+mirroredW) construction; one actual ImageGen material proposal patched through canonical geometry. Neutral primary/detail weight and eight native detail examples. Native acceptance pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Reviewed both actual native Painting masks, exact Painting/MountedFurniture/Furniture ancestry, description and colour-selection code, actual installed VTE/Ideology Lectern S/E/N reference, editable landscape/portrait easels and full physical turnarounds. Source paint motifs stay abstract and distinct; negative pixels inside canvas are explicitly interpreted as dark image space on continuous linen rather than holes. No invented depicted subject or lectern identity/ritual mechanics. Initial flat support strips collapsed in profile; rejected first construction retained. Corrected square-section solid support projection retains shared5.6unitdepth, canvas thickness and14degree map-camera before actual ImageGen refinement. All directions share full source-cell frame, physical dimensions and placement pivot; no panel-width target, independent bounds fitting or inflated edge-on canvas. One actual composed six-view ImageGen proposal retained. It added unsupported metal fittings and excessive grain; canonical manual geometry, alpha and source paint ownership remain authoritative, with only bounded neutral high-frequency material grain transferred. Rejected generated details and complete raw output are retained; no second isolation or fabricated refinement. Eight native tile-detail examples shown beside both original source designs at intended sizes. RandomColors.MainColor affects glyph ColorString only, while Cell uses declared TileColor w; native independently selects detail fromm/W/r/R/b/B/g/G. Neutral gray textures, single coverage and separate detail weight prevent baked colours or background fill. Reverse is unpainted; profile retains full stand depth; W mirrors symmetric E. Both designs have S/E/N plus mirroredW authoring. Extra furniture views are unbound; no native rotation, automatic placement or altered random selector. Clothing integration is inapplicable. Source/reference/prompt/artifact hashes checked and coverage/tint contracts inspected. Native palette/state/visibility/cell binding acceptance remains pending after full-ledger generation.",
+        "record": {
+          "path": "art/conversion/scn-painting/v1/registered/authoring-review.json",
+          "sha256": "9bc6fc652090a1ba2be5e7e30bbc0d148077712da2b7a2a8a45887e4b931db36"
+        }
+      }
     },
     {
       "id": "SCN-SCRAP-ELECTRONICS",
@@ -45508,8 +45978,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -63006,7 +63476,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T01:44:27.961077+00:00",
+  "updated_at": "2026-10-21T02:03:19.512748+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
