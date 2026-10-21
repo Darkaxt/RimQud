@@ -53,6 +53,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CtesiphusArt.cs') -Destination 
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'DromadArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'VillageArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CurrentArt.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CaiFog.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{

@@ -1,5 +1,20 @@
 # Faithful Joppa art and body specification
 
+Current visual correction request (2026-10-21): fix the apparently luminous
+water and compare vegetation with the original RimWorld-texture POC. Restore
+the missing source-owned grassy substrate and explicit plant presentation/scale
+instead of treating all plants as generic cell props. Investigate native water
+eligibility before changing colors; fallback and converted graphics must share
+the same night presentation. The remaining native NPC fallbacks are explicitly
+lower priority. Inspect the RimWorld fog-of-war mod and use its rendering here
+instead of blank undrawn canvas, preserving Qud's visibility, exploration and
+hidden-object ownership. The installed CAI5000 fog shader is the first concrete
+candidate; importing its combat/sight simulation is outside this request. Keep
+all four actual game views and include the POC comparison and known limits.
+The vegetation ground must match the rest of the map: share the continuous
+source-tinted substrate beneath dry converted cells instead of introducing a
+different background only on grass-painted cells. Plant alpha remains intact.
+
 Native rendering test request (2026-10-21): wire the current selected art into
 the isolated Qud adapter and deliver four actual game-camera captures of the
 same Joppa layout: day/revealed, night/revealed, day/native fog of war, and
@@ -16,16 +31,33 @@ selected cast-v2 operations and explicit production scenery/state recipes.
 Native game-camera captures and the comparison page are recorded in
 [the in-game review](current-game-rendering.html). The latest run exited0,
 preserved normal saves/settings and restored Unity preferences. Day/revealed
-maps1945cells; night/revealed1944; day/native fog718; night/native fog710.
+maps1997cells; night/revealed1997; day/native fog731; night/native fog723.
 Fifteen current NPC assemblies appear in the revealed capture. The captured
 farmer template is female but this new game generated a male farmer; keep that
 unsupported body/outfit native. The loudspeaker's power-cut status and unsupported
-water mixtures also retain native rendering, including objects above those
-mixtures. Native player art remains unchanged. These are recorded limits, not
+water mixtures retain native rendering. Joppa's observed water600/salt400 brine
+now uses the reviewed water material; frozen water and other mixtures remain
+native. Native player art remains unchanged. These are recorded limits, not
 acceptance credit for those bindings. The night material tint is an explicit
 adapter approximation; native Daylight, LOS, exploration and local lights remain
 owned by Qud. Complete-set equipment/state/lifecycle acceptance and Stage3 remain
 unfinished; the post-test redesign pause has not been reached.
+
+Rendering correction checkpoint (v2): actual installed CAI5000 fog shader loaded
+as supported and rendered both native fog masks. No CAI AI/sight simulation was
+imported, and unseen cells expose no object identities. Donor terrain UVs derive
+from local XZ/16; full repeating1024pixel materials and separate vertex boundary
+coverage replace the incorrect per-cell crops. Dry converted cells share the
+same grassy substrate; trees use their authored contact and the POC's scale2.
+All four actual captures, original comparisons, earlier POC and desktop/mobile
+checks are retained under `evidence/current-game-rendering-v2-20261021/`.
+The earlier native shutdown deadlock was diagnosed as a Mono critical section
+owned by an exited thread; its exact test process was cancelled with diagnostics
+retained privately. Subsequent corrected runs exited0 with preserved profiles.
+No timer/retry workaround or game shutdown patch was introduced. The current
+renderer changes satisfy this bounded visual correction; complete-set lifecycle
+acceptance remains an internal Stage3 advancement blocker. No new tracked
+deferrals or authoring rebuilds were added.
 
 Requested visual review surface (2026-10-21): present current integration
 preparation through a small HTML preview, not a JSON-only handoff. Show prepared
@@ -52,6 +84,10 @@ the visual workflow, with extra heads considered where needed. Native mutation
 mechanics and supported behavior are not removed by this visual direction.
 No replacement assets, body invalidation or renderer changes are authorized by
 recording this future brief. Preserve the current generation/native-test scope.
+Path-art preference for that redesign: keep the current cobblestones for this
+test; when revising them, follow the original loose, separated stones with
+generous grass-filled gaps instead of a tightly packed paved surface. The user
+explicitly requested no cobblestone art change now.
 
 User-selected route (2026-10-21): **ART-BLENDER-FIRST** applies to remaining and
 revised items/equipment/objects, including garments, furniture, machinery,

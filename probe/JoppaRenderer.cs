@@ -22,6 +22,7 @@ namespace RenderingTransplantProbe
         readonly Dictionary<string,Texture2D> textures=new Dictionary<string,Texture2D>();
         readonly Dictionary<string,Material> materials=new Dictionary<string,Material>();
         readonly Camera camera;
+        readonly CaiFog fog;
         readonly RenderTexture target;
         public RenderTexture Texture { get { return target; } }
         public bool[] Covered { get; private set; }
@@ -105,6 +106,7 @@ namespace RenderingTransplantProbe
             camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.04f,.08f,.12f,1);
             camera.cullingMask=1<<30;camera.targetTexture=target;
             camera.transparencySortMode=TransparencySortMode.Orthographic;
+            if(CurrentArt.Enabled)fog=new CaiFog();
         }
         Material Material(string shader,string filename,Color color)
         {
@@ -136,6 +138,15 @@ namespace RenderingTransplantProbe
             if(shader=="Custom/Terrain hard")mat.renderQueue=2000;
             if(shader.Contains("Terrain fade"))
                 mat.renderQueue=filename=="sand.png"?2350:filename=="marsh.png"?2325:2340;
+            if(filename=="current-source:white.png")mat.renderQueue=2000;
+            if(filename.StartsWith("current:surface/"))
+            {
+                // Explicit terrain precedence; translucent ripple alpha must
+                // blend once rather than passing an opaque cutout threshold.
+                mat.renderQueue=filename.Contains("/field/")?2001:filename.Contains("/soil/")?2010:
+                    filename.Contains("/path/")?2020:filename.Contains("/shallow/")?2030:2032;
+                if(filename.EndsWith("/True"))mat.renderQueue++;
+            }
             if(shader.Contains("rough"))
             {
                 var rough=Material("Custom/Terrain hard","rough.png",Color.white).mainTexture;
@@ -160,6 +171,25 @@ namespace RenderingTransplantProbe
             g.UV.Add(new Vector3(u+scale,v+scale,phase));g.UV.Add(new Vector3(u+scale,v,phase));
             for(int i=0;i<4;i++)g.Colors.Add(new Color32(255,255,255,(byte)(plant && (i==0 || i==3)?0:255)));
             foreach(int index in new[]{0,1,2,0,2,3})g.Triangles.Add(start+index);
+        }
+        void CurrentTerrain(string name,Color color,JoppaCell cell,float altitude,int mask=255,bool ripple=false)
+        {
+            // Donor terrain computes UV from local XZ/16, ignoring mesh UVs.
+            // Keep the full repeating material; vertex alpha owns only edges.
+            const int divisions=8,stride=divisions+1;
+            var mat=Material(name=="field"?"Custom/Terrain hard":"Custom/Terrain fade",CurrentArt.Surface(name,ripple),color);
+            var g=Group(mat);int start=g.Vertices.Count;
+            for(int y=0;y<=divisions;y++)for(int x=0;x<=divisions;x++)
+            {
+                float u=x/(float)divisions,v=1-y/(float)divisions;
+                g.Vertices.Add(new Vector3(cell.X+u,altitude,-cell.Y-1+v));g.UV.Add(new Vector3(u,v,0));
+                g.Colors.Add(new Color32(255,255,255,(byte)Mathf.RoundToInt(CurrentArt.Boundary(mask,u,v)*255)));
+            }
+            for(int y=0;y<divisions;y++)for(int x=0;x<divisions;x++)
+            {
+                int i=start+x+y*stride;
+                foreach(int index in new[]{i,i+1,i+stride+1,i,i+stride+1,i+stride})g.Triangles.Add(index);
+            }
         }
         static bool CanMap(JoppaCell c)
         {
@@ -237,7 +267,7 @@ namespace RenderingTransplantProbe
             }
             for(int i=0;i<8;i++){g.Triangles.Add(start+i);g.Triangles.Add(start+(i+1)%8);g.Triangles.Add(start+8);}
         }
-        UnityEngine.GameObject Original(JoppaCell c)
+        UnityEngine.GameObject Original(JoppaCell c,bool nightTreatment=false)
         {
             ConsoleChar d=c.Display;
             string tile=d.Char=='\0'?d.Tile:"assets_content_textures_text_"+(int)d.Char+".bmp";
@@ -248,6 +278,8 @@ namespace RenderingTransplantProbe
             sprite.color=d.Char=='\0'?d.Foreground:d.Background;
             sprite.backcolor=d.Char=='\0'?d.Background:d.Foreground;
             sprite.detailcolor=d.Char=='\0'?d.Detail:d.Foreground;
+            if(nightTreatment)
+            {var tint=CurrentArt.Lighting(c);sprite.color*=tint;sprite.backcolor*=tint;sprite.detailcolor*=tint;}
             go.transform.position=Point(c.X+.5f,c.Y+.5f,.3f+(25-c.Y)*.001f);
             go.transform.rotation=Quaternion.Euler(90,0,0);
             go.transform.localScale=new Vector3((d.HFlip?-1:1)/24f,(d.VFlip?-1:1)/24f,1f/24f);
@@ -376,7 +408,7 @@ namespace RenderingTransplantProbe
             {
                 int x=cell.X+dx[i],y=cell.Y+dy[i];if(x<0 || x>=80 || y<0 || y>=25)continue;
                 var next=frame.Cells[x+80*y];
-                if(next.Visible && !next.RequiresOriginal && (domain=="water"?next.WaterDepth>0:domain=="deep"?next.WaterDepth>=3:next.Source=="DirtPath" || next.GroundKind=="path"))mask|=1<<i;
+                if(next.Visible && !next.RequiresOriginal && (domain=="water"?next.WaterSupported && next.WaterDepth>0:domain=="deep"?next.WaterSupported && next.WaterDepth>=3:next.Source=="DirtPath" || next.GroundKind=="path"))mask|=1<<i;
             }
             return mask;
         }
@@ -386,30 +418,40 @@ namespace RenderingTransplantProbe
             // Retain source background and actual full-cell registration. No old
             // donor sand/grass/door recipe participates in this branch.
             Quad(Material("Custom/Cutout","current-source:white.png",c.Display.Background*shade),c.X,c.Y);
+            // One world-continuous substrate beneath dry converted cells.
+            // Applying its albedo only on grass-painted cells creates boxes.
+            if(c.WaterDepth==0)
+                CurrentTerrain("field",c.Display.Background*shade,c,.001f);
             bool water=c.WaterDepth>0;
             if(water)
             {
                 int mask=CurrentMask(frame,c,"water");
                 Color b=ConsoleLib.Console.ColorUtility.colorFromChar('b'),detail=ConsoleLib.Console.ColorUtility.colorFromChar('B');
-                Quad(Material("Custom/Cutout",CurrentArt.Surface("shallow",c,mask),b*shade),c.X,c.Y,altitude:.01f);
-                Quad(Material("Custom/Cutout",CurrentArt.Surface("shallow",c,mask,true),detail*shade),c.X,c.Y,altitude:.011f);
+                CurrentTerrain("shallow",b*shade,c,.01f,mask);
+                CurrentTerrain("shallow",detail*shade,c,.011f,mask,true);
                 if(c.WaterDepth>=3)
                 {
                     int deep=CurrentMask(frame,c,"deep");
-                    Quad(Material("Custom/Cutout",CurrentArt.Surface("swimming",c,deep),b*shade),c.X,c.Y,altitude:.012f);
-                    Quad(Material("Custom/Cutout",CurrentArt.Surface("swimming",c,deep,true),detail*shade),c.X,c.Y,altitude:.013f);
+                    CurrentTerrain("swimming",b*shade,c,.012f,deep);
+                    CurrentTerrain("swimming",detail*shade,c,.013f,deep,true);
                 }
             }
             else if(c.Source=="DirtFloor" || c.GroundKind=="ground")
-                Quad(Material("Custom/Cutout",CurrentArt.Surface("soil",c,255),ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade),c.X,c.Y,altitude:.002f);
+                CurrentTerrain("soil",ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade,c,.002f);
             if(c.Source=="DirtPath" || c.GroundKind=="path")
-                Quad(Material("Custom/Cutout",CurrentArt.Surface("path",c,CurrentMask(frame,c,"path")),ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade),c.X,c.Y,altitude:.005f);
+                CurrentTerrain("path",ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade,c,.005f,CurrentMask(frame,c,"path"));
             if((c.AssetFamily??"").StartsWith("current:NPC-"))Foreground(c);
             else
             {
                 var ops=CurrentArt.Scenery(c)??CurrentArt.Data["paint"][CurrentArt.Canonical(c.Display.Tile)] as JArray;
-                if(ops!=null)Quad(Material("Custom/Cutout",CurrentArt.Compose(c,ops,(c.Source??"paint")+"/"+c.Display.Tile+"/"+c.ConnectionMask),shade),
-                    c.X,c.Y,altitude:ForegroundDepth(c,.2f));
+                if(ops!=null)
+                {
+                    var plant=CurrentArt.Plant(c);float scale=plant==null?1:(float)plant["scale"];
+                    // Scale the full registered frame about its authored contact.
+                    float ax=plant==null?.5f:(float)plant["anchor"][0],ay=plant==null?.5f:(float)plant["anchor"][1];
+                    Quad(Material(plant==null?"Custom/Cutout":"Custom/Plant cutout",CurrentArt.Compose(c,ops,(c.Source??"paint")+"/"+c.Display.Tile+"/"+c.ConnectionMask),shade),
+                        c.X+ax*(1-scale),c.Y+ay*(1-scale),scale,scale,altitude:ForegroundDepth(c,.2f),plant:plant!=null);
+                }
             }
         }
         void FlushGeometry()
@@ -420,6 +462,8 @@ namespace RenderingTransplantProbe
                 mesh.SetVertices(entry.Value.Vertices);mesh.SetUVs(0,entry.Value.UV);
                 mesh.SetColors(entry.Value.Colors);mesh.SetTriangles(entry.Value.Triangles,0);mesh.RecalculateBounds();
                 var go=new UnityEngine.GameObject("RimQudMaterialGroup");scene.Add(go);go.layer=30;
+                if(CurrentArt.Enabled && entry.Key.shader.name.StartsWith("Custom/Terrain"))
+                {go.transform.localScale=new Vector3(CellWidth,1,1);go.transform.position=new Vector3(0,0,25);}
                 go.AddComponent<MeshFilter>().sharedMesh=mesh;
                 var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterial=entry.Key;
                 renderer.shadowCastingMode=ShadowCastingMode.Off;renderer.receiveShadows=false;
@@ -456,6 +500,13 @@ namespace RenderingTransplantProbe
                     bool mapped=eligible && CanMap(c);
                     bool waterLayer=eligible && !CurrentArt.Enabled && Wet(frame,c.X,c.Y);
                     Covered[c.X+80*c.Y]=mapped || waterLayer;
+                    if(CurrentArt.Enabled && eligible && !mapped)
+                    {
+                        // Re-present the accepted native cell so fallback receives
+                        // the same lighting. Unexplored input contains no identity.
+                        if(live)originals[c.X+80*c.Y]=Original(c,true);
+                        Covered[c.X+80*c.Y]=true;
+                    }
                     if(waterLayer)
                     {
                         WaterSurface(frame,c);water++;if(c.WaterDepth>=3)deep++;else shallow++;
@@ -558,11 +609,12 @@ namespace RenderingTransplantProbe
                         {"screenX",screen.x},{"screenY",screen.y},
                         {"visible",c.Visible},{"requiresOriginal",c.RequiresOriginal},{"mapped",mapped},
                         {"nativeLight",c.NativeLight},{"currentArt",CurrentArt.Enabled && mapped},
-                        {"pureWater",c.WaterPure},
+                        {"pureWater",c.WaterPure},{"waterSupported",c.WaterSupported},
+                        {"explored",c.Explored},{"plantScale",CurrentArt.Enabled && CurrentArt.Plant(c)!=null?(float)CurrentArt.Plant(c)["scale"]:1},
                         {"nativeGrassPaint",c.Grass},{"grassDrawn",mapped && c.Kind=="ground" && c.Grass},
-                        {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer}});
+                        {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer || CurrentArt.Enabled && mapped && c.WaterSupported && c.WaterDepth>0}});
                 }
-                FlushGeometry();string replacement=null;
+                FlushGeometry();if(CurrentArt.Enabled && CurrentArt.Fog && eligible)fog.Draw(frame,obj=>scene.Add(obj));string replacement=null;
                 foreach(var actor in actors)
                 {
                     Impact impact;if(impacts.TryGetValue(actor.Key,out impact) && impact.Started==0)impact.Started=Now;
@@ -574,7 +626,12 @@ namespace RenderingTransplantProbe
                     enabled=frame.Enabled,eligible,zone=frame.Zone,mappedByKind=counts,wallMasks=masks,
                     grassClumps=grass,waterLayerCells=water,shallowWaterCells=shallow,deepWaterCells=deep,
                     originalFallbackCells=2000-counts.Values.Sum(),offscreenMilliseconds=clock.Elapsed.TotalMilliseconds,
-                    materialGroups=groups.Count,cells=rows});
+                    materialGroups=groups.Count,
+                    currentTerrain=CurrentArt.Enabled?groups.Where(p=>p.Key.shader.name.StartsWith("Custom/Terrain")).Select(p=>new{
+                        shader=p.Key.shader.name,textureWidth=p.Key.mainTexture.width,textureHeight=p.Key.mainTexture.height,
+                        wrapMode=p.Key.mainTexture.wrapMode.ToString(),worldPeriodCells=16,
+                        vertexAlphaMin=p.Value.Colors.Min(v=>(int)v.a),vertexAlphaMax=p.Value.Colors.Max(v=>(int)v.a)}).ToArray():null,
+                    cells=rows});
             }
             finally
             {
@@ -587,6 +644,7 @@ namespace RenderingTransplantProbe
             foreach(var mat in materials.Values)UnityEngine.Object.DestroyImmediate(mat);
             foreach(var pair in textures)if(!pair.Key.StartsWith("current"))UnityEngine.Object.DestroyImmediate(pair.Value);
             CurrentArt.Dispose();
+            if(fog!=null)fog.Dispose();
             target.Release();UnityEngine.Object.DestroyImmediate(target);
             UnityEngine.Object.DestroyImmediate(camera.gameObject);bundle.Unload(true);
         }

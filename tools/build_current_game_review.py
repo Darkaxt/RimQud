@@ -11,7 +11,7 @@ from PIL import Image, ImageChops
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def build(root):
+def build(root, revision=1):
     read = lambda name: json.loads((root / name).read_text(encoding='utf-8-sig'))
     result = read('current-four-views.json')
     frames = read('gameplay-frames.json')
@@ -22,7 +22,8 @@ def build(root):
     assert {x['phase'] for x in result['phases']} == set(phases)
     assert len({json.dumps(x['player'],sort_keys=True) for x in frames}) == 1
     assert len({json.dumps(x['camera'],sort_keys=True) for x in frames}) == 1
-    out = ROOT / 'evidence/current-game-rendering-20261021'
+    folder='current-game-rendering-20261021' if revision==1 else 'current-game-rendering-v2-20261021'
+    out = ROOT / ('evidence/'+folder)
     out.mkdir(exist_ok=True)
     records, cards = [], []
     all_images = []
@@ -70,6 +71,28 @@ def build(root):
                   runtime_contract_sha256=hashlib.sha256((root/'selected/runtime/contract.json').read_bytes()).hexdigest(),
                   package_sha256=result['packageSha256'],cast_sha256=result['castSha256'],night_treatment=result['nightTreatment'],
                   full_ledger_native_acceptance=False)
+    comparison=''
+    if revision==2:
+        shader=read('current-fog-shader.json')
+        assert shader['supported'] and shader['shader']=='Custom/FogShader'
+        fogs=[read('current-fog-current-'+phase+'.json') for phase in ['day-fog','night-fog']]
+        assert all(x['nativeVisibility'] and x['nativeExploration'] and not x['hiddenObjectQueries'] and x['unknown']>0 for x in fogs)
+        day=next(x for x in frames if x['phase']=='current-day-revealed')
+        ponds=[x for x in day['cells'] if x['source']=='Pond' and x['visible']]
+        assert ponds and all(x['waterSupported'] and x['mapped'] and x['waterLayer'] for x in ponds), 'Current brine conversion is not exercised'
+        terrain=day['currentTerrain']
+        assert terrain and all(x['textureWidth']==1024 and x['textureHeight']==1024 and x['wrapMode']=='Repeat' and x['worldPeriodCells']==16 for x in terrain), 'Terrain shader received cropped or clamped material'
+        assert any(x['vertexAlphaMin']<x['vertexAlphaMax'] for x in terrain), 'Connected terrain boundary coverage is missing'
+        assert all(x['plantScale']==2 for x in day['cells'] if x['source'] in ['Dogthorn Tree','Starapple Tree','Starapple Tree Ripe'] and x['mapped'])
+        liquid=read('current-liquid-inputs.json')
+        evidence.update(fog_shader=shader,fog_frames=fogs,liquid_inputs=liquid,terrain_materials=terrain)
+        references=[('Original POC · RimWorld textures; different capture layout',Path('E:/Temp/qud-transplant-probe-pawns-20261019/joppa-baseline-replacement.png'),'poc-donor-full-map.png'),
+                    ('Previous current-art rendering',ROOT/'evidence/current-game-rendering-20261021/day-revealed-replacement.png','previous-current-day.png')]
+        comparison='<details><summary>Compare vegetation and ground with the original POC</summary><p>The POC is a style/scale reference from an earlier controlled capture. Its viewport and population differ.</p><section class="gallery">'
+        for label,source,name in references:
+            shutil.copy2(source,out/name)
+            comparison+=f'<figure><figcaption>{label}</figcaption><a href="../evidence/{folder}/{name}" target="_blank" rel="noopener"><img loading="lazy" src="../evidence/{folder}/{name}" alt="{label}"></a></figure>'
+        comparison+='</section></details>'
     (out/'verification.json').write_text(json.dumps(evidence,indent=2)+'\n',encoding='utf-8',newline='\n')
     page='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RimQud · in-game day, night and fog</title>
 <style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#142823;color:#e5e8d8;font:17px/1.5 Georgia,serif}main{max-width:1450px;margin:auto;padding:24px}a{color:#e3cf43}h1{font-weight:normal;font-size:clamp(28px,4vw,42px);margin:16px 0}p{max-width:90ch}.controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center;border-block:1px solid #526b5c;padding:14px 0;margin:24px 0}select{background:#20382d;color:inherit;padding:8px;font:inherit}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0;border:1px solid #526b5c;background:#20382d}figcaption{padding:10px 14px;color:#e3cf43;font:14px/1.5 Consolas,monospace}figcaption span{float:right;color:#b6c8ba;font-size:12px}img{display:block;width:100%;height:auto}small{color:#b6c8ba}a:focus-visible,select:focus-visible{outline:2px solid #e3cf43;outline-offset:4px}@media(max-width:850px){.gallery{grid-template-columns:1fr}main{padding:14px}}</style>
@@ -77,8 +100,11 @@ def build(root):
 <p>Four actual captures from Qud’s game camera, using the same generated Joppa layout, player position and current asset selections. Click an image for its full resolution.</p>
 <p><strong>Day/night:</strong> the native clock drives Qud’s Daylight component. The adapter adds a blue night tint to converted art. Fully revealed views are diagnostic overrides; native fog views preserve line of sight, exploration and local light. Unsupported or hidden content keeps the native display.</p>
 <div class="controls"><label for="display">Show</label><select id="display"><option value="replacement">Current converted art</option><option value="original">Original native rendering</option></select><small>Same camera and native frame</small></div><section class="gallery">__CARDS__</section>
-<p><small>Native fallback is visible for the player, the newly generated male farmer (the captured template is female), the loudspeaker’s power-cut status tile, and unsupported liquid mixtures with their foreground objects. Rendering comparison only; complete equipment/state/lifecycle acceptance remains pending. <a href="../evidence/current-game-rendering-20261021/verification.json">Capture verification</a></small></p></main>
-<script>document.querySelector('#display').addEventListener('change',e=>{for(const image of document.images){image.src=image.dataset[e.target.value];image.closest('a').href=image.src;}});</script></html>'''.replace('__CARDS__',''.join(cards))
+__COMPARISON__<p><small>Native fallback is visible for the player, the newly generated male farmer (the captured template is female), and unsupported status/body states. Rendering comparison only; complete equipment/state/lifecycle acceptance remains pending. <a href="../evidence/__FOLDER__/verification.json">Capture verification</a></small></p></main>
+<script>document.querySelector('#display').addEventListener('change',e=>{for(const image of document.querySelectorAll('img[data-replacement]')){image.src=image.dataset[e.target.value];image.closest('a').href=image.src;}});</script></html>'''.replace('__CARDS__',''.join(cards)).replace('__COMPARISON__',comparison).replace('__FOLDER__',folder)
+    if revision==2:
+        page=page.replace('The adapter adds a blue night tint to converted art.', 'The adapter applies the same night treatment to converted and retained native art.')
+        page=page.replace('Unsupported or hidden content keeps the native display.', 'CAI5000’s actual fog shader renders Qud’s visibility/exploration mask. Unseen cells contain no hidden object identities; unsupported art retains the accepted native appearance.')
     (ROOT/'docs/current-game-rendering.html').write_text(page,encoding='utf-8',newline='\n')
     print(json.dumps([dict(phase=x['phase'],mapped=x['mapped'],actors=len(x['current_actor_cells'])) for x in records]))
 
@@ -86,4 +112,6 @@ def build(root):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',required=True,type=Path)
-    build(parser.parse_args().root)
+    parser.add_argument('--revision',type=int,choices=[1,2],default=1)
+    args=parser.parse_args()
+    build(args.root,args.revision)

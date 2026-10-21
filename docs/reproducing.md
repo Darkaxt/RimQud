@@ -11,14 +11,22 @@ The current four-view native-camera test is available separately from the
 historical village batch. Prepare the pinned inputs below, then run:
 
 ```powershell
-python -X utf8 -B tools/prepare_current_runtime.py --root E:/Temp/qud-transplant-probe-fullset-20261021
+python -X utf8 -B tools/prepare_current_runtime.py --root E:/Temp/qud-transplant-probe-fullset-20261021 --image-root D:/Temp/rimqud-current-runtime-v2-20261021
 ./probe/run_probe.ps1 -Root E:/Temp/qud-transplant-probe-fullset-20261021 -Mode pawns -IntegrationStage 4 -ArtSet current
-python -X utf8 -B tools/build_current_game_review.py --root E:/Temp/qud-transplant-probe-fullset-20261021
+python -X utf8 -B tools/build_current_game_review.py --root E:/Temp/qud-transplant-probe-fullset-20261021 --revision 2
 ```
 
 The root also requires the audited `donor/donor-shaders.bundle` prepared by the
 shader-package procedure below (SHA256
 `35ae7c328ed9a731caf4699d35e1240e9a0d672b5bdb36be254477dee52b013b`).
+Preparation also copies the installed [CAI5000](https://github.com/kbatbouta/CAI-5000)
+Windows fog shader bundle into the private root and records its exact source/hash
+in `donor/cai-fog-source.json`. Use `--fog-bundle <installed-path>` for another
+installation. The shader is required and must load as supported; no CAI combat
+or sight simulation is imported. Qud supplies visibility and exploration. Donor
+bundles remain private inputs. `--fog-only` prepares just this dependency.
+The explicit `--image-root` keeps bulk image traffic on D: while reusing the
+existing E: profile and metadata; retain that cache while the contract uses it.
 Runtime exports are derived from verified selected public images, retaining
 explicit west operations, per-item ownership, independent native tints and full
 registered frames. Working raster copies are downsampled to256pixels maximum
@@ -29,6 +37,18 @@ position, and either a diagnostic reveal override or native visibility. Blue
 night tint is an adapter material treatment, not a transplanted RimWorld lighting
 system. The report retains original/native comparisons and unsupported-state
 fallback. This test does not establish complete lifecycle/ledger acceptance.
+Fresh water and water-primary water/salt brine use the reviewed water surfaces;
+frozen water and other mixtures retain native rendering. Translucent ripples
+blend over the base. Retained native graphics receive the same night treatment.
+Donor terrain shaders derive UV from local XZ/16 and multiply sampled RGBA by
+vertex color. Keep full1024pixel repeating materials on a logical cell-space
+mesh; apply Qud's rectangular cell aspect through the mesh transform. Connected
+boundary masks drive vertex alpha, while material/stone/ripple alpha remains in
+the texture. Supplying cell crops or resetting texture UVs breaks this contract.
+Trees use the original POC's two-cell scale around their authored ground contact,
+with the donor plant shader. Dry converted cells share the selected grassy
+substrate, avoiding a different ground albedo only beneath vegetation. The report
+includes the earlier donor-texture POC for comparison.
 
 The older village package/run below is historical evidence. It does not test
 the current conversion ledger. Full acceptance coverage is still being wired;

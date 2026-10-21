@@ -26,7 +26,7 @@ namespace RenderingTransplantProbe
         public EquippedAppearance[] Equipment;
         public string BodyShape,ApparelFallback,ArtFallback;
         public string Source,Kind,Resolved,GroundKind,AssetFamily;
-        public bool Visible,RequiresOriginal,Grass,DoorOpen,WaterPure;
+        public bool Visible,RequiresOriginal,Grass,DoorOpen,WaterPure,WaterSupported,Explored;
         public int WaterDepth,WaterVolume;
         public int NativeLight,ConnectionMask;
         public ConsoleChar Display;
@@ -115,7 +115,7 @@ namespace RenderingTransplantProbe
                 cell.PaintTile=="assets_content_textures_tiles_tile-grass1.png" ||
                 cell.PaintTile=="Terrain/sw_grass1.bmp" || cell.PaintTile=="Terrain/sw_grass2.bmp" ||
                 cell.PaintTile=="Terrain/sw_grass3.bmp");
-            int depth=0,volume=0;bool waterPure=false;
+            int depth=0,volume=0;bool waterPure=false,waterSupported=false;
             if(e.Visible && zone.GetVisibility(cell.X,cell.Y))
             {
                 // Explicit known liquid-underlay adapter for visible open water.
@@ -124,16 +124,21 @@ namespace RenderingTransplantProbe
                 if(liquid!=null)
                 {
                     var v=liquid.LiquidVolume;volume=v.Volume;
-                    waterPure=v.Proportion("water")==1000;
+                    waterPure=v.IsPureLiquid("water");
+                    // Fresh water and water-primary brine share Qud's b/B
+                    // surface palette. Other mixtures and frozen water stay native.
+                    waterSupported=!liquid.IsFrozen() && v.GetPrimaryLiquidID()=="water" &&
+                        v.ComponentLiquids.Keys.All(k=>k=="water" || k=="salt");
                     depth=v.IsSwimmingDepth()?3:v.IsWadingDepth()?2:1;
                 }
             }
             var observation=new JoppaCell{X=cell.X,Y=cell.Y,Visible=e.Visible,
                 Source=e.Visible && selected!=null?selected.Blueprint:null,
-                Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,WaterPure=waterPure,
+                Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,WaterPure=waterPure,WaterSupported=waterSupported,
                 Grass=e.Visible && cell.PaintTile!=null && cell.PaintTile.IndexOf("grass",StringComparison.OrdinalIgnoreCase)>=0};
             PawnPresentation.Capture(cell,selected,observation);
             observation.NativeLight=(int)zone.GetLight(cell.X,cell.Y);
+            observation.Explored=zone.GetExplored(cell.X,cell.Y);
             if(CurrentArt.Enabled && observation.Source!=null && new[]{"BrinestalkWall","BrinestalkWallWithGearbox"}.Contains(observation.Source))
             {
                 int mask=0,bit=1;
@@ -187,6 +192,8 @@ namespace RenderingTransplantProbe
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
                 cells[i].WaterPure=observed!=null && observed.WaterPure;
+                cells[i].WaterSupported=observed!=null && observed.WaterSupported;
+                cells[i].Explored=zone.GetExplored(x,y);
             }
             PawnPresentation.Accepted(cells);
             accepted=new JoppaFrame{Generation=++generation,World=PawnPresentation.World,Phase=phase,Enabled=enabled && (!Gameplay || GameplayProbe.Replacement),Cells=cells,

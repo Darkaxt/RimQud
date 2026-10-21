@@ -488,6 +488,15 @@ native state ownership. Review seamless material scale in the complete village,
 not only enlarged isolated tiles. Native glyphs and dynamically painted tile
 variants need explicit provenance; they are not automatically non-art exclusions.
 
+Before authoring or revising terrain, liquid or vegetation textures, read
+[terrain and vegetation contracts](references/terrain-and-vegetation.md).
+Record the actual destination shader's coordinate, opacity, tint and layer
+contracts with the asset. A correct isolated PNG can still render incorrectly
+when sampled as a cropped tile, given the wrong boundary opacity, or placed over
+a different ground background. Keep the continuous substrate independent of
+plant silhouettes; preserve registered plant contact/scale. These authoring
+requirements do not move native validation ahead of section 7's generation gate.
+
 Do not repeat the earlier fixed-mutant-body approach. The historical Yrame
 three-foot proposals and four-foot patch illustrate why baseline species art
 and mutation assembly must remain separate. Retain rejected proposals as history;

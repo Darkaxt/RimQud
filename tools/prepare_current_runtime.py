@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import shutil
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -9,17 +10,34 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def prepare_fog(root, bundle):
+    """Keep the installed shader private; record exact donor provenance."""
+    blob=bundle.read_bytes()
+    digest=hashlib.sha256(blob).hexdigest()
+    target=root/'donor/cai-fog.bundle'
+    target.parent.mkdir(exist_ok=True)
+    if not target.exists() or hashlib.sha256(target.read_bytes()).hexdigest()!=digest:
+        shutil.copy2(bundle,target)
+    receipt=dict(source=str(bundle),sha256=digest,shader='Custom/FogShader',
+                 mod='CAI5000',workshop_id='2938891185',url='https://github.com/kbatbouta/CAI-5000',
+                 scope='Private installed shader only; no mod DLL, AI or faction sight implementation is imported.')
+    (root/'donor/cai-fog-source.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8',newline='\n')
+    print('Prepared installed CAI5000 fog shader:',digest)
+
+
 def canonical(tile):
     tile = tile.lower()
     return tile if tile.startswith('assets_content_textures_') else 'assets_content_textures_' + tile.replace('/', '_')
 
 
-def build(root):
+def build(root, image_root=None):
     selected = root / 'selected'
     package = json.loads((selected / 'package.json').read_text())
     cast = json.loads((selected / 'cast-v2.json').read_text())
     out = selected / 'runtime'
     out.mkdir(exist_ok=True)
+    image_out=image_root or out
+    image_out.mkdir(parents=True,exist_ok=True)
     exports = {}
 
     def read(ref):
@@ -44,7 +62,7 @@ def build(root):
             else:
                 value.thumbnail((256, 256), Image.Resampling.LANCZOS)
             name = hashlib.sha256(repr(key).encode()).hexdigest() + '.png'
-            value.save(out / name)
+            value.save(image_out / name)
             exports[key] = name
         return exports[key]
 
@@ -182,8 +200,17 @@ def build(root):
         model = read(ref)
         surfaces[name] = dict(base=image(model['layers'][0], size=(1024,1024)), ripple=image(model['layers'][1], size=(1024,1024)))
     boundaries = {str(x['mask']): image(x, mask=True, size=(64,64)) for x in path['coverage']['masks']}
-    Image.new('RGBA',(1,1),'white').save(out/'white.png')
-    data = dict(schema=1, actors=actors, scenery=scenery, paint=paint, surfaces=surfaces, boundaries=boundaries,
+    Image.new('RGBA',(1,1),'white').save(image_out/'white.png')
+    grassy = read(package['entries']['TILE-MARSH']['model'])
+    surfaces['field'] = dict(file=image(grassy['neutral_material'], size=(1024,1024)))
+    plants = {'Dogthorn Tree':dict(kind='tree',scale=2.0,anchor=[.5,2/3]),
+              'Starapple Tree':dict(kind='tree',scale=2.0,anchor=[.5,2/3]),
+              'Starapple Tree Ripe':dict(kind='tree',scale=2.0,anchor=[.5,2/3]),
+              'Watervine':dict(kind='crop',scale=1.0,anchor=[.5,2/3]),
+              'Brinestalk':dict(kind='reed',scale=1.0,anchor=[.5,2/3])}
+    for blueprint, presentation in plants.items():
+        scenery[blueprint]['plant']=presentation
+    data = dict(schema=1, image_root=str(image_out.resolve()),actors=actors, scenery=scenery, paint=paint, surfaces=surfaces, boundaries=boundaries,
                 cast_sha256=hashlib.sha256((selected/'cast-v2.json').read_bytes()).hexdigest(),
                 package_sha256=hashlib.sha256((selected/'package.json').read_bytes()).hexdigest(),
                 unmapped=omissions, native_acceptance=False)
@@ -194,4 +221,9 @@ def build(root):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', required=True, type=Path)
-    build(parser.parse_args().root)
+    parser.add_argument('--fog-only', action='store_true')
+    parser.add_argument('--image-root',type=Path)
+    parser.add_argument('--fog-bundle', type=Path, default=Path('D:/Steam/steamapps/workshop/content/294100/2938891185/Resources/Bundles/StandaloneWindows/isma'))
+    args=parser.parse_args()
+    if not args.fog_only:build(args.root,args.image_root)
+    prepare_fog(args.root,args.fog_bundle)

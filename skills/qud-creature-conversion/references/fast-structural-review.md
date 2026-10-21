@@ -26,6 +26,8 @@ state. Inspect a relevant close-up when a suspected defect is unclear. Look for:
 - garment openings, strap endpoints, grips, detached fragments and foreign lines;
 - cardinal camera, scale/pivot, edge/crop integrity and unintended backgrounds;
 - neutral/tint separation and source identity, when visible evidence permits it.
+- for environmental art: connected seams, unintended ground rectangles or mattes,
+  stone/foliage density at intended size, and plant contact/scale in composition.
 
 For example, a horn can have a root point inside the skull yet look like a flat
 tube resting on it. A rear curl can show two unrelated-looking fragments despite

@@ -37,6 +37,7 @@ namespace RenderingTransplantProbe
         public static bool Fog;
         public static Color Shade {get{return Night?new Color(.42f,.49f,.69f,1):Color.white;}}
         public static Color Lighting(JoppaCell cell){return Night && (!Fog || cell.NativeLight<200)?Shade:Color.white;}
+        public static JObject Plant(JoppaCell cell){return cell.Source==null?null:Data["scenery"][cell.Source]?["plant"] as JObject;}
         public static string Canonical(string tile)
         {if(tile==null)return "";tile=tile.ToLowerInvariant();return tile.StartsWith("assets_content_textures_")?tile:"assets_content_textures_"+tile.Replace('/','_');}
         static string PartPath(XRL.World.Anatomy.BodyPart p)
@@ -98,7 +99,7 @@ namespace RenderingTransplantProbe
             (Data["scenery"][source]["tiles"][Canonical(tile)]!=null ||
              (bool)Data["scenery"][source]["connected"] && Canonical(tile).Contains("wall_brinestalk"));}
         public static bool CanMap(JoppaCell cell)
-        {return cell.Visible && !cell.RequiresOriginal && !cell.Display.VFlip && cell.Display.Char=='\0' && (cell.WaterDepth==0 || cell.WaterPure) &&
+        {return cell.Visible && !cell.RequiresOriginal && !cell.Display.VFlip && cell.Display.Char=='\0' && (cell.WaterDepth==0 || cell.WaterSupported) &&
             ((cell.AssetFamily??"").StartsWith("current:NPC-") || Scenery(cell)!=null || Data["paint"][Canonical(cell.Display.Tile)]!=null ||
              cell.Source=="DirtPath" || cell.Source=="DirtFloor" || cell.Source=="Pond" && cell.WaterDepth>0);}
         static Texture2D Image(string file)
@@ -106,8 +107,8 @@ namespace RenderingTransplantProbe
             if(file==null)return null;Texture2D image;
             if(!images.TryGetValue(file,out image))
             {
-                image=new Texture2D(2,2,TextureFormat.RGBA32,false,true);
-                if(!ImageConversion.LoadImage(image,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"selected/runtime",file))))throw new InvalidDataException(file);
+                image=new Texture2D(2,2,TextureFormat.RGBA32,true,true);
+                if(!ImageConversion.LoadImage(image,File.ReadAllBytes(Path.Combine((string)Data["image_root"],file))))throw new InvalidDataException(file);
                 image.wrapMode=TextureWrapMode.Clamp;images[file]=image;
             }
             return image;
@@ -151,19 +152,17 @@ namespace RenderingTransplantProbe
         public static Texture2D Texture(string key){return composed[key];}
         public static Texture2D SourceTexture(string key,bool repeat=false)
         {var image=Image(key);image.wrapMode=repeat?TextureWrapMode.Repeat:TextureWrapMode.Clamp;return image;}
-        public static string Surface(string name,JoppaCell cell,int mask,bool ripple=false)
+        public static string Surface(string name,bool ripple=false)
         {
-            string key="current:surface/"+name+"/"+(cell.X%16)+"/"+(cell.Y%16)+"/"+mask+"/"+ripple;
+            string key="current:surface/"+name+"/"+ripple;
             if(composed.ContainsKey(key))return key;
             var rule=Data["surfaces"][name];
             string file=(string)(rule[ripple?"ripple":"base"]??rule["file"]);
-            var source=Image(file);int size=source.width/16;
-            var pixels=source.GetPixels((cell.X%16)*size,(15-cell.Y%16)*size,size,size);
-            var boundary=Image((string)Data["boundaries"][mask.ToString()]);var weights=boundary.GetPixels();
-            for(int y=0;y<size;y++)for(int x=0;x<size;x++)pixels[x+y*size].a*=weights[x*boundary.width/size+(y*boundary.height/size)*boundary.width].r;
-            var texture=new Texture2D(size,size,TextureFormat.RGBA32,true,true);texture.SetPixels(pixels);texture.Apply();
-            texture.wrapMode=TextureWrapMode.Clamp;composed[key]=texture;return key;
+            var texture=Image(file);texture.wrapMode=TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
+            composed[key]=texture;return key;
         }
+        public static float Boundary(int mask,float u,float v)
+        {return Image((string)Data["boundaries"][mask.ToString()]).GetPixelBilinear(u,v).r;}
         public static JObject ActorView(JoppaCell cell)
         {
             string id=cell.AssetFamily.Substring("current:".Length);
@@ -173,12 +172,16 @@ namespace RenderingTransplantProbe
         public static string ActorTexture(JoppaCell cell,JObject view)
         {return Compose(cell,(JArray)view["ops"],cell.AssetFamily+"/"+cell.Facing);}
         public static void Dispose()
-        {foreach(var texture in images.Values.Concat(composed.Values))UnityEngine.Object.DestroyImmediate(texture);images.Clear();composed.Clear();}
+        {foreach(var texture in images.Values.Concat(composed.Values).Distinct())UnityEngine.Object.DestroyImmediate(texture);images.Clear();composed.Clear();}
         public static void Run()
         {
             var core=XRLCore.Core;var game=core.Game;var zone=game.Player.Body.CurrentZone;
             long ticks=game.TimeTicks;bool reveal=core.VisAllToggle;
             var explored=(bool[])zone.ExploredMap.Clone();var phases=new JArray();
+            ProbeRunner.Record("current-liquid-inputs.json",Enumerable.Range(0,2000).Where(i=>zone.GetVisibility(i%80,i/80)).SelectMany(i=>zone.GetCell(i%80,i/80).Objects)
+                .Where(o=>o.LiquidVolume!=null && o.LiquidVolume.IsOpenVolume() && o.LiquidVolume.Volume>0)
+                .Select(o=>new{blueprint=o.Blueprint,x=o.CurrentCell.X,y=o.CurrentCell.Y,components=o.LiquidVolume.ComponentLiquids,
+                    pureWater=o.LiquidVolume.IsPureLiquid("water"),waterProportion=o.LiquidVolume.Proportion("water")}));
             try
             {
                 foreach(bool night in new[]{false,true})foreach(bool fog in new[]{false,true})
