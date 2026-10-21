@@ -33,9 +33,26 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-CANVASWALL is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCOPE-DAYLIGHTWIDGET is the sole active entry.
 
-Current shrine checkpoint (2026-10-21): `scn-joppareshephshrine/blender-v4/registered`
+Current canvas checkpoint (2026-10-21): `scn-canvaswall/blender-v3/registered`
+is generation-ready with all16 actual PaintedFence tent masks: isolated, ends,
+straights, corners, T-junctions and crossing. Complete thin cloth/pickets and
+source-asymmetric lower red regions share a calibrated cardinal map frame.
+The first refinement was held for weak red-region weight and thin N/S strips;
+saved-model correction and fresh review resolve both. Joined multicell proofs
+show no visible gaps or duplicate exposed endcaps. The model retains64 cardinal
+attachment empties. UsesGate names Brinestalk Gate, but its PaintWith group is
+brinestalkfence while Canvas has none; that association does not authorize new
+neighbor flags. SingleTrack wildcard behavior and MultiTrack's nonempty-group
+guard are documented. Other item joins remain source-bound. Immutable registry
+snapshot16 retains three editable versions and the exact selected resume model.
+Neutral/tint-weight/coverage atlases preserve one coverage and native w/r roles.
+Diagnostic-scale cloth rigidity is minor provisional polish. There are148
+generation-ready entries and eight source-based exclusion reviews remaining.
+Native acceptance remains pending for the complete set; no game was launched.
+
+Prior shrine checkpoint (2026-10-21): `scn-joppareshephshrine/blender-v4/registered`
 is generation-ready with the declared catalogue monument, four temporary native
 tombstones and normal Resheph statue. Six source-guided carved interpretations
 share the original cell frame and real S/E/N model rotations. Source negative
@@ -133,6 +150,16 @@ native facts, preserve palette/coverage/connection ownership and retain editable
 models. Appropriate ground surfaces keep their source-supported map-plane form.
 This confirms the Blender-first route; it does not reopen usable existing sets,
 invent unsupported neighbor states or permit native validation before generation.
+
+Wall connection reminder (2026-10-21): CanvasWall and new structural wall art
+must include the supported corner and connected-item cases, not only isolated
+panels or straight runs. Cover the existing16 N/E/S/W masks: isolated, four ends,
+two straights, four corners, four T-junctions and a crossing. Inspect joined
+multi-cell authoring arrangements for gaps, duplicate caps/posts and incompatible
+cloth/edge ownership. Resolve native gate and other item connection rules from
+their actual metadata/code, retain suitable attachment faces/anchors in the saved
+geometry, and record supported versus unknown connections explicitly. Do not
+infer new native connectivity or equipment/fixture behavior from a visual join.
 
 Prior pottery checkpoint (2026-10-21): Vase and Wine Vase are generation-ready.
 `scn-vase/blender-v5/registered` retains complete hollow two-handled pottery,

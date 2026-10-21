@@ -1,0 +1,269 @@
+{
+  "entry": "SCN-CANVASWALL",
+  "identity": "CanvasWall -> Wall -> InorganicObject -> PhysicalObject -> Object",
+  "description": "The quickened flax of the earth was duck-weaved in a simple square pattern and hung up on pickets.",
+  "ancestry": {
+    "CanvasWall": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Walls.xml",
+        "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e"
+      },
+      "selected": "<object Name=\"CanvasWall\" Inherits=\"Wall\">\n    <part Name=\"Render\" DisplayName=\"canvas\" RenderString=\"216\" ColorString=\"&amp;w\" DetailColor=\"r\" Occluding=\"true\" />\n    <part Name=\"Physics\" Weight=\"100\" Takeable=\"false\" Solid=\"true\" Organic=\"true\" />\n    <part Name=\"Description\" Short=\"The quickened flax of the earth was duck-weaved in a simple square pattern and hung up on pickets.\" />\n    <stat Name=\"AV\" Value=\"1\" />\n    <stat Name=\"Hitpoints\" Value=\"15\" />\n    <tag Name=\"BodyType\" Value=\"ClothWall\" />\n    <tag Name=\"PaintedFence\" Value=\"tent\" />\n    <tag Name=\"ImmutableWhenUnexplored\" Value=\"1\" />\n    <tag Name=\"Category_Settlement\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"UsesGate\" Value=\"Brinestalk Gate\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitFabric\"></tag>\n  </object>",
+      "inherits": "Wall"
+    },
+    "Wall": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Walls.xml",
+        "sha256": "7ef3e50125236ba8497c9f86814e595e4de86c15a3a0be13eb6a403debe4492e"
+      },
+      "selected": "<object Name=\"Wall\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Wall]\" Tile=\"assets_content_textures_tiles_tile-0-13.png\" RenderLayer=\"7\" RenderString=\"219\" ColorString=\"&amp;y^k\" Occluding=\"true\" />\n    <part Name=\"Physics\" Weight=\"10000\" Takeable=\"false\" Solid=\"true\" SpecificHeat=\"1.55\" Conductivity=\"20\" />\n    <part Name=\"Description\" Short=\"[wall]\" />\n    <stat Name=\"AV\" Value=\"5\" />\n    <stat Name=\"Hitpoints\" Value=\"100\" />\n    <tag Name=\"Wall\" />\n    <tag Name=\"Diggable\" />\n    <tag Name=\"NoEffects\" />\n    <stat Name=\"ColdResistance\" Value=\"50\" />\n    <stat Name=\"ElectricResistance\" Value=\"50\" />\n    <tag Name=\"PaintedWall\" Value=\"wall_brick\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Cracked,Crackless,Once-Cracked,Painted,Still-Standing,Studded,Sturdy,Twice-Cracked,Unpainted,Unstudded\" />\n    <tag Name=\"HeroNameTitleClientele\" Value=\"Builders,Cowards,Defenders,Roofs,the Assailed,the Stalwart\" />\n    <xtagTextFragments Skin=\"texture\" PoeticFeatures=\"towering nature,gentle stillness,comforting enclosure\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"200000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Class\" Value=\"wall\" />\n    <tag Name=\"BodyType\" Value=\"Wall\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"2000\" />\n    <tag Name=\"ImpactSound\" Value=\"Sounds/Throw/sfx_throwing_generic_hitStone\"></tag>\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_stone\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_stone\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_rocks\"></tag>\n\t\t<tag Name=\"Breakable\" Value=\"*delete\" />\n  </object>",
+      "inherits": "InorganicObject"
+    },
+    "InorganicObject": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>",
+      "inherits": "PhysicalObject"
+    },
+    "PhysicalObject": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>",
+      "inherits": "Object"
+    },
+    "Brinestalk Gate": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Brinestalk Gate\" Inherits=\"Gate\">\n    <part Name=\"Render\" RenderLayer=\"6\" DisplayName=\"brinestalk gate\" ColorString=\"&amp;w\" DetailColor=\"y\" RenderString=\"+\" Occluding=\"false\" RenderIfDark=\"true\" Tile=\"Items/sw_fence_gates_2_open.bmp\" />\n    <part Name=\"Physics\" Weight=\"50\" />\n    <part Name=\"Description\" Short=\"Brinestalk is shaved into pickets and set across an iron-latched rail.\" />\n\t\t<tag Name=\"PaintWith\" Value=\"brinestalkfence\" />\n  </object>",
+      "inherits": "Gate"
+    },
+    "Gate": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Gate\" Inherits=\"Door\">\n    <part Name=\"Render\" RenderLayer=\"6\" DisplayName=\"[gate]\" ColorString=\"&amp;w\" DetailColor=\"y\" RenderString=\"+\" Occluding=\"false\" RenderIfDark=\"true\" Tile=\"Items/sw_fence_gates_2_open.bmp\" />\n    <part Name=\"Physics\" Weight=\"50\" Organic=\"true\" />\n    <part Name=\"Door\" OccludingWhileClosed=\"false\" OpenTile=\"Items/sw_fence_gates_closed.bmp\" ClosedTile=\"Items/sw_fence_gates_2_open.bmp\" />\n    <tag Name=\"NoEffects\" />\n    <tag Name=\"OpenSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_open\" />\n    <tag Name=\"CloseSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_close\" />\n    <tag Name=\"Door\" />\n    <tag Name=\"Flyover\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <intproperty Name=\"AllowMissiles\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "inherits": "Door"
+    },
+    "Door": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Door\" Inherits=\"MountedFurniture\">\n    <part Name=\"Render\" Tile=\"Assets_Content_Textures_Tiles_sw_doorclosed.bmp\" ColorString=\"&amp;y\" DetailColor=\"y\" RenderLayer=\"7\" DisplayName=\"door\" RenderString=\"+\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Weight=\"50\" Organic=\"true\" />\n    <part Name=\"Door\" />\n    <tag Name=\"Door\" />\n    <tag Name=\"NoEffects\" />\n    <part Name=\"Description\" Short=\"The slate is touched with years of handprints and a ring of rust flakes off the top of the hinges. The door continues, though, its stubborn assertion of 'in' and 'out'.\" />\n    <tag Name=\"OpenSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_open\" />\n    <tag Name=\"CloseSound\" Value=\"Sounds/Interact/sfx_interact_door_wood_close\" />\n    <tag Name=\"HeroNameTitleDescriptor\" Value=\"Ajar,Closed,Locked,Once-Knocked,Open,Thrice-Knocked,Twice-Knocked,Unknockable,Unknocked,Unlocked\" />\n    <xtagTextFragments Skin=\"panel\" PoeticFeatures=\"charming moulding,oiled hinges,inviting knob\" />\n    <tag Name=\"NamingTag\" Value=\"Animated\" />\n    <tag Name=\"BodyType\" Value=\"Door\" />\n    <builder Name=\"Animated\" ChanceOneIn=\"15000\" />\n    <tag Name=\"Animatable\" />\n    <tag Name=\"DynamicObjectsTable:AnimatableFurniture\" />\n    <tag Name=\"Category\" Value=\"door\" />\n    <tag Name=\"Class\" Value=\"door\" />\n    <tag Name=\"HangingSupport\" />\n    <tag Name=\"QuestableVerb\" Value=\"open,close\" />\n    <tag Name=\"QuestableEvent\" Value=\"Opened,Closed\" />\n    <tag Name=\"Tier\" Value=\"1\" />\n    <intproperty Name=\"Anchoring\" Value=\"8000\" />\n  </object>",
+      "inherits": "MountedFurniture"
+    },
+    "MountedFurniture": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"MountedFurniture\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"[MountedFurniture]\" />\n    <part Name=\"Physics\" Takeable=\"false\" />\n    <part Name=\"MountedFurniture\" />\n    <stat Name=\"Hitpoints\" Value=\"300\" />\n    <part Name=\"MissileCover\" Percentage=\"10\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k^k\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n  </object>",
+      "inherits": "Furniture"
+    },
+    "Furniture": {
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>",
+      "inherits": "InorganicObject"
+    }
+  },
+  "actual_native_states": {
+    "path": "art/conversion/scn-canvaswall/blender-v1/native-state-index.json",
+    "sha256": "7495ae147d8d8a77d62430fb789f7b2d50186369786c5eb1fddfef7e40df382b"
+  },
+  "original_placeholder": {
+    "tile": "assets_content_textures_tiles_tile-0-13.png",
+    "description": "The quickened flax of the earth was duck-weaved in a simple square pattern and hung up on pickets.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "canvas",
+      "RenderString": "216",
+      "RenderLayer": "7",
+      "RenderIfDark": "true",
+      "Tile": "assets_content_textures_tiles_tile-0-13.png",
+      "ColorString": "&w",
+      "Occluding": "true",
+      "DetailColor": "r"
+    },
+    "kind": "scenery",
+    "blueprint": "CanvasWall",
+    "reference_file": "village-originals/canvaswall-reference.png",
+    "native_mask_sha256": "8bdf41e4e2b4338772974c389a85cd052640ad3e6a9c64af42209f58a5ca8197",
+    "reference_sha256": "f299d90af344a358fb01c87d7045ddd6e376ba5204b6b84a56320ee4171b1cfc",
+    "info_id": 14306,
+    "atlas_id": 277,
+    "rect": [
+      702,
+      2002,
+      16,
+      24
+    ]
+  },
+  "source_correction": "Inherited static tile-0-13 is a catalogue placeholder. PaintedFence tent is assigned after inherited PaintedWall and is the actual connected tile family.",
+  "source_code": {
+    "assembly": {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+    },
+    "zone_manager": {
+      "path": "E:/Temp/rimqud-native-canvaswall-20261021/ZoneManager.cs",
+      "sha256": "6062712bec7a1950e807c477a9c88ae20fc2bd5e28d033c2d25267a9f1b8eaa3"
+    },
+    "door": {
+      "path": "E:/Temp/rimqud-native-canvaswall-20261021/Door.cs",
+      "sha256": "ee3168610bb68b2e2424bcc28f60de1db80b1c865de5e0e1675caa96f049a427"
+    },
+    "resources_sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"
+  },
+  "connections": {
+    "recipient_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8
+    },
+    "native_suffix_order": [
+      "n",
+      "s",
+      "e",
+      "w"
+    ],
+    "required_states": "isolated; four ends; two straights; four corners; four T junctions; crossing",
+    "same_blueprint": true,
+    "paint_part": null,
+    "paint_with": null,
+    "single_track_neighbor_wildcard": true,
+    "multi_track_wildcard_requires_nonempty_source_paint_with": true,
+    "named_gate": "Brinestalk Gate",
+    "gate_paint_with": "brinestalkfence",
+    "gate_scope": "UsesGate is the native placement association, not an automatic shared paint group. Canvas has no PaintWith group. Do not add gate-neighbor flags absent source support. Preserve native gate art and state mechanics; gate is not a new ledger target.",
+    "attached_items": "Expose cardinal midpoint join/attachment anchors. Named-gate contact is a visual authoring proxy; wildcard PaintWith=* has source support in SingleTrack only. Unknown other item groups remain unknown.",
+    "native_rules": "Same exact blueprint joins. Nonempty PaintPart matches parts. Neighbor PaintWith=* joins SingleTrack. Equal PaintWith requires nonempty source group. MultiTrack wildcard check is guarded by nonempty source group. Preserve track-dependent behavior; do not repair it during art generation."
+  },
+  "palette": {
+    "primary": "w",
+    "detail": "r",
+    "preview": "Native w (#98875f) and r (#a64a2e), separate semantic roles and one coverage"
+  },
+  "source_shape": "One central thin picket with red cap. East/west hanging canvas panels have a red upper hem and lower outer red folded corner. North/south connectors are a narrow red edge-on strip with intermittent primary crossbars. Not a solid masonry checker block or a roof tent.",
+  "native_behavior": {
+    "solid": true,
+    "occluding": true,
+    "organic": true,
+    "weight": 100,
+    "av": 1,
+    "hitpoints": 15,
+    "body_type": "ClothWall",
+    "immutable_when_unexplored": 1,
+    "graffiti_chance_one_in": 300,
+    "uses_gate": "Brinestalk Gate",
+    "render_layer": 7,
+    "note": "Do not import BrinestalkFence Flyover or AllowMissiles declarations; maintain native collision, exploration, damage and gate ownership."
+  },
+  "donors": [
+    {
+      "name": "Camping Tent",
+      "package_id": "Aoba.Tent",
+      "workshop_id": "2407128339",
+      "about": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2407128339/About/About.xml",
+        "sha256": "5ae1110e650d30fc6d1979912d0a217a79b3068bb2e6676e74c09ef8e8c68dde"
+      },
+      "assets": [
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2407128339/Textures/Things/Building/Tent/Tent_south.png",
+          "sha256": "03328d9f3eac13b631462945a518c91fd3b6b1424cb5eb1bfbe4e00d67e343ba"
+        }
+      ],
+      "definition": null,
+      "role": "Cloth tension, simple folded surface and pole outline only. No roof, triangular tent silhouette or new tent mechanics."
+    },
+    {
+      "name": "Vanilla Textures Expanded - Variations",
+      "package_id": "VanillaExpanded.VTEXVariations",
+      "workshop_id": "2493234474",
+      "about": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2493234474/About/About.xml",
+        "sha256": "c78fb39118527018f9c8783ecbf573fd767fae20fcfd9a5d4dadd6f12d23e666"
+      },
+      "assets": [
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2493234474/Textures/Things/Building/Furniture/Drapes/VFE_DrapeSparse_south.png",
+          "sha256": "85bb25dd764ca0f1dabd2e878f784a4b2282a22ee4c56d702c1cadaea60400ac"
+        },
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2493234474/Textures/Things/Building/Furniture/Drapes/VFE_DrapeSparse_east.png",
+          "sha256": "5aef2f83e1535c9addf18f2fb13c19c5591ab78ac63d3694941c276e77abe478"
+        }
+      ],
+      "definition": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2493234474/1.6/Mods/Royalty/Patches/RoyaltyPatch.xml",
+        "sha256": "d483e1dda4b980cb1e9d7924481a080a4b2179c99db567ebfdb933df59c1d632"
+      },
+      "role": "Hanging fabric and narrow edge-on pole convention. Do not copy ornamental swags, tassels or crossrod."
+    },
+    {
+      "name": "Vanilla Furniture Expanded - Architect",
+      "package_id": "VanillaExpanded.VFEArchitect",
+      "workshop_id": "2608762624",
+      "about": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2608762624/About/About.xml",
+        "sha256": "93e4e973d0d2bd8f196cac626d1ec61b5cb32da3453f87ea9af6cf271f4d88c3"
+      },
+      "assets": [
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2608762624/Textures/Fences/PicketFence/PicketFence_MenuIcon.png",
+          "sha256": "b85382de60e8c4e316f319d71b0e1949a778b517cdc77a89365e58594732933d"
+        },
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2608762624/Textures/Fences/PicketFence/PicketFence_Atlas.png",
+          "sha256": "c498abaa5eb63c83b92acd0fa6642d1eeae31834d32442cfca41423e3cdff391"
+        }
+      ],
+      "definition": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2608762624/1.6/Defs/ThingDefs_Buildings/Buildings_Structure.xml",
+        "sha256": "a6543e988186b83202ecba28cf0fbd4c00a31d323e99910f391c7e2c28f7b6f6"
+      },
+      "role": "Actual linked fence atlas/cap convention and readable borders only; native Qud connection rules and cloth identity remain authoritative."
+    }
+  ],
+  "authored_geometry": "Thin complete hanging fabric with a squared central picket, upper hem, lower folded color region and subdued square weave. Hidden thickness, cloth tension and camera elevation are authored estimates. One common frame for all16 masks, no independently fitted bounds.",
+  "frame": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "anchor": [
+      8,
+      16
+    ],
+    "camera": "Fixed cardinal map view. Calibrate world axes/pixel aspect in Blender and retain projection receipt. Source N/S connector spans tile boundaries; only declared connected sides may touch or cross canvas."
+  },
+  "evidence_required": [
+    "actual all16 states",
+    "joined multicell straight/corner/T/cross contexts",
+    "explicit attachment anchors and named gate/unknown group limits",
+    "saved editable model and controls",
+    "fresh independent structural review",
+    "neutral/detail/coverage and intended-size plate"
+  ],
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

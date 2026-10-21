@@ -1,0 +1,15 @@
+"""Record actual fresh corrected-state screening before registration."""
+from pathlib import Path
+import json,hashlib
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+p=json.loads((HERE/'review-inputs.json').read_text())
+for r in p['inputs']:assert hashlib.sha256((ROOT/r['path']).read_bytes()).hexdigest()==r['sha256']
+report=dict(asset='SCN-CANVASWALL',reviewer=dict(agent='/root/canvas_source_balance_review',fork_turns='none',reasoning_effort_requested='low',model='Inherited current main model; no override',configuration_limit='No independent model/effort readout exposed'),inputs=p['inputs'],recommendation='pass',fix_now=[],findings=[
+ dict(states='All16 masks',observation='Direction membership matches source; isolated, ends, corners, straights, T and cross distinguishable at intended-size thumbnails.',confidence='high',severity='none'),
+ dict(states='E/W panels',observation='Broad tan primary, red hem/lower fold; E outer-rising and W inward tongue/lower return remain visibly asymmetric.',confidence='high',severity='none'),
+ dict(states='NS strips',observation='Narrow red edge-on reading with tan ties survives; more shading/volume than native pixels but no broad second face.',confidence='high',severity='nonblocking authored interpretation'),
+ dict(states='Joined corners/T/cross',observation='Continuous joins without visible background gaps or duplicate exposed endcaps; intersection posts legible.',confidence='high',severity='none'),
+ dict(states='Pivot/crops/attachments',observation='Shared central support; only connected sides contact/cross frame. EW interface proof does not assert gate conversion.',confidence='high',severity='none'),
+ dict(states='Refined diagnostic03/15',observation='Complete joined panels/pickets preserved. Planar cloth and shaded hems somewhat rigid at diagnostic scale; tiny map reads as canvas barrier.',confidence='medium',severity='low',correction_principle='Keep cloth softness subordinate to source silhouette and thinness if refining later.')],observed='All24 packet hashes matched. Viewed full comparison sheets, manual geometry, refined03/15 and raw08/15 maps.',limits='Visual authoring screening only, not native acceptance, runtime connections, physical proof or undocumented gate mechanics.',main_dispositions=[dict(finding='Prior undersized folds/thin strips',decision='FIX NOW RESOLVED',reason='Source E/W unequal region groups and2pixel NS projected width restored in saved geometry; fresh all-state/join review passes.'),dict(finding='Rigid diagnostic-scale cloth',decision='MINOR POLISH',reason='Native source describes tensioned duck-weave on pickets. Complete thin panels, modest tension and readable map silhouette fit current provisional whole-set test. No unsupported tent roof or hanging ornaments.')],native_acceptance=False)
+(HERE/'independent-structural-review.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
+print('Corrected-state independent PASS and main dispositions retained.')
