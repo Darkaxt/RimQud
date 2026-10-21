@@ -114,6 +114,10 @@ namespace RenderingTransplantProbe
             Texture2D texture;
             if(!textures.TryGetValue(filename,out texture))
             {
+                if(filename.StartsWith("current:"))texture=CurrentArt.Texture(filename);
+                else if(filename.StartsWith("current-source:"))texture=CurrentArt.SourceTexture(filename.Substring(15),true);
+                else
+                {
                 texture=new Texture2D(2,2,TextureFormat.RGBA32,true);
                 if(!ImageConversion.LoadImage(texture,File.ReadAllBytes(Path.Combine(ProbeRunner.Root,"donor",filename))))
                     throw new InvalidDataException(filename);
@@ -123,6 +127,8 @@ namespace RenderingTransplantProbe
                 texture.wrapMode=sprite?TextureWrapMode.Clamp:TextureWrapMode.Repeat;texture.filterMode=UnityEngine.FilterMode.Trilinear;
                 texture.anisoLevel=1;textures[filename]=texture;
                 texture.name=filename;
+                }
+                textures[filename]=texture;
             }
             mat=new Material(shaders[shader]);mat.mainTexture=texture;mat.SetColor("_Color",color);
             // Donor terrain drawing uses precedence-ordered materials. Explicit
@@ -157,6 +163,7 @@ namespace RenderingTransplantProbe
         }
         static bool CanMap(JoppaCell c)
         {
+            if(CurrentArt.Enabled)return CurrentArt.CanMap(c);
             return c.Visible && !c.RequiresOriginal && c.Kind!="original" && CtesiphusArt.Failure(c)==null &&
                 (!JoppaCoverage.Enabled || !c.Display.VFlip) &&
                 (!PawnPresentation.IsLayered(c.Kind) || (!string.IsNullOrEmpty(c.GroundKind) && !c.Display.VFlip));
@@ -270,8 +277,14 @@ namespace RenderingTransplantProbe
             string direction=c.Facing==0?"north":c.Facing==2?"south":"east";
             var go=new UnityEngine.GameObject("RimQudForeground:"+c.Instance);scene.Add(go);go.layer=30;
             go.transform.position=Point(c.X+.5f,c.Y+.86f,ForegroundDepth(c,.2f));
-            bool flip=(c.Facing==3)^c.Display.HFlip;go.transform.localScale=new Vector3(flip?-1:1,1,1);
-            if(VillageArt.Enabled && c.AssetFamily!=null && c.AssetFamily.StartsWith("village:"))
+            bool flip=(!CurrentArt.Enabled && c.Facing==3)^c.Display.HFlip;go.transform.localScale=new Vector3(flip?-1:1,1,1);
+            if(CurrentArt.Enabled)
+            {
+                var view=CurrentArt.ActorView(c);
+                SpriteLayer(go.transform,Material("Custom/Cutout",CurrentArt.ActorTexture(c,view),CurrentArt.Lighting(c)),
+                    (float)view["width"],(float)view["height"],(float)view["center_x"],(float)view["center_z"],0);
+            }
+            else if(VillageArt.Enabled && c.AssetFamily!=null && c.AssetFamily.StartsWith("village:"))
             {
                 foreach(JObject part in VillageArt.Layers(c))
                 {
@@ -356,6 +369,49 @@ namespace RenderingTransplantProbe
                 }
             }
         }
+        int CurrentMask(JoppaFrame frame,JoppaCell cell,string domain)
+        {
+            int[] dx={0,1,1,1,0,-1,-1,-1},dy={-1,-1,0,1,1,1,0,-1};int mask=0;
+            for(int i=0;i<8;i++)
+            {
+                int x=cell.X+dx[i],y=cell.Y+dy[i];if(x<0 || x>=80 || y<0 || y>=25)continue;
+                var next=frame.Cells[x+80*y];
+                if(next.Visible && !next.RequiresOriginal && (domain=="water"?next.WaterDepth>0:domain=="deep"?next.WaterDepth>=3:next.Source=="DirtPath" || next.GroundKind=="path"))mask|=1<<i;
+            }
+            return mask;
+        }
+        void CurrentCell(JoppaFrame frame,JoppaCell c)
+        {
+            var shade=CurrentArt.Lighting(c);
+            // Retain source background and actual full-cell registration. No old
+            // donor sand/grass/door recipe participates in this branch.
+            Quad(Material("Custom/Cutout","current-source:white.png",c.Display.Background*shade),c.X,c.Y);
+            bool water=c.WaterDepth>0;
+            if(water)
+            {
+                int mask=CurrentMask(frame,c,"water");
+                Color b=ConsoleLib.Console.ColorUtility.colorFromChar('b'),detail=ConsoleLib.Console.ColorUtility.colorFromChar('B');
+                Quad(Material("Custom/Cutout",CurrentArt.Surface("shallow",c,mask),b*shade),c.X,c.Y,altitude:.01f);
+                Quad(Material("Custom/Cutout",CurrentArt.Surface("shallow",c,mask,true),detail*shade),c.X,c.Y,altitude:.011f);
+                if(c.WaterDepth>=3)
+                {
+                    int deep=CurrentMask(frame,c,"deep");
+                    Quad(Material("Custom/Cutout",CurrentArt.Surface("swimming",c,deep),b*shade),c.X,c.Y,altitude:.012f);
+                    Quad(Material("Custom/Cutout",CurrentArt.Surface("swimming",c,deep,true),detail*shade),c.X,c.Y,altitude:.013f);
+                }
+            }
+            else if(c.Source=="DirtFloor" || c.GroundKind=="ground")
+                Quad(Material("Custom/Cutout",CurrentArt.Surface("soil",c,255),ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade),c.X,c.Y,altitude:.002f);
+            if(c.Source=="DirtPath" || c.GroundKind=="path")
+                Quad(Material("Custom/Cutout",CurrentArt.Surface("path",c,CurrentMask(frame,c,"path")),ConsoleLib.Console.ColorUtility.colorFromChar('w')*shade),c.X,c.Y,altitude:.005f);
+            if((c.AssetFamily??"").StartsWith("current:NPC-"))Foreground(c);
+            else
+            {
+                var ops=CurrentArt.Scenery(c)??CurrentArt.Data["paint"][CurrentArt.Canonical(c.Display.Tile)] as JArray;
+                if(ops!=null)Quad(Material("Custom/Cutout",CurrentArt.Compose(c,ops,(c.Source??"paint")+"/"+c.Display.Tile+"/"+c.ConnectionMask),shade),
+                    c.X,c.Y,altitude:ForegroundDepth(c,.2f));
+            }
+        }
         void FlushGeometry()
         {
             foreach(var entry in groups)
@@ -398,7 +454,7 @@ namespace RenderingTransplantProbe
                 foreach(var c in frame.Cells)
                 {
                     bool mapped=eligible && CanMap(c);
-                    bool waterLayer=eligible && Wet(frame,c.X,c.Y);
+                    bool waterLayer=eligible && !CurrentArt.Enabled && Wet(frame,c.X,c.Y);
                     Covered[c.X+80*c.Y]=mapped || waterLayer;
                     if(waterLayer)
                     {
@@ -412,7 +468,13 @@ namespace RenderingTransplantProbe
                             sprite.backcolor=Color.clear;flush.Invoke(sprite,null);
                         }
                     }
-                    if(mapped)
+                    if(mapped && CurrentArt.Enabled)
+                    {
+                        if(!counts.ContainsKey(c.Kind))counts[c.Kind]=0;counts[c.Kind]++;
+                        if(!live)originals[c.X+80*c.Y].SetActive(false);
+                        CurrentCell(frame,c);
+                    }
+                    else if(mapped)
                     {
                         if(!counts.ContainsKey(c.Kind))counts[c.Kind]=0;counts[c.Kind]++;
                         if(!live)originals[c.X+80*c.Y].SetActive(false);
@@ -495,6 +557,8 @@ namespace RenderingTransplantProbe
                         {"nativeInputEnabled",binding!=null && binding.enabled && binding.GetComponents<Collider>().Any(collider=>collider.enabled)},
                         {"screenX",screen.x},{"screenY",screen.y},
                         {"visible",c.Visible},{"requiresOriginal",c.RequiresOriginal},{"mapped",mapped},
+                        {"nativeLight",c.NativeLight},{"currentArt",CurrentArt.Enabled && mapped},
+                        {"pureWater",c.WaterPure},
                         {"nativeGrassPaint",c.Grass},{"grassDrawn",mapped && c.Kind=="ground" && c.Grass},
                         {"waterDepth",c.WaterDepth},{"waterVolume",c.WaterVolume},{"waterLayer",waterLayer}});
                 }
@@ -521,7 +585,8 @@ namespace RenderingTransplantProbe
         {
             ClearScene();impacts.Clear();
             foreach(var mat in materials.Values)UnityEngine.Object.DestroyImmediate(mat);
-            foreach(var texture in textures.Values)UnityEngine.Object.DestroyImmediate(texture);
+            foreach(var pair in textures)if(!pair.Key.StartsWith("current"))UnityEngine.Object.DestroyImmediate(pair.Value);
+            CurrentArt.Dispose();
             target.Release();UnityEngine.Object.DestroyImmediate(target);
             UnityEngine.Object.DestroyImmediate(camera.gameObject);bundle.Unload(true);
         }

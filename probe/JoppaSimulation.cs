@@ -26,8 +26,9 @@ namespace RenderingTransplantProbe
         public EquippedAppearance[] Equipment;
         public string BodyShape,ApparelFallback,ArtFallback;
         public string Source,Kind,Resolved,GroundKind,AssetFamily;
-        public bool Visible,RequiresOriginal,Grass,DoorOpen;
+        public bool Visible,RequiresOriginal,Grass,DoorOpen,WaterPure;
         public int WaterDepth,WaterVolume;
+        public int NativeLight,ConnectionMask;
         public ConsoleChar Display;
     }
     public sealed class JoppaFrame
@@ -61,6 +62,7 @@ namespace RenderingTransplantProbe
             NativeApparel.BeginFrame();
             DromadArt.BeginFrame();
             VillageArt.BeginFrame();
+            CurrentArt.BeginFrame();
             Array.Clear(observations,0,observations.Length);rendering=true;
         }
         public static void EndGameplay(Zone area,ScreenBuffer buffer)
@@ -113,7 +115,7 @@ namespace RenderingTransplantProbe
                 cell.PaintTile=="assets_content_textures_tiles_tile-grass1.png" ||
                 cell.PaintTile=="Terrain/sw_grass1.bmp" || cell.PaintTile=="Terrain/sw_grass2.bmp" ||
                 cell.PaintTile=="Terrain/sw_grass3.bmp");
-            int depth=0,volume=0;
+            int depth=0,volume=0;bool waterPure=false;
             if(e.Visible && zone.GetVisibility(cell.X,cell.Y))
             {
                 // Explicit known liquid-underlay adapter for visible open water.
@@ -122,14 +124,23 @@ namespace RenderingTransplantProbe
                 if(liquid!=null)
                 {
                     var v=liquid.LiquidVolume;volume=v.Volume;
+                    waterPure=v.Proportion("water")==1000;
                     depth=v.IsSwimmingDepth()?3:v.IsWadingDepth()?2:1;
                 }
             }
             var observation=new JoppaCell{X=cell.X,Y=cell.Y,Visible=e.Visible,
                 Source=e.Visible && selected!=null?selected.Blueprint:null,
-                Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,
+                Kind=e.Visible?(paintedGround?"ground":Kind(selected)):"original",Resolved=Appearance(display),WaterDepth=depth,WaterVolume=volume,WaterPure=waterPure,
                 Grass=e.Visible && cell.PaintTile!=null && cell.PaintTile.IndexOf("grass",StringComparison.OrdinalIgnoreCase)>=0};
             PawnPresentation.Capture(cell,selected,observation);
+            observation.NativeLight=(int)zone.GetLight(cell.X,cell.Y);
+            if(CurrentArt.Enabled && observation.Source!=null && new[]{"BrinestalkWall","BrinestalkWallWithGearbox"}.Contains(observation.Source))
+            {
+                int mask=0,bit=1;
+                foreach(string direction in new[]{"N","E","S","W"})
+                {var next=cell.GetCellFromDirection(direction);if(next!=null && next.Objects.Any(o=>o.Blueprint=="BrinestalkWall" || o.Blueprint=="BrinestalkWallWithGearbox"))mask|=bit;bit*=2;}
+                observation.ConnectionMask=mask;
+            }
             observations[cell.X+80*cell.Y]=observation;
         }
         public static void Publish(ScreenBuffer buffer)
@@ -152,7 +163,9 @@ namespace RenderingTransplantProbe
                 int i=x+80*y;var observed=observations[i];
                 var display=new ConsoleChar();display.Copy(TextConsole.CurrentBuffer.Buffer[x,y]);
                 bool changed=observed==null || observed.Resolved!=Appearance(display);
-                bool equipmentChanged=NativeApparel.Changed(i) || DromadArt.Changed(i) || VillageArt.Changed(i);
+                bool equipmentChanged=NativeApparel.Changed(i) || DromadArt.Changed(i) || VillageArt.Changed(i) || CurrentArt.Changed(i);
+                bool currentPaint=CurrentArt.Enabled && observed!=null && CurrentArt.KnownFinalTile(observed.Source,display.Tile) &&
+                    observed.Resolved.Substring(observed.Resolved.IndexOf('|'))==Appearance(display).Substring(Appearance(display).IndexOf('|'));
                 // A known wall-paint adapter may change the tile variant only.
                 bool wallPaint=observed!=null && observed.Kind=="wall" && display.Tile!=null &&
                     display.Tile.StartsWith("Walls/wall_brinestalk",StringComparison.OrdinalIgnoreCase) &&
@@ -161,7 +174,8 @@ namespace RenderingTransplantProbe
                     display.Tile!=null && display.Tile.StartsWith("Liquids/Water/",StringComparison.OrdinalIgnoreCase);
                 cells[i]=new JoppaCell{X=x,Y=y,Source=observed==null?null:observed.Source,
                     Visible=observed!=null && observed.Visible,Kind=observed==null?"original":observed.Kind,
-                    RequiresOriginal=changed && !wallPaint && !waterPaint || equipmentChanged,Display=display,
+                    RequiresOriginal=changed && !wallPaint && !waterPaint && !currentPaint || equipmentChanged,Display=display,
+                    NativeLight=observed==null?0:observed.NativeLight,ConnectionMask=observed==null?0:observed.ConnectionMask,
                     Instance=observed==null?0:observed.Instance,Facing=observed==null?2:observed.Facing,
                     HurtSerial=observed==null?0:observed.HurtSerial,HurtDX=observed==null?0:observed.HurtDX,HurtDY=observed==null?0:observed.HurtDY,
                     GroundKind=observed==null?null:observed.GroundKind,
@@ -172,6 +186,7 @@ namespace RenderingTransplantProbe
                     ApparelFallback=equipmentChanged?"Equipped appearance changed after observation":observed==null?null:observed.ApparelFallback,
                     Grass=observed!=null && observed.Grass,WaterDepth=observed==null?0:observed.WaterDepth,
                     WaterVolume=observed==null?0:observed.WaterVolume};
+                cells[i].WaterPure=observed!=null && observed.WaterPure;
             }
             PawnPresentation.Accepted(cells);
             accepted=new JoppaFrame{Generation=++generation,World=PawnPresentation.World,Phase=phase,Enabled=enabled && (!Gameplay || GameplayProbe.Replacement),Cells=cells,

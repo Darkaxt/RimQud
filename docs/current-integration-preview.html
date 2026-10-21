@@ -8,7 +8,7 @@
 <main>
 <nav><a href="conversion-report.html">Conversion evidence</a><a id="evidence" href="conversion-report.html">Resident’s source steps</a></nav>
 <p class="eyebrow">RIMQUD / VISUAL REVIEW</p><h1>Current composition preview</h1>
-<p class="intro">Prepared bodies and equipment, using the captured palette and reviewed masks. <strong>In-game rendering is still pending.</strong> Use this page to inspect shape, overlap and readability.</p>
+<p class="intro">Prepared bodies and equipment, using the captured palette and reviewed masks. <a href="current-game-rendering.html">Actual in-game day/night and fog captures are available.</a> Use this page to inspect shape, overlap and readability.</p>
 <section class="controls" aria-label="Preview controls">
 <div class="resident"><label for="actor">Resident</label><select id="actor"></select></div>
 <fieldset><legend>View</legend><div class="views"><button type="button" data-view="south" aria-pressed="true">Front</button><button type="button" data-view="east" aria-pressed="false">Right</button><button type="button" data-view="north" aria-pressed="false">Back</button><button type="button" data-view="west" aria-pressed="false">Left</button></div></fieldset>
@@ -42,7 +42,7 @@ async function render(){
  document.querySelector('#evidence').href=current.evidence;
  for(const button of document.querySelectorAll('[data-view]'))button.setAttribute('aria-pressed',String(button.dataset.view===facing));
  updateHash();
- try{await Promise.all([prepared.decode(),reference.decode()]);if(ticket===revision)status.textContent=palette.value==='neutral'&&equipment.checked?'Prepared neutral view matches the reviewed composition.':'Preview ready · in-game check pending.';}
+ try{await Promise.all([prepared.decode(),reference.decode()]);if(ticket===revision)status.textContent=palette.value==='neutral'&&equipment.checked?'Prepared neutral view matches the reviewed composition.':'Prepared preview ready · game captures linked above.';}
  catch(e){if(ticket===revision){status.textContent='';error.textContent='An image could not load. Change the view to retry.';error.hidden=false;}}
 }
 async function loadActor(){

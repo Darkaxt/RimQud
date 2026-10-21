@@ -3,10 +3,13 @@ param(
     [ValidateSet('shader','capture','joppa','gameplay','review','pawns')][string]$Mode = 'shader',
     [ValidateRange(1,4)][int]$IntegrationStage = 1,
     [switch]$CatalogueOnly,
-    [ValidateSet('donor','ray-cat','dromad','dromad-refined','village')][string]$ArtSet = 'donor',
+    [ValidateSet('donor','ray-cat','dromad','dromad-refined','village','current')][string]$ArtSet = 'donor',
     [string]$Game = 'D:\Steam\steamapps\common\Caves of Qud'
 )
 $ErrorActionPreference='Stop'
+if($ArtSet -eq 'current' -and ($Mode -ne 'pawns' -or $IntegrationStage -ne 4 -or -not (Test-Path -LiteralPath (Join-Path $Root 'selected/runtime/contract.json')))) {
+    throw 'Current art requires the exact prepared runtime contract and pawns stage4.'
+}
 if(($IntegrationStage -eq 2 -or $IntegrationStage -eq 4) -and $Mode -ne 'pawns' -or
    $IntegrationStage -eq 3 -and $Mode -notin @('pawns','joppa')) {
     throw 'Stages 2/4 require pawns mode; stage 3 requires pawns or joppa mode.'
@@ -49,6 +52,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeApparel.cs') -Destination
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CtesiphusArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'DromadArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'VillageArt.cs') -Destination $mod
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'CurrentArt.cs') -Destination $mod
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'joppa-coverage.json') -Destination $Root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'manifest.json') -Destination $mod
 @{

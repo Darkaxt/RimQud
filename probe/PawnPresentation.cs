@@ -67,6 +67,7 @@ namespace RenderingTransplantProbe
         public static string Kind(GO obj)
         {
             if((!Enabled && !JoppaCoverage.Enabled) || obj==null)return null;
+            if(CurrentArt.Enabled)return CurrentArt.Kind(obj)??"original";
             if(VillageArt.Enabled){var villageKind=VillageArt.Kind(obj);if(villageKind!=null)return villageKind;}
             if(DromadArt.Enabled && obj.Blueprint=="Tam")return "human";
             if(JoppaCoverage.Enabled)
@@ -111,6 +112,7 @@ namespace RenderingTransplantProbe
             CtesiphusArt.Capture(obj,result);
             DromadArt.Capture(obj,result);
             VillageArt.Capture(obj,result);
+            CurrentArt.Capture(obj,result);
         }
         static bool KnownPaint(string tile)
         {

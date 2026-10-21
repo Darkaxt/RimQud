@@ -11,7 +11,7 @@ namespace RenderingTransplantProbe
 {
     public static class JoppaCoverage
     {
-        public static bool Enabled { get { return PawnPresentation.Stage>=3 &&
+        public static bool Enabled { get { return !CurrentArt.Enabled && PawnPresentation.Stage>=3 &&
             new[]{"pawns","joppa"}.Contains(Environment.GetEnvironmentVariable("QUDEXPERIMENT_MODE")); } }
         static JObject data;
         static Dictionary<string,JObject> rules,textures;

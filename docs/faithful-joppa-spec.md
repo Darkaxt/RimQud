@@ -1,11 +1,39 @@
 # Faithful Joppa art and body specification
 
+Native rendering test request (2026-10-21): wire the current selected art into
+the isolated Qud adapter and deliver four actual game-camera captures of the
+same Joppa layout: day/revealed, night/revealed, day/native fog of war, and
+night/native fog of war. Keep native time, line of sight, exploration and local
+light ownership; identify any adapter night tint separately from Qud's native
+palette/visibility. Supply a small HTML comparison with the actual captures.
+This work remains in ACTIVE Stage3 (A5/A6), with the current bodies serving as
+placeholders. It does not authorize the postponed body redesign. Acceptance
+requires current asset bindings, preserved native fallback/visibility and user
+profiles, actual game captures, and inspected day/night and fog differences.
+
+Four-view rendering checkpoint: the current isolated adapter now consumes the
+selected cast-v2 operations and explicit production scenery/state recipes.
+Native game-camera captures and the comparison page are recorded in
+[the in-game review](current-game-rendering.html). The latest run exited0,
+preserved normal saves/settings and restored Unity preferences. Day/revealed
+maps1945cells; night/revealed1944; day/native fog718; night/native fog710.
+Fifteen current NPC assemblies appear in the revealed capture. The captured
+farmer template is female but this new game generated a male farmer; keep that
+unsupported body/outfit native. The loudspeaker's power-cut status and unsupported
+water mixtures also retain native rendering, including objects above those
+mixtures. Native player art remains unchanged. These are recorded limits, not
+acceptance credit for those bindings. The night material tint is an explicit
+adapter approximation; native Daylight, LOS, exploration and local lights remain
+owned by Qud. Complete-set equipment/state/lifecycle acceptance and Stage3 remain
+unfinished; the post-test redesign pause has not been reached.
+
 Requested visual review surface (2026-10-21): present current integration
 preparation through a small HTML preview, not a JSON-only handoff. Show prepared
 cast compositions beside reviewed reference images, all four views, neutral and
 captured colors, separate-body/equipped choices and smaller display sizes. Load
 only the selected resident/view. Label this as authoring/prepared-operation
-rendering; actual native adapter integration and in-game acceptance stay pending.
+rendering and link the separate native game review. Full native acceptance stays
+pending until the complete-set state/equipment/lifecycle checks pass.
 
 User-directed stop boundary (2026-10-21): finish the current remaining generation
 and fully check the complete conversion set in game, then PAUSE before redesigning
@@ -80,8 +108,10 @@ the new set. `tools/package_current_village.py` stages selected model bytes and
 hashed PNG references in the owned isolated full-set probe root. It does not
 install a mod, launch the game, alter artwork or grant native acceptance.
 
-The current A5 advancement blocker is internal: the existing native adapter and
-verifier still use the older village contract. Resolve it by binding the current
+The complete-set A5 advancement blocker is internal: the current four-view
+adapter is wired, but full state/equipment/lifecycle coverage and its verifier
+remain unfinished. The older village verifier cannot establish current-set
+acceptance. Continue binding and exercising the current
 cast assemblies, production state/tile recipes, tint/coverage and connected
 surfaces, preserving native state selection, underlays and unsupported-state
 fallback. The cast input preparation must preserve per-assembly west operations

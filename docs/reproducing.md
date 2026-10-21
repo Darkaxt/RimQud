@@ -7,8 +7,31 @@ versions before changing those guards.
 
 ## Current ledger-selected integration inputs
 
+The current four-view native-camera test is available separately from the
+historical village batch. Prepare the pinned inputs below, then run:
+
+```powershell
+python -X utf8 -B tools/prepare_current_runtime.py --root E:/Temp/qud-transplant-probe-fullset-20261021
+./probe/run_probe.ps1 -Root E:/Temp/qud-transplant-probe-fullset-20261021 -Mode pawns -IntegrationStage 4 -ArtSet current
+python -X utf8 -B tools/build_current_game_review.py --root E:/Temp/qud-transplant-probe-fullset-20261021
+```
+
+The root also requires the audited `donor/donor-shaders.bundle` prepared by the
+shader-package procedure below (SHA256
+`35ae7c328ed9a731caf4699d35e1240e9a0d672b5bdb36be254477dee52b013b`).
+Runtime exports are derived from verified selected public images, retaining
+explicit west operations, per-item ownership, independent native tints and full
+registered frames. Working raster copies are downsampled to256pixels maximum
+height for NPCs and256square for cell graphics; continuous terrain retains its
+1024pixel world field. This does not alter authoritative source artwork.
+The four captures use native times600(day) and0(night) modulo1200, the same player
+position, and either a diagnostic reveal override or native visibility. Blue
+night tint is an adapter material treatment, not a transplanted RimWorld lighting
+system. The report retains original/native comparisons and unsupported-state
+fallback. This test does not establish complete lifecycle/ledger acceptance.
+
 The older village package/run below is historical evidence. It does not test
-the current conversion ledger. The complete-set adapter is still being wired;
+the current conversion ledger. Full acceptance coverage is still being wired;
 the following commands only prepare its current inputs and compare cast
 composition operations with the reviewed authoring images. They do not launch
 Qud or grant native acceptance.
