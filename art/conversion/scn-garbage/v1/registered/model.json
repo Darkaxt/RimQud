@@ -1,0 +1,354 @@
+{
+  "entry": "SCN-GARBAGE",
+  "kind": "source_primary_native_random_tile_family",
+  "blueprint": "Garbage",
+  "source": {
+    "path": "art/conversion/scn-garbage/v1/source-packet.json",
+    "sha256": "82dee8e899807b185ad3887dd3dc4ab4f7d778babd2b9dab773ca19c05624d89"
+  },
+  "construction": {
+    "path": "art/conversion/scn-garbage/v1/construction-controls.json",
+    "sha256": "3fc6adbd280fd1ea9a5f19927ec58ba42840d2e2f63d8790a1004c7ad2d64b57"
+  },
+  "source_states": {
+    "path": "art/conversion/scn-garbage/v1/native-state-index.json",
+    "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"
+  },
+  "palette_resolution": {
+    "path": "art/conversion/scn-garbage/v1/palette-resolution.json",
+    "sha256": "8992ef0df35488a0f6a18241a5c3745ccc7e16e9c800d6ee3990d76b0f5557b5"
+  },
+  "native_state_study": {
+    "path": "art/conversion/scn-garbage/v1/native-state-study.json",
+    "sha256": "23aa24f67c202fe5299b9ec98ffed4378cdd2f89104480c7b3a1c57dcb47b7f0"
+  },
+  "registration": {
+    "native": [
+      16,
+      24
+    ],
+    "manual": [
+      512,
+      768
+    ],
+    "recipient": [
+      256,
+      256
+    ],
+    "anchor": [
+      8,
+      12
+    ],
+    "policy": "Same full source-cell mapping for all5states. No per-pile bounding-box fitting or imported donor footprint."
+  },
+  "camera": "Fixed cardinal map scatter using Core simple shallow map-art shading. No isometric stage, tilted sample slab or perspective camera.",
+  "palette": {
+    "primary": "K",
+    "background": "k",
+    "detail": "Unused: all5source masks have visible R0 only",
+    "native_primary_rgb": "155352",
+    "native_background_rgb": "0f3b3a",
+    "rule": "Gray material luminance modulates native primary K. Background belongs outside coverage; no fixed coloured production pixels or invented bright secondary tint."
+  },
+  "state_owner": "Four actual RandomTile choices selected by native builder; fallback remains distinct and scoped to Garbage. No global replacement of generic font/glyph or procedural Core filth clustering.",
+  "native_behavior": "Preserve Takeable=true, Solid=false, native Garbage scavenge/divination/stack consumption and separate BurnGenerateObjectInCell behavior. No changed inventory, rummage, fire, filth-cleaning, adjacency or animation system.",
+  "states": [
+    {
+      "id": "choice-1",
+      "native_tile": "Items/sw_trash_1.bmp",
+      "role": "RandomTile choice",
+      "primary": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/primary-neutral.png",
+        "sha256": "6b350dca0279d4caa2015344c99688522e580d03590e72d4a042a030c88fcc1b"
+      },
+      "detail": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/coverage.png",
+        "sha256": "41d55599b1224aedf2c1f176fda70708ede50d92564dffbfe3ccadb8f13d9679"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/detail-weight.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/authored-dualcolor-mask.png",
+        "sha256": "13404c2131d46031df6768799d25c9856b5d2807383d6c9eeded1aeb58d965ee"
+      },
+      "material_ownership": {
+        "metal": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-1/ownership-metal-master.png",
+          "sha256": "8f6335b36566d9790717f094bdb0aad892670435a2789de5739dabca84034388"
+        },
+        "paper": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-1/ownership-paper-master.png",
+          "sha256": "c81895590666a2ad839f16ae66fd10c1881660d80b74f232bc38d10695512b36"
+        },
+        "glass": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-1/ownership-glass-master.png",
+          "sha256": "89c87fd5562fbfaf0d7947926a524357c8aaa56a544ca5d540aef5fd8ca29ba8"
+        },
+        "wire": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-1/ownership-wire-master.png",
+          "sha256": "37f89611f986bf14b6272fbc6a70472a20e67960d61967dc87a9d2dbfea01ebc"
+        }
+      },
+      "master": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/primary-master.png",
+        "sha256": "145512b0e26bed838b323fe3d156380ff2bcdc6c24138f0a2c7341034b58ff42"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-1/native-K.png",
+        "sha256": "9304b0b680a9bf461b2703b0cdac5a566bcb579513e7cde64029357e38e0c5be"
+      }
+    },
+    {
+      "id": "choice-2",
+      "native_tile": "Items/sw_trash_2.bmp",
+      "role": "RandomTile choice",
+      "primary": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/primary-neutral.png",
+        "sha256": "4bab4e3c4dd473b7daa4fc1cc449274c71e1a42922f00e297c834226799cb74e"
+      },
+      "detail": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/coverage.png",
+        "sha256": "2fc34a5f86c84b120614be62e352d9d33e8cc39b920847174147db817d4940f5"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/detail-weight.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/authored-dualcolor-mask.png",
+        "sha256": "445bf6553b92127f2e55914fe8024cb79a10985bd3dcc4a03a041b82838d1cf5"
+      },
+      "material_ownership": {
+        "metal": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-2/ownership-metal-master.png",
+          "sha256": "d330a636cc774ce13d068b1301688699ac220345b58c99787a22ee0e7407bf26"
+        },
+        "paper": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-2/ownership-paper-master.png",
+          "sha256": "2014cb8096be7bd7b207b8d15720dcb1a1a4ce71afa1407cfb90bf682c47a052"
+        },
+        "glass": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-2/ownership-glass-master.png",
+          "sha256": "aabc3dc69c98668975cd8b5324b43aeb144bb396baeb0710fd423e355654e772"
+        },
+        "wire": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-2/ownership-wire-master.png",
+          "sha256": "ac12705d29dcec0527053ad5013caf716b8db51da6ea4fdd8b9e78c3c1e7705b"
+        }
+      },
+      "master": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/primary-master.png",
+        "sha256": "92d8ea71f8ecf74c5485819579186f57fbda30f4b7a4b57b1c3c80cd270908f5"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-2/native-K.png",
+        "sha256": "4cb5a8054a3ed9240e178ae502908b4308c544176029c629020c76d76513d598"
+      }
+    },
+    {
+      "id": "choice-3",
+      "native_tile": "Items/sw_trash_3.bmp",
+      "role": "RandomTile choice",
+      "primary": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/primary-neutral.png",
+        "sha256": "652bbba4fa9fa59c6d1ad3fe6b6fe93f982c56c0e99ab3dffdec2ae1d34cbe29"
+      },
+      "detail": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/coverage.png",
+        "sha256": "c9eda809cc03423b2631f5bbce53b4b8c5b9e41adec2ea14c959d0f932b5c874"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/detail-weight.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/authored-dualcolor-mask.png",
+        "sha256": "acf59e543b4d64da25521c4b96c0b4de7307f9eaf08a9fbc2a8ef4a3794651de"
+      },
+      "material_ownership": {
+        "metal": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-3/ownership-metal-master.png",
+          "sha256": "70b6e9cec10b75d3f61b0c14d01397b4a05b1ea73117f159f4eb951e812a35d8"
+        },
+        "paper": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-3/ownership-paper-master.png",
+          "sha256": "72a880b149cab5b894f4a10e78fdb7739532669e62f27aca63f9f071d857d89c"
+        },
+        "glass": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-3/ownership-glass-master.png",
+          "sha256": "cb7dd65eb3c2c44197d01207e024a936b3edbd22b39f2793b1ef3eb7edca210a"
+        },
+        "wire": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-3/ownership-wire-master.png",
+          "sha256": "447432937a32bb90afca5375b5f81da4fcf76b70ab8fe0225091fd49061ad7a1"
+        }
+      },
+      "master": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/primary-master.png",
+        "sha256": "55dff1f8cb06c1979e96a9d7fb6fb451ea3a9c38c004b4d0bd98bfe20e4c331d"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-3/native-K.png",
+        "sha256": "2aed03aebe25bf31bea453cac2155d23e670116ae5a674c588983e42702ca599"
+      }
+    },
+    {
+      "id": "choice-4",
+      "native_tile": "Items/sw_trash_4.bmp",
+      "role": "RandomTile choice",
+      "primary": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/primary-neutral.png",
+        "sha256": "055e33de0356f4f03f26e1f55f89052af9921208308780fd2600a36d6578cf9f"
+      },
+      "detail": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/coverage.png",
+        "sha256": "6acd4f1f651993c1f62f3218be9b8f5f02d433789ee3b7a906d072924f789e95"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/detail-weight.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/authored-dualcolor-mask.png",
+        "sha256": "d043fbf166559882da61018772b74b79974c5c56464b8fbf2b40deb6f69c0893"
+      },
+      "material_ownership": {
+        "metal": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-4/ownership-metal-master.png",
+          "sha256": "6129c1c207402cf0a5637fd212a39881a40d6f9b812c57679ad6fbd1cd2b89ef"
+        },
+        "paper": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-4/ownership-paper-master.png",
+          "sha256": "b324ee2de07244e1224382d9fdf5f7dcea4e759666bef1e2c543acfdded70203"
+        },
+        "glass": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-4/ownership-glass-master.png",
+          "sha256": "5a3e39d57af77fa3013b065f54b681c3143d722d5df5ddf819fa35aed6991cdd"
+        },
+        "wire": {
+          "path": "art/conversion/scn-garbage/v1/registered/choice-4/ownership-wire-master.png",
+          "sha256": "798cab736398823acb12afdccc7c8cb77c5f3dfdfbab78eca0227cf104e8e84c"
+        }
+      },
+      "master": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/primary-master.png",
+        "sha256": "8ec38045337fdc278393c021fd2709a3647826148bfd9ab3eed4265628c0ccb0"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-garbage/v1/registered/choice-4/native-K.png",
+        "sha256": "6191985a9cbe32c785aae62338388f2002796ddfffcab9bc1396c630d1fa4928"
+      }
+    },
+    {
+      "id": "fallback",
+      "native_tile": "Assets_Content_Textures_Tiles_Tile-7-3.png",
+      "role": "Declared Render fallback; not a fifth random choice",
+      "primary": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/primary-neutral.png",
+        "sha256": "f8a234a7a5319359dbf0513e95f6c196210392cf045bb52576fc8c67536fa85a"
+      },
+      "detail": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/detail-neutral.png",
+        "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/coverage.png",
+        "sha256": "a8a29a6b8759232c314654b6f08e3017d7985522802b17a4c6027c216736682d"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/detail-weight.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/detail-coverage.png",
+        "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/authored-dualcolor-mask.png",
+        "sha256": "f220f10bf544458595e1d9a3e5353d90e4f41af3d73b02a00e1f450e208669be"
+      },
+      "material_ownership": {
+        "metal": {
+          "path": "art/conversion/scn-garbage/v1/registered/fallback/ownership-metal-master.png",
+          "sha256": "a70961af660ea18cfda321f8711c882ee4f667ecfc06dec950b88a7f7c9fe0c9"
+        },
+        "paper": {
+          "path": "art/conversion/scn-garbage/v1/registered/fallback/ownership-paper-master.png",
+          "sha256": "1b4b8e63c4471d980580591432cfd977fd84901b16dc92b633583d79b820a157"
+        },
+        "glass": {
+          "path": "art/conversion/scn-garbage/v1/registered/fallback/ownership-glass-master.png",
+          "sha256": "1af41cafc7c8f48ba588007a74f833a03c138a28a1e6715797efccba519d3ae8"
+        },
+        "wire": {
+          "path": "art/conversion/scn-garbage/v1/registered/fallback/ownership-wire-master.png",
+          "sha256": "6ba8716257fd41c0497cc60399d2ba32215524c971262f42017f175942abb7fe"
+        }
+      },
+      "master": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/primary-master.png",
+        "sha256": "3bd2330062635b5db566790419a1bd8073b4a7fe1054ae5088e61c67e1e92b71"
+      },
+      "native_preview": {
+        "path": "art/conversion/scn-garbage/v1/registered/fallback/native-K.png",
+        "sha256": "2961f8815fd4f49ec3410e1aa3731d76b2d503a9b4c77785185b64eb78388a1f"
+      }
+    }
+  ],
+  "primary": {
+    "path": "art/conversion/scn-garbage/v1/registered/fallback/primary-neutral.png",
+    "sha256": "f8a234a7a5319359dbf0513e95f6c196210392cf045bb52576fc8c67536fa85a"
+  },
+  "detail": {
+    "path": "art/conversion/scn-garbage/v1/registered/fallback/detail-neutral.png",
+    "sha256": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f"
+  },
+  "coverage": {
+    "path": "art/conversion/scn-garbage/v1/registered/fallback/coverage.png",
+    "sha256": "a8a29a6b8759232c314654b6f08e3017d7985522802b17a4c6027c216736682d"
+  },
+  "detail_weight": {
+    "path": "art/conversion/scn-garbage/v1/registered/fallback/detail-weight.png",
+    "sha256": "5933d4c44ed2bc2f431e2698b41923a18d056b24b450540bb109e7592a547060"
+  },
+  "native_activation": false,
+  "native_acceptance": "Pending full-set generation and real exact-key/variant-selection/visibility/palette/background/stack/rummage-consumption/burning-object behavior acceptance. Authoring only.",
+  "readability_correction": {
+    "path": "art/conversion/scn-garbage/v1/readability-correction.json",
+    "sha256": "d33158792439549b2e71404240e30087b4b7be504afff3586f85f26e1b6ad19f"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "defects": [
+    "Initial wire specimen residual repeated as a visible band/grid, despite correct fragment alpha.",
+    "Initial broad material shading reduced K-on-k contrast below the source glyph presentation."
+  ],
+  "changes": [
+    "Keep wire manual luminance/highlight geometry; do not transfer generated wire grain. Other3materials retain bounded generated surface residuals.",
+    "Compress only material-interior shading toward source foreground:156+0.35*luminance. Original ink, contour, recess and highlight ownership is retained."
+  ],
+  "unchanged": "Every manual curve, source-layout position, alpha gap/coverage, full source-cell mapping, primary K, background k, empty detail role and native selection/behavior.",
+  "previous": {
+    "path": "art/conversion/scn-garbage/v1/registration-initial/game-scale-source-comparison.png",
+    "sha256": "ce55b6c230312bac5f9bceac2a8dd4146596e01d9fcb3a462b342e0affe5d731"
+  },
+  "method": {
+    "path": "art/conversion/scn-garbage/v1/correct-readability.py",
+    "sha256": "85c414c43f116710e7efda5504efdd8cb428ad77e74990254163d1ba0ecf702a"
+  },
+  "native_activation": false
+}

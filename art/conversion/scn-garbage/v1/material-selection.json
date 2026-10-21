@@ -1,0 +1,101 @@
+{
+  "selected": [
+    {
+      "material": "metal",
+      "source_box": [
+        642,
+        423,
+        666,
+        447
+      ],
+      "source": {
+        "path": "art/conversion/scn-garbage/v1/refined-raw.png",
+        "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"
+      },
+      "specimen": {
+        "path": "art/conversion/scn-garbage/v1/material-specimens/metal.png",
+        "sha256": "7c48a029ae4476a0d67b59263f21b097cdb5e9728fa9ee0eca5723ddb14a7416"
+      },
+      "alpha_min": 252,
+      "luminance": {
+        "minimum": 120.66666666666667,
+        "mean": 168.38368055555554,
+        "std": 13.264476858514023
+      },
+      "rule": "Opaque interior within manually identified same-material ROI; excludes object rim, transparent pixels and dark printed ink. Only bounded high-frequency gray residual is transferred, not source contours/labels."
+    },
+    {
+      "material": "paper",
+      "source_box": [
+        609,
+        225,
+        629,
+        245
+      ],
+      "source": {
+        "path": "art/conversion/scn-garbage/v1/refined-raw.png",
+        "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"
+      },
+      "specimen": {
+        "path": "art/conversion/scn-garbage/v1/material-specimens/paper.png",
+        "sha256": "fbc0df495967304ad339ca700c902c8655acacdf970836e556df0bb00a401b05"
+      },
+      "alpha_min": 253,
+      "luminance": {
+        "minimum": 187.33333333333334,
+        "mean": 214.40833333333336,
+        "std": 9.459500662179678
+      },
+      "rule": "Opaque interior within manually identified same-material ROI; excludes object rim, transparent pixels and dark printed ink. Only bounded high-frequency gray residual is transferred, not source contours/labels."
+    },
+    {
+      "material": "glass",
+      "source_box": [
+        105,
+        354,
+        129,
+        374
+      ],
+      "source": {
+        "path": "art/conversion/scn-garbage/v1/refined-raw.png",
+        "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"
+      },
+      "specimen": {
+        "path": "art/conversion/scn-garbage/v1/material-specimens/glass.png",
+        "sha256": "8d2c18756e906500d61a2808de378a6c6ca463d754be753ccefe6bf2ea1b49c6"
+      },
+      "alpha_min": 251,
+      "luminance": {
+        "minimum": 135.0,
+        "mean": 165.59444444444446,
+        "std": 12.152021881253717
+      },
+      "rule": "Opaque interior within manually identified same-material ROI; excludes object rim, transparent pixels and dark printed ink. Only bounded high-frequency gray residual is transferred, not source contours/labels."
+    },
+    {
+      "material": "wire",
+      "source_box": [
+        125,
+        203,
+        133,
+        223
+      ],
+      "source": {
+        "path": "art/conversion/scn-garbage/v1/refined-raw.png",
+        "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"
+      },
+      "specimen": {
+        "path": "art/conversion/scn-garbage/v1/material-specimens/wire.png",
+        "sha256": "4cfdbbc5b21c830c79fc2dd202247bde16f80226fe2855afeda14a5c63670156"
+      },
+      "alpha_min": 252,
+      "luminance": {
+        "minimum": 149.0,
+        "mean": 181.55416666666665,
+        "std": 23.14585058505208
+      },
+      "rule": "Opaque interior within manually identified same-material ROI; excludes object rim, transparent pixels and dark printed ink. Only bounded high-frequency gray residual is transferred, not source contours/labels."
+    }
+  ],
+  "rejected_initial": "material-specimen-boxes.json and material-specimen-review.png retained: paper had transparency/ink, metal approached border. No rejected pixels copied into production."
+}

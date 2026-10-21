@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCN-GARBAGE**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-PAINTING**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -188,8 +188,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-GARBAGE | Garbage | IN PROGRESS | - | All four actual random trash tiles plus declared fallback and Core references are resolved/inspected. Visible palette uses only primary K; ^k is background. Faithful editable construction for each source layout, actual refinement, extraction/registration and final art review remain unfinished. |
-| SCN-PAINTING | Painting | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-GARBAGE | Garbage | UNFINISHED | - |  |
+| SCN-PAINTING | Painting | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-ELECTRONICS | Scrap Electronics | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-TORCHPOST | Torchpost | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -7419,7 +7419,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/garbage-body.png](../art/village/scenery/garbage-body.png).
 
-Current step: construct_faithful_shape. Process-log events: 3.
+Current step: native_state_review. Process-log events: 11.
 
 - 2026-10-21T01:24:51.863538+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Garbage definition and extract all four native RandomTile choices plus declared fallback from version-pinned Qud resources.
   Review: Old catalogue declared tile alone omits four builder-selected shapes. All five source masks retained privately with exact atlas/rect/hash. Native selection, non-solid/takeable behavior and separate burning object ownership retained; final detail-colour mapping remains explicitly unresolved.
@@ -7439,6 +7439,54 @@ Current step: construct_faithful_shape. Process-log events: 3.
   Outputs: [{"path": "art/conversion/scn-garbage/v1/source-reference-variants-reviewed.png", "sha256": "e992ea5e8c1aa90ea11d2b7c939c32492e33c1607d8b4768947e3551a6cd6a9f"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T01:33:33.384612+00:00 / construct_faithful_shape / PASS: Construct all five source-layout debris interpretations in editable16x24geometry with shared full-cell mapping.
+  Review: Inspected native silhouettes against each manual pile. Distinct wire, lens, torn inked paper and nibbled metal are authored interpretations of ambiguous source blobs. Relative placement and detached fragments remain source-bound; sparse fallback remains sparse. Same cell mapping, grayscale-only material shading and transparent gaps; no independent per-pile bounds fitting.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/source-packet.json", "sha256": "82dee8e899807b185ad3887dd3dc4ab4f7d778babd2b9dab773ca19c05624d89"}, {"path": "art/conversion/scn-garbage/v1/native-state-index.json", "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"}, {"path": "art/conversion/scn-garbage/v1/palette-resolution.json", "sha256": "8992ef0df35488a0f6a18241a5c3745ccc7e16e9c800d6ee3990d76b0f5557b5"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/construct-garbage.py", "sha256": "26b879d205f0c3207e2f81b622c5383ed712912ec2c73571c5b03ee6a10c969a"}, {"path": "art/conversion/scn-garbage/v1/construction-controls.json", "sha256": "3fc6adbd280fd1ea9a5f19927ec58ba42840d2e2f63d8790a1004c7ad2d64b57"}, {"path": "art/conversion/scn-garbage/v1/source-construction-comparison.png", "sha256": "25345f5c81422adf0371e3100931ca6e4df03562a8dafcfaccadd4e42ffa54e6"}, {"path": "art/conversion/scn-garbage/v1/constructed-family.png", "sha256": "462d728cafbb4d09c4b44b4ac6972e1c094b6b617abed031ff1ff99ef807d4f1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:33:33.384612+00:00 / create_required_state_neighbor_variants / PASS: Reconcile required native shape variants and source-owned rummage/burning behavior before refinement.
+  Review: All four native builder choices plus declared fallback constructed. Private installed Garbage source confirms consumption rather than a new empty visual. No invented burning/empty/neighbor/animation/directional state or donor filth behavior. Fixed-view debris does not require a furniture turnaround.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/native-state-index.json", "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"}, {"path": "art/conversion/scn-garbage/v1/construction-controls.json", "sha256": "3fc6adbd280fd1ea9a5f19927ec58ba42840d2e2f63d8790a1004c7ad2d64b57"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/native-state-study.json", "sha256": "23aa24f67c202fe5299b9ec98ffed4378cdd2f89104480c7b3a1c57dcb47b7f0"}, {"path": "art/conversion/scn-garbage/v1/refinement-prompt.txt", "sha256": "b8c97c97f5cc366d5c53de5ffcf2af5281d3318601cb2381c5688d22cf7d1a57"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / refine_materials_and_form / PASS: Run actual five-layout ImageGen material refinement from manual design, native silhouettes and exact Core reference plate.
+  Review: Five corresponding piles and sparse fallback retained; generated border/gloss is not canonical. Actual proposal retained whole. Usable surface texture is selected without another AI isolation or invented directional views.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/refinement-prompt.txt", "sha256": "b8c97c97f5cc366d5c53de5ffcf2af5281d3318601cb2381c5688d22cf7d1a57"}, {"path": "art/conversion/scn-garbage/v1/constructed-family.png", "sha256": "462d728cafbb4d09c4b44b4ac6972e1c094b6b617abed031ff1ff99ef807d4f1"}, {"path": "art/conversion/scn-garbage/v1/source-construction-comparison.png", "sha256": "25345f5c81422adf0371e3100931ca6e4df03562a8dafcfaccadd4e42ffa54e6"}, {"path": "art/conversion/scn-garbage/v1/source-reference-variants-reviewed.png", "sha256": "e992ea5e8c1aa90ea11d2b7c939c32492e33c1607d8b4768947e3551a6cd6a9f"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/refined-raw.png", "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"}, {"path": "art/conversion/scn-garbage/v1/generation-receipt.json", "sha256": "4bc86d1be1681c83ba59a7d9a26909177f24e98242d7c56fd5431a476e98fa06"}, {"path": "art/conversion/scn-garbage/v1/first-structural-review.json", "sha256": "e33e00fbf4493b5c2a7ea62309f7a7a4368259c625669785bb16eb162d6404d8"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / refine_materials_and_form / PASS: Inspect/reject contaminated first specimen picks and select opaque material interiors for restrained transfer.
+  Review: First paper pick contained transparency/printed stroke and metal approached an edge. New same-material interior patches exclude those pixels. Only bounded neutral high-frequency residual is transferred through authored ownership; no generated contour, alpha or label.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/refined-raw.png", "sha256": "01281cada11db50f09495024c78db096324523150b1657802f3c8c41c59ae3a7"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/material-specimen-boxes.json", "sha256": "58354abf82b49d7b1c4d0654e0e4e9049f60fe8968f6def14ca524edd8ef6d1e"}, {"path": "art/conversion/scn-garbage/v1/material-specimen-review.png", "sha256": "7703bfbd146a25fe7362540871b2d19baec06e104e9561f854e4d82a024f8c78"}, {"path": "art/conversion/scn-garbage/v1/select-materials.py", "sha256": "ec50d06a56424e004bae1e5932623ba7556435300f7e6d365e6f168f7b9172bc"}, {"path": "art/conversion/scn-garbage/v1/material-selection.json", "sha256": "4ea1afe96fa12676bdbaed8676452b7aa9f773fe3566d3aa4d020b03bbfa587d"}, {"path": "art/conversion/scn-garbage/v1/selected-material-specimens.png", "sha256": "0d2a5fe8d24e131c454aa433dab49a7cbcac27bf17568861fc64996dafe816e2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / extract_register_color_coverage / PASS: Register all five fixed source layouts with neutral primary/empty-detail/coverage channels and native K preview.
+  Review: Master alpha exactly matches manual construction; all five source-cell mappings and sparse fallback retained. Single primary K role; all detail planes empty. No background cap, secondary material palette, per-pile bounds fit or runtime activation.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/construction-controls.json", "sha256": "3fc6adbd280fd1ea9a5f19927ec58ba42840d2e2f63d8790a1004c7ad2d64b57"}, {"path": "art/conversion/scn-garbage/v1/material-selection.json", "sha256": "4ea1afe96fa12676bdbaed8676452b7aa9f773fe3566d3aa4d020b03bbfa587d"}, {"path": "art/conversion/scn-garbage/v1/palette-resolution.json", "sha256": "8992ef0df35488a0f6a18241a5c3745ccc7e16e9c800d6ee3990d76b0f5557b5"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/register-garbage.py", "sha256": "c51490723571293296a1d084f041aa4145a41a6c6fac45aeedc3693e7b1aabc5"}, {"path": "art/conversion/scn-garbage/v1/registered/model.json", "sha256": "4480ae7d19245e88a87743fc6e4fe6c7f677d44a68ec3c98be584417a7ab3673"}, {"path": "art/conversion/scn-garbage/v1/registered/registration-decisions.json", "sha256": "e271080d825837094d5c22a2552239387c37bba7e96436559b892ef4cb62b468"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / extract_register_color_coverage / PASS: Correct observed wire repeat and overly dark shading while retaining source geometry and palette.
+  Review: Initial registered evidence retained. Remove generated wire grain and compress material-interior shading only; original contours/ink/recesses/highlights/coverage and K/k roles remain. No repeated ImageGen request or changed native behavior.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/registered/model.json", "sha256": "4480ae7d19245e88a87743fc6e4fe6c7f677d44a68ec3c98be584417a7ab3673"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/correct-readability.py", "sha256": "85c414c43f116710e7efda5504efdd8cb428ad77e74990254163d1ba0ecf702a"}, {"path": "art/conversion/scn-garbage/v1/readability-correction.json", "sha256": "d33158792439549b2e71404240e30087b4b7be504afff3586f85f26e1b6ad19f"}, {"path": "art/conversion/scn-garbage/v1/registration-initial/neutral-family.png", "sha256": "fdbf718264a08f452c10f3d58e6e030df328e58c44371176dc7f65b526cd0ab4"}, {"path": "art/conversion/scn-garbage/v1/registration-initial/native-K-family.png", "sha256": "299600022c07e6445385556018455a1f078d188bc403e7caab1fa918f2d4e634"}, {"path": "art/conversion/scn-garbage/v1/registration-initial/game-scale-source-comparison.png", "sha256": "ce55b6c230312bac5f9bceac2a8dd4146596e01d9fcb3a462b342e0affe5d731"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / visual_review_identity_and_connections_at_game_scale / PASS: Inspect complete five-layout neutral/native and source-comparison views at intended map sizes.
+  Review: Inspected all four actual RandomTile sprites and declared fallback, exact native metadata and source K/^k roles, actual Core TrashA/B/C Graphic_Cluster references, editable five-layout construction, actual ImageGen proposal, rejected and corrected material specimens, fixed-geometry surface registration, initial wire/contrast defects and corrected neutral/native/intended-size plates. Layouts retain source-relative fragments and sparse fallback; glass lens, ink serif, acid-eaten lug and wire ribbon are authored interpretations of ambiguous blobs, not measured source object identities. No modern bottle/can heap, native filth placement or donor contents/palette/mechanics imported. Refinement supplies restrained neutral surface grain only; canonical curves, ink and full-cell geometry remain authoritative. Rejected paper edge/ink sample is not used. Repeated wire grain removed and excessive interior darkening compressed for source K/k readability without changing alpha or material identities. All five master alpha planes exactly match selected manual coverage. Common512x768source-cell frame maps to256x256recipient without individual bounds fitting; neutral RGB remains gray. Every source visible R is0, so all material roles share primary K; detail/weight/coverage are empty and ^k stays outside the object. Four initial random choices and declared fallback stay distinct, scoped to Garbage rather than global glyph art. Native Garbage code consumes a stack object instead of assigning an empty tile; separate TrashFire-table object creation does not invent a burning Garbage state. Fixed map debris needs no directional turnaround or clothing assembly. Takeability, non-solid status, stack/rummage/divination/fire behavior remain native. One actual ImageGen call retained, no second isolation or fabricated refinement. Native selection/visibility/palette/stack/burning acceptance remains unfinished after full generation.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/registered/model.json", "sha256": "4480ae7d19245e88a87743fc6e4fe6c7f677d44a68ec3c98be584417a7ab3673"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/registered/neutral-family.png", "sha256": "0169693f1634c45dcff99e9f2c062851a65704d6b9ff46ed5e4088c8de83ce7d"}, {"path": "art/conversion/scn-garbage/v1/registered/native-K-family.png", "sha256": "1c3caa909ef98caa5daf76c894e7ef3c012bdc40d8afbd959eacbb59644aadda"}, {"path": "art/conversion/scn-garbage/v1/registered/game-scale-source-comparison.png", "sha256": "0efc2e3bb0ec9edd4310a6870ff828c28f2af7aa10e8d566d566f4655ae1832b"}, {"path": "art/conversion/scn-garbage/v1/record-review.py", "sha256": "bb57c54c7d63d36260a8ad01b476b3f0c382203f0ffc8ccfc525b5ee8460d1e4"}, {"path": "art/conversion/scn-garbage/v1/registered/authoring-review.json", "sha256": "c2d4f3b7f82269ada46e77de8469d8c7c8463fb6e3f692816f53797e46691c7f"}, {"path": "art/conversion/scn-garbage/v1/artifact-manifest.json", "sha256": "57eaca192fe2dc8c9366e7de44c6d9b2839d234c0dcc90cfc186a1f55abe6d36"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:44:27.961077+00:00 / native_state_review / DEFERRED UNTIL ALL GENERATED: Retain native exact-key/random-selection/visibility/palette/rummage-stack/fire acceptance behind all-generation gate.
+  Review: Authoring previews only. No native activation, game launch, state simulation or harness test. Entry remains UNFINISHED pending integrated Stage3 acceptance.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/registered/model.json", "sha256": "4480ae7d19245e88a87743fc6e4fe6c7f677d44a68ec3c98be584417a7ab3673"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### SCN-PAINTING: Painting
 
 Required steps: resolve_object_description_original_tile_palette_state -> select_render_reference_or_document_no_equivalent -> construct_faithful_shape -> create_required_state_neighbor_variants -> refine_materials_and_form -> extract_register_color_coverage -> visual_review_identity_and_connections_at_game_scale -> native_state_review.
@@ -7447,7 +7495,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/painting-body.png](../art/village/scenery/painting-body.png), [art/village/scenery/painting-detail.png](../art/village/scenery/painting-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-SCRAP-ELECTRONICS: Scrap Electronics
 

@@ -1,0 +1,17 @@
+{
+  "private_code": {
+    "path": "E:/Temp/rimqud-native-garbage-20261021/Garbage.decompiled.cs",
+    "sha256": "7d6273fc5e86e990a836d616b52b0acd7ebf33de47baa51b755c3800f9ade2c2"
+  },
+  "assembly": {
+    "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/Managed/Assembly-CSharp.dll",
+    "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+  },
+  "findings": [
+    "Garbage part rummage/scavenge/divination paths consume one stack object through RemoveOne and Destroy; they do not assign a replacement Render.Tile.",
+    "Native RandomTile builder owns four initial choices. The declared fallback is retained separately rather than counted as a fifth random choice.",
+    "BurnGenerateObjectInCell creates a separate native TrashFire-table object; no invented empty/burning Garbage art.",
+    "All four choices and fallback use the same fixed map view and native primary K channel; no directional or adjacency system is invented."
+  ],
+  "native_activation": false
+}
