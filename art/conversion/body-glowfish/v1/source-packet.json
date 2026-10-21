@@ -1,0 +1,482 @@
+{
+  "entry": "BODY-GLOWFISH",
+  "timestamp": "2026-10-21T02:53:24.707977+00:00",
+  "identity": "Glowfish -> BaseFish -> Animal -> Creature -> PhysicalObject -> Object",
+  "species": "catfish",
+  "description": "Luminescent flecks flit beneath the water's surface.",
+  "ancestry": [
+    {
+      "name": "Glowfish",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml",
+        "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95"
+      },
+      "object": "<object Name=\"Glowfish\" Inherits=\"BaseFish\">\n    <part Name=\"Render\" DisplayName=\"glowfish\" RenderString=\"224\" Tile=\"creatures\\sw_glowfish.bmp\" DetailColor=\"C\" ColorString=\"&amp;m\" />\n    <part Name=\"Corpse\" CorpseChance=\"100\" CorpseBlueprint=\"Glowfish Corpse\" />\n    <stat Name=\"Hitpoints\" Value=\"5\" />\n    <part Name=\"Brain\" WandersRandomly=\"true\" Hostile=\"false\" Wanders=\"false\" Aquatic=\"true\" Calm=\"true\" Factions=\"Fish-100\" />\n    <mutation Name=\"Gills\" Level=\"12\" />\n\t\t<part Name=\"LightSource\" Lit=\"true\" Radius=\"1\" />\n    <part Name=\"Description\" Short=\"Luminescent flecks flit beneath the water's surface.\" />\n    <inventoryobject Blueprint=\"Glowfish_Bite\" Number=\"1\" />\n    <tag Name=\"Species\" Value=\"catfish\" />\t\t\n    <tag Name=\"DynamicObjectsTable:Saltmarsh_Creatures\" />\n    <tag Name=\"DynamicObjectsTable:Water_Creatures\" />\n    <tag Name=\"PlacementHint\" Value=\"Aquatic\" />\n  </object>"
+    },
+    {
+      "name": "BaseFish",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml",
+        "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95"
+      },
+      "object": "<object Name=\"BaseFish\" Inherits=\"Animal\">\n    <part Name=\"Render\" RenderString=\"224\" />\n    <part Name=\"Body\" Anatomy=\"Fish\" />\n    <stat Name=\"Strength\" sValue=\"8,1d2,(t-1)d2-1\" />\n    <stat Name=\"Agility\" sValue=\"14,1d3,(t-1)d2\" />\n    <stat Name=\"Toughness\" sValue=\"10,1d2,(t-1)d2-1\" />\n    <stat Name=\"Intelligence\" sValue=\"3,1d2,(t-1)d2-1\" />\n    <stat Name=\"Willpower\" sValue=\"3,1d2,(t-1)d2-1\" />\n    <stat Name=\"Ego\" sValue=\"3,1d2,(t-1)d2-1\" />\n    <intproperty Name=\"Bleeds\" Value=\"1\" />\n    <mutation Name=\"DarkVision\" Level=\"2\" />\n    <stat Name=\"ElectricResistance\" Value=\"-25\" />\n    <part Name=\"Brain\" Factions=\"Fish-100\" />\n    <part Name=\"NoKnockdown\" />\n    <part Name=\"Aquatic\" />\n    <skill Name=\"Endurance_Swimming\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Gender\" Value=\"neuterperson\" />\n    <part Name=\"ConversationScript\" ConversationID=\"Fish\" />\n    <tag Name=\"HeroNameTitleWiseDescriptor\" Value=\"Wise,Sage,Old,Great,Giant,Ornately-Finned,Fleet,Many-Finned\" />\n    <tag Name=\"HeroNameTitleMayorSyn\" Value=\"fish god,fish mayor,elder-fish\" />\n    <tag Name=\"HeroNameTitleMayorSynCap\" Value=\"Fish God,Fish Mayor,Elder-Fish\" />\n    <xtagTextFragments Skin=\"scales\" PoeticFeatures=\"contoured fins,iridescence,slim dimensionality\" YounglingNoise=\"*blub*\" Activity=\"swimming in circles,nibbling algae,laying eggs,nestling in brineweed\" VillageActivity=\"nestling in our brineweed,laying its eggs\" NeedsItemFor=\"for my own collection,to slake my greed,because of its trade value,to hide in the water\" SacredThing=\"the necessity of water,water,burrowing,the fin\" ArableLand=\"pools of water,rivers,lakes\" ValuedOre=\"sunken treasure\" />\n    <stag Name=\"HardMaterial\" Value=\"scale\" />\n    <tag Name=\"Class\" Value=\"fish\" />\n    <tag Name=\"Culture\" Value=\"Fish\" />\n\t\t<tag Name=\"AmbientIdleSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_fish_vo_idle\"/>\n\t\t<tag Name=\"PunchSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_fish_vo_attack\"/>\n\t\t<tag Name=\"DeathSounds\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_fish_vo_die\" />\n\t\t<tag Name=\"TakeDamageSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_fish_vo_hurt\"/>\n    <tag Name=\"SimpleConversation\" Value=\"&amp;w*stares at you unblinking*&amp;y\" />\n    <part Name=\"SpawnWithLiquid\" />\n    <tag Name=\"PetResponse\" Value=\"=subject.T= =verb:gurgle=.\" />    \n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_fish\" />\n  </object>"
+    },
+    {
+      "name": "Animal",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml",
+        "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95"
+      },
+      "object": "<object Name=\"Animal\" Inherits=\"Creature\">\n    <part Name=\"Render\" DisplayName=\"[Animal]\" RenderString=\"@\" />\n    <part Name=\"Body\" Anatomy=\"Quadruped\" />\n    <stat Name=\"Strength\" Value=\"14\" />\n    <stat Name=\"Agility\" Value=\"14\" />\n    <stat Name=\"Toughness\" Value=\"14\" />\n    <stat Name=\"Intelligence\" Value=\"6\" />\n    <stat Name=\"Willpower\" Value=\"6\" />\n    <stat Name=\"Ego\" Value=\"6\" />\n    <mutation Name=\"DarkVision\" Level=\"6\" />\n    <tag Name=\"RandomGender\" Value=\"male,female\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />    \n    <tag Name=\"DeathSounds\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_grazingAnimal_vo_die\" />\n    <tag Name=\"PrimaryLimbType\" Value=\"Face\" />\n  </object>"
+    },
+    {
+      "name": "Creature",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Creatures.xml",
+        "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95"
+      },
+      "object": "<object Name=\"Creature\" Inherits=\"PhysicalObject\">\n    <part Name=\"Render\" DisplayName=\"[Creature]\" RenderString=\"@\" RenderLayer=\"10\" RenderIfDark=\"false\" DetailColor=\"w\" Tile=\"Assets_Content_Textures_Creatures_sw_farmer.bmp\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;G^k\" />\n    <part Name=\"Physics\" Organic=\"true\" Takeable=\"false\" Solid=\"false\" Weight=\"201\" Category=\"Creatures\" />\n    <part Name=\"Brain\" Hostile=\"false\" Wanders=\"true\" Factions=\"Beasts-100\" />\n    <part Name=\"Body\" Anatomy=\"Humanoid\" />\n    <part Name=\"Combat\" />\n    <part Name=\"Experience\" />\n    <part Name=\"Inventory\" />\n    <part Name=\"Mutations\" />\n    <part Name=\"Skills\" />\n    <part Name=\"ActivatedAbilities\" />\n    <part Name=\"RandomLoot\" />\n    <part Name=\"Springy\" Factor=\"0.5\" />\n    <stat Name=\"Strength\" ShortName=\"ST\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Agility\" ShortName=\"AG\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Toughness\" ShortName=\"TO\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Intelligence\" ShortName=\"IN\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Willpower\" ShortName=\"WI\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Ego\" ShortName=\"EG\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"16\" />\n    <stat Name=\"Energy\" ShortName=\"EN\" Min=\"-100000\" Max=\"100000\" Value=\"0\" />\n    <stat Name=\"Speed\" ShortName=\"SP\" Min=\"1\" Max=\"10000\" Value=\"100\" />\n    <stat Name=\"MoveSpeed\" ShortName=\"MS\" Min=\"-1800\" Max=\"195\" Value=\"100\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"XP\" ShortName=\"XP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"XPValue\" ShortName=\"XPValue\" sValue=\"*XP\" Min=\"0\" Max=\"2147483647\" />\n    <stat Name=\"SP\" ShortName=\"SP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"MP\" ShortName=\"MP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"AP\" ShortName=\"AP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"MA\" ShortName=\"MA\" Min=\"-100\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"HeatResistance\" ShortName=\"HeatResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"ColdResistance\" ShortName=\"ColdResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"ElectricResistance\" ShortName=\"ElectricResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"AcidResistance\" ShortName=\"AcidResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <part Name=\"Leveler\" />\n    <part Name=\"Commerce\" Value=\"100\" />\n    <part Name=\"Stomach\" />\n    <part Name=\"Corpse\" CorpseChance=\"0\" BurntCorpseChance=\"100\" BurntCorpseBlueprint=\"Ashes\" />\n    <removepart Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Level\" ShortName=\"LV\" Min=\"1\" Max=\"10000\" Value=\"1\" />\n    <tag Name=\"Role\" Value=\"Unspecified\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <builder Name=\"Roboticized\" ChanceOneIn=\"20000\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"Creature\" />    \n    <tag Name=\"PetResponse\" Value=\"=subject.T= =verb:stare= at =object.t= blankly.\" />\n    <tag Name=\"SimpleConversation\" Value=\"Moon and Sun. Wisdom and will.~May the earth yield for us this season.~Peace, =player.formalAddressTerm=.\" />\n    <xtagTextFragments Skin=\"skin\" PoeticFeatures=\"shiny teeth,coarse hair,sunken eyes\" YounglingNoise=\"*heh*\" Activity=\"roaming around idly\" VillageActivity=\"sleeping in our homes\" NeedsItemFor=\"for my own collection,to slake my greed,because of its trade value\" SacredThing=\"the act of procreating\" ArableLand=\"arable land\" ValuedOre=\"precious metals\" />\n    <stag Name=\"HardMaterial\" Value=\"bone\" />\n  </object>"
+    },
+    {
+      "name": "PhysicalObject",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "object": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    },
+    {
+      "name": "Object",
+      "definition": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "object": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "resolved_parts": {
+    "Physics": {
+      "Name": "Physics",
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "201",
+      "Category": "Creatures",
+      "Organic": "true",
+      "Takeable": "false"
+    },
+    "Render": {
+      "Name": "Render",
+      "DisplayName": "glowfish",
+      "RenderString": "224",
+      "RenderLayer": "10",
+      "RenderIfDark": "false",
+      "DetailColor": "C",
+      "Tile": "creatures\\sw_glowfish.bmp",
+      "ColorString": "&m"
+    },
+    "MeleeWeapon": {
+      "Name": "MeleeWeapon",
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    "Commerce": {
+      "Name": "Commerce",
+      "Value": "100"
+    },
+    "Description": {
+      "Name": "Description",
+      "Short": "Luminescent flecks flit beneath the water's surface."
+    },
+    "BurnToAshesIfOrganic": {
+      "Name": "BurnToAshesIfOrganic"
+    },
+    "Brain": {
+      "Name": "Brain",
+      "Hostile": "false",
+      "Wanders": "false",
+      "Factions": "Fish-100",
+      "WandersRandomly": "true",
+      "Aquatic": "true",
+      "Calm": "true"
+    },
+    "Body": {
+      "Name": "Body",
+      "Anatomy": "Fish"
+    },
+    "Combat": {
+      "Name": "Combat"
+    },
+    "Experience": {
+      "Name": "Experience"
+    },
+    "Inventory": {
+      "Name": "Inventory"
+    },
+    "Mutations": {
+      "Name": "Mutations"
+    },
+    "Skills": {
+      "Name": "Skills"
+    },
+    "ActivatedAbilities": {
+      "Name": "ActivatedAbilities"
+    },
+    "RandomLoot": {
+      "Name": "RandomLoot"
+    },
+    "Springy": {
+      "Name": "Springy",
+      "Factor": "0.5"
+    },
+    "Leveler": {
+      "Name": "Leveler"
+    },
+    "Stomach": {
+      "Name": "Stomach"
+    },
+    "Corpse": {
+      "Name": "Corpse",
+      "CorpseChance": "100",
+      "BurntCorpseChance": "100",
+      "BurntCorpseBlueprint": "Ashes",
+      "CorpseBlueprint": "Glowfish Corpse"
+    },
+    "NoKnockdown": {
+      "Name": "NoKnockdown"
+    },
+    "Aquatic": {
+      "Name": "Aquatic"
+    },
+    "ConversationScript": {
+      "Name": "ConversationScript",
+      "ConversationID": "Fish"
+    },
+    "SpawnWithLiquid": {
+      "Name": "SpawnWithLiquid"
+    },
+    "LightSource": {
+      "Name": "LightSource",
+      "Lit": "true",
+      "Radius": "1"
+    }
+  },
+  "original": {
+    "tile": "creatures\\sw_glowfish.bmp",
+    "description": "Luminescent flecks flit beneath the water's surface.\n\nBase demeanor: {{g|docile}}",
+    "kind": "creature",
+    "blueprint": "Glowfish",
+    "reference_file": "village-originals/glowfish-reference.png",
+    "native_mask_sha256": "71b8c011c1637765ea0d23827dc26f475534cedbdb7c9a89f412a51166caad9d",
+    "reference_sha256": "0bdf642d1abbe8cd458f36f1f7569ac24dd7fc69dddda781917fcec95d2e9212",
+    "info_id": 8262,
+    "atlas_id": 224,
+    "rect": [
+      90,
+      364,
+      16,
+      24
+    ],
+    "private_mask": {
+      "path": "E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/glowfish-mask.png",
+      "sha256": "71b8c011c1637765ea0d23827dc26f475534cedbdb7c9a89f412a51166caad9d"
+    },
+    "size": [
+      16,
+      24
+    ],
+    "visible_bbox": [
+      1,
+      2,
+      15,
+      21
+    ],
+    "interpretation": "Broad head/body in upper left and long curled body/tail returning below; cyan detail on fins/tail accents. Curvature is source silhouette evidence, not proof of extra appendages or seahorse species."
+  },
+  "anatomy": {
+    "definition": {
+      "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/Bodies.xml",
+      "sha256": "5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292"
+    },
+    "fish_template": "<anatomy Name=\"Fish\">\n      <part Type=\"Head\">\n        <part Type=\"Face\" />\n      </part>\n      <part Type=\"Back\" />\n      <part Type=\"Dorsal Fin\" />\n      <part Type=\"Fin\" Laterality=\"Right\" />\n      <part Type=\"Fin\" Laterality=\"Left\" />\n      <part Type=\"Missile Weapon\" Laterality=\"Right\" />\n      <part Type=\"Missile Weapon\" Laterality=\"Left\" />\n      <part Type=\"Tail Fin\" />\n    </anatomy>",
+    "fin_variants": [
+      "<bodyparttypevariant VariantOf=\"Fin\" Type=\"Dorsal Fin\" Laterality=\"Upper\" Mobility=\"0\" Branching=\"Longitudinal,Lateral,Stratal\" />",
+      "<bodyparttypevariant VariantOf=\"Fin\" Type=\"Tail Fin\" Laterality=\"Hind\" Mobility=\"3\" Branching=\"Lateral,Vertical,Stratal\" />"
+    ],
+    "observed_actor": {
+      "instance": 528,
+      "blueprint": "Glowfish",
+      "species": "catfish",
+      "gender": "neuterperson",
+      "description": "Luminescent flecks flit beneath the water's surface.\n\nBase demeanor: {{g|docile}}",
+      "anatomy": "Fish",
+      "parts": [
+        {
+          "id": 175,
+          "parent": -1,
+          "type": "Body",
+          "variant": "Body",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 399,
+          "parent": 175,
+          "type": "Head",
+          "variant": "Head",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 400,
+          "parent": 399,
+          "type": "Face",
+          "variant": "Face",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": {
+            "instance": 619,
+            "blueprint": "Glowfish_Bite",
+            "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+            "tile": "Creatures/natural-weapon-bite.bmp",
+            "foreground": "&y",
+            "tileColor": "",
+            "detailColor": ""
+          }
+        },
+        {
+          "id": 401,
+          "parent": 175,
+          "type": "Back",
+          "variant": "Back",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 402,
+          "parent": 175,
+          "type": "Fin",
+          "variant": "Dorsal Fin",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 403,
+          "parent": 175,
+          "type": "Fin",
+          "variant": "Fin",
+          "laterality": 2,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 404,
+          "parent": 175,
+          "type": "Fin",
+          "variant": "Fin",
+          "laterality": 1,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 405,
+          "parent": 175,
+          "type": "Missile Weapon",
+          "variant": "Missile Weapon",
+          "laterality": 2,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 406,
+          "parent": 175,
+          "type": "Missile Weapon",
+          "variant": "Missile Weapon",
+          "laterality": 1,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 407,
+          "parent": 175,
+          "type": "Fin",
+          "variant": "Tail Fin",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 408,
+          "parent": 175,
+          "type": "Thrown Weapon",
+          "variant": "Thrown Weapon",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        },
+        {
+          "id": 409,
+          "parent": 175,
+          "type": "Floating Nearby",
+          "variant": "Floating Nearby",
+          "laterality": 0,
+          "manager": null,
+          "defaultBlueprint": null,
+          "equipped": null,
+          "defaultItem": null
+        }
+      ],
+      "tile": "creatures\\sw_glowfish.bmp",
+      "foreground": "&m",
+      "tileColor": "",
+      "detailColor": "C"
+    },
+    "runtime_source": {
+      "path": "art/village/sources.json",
+      "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+    },
+    "native_catalogue_hash": "fb050c7c0faebcf2fb3faaaecf9a248982b0e00678f706034fe81d6a5ee7babc",
+    "interpretation": "One head/face, one dorsal fin, paired right/left fins, one tail fin. Body/back/weapon/floating slots are mechanical, not extra limbs. No hands/feet/legs. Intrinsic catfish mouth/barbels/gills are ordinary fish anatomy; exact barbel count/proportions and unseen surfaces are authored, not slot-derived."
+  },
+  "baseline": {
+    "mutations": [
+      {
+        "Name": "DarkVision",
+        "Level": "6"
+      },
+      {
+        "Name": "DarkVision",
+        "Level": "2"
+      },
+      {
+        "Name": "Gills",
+        "Level": "12"
+      }
+    ],
+    "policy": "Reusable unmutated normal catfish morphology first. Gills12/DarkVision2 are native aquatic/sensory behaviors, not reasons to graft extra limbs/tails. Preserve metadata and normal intrinsic fish gills; no individual mutation-granted appendages or outfit baked in.",
+    "gender": "neuterperson",
+    "age": "No explicit native age/life-stage established; do not invent child residents or change demographics."
+  },
+  "natural_equipment": {
+    "face_default": {
+      "instance": 619,
+      "blueprint": "Glowfish_Bite",
+      "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+      "tile": "Creatures/natural-weapon-bite.bmp",
+      "foreground": "&y",
+      "tileColor": "",
+      "detailColor": ""
+    },
+    "equipped": [],
+    "interpretation": "Glowfish_Bite is default Face behavior, not an external handheld item, extra head or clothing fit. Observed equipped list is empty."
+  },
+  "palette": {
+    "primary": "m",
+    "detail": "C",
+    "primary_rgb": "b154cf",
+    "detail_rgb": "77bfcf",
+    "native_tile_color": "",
+    "policy": "Pure equal-RGB neutral art and separate primary/detail ownership, one coverage plane. No magenta/cyan baked into neutral, fixed-color fallback, water tint, glow halo or emissive artwork. Native light radius1 remains native."
+  },
+  "donor_reference": {
+    "live_fish": {
+      "name": "Installed Biomes! Islands BaitFish S/E/N pawn textures",
+      "definition": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/1.5/Defs/ThingDefs_Races/Baitfish/BMT_Muckfrill.xml",
+        "sha256": "5cf094294a509b83ca4e13a2af4818ca4c1200d4a133c86171fb03f5e76a6fed"
+      },
+      "definition_text": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<Defs>\n\n\t<ThingDef ParentName=\"BMT_BaitfishBase\">\n\t\t<defName>BMT_Muckfrill</defName>\n\t\t<label>muckfrill</label>\n\t\t<description>A small schooling fish.</description>\n\t\t<statBases>\n\t\t\t<ComfyTemperatureMin>-10</ComfyTemperatureMin>\n\t\t\t<ComfyTemperatureMax>65</ComfyTemperatureMax>\n\t\t</statBases>\n\t\t<comps>\n\t\t\t<li Class=\"CompProperties_EggLayer\">\n\t\t\t\t<eggFertilizedDef>BMT_EggMuckfrillFertilized</eggFertilizedDef>\n\t\t\t\t<eggFertilizationCountMax>1</eggFertilizationCountMax>\n\t\t\t\t<eggLayIntervalDays>12</eggLayIntervalDays>\n\t\t\t\t<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>\n\t\t\t\t<eggCountRange>2~5</eggCountRange>\n\t\t\t</li>\n\t\t</comps>\n\t\t<race>\n\t\t\t<wildness>0.4</wildness>\n\t\t\t<lifeExpectancy>3</lifeExpectancy>\n\t\t\t<manhunterOnDamageChance>0.01</manhunterOnDamageChance>\n\t\t\t<manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>\n\t\t\t<baseBodySize>0.20</baseBodySize>\n\t\t</race>\n\t</ThingDef>\n\n\n\t<PawnKindDef ParentName=\"BMT_BaseBaitfish\">\n\t\t<defName>BMT_Muckfrill</defName>\n\t\t<label>muckfrill</label>\n\t\t<description>A small schooling fish.</description>\n\t\t<race>BMT_Muckfrill</race>\n\t\t<wildGroupSize>2~7</wildGroupSize>\n\t\t<lifeStages>\n\t\t\t<li>\n\t\t\t\t<bodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish</texPath>\n\t\t\t\t\t<drawSize>0.35</drawSize>\n\t\t\t\t\t<color>(146,128,56)</color>\n\t\t\t\t</bodyGraphicData>\n\t\t\t\t<dessicatedBodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>\n\t\t\t\t\t<drawSize>0.35</drawSize>\n\t\t\t\t</dessicatedBodyGraphicData>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<bodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish</texPath>\n\t\t\t\t\t<drawSize>0.6</drawSize>\n\t\t\t\t\t<color>(146,128,56)</color>\n\t\t\t\t</bodyGraphicData>\n\t\t\t\t<dessicatedBodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>\n\t\t\t\t\t<drawSize>0.6</drawSize>\n\t\t\t\t</dessicatedBodyGraphicData>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<bodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish</texPath>\n\t\t\t\t\t<drawSize>0.85</drawSize>\n\t\t\t\t\t<color>(146,128,56)</color>\n\t\t\t\t</bodyGraphicData>\n\t\t\t\t<dessicatedBodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>\n\t\t\t\t\t<drawSize>0.85</drawSize>\n\t\t\t\t</dessicatedBodyGraphicData>\n\t\t\t</li>\n\t\t</lifeStages>\n\t\t<modExtensions>\n\t\t\t<li Class=\"PathfindingFramework.TerrainTagGraphicExtension\">\n\t\t\t\t<terrainTags>\n\t\t\t\t\t<li>PF_TerrainTag_WaterShallow</li>\n\t\t\t\t\t<li>PF_TerrainTag_WaterChest</li>\n\t\t\t\t\t<li>PF_TerrainTag_WaterDeep</li>\n\t\t\t\t</terrainTags>\n\t\t\t\t<bodyGraphicData>\n\t\t\t\t\t<texPath>BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFishSubmerged</texPath>\n\t\t\t\t\t<color>(146,128,56)</color>\n\t\t\t\t</bodyGraphicData>\n\t\t\t</li>\n\t\t</modExtensions>\n\t</PawnKindDef>\n\n\n\t<ThingDef ParentName=\"EggFertBase\">\n\t\t<defName>BMT_EggMuckfrillFertilized</defName>\n\t\t<label>muckfrill egg (fert.)</label>\n\t\t<description>A fertilized muckfrill egg. If all goes well, it should hatch into a fish. It can be eaten raw, but it's much better cooked.</description>\n\t\t<graphicData>\n\t\t\t<color>(200,200,150)</color>\n\t\t\t<drawSize>0.8</drawSize>\n\t\t</graphicData>\n\t\t<statBases>\n\t\t\t<MarketValue>10.0</MarketValue>\n\t\t\t<DeteriorationRate>0</DeteriorationRate>\n\t\t</statBases>\n\t\t<comps>\n\t\t\t<li Class=\"CompProperties_Hatcher\">\n\t\t\t\t<hatcherDaystoHatch>6.5</hatcherDaystoHatch>\n\t\t\t\t<hatcherPawn>BMT_Muckfrill</hatcherPawn>\n\t\t\t</li>\n\t\t</comps>\n\t</ThingDef>\n\n\n</Defs>",
+      "about": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/About/About.xml",
+        "sha256": "4d3d606b8662d6a6d30c735eda03010be76b605028464d54868ca2e6b6c0ab01"
+      },
+      "load_folders": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/LoadFolders.xml",
+        "sha256": "59ef1cf2c5b88f458ca85aff459f7c734093d136ccec65f2387ded62bcde38a6"
+      },
+      "assets": [
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/Textures/BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish_south.png",
+          "sha256": "1df330525aa1fccbb57c2f8c62900c5a04140b6f3ba99aa6130f37d8578ec0e1",
+          "facing": "south",
+          "role": "Actual live fish-pawn directional rendering and compact animal silhouette only; do not straighten Qud source curl, import donor size/age/mechanics or baked underwater tint."
+        },
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/Textures/BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish_east.png",
+          "sha256": "33f0acc90724a08f43678d5b6d82857afdb010e62f2c7d5b6e999861754821a5",
+          "facing": "east",
+          "role": "Actual live fish-pawn directional rendering and compact animal silhouette only; do not straighten Qud source curl, import donor size/age/mechanics or baked underwater tint."
+        },
+        {
+          "path": "D:/Steam/steamapps/workshop/content/294100/2038001322/Textures/BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish_north.png",
+          "sha256": "6fdb6ee6ca45ca24d882031335e96e32fda08917be14ea2471292def6dd8256b",
+          "facing": "north",
+          "role": "Actual live fish-pawn directional rendering and compact animal silhouette only; do not straighten Qud source curl, import donor size/age/mechanics or baked underwater tint."
+        }
+      ],
+      "version_note": "Installed asset/reference supports through1.5; art study does not claim currently enabled pawn mod or install its code."
+    },
+    "catfish_feature": {
+      "name": "Installed Vanilla Fishing Expanded catfish resource",
+      "asset": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1914064942/Textures/Things/Item/Resource/VCEF_Catfish/VCEF_Catfish_a.png",
+        "sha256": "fad82529d073ddf67d7ec3863b3a5d6747afa3e8dd50dba29fc84422db61c87f"
+      },
+      "definition": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1914064942/1.6NotOdyssey/Defs/ThingDefs_Items/Items_Resource_Fish.xml",
+        "sha256": "244bfb8286c111aa1b01f96ae484581455db5bf95169af4b8adbbdbb28dc0831",
+        "object": "<ThingDef ParentName=\"VCEF_RawFishBase\">\n\t\t<defName>VCEF_RawCatfish</defName>\n\t\t<label>catfish</label>\n\t\t<description>Raw catfish. Catfish are a diverse group of ray-finned fish. Named for their prominent barbels, which resemble a cat's whiskers.</description>\n\t\t<graphicData>\n\t\t\t<texPath>Things/Item/Resource/VCEF_Catfish</texPath>\n\t\t\t<graphicClass>Graphic_StackCount</graphicClass>\n\t\t</graphicData>\n\t\t<statBases>\n\t\t\t<Mass>0.05</Mass>\n\t\t\t<Nutrition>0.10</Nutrition>\n\t\t\t<MarketValue>2.2</MarketValue>\n\t\t</statBases>\n\t\t<ingestible>\n\t\t\t<specialThoughtDirect>AteRawFood</specialThoughtDirect>\n\t\t</ingestible>\n\t\t<uiIconForStackCount>1</uiIconForStackCount>\n\t</ThingDef>\n\t\n\t\n\t\n\n\n\t"
+      },
+      "about": {
+        "path": "D:/Steam/steamapps/workshop/content/294100/1914064942/About/About.xml",
+        "sha256": "9281e050ab4fefb657ad9656d4e6f0a9ffb7ea45df7d18f3fb4fef9efc4d1ec2"
+      },
+      "role": "Catfish flattened head/barbel/anatomical cue only. This is resource art, not a live directional pawn; do not import dead-food pose, colour, stack pictures or eating mechanics."
+    }
+  },
+  "camera": "Use actual live fish-pawn cardinal map convention: S head towards bottom, E head right, N head top. Entire normal fish turns, no human upright stance or independently turned head. Preserve source curl in a coherent swimming-plane form; unseen body depth/fin placement remain authored. Front design is constructed first, then actual ImageGen E/N from that front and these facts.",
+  "rendering_contract": "Whole animal body graphics with two tint channels. Mechanical Head/Fin slots do not require independent render bones/limb models. Retain normal head/fins in whole body; no invented articulated fins, clothing framework, per-facing bbox scaling or source-unknown animation.",
+  "frame": {
+    "authoring": [
+      768,
+      768
+    ],
+    "swim_pivot": [
+      384,
+      384
+    ],
+    "world_canvas": [
+      1.2,
+      1.2
+    ],
+    "policy": "Common centered trunk/swim pivot and scale for all facings; asymmetrical source curl may extend off axis. Do not recenter each alpha bbox or normalize body length by facing.",
+    "world_size_provenance": "Authored template scale, not a native measured body dimension; final native acceptance after all generation."
+  },
+  "native_activation": false
+}

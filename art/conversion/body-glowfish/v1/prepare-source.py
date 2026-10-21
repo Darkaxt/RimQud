@@ -1,0 +1,57 @@
+"""Resolve unmutated Glowfish/catfish anatomy and source roles before front-first design."""
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib,re,xml.etree.ElementTree as ET
+import numpy as np
+from PIL import Image,ImageDraw,ImageFont
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else p.as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+def write(p,x):p.write_bytes((json.dumps(x,indent=2,ensure_ascii=False)+'\n').encode())
+assert not (HERE/'source-packet.json').exists();ledger=read(ROOT/'evidence/conversion-ledger.json');assert ledger['active_entry']=='BODY-GLOWFISH';entry=next(e for e in ledger['entries'] if e['id']==ledger['active_entry']);assert not entry['process_log']
+base=Path('D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base');texts={p:p.read_text() for p in [base/'ObjectBlueprints/Creatures.xml',base/'ObjectBlueprints/PhysicalPhenomena.xml',base/'ObjectBlueprints/RootObjects.xml']};nodes=[];ancestry=[];name='Glowfish'
+while name:
+    found=[(p,re.search(r'<object\s+Name="'+re.escape(name)+r'"(?=\s|>).*?</object>',t,re.S)) for p,t in texts.items()];found=[(p,m) for p,m in found if m];assert len(found)==1,name;p,m=found[0];node=ET.fromstring(m.group());nodes.append(node);ancestry.append(dict(name=name,definition=ref(p),object=m.group()));name=node.get('Inherits')
+parts={};tags={}
+for node in reversed(nodes):
+    for n in node.findall('part'):parts.setdefault(n.get('Name'),{}).update(n.attrib)
+    for n in node.findall('tag'):tags[n.get('Name')]=dict(n.attrib)
+assert tags['Species']['Value']=='catfish' and parts['Body']['Anatomy']=='Fish' and parts['Render']['ColorString']=='&m' and parts['Render']['DetailColor']=='C'
+sources=read(ROOT/'art/village/sources.json');actor=next(a for a in sources['actors'] if a['creature']=='Glowfish');runtime=actor['native_instances'][0];assert runtime['species']=='catfish' and not runtime['tileColor'] and runtime['foreground']=='&m' and runtime['detailColor']=='C'
+fins=[p for p in runtime['parts'] if p['type']=='Fin'];assert len(fins)==4 and {p['variant'] for p in fins}=={'Fin','Dorsal Fin','Tail Fin'};assert not any(p['type'] in ['Foot','Feet','Arm','Leg','Hand'] for p in runtime['parts'])
+bodies=base/'Bodies.xml';bodytext=bodies.read_text();fish=re.search(r'<anatomy Name="Fish">.*?</anatomy>',bodytext,re.S).group();variants=[re.search(r'<bodyparttypevariant[^>]*Type="'+n+r'"[^>]*/>',bodytext).group() for n in ['Dorsal Fin','Tail Fin']]
+original=next(e for e in read(ROOT/'evidence/village-reference-index.json')['entries'] if e.get('blueprint')=='Glowfish');native=Path('E:/Temp/qud-transplant-probe-pawns-20261019/donor/village-originals/glowfish-mask.png');assert ref(native)['sha256']==original['native_mask_sha256'];a=np.array(Image.open(native).convert('RGBA'));assert set(np.unique(a[:,:,0][a[:,:,3]>0]))=={0,255}
+donor=Path('D:/Steam/steamapps/workshop/content/294100/2038001322');dn=donor/'1.5/Defs/ThingDefs_Races/Baitfish/BMT_Muckfrill.xml';assert 'BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish' in dn.read_text();cat=Path('D:/Steam/steamapps/workshop/content/294100/1914064942');catdef=cat/'1.6NotOdyssey/Defs/ThingDefs_Items/Items_Resource_Fish.xml';cn=next(n for n in ET.parse(catdef).getroot() if n.findtext('defName')=='VCEF_RawCatfish')
+refs=[dict(**ref(donor/f'Textures/BiomesIslands_Things/Pawn/Animal/BaitFish/BaitFish_{f}.png'),facing=f,role='Actual live fish-pawn directional rendering and compact animal silhouette only; do not straighten Qud source curl, import donor size/age/mechanics or baked underwater tint.') for f in ['south','east','north']]
+packet=dict(entry='BODY-GLOWFISH',timestamp=datetime.now(timezone.utc).isoformat(),identity=' -> '.join(n['name'] for n in ancestry),species='catfish',description=parts['Description']['Short'],ancestry=ancestry,resolved_parts=parts,
+    original=dict(**original,private_mask=ref(native),size=[16,24],visible_bbox=list(Image.open(native).getbbox()),interpretation='Broad head/body in upper left and long curled body/tail returning below; cyan detail on fins/tail accents. Curvature is source silhouette evidence, not proof of extra appendages or seahorse species.'),
+    anatomy=dict(definition=ref(bodies),fish_template=fish,fin_variants=variants,observed_actor=runtime,runtime_source=ref(ROOT/'art/village/sources.json'),native_catalogue_hash=sources['runtime_catalogue_sha256'],
+        interpretation='One head/face, one dorsal fin, paired right/left fins, one tail fin. Body/back/weapon/floating slots are mechanical, not extra limbs. No hands/feet/legs. Intrinsic catfish mouth/barbels/gills are ordinary fish anatomy; exact barbel count/proportions and unseen surfaces are authored, not slot-derived.'),
+    baseline=dict(mutations=[dict(n.attrib) for node in reversed(nodes) for n in node.findall('mutation')],policy='Reusable unmutated normal catfish morphology first. Gills12/DarkVision2 are native aquatic/sensory behaviors, not reasons to graft extra limbs/tails. Preserve metadata and normal intrinsic fish gills; no individual mutation-granted appendages or outfit baked in.',gender=runtime['gender'],age='No explicit native age/life-stage established; do not invent child residents or change demographics.'),
+    natural_equipment=dict(face_default=next(p for p in runtime['parts'] if p['variant']=='Face')['defaultItem'],equipped=[p for p in runtime['parts'] if p['equipped']],interpretation='Glowfish_Bite is default Face behavior, not an external handheld item, extra head or clothing fit. Observed equipped list is empty.'),
+    palette=dict(primary='m',detail='C',primary_rgb='b154cf',detail_rgb='77bfcf',native_tile_color=runtime['tileColor'],policy='Pure equal-RGB neutral art and separate primary/detail ownership, one coverage plane. No magenta/cyan baked into neutral, fixed-color fallback, water tint, glow halo or emissive artwork. Native light radius1 remains native.'),
+    donor_reference=dict(live_fish=dict(name='Installed Biomes! Islands BaitFish S/E/N pawn textures',definition=ref(dn),definition_text=dn.read_text(),about=ref(donor/'About/About.xml'),load_folders=ref(donor/'LoadFolders.xml'),assets=refs,version_note='Installed asset/reference supports through1.5; art study does not claim currently enabled pawn mod or install its code.'),
+        catfish_feature=dict(name='Installed Vanilla Fishing Expanded catfish resource',asset=ref(cat/'Textures/Things/Item/Resource/VCEF_Catfish/VCEF_Catfish_a.png'),definition=dict(**ref(catdef),object=ET.tostring(cn,encoding='unicode')),about=ref(cat/'About/About.xml'),role='Catfish flattened head/barbel/anatomical cue only. This is resource art, not a live directional pawn; do not import dead-food pose, colour, stack pictures or eating mechanics.')),
+    camera='Use actual live fish-pawn cardinal map convention: S head towards bottom, E head right, N head top. Entire normal fish turns, no human upright stance or independently turned head. Preserve source curl in a coherent swimming-plane form; unseen body depth/fin placement remain authored. Front design is constructed first, then actual ImageGen E/N from that front and these facts.',
+    rendering_contract='Whole animal body graphics with two tint channels. Mechanical Head/Fin slots do not require independent render bones/limb models. Retain normal head/fins in whole body; no invented articulated fins, clothing framework, per-facing bbox scaling or source-unknown animation.',
+    frame=dict(authoring=[768,768],swim_pivot=[384,384],world_canvas=[1.2,1.2],policy='Common centered trunk/swim pivot and scale for all facings; asymmetrical source curl may extend off axis. Do not recenter each alpha bbox or normalize body length by facing.',world_size_provenance='Authored template scale, not a native measured body dimension; final native acceptance after all generation.'),native_activation=False)
+write(HERE/'source-packet.json',packet)
+font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',16);plate=Image.new('RGB',(1440,900),'#142823');d=ImageDraw.Draw(plate);d.text((20,15),'GLOWFISH -> CATFISH / native curled silhouette + actual fish pawn/feature references',font=font,fill='#e3cf43')
+g=np.uint8(225-a[:,:,0].astype(float)/255*75);im=Image.fromarray(np.dstack([g,g,g,a[:,:,3]])).resize((192,288),Image.Resampling.NEAREST);plate.paste(im,(35,65),im)
+w=a[:,:,0].astype(float)/255;rgb=np.uint8(np.rint((1-w[:,:,None])*np.array([177,84,207])+w[:,:,None]*np.array([119,191,207])));im=Image.fromarray(np.dstack([rgb,a[:,:,3]])).resize((192,288),Image.Resampling.NEAREST);plate.paste(im,(275,65),im)
+for i,r in enumerate(refs):
+    im=Image.open(r['path']).convert('RGBA').resize((192,192),Image.Resampling.NEAREST);plate.paste(im,(565+i*235,110),im);d.text((565+i*235,330),r['facing'].upper(),font=font,fill='#e3cf43')
+im=Image.open(packet['donor_reference']['catfish_feature']['asset']['path']).convert('RGBA').resize((210,210),Image.Resampling.NEAREST);plate.paste(im,(1190,100),im)
+for x,s in [(25,'SOURCE P/D'),(265,'NATIVE m/C'),(565,'LIVE PAWN S/E/N'),(1160,'CATFISH FEATURE')]:d.text((x,390),s,font=font,fill='#e3cf43')
+lines=['Metadata: catfish, Fish anatomy. One head, dorsal fin, paired fins and tail fin; NO feet/arms/legs.',
+ 'Observed actor528 has Face default Glowfish_Bite, no worn/held equipment; gender neuterperson, age unknown.',
+ 'Source curl matters: do not turn it into a straight generic baitfish, seahorse, eel with legs or humanoid.',
+ 'First construct neutral SOUTH/front; actual ImageGen E/N uses that front + race/anatomy facts.',
+ 'Register all directions to common trunk/swim pivot; ordinary fish features remain one animal graphic.',
+ 'Neutral must contain equal RGB only; m body/C fins/flecks use independent masks, no fixed coloured pixels.',
+ 'Gills/DarkVision/LightSource remain native behaviors. No extra mutation limbs, water shading or baked glow.',
+ 'Refined/side/back surfaces are authoring proposals; only completed per-entry evidence earns generation readiness.']
+for i,line in enumerate(lines):d.text((20,465+i*47),line,font=font,fill='#e5e8d8')
+plate.save(HERE/'source-reference.png');now=datetime.now(timezone.utc).isoformat();entry['process_log'].append(dict(timestamp=now,step=entry['required_steps'][0],action='Resolve exact Glowfish->catfish identity, full source ancestry, original m/C curled sprite and observed Fish topology before front-first art.',inputs=[ref(p) for p in texts]+[ref(bodies),ref(native),ref(ROOT/'art/village/sources.json')],outputs=[ref(HERE/n) for n in ['prepare-source.py','source-packet.json','source-reference.png']],review='Normal fish morphology: one head, dorsal+paired+tail fins, no legs. Face default Bite is not outfit; actual worn equipment empty. Gills/DarkVision/light behavior preserved without mutation appendages. Source curl/roles and exact native palette retained; old fixed-colour/east-first proposal receives no credit.',result='PASS'))
+entry.update(current_step=entry['required_steps'][1],known_issues=['Source/runtime/reference packet ready. Inspect references and construct a neutral front from catfish/source curl; no side-first reuse, baked colours or generation-ready credit yet.']);ledger['updated_at']=now;write(ROOT/'evidence/conversion-ledger.json',ledger)
+print('Resolved catfish identity, source curl, four fin slots, native m/C roles and actual live fish reference.')
