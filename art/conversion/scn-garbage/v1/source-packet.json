@@ -1,0 +1,134 @@
+{
+  "entry": "SCN-GARBAGE",
+  "recorded_at": "2026-10-21T01:24:50.585009+00:00",
+  "identity": "Garbage -> Item",
+  "description": "Pieces of the old and aching world have been shaved off their timepoint and crushed to the vicinity of the present. A few bits of recognition remain:  lens of glass, serif of ink, acid-ate lug, and ribbon of wire.",
+  "source_definition": {
+    "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+    "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+    "object": "<object Name=\"Garbage\" Inherits=\"Item\">\n    <part Name=\"Render\" DisplayName=\"trash\" Tile=\"Assets_Content_Textures_Tiles_Tile-7-3.png\" RenderString=\"%\" ColorString=\"&amp;K^k\" Occluding=\"false\" />\n    <part Name=\"Physics\" Weight=\"5\" Takeable=\"true\" Solid=\"false\" />\n    <part Name=\"Description\" Short=\"Pieces of the old and aching world have been shaved off their timepoint and crushed to the vicinity of the present. A few bits of recognition remain:  lens of glass, serif of ink, acid-ate lug, and ribbon of wire.\" />\n    <part Name=\"Garbage\" />\n    <builder Name=\"RandomTile\" Tiles=\"Items/sw_trash_1.bmp,Items/sw_trash_2.bmp,Items/sw_trash_3.bmp,Items/sw_trash_4.bmp\" />\n    <part Name=\"BurnGenerateObjectInCell\" Chance=\"20\" Table=\"TrashFire\" PerZone=\"true\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;k\" />\n    <xtagGrammar adjunctNoun=\"pile\" massNoun=\"true\" />\n    <tag Name=\"Breakable\" Value=\"*delete\"/>\n    <stag Name=\"Garbage\" />\n    <part Name=\"NoBreak\" />\n    <part Name=\"NoRust\" />\n  </object>"
+  },
+  "original_reference": {
+    "tile": "Assets_Content_Textures_Tiles_Tile-7-3.png",
+    "description": "Pieces of the old and aching world have been shaved off their timepoint and crushed to the vicinity of the present. A few bits of recognition remain:  lens of glass, serif of ink, acid-ate lug, and ribbon of wire.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "trash",
+      "RenderString": "%",
+      "RenderLayer": "5",
+      "RenderIfDark": "true",
+      "Tile": "Assets_Content_Textures_Tiles_Tile-7-3.png",
+      "ColorString": "&K^k",
+      "Occluding": "false"
+    },
+    "kind": "scenery",
+    "blueprint": "Garbage",
+    "reference_file": "village-originals/garbage-reference.png",
+    "native_mask_sha256": "15a7d007b61805f1b83ec357230819ab48dce6d66b3fcfafd4ffccf4e43cb27d",
+    "reference_sha256": "dfcd859bf7bb691e3e5ca8ca8f4e956106dceed98574e557608ca99fcaa601f5",
+    "info_id": 14466,
+    "atlas_id": 277,
+    "rect": [
+      684,
+      1092,
+      16,
+      24
+    ]
+  },
+  "native_states": {
+    "path": "art/conversion/scn-garbage/v1/native-state-index.json",
+    "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"
+  },
+  "required_native_art": {
+    "random_tile_choices": [
+      "Items/sw_trash_1.bmp",
+      "Items/sw_trash_2.bmp",
+      "Items/sw_trash_3.bmp",
+      "Items/sw_trash_4.bmp"
+    ],
+    "declared_fallback": "Assets_Content_Textures_Tiles_Tile-7-3.png",
+    "selection": "Native RandomTile builder owns selection. Preserve all four actual choices; keep declared fallback distinguishable. No inferred adjacency, animation or view-state conversion.",
+    "burning": "BurnGenerateObjectInCell may create a separate native TrashFire-table object; it does not establish an extra burning Garbage texture. No fire simulation or art is invented here."
+  },
+  "source_parts": {
+    "Render": {
+      "Name": "Render",
+      "DisplayName": "trash",
+      "Tile": "Assets_Content_Textures_Tiles_Tile-7-3.png",
+      "RenderString": "%",
+      "ColorString": "&K^k",
+      "Occluding": "false"
+    },
+    "Physics": {
+      "Name": "Physics",
+      "Weight": "5",
+      "Takeable": "true",
+      "Solid": "false"
+    },
+    "Description": {
+      "Name": "Description",
+      "Short": "Pieces of the old and aching world have been shaved off their timepoint and crushed to the vicinity of the present. A few bits of recognition remain:  lens of glass, serif of ink, acid-ate lug, and ribbon of wire."
+    },
+    "Garbage": {
+      "Name": "Garbage"
+    },
+    "BurnGenerateObjectInCell": {
+      "Name": "BurnGenerateObjectInCell",
+      "Chance": "20",
+      "Table": "TrashFire",
+      "PerZone": "true"
+    },
+    "NoBreak": {
+      "Name": "NoBreak"
+    },
+    "NoRust": {
+      "Name": "NoRust"
+    }
+  },
+  "palette": {
+    "ColorString": "&K^k",
+    "primary": "K",
+    "background": "k",
+    "detail": "Not explicitly set on Garbage; resolve inherited/default/native mapping before final registration. Do not treat ^k background as a DetailColor or bake it into object alpha.",
+    "inspection": "Source plate uses neutral primary/detail tones to make masks readable; it is not a claim of final native colour rendering."
+  },
+  "donor_reference": {
+    "definition": {
+      "path": "D:/Steam/steamapps/common/RimWorld/Data/Core/Defs/ThingDefs_Misc/Filth_Various.xml",
+      "sha256": "3009403c4d02d0a057c88490d107d7b396f756c5979e129df96fbcd8e2f5c1f2",
+      "object": "<ThingDef ParentName=\"BaseFilth\">\n    <defName>Filth_Trash</defName>\n    <label>trash</label>\n    <graphicData>\n      <texPath>Things/Filth/Trash</texPath>\n      <graphicClass>Graphic_Cluster</graphicClass>\n    </graphicData>\n    <filth>\n      <placementMask>\n        <li>Terrain</li>\n        <li>Unnatural</li>\n      </placementMask>\n      <disappearsInDays>45~50</disappearsInDays>\n      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>\n      <canFilthAttach>true</canFilthAttach>\n      <cleaningSound>Interact_CleanFilth_Scattered</cleaningSound>\n    </filth>\n  </ThingDef>\n  \n  "
+    },
+    "resources": {
+      "path": "D:/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/resources.assets",
+      "sha256": "7c0c69bde01910dde60205bc1417cd56a39e27affd2de36735dcedd6facd6155"
+    },
+    "assets": [
+      {
+        "path": "E:/Temp/rimqud-native-garbage-20261021/core-TrashA.png",
+        "sha256": "29c87d433a834d2f7d4df788e39a6be2f97929845a92c809e6bbba762fa39c4d",
+        "name": "TrashA",
+        "source_id": 2995,
+        "role": "Actual Core trash scatter: outline, overlapping fragments and quiet map-art shading only; do not copy its exact rubbish contents, palette, footprint, rotation or filth mechanics."
+      },
+      {
+        "path": "E:/Temp/rimqud-native-garbage-20261021/core-TrashB.png",
+        "sha256": "843da25e56e0ee5a25fd14d3fb07e512fde68a356fda90af5ce8551d559ba10e",
+        "name": "TrashB",
+        "source_id": 2910,
+        "role": "Actual Core trash scatter: outline, overlapping fragments and quiet map-art shading only; do not copy its exact rubbish contents, palette, footprint, rotation or filth mechanics."
+      },
+      {
+        "path": "E:/Temp/rimqud-native-garbage-20261021/core-TrashC.png",
+        "sha256": "7d9c8085cff5e2fc6bac81ec8356a56af1351d6f7e03bb28d2adeb1d06338b2d",
+        "name": "TrashC",
+        "source_id": 1498,
+        "role": "Actual Core trash scatter: outline, overlapping fragments and quiet map-art shading only; do not copy its exact rubbish contents, palette, footprint, rotation or filth mechanics."
+      }
+    ],
+    "role": "Visual map-scatter convention only. Qud description, individual tile layouts and dark source palette govern the new art."
+  },
+  "construction_contract": "Preserve the recognisable layout/coverage of each Qud variant. Reconstruct readable fragments including glass lens, ink serif, corroded lug and wire ribbon without turning every blob into a generic bottle/can pile. Unseen material surfaces and exact fragment identities remain authored interpretations.",
+  "views": "Fixed map-facing debris, not furniture: one source-bound view per actual tile choice/fallback. No invented south/east/north turnaround or runtime rotation.",
+  "scope": "Source/reference preparation only; construction, actual refinement, extraction/registration, palette resolution and final art review remain unfinished.",
+  "native_activation": false
+}

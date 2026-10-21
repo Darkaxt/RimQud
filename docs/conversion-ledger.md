@@ -188,7 +188,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-GARBAGE | Garbage | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-GARBAGE | Garbage | IN PROGRESS | - | All four actual random trash tiles plus declared fallback and Core references are resolved/inspected. Visible palette uses only primary K; ^k is background. Faithful editable construction for each source layout, actual refinement, extraction/registration and final art review remain unfinished. |
 | SCN-PAINTING | Painting | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-ELECTRONICS | Scrap Electronics | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-SCRAP-METAL | Scrap Metal | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -7419,7 +7419,25 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/garbage-body.png](../art/village/scenery/garbage-body.png).
 
-Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
+Current step: construct_faithful_shape. Process-log events: 3.
+
+- 2026-10-21T01:24:51.863538+00:00 / resolve_object_description_original_tile_palette_state / PASS: Resolve exact Garbage definition and extract all four native RandomTile choices plus declared fallback from version-pinned Qud resources.
+  Review: Old catalogue declared tile alone omits four builder-selected shapes. All five source masks retained privately with exact atlas/rect/hash. Native selection, non-solid/takeable behavior and separate burning object ownership retained; final detail-colour mapping remains explicitly unresolved.
+  Inputs: [{"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml", "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"}, {"path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/resources.assets", "sha256": "61f5c811a061626bc646f7ee654afb4575c2b4b9ad703a05b18655b2505ed376"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/prepare-source.py", "sha256": "18430b0ec58d03db14f38a06c4066454b9de5ae28ddb5b60334ad29af800a237"}, {"path": "art/conversion/scn-garbage/v1/native-state-index.json", "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"}, {"path": "art/conversion/scn-garbage/v1/source-packet.json", "sha256": "82dee8e899807b185ad3887dd3dc4ab4f7d778babd2b9dab773ca19c05624d89"}, {"path": "art/conversion/scn-garbage/v1/source-reference-variants.png", "sha256": "461a3dd5043fd2e58dd60f2ccbb8ebf7b6910d0846fb1c2008fe17573984ec91"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:26:31.444832+00:00 / resolve_object_description_original_tile_palette_state / PASS: Inspect actual five masks to resolve visible palette ownership before constructing replacement art.
+  Review: All visible source pixels are R0, so no default DetailColor guess is needed. Native K is primary and ^k is outside-coverage background. Preserve all fragment gaps, no invented bright secondary material palette. Initial source packet remains unchanged as historical evidence.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/native-state-index.json", "sha256": "7ce81b2619408d2d44c6d9ab3db3de0f408baa0df194c451c29589a50fc2c125"}, {"path": "art/conversion/scn-garbage/v1/source-packet.json", "sha256": "82dee8e899807b185ad3887dd3dc4ab4f7d778babd2b9dab773ca19c05624d89"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/review-source.py", "sha256": "4b4cb4ebfac0745401ee9a11bec5904c12ce0d0fc46c93e37e1a448c45636136"}, {"path": "art/conversion/scn-garbage/v1/palette-resolution.json", "sha256": "8992ef0df35488a0f6a18241a5c3745ccc7e16e9c800d6ee3990d76b0f5557b5"}, {"path": "art/conversion/scn-garbage/v1/source-reference-variants-reviewed.png", "sha256": "e992ea5e8c1aa90ea11d2b7c939c32492e33c1607d8b4768947e3551a6cd6a9f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:26:31.444832+00:00 / select_render_reference_or_document_no_equivalent / PASS: Inspect actual Core TrashA/B/C and Filth_Trash Graphic_Cluster as map-scatter rendering references.
+  Review: Viewed native four choices/fallback and actual Core textures. Core provides simple fragment overlap/edge shading and scatter readability only. Its sparse bar-shaped scraps, contents, colours, procedural cluster placement, cleaning/disappearance and filth behavior are not imported. Qud source layouts and lens/ink/lug/wire prose govern authored design; unseen fragment identities remain estimates.
+  Inputs: [{"path": "art/conversion/scn-garbage/v1/source-packet.json", "sha256": "82dee8e899807b185ad3887dd3dc4ab4f7d778babd2b9dab773ca19c05624d89"}]
+  Outputs: [{"path": "art/conversion/scn-garbage/v1/source-reference-variants-reviewed.png", "sha256": "e992ea5e8c1aa90ea11d2b7c939c32492e33c1607d8b4768947e3551a6cd6a9f"}]
+  Method/prompt/corrections: {}
 
 ### SCN-PAINTING: Painting
 
