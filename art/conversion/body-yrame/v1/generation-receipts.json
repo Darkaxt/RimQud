@@ -1,0 +1,52 @@
+{
+  "actual_calls": [
+    {
+      "tool": "built-in image_gen.imagegen",
+      "prompt": {
+        "path": "art/conversion/body-yrame/v1/secondary-views-prompt.txt",
+        "sha256": "eea95297ba204f2698f46d62fc41aa009df54e46abf2f75c4695e06160304eee"
+      },
+      "output": {
+        "path": "art/conversion/body-yrame/v1/secondary-views-raw.png",
+        "sha256": "9bc8ee0641b312d0c59390f964cf8fcfb66f2d510d4eb9dd2ded115f556dbefb"
+      },
+      "original_generated_filename": "exec-782d1a40-f5ff-42fa-8b6f-ae7d71f9a16e.png",
+      "transparent_background": true,
+      "referenced_images": [
+        {
+          "path": "art/conversion/body-yrame/v1/constructed-turnaround.png",
+          "sha256": "25c05b139f90aac3dfe147600f57ff813b8c1ecd3fbfedd1cc166bd347755ed2"
+        },
+        {
+          "path": "art/conversion/body-yrame/v1/source-reference-baseline.png",
+          "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"
+        }
+      ]
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "prompt": {
+        "path": "art/conversion/body-yrame/v1/composed-refinement-prompt.txt",
+        "sha256": "e38d53f78d11972fd6b4541e0401458658738c40045f113482a5dcf5a8c30ea2"
+      },
+      "output": {
+        "path": "art/conversion/body-yrame/v1/composed-refinement-raw.png",
+        "sha256": "f0e09a1426c0d1954f3e35bfb1a08d30886fdc86a1a5a5e3fd91b80a55f2404d"
+      },
+      "original_generated_filename": "exec-0b39b839-0628-4c8f-a686-89d314510b38.png",
+      "transparent_background": true,
+      "referenced_images": [
+        {
+          "path": "art/conversion/body-yrame/v1/patched-turnaround.png",
+          "sha256": "9c2180e1465ae27a6c70ff4ed25281d2ad68fa4e1f9f389a39ddc7c3595b83db"
+        },
+        {
+          "path": "art/conversion/body-yrame/v1/source-reference-baseline.png",
+          "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"
+        }
+      ]
+    }
+  ],
+  "new_calls": 2,
+  "rule": "Exact original outputs retained. Both are proposals; registration restores fixed source geometry rather than silently accepting baseline redraw."
+}

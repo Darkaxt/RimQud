@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "BODY-YRAME",
+  "active_entry": "NPC-WARDEN-YRAME",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -41257,7 +41257,7 @@
         "native visible/hidden and supported state"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "verify_body_and_every_equipped_item_dependencies",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
@@ -41268,7 +41268,7 @@
         "native_visibility_equipment_hurt_look_save_review"
       ],
       "known_issues": [
-        "Missing separately authored BODY-YRAME four-foot anatomy prerequisite; four-item assembly and native acceptance remain unfinished."
+        "Separate BODY-YRAME is generation-ready. Assemble actual mail, horns, blade and Boots580 only on changed Feet297; added Feet298 remains unequipped. Respect horn near/far ownership and unchanged source-body frame."
       ],
       "metadata": {
         "species": "human",
@@ -41559,9 +41559,9 @@
       },
       "advancement_blocker": {
         "requirement": "Source-bound four-foot named anatomy and actual four-item assembly",
-        "reason": "BODY-YRAME has no current generation-ready registered model. Old three-foot proposals and unrefined four-foot patches do not satisfy this workflow.",
+        "reason": "Separate BODY-YRAME is generation-ready. Assemble actual mail, horns, blade and Boots580 only on changed Feet297; added Feet298 remains unequipped. Respect horn near/far ownership and unchanged source-body frame.",
         "classification": "internal",
-        "resolution": "Finish BODY-YRAME on the unchanged female base with separate added leg pair, then assemble current four actual fittings without duplicating Boots580 onto unequipped Feet298.",
+        "resolution": "Finish four-item source-bound assembly with correct horn depth and single booted Feet group; preserve source slots and keep native state acceptance gated.",
         "dependent": "NPC-WARDEN-YRAME authoring and later integrated native acceptance"
       }
     },
@@ -47685,8 +47685,8 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "construct_front",
+      "status": "UNFINISHED",
+      "current_step": "native_body_review",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
         "select_actual_core_dlc_or_mod_reference",
@@ -47697,9 +47697,7 @@
         "visual_review_anatomy_orientation_palette_all_views",
         "native_body_review"
       ],
-      "known_issues": [
-        "Source, actual Feet297/298 managers, paired-feet definition and Core references resolved. Additional-leg construction, actual secondary/refinement calls, patches, registration and review remain unfinished."
-      ],
+      "known_issues": [],
       "metadata": {
         "unmutated_base_entry": "BODY-HUMAN-FEMALE",
         "mutation_rendering": "Separate framework; no baked mutant baseline"
@@ -47836,8 +47834,300 @@
           ],
           "review": "Actual south/east/north donor PNG hashes verified and views inspected. These provide human style/outline only. No whole-body equivalent, donor mechanics or speculative species change. Manual additional-leg design is next; the plate does not claim generated mutant art.",
           "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T00:58:39.663304+00:00",
+          "step": "construct_front",
+          "action": "Construct one separate additional human leg pair behind the unchanged shared female body, then compose strict south/east/north views.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/source-packet.json",
+              "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/construct-yrame.py",
+              "sha256": "87ecc7994c46c5e939fa62ef20b44fcfddee7dca8e6eaaba1e4727c72140333d"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/leg-construction.json",
+              "sha256": "d069a7d1f545c66a504bd5309756671369783b35aba1bdc7bcec976a0081d6c3"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/extra-legs-south.svg",
+              "sha256": "bb4b07076cae79d517a496f32af9fe44af01cf44100409843f59005eb5a1c22c"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/extra-legs-east.svg",
+              "sha256": "70bd3898ba477ebfb8bec1238d4b44a16cd568284a4964187ebcb5287e5c4afc"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/extra-legs-north.svg",
+              "sha256": "fb43b436c0b58e199c8c5bb9ac9cc003d77d6d330835f53a531fdfe2195a1053"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/constructed-south.png",
+              "sha256": "9974cfca261a13557cf5f3c9c9b7f25897bcbe9d98c03a99bed50f863a8de6ec"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/constructed-turnaround.png",
+              "sha256": "25c05b139f90aac3dfe147600f57ff813b8c1ecd3fbfedd1cc166bd347755ed2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/secondary-views-prompt.txt",
+              "sha256": "eea95297ba204f2698f46d62fc41aa009df54e46abf2f75c4695e06160304eee"
+            }
+          ],
+          "review": "Inspected whole manual set:4grounded feet in front/back, original2arms/hands and blank head unchanged, additional near/far hind legs overlap in full profile. Pelvic root/spacing/knee curves are authored; no horse anatomy, horns or clothing. Frame512x1024/contact256,950 is retained. Prepared exact prompt for actual secondary/refinement request.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:01:14.223169+00:00",
+          "step": "imagegen_side_back_from_front_and_race_facts",
+          "action": "Run actual built-in ImageGen using manual front/profile/back plus race/body/source/reference facts.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/secondary-views-prompt.txt",
+              "sha256": "eea95297ba204f2698f46d62fc41aa009df54e46abf2f75c4695e06160304eee"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/constructed-turnaround.png",
+              "sha256": "25c05b139f90aac3dfe147600f57ff813b8c1ecd3fbfedd1cc166bd347755ed2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/source-reference-baseline.png",
+              "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/secondary-views-raw.png",
+              "sha256": "9bc8ee0641b312d0c59390f964cf8fcfb66f2d510d4eb9dd2ded115f556dbefb"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/first-structural-review.json",
+              "sha256": "bb9c59e494eb53197fbad496ecba91744ad957e79f72a9e342009192ef8d8716"
+            }
+          ],
+          "review": "First output preserves four human legs/feet in front/back, two arms/hands, one blank head and complete cardinal profile with natural overlap. Quiet neutral shading is useful. Restore exact original shared body/head. Retain separate editable added-leg curves and cardinal attachments; soften outer forefoot curves and add restrained curved toe divisions. Transfer measured generated limb luminance as surface guidance only, without importing generated body contours or foreign body lines.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:01:14.223169+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Inspect first structural result, restore exact shared body and patch only the added feet/surfaces before composed refinement.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/secondary-views-raw.png",
+              "sha256": "9bc8ee0641b312d0c59390f964cf8fcfb66f2d510d4eb9dd2ded115f556dbefb"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/first-structural-review.json",
+              "sha256": "bb9c59e494eb53197fbad496ecba91744ad957e79f72a9e342009192ef8d8716"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/patch-extra-legs.py",
+              "sha256": "022e0f52fc6143d60b088acfaa6fdb5f85305d492b1b06eaee58f2990f429bc8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/manual-corrections.json",
+              "sha256": "5dfc11a962e61cedb5c2d3bca4437415288b2d7e1f2b8a96fcad69f5102c8513"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/patched-extra-legs-south.svg",
+              "sha256": "3fa655b1491f7101528de4993163691b58e3dd2b525b488138ce2d3121dfc2f3"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/patched-extra-legs-east.svg",
+              "sha256": "b9d06efcce5361b728e6413078afbaed4c3e651b8f0dc309a4e70a8865a09ade"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/patched-extra-legs-north.svg",
+              "sha256": "c4dc0abc44c1fe37bbaf7102ce056109b25551fc0db4cd34c8615acfa48e53d3"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/patched-turnaround.png",
+              "sha256": "9c2180e1465ae27a6c70ff4ed25281d2ad68fa4e1f9f389a39ddc7c3595b83db"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/composed-refinement-prompt.txt",
+              "sha256": "e38d53f78d11972fd6b4541e0401458658738c40045f113482a5dcf5a8c30ea2"
+            }
+          ],
+          "review": "First generated four-foot anatomy is coherent; full-body redraw is not imported. Canonical pelvic roots and profile overlap retained, outer feet rounded. Exact second contextual prompt prepared; registration and final review remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:07:58.514221+00:00",
+          "step": "correct_anatomy_then_imagegen_refine_composed_views",
+          "action": "Run actual composed ImageGen refinement after editable foot patches, then inspect structural invariants.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/composed-refinement-prompt.txt",
+              "sha256": "e38d53f78d11972fd6b4541e0401458658738c40045f113482a5dcf5a8c30ea2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/patched-turnaround.png",
+              "sha256": "9c2180e1465ae27a6c70ff4ed25281d2ad68fa4e1f9f389a39ddc7c3595b83db"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/source-reference-baseline.png",
+              "sha256": "7c6b5dfb172d6e9e8f037b645cdceb822db8ab9cc71581dc424a93b14aa946a9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/composed-refinement-raw.png",
+              "sha256": "f0e09a1426c0d1954f3e35bfb1a08d30886fdc86a1a5a5e3fd91b80a55f2404d"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/composed-structural-review.json",
+              "sha256": "a1407f2e72cf9ff3fb9f36e106285a91e664d97ef576bc1a98e6c53ad9924ae6"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/generation-receipts.json",
+              "sha256": "c19812afcc0aecb9307846bce2ca4aa24bdb559e737ff056f5c1bdffc5b54a28"
+            }
+          ],
+          "review": "Four-foot anatomy remains coherent. Baseline redraw and changed profile spacing rejected; useful neutral surface range retained. No third prompt loop or generated-body isolation.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:07:58.514221+00:00",
+          "step": "register_required_layers_and_color_masks",
+          "action": "Register exact source body/head and separate additional leg pair; correct final front/back toe clearance without source rescaling.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/source-packet.json",
+              "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/manual-corrections.json",
+              "sha256": "5dfc11a962e61cedb5c2d3bca4437415288b2d7e1f2b8a96fcad69f5102c8513"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/composed-structural-review.json",
+              "sha256": "a1407f2e72cf9ff3fb9f36e106285a91e664d97ef576bc1a98e6c53ad9924ae6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/register-yrame.py",
+              "sha256": "2fc407ba0c776c0a199fa72a9113bacde3c4f0a705e7c4790269b45410f7a5c8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/source-palette-roles.json",
+              "sha256": "88a82f422b9f6d7132a36aa74221eb97bf763d6c9ef5052969f6298b7dbcdb25"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/model.json",
+              "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/registration-decisions.json",
+              "sha256": "f5c73e46d7c4c7747cd6195bcdd748bce7a59f30b147c6a8e2342732db47abd9"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/extra-legs-comparison.png",
+              "sha256": "2ab35139802c1cc292cec6292057296edbcf6d3d0c16dd50e91c22237c490482"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/extra-legs-alpha-comparison.png",
+              "sha256": "cb5f19ae4b607e494ead3e45fa91dbcd70ed84ca7a44d6dbc853652cd100b1b8"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/separate-foot-contours.py",
+              "sha256": "085feec535f38a4af7e7f6b5b67d9f93d195d6df6a92a5c919d0844a2be3cd72"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/foot-clearance-correction.json",
+              "sha256": "d5352e79d7987fec7f53a4e4bb1465fb7497593900c3e8cbec35b84065e854c9"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registration-before-foot-clearance.png",
+              "sha256": "d6c7de5573f3df8a981a7141935599baa72bf3777ec981939ceacf8eb8d3b377"
+            }
+          ],
+          "review": "Original RGBA, world dimensions and ground unchanged. Front/back added pair moves outward12px to avoid merged forefeet; accepted profile unchanged. Editable west geometry and bitmap both face left. Native B retained without guessed skin mask.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:07:58.514221+00:00",
+          "step": "visual_review_anatomy_orientation_palette_all_views",
+          "action": "Inspect all four complete anatomy/component/palette views and intended-size silhouettes.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/registered/model.json",
+              "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/registered/neutral-comparison.png",
+              "sha256": "055762541899fcf6699b9a56045406c7abab222e7c91ddd50de2fb6a32781e04"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/native-comparison.png",
+              "sha256": "d3699f177de2f45ab24ef9b3099681972b32fd965785a54106c1da9b39cefd9b"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/game-scale-comparison.png",
+              "sha256": "09a465141d6fff0ce4c6e2e38f0263fe5b9e2c2f6d261c207f07f59e4b93c85c"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/record-review.py",
+              "sha256": "20e56091ec7450f386198defd84374813dc566a62a12c3ff5771e8bd82c36a62"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/registered/authoring-review.json",
+              "sha256": "1dd4b9149f9fd36e8a5fa2ce0ad55ec8f8b1e4fa1c5d7ec9aa8f51b0059db726"
+            },
+            {
+              "path": "art/conversion/body-yrame/v1/artifact-manifest.json",
+              "sha256": "c5d6051841b7311cd93657692319f57310039b6a1ee5c94a2806b778abc0dda9"
+            }
+          ],
+          "review": "Inspected original w/B glyph and full native description/body tree, actual Core female directional references, unchanged reusable base, editable front/profile/back construction, both actual ImageGen outputs, patched feet and final four-view neutral/native/component/intended-size plates. Two plural Feet groups with Mobility2 and native hind/foreleg prose support four physical feet; level6 is not six appendages. Original two arms/hands/head/body and paired baseline legs remain exact. Additional leg pair is a separate texture bound as art to added Feet298/64, parent Body287, manager515::MultipleLegs::Add. Changed Feet297/16 retains Boots580; added group remains unequipped. Horns575 remain separate equipment, not baseline anatomy. Both generated proposals preserve four-foot anatomy but redraw baseline pixels. Keep only measured neutral surface range in fixed editable added-leg gradients; no generated baseline replacement or AI isolation. Rounded feet and subtle toe curves retained. Final12px outward spacing in front/back separates toe silhouettes without changing body, contact, leg lengths, physical frame or accepted profiles; previous registration retained. Neutral RGB is grayscale. Native body preview uses captured tileColor w. B detail remains documented but has no guessed permanent-skin region; icy/rime cosmetics and natural Icy Vapor effect are outside the initial body phase. West mirrors the symmetric east body/leg geometry. No new human race, centaur/horse anatomy, general mutation framework, gear, fixed skin color, personal cosmetics or native activation. Actual four-item Yrame assembly and full native acceptance remain unfinished.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T01:07:58.514221+00:00",
+          "step": "native_body_review",
+          "action": "Keep real native body/part/equipment/visibility/hurt/look/save acceptance behind the full-generation gate.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v1/registered/model.json",
+              "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+            }
+          ],
+          "outputs": [],
+          "review": "No native activation or game/harness run. Complete actual four-item NPC assembly next; body remains UNFINISHED pending integrated native acceptance.",
+          "result": "DEFERRED UNTIL ALL GENERATED"
         }
-      ]
+      ],
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/body-yrame/v1/registered/model.json",
+          "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+        },
+        "plate": {
+          "path": "art/conversion/body-yrame/v1/registered/neutral-comparison.png",
+          "sha256": "055762541899fcf6699b9a56045406c7abab222e7c91ddd50de2fb6a32781e04"
+        }
+      },
+      "registration_summary": "Yrame515 source-exact shared female body/head with one separate added human leg pair. Four foot contours, captured Feet297/298 managers, source frame/contact and independent neutral/native metadata retained. Boots and horns remain separate actual items; native acceptance pending.",
+      "art_review": {
+        "status": "PASS",
+        "reason": "Inspected original w/B glyph and full native description/body tree, actual Core female directional references, unchanged reusable base, editable front/profile/back construction, both actual ImageGen outputs, patched feet and final four-view neutral/native/component/intended-size plates. Two plural Feet groups with Mobility2 and native hind/foreleg prose support four physical feet; level6 is not six appendages. Original two arms/hands/head/body and paired baseline legs remain exact. Additional leg pair is a separate texture bound as art to added Feet298/64, parent Body287, manager515::MultipleLegs::Add. Changed Feet297/16 retains Boots580; added group remains unequipped. Horns575 remain separate equipment, not baseline anatomy. Both generated proposals preserve four-foot anatomy but redraw baseline pixels. Keep only measured neutral surface range in fixed editable added-leg gradients; no generated baseline replacement or AI isolation. Rounded feet and subtle toe curves retained. Final12px outward spacing in front/back separates toe silhouettes without changing body, contact, leg lengths, physical frame or accepted profiles; previous registration retained. Neutral RGB is grayscale. Native body preview uses captured tileColor w. B detail remains documented but has no guessed permanent-skin region; icy/rime cosmetics and natural Icy Vapor effect are outside the initial body phase. West mirrors the symmetric east body/leg geometry. No new human race, centaur/horse anatomy, general mutation framework, gear, fixed skin color, personal cosmetics or native activation. Actual four-item Yrame assembly and full native acceptance remain unfinished.",
+        "record": {
+          "path": "art/conversion/body-yrame/v1/registered/authoring-review.json",
+          "sha256": "1dd4b9149f9fd36e8a5fa2ce0ad55ec8f8b1e4fa1c5d7ec9aa8f51b0059db726"
+        }
+      }
     },
     {
       "id": "SCN-ARGYVESIGN",
@@ -60846,7 +61136,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T00:55:07.608270+00:00",
+  "updated_at": "2026-10-21T01:07:58.514221+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
