@@ -8,7 +8,31 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, equipped fore boots): the Leather Boots
+Current authoring checkpoint (2026-10-21, current Yrame outfit): the Vibro Blade
+Hand292/2 fitting, item aggregate and named Yrame assembly are generation-ready
+under `fit-yrame-vibro-blade/v2`, `item-vibro-blade/v2` and
+`npc-warden-yrame/v2`. The unchanged complete blade/hilt retains its actual prior
+contextual refinement; no new ImageGen call was invented for a palm refit.
+Fresh blueprint ancestry and hash-verified Physics default evidence support a
+one-hand base class; actor slot demand, charge state and source weight conflict
+remain explicit. One frame-compensation scale preserves physical weapon size;
+low handle grips sit inward in front/back, with explicit far right-hand depth
+in west. Separate tint-mask resampling was corrected to preserve neutral pixels.
+The named outfit now uses the selected centauroid body, crown horns v4, arm-owner
+mail v2, fore boots v2 and blade v2 in one unchanged physical frame. Only actual
+fore Feet297/16 wears Boots580; hind Feet298/64 remains bare. Full item textures
+remain intact, original body ownership masks apply late, and native w/B body
+and per-item palettes remain independent. An initial double-mirrored west body
+assembly is preserved and rejected; the corrected assembly mirrors only missing
+item views, with explicit far-side blade depth. Original native-colored Qud glyph,
+source/dependency histories, all-direction neutral/native palettes and intended
+size were inspected. These are generation-authoring results, not native
+acceptance; resting/ready pose work remains after the full-generation gate.
+There are 133 generation-ready entries out of 156. Every entry remains unfinished
+for native acceptance, Stage 3 remains the sole ACTIVE stage and `BODY-RAY-CAT`
+is the sole active entry.
+
+Prior authoring checkpoint (2026-10-21, equipped fore boots): the Leather Boots
 Feet297/16 fitting and its inventory aggregate are generation-ready under
 `fit-yrame-leather-boots/v2` and `item-leather-boots/v2`. Captured Boots580 equips
 the mutation-changed fore group; added hind Feet298/64 is unequipped. The

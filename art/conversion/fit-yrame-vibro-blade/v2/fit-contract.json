@@ -1,0 +1,77 @@
+{
+  "entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
+  "recorded_at": "2026-10-21T05:53:09.389471+00:00",
+  "status": "PLANNED — actual new-body fit review pending",
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "item_sources": {
+    "manual": {
+      "path": "art/conversion/fit-yrame-vibro-blade/v1/constructed-canonical.png",
+      "sha256": "f3d7aeae5b370bd336f9093d14e261a99e51af0e3ac24168f61be89bf9e2759d"
+    },
+    "refined": {
+      "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+      "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+    },
+    "hilt": {
+      "path": "art/conversion/fit-yrame-vibro-blade/v1/hilt-canonical.png",
+      "sha256": "6723ceca8cfff2e9f850564568dcb1d79791bf4e71d02a402202ec0655f078f8"
+    }
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "canonical_grip": [
+    256,
+    570
+  ],
+  "source_world_per_pixel": 0.0012941176470588234,
+  "recipient_raster_scale": 0.9726775956284153,
+  "native_facts": "Vibro Blade576 on ordinary Hand292/2, parent Arm291. Opposite Hand294/1 unequipped. Installed matte ionic-plastifer blade/finger-rest hilt, native c/y colors. Actor slot-demand, charge state and exact physical dimensions unknown.",
+  "authored_estimates": "Canonical dimensions/low-handle grip and palm anchors are authoring choices. Preserve v1 physical size; new body does not imply a larger weapon. West far-hand projection is hidden/unknown and estimated from mirrored profile overlap.",
+  "views": {
+    "south": {
+      "attachment": "Right Hand292 is screen-left. Anchor218,566 sits inside and10px toward body from palm center208,566. Item-space grip256,570 stays30px above pommel and below finger-rest.",
+      "direction": "Upright display, same intact blade. No claim of resting or drafted pose.",
+      "visibility": "Original gripping hand covers the handle at contact; blade and finger-rest remain separate, with no forearm contour carried into the weapon.",
+      "depth": "Body then full blade/hilt, then original right-hand foreground only."
+    },
+    "east": {
+      "attachment": "Visible near right palm529,585, handle anchor535,585. Same low item-space grip and unchanged physical size.",
+      "direction": "Existing15-degree forward lean for authoring display. Future drafted side pose must project forward horizontally,90degrees to upright body.",
+      "visibility": "Near hand occludes handle; full physical item remains intact beneath it. No independent supporting hand implied.",
+      "depth": "Body then blade/hilt, then original right-hand foreground."
+    },
+    "north": {
+      "attachment": "Right Hand292 is screen-right, palm555,588. Anchor545,588 lies10px inward. Same canonical handle height.",
+      "direction": "Existing10-degree display lean. Aim/state mapping remains pending.",
+      "visibility": "Original rear body/hand occludes far weapon where silhouettes overlap. Do not cut hand-shaped holes in full weapon.",
+      "depth": "Full weapon behind original body/head; no duplicate hand redraw needed."
+    },
+    "west": {
+      "attachment": "Same equipped right Hand292 is far-side. Use mirrored profile projection232,585 as an explicit estimate; hidden actual far-hand coordinates were not exported.",
+      "direction": "Mirror east item geometry/scale, with far-side depth rather than blindly mirroring the near-hand overlay.",
+      "visibility": "Original visible left arm/body can hide the far right-held weapon; do not relabel item to Hand294 or invent another hand.",
+      "depth": "Mirrored full weapon behind original west body. Native side/pose acceptance pending."
+    }
+  },
+  "pose_boundary": "Only current authoring display is fitted here. Resting/ready angle/state implementation and review stay in Stage3 final assembly after all generation, per skill/user priority."
+}

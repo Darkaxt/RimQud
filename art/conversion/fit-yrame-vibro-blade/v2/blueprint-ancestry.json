@@ -1,0 +1,127 @@
+{
+  "item": "Vibro Blade",
+  "parser_note": "Items.xml contains invalid XML1.0 control-character entity &#11; in an unrelated makers-mark field. Exact required object fragments parsed independently without modifying installed files.",
+  "ancestry": [
+    {
+      "blueprint": "Vibro Blade",
+      "inherits": "BaseLongBlade",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "2"
+        }
+      ],
+      "slot_tags": [],
+      "description": [
+        {
+          "Name": "Description",
+          "Short": "A long, matte blade of ionic plastifer sits on a finger-rest hilt. When charged it blurs in high-width motion and jostles its material obstacles out of the way."
+        }
+      ],
+      "object_xml": "<object Name=\"Vibro Blade\" Inherits=\"BaseLongBlade\">\n    <part Name=\"Render\" DisplayName=\"{{c|vibro blade}}\" Tile=\"Items/sw_longblade_10.bmp\" ColorString=\"&amp;c\" DetailColor=\"y\" />\n    <part Name=\"MeleeWeapon\" MaxStrengthBonus=\"0\" BaseDamage=\"1d10\" Skill=\"LongBlades\" />\n    <part Name=\"Commerce\" Value=\"300\" />\n    <part Name=\"EnergyCellSocket\" SlotType=\"EnergyCell\" />\n    <part Name=\"AIOffensiveEnergyCellReload\" />\n    <part Name=\"AIPassiveEnergyCellReload\" />\n    <part Name=\"Description\" Short=\"A long, matte blade of ionic plastifer sits on a finger-rest hilt. When charged it blurs in high-width motion and jostles its material obstacles out of the way.\" />\n    <part Name=\"RulesDescription\" Text=\"When charged, this weapon's penetration value is equal to the defender's armor value.\" />\n    <part Name=\"Examiner\" Complexity=\"5\" />\n    <part Name=\"TinkerItem\" Bits=\"0015\" CanDisassemble=\"true\" CanBuild=\"true\" />\n    <part Name=\"Metal\" />\n    <part Name=\"VibroWeapon\" ChargeUse=\"100\" WorksWhenThrown=\"false\" />\n    <part Name=\"Physics\" Weight=\"2\" />\n    <tag Name=\"Mods\" Value=\"LongBladeMods,BladeMods,WeaponMods,CommonMods,ElectronicsMods\" />\n    <tag Name=\"Tier\" Value=\"5\" />\n    <tag Name=\"SwingSound\" Value=\"Sounds/Melee/longBlades/sfx_melee_longBlade_vibro_swing\" />\n    <tag Name=\"BlockedSound\" Value=\"Sounds/Melee/multiUseBlock/sfx_melee_vibro_blocked\" />\n\t  <tag Name=\"EquipSound\" Value=\"Sounds/Equip/sfx_equip_weapon_blade_long_artifact\" />\n  </object>"
+    },
+    {
+      "blueprint": "BaseLongBlade",
+      "inherits": "MeleeWeapon",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "5"
+        }
+      ],
+      "slot_tags": [],
+      "description": [],
+      "object_xml": "<object Name=\"BaseLongBlade\" Inherits=\"MeleeWeapon\">\n    <part Name=\"MeleeWeapon\" Skill=\"LongBlades\" />\n    <tag Name=\"Mods\" Value=\"LongBladeMods,BladeMods,WeaponMods,CommonMods\" />\n    <part Name=\"Physics\" Weight=\"5\" />\n    <part Name=\"Render\" Tile=\"items/sw_longblade_1.bmp\" DetailColor=\"y\" />\n    <part Name=\"Examiner\" Alternate=\"UnknownSword\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t\t<tag Name=\"SwingSound\" Value=\"Sounds/Melee/longBlades/sfx_melee_longBlade_metal_swing\" />\n\t  <tag Name=\"EquipSound\" Value=\"Sounds/Equip/sfx_equip_weapon_blade_long_metal_light\" />\n\t</object>"
+    },
+    {
+      "blueprint": "MeleeWeapon",
+      "inherits": "Item",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Weight": "5",
+          "Category": "Melee Weapons"
+        }
+      ],
+      "slot_tags": [],
+      "description": [],
+      "object_xml": "<object Name=\"MeleeWeapon\" Inherits=\"Item\">\n    <part Name=\"Render\" RenderString=\"\\\" />\n    <part Name=\"Physics\" Weight=\"5\" Category=\"Melee Weapons\" />\n    <part Name=\"TinkerItem\" Bits=\"00\" CanDisassemble=\"false\" CanBuild=\"false\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"ShowMeleeWeaponStats\" Value=\"true\" />\n    <tag Name=\"MeleeWeapon\" Value=\"1\" />\n    <tag Name=\"TinkerCategory\" Value=\"melee weapons\" />\n    <tag Name=\"DynamicObjectsTable:MeleeWeapons\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_weapon_bludgeon_wood\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_weapon\" />\n    <stag Name=\"Melee\" />\n  </object>"
+    },
+    {
+      "blueprint": "Item",
+      "inherits": "InorganicObject",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Items.xml",
+      "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Conductivity": "20"
+        }
+      ],
+      "slot_tags": [],
+      "description": [],
+      "object_xml": "<object Name=\"Item\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Item]\" RenderString=\".\" RenderLayer=\"5\" />\n    <part Name=\"Physics\" Conductivity=\"20\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;Y^k\" />\n    <part Name=\"Stacker\" />\n    <part Name=\"MentalShield\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_organic\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_material\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TinkerCategory\" Value=\"utility\" />\n    <tag Name=\"Item\" />\n    <tag Name=\"DynamicObjectsTable:Items\" />\n  </object>"
+    },
+    {
+      "blueprint": "InorganicObject",
+      "inherits": "PhysicalObject",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Organic": "false"
+        }
+      ],
+      "slot_tags": [],
+      "description": [],
+      "object_xml": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "inherits": "Object",
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "physics": [
+        {
+          "Name": "Physics",
+          "Category": "Miscellaneous",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "1"
+        }
+      ],
+      "slot_tags": [],
+      "description": [
+        {
+          "Name": "Description",
+          "Short": "A hideous specimen."
+        }
+      ],
+      "object_xml": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    },
+    {
+      "blueprint": "Object",
+      "inherits": null,
+      "file": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "physics": [
+        {
+          "Name": "Physics",
+          "IsReal": "true",
+          "Solid": "false",
+          "Weight": "0"
+        }
+      ],
+      "slot_tags": [],
+      "description": [],
+      "object_xml": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "result": "REJECTED authoring assembly before acceptance",
+  "cause": "Body model west rows record mirrored_from_east as provenance, but already point at final west pixels. Compositor reapplied that mirror while generated item west textures correctly needed one mirror.",
+  "correction": "Use a distinct needs_assembly_mirror flag only for unresolved equipment views. Never treat historic mirroring provenance as a pending operation.",
+  "effect": "West body faced east while all west equipment faced west; other facings unchanged."
+}

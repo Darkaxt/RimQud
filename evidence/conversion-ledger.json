@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "FIT-YRAME-VIBRO-BLADE-HAND-2",
+  "active_entry": "BODY-RAY-CAT",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -17843,8 +17843,8 @@
         "west mirror/handedness review"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "source_identity_description_slot_laterality",
+      "status": "UNFINISHED",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "source_identity_description_slot_laterality",
         "select_correct_body_and_references",
@@ -17855,9 +17855,7 @@
         "review_game_scale_and_palette",
         "native_equipment_state_review"
       ],
-      "known_issues": [
-        "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse."
-      ],
+      "known_issues": [],
       "metadata": {
         "body_family": "yrame",
         "equipment_key": "vibro-blade@Hand@2",
@@ -18140,30 +18138,311 @@
           "outputs": [],
           "review": "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse. Existing source art and process evidence are retained; no new generation or native acceptance claimed.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T05:53:09.389471+00:00",
+          "step": "source_identity_description_slot_laterality",
+          "phase": "Resolve current Hand292/2, inherited slot evidence and source conflicts",
+          "action": "Actual Vibro Blade576 remains on right Hand292/2. One-hand base class supported, actor-sensitive slot demand unknown; captured weight3 versus installed2 and unknown charge state retained.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-packet.json",
+              "sha256": "10d2fa4667ff576e34cef112cd77656469e91853752f91420742574b38093e5d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/blueprint-ancestry.json",
+              "sha256": "50478c5560abbc10952e8d11685f2769d86f22d54f5b54f439b7c58732e2a205"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/handedness-evidence.json",
+              "sha256": "8a0109ea81d763a009ad34ecabef9e24bdd74b0c2ed83cdb6ff0449b6d2f3bc1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/donor-definition-evidence.json",
+              "sha256": "0459c07cb9cc4e368f757d5dcdec9ade1e77ccb5e3304b3190755d3b0a518b37"
+            }
+          ],
+          "review": "Actual Vibro Blade576 remains on right Hand292/2. One-hand base class supported, actor-sensitive slot demand unknown; captured weight3 versus installed2 and unknown charge state retained.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:53:09.389471+00:00",
+          "step": "select_correct_body_and_references",
+          "phase": "Current centauroid and unchanged long matte blade source",
+          "action": "Current body and v1 full item/refinement/donor hashes verified. Record lower handle grip, body-relative size and far-side west projection before fitting.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/fit-contract.json",
+              "sha256": "f8a477763ceb92385ea49774378d6a2937d759003e4e6c95fc85b427105b17ac"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-encoding-normalization.json",
+              "sha256": "9167f251a8e43d4e85f6985bbc7ad33b3a6bbe95704f56997adbb0f259b41870"
+            }
+          ],
+          "review": "Current body and v1 full item/refinement/donor hashes verified. Record lower handle grip, body-relative size and far-side west projection before fitting.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:53:09.389471+00:00",
+          "step": "construct_and_overlay_one_item",
+          "phase": "Parametric full-weapon refit on original palms — review pending",
+          "action": "Same physical tool, new hand anchors and0.9726776 raster scale for frame compensation. South/north grips inward; west mirrors geometry but draws far, without switching equipped hand. Visual review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/refit-blade.py",
+              "sha256": "f63937aeef5b3ca80106c0561c9574ac3707d56230dc205601d6c5391167cd95"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/manual-fit-comparison.png",
+              "sha256": "b17537f7159843025e0ce78fb6eff7a20bb3fb54bde1f535a360e03b63968fc0"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png",
+              "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/grip-comparison.png",
+              "sha256": "6c5695e83fe9a4d00794c33266b8a452e494e2975439c1062e4ca19a5c2482a8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/registration-decisions.json",
+              "sha256": "c0c48b17bc4c32c8898e4d517d3c464ad70d65b7ce2a05afe640f8c07e20337e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            }
+          ],
+          "review": "Same physical tool, new hand anchors and0.9726776 raster scale for frame compensation. South/north grips inward; west mirrors geometry but draws far, without switching equipped hand. Visual review pending.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T05:53:09.389471+00:00",
+          "step": "imagegen_refine_in_context_on_unchanged_body",
+          "phase": "Reuse actual v1 contextual refinement; no new generation",
+          "action": "No new call: unchanged independent weapon retains actual prior contextual refinement and completed matte surface. Prior ordinary-human context is explicitly historical source evidence, not a claimed generation on the current body.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/imagegen-prompt.txt",
+              "sha256": "f4356f9dd5dc9f7345936d02a35031167a09324fc2b2e53fd5082c1ee5eaaaa6"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/refined-red-context.png",
+              "sha256": "a4cdd56042555b289355724f48e20c8042987a17198e37d4be8b5b5ddeef878a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/authoring-review.json",
+              "sha256": "993a4b183108764459002272b97c5895c2b903b8d2417179ebb22df0e32d2700"
+            }
+          ],
+          "review": "No new call: unchanged independent weapon retains actual prior contextual refinement and completed matte surface. Prior ordinary-human context is explicitly historical source evidence, not a claimed generation on the current body.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:53:09.389471+00:00",
+          "step": "retrieve_isolated_item_and_masks",
+          "phase": "Reuse intact neutral item and hilt, derive current original-hand masks",
+          "action": "Visible canonical RGBA/full alpha preserved; only invisible RGB cleared. Hilt tint constrained to opaque interiors to preserve neutral silhouette. New masks use actual current palm interiors/rims; no body-shaped weapon cutout.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/source-packet.json",
+              "sha256": "968aad0a45afc5d1926005afcd81e9571b0a112a869c0b54b5155c4b2e60ab3e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-canonical.png",
+              "sha256": "586a9e248566d267c7d1ec8cf5bf4c581241c07c24e3fa94c0fd9ccf85294654"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/canonical-source.png",
+              "sha256": "292d859acf330d12a2567b47f77c256c4f80f924f1895707afaa5607b901da84"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/canonical-hilt-source.png",
+              "sha256": "3decfe7a6ac8f1c5e809973d5219e837386a6d85fdd77db6b2c32afaf67924c5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-encoding-normalization.json",
+              "sha256": "9167f251a8e43d4e85f6985bbc7ad33b3a6bbe95704f56997adbb0f259b41870"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/full-item-comparison.png",
+              "sha256": "878c78355518ab88c574d26016a0281dd9e6394fdcab5473f44a9963306cdf0e"
+            }
+          ],
+          "review": "Visible canonical RGBA/full alpha preserved; only invisible RGB cleared. Hilt tint constrained to opaque interiors to preserve neutral silhouette. New masks use actual current palm interiors/rims; no body-shaped weapon cutout.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:54:33.916023+00:00",
+          "step": "construct_and_overlay_one_item",
+          "action": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-packet.json",
+              "sha256": "10d2fa4667ff576e34cef112cd77656469e91853752f91420742574b38093e5d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/manual-fit-comparison.png",
+              "sha256": "b17537f7159843025e0ce78fb6eff7a20bb3fb54bde1f535a360e03b63968fc0"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/fit-contract.json",
+              "sha256": "f8a477763ceb92385ea49774378d6a2937d759003e4e6c95fc85b427105b17ac"
+            }
+          ],
+          "review": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:54:33.916023+00:00",
+          "step": "recompose_check_cuffs_attachment_occlusion_all_views",
+          "action": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-packet.json",
+              "sha256": "10d2fa4667ff576e34cef112cd77656469e91853752f91420742574b38093e5d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png",
+              "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/grip-comparison.png",
+              "sha256": "6c5695e83fe9a4d00794c33266b8a452e494e2975439c1062e4ca19a5c2482a8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/full-item-comparison.png",
+              "sha256": "878c78355518ab88c574d26016a0281dd9e6394fdcab5473f44a9963306cdf0e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/construction-attempt-notes.json",
+              "sha256": "b35a7273d282167a7aab4b2a98b42f15e17bce519e5c9ebb12aa8b009d451e1b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/authoring-review.json",
+              "sha256": "8ddff812e2f1b7dadfa3fbc0416e7ee8f07189db568eb4e02050a5080b735153"
+            }
+          ],
+          "review": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:54:33.916023+00:00",
+          "step": "review_game_scale_and_palette",
+          "action": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-packet.json",
+              "sha256": "10d2fa4667ff576e34cef112cd77656469e91853752f91420742574b38093e5d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/independent-palette-comparison.png",
+              "sha256": "64b8990173e04f513955dc0a371882f713e9babe9c914a244ae6896105b3c35f"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/game-scale-review.png",
+              "sha256": "48c5e3f69b97bf0f8e5250019299a8fc2936d67c5792c7cee8fb71fbee0b437b"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/artifact-manifest.json",
+              "sha256": "7b7dcaf4206f99387fdd8cefac31d239d5b79932983d7aa66f749a99c62b2081"
+            }
+          ],
+          "review": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+          "result": "PASS"
         }
       ],
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
-          "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+          "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+          "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
         },
         "plate": {
-          "path": "art/conversion/fit-yrame-vibro-blade/v1/assembly-comparison.png",
-          "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+          "path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png",
+          "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"
         }
       },
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "Reconcile held-item registration and hand anchor in the changed whole-body physical frame; retain existing weapon identity and art for reuse."
+        "status": "PASS",
+        "reason": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/fit-yrame-vibro-blade/v2/authoring-review.json",
+          "sha256": "8ddff812e2f1b7dadfa3fbc0416e7ee8f07189db568eb4e02050a5080b735153"
+        }
       },
-      "registration_summary": "Matte Vibro Blade, sparse root grooves and finger-rest hilt; one complete neutral tool and separate c/y tint, lower item-space grip on unchanged ordinary female baseline. Actual Hand292/2 retained; named Big body/mutations/outfit and resting-ready/native state unfinished.",
+      "registration_summary": "Reviewed manual and actual refined source refits, whole weapon, original-palm closeups, native c/y palette and intended-size plates. Lower handle sits toward the inner side of the correct front/back palm. Profile right-hand depth is near east and far west, without switching to the visible left hand. Same physical blade size and body/frame retained. Upright authoring display is provisional; resting/ready and native acceptance remain pending.",
       "native_acceptance": "Pending full-set generation gate and actual native named/equipment/pose state",
-      "held_pose_review": {
-        "status": "PENDING FINAL ASSEMBLY",
-        "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
-        "owner": "Stage 3 final assembly after full-set generation gate"
-      }
+      "held_pose_review": "Pending final assembly after all entries are generation-ready"
     },
     {
       "id": "SCN-CANTEEN",
@@ -22244,16 +22523,13 @@
       "required_variants": [],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "resolve_item_identity_description_palette",
+      "current_step": "native_equipment_state_review",
       "required_steps": [
         "resolve_item_identity_description_palette",
         "verify_every_body_fitting_log",
         "record_item_acceptance_from_all_fittings"
       ],
-      "known_issues": [
-        "Captured generic description/weight differ from installed identity; records retained. Named Yrame body/mutations/outfit and native equipment/pose acceptance remain unfinished.",
-        "Required fitting reconciliation pending: FIT-YRAME-VIBRO-BLADE-HAND-2"
-      ],
+      "known_issues": [],
       "metadata": {
         "original_reference": {
           "instance": 576,
@@ -22351,6 +22627,99 @@
           "outputs": [],
           "review": "Required fitting reconciliation pending: FIT-YRAME-VIBRO-BLADE-HAND-2",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T05:55:19.274114+00:00",
+          "step": "resolve_item_identity_description_palette",
+          "action": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/source-packet.json",
+              "sha256": "10d2fa4667ff576e34cef112cd77656469e91853752f91420742574b38093e5d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/blueprint-ancestry.json",
+              "sha256": "50478c5560abbc10952e8d11685f2769d86f22d54f5b54f439b7c58732e2a205"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/handedness-evidence.json",
+              "sha256": "8a0109ea81d763a009ad34ecabef9e24bdd74b0c2ed83cdb6ff0449b6d2f3bc1"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/donor-definition-evidence.json",
+              "sha256": "0459c07cb9cc4e368f757d5dcdec9ade1e77ccb5e3304b3190755d3b0a518b37"
+            }
+          ],
+          "review": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:55:19.274114+00:00",
+          "step": "verify_every_body_fitting_log",
+          "action": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/fit-contract.json",
+              "sha256": "f8a477763ceb92385ea49774378d6a2937d759003e4e6c95fc85b427105b17ac"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/authoring-review.json",
+              "sha256": "8ddff812e2f1b7dadfa3fbc0416e7ee8f07189db568eb4e02050a5080b735153"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png",
+              "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/grip-comparison.png",
+              "sha256": "6c5695e83fe9a4d00794c33266b8a452e494e2975439c1062e4ca19a5c2482a8"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/game-scale-review.png",
+              "sha256": "48c5e3f69b97bf0f8e5250019299a8fc2936d67c5792c7cee8fb71fbee0b437b"
+            }
+          ],
+          "review": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:55:19.274114+00:00",
+          "step": "record_item_acceptance_from_all_fittings",
+          "action": "Aggregate authoring acceptance only; native item acceptance remains pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/item-vibro-blade/v2/fittings.json",
+              "sha256": "e87a42795e93a4886df8905b023faca29cd476acc68dbec10e798d1e9c47aff8"
+            },
+            {
+              "path": "art/conversion/item-vibro-blade/v2/authoring-review.json",
+              "sha256": "c6d91c17aa36f800138a2dde48237a5e14afcf21161f83912d066a155fda3b2b"
+            },
+            {
+              "path": "art/conversion/item-vibro-blade/v2/artifact-manifest.json",
+              "sha256": "2833677d5dda4d5190072de4d0d1047b6459c319ae062b53b4ffa135565cac40"
+            }
+          ],
+          "review": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+          "result": "PASS"
         }
       ],
       "held_pose_review": {
@@ -22358,22 +22727,26 @@
         "requirement": "Item-space grip height and separate resting versus ready/drafted visual positions, mapped only to actual available Qud state.",
         "owner": "Stage 3 final assembly after full-set generation gate"
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/item-vibro-blade/v1/fittings.json",
-          "sha256": "c3b8690fd9ce27ee04db7fdfc801c15eb890c0671df2e59fa9ee366fd65311cf"
+          "path": "art/conversion/item-vibro-blade/v2/fittings.json",
+          "sha256": "e87a42795e93a4886df8905b023faca29cd476acc68dbec10e798d1e9c47aff8"
         },
         "plate": {
-          "path": "art/conversion/item-vibro-blade/v1/body-fittings-comparison.png",
-          "sha256": "cee1a3de8c425c746a3a507ff25f705721235edb9f72628be2ce12162ea476ee"
+          "path": "art/conversion/fit-yrame-vibro-blade/v2/assembly-comparison.png",
+          "sha256": "82468c95c36d4278a981890ade6aa682e40c9c3470e725e6a8322c89d06b034e"
         }
       },
       "art_review": {
         "status": "PASS",
-        "reason": "Reconciled exact Vibro Blade identity with installed matte ionic-plastifer/finger-rest definition and original c/y mask roles; captured unidentified description/weight discrepancy remains explicit. Sole ordinary Hand292/2 fitting has actual Core reference, editable full source, one contextual refinement, programmatic full material/hilt extraction, lower handle grip, all-view depth, intended-size and independent tint evidence. No redundant generation or native acceptance. Named Yrame Big shape/mutations/outfit and actual equipment/resting-ready pose state remain unfinished."
+        "reason": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
+        "record": {
+          "path": "art/conversion/item-vibro-blade/v2/authoring-review.json",
+          "sha256": "c6d91c17aa36f800138a2dde48237a5e14afcf21161f83912d066a155fda3b2b"
+        }
       },
-      "registration_summary": "Vibro Blade item identity and ordinary Hand292/2 authoring fit generation-ready; matte full blade/finger-rest, separate c/y tint and lower grip. Named Yrame and actual held/resting-ready state acceptance remain unfinished.",
+      "registration_summary": "Reconciled the sole required Vibro Blade fitting on current centauroid anatomy and actual right Hand292/2/item576. Existing complete matte blade/finger-rest art, original source glyph, actual Core reference and historical ImageGen call remain linked. Fresh ancestry/default evidence supports one-hand base class; actor slot demand and charge state remain unknown. Fixed physical size, low inward palm grip and explicit west far-side depth reviewed. No new ImageGen call. Native/held/resting-ready state acceptance stays pending.",
       "native_acceptance": "Pending full-set generation gate and actual native named/held/pose state"
     },
     {
@@ -42959,7 +43332,7 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": "verify_body_and_every_equipped_item_dependencies",
+      "current_step": "native_visibility_equipment_hurt_look_save_review",
       "required_steps": [
         "resolve_individual_race_and_runtime_metadata",
         "verify_body_and_every_equipped_item_dependencies",
@@ -42968,9 +43341,7 @@
         "review_neutral_and_qud_palette_at_game_scale",
         "native_visibility_equipment_hurt_look_save_review"
       ],
-      "known_issues": [
-        "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged."
-      ],
+      "known_issues": [],
       "metadata": {
         "species": "human",
         "captured_gender": "female",
@@ -43439,6 +43810,453 @@
           "outputs": [],
           "review": "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged.",
           "result": "REQUIRES REWORK"
+        },
+        {
+          "timestamp": "2026-10-21T05:57:59.208807+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/source-packet.json",
+              "sha256": "8f5d420b8bce400b620d3d9d819ed2fbf6b18efd42fa183c8297f67a2a8b4568"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/source-to-assembly.png",
+              "sha256": "e1afbb113b46abbb3736e5490c507a4480bb4ade0c2e99acad3b777079116cea"
+            }
+          ],
+          "review": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base. Superseded: west body was mirrored twice in this construction. Exact failed output snapshots are retained under rejected-double-body-mirror; corrected assembly follows.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:57:59.208807+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/dependency-lineage.json",
+              "sha256": "4028edcb339d48f57769b325eee1bec47dd756ddf01d12fc6b4865a837fa104a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/dependency-evidence.html",
+              "sha256": "d87121c2963b7350ccb770700a36180fd109dc23834f2d4702590cc900946cc2"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/assembly-contract.json",
+              "sha256": "736ae58424061640e267fefad7a0cdd456122c66c98a8c242204272a07fa4a83"
+            }
+          ],
+          "review": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts. Superseded: west body was mirrored twice in this construction. Exact failed output snapshots are retained under rejected-double-body-mirror; corrected assembly follows.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:57:59.208807+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/assemble.py",
+              "sha256": "43216d984f295368f3dbb857cd2efea94e1cf33c7e1a67a82c86a4d314285f66"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/model.json",
+              "sha256": "19d7944507187f850d2ab1a13da089dfacd138aaa88b2edb34141b7e0ab9ac63"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/base-comparison.png",
+              "sha256": "b2637d730dba30d66716ac7e6da72c6854f11ac4bb62245f6c6dedb3b6d0ff5c"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/chain-mail-comparison.png",
+              "sha256": "e60d3191da22697f1e143c8878af3d8f027a7a0e30d4ec56c2079d5279a135d8"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/horns-comparison.png",
+              "sha256": "c95fc0cebdfc4f7be7d57737e544b3831e4f755b80b894d1b8bddd2cef294f80"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/vibro-blade-comparison.png",
+              "sha256": "c1251e29ba4f45f6d04e6810c464bf115aaac95cbd4742d52382f5ad7eb7f7db"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/leather-boots-comparison.png",
+              "sha256": "7f5758ba33d6c6e730b48241b661d55a5ad279e5e68e33cf771ae509225b9eaf"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/assembly-stages.png",
+              "sha256": "06df9b99c342ccf2253a60027ccb55cddbbcd976c079a755563f7cba93c2bccc"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/full-neutral-comparison.png",
+              "sha256": "0a37f742b59422169cadfc409867fd353f3a4997365038ba268443194c8a8b01"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/full-native-comparison.png",
+              "sha256": "6c381cb5986ad476a60512931fdfd0329853a2faded83f942f11f2997d3b3082"
+            }
+          ],
+          "review": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending. Superseded: west body was mirrored twice in this construction. Exact failed output snapshots are retained under rejected-double-body-mirror; corrected assembly follows.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-21T05:59:10.340444+00:00",
+          "step": "resolve_individual_race_and_runtime_metadata",
+          "action": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/source-packet.json",
+              "sha256": "415629c6fbd1390ec1113aa5999d042aea5a4e1692474dce6bd010311436810e"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/source-to-assembly.png",
+              "sha256": "237f3c1582ef5a8eda138666af88d63390b28337fa9529d623145bb1797e2c9a"
+            }
+          ],
+          "review": "Reconcile source human-based female mutant with selected compact fleece centauroid, actual fore/hind anatomy and separate ordinary female base.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:59:10.340444+00:00",
+          "step": "verify_body_and_every_equipped_item_dependencies",
+          "action": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/dependency-lineage.json",
+              "sha256": "4028edcb339d48f57769b325eee1bec47dd756ddf01d12fc6b4865a837fa104a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/dependency-evidence.html",
+              "sha256": "d87121c2963b7350ccb770700a36180fd109dc23834f2d4702590cc900946cc2"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/assembly-contract.json",
+              "sha256": "9b2b058436bf82cef07372e12df72d4aed41a10e6027de9b6445a5d8d7028bc8"
+            }
+          ],
+          "review": "Verify current body and all four actual equipped item models/hashes/physical frames; retain full illustrated histories and per-view contracts.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T05:59:10.340444+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/assemble.py",
+              "sha256": "52fc3b2c1651cb0148abc3020703b8d29417d7ce7a43ed9397d9c1c6607cd06a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/model.json",
+              "sha256": "c41e2e67a9f1878c0646cd0b2478aaa60d1fd2e5e45f93e995cde6513c096aeb"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/base-comparison.png",
+              "sha256": "51c30b805ada2b0f1e2c83a8cb777b3395dd8acafae2db64419a860929d6b197"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/chain-mail-comparison.png",
+              "sha256": "3919b6894a2ef972d2b1c87b59324d9c2cc18f87a198c002f7fb30543dece3d3"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/horns-comparison.png",
+              "sha256": "835a2ba96360754af3243bb4664aa176caad5a1fce3796c00c80fb35f316b49f"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/vibro-blade-comparison.png",
+              "sha256": "fdc5e38c668f955448a22b07bb92f80ef77cd00320bde28032cb63026c1e34e2"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/leather-boots-comparison.png",
+              "sha256": "1e133073ac98fb96159bfe0de32bce57d1fbd2569fa911e09f95bc6154bcc91b"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/assembly-stages.png",
+              "sha256": "06df9b99c342ccf2253a60027ccb55cddbbcd976c079a755563f7cba93c2bccc"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/full-neutral-comparison.png",
+              "sha256": "66a5c39ea2a02ea387b8a4e987c7e14d2eb22a37cae2068c6f46cd98ba77f66a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/full-native-comparison.png",
+              "sha256": "01d4d2c5529c0461f469348caa34f9451d7b262a7cfbb2c86a81541375e5e787"
+            }
+          ],
+          "review": "Compose exact current layers at shared scale, retaining full garment/item sources and late original-body ownership. No redraw, warping or new ImageGen call. Review pending.",
+          "result": "REQUIRES REVIEW"
+        },
+        {
+          "timestamp": "2026-10-21T06:01:48.394232+00:00",
+          "step": "assemble_without_baking_equipment",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/model.json",
+              "sha256": "c41e2e67a9f1878c0646cd0b2478aaa60d1fd2e5e45f93e995cde6513c096aeb"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/assembly-stages.png",
+              "sha256": "06df9b99c342ccf2253a60027ccb55cddbbcd976c079a755563f7cba93c2bccc"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/dependency-evidence.html",
+              "sha256": "d87121c2963b7350ccb770700a36180fd109dc23834f2d4702590cc900946cc2"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T06:01:48.394232+00:00",
+          "step": "review_anatomy_clothing_attachment_all_directions",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/assembly-contract.json",
+              "sha256": "9b2b058436bf82cef07372e12df72d4aed41a10e6027de9b6445a5d8d7028bc8"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/full-neutral-comparison.png",
+              "sha256": "66a5c39ea2a02ea387b8a4e987c7e14d2eb22a37cae2068c6f46cd98ba77f66a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/full-native-comparison.png",
+              "sha256": "01d4d2c5529c0461f469348caa34f9451d7b262a7cfbb2c86a81541375e5e787"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/rejected-double-body-mirror/rejection.json",
+              "sha256": "a1249e263c2e8f42df5843d77eb159d149387d6488793dd2c2805adc555e4fbc"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/authoring-review.json",
+              "sha256": "14e3478c0bf8fdbe15b1038c3665b6da12aea1f817eb24fdea200c4df5f9df40"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T06:01:48.394232+00:00",
+          "step": "review_neutral_and_qud_palette_at_game_scale",
+          "action": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "inputs": [
+            {
+              "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+              "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+            },
+            {
+              "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+              "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+            },
+            {
+              "path": "art/conversion/fit-yrame-horns/v4/model.json",
+              "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+            },
+            {
+              "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+              "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+            },
+            {
+              "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+              "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/source-to-assembly.png",
+              "sha256": "237f3c1582ef5a8eda138666af88d63390b28337fa9529d623145bb1797e2c9a"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/original-native-glyph.png",
+              "sha256": "309e27e02269a6a441ec30e704c16d3bac1ad5be0b04cf63904d3270875feb3d"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/game-scale-comparison.png",
+              "sha256": "be8ecbc65a72b8161e9a254fb65e9feb71d32611d6fc3d66a9ec52bb4ccb4357"
+            },
+            {
+              "path": "art/conversion/npc-warden-yrame/v2/artifact-manifest.json",
+              "sha256": "7aaeaa6cdb920f2bf789991f26dbc06082363bfee6d29b4159b8a9b86e52c3df"
+            }
+          ],
+          "review": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+          "result": "PASS"
         }
       ],
       "apparel_dependencies": {
@@ -43449,21 +44267,25 @@
         ],
         "status": "Current mail and boots reviewed on separate named body. Boots580 only on Feet297/16; native outfit acceptance pending."
       },
-      "generation_ready": false,
+      "generation_ready": true,
       "current_registration": {
         "model": {
-          "path": "art/conversion/npc-warden-yrame/v1/model.json",
-          "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"
+          "path": "art/conversion/npc-warden-yrame/v2/model.json",
+          "sha256": "c41e2e67a9f1878c0646cd0b2478aaa60d1fd2e5e45f93e995cde6513c096aeb"
         },
         "plate": {
-          "path": "art/conversion/npc-warden-yrame/v1/full-neutral-comparison.png",
-          "sha256": "7572c87a6529232e55d9656378d56a165f69125fe0c256b7aa752d380cbfc400"
+          "path": "art/conversion/npc-warden-yrame/v2/full-neutral-comparison.png",
+          "sha256": "66a5c39ea2a02ea387b8a4e987c7e14d2eb22a37cae2068c6f46cd98ba77f66a"
         }
       },
-      "registration_summary": "Yrame515: separate four-foot body with actual mail, near/far forehead horns, static blade and boots on changed Feet297 only. Source pixels and world scale/contact preserved in horn-compatible frame; actual natural/equipped state retained. Native acceptance pending.",
+      "registration_summary": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
       "art_review": {
-        "status": "REQUIRES REWORK",
-        "reason": "Dependent BODY-YRAME anatomy superseded; regenerate assembly after body correction. Existing item fits are unchanged."
+        "status": "PASS",
+        "reason": "Reviewed corrected source-to-outfit, all four neutral/native-palette facings, stages and intended-size plates. Compact four-legged fleece trunk with no tail remains separate from ordinary female baseline; connected crown roots and flesh ears are unchanged. Mail covers torso with curved sleeve ownership. Only fore Feet297/16 wears actual Boots580; hind pair is bare. Actual right Hand292/2 keeps low blade grip and far west depth. Exact current dependency textures and shared physical frame are unchanged. Rejected double-mirrored west assembly is retained with cause/correction. These are generation authoring results, not native equipment or pose acceptance.",
+        "record": {
+          "path": "art/conversion/npc-warden-yrame/v2/authoring-review.json",
+          "sha256": "14e3478c0bf8fdbe15b1038c3665b6da12aea1f817eb24fdea200c4df5f9df40"
+        }
       },
       "resolved_advancement_blocker": {
         "requirement": "Source-bound four-foot named anatomy and actual four-item assembly",
@@ -53283,7 +54105,7 @@
         "neutral base and separate Qud tint/detail"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
+      "status": "IN PROGRESS",
       "current_step": "resolve_race_description_original_sprite_runtime_anatomy",
       "required_steps": [
         "resolve_race_description_original_sprite_runtime_anatomy",
@@ -67156,7 +67978,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T05:34:03.552701+00:00",
+  "updated_at": "2026-10-21T06:01:48.394232+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

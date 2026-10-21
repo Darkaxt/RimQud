@@ -1,0 +1,82 @@
+{
+  "recorded_at": "2026-10-21T05:57:59.208807+00:00",
+  "entry": "NPC-WARDEN-YRAME",
+  "body": {
+    "path": "art/conversion/body-yrame/v3/registered-v2/model.json",
+    "sha256": "a9384df077869715f8433c4ffd1618571d29fd4437603d9af9597b2253809ee4"
+  },
+  "equipment": {
+    "Chain Mail": {
+      "model": {
+        "path": "art/conversion/fit-yrame-chain-mail/v2/arm-owner-v2/model.json",
+        "sha256": "22343d2d0860fcf7f266098b90318f7838c280585d54e6c46d6adf8561ea450a"
+      },
+      "instance": 574,
+      "part_id": 287,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null
+    },
+    "Horns": {
+      "model": {
+        "path": "art/conversion/fit-yrame-horns/v4/model.json",
+        "sha256": "07b6b16c883dafab88027d8076bce5da30aa2ac04be4ab89623a69e0d7f04b8d"
+      },
+      "instance": 575,
+      "part_id": 288,
+      "slot": "Head",
+      "laterality": 0,
+      "manager": null
+    },
+    "Vibro Blade": {
+      "model": {
+        "path": "art/conversion/fit-yrame-vibro-blade/v2/model.json",
+        "sha256": "0593dedb83763de77beedcc10f6c70a031929b2ba093f8d05732b82890a030f5"
+      },
+      "instance": 576,
+      "part_id": 292,
+      "slot": "Hand",
+      "laterality": 2,
+      "manager": null
+    },
+    "Leather Boots": {
+      "model": {
+        "path": "art/conversion/fit-yrame-leather-boots/v2/model.json",
+        "sha256": "df1f4fcb21c4ad795743abbc6437f191bf7ccd5956723ae403c52214e9877817"
+      },
+      "instance": 580,
+      "part_id": 297,
+      "slot": "Feet",
+      "laterality": 16,
+      "manager": "515::MultipleLegs::Change"
+    }
+  },
+  "frame": {
+    "canvas": [
+      768,
+      1152
+    ],
+    "contact": [
+      384,
+      1050
+    ],
+    "width": 1.5327005948446792,
+    "height": 1.5327005948446792,
+    "center_x": 0,
+    "center_z": 0.6306424322538003,
+    "pixel_world_size": 0.0013304692663582286,
+    "physical_scale": "One common world/pixel scale calibrated to the existing female SOUTH head width, including ears, at alpha>128. Authored family-scale choice, not a recovered native height.",
+    "source_head_width": 183,
+    "refined_head_width": 178,
+    "units": "width and center_x are Qud cell-width units (2/3 world); height and center_z are world units. No per-facing rescale."
+  },
+  "policy": "Authoring assembly of independently reviewed current versions only. Source textures remain intact and immutable; late original-body ownership overlays use their original tint roles. No new drawing, deformation or ImageGen call.",
+  "views": {
+    "south": "Mail covers connected shoulders and anterior chest drop. Near horns grow from upper crown; flesh ears remain separate. Only inner fore pair wears boots; outer hind pair stays bare. Right Hand292 is screen-left and covers its low inward blade grip.",
+    "east": "Mail covers upright torso with curved short sleeve; fleece lower trunk remains separate. Crown roots sit above/forward of ear. Near/far fore boots overlap naturally, hind hooves bare. Blade is near, low original palm above handle.",
+    "north": "Original skull hides anterior horn roots. Short dorsal mail ends at horizontal trunk junction. Complete fore boots and right-hand weapon remain behind the original body; visible hind pair stays bare. Right hand is screen-right.",
+    "west": "Body, mail, boots and horn anatomy mirror east. Blade keeps the actually equipped right Hand292 and uses explicit far-side depth, so it is not moved onto the visible left hand. No independent rescaling."
+  },
+  "unknowns": "Joint/skull/far-palm coordinates and garment tailoring are authored estimates. Source supports fore/hind groups and four actual equipped objects, not an ovine species identity. No tail inferred.",
+  "boundaries": "Static source-bound generation assembly. Icy Vapor stays native metadata/effect. Resting/ready blade display, equip/unequip, visibility, hurt/look/save and native activation await full-set generation gate."
+}
