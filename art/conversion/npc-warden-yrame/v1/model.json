@@ -1,0 +1,1952 @@
+{
+  "entry": "NPC-WARDEN-YRAME",
+  "kind": "captured_actor_layered_assembly",
+  "source": {
+    "path": "art/conversion/npc-warden-yrame/v1/assembly-source-packet.json",
+    "sha256": "6c5d2e713905dbb2ac7057dc2aa76d85a5af1419bf4deb822bce86c593a6383f"
+  },
+  "body_model": {
+    "path": "art/conversion/body-yrame/v1/registered/model.json",
+    "sha256": "28fa742a5ac93503d21f3c90c5e2f6a022069131a4b525eb5dae649fe4d118c2"
+  },
+  "equipment_bindings": {
+    "Chain Mail": {
+      "model": {
+        "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+        "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+      },
+      "instance": 574,
+      "part_id": 287,
+      "parent": -1,
+      "slot": "Body",
+      "laterality": 0,
+      "manager": null,
+      "equipment_kind": "captured equipped object"
+    },
+    "Horns": {
+      "model": {
+        "path": "art/conversion/fit-yrame-horns/v2/model.json",
+        "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+      },
+      "instance": 575,
+      "part_id": 288,
+      "parent": 287,
+      "slot": "Head",
+      "laterality": 0,
+      "manager": null,
+      "equipment_kind": "mutation-created natural Head equipment"
+    },
+    "Vibro Blade": {
+      "model": {
+        "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+        "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+      },
+      "instance": 576,
+      "part_id": 292,
+      "parent": 291,
+      "slot": "Hand",
+      "laterality": 2,
+      "manager": null,
+      "equipment_kind": "captured equipped object"
+    },
+    "Leather Boots": {
+      "model": {
+        "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+        "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+      },
+      "instance": 580,
+      "part_id": 297,
+      "parent": 287,
+      "slot": "Feet",
+      "laterality": 16,
+      "manager": "515::MultipleLegs::Change",
+      "equipment_kind": "captured equipped object"
+    }
+  },
+  "registration": {
+    "canvas": [
+      512,
+      1152
+    ],
+    "contact": [
+      256,
+      1078
+    ],
+    "width": 0.9938823529411764,
+    "height": 1.4908235294117647,
+    "center_x": 0,
+    "center_z": 0.6496470588235294,
+    "method": "Adopt existing horn canvas1152/contact1078. Copy body/mail/blade/boots RGBA at y+128; existing horn pixels stay at y+0. No resampling or physical size change."
+  },
+  "views": {
+    "south": {
+      "body": [
+        {
+          "component": "mutation-extra-legs",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": -0.002,
+          "native_part": 298,
+          "parent_part": 287,
+          "manager": "515::MultipleLegs::Add",
+          "baseline_feet_group": 297,
+          "anatomy_role": "One separate additional human leg/foot pair behind unchanged paired baseline legs. Full profile uses natural far-limb overlap.",
+          "registration_adjustment": "Additional left/right legs translated outward12px as intact independent pieces, preserving original body and y950 contact.",
+          "file": "mutation-extra-legs.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/south/mutation-extra-legs.png",
+          "sha256": "2a713e6f9090bac0649b8f6bb7d6e86be35fbf78d8f1f8dd623eaf94dc6bed1e",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/extra-legs-south.png",
+            "sha256": "fd41f1ef74cace59235062cd5d0c44ee13ed5045e8af35e5c1fb8f2108848662"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-south.png",
+            "sha256": "a16d522e0f330d76bd3136914eba9c7173ad5598d24f660072a463c3ce7de902"
+          },
+          "file": "body.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/south/body.png",
+          "sha256": "7be3a7b1e16f09c5f4b1fc22e899a54c50e10093c4206ca35af3d5a94858a126",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/body-south.png",
+            "sha256": "a16d522e0f330d76bd3136914eba9c7173ad5598d24f660072a463c3ce7de902"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-south.png",
+            "sha256": "faa3bc3220fe2db08794e0e6b77b7c2795757468306249a13121e8530a5585b8"
+          },
+          "file": "head.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/south/head.png",
+          "sha256": "e2c14663599765213988eecd99776dceac448830f45003a5f38df709fb96271c",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/head-south.png",
+            "sha256": "faa3bc3220fe2db08794e0e6b77b7c2795757468306249a13121e8530a5585b8"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+            "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "parent": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/south/item.png",
+              "sha256": "1edef324467fe1ede90855a3d99b9637fd0b732a72fcdbbcd8c214a4d2fbb532",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/intact-mail-south.png",
+                "sha256": "fae62930add64b937bf9c45fe931db430f3483360e5160dacfa350dc90e3ac1f"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/south/item-detail.png",
+              "sha256": "e08e8cbf0e6f79b14e4365d2f9b92ad995269a8009fa9c37f98af7f01b625dc1",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/item-detail-south.png",
+                "sha256": "1830d7a492ee3bdc3b93f21cd47a03ecd0e06176e3cd70f1cd4616d8be98e2fa"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/south/body-overlay.png",
+              "sha256": "5412d26ed93571691f01da38bafaa37e10386a269ecb2efd08e622e55fc69651",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/body-overlay-south.png",
+                "sha256": "707e5d00afee0938fc47d5df2299afbde3dbd87fccda62804dcfa8276d879364"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/v2/model.json",
+            "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "parent": 287,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "mutation-created natural Head equipment",
+          "components": [
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/south/item-near.png",
+              "sha256": "6e67df97f4cc54e48b04f5383f6447fc545d03708068d6079db20a3a028485ab",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-near-south.png",
+                "sha256": "6e67df97f4cc54e48b04f5383f6447fc545d03708068d6079db20a3a028485ab"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/south/item-near-detail.png",
+              "sha256": "c5856600bd3ef9a6b5f29cb0e7fbc2d620d461342ec3075180a767a2c6335823",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-near-south.png",
+                "sha256": "c5856600bd3ef9a6b5f29cb0e7fbc2d620d461342ec3075180a767a2c6335823"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+            "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "parent": 291,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/south/item.png",
+              "sha256": "39f2b8e2f05471f49425270ca34496da4632e19d601404d26556d8338700468c",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-item-south.png",
+                "sha256": "c58c8e0d0e0298aef0f844ec69823f49d21109e024cc6bbfda93b0dc3c80887d"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/south/item-detail.png",
+              "sha256": "8f1a9e756a05180ceed0f9b2098928dec420b42361bba5026d77c4391d4b183b",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/item-detail-south.png",
+                "sha256": "78ba6846471256cdfe27633748ae020f215b2df7278161fabd5e14ff15b7bef0"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/south/body-overlay.png",
+              "sha256": "fc8018316fc980a6593e7b9ad41661da69637c3202a424a08cf919a36c6699d0",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/original-hand-south.png",
+                "sha256": "02932cdfa4f9fb698a7ffc5b49e1dbc102cbfffc98fe668da9ed099f09d3cdfe"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+            "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "parent": 287,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/south/item.png",
+              "sha256": "89b2b0272cf47c185e39e7c75f2be86d192a9b078a224ccb070171189f3b43fb",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/intact-boot-south.png",
+                "sha256": "157b66d26e6225a9bed7b2ae397891f2bf60d70551c374457688692fcdb149c1"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/south/item-detail.png",
+              "sha256": "6975c78fa7429af0141b5e31108c910f26721434f6b254037fddbcd5262fd5b2",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/item-detail-south.png",
+                "sha256": "7c3179ffca5a9635f303172ec6b3a62962138b09620d10bf388e0730b4334ec7"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-neutral-south.png",
+        "sha256": "400cfadec07bc0b495d980409940188217ca72a73e18f7de08a4cf62689d6638"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-native-south.png",
+        "sha256": "9ce163c84f9d7c1ed12fedc12df359098c8b367f1b827a327831208bfbc34c6f"
+      }
+    },
+    "east": {
+      "body": [
+        {
+          "component": "mutation-extra-legs",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": -0.002,
+          "native_part": 298,
+          "parent_part": 287,
+          "manager": "515::MultipleLegs::Add",
+          "baseline_feet_group": 297,
+          "anatomy_role": "One separate additional human leg/foot pair behind unchanged paired baseline legs. Full profile uses natural far-limb overlap.",
+          "file": "mutation-extra-legs.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/east/mutation-extra-legs.png",
+          "sha256": "260ef39e55a1d8255eb509ae6b60b66a68d3d06e99a7b25f9edefef85d5ffb80",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/extra-legs-east.png",
+            "sha256": "adf0b1dd70c3d0a3cda9bf03d69a7491653ff89c0f8818ec21f312fe9ac7e6a9"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-east.png",
+            "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+          },
+          "file": "body.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/east/body.png",
+          "sha256": "f18684d9986f4943fe4c588954d19346bd1ea4cb6a1e10473ae4ae1c303019f0",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/body-east.png",
+            "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-east.png",
+            "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+          },
+          "file": "head.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/east/head.png",
+          "sha256": "39153fe84947fe750f81e9eddad9d003b4acf2c9fec6b5a47a8edaf0cbc18043",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/head-east.png",
+            "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+            "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "parent": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/east/item.png",
+              "sha256": "45b410bcd8cff22b8f48cf21f23fedcd1d776ae0d4a2db90d999ff2eb9ce5c8a",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/intact-mail-east.png",
+                "sha256": "bd68da7534973938f50e99d4cb599f45f6f55d809893ad4852b96f83a5231465"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/east/item-detail.png",
+              "sha256": "21701dfec738b533811d54765cab4fe365b1f23136dd101d120a2c101b08caf2",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/item-detail-east.png",
+                "sha256": "9b2162738b76ca36352617dcb1ab9fa39df85d883ebc892bacbf0120b8b92429"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/east/body-overlay.png",
+              "sha256": "3922484c7e5c78d75a3b70bb0f1f3708464b6508d4a7a889009af9cae5b75b32",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/body-overlay-east.png",
+                "sha256": "8b9d0d8cab27964bc4c5be8a12c4e502148e8478bc50a822beefcdda04a58344"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/v2/model.json",
+            "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "parent": 287,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "mutation-created natural Head equipment",
+          "components": [
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/east/item-near.png",
+              "sha256": "f1c4c78dcc0fb125120123ee29f7d464d67928adcfa336dc93554b55218f1dfd",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-near-east.png",
+                "sha256": "f1c4c78dcc0fb125120123ee29f7d464d67928adcfa336dc93554b55218f1dfd"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/east/item-near-detail.png",
+              "sha256": "95f0eb2043e928109cc4ba60b343f7c2d790ddf6f77f7bd94e4e061efd597048",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-near-east.png",
+                "sha256": "95f0eb2043e928109cc4ba60b343f7c2d790ddf6f77f7bd94e4e061efd597048"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/east/item-far.png",
+              "sha256": "f3618d5c50571da1ece27974938227990923e725ee07fc5d9e815172ddd36d09",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-far-east.png",
+                "sha256": "f3618d5c50571da1ece27974938227990923e725ee07fc5d9e815172ddd36d09"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/east/item-far-detail.png",
+              "sha256": "f7f9efcaa190d26ba03044929fb8ac4d81cebecab1ce2647fe9543cec4a39b54",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-far-east.png",
+                "sha256": "f7f9efcaa190d26ba03044929fb8ac4d81cebecab1ce2647fe9543cec4a39b54"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+            "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "parent": 291,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/east/item.png",
+              "sha256": "42421807898b415dac176c88e9f244e0a663e511e195da500431e66dc69cf4c0",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-item-east.png",
+                "sha256": "041f9093377ccb3541aa894b8c13d37746c262cb1051fe5f3996c207a8e9f62d"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/east/item-detail.png",
+              "sha256": "b062418523e423a378bf9e193044b0f2d8aca7118588d0e66cf891cec5577fe1",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/item-detail-east.png",
+                "sha256": "b0f98e38c413ca66a7af0aaf9e81f7941148c804c1a1eef1c1231b6163196467"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/east/body-overlay.png",
+              "sha256": "145a17e19af049166286540676cf9d981c1bfb73a6d05220613d3588a256d9c7",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/original-hand-east.png",
+                "sha256": "02171c4ef1385b6a86974b740eacc0adaa7f668ffb376e83bdcee963836e3d56"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+            "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "parent": 287,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/east/item.png",
+              "sha256": "49fdd4541013a3bc34bb8c20ab33979c7960dc1bef9775bb03983e93d5c88835",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/intact-boot-east.png",
+                "sha256": "fc8aa2f34df9bee208619654fcf35ec19da4d177137ebaf99628f5c2d7a80876"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/east/item-detail.png",
+              "sha256": "dd36348e75e7dab1adc8d597430a3a0f34993e36e627c56e24aad448a7529852",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/item-detail-east.png",
+                "sha256": "85d794c0729b409d205c7087c7d72e7c9ad2a39ab4b2cff02bb678acece68d65"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-neutral-east.png",
+        "sha256": "b345663d1c5a0612c70992eaa958db4744c1e1fbb72c6f791daa4091aa3b51fd"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-native-east.png",
+        "sha256": "062aab12550959125fff2508a884f388fdbafa4144edb310ead252d4d4987461"
+      }
+    },
+    "north": {
+      "body": [
+        {
+          "component": "mutation-extra-legs",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": -0.002,
+          "native_part": 298,
+          "parent_part": 287,
+          "manager": "515::MultipleLegs::Add",
+          "baseline_feet_group": 297,
+          "anatomy_role": "One separate additional human leg/foot pair behind unchanged paired baseline legs. Full profile uses natural far-limb overlap.",
+          "registration_adjustment": "Additional left/right legs translated outward12px as intact independent pieces, preserving original body and y950 contact.",
+          "file": "mutation-extra-legs.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/north/mutation-extra-legs.png",
+          "sha256": "d4edfa552e9bf03265ef9b45fc13de03bc1d9d37ad599e4b0c5da3548e507adc",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/extra-legs-north.png",
+            "sha256": "594516f8a792c37d53275b7b94062c6b11e46b920ad4e4905496d1cef7db2661"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-north.png",
+            "sha256": "f56d658f1e9cb36f9b1f44766ab8e5d95157a83009a848730e8927fd832d3d30"
+          },
+          "file": "body.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/north/body.png",
+          "sha256": "8dd592ff304aedc36ec08e2c1e8a468a5d2c35b65ea3be967684bbc13d5726f3",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/body-north.png",
+            "sha256": "f56d658f1e9cb36f9b1f44766ab8e5d95157a83009a848730e8927fd832d3d30"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-north.png",
+            "sha256": "894d6930977186ca62f3bcf681242ee3f8131fbcff7136cb8f927dc459eec637"
+          },
+          "file": "head.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/north/head.png",
+          "sha256": "3a799e76940a2ae3433035b3c657ef0048d2f7731d089599ec4b336bd282436d",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/head-north.png",
+            "sha256": "894d6930977186ca62f3bcf681242ee3f8131fbcff7136cb8f927dc459eec637"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+            "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "parent": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/north/item.png",
+              "sha256": "fa5f786d6efd222c23a70c48833ad0756bfa367e3c676e923a1d6b135cf25962",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/intact-mail-north.png",
+                "sha256": "67bb4bc5fe8e1298f93b069b04ae80d2dbdb809a909a6b815f1a265919e2605d"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/north/item-detail.png",
+              "sha256": "93210107b157946d73273ebd3420809abcac5b33e18cb890fc1438bbdcaae671",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/item-detail-north.png",
+                "sha256": "c17688521de64cde681f0383719a80146003c816cfc539d4cc594fccaeef1048"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/north/body-overlay.png",
+              "sha256": "9ecca869b1869976bf9352656fd53fba84887330d059f071a8242d411139c932",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/body-overlay-north.png",
+                "sha256": "112bfdb340020ca9244cbd29fc742488521b2b109551ecbac4fce2a9f0a162f7"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/v2/model.json",
+            "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "parent": 287,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "mutation-created natural Head equipment",
+          "components": [
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/north/item-far.png",
+              "sha256": "656edd4e6fec3df3217f3926ddfa22bf22b4ba52463f44974be48f5417e32222",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-far-north.png",
+                "sha256": "656edd4e6fec3df3217f3926ddfa22bf22b4ba52463f44974be48f5417e32222"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/north/item-far-detail.png",
+              "sha256": "c1885259f81370c9f52544d670a02ed3ab907141af0a9e77df3ccca615255cc2",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-far-north.png",
+                "sha256": "c1885259f81370c9f52544d670a02ed3ab907141af0a9e77df3ccca615255cc2"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+            "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "parent": 291,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/north/item.png",
+              "sha256": "2a74860d67651bed09d8fa1a6d541ef27b9f0f62f8f5d4f2ea12aec9b82b6026",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-item-north.png",
+                "sha256": "6d2e0af250d527cb270e8e052f1e60fa9a9475be02c47a9ac0aeedf0106171b3"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/north/item-detail.png",
+              "sha256": "6ea2bcea391380a56939db9d12052aa900f6a202b2ea23e49f4ef843c94ff66a",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/item-detail-north.png",
+                "sha256": "77f5bfdd25fd5236db0d2d746085e314219cfcb8f57dff8307ced39a6db6432b"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/north/body-overlay.png",
+              "sha256": "6d72660ea2198770005da8406bf3bd9073b2b0c1ac64abf334e713c6a8f187bc",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/original-hand-north.png",
+                "sha256": "cf3ce2030d3600fc7d47f5b8d2127f10490977aa085b7a62d5eb4a5ba431ed5c"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+            "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "parent": 287,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/north/item.png",
+              "sha256": "24488152abaa33c31f903c5a4410ac313683da5e968f8fe1ae939460fe02619b",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/intact-boot-north.png",
+                "sha256": "61a0a3f0d26fc3fc7a15f3944eb2327d39ab621c77fa0804d4e7f23c883f55d2"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/north/item-detail.png",
+              "sha256": "1253591c7428fe4b283b1de48e9c433875afe3809e68dfe76be40a8ec91ca3eb",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/item-detail-north.png",
+                "sha256": "c271b19da5add365cf279c93af3a1a923e5b27330b2b577f8c331210d1e5a0e3"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": false
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-neutral-north.png",
+        "sha256": "ba90cddb1806de4df777cb45ac80eded65d914be21b6639f53d67704bee63ee7"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-native-north.png",
+        "sha256": "d311f3f0564fc75f76f9635be9bfb0e45c922d8ae069d09f2df3167818195ba2"
+      }
+    },
+    "west": {
+      "body": [
+        {
+          "component": "mutation-extra-legs",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": -0.002,
+          "native_part": 298,
+          "parent_part": 287,
+          "manager": "515::MultipleLegs::Add",
+          "baseline_feet_group": 297,
+          "anatomy_role": "One separate additional human leg/foot pair behind unchanged paired baseline legs. Full profile uses natural far-limb overlap.",
+          "file": "mutation-extra-legs.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/west/mutation-extra-legs.png",
+          "sha256": "cded4fab705c2da985d43e551cb2603cd905cef0351c010ebf6b6d5857e5dbf2",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/extra-legs-west.png",
+            "sha256": "1bf2bc70a4461f6f6a4f963cbb3d89f3fadccaa21d3d32a3f54eb2c8bd98f8b0"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "body",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/body-east.png",
+            "sha256": "10c46567247cf069b63f68ae546c9b247149a7ab2d141516c85f4e94b24f1dc7"
+          },
+          "file": "body.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/west/body.png",
+          "sha256": "5a5663a4c07ad11eca5cd8f32e9e61643bd1c302ecf983047d670d0421464c77",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/body-west.png",
+            "sha256": "0982b8e7bca14037bf8460266d0ecd9ef99a2aba85ef6d5f5ee28cc7a402425e"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        },
+        {
+          "component": "head",
+          "color_role": "foreground",
+          "width": 0.9938823529411764,
+          "center_x": 0,
+          "layer": 0.001,
+          "original_component": {
+            "path": "art/conversion/body-human-female/v2/head-east.png",
+            "sha256": "2ba5b17a0e1afd5ff7b2752c21f2b7effe0cdd715dd2de297c9cd891956ee511"
+          },
+          "file": "head.png",
+          "public_file": "art/conversion/npc-warden-yrame/v1/registered-body/west/head.png",
+          "sha256": "ec608413620461e99ef51243d33500911dd61b5e73e39f50f81a46d28f4f251b",
+          "size": [
+            512,
+            1152
+          ],
+          "contact": [
+            256,
+            1078
+          ],
+          "height": 1.4908235294117647,
+          "center_z": 0.6496470588235294,
+          "source_component": {
+            "path": "art/conversion/body-yrame/v1/registered/head-west.png",
+            "sha256": "82205c2af7e77f0ebd17bb459ea16a18390ff51cf89c7a44d3124f5e0328a1dc"
+          },
+          "padding_top": 128,
+          "mirrored_from_east": false
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Chain Mail",
+          "model": {
+            "path": "art/conversion/fit-yrame-chain-mail/v1/model.json",
+            "sha256": "c91894cac9a0123a1629f7511fd333142ca6dda2b6922578f83aaa5b48426369"
+          },
+          "instance": 574,
+          "part_id": 287,
+          "parent": -1,
+          "slot": "Body",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0012,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/west/item.png",
+              "sha256": "fbe7cdd326f7301cb58c58d4da2ae83b955c9b36d7d5ddd4aea1a38b06146841",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/intact-mail-east.png",
+                "sha256": "bd68da7534973938f50e99d4cb599f45f6f55d809893ad4852b96f83a5231465"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00125,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/west/item-detail.png",
+              "sha256": "72ed9527bc48c1bd9944b9d24daa31a07839d62fee722a9781daa7faf2112422",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/item-detail-east.png",
+                "sha256": "9b2162738b76ca36352617dcb1ab9fa39df85d883ebc892bacbf0120b8b92429"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0013,
+              "equipment_key": "chain-mail@Body@0",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/chain-mail/west/body-overlay.png",
+              "sha256": "13046ed1073e495a1414529014f7c72941915a9ecb34c3fef9dd525b06a23266",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-chain-mail/v1/body-overlay-east.png",
+                "sha256": "8b9d0d8cab27964bc4c5be8a12c4e502148e8478bc50a822beefcdda04a58344"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "name": "Horns",
+          "model": {
+            "path": "art/conversion/fit-yrame-horns/v2/model.json",
+            "sha256": "107e67f8fdcb60973c2e78c984b82deacf1ce04d6d89d93fa6acfc7cf5175f1e"
+          },
+          "instance": 575,
+          "part_id": 288,
+          "parent": 287,
+          "slot": "Head",
+          "laterality": 0,
+          "manager": null,
+          "equipment_kind": "mutation-created natural Head equipment",
+          "components": [
+            {
+              "component": "item-near",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/west/item-near.png",
+              "sha256": "35238d8d8335a2a1b1325d46fe6077fe42c318d30d37b8ef401a2ce75b4d11ba",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-near-east.png",
+                "sha256": "f1c4c78dcc0fb125120123ee29f7d464d67928adcfa336dc93554b55218f1dfd"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-near-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "horns@Head@0",
+              "file": "item-near-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/west/item-near-detail.png",
+              "sha256": "a9e62e189bb69b5a616fe93280e523f4626fe72587537b20eed1157babcd6a23",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-near-east.png",
+                "sha256": "95f0eb2043e928109cc4ba60b343f7c2d790ddf6f77f7bd94e4e061efd597048"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-far",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.0002,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/west/item-far.png",
+              "sha256": "54a33f5896358213bbdf35c3eaac4b690fa456194cb622069d792e5a74c66179",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/intact-far-east.png",
+                "sha256": "f3618d5c50571da1ece27974938227990923e725ee07fc5d9e815172ddd36d09"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-far-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": -0.00019,
+              "equipment_key": "horns@Head@0",
+              "file": "item-far-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/horns/west/item-far-detail.png",
+              "sha256": "6d4a6c7ab7555951d55c5fb3b97ca7476eac447a44a7994aaba849ace6303d34",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-horns/v2/detail-far-east.png",
+                "sha256": "f7f9efcaa190d26ba03044929fb8ac4d81cebecab1ce2647fe9543cec4a39b54"
+              },
+              "padding_top": 0,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "name": "Vibro Blade",
+          "model": {
+            "path": "art/conversion/fit-yrame-vibro-blade/v1/model.json",
+            "sha256": "27c9ea5a4b88353c7d2688407172ec8691f84a1077a77c27f2d9eec10fd638d8"
+          },
+          "instance": 576,
+          "part_id": 292,
+          "parent": 291,
+          "slot": "Hand",
+          "laterality": 2,
+          "manager": null,
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0018,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/west/item.png",
+              "sha256": "0f66b253d9ad77db8fe0dbc5b1b777a57bef399db5423dcedc47ebae9715c39f",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/intact-item-east.png",
+                "sha256": "041f9093377ccb3541aa894b8c13d37746c262cb1051fe5f3996c207a8e9f62d"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00181,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/west/item-detail.png",
+              "sha256": "b3d89bda02b44cc73aaca569002664c4b5d743e3bc3d3573d017fdda01e68ddf",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/item-detail-east.png",
+                "sha256": "b0f98e38c413ca66a7af0aaf9e81f7941148c804c1a1eef1c1231b6163196467"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "body-overlay",
+              "color_role": "foreground",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0019,
+              "equipment_key": "vibro-blade@Hand@2",
+              "file": "body-overlay.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/vibro-blade/west/body-overlay.png",
+              "sha256": "1f5702a7f511f98ab3050c1a02d95d1548a0f4bb9e2ed621944362be6a3889fc",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-vibro-blade/v1/original-hand-east.png",
+                "sha256": "02171c4ef1385b6a86974b740eacc0adaa7f668ffb376e83bdcee963836e3d56"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            }
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "model": {
+            "path": "art/conversion/fit-yrame-leather-boots/v1/model.json",
+            "sha256": "ec71d460e18deb6698b7855843d9d561cf735ebfc36935245473e92d300e596c"
+          },
+          "instance": 580,
+          "part_id": 297,
+          "parent": 287,
+          "slot": "Feet",
+          "laterality": 16,
+          "manager": "515::MultipleLegs::Change",
+          "equipment_kind": "captured equipped object",
+          "components": [
+            {
+              "component": "item",
+              "color_role": "equipment",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.0007,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/west/item.png",
+              "sha256": "b9abb7fb5bcadcd0d719204c32a3cd9b068a04ca257291c2d6f0811f443ba7f0",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/intact-boot-east.png",
+                "sha256": "fc8aa2f34df9bee208619654fcf35ec19da4d177137ebaf99628f5c2d7a80876"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            },
+            {
+              "component": "item-detail",
+              "color_role": "equipment-detail",
+              "width": 0.9938823529411764,
+              "center_x": 0,
+              "layer": 0.00075,
+              "equipment_key": "leather-boots@Feet@16",
+              "file": "item-detail.png",
+              "public_file": "art/conversion/npc-warden-yrame/v1/registered-items/leather-boots/west/item-detail.png",
+              "sha256": "9e3d043b615bea1c00c1861d2cf1690ff347ed8c632fc31b06c6b93dde69593f",
+              "size": [
+                512,
+                1152
+              ],
+              "contact": [
+                256,
+                1078
+              ],
+              "height": 1.4908235294117647,
+              "center_z": 0.6496470588235294,
+              "source_component": {
+                "path": "art/conversion/fit-yrame-leather-boots/v1/item-detail-east.png",
+                "sha256": "85d794c0729b409d205c7087c7d72e7c9ad2a39ab4b2cff02bb678acece68d65"
+              },
+              "padding_top": 128,
+              "mirrored_from_east": true
+            }
+          ]
+        }
+      ],
+      "neutral_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-neutral-west.png",
+        "sha256": "d2ed1fa906f32ba2af5187539311254db0491df0d70bb7b5d77e3f1c720476e1"
+      },
+      "native_palette_preview": {
+        "path": "art/conversion/npc-warden-yrame/v1/full-native-west.png",
+        "sha256": "6fa177c35ef4bf5891e9bdd47fedfcc4b28a7dae195d89f9cceff55679b929a6"
+      }
+    }
+  },
+  "composition": "Far horn/blade pieces -> separate body/additional legs/head -> mail and original-pair boots -> near horns/blade. Local late ownership only affects its own item; no global body redraw.",
+  "native_activation": false,
+  "native_acceptance": "Pending complete generation: actual mutation/feet/equipment/head-depth/visibility/held state/hurt/look/save and native Icy Vapor effect acceptance. Static authoring only."
+}

@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **NPC-WARDEN-YRAME**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **NPC-WATERVINEFARMERJOPPA-01**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -175,8 +175,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 | NPC-MEHMET | Mehmet | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 |  |
 | NPC-NIMA-RUDA | Nima Ruda | UNFINISHED | BODY-NIMA, FIT-NIMA-LEATHER-APRON-BODY-0, FIT-NIMA-WIDE-BRIMMED-HAT-HEAD-0, FIT-NIMA-PESTLE-HAND-6, FIT-NIMA-SANDALS-FEET-0, FIT-NIMA-FLOATING-GLOWSPHERE-FLOATING-NEARBY-0 |  |
 | NPC-TAM | Tam | UNFINISHED | BODY-DROMAD, FIT-DROMAD-CLOTH-ROBE-BODY-0, FIT-DROMAD-SHILLELAGH-HAND-2 |  |
-| NPC-WARDEN-YRAME | Warden Yrame | IN PROGRESS | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 | Separate BODY-YRAME is generation-ready. Assemble actual mail, horns, blade and Boots580 only on changed Feet297; added Feet298 remains unequipped. Respect horn near/far ownership and unchanged source-body frame. |
-| NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | UNFINISHED | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-WARDEN-YRAME | Warden Yrame | UNFINISHED | BODY-YRAME, FIT-YRAME-CHAIN-MAIL-BODY-0, FIT-YRAME-HORNS-HEAD-0, FIT-YRAME-VIBRO-BLADE-HAND-2, FIT-YRAME-LEATHER-BOOTS-FEET-16 |  |
+| NPC-WATERVINEFARMERJOPPA-01 | WatervineFarmerJoppa / captured resident 1 | IN PROGRESS | BODY-HUMAN-MALE, FIT-HUMAN-MALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-MALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-MALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-MALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-02 | WatervineFarmerJoppa / captured resident 2 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-03 | WatervineFarmerJoppa / captured resident 3 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
 | NPC-WATERVINEFARMERJOPPA-04 | WatervineFarmerJoppa / captured resident 4 | UNFINISHED | BODY-HUMAN-FEMALE, FIT-HUMAN-FEMALE-WOVEN-TUNIC-BODY-0, FIT-HUMAN-FEMALE-WIDE-BRIMMED-HAT-HEAD-0, FIT-HUMAN-FEMALE-IRON-VINEREAPER-HAND-2, FIT-HUMAN-FEMALE-SANDALS-FEET-0 | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
@@ -7039,7 +7039,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: verify_body_and_every_equipped_item_dependencies. Process-log events: 2.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 8.
 
 - 2026-10-21T00:55:07.608270+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve Yrame515 exact source anatomy, original/palette and four equipped objects.
   Review: Retain actual item slots, both paired Feet groups and natural Icy Vapor distinction. No profession costume or unexported item inferred.
@@ -7053,6 +7053,42 @@ Current step: verify_body_and_every_equipped_item_dependencies. Process-log even
   Outputs: [{"path": "art/conversion/body-yrame/v1/source-packet.json", "sha256": "dbdd6f45fd9b0edaf79201d13bef72321bec39ced9d464f57f768e67e8850949"}]
   Method/prompt/corrections: {}
 
+- 2026-10-21T01:12:58.463956+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Reconcile Yrame515 actual four-item capture after separate extra-leg generation.
+  Review: Original preflight retained. Two actual Feet groups remain distinct, Horns remains natural equipped Head288 item, Icy Vapor is native default Hands equipment rather than an additional worn glove.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/source-packet.json", "sha256": "d41bc2f806c1fe4c87b3f1cdcf69a017166e6747c49dc20d7bfd7fbe4c891c50"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/assembly-source-packet.json", "sha256": "6c5d2e713905dbb2ac7057dc2aa76d85a5af1419bf4deb822bce86c593a6383f"}, {"path": "art/conversion/npc-warden-yrame/v1/render-source-comparison.py", "sha256": "73afba86c44c5801d486a74e0cddfb23732e853c5004decfcbadf53c76aceff6"}, {"path": "art/conversion/npc-warden-yrame/v1/source-to-assembly.png", "sha256": "44b6d0aa2b950957e0dfdd11c1d8163ce59e6f8f9319c903be7f870186af9e43"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:12:58.463956+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify all five current body/item dependencies and preserve their actual performed conversion histories.
+  Review: Current models/components match; older instruction inputs resolve to exact Git bytes. Named body now generation-ready; no new generation call for outfit.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/assembly-source-packet.json", "sha256": "6c5d2e713905dbb2ac7057dc2aa76d85a5af1419bf4deb822bce86c593a6383f"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/dependency-lineage.json", "sha256": "250e7acdd7193da13d615e3c859c7763b7b41e2a9a7a78a03907f5b8d3374962"}, {"path": "art/conversion/npc-warden-yrame/v1/dependency-evidence.html", "sha256": "873ff809fbdb1bb0aa58a54ad5ae2228d3d782e1799e014cacce572f57e2bb8b"}, {"path": "art/conversion/npc-warden-yrame/v1/historical-instruction-versions.json", "sha256": "0c93ba7f2b949bc35fad8d2e47b31bafcd0301c6314394fdf8f9865e98c688bb"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:12:58.463956+00:00 / assemble_without_baking_equipment / PASS: Assemble exact separate source components in the existing horn-compatible1152px frame.
+  Review: Body/mail/blade/boots padded128px; horns unshifted. Near/far horn layers preserve forehead roots and body occlusion. Boots only on original changed Feet297; added pair remains bare. No rescale or global body overlay.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/assembly-source-packet.json", "sha256": "6c5d2e713905dbb2ac7057dc2aa76d85a5af1419bf4deb822bce86c593a6383f"}, {"path": "art/conversion/npc-warden-yrame/v1/dependency-lineage.json", "sha256": "250e7acdd7193da13d615e3c859c7763b7b41e2a9a7a78a03907f5b8d3374962"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/assemble-yrame.py", "sha256": "f7d3c597ed96ddf64660f1cdfcb77be005d51e4fb5bd7b1c5cf1e0472d898c18"}, {"path": "art/conversion/npc-warden-yrame/v1/model.json", "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"}, {"path": "art/conversion/npc-warden-yrame/v1/assembly-stages.png", "sha256": "2633fbb9fcfc49f6f88fe9469f762ed8eb4f11f557aa712ede9d5067bf5f1cc8"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:12:58.463956+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspect every actual item separately on the unclothed named body and the complete outfit in all facings.
+  Review: Mail/arms, original booted feet versus bare added pair, forehead roots/near-far horns and static blade palm/depth visually reviewed. No new profession pose, mutation anatomy or baked gear.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/model.json", "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/chain-mail-comparison.png", "sha256": "dd996705353681bd643780cf89f1613c3e71768fc5187ede191578a685218c3d"}, {"path": "art/conversion/npc-warden-yrame/v1/horns-comparison.png", "sha256": "0d24f1e420336300114f63801dfe911f92f859d8cb5ee25c231863d54d658359"}, {"path": "art/conversion/npc-warden-yrame/v1/vibro-blade-comparison.png", "sha256": "a74298d1863b03b82d14762ab08d3a7dc49e7b346fc0dcafbac018a34477d72f"}, {"path": "art/conversion/npc-warden-yrame/v1/leather-boots-comparison.png", "sha256": "c5af377b5f2ac2682a21bd3cb09393471e978f3c86d312f285296561351fbc05"}, {"path": "art/conversion/npc-warden-yrame/v1/full-neutral-comparison.png", "sha256": "7572c87a6529232e55d9656378d56a165f69125fe0c256b7aa752d380cbfc400"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:12:58.463956+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspect independent captured palettes, original registration and intended-size full assembly.
+  Review: Inspected original glyph, full captured metadata, separate four-foot anatomy, all four single-item plates, assembly stages, complete neutral/native and intended-size views. Mail574 Body287, natural Horns575 Head288, Blade576 Hand292/2 and Boots580 changed Feet297/16 match the capture. Added Feet298/64 remains unequipped; no duplicate boots or invented frozen-hand garment. High-forehead horns retain existing near/far layers: north roots are behind the original head, profiles overlap naturally, south roots remain on forehead. No temple-root substitution or baked horn anatomy. Existing1152px horn canvas governs the assembly. Exact body/mail/blade/boots RGBA is copied at y+128 while existing horn pixels stay at y+0; physical pixel scale and ground/contact are unchanged. Mail cuffs/shoulders/hem, boots on the original pair, independent added bare feet, and static blade palm/depth reviewed in all facings. Each late mask affects only its own item; no original body redraw erases another piece. Neutral RGB remains gray. Body uses captured tileColor w; horns use w/W, mail y/Y, blade c/y and boots w/y independently. Source B detail and natural Icy Vapor metadata remain retained without an invented permanent-skin region or new particle effect. All five dependencies retain actual original/reference/manual/refinement/secondary/patch/extraction histories; no new ImageGen call or costume for this assembly. Static blade display is not ready/resting or native held-state acceptance. No mutation framework, game launch or native acceptance; those remain required after full generation.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/model.json", "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"}]
+  Outputs: [{"path": "art/conversion/npc-warden-yrame/v1/full-native-comparison.png", "sha256": "36edc16ed70bf26ba3a038ad138ef108ff49c45303db96f0964e1c9bdfb9128f"}, {"path": "art/conversion/npc-warden-yrame/v1/game-scale-comparison.png", "sha256": "825d14038d22844f9336aa9b12d2f05024052e6b65330dc6d0cf8adeded69851"}, {"path": "art/conversion/npc-warden-yrame/v1/hidden-comparison.png", "sha256": "7500657900be4b804c86e14be8cef8b8e8fb8d24d0dfe12efed781ee768a429f"}, {"path": "art/conversion/npc-warden-yrame/v1/record-review.py", "sha256": "6c70ef15ce2edc4b50bacfa2c515b713be04e3bb98d356424fd7c3242a42d028"}, {"path": "art/conversion/npc-warden-yrame/v1/authoring-review.json", "sha256": "7b28c0e97f8bbef3029bbe1c03e9a87db24593e16faccf34a770a64a46fba539"}, {"path": "art/conversion/npc-warden-yrame/v1/artifact-manifest.json", "sha256": "b76aeb6262d694c192ddfcebadca524d3fe8bd95f60902efccc695cb37884847"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T01:12:58.463956+00:00 / native_visibility_equipment_hurt_look_save_review / DEFERRED UNTIL ALL GENERATED: Retain native mutation/body/slot/equipment/visibility/held state/hurt/look/save and natural-effect acceptance behind full-generation gate.
+  Review: Authoring hidden preview is empty. Native Horns/Feet precedence, equip/unequip, supported held states and Icy Vapor effects remain untested; entry stays UNFINISHED.
+  Inputs: [{"path": "art/conversion/npc-warden-yrame/v1/model.json", "sha256": "20924899790f44827e9eabf3b2c60dde9107c97351856de6642ebb92e157da08"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
 ### NPC-WATERVINEFARMERJOPPA-01: WatervineFarmerJoppa / captured resident 1
 
 Required steps: resolve_individual_race_and_runtime_metadata -> verify_body_and_every_equipped_item_dependencies -> assemble_without_baking_equipment -> review_anatomy_clothing_attachment_all_directions -> review_neutral_and_qud_palette_at_game_scale -> native_visibility_equipment_hurt_look_save_review.
@@ -7061,7 +7097,7 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_individual_race_and_runtime_metadata. Process-log events: 0.
 
 ### NPC-WATERVINEFARMERJOPPA-02: WatervineFarmerJoppa / captured resident 2
 
