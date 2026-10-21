@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "reason": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+  "independent_review": {
+    "path": "art/conversion/scn-wine-vase/blender-reuse-v1/independent-structural-review.json",
+    "sha256": "3b35c83a10d45b2d6303050e690d80e23b288513af64cc74945f46f95badc806"
+  },
+  "reused_geometry_review": {
+    "path": "art/conversion/scn-vase/blender-v5/registered/authoring-review.json",
+    "sha256": "1795aeb2444e1797a30d1a23af94156d9b668d5698f1814d8da9b79614b0ce11"
+  },
+  "reviewer": {
+    "agent": "/root/wine_vase_variant_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "checks": {
+    "exact_shared_geometry_layers_frame": true,
+    "native_w_m_one_coverage_exact": true,
+    "source_randomization_removals_verified": true,
+    "no_new_generation_claim": true
+  },
+  "dispositions": [
+    {
+      "finding": "Inherited high-resolution handle-root roughness",
+      "decision": "MINOR POLISH",
+      "reason": "Unchanged reviewed complete geometry; source/native small-size identity remains coherent."
+    }
+  ],
+  "native_acceptance": "Pending full generation gate"
+}

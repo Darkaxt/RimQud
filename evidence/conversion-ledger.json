@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-VASE",
+  "active_entry": "SCN-WOVEN-BASKET",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -22581,20 +22581,21 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "High-resolution angled handle emergence is minor polish; native randomized slip and liquid storage/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -22653,7 +22654,339 @@
           "sha256": "6cb2654f6bfe0338b7cedf7cb9e1ae1eb658dbeb72a47c64a4623ff1d16afb82"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T12:17:24.399858+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Bind installed ancestry, original mask, slip palette and native content behavior.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\vase-mask.png",
+              "sha256": "a3b7862aeb8b5c85fdaf26560ed79ac700b1f83bde981076ad7fb0c84aceda3e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-packet.json",
+              "sha256": "146e3a52e5386b3267c23584a33e10eaed54861a461cacfccc36f34f6d8d7e57"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-reference-comparison.png",
+              "sha256": "7f28da7a1736db399832969f732f6e438cebe20df70edca61106860a7e57ff3d"
+            }
+          ],
+          "review": "Source facts and authored depth remain distinct; native acceptance gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:17:24.399858+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VTE urn as pottery/rim convention; source supplies two handles, neck and slip bands.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Misc\\Urn.png",
+              "sha256": "c867c7d6d7ae6500d3916701763fc95ba60cb8f522666c273cf4220570d01b23"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-packet.json",
+              "sha256": "146e3a52e5386b3267c23584a33e10eaed54861a461cacfccc36f34f6d8d7e57"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-reference-comparison.png",
+              "sha256": "7f28da7a1736db399832969f732f6e438cebe20df70edca61106860a7e57ff3d"
+            }
+          ],
+          "review": "Source facts and authored depth remain distinct; native acceptance gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Build complete hollow pottery and two actual neck-to-shoulder handles in Blender.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-packet.json",
+              "sha256": "146e3a52e5386b3267c23584a33e10eaed54861a461cacfccc36f34f6d8d7e57"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/stage-02-model-3d.png",
+              "sha256": "c06e4838dd5084af3ab430d506dda98adc6c83ad2f2f0b25817dd481cbaf0bc2"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v1/manual-neutral-master.png",
+              "sha256": "7703cc7ec0955076535fad18b48c602638675dd57c6fa8c040573b382dce16fe"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Resume saved model, seat hidden roots, separate source slip and add direct Blender contours; reject optional bevel defects.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/vase.blend",
+              "sha256": "a1e92eb3022c211913b7b7dd06aa2e69b1c4832d0d8e979e5418cb39502b51b1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "5cd4425e5c55ea906312aef5cfaa9c7a54902763cf4e29095802777f316dc73c"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v2/modifier-diagnostic.json",
+              "sha256": "484340d4b3ab751dc89243afddc00cb70b0b13869f7c1358146ee0cd364a0dbf"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "RECORDED"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Fresh independent review rejects pale, cap-like cavity; retain that output and correction requirement.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v2/independent-structural-review.json",
+              "sha256": "149c685c6d3411073e9208f7dd203a6ffdf094a3b7010e38ce9585f003814c62"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v3/cavity-refinement-comparison.png",
+              "sha256": "3a54969aa0d08b118a9eaeeda6332bde4476dd7afd52637f1b0e2034593ccdb6"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Darken the actual inward pottery wall; source geometry, handles and two slip bands remain unchanged.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v2/vase.blend",
+              "sha256": "a7b76fe617ced4c259407c026234111551612398c3a878dcfc93f106cab3a384"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/raw-neutral-master.png",
+              "sha256": "8efe00538dfbdb8a14f5a5bf7de8a087ea19e2a3d3b9a565139910cbf4ee7e71"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+              "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Retain independent handle-emergence concern and reject topology-changing voxel trial before model save/render.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v3/independent-structural-review.json",
+              "sha256": "1f7531aea8c9fb6a8ec36b1e3ac094ff41d8caa35b7365734d9399bbf8463c26"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v4/trial-decision.json",
+              "sha256": "028684351e32aac990dbb07325a4caf13017e2e9844102729804a9e3b2749268"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "REJECTED"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Smooth the original joined surface only near four roots; preserve topology and use restrained continuous pottery shading.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v3/vase.blend",
+              "sha256": "03debc0f5df7d1392f7401751c9ad7d6b9e0df0f7adf70cfd09d786f295cf504"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/root-refinement-comparison.png",
+              "sha256": "7948654023635a1e0482a6846605dcda49fad136a0d2662deda0b2d705dce2e8"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/surface-refinement-audit.json",
+              "sha256": "56a700b2246c8fd965ef16abed26f1ba7a69724d9e4ed03b4f63e5e7a1bcbea0"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Diagnose actual terminal-cap visibility under the exact selected geometry; distinguish surface shading from exposed caps.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/diagnose-cap-visibility.py",
+              "sha256": "e5a4d39659d675bd3cf8ec96f93ff3eab4fe7e46f934b32fbbc7e5a1c5178d81"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/cap-visibility-diagnostic.png",
+              "sha256": "8b1f12b7b8f1592eacc98d42dd4b7875c79207c546690650c3614a54cbae0154"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/cap-visibility-result.json",
+              "sha256": "3a7a933855bf2e2e9a44a0202ca315ba550649f733d9ecffbca0639a1b6427fd"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Keep one fixed native map face; contents and RandomColors alter native state/palette, not exterior geometry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-packet.json",
+              "sha256": "146e3a52e5386b3267c23584a33e10eaed54861a461cacfccc36f34f6d8d7e57"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/registered/model.json",
+              "sha256": "c17003f307a58e1a1f50f96987c651660ea31aa24419725428824039f8b2a4fc"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render full object, actual oblique hollow-wall proof and separate visible slip ownership; retain editable model and reopen evidence.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+              "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/stage-03-refined-model-3d.png",
+              "sha256": "0c445c49041288c20d85fb70911307e8bba2a9949f53afc2012d2a1ce1a60742"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/raw-slip-pass.png",
+              "sha256": "1d1e648d367e74db053c05d72dea855fa746decada33597425407c8af0d46f9a"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/reopen-audit.json",
+              "sha256": "89878133a8c6237b3c7ae052ee5294768038cf682eeacb7c56f2d43e74df5cb8"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v7.json",
+              "sha256": "8f36850e135b52d3fdba54eff34b1873bfda6b8671cf0d028471d3755fc6b606"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register whole direct render and independent slip mask in the original full source cell and one-coverage formula.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/register-vase.py",
+              "sha256": "9ea24509bd21e533bc159a965c07757e3b48365e4b8ac90d6773c248d5af79f4"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/registered/model.json",
+              "sha256": "c17003f307a58e1a1f50f96987c651660ea31aa24419725428824039f8b2a4fc"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/registered/registration-decisions.json",
+              "sha256": "3cc972cc3d3f035462c2a5be415994f3615e39de0df8cf8e6918424e3bd71255"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:37:49.444231+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect exact source/native/color/mask/size proof and disposition fresh independent structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/independent-structural-review.json",
+              "sha256": "c2516d17165d5d3273ad9a1ca5ceabb80c475594febd797de11bac5541b1ef6b"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/registered/registration-comparison.png",
+              "sha256": "3a35f91788e40c76f4db6a660c2ad50ffec795079c145de997fc88295c3f6b51"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/registered/authoring-review.json",
+              "sha256": "1795aeb2444e1797a30d1a23af94156d9b668d5698f1814d8da9b79614b0ce11"
+            }
+          ],
+          "review": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v7.json",
+          "sha256": "8f36850e135b52d3fdba54eff34b1873bfda6b8671cf0d028471d3755fc6b606"
+        },
+        "resume": {
+          "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+          "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+        },
+        "controls": {
+          "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+          "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-vase/blender-v5/registered/model.json",
+          "sha256": "c17003f307a58e1a1f50f96987c651660ea31aa24419725428824039f8b2a4fc"
+        },
+        "plate": {
+          "path": "art/conversion/scn-vase/blender-v5/registered/registration-comparison.png",
+          "sha256": "3a35f91788e40c76f4db6a660c2ad50ffec795079c145de997fc88295c3f6b51"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+        "record": {
+          "path": "art/conversion/scn-vase/blender-v5/registered/authoring-review.json",
+          "sha256": "1795aeb2444e1797a30d1a23af94156d9b668d5698f1814d8da9b79614b0ce11"
+        }
+      },
+      "registration_summary": "Direct Blender hollow two-handled pottery with clearly recessed open mouth, source two slip bands and independent native detail ownership."
     },
     {
       "id": "SCN-WINE-VASE",
@@ -22668,19 +23001,20 @@
       ],
       "disposition": "Convert and review",
       "status": "UNFINISHED",
-      "current_step": null,
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Inherited high-resolution root polish and native liquid/play-distance acceptance remain pending."
       ],
       "metadata": {
         "description": {
@@ -22739,7 +23073,228 @@
           "sha256": "6cb2654f6bfe0338b7cedf7cb9e1ae1eb658dbeb72a47c64a4623ff1d16afb82"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve exact Wine Vase ancestry, identical original mask, fixed slip palette and native wine/removal declarations.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\wine-vase-mask.png",
+              "sha256": "a3b7862aeb8b5c85fdaf26560ed79ac700b1f83bde981076ad7fb0c84aceda3e"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/source-packet.json",
+              "sha256": "119ce9ac1c4453ff3fb306e9569610eccca4f3323e6207b442e8a42eb39cac1c"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Reinspect the actual installed VTE urn; reuse its material/rim convention without replacing source shape.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Misc\\Urn.png",
+              "sha256": "c867c7d6d7ae6500d3916701763fc95ba60cb8f522666c273cf4220570d01b23"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/registration-comparison.png",
+              "sha256": "d802994772639470260e7c4f7b82c442781239b923935e60bc1ff9efe54e48c7"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Reuse actual source-identical Vase Blender construction; no new silhouette/model generation is needed.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/source-packet.json",
+              "sha256": "146e3a52e5386b3267c23584a33e10eaed54861a461cacfccc36f34f6d8d7e57"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v1/manual-neutral-master.png",
+              "sha256": "7703cc7ec0955076535fad18b48c602638675dd57c6fa8c040573b382dce16fe"
+            },
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/reuse-controls.json",
+              "sha256": "b361ed7f3cee96fbf4d3286341f82ff595919e9431238d75d7e1246c5d16c289"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Keep one fixed native map tile; wine contents and removed palette randomization do not create a new exterior state.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/source-packet.json",
+              "sha256": "119ce9ac1c4453ff3fb306e9569610eccca4f3323e6207b442e8a42eb39cac1c"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/model.json",
+              "sha256": "209737bd6b676c5488712e55cf554b0a68e148481207e93451d30d54c23d57cd"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Reuse unchanged actual direct Blender pottery refinement and complete neutral two-band slip mask; no new render or ImageGen call.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+              "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/raw-neutral-master.png",
+              "sha256": "8efe00538dfbdb8a14f5a5bf7de8a087ea19e2a3d3b9a565139910cbf4ee7e71"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/independent-structural-review.json",
+              "sha256": "c2516d17165d5d3273ad9a1ca5ceabb80c475594febd797de11bac5541b1ef6b"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Bind actual existing fixed-map/angled renders, full material mask and valid saved-model reopen evidence by hash.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/reuse-controls.json",
+              "sha256": "b361ed7f3cee96fbf4d3286341f82ff595919e9431238d75d7e1246c5d16c289"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-vase/blender-v5/stage-03-refined-model-3d.png",
+              "sha256": "0c445c49041288c20d85fb70911307e8bba2a9949f53afc2012d2a1ce1a60742"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/raw-slip-pass.png",
+              "sha256": "1d1e648d367e74db053c05d72dea855fa746decada33597425407c8af0d46f9a"
+            },
+            {
+              "path": "art/conversion/scn-vase/blender-v5/reopen-audit.json",
+              "sha256": "89878133a8c6237b3c7ae052ee5294768038cf682eeacb7c56f2d43e74df5cb8"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v8.json",
+              "sha256": "2948a43f4d1bbd064f3cd321bc080322dbb94d363f3f25b62336bc4d31e8970b"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Reuse exact full registered layers/frame and apply native fixed w/m color roles with one coverage.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/prepare-and-register.py",
+              "sha256": "89c2f7fb6143df83d2be6e82b563b946f49d41043548a03d72dab0300e6d0d89"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/model.json",
+              "sha256": "209737bd6b676c5488712e55cf554b0a68e148481207e93451d30d54c23d57cd"
+            },
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/native-w-m.png",
+              "sha256": "7c39efcc6e6c398258209455aeb4585b4e71f751bed1a20283d41bbabd143c4f"
+            },
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/registration-decisions.json",
+              "sha256": "163a559b1c41991ad18770b94659ff8276a7e3ca9bbfb90760f79da37fcc184f"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T12:42:29.916482+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Review exact derived magenta-slip/source/size evidence and preserve fresh independent review plus main disposition.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/independent-structural-review.json",
+              "sha256": "3b35c83a10d45b2d6303050e690d80e23b288513af64cc74945f46f95badc806"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/registration-comparison.png",
+              "sha256": "d802994772639470260e7c4f7b82c442781239b923935e60bc1ff9efe54e48c7"
+            },
+            {
+              "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/authoring-review.json",
+              "sha256": "5b41bd6cde7960636e36aa24c4dd073fdf5f044aa9e568f464137182aaf8f908"
+            }
+          ],
+          "review": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v8.json",
+          "sha256": "2948a43f4d1bbd064f3cd321bc080322dbb94d363f3f25b62336bc4d31e8970b"
+        },
+        "resume": {
+          "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+          "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+        },
+        "controls": {
+          "path": "art/conversion/scn-wine-vase/blender-reuse-v1/reuse-controls.json",
+          "sha256": "b361ed7f3cee96fbf4d3286341f82ff595919e9431238d75d7e1246c5d16c289"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/model.json",
+          "sha256": "209737bd6b676c5488712e55cf554b0a68e148481207e93451d30d54c23d57cd"
+        },
+        "plate": {
+          "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/registration-comparison.png",
+          "sha256": "d802994772639470260e7c4f7b82c442781239b923935e60bc1ff9efe54e48c7"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Wine Vase explicitly inherits Vase and uses the exact same native mask/tile and description, so the accepted complete Blender geometry and registered neutral/slip layers are reused byte-exactly. Its actual source removes RandomColors and PopulationLiquidFiller, keeps capacity64, initial wine-1000 volume1d7-1 and fixed w/m decorative slip. Opaque pottery hides the contents; no liquid geometry, altered silhouette, cap, new facing/state or new generation call was invented. Current shared geometry review/reopen evidence still applies to unchanged bytes; a separate fresh review and main inspection cover this exact magenta-slip/source comparison and intended-size proof. Native storage/content behavior and full-set play-distance acceptance remain gated.",
+        "record": {
+          "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/authoring-review.json",
+          "sha256": "5b41bd6cde7960636e36aa24c4dd073fdf5f044aa9e568f464137182aaf8f908"
+        }
+      },
+      "registration_summary": "Exact source-identical retained Blender Vase shape/mask reuse with fixed native magenta slip and original wine contents/removal metadata."
     },
     {
       "id": "SCN-WOVEN-BASKET",
@@ -22753,8 +23308,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -80105,7 +80660,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T12:13:28.140737+00:00",
+  "updated_at": "2026-10-21T12:42:29.916482+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

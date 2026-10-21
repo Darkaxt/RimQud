@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "reason": "Selected direct Blender hollow pottery retains the native large bowl, long neck, flared open mouth, two side handles and two slip bands. Actual VTE Urn.png guides restrained pottery shading only. Prior pale interior was rejected and the actual inward wall darkened. A subsequent review raised cap-like handle emergence; the final surface resumes the complete sound Boolean mesh with local root smoothing and continuous neutral pottery shading. A voxel reconstruction trial was rejected before saving/rendering because it changed topology. Selected geometry reopens as one manifold component, no zero-area faces, Euler-2. The cap-only magenta diagnostic reproduces selected vertex positions exactly and marks40 original terminal faces; zero magenta pixels are exposed. Thus the pale root patch is attachment-surface shading, not an exposed cut cap; its high-resolution seam remains minor polish. Full fixed map face and actual source/native/intended-size plates remain coherent. Final independent review is retained and main-author dispositions govern selection. Native RandomColors/detail, liquid storage, play-distance and full-set acceptance remain gated.",
+  "independent_review": {
+    "path": "art/conversion/scn-vase/blender-v5/independent-structural-review.json",
+    "sha256": "c2516d17165d5d3273ad9a1ca5ceabb80c475594febd797de11bac5541b1ef6b"
+  },
+  "reopen_verification": {
+    "path": "art/conversion/scn-vase/blender-v5/reopen-audit.json",
+    "sha256": "89878133a8c6237b3c7ae052ee5294768038cf682eeacb7c56f2d43e74df5cb8"
+  },
+  "reviewer": {
+    "agent": "/root/vase_selected_surface_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "dispositions": [
+    {
+      "finding": "Prior pale interior reads as a cap",
+      "decision": "FIX NOW RESOLVED",
+      "evidence": {
+        "path": "art/conversion/scn-vase/blender-v3/cavity-refinement-comparison.png",
+        "sha256": "3a54969aa0d08b118a9eaeeda6332bde4476dd7afd52637f1b0e2034593ccdb6"
+      },
+      "reason": "Dark actual inward pottery material establishes recess; no painted cap/hole or geometry substitution."
+    },
+    {
+      "finding": "Cap-like angled handle root",
+      "decision": "NOT SUBSTANTIATED as an exposed cap; MINOR POLISH for emergence shading",
+      "evidence": {
+        "path": "art/conversion/scn-vase/blender-v5/cap-visibility-result.json",
+        "sha256": "3a7a933855bf2e2e9a44a0202ca315ba550649f733d9ecffbca0639a1b6427fd"
+      },
+      "reason": "40 actual terminal faces are marked magenta under exact selected geometry, with0 exposed magenta pixels. The visible patch is outer attachment shading. Local root smoothing retains continuous actual joins; fixed source face has no floating handle."
+    }
+  ],
+  "checks": {
+    "one_coverage_native_w_g_exact": true,
+    "neutral_equal_rgb": true,
+    "detail_coverage_subset": true,
+    "fixed_source_cell_and_anchor": true
+  },
+  "native_acceptance": "Pending full generation gate"
+}

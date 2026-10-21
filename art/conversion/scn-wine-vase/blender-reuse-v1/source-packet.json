@@ -1,0 +1,123 @@
+{
+  "entry": "SCN-WINE-VASE",
+  "identity": "Wine Vase -> Vase -> Vessel -> WaterContainer -> Item",
+  "description": "A large storage vase with a decorative slip. The style hints that it was fired in the home-kiln of a canyon dweller.",
+  "ancestry": {
+    "Wine Vase": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Wine Vase\" Inherits=\"Vase\">\n    <part Name=\"Render\" DisplayName=\"vase\" ColorString=\"&amp;w\" DetailColor=\"m\" Tile=\"Items/sw_jug.bmp\" RenderLayer=\"6\" Occluding=\"false\" />\n    <part Name=\"LiquidVolume\" MaxVolume=\"64\" StartVolume=\"1d7-1\" InitialLiquid=\"wine-1000\" />    \n    <removepart Name=\"RandomColors\" />\n    <removepart Name=\"PopulationLiquidFiller\" />    \n  </object>"
+    },
+    "Vase": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Vase\" Inherits=\"Vessel\">\n    <part Name=\"Render\" DisplayName=\"vase\" ColorString=\"&amp;w\" DetailColor=\"g\" Tile=\"Items/sw_jug.bmp\" RenderLayer=\"6\" Occluding=\"false\" />\n    <part Name=\"Description\" Short=\"A large storage vase with a decorative slip. The style hints that it was fired in the home-kiln of a canyon dweller.\" />\n    <part Name=\"RandomColors\" MainColor=\"w\" DetailColor=\"all\" />\n    <part Name=\"LiquidVolume\" StartVolume=\"0\" MaxVolume=\"64\" />\n    <part Name=\"PopulationLiquidFiller\" Table=\"VesselLiquid_Standard\" Volume=\"1d6\" />\n\t  <stag Name=\"Contemporary\" />\n  </object>"
+    },
+    "Vessel": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Vessel\" Inherits=\"WaterContainer\">\n    <part Name=\"Render\" DisplayName=\"[vase]\" RenderString=\"168\" ColorString=\"&amp;w\" DetailColor=\"g\" Tile=\"Items/sw_jug.bmp\" RenderLayer=\"6\" Occluding=\"false\" TileColor=\"\" />\n    <part Name=\"Physics\" Weight=\"15\" Takeable=\"false\" Organic=\"false\" />\n    <part Name=\"LeakWhenBroken\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Mods\" Value=\"PotteryMods\" />\n    <tag Name=\"QuestableVerb\" Value=\"drink from\" />\n    <tag Name=\"QuestableEvent\" Value=\"BeforeDrink\" />\n    <stag Name=\"LiquidStorage\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"Vessel\" />\n  </object>"
+    },
+    "WaterContainer": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "selected": "<object Name=\"WaterContainer\" Inherits=\"Item\">\n    <part Name=\"LiquidVolume\" MaxVolume=\"64\" Volume=\"0\" />\n    <part Name=\"Render\" DisplayName=\"[Water Container]\" ColorString=\"&amp;b\" RenderString=\"168\" RenderLayer=\"5\" Tile=\"Items/sw_waterskin.bmp\" TileColor=\"&amp;w\" DetailColor=\"y\" />\n    <part Name=\"Physics\" Category=\"Water Containers\" SpecificHeat=\"4.1813\" />\n    <part Name=\"LeakWhenBroken\" />\n    <part Name=\"Commerce\" Value=\"5\" />\n    <part Name=\"NotNameable\" />\n    <part Name=\"LiquidRepellent\" Liquids=\"water,cider,goo,oil,ooze,proteangunk,slime,sludge,wine\" />\n    <stat Name=\"Hitpoints\" Value=\"30\" sValue=\"30\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_liquidContainer\" />\n    <tag Name=\"WaterContainer\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n\t\t<stag Name=\"Storage\" />\n  </object>"
+    },
+    "Item": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Items.xml",
+        "sha256": "49aa1ed76bae9eb03231fb486ccaaeee3bdb4412e7a64e6d5ea3425ef0dbe2ec"
+      },
+      "selected": "<object Name=\"Item\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" DisplayName=\"[Item]\" RenderString=\".\" RenderLayer=\"5\" />\n    <part Name=\"Physics\" Conductivity=\"20\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;Y^k\" />\n    <part Name=\"Stacker\" />\n    <part Name=\"MentalShield\" />\n\t  <tag Name=\"EquipSound\" Value=\"sfx_equip_material_generic_organic\" />\n\t  <tag Name=\"UnequipSound\" Value=\"sfx_unequip_material\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"TinkerCategory\" Value=\"utility\" />\n    <tag Name=\"Item\" />\n    <tag Name=\"DynamicObjectsTable:Items\" />\n  </object>"
+    }
+  },
+  "original_mask": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\wine-vase-mask.png",
+    "sha256": "a3b7862aeb8b5c85fdaf26560ed79ac700b1f83bde981076ad7fb0c84aceda3e"
+  },
+  "original_tile": {
+    "tile": "Items/sw_jug.bmp",
+    "description": "A large storage vase with a decorative slip. The style hints that it was fired in the home-kiln of a canyon dweller.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "vase",
+      "RenderString": "168",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "ColorString": "&w",
+      "Tile": "Items/sw_jug.bmp",
+      "TileColor": "",
+      "DetailColor": "m",
+      "Occluding": "false"
+    },
+    "kind": "scenery",
+    "blueprint": "Wine Vase",
+    "reference_file": "village-originals/wine-vase-reference.png",
+    "native_mask_sha256": "a3b7862aeb8b5c85fdaf26560ed79ac700b1f83bde981076ad7fb0c84aceda3e",
+    "reference_sha256": "4335081b56af5bfe97835704b7112eb0f0456013f46e7a46a25a85861df6d458",
+    "info_id": 9762,
+    "atlas_id": 185,
+    "rect": [
+      648,
+      104,
+      16,
+      24
+    ]
+  },
+  "shape_reuse": {
+    "source_vase": {
+      "path": "art/conversion/scn-vase/blender-v5/registered/model.json",
+      "sha256": "c17003f307a58e1a1f50f96987c651660ea31aa24419725428824039f8b2a4fc"
+    },
+    "blend": {
+      "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+      "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+    },
+    "controls": {
+      "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+      "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+    },
+    "same_native_tile_and_mask": true,
+    "reason": "Native Wine Vase inherits Vase and uses exactly the same Items/sw_jug.bmp mask; no new silhouette, handle, band or exterior state is declared."
+  },
+  "palette": {
+    "primary": "w pottery",
+    "detail": "m fixed decorative slip",
+    "rule": "Wine Vase removes RandomColors. Slip remains decorative, not a visible pool of wine or liquid-driven glass band."
+  },
+  "native_behavior": {
+    "capacity": 64,
+    "initial_volume": "1d7-1",
+    "initial_liquid": "wine-1000",
+    "random_colors_removed": true,
+    "population_liquid_filler_removed": true,
+    "weight": 15,
+    "takeable": false,
+    "leak_when_broken": true,
+    "mods": "PotteryMods",
+    "scope": "Inherited opaque pottery/storage behavior stays native; wine content is hidden by the complete wall. No liquid simulation or invented exterior state."
+  },
+  "donor_reference": {
+    "mod": "Vanilla Textures Expanded",
+    "workshop_id": "2016436324",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2016436324\\Textures\\Things\\Building\\Misc\\Urn.png",
+    "sha256": "c867c7d6d7ae6500d3916701763fc95ba60cb8f522666c273cf4220570d01b23",
+    "role": "Actual Urn.png supplies restrained pottery shading and open-rim/edge convention only. Keep the Qud long neck, pair of handles and two slip bands."
+  },
+  "view_contract": {
+    "production": "One original fixed map view: both symmetric handles connect neck to shoulder; two slip bands remain on bowl; visible open rim.",
+    "diagnostic": "Angled actual model shows hollow mouth, handle depth and continuation of both decorative rings.",
+    "scale": "One16x24 source cell ->512x768 manual ->256square recipient. Anchor8,16; no alpha-bound sizing."
+  },
+  "actual_new_generation": "None. Reuse unchanged accepted complete Blender surface and material masks, then apply exact native w/m palette.",
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

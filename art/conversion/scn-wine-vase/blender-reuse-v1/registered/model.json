@@ -1,0 +1,98 @@
+{
+  "entry": "SCN-WINE-VASE",
+  "kind": "source_dualcolor_hollow_pottery",
+  "blueprint": "Wine Vase",
+  "workflow": "blender-first-v1",
+  "source": {
+    "path": "art/conversion/scn-wine-vase/blender-reuse-v1/source-packet.json",
+    "sha256": "119ce9ac1c4453ff3fb306e9569610eccca4f3323e6207b442e8a42eb39cac1c"
+  },
+  "blender_source": {
+    "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+    "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+  },
+  "blender_controls": {
+    "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+    "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+  },
+  "registration": {
+    "native_canvas": [
+      16,
+      24
+    ],
+    "manual_canvas": [
+      512,
+      768
+    ],
+    "recipient_canvas": [
+      256,
+      256
+    ],
+    "authored_source_anchor": [
+      8,
+      16
+    ],
+    "rule": "One fixed full-cell registration, no alpha-bound fitting or per-layer placement."
+  },
+  "camera": {
+    "production": "One original fixed map view: both symmetric handles connect neck to shoulder; two slip bands remain on bowl; visible open rim.",
+    "diagnostic": "Angled actual model shows hollow mouth, handle depth and continuation of both decorative rings.",
+    "scale": "One16x24 source cell ->512x768 manual ->256square recipient. Anchor8,16; no alpha-bound sizing."
+  },
+  "palette": {
+    "primary": "w pottery",
+    "detail": "m fixed decorative slip",
+    "rule": "Wine Vase removes RandomColors. Slip remains decorative, not a visible pool of wine or liquid-driven glass band."
+  },
+  "native_behavior": {
+    "capacity": 64,
+    "initial_volume": "1d7-1",
+    "initial_liquid": "wine-1000",
+    "random_colors_removed": true,
+    "population_liquid_filler_removed": true,
+    "weight": 15,
+    "takeable": false,
+    "leak_when_broken": true,
+    "mods": "PotteryMods",
+    "scope": "Inherited opaque pottery/storage behavior stays native; wine content is hidden by the complete wall. No liquid simulation or invented exterior state."
+  },
+  "native_state_owner": "One Items/sw_jug.bmp tile, fixed w/m. Remove inherited RandomColors/PopulationLiquidFiller; native wine-1000 initial volume1d7-1 remains native.",
+  "view_policy": "Fixed source map face with both handles. Angled hollow-wall proof is diagnostic, not a new game-facing sprite.",
+  "formula": "coverage*luminance*((1-detail_weight)*foreground+detail_weight*detail)+(1-coverage)*background",
+  "frames": [
+    {
+      "native_tile": "Items/sw_jug.bmp",
+      "primary": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-primary.png",
+        "sha256": "acd208f180d417d2f19a603ae6c6ae0767fc361799a83cd60260c6ebf3b5308c"
+      },
+      "detail": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-detail.png",
+        "sha256": "1b0f68dc92fb3d3fd831ea278eeeeb1134aec168ff358ea2224ffe2111c777eb"
+      },
+      "coverage": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-coverage.png",
+        "sha256": "f2a04ef020eb1d222bae135daa7eb328bd632ff9300eb9541564f0286b08703e"
+      },
+      "detail_weight": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-detail_weight.png",
+        "sha256": "1b74788140136f5eb3c8ea01dc92ac8c34d377364aea6a71670f4e0069de58dc"
+      },
+      "detail_coverage": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-detail_coverage.png",
+        "sha256": "e9f0d7ebbf30570402bc8efdd65e89dd7919525133665bf099b10c3f78847f24"
+      },
+      "authored_dualcolor_mask": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/vase-authored_dualcolor_mask.png",
+        "sha256": "ccc37fec9881369e0d7ffc702a9cdc603068892c1aa274e2b973d748fa287220"
+      }
+    }
+  ],
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate",
+  "blender_variant_controls": {
+    "path": "art/conversion/scn-wine-vase/blender-reuse-v1/reuse-controls.json",
+    "sha256": "b361ed7f3cee96fbf4d3286341f82ff595919e9431238d75d7e1246c5d16c289"
+  },
+  "reuse": "Exact source-identical Vase geometry, full registered neutral layers/masks and original frame; only native tint/metadata differ."
+}

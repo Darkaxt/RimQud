@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T12:13:28.140737+00:00",
+  "updated_at": "2026-10-21T12:42:29.916482+00:00",
   "purpose": "Persistent editable 3D source registry; models are intentional project outputs, not disposable cache.",
   "reuse_rule": "Open the selected .blend and save a new version for local corrections. Preserve prior versions. Use construction replay for recovery or deliberate geometry regeneration, not as a requirement to restart.",
   "assets": [
@@ -551,13 +551,174 @@
         "path": "art/conversion/scn-random-bottle/blender-v8/reopen-audit.json",
         "sha256": "339e3899ff9b2a5644042a24d22655371a20bf6d02224c56751bac58e7522389"
       }
+    },
+    {
+      "entry": "SCN-VASE",
+      "native_item": "Vase / randomized decorative slip",
+      "versions": [
+        {
+          "version": "blender-v1",
+          "blend": {
+            "path": "art/conversion/scn-vase/blender-v1/vase.blend",
+            "sha256": "a1e92eb3022c211913b7b7dd06aa2e69b1c4832d0d8e979e5418cb39502b51b1"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-vase/blender-v1/build-vase.py",
+            "sha256": "110e450e66a9a119d13f4e7e987919f5c098dbcc45f883017bc79644cc411217"
+          },
+          "controls": {
+            "path": "art/conversion/scn-vase/blender-v1/model-controls.json",
+            "sha256": "2f94ca0290411b901c747400d6b7e6d4f1818ce61fd45f97a53589b7ca98ff0e"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-vase/blender-v1/blender-receipt.json",
+            "sha256": "d8635dab43b2ab7bbc86418b084bd1d77ac599a9ff88fdac441fabc63677b7e4"
+          },
+          "status": "Manual shape / superseded material and optional bevel"
+        },
+        {
+          "version": "blender-v2",
+          "blend": {
+            "path": "art/conversion/scn-vase/blender-v2/vase.blend",
+            "sha256": "a7b76fe617ced4c259407c026234111551612398c3a878dcfc93f106cab3a384"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-vase/blender-v2/refine-pottery.py",
+            "sha256": "7c61017617dea576cdbab13e3df823ff53a540ceee8251749ae23942a9c000f5"
+          },
+          "controls": {
+            "path": "art/conversion/scn-vase/blender-v2/model-controls.json",
+            "sha256": "b68c22a9774c78c043531b3fcce83d02e1592d27358485e9353c177cdf4294f2"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-vase/blender-v2/blender-receipt.json",
+            "sha256": "f8b59be5b840d15933f60137b191212b2f874aa7c43f6cce3293b835f8597801"
+          },
+          "status": "Rejected pale cavity; hidden roots/contours/slip retained"
+        },
+        {
+          "version": "blender-v3",
+          "blend": {
+            "path": "art/conversion/scn-vase/blender-v3/vase.blend",
+            "sha256": "03debc0f5df7d1392f7401751c9ad7d6b9e0df0f7adf70cfd09d786f295cf504"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-vase/blender-v3/refine-cavity.py",
+            "sha256": "8d10878dad29fae984a3b5832a2bc53d023dc87b3af7c2aec5d4284d14c5d530"
+          },
+          "controls": {
+            "path": "art/conversion/scn-vase/blender-v3/model-controls.json",
+            "sha256": "d8f1a80d96c63f6320eada53304f1229ae59ff4d2bee448b19044cdf7e434b7c"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-vase/blender-v3/blender-receipt.json",
+            "sha256": "bc6fae21b367f51d3150fc0a85bc775831350f46fb6e8b3b48a894f990b31776"
+          },
+          "status": "Dark cavity retained / handle emergence review held selection"
+        },
+        {
+          "version": "blender-v5",
+          "blend": {
+            "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+            "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-vase/blender-v5/smooth-joined-roots.py",
+            "sha256": "2317c73629f6a65efb570fd7311d6a1f0ff841bd5541dfe08764deecaea87007"
+          },
+          "controls": {
+            "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+            "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-vase/blender-v5/blender-receipt.json",
+            "sha256": "0a4ecd570a829553ab46b04c8cdc780a55f08c8e1f0e9a7ab9f507b740cd1b35"
+          },
+          "status": "GENERATION SELECTED / native pending"
+        }
+      ],
+      "approved_generation_version": "blender-v5",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scn-vase/blender-v5/vase.blend",
+      "registered_model": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/model.json",
+        "sha256": "c17003f307a58e1a1f50f96987c651660ea31aa24419725428824039f8b2a4fc"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scn-vase/blender-v5/registered/authoring-review.json",
+        "sha256": "1795aeb2444e1797a30d1a23af94156d9b668d5698f1814d8da9b79614b0ce11"
+      },
+      "reopen_verification": {
+        "path": "art/conversion/scn-vase/blender-v5/reopen-audit.json",
+        "sha256": "89878133a8c6237b3c7ae052ee5294768038cf682eeacb7c56f2d43e74df5cb8"
+      },
+      "rejected_trials": [
+        {
+          "version": "blender-v4",
+          "script": {
+            "path": "art/conversion/scn-vase/blender-v4/fuse-root-transitions.py",
+            "sha256": "10cbc0350f677a73ce2929f1645cb7dd1fefa18fcffe13d6c11b0cab60496174"
+          },
+          "decision": {
+            "path": "art/conversion/scn-vase/blender-v4/trial-decision.json",
+            "sha256": "028684351e32aac990dbb07325a4caf13017e2e9844102729804a9e3b2749268"
+          },
+          "saved_model": false
+        }
+      ]
+    },
+    {
+      "entry": "SCN-WINE-VASE",
+      "native_item": "Wine Vase / inherited identical Vase geometry, fixed magenta slip and native wine",
+      "versions": [
+        {
+          "version": "reuse-vase-blender-v5",
+          "blend": {
+            "path": "art/conversion/scn-vase/blender-v5/vase.blend",
+            "sha256": "7bcc5bb71c943e985968dc843963c1824ae1bc9a7fe4d2f494ff413fbe00cb03"
+          },
+          "construction_script": {
+            "path": "art/conversion/scn-vase/blender-v5/smooth-joined-roots.py",
+            "sha256": "2317c73629f6a65efb570fd7311d6a1f0ff841bd5541dfe08764deecaea87007"
+          },
+          "controls": {
+            "path": "art/conversion/scn-wine-vase/blender-reuse-v1/reuse-controls.json",
+            "sha256": "b361ed7f3cee96fbf4d3286341f82ff595919e9431238d75d7e1246c5d16c289"
+          },
+          "shared_geometry_controls": {
+            "path": "art/conversion/scn-vase/blender-v5/model-controls.json",
+            "sha256": "0644399622c1b5f8246af126c998a3e34e455a109103166e1de0758a9ddf2c10"
+          },
+          "receipt": {
+            "path": "art/conversion/scn-vase/blender-v5/blender-receipt.json",
+            "sha256": "0a4ecd570a829553ab46b04c8cdc780a55f08c8e1f0e9a7ab9f507b740cd1b35"
+          },
+          "status": "GENERATION SELECTED / exact unchanged shared shape / native pending"
+        }
+      ],
+      "approved_generation_version": "reuse-vase-blender-v5",
+      "approved_production_version": null,
+      "recommended_resume": "art/conversion/scn-vase/blender-v5/vase.blend",
+      "resume_rule": "Open shared source and save a new Wine Vase version before changing geometry; preserve accepted shared Vase model.",
+      "registered_model": {
+        "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/model.json",
+        "sha256": "209737bd6b676c5488712e55cf554b0a68e148481207e93451d30d54c23d57cd"
+      },
+      "authoring_review": {
+        "path": "art/conversion/scn-wine-vase/blender-reuse-v1/registered/authoring-review.json",
+        "sha256": "5b41bd6cde7960636e36aa24c4dd073fdf5f044aa9e568f464137182aaf8f908"
+      },
+      "reopen_verification": {
+        "path": "art/conversion/scn-vase/blender-v5/reopen-audit.json",
+        "sha256": "89878133a8c6237b3c7ae052ee5294768038cf682eeacb7c56f2d43e74df5cb8"
+      }
     }
   ],
   "reopen_verification": {
     "path": "evidence/blender-shape-reopen-audit-v2.json",
     "sha256": "6ceb6946d72cfc6350c050e177cc26a7e1fc981d535a977f1118a8f39ae6ff1d"
   },
-  "revision": 6,
+  "revision": 8,
   "prior_snapshots": [
     {
       "path": "evidence/blender-shape-ledger-history/v1.json",
@@ -578,6 +739,14 @@
     {
       "path": "evidence/blender-shape-ledger-history/v5.json",
       "sha256": "fdefed867156326e34321dc92fca104c60f1eacab485e34fc06322f58ab2fc1a"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v6.json",
+      "sha256": "6b966766b714dc34149acf4f133f2d921f280fcfc2367fe6d7ec361eb95c1e0f"
+    },
+    {
+      "path": "evidence/blender-shape-ledger-history/v7.json",
+      "sha256": "8f36850e135b52d3fdba54eff34b1873bfda6b8671cf0d028471d3755fc6b606"
     }
   ],
   "reusable_fit_proxies": [

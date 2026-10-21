@@ -1,0 +1,21 @@
+{
+  "review_type": "Independent static derivative visual review",
+  "scope": "Wine Vase static comparison and metadata only. No edits to artwork, regeneration, geometry inspection or runtime validation. Shared geometry acceptance is inherited from the cited Vase review, not independently revalidated here.",
+  "inputs": [
+    {"path":"registered/registration-comparison.png","sha256":"d802994772639470260e7c4f7b82c442781239b923935e60bc1ff9efe54e48c7"},
+    {"path":"source-packet.json","sha256":"119ce9ac1c4453ff3fb306e9569610eccca4f3323e6207b442e8a42eb39cac1c"},
+    {"path":"registered/model.json","sha256":"209737bd6b676c5488712e55cf554b0a68e148481207e93451d30d54c23d57cd"},
+    {"path":"../../scn-vase/blender-v5/independent-structural-review.json","sha256":"c2516d17165d5d3273ad9a1ca5ceabb80c475594febd797de11bac5541b1ef6b"}
+  ],
+  "findings": [
+    {"area":"Source identity","severity":"pass","finding":"Wine Vase retains the source long neck, broad storage bowl, paired loop handles and two bands. Source packet records Wine Vase inheriting Vase with the same Items/sw_jug.bmp tile and native mask; the short-neck pedestal urn remains a style reference only."},
+    {"area":"Fixed decorative slip","severity":"pass","finding":"Two separate magenta bands read as surface decoration against the muted primary pottery. This agrees with fixed w/m and removal of RandomColors. Neither band reads as a visible liquid level; native wine contents do not introduce a visible exterior state."},
+    {"area":"Hollow mouth and paired handles","severity":"pass","finding":"The dark mouth within the rim reads as an opening, and both loops visibly join neck and shoulder in the supplied map face. Existing accepted geometry limitations remain those of the shared Vase review."},
+    {"area":"Intended-size clarity","severity":"pass with limitation","finding":"Small comparison samples preserve the vessel silhouette and magenta band cue; paired handles and opening become clearer in the larger samples. The smallest sample necessarily compresses these details, without a consequential identity defect visible here."},
+    {"area":"Faithful geometry reuse","severity":"pass within static scope","finding":"The neutral and tinted comparison share their silhouette, mouth, handle layout and band placement. Model metadata references the accepted Vase blend, controls and registered neutral layers rather than newly authored geometry. This supports the recorded reuse contract; it is not a fresh topology or runtime proof."}
+  ],
+  "fix_now": [],
+  "recommendation": "pass",
+  "recommendation_reason": "No consequential derivative palette, source-identity or static readability defect is visible. Pass applies only to this static Wine Vase derivative; native activation, liquid behavior and full generation acceptance remain pending.",
+  "final_disposition_owner": "Main author"
+}

@@ -15,7 +15,26 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-VASE is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-WOVEN-BASKET is the sole active entry.
+
+Current pottery checkpoint (2026-10-21): Vase and Wine Vase are generation-ready.
+`scn-vase/blender-v5/registered` retains complete hollow two-handled pottery,
+two source slip bands, a clearly recessed mouth and local surface smoothing at
+the handle roots. A topology-changing voxel trial was rejected before saving or
+rendering. The actual cap-only diagnostic matches selected geometry exactly and
+exposes no marked terminal caps in the tested angled view; high-resolution root
+roughness is minor polish. Saved selected geometry is one manifold component
+with no zero-area faces, Euler-2, and no render-material external image dependency.
+Fresh independent visual review and main disposition are retained. Wine Vase
+explicitly inherits the identical source tile/mask, so it reuses the exact accepted
+Blender shape and masks under `scn-wine-vase/blender-reuse-v1`, with fixed native
+w/m slip, removed RandomColors/PopulationLiquidFiller and native wine-1000 volume
+1d7-1. Its own source/palette proof and independent derivative review are retained;
+no new geometry generation or refinement is claimed for reuse. Immutable shape
+registry snapshots7 and8 bind the models and exact resume dependencies.
+There are140 generation-ready entries out of156. The16 pending entries are
+Woven Basket, six signs/shrine, CanvasWall and eight source-based exclusion reviews.
+Every entry remains unfinished for native acceptance; no native check was run.
 
 Random Bottle direction (2026-10-21): depict transparent glass with visible
 liquid inside, as the user identified from the source. Keep a translucent glass
@@ -25,7 +44,7 @@ interpretation. Opaque neutral renders are geometry drafts, not the selected
 glass finish. Preserve native liquid/seal/content behavior and the generation
 gate; do not invent new tile states or simulate liquid during authoring.
 
-Random Bottle authoring checkpoint: `scn-random-bottle/blender-v8/registered`
+Prior Random Bottle authoring checkpoint: `scn-random-bottle/blender-v8/registered`
 selects the transparent hollow glass shell and independently tintable liquid.
 Actual handle terminal geometry replaces flat caps, and the liquid has positive
 sampled clearance from the evaluated bowl cavity. Rejected sphere-union and
@@ -34,8 +53,8 @@ no consequential structural defect; frontal mouth contrast and bright neutral
 highlights are minor polish for the full-set play-distance test. All eight
 editable model versions are indexed in immutable Blender registry snapshot6.
 Filled, empty-glass and contrasting liquid-role proofs appear in the lazy report.
-There are138 generation-ready entries and18 pending; native acceptance remains
-unfinished for every entry. Vase is the sole next active entry.
+At that checkpoint138 entries were generation-ready and18 pending; native
+acceptance remained unfinished for every entry, and Vase followed as active entry.
 
 Current status correction (2026-10-20): **Stage 3 is ACTIVE and every asset is
 unfinished**, including previously selected Tam/Ctesiphus. The user explicitly
@@ -55,14 +74,14 @@ that every component was individually visually inspected or that art is flawless
 At the retrospective screening,19 entries had no current created set and received
 no visual approval; subsequent entries receive their own authoring reviews.
 
-The flagged-art queue is resolved for generation. Continue with Vase and keep
+The flagged-art queue is resolved for generation. Continue with Woven Basket and keep
 one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.
 Source-specific references and explicit user art choices remain authoritative.
 
 No directly affected audit row still has readiness withheld. There are
-138 generation-ready entries of156, with18 pending entries including source-based
+140 generation-ready entries of156, with16 pending entries including source-based
 exclusion reviews. Yrame's direct Blender horn fit, item
 aggregate and named assembly have been refreshed with a calibrated reusable
 head proxy, unchanged complete horn volume and source-bound directional depth.
@@ -72,7 +91,7 @@ now retain one original hand contour. Both corrections received fresh independen
 authoring review and main-author disposition. Editable Blender source and
 versioned shape-registry snapshots are retained for resuming refinements.
 Every entry remains unfinished for native acceptance; Stage3 is the sole ACTIVE
-stage and SCN-VASE the sole active entry. The door now derives both
+stage and SCN-WOVEN-BASKET the sole active entry. The door now derives both
 states from an editable Blender slab and shared connected hinge axis; static
 independent review passed, with dark hardware material as minor polish. Its
 source slate wear and state/palette/frame bindings remain intact. Closer original-alpha

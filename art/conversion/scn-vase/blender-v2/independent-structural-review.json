@@ -1,0 +1,19 @@
+{
+  "review_type": "independent visual structural review",
+  "scope": "Supplied PNGs and source packet only; no geometry inspection, native activation or runtime acceptance",
+  "inputs": [
+    {"path":"raw-neutral-master.png","sha256":"F827C261E0FEA1D38F5B812356C3DA6FA63368DD28FC2B8B2A347988439C765B"},
+    {"path":"stage-03-refined-model-3d.png","sha256":"5CD4425E5C55EA906312AEF5CFAA9C7A54902763CF4E29095802777F316DC73C"},
+    {"path":"../blender-v1/source-reference-comparison.png","sha256":"7F28DA7A1736DB399832969F732F6E438CEBE20DF70EDCA61106860A7E57FF3D"},
+    {"path":"../blender-v1/source-packet.json","sha256":"146E3A52E5386B3267C23584A33E10EAED54861A461CACFCCC36F34F6D8D7E57"}
+  ],
+  "findings": [
+    {"id":"mouth-readability","severity":"medium","consequential":true,"finding":"The flared rim is clear, but its interior is pale and carries broad material shading similar to the outside. Especially in the fixed view, it can read as an elliptical cap rather than a deep opening. The angled diagnostic also provides little depth cue beyond the rim. This is visual ambiguity, not proof of a capped mesh.","action":"Establish a visibly recessed cavity using the actual existing interior geometry and restrained interior shading; inspect the intended small display sizes."},
+    {"id":"handle-contact","severity":"minor","consequential":false,"finding":"Both production-view loops visibly meet neck and shoulder with continuous silhouettes. The angled right handle has conspicuous blunt attachment edges and a lower terminal appearing laid on the shoulder, but no unambiguous air gap is visible. Treat attachment smoothing as high-resolution polish unless small-size rendering exposes a break."},
+    {"id":"source-identity","severity":"none","consequential":false,"finding":"Long narrow neck, flared mouth, paired side loops, large complete bowl and two horizontal slip bands preserve the source identity. No donor pedestal or short-neck substitution is present."},
+    {"id":"bowl-and-bands","severity":"none","consequential":false,"finding":"The bowl is complete and uncropped. Two distinct bands lie on the bowl and follow its curved surface in the angled image. PNG appearance supports separate visible regions, but does not independently prove material or mask ownership."},
+    {"id":"framing-background","severity":"none","consequential":false,"finding":"No visible crop, stray object or background artifact appears in either supplied image. Image-viewer black background alone cannot establish alpha correctness or full-cell registration."}
+  ],
+  "fix_now": ["Resolve mouth-readability with an unmistakable recessed interior in the fixed view, without altering the source silhouette or introducing visible contents."],
+  "recommendation": "Source structure otherwise acceptable for further art processing. Address mouth readability before final visual acceptance; do not spend the current pass on minor attachment polish. Verify alpha, ownership masks, full source-cell mapping and actual 16x24/24x36/32x48 outputs separately. This review does not grant native/runtime acceptance."
+}

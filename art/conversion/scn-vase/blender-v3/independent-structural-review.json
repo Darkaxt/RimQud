@@ -1,0 +1,56 @@
+{
+  "review_type": "independent bounded visual structural review",
+  "scope": "Images only; no model inspection or runtime validation",
+  "input_hash_algorithm": "SHA256",
+  "inputs": [
+    {
+      "path": "blender-v3/cavity-refinement-comparison.png",
+      "sha256": "3A54969AA0D08B118A9EAEEDA6332BDE4476DD7AFD52637F1B0E2034593CCDB6"
+    },
+    {
+      "path": "blender-v3/raw-neutral-master.png",
+      "sha256": "F43000A0746E56A94C1A2E4838CE941627F08ED95767CB6EC94FF5750412C2FB"
+    },
+    {
+      "path": "blender-v3/stage-03-refined-model-3d.png",
+      "sha256": "5CAED032ABB06BC844F4F9FFFF459D39057431B58AF11C6617CC22C0436A1AFA"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "7F28DA7A1736DB399832969F732F6E438CEBE20DF70EDCA61106860A7E57FF3D"
+    }
+  ],
+  "findings": [
+    {
+      "area": "hollow mouth",
+      "severity": "pass",
+      "finding": "Dark opening and rim clearly read as hollow in the map face and angled diagnostic. The former bright apparent plug is removed. At the smallest authoring size the opening is subtle but remains dark."
+    },
+    {
+      "area": "handles",
+      "severity": "consequential visual concern",
+      "finding": "Both loops are continuous and attached in the map face. In the angled diagnostic the near/right handle has a conspicuous pale capped lower termination on the shoulder, and a squared upper root. The lower root reads as a separate strip placed on the vessel rather than a continuous ceramic attachment. No definite background gap is visible, so image evidence does not prove disconnected geometry."
+    },
+    {
+      "area": "bowl and silhouette",
+      "severity": "pass",
+      "finding": "Broad storage bowl, rounded base, long narrow neck, flared mouth and two side loops preserve the source identity. Smooth shoulders and rounded body are reasonable translations of the coarse source pixels."
+    },
+    {
+      "area": "decorative bands",
+      "severity": "pass",
+      "finding": "Two distinct horizontal slip bands remain on the lower bowl, wrapping coherently in the diagnostic and matching source placement."
+    },
+    {
+      "area": "minor polish",
+      "severity": "minor",
+      "finding": "The large mouth has slightly irregular tonal patches and the handles show flat sectional shading. These do not compromise the map face or require further work by themselves."
+    }
+  ],
+  "fix_now": [
+    "Resolve or explicitly disposition the conspicuous capped lower root of the near/right handle in the angled diagnostic; show a convincing continuous attachment to the shoulder. Preserve the successful map silhouette and dark mouth."
+  ],
+  "recommendation": "hold",
+  "disposition_owner": "main author",
+  "limitation": "Hold is based on visual attachment readability, not a claim of mesh disconnection. Main author owns final disposition."
+}

@@ -1,0 +1,61 @@
+{
+  "review_type": "Independent visual structural artwork review",
+  "scope": "Provided images and recorded cap diagnostic only; no edits, regeneration or runtime validation.",
+  "inputs": [
+    {
+      "path": "root-refinement-comparison.png",
+      "sha256": "7948654023635a1e0482a6846605dcda49fad136a0d2662deda0b2d705dce2e8"
+    },
+    {
+      "path": "raw-neutral-master.png",
+      "sha256": "8efe00538dfbdb8a14f5a5bf7de8a087ea19e2a3d3b9a565139910cbf4ee7e71"
+    },
+    {
+      "path": "stage-03-refined-model-3d.png",
+      "sha256": "0c445c49041288c20d85fb70911307e8bba2a9949f53afc2012d2a1ce1a60742"
+    },
+    {
+      "path": "cap-visibility-diagnostic.png",
+      "sha256": "8b1f12b7b8f1592eacc98d42dd4b7875c79207c546690650c3614a54cbae0154"
+    },
+    {
+      "path": "cap-visibility-result.json",
+      "sha256": "3a7a933855bf2e2e9a44a0202ca315ba550649f733d9ecffbca0639a1b6427fd"
+    },
+    {
+      "path": "../blender-v1/source-reference-comparison.png",
+      "sha256": "7f28da7a1736db399832969f732f6e438cebe20df70edca61106860a7e57ff3d"
+    }
+  ],
+  "findings": [
+    {
+      "area": "Source identity",
+      "severity": "pass",
+      "finding": "Long neck, flared mouth, two side loop handles, broad storage body and two decorative bands preserve the actual source identity. The reference urn short neck and pedestal have not displaced the source silhouette."
+    },
+    {
+      "area": "Hollow opening",
+      "severity": "pass",
+      "finding": "Dark interior bounded by a visible bright rim reads as an open pottery mouth in the map face and oblique view. The simplified interior shading is adequate for the intended small map presentation."
+    },
+    {
+      "area": "Handle contact and continuity",
+      "severity": "minor polish",
+      "finding": "Both loops remain continuous and visually contact the neck and shoulder. Oblique root transitions are abrupt and locally rough at high resolution, especially the near right upper root, but no consequential detached gap is evident in the supplied views."
+    },
+    {
+      "area": "Cap diagnostic",
+      "severity": "pass with limitation",
+      "finding": "Recorded diagnostic marks 40 actual terminal cap faces, reports zero visible magenta pixels and zero selected geometry maximum vertex delta. This supports that visible root patches are not exposed marked terminal caps in this diagnostic view. It does not independently prove manifold topology, all-angle cap concealment, or native runtime behavior."
+    },
+    {
+      "area": "Intended sizes",
+      "severity": "pass",
+      "finding": "Provided 16x24, 24x36 and 32x48 samples retain the vase silhouette, mouth cue and paired handles; the two bands are clearer at the larger sizes. High-resolution root roughness does not materially impair the map-face read."
+    }
+  ],
+  "fix_now": [],
+  "recommendation": "pass",
+  "recommendation_reason": "No consequential source-identity, opening or handle-continuity defect is visible in the supplied evidence. Remaining root smoothness is optional high-resolution polish.",
+  "final_disposition_owner": "Main author"
+}
