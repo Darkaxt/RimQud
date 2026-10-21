@@ -1,0 +1,52 @@
+{
+  "review_type": "independent visual structural review",
+  "scope": "Image and source-packet inspection only; no mesh/runtime validation",
+  "inputs": [
+    {
+      "path": "blender-v2/stage-03-refined-model-3d.png",
+      "sha256": "b447b6d49b305cb44b0ce26216b35d91544fe56a435ee44e4ef1f7afa9933c46"
+    },
+    {
+      "path": "blender-v2/south-neutral-master.png",
+      "sha256": "843bb72e17f9ba7ca2e692798b41faf58fb0793a811d5e89c5f9e181a382c0cd"
+    },
+    {
+      "path": "blender-v2/east-neutral-master.png",
+      "sha256": "930a73825bf098201f88cb841111683d637615d9e4421f50448d43c6b49c8e84"
+    },
+    {
+      "path": "blender-v2/north-neutral-master.png",
+      "sha256": "d47834887ed695bc94bfc7de4434fe7a0fba9c9d167df2e5ff704221a04e0b4e"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "fcb9aebc5239181fc0fd1b41d837688e23ca11f1a71fe4877b667c1fd1a23b81"
+    },
+    {
+      "path": "blender-v1/source-packet.json",
+      "sha256": "0a1506afae1ea50da9f1340511c7290a373863dbd00ad88eeac31dca8cd64ea1"
+    }
+  ],
+  "recommendation": "hold",
+  "findings": [
+    {
+      "action": "Resolve the diagonal interior strip and central cavity spikes; retain a clean hollow interior or show continuous intentionally integrated interior weave.",
+      "id": "F1",
+      "severity": "medium",
+      "evidence": "stage-03-refined-model-3d.png: bright diagonal reed-like strip spans the otherwise empty bowl interior, from lower-left/front toward upper-right/back. south-neutral-master.png has two pointed slivers at the center of the cavity; north-neutral-master.png has one central pointed sliver. These read as stray penetrating strand geometry, not an intentional continuous interior weave.",
+      "requirement": "Hollow empty bowl, integrated weave, no stray fragments or inferred contents"
+    }
+  ],
+  "fix_now": [
+    "F1: remove or correctly integrate the interior diagonal strip and center spikes, then rerender the same views for inspection."
+  ],
+  "observations": [
+    "Low rounded woven bowl and tall single carry arch preserve the source identity. No identified inventory contents have been added.",
+    "Bowl is visibly hollow, with open rim and shaded inner wall.",
+    "Handle is continuous around its arch; both south/north ends visibly reach the bound rim, and east shows an appropriate edge-on profile with binding. Image inspection does not prove mesh connectivity.",
+    "Exterior horizontal courses and vertical uprights read as integrated woven wall; no detached exterior fragments observed.",
+    "All reviewed object views have clear margins and no object crop.",
+    "South is the production map view; east/north are reviewed only as auxiliary actual geometry views."
+  ],
+  "disposition_owner": "Main author"
+}

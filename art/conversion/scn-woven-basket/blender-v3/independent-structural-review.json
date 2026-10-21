@@ -1,0 +1,70 @@
+{
+  "review_type": "Independent rendered-art structural review",
+  "scope": "Supplied renders and source evidence only; no geometry/runtime verification",
+  "inputs": [
+    {
+      "path": "blender-v3/three-view-authoring-comparison.png",
+      "sha256": "2de85bc54ff2d0dde6d42d4f666844b9de9bd9118b77af0bdc97faec962edac3"
+    },
+    {
+      "path": "blender-v3/stage-03-refined-model-3d.png",
+      "sha256": "9174933e532c1388d275407ba11af4b1920d604f2436b12359f3b444e915c6dc"
+    },
+    {
+      "path": "blender-v3/south-neutral-master.png",
+      "sha256": "291a09a602b84345099be489fce7af7c4139ca239b8a24e805dfe5001e205755"
+    },
+    {
+      "path": "blender-v3/east-neutral-master.png",
+      "sha256": "b87144aec5c31cd9aae5ac52250d7050fcbb8723f058fb9bf90b58a768f0fa76"
+    },
+    {
+      "path": "blender-v3/north-neutral-master.png",
+      "sha256": "a4f012404b514f1ebe668ac36b798583a6777a4b20354dbda0f086ece3616b6e"
+    },
+    {
+      "path": "blender-v1/source-reference-comparison.png",
+      "sha256": "fcb9aebc5239181fc0fd1b41d837688e23ca11f1a71fe4877b667c1fd1a23b81"
+    },
+    {
+      "path": "blender-v1/source-packet.json",
+      "sha256": "0a1506afae1ea50da9f1340511c7290a373863dbd00ad88eeac31dca8cd64ea1"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "pass",
+      "area": "source_identity",
+      "finding": "Low rounded woven bowl, bound rim and one tall continuous carrying arch preserve the source identity. Empty cavity contains no inferred goods."
+    },
+    {
+      "severity": "pass",
+      "area": "cavity_and_strands",
+      "finding": "Oblique cavity is clear. No consequential strand intrusion or detached floating piece is visible. Exterior warp/weft reads as attached continuous woven surface."
+    },
+    {
+      "severity": "pass",
+      "area": "attachment_and_continuity",
+      "finding": "Both arch ends meet the rim/wall, with small binding marks at the junctions. Arch and bound rim are visually continuous in the supplied south, north and oblique views."
+    },
+    {
+      "severity": "pass",
+      "area": "common_frame_views",
+      "finding": "East is a physically edge-on carrying arch over the same bowl; south/north retain the full arch. These are consistent authoring views, not evidence of extra native map states."
+    },
+    {
+      "severity": "pass",
+      "area": "supplied_small_scale_readability",
+      "finding": "At supplied 16x24, 24x36 and 32x48 comparisons, south/north preserve the arch-and-low-bowl silhouette. Weave becomes tonal texture at 16x24, with better courses at larger sizes. East loses the arch opening as expected edge-on; it is an authoring view."
+    },
+    {
+      "severity": "minor_polish",
+      "area": "high_resolution_surface",
+      "finding": "Small dark seams and short binding ends at rim/handle joins, and slight unevenness at the bottom strand termination, are visible at master scale. They do not read as contents, separate floating pieces, or consequential small-scale defects."
+    }
+  ],
+  "fix_now": [],
+  "recommendation": "pass",
+  "disposition_owner": "Main author",
+  "limitations": "Visual structural recommendation only. No mesh topology, native activation, runtime, palette ownership or delivery validation performed."
+}

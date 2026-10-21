@@ -1,0 +1,107 @@
+{
+  "entry": "SCN-WOVEN-BASKET",
+  "identity": "Woven Basket -> Furniture -> InorganicObject -> PhysicalObject -> Object",
+  "description": "Marsh reed was handcrossed by warp and weft into a vessel for sheaf and other dry goods.",
+  "ancestry": {
+    "Woven Basket": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Woven Basket\" Inherits=\"Furniture\">\n    <part Name=\"Render\" DisplayName=\"woven basket\" ColorString=\"&amp;w\" DetailColor=\"w\" RenderString=\"229\" Tile=\"Items/sw_basket.bmp\" Occluding=\"false\" RenderIfDark=\"true\" />\n\t\t<part Name=\"Description\" Short=\"Marsh reed was handcrossed by warp and weft into a vessel for sheaf and other dry goods.\" />\n    <tag Name=\"EmptyTile\" Value=\"Items/sw_basket.bmp\" />\n    <tag Name=\"FullTile\" Value=\"Items/sw_basket.bmp\" />\n    <part Name=\"Physics\" Weight=\"3\" Organic=\"true\" Takeable=\"false\" />    \n    <property Name=\"DontWarnOnOpen\" Value=\"true\" />\n    <part Name=\"Container\" />\n    <part Name=\"Inventory\" />\n    <stag Name=\"Storage\" />\n    <stag Name=\"Cheap\" />\n\t\t<stag Name=\"Contemporary\" />\n    <tag Name=\"QuestableVerb\" Value=\"put something in\" />\n    <tag Name=\"QuestableEvent\" Value=\"CommandTakeObject\" />\n  </object>"
+    },
+    "Furniture": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Furniture.xml",
+        "sha256": "b3536f2debf912194e43e23eb5b96e10feafd97dbd4682c807732b2db19054ae"
+      },
+      "selected": "<object Name=\"Furniture\" Inherits=\"InorganicObject\">\n    <part Name=\"Render\" RenderLayer=\"6\" Occluding=\"false\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Conductivity=\"20\" Organic=\"false\" />\n    <part Name=\"Examiner\" Unknown=\"UnknownStrangeFurniture\" KeepTile=\"true\" />\n    <tag Name=\"Furniture\" Value=\"1\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <stag Name=\"InsideFurniture\" />\n    <stag Name=\"InsideWallFurniture\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"NoAutoget\" Value=\"1\" />\n    <tag Name=\"Tier\" Value=\"0\" />\n    <part Name=\"Graffitied\" ChanceOneIn=\"300\" />\n    <tag Name=\"BlocksDoors\" />\n    <tag Name=\"DiscardInsteadOfGeneratingStacked\" Value=\"1\" />\n    <stag Name=\"Furniture\" />\n    <tag Name=\"TakeDamageSound\" Value=\"Sounds/Damage/sfx_damage_manufacturedWood\" />\n    <tag Name=\"DeathSounds\" Value=\"Sounds/Damage/sfx_destroy_manufacturedWood\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_animatedFurniture\" />\n  </object>"
+    },
+    "InorganicObject": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"InorganicObject\" Inherits=\"PhysicalObject\">\n    <part Name=\"Inorganic\" />\n    <stat Name=\"DV\" Value=\"-20\" />\n    <part Name=\"Physics\" Organic=\"false\" />\n    <tag Name=\"Gender\" Value=\"neuter\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Breakable\" />\n  </object>"
+    },
+    "PhysicalObject": {
+      "file": {
+        "path": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+        "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44"
+      },
+      "selected": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>"
+    }
+  },
+  "original_mask": {
+    "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\woven-basket-mask.png",
+    "sha256": "c50908dd1950d249c36e2e4b47696e0b8722f35c406dc0a16dfa167547bb0d5a"
+  },
+  "original_tile": {
+    "tile": "Items/sw_basket.bmp",
+    "description": "Marsh reed was handcrossed by warp and weft into a vessel for sheaf and other dry goods.",
+    "render": {
+      "Name": "Render",
+      "DisplayName": "woven basket",
+      "RenderString": "229",
+      "RenderLayer": "6",
+      "RenderIfDark": "true",
+      "Occluding": "false",
+      "ColorString": "&w",
+      "DetailColor": "w",
+      "Tile": "Items/sw_basket.bmp"
+    },
+    "kind": "scenery",
+    "blueprint": "Woven Basket",
+    "reference_file": "village-originals/woven-basket-reference.png",
+    "native_mask_sha256": "c50908dd1950d249c36e2e4b47696e0b8722f35c406dc0a16dfa167547bb0d5a",
+    "reference_sha256": "6d07d2af0eb45158894389ff34b8e7db1d9f8239f61abb7dc20e58017791a1d4",
+    "info_id": 9286,
+    "atlas_id": 185,
+    "rect": [
+      252,
+      312,
+      16,
+      24
+    ]
+  },
+  "source_features": "Low rounded woven vessel beneath a tall arching carry loop. Bottom warp/weft marks establish woven reed material. Small internal glyph marks do not identify actual inventory contents.",
+  "source_behavior": {
+    "container": true,
+    "inventory": true,
+    "empty_tile": "Items/sw_basket.bmp",
+    "full_tile": "Items/sw_basket.bmp",
+    "dont_warn_on_open": true,
+    "weight": 3,
+    "organic": true,
+    "takeable": false,
+    "scope": "Native dry-goods inventory/open behavior, furniture tags and organic damage remain native. Empty/full tile is identical; no new lid or contents state."
+  },
+  "palette": {
+    "primary": "w metadata foreground, unused by visible source ink",
+    "detail": "w all visible reed ink",
+    "original_ink_all_detail": true,
+    "rule": "Keep neutral reed shading and one coverage; all visible shape uses detail ownership, as in the original mask."
+  },
+  "donor_reference": {
+    "mod": "Primitive Storage",
+    "package_id": "PrimitiveStorage.velcroboy333",
+    "workshop_id": "2249071438",
+    "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2249071438\\Common\\Textures\\Things\\HMC_Woven_Basket\\HMC_Woven_Basket.png",
+    "sha256": "fa2f3f660d2d3f4c43685250e995977beae05832b04a4d9746e5a0738ce2b523",
+    "about": {
+      "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2249071438\\About\\About.xml",
+      "sha256": "9b8c38dddbd1f37fed8875f1ab1f489aec8a7a05599734d19c352f388a2d002f"
+    },
+    "role": "Actual installed woven storage basket supplies reed-crossing/shadow/edge convention. Keep the source rounded bowl and tall single arch; do not import rectangular donor footprint, capacity, stored goods or game behavior."
+  },
+  "authored_interpretation": "A complete hollow close-woven bowl with bound rim, one tall carry loop and visible warp/weft courses. Hidden depth, thickness, strand count and weave geometry are authored; no contents inferred.",
+  "view_contract": {
+    "south": "Source map-facing tall arch left/right over open low bowl; two loop ends continue into bound rim/wall.",
+    "east": "Actual same object profile, adequate bowl depth, physically edge-on loop; no independent panel compression.",
+    "north": "Actual same object back, same complete arch/rim and continuous weave.",
+    "production": "One original fixed map tile only. East/north are retained authoring views, not new native direction states.",
+    "scale": "16x24 native source ->512x768 manual ->256square recipient, anchor8,16; one physical frame for all exports."
+  },
+  "native_activation": false,
+  "native_acceptance": "Pending full generation gate"
+}

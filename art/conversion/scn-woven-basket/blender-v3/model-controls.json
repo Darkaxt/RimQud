@@ -1,0 +1,164 @@
+{
+  "source": {
+    "path": "art/conversion/scn-woven-basket/blender-v1/source-packet.json",
+    "sha256": "0a1506afae1ea50da9f1340511c7290a373863dbd00ad88eeac31dca8cd64ea1"
+  },
+  "body_radii": [
+    5.4,
+    4.1
+  ],
+  "outer_profile_scale_y": [
+    [
+      0,
+      19.0
+    ],
+    [
+      0.72,
+      19.0
+    ],
+    [
+      0.84,
+      18.5
+    ],
+    [
+      0.95,
+      17.5
+    ],
+    [
+      1.0,
+      15.1
+    ],
+    [
+      1.0,
+      13.8
+    ]
+  ],
+  "inner_profile_scale_y": [
+    [
+      0.93,
+      13.8
+    ],
+    [
+      0.93,
+      15.1
+    ],
+    [
+      0.88,
+      17.2
+    ],
+    [
+      0.77,
+      18.1
+    ],
+    [
+      0.65,
+      18.6
+    ],
+    [
+      0,
+      18.6
+    ]
+  ],
+  "handle_points_x_y_down": [
+    [
+      -5.15,
+      14.5
+    ],
+    [
+      -5.5,
+      11.5
+    ],
+    [
+      -4.9,
+      8.2
+    ],
+    [
+      -3,
+      6.2
+    ],
+    [
+      0,
+      5.65
+    ],
+    [
+      3,
+      6.2
+    ],
+    [
+      4.9,
+      8.2
+    ],
+    [
+      5.5,
+      11.5
+    ],
+    [
+      5.15,
+      14.5
+    ]
+  ],
+  "handle_radius": 0.24,
+  "body_wall": "Complete closed-weave hollow wall with separate inner shading, no lid or baked inventory.",
+  "handle_join": "Loop ends continue into sidewall; two bound reed loops at each foot visibly tie them to the rim/wall.",
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      8,
+      -42,
+      18
+    ],
+    "target": [
+      8,
+      0,
+      12
+    ],
+    "ortho_scale": 24,
+    "canvas": [
+      512,
+      768
+    ]
+  },
+  "authored_dimensions": "Hidden depth/wall thickness/strand count are authored; common frame and source low-bowl/tall-loop proportions retained.",
+  "new_imagegen_call": false,
+  "native_activation": false,
+  "resumed_from": {
+    "path": "art/conversion/scn-woven-basket/blender-v2/basket.blend",
+    "sha256": "62b083231ebed97640032e872a1776a853b1833e8532594db547854a2a92a07b"
+  },
+  "weave": {
+    "warp_count": 16,
+    "weft_courses": 6,
+    "actual_wall_fit": "Deterministic evaluated outer-wall cross sections, alternating over/under displacement, real strand thickness.",
+    "course_centers_y": [
+      14.4,
+      15.200000000000001,
+      16.0,
+      16.8,
+      17.6,
+      18.4
+    ],
+    "strand_thickness": 0.06,
+    "openings": "Close-woven foundation remains continuous; no inventory contents or unrelated floating marks."
+  },
+  "facings": {
+    "south": 0,
+    "east": -90,
+    "north": 180
+  },
+  "source_selection": "Direct Blender neutral reeds, bound loop/rim and contours preserve shape and weave. No ImageGen or isolation call.",
+  "production_view": "south only; east/north retained as actual common-frame authoring views, not added native direction states.",
+  "review_trigger": {
+    "path": "art/conversion/scn-woven-basket/blender-v2/independent-structural-review.json",
+    "sha256": "3ec1b3e3cde482bb06d171c3f804c5456242e6f67a23982918ab21f365c70092"
+  },
+  "weave_fit_correction": {
+    "method": "Intersect evaluated bowl mesh edges with each strand-height plane and take the outer normalized elliptical radius. No directional ray can tunnel through a mesh seam or select the far wall.",
+    "sampled_sections": 76,
+    "radius_range": [
+      0.791608264584286,
+      0.9967318429952842
+    ],
+    "body_rim_handle_unchanged": true,
+    "all_ribbon_topology_preserved": true
+  }
+}

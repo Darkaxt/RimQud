@@ -15,9 +15,37 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-WOVEN-BASKET is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-ARGYVESIGN is the sole active entry.
 
-Current pottery checkpoint (2026-10-21): Vase and Wine Vase are generation-ready.
+Current woven-basket checkpoint (2026-10-21):
+`scn-woven-basket/blender-v3/registered` selects a complete hollow close-woven
+reed bowl, bound rim and single tall carrying loop, with16 actual warp ribbons
+and6 weft courses. Primitive Storage's installed basket supplies the material
+reference. Initial seam-sensitive ray fitting pulled part of the top course
+across the cavity; its images, fresh hold review and negative outward-projection
+diagnostic are retained. Deterministic evaluated outer-wall cross sections now
+fit the strands without opposite-wall samples. Fresh independent review and
+main inspection pass the clear cavity and source identity. Master-scale binding
+and bottom-strand seams remain minor polish. Saved assembled elements reopen
+with geometric closure and no external render-image dependency. Native source
+ink is entirely detail w; registered layers preserve that ownership under one
+coverage. Actual common-frame south/east/north exports are retained, while south
+alone maps the original identical empty/full tile. Immutable shape-registry
+snapshot9 retains all three editable versions. There are141 generation-ready
+entries and15 pending: six signs/shrine, CanvasWall and eight source-based
+exclusion reviews. Every entry remains unfinished for native acceptance.
+
+Structural-tile direction (2026-10-21): new or revised walls and similar solid
+structural tiles use Blender as the authoritative shape source, including the
+pending CanvasWall. Model source-supported wall thickness, edges, corners and
+joins in3D, then export the required registered2D tile/view/neighbor states from
+the shared camera and physical frame. Distinguish authored hidden depth from
+native facts, preserve palette/coverage/connection ownership and retain editable
+models. Appropriate ground surfaces keep their source-supported map-plane form.
+This confirms the Blender-first route; it does not reopen usable existing sets,
+invent unsupported neighbor states or permit native validation before generation.
+
+Prior pottery checkpoint (2026-10-21): Vase and Wine Vase are generation-ready.
 `scn-vase/blender-v5/registered` retains complete hollow two-handled pottery,
 two source slip bands, a clearly recessed mouth and local surface smoothing at
 the handle roots. A topology-changing voxel trial was rejected before saving or
@@ -32,7 +60,7 @@ w/m slip, removed RandomColors/PopulationLiquidFiller and native wine-1000 volum
 1d7-1. Its own source/palette proof and independent derivative review are retained;
 no new geometry generation or refinement is claimed for reuse. Immutable shape
 registry snapshots7 and8 bind the models and exact resume dependencies.
-There are140 generation-ready entries out of156. The16 pending entries are
+At that checkpoint140 entries were generation-ready out of156. The16 pending entries were
 Woven Basket, six signs/shrine, CanvasWall and eight source-based exclusion reviews.
 Every entry remains unfinished for native acceptance; no native check was run.
 
@@ -74,14 +102,14 @@ that every component was individually visually inspected or that art is flawless
 At the retrospective screening,19 entries had no current created set and received
 no visual approval; subsequent entries receive their own authoring reviews.
 
-The flagged-art queue is resolved for generation. Continue with Woven Basket and keep
+The flagged-art queue is resolved for generation. Continue with ArgyveSign and keep
 one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.
 Source-specific references and explicit user art choices remain authoritative.
 
 No directly affected audit row still has readiness withheld. There are
-140 generation-ready entries of156, with16 pending entries including source-based
+141 generation-ready entries of156, with15 pending entries including source-based
 exclusion reviews. Yrame's direct Blender horn fit, item
 aggregate and named assembly have been refreshed with a calibrated reusable
 head proxy, unchanged complete horn volume and source-bound directional depth.
@@ -91,7 +119,7 @@ now retain one original hand contour. Both corrections received fresh independen
 authoring review and main-author disposition. Editable Blender source and
 versioned shape-registry snapshots are retained for resuming refinements.
 Every entry remains unfinished for native acceptance; Stage3 is the sole ACTIVE
-stage and SCN-WOVEN-BASKET the sole active entry. The door now derives both
+stage and SCN-ARGYVESIGN the sole active entry. The door now derives both
 states from an editable Blender slab and shared connected hinge axis; static
 independent review passed, with dark hardware material as minor polish. Its
 source slate wear and state/palette/frame bindings remain intact. Closer original-alpha
