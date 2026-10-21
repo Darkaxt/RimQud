@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCOPE-DAYLIGHTWIDGET",
+  "active_entry": "SCOPE-DIRTY",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -45,16 +45,14 @@
       ],
       "related_entries": [],
       "required_variants": [],
-      "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
-      "status": "IN PROGRESS",
-      "current_step": "verify_blueprint_visibility_and_any_tile",
+      "disposition": "Source-reviewed invisible marker / no independent art",
+      "status": "UNFINISHED",
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
-      "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
-      ],
+      "known_issues": [],
       "metadata": {
         "original_baseline_decision": {
           "blueprint": "DaylightWidget",
@@ -75,7 +73,51 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T14:47:31.244890+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/daylightwidget/source-scope-review.json",
+              "sha256": "89c2bee791be303732aeaf8dbaed9050a3a5aa47c67e52c9cf3b32c2dc4bad4f"
+            }
+          ],
+          "review": "DaylightWidget inherits Widget Render.Visible=false and no tile. Its sole Daylight part handles BeforeRender by native zone ambient light and explored-radius updates; it does not draw an object texture, set Visible or create a visible tile. Preserve daylight and exploration mechanics. No dedicated art is omitted.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T14:47:31.244890+00:00",
+          "step": "record_justified_art_exclusion_or_add_conversion_target",
+          "action": "Record the source-bound no-independent-art decision while preserving native behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/record-review.py",
+              "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/daylightwidget/source-scope-review.json",
+              "sha256": "89c2bee791be303732aeaf8dbaed9050a3a5aa47c67e52c9cf3b32c2dc4bad4f"
+            }
+          ],
+          "review": "DaylightWidget inherits Widget Render.Visible=false and no tile. Its sole Daylight part handles BeforeRender by native zone ambient light and explored-radius updates; it does not draw an object texture, set Visible or create a visible tile. Preserve daylight and exploration mechanics. No dedicated art is omitted.",
+          "result": "PASS"
+        }
+      ],
+      "generation_ready": true,
+      "scope_review": {
+        "path": "art/conversion/scope-source-reviews/daylightwidget/source-scope-review.json",
+        "sha256": "89c2bee791be303732aeaf8dbaed9050a3a5aa47c67e52c9cf3b32c2dc4bad4f"
+      }
     },
     {
       "id": "SCOPE-DIRTY",
@@ -87,14 +129,14 @@
       "related_entries": [],
       "required_variants": [],
       "disposition": "Audit exclusion; do not generate art for a truly invisible widget",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "record_justified_art_exclusion_or_add_conversion_target",
       "required_steps": [
         "verify_blueprint_visibility_and_any_tile",
         "record_justified_art_exclusion_or_add_conversion_target"
       ],
       "known_issues": [
-        "Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior."
+        "Invisible marker generates visible cell paint. Two aliases still require source-bound art/binding: tile-dirt1 single point and legacy tile-grass1 two tufts. Existing sw_grass1..3 sources match exactly."
       ],
       "metadata": {
         "original_baseline_decision": {
@@ -116,7 +158,46 @@
         "original_tile": null
       },
       "historical_artifacts": [],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T14:51:47.955077+00:00",
+          "step": "verify_blueprint_visibility_and_any_tile",
+          "action": "Inspect invisible Dirty ancestry and actual cell-paint code; extract all5 source masks and reconcile3 exact existing grass sources.",
+          "inputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/record-source-hold.py",
+              "sha256": "c40b832497efc26e50836caeaa5e776de066941e99c4c2d0d002222328e3911c"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/extract-dirty-paint.py",
+              "sha256": "7e5786286797e006d7448b0d465d768267c583c01811fe12d3e1618dddb921e9"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/source-scope-hold.json",
+              "sha256": "5801f74be77cf415371d521a17f99b7fd445bf0e35dfa7f76c2ae6861aba7efe"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png",
+              "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"
+            },
+            {
+              "path": "art/conversion/scope-source-reviews/dirty/painted-tile-index.json",
+              "sha256": "fd75296346ef5cab992f8422a2fd1d2802aa9d72b61c35697114ecca9e865016"
+            }
+          ],
+          "review": "Dirty inherits invisible FloorPainter/Widget, but its EnteredCell handler paints visible cells. Dirty.PaintCell selects Tiles/tile-dirt1.png with w or y and k detail in6/8 branches; g or G grass in2/8 branches. DirtPicker chooses legacy tile-grass1 plus sw_grass1/2/3 equally. Three sw_grass masks exactly match existing source-bound completed grass conversions. The sparse single dirt1 point and legacy two-tuft grass1 are different actual source shapes; DirtFloor dots and existing three grass aliases do not establish their conversion. Do not mark Dirty generation-ready from invisible Render alone. Preserve native random selection, floor-texture option, paint strings, source color/detail and native placement.",
+          "result": "PASS"
+        }
+      ],
+      "advancement_blocker": {
+        "requirement": "Account for every visible texture/state before justified exclusion or generation readiness",
+        "reason": "Dirty dynamically produces2 actual visible source aliases not covered by existing DirtFloor or sw_grass1..3 registrations.",
+        "classification": "internal",
+        "resolution": "Author/register and review2 source-bound sparse paint variants or establish justified existing-art bindings; retain all5 mappings and native random palette/options.",
+        "dependent_work": "Dirty readiness, remaining scope review sequence and full-set native generation gate"
+      }
     },
     {
       "id": "SCOPE-LANDMARKJOPPAARGYVEWORKSHOP",
@@ -82883,7 +82964,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T14:44:25.942352+00:00",
+  "updated_at": "2026-10-21T14:51:47.955077+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",

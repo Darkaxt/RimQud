@@ -1,0 +1,86 @@
+{
+  "entry": "SCOPE-DIRTY",
+  "ancestry": [
+    {
+      "name": "Dirty",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml",
+        "sha256": "106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb"
+      },
+      "selected": "<object Name=\"Dirty\" Inherits=\"FloorPainter\">\n    <part Name=\"Dirty\" />\n  </object>"
+    },
+    {
+      "name": "FloorPainter",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml",
+        "sha256": "106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb"
+      },
+      "selected": "<object Name=\"FloorPainter\" Inherits=\"Widget\">\n    <tag Name=\"PlacementHint:AlwaysPlace00\"></tag>\n  </object>"
+    },
+    {
+      "name": "Widget",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/Widgets.xml",
+        "sha256": "106d02215c534bc3f60e41386815e8a2b9e4fa1245bc27fc79f026c09124f3bb"
+      },
+      "selected": "<object Name=\"Widget\" Inherits=\"Object\">\n    <part Name=\"Render\" Visible=\"false\" DisplayName=\"[Widget]\" RenderString=\"*\" RenderLayer=\"0\" />\n    <part Name=\"Physics\" Weight=\"10000\" Takeable=\"false\" Solid=\"false\" IsReal=\"false\" />\n    <part Name=\"NoDamage\" />\n    <part Name=\"NoMove\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" />\n    <tag Name=\"NoSparkingQuest\" />\n    <tag Name=\"Non\" />\n    <tag Name=\"Important\"></tag>\n  </object>"
+    },
+    {
+      "name": "Object",
+      "file": {
+        "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/StreamingAssets/Base/ObjectBlueprints/RootObjects.xml",
+        "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e"
+      },
+      "selected": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>"
+    }
+  ],
+  "source_index": {
+    "path": "art/conversion/scope-source-reviews/dirty/painted-tile-index.json",
+    "sha256": "fd75296346ef5cab992f8422a2fd1d2802aa9d72b61c35697114ecca9e865016"
+  },
+  "source_plate": {
+    "path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png",
+    "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"
+  },
+  "assembly": {
+    "path": "D:/Steam/steamapps/common/Caves of Qud/CoQ_Data/Managed/Assembly-CSharp.dll",
+    "sha256": "cfd20cf1d6126bb64c9362311b9611fe0450589e21d51db00536af32d63150a7"
+  },
+  "main_evaluation": "Dirty inherits invisible FloorPainter/Widget, but its EnteredCell handler paints visible cells. Dirty.PaintCell selects Tiles/tile-dirt1.png with w or y and k detail in6/8 branches; g or G grass in2/8 branches. DirtPicker chooses legacy tile-grass1 plus sw_grass1/2/3 equally. Three sw_grass masks exactly match existing source-bound completed grass conversions. The sparse single dirt1 point and legacy two-tuft grass1 are different actual source shapes; DirtFloor dots and existing three grass aliases do not establish their conversion. Do not mark Dirty generation-ready from invisible Render alone. Preserve native random selection, floor-texture option, paint strings, source color/detail and native placement.",
+  "reusable_existing_outputs": [
+    {
+      "entry": "TILE-GRASS-1",
+      "native_tile": "Terrain/sw_grass1.bmp",
+      "source_sha256_match": true,
+      "model": {
+        "path": "art/conversion/tile-grass-1/v1/registered-v2/model.json",
+        "sha256": "66bd36911cfd95074b52d0ace26a00e90fde1ddb98335c6787f17fcf0baa1b9c"
+      }
+    },
+    {
+      "entry": "TILE-GRASS-2",
+      "native_tile": "Terrain/sw_grass2.bmp",
+      "source_sha256_match": true,
+      "model": {
+        "path": "art/conversion/tile-grass-2/v1/registered/model.json",
+        "sha256": "4c0e28b1cc441a1e3df441971319953c78bcbd8de34ec536877e89d2d39f74e6"
+      }
+    },
+    {
+      "entry": "TILE-GRASS-3",
+      "native_tile": "Terrain/sw_grass3.bmp",
+      "source_sha256_match": true,
+      "model": {
+        "path": "art/conversion/tile-grass-3/v1/registered/model.json",
+        "sha256": "0cf20b900d24719eafa5325f4f08f4b8add8ea9740d02a2c22058ef821db41c9"
+      }
+    }
+  ],
+  "uncovered_visible_outputs": [
+    "Tiles/tile-dirt1.png",
+    "assets_content_textures_tiles_tile-grass1.png"
+  ],
+  "next_action": "Keep SCOPE-DIRTY sole active entry. Author the two exact sparse cell-paint variants or source-justified existing-art bindings, with full metadata/reference/manual/refinement/review/registration evidence, then reconcile all5 native aliases. No blanket invisible exclusion.",
+  "generation_ready": false,
+  "native_activation": false
+}

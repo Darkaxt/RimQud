@@ -33,9 +33,23 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCOPE-DAYLIGHTWIDGET is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCOPE-DIRTY is the sole active entry.
 
-Current canvas checkpoint (2026-10-21): `scn-canvaswall/blender-v3/registered`
+Current scope checkpoint (2026-10-21): DaylightWidget is source-reviewed as an
+invisible lighting/exploration controller with no independent object texture.
+There are149 generation-ready entries and seven pending. Dirty is invisible too,
+but its actual part paints visible ground: dirt1 with native w/y and k detail,
+or g/G one of four grass aliases. Exact installed mask extraction confirms that
+sw_grass1/2/3 match the existing three grass conversions. The legacy tile-grass1
+two-tuft shape and single sparse tile-dirt1 point remain uncovered visible paint
+outputs. This is an internal advancement blocker, not a justified blanket
+invisible exclusion. Keep Dirty active; author or source-justify its two remaining
+bindings, preserve all five mappings and native random/options/color ownership,
+then continue the other six scope reviews. No game/native validation is allowed
+while these generation requirements remain. The whole-set native check and the
+user's subsequent pause/redesign discussion are still required.
+
+Prior canvas checkpoint (2026-10-21): `scn-canvaswall/blender-v3/registered`
 is generation-ready with all16 actual PaintedFence tent masks: isolated, ends,
 straights, corners, T-junctions and crossing. Complete thin cloth/pickets and
 source-asymmetric lower red regions share a calibrated cardinal map frame.

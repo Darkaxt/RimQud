@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **SCOPE-DAYLIGHTWIDGET**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCOPE-DIRTY**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -40,8 +40,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCOPE-DAYLIGHTWIDGET | DaylightWidget | IN PROGRESS | - | Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior. |
-| SCOPE-DIRTY | Dirty | UNFINISHED | - | Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior. |
+| SCOPE-DAYLIGHTWIDGET | DaylightWidget | UNFINISHED | - |  |
+| SCOPE-DIRTY | Dirty | IN PROGRESS | - | Invisible marker generates visible cell paint. Two aliases still require source-bound art/binding: tile-dirt1 single point and legacy tile-grass1 two tufts. Existing sw_grass1..3 sources match exactly. |
 | SCOPE-LANDMARKJOPPAARGYVEWORKSHOP | LandmarkJoppaArgyveWorkshop | UNFINISHED | - | Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior. |
 | SCOPE-LANDMARKJOPPAIRUDADHUT | LandmarkJoppaIrudadHut | UNFINISHED | - | Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior. |
 | SCOPE-LANDMARKJOPPAMILL | LandmarkJoppaMill | UNFINISHED | - | Unfinished exclusion review. Confirm no independent visible tile/state is being omitted; preserve native behavior. |
@@ -279,7 +279,19 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: verify_blueprint_visibility_and_any_tile. Process-log events: 0.
+Current step: record_justified_art_exclusion_or_add_conversion_target. Process-log events: 2.
+
+- 2026-10-21T14:47:31.244890+00:00 / verify_blueprint_visibility_and_any_tile / PASS: Inspect exact installed ancestry, effective Render.Visible/Tile and attached part code for independent visible art or state changes.
+  Review: DaylightWidget inherits Widget Render.Visible=false and no tile. Its sole Daylight part handles BeforeRender by native zone ambient light and explored-radius updates; it does not draw an object texture, set Visible or create a visible tile. Preserve daylight and exploration mechanics. No dedicated art is omitted.
+  Inputs: [{"path": "art/conversion/scope-source-reviews/record-review.py", "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"}]
+  Outputs: [{"path": "art/conversion/scope-source-reviews/daylightwidget/source-scope-review.json", "sha256": "89c2bee791be303732aeaf8dbaed9050a3a5aa47c67e52c9cf3b32c2dc4bad4f"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T14:47:31.244890+00:00 / record_justified_art_exclusion_or_add_conversion_target / PASS: Record the source-bound no-independent-art decision while preserving native behavior.
+  Review: DaylightWidget inherits Widget Render.Visible=false and no tile. Its sole Daylight part handles BeforeRender by native zone ambient light and explored-radius updates; it does not draw an object texture, set Visible or create a visible tile. Preserve daylight and exploration mechanics. No dedicated art is omitted.
+  Inputs: [{"path": "art/conversion/scope-source-reviews/record-review.py", "sha256": "b3e4afdacb18723765e3aee334a3f3aee61ae051c43bdcfea7f3faa00f191af1"}]
+  Outputs: [{"path": "art/conversion/scope-source-reviews/daylightwidget/source-scope-review.json", "sha256": "89c2bee791be303732aeaf8dbaed9050a3a5aa47c67e52c9cf3b32c2dc4bad4f"}]
+  Method/prompt/corrections: {}
 
 ### SCOPE-DIRTY: Dirty
 
@@ -289,7 +301,13 @@ Required views/states: source/exclusion review.
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: record_justified_art_exclusion_or_add_conversion_target. Process-log events: 1.
+
+- 2026-10-21T14:51:47.955077+00:00 / verify_blueprint_visibility_and_any_tile / PASS: Inspect invisible Dirty ancestry and actual cell-paint code; extract all5 source masks and reconcile3 exact existing grass sources.
+  Review: Dirty inherits invisible FloorPainter/Widget, but its EnteredCell handler paints visible cells. Dirty.PaintCell selects Tiles/tile-dirt1.png with w or y and k detail in6/8 branches; g or G grass in2/8 branches. DirtPicker chooses legacy tile-grass1 plus sw_grass1/2/3 equally. Three sw_grass masks exactly match existing source-bound completed grass conversions. The sparse single dirt1 point and legacy two-tuft grass1 are different actual source shapes; DirtFloor dots and existing three grass aliases do not establish their conversion. Do not mark Dirty generation-ready from invisible Render alone. Preserve native random selection, floor-texture option, paint strings, source color/detail and native placement.
+  Inputs: [{"path": "art/conversion/scope-source-reviews/dirty/record-source-hold.py", "sha256": "c40b832497efc26e50836caeaa5e776de066941e99c4c2d0d002222328e3911c"}, {"path": "art/conversion/scope-source-reviews/extract-dirty-paint.py", "sha256": "7e5786286797e006d7448b0d465d768267c583c01811fe12d3e1618dddb921e9"}]
+  Outputs: [{"path": "art/conversion/scope-source-reviews/dirty/source-scope-hold.json", "sha256": "5801f74be77cf415371d521a17f99b7fd445bf0e35dfa7f76c2ae6861aba7efe"}, {"path": "art/conversion/scope-source-reviews/dirty/painted-source-comparison.png", "sha256": "0e54a0befda2979fb18ac70cf03d086886b034ef599d72362c57cb46accbdca7"}, {"path": "art/conversion/scope-source-reviews/dirty/painted-tile-index.json", "sha256": "fd75296346ef5cab992f8422a2fd1d2802aa9d72b61c35697114ecca9e865016"}]
+  Method/prompt/corrections: {}
 
 ### SCOPE-LANDMARKJOPPAARGYVEWORKSHOP: LandmarkJoppaArgyveWorkshop
 

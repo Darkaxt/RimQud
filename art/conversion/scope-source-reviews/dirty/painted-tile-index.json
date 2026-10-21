@@ -1,0 +1,93 @@
+{
+  "entry": "SCOPE-DIRTY",
+  "source_code": [
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/Dirty.cs",
+      "sha256": "3d17081c26bd1ac0acb7c0642a3c7dd903c158928018433cbc58c6a82a6dafa6"
+    },
+    {
+      "path": "E:/Temp/rimqud-native-scope-review-20261021/DirtPicker.cs",
+      "sha256": "f217ec3a39298f7c8e7ca8e4c6217b9bfec8e6d7e2aa8c76d1fb8efbc76438e5"
+    }
+  ],
+  "native_states": [
+    {
+      "native_tile": "Tiles/tile-dirt1.png",
+      "info_id": 14516,
+      "atlas_id": 277,
+      "rect": [
+        1422,
+        650,
+        16,
+        24
+      ],
+      "private_mask": {
+        "path": "E:/Temp/rimqud-native-scope-review-20261021/tile-dirt1-mask.png",
+        "sha256": "3b6eccc0f74278db7f74002dd4619f1b80a08d097dcb006505d52859ef1300cf"
+      }
+    },
+    {
+      "native_tile": "assets_content_textures_tiles_tile-grass1.png",
+      "info_id": 14519,
+      "atlas_id": 277,
+      "rect": [
+        1368,
+        650,
+        16,
+        24
+      ],
+      "private_mask": {
+        "path": "E:/Temp/rimqud-native-scope-review-20261021/assets_content_textures_tiles_tile-grass1-mask.png",
+        "sha256": "3de48ab40158e557063810ca13acf70bdd81435f77cad8bc7bfed3e2f5ae097c"
+      }
+    },
+    {
+      "native_tile": "Terrain/sw_grass1.bmp",
+      "info_id": 11191,
+      "atlas_id": 203,
+      "rect": [
+        738,
+        208,
+        16,
+        24
+      ],
+      "private_mask": {
+        "path": "E:/Temp/rimqud-native-scope-review-20261021/sw_grass1-mask.png",
+        "sha256": "9f2ee0e82564b77531c07c6db428df97d66cf9abbc0d9d9080c62640e7865b48"
+      }
+    },
+    {
+      "native_tile": "Terrain/sw_grass2.bmp",
+      "info_id": 11192,
+      "atlas_id": 203,
+      "rect": [
+        720,
+        208,
+        16,
+        24
+      ],
+      "private_mask": {
+        "path": "E:/Temp/rimqud-native-scope-review-20261021/sw_grass2-mask.png",
+        "sha256": "68df3e4ed8fca957df88f3ca22287f32ced47e21acc16b1e2a84b4439f028e51"
+      }
+    },
+    {
+      "native_tile": "Terrain/sw_grass3.bmp",
+      "info_id": 11193,
+      "atlas_id": 203,
+      "rect": [
+        702,
+        208,
+        16,
+        24
+      ],
+      "private_mask": {
+        "path": "E:/Temp/rimqud-native-scope-review-20261021/sw_grass3-mask.png",
+        "sha256": "13cb3b4ec9dc5cb0d74182d9e11a242459f5df76b301e1d39937933b32d6bd47"
+      }
+    }
+  ],
+  "source_paint": "Dirty.PaintCell sets w/y dirt1 with k detail, or g/G one of four grass tile aliases; source options and random choices remain native.",
+  "scope_question": "Widget itself invisible; generated cell paint is visible. Verify actual alias coverage before no-art readiness. DirtFloor dots and grass1..3 do not by themselves cover all5 strings.",
+  "native_activation": false
+}
