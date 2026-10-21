@@ -8,7 +8,41 @@ variants, with one active entry and a complete contemporaneous process log.
 Earlier completion/reconciliation statements below are historical and withdrawn
 as art acceptance. Native checks retain only their measured integration meaning.
 
-Current authoring checkpoint (2026-10-21, current Yrame outfit): the Vibro Blade
+Current authoring checkpoint (2026-10-21, ray-cat and fish assemblies): the
+accepted Ray Cat design is generation-ready under
+`body-ray-cat/v1/registered-v3`, and named Ctesiphus under `npc-ctesiphus/v1`.
+All three selected historical generated images are byte-exact recovered outputs;
+the rejected north neck-root tail and actual correction remain in the report.
+The current editable anatomy/ownership plan is explicitly later work, never a
+fabricated historical generator input. Original sources remain unchanged; one
+common physical frame preserves the frozen anatomical scale. Small whole-frame
+integer shifts center paired paws without resampling or changing body size.
+Body/head and independent m/y material planes reconstruct registered neutral
+RGBA exactly. The opaque-only initial detail filter is rejected and retained;
+mathematical alpha partition preserves the source's partial-alpha coverage.
+Ctesiphus's actual worn/held outfit is empty; natural Cat Bite/Claw defaults remain
+native behavior rather than extra garment/weapon sprites.
+
+Glowfish body mapping was reopened before its named assembly: the prior model
+promised a 1.2x1.2 world canvas but passed1.2 as width in Qud cell units, producing
+0.8-world width under the existing renderer. `body-glowfish/v1/registered-v3`
+corrects width to1.8 cells while retaining 1.2-world height, fixed trunk/swim pivot,
+all 8 exact source PNGs, layer order, geometry and neutral/native m/C masks. The
+physical-frame comparison and read-only renderer contract establish the mapping;
+no native test was run. `npc-glowfish/v1` reuses those two whole-animal planes with
+an empty worn outfit. Natural Bite/Gills/DarkVision/LightSource and water behavior
+stay native. Both named assemblies have all-direction neutral/native and intended
+size evidence. Their actual source histories, rejected attempts and corrected
+mapping are retained; no new ImageGen calls were invented for assembly or reuse.
+
+There are 136 generation-ready entries out of 156. Every entry remains unfinished
+for native acceptance. Remaining generation work is five containers, six
+signs/shrine, canvas wall and eight source-based exclusion reviews. Stage 3 remains
+the sole ACTIVE stage and `SCN-CANTEEN` is the sole active entry. Resting/ready
+weapon presentation, full-set native integration and final reconciliation remain
+behind the full-generation gate.
+
+Prior authoring checkpoint (2026-10-21, current Yrame outfit): the Vibro Blade
 Hand292/2 fitting, item aggregate and named Yrame assembly are generation-ready
 under `fit-yrame-vibro-blade/v2`, `item-vibro-blade/v2` and
 `npc-warden-yrame/v2`. The unchanged complete blade/hilt retains its actual prior
@@ -32,7 +66,7 @@ There are 133 generation-ready entries out of 156. Every entry remains unfinishe
 for native acceptance, Stage 3 remains the sole ACTIVE stage and `BODY-RAY-CAT`
 is the sole active entry.
 
-Ray Cat source checkpoint (2026-10-21): current installed ancestry and observed
+Prior Ray Cat source checkpoint (2026-10-21): current installed ancestry and observed
 Quadruped parts confirm four physical Foot nodes and an intrinsic Tail; dependent
 Feet groups do not add legs. The accepted cat design remains unchanged. Exact
 historical front, front-guided east/north and north tail-correction calls were

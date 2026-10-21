@@ -2,8 +2,1700 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#NPC-CTESIPHUS">Back to conversion index</a></nav><h1>Ctesiphus</h1><div class="entry-body">
-<p class="eyebrow">NPC-CTESIPHUS / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward.</p>
-<ol class="workflow"><li class="pending">resolve individual race and runtime metadata — pending</li><li class="pending">verify body and every equipped item dependencies — pending</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="eyebrow">NPC-CTESIPHUS / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: </p>
+<h3>Current registered artwork</h3><p>Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p><div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890</code></details></figure></div><p><a href="../../art/conversion/npc-ctesiphus/v1/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">resolve individual race and runtime metadata — recorded PASS</li><li class="pass">verify body and every equipped item dependencies — recorded PASS</li><li class="pass">assemble without baking equipment — recorded PASS</li><li class="pass">review anatomy clothing attachment all directions — recorded PASS</li><li class="pass">review neutral and qud palette at game scale — recorded PASS</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-21T06:31:08.503717+00:00 / PASS</small><h3>resolve individual race and runtime metadata</h3><p>Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.</p><p><strong>Review:</strong> Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;entry&quot;: &quot;NPC-CTESIPHUS&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/village/sources.json&quot;,
+    &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+  },
+  &quot;captured_actor&quot;: {
+    &quot;instance&quot;: 566,
+    &quot;blueprint&quot;: &quot;Ctesiphus&quot;,
+    &quot;species&quot;: &quot;cat&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;description&quot;: &quot;One star-ribboned night, a ray cat crossed the marshy loam and wandered into Joppa. The watervine farmers, wakened by the joyful cries of a small girl, gathered around to revel at the favorable omen and extol the generosity of the Beetle Moon. Since then, Ctesiphus has spent his days curled under the shade of brinestalk huts and sauntering over dirt paths. So long as he&#x27;s approached with care, he welcomes the hands of friends and strangers alike.\n\n&amp;mphosphorescent&amp;y\n\nBase demeanor: {{g|docile}}&quot;,
+    &quot;anatomy&quot;: &quot;Quadruped&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: 173,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 259,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 260,
+        &quot;parent&quot;: 259,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 567,
+          &quot;blueprint&quot;: &quot;Cat Bite&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-bite.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 261,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 262,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Foot&quot;,
+        &quot;variant&quot;: &quot;Foot&quot;,
+        &quot;laterality&quot;: 18,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 512,
+          &quot;blueprint&quot;: &quot;Cat Claw&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-paw.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 263,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Foot&quot;,
+        &quot;variant&quot;: &quot;Foot&quot;,
+        &quot;laterality&quot;: 17,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 511,
+          &quot;blueprint&quot;: &quot;Cat Claw&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-paw.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;w&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 264,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Foot&quot;,
+        &quot;variant&quot;: &quot;Foot&quot;,
+        &quot;laterality&quot;: 66,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 265,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Foot&quot;,
+        &quot;variant&quot;: &quot;Foot&quot;,
+        &quot;laterality&quot;: 65,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 266,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 267,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 268,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 16,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 269,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Feet&quot;,
+        &quot;variant&quot;: &quot;Feet&quot;,
+        &quot;laterality&quot;: 64,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 270,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Tail&quot;,
+        &quot;variant&quot;: &quot;Tail&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 271,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 272,
+        &quot;parent&quot;: 173,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;tile&quot;: &quot;creatures/sw_kitty.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;m&quot;,
+    &quot;tileColor&quot;: &quot;&quot;,
+    &quot;detailColor&quot;: &quot;y&quot;
+  },
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;body_review&quot;: {
+    &quot;status&quot;: &quot;PASS&quot;,
+    &quot;reason&quot;: &quot;Inspected actual accepted source views and recovered north patch, manual anatomy/ownership plan, shared-frame neutral/native and intended-size plates. Compact feline cardinal views preserve four-foot/tail anatomy with natural pair overlap; north has no face and tail joins lower rump separately from skull. New body/head/tint layers reconstruct source grayscale and alpha exactly. Mathematical material partition corrects rejected opaque-only filter. Paw-midpoint integer shifts center the body without scaling, warping or clipping. No new ImageGen call or new species/mutation geometry.&quot;,
+    &quot;record&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;412af5fd63cf7c0e32a7422d50004a4162d021cda4ee90ff166400ac352c0273&quot;
+    }
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;natural_equipment&quot;: [
+    {
+      &quot;part&quot;: 260,
+      &quot;type&quot;: &quot;Face&quot;,
+      &quot;laterality&quot;: 0,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 567,
+        &quot;blueprint&quot;: &quot;Cat Bite&quot;,
+        &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Creatures/natural-weapon-bite.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;y&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;&quot;
+      }
+    },
+    {
+      &quot;part&quot;: 262,
+      &quot;type&quot;: &quot;Foot&quot;,
+      &quot;laterality&quot;: 18,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 512,
+        &quot;blueprint&quot;: &quot;Cat Claw&quot;,
+        &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Creatures/natural-weapon-paw.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;w&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;&quot;
+      }
+    },
+    {
+      &quot;part&quot;: 263,
+      &quot;type&quot;: &quot;Foot&quot;,
+      &quot;laterality&quot;: 17,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 511,
+        &quot;blueprint&quot;: &quot;Cat Claw&quot;,
+        &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Creatures/natural-weapon-paw.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;w&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;&quot;
+      }
+    }
+  ],
+  &quot;equipment_policy&quot;: &quot;Observed worn/held list is empty. Cat Bite/Claw defaults are natural behavior on real Face/Foot parts, not inventory clothes or separate held objects. No collar or profession costume added.&quot;,
+  &quot;body_policy&quot;: &quot;Reuse current intrinsic Ray Cat body/head/tint source; named historical artwork remains unchanged. Male capture does not establish age or extra sex geometry. No mutation appendages inferred.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;y&quot;
+  },
+  &quot;history&quot;: {
+    &quot;report&quot;: &quot;docs/conversion-entries/BODY-RAY-CAT.html&quot;,
+    &quot;source_packet&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9&quot;
+    },
+    &quot;generation&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/historical-generation-provenance.json&quot;,
+      &quot;sha256&quot;: &quot;be175212b205eaacd18e56f6856daf3301a7bf229eca6d4ced4d3e1a1b31f69c&quot;
+    },
+    &quot;manual&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/manual-ownership-controls.json&quot;,
+      &quot;sha256&quot;: &quot;3ea6bc79e1165a5cf8cb463c467a41f4f2028bc2730faf5359d326cf8ef730b9&quot;
+    }
+  },
+  &quot;new_imagegen_calls&quot;: 0,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual visible/hidden, facing, independent tint, look/hurt/save and supported state.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_individual_race_and_runtime_metadata&quot;,
+  &quot;action&quot;: &quot;Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-21T06:31:08.503717+00:00 / PASS</small><h3>verify body and every equipped item dependencies</h3><p>Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.</p><p><strong>Review:</strong> Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/assembly-contract.json">assembly-contract.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;canvas&quot;: [
+      512,
+      512
+    ],
+    &quot;contact&quot;: [
+      256,
+      448
+    ],
+    &quot;pixel_world_size&quot;: 0.002,
+    &quot;width&quot;: 1.536,
+    &quot;height&quot;: 1.024,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0.384
+  },
+  &quot;equipment&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: &quot;Front cat head/forepaws below trunk, tail rises behind; hind pair occluded.&quot;,
+    &quot;east&quot;: &quot;Whole right profile; head right, tail rooted at left rump; fore/hind near paws and overlapped far pair.&quot;,
+    &quot;north&quot;: &quot;Back of skull/ears, no face; lower-rump tail curves outside flank separately from head.&quot;,
+    &quot;west&quot;: &quot;Exact corrected east mirror, including head and both tint planes.&quot;
+  },
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;y&quot;
+  },
+  &quot;policy&quot;: &quot;Observed worn/held list is empty. Cat Bite/Claw defaults are natural behavior on real Face/Foot parts, not inventory clothes or separate held objects. No collar or profession costume added.&quot;,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>131f3ee216c73f83e0b264d9f97a9e930474a8f9e79fda239b0a8f9fce63d4ee</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/composition-checks.json">composition-checks.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;south&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;east&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;north&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;west&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;step&quot;: &quot;verify_body_and_every_equipped_item_dependencies&quot;,
+  &quot;action&quot;: &quot;Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-21T06:31:08.503717+00:00 / REQUIRES REVIEW</small><h3>assemble without baking equipment</h3><p>Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.</p><p><strong>Review:</strong> Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/assemble.py">assemble.py</a><details class="hash"><summary>Exact evidence hash</summary><code>5b67d9268969db78a452c91a04c855a40c87e543ffaeda813d3c13ed9e172a8f</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-CTESIPHUS&quot;,
+  &quot;kind&quot;: &quot;captured_actor_layered_assembly&quot;,
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;canvas&quot;: [
+      512,
+      512
+    ],
+    &quot;contact&quot;: [
+      256,
+      448
+    ],
+    &quot;pixel_world_size&quot;: 0.002,
+    &quot;width&quot;: 1.536,
+    &quot;height&quot;: 1.024,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0.384
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-south.png&quot;,
+          &quot;sha256&quot;: &quot;3e5e70653464134630c82aadf1314b12121029bf39f5e49f625991cc02507d28&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-south.png&quot;,
+            &quot;sha256&quot;: &quot;34969c365a619be02acd982b240f3c98cd892fc240f9b1ff284f7dc2a09e79cd&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-south.png&quot;,
+          &quot;sha256&quot;: &quot;f65405b5df178f134ed554b2f59c02a57585989a41c2a693324cbeb05f025649&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-south.png&quot;,
+            &quot;sha256&quot;: &quot;b6829d388bacbe74e1101da6cacbca8a16241fc187039f0df1c915baf9823643&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-south.png&quot;,
+          &quot;sha256&quot;: &quot;bee651692a2f62503fe51c2f19749147afdc792d19648be2408844ac68a9e231&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-south.png&quot;,
+            &quot;sha256&quot;: &quot;63abfe011d2c8ed4ba4aa34a02a6e0d7080498e46ab63aa58209e04f35b5f436&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-south.png&quot;,
+          &quot;sha256&quot;: &quot;b226f4e333a5aa30cd96dcc73f91bbd20262cac5446d07a60ce540378347be9f&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-south.png&quot;,
+            &quot;sha256&quot;: &quot;05159d478d1180b096c5ad4bf5c521813fe1f872c8740b484779106979e1324d&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-south.png&quot;,
+        &quot;sha256&quot;: &quot;03484a8051fb74ed4a12a76b72dce61e08bdd6a3e3d77bbe3d1ca3cccf45dc17&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-south.png&quot;,
+        &quot;sha256&quot;: &quot;5c4500288537d411185a56f60311e12c8822fc5317995ab631bc0070ff728cba&quot;
+      }
+    },
+    &quot;east&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-east.png&quot;,
+          &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-east.png&quot;,
+          &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-east.png&quot;,
+          &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-east.png&quot;,
+          &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-east.png&quot;,
+        &quot;sha256&quot;: &quot;39f5955fa18fc313cdc55e5a0b14df430d3c289b28b38be02e29d5eeef48fc34&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-east.png&quot;,
+        &quot;sha256&quot;: &quot;29fac4ec1194a8a8b6271e0e0a2252ee979173a5c13efc791c66c61a1620eafe&quot;
+      }
+    },
+    &quot;north&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-north.png&quot;,
+          &quot;sha256&quot;: &quot;518639d92df8a83821d931b5bbd9f55bdc8680f32ffd241da16d4a35f0a012b4&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-north.png&quot;,
+            &quot;sha256&quot;: &quot;115d7e57c9069c25dc35a8b897a063c0261fddd07c0bf3665d4afd880d4fb95c&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-north.png&quot;,
+          &quot;sha256&quot;: &quot;799974052843a47916ebba1807d8d2c1770b5108718235c5bcd3cb87553e0f4d&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-north.png&quot;,
+            &quot;sha256&quot;: &quot;0929618601259ca7b430fe224755e9b291d4fec1e6edb0930c366f4ce5621f64&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-north.png&quot;,
+          &quot;sha256&quot;: &quot;8be7f3ea808ce04215edb0066bb6b82a341e2c82b4a3c4a579da87a43cdb46d4&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-north.png&quot;,
+            &quot;sha256&quot;: &quot;294d11d09dac6dd84206c7187804e3af5d91e561d7f09d70fbefbd931779ae5b&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-north.png&quot;,
+          &quot;sha256&quot;: &quot;b262bd68d44f93637b9949caf7ff7ce0b6b6ed839c3a2468681952b215ec4d95&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-north.png&quot;,
+            &quot;sha256&quot;: &quot;b262bd68d44f93637b9949caf7ff7ce0b6b6ed839c3a2468681952b215ec4d95&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-north.png&quot;,
+        &quot;sha256&quot;: &quot;414477f5740d78ba0bb97a5491fa40ef90cccc12481aba3090b068f1bfb6c47b&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-north.png&quot;,
+        &quot;sha256&quot;: &quot;47460c9f20d2090d7b28e89ffeee3542fc93548aeb2accd966e58e04cc2b4cd4&quot;
+      }
+    },
+    &quot;west&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-west.png&quot;,
+          &quot;sha256&quot;: &quot;c08993cb49eaec6d873545bb2d5abb7cbcb9b1e952ee934674138b3ea3875e3c&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-west.png&quot;,
+          &quot;sha256&quot;: &quot;db6d0cc08271732f22b6828008c824acea422e0a4a75ed922bfcfdc089c3918c&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-west.png&quot;,
+          &quot;sha256&quot;: &quot;4dddef9e32d445bde614dd7d37adee8d53d065e6148921d03b75977a93450a6a&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-west.png&quot;,
+          &quot;sha256&quot;: &quot;ac15def99ac7a33835ec653ea95aec56868467fac8bae49529f0ff85d95dfae5&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-west.png&quot;,
+        &quot;sha256&quot;: &quot;7d2ee5647a07697ece17775d39ea28ae42fd24a850d069ebb266bbb0f80ce3ff&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-west.png&quot;,
+        &quot;sha256&quot;: &quot;4f51410dd3d4ba138e1e9c88a31496ff49c399d4c3fb2abe62a4a0fc5a2388e3&quot;
+      }
+    }
+  },
+  &quot;native_activation&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual visible/hidden, facing, independent tint, look/hurt/save and supported state.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png" alt="native-palette-comparison"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png">native-palette-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;step&quot;: &quot;assemble_without_baking_equipment&quot;,
+  &quot;action&quot;: &quot;Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.&quot;,
+  &quot;result&quot;: &quot;REQUIRES REVIEW&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-21T06:31:58.452671+00:00 / PASS</small><h3>assemble without baking equipment</h3><p>Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-CTESIPHUS&quot;,
+  &quot;kind&quot;: &quot;captured_actor_layered_assembly&quot;,
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;canvas&quot;: [
+      512,
+      512
+    ],
+    &quot;contact&quot;: [
+      256,
+      448
+    ],
+    &quot;pixel_world_size&quot;: 0.002,
+    &quot;width&quot;: 1.536,
+    &quot;height&quot;: 1.024,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0.384
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-south.png&quot;,
+          &quot;sha256&quot;: &quot;3e5e70653464134630c82aadf1314b12121029bf39f5e49f625991cc02507d28&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-south.png&quot;,
+            &quot;sha256&quot;: &quot;34969c365a619be02acd982b240f3c98cd892fc240f9b1ff284f7dc2a09e79cd&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-south.png&quot;,
+          &quot;sha256&quot;: &quot;f65405b5df178f134ed554b2f59c02a57585989a41c2a693324cbeb05f025649&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-south.png&quot;,
+            &quot;sha256&quot;: &quot;b6829d388bacbe74e1101da6cacbca8a16241fc187039f0df1c915baf9823643&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-south.png&quot;,
+          &quot;sha256&quot;: &quot;bee651692a2f62503fe51c2f19749147afdc792d19648be2408844ac68a9e231&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-south.png&quot;,
+            &quot;sha256&quot;: &quot;63abfe011d2c8ed4ba4aa34a02a6e0d7080498e46ab63aa58209e04f35b5f436&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-south.png&quot;,
+          &quot;sha256&quot;: &quot;b226f4e333a5aa30cd96dcc73f91bbd20262cac5446d07a60ce540378347be9f&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            3,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-south.png&quot;,
+            &quot;sha256&quot;: &quot;05159d478d1180b096c5ad4bf5c521813fe1f872c8740b484779106979e1324d&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-south.png&quot;,
+        &quot;sha256&quot;: &quot;03484a8051fb74ed4a12a76b72dce61e08bdd6a3e3d77bbe3d1ca3cccf45dc17&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-south.png&quot;,
+        &quot;sha256&quot;: &quot;5c4500288537d411185a56f60311e12c8822fc5317995ab631bc0070ff728cba&quot;
+      }
+    },
+    &quot;east&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-east.png&quot;,
+          &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-east.png&quot;,
+          &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-east.png&quot;,
+          &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-east.png&quot;,
+          &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-east.png&quot;,
+        &quot;sha256&quot;: &quot;39f5955fa18fc313cdc55e5a0b14df430d3c289b28b38be02e29d5eeef48fc34&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-east.png&quot;,
+        &quot;sha256&quot;: &quot;29fac4ec1194a8a8b6271e0e0a2252ee979173a5c13efc791c66c61a1620eafe&quot;
+      }
+    },
+    &quot;north&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-north.png&quot;,
+          &quot;sha256&quot;: &quot;518639d92df8a83821d931b5bbd9f55bdc8680f32ffd241da16d4a35f0a012b4&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-north.png&quot;,
+            &quot;sha256&quot;: &quot;115d7e57c9069c25dc35a8b897a063c0261fddd07c0bf3665d4afd880d4fb95c&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-north.png&quot;,
+          &quot;sha256&quot;: &quot;799974052843a47916ebba1807d8d2c1770b5108718235c5bcd3cb87553e0f4d&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-north.png&quot;,
+            &quot;sha256&quot;: &quot;0929618601259ca7b430fe224755e9b291d4fec1e6edb0930c366f4ce5621f64&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-north.png&quot;,
+          &quot;sha256&quot;: &quot;8be7f3ea808ce04215edb0066bb6b82a341e2c82b4a3c4a579da87a43cdb46d4&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-north.png&quot;,
+            &quot;sha256&quot;: &quot;294d11d09dac6dd84206c7187804e3af5d91e561d7f09d70fbefbd931779ae5b&quot;
+          }
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-north.png&quot;,
+          &quot;sha256&quot;: &quot;b262bd68d44f93637b9949caf7ff7ce0b6b6ed839c3a2468681952b215ec4d95&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            -1,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-north.png&quot;,
+            &quot;sha256&quot;: &quot;b262bd68d44f93637b9949caf7ff7ce0b6b6ed839c3a2468681952b215ec4d95&quot;
+          }
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-north.png&quot;,
+        &quot;sha256&quot;: &quot;414477f5740d78ba0bb97a5491fa40ef90cccc12481aba3090b068f1bfb6c47b&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-north.png&quot;,
+        &quot;sha256&quot;: &quot;47460c9f20d2090d7b28e89ffeee3542fc93548aeb2accd966e58e04cc2b4cd4&quot;
+      }
+    },
+    &quot;west&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-foreground-west.png&quot;,
+          &quot;sha256&quot;: &quot;c08993cb49eaec6d873545bb2d5abb7cbcb9b1e952ee934674138b3ea3875e3c&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;aba2d43ca683b6e3f9d9e9af417442a43b6821832f27d23277d5e9cb909967c7&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-body-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/body-detail-west.png&quot;,
+          &quot;sha256&quot;: &quot;db6d0cc08271732f22b6828008c824acea422e0a4a75ed922bfcfdc089c3918c&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0001,
+          &quot;native_part_type&quot;: &quot;Body&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/body-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;f8fa1eec74264854bb8aba63d97179065c7241fea8a83e2be2802523dca08cae&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-foreground-west.png&quot;,
+          &quot;sha256&quot;: &quot;4dddef9e32d445bde614dd7d37adee8d53d065e6148921d03b75977a93450a6a&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.001,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-foreground-east.png&quot;,
+            &quot;sha256&quot;: &quot;4b375f1df716414956217f3673ff872e4c929f6603bb514093118e69971a640f&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        },
+        {
+          &quot;component&quot;: &quot;head&quot;,
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;file&quot;: &quot;ray-cat-head-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/head-detail-west.png&quot;,
+          &quot;sha256&quot;: &quot;ac15def99ac7a33835ec653ea95aec56868467fac8bae49529f0ff85d95dfae5&quot;,
+          &quot;size&quot;: [
+            512,
+            512
+          ],
+          &quot;contact&quot;: [
+            256,
+            448
+          ],
+          &quot;width&quot;: 1.536,
+          &quot;height&quot;: 1.024,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0.384,
+          &quot;layer&quot;: 0.0011,
+          &quot;native_part_type&quot;: &quot;Head&quot;,
+          &quot;alignment_translation&quot;: [
+            0,
+            0
+          ],
+          &quot;source_before_centering&quot;: {
+            &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v2/head-detail-east.png&quot;,
+            &quot;sha256&quot;: &quot;bb50a8825c6bb01ee56bf6ffe50993e30484a7cd78b53ecc456e8075e440c263&quot;
+          },
+          &quot;already_mirrored_from_east&quot;: true
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-west.png&quot;,
+        &quot;sha256&quot;: &quot;7d2ee5647a07697ece17775d39ea28ae42fd24a850d069ebb266bbb0f80ce3ff&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-west.png&quot;,
+        &quot;sha256&quot;: &quot;4f51410dd3d4ba138e1e9c88a31496ff49c399d4c3fb2abe62a4a0fc5a2388e3&quot;
+      }
+    }
+  },
+  &quot;native_activation&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual visible/hidden, facing, independent tint, look/hurt/save and supported state.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/composition-checks.json">composition-checks.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;south&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;east&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;north&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  },
+  &quot;west&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_and_frame_unchanged&quot;: true,
+    &quot;neutral_and_palette_exact_body_reference&quot;: true,
+    &quot;worn_items&quot;: 0
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:58.452671+00:00&quot;,
+  &quot;step&quot;: &quot;assemble_without_baking_equipment&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-21T06:31:58.452671+00:00 / PASS</small><h3>review anatomy clothing attachment all directions</h3><p>Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/assembly-contract.json">assembly-contract.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:31:08.503717+00:00&quot;,
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;canvas&quot;: [
+      512,
+      512
+    ],
+    &quot;contact&quot;: [
+      256,
+      448
+    ],
+    &quot;pixel_world_size&quot;: 0.002,
+    &quot;width&quot;: 1.536,
+    &quot;height&quot;: 1.024,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0.384
+  },
+  &quot;equipment&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: &quot;Front cat head/forepaws below trunk, tail rises behind; hind pair occluded.&quot;,
+    &quot;east&quot;: &quot;Whole right profile; head right, tail rooted at left rump; fore/hind near paws and overlapped far pair.&quot;,
+    &quot;north&quot;: &quot;Back of skull/ears, no face; lower-rump tail curves outside flank separately from head.&quot;,
+    &quot;west&quot;: &quot;Exact corrected east mirror, including head and both tint planes.&quot;
+  },
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;y&quot;
+  },
+  &quot;policy&quot;: &quot;Observed worn/held list is empty. Cat Bite/Claw defaults are natural behavior on real Face/Foot parts, not inventory clothes or separate held objects. No collar or profession costume added.&quot;,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>131f3ee216c73f83e0b264d9f97a9e930474a8f9e79fda239b0a8f9fce63d4ee</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/authoring-review.json">authoring-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:31:58.452671+00:00&quot;,
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;Generation authoring assembly only&quot;,
+  &quot;reason&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;composition_checks&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/composition-checks.json&quot;,
+    &quot;sha256&quot;: &quot;94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579&quot;
+  },
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+  },
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual visible/hidden, facing, independent tint, look/hurt/save and supported state.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>272f0ec112d8499e1a9ee1080b853a1005a99c1e12defbef095c98035f660fa3</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:58.452671+00:00&quot;,
+  &quot;step&quot;: &quot;review_anatomy_clothing_attachment_all_directions&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-21T06:31:58.452671+00:00 / PASS</small><h3>review neutral and qud palette at game scale</h3><p>Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png" alt="native-palette-comparison"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/native-palette-comparison.png">native-palette-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png"><img loading="lazy" src="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/npc-ctesiphus/v1/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344</code></details></figure><figure><a href="../../art/conversion/npc-ctesiphus/v1/artifact-manifest.json">artifact-manifest.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:31:58.452671+00:00&quot;,
+  &quot;entry&quot;: &quot;NPC-CTESIPHUS&quot;,
+  &quot;artifacts&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/assemble.py&quot;,
+      &quot;sha256&quot;: &quot;5b67d9268969db78a452c91a04c855a40c87e543ffaeda813d3c13ed9e172a8f&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/assembly-contract.json&quot;,
+      &quot;sha256&quot;: &quot;131f3ee216c73f83e0b264d9f97a9e930474a8f9e79fda239b0a8f9fce63d4ee&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;272f0ec112d8499e1a9ee1080b853a1005a99c1e12defbef095c98035f660fa3&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/composition-checks.json&quot;,
+      &quot;sha256&quot;: &quot;94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/game-scale-review.png&quot;,
+      &quot;sha256&quot;: &quot;111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/model.json&quot;,
+      &quot;sha256&quot;: &quot;70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-east.png&quot;,
+      &quot;sha256&quot;: &quot;29fac4ec1194a8a8b6271e0e0a2252ee979173a5c13efc791c66c61a1620eafe&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-north.png&quot;,
+      &quot;sha256&quot;: &quot;47460c9f20d2090d7b28e89ffeee3542fc93548aeb2accd966e58e04cc2b4cd4&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-south.png&quot;,
+      &quot;sha256&quot;: &quot;5c4500288537d411185a56f60311e12c8822fc5317995ab631bc0070ff728cba&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/native-palette-west.png&quot;,
+      &quot;sha256&quot;: &quot;4f51410dd3d4ba138e1e9c88a31496ff49c399d4c3fb2abe62a4a0fc5a2388e3&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-east.png&quot;,
+      &quot;sha256&quot;: &quot;39f5955fa18fc313cdc55e5a0b14df430d3c289b28b38be02e29d5eeef48fc34&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-north.png&quot;,
+      &quot;sha256&quot;: &quot;414477f5740d78ba0bb97a5491fa40ef90cccc12481aba3090b068f1bfb6c47b&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-south.png&quot;,
+      &quot;sha256&quot;: &quot;03484a8051fb74ed4a12a76b72dce61e08bdd6a3e3d77bbe3d1ca3cccf45dc17&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/neutral-west.png&quot;,
+      &quot;sha256&quot;: &quot;7d2ee5647a07697ece17775d39ea28ae42fd24a850d069ebb266bbb0f80ce3ff&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-ctesiphus/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579&quot;
+    }
+  ]
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>88d1c36a7477b5910341f1342d7322243ed7d1de02bf8fc201ef8eb08adc48ce</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:31:58.452671+00:00&quot;,
+  &quot;step&quot;: &quot;review_neutral_and_qud_palette_at_game_scale&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-ray-cat/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
 </div></div></main></html>

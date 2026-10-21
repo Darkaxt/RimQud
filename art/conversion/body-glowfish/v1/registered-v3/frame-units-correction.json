@@ -1,0 +1,112 @@
+{
+  "recorded_at": "2026-10-21T06:34:31.789871+00:00",
+  "old_model": {
+    "path": "art/conversion/body-glowfish/v1/registered-v2/model.json",
+    "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"
+  },
+  "renderer": {
+    "path": "probe/JoppaRenderer.cs",
+    "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"
+  },
+  "renderer_contract": "CellWidth=2/3 at line19; SpriteLayer world width=width*CellWidth at line257. Height already uses world units. This is read-only source inspection, no native/game validation.",
+  "error": "Old width1.2 cell units would yield0.8 world while height1.2 world and declared canvas1.2x1.2 imply square physical pixel scale.",
+  "correction": "Set width=1.2/(2/3)=1.8 Qud cell units for both color planes in every view. Canvas/pivot, center offsets, height, layers, every PNG and world_canvas remain unchanged.",
+  "affected_rows": [
+    {
+      "facing": "south",
+      "component": "body",
+      "role": "foreground",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/south/primary-neutral.png",
+      "sha256": "7dc4130ea3147abf5930fbf4375ec3efe3253e81d927c377ea63ab8fe0c90898",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "south",
+      "component": "body",
+      "role": "detail",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/south/detail-neutral.png",
+      "sha256": "9b965b5a0cc4f687e7d3c261762650f891796bbfa23e21aa35c4634edd417836",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "east",
+      "component": "body",
+      "role": "foreground",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/east/primary-neutral.png",
+      "sha256": "d59aad7863e637c7be1b5f9c61de14350237cda8b2dbfc059be7d18b0c4e67ad",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "east",
+      "component": "body",
+      "role": "detail",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/east/detail-neutral.png",
+      "sha256": "41f1eb8e53a6470c00e83659e4d7efa864a5565edfb0658ab018053934472880",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "north",
+      "component": "body",
+      "role": "foreground",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/north/primary-neutral.png",
+      "sha256": "b793db6f0f6368e87dc4e1869f94d53e0125e015eb2795fc567e81657ab1e0b0",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "north",
+      "component": "body",
+      "role": "detail",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/north/detail-neutral.png",
+      "sha256": "be34774a6831a6e87059180417c15762ba0c056cba0a45ed2cc38ed6ed427b2a",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "west",
+      "component": "body",
+      "role": "foreground",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/west/primary-neutral.png",
+      "sha256": "67dc47096f6e5a6b1de5878f027fc9e4e9eb4e85878eff8fadb3598f836b5469",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    },
+    {
+      "facing": "west",
+      "component": "body",
+      "role": "detail",
+      "file": "art/conversion/body-glowfish/v1/registered-v2/west/detail-neutral.png",
+      "sha256": "604524a6e7dc4015ce38cf5754c89ada232277a112d3fa5d40f0cd0286429055",
+      "width_before_cells": 1.2,
+      "width_after_cells": 1.8,
+      "world_width_before": 0.8,
+      "world_width_after": 1.2,
+      "world_height": 1.2
+    }
+  ]
+}

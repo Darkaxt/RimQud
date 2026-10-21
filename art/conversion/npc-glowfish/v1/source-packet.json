@@ -1,0 +1,234 @@
+{
+  "recorded_at": "2026-10-21T06:37:00.738394+00:00",
+  "entry": "NPC-GLOWFISH",
+  "source": {
+    "path": "art/village/sources.json",
+    "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"
+  },
+  "captured_actor": {
+    "instance": 528,
+    "blueprint": "Glowfish",
+    "species": "catfish",
+    "gender": "neuterperson",
+    "description": "Luminescent flecks flit beneath the water's surface.\n\nBase demeanor: {{g|docile}}",
+    "anatomy": "Fish",
+    "parts": [
+      {
+        "id": 175,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 399,
+        "parent": 175,
+        "type": "Head",
+        "variant": "Head",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 400,
+        "parent": 399,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 619,
+          "blueprint": "Glowfish_Bite",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-bite.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 401,
+        "parent": 175,
+        "type": "Back",
+        "variant": "Back",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 402,
+        "parent": 175,
+        "type": "Fin",
+        "variant": "Dorsal Fin",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 403,
+        "parent": 175,
+        "type": "Fin",
+        "variant": "Fin",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 404,
+        "parent": 175,
+        "type": "Fin",
+        "variant": "Fin",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 405,
+        "parent": 175,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 406,
+        "parent": 175,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 407,
+        "parent": 175,
+        "type": "Fin",
+        "variant": "Tail Fin",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 408,
+        "parent": 175,
+        "type": "Thrown Weapon",
+        "variant": "Thrown Weapon",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 409,
+        "parent": 175,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      }
+    ],
+    "tile": "creatures\\sw_glowfish.bmp",
+    "foreground": "&m",
+    "tileColor": "",
+    "detailColor": "C"
+  },
+  "body_model": {
+    "path": "art/conversion/body-glowfish/v1/registered-v3/model.json",
+    "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"
+  },
+  "body_review": {
+    "status": "PASS",
+    "reason": "Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.",
+    "record": {
+      "path": "art/conversion/body-glowfish/v1/registered-v3/authoring-review.json",
+      "sha256": "bafc8038b85ebbc606272371bd569d9892b558f0f3518b1597c8f24a5978758a"
+    }
+  },
+  "equipment_bindings": {},
+  "natural_equipment": [
+    {
+      "part": 400,
+      "type": "Face",
+      "item": {
+        "instance": 619,
+        "blueprint": "Glowfish_Bite",
+        "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+        "tile": "Creatures/natural-weapon-bite.bmp",
+        "foreground": "&y",
+        "tileColor": "",
+        "detailColor": ""
+      }
+    }
+  ],
+  "equipment_policy": "Observed worn/held list is empty. Default Face Glowfish_Bite remains native natural attack behavior, not a carried object or clothing. No fins/head treated as independent articulated renderer bones.",
+  "body_policy": "Two neutral color planes depict one normal whole catfish with intrinsic head, gills, barbels, four fins and source curl. Source metadata/species supports the plan; no humanoid model or new mutation limb. Exact current material/geometry and corrected square world frame are reused.",
+  "palette": {
+    "primary": "&m",
+    "detail": "C"
+  },
+  "history": {
+    "report": "docs/conversion-entries/BODY-GLOWFISH.html",
+    "source_packet": {
+      "path": "art/conversion/body-glowfish/v1/source-packet.json",
+      "sha256": "427d97cf9bd656ee6504663b09f1a8dd12c2935a4a16fc1bddf55b2053401e0f"
+    },
+    "front": {
+      "path": "art/conversion/body-glowfish/v1/front-controls-patched.json",
+      "sha256": "3cf7b88691c8d8eeaf39a43c4d99ba2c7c02fda4d35f5a0a52245e06dcc985e4"
+    },
+    "construction": {
+      "path": "art/conversion/body-glowfish/v1/turnaround-controls.json",
+      "sha256": "5ac699f95519d1452d2229a094aa0fedaddb2ad1834455ab9df209f0045df2e4"
+    },
+    "actual_side_back": {
+      "path": "art/conversion/body-glowfish/v1/side-back-receipt.json",
+      "sha256": "6c1f46ce03336484605fbffa995a419c6295e017bcfcc724e7276876353b19ea"
+    },
+    "actual_refinement": {
+      "path": "art/conversion/body-glowfish/v1/composed-refinement-receipt.json",
+      "sha256": "9b6f505efc777a1f0b6a69d055e39316398a2cb543d14b3eb72f8c2ee999d3c2"
+    },
+    "structural_review": {
+      "path": "art/conversion/body-glowfish/v1/composed-structural-review.json",
+      "sha256": "44e35d940cc29a29d5fd635563ca78ab46efe5652b54d81a6e3531ec48dd2439"
+    },
+    "material": {
+      "path": "art/conversion/body-glowfish/v1/material-selection-corrected.json",
+      "sha256": "11cc7b1c917c8af4da47fa72ac4b7d5bb1d07c3b9c166d4422305717eecd0b8f"
+    },
+    "frame_correction": {
+      "path": "art/conversion/body-glowfish/v1/registered-v3/frame-units-correction.json",
+      "sha256": "16f14bb2fdf0bb1acb8fcdbe03933ef364ad10e7145c5a0e674921c5b7cb9346"
+    }
+  },
+  "new_imagegen_calls": 0,
+  "behavior_boundary": "Native LightSource/Gills/DarkVision, water visibility, movement and natural bite remain native. No water/glow layer, fixed-purple fallback, demographics or simulation changes.",
+  "native_acceptance": "Pending full-set generation gate: actual water/lighting/visibility, whole-body facing/pivot, palette OFF/ON, hurt/look/save and supported states."
+}

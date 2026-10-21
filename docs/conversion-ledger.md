@@ -10,7 +10,7 @@ The 75 baseline blueprint types are all accounted for: 67 selected visible types
 
 Equipment inventory rows identify the 20 unique items and aggregate their fitting records; they do not require generating a second generic outfit. The 33 fitting entries own actual body-specific construction/refinement/extraction. An item aggregate or NPC assembly cannot complete while its linked fittings/body remain unfinished.
 
-Active entry: **BODY-RAY-CAT**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
+Active entry: **SCN-CANTEEN**. Overall art work: **unfinished**. Implementation Stage 3: **ACTIVE**.
 
 ## One-entry execution rule
 
@@ -91,7 +91,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| SCN-CANTEEN | Canteen | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
+| SCN-CANTEEN | Canteen | IN PROGRESS | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-RANDOM-BOTTLE | Random Bottle | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-VASE | Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
 | SCN-WINE-VASE | Wine Vase | UNFINISHED | - | Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished. |
@@ -101,8 +101,8 @@ Creature views/composed refinement and garment in-context refinement must follow
 
 | Entry | Subject | Status | Linked entries | Known work remaining |
 | --- | --- | --- | --- | --- |
-| NPC-CTESIPHUS | Ctesiphus | UNFINISHED | BODY-RAY-CAT | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
-| NPC-GLOWFISH | Glowfish | UNFINISHED | BODY-GLOWFISH | Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward. |
+| NPC-CTESIPHUS | Ctesiphus | UNFINISHED | BODY-RAY-CAT |  |
+| NPC-GLOWFISH | Glowfish | UNFINISHED | BODY-GLOWFISH |  |
 
 ### Equipment inventory (20)
 
@@ -206,7 +206,7 @@ Creature views/composed refinement and garment in-context refinement must follow
 | BODY-HUMAN-MALE | human-male | UNFINISHED | - | Existing art/registration and native checks are historical only; restart the logged workflow. Shared-human-base consistency must be reviewed across named human variants; independent turnarounds allowed unsupported proportion drift. The standard human shown in the gallery has tapered leg stubs without recognizable feet; construct and review feet and contact in every orientation. |
 | BODY-IRUDAD | irudad | UNFINISHED | BODY-HUMAN-MALE-OLDER |  |
 | BODY-NIMA | nima | UNFINISHED | BODY-HUMAN-FEMALE |  |
-| BODY-RAY-CAT | ray-cat | IN PROGRESS | - | Existing art/registration and native checks are historical only; restart the logged workflow. |
+| BODY-RAY-CAT | ray-cat | UNFINISHED | - |  |
 | BODY-YRAME | yrame | UNFINISHED | BODY-HUMAN-FEMALE |  |
 | BODY-HUMAN-FEMALE-OLDER | human female older template | UNFINISHED | BODY-HUMAN-FEMALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
 | BODY-HUMAN-MALE-OLDER | human male older template | UNFINISHED | BODY-HUMAN-MALE | User-requested age variant of the selected shared human family. No native life-stage selector established; do not change NPC demographics. |
@@ -3425,7 +3425,7 @@ Required views/states: fixed map view; source palette/coverage and native suppor
 
 Historical artifacts: [art/village/scenery/canteen-body.png](../art/village/scenery/canteen-body.png), [art/village/scenery/canteen-detail.png](../art/village/scenery/canteen-detail.png).
 
-Current step: not started. Process-log events: 0.
+Current step: resolve_object_description_original_tile_palette_state. Process-log events: 0.
 
 ### SCN-RANDOM-BOTTLE: Random Bottle
 
@@ -3475,7 +3475,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T06:31:08.503717+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.
+  Review: Resolve actual Ctesiphus566, Ray Cat race, four physical paws, intrinsic tail and natural defaults.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/source-packet.json", "sha256": "485ea69512ae1d742656c31c410a82352f9fcf895122086e8ae6052e03af6579"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:08.503717+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.
+  Review: Verify current generation-ready Ray Cat and explicit empty worn/held list; retain full actual generation and current registration lineage.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/assembly-contract.json", "sha256": "131f3ee216c73f83e0b264d9f97a9e930474a8f9e79fda239b0a8f9fce63d4ee"}, {"path": "art/conversion/npc-ctesiphus/v1/composition-checks.json", "sha256": "94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:08.503717+00:00 / assemble_without_baking_equipment / REQUIRES REVIEW: Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.
+  Review: Compose exact current body/head/tint rows, with no equipment. Actual all-view palette/shape review pending.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/assemble.py", "sha256": "5b67d9268969db78a452c91a04c855a40c87e543ffaeda813d3c13ed9e172a8f"}, {"path": "art/conversion/npc-ctesiphus/v1/model.json", "sha256": "70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147"}, {"path": "art/conversion/npc-ctesiphus/v1/neutral-comparison.png", "sha256": "6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890"}, {"path": "art/conversion/npc-ctesiphus/v1/native-palette-comparison.png", "sha256": "525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb"}, {"path": "art/conversion/npc-ctesiphus/v1/game-scale-review.png", "sha256": "111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:58.452671+00:00 / assemble_without_baking_equipment / PASS: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Review: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/model.json", "sha256": "70152d043d9283899f26c0f7c1cdb1cd48f11e3f87613f88a8ac6b515f0b7147"}, {"path": "art/conversion/npc-ctesiphus/v1/composition-checks.json", "sha256": "94ba341ed6f09612b6c0d88c153ac71c42b20af7f10c4236013ff47ccdf4eb8e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:58.452671+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Review: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/assembly-contract.json", "sha256": "131f3ee216c73f83e0b264d9f97a9e930474a8f9e79fda239b0a8f9fce63d4ee"}, {"path": "art/conversion/npc-ctesiphus/v1/neutral-comparison.png", "sha256": "6bafd075a2d2b97b3b1f43cacf3de1175c56ed1f4105590d267bc3962f660890"}, {"path": "art/conversion/npc-ctesiphus/v1/authoring-review.json", "sha256": "272f0ec112d8499e1a9ee1080b853a1005a99c1e12defbef095c98035f660fa3"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:58.452671+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Review: Inspected all four neutral/native m/y and intended-size displays against current Ray Cat source. Exact current body/head/tint layers, physical frame and empty outfit are preserved. Four real Foot nodes and intrinsic Tail remain represented with natural overlap; Cat Bite/Claw defaults stay native behavior. No new costume, collar, ImageGen call, demographic mutation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}]
+  Outputs: [{"path": "art/conversion/npc-ctesiphus/v1/native-palette-comparison.png", "sha256": "525d151a3f48ec517c0fc1723d3ffff65793446fc3d8c84bbdc79d0fb76784eb"}, {"path": "art/conversion/npc-ctesiphus/v1/game-scale-review.png", "sha256": "111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344"}, {"path": "art/conversion/npc-ctesiphus/v1/artifact-manifest.json", "sha256": "88d1c36a7477b5910341f1342d7322243ed7d1de02bf8fc201ef8eb08adc48ce"}]
+  Method/prompt/corrections: {}
 
 ### NPC-GLOWFISH: Glowfish
 
@@ -3485,7 +3521,43 @@ Required views/states: south; east; north; west; neutral/Qud palette; actual equ
 
 Historical artifacts: none recorded.
 
-Current step: not started. Process-log events: 0.
+Current step: native_visibility_equipment_hurt_look_save_review. Process-log events: 6.
+
+- 2026-10-21T06:37:00.738394+00:00 / resolve_individual_race_and_runtime_metadata / PASS: Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.
+  Review: Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/source-packet.json", "sha256": "72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:37:00.738394+00:00 / verify_body_and_every_equipped_item_dependencies / PASS: Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.
+  Review: Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/assembly-contract.json", "sha256": "07975b39745f1dc4746f2f47eb158e850fb3b8b9cfba20dd078aa46887ce0cea"}, {"path": "art/conversion/npc-glowfish/v1/composition-checks.json", "sha256": "920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:37:00.738394+00:00 / assemble_without_baking_equipment / REQUIRES REVIEW: Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.
+  Review: Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/assemble.py", "sha256": "7e8da11379e07b64707da83d5681c1e56de5f5d1b4b587e886bcd92395e9bc6d"}, {"path": "art/conversion/npc-glowfish/v1/model.json", "sha256": "618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897"}, {"path": "art/conversion/npc-glowfish/v1/neutral-comparison.png", "sha256": "01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7"}, {"path": "art/conversion/npc-glowfish/v1/native-palette-comparison.png", "sha256": "209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4"}, {"path": "art/conversion/npc-glowfish/v1/game-scale-review.png", "sha256": "f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:37:54.622406+00:00 / assemble_without_baking_equipment / PASS: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Review: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/model.json", "sha256": "618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897"}, {"path": "art/conversion/npc-glowfish/v1/composition-checks.json", "sha256": "920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:37:54.622406+00:00 / review_anatomy_clothing_attachment_all_directions / PASS: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Review: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/assembly-contract.json", "sha256": "07975b39745f1dc4746f2f47eb158e850fb3b8b9cfba20dd078aa46887ce0cea"}, {"path": "art/conversion/npc-glowfish/v1/neutral-comparison.png", "sha256": "01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7"}, {"path": "art/conversion/npc-glowfish/v1/authoring-review.json", "sha256": "f46987c627f76af4b2d9d8427a07fc0e1a2f78ece85f9ec2d572b64fff4cda1c"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:37:54.622406+00:00 / review_neutral_and_qud_palette_at_game_scale / PASS: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Review: Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}]
+  Outputs: [{"path": "art/conversion/npc-glowfish/v1/native-palette-comparison.png", "sha256": "209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4"}, {"path": "art/conversion/npc-glowfish/v1/game-scale-review.png", "sha256": "f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba"}, {"path": "art/conversion/npc-glowfish/v1/artifact-manifest.json", "sha256": "6a0ecb9340a0b935c1d8623f334e8361cc6bedf90af0f33f8e434bd3d5f93352"}]
+  Method/prompt/corrections: {}
 
 ### ITEM-BLACK-ROBES: Black Robes
 
@@ -8419,7 +8491,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/village/bodies/glowfish/body-east.png](../art/village/bodies/glowfish/body-east.png), [art/village/bodies/glowfish/body-north.png](../art/village/bodies/glowfish/body-north.png), [art/village/bodies/glowfish/body-south.png](../art/village/bodies/glowfish/body-south.png), [art/village/bodies/glowfish/model.json](../art/village/bodies/glowfish/model.json), [art/village/bodies/glowfish/turnaround-prompt.txt](../art/village/bodies/glowfish/turnaround-prompt.txt), [art/village/bodies/glowfish/turnaround.png](../art/village/bodies/glowfish/turnaround.png).
 
-Current step: native_body_review. Process-log events: 10.
+Current step: native_body_review. Process-log events: 14.
 
 - 2026-10-21T02:53:24.733792+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve exact Glowfish->catfish identity, full source ancestry, original m/C curled sprite and observed Fish topology before front-first art.
   Review: Normal fish morphology: one head, dorsal+paired+tail fins, no legs. Face default Bite is not outfit; actual worn equipment empty. Gills/DarkVision/light behavior preserved without mutation appendages. Source curl/roles and exact native palette retained; old fixed-colour/east-first proposal receives no credit.
@@ -8479,6 +8551,30 @@ Current step: native_body_review. Process-log events: 10.
   Review: Art authoring only. No game launch, native body test, save/load/hurt harness or renderer integration claim. NPC assembly is a separate required entry.
   Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v2/model.json", "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"}]
   Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:31:58.452671+00:00 / register_required_layers_and_color_masks / REQUIRES REVIEW: Source model declares shared1.2x1.2 world canvas but supplies row width1.2 in Qud cell-width units; existing renderer multiplies width by2/3, so current parameters would squeeze it to0.8x1.2 world. Correct metadata to width1.8 cells, preserving all artwork, pivot, source geometry, tints and1.2-world height before NPC assembly.
+  Review: Generation mapping defect found before NPC assembly; no game/native test run. Previous source/neutral/tint art remains usable.
+  Inputs: [{"path": "probe/JoppaRenderer.cs", "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"}, {"path": "art/conversion/body-glowfish/v1/registered-v2/model.json", "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"}]
+  Outputs: []
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:34:31.789871+00:00 / register_required_layers_and_color_masks / REQUIRES REVIEW: Correct shared frame unit mapping only: width1.8 cells maps1.2 world, matching1.2-world height. Keep all8 source layer PNGs, both tint roles, pivot and depth unchanged. Actual generated mapping review pending.
+  Review: No new art or ImageGen/native call. Inspect physical-frame mapping before generation-ready credit.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v2/model.json", "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"}, {"path": "probe/JoppaRenderer.cs", "sha256": "530fa8ba7b7679f582b352e23d8584193812422f4840001519ab161af6057cd9"}]
+  Outputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/frame-units-correction.json", "sha256": "16f14bb2fdf0bb1acb8fcdbe03933ef364ad10e7145c5a0e674921c5b7cb9346"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/physical-frame-comparison.png", "sha256": "e67fad387fad798bfc19de5ba142b209cc3b8077bc9b87262859f8d00c21bfd4"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/neutral-turnarounds.png", "sha256": "0841e3b039c1cc0685a3e9d5af3d805b55dc928e0ff80c057371e1cb68c8618e"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/native-palette-turnarounds.png", "sha256": "531b42b9c43b459f240d839b8927362600e54c8aa42d1a1cf569e981bfc492cc"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:35:31.399589+00:00 / register_required_layers_and_color_masks / PASS: Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.
+  Review: Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v2/model.json", "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"}]
+  Outputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/model.json", "sha256": "ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/frame-units-correction.json", "sha256": "16f14bb2fdf0bb1acb8fcdbe03933ef364ad10e7145c5a0e674921c5b7cb9346"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/physical-frame-comparison.png", "sha256": "e67fad387fad798bfc19de5ba142b209cc3b8077bc9b87262859f8d00c21bfd4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:35:31.399589+00:00 / visual_review_anatomy_orientation_palette_all_views / PASS: Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.
+  Review: Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.
+  Inputs: [{"path": "art/conversion/body-glowfish/v1/registered-v2/model.json", "sha256": "ad038c6466c9f50136c57e9eea15e66083a0018c30816108fd44cecec026445a"}]
+  Outputs: [{"path": "art/conversion/body-glowfish/v1/registered-v3/neutral-turnarounds.png", "sha256": "0841e3b039c1cc0685a3e9d5af3d805b55dc928e0ff80c057371e1cb68c8618e"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/native-palette-turnarounds.png", "sha256": "531b42b9c43b459f240d839b8927362600e54c8aa42d1a1cf569e981bfc492cc"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/authoring-review.json", "sha256": "bafc8038b85ebbc606272371bd569d9892b558f0f3518b1597c8f24a5978758a"}, {"path": "art/conversion/body-glowfish/v1/registered-v3/artifact-manifest.json", "sha256": "9a0bb75aa4edd68437d4a73ec5a4d6ba5f850887caa5d218ef1f858a8a0704a4"}]
   Method/prompt/corrections: {}
 
 ### BODY-HUMAN-CHILD: human child (featureless body with separate clothing)
@@ -8881,7 +8977,7 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/ctesiphus/east-albedo.png](../art/ctesiphus/east-albedo.png), [art/ctesiphus/north-albedo.png](../art/ctesiphus/north-albedo.png), [art/ctesiphus/preview.html](../art/ctesiphus/preview.html), [art/ctesiphus/south-albedo.png](../art/ctesiphus/south-albedo.png), [evidence/faithful-cat-result.json](../evidence/faithful-cat-result.json).
 
-Current step: construct_front. Process-log events: 4.
+Current step: native_body_review. Process-log events: 10.
 
 - 2026-10-21T06:14:00.177716+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
   Review: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
@@ -8905,6 +9001,42 @@ Current step: construct_front. Process-log events: 4.
   Review: Both source identities/palette roles retained. Current registration/detail split still unfinished; historical native tests do not complete this entry.
   Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
   Outputs: [{"path": "art/conversion/body-ray-cat/v1/extract-generic-reference.py", "sha256": "9fba04d4e610a81b1e2ecd048f2d728192304286ca1834eacd74c67c8ccd9298"}, {"path": "art/conversion/body-ray-cat/v1/generic-original-reference.json", "sha256": "f62fad5a98658a04f23e79354d6c56e51acce063c70c0417f007e4d210141325"}, {"path": "art/conversion/body-ray-cat/v1/original-glyph-review.json", "sha256": "639501320d9ddb522050aad6aad377c929bbb3a412e7fcfaad258e2ce4d62447"}, {"path": "art/conversion/body-ray-cat/v1/original-glyph-comparison.png", "sha256": "ffd94ee74c99316e40a838795ec837ec06ed5f9b3d26c657a39beb47176bc4c4"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:23:03.403697+00:00 / construct_front / PASS: Create current editable manual anatomy/ownership suggestion with shared frame and visible/hidden part plan. This is current work after historical approved generation; never represented as an input to past calls.
+  Review: Create current editable manual anatomy/ownership suggestion with shared frame and visible/hidden part plan. This is current work after historical approved generation; never represented as an input to past calls.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/manual-ownership-controls.json", "sha256": "3ea6bc79e1165a5cf8cb463c467a41f4f2028bc2730faf5359d326cf8ef730b9"}, {"path": "art/conversion/body-ray-cat/v1/manual-south.svg", "sha256": "2223f3bd6253461c0c07e7650ea15b2bf5bcd664719b086cc40f3091d3b5f25d"}, {"path": "art/conversion/body-ray-cat/v1/manual-east.svg", "sha256": "c2f6b0e9c9151a18a58e2c95531db1a694a2b22c5ff8003829dc19afff4c52ff"}, {"path": "art/conversion/body-ray-cat/v1/manual-north.svg", "sha256": "d13a25a7f4fe57ddd0940a1411f5bdcf86c2b9d45755deafe9fdc34bf15d9acf"}, {"path": "art/conversion/body-ray-cat/v1/registered/manual-plan-comparison.png", "sha256": "3dd2e332fb723f17a03d9b129e80390305247f716d2d69bdd53563493c3e884e"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:23:03.403697+00:00 / correct_anatomy_then_imagegen_refine_composed_views / PASS: Reuse actual corrected/refined selected view set: original north with neck-root tail is rejected; recorded actual north edit moves root to lower rump and separates tail from head. South/east retained as accepted. No additional generation or cosmetic redesign.
+  Review: Reuse actual corrected/refined selected view set: original north with neck-root tail is rejected; recorded actual north edit moves root to lower rump and separates tail from head. South/east retained as accepted. No additional generation or cosmetic redesign.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/historical-generation-provenance.json", "sha256": "be175212b205eaacd18e56f6856daf3301a7bf229eca6d4ced4d3e1a1b31f69c"}, {"path": "art/conversion/body-ray-cat/v1/north-before-tail-correction-historical-output.png", "sha256": "0c1773559b52b22c1551d1a1a489d4fa5d2e65d6aa59098bc40b5333bedd1a9d"}, {"path": "art/conversion/body-ray-cat/v1/north-tail-correction-historical-output.png", "sha256": "5309ebee0c78e2cefdaf61f77eb368a3d3b0cd37ce0b470c76181be1ee009c92"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:23:03.403697+00:00 / register_required_layers_and_color_masks / REQUIRES REVIEW: Register accepted sources through frozen physical landmarks, derive neutral body/head plus independent detail and keep source pixels/shape, intrinsic tail/paws and west mirroring explicit. Actual visual review pending.
+  Review: Register accepted sources through frozen physical landmarks, derive neutral body/head plus independent detail and keep source pixels/shape, intrinsic tail/paws and west mirroring explicit. Actual visual review pending.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/registered/model.json", "sha256": "09e07d598524f813f8e5dcf1e38bff25adeecba5ef4909b6f135f4de496f1b18"}, {"path": "art/conversion/body-ray-cat/v1/registered/registration-decisions.json", "sha256": "2720362c74c73e1a8c19f72f96e8c3efc6d437b91e15a6bad0907a8fb934e6ea"}, {"path": "art/conversion/body-ray-cat/v1/registered/assembly-comparison.png", "sha256": "0d4967a698ae3d666e7b000ed451caafc15576b8b1b17ee6ebd49abc863b84c8"}, {"path": "art/conversion/body-ray-cat/v1/registered/ownership-comparison.png", "sha256": "4d874156436e00d2aeeec931bb050bd6bdd6f424ea684661593905915cffb69a"}, {"path": "art/conversion/body-ray-cat/v1/registered/native-palette-comparison.png", "sha256": "25ddd0d3bb849f974a888d97206a020f163dacdbf18d6c6990f0e8cdd8e98053"}, {"path": "art/conversion/body-ray-cat/v1/registered/detail-comparison.png", "sha256": "c39c799902f48f08e1b01d1b3163a3fef3ec8d86ca2b3bb87d225b1f72412dab"}, {"path": "art/conversion/body-ray-cat/v1/registered/game-scale-review.png", "sha256": "fd9ad36d511e223a874a762124c6745a97ed74942fd0341bf913b35b8a5c4362"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:25:14.064941+00:00 / register_required_layers_and_color_masks / REQUIRES REVIEW: Reject opaque-only tint filter and partition original partial alpha exactly. Shared registered geometry, accepted source/world scale and head/body ownership are unchanged. Actual current tint/attachment review pending.
+  Review: Reject opaque-only tint filter and partition original partial alpha exactly. Shared registered geometry, accepted source/world scale and head/body ownership are unchanged. Actual current tint/attachment review pending.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/registered/model.json", "sha256": "09e07d598524f813f8e5dcf1e38bff25adeecba5ef4909b6f135f4de496f1b18"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v2/opaque-filter-rejection.json", "sha256": "114dcbfa723e1a1f308f7f9d16db010c6f6bde8347e33aa8b633026ee090d539"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/registration-decisions.json", "sha256": "962506e8eec99c3366a178c0a017ab93ac710b1062eddb3ce1e1701778ebaa39"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/model.json", "sha256": "a9b4d7b20c6090330da36e637fd5ff081c51382b105576713313b29da63d94e7"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/assembly-comparison.png", "sha256": "b55536a2f1b92e44d0db8bc82a4c5deac4976a3586f237983aa0978a526892cd"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/native-palette-comparison.png", "sha256": "8aa762964f22342087f58863b2f55720c3e00db35cfb4d0b40743677c3b0a107"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/detail-comparison.png", "sha256": "633b03f25dd00482a2b45edc72d1e26550b281925e1e8b8439ad058f2e312979"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/material-ownership-comparison.png", "sha256": "89f71933a85b71efe37a4e3bd1aecaede66d1bb194c3234268be3c40880a757f"}, {"path": "art/conversion/body-ray-cat/v1/registered-v2/game-scale-review.png", "sha256": "75963f0bd2cc5f782acb55f9bb44a667d0a6437c458e3290c06193a1f10bf851"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:28:29.377033+00:00 / register_required_layers_and_color_masks / PASS: Inspected actual accepted source views and recovered north patch, manual anatomy/ownership plan, shared-frame neutral/native and intended-size plates. Compact feline cardinal views preserve four-foot/tail anatomy with natural pair overlap; north has no face and tail joins lower rump separately from skull. New body/head/tint layers reconstruct source grayscale and alpha exactly. Mathematical material partition corrects rejected opaque-only filter. Paw-midpoint integer shifts center the body without scaling, warping or clipping. No new ImageGen call or new species/mutation geometry.
+  Review: Inspected actual accepted source views and recovered north patch, manual anatomy/ownership plan, shared-frame neutral/native and intended-size plates. Compact feline cardinal views preserve four-foot/tail anatomy with natural pair overlap; north has no face and tail joins lower rump separately from skull. New body/head/tint layers reconstruct source grayscale and alpha exactly. Mathematical material partition corrects rejected opaque-only filter. Paw-midpoint integer shifts center the body without scaling, warping or clipping. No new ImageGen call or new species/mutation geometry.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/model.json", "sha256": "119d1adf9e9e32b22ebe5367b0481d733d1b35914b7700cf5456d9b02e8e115b"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/centering-decisions.json", "sha256": "29de9ae80e44a6f9e9a5f29a7199623ee4aa0ecacf38b827557b129b03991a7d"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/detail-comparison.png", "sha256": "417b271341afd727064455fa87c82f3e33c0fb634142032571b9dc16f70ffb50"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:28:29.377033+00:00 / visual_review_anatomy_orientation_palette_all_views / PASS: Inspected actual accepted source views and recovered north patch, manual anatomy/ownership plan, shared-frame neutral/native and intended-size plates. Compact feline cardinal views preserve four-foot/tail anatomy with natural pair overlap; north has no face and tail joins lower rump separately from skull. New body/head/tint layers reconstruct source grayscale and alpha exactly. Mathematical material partition corrects rejected opaque-only filter. Paw-midpoint integer shifts center the body without scaling, warping or clipping. No new ImageGen call or new species/mutation geometry.
+  Review: Inspected actual accepted source views and recovered north patch, manual anatomy/ownership plan, shared-frame neutral/native and intended-size plates. Compact feline cardinal views preserve four-foot/tail anatomy with natural pair overlap; north has no face and tail joins lower rump separately from skull. New body/head/tint layers reconstruct source grayscale and alpha exactly. Mathematical material partition corrects rejected opaque-only filter. Paw-midpoint integer shifts center the body without scaling, warping or clipping. No new ImageGen call or new species/mutation geometry.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/registered-v3/assembly-comparison.png", "sha256": "852895d0a59c7242973b67dc4cdfe22330512061ffbd3f469fd258c0254bdbd8"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/native-palette-comparison.png", "sha256": "fa2bf5499346d483ed8ec780bb60b3b134631fe620f22c4cb1ef0bc86b7faee9"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/game-scale-review.png", "sha256": "111cae5ac967d8b26ff88b3c011925034bb98d57daa9c6258cbaf23186a58344"}, {"path": "art/conversion/body-ray-cat/v1/registered-v3/authoring-review.json", "sha256": "412af5fd63cf7c0e32a7422d50004a4162d021cda4ee90ff166400ac352c0273"}, {"path": "art/conversion/body-ray-cat/v1/artifact-manifest.json", "sha256": "6a17a395bc3e9c2dbedf7ab9792c05568eb0ae938f4da87d647e38f4104db293"}]
   Method/prompt/corrections: {}
 
 ### BODY-YRAME: yrame

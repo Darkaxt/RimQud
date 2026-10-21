@@ -2,8 +2,1105 @@
 :root{color-scheme:dark;--bg:#142823;--panel:#20382d;--ink:#e5e8d8;--muted:#b6c8ba;--line:#526b5c;--gold:#e3cf43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,serif}main{max-width:1440px;padding:36px 32px 80px;margin:auto}a{color:var(--gold)}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;max-width:950px;margin:16px 0 22px}h2,h3{line-height:1.2}p{max-width:85ch}.eyebrow,.status,small,figcaption,label,summary{font-family:Consolas,monospace}.eyebrow{color:var(--gold);letter-spacing:.13em;font-size:13px}.intro{color:var(--muted)}.counts{display:flex;flex-wrap:wrap;gap:14px;border-block:1px solid var(--line);padding:16px 0;margin:25px 0}.counts strong{font:25px Consolas,monospace;color:var(--gold)}.filters{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:30px}input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace;width:min(100%,470px)}.entry{margin:10px 0;border:1px solid var(--line);scroll-margin-top:20px}.entry>.entry-toggle{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;background:var(--panel);font-size:15px}.entry[data-open="true"]>.entry-toggle{border-bottom:1px solid var(--gold)}.status{color:var(--gold);font-size:12px;white-space:nowrap}.entry-body{padding:20px}.issues{color:var(--muted);font-size:16px}.workflow{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}.workflow li{font:12px/1.4 Consolas,monospace;border:1px solid var(--line);padding:8px;max-width:240px}.workflow .pass{border-color:var(--gold)}.timeline{border-left:2px solid var(--line);padding-left:22px}.event{padding:8px 0 28px;border-bottom:1px solid var(--line);margin-bottom:20px}.event h3{font-size:25px;margin:8px 0}.event small{color:var(--muted);font-size:12px}.gallery{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px}figure{margin:0;min-width:0;max-width:100%;padding:12px;border:1px solid var(--line);background:#1b3028;flex:1 1 260px}figure img{display:block;width:100%;height:340px;object-fit:contain;background:repeating-conic-gradient(#20382d 0% 25%,#294135 0% 50%) 50%/20px 20px}figure:has(img[src*="comparison"]) {flex-basis:100%}figure:has(img[src*="comparison"]) img{height:auto;max-height:570px}figcaption{font-size:13px;margin-top:10px;overflow-wrap:anywhere}pre,code{font:12px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}details.hash{font-size:12px;color:var(--muted);margin-top:8px}.method{margin-top:16px}summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.pending{color:var(--muted);font-style:italic}nav{display:flex;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:15px}@media(max-width:650px){main{padding:24px 12px 45px}.entry-body{padding:12px}.entry>.entry-toggle{align-items:flex-start;flex-direction:column;gap:5px}.timeline{padding-left:12px}figure img{height:300px}.filters{display:block}.filters label{display:block;margin:12px 0}}
 .taxonomy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}.taxonomy label{display:block;min-width:0}.taxonomy select{display:block;width:100%;margin-top:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px;font:16px Consolas,monospace}.taxonomy select:disabled{opacity:.55}button{background:var(--panel);color:var(--gold);border:1px solid var(--line);padding:10px 14px;font:15px Consolas,monospace;cursor:pointer}select:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.filter-note{margin:0;font:14px/1.5 Consolas,monospace;color:var(--muted);width:100%}.entry>.entry-toggle{width:100%;text-align:left;color:var(--ink)}.entry-host:empty{display:none}@media(max-width:650px){.taxonomy{grid-template-columns:1fr;gap:8px}.taxonomy label{margin:0}.filters input[type=search]{width:100%}}
 </style><main><nav><a href="../conversion-report.html#NPC-GLOWFISH">Back to conversion index</a></nav><h1>Glowfish</h1><div class="entry-body">
-<p class="eyebrow">NPC-GLOWFISH / GENERATION UNFINISHED</p><p class="issues">Reset findings / historical defects: Reused bodies/equipment are dependencies; do not generate a baked profession costume. No accepted assembly carried forward.</p>
-<ol class="workflow"><li class="pending">resolve individual race and runtime metadata — pending</li><li class="pending">verify body and every equipped item dependencies — pending</li><li class="pending">assemble without baking equipment — pending</li><li class="pending">review anatomy clothing attachment all directions — pending</li><li class="pending">review neutral and qud palette at game scale — pending</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<p class="eyebrow">NPC-GLOWFISH / GENERATION READY · NATIVE ACCEPTANCE PENDING</p><p class="issues">Reset findings / historical defects: </p>
+<h3>Current registered artwork</h3><p>Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p><div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7</code></details></figure></div><p><a href="../../art/conversion/npc-glowfish/v1/model.json">Current asset registration</a></p>
+<ol class="workflow"><li class="pass">resolve individual race and runtime metadata — recorded PASS</li><li class="pass">verify body and every equipped item dependencies — recorded PASS</li><li class="pass">assemble without baking equipment — recorded PASS</li><li class="pass">review anatomy clothing attachment all directions — recorded PASS</li><li class="pass">review neutral and qud palette at game scale — recorded PASS</li><li class="pending">native visibility equipment hurt look save review — pending</li></ol>
+<h3>Process history, including superseded sheets</h3><p class="pending">Raw generations and superseded registrations remain preserved. Use the registered artwork or flagged candidate above for current authoring status. Native acceptance remains pending.</p>
 <div class="timeline">
-<p class="pending">No conversion steps have been performed under the reset.</p>
+<section class="event"><small>01 / 2026-10-21T06:37:00.738394+00:00 / PASS</small><h3>resolve individual race and runtime metadata</h3><p>Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.</p><p><strong>Review:</strong> Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/source-packet.json">source-packet.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;entry&quot;: &quot;NPC-GLOWFISH&quot;,
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/village/sources.json&quot;,
+    &quot;sha256&quot;: &quot;b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22&quot;
+  },
+  &quot;captured_actor&quot;: {
+    &quot;instance&quot;: 528,
+    &quot;blueprint&quot;: &quot;Glowfish&quot;,
+    &quot;species&quot;: &quot;catfish&quot;,
+    &quot;gender&quot;: &quot;neuterperson&quot;,
+    &quot;description&quot;: &quot;Luminescent flecks flit beneath the water&#x27;s surface.\n\nBase demeanor: {{g|docile}}&quot;,
+    &quot;anatomy&quot;: &quot;Fish&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: 175,
+        &quot;parent&quot;: -1,
+        &quot;type&quot;: &quot;Body&quot;,
+        &quot;variant&quot;: &quot;Body&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 399,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Head&quot;,
+        &quot;variant&quot;: &quot;Head&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 400,
+        &quot;parent&quot;: 399,
+        &quot;type&quot;: &quot;Face&quot;,
+        &quot;variant&quot;: &quot;Face&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: {
+          &quot;instance&quot;: 619,
+          &quot;blueprint&quot;: &quot;Glowfish_Bite&quot;,
+          &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+          &quot;tile&quot;: &quot;Creatures/natural-weapon-bite.bmp&quot;,
+          &quot;foreground&quot;: &quot;&amp;y&quot;,
+          &quot;tileColor&quot;: &quot;&quot;,
+          &quot;detailColor&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;id&quot;: 401,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Back&quot;,
+        &quot;variant&quot;: &quot;Back&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 402,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Fin&quot;,
+        &quot;variant&quot;: &quot;Dorsal Fin&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 403,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Fin&quot;,
+        &quot;variant&quot;: &quot;Fin&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 404,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Fin&quot;,
+        &quot;variant&quot;: &quot;Fin&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 405,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 2,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 406,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Missile Weapon&quot;,
+        &quot;variant&quot;: &quot;Missile Weapon&quot;,
+        &quot;laterality&quot;: 1,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 407,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Fin&quot;,
+        &quot;variant&quot;: &quot;Tail Fin&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 408,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Thrown Weapon&quot;,
+        &quot;variant&quot;: &quot;Thrown Weapon&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      },
+      {
+        &quot;id&quot;: 409,
+        &quot;parent&quot;: 175,
+        &quot;type&quot;: &quot;Floating Nearby&quot;,
+        &quot;variant&quot;: &quot;Floating Nearby&quot;,
+        &quot;laterality&quot;: 0,
+        &quot;manager&quot;: null,
+        &quot;defaultBlueprint&quot;: null,
+        &quot;equipped&quot;: null,
+        &quot;defaultItem&quot;: null
+      }
+    ],
+    &quot;tile&quot;: &quot;creatures\\sw_glowfish.bmp&quot;,
+    &quot;foreground&quot;: &quot;&amp;m&quot;,
+    &quot;tileColor&quot;: &quot;&quot;,
+    &quot;detailColor&quot;: &quot;C&quot;
+  },
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;body_review&quot;: {
+    &quot;status&quot;: &quot;PASS&quot;,
+    &quot;reason&quot;: &quot;Inspected before/after physical-frame illustration and all four neutral/native m/C views. Corrected width1.2/(2/3)=1.8 Qud cell units gives the declared1.2x1.2 world canvas. Height, pivot, offsets, layers and all8 source PNGs remain identical. Neutral assembly remains exact and both production planes are grayscale. Existing construction, two actual generations, rejected geometry/material attempts and source palette evidence are reused unchanged. No native/game validation or new generation.&quot;,
+    &quot;record&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;bafc8038b85ebbc606272371bd569d9892b558f0f3518b1597c8f24a5978758a&quot;
+    }
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;natural_equipment&quot;: [
+    {
+      &quot;part&quot;: 400,
+      &quot;type&quot;: &quot;Face&quot;,
+      &quot;item&quot;: {
+        &quot;instance&quot;: 619,
+        &quot;blueprint&quot;: &quot;Glowfish_Bite&quot;,
+        &quot;description&quot;: &quot;\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}&quot;,
+        &quot;tile&quot;: &quot;Creatures/natural-weapon-bite.bmp&quot;,
+        &quot;foreground&quot;: &quot;&amp;y&quot;,
+        &quot;tileColor&quot;: &quot;&quot;,
+        &quot;detailColor&quot;: &quot;&quot;
+      }
+    }
+  ],
+  &quot;equipment_policy&quot;: &quot;Observed worn/held list is empty. Default Face Glowfish_Bite remains native natural attack behavior, not a carried object or clothing. No fins/head treated as independent articulated renderer bones.&quot;,
+  &quot;body_policy&quot;: &quot;Two neutral color planes depict one normal whole catfish with intrinsic head, gills, barbels, four fins and source curl. Source metadata/species supports the plan; no humanoid model or new mutation limb. Exact current material/geometry and corrected square world frame are reused.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;C&quot;
+  },
+  &quot;history&quot;: {
+    &quot;report&quot;: &quot;docs/conversion-entries/BODY-GLOWFISH.html&quot;,
+    &quot;source_packet&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;427d97cf9bd656ee6504663b09f1a8dd12c2935a4a16fc1bddf55b2053401e0f&quot;
+    },
+    &quot;front&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/front-controls-patched.json&quot;,
+      &quot;sha256&quot;: &quot;3cf7b88691c8d8eeaf39a43c4d99ba2c7c02fda4d35f5a0a52245e06dcc985e4&quot;
+    },
+    &quot;construction&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/turnaround-controls.json&quot;,
+      &quot;sha256&quot;: &quot;5ac699f95519d1452d2229a094aa0fedaddb2ad1834455ab9df209f0045df2e4&quot;
+    },
+    &quot;actual_side_back&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/side-back-receipt.json&quot;,
+      &quot;sha256&quot;: &quot;6c1f46ce03336484605fbffa995a419c6295e017bcfcc724e7276876353b19ea&quot;
+    },
+    &quot;actual_refinement&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/composed-refinement-receipt.json&quot;,
+      &quot;sha256&quot;: &quot;9b6f505efc777a1f0b6a69d055e39316398a2cb543d14b3eb72f8c2ee999d3c2&quot;
+    },
+    &quot;structural_review&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/composed-structural-review.json&quot;,
+      &quot;sha256&quot;: &quot;44e35d940cc29a29d5fd635563ca78ab46efe5652b54d81a6e3531ec48dd2439&quot;
+    },
+    &quot;material&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/material-selection-corrected.json&quot;,
+      &quot;sha256&quot;: &quot;11cc7b1c917c8af4da47fa72ac4b7d5bb1d07c3b9c166d4422305717eecd0b8f&quot;
+    },
+    &quot;frame_correction&quot;: {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/frame-units-correction.json&quot;,
+      &quot;sha256&quot;: &quot;16f14bb2fdf0bb1acb8fcdbe03933ef364ad10e7145c5a0e674921c5b7cb9346&quot;
+    }
+  },
+  &quot;new_imagegen_calls&quot;: 0,
+  &quot;behavior_boundary&quot;: &quot;Native LightSource/Gills/DarkVision, water visibility, movement and natural bite remain native. No water/glow layer, fixed-purple fallback, demographics or simulation changes.&quot;,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual water/lighting/visibility, whole-body facing/pivot, palette OFF/ON, hurt/look/save and supported states.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;step&quot;: &quot;resolve_individual_race_and_runtime_metadata&quot;,
+  &quot;action&quot;: &quot;Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Resolve actual Glowfish528/catfish, Fish topology, four fins and natural default Bite; no worn/held objects.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>02 / 2026-10-21T06:37:00.738394+00:00 / PASS</small><h3>verify body and every equipped item dependencies</h3><p>Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.</p><p><strong>Review:</strong> Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/assembly-contract.json">assembly-contract.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;canvas&quot;: [
+      768,
+      768
+    ],
+    &quot;contact&quot;: [
+      384,
+      384
+    ],
+    &quot;width&quot;: 1.8,
+    &quot;height&quot;: 1.2,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0,
+    &quot;pixel_world_size&quot;: 0.0015624999999999999,
+    &quot;units&quot;: &quot;width and center_x in Qud cell-width units; height and center_z in world units. Shared1.2x1.2world frame, no per-facing resize.&quot;
+  },
+  &quot;equipment&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: &quot;Selected curled south swimming-plane catfish, head toward south; dorsal/lateral/tail fins keep their identities.&quot;,
+    &quot;east&quot;: &quot;Whole selected animal turns east under actual live fish-pawn map camera; no independent head/fin turn.&quot;,
+    &quot;north&quot;: &quot;Whole selected animal turns north in swimming plane; source curl and fin count unchanged.&quot;,
+    &quot;west&quot;: &quot;Supported mirror of east, whole geometry and tint ownership together.&quot;
+  },
+  &quot;pivot&quot;: &quot;Fixed384,384 trunk/swim pivot, not human ground feet. Both color planes share identical physical frame and eventual native transform.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;C&quot;
+  },
+  &quot;policy&quot;: &quot;Observed worn/held list is empty. Default Face Glowfish_Bite remains native natural attack behavior, not a carried object or clothing. No fins/head treated as independent articulated renderer bones.&quot;,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>07975b39745f1dc4746f2f47eb158e850fb3b8b9cfba20dd078aa46887ce0cea</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/composition-checks.json">composition-checks.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;south&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;east&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;north&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;west&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;step&quot;: &quot;verify_body_and_every_equipped_item_dependencies&quot;,
+  &quot;action&quot;: &quot;Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Verify current generation-ready intrinsic fish body, actual complete source-generation history, independent tint planes and corrected world-square frame.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>03 / 2026-10-21T06:37:00.738394+00:00 / REQUIRES REVIEW</small><h3>assemble without baking equipment</h3><p>Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.</p><p><strong>Review:</strong> Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/assemble.py">assemble.py</a><details class="hash"><summary>Exact evidence hash</summary><code>7e8da11379e07b64707da83d5681c1e56de5f5d1b4b587e886bcd92395e9bc6d</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-GLOWFISH&quot;,
+  &quot;kind&quot;: &quot;captured_actor_layered_assembly&quot;,
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;canvas&quot;: [
+      768,
+      768
+    ],
+    &quot;contact&quot;: [
+      384,
+      384
+    ],
+    &quot;width&quot;: 1.8,
+    &quot;height&quot;: 1.2,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0,
+    &quot;pixel_world_size&quot;: 0.0015624999999999999,
+    &quot;units&quot;: &quot;width and center_x in Qud cell-width units; height and center_z in world units. Shared1.2x1.2world frame, no per-facing resize.&quot;
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/south/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;7dc4130ea3147abf5930fbf4375ec3efe3253e81d927c377ea63ab8fe0c90898&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/south/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;9b965b5a0cc4f687e7d3c261762650f891796bbfa23e21aa35c4634edd417836&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-south.png&quot;,
+        &quot;sha256&quot;: &quot;d913a5b6f37352d512b308c022a5c8b90eb9064c1040b9bf3cae4136e148015d&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-south.png&quot;,
+        &quot;sha256&quot;: &quot;b08ba383543c5efe77a534e53ea43976f51a361ffaadc34ae26ed2f77be91a39&quot;
+      }
+    },
+    &quot;east&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/east/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;d59aad7863e637c7be1b5f9c61de14350237cda8b2dbfc059be7d18b0c4e67ad&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/east/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;41f1eb8e53a6470c00e83659e4d7efa864a5565edfb0658ab018053934472880&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-east.png&quot;,
+        &quot;sha256&quot;: &quot;756d2bea2e1400f5b7580ef4385cd6278d1402f58d9d9d3ad87f8e2f59c7f1ff&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-east.png&quot;,
+        &quot;sha256&quot;: &quot;6ccef7c2e5536d9cffb2109692b92e5369967339a46f3f62215634c19c571888&quot;
+      }
+    },
+    &quot;north&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/north/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;b793db6f0f6368e87dc4e1869f94d53e0125e015eb2795fc567e81657ab1e0b0&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/north/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;be34774a6831a6e87059180417c15762ba0c056cba0a45ed2cc38ed6ed427b2a&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-north.png&quot;,
+        &quot;sha256&quot;: &quot;006cf3955fb3a6ef0a00c234c6465b526cb2f14459ef8e86e2ea7e52a233c6e5&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-north.png&quot;,
+        &quot;sha256&quot;: &quot;fd0f082a280de991b84cb0c3b5241fd75a1e122e5d140acdb2e5fc5a8f7d2236&quot;
+      }
+    },
+    &quot;west&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/west/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;67dc47096f6e5a6b1de5878f027fc9e4e9eb4e85878eff8fadb3598f836b5469&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/west/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;604524a6e7dc4015ce38cf5754c89ada232277a112d3fa5d40f0cd0286429055&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-west.png&quot;,
+        &quot;sha256&quot;: &quot;7068d4ffa16ee8468928fe41dbef29087d5fb8ffb8bf93b6cd088312636cbf53&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-west.png&quot;,
+        &quot;sha256&quot;: &quot;d1a414bd184a376a6c501012df77cc39988e3db9a1763d705ee81f0f429e625e&quot;
+      }
+    }
+  },
+  &quot;native_activation&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual water/lighting/visibility, whole-body facing/pivot, palette OFF/ON, hurt/look/save and supported states.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png" alt="native-palette-comparison"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png">native-palette-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/game-scale-review.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;step&quot;: &quot;assemble_without_baking_equipment&quot;,
+  &quot;action&quot;: &quot;Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Compose exact current two-plane animal and native m/C colors with empty equipment list. Actual all-view review pending.&quot;,
+  &quot;result&quot;: &quot;REQUIRES REVIEW&quot;
+}</pre></details></section>
+<section class="event"><small>04 / 2026-10-21T06:37:54.622406+00:00 / PASS</small><h3>assemble without baking equipment</h3><p>Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/model.json">model.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;entry&quot;: &quot;NPC-GLOWFISH&quot;,
+  &quot;kind&quot;: &quot;captured_actor_layered_assembly&quot;,
+  &quot;body_model&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465&quot;
+  },
+  &quot;registration&quot;: {
+    &quot;canvas&quot;: [
+      768,
+      768
+    ],
+    &quot;contact&quot;: [
+      384,
+      384
+    ],
+    &quot;width&quot;: 1.8,
+    &quot;height&quot;: 1.2,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0,
+    &quot;pixel_world_size&quot;: 0.0015624999999999999,
+    &quot;units&quot;: &quot;width and center_x in Qud cell-width units; height and center_z in world units. Shared1.2x1.2world frame, no per-facing resize.&quot;
+  },
+  &quot;equipment_bindings&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/south/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;7dc4130ea3147abf5930fbf4375ec3efe3253e81d927c377ea63ab8fe0c90898&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-south.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/south/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;9b965b5a0cc4f687e7d3c261762650f891796bbfa23e21aa35c4634edd417836&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-south.png&quot;,
+        &quot;sha256&quot;: &quot;d913a5b6f37352d512b308c022a5c8b90eb9064c1040b9bf3cae4136e148015d&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-south.png&quot;,
+        &quot;sha256&quot;: &quot;b08ba383543c5efe77a534e53ea43976f51a361ffaadc34ae26ed2f77be91a39&quot;
+      }
+    },
+    &quot;east&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/east/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;d59aad7863e637c7be1b5f9c61de14350237cda8b2dbfc059be7d18b0c4e67ad&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-east.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/east/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;41f1eb8e53a6470c00e83659e4d7efa864a5565edfb0658ab018053934472880&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-east.png&quot;,
+        &quot;sha256&quot;: &quot;756d2bea2e1400f5b7580ef4385cd6278d1402f58d9d9d3ad87f8e2f59c7f1ff&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-east.png&quot;,
+        &quot;sha256&quot;: &quot;6ccef7c2e5536d9cffb2109692b92e5369967339a46f3f62215634c19c571888&quot;
+      }
+    },
+    &quot;north&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/north/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;b793db6f0f6368e87dc4e1869f94d53e0125e015eb2795fc567e81657ab1e0b0&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-north.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/north/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;be34774a6831a6e87059180417c15762ba0c056cba0a45ed2cc38ed6ed427b2a&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-north.png&quot;,
+        &quot;sha256&quot;: &quot;006cf3955fb3a6ef0a00c234c6465b526cb2f14459ef8e86e2ea7e52a233c6e5&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-north.png&quot;,
+        &quot;sha256&quot;: &quot;fd0f082a280de991b84cb0c3b5241fd75a1e122e5d140acdb2e5fc5a8f7d2236&quot;
+      }
+    },
+    &quot;west&quot;: {
+      &quot;body&quot;: [
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-foreground-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/west/primary-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;67dc47096f6e5a6b1de5878f027fc9e4e9eb4e85878eff8fadb3598f836b5469&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;foreground&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 0,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        },
+        {
+          &quot;component&quot;: &quot;body&quot;,
+          &quot;file&quot;: &quot;glowfish-detail-west.png&quot;,
+          &quot;public_file&quot;: &quot;art/conversion/body-glowfish/v1/registered-v2/west/detail-neutral.png&quot;,
+          &quot;sha256&quot;: &quot;604524a6e7dc4015ce38cf5754c89ada232277a112d3fa5d40f0cd0286429055&quot;,
+          &quot;size&quot;: [
+            768,
+            768
+          ],
+          &quot;contact&quot;: [
+            384,
+            384
+          ],
+          &quot;color_role&quot;: &quot;detail&quot;,
+          &quot;width&quot;: 1.8,
+          &quot;height&quot;: 1.2,
+          &quot;center_x&quot;: 0,
+          &quot;center_z&quot;: 0,
+          &quot;layer&quot;: 1,
+          &quot;logical_body&quot;: &quot;whole animal; colour plane only&quot;
+        }
+      ],
+      &quot;equipment&quot;: [],
+      &quot;neutral_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-west.png&quot;,
+        &quot;sha256&quot;: &quot;7068d4ffa16ee8468928fe41dbef29087d5fb8ffb8bf93b6cd088312636cbf53&quot;
+      },
+      &quot;native_palette_preview&quot;: {
+        &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-west.png&quot;,
+        &quot;sha256&quot;: &quot;d1a414bd184a376a6c501012df77cc39988e3db9a1763d705ee81f0f429e625e&quot;
+      }
+    }
+  },
+  &quot;native_activation&quot;: false,
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual water/lighting/visibility, whole-body facing/pivot, palette OFF/ON, hurt/look/save and supported states.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/composition-checks.json">composition-checks.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;south&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;east&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;north&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  },
+  &quot;west&quot;: {
+    &quot;source_hashes_current&quot;: true,
+    &quot;body_pixels_frame_pivot_unchanged&quot;: true,
+    &quot;neutral_exact_body_reference&quot;: true,
+    &quot;native_rounding_max_rgb&quot;: 0,
+    &quot;native_alpha_error&quot;: 0,
+    &quot;production_neutral_equal_RGB&quot;: true,
+    &quot;physical_canvas_world&quot;: [
+      1.2,
+      1.2
+    ],
+    &quot;worn_items&quot;: 0
+  }
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:54.622406+00:00&quot;,
+  &quot;step&quot;: &quot;assemble_without_baking_equipment&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>05 / 2026-10-21T06:37:54.622406+00:00 / PASS</small><h3>review anatomy clothing attachment all directions</h3><p>Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/assembly-contract.json">assembly-contract.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:37:00.738394+00:00&quot;,
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;frame&quot;: {
+    &quot;canvas&quot;: [
+      768,
+      768
+    ],
+    &quot;contact&quot;: [
+      384,
+      384
+    ],
+    &quot;width&quot;: 1.8,
+    &quot;height&quot;: 1.2,
+    &quot;center_x&quot;: 0,
+    &quot;center_z&quot;: 0,
+    &quot;pixel_world_size&quot;: 0.0015624999999999999,
+    &quot;units&quot;: &quot;width and center_x in Qud cell-width units; height and center_z in world units. Shared1.2x1.2world frame, no per-facing resize.&quot;
+  },
+  &quot;equipment&quot;: {},
+  &quot;views&quot;: {
+    &quot;south&quot;: &quot;Selected curled south swimming-plane catfish, head toward south; dorsal/lateral/tail fins keep their identities.&quot;,
+    &quot;east&quot;: &quot;Whole selected animal turns east under actual live fish-pawn map camera; no independent head/fin turn.&quot;,
+    &quot;north&quot;: &quot;Whole selected animal turns north in swimming plane; source curl and fin count unchanged.&quot;,
+    &quot;west&quot;: &quot;Supported mirror of east, whole geometry and tint ownership together.&quot;
+  },
+  &quot;pivot&quot;: &quot;Fixed384,384 trunk/swim pivot, not human ground feet. Both color planes share identical physical frame and eventual native transform.&quot;,
+  &quot;palette&quot;: {
+    &quot;primary&quot;: &quot;&amp;m&quot;,
+    &quot;detail&quot;: &quot;C&quot;
+  },
+  &quot;policy&quot;: &quot;Observed worn/held list is empty. Default Face Glowfish_Bite remains native natural attack behavior, not a carried object or clothing. No fins/head treated as independent articulated renderer bones.&quot;,
+  &quot;native_activation&quot;: false
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>07975b39745f1dc4746f2f47eb158e850fb3b8b9cfba20dd078aa46887ce0cea</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/neutral-comparison.png" alt="neutral-comparison"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/neutral-comparison.png">neutral-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/authoring-review.json">authoring-review.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:37:54.622406+00:00&quot;,
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;Generation authoring assembly only&quot;,
+  &quot;reason&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;composition_checks&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/composition-checks.json&quot;,
+    &quot;sha256&quot;: &quot;920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2&quot;
+  },
+  &quot;source&quot;: {
+    &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/source-packet.json&quot;,
+    &quot;sha256&quot;: &quot;72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465&quot;
+  },
+  &quot;body&quot;: {
+    &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+    &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+  },
+  &quot;native_acceptance&quot;: &quot;Pending full-set generation gate: actual water/lighting/visibility, whole-body facing/pivot, palette OFF/ON, hurt/look/save and supported states.&quot;
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>f46987c627f76af4b2d9d8427a07fc0e1a2f78ece85f9ec2d572b64fff4cda1c</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:54.622406+00:00&quot;,
+  &quot;step&quot;: &quot;review_anatomy_clothing_attachment_all_directions&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
+<section class="event"><small>06 / 2026-10-21T06:37:54.622406+00:00 / PASS</small><h3>review neutral and qud palette at game scale</h3><p>Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p><p><strong>Review:</strong> Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.</p>
+<div class="gallery"><figure><a href="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png" alt="native-palette-comparison"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/native-palette-comparison.png">native-palette-comparison.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/game-scale-review.png"><img loading="lazy" src="../../art/conversion/npc-glowfish/v1/game-scale-review.png" alt="game-scale-review"></a><figcaption><a href="../../art/conversion/npc-glowfish/v1/game-scale-review.png">game-scale-review.png</a></figcaption><details class="hash"><summary>Exact evidence hash</summary><code>f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba</code></details></figure><figure><a href="../../art/conversion/npc-glowfish/v1/artifact-manifest.json">artifact-manifest.json</a><details><summary>Read metadata / recorded decisions</summary><pre>{
+  &quot;recorded_at&quot;: &quot;2026-10-21T06:37:54.622406+00:00&quot;,
+  &quot;entry&quot;: &quot;NPC-GLOWFISH&quot;,
+  &quot;artifacts&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/assemble.py&quot;,
+      &quot;sha256&quot;: &quot;7e8da11379e07b64707da83d5681c1e56de5f5d1b4b587e886bcd92395e9bc6d&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/assembly-contract.json&quot;,
+      &quot;sha256&quot;: &quot;07975b39745f1dc4746f2f47eb158e850fb3b8b9cfba20dd078aa46887ce0cea&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/authoring-review.json&quot;,
+      &quot;sha256&quot;: &quot;f46987c627f76af4b2d9d8427a07fc0e1a2f78ece85f9ec2d572b64fff4cda1c&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/composition-checks.json&quot;,
+      &quot;sha256&quot;: &quot;920d67335b3f557cc599d84a2660168ef3cc68255b9379d7cbeb701f8a8adff2&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/game-scale-review.png&quot;,
+      &quot;sha256&quot;: &quot;f2dbaf5b003e0f1b7c92a61184737b937d8e9e60c803e0b0beae1937ffbf4eba&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/model.json&quot;,
+      &quot;sha256&quot;: &quot;618a6108aa99c0ea4f1e11295fceeee437f13bbc4595c89737cdc2f6ca545897&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;209b6065f6868bc0e21d02568ceee78d7b1e80f53017c881b3ae71330920b0a4&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-east.png&quot;,
+      &quot;sha256&quot;: &quot;6ccef7c2e5536d9cffb2109692b92e5369967339a46f3f62215634c19c571888&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-north.png&quot;,
+      &quot;sha256&quot;: &quot;fd0f082a280de991b84cb0c3b5241fd75a1e122e5d140acdb2e5fc5a8f7d2236&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-south.png&quot;,
+      &quot;sha256&quot;: &quot;b08ba383543c5efe77a534e53ea43976f51a361ffaadc34ae26ed2f77be91a39&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/native-palette-west.png&quot;,
+      &quot;sha256&quot;: &quot;d1a414bd184a376a6c501012df77cc39988e3db9a1763d705ee81f0f429e625e&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-comparison.png&quot;,
+      &quot;sha256&quot;: &quot;01b341e5ff96210014f0070411acd9ab6ccda24d246ba01909f6ba2864f756b7&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-east.png&quot;,
+      &quot;sha256&quot;: &quot;756d2bea2e1400f5b7580ef4385cd6278d1402f58d9d9d3ad87f8e2f59c7f1ff&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-north.png&quot;,
+      &quot;sha256&quot;: &quot;006cf3955fb3a6ef0a00c234c6465b526cb2f14459ef8e86e2ea7e52a233c6e5&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-south.png&quot;,
+      &quot;sha256&quot;: &quot;d913a5b6f37352d512b308c022a5c8b90eb9064c1040b9bf3cae4136e148015d&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/neutral-west.png&quot;,
+      &quot;sha256&quot;: &quot;7068d4ffa16ee8468928fe41dbef29087d5fb8ffb8bf93b6cd088312636cbf53&quot;
+    },
+    {
+      &quot;path&quot;: &quot;art/conversion/npc-glowfish/v1/source-packet.json&quot;,
+      &quot;sha256&quot;: &quot;72dd5ad1dea8b7bd229cadc54426ff0641937b843a0ca31d8e2aca5b4e378465&quot;
+    }
+  ]
+}</pre></details><details class="hash"><summary>Exact evidence hash</summary><code>6a0ecb9340a0b935c1d8623f334e8361cc6bedf90af0f33f8e434bd3d5f93352</code></details></figure></div>
+<details class="method"><summary>Inputs, exact prompt, settings and decisions</summary><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-21T06:37:54.622406+00:00&quot;,
+  &quot;step&quot;: &quot;review_neutral_and_qud_palette_at_game_scale&quot;,
+  &quot;action&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;inputs&quot;: [
+    {
+      &quot;path&quot;: &quot;art/conversion/body-glowfish/v1/registered-v3/model.json&quot;,
+      &quot;sha256&quot;: &quot;ca1a20e0621470f9325402a3366620c6f15740f640d4646e4da6126c855c0d57&quot;
+    }
+  ],
+  &quot;review&quot;: &quot;Inspected all four neutral, independent native m/C and intended-size displays from current corrected body mapping. Production planes are grayscale; palette-off is neutral everywhere, source curl/fins/barbels and exact current alpha/geometry remain intact. The whole animal turns under the actual fish-pawn map convention at one trunk pivot. Actual outfit is empty; Face default Bite and LightSource/Gills/DarkVision remain behavior, with no clothing or decorative glow/water overlay. Shared1.2x1.2 world canvas uses1.8-cell width and1.2-world height. No new ImageGen call, anatomy, simulation or native acceptance.&quot;,
+  &quot;result&quot;: &quot;PASS&quot;
+}</pre></details></section>
 </div></div></main></html>

@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-10-21T06:25:14.064941+00:00",
+  "status": "REJECTED tint candidate",
+  "source_model": {
+    "path": "art/conversion/body-ray-cat/v1/registered/model.json",
+    "sha256": "09e07d598524f813f8e5dcf1e38bff25adeecba5ef4909b6f135f4de496f1b18"
+  },
+  "reason": "Opaque-only filtering suppressed nearly all detail because accepted ImageGen coat interiors are generally partially transparent. Same-source alpha partition is required rather than making the artwork opaque or enlarging its alpha.",
+  "correction": "For desired detail weight R: D=round(A*R), P=round((A-D)/(1-D)). Store unchanged shade RGB in each plane. Both planes reconstruct full neutral RGBA exactly.",
+  "measurements": {
+    "south": {
+      "source_partial_alpha_pixels_by_part": [
+        24599,
+        14180
+      ],
+      "source_alpha_max": 255,
+      "detail_pixels": 3833,
+      "neutral_rgba_reconstruction_exact": true
+    },
+    "east": {
+      "source_partial_alpha_pixels_by_part": [
+        44046,
+        12995
+      ],
+      "source_alpha_max": 255,
+      "detail_pixels": 3028,
+      "neutral_rgba_reconstruction_exact": true
+    },
+    "north": {
+      "source_partial_alpha_pixels_by_part": [
+        40300,
+        19586
+      ],
+      "source_alpha_max": 255,
+      "detail_pixels": 1832,
+      "neutral_rgba_reconstruction_exact": true
+    }
+  }
+}
