@@ -8881,7 +8881,31 @@ Required views/states: south/front; east/whole-body side; north/back; west mirro
 
 Historical artifacts: [art/ctesiphus/east-albedo.png](../art/ctesiphus/east-albedo.png), [art/ctesiphus/north-albedo.png](../art/ctesiphus/north-albedo.png), [art/ctesiphus/preview.html](../art/ctesiphus/preview.html), [art/ctesiphus/south-albedo.png](../art/ctesiphus/south-albedo.png), [evidence/faithful-cat-result.json](../evidence/faithful-cat-result.json).
 
-Current step: resolve_race_description_original_sprite_runtime_anatomy. Process-log events: 0.
+Current step: construct_front. Process-log events: 4.
+
+- 2026-10-21T06:14:00.177716+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
+  Review: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}, {"path": "art/conversion/body-ray-cat/v1/native-anatomy-evidence.json", "sha256": "1b3ab29b32e6ee9380b6bdb12e7e4364c0901c039cdb7d3ec89afb9bec8dff47"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:14:00.177716+00:00 / select_actual_core_dlc_or_mod_reference / PASS: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
+  Review: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
+  Inputs: [{"path": "art/village/sources.json", "sha256": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/donor-reference-evidence.json", "sha256": "526930310d6d85c6fb874d16a35d3dc7855c3d80eb1f83c34225e993fd849ce3"}, {"path": "art/conversion/body-ray-cat/v1/source-reference-history.png", "sha256": "a23501c6a75f549ce38647037acbe47891e9d48b60ec97452e016a20569374b1"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:14:00.177716+00:00 / imagegen_side_back_from_front_and_race_facts / PASS: Recover historical source-bound front-guided actual calls without claiming new generation or a pre-existing manual stage.
+  Review: Fresh installed Ray Cat ancestry, native Quadruped tree and captured Ctesiphus parts confirm a small feline with four Foot nodes and intrinsic Tail. Exact Core Cat directional texture hashes and current definition are recorded. Recovered all four original ImageGen calls and actual PNG bytes: accepted south/east/corrected north exactly match current source files; rejected neck-root north is retained. No new generation or native acceptance claim.
+  Inputs: [{"path": "art/ctesiphus/generation-prompts.json", "sha256": "def9f7a2a0f0dee2a072e606f31a700816c8fccf81663314c982a40178622afd"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/historical-generation-provenance.json", "sha256": "be175212b205eaacd18e56f6856daf3301a7bf229eca6d4ced4d3e1a1b31f69c"}, {"path": "art/conversion/body-ray-cat/v1/south-historical-output.png", "sha256": "89790f2e4656ec91d80cd950e0f7c63e5ece48f445455ce2ecfd4d5b62460991"}, {"path": "art/conversion/body-ray-cat/v1/east-historical-output.png", "sha256": "0419143514f8e4157f0b2aaa6434a340fca18671ab8d7970838e5b84b01ff6b7"}, {"path": "art/conversion/body-ray-cat/v1/north-before-tail-correction-historical-output.png", "sha256": "0c1773559b52b22c1551d1a1a489d4fa5d2e65d6aa59098bc40b5333bedd1a9d"}, {"path": "art/conversion/body-ray-cat/v1/north-tail-correction-historical-output.png", "sha256": "5309ebee0c78e2cefdaf61f77eb368a3d3b0cd37ce0b470c76181be1ee009c92"}]
+  Method/prompt/corrections: {}
+
+- 2026-10-21T06:16:08.894081+00:00 / resolve_race_description_original_sprite_runtime_anatomy / PASS: Resolve the generic sw_cat.bmp independently of named sw_kitty.bmp; decode both exact source masks with native m/y palette for source comparison.
+  Review: Both source identities/palette roles retained. Current registration/detail split still unfinished; historical native tests do not complete this entry.
+  Inputs: [{"path": "art/conversion/body-ray-cat/v1/source-packet.json", "sha256": "260d485d75fc1d0a225176b60a76df1609a5538e776f3f60dc23d8098b1f06c9"}]
+  Outputs: [{"path": "art/conversion/body-ray-cat/v1/extract-generic-reference.py", "sha256": "9fba04d4e610a81b1e2ecd048f2d728192304286ca1834eacd74c67c8ccd9298"}, {"path": "art/conversion/body-ray-cat/v1/generic-original-reference.json", "sha256": "f62fad5a98658a04f23e79354d6c56e51acce063c70c0417f007e4d210141325"}, {"path": "art/conversion/body-ray-cat/v1/original-glyph-review.json", "sha256": "639501320d9ddb522050aad6aad377c929bbb3a412e7fcfaad258e2ce4d62447"}, {"path": "art/conversion/body-ray-cat/v1/original-glyph-comparison.png", "sha256": "ffd94ee74c99316e40a838795ec837ec06ed5f9b3d26c657a39beb47176bc4c4"}]
+  Method/prompt/corrections: {}
 
 ### BODY-YRAME: yrame
 

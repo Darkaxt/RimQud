@@ -1,0 +1,740 @@
+{
+  "race_ancestry": [
+    {
+      "blueprint": "Ray Cat",
+      "parent": "BaseCat",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "object_xml": "<object Name=\"Ray Cat\" Inherits=\"BaseCat\">\n    <part Name=\"Render\" DisplayName=\"ray cat\" Tile=\"creatures/sw_cat.bmp\" RenderString=\"l\" ColorString=\"&amp;m\" DetailColor=\"y\" />\n    <part Name=\"Corpse\" CorpseChance=\"50\" CorpseBlueprint=\"Ray Cat Corpse\" />\n    <stat Name=\"AV\" Value=\"0\" />\n    <stat Name=\"Level\" Value=\"1\" />\n    <stat Name=\"Hitpoints\" Value=\"5\" />\n    <stat Name=\"Strength\" sValue=\"5\" />\n    <stat Name=\"Toughness\" sValue=\"10\" />\n    <stat Name=\"Willpower\" sValue=\"21\" />\n    <part Name=\"Brain\" Hostile=\"false\" Calm=\"True\" Factions=\"Cats-100\" Wanders=\"True\" />\n    <part Name=\"ItemElements\" Elements=\"stars::1\" />\n    <inventoryobject Blueprint=\"Cat Claw\" Number=\"2\" />\n    <inventoryobject Blueprint=\"Cat Bite\" Number=\"1\" />\n    <part Name=\"Description\" Short=\"=pronouns.Subjective= =verb:are:afterpronoun= a small kitty and the glassy fibers of =pronouns.possessive= coat bend the light of faraway stars into strange loops.  &amp;mphosphorescent&amp;y\" />\n    <part Name=\"LightSource\" Lit=\"true\" Radius=\"4\" />\n    <tag Name=\"Role\" Value=\"Minion\" />\n    <tag Name=\"SleepOnBed\" />\n    <part Name=\"Raycat\" />\n  </object>\t\n  "
+    },
+    {
+      "blueprint": "BaseCat",
+      "parent": "BaseAnimal",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "object_xml": "<object Name=\"BaseCat\" Inherits=\"BaseAnimal\">\n    <part Name=\"Brain\" Factions=\"Cats-100\" />\n    <stat Name=\"Strength\" sValue=\"16,1d3,(t-1)d2\" />\n    <stat Name=\"Agility\" sValue=\"20,1d3,(t-1)d1\" />\n    <stat Name=\"Toughness\" sValue=\"16,1d3,(t-1)d2\" />\n    <stat Name=\"Intelligence\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <stat Name=\"Willpower\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <stat Name=\"Ego\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <tag Name=\"HeroNameTitleWiseDescriptor\" Value=\"Sleek,Sphinx,Sphinx-like,Cunning,Graceful,Lithe,Wise,Sage,Sophic\" />\n    <tag Name=\"HeroNameTitleMayorSyn\" Value=\"sphinx,mayor,elder\" />\n    <tag Name=\"HeroNameTitleMayorSynCap\" Value=\"Sphinx,Mayor,Elder\" />\n    <tag Name=\"Class\" Value=\"cat\" />\n    <tag Name=\"Species\" Value=\"cat\" />\n\t\t<tag Name=\"AmbientIdleSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_cat_vo_idle\" />\n\t\t<tag Name=\"PunchSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_cat_vo_attack\" />\n\t\t<tag Name=\"DeathSounds\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_cat_vo_die\" />\n\t\t<tag Name=\"TakeDamageSound\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_cat_vo_hurt\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <part Name=\"Pettable\" UseFactionForFeelingFloor=\"Cats\" />\n    <tag Name=\"PetResponse\" Value=\"=subject.T= =verb:meow=.\" />\n    <part Name=\"SmartuseForceTwiddles\" />\n    <xtagTextFragments Skin=\"fur\" PoeticFeatures=\"triangle ears,pearly whiskers,ageless eyes\" YounglingNoise=\"*mew*,*prrrup*\" Activity=\"sleeping and chasing birds all through the day\" VillageActivity=\"sleeping in our homes\" SacredThing=\"judgemental silence\" />\n    <tag Name=\"PrimaryLimbType\" Value=\"Foot\" />\n    <tag Name=\"LairAmbientBed\" Value=\"Sounds/Ambiences/amb_creature_cat\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "BaseAnimal",
+      "parent": "Animal",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "object_xml": "<object Name=\"BaseAnimal\" Inherits=\"Animal\">\n    <stat Name=\"Strength\" sValue=\"16,1d3,(t-1)d2\" />\n    <stat Name=\"Agility\" sValue=\"14,1d3,(t-1)d1\" />\n    <stat Name=\"Toughness\" sValue=\"16,1d3,(t-1)d2\" />\n    <stat Name=\"Intelligence\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <stat Name=\"Willpower\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <stat Name=\"Ego\" sValue=\"7,1d3,(t-1)d2-1\" />\n    <intproperty Name=\"Bleeds\" Value=\"1\" />\n    <mutation Name=\"DarkVision\" Level=\"6\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <part Name=\"ConversationScript\" ConversationID=\"Animals\" />\n    <xtagTextFragments Skin=\"skin\" PoeticFeatures=\"shiny teeth,hispid skin,spheric hooves\" YounglingNoise=\"*whine*\" Activity=\"roaming around idly,scrounging for food,napping under the high salt sun\" VillageActivity=\"sleeping in our homes,eating our food\" GuestActivity=\"breaking bread\" NeedsItemFor=\"for my own collection,to slake my greed,because of its trade value\" SacredThing=\"the act of procreating,shade from the salt sun,naps,abundant food\" ArableLand=\"grazeland\" ValuedOre=\"shade and vittle\" />\n    <tag Name=\"Class\" Value=\"grazer\" />\n    <tag Name=\"Culture\" Value=\"Animal\" />\n    <tag Name=\"SimpleConversation\" Value=\"&amp;w*soft growling*&amp;y\" />\n    <tag Name=\"PetResponse\" Value=\"=subject.T= =verb:growl= softly.\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "Animal",
+      "parent": "Creature",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "object_xml": "<object Name=\"Animal\" Inherits=\"Creature\">\n    <part Name=\"Render\" DisplayName=\"[Animal]\" RenderString=\"@\" />\n    <part Name=\"Body\" Anatomy=\"Quadruped\" />\n    <stat Name=\"Strength\" Value=\"14\" />\n    <stat Name=\"Agility\" Value=\"14\" />\n    <stat Name=\"Toughness\" Value=\"14\" />\n    <stat Name=\"Intelligence\" Value=\"6\" />\n    <stat Name=\"Willpower\" Value=\"6\" />\n    <stat Name=\"Ego\" Value=\"6\" />\n    <mutation Name=\"DarkVision\" Level=\"6\" />\n    <tag Name=\"RandomGender\" Value=\"male,female\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />    \n    <tag Name=\"DeathSounds\" Value=\"Sounds/Creatures/VO/sfx_creature_animal_grazingAnimal_vo_die\" />\n    <tag Name=\"PrimaryLimbType\" Value=\"Face\" />\n  </object>\n  "
+    },
+    {
+      "blueprint": "Creature",
+      "parent": "PhysicalObject",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+      "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+      "object_xml": "<object Name=\"Creature\" Inherits=\"PhysicalObject\">\n    <part Name=\"Render\" DisplayName=\"[Creature]\" RenderString=\"@\" RenderLayer=\"10\" RenderIfDark=\"false\" DetailColor=\"w\" Tile=\"Assets_Content_Textures_Creatures_sw_farmer.bmp\" />\n    <tag Name=\"OverlayColor\" Value=\"&amp;G^k\" />\n    <part Name=\"Physics\" Organic=\"true\" Takeable=\"false\" Solid=\"false\" Weight=\"201\" Category=\"Creatures\" />\n    <part Name=\"Brain\" Hostile=\"false\" Wanders=\"true\" Factions=\"Beasts-100\" />\n    <part Name=\"Body\" Anatomy=\"Humanoid\" />\n    <part Name=\"Combat\" />\n    <part Name=\"Experience\" />\n    <part Name=\"Inventory\" />\n    <part Name=\"Mutations\" />\n    <part Name=\"Skills\" />\n    <part Name=\"ActivatedAbilities\" />\n    <part Name=\"RandomLoot\" />\n    <part Name=\"Springy\" Factor=\"0.5\" />\n    <stat Name=\"Strength\" ShortName=\"ST\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Agility\" ShortName=\"AG\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Toughness\" ShortName=\"TO\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Intelligence\" ShortName=\"IN\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Willpower\" ShortName=\"WI\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Ego\" ShortName=\"EG\" Min=\"1\" Max=\"9000\" Value=\"16\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"16\" />\n    <stat Name=\"Energy\" ShortName=\"EN\" Min=\"-100000\" Max=\"100000\" Value=\"0\" />\n    <stat Name=\"Speed\" ShortName=\"SP\" Min=\"1\" Max=\"10000\" Value=\"100\" />\n    <stat Name=\"MoveSpeed\" ShortName=\"MS\" Min=\"-1800\" Max=\"195\" Value=\"100\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"XP\" ShortName=\"XP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"XPValue\" ShortName=\"XPValue\" sValue=\"*XP\" Min=\"0\" Max=\"2147483647\" />\n    <stat Name=\"SP\" ShortName=\"SP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"MP\" ShortName=\"MP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"AP\" ShortName=\"AP\" Min=\"0\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"MA\" ShortName=\"MA\" Min=\"-100\" Max=\"2147483647\" Value=\"0\" />\n    <stat Name=\"HeatResistance\" ShortName=\"HeatResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"ColdResistance\" ShortName=\"ColdResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"ElectricResistance\" ShortName=\"ElectricResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <stat Name=\"AcidResistance\" ShortName=\"AcidResistance\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <part Name=\"Leveler\" />\n    <part Name=\"Commerce\" Value=\"100\" />\n    <part Name=\"Stomach\" />\n    <part Name=\"Corpse\" CorpseChance=\"0\" BurntCorpseChance=\"100\" BurntCorpseBlueprint=\"Ashes\" />\n    <removepart Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Level\" ShortName=\"LV\" Min=\"1\" Max=\"10000\" Value=\"1\" />\n    <tag Name=\"Role\" Value=\"Unspecified\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <builder Name=\"Roboticized\" ChanceOneIn=\"20000\" />\n    <tag Name=\"NeverStack\" />\n    <tag Name=\"Creature\" />    \n    <tag Name=\"PetResponse\" Value=\"=subject.T= =verb:stare= at =object.t= blankly.\" />\n    <tag Name=\"SimpleConversation\" Value=\"Moon and Sun. Wisdom and will.~May the earth yield for us this season.~Peace, =player.formalAddressTerm=.\" />\n    <xtagTextFragments Skin=\"skin\" PoeticFeatures=\"shiny teeth,coarse hair,sunken eyes\" YounglingNoise=\"*heh*\" Activity=\"roaming around idly\" VillageActivity=\"sleeping in our homes\" NeedsItemFor=\"for my own collection,to slake my greed,because of its trade value\" SacredThing=\"the act of procreating\" ArableLand=\"arable land\" ValuedOre=\"precious metals\" />\n    <stag Name=\"HardMaterial\" Value=\"bone\" />\n  </object>\n  \n  \n  "
+    },
+    {
+      "blueprint": "PhysicalObject",
+      "parent": "Object",
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\PhysicalPhenomena.xml",
+      "sha256": "30d4039dc4e78e9d77eebe1bc002792fd64a5394d2ff0c3547bd826f58e51f44",
+      "object_xml": "<object Name=\"PhysicalObject\" Inherits=\"Object\">\n    <part Name=\"Render\" DisplayName=\"[Object]\" RenderString=\"?\" RenderLayer=\"1\" RenderIfDark=\"true\" />\n    <part Name=\"Physics\" Category=\"Miscellaneous\" IsReal=\"true\" Solid=\"false\" Weight=\"1\" />\n    <part Name=\"MeleeWeapon\" BaseDamage=\"1d2\" Stat=\"Strength\" Skill=\"Cudgel\" />\n    <part Name=\"Commerce\" Value=\"0.01\" />\n    <part Name=\"Description\" Short=\"A hideous specimen.\" />\n    <part Name=\"BurnToAshesIfOrganic\" />\n    <stat Name=\"Hitpoints\" ShortName=\"HP\" Min=\"0\" Max=\"64000\" Value=\"25\" />\n    <stat Name=\"AV\" ShortName=\"AV\" Min=\"0\" Max=\"100\" Value=\"2\" />\n    <stat Name=\"DV\" ShortName=\"DV\" Min=\"-100\" Max=\"100\" Value=\"0\" />\n    <tag Name=\"BaseObject\" Value=\"*noinherit\" />\n    <tag Name=\"Category\" Value=\"object\" />    \n  </object>\n  "
+    },
+    {
+      "blueprint": "Object",
+      "parent": null,
+      "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\RootObjects.xml",
+      "sha256": "a211cf157aa6a6f2e4d5fa13a2e5699630efa51666bd6bb419c81d6095af1a4e",
+      "object_xml": "<object Name=\"Object\">\n    <part Name=\"Physics\" IsReal=\"true\" Solid=\"false\" Weight=\"0\" />\n  </object>\n  "
+    }
+  ],
+  "named_override": {
+    "blueprint": "Ctesiphus",
+    "parent": "Ray Cat",
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\ObjectBlueprints\\Creatures.xml",
+    "sha256": "66295225f7821f87a0d809c94a5ac6430acf2c4cf63d3d10b9acbf0f237c3d95",
+    "object_xml": "<object Name=\"Ctesiphus\" Inherits=\"Ray Cat\">\n    <part Name=\"Render\" DisplayName=\"Ctesiphus\" Tile=\"creatures/sw_kitty.bmp\" RenderString=\"l\" ColorString=\"&amp;m\" DetailColor=\"y\" />\n    <part Name=\"Brain\" Wanders=\"True\" Calm=\"True\" Factions=\"Joppa-100\" />\n    <part Name=\"Description\" Short=\"One star-ribboned night, a ray cat crossed the marshy loam and wandered into Joppa. The watervine farmers, wakened by the joyful cries of a small girl, gathered around to revel at the favorable omen and extol the generosity of the Beetle Moon. Since then, Ctesiphus =verb:have= spent =pronouns.possessive= days curled under the shade of brinestalk huts and sauntering over dirt paths. So long as =pronouns.subjective==verb:'re:afterpronoun= approached with care, =pronouns.subjective= =verb:welcome:afterpronoun= the hands of friends and strangers alike.  &amp;mphosphorescent&amp;y\" />\n    <part Name=\"Raycat\" />\n    <part Name=\"Pettable\" PettableIfPositiveFeeling=\"True\" UseFactionForFeelingFloor=\"Joppa\" />\n    <tag Name=\"ExcludeFromDynamicEncounters\" Value=\"*noinherit\" />\n    <part Name=\"AISelfPreservation\" Threshold=\"40\" />\n    <part Name=\"Interesting\" />\n    <part Name=\"ReplicatedAchievement\" AchievementID=\"ACH_CLONE_CTESIPHUS\" />\n    <tag Name=\"Gender\" Value=\"male\" />\n    <tag Name=\"VillagePet\" />\n    <xtagGrammar Proper=\"true\" />\n  </object>\n  "
+  },
+  "resolved_race": [
+    {
+      "kind": "part",
+      "Name": "Physics",
+      "IsReal": "true",
+      "Solid": "false",
+      "Weight": "201",
+      "Category": "Creatures",
+      "Organic": "true",
+      "Takeable": "false"
+    },
+    {
+      "kind": "part",
+      "Name": "Render",
+      "DisplayName": "ray cat",
+      "RenderString": "l",
+      "RenderLayer": "10",
+      "RenderIfDark": "false",
+      "DetailColor": "y",
+      "Tile": "creatures/sw_cat.bmp",
+      "ColorString": "&m"
+    },
+    {
+      "kind": "part",
+      "Name": "MeleeWeapon",
+      "BaseDamage": "1d2",
+      "Stat": "Strength",
+      "Skill": "Cudgel"
+    },
+    {
+      "kind": "part",
+      "Name": "Commerce",
+      "Value": "100"
+    },
+    {
+      "kind": "part",
+      "Name": "Description",
+      "Short": "=pronouns.Subjective= =verb:are:afterpronoun= a small kitty and the glassy fibers of =pronouns.possessive= coat bend the light of faraway stars into strange loops.  &mphosphorescent&y"
+    },
+    {
+      "kind": "stat",
+      "Name": "Hitpoints",
+      "ShortName": "HP",
+      "Min": "0",
+      "Max": "64000",
+      "Value": "5"
+    },
+    {
+      "kind": "stat",
+      "Name": "AV",
+      "ShortName": "AV",
+      "Min": "0",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "DV",
+      "ShortName": "DV",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "tag",
+      "Name": "BaseObject",
+      "Value": "*noinherit"
+    },
+    {
+      "kind": "tag",
+      "Name": "Category",
+      "Value": "object"
+    },
+    {
+      "kind": "tag",
+      "Name": "OverlayColor",
+      "Value": "&G^k"
+    },
+    {
+      "kind": "part",
+      "Name": "Brain",
+      "Hostile": "false",
+      "Wanders": "True",
+      "Factions": "Cats-100",
+      "Calm": "True"
+    },
+    {
+      "kind": "part",
+      "Name": "Body",
+      "Anatomy": "Quadruped"
+    },
+    {
+      "kind": "part",
+      "Name": "Combat"
+    },
+    {
+      "kind": "part",
+      "Name": "Experience"
+    },
+    {
+      "kind": "part",
+      "Name": "Inventory"
+    },
+    {
+      "kind": "part",
+      "Name": "Mutations"
+    },
+    {
+      "kind": "part",
+      "Name": "Skills"
+    },
+    {
+      "kind": "part",
+      "Name": "ActivatedAbilities"
+    },
+    {
+      "kind": "part",
+      "Name": "RandomLoot"
+    },
+    {
+      "kind": "part",
+      "Name": "Springy",
+      "Factor": "0.5"
+    },
+    {
+      "kind": "stat",
+      "Name": "Strength",
+      "ShortName": "ST",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "14",
+      "sValue": "5"
+    },
+    {
+      "kind": "stat",
+      "Name": "Agility",
+      "ShortName": "AG",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "14",
+      "sValue": "20,1d3,(t-1)d1"
+    },
+    {
+      "kind": "stat",
+      "Name": "Toughness",
+      "ShortName": "TO",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "14",
+      "sValue": "10"
+    },
+    {
+      "kind": "stat",
+      "Name": "Intelligence",
+      "ShortName": "IN",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "6",
+      "sValue": "7,1d3,(t-1)d2-1"
+    },
+    {
+      "kind": "stat",
+      "Name": "Willpower",
+      "ShortName": "WI",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "6",
+      "sValue": "21"
+    },
+    {
+      "kind": "stat",
+      "Name": "Ego",
+      "ShortName": "EG",
+      "Min": "1",
+      "Max": "9000",
+      "Value": "6",
+      "sValue": "7,1d3,(t-1)d2-1"
+    },
+    {
+      "kind": "stat",
+      "Name": "Energy",
+      "ShortName": "EN",
+      "Min": "-100000",
+      "Max": "100000",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "Speed",
+      "ShortName": "SP",
+      "Min": "1",
+      "Max": "10000",
+      "Value": "100"
+    },
+    {
+      "kind": "stat",
+      "Name": "MoveSpeed",
+      "ShortName": "MS",
+      "Min": "-1800",
+      "Max": "195",
+      "Value": "100"
+    },
+    {
+      "kind": "stat",
+      "Name": "XP",
+      "ShortName": "XP",
+      "Min": "0",
+      "Max": "2147483647",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "XPValue",
+      "ShortName": "XPValue",
+      "sValue": "*XP",
+      "Min": "0",
+      "Max": "2147483647"
+    },
+    {
+      "kind": "stat",
+      "Name": "SP",
+      "ShortName": "SP",
+      "Min": "0",
+      "Max": "2147483647",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "MP",
+      "ShortName": "MP",
+      "Min": "0",
+      "Max": "2147483647",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "AP",
+      "ShortName": "AP",
+      "Min": "0",
+      "Max": "2147483647",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "MA",
+      "ShortName": "MA",
+      "Min": "-100",
+      "Max": "2147483647",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "HeatResistance",
+      "ShortName": "HeatResistance",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "ColdResistance",
+      "ShortName": "ColdResistance",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "ElectricResistance",
+      "ShortName": "ElectricResistance",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "stat",
+      "Name": "AcidResistance",
+      "ShortName": "AcidResistance",
+      "Min": "-100",
+      "Max": "100",
+      "Value": "0"
+    },
+    {
+      "kind": "part",
+      "Name": "Leveler"
+    },
+    {
+      "kind": "part",
+      "Name": "Stomach"
+    },
+    {
+      "kind": "part",
+      "Name": "Corpse",
+      "CorpseChance": "50",
+      "BurntCorpseChance": "100",
+      "BurntCorpseBlueprint": "Ashes",
+      "CorpseBlueprint": "Ray Cat Corpse"
+    },
+    {
+      "kind": "stat",
+      "Name": "Level",
+      "ShortName": "LV",
+      "Min": "1",
+      "Max": "10000",
+      "Value": "1"
+    },
+    {
+      "kind": "tag",
+      "Name": "Role",
+      "Value": "Minion"
+    },
+    {
+      "kind": "builder",
+      "Name": "Roboticized",
+      "ChanceOneIn": "20000"
+    },
+    {
+      "kind": "tag",
+      "Name": "NeverStack"
+    },
+    {
+      "kind": "tag",
+      "Name": "Creature"
+    },
+    {
+      "kind": "tag",
+      "Name": "PetResponse",
+      "Value": "=subject.T= =verb:meow=."
+    },
+    {
+      "kind": "tag",
+      "Name": "SimpleConversation",
+      "Value": "&w*soft growling*&y"
+    },
+    {
+      "kind": "xtagTextFragments",
+      "Skin": "fur",
+      "PoeticFeatures": "triangle ears,pearly whiskers,ageless eyes",
+      "YounglingNoise": "*mew*,*prrrup*",
+      "Activity": "sleeping and chasing birds all through the day",
+      "VillageActivity": "sleeping in our homes",
+      "NeedsItemFor": "for my own collection,to slake my greed,because of its trade value",
+      "SacredThing": "judgemental silence",
+      "ArableLand": "grazeland",
+      "ValuedOre": "shade and vittle",
+      "GuestActivity": "breaking bread"
+    },
+    {
+      "kind": "stag",
+      "Name": "HardMaterial",
+      "Value": "bone"
+    },
+    {
+      "kind": "mutation",
+      "Name": "DarkVision",
+      "Level": "6"
+    },
+    {
+      "kind": "tag",
+      "Name": "RandomGender",
+      "Value": "male,female"
+    },
+    {
+      "kind": "tag",
+      "Name": "DeathSounds",
+      "Value": "Sounds/Creatures/VO/sfx_creature_animal_cat_vo_die"
+    },
+    {
+      "kind": "tag",
+      "Name": "PrimaryLimbType",
+      "Value": "Foot"
+    },
+    {
+      "kind": "intproperty",
+      "Name": "Bleeds",
+      "Value": "1"
+    },
+    {
+      "kind": "part",
+      "Name": "ConversationScript",
+      "ConversationID": "Animals"
+    },
+    {
+      "kind": "tag",
+      "Name": "Class",
+      "Value": "cat"
+    },
+    {
+      "kind": "tag",
+      "Name": "Culture",
+      "Value": "Animal"
+    },
+    {
+      "kind": "tag",
+      "Name": "HeroNameTitleWiseDescriptor",
+      "Value": "Sleek,Sphinx,Sphinx-like,Cunning,Graceful,Lithe,Wise,Sage,Sophic"
+    },
+    {
+      "kind": "tag",
+      "Name": "HeroNameTitleMayorSyn",
+      "Value": "sphinx,mayor,elder"
+    },
+    {
+      "kind": "tag",
+      "Name": "HeroNameTitleMayorSynCap",
+      "Value": "Sphinx,Mayor,Elder"
+    },
+    {
+      "kind": "tag",
+      "Name": "Species",
+      "Value": "cat"
+    },
+    {
+      "kind": "tag",
+      "Name": "AmbientIdleSound",
+      "Value": "Sounds/Creatures/VO/sfx_creature_animal_cat_vo_idle"
+    },
+    {
+      "kind": "tag",
+      "Name": "PunchSound",
+      "Value": "Sounds/Creatures/VO/sfx_creature_animal_cat_vo_attack"
+    },
+    {
+      "kind": "tag",
+      "Name": "TakeDamageSound",
+      "Value": "Sounds/Creatures/VO/sfx_creature_animal_cat_vo_hurt"
+    },
+    {
+      "kind": "part",
+      "Name": "Pettable",
+      "UseFactionForFeelingFloor": "Cats"
+    },
+    {
+      "kind": "part",
+      "Name": "SmartuseForceTwiddles"
+    },
+    {
+      "kind": "tag",
+      "Name": "LairAmbientBed",
+      "Value": "Sounds/Ambiences/amb_creature_cat"
+    },
+    {
+      "kind": "part",
+      "Name": "ItemElements",
+      "Elements": "stars::1"
+    },
+    {
+      "kind": "inventoryobject",
+      "Blueprint": "Cat Claw",
+      "Number": "2"
+    },
+    {
+      "kind": "inventoryobject",
+      "Blueprint": "Cat Bite",
+      "Number": "1"
+    },
+    {
+      "kind": "part",
+      "Name": "LightSource",
+      "Lit": "true",
+      "Radius": "4"
+    },
+    {
+      "kind": "tag",
+      "Name": "SleepOnBed"
+    },
+    {
+      "kind": "part",
+      "Name": "Raycat"
+    }
+  ],
+  "anatomy_file": {
+    "file": "D:\\Steam\\steamapps\\common\\Caves of Qud\\CoQ_Data\\StreamingAssets\\Base\\Bodies.xml",
+    "sha256": "5c92f758657a45805b8aac6363b34a4bcd060a0daedd97abb268a339b7ec2292",
+    "xml": "<anatomy Name=\"Quadruped\">\n      <part Type=\"Head\">\n        <part Type=\"Face\" />\n      </part>\n      <part Type=\"Back\" />\n      <part Type=\"Foot\" Laterality=\"Right Fore\" SupportsDependent=\"Forefeet\" />\n      <part Type=\"Foot\" Laterality=\"Left Fore\" SupportsDependent=\"Forefeet\" />\n      <part Type=\"Foot\" Laterality=\"Right Hind\" SupportsDependent=\"Hindfeet\" />\n      <part Type=\"Foot\" Laterality=\"Left Hind\" SupportsDependent=\"Hindfeet\" />\n      <part Type=\"Missile Weapon\" Laterality=\"Right\" />\n      <part Type=\"Missile Weapon\" Laterality=\"Left\" />\n      <part Type=\"Feet\" Laterality=\"Fore\" DependsOn=\"Forefeet\" Mobility=\"0\" />\n      <part Type=\"Feet\" Laterality=\"Hind\" DependsOn=\"Hindfeet\" Mobility=\"0\" />\n      <part Type=\"Tail\" />\n    </anatomy>\n\n    "
+  },
+  "observed_actor": {
+    "instance": 566,
+    "blueprint": "Ctesiphus",
+    "species": "cat",
+    "gender": "male",
+    "description": "One star-ribboned night, a ray cat crossed the marshy loam and wandered into Joppa. The watervine farmers, wakened by the joyful cries of a small girl, gathered around to revel at the favorable omen and extol the generosity of the Beetle Moon. Since then, Ctesiphus has spent his days curled under the shade of brinestalk huts and sauntering over dirt paths. So long as he's approached with care, he welcomes the hands of friends and strangers alike.\n\n&mphosphorescent&y\n\nBase demeanor: {{g|docile}}",
+    "anatomy": "Quadruped",
+    "parts": [
+      {
+        "id": 173,
+        "parent": -1,
+        "type": "Body",
+        "variant": "Body",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 259,
+        "parent": 173,
+        "type": "Head",
+        "variant": "Head",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 260,
+        "parent": 259,
+        "type": "Face",
+        "variant": "Face",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 567,
+          "blueprint": "Cat Bite",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-bite.bmp",
+          "foreground": "&y",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 261,
+        "parent": 173,
+        "type": "Back",
+        "variant": "Back",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 262,
+        "parent": 173,
+        "type": "Foot",
+        "variant": "Foot",
+        "laterality": 18,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 512,
+          "blueprint": "Cat Claw",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-paw.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 263,
+        "parent": 173,
+        "type": "Foot",
+        "variant": "Foot",
+        "laterality": 17,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": {
+          "instance": 511,
+          "blueprint": "Cat Claw",
+          "description": "\n{{rules|Strength Bonus Cap: 1000\nWeapon Class: Short Blades (causes bleeding on critical hit)}}\n{{rules|Offhand Attack Chance: 15%}}\n\n{{K|Weight: 0 lbs.}}",
+          "tile": "Creatures/natural-weapon-paw.bmp",
+          "foreground": "&w",
+          "tileColor": "",
+          "detailColor": ""
+        }
+      },
+      {
+        "id": 264,
+        "parent": 173,
+        "type": "Foot",
+        "variant": "Foot",
+        "laterality": 66,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 265,
+        "parent": 173,
+        "type": "Foot",
+        "variant": "Foot",
+        "laterality": 65,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 266,
+        "parent": 173,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 2,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 267,
+        "parent": 173,
+        "type": "Missile Weapon",
+        "variant": "Missile Weapon",
+        "laterality": 1,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 268,
+        "parent": 173,
+        "type": "Feet",
+        "variant": "Feet",
+        "laterality": 16,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 269,
+        "parent": 173,
+        "type": "Feet",
+        "variant": "Feet",
+        "laterality": 64,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 270,
+        "parent": 173,
+        "type": "Tail",
+        "variant": "Tail",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 271,
+        "parent": 173,
+        "type": "Thrown Weapon",
+        "variant": "Thrown Weapon",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      },
+      {
+        "id": 272,
+        "parent": 173,
+        "type": "Floating Nearby",
+        "variant": "Floating Nearby",
+        "laterality": 0,
+        "manager": null,
+        "defaultBlueprint": null,
+        "equipped": null,
+        "defaultItem": null
+      }
+    ],
+    "tile": "creatures/sw_kitty.bmp",
+    "foreground": "&m",
+    "tileColor": "",
+    "detailColor": "y"
+  },
+  "interpretation": "Four actual Foot nodes plus two dependent Feet groups; the groups do not add legs. Tail is intrinsic. Cat Bite/Claw defaults are natural behavior, not worn garments. Static inherited DarkVision is not extra anatomy; unexported active mutation state remains unknown."
+}

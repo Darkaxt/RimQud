@@ -32,6 +32,20 @@ There are 133 generation-ready entries out of 156. Every entry remains unfinishe
 for native acceptance, Stage 3 remains the sole ACTIVE stage and `BODY-RAY-CAT`
 is the sole active entry.
 
+Ray Cat source checkpoint (2026-10-21): current installed ancestry and observed
+Quadruped parts confirm four physical Foot nodes and an intrinsic Tail; dependent
+Feet groups do not add legs. The accepted cat design remains unchanged. Exact
+historical front, front-guided east/north and north tail-correction calls were
+recovered from this thread, including returned PNG bytes that match all three
+selected source images. The rejected neck-root north image is preserved. Generic
+Ray Cat `sw_cat.bmp` and named Ctesiphus `sw_kitty.bmp` were resolved separately
+and shown with their actual m/y palette. Exact Core directional references and
+current life-stage definitions are recorded; the historical 0.9 presentation
+multiplier is authored, not an installed default or evidence of Qud age. Current
+manual ownership controls, common-frame registration, independent body/head/detail
+layers and visual review remain unfinished. Historical native checks do not
+complete this entry or bypass the full-set generation gate.
+
 Prior authoring checkpoint (2026-10-21, equipped fore boots): the Leather Boots
 Feet297/16 fitting and its inventory aggregate are generation-ready under
 `fit-yrame-leather-boots/v2` and `item-leather-boots/v2`. Captured Boots580 equips
