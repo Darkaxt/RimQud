@@ -15,9 +15,23 @@ retain usable existing art provisionally, then test the complete set in game.
 Do not restart every ledger entry or repeat the completed blanket review solely
 for the method change. Existing known defects still block their entries. Further
 replacements follow visible problems at actual play distance after that gate.
-Stage3 remains the sole ACTIVE stage; SCN-ARGYVESIGN is the sole active entry.
+Stage3 remains the sole ACTIVE stage; SCN-JOPPAMILLSIGN is the sole active entry.
 
-Current woven-basket checkpoint (2026-10-21):
+Current sign checkpoint (2026-10-21): ArgyveSign is generation-ready under
+`scn-argyvesign/blender-v2/registered`. Its saved physical clay plaque, two rear
+uprights, front-only source pictogram and actual S/E/N exports share one model,
+camera and frame. The source's negative pictogram cells become opaque dark paint
+on solid clay, explicitly following painted-board metadata; exact source binary
+alpha is not claimed. Native tile-primary y and detail r remain separately owned,
+with one coverage. The back has no cloned glyph, and Go Away remains native Chat
+text rather than invented tile lettering. Fresh independent structural review,
+main palette/size inspection and saved-model/frame diagnostics pass authoring.
+Immutable shape-registry snapshot10 retains both editable versions. There are142
+generation-ready entries and14 pending: five signs/shrine, CanvasWall and eight
+source-based exclusion reviews. Every entry remains unfinished for native
+acceptance; continue JoppaMillSign without opening native validation.
+
+Prior woven-basket checkpoint (2026-10-21):
 `scn-woven-basket/blender-v3/registered` selects a complete hollow close-woven
 reed bowl, bound rim and single tall carrying loop, with16 actual warp ribbons
 and6 weft courses. Primitive Storage's installed basket supplies the material
@@ -102,7 +116,7 @@ that every component was individually visually inspected or that art is flawless
 At the retrospective screening,19 entries had no current created set and received
 no visual approval; subsequent entries receive their own authoring reviews.
 
-The flagged-art queue is resolved for generation. Continue with ArgyveSign and keep
+The flagged-art queue is resolved for generation. Continue with JoppaMillSign and keep
 one active entry at a time. The cat-back step and prominent sandal rim are optional
 polish. Bed camera, Nima's shared fitting evidence, the apron lower palette field
 and a proposed straight-horn silhouette are not substantiated correction needs.

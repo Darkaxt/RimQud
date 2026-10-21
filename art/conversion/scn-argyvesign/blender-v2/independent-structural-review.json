@@ -1,0 +1,114 @@
+{
+  "asset": "SCN-ARGYVESIGN",
+  "reviewer": {
+    "agent": "/root/argyve_sign_review",
+    "fork_turns": "none",
+    "reasoning_effort_requested": "low",
+    "model": "Inherited main model; no override"
+  },
+  "inputs": [
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v1/source-reference-comparison.png",
+      "sha256": "f0e221a007686bec87f3232b05fa3feae6e22240bba6b0ac18ece44784682f4b"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v1/manual-neutral-master.png",
+      "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v1/source-packet.json",
+      "sha256": "c6f84fce13d23e8add46c97ec0462574fe69780e584908a8c97a9faad89a3f80"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v2/three-view-authoring-comparison.png",
+      "sha256": "8c9cab61a8b4c3630b0f3272cbf07c0cc53466941544e56f7d8cbc982121bcb3"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v2/south-neutral-master.png",
+      "sha256": "0bc4cdaf776724ab7810d1fb3030f0b20973170e287fe7bac00408000f104aa3"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v2/east-neutral-master.png",
+      "sha256": "7c8e31839204a2eb797c4bcb8e95b5eef414739319e2680e414ffc1bf91616c3"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v2/north-neutral-master.png",
+      "sha256": "d80ac8b8223252c1a6b208b83b30583cee6d5184ae5c314b0014a1c765bdb493"
+    },
+    {
+      "path": "art/conversion/scn-argyvesign/blender-v2/stage-03-refined-model-3d.png",
+      "sha256": "3dfc2f68ac026d849f7210bccc6c4d9089f21988ed1c850cbd89f5f046c9ecd6"
+    }
+  ],
+  "recommendation": "pass",
+  "fix_now": [],
+  "native_acceptance_tested": false,
+  "summary": "Registration can proceed on the reviewed visual structure. No blocking structural defect found. This is authoring review only; native acceptance was not tested.",
+  "findings": [
+    {
+      "view": "south",
+      "region": "whole object and glyph",
+      "observation": "Broad edged plaque, two supports, asymmetric source-positioned pictogram retained. Large stepped left mark and separated right bars/cells are surface-bound. No invented lettering or modern disc logo.",
+      "confidence": "high",
+      "severity": "none",
+      "evidence": [
+        "../blender-v1/source-reference-comparison.png",
+        "south-neutral-master.png",
+        "stage-03-refined-model-3d.png"
+      ]
+    },
+    {
+      "view": "south/north",
+      "region": "support contact",
+      "observation": "Front plaque occludes rear uprights; north exposes continuous lengths. No visible floating joint or board/support gap.",
+      "confidence": "high",
+      "severity": "none",
+      "evidence": [
+        "south-neutral-master.png",
+        "north-neutral-master.png",
+        "stage-03-refined-model-3d.png"
+      ]
+    },
+    {
+      "view": "east",
+      "region": "near/far structure",
+      "observation": "Thin board edge lies forward of support profile. Two laterally separated supports overlap consistently in side projection; no compressed substitute panel.",
+      "confidence": "high",
+      "severity": "none",
+      "evidence": [
+        "east-neutral-master.png",
+        "north-neutral-master.png"
+      ]
+    },
+    {
+      "view": "north",
+      "region": "face",
+      "observation": "Blank back and visible rear supports; no mirrored glyph.",
+      "confidence": "high",
+      "severity": "none",
+      "evidence": [
+        "north-neutral-master.png"
+      ]
+    },
+    {
+      "view": "all",
+      "region": "crop/frame",
+      "observation": "Clear upper/lower margins, intact corners and support ends.",
+      "confidence": "high",
+      "severity": "none",
+      "evidence": [
+        "three-view-authoring-comparison.png"
+      ]
+    },
+    {
+      "view": "intended sizes",
+      "region": "glyph legibility",
+      "observation": "At16x24, small glyph cells soften/merge but south remains a two-post pictographic sign.24x36 and32x48 clarify them. East is a narrow sliver, north retains uprights and blank panel. No structural correction indicated; palette/recipient rendering still needs its own inspection.",
+      "confidence": "medium-high",
+      "severity": "informational",
+      "evidence": [
+        "three-view-authoring-comparison.png"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "reset_date": "2026-10-20",
   "art_completion_claims_withdrawn": true,
   "stage": "Stage 3 ACTIVE",
-  "active_entry": "SCN-ARGYVESIGN",
+  "active_entry": "SCN-JOPPAMILLSIGN",
   "input_sha256": {
     "art/village/sources.json": "b0a2de847e29d251f500f81fc25aa3eacec393b4af78370c2a490e9f2706ec22",
     "art/village/model.json": "f333b0cd7b309481409d3b2e15aa03bbae0b4fa051adfb5ecf6af41833646431",
@@ -66006,20 +66006,21 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "IN PROGRESS",
-      "current_step": "resolve_object_description_original_tile_palette_state",
+      "status": "UNFINISHED",
+      "current_step": "native_state_review",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
         "construct_faithful_shape",
         "create_required_state_neighbor_variants",
         "refine_materials_and_form",
+        "render_blender_views_and_masks",
         "extract_register_color_coverage",
         "visual_review_identity_and_connections_at_game_scale",
         "native_state_review"
       ],
       "known_issues": [
-        "Only traced/enlarged source contours or preliminary surfaces exist. Full source-to-design/refinement/visual conversion remains unfinished."
+        "Tiny glyph cells soften at source display size; native Chat/state/play-distance acceptance pending."
       ],
       "metadata": {
         "description": {
@@ -66078,7 +66079,264 @@
           "sha256": "fdbd76766a1cd233d11243c914e83bdc5be0ddd099e4b545702c71d6099e7538"
         }
       ],
-      "process_log": []
+      "process_log": [
+        {
+          "timestamp": "2026-10-21T13:15:05.276378+00:00",
+          "step": "resolve_object_description_original_tile_palette_state",
+          "action": "Resolve source pictogram, painted terracotta material, TileColor override and exact Go Away native chat.",
+          "inputs": [
+            {
+              "path": "E:\\Temp\\qud-transplant-probe-pawns-20261019\\donor\\village-originals\\argyvesign-mask.png",
+              "sha256": "fc2aa4c4844a1322559e0686dff7b606c78d5914f478fb1f81bd9191925fa7d0"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-packet.json",
+              "sha256": "c6f84fce13d23e8add46c97ec0462574fe69780e584908a8c97a9faad89a3f80"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-reference-comparison.png",
+              "sha256": "f0e221a007686bec87f3232b05fa3feae6e22240bba6b0ac18ece44784682f4b"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:15:05.276378+00:00",
+          "step": "select_render_reference_or_document_no_equivalent",
+          "action": "Inspect actual VFE standing sign for edge/support convention only.",
+          "inputs": [
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\Textures\\Things\\Building\\MedievalProps\\WoodenSign\\WoodenSignA.png",
+              "sha256": "c2a1b3d27afd25c1bb1e4449a03934d5d00feef9b79d5d921bb75588acdb9671"
+            },
+            {
+              "path": "D:\\Steam\\steamapps\\workshop\\content\\294100\\2102143149\\About\\About.xml",
+              "sha256": "fa2dc6718f849c30d5f23e17c5f7c61e7d83daa99a1a143f4251dbd8802fa6a7"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-packet.json",
+              "sha256": "c6f84fce13d23e8add46c97ec0462574fe69780e584908a8c97a9faad89a3f80"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-reference-comparison.png",
+              "sha256": "f0e221a007686bec87f3232b05fa3feae6e22240bba6b0ac18ece44784682f4b"
+            }
+          ],
+          "review": "Physical painted-board interpretation and authored hidden depth are explicit; no new text, native state or behavior.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "construct_faithful_shape",
+          "action": "Build one solid clay plaque and two actual rear supports with shared frame and source-supported outline.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-packet.json",
+              "sha256": "c6f84fce13d23e8add46c97ec0462574fe69780e584908a8c97a9faad89a3f80"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/stage-02-model-3d.png",
+              "sha256": "530e9335cc8688e2fe8b5e10b06e411b27ca73d3e0789c544efd7d0b8c0de1d6"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/manual-neutral-master.png",
+              "sha256": "a5d1c504103f4dfdef7c910489bc23c5a010da7a5a28ecf711fbf87da77a60d8"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "refine_materials_and_form",
+          "action": "Resume saved model; bevel physical edges and add front-only dark paint from43 exact source pictogram cells. Select direct Blender rendering; no ImageGen call or second isolation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/sign.blend",
+              "sha256": "431953d07427c3a7434725463d3194a2fab881ed874b2491687dd02003b7091d"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/stage-03-refined-model-3d.png",
+              "sha256": "3dfc2f68ac026d849f7210bccc6c4d9089f21988ed1c850cbd89f5f046c9ecd6"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/model-controls.json",
+              "sha256": "119e94909d245fcbf90c15c72c9dc9a6af395a6c0f73fe8f1e6e4a9067b0bde0"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/independent-structural-review.json",
+              "sha256": "af5cab8fc1502782c148b6b97cc87e520ef9d7fe97c481c7259a8832f25ca8a6"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "create_required_state_neighbor_variants",
+          "action": "Retain one fixed native map tile and exact native Chat; auxiliary E/N show physical back/depth without creating native direction behavior.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v1/source-packet.json",
+              "sha256": "c6f84fce13d23e8add46c97ec0462574fe69780e584908a8c97a9faad89a3f80"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/three-view-authoring-comparison.png",
+              "sha256": "8c9cab61a8b4c3630b0f3272cbf07c0cc53466941544e56f7d8cbc982121bcb3"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/registered/model.json",
+              "sha256": "47f4e0486ea8c167dd2d8c21fd6c5c314a1b07556ec04436dd148803dee3c8cd"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "render_blender_views_and_masks",
+          "action": "Render real S/E/N rotations, complete transparent geometry and separate actual detail ownership passes. Reopen saved model and retain immutable shape registry.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/sign.blend",
+              "sha256": "949f194e504595685bbf5743240a3d19b1178f8817a7d6269712f24a77a8b26f"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/blender-receipt.json",
+              "sha256": "98d8f8880c31f990d55238f27d00e80cae488073e68f058e903b68e6e5d69939"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/south-neutral-master.png",
+              "sha256": "0bc4cdaf776724ab7810d1fb3030f0b20973170e287fe7bac00408000f104aa3"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/east-neutral-master.png",
+              "sha256": "7c8e31839204a2eb797c4bcb8e95b5eef414739319e2680e414ffc1bf91616c3"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/north-neutral-master.png",
+              "sha256": "d80ac8b8223252c1a6b208b83b30583cee6d5184ae5c314b0014a1c765bdb493"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/south-detail-pass.png",
+              "sha256": "b8a9b4bb9fc1bc08f9de844ee7bcc7b40ab4812bb77e611475824d236afd85d7"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/east-detail-pass.png",
+              "sha256": "1a9a61e0b77edf1cd939a94ea2b6ddc65ef51426d5e5d17aeca195b913350a99"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/north-detail-pass.png",
+              "sha256": "5518ef7106c6a0d23bd0ea046866c133ce76152efbab1eef7010337ba93bbf60"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/reopen-audit.json",
+              "sha256": "262e36b4f1498bcd8fbe888b37d839e683cbbe7db03dc78a7769e331c13c9e68"
+            },
+            {
+              "path": "evidence/blender-shape-ledger-history/v10.json",
+              "sha256": "d19f4be22b03f963a5bdb2d28e29e0bbccf3a347e3b7959b870da9b0ff5af75f"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "extract_register_color_coverage",
+          "action": "Register tile-primary y supports and detail-r plaque/paint under one coverage; disclose solid-board glyph alpha interpretation.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/register-sign.py",
+              "sha256": "bf0ea45dd1030834ca76ab0d4520d3927f5455d18582c74fca85d76ac999ce65"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/registered/model.json",
+              "sha256": "47f4e0486ea8c167dd2d8c21fd6c5c314a1b07556ec04436dd148803dee3c8cd"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/registered/registration-decisions.json",
+              "sha256": "253c877037f9e516eccec1941f6f7f59def92d4684af12d2fa9ea87bb9e1dd9e"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        },
+        {
+          "timestamp": "2026-10-21T13:26:30.905893+00:00",
+          "step": "visual_review_identity_and_connections_at_game_scale",
+          "action": "Inspect native palette/intended-size proofs and disposition exact-hash independent structural review.",
+          "inputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/independent-structural-review.json",
+              "sha256": "af5cab8fc1502782c148b6b97cc87e520ef9d7fe97c481c7259a8832f25ca8a6"
+            }
+          ],
+          "outputs": [
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/registered/registration-comparison.png",
+              "sha256": "664a0f7a50541a8136d7399ad18bf92df77a9513ac8d60ec5e7d5aefd3a30430"
+            },
+            {
+              "path": "art/conversion/scn-argyvesign/blender-v2/registered/authoring-review.json",
+              "sha256": "e1fc72bd3b35aa77d48963af3bc1ebec161c350cf9e7de2bb8dedb120ab5886d"
+            }
+          ],
+          "review": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+          "result": "PASS"
+        }
+      ],
+      "persistent_3d_sources": {
+        "latest_registry_path": "evidence/blender-shape-ledger.json",
+        "registry_snapshot": {
+          "path": "evidence/blender-shape-ledger-history/v10.json",
+          "sha256": "d19f4be22b03f963a5bdb2d28e29e0bbccf3a347e3b7959b870da9b0ff5af75f"
+        },
+        "resume": {
+          "path": "art/conversion/scn-argyvesign/blender-v2/sign.blend",
+          "sha256": "949f194e504595685bbf5743240a3d19b1178f8817a7d6269712f24a77a8b26f"
+        },
+        "controls": {
+          "path": "art/conversion/scn-argyvesign/blender-v2/model-controls.json",
+          "sha256": "119e94909d245fcbf90c15c72c9dc9a6af395a6c0f73fe8f1e6e4a9067b0bde0"
+        }
+      },
+      "workflow_version": "blender-first-v1",
+      "generation_ready": true,
+      "current_registration": {
+        "model": {
+          "path": "art/conversion/scn-argyvesign/blender-v2/registered/model.json",
+          "sha256": "47f4e0486ea8c167dd2d8c21fd6c5c314a1b07556ec04436dd148803dee3c8cd"
+        },
+        "plate": {
+          "path": "art/conversion/scn-argyvesign/blender-v2/registered/registration-comparison.png",
+          "sha256": "664a0f7a50541a8136d7399ad18bf92df77a9513ac8d60ec5e7d5aefd3a30430"
+        }
+      },
+      "art_review": {
+        "status": "PASS",
+        "reason": "Painted terracotta plaque and two supports derive from exact Sign/ArgyveSign ancestry and native y/r source. Actual installed VFE standing sign supplies edge/support convention only. One closed plaque and two rear uprights share physical dimensions, pivot and camera; beveled edges and43 source-cell paint faces refine that saved construction. Source negative pictogram spaces become very dark opaque paint on solid clay: this is an explicit physical interpretation, not exact binary-source-alpha preservation. The front has the asymmetric pictogram; the back is blank clay behind continuous supports, and actual side depth is retained. Native Go Away remains Chat text, not new English lettering. Fresh independent review and main inspection show coherent contact, source identity and frame; tiny glyph cells soften at16x24 as expected, without consequential structural failure. Reopened physical elements have no nonmanifold/zero-area faces; front paint is intentionally an open attached surface. Registered y-support/r-board masks use neutral shading and one coverage. Only south binds the original fixed tile; auxiliary east/north are authoring exports. Native behavior and final play-distance acceptance remain pending.",
+        "record": {
+          "path": "art/conversion/scn-argyvesign/blender-v2/registered/authoring-review.json",
+          "sha256": "e1fc72bd3b35aa77d48963af3bc1ebec161c350cf9e7de2bb8dedb120ab5886d"
+        }
+      },
+      "registration_summary": "Direct Blender painted terracotta plaque, two rear supports and source-positioned dark pictogram; native y/r tint, original fixed tile and retained S/E/N geometry exports."
     },
     {
       "id": "SCN-JOPPAMILLSIGN",
@@ -66092,8 +66350,8 @@
         "fixed map view; source palette/coverage and native supported states"
       ],
       "disposition": "Convert and review",
-      "status": "UNFINISHED",
-      "current_step": null,
+      "status": "IN PROGRESS",
+      "current_step": "resolve_object_description_original_tile_palette_state",
       "required_steps": [
         "resolve_object_description_original_tile_palette_state",
         "select_render_reference_or_document_no_equivalent",
@@ -80948,7 +81206,7 @@
     },
     "rule": "Follow skills/qud-creature-conversion/SKILL.md section2. Source identity/palette remain authoritative; reconstruct an oblique source camera into the target cardinal presentation."
   },
-  "updated_at": "2026-10-21T13:04:52.496194+00:00",
+  "updated_at": "2026-10-21T13:26:30.905893+00:00",
   "furniture_view_policy": {
     "required": [
       "south/front",
